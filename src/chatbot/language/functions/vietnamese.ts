@@ -268,8 +268,8 @@ export const vietnameseOpenGoogleMapDeclaration: FunctionDeclaration = {
     },
 };
 
-export const vietnameseFollowUnfollowItemDeclaration: FunctionDeclaration = {
-    name: "followUnfollowItem",
+export const vietnameseManageFollowDeclaration: FunctionDeclaration = {
+    name: "manageFollow",
     description: "Theo dõi hoặc bỏ theo dõi một hội nghị hoặc tạp chí cụ thể cho người dùng đang đăng nhập.",
     parameters: {
         type: SchemaType.OBJECT, // Kiểu SchemaType.OBJECT

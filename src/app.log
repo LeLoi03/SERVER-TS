@@ -3957,3 +3957,1452 @@ Body:
 [2025-05-12T02:49:14.988Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
 [2025-05-12T02:49:15.027Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
 [2025-05-12T02:49:15.027Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:54:32.263Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:54:32.264Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:54:32.692Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:54:32.694Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:54:32.695Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:54:33.604Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:54:33.605Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:54:33.605Z] [MainLoader] Database loaded.
+[2025-05-12T02:54:33.606Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:54:33.606Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:54:33.613Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:54:33.617Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:54:33.617Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:54:33.617Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:54:33.617Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:54:33.618Z] [MainLoader] Express loaded.
+[2025-05-12T02:54:33.619Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:54:33.625Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:54:33.625Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:54:33.626Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:54:33.626Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:54:33.627Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:54:33.668Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:54:33.668Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:54:33.668Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:54:33.714Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:54:33.714Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:55:55.691Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:55:55.692Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:55:56.027Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:55:56.028Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:55:56.029Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:55:56.920Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:55:56.920Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:55:56.921Z] [MainLoader] Database loaded.
+[2025-05-12T02:55:56.921Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:55:56.922Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:55:56.928Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:55:56.931Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:55:56.932Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:55:56.932Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:55:56.932Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:55:56.933Z] [MainLoader] Express loaded.
+[2025-05-12T02:55:56.933Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:55:56.939Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:55:56.939Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:55:56.940Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:55:56.940Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:55:56.940Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:55:57.013Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:55:57.014Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:55:57.014Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:55:57.058Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:55:57.059Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:56:17.727Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:56:17.728Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:56:18.068Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:56:18.069Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:56:18.069Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:56:18.904Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:56:18.904Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:56:18.905Z] [MainLoader] Database loaded.
+[2025-05-12T02:56:18.905Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:56:18.905Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:56:18.912Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:56:18.915Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:56:18.915Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:56:18.915Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:56:18.915Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:56:18.917Z] [MainLoader] Express loaded.
+[2025-05-12T02:56:18.919Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:56:18.924Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:56:18.924Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:56:18.925Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:56:18.925Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:56:18.925Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:56:18.970Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:56:18.970Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:56:18.970Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:56:19.023Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:56:19.024Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:57:29.666Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:57:29.667Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:57:47.601Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:57:47.601Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:57:47.927Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:57:47.928Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:57:47.929Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:57:48.808Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:57:48.808Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:57:48.809Z] [MainLoader] Database loaded.
+[2025-05-12T02:57:48.809Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:57:48.810Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:57:48.815Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:57:48.818Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:57:48.818Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:57:48.819Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:57:48.819Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:57:48.820Z] [MainLoader] Express loaded.
+[2025-05-12T02:57:48.821Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:57:48.825Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:57:48.825Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:57:48.825Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:57:48.826Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:57:48.826Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:57:48.864Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:57:48.864Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:57:48.865Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:57:48.903Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:57:48.904Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:58:10.955Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:58:10.957Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:58:11.323Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:58:11.324Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:58:11.325Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:58:12.218Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:58:12.218Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:58:12.218Z] [MainLoader] Database loaded.
+[2025-05-12T02:58:12.219Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:58:12.219Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:58:12.226Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:58:12.230Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:58:12.230Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:58:12.231Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:58:12.231Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:58:12.232Z] [MainLoader] Express loaded.
+[2025-05-12T02:58:12.233Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:58:12.239Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:58:12.239Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:58:12.239Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:58:12.240Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:58:12.240Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:58:12.308Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:58:12.308Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:58:12.309Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:58:12.407Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:58:12.407Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:58:30.396Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:58:30.397Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:58:30.758Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:58:30.758Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:58:30.759Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:58:31.529Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:58:31.529Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:58:31.530Z] [MainLoader] Database loaded.
+[2025-05-12T02:58:31.530Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:58:31.530Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:58:31.537Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:58:31.540Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:58:31.540Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:58:31.540Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:58:31.540Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:58:31.542Z] [MainLoader] Express loaded.
+[2025-05-12T02:58:31.543Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:58:31.547Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:58:31.547Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:58:31.547Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:58:31.548Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:58:31.548Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:58:31.585Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:58:31.585Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:58:31.585Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:58:31.627Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:58:31.628Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:58:50.872Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:58:50.873Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:58:51.205Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:58:51.209Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:58:51.210Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:58:52.136Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:58:52.136Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:58:52.137Z] [MainLoader] Database loaded.
+[2025-05-12T02:58:52.137Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:58:52.138Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:58:52.143Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:58:52.146Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:58:52.147Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:58:52.147Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:58:52.147Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:58:52.148Z] [MainLoader] Express loaded.
+[2025-05-12T02:58:52.149Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:58:52.153Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:58:52.154Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:58:52.154Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:58:52.155Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:58:52.155Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:58:52.190Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:58:52.190Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:58:52.190Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:58:52.230Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:58:52.230Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T02:59:09.471Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T02:59:09.472Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T02:59:09.881Z] [MainLoader] Starting application loading process...
+[2025-05-12T02:59:09.882Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T02:59:09.883Z] [Database] Attempting MongoDB connection...
+[2025-05-12T02:59:10.872Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T02:59:10.872Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T02:59:10.873Z] [MainLoader] Database loaded.
+[2025-05-12T02:59:10.873Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T02:59:10.873Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T02:59:10.879Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T02:59:10.882Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T02:59:10.882Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T02:59:10.882Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T02:59:10.882Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T02:59:10.884Z] [MainLoader] Express loaded.
+[2025-05-12T02:59:10.884Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T02:59:10.888Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T02:59:10.889Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T02:59:10.889Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T02:59:10.889Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T02:59:10.890Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T02:59:10.923Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T02:59:10.924Z] [MainLoader] Jobs scheduled.
+[2025-05-12T02:59:10.924Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T02:59:10.959Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T02:59:10.960Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:00:58.801Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:00:58.802Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:00:59.135Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:00:59.136Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:00:59.139Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:01:00.008Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:01:00.008Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:01:00.009Z] [MainLoader] Database loaded.
+[2025-05-12T03:01:00.009Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:01:00.009Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:01:00.017Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:01:00.020Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:01:00.021Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:01:00.021Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:01:00.022Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:01:00.023Z] [MainLoader] Express loaded.
+[2025-05-12T03:01:00.023Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:01:00.029Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:01:00.030Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:01:00.030Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:01:00.030Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:01:00.031Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:01:00.082Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:01:00.082Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:01:00.083Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:01:00.151Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:01:00.151Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:05:33.304Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:05:33.304Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:05:33.614Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:05:33.614Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:05:33.615Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:05:34.526Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:05:34.526Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:05:34.527Z] [MainLoader] Database loaded.
+[2025-05-12T03:05:34.527Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:05:34.528Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:05:34.533Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:05:34.535Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:05:34.536Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:05:34.536Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:05:34.536Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:05:34.538Z] [MainLoader] Express loaded.
+[2025-05-12T03:05:34.538Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:05:34.543Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:05:34.543Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:05:34.543Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:05:34.544Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:05:34.544Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:05:34.579Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:05:34.579Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:05:34.579Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:05:34.616Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:05:34.617Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:07:50.628Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:07:50.629Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:07:51.058Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:07:51.058Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:07:51.059Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:07:51.945Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:07:51.945Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:07:51.946Z] [MainLoader] Database loaded.
+[2025-05-12T03:07:51.946Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:07:51.947Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:07:51.954Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:07:51.957Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:07:51.958Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:07:51.958Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:07:51.958Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:07:51.959Z] [MainLoader] Express loaded.
+[2025-05-12T03:07:51.960Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:07:51.965Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:07:51.965Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:07:51.965Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:07:51.966Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:07:51.966Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:07:52.014Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:07:52.018Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:07:52.019Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:07:52.093Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:07:52.094Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:09:30.416Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:09:30.417Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:09:30.792Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:09:30.792Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:09:30.793Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:09:31.672Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:09:31.673Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:09:31.673Z] [MainLoader] Database loaded.
+[2025-05-12T03:09:31.673Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:09:31.674Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:09:31.680Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:09:31.683Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:09:31.683Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:09:31.684Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:09:31.684Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:09:31.685Z] [MainLoader] Express loaded.
+[2025-05-12T03:09:31.686Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:09:31.690Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:09:31.691Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:09:31.691Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:09:31.692Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:09:31.692Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:09:31.728Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:09:31.728Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:09:31.728Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:09:31.788Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:09:31.789Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:35:47.357Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:35:47.357Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:35:47.687Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:35:47.687Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:35:47.690Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:35:48.591Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:35:48.592Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:35:48.592Z] [MainLoader] Database loaded.
+[2025-05-12T03:35:48.592Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:35:48.593Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:35:48.600Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:35:48.603Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:35:48.603Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:35:48.604Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:35:48.604Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:35:48.605Z] [MainLoader] Express loaded.
+[2025-05-12T03:35:48.606Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:35:48.611Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:35:48.611Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:35:48.612Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:35:48.612Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:35:48.613Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:35:48.668Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:35:48.669Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:35:48.670Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:35:48.719Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:35:48.724Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:42:56.200Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:42:56.201Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:42:56.995Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:42:57.002Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:42:57.003Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:42:58.106Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:42:58.106Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:42:58.107Z] [MainLoader] Database loaded.
+[2025-05-12T03:42:58.107Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:42:58.108Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:42:58.114Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:42:58.118Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:42:58.118Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:42:58.119Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:42:58.119Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:42:58.120Z] [MainLoader] Express loaded.
+[2025-05-12T03:42:58.121Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:42:58.127Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:42:58.127Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:42:58.127Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:42:58.128Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:42:58.128Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:42:58.170Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:42:58.170Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:42:58.170Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:42:58.251Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:42:58.255Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:44:59.667Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:44:59.668Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:45:00.050Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:45:00.054Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:45:00.055Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:45:00.898Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:45:00.898Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:45:00.899Z] [MainLoader] Database loaded.
+[2025-05-12T03:45:00.899Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:45:00.900Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:45:00.905Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:45:00.908Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:45:00.909Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:45:00.909Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:45:00.909Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:45:00.910Z] [MainLoader] Express loaded.
+[2025-05-12T03:45:00.911Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:45:00.916Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:45:00.916Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:45:00.916Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:45:00.917Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:45:00.917Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:45:00.953Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:45:00.953Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:45:00.953Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:45:00.996Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:45:00.996Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:47:18.851Z] [socketAuth][WAzjZDNNGH-bCsAGAAAB] Authentication attempt. Has token: true
+[2025-05-12T03:47:18.858Z] [socketAuth][WAzjZDNNGH-bCsAGAAAB] Token signature validated successfully.
+[2025-05-12T03:47:18.861Z] [HistoryService] Initialized.
+[2025-05-12T03:47:18.862Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB] New connection. Socket ID: WAzjZDNNGH-bCsAGAAAB. Initial socket.data.userId: null
+[2025-05-12T03:47:18.863Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB] Client connected, processing authentication. Has token: true
+[2025-05-12T03:47:18.863Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB] Attempting to fetch user info using token...
+[2025-05-12T03:47:18.864Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:47:18.864Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:47:19.875Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:47:19.875Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:47:19.875Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:47:19.877Z] [HistoryService] Initialized.
+[2025-05-12T03:47:19.877Z] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:47:19.878Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:47:19.878Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:47:19.878Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:47:19.879Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:47:19.880Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:47:19.924Z] [SERVER SOCKET WAzjZDNNGH-bCsAGAAAB - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:47:20.178Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:47:20.180Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:47:20.180Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:47:20.181Z] [SERVER GLOBAL][connection][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:47:40.339Z] [SERVER SOCKET WAzjZDNNGH-bCsAGAAAB - ON ANY] Event: send_message, Args: [{"userInput":"Follow INLG conference","isStreaming":true,"language":"en","conversationId":null}]
+[2025-05-12T03:47:40.340Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340] Request received. UserInput: "Follow INLG conference", Streaming: true, Language: en, PayloadConvId: N/A, SocketDataConvId: N/A
+[2025-05-12T03:47:40.341Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340] payloadConversationId is null/undefined. Client requests new conversation.
+[2025-05-12T03:47:40.518Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Explicitly created new conversation based on payload and set as active. Title: "Chat mới"
+[2025-05-12T03:47:40.519Z] [DEBUG] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Attempting to fetch and emit updated conversation list. Reason: new conversation from send_message
+[2025-05-12T03:47:40.520Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:47:40.776Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:47:40.778Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Emitted updated conversation list. Reason: new conversation from send_message, Count: 20
+[2025-05-12T03:47:40.841Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Fetched current history. Count: 0
+[2025-05-12T03:47:40.841Z] [DEBUG] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Calling streaming intent handler.
+[2025-05-12T03:47:40.843Z] --- [WAzj-1747021660340 Socket WAzjZDNNGH-bCsAGAAAB] Handling STREAMING input: "Follow INLG conference", Lang: en ---
+[2025-05-12T03:47:40.843Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T03:47:40.845Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:40.846Z] --- [WAzj-1747021660340 HostAgent Streaming Turn 1 Start - WAzjZDNNGH-bCsAGAAAB] ---
+[2025-05-12T03:47:40.846Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:40.847Z] [WAzj-1747021660340 History T1 Send - WAzjZDNNGH-bCsAGAAAB] Host History Size: 1
+[2025-05-12T03:47:40.848Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-12T03:47:40.849Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-12T03:47:40.849Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:47:40.850Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:47:40.850Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:47:40.851Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:47:40.851Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:47:40.851Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-12T03:47:40.851Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:47:42.749Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T03:47:42.750Z] [WAzj-1747021660340 HostAgent Streaming T1 - WAzjZDNNGH-bCsAGAAAB] Requests function: routeToAgent
+[2025-05-12T03:47:42.751Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:42.755Z] --- [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 Socket WAzjZDNNGH-bCsAGAAAB] Calling Sub Agent: ConferenceAgent, Task: 35c30aa1-5b6b-4cdb-a3f1-efacce4c3f6d ---
+[2025-05-12T03:47:42.755Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T03:47:42.756Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T03:47:42.757Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T03:47:42.758Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T03:47:42.758Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T03:47:42.759Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:47:42.759Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:47:42.759Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:47:42.759Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T03:47:42.759Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:47:42.760Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T03:47:42.760Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:47:44.578Z] Model Finish Reason: STOP
+[2025-05-12T03:47:44.578Z] Model requested function call: manageFollow
+[2025-05-12T03:47:44.578Z] Arguments: {"action":"follow","identifierType":"acronym","identifier":"INLG","itemType":"conference"}
+[2025-05-12T03:47:44.579Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T03:47:44.579Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755] ConferenceAgent requests function call: manageFollow
+[2025-05-12T03:47:44.579Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageFollow] Received request.
+[2025-05-12T03:47:44.580Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T03:47:44.580Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T03:47:44.581Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageFollow] Executing handler...
+[2025-05-12T03:47:44.582Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 WAzjZDNNGH-bCsAGAAAB] Handler: FollowUnfollowItem, Args: {"action":"follow","identifierType":"acronym","identifier":"INLG","itemType":"conference"}, Auth: true
+[2025-05-12T03:47:44.583Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: validating_function_args, Agent: ConferenceAgent
+[2025-05-12T03:47:44.583Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: validating_function_args for ConferenceAgent
+[2025-05-12T03:47:44.583Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: checking_authentication, Agent: ConferenceAgent
+[2025-05-12T03:47:44.584Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: checking_authentication for ConferenceAgent
+[2025-05-12T03:47:44.584Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: finding_item_id, Agent: ConferenceAgent
+[2025-05-12T03:47:44.584Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: finding_item_id for ConferenceAgent
+[2025-05-12T03:47:44.585Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T03:47:44.586Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:47:44.587Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T03:47:45.266Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T03:47:45.266Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T03:47:45.266Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T03:47:45.267Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:47:45.271Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T03:47:45.271Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T03:47:45.272Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T03:47:45.272Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: item_id_found, Agent: ConferenceAgent
+[2025-05-12T03:47:45.273Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: item_id_found for ConferenceAgent
+[2025-05-12T03:47:45.273Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: checking_follow_status, Agent: ConferenceAgent
+[2025-05-12T03:47:45.273Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: checking_follow_status for ConferenceAgent
+[2025-05-12T03:47:45.274Z] [FollowService] [GetFollowed conference] Fetching followed items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/follow-conference/followed
+[2025-05-12T03:47:45.882Z] [FollowService] [GetFollowed conference] Success. Found 1 followed item(s).
+[2025-05-12T03:47:45.883Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: follow_status_checked, Agent: ConferenceAgent
+[2025-05-12T03:47:45.884Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: follow_status_checked for ConferenceAgent
+[2025-05-12T03:47:45.884Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: determining_follow_action, Agent: ConferenceAgent
+[2025-05-12T03:47:45.885Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: determining_follow_action for ConferenceAgent
+[2025-05-12T03:47:45.885Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: follow_action_determined, Agent: ConferenceAgent
+[2025-05-12T03:47:45.886Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: follow_action_determined for ConferenceAgent
+[2025-05-12T03:47:45.886Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 WAzjZDNNGH-bCsAGAAAB] FollowUnfollow: No API call executed for action 'follow'. Current status: true
+[2025-05-12T03:47:45.886Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageFollow] Handler execution finished. Result indicates error: false
+[2025-05-12T03:47:45.887Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T03:47:45.887Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T03:47:45.887Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T03:47:45.888Z] [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T03:47:45.888Z] --- [WAzj-1747021660340-Sub-ConferenceAgent-1747021662755] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 12 ---
+[2025-05-12T03:47:45.888Z] [WAzj-1747021660340 Streaming] Appended 12 thoughts from ConferenceAgent. Total: 15
+[2025-05-12T03:47:45.889Z] --- [WAzj-1747021660340 HostAgent Streaming Turn 2 Start - WAzjZDNNGH-bCsAGAAAB] ---
+[2025-05-12T03:47:45.889Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:45.889Z] [WAzj-1747021660340 History T2 Send - WAzjZDNNGH-bCsAGAAAB] Host History Size: 3
+[2025-05-12T03:47:45.890Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-05-12T03:47:45.890Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-05-12T03:47:45.891Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T03:47:45.891Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:47:45.891Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:47:45.892Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:47:45.892Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:47:45.892Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-05-12T03:47:45.892Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:47:46.575Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T03:47:46.576Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:46.577Z] [WAzj-1747021660340 Stream Processing - WAzjZDNNGH-bCsAGAAAB] Starting...
+[2025-05-12T03:47:46.577Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:47:46.578Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:47:46.661Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:47:46.666Z] [WAzj-1747021660340 Stream Processing - WAzjZDNNGH-bCsAGAAAB] Finished. Length: 47
+[2025-05-12T03:47:46.667Z] [WAzj-1747021660340 WAzjZDNNGH-bCsAGAAAB] Emitting final streaming chat_result with 18 thoughts.
+[2025-05-12T03:47:46.668Z] [WAzj-1747021660340 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T03:47:46.668Z] --- [WAzj-1747021660340 WAzjZDNNGH-bCsAGAAAB Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T03:47:46.668Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Intent handler returned updated history. Attempting save. New size: 4
+[2025-05-12T03:47:46.756Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Successfully updated history in DB.
+[2025-05-12T03:47:46.756Z] [DEBUG] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T03:47:46.756Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:47:47.002Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:47:47.005Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021660340][Conv:68216f5c83d0d2b4c0ee72cd] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T03:48:13.833Z] [SERVER SOCKET WAzjZDNNGH-bCsAGAAAB - ON ANY] Event: send_message, Args: [{"userInput":"Add calendar too","isStreaming":true,"language":"en","conversationId":"68216f5c83d0d2b4c0ee72cd"}]
+[2025-05-12T03:48:13.833Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833] Request received. UserInput: "Add calendar too", Streaming: true, Language: en, PayloadConvId: 68216f5c83d0d2b4c0ee72cd, SocketDataConvId: 68216f5c83d0d2b4c0ee72cd
+[2025-05-12T03:48:13.833Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Using conversationId from payload.
+[2025-05-12T03:48:13.892Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Fetched current history. Count: 4
+[2025-05-12T03:48:13.892Z] [DEBUG] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Calling streaming intent handler.
+[2025-05-12T03:48:13.893Z] --- [WAzj-1747021693833 Socket WAzjZDNNGH-bCsAGAAAB] Handling STREAMING input: "Add calendar too", Lang: en ---
+[2025-05-12T03:48:13.893Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T03:48:13.895Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:13.895Z] --- [WAzj-1747021693833 HostAgent Streaming Turn 1 Start - WAzjZDNNGH-bCsAGAAAB] ---
+[2025-05-12T03:48:13.895Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:13.896Z] [WAzj-1747021693833 History T1 Send - WAzjZDNNGH-bCsAGAAAB] Host History Size: 5
+[2025-05-12T03:48:13.896Z] [GeminiService] Received history with 5 items before mapping (for stream).
+[2025-05-12T03:48:13.896Z] [GeminiService] Mapped history (SDK Content[]) with 5 items (for stream).
+[2025-05-12T03:48:13.896Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:48:13.896Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:48:13.897Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:48:13.897Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:48:13.897Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:48:13.897Z] [GeminiService Stream] Preparing stream request with 5 Content items.
+[2025-05-12T03:48:13.897Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:48:15.617Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T03:48:15.617Z] [WAzj-1747021693833 HostAgent Streaming T1 - WAzjZDNNGH-bCsAGAAAB] Requests function: routeToAgent
+[2025-05-12T03:48:15.618Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:15.618Z] --- [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 Socket WAzjZDNNGH-bCsAGAAAB] Calling Sub Agent: ConferenceAgent, Task: a2309b2f-ca54-410a-af60-13022f3f3080 ---
+[2025-05-12T03:48:15.618Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T03:48:15.618Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T03:48:15.619Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T03:48:15.619Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T03:48:15.619Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T03:48:15.619Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:48:15.619Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:48:15.619Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:48:15.620Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T03:48:15.620Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:48:15.620Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T03:48:15.620Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:48:17.477Z] Model Finish Reason: STOP
+[2025-05-12T03:48:17.478Z] Model requested function call: manageCalendar
+[2025-05-12T03:48:17.478Z] Arguments: {"identifierType":"acronym","itemType":"conference","action":"add","identifier":"INLG"}
+[2025-05-12T03:48:17.478Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T03:48:17.478Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618] ConferenceAgent requests function call: manageCalendar
+[2025-05-12T03:48:17.478Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Received request.
+[2025-05-12T03:48:17.489Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T03:48:17.493Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T03:48:17.495Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Executing handler...
+[2025-05-12T03:48:17.499Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 WAzjZDNNGH-bCsAGAAAB] Handler: ManageCalendar, Args: {"identifierType":"acronym","itemType":"conference","action":"add","identifier":"INLG"}, Auth: true
+[2025-05-12T03:48:17.500Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: validating_calendar_args, Agent: ConferenceAgent
+[2025-05-12T03:48:17.502Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: validating_calendar_args for ConferenceAgent
+[2025-05-12T03:48:17.505Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: checking_authentication_calendar, Agent: ConferenceAgent
+[2025-05-12T03:48:17.508Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: checking_authentication_calendar for ConferenceAgent
+[2025-05-12T03:48:17.509Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: finding_calendar_item_id, Agent: ConferenceAgent
+[2025-05-12T03:48:17.512Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: finding_calendar_item_id for ConferenceAgent
+[2025-05-12T03:48:17.516Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T03:48:17.518Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:48:17.519Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T03:48:18.288Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T03:48:18.288Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T03:48:18.288Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T03:48:18.288Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:48:18.290Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T03:48:18.290Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T03:48:18.291Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T03:48:18.291Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: calendar_item_id_found, Agent: ConferenceAgent
+[2025-05-12T03:48:18.292Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: calendar_item_id_found for ConferenceAgent
+[2025-05-12T03:48:18.292Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: checking_calendar_status, Agent: ConferenceAgent
+[2025-05-12T03:48:18.293Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: checking_calendar_status for ConferenceAgent
+[2025-05-12T03:48:18.294Z] [CalendarService] [GetCalendarItems] Fetching calendar items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/calendar/events
+[2025-05-12T03:48:18.923Z] [CalendarService] [GetCalendarItems] Success. Found 0 item(s) in calendar.
+[2025-05-12T03:48:18.924Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: calendar_status_checked, Agent: ConferenceAgent
+[2025-05-12T03:48:18.925Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: calendar_status_checked for ConferenceAgent
+[2025-05-12T03:48:18.925Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: determining_calendar_action, Agent: ConferenceAgent
+[2025-05-12T03:48:18.925Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: determining_calendar_action for ConferenceAgent
+[2025-05-12T03:48:18.926Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: calendar_action_determined, Agent: ConferenceAgent
+[2025-05-12T03:48:18.926Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: calendar_action_determined for ConferenceAgent
+[2025-05-12T03:48:18.927Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: preparing_calendar_api_call, Agent: ConferenceAgent
+[2025-05-12T03:48:18.927Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: preparing_calendar_api_call for ConferenceAgent
+[2025-05-12T03:48:18.928Z] [CalendarService] [addCalendarItem ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] Executing action: POST https://confhub.westus3.cloudapp.azure.com/api/v1/calendar/add-event
+[2025-05-12T03:48:19.138Z] [CalendarService] [addCalendarItem ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] API Error (404): Cannot POST /api/v1/calendar/add-event
+[2025-05-12T03:48:19.138Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 WAzjZDNNGH-bCsAGAAAB] ManageCalendar: API call for add failed - API Error (404): Failed to add conference to calendar. Cannot POST /api/v1/calendar/add-event
+[2025-05-12T03:48:19.139Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: calendar_update_failed, Agent: ConferenceAgent
+[2025-05-12T03:48:19.140Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: calendar_update_failed for ConferenceAgent
+[2025-05-12T03:48:19.140Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 WAzjZDNNGH-bCsAGAAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Handler execution finished. Result indicates error: false
+[2025-05-12T03:48:19.140Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T03:48:19.140Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T03:48:19.141Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Thought Added - WAzjZDNNGH-bCsAGAAAB] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T03:48:19.141Z] [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618 SubAgent Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T03:48:19.141Z] --- [WAzj-1747021693833-Sub-ConferenceAgent-1747021695618] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 14 ---
+[2025-05-12T03:48:19.141Z] [WAzj-1747021693833 Streaming] Appended 14 thoughts from ConferenceAgent. Total: 17
+[2025-05-12T03:48:19.141Z] --- [WAzj-1747021693833 HostAgent Streaming Turn 2 Start - WAzjZDNNGH-bCsAGAAAB] ---
+[2025-05-12T03:48:19.142Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:19.142Z] [WAzj-1747021693833 History T2 Send - WAzjZDNNGH-bCsAGAAAB] Host History Size: 7
+[2025-05-12T03:48:19.142Z] [GeminiService] Received history with 7 items before mapping (for stream).
+[2025-05-12T03:48:19.142Z] [GeminiService] Mapped history (SDK Content[]) with 7 items (for stream).
+[2025-05-12T03:48:19.142Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T03:48:19.143Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:48:19.143Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:48:19.143Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:48:19.143Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:48:19.143Z] [GeminiService Stream] Preparing stream request with 7 Content items.
+[2025-05-12T03:48:19.144Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:48:19.639Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T03:48:19.640Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:19.640Z] [WAzj-1747021693833 Stream Processing - WAzjZDNNGH-bCsAGAAAB] Starting...
+[2025-05-12T03:48:19.640Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:48:19.641Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:48:19.832Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:48:19.833Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:48:19.835Z] [WAzj-1747021693833 Stream Processing - WAzjZDNNGH-bCsAGAAAB] Finished. Length: 82
+[2025-05-12T03:48:19.836Z] [WAzj-1747021693833 WAzjZDNNGH-bCsAGAAAB] Emitting final streaming chat_result with 20 thoughts.
+[2025-05-12T03:48:19.837Z] [WAzj-1747021693833 Streaming Emit Sent - WAzjZDNNGH-bCsAGAAAB] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T03:48:19.837Z] --- [WAzj-1747021693833 WAzjZDNNGH-bCsAGAAAB Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T03:48:19.837Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Intent handler returned updated history. Attempting save. New size: 8
+[2025-05-12T03:48:19.920Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Successfully updated history in DB.
+[2025-05-12T03:48:19.920Z] [DEBUG] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T03:48:19.921Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:48:20.343Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:48:20.344Z] [INFO] [coreHandlers][WAzjZDNNGH-bCsAGAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:WAzj-1747021693833][Conv:68216f5c83d0d2b4c0ee72cd] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T03:50:35.293Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:50:35.294Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:50:35.951Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:50:35.955Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:50:35.957Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:50:37.049Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:50:37.050Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:50:37.050Z] [MainLoader] Database loaded.
+[2025-05-12T03:50:37.050Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:50:37.051Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:50:37.059Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:50:37.063Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:50:37.063Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:50:37.063Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:50:37.063Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:50:37.065Z] [MainLoader] Express loaded.
+[2025-05-12T03:50:37.066Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:50:37.072Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:50:37.072Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:50:37.073Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:50:37.073Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:50:37.073Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:50:37.134Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:50:37.135Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:50:37.136Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:50:37.198Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:50:37.202Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:50:41.406Z] [socketAuth][J5Dtcgg3hgHN3NS1AAAB] Authentication attempt. Has token: true
+[2025-05-12T03:50:41.413Z] [socketAuth][J5Dtcgg3hgHN3NS1AAAB] Token signature validated successfully.
+[2025-05-12T03:50:41.416Z] [HistoryService] Initialized.
+[2025-05-12T03:50:41.417Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB] New connection. Socket ID: J5Dtcgg3hgHN3NS1AAAB. Initial socket.data.userId: null
+[2025-05-12T03:50:41.417Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB] Client connected, processing authentication. Has token: true
+[2025-05-12T03:50:41.418Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB] Attempting to fetch user info using token...
+[2025-05-12T03:50:41.418Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:50:41.419Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:50:42.078Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:50:42.078Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:50:42.079Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:50:42.080Z] [HistoryService] Initialized.
+[2025-05-12T03:50:42.081Z] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:50:42.081Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:50:42.081Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:50:42.081Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:50:42.083Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:50:42.083Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:50:42.126Z] [SERVER SOCKET J5Dtcgg3hgHN3NS1AAAB - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:50:42.422Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:50:42.423Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:50:42.424Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:50:42.424Z] [SERVER GLOBAL][connection][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:50:57.684Z] [SERVER SOCKET J5Dtcgg3hgHN3NS1AAAB - ON ANY] Event: send_message, Args: [{"userInput":"Add INLG to my calendar","isStreaming":true,"language":"en","conversationId":null}]
+[2025-05-12T03:50:57.685Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685] Request received. UserInput: "Add INLG to my calendar", Streaming: true, Language: en, PayloadConvId: N/A, SocketDataConvId: N/A
+[2025-05-12T03:50:57.686Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685] payloadConversationId is null/undefined. Client requests new conversation.
+[2025-05-12T03:50:57.892Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Explicitly created new conversation based on payload and set as active. Title: "Chat mới"
+[2025-05-12T03:50:57.893Z] [DEBUG] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Attempting to fetch and emit updated conversation list. Reason: new conversation from send_message
+[2025-05-12T03:50:57.894Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:50:58.189Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:50:58.190Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Emitted updated conversation list. Reason: new conversation from send_message, Count: 20
+[2025-05-12T03:50:58.267Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Fetched current history. Count: 0
+[2025-05-12T03:50:58.268Z] [DEBUG] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Calling streaming intent handler.
+[2025-05-12T03:50:58.269Z] --- [J5Dt-1747021857685 Socket J5Dtcgg3hgHN3NS1AAAB] Handling STREAMING input: "Add INLG to my calendar", Lang: en ---
+[2025-05-12T03:50:58.270Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T03:50:58.271Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:50:58.271Z] --- [J5Dt-1747021857685 HostAgent Streaming Turn 1 Start - J5Dtcgg3hgHN3NS1AAAB] ---
+[2025-05-12T03:50:58.272Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:50:58.272Z] [J5Dt-1747021857685 History T1 Send - J5Dtcgg3hgHN3NS1AAAB] Host History Size: 1
+[2025-05-12T03:50:58.274Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-12T03:50:58.274Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-12T03:50:58.275Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:50:58.275Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:50:58.275Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:50:58.276Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:50:58.276Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:50:58.276Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-12T03:50:58.277Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:50:59.210Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T03:50:59.210Z] [J5Dt-1747021857685 HostAgent Streaming T1 - J5Dtcgg3hgHN3NS1AAAB] Requests function: routeToAgent
+[2025-05-12T03:50:59.211Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:50:59.213Z] --- [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 Socket J5Dtcgg3hgHN3NS1AAAB] Calling Sub Agent: ConferenceAgent, Task: 41e95d8d-a1b9-4621-9837-093a2878d573 ---
+[2025-05-12T03:50:59.214Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T03:50:59.214Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T03:50:59.215Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T03:50:59.216Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T03:50:59.217Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T03:50:59.217Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:50:59.217Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:50:59.218Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:50:59.218Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T03:50:59.219Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:50:59.219Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T03:50:59.219Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:51:01.013Z] Model Finish Reason: STOP
+[2025-05-12T03:51:01.014Z] Model requested function call: manageCalendar
+[2025-05-12T03:51:01.014Z] Arguments: {"itemType":"conference","identifier":"INLG","identifierType":"acronym","action":"add"}
+[2025-05-12T03:51:01.014Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T03:51:01.014Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213] ConferenceAgent requests function call: manageCalendar
+[2025-05-12T03:51:01.015Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Received request.
+[2025-05-12T03:51:01.016Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T03:51:01.017Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T03:51:01.017Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Executing handler...
+[2025-05-12T03:51:01.018Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 J5Dtcgg3hgHN3NS1AAAB] Handler: ManageCalendar, Args: {"itemType":"conference","identifier":"INLG","identifierType":"acronym","action":"add"}, Auth: true
+[2025-05-12T03:51:01.019Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: validating_calendar_args, Agent: ConferenceAgent
+[2025-05-12T03:51:01.019Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: validating_calendar_args for ConferenceAgent
+[2025-05-12T03:51:01.020Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: checking_authentication_calendar, Agent: ConferenceAgent
+[2025-05-12T03:51:01.020Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: checking_authentication_calendar for ConferenceAgent
+[2025-05-12T03:51:01.021Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: finding_calendar_item_id, Agent: ConferenceAgent
+[2025-05-12T03:51:01.021Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: finding_calendar_item_id for ConferenceAgent
+[2025-05-12T03:51:01.022Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T03:51:01.023Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:51:01.024Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T03:51:01.709Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T03:51:01.709Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T03:51:01.710Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T03:51:01.710Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:51:01.713Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T03:51:01.714Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T03:51:01.714Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T03:51:01.715Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_item_id_found, Agent: ConferenceAgent
+[2025-05-12T03:51:01.716Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_item_id_found for ConferenceAgent
+[2025-05-12T03:51:01.717Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: checking_calendar_status, Agent: ConferenceAgent
+[2025-05-12T03:51:01.717Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: checking_calendar_status for ConferenceAgent
+[2025-05-12T03:51:01.718Z] [CalendarService] [GetCalendarItems] Fetching calendar items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/calendar/events
+[2025-05-12T03:51:02.319Z] [CalendarService] [GetCalendarItems] Success. Found 0 item(s) in calendar.
+[2025-05-12T03:51:02.320Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_status_checked, Agent: ConferenceAgent
+[2025-05-12T03:51:02.321Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_status_checked for ConferenceAgent
+[2025-05-12T03:51:02.322Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: determining_calendar_action, Agent: ConferenceAgent
+[2025-05-12T03:51:02.322Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: determining_calendar_action for ConferenceAgent
+[2025-05-12T03:51:02.323Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_action_determined, Agent: ConferenceAgent
+[2025-05-12T03:51:02.323Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_action_determined for ConferenceAgent
+[2025-05-12T03:51:02.323Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: preparing_calendar_api_call, Agent: ConferenceAgent
+[2025-05-12T03:51:02.324Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: preparing_calendar_api_call for ConferenceAgent
+[2025-05-12T03:51:02.324Z] [CalendarService] [addCalendarItem ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] Executing action: PUT https://confhub.westus3.cloudapp.azure.com/api/v1/calendar/add-event
+[2025-05-12T03:51:02.562Z] [CalendarService] [addCalendarItem ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] Action executed successfully.
+[2025-05-12T03:51:02.564Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 J5Dtcgg3hgHN3NS1AAAB] ManageCalendar: API call for add successful.
+[2025-05-12T03:51:02.564Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_update_success, Agent: ConferenceAgent
+[2025-05-12T03:51:02.565Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_update_success for ConferenceAgent
+[2025-05-12T03:51:02.565Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Handler execution finished. Result indicates error: false
+[2025-05-12T03:51:02.565Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T03:51:02.566Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T03:51:02.566Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T03:51:02.566Z] [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T03:51:02.567Z] --- [J5Dt-1747021857685-Sub-ConferenceAgent-1747021859213] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 14 ---
+[2025-05-12T03:51:02.567Z] [J5Dt-1747021857685 Streaming] Appended 14 thoughts from ConferenceAgent. Total: 17
+[2025-05-12T03:51:02.567Z] --- [J5Dt-1747021857685 HostAgent Streaming Turn 2 Start - J5Dtcgg3hgHN3NS1AAAB] ---
+[2025-05-12T03:51:02.568Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:51:02.568Z] [J5Dt-1747021857685 History T2 Send - J5Dtcgg3hgHN3NS1AAAB] Host History Size: 3
+[2025-05-12T03:51:02.569Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-05-12T03:51:02.569Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-05-12T03:51:02.569Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T03:51:02.569Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:51:02.569Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:51:02.570Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:51:02.570Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:51:02.571Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-05-12T03:51:02.571Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:51:03.151Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T03:51:03.152Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:51:03.153Z] [J5Dt-1747021857685 Stream Processing - J5Dtcgg3hgHN3NS1AAAB] Starting...
+[2025-05-12T03:51:03.153Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:51:03.154Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:51:03.241Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:51:03.247Z] [J5Dt-1747021857685 Stream Processing - J5Dtcgg3hgHN3NS1AAAB] Finished. Length: 55
+[2025-05-12T03:51:03.248Z] [J5Dt-1747021857685 J5Dtcgg3hgHN3NS1AAAB] Emitting final streaming chat_result with 20 thoughts.
+[2025-05-12T03:51:03.249Z] [J5Dt-1747021857685 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T03:51:03.249Z] --- [J5Dt-1747021857685 J5Dtcgg3hgHN3NS1AAAB Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T03:51:03.249Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Intent handler returned updated history. Attempting save. New size: 4
+[2025-05-12T03:51:03.346Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Successfully updated history in DB.
+[2025-05-12T03:51:03.347Z] [DEBUG] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T03:51:03.347Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:51:03.633Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:51:03.634Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747021857685][Conv:682170217c5e4e43d9252fb1] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T03:51:29.168Z] [socketAuth][HL4y30Z2Ml3-gBQCAAAD] Authentication attempt. Has token: true
+[2025-05-12T03:51:29.171Z] [socketAuth][HL4y30Z2Ml3-gBQCAAAD] Token signature validated successfully.
+[2025-05-12T03:51:29.172Z] [HistoryService] Initialized.
+[2025-05-12T03:51:29.172Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD] New connection. Socket ID: HL4y30Z2Ml3-gBQCAAAD. Initial socket.data.userId: null
+[2025-05-12T03:51:29.172Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD] Client connected, processing authentication. Has token: true
+[2025-05-12T03:51:29.173Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD] Attempting to fetch user info using token...
+[2025-05-12T03:51:29.173Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:51:29.173Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:51:29.837Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:51:29.838Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:51:29.838Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:51:29.838Z] [HistoryService] Initialized.
+[2025-05-12T03:51:29.838Z] [coreHandlers][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:51:29.839Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:51:29.839Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:51:29.839Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:51:29.840Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:51:29.840Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:51:29.843Z] [SERVER SOCKET HL4y30Z2Ml3-gBQCAAAD - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:51:30.131Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:51:30.132Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:51:30.132Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:51:30.132Z] [SERVER GLOBAL][connection][HL4y30Z2Ml3-gBQCAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:51:40.729Z] [SERVER GLOBAL][disconnect][HL4y30Z2Ml3-gBQCAAAD] Client disconnected. Reason: transport close, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-12T03:51:49.760Z] [socketAuth][oeqjvRzRkQBeqI8RAAAF] Authentication attempt. Has token: true
+[2025-05-12T03:51:49.763Z] [socketAuth][oeqjvRzRkQBeqI8RAAAF] Token signature validated successfully.
+[2025-05-12T03:51:49.764Z] [HistoryService] Initialized.
+[2025-05-12T03:51:49.764Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF] New connection. Socket ID: oeqjvRzRkQBeqI8RAAAF. Initial socket.data.userId: null
+[2025-05-12T03:51:49.765Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF] Client connected, processing authentication. Has token: true
+[2025-05-12T03:51:49.765Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF] Attempting to fetch user info using token...
+[2025-05-12T03:51:49.765Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:51:49.765Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:51:50.514Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:51:50.514Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:51:50.514Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:51:50.515Z] [HistoryService] Initialized.
+[2025-05-12T03:51:50.515Z] [coreHandlers][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:51:50.515Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:51:50.515Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:51:50.515Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:51:50.516Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:51:50.516Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:51:50.522Z] [SERVER SOCKET oeqjvRzRkQBeqI8RAAAF - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:51:50.803Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:51:50.804Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:51:50.804Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:51:50.805Z] [SERVER GLOBAL][connection][oeqjvRzRkQBeqI8RAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:57:50.353Z] [SERVER SOCKET J5Dtcgg3hgHN3NS1AAAB - ON ANY] Event: send_message, Args: [{"userInput":"Remove it from my calendar","isStreaming":true,"language":"en","conversationId":"682170217c5e4e43d9252fb1"}]
+[2025-05-12T03:57:50.353Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353] Request received. UserInput: "Remove it from my calendar", Streaming: true, Language: en, PayloadConvId: 682170217c5e4e43d9252fb1, SocketDataConvId: 682170217c5e4e43d9252fb1
+[2025-05-12T03:57:50.353Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Using conversationId from payload.
+[2025-05-12T03:57:50.424Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Fetched current history. Count: 4
+[2025-05-12T03:57:50.425Z] [DEBUG] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Calling streaming intent handler.
+[2025-05-12T03:57:50.425Z] --- [J5Dt-1747022270353 Socket J5Dtcgg3hgHN3NS1AAAB] Handling STREAMING input: "Remove it from my calendar", Lang: en ---
+[2025-05-12T03:57:50.425Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T03:57:50.426Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:50.426Z] --- [J5Dt-1747022270353 HostAgent Streaming Turn 1 Start - J5Dtcgg3hgHN3NS1AAAB] ---
+[2025-05-12T03:57:50.427Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:50.427Z] [J5Dt-1747022270353 History T1 Send - J5Dtcgg3hgHN3NS1AAAB] Host History Size: 5
+[2025-05-12T03:57:50.427Z] [GeminiService] Received history with 5 items before mapping (for stream).
+[2025-05-12T03:57:50.428Z] [GeminiService] Mapped history (SDK Content[]) with 5 items (for stream).
+[2025-05-12T03:57:50.428Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:57:50.428Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:57:50.428Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:57:50.429Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:57:50.429Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:57:50.429Z] [GeminiService Stream] Preparing stream request with 5 Content items.
+[2025-05-12T03:57:50.429Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:57:52.267Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T03:57:52.268Z] [J5Dt-1747022270353 HostAgent Streaming T1 - J5Dtcgg3hgHN3NS1AAAB] Requests function: routeToAgent
+[2025-05-12T03:57:52.268Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:52.269Z] --- [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 Socket J5Dtcgg3hgHN3NS1AAAB] Calling Sub Agent: ConferenceAgent, Task: 8ffd8cf8-9e70-4d9d-8b61-46c000b71e0a ---
+[2025-05-12T03:57:52.269Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T03:57:52.270Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T03:57:52.270Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T03:57:52.270Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T03:57:52.271Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T03:57:52.271Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:57:52.271Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:57:52.271Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:57:52.271Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T03:57:52.272Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:57:52.272Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T03:57:52.272Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:57:54.087Z] Model Finish Reason: STOP
+[2025-05-12T03:57:54.088Z] Model requested function call: manageCalendar
+[2025-05-12T03:57:54.088Z] Arguments: {"itemType":"conference","identifierType":"acronym","identifier":"INLG","action":"remove"}
+[2025-05-12T03:57:54.088Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T03:57:54.088Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269] ConferenceAgent requests function call: manageCalendar
+[2025-05-12T03:57:54.089Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Received request.
+[2025-05-12T03:57:54.089Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T03:57:54.089Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T03:57:54.097Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Executing handler...
+[2025-05-12T03:57:54.098Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 J5Dtcgg3hgHN3NS1AAAB] Handler: ManageCalendar, Args: {"itemType":"conference","identifierType":"acronym","identifier":"INLG","action":"remove"}, Auth: true
+[2025-05-12T03:57:54.100Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: validating_calendar_args, Agent: ConferenceAgent
+[2025-05-12T03:57:54.103Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: validating_calendar_args for ConferenceAgent
+[2025-05-12T03:57:54.105Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: checking_authentication_calendar, Agent: ConferenceAgent
+[2025-05-12T03:57:54.107Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: checking_authentication_calendar for ConferenceAgent
+[2025-05-12T03:57:54.111Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: finding_calendar_item_id, Agent: ConferenceAgent
+[2025-05-12T03:57:54.113Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: finding_calendar_item_id for ConferenceAgent
+[2025-05-12T03:57:54.114Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T03:57:54.117Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:57:54.119Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T03:57:54.796Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T03:57:54.796Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T03:57:54.797Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T03:57:54.797Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T03:57:54.798Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T03:57:54.799Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T03:57:54.799Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T03:57:54.800Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_item_id_found, Agent: ConferenceAgent
+[2025-05-12T03:57:54.800Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_item_id_found for ConferenceAgent
+[2025-05-12T03:57:54.801Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: checking_calendar_status, Agent: ConferenceAgent
+[2025-05-12T03:57:54.801Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: checking_calendar_status for ConferenceAgent
+[2025-05-12T03:57:54.801Z] [CalendarService] [GetCalendarItems] Fetching calendar items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/calendar/events
+[2025-05-12T03:57:55.409Z] [CalendarService] [GetCalendarItems] Success. Found 10 item(s) in calendar.
+[2025-05-12T03:57:55.409Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_status_checked, Agent: ConferenceAgent
+[2025-05-12T03:57:55.410Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_status_checked for ConferenceAgent
+[2025-05-12T03:57:55.410Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: determining_calendar_action, Agent: ConferenceAgent
+[2025-05-12T03:57:55.410Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: determining_calendar_action for ConferenceAgent
+[2025-05-12T03:57:55.411Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: calendar_action_determined, Agent: ConferenceAgent
+[2025-05-12T03:57:55.411Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: calendar_action_determined for ConferenceAgent
+[2025-05-12T03:57:55.411Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 J5Dtcgg3hgHN3NS1AAAB] ManageCalendar: No API call executed for action 'remove'. Current status: false
+[2025-05-12T03:57:55.411Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 J5Dtcgg3hgHN3NS1AAAB Agent:ConferenceAgent FuncRegistry Func:manageCalendar] Handler execution finished. Result indicates error: false
+[2025-05-12T03:57:55.412Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T03:57:55.412Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T03:57:55.412Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Thought Added - J5Dtcgg3hgHN3NS1AAAB] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T03:57:55.412Z] [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269 SubAgent Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T03:57:55.413Z] --- [J5Dt-1747022270353-Sub-ConferenceAgent-1747022272269] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 12 ---
+[2025-05-12T03:57:55.413Z] [J5Dt-1747022270353 Streaming] Appended 12 thoughts from ConferenceAgent. Total: 15
+[2025-05-12T03:57:55.413Z] --- [J5Dt-1747022270353 HostAgent Streaming Turn 2 Start - J5Dtcgg3hgHN3NS1AAAB] ---
+[2025-05-12T03:57:55.413Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:55.414Z] [J5Dt-1747022270353 History T2 Send - J5Dtcgg3hgHN3NS1AAAB] Host History Size: 7
+[2025-05-12T03:57:55.414Z] [GeminiService] Received history with 7 items before mapping (for stream).
+[2025-05-12T03:57:55.414Z] [GeminiService] Mapped history (SDK Content[]) with 7 items (for stream).
+[2025-05-12T03:57:55.415Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T03:57:55.415Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:57:55.415Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:57:55.415Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:57:55.415Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:57:55.416Z] [GeminiService Stream] Preparing stream request with 7 Content items.
+[2025-05-12T03:57:55.416Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:57:56.013Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T03:57:56.014Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:56.014Z] [J5Dt-1747022270353 Stream Processing - J5Dtcgg3hgHN3NS1AAAB] Starting...
+[2025-05-12T03:57:56.015Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:57:56.015Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:57:56.057Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:57:56.067Z] [J5Dt-1747022270353 Stream Processing - J5Dtcgg3hgHN3NS1AAAB] Finished. Length: 49
+[2025-05-12T03:57:56.068Z] [J5Dt-1747022270353 J5Dtcgg3hgHN3NS1AAAB] Emitting final streaming chat_result with 18 thoughts.
+[2025-05-12T03:57:56.069Z] [J5Dt-1747022270353 Streaming Emit Sent - J5Dtcgg3hgHN3NS1AAAB] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T03:57:56.069Z] --- [J5Dt-1747022270353 J5Dtcgg3hgHN3NS1AAAB Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T03:57:56.069Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Intent handler returned updated history. Attempting save. New size: 8
+[2025-05-12T03:57:56.155Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Successfully updated history in DB.
+[2025-05-12T03:57:56.155Z] [DEBUG] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T03:57:56.155Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:57:56.442Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:57:56.443Z] [INFO] [coreHandlers][J5Dtcgg3hgHN3NS1AAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:J5Dt-1747022270353][Conv:682170217c5e4e43d9252fb1] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T03:59:08.402Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T03:59:08.404Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:59:08.965Z] [MainLoader] Starting application loading process...
+[2025-05-12T03:59:08.966Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T03:59:08.967Z] [Database] Attempting MongoDB connection...
+[2025-05-12T03:59:11.085Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T03:59:11.086Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T03:59:11.086Z] [MainLoader] Database loaded.
+[2025-05-12T03:59:11.087Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T03:59:11.087Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T03:59:11.097Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T03:59:11.101Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T03:59:11.101Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T03:59:11.102Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T03:59:11.102Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T03:59:11.103Z] [MainLoader] Express loaded.
+[2025-05-12T03:59:11.105Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T03:59:11.110Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T03:59:11.111Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T03:59:11.111Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T03:59:11.112Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T03:59:11.112Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T03:59:11.180Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T03:59:11.181Z] [MainLoader] Jobs scheduled.
+[2025-05-12T03:59:11.182Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T03:59:11.248Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T03:59:11.248Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-12T03:59:11.509Z] [socketAuth][ZZSgtA9oG-6vuHLAAAAC] Authentication attempt. Has token: true
+[2025-05-12T03:59:11.521Z] [socketAuth][ZZSgtA9oG-6vuHLAAAAC] Token signature validated successfully.
+[2025-05-12T03:59:11.524Z] [HistoryService] Initialized.
+[2025-05-12T03:59:11.524Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC] New connection. Socket ID: ZZSgtA9oG-6vuHLAAAAC. Initial socket.data.userId: null
+[2025-05-12T03:59:11.525Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC] Client connected, processing authentication. Has token: true
+[2025-05-12T03:59:11.525Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC] Attempting to fetch user info using token...
+[2025-05-12T03:59:11.526Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:59:11.526Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:59:11.612Z] [socketAuth][hqe5ZN2Lep8nfq1gAAAD] Authentication attempt. Has token: true
+[2025-05-12T03:59:11.643Z] [socketAuth][hqe5ZN2Lep8nfq1gAAAD] Token signature validated successfully.
+[2025-05-12T03:59:11.647Z] [HistoryService] Initialized.
+[2025-05-12T03:59:11.648Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD] New connection. Socket ID: hqe5ZN2Lep8nfq1gAAAD. Initial socket.data.userId: null
+[2025-05-12T03:59:11.651Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD] Client connected, processing authentication. Has token: true
+[2025-05-12T03:59:11.652Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD] Attempting to fetch user info using token...
+[2025-05-12T03:59:11.654Z] [API Client] Attempting to fetch user info.
+[2025-05-12T03:59:11.656Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T03:59:12.265Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:59:12.266Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:59:12.266Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:59:12.267Z] [HistoryService] Initialized.
+[2025-05-12T03:59:12.268Z] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:59:12.268Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:59:12.268Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:59:12.268Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:59:12.270Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:59:12.270Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:59:12.310Z] [SERVER SOCKET ZZSgtA9oG-6vuHLAAAAC - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:59:13.801Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T03:59:13.801Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T03:59:13.802Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T03:59:13.802Z] [HistoryService] Initialized.
+[2025-05-12T03:59:13.802Z] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T03:59:13.803Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T03:59:13.803Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:59:13.803Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T03:59:13.804Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T03:59:13.805Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:59:13.809Z] [SERVER SOCKET hqe5ZN2Lep8nfq1gAAAD - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T03:59:14.426Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:59:14.428Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:59:14.428Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:59:14.429Z] [SERVER GLOBAL][connection][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:59:29.296Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:59:29.298Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T03:59:29.298Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T03:59:29.299Z] [SERVER GLOBAL][connection][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T03:59:29.557Z] [SERVER SOCKET ZZSgtA9oG-6vuHLAAAAC - ON ANY] Event: send_message, Args: [{"userInput":"Kiểm tra danh sách calendar của tôi","isStreaming":true,"language":"en","conversationId":null}]
+[2025-05-12T03:59:29.559Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559] Request received. UserInput: "Kiểm tra danh sách calendar củ...", Streaming: true, Language: en, PayloadConvId: N/A, SocketDataConvId: N/A
+[2025-05-12T03:59:29.559Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559] payloadConversationId is null/undefined. Client requests new conversation.
+[2025-05-12T03:59:29.792Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Explicitly created new conversation based on payload and set as active. Title: "Chat mới"
+[2025-05-12T03:59:29.794Z] [DEBUG] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Attempting to fetch and emit updated conversation list. Reason: new conversation from send_message
+[2025-05-12T03:59:29.795Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:59:33.703Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:59:33.704Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Emitted updated conversation list. Reason: new conversation from send_message, Count: 20
+[2025-05-12T03:59:33.796Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Fetched current history. Count: 0
+[2025-05-12T03:59:33.797Z] [DEBUG] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Calling streaming intent handler.
+[2025-05-12T03:59:33.798Z] --- [ZZSg-1747022369559 Socket ZZSgtA9oG-6vuHLAAAAC] Handling STREAMING input: "Kiểm tra danh sách calendar của tôi", Lang: en ---
+[2025-05-12T03:59:33.799Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T03:59:33.800Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:59:33.800Z] --- [ZZSg-1747022369559 HostAgent Streaming Turn 1 Start - ZZSgtA9oG-6vuHLAAAAC] ---
+[2025-05-12T03:59:33.801Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:59:33.801Z] [ZZSg-1747022369559 History T1 Send - ZZSgtA9oG-6vuHLAAAAC] Host History Size: 1
+[2025-05-12T03:59:33.802Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-12T03:59:33.803Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-12T03:59:33.803Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T03:59:33.803Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T03:59:33.803Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T03:59:33.804Z] Tools provided: ["routeToAgent"]
+[2025-05-12T03:59:33.805Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T03:59:33.805Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-12T03:59:33.805Z]   - No valid next turn added, sending only history.
+[2025-05-12T03:59:35.572Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T03:59:35.573Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:59:35.573Z] [ZZSg-1747022369559 Stream Processing - ZZSgtA9oG-6vuHLAAAAC] Starting...
+[2025-05-12T03:59:35.574Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T03:59:35.574Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:59:35.678Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T03:59:35.703Z] [ZZSg-1747022369559 Stream Processing - ZZSgtA9oG-6vuHLAAAAC] Finished. Length: 94
+[2025-05-12T03:59:35.703Z] [ZZSg-1747022369559 ZZSgtA9oG-6vuHLAAAAC] Emitting final streaming chat_result with 4 thoughts.
+[2025-05-12T03:59:35.704Z] [ZZSg-1747022369559 Streaming Emit Sent - ZZSgtA9oG-6vuHLAAAAC] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T03:59:35.704Z] --- [ZZSg-1747022369559 ZZSgtA9oG-6vuHLAAAAC Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T03:59:35.704Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Intent handler returned updated history. Attempting save. New size: 2
+[2025-05-12T03:59:35.837Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Successfully updated history in DB.
+[2025-05-12T03:59:35.837Z] [DEBUG] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T03:59:35.837Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T03:59:39.334Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T03:59:39.335Z] [INFO] [coreHandlers][ZZSgtA9oG-6vuHLAAAAC][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:ZZSg-1747022369559][Conv:6821722127d48af714f77a8e] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T04:02:57.680Z] [SERVER SOCKET hqe5ZN2Lep8nfq1gAAAD - ON ANY] Event: send_message, Args: [{"userInput":"Follow INLG conference","isStreaming":true,"language":"en","conversationId":null}]
+[2025-05-12T04:02:57.680Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680] Request received. UserInput: "Follow INLG conference", Streaming: true, Language: en, PayloadConvId: N/A, SocketDataConvId: N/A
+[2025-05-12T04:02:57.681Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680] payloadConversationId is null/undefined. Client requests new conversation.
+[2025-05-12T04:02:57.917Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Explicitly created new conversation based on payload and set as active. Title: "Chat mới"
+[2025-05-12T04:02:57.917Z] [DEBUG] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Attempting to fetch and emit updated conversation list. Reason: new conversation from send_message
+[2025-05-12T04:02:57.918Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T04:02:59.478Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T04:02:59.479Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Emitted updated conversation list. Reason: new conversation from send_message, Count: 20
+[2025-05-12T04:02:59.544Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Fetched current history. Count: 0
+[2025-05-12T04:02:59.544Z] [DEBUG] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Calling streaming intent handler.
+[2025-05-12T04:02:59.545Z] --- [hqe5-1747022577680 Socket hqe5ZN2Lep8nfq1gAAAD] Handling STREAMING input: "Follow INLG conference", Lang: en ---
+[2025-05-12T04:02:59.545Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T04:02:59.546Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:02:59.546Z] --- [hqe5-1747022577680 HostAgent Streaming Turn 1 Start - hqe5ZN2Lep8nfq1gAAAD] ---
+[2025-05-12T04:02:59.547Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:02:59.548Z] [hqe5-1747022577680 History T1 Send - hqe5ZN2Lep8nfq1gAAAD] Host History Size: 1
+[2025-05-12T04:02:59.548Z] [GeminiService] Received history with 1 items before mapping (for stream).
+[2025-05-12T04:02:59.548Z] [GeminiService] Mapped history (SDK Content[]) with 1 items (for stream).
+[2025-05-12T04:02:59.548Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T04:02:59.549Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:02:59.551Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:02:59.551Z] Tools provided: ["routeToAgent"]
+[2025-05-12T04:02:59.552Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:02:59.552Z] [GeminiService Stream] Preparing stream request with 1 Content items.
+[2025-05-12T04:02:59.553Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:01.511Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T04:03:01.511Z] [hqe5-1747022577680 HostAgent Streaming T1 - hqe5ZN2Lep8nfq1gAAAD] Requests function: routeToAgent
+[2025-05-12T04:03:01.512Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:01.515Z] --- [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 Socket hqe5ZN2Lep8nfq1gAAAD] Calling Sub Agent: ConferenceAgent, Task: ad8e7d8a-2da8-4f69-b773-99df71229b30 ---
+[2025-05-12T04:03:01.516Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T04:03:01.517Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T04:03:01.517Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T04:03:01.518Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T04:03:01.518Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T04:03:01.519Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T04:03:01.519Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:03:01.519Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:03:01.519Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T04:03:01.519Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:03:01.520Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T04:03:01.520Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:03.366Z] Model Finish Reason: STOP
+[2025-05-12T04:03:03.366Z] Model requested function call: manageFollow
+[2025-05-12T04:03:03.366Z] Arguments: {"itemType":"conference","identifier":"INLG","identifierType":"acronym","action":"follow"}
+[2025-05-12T04:03:03.367Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T04:03:03.367Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515] ConferenceAgent requests function call: manageFollow
+[2025-05-12T04:03:03.368Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Received request.
+[2025-05-12T04:03:03.368Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T04:03:03.369Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T04:03:03.369Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Executing handler...
+[2025-05-12T04:03:03.370Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 hqe5ZN2Lep8nfq1gAAAD] Handler: FollowUnfollowItem, Args: {"itemType":"conference","identifier":"INLG","identifierType":"acronym","action":"follow"}, Auth: true
+[2025-05-12T04:03:03.371Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: validating_function_args, Agent: ConferenceAgent
+[2025-05-12T04:03:03.371Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: validating_function_args for ConferenceAgent
+[2025-05-12T04:03:03.372Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: checking_authentication, Agent: ConferenceAgent
+[2025-05-12T04:03:03.372Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: checking_authentication for ConferenceAgent
+[2025-05-12T04:03:03.372Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: finding_item_id, Agent: ConferenceAgent
+[2025-05-12T04:03:03.372Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: finding_item_id for ConferenceAgent
+[2025-05-12T04:03:03.373Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T04:03:03.374Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T04:03:03.375Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T04:03:04.095Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T04:03:04.097Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T04:03:04.097Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T04:03:04.100Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T04:03:04.103Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T04:03:04.103Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T04:03:04.104Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T04:03:04.104Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: item_id_found, Agent: ConferenceAgent
+[2025-05-12T04:03:04.105Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: item_id_found for ConferenceAgent
+[2025-05-12T04:03:04.105Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: checking_follow_status, Agent: ConferenceAgent
+[2025-05-12T04:03:04.105Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: checking_follow_status for ConferenceAgent
+[2025-05-12T04:03:04.106Z] [FollowService] [GetFollowed conference] Fetching followed items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/follow-conference/followed
+[2025-05-12T04:03:04.732Z] [FollowService] [GetFollowed conference] Success. Found 1 followed item(s).
+[2025-05-12T04:03:04.733Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: follow_status_checked, Agent: ConferenceAgent
+[2025-05-12T04:03:04.733Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: follow_status_checked for ConferenceAgent
+[2025-05-12T04:03:04.733Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: determining_follow_action, Agent: ConferenceAgent
+[2025-05-12T04:03:04.734Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: determining_follow_action for ConferenceAgent
+[2025-05-12T04:03:04.734Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: follow_action_determined, Agent: ConferenceAgent
+[2025-05-12T04:03:04.734Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: follow_action_determined for ConferenceAgent
+[2025-05-12T04:03:04.734Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 hqe5ZN2Lep8nfq1gAAAD] FollowUnfollow: No API call executed for action 'follow'. Current status: true
+[2025-05-12T04:03:04.735Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Handler execution finished. Result indicates error: false
+[2025-05-12T04:03:04.735Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T04:03:04.735Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T04:03:04.736Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T04:03:04.736Z] [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T04:03:04.736Z] --- [hqe5-1747022577680-Sub-ConferenceAgent-1747022581515] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 12 ---
+[2025-05-12T04:03:04.737Z] [hqe5-1747022577680 Streaming] Appended 12 thoughts from ConferenceAgent. Total: 15
+[2025-05-12T04:03:04.737Z] --- [hqe5-1747022577680 HostAgent Streaming Turn 2 Start - hqe5ZN2Lep8nfq1gAAAD] ---
+[2025-05-12T04:03:04.737Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:04.738Z] [hqe5-1747022577680 History T2 Send - hqe5ZN2Lep8nfq1gAAAD] Host History Size: 3
+[2025-05-12T04:03:04.738Z] [GeminiService] Received history with 3 items before mapping (for stream).
+[2025-05-12T04:03:04.738Z] [GeminiService] Mapped history (SDK Content[]) with 3 items (for stream).
+[2025-05-12T04:03:04.739Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T04:03:04.739Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:03:04.739Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:03:04.739Z] Tools provided: ["routeToAgent"]
+[2025-05-12T04:03:04.739Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:03:04.740Z] [GeminiService Stream] Preparing stream request with 3 Content items.
+[2025-05-12T04:03:04.740Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:05.349Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T04:03:05.350Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:05.350Z] [hqe5-1747022577680 Stream Processing - hqe5ZN2Lep8nfq1gAAAD] Starting...
+[2025-05-12T04:03:05.351Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:05.351Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T04:03:05.383Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T04:03:05.392Z] [hqe5-1747022577680 Stream Processing - hqe5ZN2Lep8nfq1gAAAD] Finished. Length: 47
+[2025-05-12T04:03:05.393Z] [hqe5-1747022577680 hqe5ZN2Lep8nfq1gAAAD] Emitting final streaming chat_result with 18 thoughts.
+[2025-05-12T04:03:05.393Z] [hqe5-1747022577680 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T04:03:05.394Z] --- [hqe5-1747022577680 hqe5ZN2Lep8nfq1gAAAD Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T04:03:05.394Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Intent handler returned updated history. Attempting save. New size: 4
+[2025-05-12T04:03:05.467Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Successfully updated history in DB.
+[2025-05-12T04:03:05.467Z] [DEBUG] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T04:03:05.467Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T04:03:06.050Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T04:03:06.050Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022577680][Conv:682172f127d48af714f77a95] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T04:03:11.913Z] [SERVER SOCKET hqe5ZN2Lep8nfq1gAAAD - ON ANY] Event: send_message, Args: [{"userInput":"unfollow","isStreaming":true,"language":"en","conversationId":"682172f127d48af714f77a95"}]
+[2025-05-12T04:03:11.914Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914] Request received. UserInput: "unfollow", Streaming: true, Language: en, PayloadConvId: 682172f127d48af714f77a95, SocketDataConvId: 682172f127d48af714f77a95
+[2025-05-12T04:03:11.914Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Using conversationId from payload.
+[2025-05-12T04:03:11.982Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Fetched current history. Count: 4
+[2025-05-12T04:03:11.982Z] [DEBUG] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Calling streaming intent handler.
+[2025-05-12T04:03:11.983Z] --- [hqe5-1747022591914 Socket hqe5ZN2Lep8nfq1gAAAD] Handling STREAMING input: "unfollow", Lang: en ---
+[2025-05-12T04:03:11.983Z] [Language Config] Using configuration for Agent: HostAgent, Language: en
+[2025-05-12T04:03:11.983Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:11.984Z] --- [hqe5-1747022591914 HostAgent Streaming Turn 1 Start - hqe5ZN2Lep8nfq1gAAAD] ---
+[2025-05-12T04:03:11.984Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:11.984Z] [hqe5-1747022591914 History T1 Send - hqe5ZN2Lep8nfq1gAAAD] Host History Size: 5
+[2025-05-12T04:03:11.985Z] [GeminiService] Received history with 5 items before mapping (for stream).
+[2025-05-12T04:03:11.985Z] [GeminiService] Mapped history (SDK Content[]) with 5 items (for stream).
+[2025-05-12T04:03:11.985Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T04:03:11.986Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:03:11.986Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:03:11.986Z] Tools provided: ["routeToAgent"]
+[2025-05-12T04:03:11.986Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:03:11.986Z] [GeminiService Stream] Preparing stream request with 5 Content items.
+[2025-05-12T04:03:11.987Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:13.855Z] [GeminiService Stream] Received function call in first chunk: routeToAgent
+[2025-05-12T04:03:13.855Z] [hqe5-1747022591914 HostAgent Streaming T1 - hqe5ZN2Lep8nfq1gAAAD] Requests function: routeToAgent
+[2025-05-12T04:03:13.856Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:13.856Z] --- [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 Socket hqe5ZN2Lep8nfq1gAAAD] Calling Sub Agent: ConferenceAgent, Task: 9b5022eb-fe83-4d9a-a0e3-281b4b051d10 ---
+[2025-05-12T04:03:13.856Z] [Language Config] Using configuration for Agent: ConferenceAgent, Language: en
+[2025-05-12T04:03:13.856Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: sub_agent_thinking, Agent: ConferenceAgent
+[2025-05-12T04:03:13.857Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: sub_agent_thinking for ConferenceAgent
+[2025-05-12T04:03:13.857Z] [GeminiService] Received history with 1 items before mapping.
+[2025-05-12T04:03:13.857Z] [GeminiService] Mapped to effectiveHistory (SDK Content[]) with 1 items.
+[2025-05-12T04:03:13.857Z] [GeminiService] Last item role in effectiveHistory: user
+[2025-05-12T04:03:13.857Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:03:13.858Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:03:13.858Z] Tools provided: ["getConferences","manageFollow","manageCalendar"]
+[2025-05-12T04:03:13.858Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:03:13.858Z] [GeminiService] Sending total 1 Content items to API.
+[2025-05-12T04:03:13.859Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:16.221Z] Model Finish Reason: STOP
+[2025-05-12T04:03:16.221Z] Model requested function call: manageFollow
+[2025-05-12T04:03:16.221Z] Arguments: {"identifier":"INLG","itemType":"conference","action":"unfollow","identifierType":"acronym"}
+[2025-05-12T04:03:16.222Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856] LLM result from ConferenceAgent: Status requires_function_call
+[2025-05-12T04:03:16.222Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856] ConferenceAgent requests function call: manageFollow
+[2025-05-12T04:03:16.222Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Received request.
+[2025-05-12T04:03:16.222Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: function_call_received, Agent: ConferenceAgent
+[2025-05-12T04:03:16.223Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: function_call_received for ConferenceAgent
+[2025-05-12T04:03:16.223Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Executing handler...
+[2025-05-12T04:03:16.224Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 hqe5ZN2Lep8nfq1gAAAD] Handler: FollowUnfollowItem, Args: {"identifier":"INLG","itemType":"conference","action":"unfollow","identifierType":"acronym"}, Auth: true
+[2025-05-12T04:03:16.224Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: validating_function_args, Agent: ConferenceAgent
+[2025-05-12T04:03:16.224Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: validating_function_args for ConferenceAgent
+[2025-05-12T04:03:16.224Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: checking_authentication, Agent: ConferenceAgent
+[2025-05-12T04:03:16.225Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: checking_authentication for ConferenceAgent
+[2025-05-12T04:03:16.225Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: finding_item_id, Agent: ConferenceAgent
+[2025-05-12T04:03:16.225Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: finding_item_id for ConferenceAgent
+[2025-05-12T04:03:16.225Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Attempting to find item ID.
+[2025-05-12T04:03:16.226Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Constructed search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T04:03:16.226Z] [BackendService] [conference] Executing API call: GET https://confhub.westus3.cloudapp.azure.com/api/v1/conference?acronym=INLG&perPage=1&page=1}
+[2025-05-12T04:03:16.925Z] [BackendService] [conference] API Success (200). Data length: 1923. Attempting parsing...
+[2025-05-12T04:03:16.925Z] [BackendService] [conference] Parsed successful. Raw data: 
+{"payload":[{"id":"ed852ee9-43c0-41b7-9525-6e73f0c50390","title":"International Natural Language Generation Conference","acronym":"INLG","location":{"cityStateProvince":"Hanoi","country":"Vietnam","address":"Vietnam Institute for Advanced Study in Ma...
+[2025-05-12T04:03:16.926Z] [BackendService] [conference] Applying transformation function: transformConferenceData
+[2025-05-12T04:03:16.926Z] Transforming conference data with Markdown. Search query: acronym=INLG&perPage=1&page=1
+[2025-05-12T04:03:16.927Z] [BackendService] [conference] Transformation successful. Transformed data: 
+**Meta:**
+- **Current page:** 1
+- **Per page:** 1
+- **Total items:** 1
+- **Total page:** 1
+- **Prev page:** null
+- **Next page:** null
+
+**Payload:**
+---
+
+**- Conference 1.**
+  - **Title:** International Natural Language Generation Conference
+  - **Ac...
+[2025-05-12T04:03:16.927Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Extracted item from parsedData.payload[0]
+[2025-05-12T04:03:16.928Z] [FollowService] [FindID conference Ident:"INLG" Type:acronym] Successfully found ID: ed852ee9-43c0-41b7-9525-6e73f0c50390
+[2025-05-12T04:03:16.928Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: item_id_found, Agent: ConferenceAgent
+[2025-05-12T04:03:16.929Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: item_id_found for ConferenceAgent
+[2025-05-12T04:03:16.929Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: checking_follow_status, Agent: ConferenceAgent
+[2025-05-12T04:03:16.930Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: checking_follow_status for ConferenceAgent
+[2025-05-12T04:03:16.930Z] [FollowService] [GetFollowed conference] Fetching followed items: GET https://confhub.westus3.cloudapp.azure.com/api/v1/follow-conference/followed
+[2025-05-12T04:03:17.538Z] [FollowService] [GetFollowed conference] Success. Found 1 followed item(s).
+[2025-05-12T04:03:17.538Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: follow_status_checked, Agent: ConferenceAgent
+[2025-05-12T04:03:17.539Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: follow_status_checked for ConferenceAgent
+[2025-05-12T04:03:17.539Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: determining_follow_action, Agent: ConferenceAgent
+[2025-05-12T04:03:17.540Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: determining_follow_action for ConferenceAgent
+[2025-05-12T04:03:17.540Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: follow_action_determined, Agent: ConferenceAgent
+[2025-05-12T04:03:17.540Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: follow_action_determined for ConferenceAgent
+[2025-05-12T04:03:17.541Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: preparing_follow_api_call, Agent: ConferenceAgent
+[2025-05-12T04:03:17.541Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: preparing_follow_api_call for ConferenceAgent
+[2025-05-12T04:03:17.541Z] [FollowService] [unfollow conference ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] Executing action: POST https://confhub.westus3.cloudapp.azure.com/api/v1/follow-conference/remove
+[2025-05-12T04:03:17.768Z] [FollowService] [unfollow conference ID: ed852ee9-43c0-41b7-9525-6e73f0c50390] Action executed successfully.
+[2025-05-12T04:03:17.769Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 hqe5ZN2Lep8nfq1gAAAD] FollowUnfollow: API call for unfollow successful.
+[2025-05-12T04:03:17.769Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: follow_update_success, Agent: ConferenceAgent
+[2025-05-12T04:03:17.769Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: follow_update_success for ConferenceAgent
+[2025-05-12T04:03:17.770Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 hqe5ZN2Lep8nfq1gAAAD Agent:ConferenceAgent FuncRegistry Func:manageFollow] Handler execution finished. Result indicates error: false
+[2025-05-12T04:03:17.770Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: function_result_processed, Agent: ConferenceAgent
+[2025-05-12T04:03:17.770Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: function_result_processed for ConferenceAgent
+[2025-05-12T04:03:17.771Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Thought Added - hqe5ZN2Lep8nfq1gAAAD] Step: sub_agent_processing_complete, Agent: ConferenceAgent
+[2025-05-12T04:03:17.771Z] [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856 SubAgent Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Step: sub_agent_processing_complete for ConferenceAgent
+[2025-05-12T04:03:17.771Z] --- [hqe5-1747022591914-Sub-ConferenceAgent-1747022593856] Sub Agent ConferenceAgent finished. Status: success, Thoughts collected: 14 ---
+[2025-05-12T04:03:17.771Z] [hqe5-1747022591914 Streaming] Appended 14 thoughts from ConferenceAgent. Total: 17
+[2025-05-12T04:03:17.771Z] --- [hqe5-1747022591914 HostAgent Streaming Turn 2 Start - hqe5ZN2Lep8nfq1gAAAD] ---
+[2025-05-12T04:03:17.772Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:17.772Z] [hqe5-1747022591914 History T2 Send - hqe5ZN2Lep8nfq1gAAAD] Host History Size: 7
+[2025-05-12T04:03:17.772Z] [GeminiService] Received history with 7 items before mapping (for stream).
+[2025-05-12T04:03:17.772Z] [GeminiService] Mapped history (SDK Content[]) with 7 items (for stream).
+[2025-05-12T04:03:17.773Z] [GeminiService] Last item role in effectiveHistory: function
+[2025-05-12T04:03:17.773Z] Calling generateContent for model: gemini-2.0-flash
+[2025-05-12T04:03:17.774Z] Generation Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T04:03:17.774Z] Tools provided: ["routeToAgent"]
+[2025-05-12T04:03:17.774Z] [GeminiService] Received empty array or unexpected type as nextTurnInput, skipping adding this turn.
+[2025-05-12T04:03:17.775Z] [GeminiService Stream] Preparing stream request with 7 Content items.
+[2025-05-12T04:03:17.775Z]   - No valid next turn added, sending only history.
+[2025-05-12T04:03:18.348Z] [GeminiService Stream] No function call in first chunk. Returning stream generator.
+[2025-05-12T04:03:18.349Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:18.350Z] [hqe5-1747022591914 Stream Processing - hqe5ZN2Lep8nfq1gAAAD] Starting...
+[2025-05-12T04:03:18.350Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: status_update, Type: status, Agent: HostAgent
+[2025-05-12T04:03:18.350Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T04:03:18.390Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_update, Type: partial_result, Agent: N/A
+[2025-05-12T04:03:18.400Z] [hqe5-1747022591914 Stream Processing - hqe5ZN2Lep8nfq1gAAAD] Finished. Length: 54
+[2025-05-12T04:03:18.401Z] [hqe5-1747022591914 hqe5ZN2Lep8nfq1gAAAD] Emitting final streaming chat_result with 20 thoughts.
+[2025-05-12T04:03:18.401Z] [hqe5-1747022591914 Streaming Emit Sent - hqe5ZN2Lep8nfq1gAAAD] Event: chat_result, Type: result, Agent: N/A
+[2025-05-12T04:03:18.402Z] --- [hqe5-1747022591914 hqe5ZN2Lep8nfq1gAAAD Lang: en] STREAMING Handler execution finished. (Socket connected: true) ---
+[2025-05-12T04:03:18.402Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Intent handler returned updated history. Attempting save. New size: 8
+[2025-05-12T04:03:18.473Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Successfully updated history in DB.
+[2025-05-12T04:03:18.488Z] [DEBUG] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Attempting to fetch and emit updated conversation list. Reason: message saved
+[2025-05-12T04:03:18.488Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T04:03:18.983Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T04:03:18.984Z] [INFO] [coreHandlers][hqe5ZN2Lep8nfq1gAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:hqe5-1747022591914][Conv:682172f127d48af714f77a95] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T04:03:24.288Z] [SERVER GLOBAL][disconnect][hqe5ZN2Lep8nfq1gAAAD] Client disconnected. Reason: transport close, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: 682172f127d48af714f77a95
+[2025-05-12T04:03:26.358Z] [socketAuth][sga_d2wyE7k9SiH9AAAF] Authentication attempt. Has token: true
+[2025-05-12T04:03:26.360Z] [socketAuth][sga_d2wyE7k9SiH9AAAF] Token signature validated successfully.
+[2025-05-12T04:03:26.361Z] [HistoryService] Initialized.
+[2025-05-12T04:03:26.361Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF] New connection. Socket ID: sga_d2wyE7k9SiH9AAAF. Initial socket.data.userId: null
+[2025-05-12T04:03:26.362Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF] Client connected, processing authentication. Has token: true
+[2025-05-12T04:03:26.362Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF] Attempting to fetch user info using token...
+[2025-05-12T04:03:26.363Z] [API Client] Attempting to fetch user info.
+[2025-05-12T04:03:26.363Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T04:03:27.123Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T04:03:27.123Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T04:03:27.123Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T04:03:27.124Z] [HistoryService] Initialized.
+[2025-05-12T04:03:27.124Z] [coreHandlers][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T04:03:27.124Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T04:03:27.125Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T04:03:27.125Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T04:03:27.126Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T04:03:27.126Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T04:03:27.131Z] [SERVER SOCKET sga_d2wyE7k9SiH9AAAF - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T04:03:27.562Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T04:03:27.563Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T04:03:27.564Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T04:03:27.564Z] [SERVER GLOBAL][connection][sga_d2wyE7k9SiH9AAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.

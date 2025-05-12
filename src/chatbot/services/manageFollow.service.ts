@@ -59,7 +59,7 @@ function getApiUrl(
  * @param token - The user's authentication token.
  * @returns A promise resolving to the result, containing item IDs on success.
  */
-export async function executeGetUserFollowedItems(
+export async function executeGetUserFollowed(
     itemType: ServiceItemType, // CHANGED from ItemType enum
     token: string | null
 ): Promise<{ success: boolean; itemIds: string[]; errorMessage?: string }> {

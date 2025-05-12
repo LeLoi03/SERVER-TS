@@ -1,19 +1,19 @@
-// src/handlers/followUnfollowItem.handler.ts
+// src/handlers/manageFollow.handler.ts
 import {
     findItemId,
-    executeGetUserFollowedItems,
+    executeGetUserFollowed,
     executeFollowUnfollowApi,
-} from '../services/followUnfollowItem.service'; 
-import { IFunctionHandler } from '../interface/functionHandler.interface'; 
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types'; 
-import logToFile from '../../utils/logger'; 
+} from '../services/manageFollow.service';
+import { IFunctionHandler } from '../interface/functionHandler.interface';
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types';
+import logToFile from '../../utils/logger';
 
 // --- Định nghĩa các kiểu dữ liệu hẹp hơn để code rõ ràng hơn ---
 type ValidItemType = 'conference' | 'journal';
 type ValidIdentifierType = 'acronym' | 'title' | 'id';
 type ValidAction = 'follow' | 'unfollow';
 
-export class FollowUnfollowItemHandler implements IFunctionHandler {
+export class ManageFollowHandler implements IFunctionHandler {
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
         const { args, userToken, handlerId, socketId, onStatusUpdate } = context;
         const logPrefix = `[${handlerId} ${socketId}]`;
@@ -100,7 +100,7 @@ export class FollowUnfollowItemHandler implements IFunctionHandler {
 
             // --- 4. Check Current Follow Status ---
             sendStatus('checking_follow_status', `Checking your follow status for item ${itemId}...`, { itemId });
-            const followStatusResult = await executeGetUserFollowedItems(validItemType, userToken);
+            const followStatusResult = await executeGetUserFollowed(validItemType, userToken);
 
             // Guard Clause 5
             if (!followStatusResult.success) {

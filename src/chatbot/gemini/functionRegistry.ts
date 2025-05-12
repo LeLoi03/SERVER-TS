@@ -16,7 +16,9 @@ import { GetJournalsHandler } from '../handlers/getJournals.handler';
 import { GetWebsiteInfoHandler } from '../handlers/getWebsiteInfo.handler';
 import { NavigationHandler } from '../handlers/navigation.handler';
 import { OpenGoogleMapHandler } from '../handlers/openGoogleMap.handler';
-import { FollowUnfollowItemHandler } from '../handlers/followUnfollowItem.handler';
+import { ManageFollowHandler } from '../handlers/manageFollow.handler';
+import { ManageCalendarHandler } from '../handlers/manageCalendar.handler';
+
 import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
 // ... import other handlers ...
 
@@ -30,7 +32,8 @@ const functionRegistry: Record<string, IFunctionHandler> = {
     getWebsiteInfo: new GetWebsiteInfoHandler(),
     navigation: new NavigationHandler(),
     openGoogleMap: new OpenGoogleMapHandler(),
-    followUnfollowItem: new FollowUnfollowItemHandler(),
+    manageFollow: new ManageFollowHandler(),
+    manageCalendar: new ManageCalendarHandler(),
     sendEmailToAdmin: new SendEmailToAdminHandler(),
     // '__unknown__': new UnknownFunctionHandler(),
 };

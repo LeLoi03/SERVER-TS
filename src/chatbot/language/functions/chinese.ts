@@ -264,8 +264,8 @@ export const chineseOpenGoogleMapDeclaration: FunctionDeclaration = {
     },
 };
 
-export const chineseFollowUnfollowItemDeclaration: FunctionDeclaration = {
-    name: "followUnfollowItem",
+export const chineseManageFollowDeclaration: FunctionDeclaration = {
+    name: "manageFollow",
     description: "为当前登录的用户关注或取消关注特定的会议或期刊",
     parameters: {
         type: SchemaType.OBJECT,

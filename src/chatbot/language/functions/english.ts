@@ -262,8 +262,8 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
     },
 };
 
-export const englishFollowUnfollowItemDeclaration: FunctionDeclaration = {
-    name: "followUnfollowItem",
+export const englishManageFollowDeclaration: FunctionDeclaration = {
+    name: "manageFollow",
     description: "Follows or unfollows a specific conference or journal for the currently logged-in user.",
     parameters: {
         type: SchemaType.OBJECT,
@@ -286,6 +286,37 @@ export const englishFollowUnfollowItemDeclaration: FunctionDeclaration = {
                 type: SchemaType.STRING,
                 description: "The desired action to perform.",
                 enum: ["follow", "unfollow"]
+            },
+        },
+        required: ["itemType", "identifier", "identifierType", "action"],
+    },
+};
+
+// --- Calendar Item Declaration (English) ---
+export const englishManageCalendarDeclaration: FunctionDeclaration = {
+    name: "manageCalendar",
+    description: "Adds or removes a specific conference event to/from the user's calendar.",
+    parameters: {
+        type: SchemaType.OBJECT,
+        properties: {
+            itemType: {
+                type: SchemaType.STRING,
+                description: "The type of item. Currently only 'conference' is supported for calendar actions.",
+                enum: ["conference"] // Restricted to conference as per requirement
+            },
+            identifier: {
+                type: SchemaType.STRING,
+                description: "A unique identifier for the conference, such as its acronym or exact title.",
+            },
+             identifierType: {
+                 type: SchemaType.STRING,
+                 description: "The type of the identifier provided.",
+                 enum: ["acronym", "title", "id"], // Allow Model to specify if it knows the type
+            },
+            action: {
+                type: SchemaType.STRING,
+                description: "The desired action to perform.",
+                enum: ["add", "remove"]
             },
         },
         required: ["itemType", "identifier", "identifierType", "action"],

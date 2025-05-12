@@ -41,21 +41,22 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             systemInstructions: LangData.englishConferenceAgentSystemInstructions,
             functionDeclarations: [
                 LangData.englishGetConferencesDeclaration,
-                LangData.englishFollowUnfollowItemDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
             ],
         },
         'vi': {
             systemInstructions: LangData.vietnameseConferenceAgentSystemInstructions,
             functionDeclarations: [
                 LangData.vietnamGetConferencesDeclaration,
-                LangData.vietnameseFollowUnfollowItemDeclaration,
+                LangData.vietnameseManageFollowDeclaration,
             ],
         },
         'zh': {
             systemInstructions: LangData.chineseConferenceAgentSystemInstructions,
             functionDeclarations: [
                 LangData.chineseGetConferencesDeclaration,
-                LangData.chineseFollowUnfollowItemDeclaration,
+                LangData.chineseManageFollowDeclaration,
             ],
         },
     },
@@ -64,21 +65,21 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             systemInstructions: LangData.englishJournalAgentSystemInstructions,
             functionDeclarations: [
                 LangData.englishGetJournalsDeclaration,
-                LangData.englishFollowUnfollowItemDeclaration,
+                LangData.englishManageFollowDeclaration,
             ],
         },
          'vi': {
             systemInstructions: LangData.vietnameseJournalAgentSystemInstructions,
             functionDeclarations: [
                 LangData.vietnamGetJournalsDeclaration,
-                LangData.vietnameseFollowUnfollowItemDeclaration,
+                LangData.vietnameseManageFollowDeclaration,
             ],
         },
          'zh': {
             systemInstructions: LangData.chineseJournalAgentSystemInstructions,
             functionDeclarations: [
                 LangData.chineseGetJournalsDeclaration,
-                LangData.chineseFollowUnfollowItemDeclaration,
+                LangData.chineseManageFollowDeclaration,
             ],
         },
     },

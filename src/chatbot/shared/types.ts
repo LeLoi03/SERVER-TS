@@ -78,13 +78,29 @@ export type FrontendAction =
     | { type: 'navigate'; url: string }
     | { type: 'openMap'; location: string }
     | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Payload defined below
-    // | { type: 'otherAction'; payload: any } // Example for future actions
+    | { type: 'addToCalendar'; payload: ItemInfo }
+    | { type: 'removeFromCalendar'; payload: ItemInfo }
+
     | undefined; // Allows for no action
+
 
 /** Defines the payload for the 'confirmEmailSend' frontend action. */
 export interface ConfirmSendEmailAction {
     /** A unique identifier for this specific confirmation request. */
     confirmationId: string;
+    /** The email subject line. */
+    subject: string;
+    /** The type of email request (e.g., for contact or reporting). */
+    requestType: 'contact' | 'report'; // Use specific types if known
+    /** The main body/message of the email. */
+    message: string;
+    /** The duration (in milliseconds) the confirmation dialog should wait for user input. */
+    timeoutMs: number;
+}
+
+export interface ItemInfo {
+    /** A unique identifier for this specific confirmation request. */
+    itemId: string;
     /** The email subject line. */
     subject: string;
     /** The type of email request (e.g., for contact or reporting). */
