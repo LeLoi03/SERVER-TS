@@ -1,13 +1,10 @@
 // src/services/manageCalendar.service.ts
 import 'reflect-metadata';
 import { container } from 'tsyringe';
-import { ApiCallResult } from '../shared/types'; // Assuming CalendarItem is similar to FollowItem or just an ID
+import { ApiCallResult, CalendarItem, FollowItem } from '../shared/types'; // Import CalendarItem
 import logToFile from '../../utils/logger';
 import { ConfigService } from '../../config/config.service';
-// Re-use findItemId from followUnfollowItem.service
-// If you prefer to keep services completely separate, you can duplicate/move findItemId or create a shared utility service.
-export { findItemId } from './manageFollow.service';
-
+export { findItemId } from './manageFollow.service'; // findItemId có thể trả về Partial<FollowItem>
 
 const LOG_PREFIX = "[CalendarService]";
 
@@ -18,19 +15,8 @@ if (!DATABASE_URL) {
     throw new Error("DATABASE_URL is not configured.");
 }
 
-// --- Type Definitions ---
-// For calendar, itemType is always 'conference'
-type ServiceActionTypeCalendar = 'add' | 'remove';
-
-// Interface for items returned by the /calendar-conference/list endpoint
-interface CalendarItem {
-    id: string; // Assuming the API returns at least the ID of the conference
-    // Potentially other details like name, date, if the API provides them
-    name?: string;
-    startDate?: string;
-    endDate?: string;
-    // ... any other relevant calendar event details
-}
+// ServiceActionTypeCalendar chỉ cho API calls, 'list' được xử lý bởi executeGetUserCalendar
+type ServiceApiActionTypeCalendar = 'add' | 'remove';
 
 
 const HEADERS = {
@@ -38,36 +24,30 @@ const HEADERS = {
     'Accept': 'application/json',
 };
 
-// --- Helper Function for URL Construction ---
-// Since it's only for conferences, itemType is fixed.
 function getCalendarApiUrl(
-    operation: 'calendarList' | 'add' | 'remove'
+    operation: 'calendarList' | 'add' | 'remove' // 'calendarList' cho lấy danh sách
 ): string {
-    const base = 'calendar'; // Always conference
+    const base = 'calendar'; // API base path của bạn cho calendar
     switch (operation) {
         case 'calendarList':
-            return `${DATABASE_URL}/${base}/events`; // Or /items, /added etc.
+            return `${DATABASE_URL}/${base}/events`; // Endpoint lấy danh sách sự kiện lịch
         case 'add':
-            return `${DATABASE_URL}/${base}/add-event`;
+            return `${DATABASE_URL}/${base}/add-event`; // Endpoint thêm sự kiện
         case 'remove':
-            return `${DATABASE_URL}/${base}/remove-event`;
+            return `${DATABASE_URL}/${base}/remove-event`; // Endpoint xóa sự kiện
         default:
             logToFile(`${LOG_PREFIX} Error: Invalid operation type for URL construction: ${operation}`);
             throw new Error(`Invalid calendar operation: ${operation}`);
     }
 }
 
-// --- Service Functions ---
-
 /**
- * Fetches the list of conference IDs added to the user's calendar.
- * @param token - The user's authentication token.
- * @returns A promise resolving to the result, containing item IDs on success.
+ * Fetches the list of conferences (as CalendarItem) added to the user's calendar.
  */
 export async function executeGetUserCalendar(
     token: string | null
-): Promise<{ success: boolean; itemIds: string[]; errorMessage?: string; items?: CalendarItem[] }> {
-    const logContext = `${LOG_PREFIX} [GetCalendarItems]`;
+): Promise<{ success: boolean; itemIds: string[]; items?: CalendarItem[]; errorMessage?: string }> {
+    const logContext = `${LOG_PREFIX} [GetUserCalendarEvents]`;
 
     if (!token) {
         logToFile(`${logContext} Error: Authentication token is missing.`);
@@ -75,50 +55,43 @@ export async function executeGetUserCalendar(
     }
 
     const url = getCalendarApiUrl('calendarList');
-    logToFile(`${logContext} Fetching calendar items: GET ${url}`);
+    logToFile(`${logContext} Fetching calendar events: GET ${url}`);
 
     try {
         const response = await fetch(url, {
             method: 'GET',
-            headers: {
-                ...HEADERS,
-                "Authorization": `Bearer ${token}`,
-            }
+            headers: { ...HEADERS, "Authorization": `Bearer ${token}` }
         });
 
         if (!response.ok) {
             const errorText = await response.text().catch(() => `Status ${response.status}`);
-            const truncatedError = errorText.substring(0, 200);
-            logToFile(`${logContext} API Error (${response.status}): ${truncatedError}`);
-            return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching calendar items list.` };
+            logToFile(`${logContext} API Error (${response.status}): ${errorText.substring(0, 200)}`);
+            return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching calendar events.` };
         }
 
-        const calendarItems: CalendarItem[] = await response.json();
-        const itemIds = calendarItems.map(item => item.id);
-        logToFile(`${logContext} Success. Found ${itemIds.length} item(s) in calendar.`);
-        return { success: true, itemIds, items: calendarItems };
+        const calendarEvents: CalendarItem[] = await response.json();
+        const itemIds = calendarEvents.map(event => event.conferenceId); // Giả sử mỗi CalendarItem có 'id' của conference
+
+        logToFile(`${logContext} Success. Found ${itemIds.length} event(s) in calendar.`);
+        return { success: true, itemIds, items: calendarEvents };
 
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : String(error);
         logToFile(`${logContext} Network/Fetch Error: ${errorMsg}`);
-        return { success: false, itemIds: [], errorMessage: `Network error fetching calendar items list.` };
+        return { success: false, itemIds: [], errorMessage: `Network error fetching calendar events.` };
     }
 }
 
 /**
  * Executes the add or remove action for a specific conference in the calendar.
- * @param conferenceId - The ID of the conference.
- * @param action - The action to perform ('add' or 'remove').
- * @param token - The user's authentication token.
- * @returns A promise resolving to the success status and optional error message.
- *          On successful 'add', may include conferenceDetails if returned by API.
+ * On successful 'add', may include conferenceDetails if returned by API.
  */
 export async function executeManageCalendarApi(
     conferenceId: string,
-    action: ServiceActionTypeCalendar,
+    action: ServiceApiActionTypeCalendar, // 'add' or 'remove'
     token: string | null
-): Promise<{ success: boolean; errorMessage?: string; conferenceDetails?: any }> {
-    const logContext = `${LOG_PREFIX} [${action}CalendarItem ID: ${conferenceId}]`;
+): Promise<{ success: boolean; errorMessage?: string; conferenceDetails?: Partial<CalendarItem> }> { // Trả về Partial<CalendarItem>
+    const logContext = `${LOG_PREFIX} [${action}CalendarEvent ID: ${conferenceId}]`;
 
     if (!token) {
         logToFile(`${logContext} Error: Authentication token is missing.`);
@@ -129,19 +102,18 @@ export async function executeManageCalendarApi(
         return { success: false, errorMessage: "Conference ID is required." };
     }
 
-    const operation = action; // 'add' or 'remove' directly maps to API operation
-    const url = getCalendarApiUrl(operation);
-    const bodyPayload = { conferenceId: conferenceId }; // API expects conferenceId
+    const url = getCalendarApiUrl(action); // 'add' hoặc 'remove'
+    // API của bạn có thể yêu cầu method khác nhau (POST, PUT, DELETE)
+    // Ví dụ này dùng PUT cho cả add và remove, điều chỉnh nếu cần
+    const method = 'PUT'; // Hoặc POST cho 'add' và DELETE cho 'remove'
+    const bodyPayload = { conferenceId: conferenceId };
 
-    logToFile(`${logContext} Executing action: PUT ${url}`);
+    logToFile(`${logContext} Executing action: ${method} ${url}`);
 
     try {
         const response = await fetch(url, {
-            method: 'PUT',
-            headers: {
-                ...HEADERS,
-                'Authorization': `Bearer ${token}`,
-            },
+            method: method,
+            headers: { ...HEADERS, 'Authorization': `Bearer ${token}` },
             body: JSON.stringify(bodyPayload),
         });
 
@@ -150,37 +122,28 @@ export async function executeManageCalendarApi(
             try {
                 const errorData = await response.json();
                 errorDetails = errorData?.message || errorData?.error || JSON.stringify(errorData).substring(0, 100);
-            } catch {
-                try {
-                    const textError = await response.text();
-                    errorDetails = textError.substring(0, 100) || `Status ${response.status}`;
-                } catch { /* Ignore text read error */ }
-            }
+            } catch { /* ignore */ }
             logToFile(`${logContext} API Error (${response.status}): ${errorDetails}`);
             return { success: false, errorMessage: `API Error (${response.status}): Failed to ${action} conference ${action === 'add' ? 'to' : 'from'} calendar. ${errorDetails}` };
         }
 
         logToFile(`${logContext} Action executed successfully.`);
-        // If the API returns details of the conference upon adding, parse and return them
-        // This is useful for the frontend 'addToCalendar' action
-        let conferenceDetails: any = undefined;
+        let returnedDetails: Partial<CalendarItem> | undefined = undefined;
         if (action === 'add') {
             try {
+                // API có thể trả về chi tiết của conference đã được thêm/cập nhật
                 const responseData = await response.json();
-                // Assuming the API might return the conference object or details
-                // Adjust this based on your actual API response
                 if (responseData && typeof responseData === 'object' && responseData.id === conferenceId) {
-                    conferenceDetails = responseData;
+                    returnedDetails = responseData as Partial<CalendarItem>; // Cast to ensure type safety
                 } else if (responseData && responseData.data && responseData.data.id === conferenceId) {
-                    conferenceDetails = responseData.data;
+                     returnedDetails = responseData.data as Partial<CalendarItem>;
                 }
+                // Nếu API không trả về gì hoặc không có id, returnedDetails sẽ là undefined
             } catch (e) {
-                logToFile(`${logContext} Could not parse conference details from 'add' response, but action was successful.`);
-                // It's not a critical error if details aren't parsed, the action itself was successful
+                logToFile(`${logContext} No parsable details from '${action}' response, but action was successful.`);
             }
         }
-
-        return { success: true, conferenceDetails };
+        return { success: true, conferenceDetails: returnedDetails };
 
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : String(error);
@@ -188,9 +151,3 @@ export async function executeManageCalendarApi(
         return { success: false, errorMessage: `Network error attempting to ${action} conference ${action === 'add' ? 'to' : 'from'} calendar.` };
     }
 }
-
-// findItemId is re-exported from followUnfollowItem.service
-// No need to redefine it here if its logic is general enough.
-// If findItemId needs specific logic for calendar (e.g., fetching different fields),
-// then you might need a separate version or enhance the existing one.
-// For now, assuming the existing findItemId is sufficient to get a conference ID.

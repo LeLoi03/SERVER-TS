@@ -48,13 +48,48 @@ export interface ApiCallResult {
     errorMessage?: string;
 }
 
-/** Represents the structure of a followed item retrieved from the backend. */
+
+export interface FollowItemDate {
+  fromDate: string; // ISO Date string
+  toDate: string;   // ISO Date string
+}
+
+export interface FollowItemLocation {
+  address?: string;
+  cityStateProvince?: string;
+  country?: string;
+  continent?: string;
+}
+
 export interface FollowItem {
-    /** The unique ID of the followed conference or journal. */
-    id: string;
-    // Add other relevant fields returned by the API (e.g., title, acronym) if needed later.
-    // title?: string;
-    // acronym?: string;
+  id: string;
+  title: string; // Sử dụng title thay vì name nếu API trả về title
+  acronym: string;
+  followedAt?: string; // ISO Date string, optional if not always present
+  updatedAt?: string;  // ISO Date string, optional
+  status?: string;     // Optional
+  dates?: FollowItemDate; // Optional
+  location?: FollowItemLocation; // Optional
+  // Thêm các trường khác nếu cần từ API
+  // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
+  // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
+  // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
+}
+
+
+export interface CalendarItem {
+  conferenceId: string;
+  conference: string; // Sử dụng title thay vì name nếu API trả về title
+  acronym?: string;
+  followedAt?: string; // ISO Date string, optional if not always present
+  updatedAt?: string;  // ISO Date string, optional
+  status?: string;     // Optional
+  dates?: FollowItemDate; // Optional
+  location?: FollowItemLocation; // Optional
+  // Thêm các trường khác nếu cần từ API
+  // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
+  // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
+  // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
 }
 
 // --- Gemini Model Interaction ---
@@ -73,14 +108,64 @@ export interface GeminiInteractionResult {
 
 // --- Frontend Interaction & Updates ---
 
+
+/**
+ * Payload for the 'displayList' frontend action.
+ */
+export interface DisplayListPayload {
+  items: any[]; // Array of items to display (e.g., FollowItem[], CalendarItem[])
+                 // Using 'any[]' for now for flexibility, but ideally should be more specific
+                 // like (FollowItem[] | CalendarItem[])
+  itemType: 'conference' | 'journal'; // Type of items in the list
+  listType: 'followed' | 'calendar' | string; // Describes the nature of the list
+  title?: string; // Optional title for the list display
+}
+
+/**
+ * Payload for the 'addToCalendar' frontend action.
+ * Details needed to create a calendar event.
+ */
+export interface AddToCalendarPayload {
+  conferenceId: string;
+  // conferenceDetails should contain all necessary info for a calendar event
+  // This structure should align with what your calendar integration needs
+  conferenceDetails: {
+    id: string;
+    title: string;
+    acronym?: string;
+    startDate?: string; // ISO string
+    endDate?: string;   // ISO string
+    startTime?: string; // e.g., "10:00" (optional, if not part of startDate)
+    endTime?: string;   // e.g., "18:00" (optional, if not part of endDate)
+    timezone?: string;  // e.g., "America/New_York" (optional)
+    location?: string;  // Text description of location
+    description?: string; // Summary or details of the conference
+    url?: string; // Link to the conference website
+    // Add any other fields your calendar event creation requires
+  };
+}
+
+/**
+ * Payload for the 'removeFromCalendar' frontend action.
+ */
+export interface RemoveFromCalendarPayload {
+  conferenceId: string;
+  // Optionally, you might need more details to uniquely identify the event
+  // in the user's calendar if conferenceId alone isn't sufficient,
+  // e.g., a specific event ID from the calendar provider.
+  calendarEventId?: string;
+}
+
+// --- Updated FrontendAction type ---
+
 /** Defines the types of actions the backend can request the frontend to perform. */
 export type FrontendAction =
     | { type: 'navigate'; url: string }
     | { type: 'openMap'; location: string }
-    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Payload defined below
-    | { type: 'addToCalendar'; payload: ItemInfo }
-    | { type: 'removeFromCalendar'; payload: ItemInfo }
-
+    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction }
+    | { type: 'displayList'; payload: DisplayListPayload }
+    | { type: 'addToCalendar'; payload: AddToCalendarPayload }
+    | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload }
     | undefined; // Allows for no action
 
 

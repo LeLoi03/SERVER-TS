@@ -1248,3 +1248,27 @@
 {"level":"info","time":"2025-05-12T03:59:11.255Z","msg":"🌐 Allowed CORS origins: http://localhost:8386, https://confhub.ddns.net"}
 {"level":"info","time":"2025-05-12T04:00:00.597Z","job":"LogAnalysisRun","runId":1747022400597,"msg":"Starting scheduled task..."}
 {"level":"info","time":"2025-05-12T04:00:00.598Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-05-12T04:44:41.504Z","service":"LoggingService","msg":"Logger initialized successfully."}
+{"level":"info","time":"2025-05-12T04:44:41.510Z","msg":"[Server Start] Core services (Config, Logging) resolved."}
+{"level":"info","time":"2025-05-12T04:44:41.511Z","msg":"[Server Start] Initializing API examples..."}
+{"level":"info","time":"2025-05-12T04:44:41.547Z","msg":"[Server Start] API examples initialized successfully."}
+{"level":"info","time":"2025-05-12T04:44:41.548Z","msg":"[Server Start] Initializing loaders..."}
+{"level":"info","time":"2025-05-12T04:44:42.506Z","context":"LogAnalysisRoutes","msg":"Configuring log analysis API routes..."}
+{"level":"info","time":"2025-05-12T04:44:42.507Z","context":"LogAnalysisRoutes","msg":"Log analysis API routes configured: GET /latest, POST /trigger"}
+{"level":"info","time":"2025-05-12T04:44:42.517Z","job":"LogAnalysisScheduler","schedule":"*/60 * * * *","timezone":"Asia/Ho_Chi_Minh","msg":"Scheduling log analysis job..."}
+{"level":"info","time":"2025-05-12T04:44:42.551Z","job":"LogAnalysisScheduler","msg":"Log analysis job scheduled successfully."}
+{"level":"info","time":"2025-05-12T04:44:42.553Z","service":"LogAnalysisService","msg":"Initialized. Log file path: D:\\NEW-SERVER-TS\\logs\\app.log"}
+{"level":"info","time":"2025-05-12T04:44:42.554Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_start","msg":"Starting log analysis execution"}
+{"level":"info","time":"2025-05-12T04:44:42.556Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_read_start","msg":"Starting Phase 1: Read and Group Logs"}
+{"level":"info","time":"2025-05-12T04:44:42.590Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_read_finish","totalEntries":1250,"parsedEntries":1250,"requestsFound":1,"msg":"Finished Phase 1"}
+{"level":"info","time":"2025-05-12T04:44:42.591Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_filter_finish","includedRequests":1,"rangeStart":1746956763056,"rangeEnd":1746956805607,"msg":"Finished Phase 2a: Filtering Requests"}
+{"level":"info","time":"2025-05-12T04:44:42.592Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_processing_start","requestCount":1,"msg":"Starting Phase 2b: Processing log entries for included requests"}
+{"level":"info","time":"2025-05-12T04:44:42.602Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_processing_end","msg":"Finished Phase 2b: Processing log entries"}
+{"level":"info","time":"2025-05-12T04:44:42.603Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_calculate_metrics_finish","msg":"Finished Phase 3: Calculating final metrics"}
+{"level":"info","time":"2025-05-12T04:44:42.603Z","service":"LogAnalysisService","msg":"Analysis completed successfully. Requests: 5, Errors: 0"}
+{"level":"info","time":"2025-05-12T04:44:42.604Z","msg":"[Server Start] Loaders initialized."}
+{"level":"info","time":"2025-05-12T04:44:42.607Z","msg":"🚀 Server (HTTP + Socket.IO) listening on port 3001"}
+{"level":"info","time":"2025-05-12T04:44:42.608Z","msg":"🔗 Access the server at: http://localhost:3001"}
+{"level":"info","time":"2025-05-12T04:44:42.608Z","msg":"🌐 Allowed CORS origins: http://localhost:8386, https://confhub.ddns.net"}
+{"level":"info","time":"2025-05-12T05:00:00.657Z","job":"LogAnalysisRun","runId":1747026000656,"msg":"Starting scheduled task..."}
+{"level":"info","time":"2025-05-12T05:00:00.658Z","service":"LogAnalysisService","filePath":"D:\\NEW-SERVER-TS\\logs\\app.log","function":"performAnalysisAndUpdate","event":"analysis_start","msg":"Starting log analysis execution"}

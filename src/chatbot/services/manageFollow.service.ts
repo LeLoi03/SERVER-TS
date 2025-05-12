@@ -1,42 +1,34 @@
-import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
-import { container } from 'tsyringe'; // Import container for resolving singletons
-import { ApiCallResult, FollowItem } from '../shared/types'; // Adjust path if needed
-import logToFile from '../../utils/logger'; // Adjust path if needed
-import { executeGetConferences } from './getConferences.service'; // Adjust path if needed
-import { executeGetJournals } from './getJournals.service'; // Adjust path if needed
+// src/services/manageFollow.service.ts
+import 'reflect-metadata';
+import { container } from 'tsyringe';
+import { ApiCallResult, FollowItem } from '../shared/types'; // Đảm bảo FollowItem được import
+import logToFile from '../../utils/logger';
+import { executeGetConferences } from './getConferences.service';
+import { executeGetJournals } from './getJournals.service';
 import { ConfigService } from '../../config/config.service';
 
 const LOG_PREFIX = "[FollowService]";
 
-// --- Lấy ConfigService Instance ---
-const configService = container.resolve(ConfigService); // Resolve singleton instance
-
-// --- Lấy cấu hình từ ConfigService ---
+const configService = container.resolve(ConfigService);
 const DATABASE_URL = configService.config.DATABASE_URL;
 if (!DATABASE_URL) {
     logToFile(`${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`);
     throw new Error("DATABASE_URL is not configured.");
 }
 
-// --- Type Definitions (replacing enums) ---
 type ServiceItemType = 'conference' | 'journal';
-type ServiceActionType = 'follow' | 'unfollow';
-// This type should align with ValidIdentifierType from the handler for clarity
-// and represent what findItemId can meaningfully process.
+type ServiceApiActionType = 'follow' | 'unfollow';
 type ServiceIdentifierType = 'id' | 'acronym' | 'title';
 
-// --- Constants (HEADERS remain the same) ---
 const HEADERS = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
 };
 
-// --- Helper Function for URL Construction ---
 function getApiUrl(
-    itemType: ServiceItemType, // CHANGED from ItemType enum
+    itemType: ServiceItemType,
     operation: 'followedList' | 'add' | 'remove'
 ): string {
-    // CHANGED: Compare with string literals
     const base = itemType === 'conference' ? 'follow-conference' : 'follow-journal';
     switch (operation) {
         case 'followedList':
@@ -51,18 +43,10 @@ function getApiUrl(
     }
 }
 
-// --- Service Functions ---
-
-/**
- * Fetches the list of followed item IDs for a given user and item type.
- * @param itemType - The type of item ('conference' or 'journal').
- * @param token - The user's authentication token.
- * @returns A promise resolving to the result, containing item IDs on success.
- */
 export async function executeGetUserFollowed(
-    itemType: ServiceItemType, // CHANGED from ItemType enum
+    itemType: ServiceItemType,
     token: string | null
-): Promise<{ success: boolean; itemIds: string[]; errorMessage?: string }> {
+): Promise<{ success: boolean; itemIds: string[]; items?: FollowItem[]; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [GetFollowed ${itemType}]`;
 
     if (!token) {
@@ -76,23 +60,21 @@ export async function executeGetUserFollowed(
     try {
         const response = await fetch(url, {
             method: 'GET',
-            headers: {
-                ...HEADERS,
-                "Authorization": `Bearer ${token}`,
-            }
+            headers: { ...HEADERS, "Authorization": `Bearer ${token}` }
         });
 
         if (!response.ok) {
             const errorText = await response.text().catch(() => `Status ${response.status}`);
-            const truncatedError = errorText.substring(0, 200);
-            logToFile(`${logContext} API Error (${response.status}): ${truncatedError}`);
+            logToFile(`${logContext} API Error (${response.status}): ${errorText.substring(0, 200)}`);
             return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching followed ${itemType} list.` };
         }
 
+        // API trả về mảng các đối tượng khớp với FollowItem
         const followedItems: FollowItem[] = await response.json();
         const itemIds = followedItems.map(item => item.id);
+
         logToFile(`${logContext} Success. Found ${itemIds.length} followed item(s).`);
-        return { success: true, itemIds };
+        return { success: true, itemIds, items: followedItems };
 
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : String(error);
@@ -101,20 +83,13 @@ export async function executeGetUserFollowed(
     }
 }
 
-/**
- * Executes the follow or unfollow action for a specific item.
- * @param itemId - The ID of the conference or journal.
- * @param itemType - The type of item ('conference' or 'journal').
- * @param action - The action to perform ('follow' or 'unfollow').
- * @param token - The user's authentication token.
- * @returns A promise resolving to the success status and optional error message.
- */
 export async function executeFollowUnfollowApi(
     itemId: string,
-    itemType: ServiceItemType, // CHANGED from ItemType enum
-    action: ServiceActionType, // CHANGED from ActionType enum
+    itemType: ServiceItemType,
+    action: ServiceApiActionType,
     token: string | null
 ): Promise<{ success: boolean; errorMessage?: string }> {
+    // ... (logic không đổi)
     const logContext = `${LOG_PREFIX} [${action} ${itemType} ID: ${itemId}]`;
 
     if (!token) {
@@ -126,10 +101,8 @@ export async function executeFollowUnfollowApi(
         return { success: false, errorMessage: "Item ID is required." };
     }
 
-    // CHANGED: Compare with string literals
     const operation = action === 'follow' ? 'add' : 'remove';
     const url = getApiUrl(itemType, operation);
-    // CHANGED: Compare with string literals
     const bodyPayload = itemType === 'conference'
         ? { conferenceId: itemId }
         : { journalId: itemId };
@@ -171,19 +144,20 @@ export async function executeFollowUnfollowApi(
     }
 }
 
+
 /**
- * Finds the ID of a conference or journal using an identifier (like acronym or ID).
- * @param identifier - The value used for searching (e.g., 'ICML', 'Nature', 'specific-id-123').
- * @param identifierType - The type of the identifier ('id', 'acronym', 'title').
- * @param itemType - The type of item ('conference' or 'journal').
- * @returns A promise resolving to the found item ID or an error message.
+ * Finds the ID of a conference or journal using an identifier.
+ * Optionally returns more details about the found item.
+ * @param identifier - The value used for searching.
+ * @param identifierType - The type of the identifier.
+ * @param itemType - The type of item.
+ * @returns A promise resolving to the found item ID and optionally its details.
  */
 export async function findItemId(
     identifier: string,
-    identifierType: ServiceIdentifierType, // CHANGED from IdentifierType enum | string | undefined
-    itemType: ServiceItemType // CHANGED from ItemType enum
-): Promise<{ success: boolean; itemId?: string; errorMessage?: string }> {
-    // No need for `effectiveIdType` cast anymore
+    identifierType: ServiceIdentifierType,
+    itemType: ServiceItemType
+): Promise<{ success: boolean; itemId?: string; details?: Partial<FollowItem>; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [FindID ${itemType} Ident:"${identifier}" Type:${identifierType}]`;
     logToFile(`${logContext} Attempting to find item ID.`);
 
@@ -192,23 +166,25 @@ export async function findItemId(
         return { success: false, errorMessage: "Identifier is required to find the item ID." };
     }
 
-    // CHANGED: Compare with string literal
     if (identifierType === 'id') {
-        logToFile(`${logContext} Identifier type is ID, returning directly: ${identifier}`);
-        return { success: true, itemId: identifier };
+        logToFile(`${logContext} Identifier type is ID. Cannot fetch details with ID alone without a specific 'getById' API. Returning ID directly: ${identifier}`);
+        // Nếu bạn có API getById, bạn có thể gọi nó ở đây để lấy chi tiết.
+        // Hiện tại, chúng ta chỉ trả về ID.
+        return { success: true, itemId: identifier, details: { id: identifier } };
     }
 
+    // Search by acronym or title
     const searchParams = new URLSearchParams({
-        // If 'title' is passed as identifierType, it will be searched using the 'acronym' API parameter.
-        // This matches the previous behavior where 'title' wasn't an explicit enum member for IdentifierType.
-        acronym: identifier,
+        // API của bạn có thể tìm kiếm bằng 'acronym' hoặc 'title' với cùng một tham số
+        // hoặc có thể cần các tham số khác nhau. Điều chỉnh nếu cần.
+        // Giả sử API tìm kiếm bằng 'acronym' có thể tìm thấy cả title.
+        acronym: identifier, // Hoặc một tham số tìm kiếm chung hơn
         perPage: '1',
         page: '1'
     });
     const searchQuery = searchParams.toString();
     logToFile(`${logContext} Constructed search query: ${searchQuery}`);
 
-    // CHANGED: Compare with string literal
     const apiResult: ApiCallResult = itemType === 'conference'
         ? await executeGetConferences(searchQuery)
         : await executeGetJournals(searchQuery);
@@ -221,24 +197,31 @@ export async function findItemId(
 
     try {
         const parsedData = JSON.parse(apiResult.rawData);
-        let itemData: any = null;
+        let itemData: any = null; // Sẽ là Partial<FollowItem>
+        // Điều chỉnh logic trích xuất này dựa trên cấu trúc thực tế của executeGetConferences/Journals
         if (parsedData && Array.isArray(parsedData.payload) && parsedData.payload.length > 0) {
             itemData = parsedData.payload[0];
-            logToFile(`${logContext} Extracted item from parsedData.payload[0]`);
         } else if (Array.isArray(parsedData) && parsedData.length > 0) {
             itemData = parsedData[0];
-            logToFile(`${logContext} Extracted item from parsedData[0]`);
         } else if (typeof parsedData === 'object' && parsedData !== null && !Array.isArray(parsedData) && parsedData.id) {
+            // Nếu API trả về một đối tượng duy nhất khi tìm thấy
             itemData = parsedData;
-            logToFile(`${logContext} Extracted item from single object parsedData`);
         }
 
+
         if (itemData && itemData.id && typeof itemData.id === 'string') {
-            logToFile(`${logContext} Successfully found ID: ${itemData.id}`);
-            return { success: true, itemId: itemData.id };
+            logToFile(`${logContext} Successfully found ID: ${itemData.id}. Details: ${JSON.stringify(itemData).substring(0,100)}`);
+            // Trả về các chi tiết cần thiết từ itemData, khớp với Partial<FollowItem>
+            const detailsToReturn: Partial<FollowItem> = {
+                id: itemData.id,
+                title: itemData.title,
+                acronym: itemData.acronym,
+                // Thêm các trường khác nếu có và cần thiết
+            };
+            return { success: true, itemId: itemData.id, details: detailsToReturn };
         } else {
-            logToFile(`${logContext} Error: Could not extract valid ID from API response. Data: ${JSON.stringify(itemData).substring(0, 100)}...`);
-            return { success: false, errorMessage: `Found ${itemType} data for "${identifier}", but could not extract its ID.` };
+            logToFile(`${logContext} Error: Could not extract valid ID or details from API response. Data: ${JSON.stringify(itemData).substring(0, 100)}...`);
+            return { success: false, errorMessage: `Found ${itemType} data for "${identifier}", but could not extract its ID or details.` };
         }
     } catch (parseError: any) {
         const errorMsg = parseError instanceof Error ? parseError.message : String(parseError);

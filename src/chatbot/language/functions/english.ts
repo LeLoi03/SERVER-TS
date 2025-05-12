@@ -263,8 +263,8 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
 };
 
 export const englishManageFollowDeclaration: FunctionDeclaration = {
-    name: "manageFollow",
-    description: "Follows or unfollows a specific conference or journal for the currently logged-in user.",
+    name: "manageFollow", // Hoặc tên hàm thực tế của bạn
+    description: "Follows, unfollows, or lists followed conferences or journals for the user.",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
@@ -273,53 +273,56 @@ export const englishManageFollowDeclaration: FunctionDeclaration = {
                 description: "The type of item.",
                 enum: ["conference", "journal"]
             },
-            identifier: {
-                type: SchemaType.STRING,
-                description: "A unique identifier for the item, such as its acronym or exact title.",
-            },
-            identifierType: {
-                 type: SchemaType.STRING,
-                 description: "The type of the identifier provided.",
-                 enum: ["acronym", "title", "id"], // Allow Model to specify if it knows the type
-            },
             action: {
                 type: SchemaType.STRING,
-                description: "The desired action to perform.",
-                enum: ["follow", "unfollow"]
+                description: "The desired action: 'follow', 'unfollow', or 'list'.",
+                enum: ["follow", "unfollow", "list"] // Thêm 'list'
+            },
+            identifier: { // Optional when action is 'list'
+                type: SchemaType.STRING,
+                description: "A unique identifier for the item (e.g., acronym, title, ID). Required for 'follow'/'unfollow'.",
+            },
+            identifierType: { // Optional when action is 'list'
+                 type: SchemaType.STRING,
+                 description: "The type of the identifier. Required for 'follow'/'unfollow'.",
+                 enum: ["acronym", "title", "id"],
             },
         },
-        required: ["itemType", "identifier", "identifierType", "action"],
+        // Điều chỉnh 'required' dựa trên 'action' có thể phức tạp trong định nghĩa JSON Schema đơn giản.
+        // Một cách là làm cho identifier và identifierType không bắt buộc ở đây
+        // và dựa vào logic của agent để cung cấp chúng khi cần (cho follow/unfollow).
+        required: ["itemType", "action"],
     },
 };
 
-// --- Calendar Item Declaration (English) ---
+
 export const englishManageCalendarDeclaration: FunctionDeclaration = {
-    name: "manageCalendar",
-    description: "Adds or removes a specific conference event to/from the user's calendar.",
+    name: "manageCalendar", // Hoặc tên hàm thực tế của bạn
+    description: "Adds, removes, or lists conferences in the user's calendar.",
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
             itemType: {
                 type: SchemaType.STRING,
-                description: "The type of item. Currently only 'conference' is supported for calendar actions.",
-                enum: ["conference"] // Restricted to conference as per requirement
-            },
-            identifier: {
-                type: SchemaType.STRING,
-                description: "A unique identifier for the conference, such as its acronym or exact title.",
-            },
-             identifierType: {
-                 type: SchemaType.STRING,
-                 description: "The type of the identifier provided.",
-                 enum: ["acronym", "title", "id"], // Allow Model to specify if it knows the type
+                description: "The type of item. Must be 'conference' for calendar actions.",
+                enum: ["conference"]
             },
             action: {
                 type: SchemaType.STRING,
-                description: "The desired action to perform.",
-                enum: ["add", "remove"]
+                description: "The desired action: 'add', 'remove', or 'list'.",
+                enum: ["add", "remove", "list"] // Thêm 'list'
+            },
+            identifier: { // Optional when action is 'list'
+                type: SchemaType.STRING,
+                description: "A unique identifier for the conference. Required for 'add'/'remove'.",
+            },
+             identifierType: { // Optional when action is 'list'
+                 type: SchemaType.STRING,
+                 description: "The type of the identifier. Required for 'add'/'remove'.",
+                 enum: ["acronym", "title", "id"],
             },
         },
-        required: ["itemType", "identifier", "identifierType", "action"],
+        required: ["itemType", "action"],
     },
 };
 
