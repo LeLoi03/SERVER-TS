@@ -6,7 +6,7 @@ import { Socket } from "socket.io";
 // --- Basic Types ---
 
 /** Represents supported languages for the application. */
-export type Language = 'en' | 'vi' | 'zh'; // Add more as needed
+export type Language = 'en' | 'vi' | 'zh' | 'de' | 'fr'| 'es'| 'ru' | 'ja'| 'ko'| 'ar'| 'fa'; // Add more as needed
 
 /** Represents the available prebuilt voices for text-to-speech. */
 export type PrebuiltVoice = "Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" | "Orus" | "Zephyr";
@@ -469,9 +469,17 @@ export interface NewConversationResult {
 
 /** List of available language options for UI selection. */
 export const AVAILABLE_LANGUAGES: LanguageOption[] = [
-    { code: 'en', name: 'English', flagCode: 'gb' },
-    { code: 'vi', name: 'Tiếng Việt', flagCode: 'vn' },
-    { code: 'zh', name: '中文', flagCode: 'cn' },
+    { name: 'English', code: 'en', flagCode: 'gb' },
+    { name: 'Deutsch', code: 'de', flagCode: 'de' },
+    { name: 'Français', code: 'fr', flagCode: 'fr' },
+    { name: 'Tiếng Việt', code: 'vi', flagCode: 'vn' },
+    { name: 'Español', code: 'es', flagCode: 'es' },
+    { name: 'Русский', code: 'ru', flagCode: 'ru' },
+    { name: '中文', code: 'zh', flagCode: 'cn' },
+    { name: '日本語', code: 'ja', flagCode: 'jp' },
+    { name: '한국어', code: 'ko', flagCode: 'kr' },
+    { name: 'العربية', code: 'ar', flagCode: 'sa' },
+    { name: 'فارسی', code: 'fa', flagCode: 'ir' }
 ];
 
 /** Default language used if none is specified or detected. */

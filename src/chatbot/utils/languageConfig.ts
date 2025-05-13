@@ -24,16 +24,64 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-             systemInstructions: LangData.vietnameseHostAgentSystemInstructions,
-             functionDeclarations: [
-                 LangData.vietnameseRouteToAgentDeclaration,
-             ],
+            systemInstructions: LangData.vietnameseHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
         },
         'zh': {
-             systemInstructions: LangData.chineseHostAgentSystemInstructions,
-             functionDeclarations: [
-                 LangData.chineseRouteToAgentDeclaration,
-             ],
+            systemInstructions: LangData.chineseSimplifiedHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'de': {
+            systemInstructions: LangData.germanHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.frenchHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.spanishHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.russianHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.japaneseHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.koreanHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.arabicHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.persianHostAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishRouteToAgentDeclaration,
+            ],
         },
     },
     'ConferenceAgent': {
@@ -46,19 +94,87 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetConferencesDeclaration,
-                LangData.vietnameseManageFollowDeclaration,
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetConferencesDeclaration,
-                LangData.chineseManageFollowDeclaration,
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
             ],
         },
+        'de': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetConferencesDeclaration,
+                LangData.englishManageFollowDeclaration,
+                LangData.englishManageCalendarDeclaration
+            ],
+        },
+
+
     },
     'JournalAgent': {
         'en': {
@@ -68,18 +184,74 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
                 LangData.englishManageFollowDeclaration,
             ],
         },
-         'vi': {
-            systemInstructions: LangData.vietnameseJournalAgentSystemInstructions,
+        'vi': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetJournalsDeclaration,
-                LangData.vietnameseManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
             ],
         },
-         'zh': {
-            systemInstructions: LangData.chineseJournalAgentSystemInstructions,
+        'zh': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetJournalsDeclaration,
-                LangData.chineseManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'de': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
             ],
         },
     },
@@ -90,16 +262,65 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
                 LangData.englishSendEmailToAdminDeclaration,
             ],
         },
-         'vi': {
-            systemInstructions: LangData.vietnameseAdminContactAgentSystemInstructions,
+        'vi': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnameseSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration,
             ],
         },
-         'zh': {
-            systemInstructions: LangData.chineseAdminContactAgentSystemInstructions,
+        'zh': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'de': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetJournalsDeclaration,
+                LangData.englishManageFollowDeclaration,
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishSendEmailToAdminDeclaration,
             ],
         },
     },
@@ -112,17 +333,73 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnameseNavigationDeclaration,
-                LangData.vietnameseOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseNavigationDeclaration,
-                LangData.chineseOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'de': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishNavigationDeclaration,
+                LangData.englishOpenGoogleMapDeclaration,
             ],
         },
     },
@@ -133,22 +410,71 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
                 LangData.englishGetWebsiteInfoDeclaration,
             ],
         },
-         'vi': {
-            systemInstructions: LangData.vietnameseWebsiteInfoAgentSystemInstructions,
+        'vi': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
             functionDeclarations: [
-                LangData.vietnamGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration,
             ],
         },
-         'zh': {
-            systemInstructions: LangData.chineseWebsiteInfoAgentSystemInstructions,
+        'zh': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
             functionDeclarations: [
-                LangData.chineseGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'de': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'fr': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'es': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'ru': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'ja': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'ko': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'ar': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
+            ],
+        },
+        'fa': {
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            functionDeclarations: [
+                LangData.englishGetWebsiteInfoDeclaration,
             ],
         },
     }
 };
 
-const DEFAULT_LANGUAGE: Language = 'en';
+
+const DEFAULT_LANGUAGE: Language = 'vi';
 // DEFAULT_AGENT_ID will now correctly use the imported AgentId type
 const DEFAULT_AGENT_ID: AgentId = 'HostAgent';
 
@@ -163,8 +489,8 @@ export function getAgentLanguageConfig(
     if (!agentConfigMap) {
         logToFile(`[Language Config] WARN: Config not found for agent "${agentId}". Falling back to agent "${DEFAULT_AGENT_ID}".`);
         if (agentId === DEFAULT_AGENT_ID) {
-             logToFile(`[Language Config] CRITICAL: Default agent config missing for agent "${DEFAULT_AGENT_ID}". Returning empty config.`);
-             return { systemInstructions: "Error: Critical config missing.", functionDeclarations: [] };
+            logToFile(`[Language Config] CRITICAL: Default agent config missing for agent "${DEFAULT_AGENT_ID}". Returning empty config.`);
+            return { systemInstructions: "Error: Critical config missing.", functionDeclarations: [] };
         }
         return getAgentLanguageConfig(targetLang, DEFAULT_AGENT_ID);
     }
@@ -177,19 +503,19 @@ export function getAgentLanguageConfig(
 
         if (!langConfig) {
             logToFile(`[Language Config] CRITICAL: Default language config missing for agent "${agentId}". Trying to return config for default agent/default language.`);
-             const absoluteDefaultConfig = agentLanguageConfigurations[DEFAULT_AGENT_ID]?.[DEFAULT_LANGUAGE];
-             if (absoluteDefaultConfig) {
-                 return absoluteDefaultConfig;
-             } else {
-                 logToFile(`[Language Config] CRITICAL: Absolute default config (Agent: ${DEFAULT_AGENT_ID}, Lang: ${DEFAULT_LANGUAGE}) missing. Returning empty config.`);
-                 return { systemInstructions: "Error: Config missing.", functionDeclarations: [] };
-             }
+            const absoluteDefaultConfig = agentLanguageConfigurations[DEFAULT_AGENT_ID]?.[DEFAULT_LANGUAGE];
+            if (absoluteDefaultConfig) {
+                return absoluteDefaultConfig;
+            } else {
+                logToFile(`[Language Config] CRITICAL: Absolute default config (Agent: ${DEFAULT_AGENT_ID}, Lang: ${DEFAULT_LANGUAGE}) missing. Returning empty config.`);
+                return { systemInstructions: "Error: Config missing.", functionDeclarations: [] };
+            }
         }
     }
 
     if (!langConfig) {
-         logToFile(`[Language Config] CRITICAL: Could not resolve any valid config for Agent: ${agentId}, Language: ${targetLang}. Returning empty config.`);
-         return { systemInstructions: "Error: Config resolution failed.", functionDeclarations: [] };
+        logToFile(`[Language Config] CRITICAL: Could not resolve any valid config for Agent: ${agentId}, Language: ${targetLang}. Returning empty config.`);
+        return { systemInstructions: "Error: Config resolution failed.", functionDeclarations: [] };
     }
 
     logToFile(`[Language Config] Using configuration for Agent: ${agentId}, Language: ${targetLang}`);
