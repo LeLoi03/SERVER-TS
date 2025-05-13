@@ -194,7 +194,7 @@ server {
     location /api/ {
 
         # Địa chỉ backend của bạn (Node.js)
-        proxy_pass http://localhost:3001;
+        proxy_pass http://localhost:3001/;
 
         # Các header quan trọng để backend nhận đúng thông tin
         proxy_set_header Host $host; # Giữ nguyên tên miền gốc
