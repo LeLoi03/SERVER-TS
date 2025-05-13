@@ -1456,3 +1456,154 @@
 [2025-05-12T05:08:47.818Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
 [2025-05-12T05:08:48.400Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
 [2025-05-12T05:08:48.401Z] [INFO] [coreHandlers][6oLQmlM2bjPV-BeZAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851][Req:6oLQ-1747026525496][Conv:682182563cc24e5f2bf99499] Emitted updated conversation list. Reason: message saved, Count: 20
+[2025-05-12T05:37:25.676Z] [SERVER GLOBAL][disconnect][Dwm3QKxpmAxi3AAyAAAB] Client disconnected. Reason: client namespace disconnect, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-12T05:37:25.823Z] [SERVER GLOBAL][disconnect][PNSKnoOarvx2rj5tAAAD] Client disconnected. Reason: client namespace disconnect, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-12T05:37:43.872Z] [socketAuth][mU91SyrEmTYSiWdwAAAF] Authentication attempt. Has token: true
+[2025-05-12T05:37:43.875Z] [socketAuth][mU91SyrEmTYSiWdwAAAF] Token signature validated successfully.
+[2025-05-12T05:37:43.876Z] [HistoryService] Initialized.
+[2025-05-12T05:37:43.876Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF] New connection. Socket ID: mU91SyrEmTYSiWdwAAAF. Initial socket.data.userId: null
+[2025-05-12T05:37:43.876Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF] Client connected, processing authentication. Has token: true
+[2025-05-12T05:37:43.876Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF] Attempting to fetch user info using token...
+[2025-05-12T05:37:43.876Z] [API Client] Attempting to fetch user info.
+[2025-05-12T05:37:43.877Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T05:37:44.548Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T05:37:44.548Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T05:37:44.549Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T05:37:44.549Z] [HistoryService] Initialized.
+[2025-05-12T05:37:44.549Z] [coreHandlers][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T05:37:44.550Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T05:37:44.550Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T05:37:44.550Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T05:37:44.551Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T05:37:44.551Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T05:37:44.580Z] [SERVER SOCKET mU91SyrEmTYSiWdwAAAF - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T05:37:44.826Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T05:37:44.827Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T05:37:44.827Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T05:37:44.827Z] [SERVER GLOBAL][connection][mU91SyrEmTYSiWdwAAAF][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T05:37:48.934Z] [socketAuth][o1TcrGctU2akFYnmAAAH] Authentication attempt. Has token: true
+[2025-05-12T05:37:48.936Z] [socketAuth][o1TcrGctU2akFYnmAAAH] Token signature validated successfully.
+[2025-05-12T05:37:48.937Z] [HistoryService] Initialized.
+[2025-05-12T05:37:48.937Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH] New connection. Socket ID: o1TcrGctU2akFYnmAAAH. Initial socket.data.userId: null
+[2025-05-12T05:37:48.938Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH] Client connected, processing authentication. Has token: true
+[2025-05-12T05:37:48.938Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH] Attempting to fetch user info using token...
+[2025-05-12T05:37:48.938Z] [API Client] Attempting to fetch user info.
+[2025-05-12T05:37:48.938Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-12T05:37:49.144Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-12T05:37:49.144Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-12T05:37:49.144Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-12T05:37:49.145Z] [HistoryService] Initialized.
+[2025-05-12T05:37:49.145Z] [coreHandlers][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-12T05:37:49.145Z] [INFO] Core event handlers successfully registered.
+[2025-05-12T05:37:49.145Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T05:37:49.146Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-12T05:37:49.146Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-12T05:37:49.146Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-12T05:37:49.155Z] [SERVER SOCKET o1TcrGctU2akFYnmAAAH - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-12T05:37:49.399Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-12T05:37:49.400Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-12T05:37:49.400Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-12T05:37:49.400Z] [SERVER GLOBAL][connection][o1TcrGctU2akFYnmAAAH][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-12T06:25:43.333Z] [SERVER GLOBAL][disconnect][mU91SyrEmTYSiWdwAAAF] Client disconnected. Reason: client namespace disconnect, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-12T06:25:44.262Z] [SERVER GLOBAL][disconnect][o1TcrGctU2akFYnmAAAH] Client disconnected. Reason: client namespace disconnect, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-12T06:56:41.954Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-12T06:56:41.955Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-12T06:56:42.404Z] [MainLoader] Starting application loading process...
+[2025-05-12T06:56:42.405Z] [DatabaseLoader] Attempting database connection...
+[2025-05-12T06:56:42.406Z] [Database] Attempting MongoDB connection...
+[2025-05-12T06:56:43.346Z] [Database] MongoDB Connected Successfully.
+[2025-05-12T06:56:43.346Z] [DatabaseLoader] Database connection successful.
+[2025-05-12T06:56:43.346Z] [MainLoader] Database loaded.
+[2025-05-12T06:56:43.347Z] [MainLoader] Services will be managed by DI container.
+[2025-05-12T06:56:43.347Z] [ExpressLoader] Configuring Express app...
+[2025-05-12T06:56:43.352Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-12T06:56:43.355Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-12T06:56:43.355Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-12T06:56:43.355Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-12T06:56:43.356Z] [ExpressLoader] Express app configured successfully.
+[2025-05-12T06:56:43.357Z] [MainLoader] Express loaded.
+[2025-05-12T06:56:43.357Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-12T06:56:43.362Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-12T06:56:43.362Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-12T06:56:43.362Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-12T06:56:43.363Z] [MainLoader] Socket.IO loaded.
+[2025-05-12T06:56:43.363Z] [JobsLoader] Scheduling background jobs...
+[2025-05-12T06:56:43.398Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-12T06:56:43.398Z] [MainLoader] Jobs scheduled.
+[2025-05-12T06:56:43.398Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-12T06:56:43.445Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-12T06:56:43.445Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-13T00:53:58.781Z] GeminiService initialized for model: gemini-2.0-flash
+[2025-05-13T00:53:58.782Z] Chatbot Initialized. Model: gemini-2.0-flash, Config: {"temperature":1,"topP":0.95,"topK":40,"maxOutputTokens":8192,"responseMimeType":"text/plain"}
+[2025-05-13T00:53:59.227Z] [MainLoader] Starting application loading process...
+[2025-05-13T00:53:59.228Z] [DatabaseLoader] Attempting database connection...
+[2025-05-13T00:53:59.236Z] [Database] Attempting MongoDB connection...
+[2025-05-13T00:54:00.177Z] [Database] MongoDB Connected Successfully.
+[2025-05-13T00:54:00.178Z] [DatabaseLoader] Database connection successful.
+[2025-05-13T00:54:00.178Z] [MainLoader] Database loaded.
+[2025-05-13T00:54:00.178Z] [MainLoader] Services will be managed by DI container.
+[2025-05-13T00:54:00.178Z] [ExpressLoader] Configuring Express app...
+[2025-05-13T00:54:00.184Z] [ExpressLoader] Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).
+[2025-05-13T00:54:00.186Z] [ExpressLoader] Mounted API routes at /api.
+[2025-05-13T00:54:00.187Z] [ExpressLoader] Registered Not Found handler.
+[2025-05-13T00:54:00.187Z] [ExpressLoader] Registered Global Error handler.
+[2025-05-13T00:54:00.187Z] [ExpressLoader] Express app configured successfully.
+[2025-05-13T00:54:00.188Z] [MainLoader] Express loaded.
+[2025-05-13T00:54:00.188Z] [SocketIOLoader] Initializing Socket.IO server...
+[2025-05-13T00:54:00.193Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-13T00:54:00.194Z] [SocketIOLoader] Socket.IO connection handler registered.
+[2025-05-13T00:54:00.194Z] [SocketIOLoader] Socket.IO server initialized successfully.
+[2025-05-13T00:54:00.194Z] [MainLoader] Socket.IO loaded.
+[2025-05-13T00:54:00.195Z] [JobsLoader] Scheduling background jobs...
+[2025-05-13T00:54:00.318Z] [JobsLoader] Background jobs scheduling initiated.
+[2025-05-13T00:54:00.319Z] [MainLoader] Jobs scheduled.
+[2025-05-13T00:54:00.319Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-13T00:54:00.466Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed.
+[2025-05-13T00:54:00.472Z] [MainLoader] All basic loaders completed successfully.
+[2025-05-13T00:56:15.800Z] [socketAuth][Shsn2abtZr5Q0KINAAAB] Authentication attempt. Has token: true
+[2025-05-13T00:56:15.807Z] [socketAuth][Shsn2abtZr5Q0KINAAAB] Token signature validated successfully.
+[2025-05-13T00:56:15.812Z] [HistoryService] Initialized.
+[2025-05-13T00:56:15.812Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB] New connection. Socket ID: Shsn2abtZr5Q0KINAAAB. Initial socket.data.userId: null
+[2025-05-13T00:56:15.812Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB] Client connected, processing authentication. Has token: true
+[2025-05-13T00:56:15.813Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB] Attempting to fetch user info using token...
+[2025-05-13T00:56:15.814Z] [API Client] Attempting to fetch user info.
+[2025-05-13T00:56:15.814Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-13T00:56:17.327Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-13T00:56:17.327Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-13T00:56:17.328Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-13T00:56:17.329Z] [HistoryService] Initialized.
+[2025-05-13T00:56:17.330Z] [coreHandlers][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-13T00:56:17.330Z] [INFO] Core event handlers successfully registered.
+[2025-05-13T00:56:17.330Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-13T00:56:17.331Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-13T00:56:17.332Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-13T00:56:17.333Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-13T00:56:17.387Z] [SERVER SOCKET Shsn2abtZr5Q0KINAAAB - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-13T00:56:17.646Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-13T00:56:17.647Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-13T00:56:17.648Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-13T00:56:17.648Z] [SERVER GLOBAL][connection][Shsn2abtZr5Q0KINAAAB][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.
+[2025-05-13T00:57:16.537Z] [SERVER GLOBAL][disconnect][Shsn2abtZr5Q0KINAAAB] Client disconnected. Reason: transport close, UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, ActiveConvId: N/A
+[2025-05-13T01:20:31.423Z] [socketAuth][TJHWWCgnh0gV2F5UAAAD] Authentication attempt. Has token: true
+[2025-05-13T01:20:31.428Z] [socketAuth][TJHWWCgnh0gV2F5UAAAD] Token signature validated successfully.
+[2025-05-13T01:20:31.429Z] [HistoryService] Initialized.
+[2025-05-13T01:20:31.429Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD] New connection. Socket ID: TJHWWCgnh0gV2F5UAAAD. Initial socket.data.userId: null
+[2025-05-13T01:20:31.430Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD] Client connected, processing authentication. Has token: true
+[2025-05-13T01:20:31.430Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD] Attempting to fetch user info using token...
+[2025-05-13T01:20:31.430Z] [API Client] Attempting to fetch user info.
+[2025-05-13T01:20:31.431Z] [API Client] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-13T01:20:32.131Z] [API Client] Successfully fetched user info from /user/me for ID: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851
+[2025-05-13T01:20:32.131Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD] User info fetched successfully. UserId: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Email: loicute5fps@gmail.com, Role: undefined
+[2025-05-13T01:20:32.132Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers NOW.
+[2025-05-13T01:20:32.132Z] [HistoryService] Initialized.
+[2025-05-13T01:20:32.132Z] [coreHandlers][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Registering core event handlers for connection.
+[2025-05-13T01:20:32.132Z] [INFO] Core event handlers successfully registered.
+[2025-05-13T01:20:32.132Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-13T01:20:32.132Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Authenticated user session ready. Emitting connection_ready.
+[2025-05-13T01:20:32.133Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Fetching initial conversation list...
+[2025-05-13T01:20:32.133Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Fetching conversation list.
+[2025-05-13T01:20:32.195Z] [SERVER SOCKET TJHWWCgnh0gV2F5UAAAD - ON ANY] Event: get_initial_conversations, Args: []
+[2025-05-13T01:20:32.382Z] [HistoryService] [List User: 772f98c9-8a52-46c1-ba2d-a51c8fc3c851, Limit: 20] Found 20 conversations.
+[2025-05-13T01:20:32.383Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Sent initial conversation list. Count: 20
+[2025-05-13T01:20:32.384Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Core event handlers registered successfully after user auth.
+[2025-05-13T01:20:32.385Z] [SERVER GLOBAL][connection][TJHWWCgnh0gV2F5UAAAD][772f98c9-8a52-46c1-ba2d-a51c8fc3c851] Emitted "server_ready" to client.

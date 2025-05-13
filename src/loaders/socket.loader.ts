@@ -26,7 +26,7 @@ export const initSocketIO = (
 
     const io = new SocketIOServer(httpServer, {
         cors: {
-            origin: configService.config.CORS_ALLOWED_ORIGINS,
+            origin: "*",
             methods: ["GET", "POST"],
             credentials: true
         },
