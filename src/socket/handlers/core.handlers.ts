@@ -276,7 +276,7 @@ export const registerCoreHandlers = (
             logToFile(`[INFO] ${handlerLogContext} payloadConversationId is null/undefined. Client requests new conversation.`);
             try {
                 // Bạn có thể muốn lấy title mặc định hoặc từ một nguồn nào đó nếu cần
-                const newConvResult = await conversationHistoryService.createNewConversation(currentUserId, "Chat mới"); // Truyền title mặc định nếu muốn
+                const newConvResult = await conversationHistoryService.createNewConversation(currentUserId);
                 targetConversationId = newConvResult.conversationId;
                 conversationTitleForNew = newConvResult.title; // Bây giờ newConvResult.title đã tồn tại
 

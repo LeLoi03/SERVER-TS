@@ -9,7 +9,6 @@ const DEFAULT_CONVERSATION_LIMIT = 20;
 const MAX_TITLE_LENGTH = 50; // Cho tiêu đề tự động
 const MAX_CUSTOM_TITLE_LENGTH = 120; // Cho tiêu đề người dùng đặt
 const TRUNCATE_SUFFIX = '...';
-const DEFAULT_SEARCH_LIMIT = 10; // Giới hạn kết quả tìm kiếm mặc định
 
 /**
  * Định nghĩa kiểu dữ liệu cho metadata của cuộc trò chuyện.
@@ -209,29 +208,29 @@ export class ConversationHistoryService {
     * @returns Promise trả về thông tin của cuộc trò chuyện mới.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-    async createNewConversation(userId: string, initialTitle?: string): Promise<NewConversationResult> { // Sửa kiểu trả về
+    async createNewConversation(userId: string): Promise<NewConversationResult> { // Bỏ initialTitle nếu không cần thiết
         const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}]`;
         try {
-            const defaultTitle = initialTitle || "New chat"; // Hoặc "New Chat"
+            // Không set customTitle ở đây
             const newConversationDoc = await this.model.create({
                 userId: userId,
                 messages: [],
-                customTitle: defaultTitle, // Lưu title vào customTitle để nhất quán
-                isPinned: false, // Mặc định
+                // customTitle: null, // Hoặc không bao gồm trường này khi tạo
+                isPinned: false,
                 // lastActivity sẽ được hook hoặc default schema xử lý
             });
 
-            // Lấy lastActivity thực tế sau khi tạo (nếu schema có default hoặc hook)
-            const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
+            // Lấy lại document để đảm bảo có lastActivity
+             const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
             if (!savedConversation) {
                 throw new Error("Failed to retrieve newly created conversation.");
             }
 
-
+            // Trả về title mặc định "New chat" cho đến khi tin nhắn đầu tiên được thêm
             return {
                 conversationId: savedConversation._id.toString(),
                 history: [],
-                title: savedConversation.customTitle || defaultTitle, // Lấy từ customTitle nếu có
+                title: "New chat", // Trả về title mặc định ban đầu
                 lastActivity: savedConversation.lastActivity,
                 isPinned: savedConversation.isPinned || false,
             };
@@ -380,54 +379,6 @@ export class ConversationHistoryService {
             const errorMsg = error instanceof Error ? error.message : String(error);
             logToFile(`${logContext} Error updating pin status: ${errorMsg}`);
             return false;
-        }
-    }
-
-    /**
-     * Tìm kiếm các cuộc trò chuyện dựa trên một thuật ngữ trong tin nhắn.
-     * Trả về metadata của các cuộc trò chuyện khớp.
-     */
-    async searchConversationsByTerm(
-        userId: string,
-        searchTerm: string,
-        limit: number = DEFAULT_SEARCH_LIMIT
-    ): Promise<ConversationMetadata[]> {
-        const logContext = `${LOG_PREFIX} [Search User: ${userId}, Term: "${searchTerm.substring(0, 30)}...", Limit: ${limit}]`;
-        logToFile(`${logContext} Searching conversations.`);
-
-        if (!searchTerm || searchTerm.trim().length === 0) {
-            logToFile(`${logContext} Search term is empty.`);
-            return [];
-        }
-
-        try {
-            // Sử dụng $text search của MongoDB
-            // `score` được thêm vào để có thể sắp xếp theo mức độ liên quan nếu muốn
-            const conversations = await this.model.find(
-                {
-                    userId: userId,
-                    $text: { $search: searchTerm.trim() }
-                },
-                { score: { $meta: 'textScore' } } // Lấy điểm số liên quan
-            )
-                .sort({ isPinned: -1, score: { $meta: 'textScore' }, lastActivity: -1 }) // Sắp xếp: ghim, điểm, hoạt động gần nhất
-                .limit(limit)
-                .select('_id messages lastActivity customTitle isPinned') // Chọn các trường cần thiết
-                .lean()
-                .exec();
-
-            // Ép kiểu cẩn thận hơn cho POJO từ lean()
-            const metadataList: ConversationMetadata[] = conversations.map(conv =>
-                this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }))
-            );
-
-            logToFile(`${logContext} Found ${metadataList.length} conversations matching search term.`);
-            return metadataList;
-
-        } catch (error: any) {
-            const errorMsg = error instanceof Error ? error.message : String(error);
-            logToFile(`${logContext} Error searching conversations: ${errorMsg}`);
-            return [];
         }
     }
 

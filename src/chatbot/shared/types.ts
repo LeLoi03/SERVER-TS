@@ -49,6 +49,7 @@ export interface ApiCallResult {
 }
 
 
+
 export interface FollowItemDate {
   fromDate: string; // ISO Date string
   toDate: string;   // ISO Date string
@@ -75,6 +76,22 @@ export interface FollowItem {
   // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
   // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
 }
+
+
+
+
+
+/**
+ * Payload for the 'itemFollowStatusUpdated' frontend action.
+ * Contains details of the item whose follow status changed.
+ */
+export interface ItemFollowStatusUpdatePayload {
+  item: FollowItem; // The item whose follow status was updated
+  itemType: 'conference' | 'journal';
+  followed: boolean; // true if the item is now followed (after a 'follow' action),
+                     // false if the item is now unfollowed (after an 'unfollow' action)
+}
+
 
 
 export interface CalendarItem {
@@ -162,13 +179,14 @@ export interface RemoveFromCalendarPayload {
 export type FrontendAction =
     | { type: 'navigate'; url: string }
     | { type: 'openMap'; location: string }
-    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction }
+    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Assuming ConfirmSendEmailAction is defined elsewhere
     | { type: 'displayList'; payload: DisplayListPayload }
     | { type: 'addToCalendar'; payload: AddToCalendarPayload }
     | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload }
+    | { type: 'itemFollowStatusUpdated'; payload: ItemFollowStatusUpdatePayload } // Added new action
     | undefined; // Allows for no action
 
-
+    
 /** Defines the payload for the 'confirmEmailSend' frontend action. */
 export interface ConfirmSendEmailAction {
     /** A unique identifier for this specific confirmation request. */
