@@ -240,32 +240,45 @@ export async function handleNonStreaming(
     historyForHandler: HistoryItem[],
     socket: Socket,
     language: Language,
-    handlerId: string, // Đây là ID của request/conversation, không phải ID của message
-    frontendMessageId?: string // <<< THAM SỐ MỚI
+    handlerId: string,
+    frontendMessageId?: string
 ): Promise<NonStreamingHandlerResult | void> {
 
     const socketId = socket.id;
-    const conversationId = handlerId; // Use handlerId as conversationId for simplicity
+    const conversationId = handlerId;
     logToFile(`--- [${handlerId} Socket ${socketId}] Handling NON-STREAMING input: "${userInput}", Lang: ${language} ---`);
 
-    // --- Start with HOST AGENT ---
     const currentAgentId: AgentId = 'HostAgent';
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId);
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
-    // --------------------------
 
-    const userTurn: HistoryItem = {
-        role: 'user',
-        parts: [{ text: userInput }],
-        timestamp: new Date(),
-        uuid: frontendMessageId || `user-fallback-${handlerId}-${Date.now()}` // Sử dụng frontendMessageId nếu có
-        // Hoặc tạo một fallback nếu không có (nhưng nên có)
-    };
-    let history: HistoryItem[] = [...historyForHandler, userTurn]; // This is the HOST's history
+    let history: HistoryItem[] = [...historyForHandler]; // Start with the provided history
+
+    // --- Determine if userTurn needs to be added ---
+    const isEditContextOrAlreadyProcessed = frontendMessageId &&
+                               history.length > 0 &&
+                               history[history.length - 1].role === 'user' &&
+                               history[history.length - 1].uuid === frontendMessageId &&
+                               history[history.length - 1].parts[0]?.text === userInput;
+
+    if (!isEditContextOrAlreadyProcessed) {
+        logToFile(`[${handlerId} NonStreaming - UserTurn] Adding new userTurn. frontendMessageId: ${frontendMessageId}, userInput: "${userInput.substring(0, 20)}"`);
+        const newUserTurn: HistoryItem = { // Create userTurn only when needed
+            role: 'user',
+            parts: [{ text: userInput }],
+            timestamp: new Date(),
+            uuid: frontendMessageId || `user-fallback-${handlerId}-${Date.now()}`
+        };
+        history.push(newUserTurn);
+    } else {
+        logToFile(`[${handlerId} NonStreaming - UserTurn] Skipping adding userTurn; assumed already present in history (edit context or already processed). frontendMessageId: ${frontendMessageId}`);
+    }
+    // --- End of UserTurn logic ---
+
     const thoughts: ThoughtStep[] = [];
     let finalFrontendAction: FrontendAction | undefined = undefined;
     let currentTurn = 1;
-    const MAX_TURNS = 5; // Max turns for the HOST agent loop
+    const MAX_TURNS = 5;
 
     // --- Safe Emit Helper ---
     const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ResultUpdate | ErrorUpdate): boolean => {
@@ -479,23 +492,43 @@ export async function handleStreaming(
     currentHistoryFromSocket: HistoryItem[],
     socket: Socket,
     language: Language,
-    handlerId: string, // Đây là ID của request/conversation, không phải ID của message
+    handlerId: string,
     onActionGenerated?: (action: FrontendAction) => void,
-    frontendMessageId?: string // <<< THAM SỐ MỚI
+    frontendMessageId?: string
 ): Promise<HistoryItem[] | void> {
 
     const socketId = socket.id;
-    const conversationId = handlerId; // Sử dụng handlerId làm conversationId
+    const conversationId = handlerId;
     logToFile(`--- [${handlerId} Socket ${socketId}] Handling STREAMING input: "${userInput}", Lang: ${language} ---`);
 
-    // Cấu hình cho HostAgent
     const currentAgentIdForHost: AgentId = 'HostAgent';
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentIdForHost);
     const hostAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
     let history: HistoryItem[] = [...currentHistoryFromSocket];
-    const allThoughtsCollectedStreaming: ThoughtStep[] = []; // <<<< THAY ĐỔI: Mảng riêng cho streaming thoughts
-    let finalFrontendActionStreaming: FrontendAction | undefined = undefined; // <<<< THAY ĐỔI: Biến riêng
+    const allThoughtsCollectedStreaming: ThoughtStep[] = [];
+    let finalFrontendActionStreaming: FrontendAction | undefined = undefined;
+
+    // --- Determine if userTurn needs to be added ---
+    const isEditContextOrAlreadyProcessed = frontendMessageId &&
+                               history.length > 0 &&
+                               history[history.length - 1].role === 'user' &&
+                               history[history.length - 1].uuid === frontendMessageId &&
+                               history[history.length - 1].parts[0]?.text === userInput;
+
+    if (!isEditContextOrAlreadyProcessed) {
+        logToFile(`[${handlerId} Streaming - UserTurn] Adding new userTurn. frontendMessageId: ${frontendMessageId}, userInput: "${userInput.substring(0, 20)}"`);
+        const newUserTurn: HistoryItem = {
+            role: 'user',
+            parts: [{ text: userInput }],
+            timestamp: new Date(),
+            uuid: frontendMessageId || `user-fallback-${handlerId}-${Date.now()}`
+        };
+        history.push(newUserTurn);
+    } else {
+        logToFile(`[${handlerId} Streaming - UserTurn] Skipping adding userTurn; assumed already present in history (edit context or already processed). frontendMessageId: ${frontendMessageId}`);
+    }
+    // --- End of UserTurn logic ---
 
     // --- Safe Emit Helper (ĐIỀU CHỈNH ĐỂ GIỐNG NON-STREAMING VỀ THOUGHTS) ---
     const safeEmitStreaming = (

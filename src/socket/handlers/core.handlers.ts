@@ -6,7 +6,7 @@ import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper'
 import { handleStreaming, handleNonStreaming } from '../../chatbot/handlers/intentHandler';
 import { stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation } from '../../chatbot/utils/confirmationManager';
 import logToFile from '../../utils/logger';
-
+import { mapHistoryItemToChatMessage } from '../../chatbot/utils/mapHistoryItemToChatMessage';
 // --- Import types ---
 import {
     FrontendAction,
@@ -359,7 +359,7 @@ export const registerCoreHandlers = (
             return sendChatError(handlerLogContext, 'Invalid payload for edit_user_message.', 'invalid_payload_edit', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
-        const { conversationId, messageIdToEdit, newText, language } = payload;
+        const { conversationId, messageIdToEdit, newText, language } = payload; // messageIdToEdit IS THE UUID
         const isStreaming = socket.data.isStreamingEnabled ?? true; // Lấy từ client settings hoặc mặc định
 
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
@@ -384,7 +384,10 @@ export const registerCoreHandlers = (
                 return sendChatError(convLogContext, 'Message to edit not found or is not the latest user message.', 'edit_msg_invalid_target', { messageIdToEdit });
             }
 
-            const { editedUserMessage, historyForNewBotResponse } = prepareResult;
+            const {
+                editedUserMessage: preparedEditedUserMessage,
+                historyForNewBotResponse
+            } = prepareResult;
 
             // 2. Gọi handler AI (streaming hoặc non-streaming)
             let finalHistoryFromAI: HistoryItem[] | void | undefined;
@@ -407,12 +410,13 @@ export const registerCoreHandlers = (
 
             if (isStreaming) {
                 finalHistoryFromAI = await handleStreaming(
-                    newText, // userInput cho handleStreaming
-                    historyForNewBotResponse, // currentHistoryFromSocket
+                    newText,
+                    historyForNewBotResponse,
                     socket,
                     language as Language,
-                    aiHandlerId, // ID cho phiên xử lý AI này
-                    handleAIActionCallback // Callback để xử lý action từ bên trong streaming
+                    aiHandlerId,
+                    handleAIActionCallback,
+                    messageIdToEdit // <<<< PASS THE UUID OF THE MESSAGE BEING EDITED
                 );
             } else {
                 const nonStreamingResult = await handleNonStreaming(
@@ -420,8 +424,8 @@ export const registerCoreHandlers = (
                     historyForNewBotResponse,
                     socket,
                     language as Language,
-                    aiHandlerId // ID cho phiên xử lý AI này
-                    // handleNonStreaming có thể tự gọi onActionGenerated hoặc trả về action
+                    aiHandlerId,
+                    messageIdToEdit // <<<< PASS THE UUID OF THE MESSAGE BEING EDITED
                 );
                 if (nonStreamingResult) {
                     finalHistoryFromAI = nonStreamingResult.history;
@@ -494,24 +498,27 @@ export const registerCoreHandlers = (
 
 
             if (!newBotMessageForClient) {
-                logToFile(`[WARNING] ${convLogContext} Could not reliably identify the new bot message from saved history. History length before AI: ${historyForNewBotResponse.length}, after AI: ${historyToSaveInDB.length}.`);
-                // Vẫn gửi editedUserMessage về, client sẽ tự cập nhật
+                logToFile(`[WARNING] ${convLogContext} Could not reliably identify the new bot message...`);
                 const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = {
-                    editedUserMessage: editedUserMessage, // Từ prepareResult
+                    // Map to the structure frontend expects (ChatMessage in backend shared types)
+                    editedUserMessage: mapHistoryItemToChatMessage(preparedEditedUserMessage), // <<< MAP HERE
                     conversationId: conversationId,
+                    // newBotMessage will be undefined here as per your backend shared type
                 };
                 socket.emit('conversation_updated_after_edit', partialPayload);
                 return sendChatWarning(convLogContext, 'Message edited, but new bot response could not be identified clearly. User message updated.', 'edit_bot_response_unclear');
             }
 
             logToFile(`[INFO] ${convLogContext} Identified new bot message for client. UUID (if any): ${(newBotMessageForClient as any).uuid}`);
+
+            // Map to the structure frontend expects
             const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
-                editedUserMessage: editedUserMessage, // Từ prepareResult
-                newBotMessage: newBotMessageForClient,
+                editedUserMessage: mapHistoryItemToChatMessage(preparedEditedUserMessage), // <<< MAP HERE
+                newBotMessage: mapHistoryItemToChatMessage(newBotMessageForClient),       // <<< MAP HERE
                 conversationId: conversationId,
             };
             socket.emit('conversation_updated_after_edit', frontendPayload);
-            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' to client.`);
+            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' to client with mapped messages.`);
 
         } catch (error: any) {
             logToFile(`[ERROR] ${convLogContext} Unhandled exception in edit_user_message: ${error.message}. Stack: ${error.stack}`);

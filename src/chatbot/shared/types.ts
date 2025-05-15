@@ -316,7 +316,7 @@ export interface WarningUpdate {
 
 
 /** Defines the possible types for a message displayed in the chat UI. */
-export type ChatDisplayMessageType = 'text' | 'error' | 'warning' | 'map' | undefined;
+export type ChatDisplayMessageType = 'text' | 'error' | 'warning' | 'map' | 'follow_update' | undefined;
 
 /** Represents a single message object used for rendering the chat history in the UI. */
 export interface ChatMessage {
@@ -603,7 +603,7 @@ export interface BackendEditUserMessagePayload {
 }
 
 export interface BackendConversationUpdatedAfterEditPayload {
-    editedUserMessage: HistoryItem; // Or your backend's message type
-    newBotMessage: HistoryItem;     // Or your backend's message type
+    editedUserMessage: ChatMessage; // << Use ChatMessage
+    newBotMessage: ChatMessage;     // << Use ChatMessage
     conversationId: string;
 }
