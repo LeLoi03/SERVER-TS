@@ -10,6 +10,23 @@ const MAX_TITLE_LENGTH = 50; // Cho tiêu đề tự động
 const MAX_CUSTOM_TITLE_LENGTH = 120; // Cho tiêu đề người dùng đặt
 const TRUNCATE_SUFFIX = '...';
 
+// Define default titles based on language
+const DEFAULT_TITLES_BY_LANGUAGE: { [key: string]: string } = {
+    en: "New Chat",                  // English
+    vi: "Cuộc trò chuyện mới",       // Vietnamese
+    zh: "新对话",                    // Chinese (Simplified) - Assuming Simplified, common for web
+    de: "Neuer Chat",               // German
+    fr: "Nouvelle discussion",      // French
+    es: "Nuevo chat",               // Spanish
+    ru: "Новый чат",                // Russian
+    ja: "新しいチャット",             // Japanese
+    ko: "새 채팅",                   // Korean
+    ar: "دردشة جديدة",             // Arabic
+    fa: "چت جدید",                  // Persian (Farsi)
+};
+const FALLBACK_DEFAULT_TITLE = "New Chat"; // Fallback if language not found or not provided
+
+
 /**
  * Định nghĩa kiểu dữ liệu cho metadata của cuộc trò chuyện.
  */
@@ -27,7 +44,6 @@ export interface ConversationMetadata {
  * Service quản lý lịch sử cuộc trò chuyện của người dùng.
  */
 export class ConversationHistoryService {
-    // Model là readonly vì không nên gán lại sau khi khởi tạo
     private readonly model: mongoose.Model<IConversation>;
 
     constructor() {
@@ -35,10 +51,19 @@ export class ConversationHistoryService {
         logToFile(`${LOG_PREFIX} Initialized.`);
     }
 
-    private mapConversationToMetadata(conv: (IConversation & { _id: Types.ObjectId }) | (Omit<IConversation, keyof Document> & { _id: Types.ObjectId })): ConversationMetadata {
-        // Omit<IConversation, keyof Document> sẽ loại bỏ các phương thức của Mongoose Document
-        // và chỉ giữ lại các trường dữ liệu.
-        const title = conv.customTitle || this.generateTitleFromMessages(conv.messages || []);
+    private getLocalizedDefaultTitle(language?: string): string {
+        if (language) {
+            const langKey = language.toLowerCase().slice(0, 2); // e.g., 'en' from 'en-US'
+            return DEFAULT_TITLES_BY_LANGUAGE[langKey] || FALLBACK_DEFAULT_TITLE;
+        }
+        return FALLBACK_DEFAULT_TITLE;
+    }
+
+     private mapConversationToMetadata(
+        conv: (IConversation & { _id: Types.ObjectId }) | (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }),
+        language?: string // << ADDED language parameter
+    ): ConversationMetadata {
+        const title = conv.customTitle || this.generateTitleFromMessages(conv.messages || [], language); // << PASS language
         return {
             id: conv._id.toString(),
             title: title,
@@ -56,9 +81,10 @@ export class ConversationHistoryService {
      */
     async getConversationListForUser(
         userId: string,
-        limit: number = DEFAULT_CONVERSATION_LIMIT
+        limit: number = DEFAULT_CONVERSATION_LIMIT,
+        language?: string // << ADDED language parameter
     ): Promise<ConversationMetadata[]> {
-        const logContext = `${LOG_PREFIX} [List User: ${userId}, Limit: ${limit}]`;
+        const logContext = `${LOG_PREFIX} [List User: ${userId}, Limit: ${limit}, Lang: ${language || 'N/A'}]`;
         logToFile(`${logContext} Fetching conversation list.`);
         try {
             const conversations = await this.model.find({ userId })
@@ -68,10 +94,8 @@ export class ConversationHistoryService {
                 .lean()
                 .exec();
 
-            // conversations ở đây là một mảng các POJOs
             const metadataList: ConversationMetadata[] = conversations.map(conv =>
-                // Ép kiểu cẩn thận hơn cho POJO từ lean()
-                this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }))
+                this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }), language) // << PASS language
             );
 
             logToFile(`${logContext} Found ${metadataList.length} conversations.`);
@@ -90,8 +114,11 @@ export class ConversationHistoryService {
     * @returns Promise trả về ID cuộc trò chuyện và lịch sử tin nhắn.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-    async getLatestOrCreateConversation(userId: string): Promise<{ conversationId: string; history: HistoryItem[] }> {
-        const logContext = `${LOG_PREFIX} [GetOrCreate User: ${userId}]`;
+     async getLatestOrCreateConversation(
+        userId: string,
+        language?: string // << ADDED language parameter
+    ): Promise<NewConversationResult> { // << MODIFIED: Return type to NewConversationResult for consistency
+        const logContext = `${LOG_PREFIX} [GetOrCreate User: ${userId}, Lang: ${language || 'N/A'}]`;
         logToFile(`${logContext} Attempting to find latest or create new conversation.`);
         try {
             const latestConversation = await this.model.findOne({ userId })
@@ -100,15 +127,19 @@ export class ConversationHistoryService {
 
             if (latestConversation) {
                 logToFile(`${logContext} Found latest conversation: ${latestConversation._id}. Updating lastActivity.`);
-                latestConversation.lastActivity = new Date(); // Hook 'pre_save' sẽ cập nhật
+                latestConversation.lastActivity = new Date();
                 await latestConversation.save();
                 return {
                     conversationId: latestConversation._id.toString(),
-                    history: latestConversation.messages || []
+                    history: latestConversation.messages || [],
+                    // For existing conv, title relies on customTitle or generated from messages
+                    title: latestConversation.customTitle || this.generateTitleFromMessages(latestConversation.messages || [], language),
+                    lastActivity: latestConversation.lastActivity,
+                    isPinned: latestConversation.isPinned || false,
                 };
             } else {
                 logToFile(`${logContext} No existing conversation found. Creating new.`);
-                return this.createNewConversation(userId);
+                return this.createNewConversation(userId, language); // << PASS language
             }
         } catch (error: any) {
             const errorMsg = error instanceof Error ? error.message : String(error);
@@ -208,29 +239,34 @@ export class ConversationHistoryService {
     * @returns Promise trả về thông tin của cuộc trò chuyện mới.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-    async createNewConversation(userId: string): Promise<NewConversationResult> { // Bỏ initialTitle nếu không cần thiết
-        const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}]`;
+     async createNewConversation(
+        userId: string,
+        language?: string // << MODIFIED: Add language parameter
+    ): Promise<NewConversationResult> {
+        const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}, Lang: ${language || 'N/A'}]`;
+        logToFile(`${logContext} Creating new conversation.`);
         try {
-            // Không set customTitle ở đây
+            const initialTitle = this.getLocalizedDefaultTitle(language); // << Get title based on language
+            logToFile(`${logContext} Initial title set to: "${initialTitle}" for language "${language || 'default'}".`);
+
             const newConversationDoc = await this.model.create({
                 userId: userId,
                 messages: [],
-                // customTitle: null, // Hoặc không bao gồm trường này khi tạo
+                customTitle: initialTitle, // << SET customTitle with the language-specific title
                 isPinned: false,
-                // lastActivity sẽ được hook hoặc default schema xử lý
             });
 
-            // Lấy lại document để đảm bảo có lastActivity
-             const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
+            const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
             if (!savedConversation) {
+                logToFile(`${LOG_PREFIX} CRITICAL: Failed to retrieve newly created conversation ${newConversationDoc._id}`);
                 throw new Error("Failed to retrieve newly created conversation.");
             }
+            logToFile(`${logContext} New conversation ${savedConversation._id} created with title: "${savedConversation.customTitle}".`);
 
-            // Trả về title mặc định "New chat" cho đến khi tin nhắn đầu tiên được thêm
             return {
                 conversationId: savedConversation._id.toString(),
                 history: [],
-                title: "New chat", // Trả về title mặc định ban đầu
+                title: savedConversation.customTitle || initialTitle, // Should be the one from customTitle
                 lastActivity: savedConversation.lastActivity,
                 isPinned: savedConversation.isPinned || false,
             };
@@ -240,6 +276,7 @@ export class ConversationHistoryService {
             throw new Error(`Database error creating new conversation: ${errorMsg}`);
         }
     }
+
 
 
     /**
@@ -390,34 +427,26 @@ export class ConversationHistoryService {
      * @param messages - Mảng các tin nhắn trong cuộc trò chuyện.
      * @returns Chuỗi tiêu đề được tạo.
      */
-    private generateTitleFromMessages(messages: HistoryItem[]): string {
-        let title = 'Cuộc trò chuyện mới'; // Tiêu đề mặc định
-        // Thêm ngôn ngữ sau này
+     private generateTitleFromMessages(messages: HistoryItem[], language?: string): string { // << ADDED language
+        let title = this.getLocalizedDefaultTitle(language); // << Use localized default
 
-        // Tìm nội dung text của tin nhắn 'user' đầu tiên
         const firstUserMessageText = messages
             .find(msg => msg.role === 'user')?.parts
-            ?.find(p => p.text)?.text?.trim(); // Lấy text và loại bỏ khoảng trắng thừa
+            ?.find(p => p.text)?.text?.trim();
 
-        // Tìm nội dung text của tin nhắn 'model' đầu tiên (nếu không có tin nhắn user)
         const firstModelMessageText = messages
             .find(msg => msg.role === 'model')?.parts
             ?.find(p => p.text)?.text?.trim();
 
-        // Ưu tiên tin nhắn của người dùng làm tiêu đề
         if (firstUserMessageText && firstUserMessageText.length > 0) {
             title = firstUserMessageText;
         } else if (firstModelMessageText && firstModelMessageText.length > 0) {
-            // Nếu không có tin nhắn user, dùng tin nhắn model
             title = firstModelMessageText;
         }
-        // Nếu cả hai đều trống hoặc không có, giữ tiêu đề mặc định
 
-        // Cắt ngắn tiêu đề nếu quá dài
         if (title.length > MAX_TITLE_LENGTH) {
             title = title.substring(0, MAX_TITLE_LENGTH - TRUNCATE_SUFFIX.length) + TRUNCATE_SUFFIX;
         }
-
         return title;
     }
 }
