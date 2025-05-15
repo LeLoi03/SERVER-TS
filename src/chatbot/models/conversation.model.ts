@@ -29,7 +29,9 @@ const historyItemSchema = new Schema({
         type: [partSchema],
         required: true
     },
-    timestamp: { type: Date, default: Date.now }
+    timestamp: { type: Date, default: Date.now },
+    uuid: { type: String, index: true, sparse: true } // <<< ADD THIS: Frontend message ID
+
 }, { _id: false });
 
 // Định nghĩa Schema chính cho Conversation
@@ -143,7 +145,7 @@ conversationSchema.pre('updateOne', function (next) {
 // MongoDB sẽ tự động xử lý việc index các phần tử trong mảng messages và parts
 conversationSchema.index(
     { 'messages.parts.text': 'text' },
-    { default_language: 'vietnamese' } // Có thể đặt ngôn ngữ mặc định cho text search
+    { default_language: 'english' } // Có thể đặt ngôn ngữ mặc định cho text search
 );
 
 

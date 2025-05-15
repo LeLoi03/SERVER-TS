@@ -1,7 +1,7 @@
 // src/chatbot/services/conversationHistory.service.ts
 import mongoose, { Types, Error as MongooseError } from 'mongoose';
 import ConversationModel, { IConversation } from '../models/conversation.model';
-import { HistoryItem, RenameResult, NewConversationResult } from '../shared/types';
+import { HistoryItem, RenameResult, NewConversationResult, Language } from '../shared/types'; // Ensure Language is imported
 import logToFile from '../../utils/logger'; // Đảm bảo đường dẫn đúng
 
 const LOG_PREFIX = "[HistoryService]";
@@ -38,6 +38,12 @@ export interface ConversationMetadata {
     // snippet?: string; // Có thể thêm một đoạn trích từ tin nhắn khớp khi tìm kiếm
 }
 
+export interface UpdateUserMessageResult {
+    editedUserMessage: HistoryItem;
+    historyForNewBotResponse: HistoryItem[];
+    originalConversationFound: boolean;
+    messageFoundAndIsLastUserMessage: boolean; // Thêm cờ này để core.handler biết rõ hơn
+}
 
 
 /**
@@ -59,7 +65,7 @@ export class ConversationHistoryService {
         return FALLBACK_DEFAULT_TITLE;
     }
 
-     private mapConversationToMetadata(
+    private mapConversationToMetadata(
         conv: (IConversation & { _id: Types.ObjectId }) | (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }),
         language?: string // << ADDED language parameter
     ): ConversationMetadata {
@@ -114,7 +120,7 @@ export class ConversationHistoryService {
     * @returns Promise trả về ID cuộc trò chuyện và lịch sử tin nhắn.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-     async getLatestOrCreateConversation(
+    async getLatestOrCreateConversation(
         userId: string,
         language?: string // << ADDED language parameter
     ): Promise<NewConversationResult> { // << MODIFIED: Return type to NewConversationResult for consistency
@@ -239,7 +245,7 @@ export class ConversationHistoryService {
     * @returns Promise trả về thông tin của cuộc trò chuyện mới.
     * @throws Error nếu có vấn đề tương tác cơ sở dữ liệu.
     */
-     async createNewConversation(
+    async createNewConversation(
         userId: string,
         language?: string // << MODIFIED: Add language parameter
     ): Promise<NewConversationResult> {
@@ -419,7 +425,112 @@ export class ConversationHistoryService {
         }
     }
 
-    // --- Phương thức Helper Riêng tư ---
+    /**
+        * Tìm và chuẩn bị dữ liệu để cập nhật tin nhắn của người dùng.
+        * Hàm này KHÔNG lưu vào DB, chỉ chuẩn bị dữ liệu.
+        * @param userId - ID của người dùng.
+        * @param conversationId - ID của cuộc trò chuyện.
+        * @param messageIdToEdit - UUID của tin nhắn người dùng muốn sửa (từ frontend).
+        * @param newText - Nội dung mới của tin nhắn.
+        * @returns Promise trả về UpdateUserMessageResult hoặc null nếu có lỗi nghiêm trọng.
+        */
+    public async updateUserMessageAndPrepareHistory(
+        userId: string,
+        conversationId: string,
+        messageIdToEdit: string, // UUID từ frontend
+        newText: string
+    ): Promise<UpdateUserMessageResult | null> {
+        const logContext = `${LOG_PREFIX} [UpdateUserMsgPrepareHist User: ${userId}, Conv: ${conversationId}, MsgToEdit: ${messageIdToEdit}]`;
+        logToFile(`${logContext} Starting. New text preview: "${newText.substring(0, 30)}..."`);
+
+        if (!mongoose.Types.ObjectId.isValid(conversationId)) {
+            logToFile(`${logContext} Invalid conversationId format.`);
+            // Trả về một cấu trúc lỗi rõ ràng thay vì null nếu có thể
+            return {
+                originalConversationFound: false,
+                messageFoundAndIsLastUserMessage: false,
+            } as UpdateUserMessageResult; // Cast để TypeScript hiểu
+        }
+
+        try {
+            const conversation = await this.model.findOne({ _id: conversationId, userId: userId });
+
+            if (!conversation) {
+                logToFile(`${logContext} Conversation not found or user not authorized.`);
+                return {
+                    originalConversationFound: false,
+                    messageFoundAndIsLastUserMessage: false,
+                } as UpdateUserMessageResult;
+            }
+
+            const messages = conversation.messages || [];
+            // Tìm tin nhắn cần sửa dựa trên UUID (frontend ID)
+            // Đảm bảo rằng schema HistoryItem của bạn có trường `uuid`
+            const messageToEditIndex = messages.findIndex(msg => (msg as any).uuid === messageIdToEdit && msg.role === 'user');
+
+            if (messageToEditIndex === -1) {
+                logToFile(`${logContext} Target user message with UUID ${messageIdToEdit} not found in history.`);
+                return {
+                    originalConversationFound: true,
+                    messageFoundAndIsLastUserMessage: false,
+                } as UpdateUserMessageResult;
+            }
+
+            // Xác minh rằng đây thực sự là tin nhắn người dùng cuối cùng trong lịch sử
+            let lastUserMessageActualIndex = -1;
+            for (let i = messages.length - 1; i >= 0; i--) {
+                if (messages[i].role === 'user') {
+                    lastUserMessageActualIndex = i;
+                    break;
+                }
+            }
+
+            if (messageToEditIndex !== lastUserMessageActualIndex) {
+                logToFile(`${logContext} Consistency check: Message with UUID ${messageIdToEdit} (index ${messageToEditIndex}) is not the absolute last user message (index ${lastUserMessageActualIndex}). Aborting edit.`);
+                return {
+                    originalConversationFound: true,
+                    messageFoundAndIsLastUserMessage: false, // Tin nhắn được tìm thấy nhưng không phải là cuối cùng
+                } as UpdateUserMessageResult;
+            }
+
+            // 1. Tạo tin nhắn người dùng đã chỉnh sửa
+            const originalUserMessage = messages[messageToEditIndex];
+            const editedUserMessage: HistoryItem = {
+                role: 'user', // Đảm bảo role là user
+                parts: [{ text: newText.trim() }], // Trim text mới
+                timestamp: new Date(), // Cập nhật timestamp
+                uuid: (originalUserMessage as any).uuid, // Giữ lại UUID gốc của tin nhắn
+            };
+
+            // 2. Tạo lịch sử để gửi cho AI
+            // Bao gồm tất cả các tin nhắn TRƯỚC tin nhắn đang được sửa, và sau đó là tin nhắn đã sửa
+            const historyForNewBotResponse = messages.slice(0, messageToEditIndex);
+            historyForNewBotResponse.push(editedUserMessage);
+
+            logToFile(`${logContext} Successfully prepared history for new bot response. History length: ${historyForNewBotResponse.length}. Edited message UUID: ${editedUserMessage.uuid}`);
+
+            return {
+                editedUserMessage,
+                historyForNewBotResponse,
+                originalConversationFound: true,
+                messageFoundAndIsLastUserMessage: true,
+            };
+
+        } catch (error: any) {
+            const errorMsg = error instanceof Error ? error.message : String(error);
+            logToFile(`${logContext} Error: ${errorMsg}. Stack: ${error.stack}`);
+            // Đối với lỗi DB không mong muốn, ném lỗi để core.handler xử lý chung
+            if (error instanceof MongooseError.CastError) {
+                // CastError có thể xảy ra nếu conversationId có vẻ hợp lệ nhưng không đúng định dạng ObjectId
+                return {
+                    originalConversationFound: false, // Coi như không tìm thấy conversation
+                    messageFoundAndIsLastUserMessage: false,
+                } as UpdateUserMessageResult;
+            }
+            // Ném lỗi cho các trường hợp khác để core handler bắt
+            throw new Error(`Database error during message update and history preparation: ${errorMsg}`);
+        }
+    }
 
     /**
      * Tạo tiêu đề cho cuộc trò chuyện dựa trên tin nhắn đầu tiên của người dùng hoặc model.
@@ -427,7 +538,7 @@ export class ConversationHistoryService {
      * @param messages - Mảng các tin nhắn trong cuộc trò chuyện.
      * @returns Chuỗi tiêu đề được tạo.
      */
-     private generateTitleFromMessages(messages: HistoryItem[], language?: string): string { // << ADDED language
+    private generateTitleFromMessages(messages: HistoryItem[], language?: string): string { // << ADDED language
         let title = this.getLocalizedDefaultTitle(language); // << Use localized default
 
         const firstUserMessageText = messages

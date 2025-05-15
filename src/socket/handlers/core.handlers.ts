@@ -1,7 +1,7 @@
 // src/socket/handlers/core.handlers.ts
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe';
-import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
+import { ConversationHistoryService, ConversationMetadata, UpdateUserMessageResult } from '../../chatbot/services/conversationHistory.service';
 import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper';
 import { handleStreaming, handleNonStreaming } from '../../chatbot/handlers/intentHandler';
 import { stageEmailConfirmation, handleUserEmailConfirmation, handleUserEmailCancellation } from '../../chatbot/utils/confirmationManager';
@@ -9,7 +9,6 @@ import logToFile from '../../utils/logger';
 
 // --- Import types ---
 import {
-    HistoryItem,
     FrontendAction,
     ConfirmSendEmailAction,
     ErrorUpdate,
@@ -25,7 +24,10 @@ import {
     PinConversationData,
     ClientConversationMetadata, // Ensure this type matches ConversationMetadata or is handled
     RenameResult,
-    NewConversationResult // Import NewConversationResult
+    NewConversationResult, // Import NewConversationResult
+    BackendEditUserMessagePayload, // <<< From your backend shared types
+    BackendConversationUpdatedAfterEditPayload, // <<< From your backend shared types
+    HistoryItem, // Assuming this is your backend message type
 } from '../../chatbot/shared/types';
 
 // --- Constants ---
@@ -220,7 +222,7 @@ export const registerCoreHandlers = (
             return sendChatError(handlerLogContext, 'Invalid message data: Missing or invalid "userInput" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
-        const { userInput, isStreaming = true, language, conversationId: payloadConversationId } = data as SendMessageData;
+        const { userInput, isStreaming = true, language, conversationId: payloadConversationId, frontendMessageId } = data as SendMessageData;
         // Store language from message on socket.data if it's more reliable for subsequent calls in this session
         socket.data.language = language;
 
@@ -301,10 +303,10 @@ export const registerCoreHandlers = (
 
             if (isStreaming) {
                 logToFile(`[DEBUG] ${handlerLogContext} Calling streaming intent handler.`);
-                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction);
+                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language as Language, handlerId, handleAction, frontendMessageId); // <<< Thêm frontendMessageId
             } else {
                 logToFile(`[DEBUG] ${handlerLogContext} Calling non-streaming intent handler.`);
-                const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language as Language, handlerId);
+                const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language as Language, handlerId, frontendMessageId); // <<< Thêm frontendMessageId
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
                     resultAction = handlerResult.action;
@@ -338,6 +340,184 @@ export const registerCoreHandlers = (
         }
     });
 
+    socket.on('edit_user_message', async (data: unknown) => {
+        const eventName = 'edit_user_message';
+        const handlerIdSuffix = Date.now(); // Để tạo unique handlerId cho mỗi request
+        const baseLogContext = `[${CORE_HANDLER_NAME}][${socketId}][Req:${handlerIdSuffix}]`;
+        const currentUserId = ensureAuthenticated(baseLogContext, eventName);
+        if (!currentUserId) return;
+        const handlerLogContext = `${baseLogContext}[User:${currentUserId}]`;
+
+        const payload = data as BackendEditUserMessagePayload;
+        if (
+            !payload ||
+            typeof payload.conversationId !== 'string' || !payload.conversationId ||
+            typeof payload.messageIdToEdit !== 'string' || !payload.messageIdToEdit ||
+            typeof payload.newText !== 'string' || // Cho phép newText rỗng nếu muốn xóa, nhưng frontend nên trim()
+            typeof payload.language !== 'string' || !payload.language
+        ) {
+            return sendChatError(handlerLogContext, 'Invalid payload for edit_user_message.', 'invalid_payload_edit', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
+        }
+
+        const { conversationId, messageIdToEdit, newText, language } = payload;
+        const isStreaming = socket.data.isStreamingEnabled ?? true; // Lấy từ client settings hoặc mặc định
+
+        const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
+        logToFile(`[INFO] ${convLogContext} Edit request. New text: "${newText.substring(0, 30)}...", Streaming: ${isStreaming}, Lang: ${language}`);
+
+        try {
+            // 1. Chuẩn bị dữ liệu từ service
+            const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(
+                currentUserId,
+                conversationId,
+                messageIdToEdit, // Đây là UUID
+                newText // Service sẽ trim() nếu cần thiết, hoặc frontend đã trim
+            );
+
+            if (!prepareResult) { // Lỗi nghiêm trọng trong service (ví dụ: DB error đã throw)
+                return sendChatError(convLogContext, 'Internal server error preparing message for edit.', 'edit_prepare_service_critical_fail');
+            }
+            if (!prepareResult.originalConversationFound) {
+                return sendChatError(convLogContext, 'Conversation not found for edit.', 'edit_conv_not_found', { conversationId });
+            }
+            if (!prepareResult.messageFoundAndIsLastUserMessage) {
+                return sendChatError(convLogContext, 'Message to edit not found or is not the latest user message.', 'edit_msg_invalid_target', { messageIdToEdit });
+            }
+
+            const { editedUserMessage, historyForNewBotResponse } = prepareResult;
+
+            // 2. Gọi handler AI (streaming hoặc non-streaming)
+            let finalHistoryFromAI: HistoryItem[] | void | undefined;
+            let actionFromAI: FrontendAction | undefined;
+            const tokenForAction = socket.data.token as string | undefined; // Cần token cho một số action
+            // handlerId dùng cho logging và các tác vụ liên quan đến request này
+            const aiHandlerId = `${eventName}-${handlerIdSuffix}`;
+
+
+            const handleAIActionCallback = (action: FrontendAction | undefined) => {
+                if (action?.type === 'confirmEmailSend' && tokenForAction) {
+                    logToFile(`[INFO] ${convLogContext}[AIAction] Staging email confirmation. ConfID: ${action.payload.confirmationId}`);
+                    stageEmailConfirmation(action.payload as ConfirmSendEmailAction, tokenForAction, socket.id, aiHandlerId, io);
+                }
+                actionFromAI = action; // Lưu lại action nếu có
+                // Thêm các xử lý action khác nếu cần
+            };
+
+            logToFile(`[DEBUG] ${convLogContext} Calling AI handler. History length: ${historyForNewBotResponse.length}. User input for AI (newText): "${newText}"`);
+
+            if (isStreaming) {
+                finalHistoryFromAI = await handleStreaming(
+                    newText, // userInput cho handleStreaming
+                    historyForNewBotResponse, // currentHistoryFromSocket
+                    socket,
+                    language as Language,
+                    aiHandlerId, // ID cho phiên xử lý AI này
+                    handleAIActionCallback // Callback để xử lý action từ bên trong streaming
+                );
+            } else {
+                const nonStreamingResult = await handleNonStreaming(
+                    newText,
+                    historyForNewBotResponse,
+                    socket,
+                    language as Language,
+                    aiHandlerId // ID cho phiên xử lý AI này
+                    // handleNonStreaming có thể tự gọi onActionGenerated hoặc trả về action
+                );
+                if (nonStreamingResult) {
+                    finalHistoryFromAI = nonStreamingResult.history;
+                    // Nếu handleNonStreaming trả về action, xử lý nó
+                    if (nonStreamingResult.action) {
+                        handleAIActionCallback(nonStreamingResult.action);
+                    }
+                }
+            }
+
+            // 3. Xử lý và lưu lịch sử cuối cùng
+            if (!Array.isArray(finalHistoryFromAI) || finalHistoryFromAI.length === 0) {
+                logToFile(`[WARNING] ${convLogContext} AI handler did not return a valid history array.`);
+                return sendChatWarning(convLogContext, 'Message edited, but AI interaction was inconclusive or did not return history.', 'edit_ai_no_history');
+            }
+
+            // finalHistoryFromAI lúc này nên là:
+            // [..., historyForNewBotResponse trước đó..., editedUserMessage (từ historyForNewBotResponse), newBotMessage (từ AI)]
+            // Vì handleStreaming/NonStreaming không push thêm user message mới do điều kiện if bên trong nó.
+
+            const historyToSaveInDB = finalHistoryFromAI;
+            logToFile(`[INFO] ${convLogContext} AI handler returned. Saving final history (size: ${historyToSaveInDB.length}) to DB.`);
+
+            const saveSuccess = await conversationHistoryService.updateConversationHistory(
+                conversationId, // ID cuộc trò chuyện gốc để update
+                currentUserId,
+                historyToSaveInDB
+            );
+
+            if (!saveSuccess) {
+                logToFile(`[ERROR] ${convLogContext} Failed to save updated history to DB after AI response.`);
+                return sendChatError(convLogContext, 'Failed to save edited message after AI response.', 'edit_final_save_fail_db');
+            }
+
+            logToFile(`[INFO] ${convLogContext} Successfully saved updated history to DB.`);
+            await emitUpdatedConversationList(convLogContext, currentUserId, `message edited in conv ${conversationId}`, language);
+
+            // Xác định newBotMessage từ historyToSaveInDB
+            // Nó sẽ là tin nhắn cuối cùng nếu AI chỉ trả về 1 text response.
+            // Nếu có function call sau đó, newBotMessage có thể phức tạp hơn.
+            // Giả định đơn giản: newBotMessage là message cuối cùng có role 'model'.
+            let newBotMessageForClient: HistoryItem | undefined;
+            for (let i = historyToSaveInDB.length - 1; i >= 0; i--) {
+                if (historyToSaveInDB[i].role === 'model') {
+                    // Kiểm tra xem tin nhắn model này có phải là một phần của historyForNewBotResponse không
+                    // (trừ trường hợp editedUserMessage chính là model, điều này không nên xảy ra)
+                    // Điều này để đảm bảo chúng ta lấy đúng tin nhắn *mới* từ bot.
+                    const isOldBotMessage = historyForNewBotResponse.some(
+                        oldMsg => oldMsg.role === 'model' && JSON.stringify(oldMsg.parts) === JSON.stringify(historyToSaveInDB[i].parts) && oldMsg.timestamp === historyToSaveInDB[i].timestamp
+                    );
+                    // Hoặc một cách đơn giản hơn là tìm message cuối cùng trong historyToSaveInDB mà không có trong historyForNewBotResponse (ngoại trừ editedUserMessage)
+                    // Vì historyForNewBotResponse chứa editedUserMessage ở cuối.
+                    // Vậy, newBotMessage phải là message không có trong slice(0, historyForNewBotResponse.length) của historyToSaveInDB.
+                    if (i >= historyForNewBotResponse.length) { // Nó nằm sau phần history đã gửi cho AI
+                        newBotMessageForClient = historyToSaveInDB[i];
+                        break;
+                    }
+                }
+            }
+            // Hoặc, nếu handleStreaming/NonStreaming trả về newBotMessage một cách rõ ràng, hãy dùng nó.
+            // Hiện tại, chúng ta giả định newBotMessage là phần tử cuối cùng của `historyToSaveInDB` nếu role là 'model'.
+            // Cần cẩn thận nếu AI có thể trả về nhiều message hoặc function call.
+            if (!newBotMessageForClient && historyToSaveInDB.length > historyForNewBotResponse.length) {
+                // Fallback: lấy message cuối cùng nếu nó là model và không phải là message đã có trước đó
+                const lastMessageInSavedHistory = historyToSaveInDB[historyToSaveInDB.length - 1];
+                if (lastMessageInSavedHistory.role === 'model') {
+                    newBotMessageForClient = lastMessageInSavedHistory;
+                }
+            }
+
+
+            if (!newBotMessageForClient) {
+                logToFile(`[WARNING] ${convLogContext} Could not reliably identify the new bot message from saved history. History length before AI: ${historyForNewBotResponse.length}, after AI: ${historyToSaveInDB.length}.`);
+                // Vẫn gửi editedUserMessage về, client sẽ tự cập nhật
+                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = {
+                    editedUserMessage: editedUserMessage, // Từ prepareResult
+                    conversationId: conversationId,
+                };
+                socket.emit('conversation_updated_after_edit', partialPayload);
+                return sendChatWarning(convLogContext, 'Message edited, but new bot response could not be identified clearly. User message updated.', 'edit_bot_response_unclear');
+            }
+
+            logToFile(`[INFO] ${convLogContext} Identified new bot message for client. UUID (if any): ${(newBotMessageForClient as any).uuid}`);
+            const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
+                editedUserMessage: editedUserMessage, // Từ prepareResult
+                newBotMessage: newBotMessageForClient,
+                conversationId: conversationId,
+            };
+            socket.emit('conversation_updated_after_edit', frontendPayload);
+            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' to client.`);
+
+        } catch (error: any) {
+            logToFile(`[ERROR] ${convLogContext} Unhandled exception in edit_user_message: ${error.message}. Stack: ${error.stack}`);
+            sendChatError(convLogContext, `Server error during message edit: ${error.message || 'Unknown error'}`, 'edit_exception_unhandled', { errorDetails: error.message });
+        }
+    });
 
     socket.on('user_confirm_email', (data: unknown) => {
         const eventName = 'user_confirm_email';
