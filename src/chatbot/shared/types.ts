@@ -584,7 +584,7 @@ export interface EditUserMessagePayload {
     conversationId: string;
     messageIdToEdit: string;
     newText: string;
-    language: string; // Good to include for context if backend needs it
+    language: Language; // Good to include for context if backend needs it
 }
 
 export interface ConversationUpdatedAfterEditPayload {
@@ -599,7 +599,7 @@ export interface BackendEditUserMessagePayload {
     conversationId: string;
     messageIdToEdit: string;
     newText: string;
-    language: string;
+    language: Language;
 }
 
 export interface BackendConversationUpdatedAfterEditPayload {

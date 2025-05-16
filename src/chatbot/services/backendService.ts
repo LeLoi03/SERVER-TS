@@ -49,7 +49,7 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
  * @returns Promise<ApiCallResult> The result including success status, raw data, formatted data, and error messages.
  */
 export async function executeApiCall(endpoint: string, queryString: string): Promise<ApiCallResult> {
-    const fullUrl = `${DATABASE_URL}/${endpoint}?${queryString}}`;
+    const fullUrl = `${DATABASE_URL}/${endpoint}?${queryString}`;
     const logContext = `${LOG_PREFIX} [${endpoint}]`; // Context for logging
 
     logToFile(`${logContext} Executing API call: GET ${fullUrl}`);

@@ -12,7 +12,8 @@ import {
 } from "@google/generative-ai";
 import { read_csv, createInputsOutputs } from '../utils/crawl/fewShotExamplesInit';
 import fs from 'fs';
-import { InputsOutputs } from '../types/crawl.types'; // Đổi thành đường dẫn đúng nếu cần
+import { InputsOutputs } from '../types/crawl.types';
+import { AgentId } from '../chatbot/shared/types'; // <<<< IMPORTANT: Import AgentId type
 
 // Đường dẫn đến file CSV - Nên lấy từ config hoặc định nghĩa rõ ràng
 const CFP_INFORMATION_CSV_PATH: string = path.resolve(__dirname, "../conference/examples/extract_cfp.csv"); // Dùng path.resolve
@@ -28,6 +29,14 @@ const parseCommaSeparatedStringLowerCase = (key: string) => (val: string | undef
     return val.split(',').map(item => item.trim().toLowerCase()).filter(item => item);
 };
 
+// Helper để parse danh sách AgentId
+const parseAgentIdArray = (key: string) => (val: string | undefined): AgentId[] => {
+    if (!val) return [];
+    // Chỉ trim, không chuyển sang lowercase vì AgentId có thể phân biệt hoa thường
+    return val.split(',').map(item => item.trim() as AgentId).filter(item => item);
+};
+
+
 // --- Zod Schema Definition ---
 const envSchema = z.object({
     NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
@@ -41,7 +50,7 @@ const envSchema = z.object({
     JWT_SECRET: z.string().min(1, "JWT_SECRET is required"),
     MONGODB_URI: z.string().min(1, "MONGODB_URI is required"),
     DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
-    CORS_ALLOWED_ORIGINS: z.string().optional().transform(parseCommaSeparatedString('CORS_ALLOWED_ORIGINS')), // Default handled below
+    CORS_ALLOWED_ORIGINS: z.string().optional().transform(parseCommaSeparatedString('CORS_ALLOWED_ORIGINS')),
 
     // --- Logging Config ---
     LOG_LEVEL: z.enum(['trace', 'debug', 'info', 'warn', 'error', 'fatal', 'silent'] as [LevelWithSilent, ...LevelWithSilent[]]).default('info'),
@@ -94,12 +103,22 @@ const envSchema = z.object({
     GEMINI_MAX_DELAY_MS: z.coerce.number().int().positive().default(30000),
 
     // --- Gemini API - Chatbot Specific ---
-    GEMINI_CHATBOT_MODEL_NAME: z.string().optional(), // e.g., "gemini-1.5-flash-latest" or "gemini-pro"
-    GEMINI_CHATBOT_TEMPERATURE: z.coerce.number().min(0).max(2).default(1.0),
-    GEMINI_CHATBOT_TOP_P: z.coerce.number().min(0).max(1).default(0.95),
-    GEMINI_CHATBOT_TOP_K: z.coerce.number().int().positive().default(40),
-    GEMINI_CHATBOT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_CHATBOT_RESPONSE_MIME_TYPE: z.string().optional(), // e.g., "application/json"
+    GEMINI_HOST_AGENT_MODEL_NAME: z.string().optional().default("gemini-2.0-flash"), // Added default
+    GEMINI_HOST_AGENT_TEMPERATURE: z.coerce.number().min(0).max(2).default(1.0),
+    GEMINI_HOST_AGENT_TOP_P: z.coerce.number().min(0).max(1).default(0.95),
+    GEMINI_HOST_AGENT_TOP_K: z.coerce.number().int().positive().default(40),
+    GEMINI_HOST_AGENT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
+    GEMINI_HOST_AGENT_RESPONSE_MIME_TYPE: z.string().optional(),
+
+    // ++++++++++ Gemini API - Sub Agent Specific ++++++++++
+    GEMINI_SUB_AGENT_MODEL_NAME: z.string().optional().default("gemini-1.5-flash-latest"), // Added default, can be different
+    GEMINI_SUB_AGENT_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.7), // Example different default
+    GEMINI_SUB_AGENT_TOP_P: z.coerce.number().min(0).max(1).default(0.9),    // Example different default
+    GEMINI_SUB_AGENT_TOP_K: z.coerce.number().int().positive().default(32),   // Example different default
+    GEMINI_SUB_AGENT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(4096),// Example different default
+    GEMINI_SUB_AGENT_RESPONSE_MIME_TYPE: z.string().optional(), // Usually not needed for sub-agents if they return structured data via functions
+    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
     // --- Gemini API - Extract Specific ---
     GEMINI_EXTRACT_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_MODEL_NAMES')),
@@ -127,8 +146,8 @@ const envSchema = z.object({
     // --- Gemini API - Determine Specific ---
     GEMINI_DETERMINE_MODEL_NAME: z.string().optional(),
     GEMINI_DETERMINE_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.1),
-    GEMINI_DETERMINE_TOP_P: z.coerce.number().min(0).max(1).default(0.9), // Thường không dùng chung với temp thấp
-    GEMINI_DETERMINE_TOP_K: z.coerce.number().int().positive().default(32), // Thường không dùng chung với temp thấp
+    GEMINI_DETERMINE_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
+    GEMINI_DETERMINE_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_DETERMINE_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
     GEMINI_DETERMINE_RESPONSE_MIME_TYPE: z.string().default("application/json"),
     GEMINI_DETERMINE_ROLE: z.string().default("Link Classifier"),
@@ -154,18 +173,28 @@ const envSchema = z.object({
     JOURNAL_CSV_HEADERS: z.string().default("Title,Type,SJR,H index,Total Docs. (2023),Total Docs. (3years),Total Refs. (2023),Total Cites (3years),Citable Docs. (3years),Cites / Doc. (2years),Ref. / Doc. (2023),Country,Details"),
 
     // --- Other ---
-    API_BASE_URL: z.string().optional().default('http://confhub.engineer/api/v1')
+    API_BASE_URL: z.string().optional().default('http://confhub.engineer/api/v1'),
 
+    // ++++++++++ ADDED CONFIGS FOR INTENT HANDLER ++++++++++
+    ALLOWED_SUB_AGENTS: z.string()
+        .optional() // Để có thể có giá trị mặc định nếu không được set
+        .transform(parseAgentIdArray('ALLOWED_SUB_AGENTS')), // Sử dụng helper mới
+        // .default('ConferenceAgent,JournalAgent,AdminContactAgent,NavigationAgent,WebsiteInfoAgent') // Cung cấp default string
+        // Mặc định sẽ được xử lý trong constructor nếu mảng rỗng
+
+    MAX_TURNS_HOST_AGENT: z.coerce.number().int().positive().default(5),
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++
 });
 
 // --- Define Interfaces for Structured Config (like Gemini API) ---
+// ... (giữ nguyên các interface GeminiApiConfig, GeminiApiConfigs)
 export interface GeminiApiConfig {
     generationConfig?: SDKGenerationConfig;
     systemInstruction?: string;
-    modelName?: string; // For single model selection like Determine
-    modelNames?: string[]; // For multiple model selection like Extract/CFP
-    inputs?: Record<string, string>; // **ĐÃ THÊM (tùy chọn)**
-    outputs?: Record<string, string>; // **ĐÃ THÊM (tùy chọn)**
+    modelName?: string;
+    modelNames?: string[];
+    inputs?: Record<string, string>;
+    outputs?: Record<string, string>;
 }
 
 export interface GeminiApiConfigs {
@@ -176,8 +205,9 @@ export interface GeminiApiConfigs {
 type AppConfigFromSchema = z.infer<typeof envSchema>;
 
 // --- Define the final config type, including the manually added API keys ---
+// Kiểu AppConfig sẽ tự động bao gồm ALLOWED_SUB_AGENTS (là AgentId[]) và MAX_TURNS_HOST_AGENT (là number)
+// do chúng đã được định nghĩa trong envSchema.
 export type AppConfig = AppConfigFromSchema & {
-    // Thêm thuộc tính này thủ công vì nó không có trong schema Zod
     GOOGLE_CUSTOM_SEARCH_API_KEYS: string[];
 };
 
@@ -187,39 +217,28 @@ const API_TYPE_CFP = "cfp";
 const API_TYPE_DETERMINE = "determine";
 
 
-
 @singleton()
 export class ConfigService {
-    // Sử dụng kiểu AppConfig cuối cùng
     public readonly config: AppConfig;
     public readonly geminiApiConfigs: GeminiApiConfigs;
+    public readonly hostAgentGenerationConfig: SDKGenerationConfig;
+    public readonly subAgentGenerationConfig: SDKGenerationConfig;
     private initializationPromise: Promise<void> | null = null;
 
     constructor() {
         dotenv.config();
         try {
-            // 1. Parse các biến môi trường được định nghĩa trong schema
             const parsedConfig = envSchema.parse(process.env);
 
-            // 2. Thu thập thủ công các khóa API Google Search từ process.env
             const googleApiKeys: string[] = [];
-            const keyPattern = /^CUSTOM_SEARCH_API_KEY_\d+$/; // Pattern để khớp CUSTOM_SEARCH_API_KEY_1, CUSTOM_SEARCH_API_KEY_2, ...
+            const keyPattern = /^CUSTOM_SEARCH_API_KEY_\d+$/;
             for (const envVar in process.env) {
                 if (keyPattern.test(envVar) && process.env[envVar]) {
                     googleApiKeys.push(process.env[envVar] as string);
-                    console.log(`   - Found Google Search API Key: ${envVar}`); // Log để xác nhận
+                    console.log(`   - Found Google Search API Key: ${envVar}`);
                 }
             }
 
-            // Sắp xếp các khóa nếu cần (ví dụ: để đảm bảo thứ tự KEY_1, KEY_2, KEY_10 đúng)
-            // googleApiKeys.sort((a, b) => {
-            //     const numA = parseInt(a.match(/\d+$/)?.[0] || '0');
-            //     const numB = parseInt(b.match(/\d+$/)?.[0] || '0');
-            //     return numA - numB;
-            // });
-
-            // 3. Gán config đã parse và các khóa đã thu thập vào this.config
-            // Cần ép kiểu vì chúng ta đang thêm thuộc tính không có trong schema gốc
             this.config = {
                 ...parsedConfig,
                 GOOGLE_CUSTOM_SEARCH_API_KEYS: googleApiKeys
@@ -227,41 +246,70 @@ export class ConfigService {
 
             // --- Post-validation checks/defaults ---
             if (!this.config.CORS_ALLOWED_ORIGINS || this.config.CORS_ALLOWED_ORIGINS.length === 0) {
-                // Gán lại vào this.config vì nó có thể đã được parse là mảng rỗng
-                this.config.CORS_ALLOWED_ORIGINS = [`*`
-                    // `http://localhost:${this.config.PORT}`,
-                    // `http://127.0.0.1:${this.config.PORT}`,
-                    // `https://confhub.ddns.net` // Thay bằng domain thực tế của bạn nếu cần
-                ];
+                this.config.CORS_ALLOWED_ORIGINS = [`*`];
             }
 
-             if (!this.config.GOOGLE_CSE_ID) {
-                console.warn("⚠️ WARN: GOOGLE_CSE_ID environment variable is not set. Google Custom Search features may not work.");
+            // ++++++++++ ADD DEFAULT FOR ALLOWED_SUB_AGENTS IF EMPTY ++++++++++
+            if (!this.config.ALLOWED_SUB_AGENTS || this.config.ALLOWED_SUB_AGENTS.length === 0) {
+                console.warn("⚠️ WARN: ALLOWED_SUB_AGENTS not set or empty in .env, using default list.");
+                this.config.ALLOWED_SUB_AGENTS = [
+                    'ConferenceAgent', 'JournalAgent', 'AdminContactAgent',
+                    'NavigationAgent', 'WebsiteInfoAgent'
+                ] as AgentId[]; // Ép kiểu về AgentId[]
             }
-            // 4. Cập nhật kiểm tra cảnh báo để sử dụng thuộc tính mới
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            if (!this.config.GOOGLE_CSE_ID) {
+                console.warn("⚠️ WARN: GOOGLE_CSE_ID environment variable is not set.");
+            }
             if (this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
-                console.warn("⚠️ WARN: No Google Custom Search API Keys found (checked for CUSTOM_SEARCH_API_KEY_n variables). Google Custom Search features may not work.");
+                console.warn("⚠️ WARN: No Google Custom Search API Keys found.");
             }
             if (this.config.GEMINI_EXTRACT_MODEL_NAMES.length === 0) {
-                 console.error("❌ FATAL: No models specified in GEMINI_EXTRACT_MODEL_NAMES environment variable.");
+                console.error("❌ FATAL: No models specified in GEMINI_EXTRACT_MODEL_NAMES.");
                 throw new Error("GEMINI_EXTRACT_MODEL_NAMES cannot be empty.");
             }
-             if (this.config.GEMINI_CFP_MODEL_NAMES.length === 0) {
-                console.error("❌ FATAL: No models specified in GEMINI_CFP_MODEL_NAMES environment variable.");
+            if (this.config.GEMINI_CFP_MODEL_NAMES.length === 0) {
+                console.error("❌ FATAL: No models specified in GEMINI_CFP_MODEL_NAMES.");
                 throw new Error("GEMINI_CFP_MODEL_NAMES cannot be empty.");
             }
 
-            // --- Build Structured Gemini Config ---
+             // ++++++++++ Initialize Generation Configs ++++++++++
+            this.hostAgentGenerationConfig = {
+                temperature: this.config.GEMINI_HOST_AGENT_TEMPERATURE,
+                topP: this.config.GEMINI_HOST_AGENT_TOP_P,
+                topK: this.config.GEMINI_HOST_AGENT_TOP_K,
+                maxOutputTokens: this.config.GEMINI_HOST_AGENT_MAX_OUTPUT_TOKENS,
+                ...(this.config.GEMINI_HOST_AGENT_RESPONSE_MIME_TYPE && {
+                    responseMimeType: this.config.GEMINI_HOST_AGENT_RESPONSE_MIME_TYPE
+                }),
+            };
+
+            this.subAgentGenerationConfig = {
+                temperature: this.config.GEMINI_SUB_AGENT_TEMPERATURE,
+                topP: this.config.GEMINI_SUB_AGENT_TOP_P,
+                topK: this.config.GEMINI_SUB_AGENT_TOP_K,
+                maxOutputTokens: this.config.GEMINI_SUB_AGENT_MAX_OUTPUT_TOKENS,
+                ...(this.config.GEMINI_SUB_AGENT_RESPONSE_MIME_TYPE && {
+                    responseMimeType: this.config.GEMINI_SUB_AGENT_RESPONSE_MIME_TYPE
+                }),
+            };
+            // +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            this.geminiApiConfigs = this.buildGeminiApiConfigs(); // buildGeminiApiConfigs không thay đổi
+
+
             this.geminiApiConfigs = this.buildGeminiApiConfigs();
 
-            // --- Log Confirmation ---
             console.log("✅ Configuration loaded and validated successfully.");
             console.log(`   - NODE_ENV: ${this.config.NODE_ENV}`);
-            console.log(`   - Port: ${this.config.PORT}`);
-            console.log(`   - Log Level: ${this.config.LOG_LEVEL}`);
-            console.log(`   - Crawl Concurrency: ${this.config.CRAWL_CONCURRENCY}`);
-            console.log(`   - Found ${this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS.length} Google Custom Search API Keys.`);
-            // console.log("   - Loaded Gemini Config Keys:", Object.keys(this.geminiApiConfigs));
+            console.log(`   - Host Agent Model: ${this.config.GEMINI_HOST_AGENT_MODEL_NAME}`);
+            console.log(`   - Host Agent Config: ${JSON.stringify(this.hostAgentGenerationConfig)}`);
+            console.log(`   - Sub Agent Model: ${this.config.GEMINI_SUB_AGENT_MODEL_NAME}`);
+            console.log(`   - Sub Agent Config: ${JSON.stringify(this.subAgentGenerationConfig)}`);
+            console.log(`   - Allowed Sub Agents: ${this.config.ALLOWED_SUB_AGENTS.join(', ')}`);
+            console.log(`   - Max Turns Host Agent: ${this.config.MAX_TURNS_HOST_AGENT}`);
+
 
         } catch (error) {
             if (error instanceof z.ZodError) {
@@ -327,6 +375,7 @@ export class ConfigService {
 
     // --- buildGeminiApiConfigs (Giữ nguyên) ---
     private buildGeminiApiConfigs(): GeminiApiConfigs {
+        // ... (Nội dung hàm này giữ nguyên)
         const extractInstruction = `
             **Role:** ${this.config.GEMINI_EXTRACT_ROLE}
             **Instruction:**
@@ -377,7 +426,6 @@ export class ConfigService {
                 },
                 systemInstruction: (this.config.GEMINI_CFP_SYSTEM_INSTRUCTION || '').trim(),
                 modelNames: this.config.GEMINI_CFP_MODEL_NAMES,
-                // inputs/outputs sẽ được thêm bởi initializeExamples
             },
             [API_TYPE_DETERMINE]: {
                  generationConfig: {
@@ -395,24 +443,15 @@ export class ConfigService {
                     } as ObjectSchema,
                 },
                 // systemInstruction: determineInstruction,
-                modelName: this.config.GEMINI_DETERMINE_MODEL_NAME, // Lưu ý: determine chỉ dùng 1 model name theo schema cũ
+                modelName: this.config.GEMINI_DETERMINE_MODEL_NAME,
             },
         };
     }
 
-    // --- Getters (Cập nhật googleSearchConfig) ---
-    get logsDirectory(): string {
-        return path.resolve(this.config.LOGS_DIRECTORY);
-    }
-
-    get appLogFilePath(): string {
-        return path.join(this.logsDirectory, this.config.LOG_FILE_NAME);
-    }
-
-    get baseOutputDir(): string {
-        return path.resolve(this.config.BASE_OUTPUT_DIR);
-    }
-
+    // --- Getters (Giữ nguyên) ---
+    get logsDirectory(): string { return path.resolve(this.config.LOGS_DIRECTORY); }
+    get appLogFilePath(): string { return path.join(this.logsDirectory, this.config.LOG_FILE_NAME); }
+    get baseOutputDir(): string { return path.resolve(this.config.BASE_OUTPUT_DIR); }
     get conferenceListPath(): string { return path.join(this.baseOutputDir, 'conference_list.json'); }
     get finalOutputJsonlPath(): string { return path.join(this.baseOutputDir, 'final_output.jsonl'); }
     get evaluateCsvPath(): string { return path.join(this.baseOutputDir, 'evaluate.csv'); }
@@ -420,39 +459,8 @@ export class ConfigService {
     get batchesDir(): string { return path.join(this.baseOutputDir, 'batches'); }
     get tempDir(): string { return path.join(this.baseOutputDir, 'temp'); }
     get errorAccessLinkPath(): string { return path.join(this.baseOutputDir, 'error_access_link_log.txt'); }
-    
-    get playwrightConfig() {
-        return {
-            channel: this.config.PLAYWRIGHT_CHANNEL,
-            headless: this.config.PLAYWRIGHT_HEADLESS,
-            userAgent: this.config.USER_AGENT,
-        };
-    }
-
-    // 5. Cập nhật getter để sử dụng mảng khóa đã thu thập
-    get googleSearchConfig() {
-        return {
-            cseId: this.config.GOOGLE_CSE_ID,
-            apiKeys: this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS, // Sử dụng trực tiếp mảng đã thu thập
-            maxUsagePerKey: this.config.MAX_USAGE_PER_KEY,
-            rotationDelayMs: this.config.KEY_ROTATION_DELAY_MS,
-            maxRetries: this.config.MAX_SEARCH_RETRIES,
-            retryDelayMs: this.config.RETRY_DELAY_MS,
-        };
-    }
-
-    get journalRetryOptions() {
-        return {
-            retries: this.config.JOURNAL_RETRY_RETRIES,
-            minTimeout: this.config.JOURNAL_RETRY_MIN_TIMEOUT,
-            factor: this.config.JOURNAL_RETRY_FACTOR,
-        };
-    }
-
-    get journalCacheOptions() {
-        return {
-            stdTTL: this.config.JOURNAL_CACHE_TTL,
-            checkperiod: this.config.JOURNAL_CACHE_CHECK_PERIOD,
-        };
-    }
+    get playwrightConfig() { return { channel: this.config.PLAYWRIGHT_CHANNEL, headless: this.config.PLAYWRIGHT_HEADLESS, userAgent: this.config.USER_AGENT, }; }
+    get googleSearchConfig() { return { cseId: this.config.GOOGLE_CSE_ID, apiKeys: this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS, maxUsagePerKey: this.config.MAX_USAGE_PER_KEY, rotationDelayMs: this.config.KEY_ROTATION_DELAY_MS, maxRetries: this.config.MAX_SEARCH_RETRIES, retryDelayMs: this.config.RETRY_DELAY_MS, }; }
+    get journalRetryOptions() { return { retries: this.config.JOURNAL_RETRY_RETRIES, minTimeout: this.config.JOURNAL_RETRY_MIN_TIMEOUT, factor: this.config.JOURNAL_RETRY_FACTOR, }; }
+    get journalCacheOptions() { return { stdTTL: this.config.JOURNAL_CACHE_TTL, checkperiod: this.config.JOURNAL_CACHE_CHECK_PERIOD, }; }
 }
