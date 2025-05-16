@@ -158,7 +158,7 @@ const envSchema = z.object({
     GEMINI_DETERMINE_SITUATION: z.string().optional(),
 
     // --- Gemini API - Conference Website Description ---
-    CONFERENCE_WEBSITE_DESCRIPTION: z.string().optional(),
+    WEBSITE_DESCRIPTION: z.string().optional(),
 
     // --- Journal Crawl Config ---
     JOURNAL_BASE_URL: z.string().default('https://www.scimagojr.com/journalrank.php?year=2023&type=j'),

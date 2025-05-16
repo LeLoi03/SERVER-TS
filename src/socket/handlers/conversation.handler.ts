@@ -78,6 +78,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
 
             const frontendMessages: ChatMessage[] = mapHistoryToFrontendMessages(history);
             socket.data.currentConversationId = requestedConvId;
+            logToFile(`[DEBUG] Emitting initial_history for conv ${requestedConvId}. Messages: ${JSON.stringify(frontendMessages.map(m => ({ id: m.id, text: m.message?.substring(0, 20), role: m.isUser ? 'user' : 'model' })))}`);
             socket.emit('initial_history', { conversationId: requestedConvId, messages: frontendMessages });
             logToFile(`[INFO] ${convLogContext} Sent history. Set as active. Message Count: ${frontendMessages.length}`);
         } catch (error: any) {

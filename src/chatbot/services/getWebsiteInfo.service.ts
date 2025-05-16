@@ -12,11 +12,11 @@ const LOG_PREFIX = "[GetWebsiteInfoService]";
 const configService = container.resolve(ConfigService); // Resolve singleton instance
 
 // --- Lấy cấu hình từ ConfigService ---
-// Đảm bảo CONFERENCE_WEBSITE_DESCRIPTION tồn tại trong config
-const CONFERENCE_WEBSITE_DESCRIPTION = configService.config.CONFERENCE_WEBSITE_DESCRIPTION;
-if (!CONFERENCE_WEBSITE_DESCRIPTION) {
-    logToFile(`${LOG_PREFIX} CRITICAL ERROR: CONFERENCE_WEBSITE_DESCRIPTION is not configured.`);
-    throw new Error("CONFERENCE_WEBSITE_DESCRIPTION is not configured.");
+// Đảm bảo WEBSITE_DESCRIPTION tồn tại trong config
+const WEBSITE_DESCRIPTION = configService.config.WEBSITE_DESCRIPTION;
+if (!WEBSITE_DESCRIPTION) {
+    logToFile(`${LOG_PREFIX} CRITICAL ERROR: WEBSITE_DESCRIPTION is not configured.`);
+    throw new Error("WEBSITE_DESCRIPTION is not configured.");
 }
 
 // Define the return type structure (you might want a shared types file)
@@ -29,10 +29,10 @@ interface WebsiteInfoResult {
 export async function executeGetWebsiteInfo(): Promise<WebsiteInfoResult> {
     const functionName = "executeGetWebsiteInfo"; // For logging context
     try {
-        const description = CONFERENCE_WEBSITE_DESCRIPTION;
+        const description = WEBSITE_DESCRIPTION;
 
         if (!description) {
-            const errorMsg = "Configuration error: CONFERENCE_WEBSITE_DESCRIPTION environment variable is not set.";
+            const errorMsg = "Configuration error: WEBSITE_DESCRIPTION environment variable is not set.";
             logToFile(`[${functionName}] Warning: ${errorMsg}`);
             return {
                 success: false,

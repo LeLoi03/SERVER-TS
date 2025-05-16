@@ -255,4 +255,4 @@ export async function handleNonStreaming(
     // Nếu code chạy đến đây, có nghĩa là có một lỗi logic trong vòng lặp while.
     logToFile(`[${handlerId} NonStreaming WARN] Reached end of handler unexpectedly. Returning current history.`);
     return { history: history, action: finalFrontendAction };
-}
+} 

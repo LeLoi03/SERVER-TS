@@ -245,7 +245,7 @@ export async function handleStreaming(
                     const botMessageUuid = uuidv4();
                     const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }], uuid: botMessageUuid, timestamp: new Date() };
                     history.push(finalModelTurn);
-                    logToFile(`[${handlerId} Streaming - Final Stream] Appended final HostAgent stream response. History size: ${history.length}`);
+                    logToFile(`[${handlerId} Streaming - Final Result] Thoughts collected: ${JSON.stringify(allThoughtsCollectedStreaming)}`);
                     safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, id: botMessageUuid });
                     return history;
                 } else {

@@ -2,8 +2,6 @@
 import 'reflect-metadata';
 import { container } from 'tsyringe';
 import { Socket } from 'socket.io';
-// Đổi tên import GenerationConfig từ @google/generative-ai để tránh xung đột
-import { GenerationConfig as SDKGenerationConfig } from "@google/generative-ai";
 import logToFile from '../../utils/logger';
 import { HistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse } from '../shared/types';
 import { Gemini } from '../gemini/gemini';
