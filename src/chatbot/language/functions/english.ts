@@ -218,34 +218,37 @@ const internalPaths = [
     '/conferences',
     '/dashboard',
     '/journals',
-    '/chatbot',
-    '/visualization',
-    '/chatbot/chat',
+    '/chatbot/landingchatbot',
+    '/chatbot/regularchat',
     '/chatbot/livechat',
+    '/chatbot/history',
+    '/visualization/landingvisualization',
+    '/visualization',
     '/support',
     '/other',
     '/addconference',
-    // '/conferences/detail', 
-    // '/journals/detail',    
+    '/conferences/detail',
+    '/journals/detail',
     '/auth/login',
     '/auth/register',
     '/auth/verify-email',
     '/auth/forgot-password',
     '/auth/reset-password',
-    // '/updateconference'
+    '/updateconference'
 ];
 
 export const englishNavigationDeclaration: FunctionDeclaration = {
     name: "navigation",
     description: `Navigates the user to a specified page within this website or to an external conference/journal website by opening a new browser tab.
-    - For INTERNAL navigation: Provide the relative path starting with '/'. The system will automatically add the base URL and locale. Allowed internal paths are: ${internalPaths.join(', ')}. Example: {"url": "/conferences"}
+    - For INTERNAL navigation: Provide the relative path starting with '/'. The system will automatically add the base URL and locale. Allowed internal paths are: ${internalPaths.join(', ')}.
+    - Specifically for the '/dashboard' path, you can navigate to specific tabs by appending '?tab=' followed by the tab name. Allowed dashboard tabs are: 'profile', 'myconferences', 'followed', 'note', 'notifications', 'blacklisted', 'setting'. Example for navigating to the profile tab: {"url": "/dashboard?tab=profile"}.
     - For EXTERNAL conference/journal sites: Provide the full, valid URL starting with 'http://' or 'https://'.`,
     parameters: {
         type: SchemaType.OBJECT,
         properties: {
             url: {
                 type: SchemaType.STRING,
-                description: `The internal path (starting with '/', e.g., '/dashboard') or the full external URL (starting with 'http://' or 'https://', e.g., 'https://some-journal.com/article') to navigate to.`
+                description: `The internal path (starting with '/', e.g., '/dashboard?tab=profile') or the full external URL (starting with 'http://' or 'https://', e.g., 'https://some-journal.com/article') to navigate to.`
             }
         },
         required: ["url"]
