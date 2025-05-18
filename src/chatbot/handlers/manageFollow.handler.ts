@@ -5,10 +5,11 @@ import {
     executeFollowUnfollowApi,
 } from '../services/manageFollow.service';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput, FollowItem, FrontendAction } from '../shared/types'; // Import FrontendAction
+import { FunctionHandlerInput, FunctionHandlerOutput, FollowItem, FrontendAction } from '../shared/types';
 import logToFile from '../../utils/logger';
+// Import hàm kiểm tra blacklist status từ manageBlacklist.service
+import { executeGetUserBlacklisted } from '../services/manageBlacklist.service';
 
-// --- Định nghĩa các kiểu dữ liệu hẹp hơn để code rõ ràng hơn ---
 type ValidItemType = 'conference' | 'journal';
 type ValidIdentifierType = 'acronym' | 'title' | 'id';
 type ValidAction = 'follow' | 'unfollow' | 'list';
@@ -22,16 +23,8 @@ export class ManageFollowHandler implements IFunctionHandler {
 
         const sendStatus = (step: string, message: string, details?: object) => {
             if (onStatusUpdate) {
-                onStatusUpdate('status_update', {
-                    type: 'status',
-                    step,
-                    message,
-                    details,
-                    timestamp: new Date().toISOString(),
-                });
-            } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
-            }
+                onStatusUpdate('status_update', { type: 'status', step, message, details, timestamp: new Date().toISOString() });
+            } else { logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`); }
         };
 
         try {
@@ -42,6 +35,7 @@ export class ManageFollowHandler implements IFunctionHandler {
             const identifier = args?.identifier as string | undefined;
             const identifierType = args?.identifierType as string | undefined;
 
+            // Basic validation
             if (!itemType || !action) {
                 const errorMsg = "Missing required information (item type or action).";
                 logToFile(`${logPrefix} ManageFollow: Validation Failed - ${errorMsg}`);
@@ -114,10 +108,7 @@ export class ManageFollowHandler implements IFunctionHandler {
                     } else if (item.location?.country) {
                         details += ` | Location: ${item.location.country}`;
                     }
-                    return {
-                        id: item.id,
-                        displayText: details,
-                    };
+                    return { id: item.id, displayText: details };
                 });
 
                 const successMessage = `Here are the ${validItemType}s you are following:`;
@@ -155,7 +146,8 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                 sendStatus('item_id_found', `Found ${validItemType} (ID: ${itemId}, Name: ${itemNameForMessage}).`, { itemId, itemType: validItemType, name: itemNameForMessage, details: idResult.details });
 
-                sendStatus('checking_follow_status', `Checking your follow status for item ${itemId}...`, { itemId });
+                // Kiểm tra trạng thái follow hiện tại
+                sendStatus('checking_follow_status', `Checking your follow status for item ${itemId} ("${itemNameForMessage}")...`);
                 const followStatusResult = await executeGetUserFollowed(validItemType, userToken);
 
                 if (!followStatusResult.success) {
@@ -165,37 +157,57 @@ export class ManageFollowHandler implements IFunctionHandler {
                     return { modelResponseContent: `Sorry, I couldn't check your current follow status: ${errorMsg}`, frontendAction: undefined };
                 }
                 const isCurrentlyFollowing = followStatusResult.itemIds.includes(itemId);
-                sendStatus('follow_status_checked', `Current follow status: ${isCurrentlyFollowing ? 'Following' : 'Not Following'}.`, { itemId, isCurrentlyFollowing });
+                sendStatus('follow_status_checked', `Current follow status for "${itemNameForMessage}": ${isCurrentlyFollowing ? 'Following' : 'Not Following'}.`, { itemId, isCurrentlyFollowing, itemName: itemNameForMessage });
+
+                // --- KIỂM TRA CHÉO KHI 'FOLLOW' (CHỈ ÁP DỤNG CHO CONFERENCES) ---
+                if (validAction === 'follow' && validItemType === 'conference' && !isCurrentlyFollowing) {
+                    // Chỉ kiểm tra blacklist nếu:
+                    // 1. Hành động là 'follow'
+                    // 2. Item là 'conference'
+                    // 3. User CHƯA follow item này (để tránh chặn nếu đã follow rồi)
+                    sendStatus('checking_blacklist_status_for_follow', `Checking if conference ${itemId} ("${itemNameForMessage}") is blacklisted before following...`);
+                    const blacklistStatusResult = await executeGetUserBlacklisted(userToken); // Hàm này chỉ cho conferences
+
+                    if (blacklistStatusResult.success && blacklistStatusResult.itemIds.includes(itemId)) {
+                        const conflictMsg = `The conference "${itemNameForMessage}" is currently in your blacklist. You must remove it from the blacklist before following.`;
+                        logToFile(`${logPrefix} ManageFollow: Conflict - Conference ${itemId} ("${itemNameForMessage}") is blacklisted, cannot follow.`);
+                        sendStatus('follow_conflict_blacklisted', conflictMsg, { itemId, itemName: itemNameForMessage });
+                        return { modelResponseContent: conflictMsg, frontendAction: undefined };
+                    }
+                    if (!blacklistStatusResult.success) {
+                        logToFile(`${logPrefix} ManageFollow: Warning - Could not verify blacklist status for conference ${itemId} ("${itemNameForMessage}") before following: ${blacklistStatusResult.errorMessage}. Proceeding with follow action.`);
+                        sendStatus('warning_blacklist_check_failed_before_follow', `Could not verify if "${itemNameForMessage}" is blacklisted. Proceeding to follow.`, { itemId, itemName: itemNameForMessage, error: blacklistStatusResult.errorMessage });
+                    } else {
+                        logToFile(`${logPrefix} ManageFollow: Conference ${itemId} ("${itemNameForMessage}") is not blacklisted. Safe to proceed with follow.`);
+                        sendStatus('blacklist_check_clear_for_follow', `Conference "${itemNameForMessage}" is not blacklisted. Proceeding to follow.`, { itemId, itemName: itemNameForMessage });
+                    }
+                }
+                // --- KẾT THÚC KIỂM TRA CHÉO ---
 
                 sendStatus('determining_follow_action', `Determining required action based on request ('${validAction}') and status...`);
                 const needsApiCall = (validAction === 'follow' && !isCurrentlyFollowing) || (validAction === 'unfollow' && isCurrentlyFollowing);
-                sendStatus('follow_action_determined', needsApiCall ? `API call required to ${validAction} item ${itemId}.` : `No API call needed (action: '${validAction}', current status: ${isCurrentlyFollowing}).`, { needsApiCall, currentStatus: isCurrentlyFollowing, requestedAction: validAction });
+                sendStatus('follow_action_determined', needsApiCall ? `API call required to ${validAction} item ${itemId} ("${itemNameForMessage}").` : `No API call needed (action: '${validAction}', current status for "${itemNameForMessage}": ${isCurrentlyFollowing ? 'Following' : 'Not Following'}).`, { needsApiCall, currentStatus: isCurrentlyFollowing, requestedAction: validAction, itemId, itemName: itemNameForMessage });
 
                 let finalMessage = "";
-                let finalFrontendAction: FrontendAction = undefined; // Initialize frontend action
+                let finalFrontendAction: FrontendAction = undefined;
 
                 if (needsApiCall) {
-                    sendStatus('preparing_follow_api_call', `${validAction === 'follow' ? 'Following' : 'Unfollowing'} item ${itemNameForMessage} (ID: ${itemId})...`, { action: validAction, itemId, itemType: validItemType });
+                    sendStatus('preparing_follow_api_call', `${validAction === 'follow' ? 'Following' : 'Unfollowing'} item "${itemNameForMessage}" (ID: ${itemId})...`, { action: validAction, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     const apiActionResult = await executeFollowUnfollowApi(itemId, validItemType, validAction as 'follow' | 'unfollow', userToken);
 
                     if (apiActionResult.success) {
                         finalMessage = `Successfully ${validAction === 'follow' ? 'followed' : 'unfollowed'} the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
-                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} successful.`);
-                        sendStatus('follow_update_success', `Successfully ${validAction}ed ${validItemType}.`, { itemId, itemType: validItemType });
+                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} successful for ${validItemType} ${itemId}.`);
+                        sendStatus('follow_update_success', `Successfully ${validAction}ed ${validItemType} "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
 
-                        // Construct FollowItem for frontend action
-                        // Assumes idResult.details contains relevant fields of FollowItem
                         const itemDetailsFromFind: Partial<FollowItem> = idResult.details || {};
                         const itemDataForFrontend: FollowItem = {
                             id: itemId,
-                            title: itemDetailsFromFind.title || itemNameForMessage, // Use itemNameForMessage as a good fallback
-                            acronym: itemDetailsFromFind.acronym || '', // Default to empty string if not in details
-                            // dates: itemDetailsFromFind.dates,
-                            // location: itemDetailsFromFind.location,
-                            // status: itemDetailsFromFind.status,
-                            // followedAt and updatedAt are not set here as executeFollowUnfollowApi
-                            // doesn't return the updated item with these timestamps.
-                            // The frontend receives static info and the new follow state.
+                            title: itemDetailsFromFind.title || itemNameForMessage,
+                            acronym: itemDetailsFromFind.acronym || '',
+                            dates: itemDetailsFromFind.dates,
+                            location: itemDetailsFromFind.location,
+                            itemType: validItemType,
                         };
 
                         finalFrontendAction = {
@@ -203,32 +215,26 @@ export class ManageFollowHandler implements IFunctionHandler {
                             payload: {
                                 item: itemDataForFrontend,
                                 itemType: validItemType,
-                                followed: validAction === 'follow', // true if 'follow', false if 'unfollow'
+                                followed: validAction === 'follow',
                             }
                         };
                     } else {
-                        finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the ${validItemType}: "${itemNameForMessage}". Please try again later.`;
-                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} failed - ${apiActionResult.errorMessage}`);
-                        sendStatus('follow_update_failed', `Failed to ${validAction} ${validItemType}.`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType });
-                        // finalFrontendAction remains undefined
+                        finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the ${validItemType} "${itemNameForMessage}". Please try again later.`;
+                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} failed for ${validItemType} ${itemId} - ${apiActionResult.errorMessage}`);
+                        sendStatus('follow_update_failed', `Failed to ${validAction} ${validItemType} "${itemNameForMessage}".`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     }
                 } else {
-                    // No API call was needed because the item is already in the desired state
-                    if (validAction === 'follow') {
+                    if (validAction === 'follow') { // Already following
                         finalMessage = `You are already following the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
-                    } else { // action === 'unfollow'
+                    } else { // action === 'unfollow', not following
                         finalMessage = `You are not currently following the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
                     }
-                    logToFile(`${logPrefix} ManageFollow: No API call executed for action '${validAction}'. Current status: ${isCurrentlyFollowing}`);
-                    // No state change occurred, so no 'itemFollowStatusUpdated' action is sent.
-                    // If you wanted to show details even in this case, you could construct 'itemDataForFrontend'
-                    // and send an action, perhaps with a different type or an additional flag.
-                    // For now, sticking to "thành công" meaning a state change.
+                    logToFile(`${logPrefix} ManageFollow: No API call executed for action '${validAction}' on ${validItemType} ${itemId}. Current status: ${isCurrentlyFollowing ? 'Following' : 'Not Following'}`);
+                    sendStatus('follow_no_action_needed', finalMessage, { itemId, itemName: itemNameForMessage, currentStatus: isCurrentlyFollowing, requestedAction: validAction });
                 }
                 return { modelResponseContent: finalMessage, frontendAction: finalFrontendAction };
             } else {
-                // This case should ideally not be reached due to prior validation,
-                // but as a fallback for unsupported actions:
+                // This case should ideally not be reached due to prior validation
                 const errorMsg = `Unsupported action: ${validAction}`;
                 logToFile(`${logPrefix} ManageFollow: Validation Error - ${errorMsg}`);
                 sendStatus('function_error', 'Unsupported action.', { error: errorMsg, action: validAction });
@@ -238,7 +244,6 @@ export class ManageFollowHandler implements IFunctionHandler {
         } catch (error: any) {
             const errorMessage = error instanceof Error ? error.message : String(error);
             logToFile(`${logPrefix} CRITICAL Error in ManageFollowHandler: ${errorMessage}\nStack: ${error.stack}`);
-            // Ensure sendStatus is available or use a safe call
             if (typeof sendStatus === 'function') {
                 sendStatus('function_error', `Critical error during follow management processing: ${errorMessage}`);
             }

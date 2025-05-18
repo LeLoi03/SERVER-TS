@@ -67,17 +67,46 @@ export interface FollowItem {
     id: string;
     title: string; // Sử dụng title thay vì name nếu API trả về title
     acronym: string;
-    followedAt?: string; // ISO Date string, optional if not always present
+    createdAt?: string; // ISO Date string, optional if not always present
     updatedAt?: string;  // ISO Date string, optional
     status?: string;     // Optional
     dates?: FollowItemDate; // Optional
     location?: FollowItemLocation; // Optional
+    itemType?: "conference" | "journal";
     // Thêm các trường khác nếu cần từ API
     // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
     // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
     // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
 }
 
+export interface BlacklistItemDate {
+    fromDate: string; // ISO Date string
+    toDate: string;   // ISO Date string
+}
+
+export interface BlacklistItemLocation {
+    address?: string;
+    cityStateProvince?: string;
+    country?: string;
+    continent?: string;
+}
+
+
+
+export interface BlacklistItem {
+    conferenceId: string;
+    title: string; // Sử dụng title thay vì name nếu API trả về title
+    acronym: string;
+    createdAt?: string; // ISO Date string, optional if not always present
+    updatedAt?: string;  // ISO Date string, optional
+    status?: string;     // Optional
+    dates?: BlacklistItemDate; // Optional
+    location?: BlacklistItemLocation; // Optional
+    // Thêm các trường khác nếu cần từ API
+    // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
+    // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
+    // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
+}
 
 
 
@@ -93,13 +122,25 @@ export interface ItemFollowStatusUpdatePayload {
     // false if the item is now unfollowed (after an 'unfollow' action)
 }
 
+export interface ItemBlacklistStatusUpdatePayload {
+    item: BlacklistItem; // The item whose Blacklist status was updated
+    itemType: 'conference';
+    blacklisted: boolean; // true if the item is now Blacklisted (after a 'Blacklist' action),
+    // false if the item is now blacklist (after an 'remove' action)
+}
 
+export interface ItemCalendarStatusUpdatePayload {
+    item: CalendarItem; // The item whose Calendar status was updated
+    itemType: 'conference';
+    calendar: boolean; // true if the item is now calendar (after a 'add' action),
+    // false if the item is now added (after an 'remove' action)
+}
 
 export interface CalendarItem {
     conferenceId: string;
     conference: string; // Sử dụng title thay vì name nếu API trả về title
     acronym?: string;
-    followedAt?: string; // ISO Date string, optional if not always present
+    createdAt?: string; // ISO Date string, optional if not always present
     updatedAt?: string;  // ISO Date string, optional
     status?: string;     // Optional
     dates?: FollowItemDate; // Optional
@@ -109,6 +150,9 @@ export interface CalendarItem {
     // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
     // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
 }
+
+
+
 
 // --- Gemini Model Interaction ---
 
@@ -185,6 +229,9 @@ export type FrontendAction =
     | { type: 'addToCalendar'; payload: AddToCalendarPayload }
     | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload }
     | { type: 'itemFollowStatusUpdated'; payload: ItemFollowStatusUpdatePayload } // Added new action
+    | { type: 'itemBlacklistStatusUpdated'; payload: ItemBlacklistStatusUpdatePayload } // Added new action
+    | { type: 'itemCalendarStatusUpdated'; payload: ItemCalendarStatusUpdatePayload } // Added new action
+
     | undefined; // Allows for no action
 
 
@@ -575,9 +622,6 @@ export interface FunctionHandlerOutput {
     thoughts?: ThoughtStep[]; // <<< THÊM DÒNG NÀY
 
 }
-
-
-
 
 
 export interface EditUserMessagePayload {

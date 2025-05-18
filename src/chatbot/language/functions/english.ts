@@ -270,8 +270,11 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
     },
 };
 
+
+
+// Định nghĩa hàm manageFollow (giữ nguyên)
 export const englishManageFollowDeclaration: FunctionDeclaration = {
-    name: "manageFollow", // Hoặc tên hàm thực tế của bạn
+    name: "manageFollow",
     description: "Follows, unfollows, or lists followed conferences or journals for the user.",
     parameters: {
         type: SchemaType.OBJECT,
@@ -284,7 +287,7 @@ export const englishManageFollowDeclaration: FunctionDeclaration = {
             action: {
                 type: SchemaType.STRING,
                 description: "The desired action: 'follow', 'unfollow', or 'list'.",
-                enum: ["follow", "unfollow", "list"] // Thêm 'list'
+                enum: ["follow", "unfollow", "list"]
             },
             identifier: { // Optional when action is 'list'
                 type: SchemaType.STRING,
@@ -296,16 +299,13 @@ export const englishManageFollowDeclaration: FunctionDeclaration = {
                  enum: ["acronym", "title", "id"],
             },
         },
-        // Điều chỉnh 'required' dựa trên 'action' có thể phức tạp trong định nghĩa JSON Schema đơn giản.
-        // Một cách là làm cho identifier và identifierType không bắt buộc ở đây
-        // và dựa vào logic của agent để cung cấp chúng khi cần (cho follow/unfollow).
         required: ["itemType", "action"],
     },
 };
 
-
+// Định nghĩa hàm manageCalendar (giữ nguyên)
 export const englishManageCalendarDeclaration: FunctionDeclaration = {
-    name: "manageCalendar", // Hoặc tên hàm thực tế của bạn
+    name: "manageCalendar",
     description: "Adds, removes, or lists conferences in the user's calendar.",
     parameters: {
         type: SchemaType.OBJECT,
@@ -318,7 +318,39 @@ export const englishManageCalendarDeclaration: FunctionDeclaration = {
             action: {
                 type: SchemaType.STRING,
                 description: "The desired action: 'add', 'remove', or 'list'.",
-                enum: ["add", "remove", "list"] // Thêm 'list'
+                enum: ["add", "remove", "list"]
+            },
+            identifier: { // Optional when action is 'list'
+                type: SchemaType.STRING,
+                description: "A unique identifier for the conference. Required for 'add'/'remove'.",
+            },
+             identifierType: { // Optional when action is 'list'
+                 type: SchemaType.STRING,
+                 description: "The type of the identifier. Required for 'add'/'remove'.",
+                 enum: ["acronym", "title", "id"],
+            },
+        },
+        required: ["itemType", "action"],
+    },
+};
+
+
+// Định nghĩa hàm manageBlacklist
+export const englishManageBlacklistDeclaration: FunctionDeclaration = {
+    name: "manageBlacklist",
+    description: "Adds, removes, or lists conferences in the user's blacklist.",
+    parameters: {
+        type: SchemaType.OBJECT,
+        properties: {
+            itemType: {
+                type: SchemaType.STRING,
+                description: "The type of item. Must be 'conference' for blacklist actions.",
+                enum: ["conference"]
+            },
+            action: {
+                type: SchemaType.STRING,
+                description: "The desired action: 'add', 'remove', or 'list'.",
+                enum: ["add", "remove", "list"]
             },
             identifier: { // Optional when action is 'list'
                 type: SchemaType.STRING,

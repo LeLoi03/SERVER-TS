@@ -2,7 +2,6 @@
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import { container } from 'tsyringe';
-import { Logger } from 'pino'; // Import Logger type
 import { ConfigService } from '../config/config.service';
 import { requestLoggerMiddleware } from '../socket/middleware/logging.middleware'; // Assuming this uses LoggingService internally or gets logger passed
 // import logToFile from '../utils/logger'; // <<< XÓA
@@ -32,8 +31,14 @@ export const loadExpress = (): Express => {
 
     // --- Core Middleware ---
     app.use(cors(corsOptions));
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: true }));
+    // app.use(express.json());
+    // app.use(express.urlencoded({ extended: true }));
+
+    // Tăng giới hạn cho JSON payloads
+    app.use(express.json({ limit: '1mb' })); // Ví dụ: tăng lên 1mb
+
+    // Tăng giới hạn cho URL-encoded payloads (nếu bạn cũng dùng)
+    app.use(express.urlencoded({ limit: '1mb', extended: true }));
     app.use(express.text({ type: ['text/plain', 'text/csv'] }));
     // Middleware ghi log request đã được điều chỉnh để dùng logToFile
     app.use(requestLoggerMiddleware);

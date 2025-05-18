@@ -61,7 +61,8 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         }
 
         routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, "Calling CrawlOrchestratorService to run the process...");
-
+        console.log(conferenceList.length);
+        return;
         // *** Truyền routeLogger vào service chính ***
         const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(conferenceList, routeLogger); // <--- THAY ĐỔI Ở ĐÂY
 

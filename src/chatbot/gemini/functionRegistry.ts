@@ -18,6 +18,7 @@ import { NavigationHandler } from '../handlers/navigation.handler';
 import { OpenGoogleMapHandler } from '../handlers/openGoogleMap.handler';
 import { ManageFollowHandler } from '../handlers/manageFollow.handler';
 import { ManageCalendarHandler } from '../handlers/manageCalendar.handler';
+import { ManageBlacklistHandler } from '../handlers/manageBlacklist.handler';
 
 import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
 // ... import other handlers ...
@@ -34,6 +35,7 @@ const functionRegistry: Record<string, IFunctionHandler> = {
     openGoogleMap: new OpenGoogleMapHandler(),
     manageFollow: new ManageFollowHandler(),
     manageCalendar: new ManageCalendarHandler(),
+    manageBlacklist: new ManageBlacklistHandler(),
     sendEmailToAdmin: new SendEmailToAdminHandler(),
     // '__unknown__': new UnknownFunctionHandler(),
 };
@@ -149,7 +151,7 @@ export async function executeFunction(
 
         reportRegistryStep('function_execution_critical_error',
             `System error during execution of function ${functionName}: ${errorMsg}`,
-            { error: errorMsg, stackPreview: executionError.stack?.substring(0,200) }
+            { error: errorMsg, stackPreview: executionError.stack?.substring(0, 200) }
         );
 
         return { // Không cần 'thoughts'

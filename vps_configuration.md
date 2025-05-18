@@ -20,28 +20,14 @@ sudo apt update
 sudo apt install microsoft-edge-stable -y
 
 
-sudo nano /etc/systemd/system/crawl_server.service
-
 sudo nano /etc/systemd/system/client.service
 
 sudo nano /etc/systemd/system/server-ts.service
 
-[Unit]
-Description=Node.js Server Application
-After=network.target
+sudo nano /etc/systemd/system/admin.service
 
-[Service]
-ExecStart=/usr/bin/node /home/admin_leloi/server_crawl.js
-WorkingDirectory=/home/admin_leloi/
-Restart=always
-User=admin_leloi
-Environment=NODE_ENV=production
-StandardOutput=journal
-StandardError=journal
 
-[Install]
-WantedBy=multi-user.target
-
+Client
 
 [Unit]
 Description=My Web Application (Development)
@@ -59,6 +45,28 @@ StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
+
+
+
+Admin
+
+[Unit]
+Description=Admin Application (Development)
+After=network.target
+
+[Service]
+Type=simple
+User=admin_leloi
+WorkingDirectory=/home/admin_leloi/confhub2-fe-admin-side
+ExecStart=/usr/bin/npm run dev -- -p 1314  # Thêm -- và -p
+Restart=on-failure
+# Environment=NODE_ENV=development
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
 
 
 
@@ -84,22 +92,26 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 
 sudo systemctl enable client.service
+sudo systemctl enable admin.service
+sudo systemctl enable server-ts.service
 
 
-sudo systemctl start crawl_server.service
 sudo systemctl start client.service
+sudo systemctl start admin.service
 sudo systemctl start server-ts.service
 
+sudo systemctl restart client.service
+sudo systemctl restart admin.service
+sudo systemctl restart server-ts.service
 
-sudo systemctl restart crawl_server.service
-sudo systemctl status crawl_server.service
 sudo systemctl status client.service
+sudo systemctl status admin.service
 sudo systemctl status server-ts.service
 
 
-sudo journalctl -u crawl_server.service
+sudo journalctl -u admin.service -f
 sudo journalctl -u client.service -f
-sudo journalctl -u crawl_server.service
+sudo journalctl -u server-ts.service -f
 
 
 =====================================
@@ -161,94 +173,95 @@ Dán nội dung sau vào file (thay `localhost:8386` nếu ứng dụng của b�
 # /etc/nginx/sites-available/confhub.ddns.net
 
 # --- Cấu hình cho Backend API (Proxy) và Frontend ---
-
 server {
     # --- Phần HTTPS (Cổng 443) ---
-    # Certbot thường tự động thêm các dòng listen và ssl_certificate/key
     listen 443 ssl http2;
-    listen [::]:443 ssl http2; # Cho IPv6 nếu có
+    listen [::]:443 ssl http2;
 
-    server_name confhub.ddns.net; # Tên miền của bạn
+    server_name confhub.ddns.net;
 
     # --- Cấu hình SSL (Do Certbot quản lý) ---
-    # Đường dẫn đến chứng chỉ và khóa, Certbot sẽ điền đúng
-    ssl_certificate /etc/letsencrypt/live/confhub.ddns.net/fullchain.pem; # Managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/confhub.ddns.net/privkey.pem; # Managed by Certbot
-
-    # Các cài đặt SSL bảo mật được khuyến nghị (Certbot thường tạo các file này)
-    include /etc/letsencrypt/options-ssl-nginx.conf; # Managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # Managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/confhub.ddns.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/confhub.ddns.net/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     # --- Proxy cho Backend API (Qua /api/) ---
-    # Block này PHẢI đứng TRƯỚC 'location /'
+    # Block này PHẢI đứng TRƯỚC các location frontend
     location /api/ {
-        # Loại bỏ /api/ khỏi đường dẫn trước khi gửi đến backend
-        # Ví dụ: /api/users -> /users
         rewrite ^/api/(.*)$ /$1 break;
-
-        # Địa chỉ backend của bạn (Node.js)
-        proxy_pass http://localhost:3001;
-
-        # Các header quan trọng để backend nhận đúng thông tin
-        proxy_set_header Host $host; # Giữ nguyên tên miền gốc
-        proxy_set_header X-Real-IP $remote_addr; # IP thật của client
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # Danh sách IP proxy đã đi qua
-        proxy_set_header X-Forwarded-Proto $scheme; # Báo cho backend biết kết nối gốc là http hay https ('https')
-
-        # Hỗ trợ WebSocket (quan trọng nếu API của bạn dùng WebSocket)
+        proxy_pass http://localhost:3001/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
-
-        # Optional: Tăng thời gian chờ nếu backend xử lý lâu
         # proxy_connect_timeout 60s;
         # proxy_send_timeout 60s;
         # proxy_read_timeout 60s;
     }
 
-    # --- Proxy cho Frontend (Next.js) ---
-    # Block này xử lý tất cả các yêu cầu còn lại không khớp với /api/
-    location / {
-        # Địa chỉ frontend của bạn (Next.js dev server hoặc production server)
-        proxy_pass http://localhost:8386;
+    # --- Proxy cho Frontend ADMIN (Qua /admin/) ---
+    # Block này sẽ xử lý các yêu cầu tới confhub.ddns.net/admin/
+    # Nó PHẢI đứng TRƯỚC 'location /' (cho client frontend)
+    location /admin/ {
 
-        # Các header quan trọng (lặp lại để đảm bảo đúng cho frontend)
+
+        # Địa chỉ frontend admin của bạn
+        proxy_pass http://localhost:1314;
+
+        # Các header quan trọng
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
 
-        # Hỗ trợ WebSocket (quan trọng nếu frontend dùng WebSocket, ví dụ Hot Module Reload của Next.js dev)
+        # Hỗ trợ WebSocket
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+    
+    # --- Proxy cho Frontend CLIENT (Next.js) ---
+    # Block này xử lý tất cả các yêu cầu còn lại không khớp với /api/ hoặc /admin/
+    location / {
+        # Địa chỉ frontend client của bạn
+        proxy_pass http://localhost:8386;
+
+        # Các header quan trọng
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Hỗ trợ WebSocket
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
     }
 
-    # Optional: Cấu hình thêm cho logs, giới hạn kích thước body,...
+    # Optional: Cấu hình thêm
     # access_log /var/log/nginx/confhub.ddns.net.access.log;
     # error_log /var/log/nginx/confhub.ddns.net.error.log;
-    # client_max_body_size 10M; # Ví dụ: giới hạn upload 10MB
+    # client_max_body_size 10M;
 }
 
 # --- Phần HTTP (Cổng 80) ---
-# Server block này chủ yếu để xử lý xác thực Let's Encrypt và chuyển hướng sang HTTPS
-# Certbot thường tự động tạo/quản lý block này
+# Không cần thay đổi gì ở đây
 server {
     listen 80;
-    listen [::]:80; # Cho IPv6 nếu có
+    listen [::]:80;
 
-    server_name confhub.ddns.net; # Tên miền của bạn
+    server_name confhub.ddns.net;
 
-    # Xử lý yêu cầu xác thực của Let's Encrypt (Certbot cần cái này)
     location /.well-known/acme-challenge/ {
-        # Đảm bảo thư mục này tồn tại và Nginx có quyền đọc/ghi
         root /var/www/html;
-        allow all; # Cho phép tất cả truy cập vào đây
+        allow all;
     }
 
-    # Chuyển hướng tất cả các yêu cầu HTTP khác sang HTTPS
     location / {
-        # Return 301 là chuyển hướng vĩnh viễn, tốt cho SEO
         return 301 https://$host$request_uri;
     }
 }

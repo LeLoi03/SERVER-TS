@@ -1,6 +1,0 @@
-[2025-05-11T02:30:50.595Z] Error in _executeBatchTaskForSave (Determine API processing) for ACCV (BatchIndex: 3): Main link/text path invalid.
-[2025-05-11T09:46:29.962Z] Error in _executeBatchTaskForSave (Determine API processing) for ACCV (BatchIndex: 3): Main link/text path invalid.
-[2025-05-11T09:46:42.916Z] Error in _executeBatchTaskForSave for ACC (BatchIndex: 5): Critical: Determine links API failed for batch 5 (SAVE): Content cannot be empty.
-Stack: Error: Critical: Determine links API failed for batch 5 (SAVE): Content cannot be empty.
-    at BatchProcessingService._executeBatchTaskForSave (D:\NEW-SERVER-TS\src\services\batchProcessing.service.ts:600:23)
-    at processTicksAndRejections (node:internal/process/task_queues:105:5)

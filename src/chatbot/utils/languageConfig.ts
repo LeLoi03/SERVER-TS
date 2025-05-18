@@ -24,63 +24,63 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseHostAgentSystemInstructions,
+            systemInstructions: LangData.vietnameseHostAgentSystemInstructions, // Giữ tiếng Việt cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseSimplifiedHostAgentSystemInstructions,
+            systemInstructions: LangData.chineseSimplifiedHostAgentSystemInstructions, // Giữ tiếng Trung cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'de': {
-            systemInstructions: LangData.germanHostAgentSystemInstructions,
+            systemInstructions: LangData.germanHostAgentSystemInstructions, // Giữ tiếng Đức cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'fr': {
-            systemInstructions: LangData.frenchHostAgentSystemInstructions,
+            systemInstructions: LangData.frenchHostAgentSystemInstructions, // Giữ tiếng Pháp cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'es': {
-            systemInstructions: LangData.spanishHostAgentSystemInstructions,
+            systemInstructions: LangData.spanishHostAgentSystemInstructions, // Giữ tiếng Tây Ban Nha cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ru': {
-            systemInstructions: LangData.russianHostAgentSystemInstructions,
+            systemInstructions: LangData.russianHostAgentSystemInstructions, // Giữ tiếng Nga cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ja': {
-            systemInstructions: LangData.japaneseHostAgentSystemInstructions,
+            systemInstructions: LangData.japaneseHostAgentSystemInstructions, // Giữ tiếng Nhật cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ko': {
-            systemInstructions: LangData.koreanHostAgentSystemInstructions,
+            systemInstructions: LangData.koreanHostAgentSystemInstructions, // Giữ tiếng Hàn cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ar': {
-            systemInstructions: LangData.arabicHostAgentSystemInstructions,
+            systemInstructions: LangData.arabicHostAgentSystemInstructions, // Giữ tiếng Ả Rập cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'fa': {
-            systemInstructions: LangData.persianHostAgentSystemInstructions,
+            systemInstructions: LangData.persianHostAgentSystemInstructions, // Giữ tiếng Ba Tư cho HostAgent system instructions
             functionDeclarations: [
-                LangData.englishRouteToAgentDeclaration,
+                LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
     },
@@ -90,87 +90,102 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             functionDeclarations: [
                 LangData.englishGetConferencesDeclaration,
                 LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishManageCalendarDeclaration,
+                LangData.englishManageBlacklistDeclaration
             ],
         },
         'vi': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
+
             ],
         },
         'zh': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
+
             ],
         },
         'de': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
+
             ],
         },
         'fr': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
+
             ],
         },
         'es': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
         'ru': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
         'ja': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
         'ko': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
         'ar': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
         'fa': {
-            systemInstructions: LangData.englishConferenceAgentSystemInstructions,
+            systemInstructions: LangData.englishConferenceAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetConferencesDeclaration,
-                LangData.englishManageFollowDeclaration,
-                LangData.englishManageCalendarDeclaration
+                LangData.englishGetConferencesDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageCalendarDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageBlacklistDeclaration // Luôn dùng tiếng Anh
             ],
         },
 
@@ -185,73 +200,73 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'zh': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'de': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fr': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'es': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ru': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ja': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ko': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ar': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fa': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishJournalAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishGetJournalsDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishManageFollowDeclaration, // Luôn dùng tiếng Anh
             ],
         },
     },
@@ -263,64 +278,63 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'zh': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'de': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fr': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'es': {
-            systemInstructions: LangData.englishJournalAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetJournalsDeclaration,
-                LangData.englishManageFollowDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ru': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ja': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ko': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ar': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fa': {
-            systemInstructions: LangData.englishAdminContactAgentSystemInstructions,
+            systemInstructions: LangData.englishAdminContactAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishSendEmailToAdminDeclaration,
+                LangData.englishSendEmailToAdminDeclaration, // Luôn dùng tiếng Anh
             ],
         },
     },
@@ -333,73 +347,73 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'zh': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'de': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fr': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'es': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ru': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ja': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ko': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ar': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fa': {
-            systemInstructions: LangData.englishNavigationAgentSystemInstructions,
+            systemInstructions: LangData.englishNavigationAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishNavigationDeclaration,
-                LangData.englishOpenGoogleMapDeclaration,
+                LangData.englishNavigationDeclaration, // Luôn dùng tiếng Anh
+                LangData.englishOpenGoogleMapDeclaration, // Luôn dùng tiếng Anh
             ],
         },
     },
@@ -411,63 +425,63 @@ const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, Lang
             ],
         },
         'vi': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'zh': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'de': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fr': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'es': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ru': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ja': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ko': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'ar': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
         'fa': {
-            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions,
+            systemInstructions: LangData.englishWebsiteInfoAgentSystemInstructions, // Luôn dùng tiếng Anh
             functionDeclarations: [
-                LangData.englishGetWebsiteInfoDeclaration,
+                LangData.englishGetWebsiteInfoDeclaration, // Luôn dùng tiếng Anh
             ],
         },
     }
@@ -497,27 +511,44 @@ export function getAgentLanguageConfig(
 
     let langConfig = agentConfigMap[targetLang];
 
-    if (!langConfig) {
-        logToFile(`[Language Config] WARN: Config not found for language "${targetLang}" in agent "${agentId}". Falling back to default language "${DEFAULT_LANGUAGE}" for this agent.`);
-        langConfig = agentConfigMap[DEFAULT_LANGUAGE];
-
-        if (!langConfig) {
-            logToFile(`[Language Config] CRITICAL: Default language config missing for agent "${agentId}". Trying to return config for default agent/default language.`);
-            const absoluteDefaultConfig = agentLanguageConfigurations[DEFAULT_AGENT_ID]?.[DEFAULT_LANGUAGE];
-            if (absoluteDefaultConfig) {
-                return absoluteDefaultConfig;
-            } else {
-                logToFile(`[Language Config] CRITICAL: Absolute default config (Agent: ${DEFAULT_AGENT_ID}, Lang: ${DEFAULT_LANGUAGE}) missing. Returning empty config.`);
-                return { systemInstructions: "Error: Config missing.", functionDeclarations: [] };
-            }
-        }
+    // Special handling for HostAgent systemInstructions based on targetLang
+    let systemInstructionsForAgent: any;
+    if (agentId === 'HostAgent') {
+        // Try to get the HostAgent instructions in the requested language
+        systemInstructionsForAgent = LangData[`${targetLang}HostAgentSystemInstructions` as keyof typeof LangData] || LangData.englishHostAgentSystemInstructions; // Fallback to English if specific language not found
+    } else {
+        // For other agents, always use the English system instructions
+        systemInstructionsForAgent = LangData[`english${agentId}SystemInstructions` as keyof typeof LangData] || "Error: English instructions missing."; // Fallback to error message
     }
 
-    if (!langConfig) {
-        logToFile(`[Language Config] CRITICAL: Could not resolve any valid config for Agent: ${agentId}, Language: ${targetLang}. Returning empty config.`);
-        return { systemInstructions: "Error: Config resolution failed.", functionDeclarations: [] };
+    // Always use English function declarations for all agents
+    const functionDeclarationsForAgent: FunctionDeclaration[] = [];
+    // Populate functionDeclarationsForAgent from the English configuration
+    const englishConfig = agentConfigMap['en'];
+    if (englishConfig && englishConfig.functionDeclarations) {
+         functionDeclarationsForAgent.push(...englishConfig.functionDeclarations);
+    } else {
+         logToFile(`[Language Config] CRITICAL: English function declarations missing for agent "${agentId}".`);
     }
 
-    logToFile(`[Language Config] Using configuration for Agent: ${agentId}, Language: ${targetLang}`);
-    return langConfig as LanguageAgentConfig;
+
+    // If a language-specific config exists for this agent, we still use its systemInstructions (overridden above for HostAgent)
+    // and ignore its functionDeclarations (always using English)
+    if (langConfig) {
+        logToFile(`[Language Config] Using configuration for Agent: ${agentId}, Language: ${targetLang} (System Instructions based on language, Functions are English)`);
+        return {
+            systemInstructions: systemInstructionsForAgent,
+            functionDeclarations: functionDeclarationsForAgent
+        };
+    }
+
+    // If no specific language config exists for this agent (shouldn't happen with the current structure, but for robustness)
+    // We still return the correct systemInstructions (language-dependent for HostAgent, English otherwise)
+    // and the English function declarations.
+     logToFile(`[Language Config] WARn: Language config not found for Agent: ${agentId}, Language: ${targetLang}. Using resolved System Instructions and English Functions.`);
+     return {
+         systemInstructions: systemInstructionsForAgent,
+         functionDeclarations: functionDeclarationsForAgent
+     };
+
 }
