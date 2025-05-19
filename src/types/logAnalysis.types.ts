@@ -134,7 +134,7 @@ export interface GeminiApiAnalysis {
     cacheMapLoadSuccess: boolean | null;// Status of loading cache map file
     cacheMapLoadFailures: number;       // Failures loading cache map file ('cache_load_failed')
     cacheMapWriteAttempts: number;      // Attempts to write cache map file
-    cacheMapWriteSuccess: number;       // Successful writes of cache map ('cache_write_success' for map)
+    cacheMapWriteSuccessCount: number;       // Successful writes of cache map ('cache_write_success' for map)
     cacheMapWriteFailures: number;      // Failures writing cache map ('cache_write_failed' for map)
 
     cacheManagerCreateFailures: number; // Failures to create GoogleAICacheManager ('cache_manager_create_failed')

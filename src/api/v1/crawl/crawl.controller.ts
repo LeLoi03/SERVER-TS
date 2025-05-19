@@ -6,6 +6,7 @@ import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
 import { Logger } from 'pino';
 import { LoggingService } from '../../../services/logging.service';
 import { ConfigService } from '../../../config/config.service';
+import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/DatabasePersistence.service';
 
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
 
@@ -133,15 +134,54 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
     res.status(501).json({ message: "Journal crawling endpoint not yet refactored." });
 }
 
-export async function handleSaveConference(req: Request, res: Response): Promise<void> {
-    // *** FIX: Assert type ***
-    const loggingService = container.resolve(LoggingService) as LoggingService;
-    const reqLogger = (req as any).log as Logger || loggingService.getLogger();
-    const routeLogger = reqLogger.child({ route: '/save-conference' });
-    routeLogger.warn("handleSaveConference needs refactoring (likely into a DatabaseService).");
-    res.status(501).json({ message: "Save conference endpoint not yet refactored." });
-}
 
+// Controller này không thay đổi, nó là route riêng để lưu DB
+export async function handleSaveConference(req: Request, res: Response): Promise<void> {
+    const loggingService = container.resolve(LoggingService);
+    const databasePersistenceService = container.resolve(DatabasePersistenceService);
+    const configService = container.resolve(ConfigService);
+
+    const reqLogger = (req as any).log as Logger || loggingService.getLogger();
+    const requestId = (req as any).id || `req-save-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    const routeLogger = reqLogger.child({ requestId, route: '/save-conference-evaluate' });
+
+    routeLogger.info("Received request to save evaluated data to database.");
+
+    try {
+        const result: DatabaseSaveResult = await databasePersistenceService.saveEvaluatedData(routeLogger);
+
+        if (result.success) {
+            routeLogger.info({ event: 'manual_db_save_success', details: result }, "Manual save to database successful.");
+            res.status(result.statusCode || 200).json({
+                message: result.message,
+                details: result.data
+            });
+        } else {
+            routeLogger.error({ event: 'manual_db_save_failed', details: result }, "Manual save to database failed.");
+            if (result.message.includes("CSV file not found")) {
+                 res.status(404).json({
+                    message: result.message,
+                    error: result.error,
+                    csvPath: configService.evaluateCsvPath
+                });
+            } else {
+                res.status(result.statusCode || 500).json({
+                    message: result.message,
+                    error: result.error,
+                    details: result.data
+                });
+            }
+        }
+    } catch (error: any) {
+        routeLogger.fatal({ err: error, stack: error.stack, event: 'manual_db_save_controller_error' }, "Unexpected error in handleSaveConference controller.");
+        if (!res.headersSent) {
+            res.status(500).json({
+                message: 'An unexpected error occurred while trying to save to the database.',
+                error: error.message
+            });
+        }
+    }
+}
 
 // // --- Refactored Journal Handler ---
 // export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {

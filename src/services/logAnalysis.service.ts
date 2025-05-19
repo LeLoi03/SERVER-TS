@@ -34,8 +34,8 @@ export class LogAnalysisService {
         this.logger.info(`Initialized. Log file path: ${this.logFilePath}`);
 
         if (!fs.existsSync(this.logFilePath)) {
-            const warnMsg = `Log file not found at configured path: ${this.logFilePath}. Analysis might fail or return empty results.`;
-            this.logger.warn(warnMsg);
+            // const warnMsg = `Log file not found at configured path: ${this.logFilePath}. Analysis might fail or return empty results.`;
+            // this.logger.warn(warnMsg);
         }
     }
 
@@ -43,8 +43,8 @@ export class LogAnalysisService {
         filterStartTime?: Date | number,
         filterEndTime?: Date | number
     ): Promise<LogAnalysisResult> {
-        const logContext = { filePath: this.logFilePath, function: 'performAnalysisAndUpdate' };
-        this.logger.info({ ...logContext, event: 'analysis_start', filterStartTime, filterEndTime }, 'Starting log analysis execution');
+        // const logContext = { filePath: this.logFilePath, function: 'performAnalysisAndUpdate' };
+        // this.logger.info({ ...logContext, event: 'analysis_start', filterStartTime, filterEndTime }, 'Starting log analysis execution');
 
         const results: LogAnalysisResult = initializeLogAnalysisResult(this.logFilePath);
 
@@ -52,13 +52,13 @@ export class LogAnalysisService {
         const filterEndMillis = filterEndTime ? new Date(filterEndTime).getTime() : null;
 
         if (filterStartMillis !== null && filterEndMillis !== null && filterStartMillis > filterEndMillis) {
-            this.logger.warn({ ...logContext, event: 'analysis_warning_invalid_filter_range' }, 'Filter start time is after filter end time.');
+            // this.logger.warn({ ...logContext, event: 'analysis_warning_invalid_filter_range' }, 'Filter start time is after filter end time.');
         }
 
         try {
             if (!fs.existsSync(this.logFilePath)) {
                 const errorMsg = `Log file not found at path: ${this.logFilePath}`;
-                this.logger.error({ ...logContext, event: 'analysis_error_file_not_found' }, errorMsg);
+                // this.logger.error({ ...logContext, event: 'analysis_error_file_not_found' }, errorMsg);
                 results.status = 'Failed';
                 results.errorMessage = errorMsg;
                 results.logProcessingErrors.push(errorMsg);
@@ -66,16 +66,16 @@ export class LogAnalysisService {
                 return results;
             }
 
-            this.logger.info({ ...logContext, event: 'analysis_read_start' }, 'Starting Phase 1: Read and Group Logs');
+            // this.logger.info({ ...logContext, event: 'analysis_read_start' }, 'Starting Phase 1: Read and Group Logs');
             const readResult: ReadLogResult = await readAndGroupLogs(this.logFilePath);
             results.totalLogEntries = readResult.totalEntries;
             results.parsedLogEntries = readResult.parsedEntries;
             results.parseErrors = readResult.parseErrors;
             results.logProcessingErrors.push(...readResult.logProcessingErrors);
-            this.logger.info({ ...logContext, event: 'analysis_read_finish', totalEntries: readResult.totalEntries, parsedEntries: readResult.parsedEntries, requestsFound: readResult.requestsData.size }, 'Finished Phase 1');
+            // this.logger.info({ ...logContext, event: 'analysis_read_finish', totalEntries: readResult.totalEntries, parsedEntries: readResult.parsedEntries, requestsFound: readResult.requestsData.size }, 'Finished Phase 1');
 
             if (readResult.requestsData.size === 0 && readResult.totalEntries > 0) {
-                this.logger.warn({ ...logContext, event: 'analysis_warning_no_requests_found' }, 'Log file parsed, but no entries with requestIds found for analysis.');
+                // this.logger.warn({ ...logContext, event: 'analysis_warning_no_requests_found' }, 'Log file parsed, but no entries with requestIds found for analysis.');
             }
 
             const { filteredRequests, analysisStartMillis, analysisEndMillis }: FilteredData = filterRequestsByTime(
@@ -83,31 +83,31 @@ export class LogAnalysisService {
                 filterStartMillis,
                 filterEndMillis
             );
-            this.logger.info({ ...logContext, event: 'analysis_filter_finish', includedRequests: filteredRequests.size, rangeStart: analysisStartMillis, rangeEnd: analysisEndMillis }, 'Finished Phase 2a: Filtering Requests');
+            // this.logger.info({ ...logContext, event: 'analysis_filter_finish', includedRequests: filteredRequests.size, rangeStart: analysisStartMillis, rangeEnd: analysisEndMillis }, 'Finished Phase 2a: Filtering Requests');
 
-            this.logger.info({ ...logContext, event: 'analysis_processing_start', requestCount: filteredRequests.size }, 'Starting Phase 2b: Processing log entries for included requests');
+            // this.logger.info({ ...logContext, event: 'analysis_processing_start', requestCount: filteredRequests.size }, 'Starting Phase 2b: Processing log entries for included requests');
             const conferenceLastTimestamp: { [compositeKey: string]: number } = {};
 
             for (const [requestId, requestInfo] of filteredRequests.entries()) {
-                const processLogContext = { function: 'processLogEntry', requestId: requestId }; // Thêm requestId vào context
+                // const processLogContext = { function: 'processLogEntry', requestId: requestId }; // Thêm requestId vào context
                 for (const logEntry of requestInfo.logs) {
                     // Truyền logger vào hàm xử lý nếu nó cần log bên trong
-                    processLogEntry(logEntry, results, conferenceLastTimestamp, processLogContext, this.logger);
+                    processLogEntry(logEntry, results, conferenceLastTimestamp);
                 }
             }
-            this.logger.info({ ...logContext, event: 'analysis_processing_end' }, 'Finished Phase 2b: Processing log entries');
+            // this.logger.info({ ...logContext, event: 'analysis_processing_end' }, 'Finished Phase 2b: Processing log entries');
 
             calculateFinalMetrics(results, conferenceLastTimestamp, analysisStartMillis, analysisEndMillis);
             results.status = 'Completed';
-            this.logger.info({ ...logContext, event: 'analysis_calculate_metrics_finish' }, 'Finished Phase 3: Calculating final metrics');
+            // this.logger.info({ ...logContext, event: 'analysis_calculate_metrics_finish' }, 'Finished Phase 3: Calculating final metrics');
 
             this.latestResult = results;
-            this.logger.info(`Analysis completed successfully. Requests: ${results.overall.processedConferencesCount}, Errors: ${results.errorLogCount}`);
+            // this.logger.info(`Analysis completed successfully. Requests: ${results.overall.processedConferencesCount}, Errors: ${results.errorLogCount}`);
 
             return results;
 
         } catch (error: any) {
-            this.logger.error({ ...logContext, err: error, event: 'analysis_error_fatal' }, 'Fatal error during log analysis execution');
+            // this.logger.error({ ...logContext, err: error, event: 'analysis_error_fatal' }, 'Fatal error during log analysis execution');
             results.status = 'Failed';
             results.errorMessage = `Fatal error during analysis: ${error.message}`;
             results.logProcessingErrors.push(`FATAL ANALYSIS ERROR: ${error.message}`);
@@ -118,7 +118,7 @@ export class LogAnalysisService {
     }
 
     getLatestAnalysisResult(): LogAnalysisResult | null {
-        this.logger.debug('getLatestAnalysisResult called.');
+        // this.logger.debug('getLatestAnalysisResult called.');
         return this.latestResult;
     }
 }

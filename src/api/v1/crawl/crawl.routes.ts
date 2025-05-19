@@ -7,6 +7,6 @@ const router = Router();
 // Định nghĩa routes cho crawl
 router.post('/crawl-conferences', handleCrawlConferences);
 router.post('/crawl-journals', handleCrawlJournals);
-router.post('/save-conference', handleSaveConference);
+router.post('/save-conferences', handleSaveConference);
 
 export default router;

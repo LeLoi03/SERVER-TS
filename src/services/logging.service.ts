@@ -1,3 +1,4 @@
+
 // src/services/logging.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
@@ -49,25 +50,30 @@ export class LoggingService {
 
         const pinoStreams: pino.StreamEntry[] = [];
 
-        // Console transport
-        if (this.configService.config.NODE_ENV !== 'production') {
-             pinoStreams.push({
-                 // <<< Cast to Level: Nếu logLevel là 'silent', main option đã chặn rồi
-                 level: this.logLevel as Level,
-                 stream: require('pino-pretty')({
-                     colorize: true,
-                     levelFirst: true,
-                     translateTime: 'SYS:standard',
-                     ignore: 'pid,hostname',
-                 }),
-             });
+
+        // Console transport (CHỈ THÊM NẾU ĐƯỢC CẤU HÌNH)
+        if (this.configService.config.LOG_TO_CONSOLE) { // <--- THAY ĐỔI Ở ĐÂY
+            if (this.configService.config.NODE_ENV !== 'production') {
+                pinoStreams.push({
+                    level: this.logLevel as Level,
+                    stream: require('pino-pretty')({
+                        colorize: true,
+                        levelFirst: true,
+                        translateTime: 'SYS:standard',
+                        ignore: 'pid,hostname',
+                    }),
+                });
+            } else {
+                pinoStreams.push({
+                    level: this.logLevel as Level,
+                    stream: process.stdout,
+                });
+            }
+            console.log(`[LoggingService] Console logging enabled. Level: ${this.logLevel}`);
         } else {
-             pinoStreams.push({
-                 // <<< Cast to Level >>>
-                 level: this.logLevel as Level,
-                 stream: process.stdout,
-             });
+            console.log('[LoggingService] Console logging is DISABLED by configuration.');
         }
+
 
         // File transport
         try {
@@ -83,10 +89,9 @@ export class LoggingService {
             });
 
             pinoStreams.push({
-                 // <<< Cast to Level >>>
-                 level: this.logLevel as Level,
-                 stream: this.fileDestination,
-             });
+                level: this.logLevel as Level,
+                stream: this.fileDestination,
+            });
 
             console.log(`[LoggingService] File logging configured. Level: ${this.logLevel}. File: ${this.logFilePath}`);
 
@@ -99,8 +104,8 @@ export class LoggingService {
         // Chỉ tạo logger nếu có ít nhất một stream hợp lệ
         if (pinoStreams.length > 0) {
             this.logger = pino(pinoOptions, pino.multistream(pinoStreams, {}));
-             // Log đầu tiên sử dụng logger đã tạo
-             this.logger.info({ service: 'LoggingService' }, 'Logger initialized successfully.');
+            // Log đầu tiên sử dụng logger đã tạo
+            this.logger.info({ service: 'LoggingService' }, 'Logger initialized successfully.');
         } else {
             // Fallback nếu không có stream nào được cấu hình (ví dụ: lỗi tạo file)
             console.error('[LoggingService] CRITICAL: No logging streams configured. Using basic console logger.');
@@ -137,8 +142,8 @@ export class LoggingService {
     public getLogger(context?: object): Logger {
         // Thêm kiểm tra phòng trường hợp this.logger chưa kịp khởi tạo (dù ít khả năng)
         if (!this.logger) {
-             console.warn('[LoggingService] Attempted to get logger before it was fully initialized. Returning basic logger.');
-             return pino({ level: 'info' }); // Trả về logger cơ bản
+            console.warn('[LoggingService] Attempted to get logger before it was fully initialized. Returning basic logger.');
+            return pino({ level: 'info' }); // Trả về logger cơ bản
         }
         return context ? this.logger.child(context) : this.logger;
     }

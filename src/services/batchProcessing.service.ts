@@ -584,6 +584,7 @@ export class BatchProcessingService {
             try {
                 determineApiLogger.info({ inputLength: batchContentForDetermine.length, event: 'gemini_determine_api_call_start_save_task' });
                 determineLinksResponse = await this.geminiApiService.determineLinks(determineApiParams, determineApiLogger);
+                console.log("determine response text", determineLinksResponse.responseText)
                 const tempResponsePath = await this.fileSystemService.saveTemporaryFile(
                     determineLinksResponse.responseText || "",
                     `${safeBatchAcronym}_determine_response_batch_${batchIndex}`,

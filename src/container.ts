@@ -8,8 +8,17 @@ import { LoggingService } from './services/logging.service';
 import { ApiKeyManager } from './services/apiKey.manager';
 import { PlaywrightService } from './services/playwright.service';
 import { FileSystemService } from './services/fileSystem.service';
-import { GeminiApiService } from './services/geminiApi.service';
 import { TaskQueueService } from './services/taskQueue.service';
+
+// --- Gemini API Service and its Sub-Services ---
+import { GeminiApiService } from './services/geminiApi.service'; // The main refactored facade
+import { GeminiClientManagerService } from './services/gemini/geminiClientManager.service';
+import { GeminiCachePersistenceService } from './services/gemini/geminiCachePersistence.service';
+import { GeminiContextCacheService } from './services/gemini/geminiContextCache.service';
+import { GeminiRateLimiterService } from './services/gemini/geminiRateLimiter.service';
+import { GeminiModelOrchestratorService } from './services/gemini/geminiModelOrchestrator.service';
+import { GeminiResponseHandlerService } from './services/gemini/geminiResponseHandler.service';
+// -------------------------------------------------
 
 // --- Your Newly Refactored Batch Processing Sub-Services ---
 import { PageContentExtractorService, IPageContentExtractorService } from './services/batchProcessingServiceChild/pageContentExtractor.service';
@@ -17,7 +26,7 @@ import { ConferenceLinkProcessorService, IConferenceLinkProcessorService } from 
 import { ConferenceDeterminationService, IConferenceDeterminationService } from './services/batchProcessingServiceChild/conferenceDetermination.service';
 import { ConferenceDataAggregatorService, IConferenceDataAggregatorService } from './services/batchProcessingServiceChild/conferenceDataAggregator.service';
 // --- The Orchestrating BatchProcessingService ---
-import { BatchProcessingService } from './services/batchProcessing.service'; // Corrected
+import { BatchProcessingService } from './services/batchProcessing.service';
 
 // Other Application Services
 import { HtmlPersistenceService } from './services/htmlPersistence.service';
@@ -31,8 +40,17 @@ container.registerSingleton(LoggingService);
 container.registerSingleton(ApiKeyManager);
 container.registerSingleton(PlaywrightService);
 container.registerSingleton(FileSystemService);
-container.registerSingleton(GeminiApiService);
 container.registerSingleton(TaskQueueService);
+
+// Register Gemini API Service and its Sub-Services (all are singletons via @singleton decorator)
+// Explicit registration is good practice and provides clarity.
+container.registerSingleton(GeminiClientManagerService);
+container.registerSingleton(GeminiCachePersistenceService);
+container.registerSingleton(GeminiContextCacheService);
+container.registerSingleton(GeminiRateLimiterService);
+container.registerSingleton(GeminiModelOrchestratorService);
+container.registerSingleton(GeminiResponseHandlerService);
+container.registerSingleton(GeminiApiService); // The main facade depends on the sub-services above
 
 // Register New Batch Processing Sub-Services (usually as singletons if stateless or state is app-wide)
 container.registerSingleton<IPageContentExtractorService>('IPageContentExtractorService', PageContentExtractorService);
@@ -46,13 +64,12 @@ container.registerSingleton(BatchProcessingService); // This will inject the sub
 // Register Other Application Services
 container.registerSingleton(HtmlPersistenceService);
 container.registerSingleton(ResultProcessingService);
-// ConferenceProcessorService might be transient if it holds per-conference state,
-// or singleton if its state is managed via parameters. Based on your current code, it's resolved per task.
-// If ConferenceProcessorService is resolved dynamically per task as in your CrawlOrchestratorService,
-// you just need to ensure its dependencies are registered.
-// `container.resolve(ConferenceProcessorService)` will work if ConferenceProcessorService and its dependencies are registered.
-// If it's always new instance per conference:
-container.register(ConferenceProcessorService, ConferenceProcessorService); // or simply ensure it's @injectable() if no interface
+
+// ConferenceProcessorService
+// If ConferenceProcessorService is resolved dynamically per task as in your CrawlOrchestratorService
+// using `container.resolve(ConferenceProcessorService)`, you just need to ensure it's @injectable()
+// and its dependencies are registered. Explicit registration as transient is also fine.
+container.register(ConferenceProcessorService, ConferenceProcessorService); // Registers for transient scope (new instance each time resolved)
 
 container.registerSingleton(CrawlOrchestratorService);
 

@@ -16,6 +16,8 @@ import { InputsOutputs } from '../types/crawl.types';
 import { AgentId } from '../chatbot/shared/types'; // <<<< IMPORTANT: Import AgentId type
 
 // Đường dẫn đến file CSV - Nên lấy từ config hoặc định nghĩa rõ ràng
+const DETERMINE_LINKS_CSV_PATH: string = path.resolve(__dirname, "../conference/examples/determine_links.csv"); // Dùng path.resolve
+const EXTRACT_INFORMATION_CSV_PATH: string = path.resolve(__dirname, "../conference/examples/extract_info.csv"); // Dùng path.resolve
 const CFP_INFORMATION_CSV_PATH: string = path.resolve(__dirname, "../conference/examples/extract_cfp.csv"); // Dùng path.resolve
 
 // --- Helper Function for Parsing Comma-Separated Strings ---
@@ -50,12 +52,15 @@ const envSchema = z.object({
     JWT_SECRET: z.string().min(1, "JWT_SECRET is required"),
     MONGODB_URI: z.string().min(1, "MONGODB_URI is required"),
     DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
+    DATABASE_IMPORT_ENDPOINT: z.string().min(1, "DATABASE_IMPORT_ENDPOINT is required"),
+
     CORS_ALLOWED_ORIGINS: z.string().optional().transform(parseCommaSeparatedString('CORS_ALLOWED_ORIGINS')),
 
     // --- Logging Config ---
     LOG_LEVEL: z.enum(['trace', 'debug', 'info', 'warn', 'error', 'fatal', 'silent'] as [LevelWithSilent, ...LevelWithSilent[]]).default('info'),
     LOGS_DIRECTORY: z.string().default('./logs'),
     LOG_FILE_NAME: z.string().default('app.log'),
+    LOG_TO_CONSOLE: z.boolean().default(false),
 
     // --- Base Output Directory ---
     BASE_OUTPUT_DIR: z.string().default('./data/crawl_output'),
@@ -64,7 +69,7 @@ const envSchema = z.object({
     CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(5),
 
     // --- Playwright Config ---
-    PLAYWRIGHT_CHANNEL: z.enum([ 'msedge', 'chrome', 'firefox', 'webkit', 'chrome-beta', 'msedge-beta', 'msedge-dev']).optional().default('msedge'),
+    PLAYWRIGHT_CHANNEL: z.enum(['msedge', 'chrome', 'firefox', 'webkit', 'chrome-beta', 'msedge-beta', 'msedge-dev']).optional().default('msedge'),
     PLAYWRIGHT_HEADLESS: z.enum(['true', 'false']).transform(val => val === 'true').default('true'),
     USER_AGENT: z.string().default('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'),
 
@@ -122,40 +127,40 @@ const envSchema = z.object({
 
     // --- Gemini API - Extract Specific ---
     GEMINI_EXTRACT_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_MODEL_NAMES')),
+    GEMINI_EXTRACT_MODEL_NAME: z.string().min(1, "GEMINI_EXTRACT_MODEL_NAME required"),
+    GEMINI_EXTRACT_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_EXTRACT_FALLBACK_MODEL_NAME required"),
     GEMINI_EXTRACT_TEMPERATURE: z.coerce.number().min(0).max(2).default(0),
     GEMINI_EXTRACT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
     GEMINI_EXTRACT_RESPONSE_MIME_TYPE: z.string().default("text/plain"),
-    GEMINI_EXTRACT_ROLE: z.string().default("Data Extractor"),
-    GEMINI_EXTRACT_INSTRUCTION_1: z.string().optional(),
-    GEMINI_EXTRACT_INSTRUCTION_2: z.string().optional(),
-    GEMINI_EXTRACT_INSTRUCTION_3: z.string().optional(),
-    GEMINI_EXTRACT_INSTRUCTION_4: z.string().optional(),
-    GEMINI_EXTRACT_INSTRUCTION_5: z.string().optional(),
-    GEMINI_EXTRACT_INSTRUCTION_6: z.string().optional(),
-    GEMINI_EXTRACT_SITUATION: z.string().optional(),
+    GEMINI_EXTRACT_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
+    GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
     // --- Gemini API - CFP Specific ---
     GEMINI_CFP_MODEL_NAMES: z.string().min(1, "GEMINI_CFP_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_CFP_MODEL_NAMES')),
+    GEMINI_CFP_MODEL_NAME: z.string().min(1, "GEMINI_CFP_MODEL_NAME required"),
+    GEMINI_CFP_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_CFP_FALLBACK_MODEL_NAME required"),
     GEMINI_CFP_TEMPERATURE: z.coerce.number().min(0).max(2).default(1.0),
     GEMINI_CFP_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_CFP_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_CFP_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
     GEMINI_CFP_RESPONSE_MIME_TYPE: z.string().default("application/json"),
     GEMINI_CFP_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_CFP_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
+    GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
     // --- Gemini API - Determine Specific ---
-    GEMINI_DETERMINE_MODEL_NAME: z.string().optional(),
+    GEMINI_DETERMINE_MODEL_NAMES: z.string().min(1, "GEMINI_DETERMINE_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_DETERMINE_MODEL_NAMES')),
+    GEMINI_DETERMINE_MODEL_NAME: z.string().min(1, "GEMINI_DETERMINE_MODEL_NAME required"),
+    GEMINI_DETERMINE_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_DETERMINE_FALLBACK_MODEL_NAME required"),
     GEMINI_DETERMINE_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.1),
     GEMINI_DETERMINE_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_DETERMINE_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_DETERMINE_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
     GEMINI_DETERMINE_RESPONSE_MIME_TYPE: z.string().default("application/json"),
-    GEMINI_DETERMINE_ROLE: z.string().default("Link Classifier"),
-    GEMINI_DETERMINE_INSTRUCTION_1: z.string().optional(),
-    GEMINI_DETERMINE_INSTRUCTION_2: z.string().optional(),
-    GEMINI_DETERMINE_INSTRUCTION_3: z.string().optional(),
-    GEMINI_DETERMINE_INSTRUCTION_4: z.string().optional(),
-    GEMINI_DETERMINE_SITUATION: z.string().optional(),
+    GEMINI_DETERMINE_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
+    GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
     // --- Gemini API - Conference Website Description ---
     WEBSITE_DESCRIPTION: z.string().optional(),
@@ -173,33 +178,37 @@ const envSchema = z.object({
     JOURNAL_CSV_HEADERS: z.string().default("Title,Type,SJR,H index,Total Docs. (2023),Total Docs. (3years),Total Refs. (2023),Total Cites (3years),Citable Docs. (3years),Cites / Doc. (2years),Ref. / Doc. (2023),Country,Details"),
 
     // --- Other ---
-    API_BASE_URL: z.string().optional().default('http://confhub.engineer/api/v1'),
+    API_BASE_URL: z.string().optional().default("https://confhub.westus3.cloudapp.azure.com/api/v1"),
 
     // ++++++++++ ADDED CONFIGS FOR INTENT HANDLER ++++++++++
     ALLOWED_SUB_AGENTS: z.string()
         .optional() // Để có thể có giá trị mặc định nếu không được set
         .transform(parseAgentIdArray('ALLOWED_SUB_AGENTS')), // Sử dụng helper mới
-        // .default('ConferenceAgent,JournalAgent,AdminContactAgent,NavigationAgent,WebsiteInfoAgent') // Cung cấp default string
-        // Mặc định sẽ được xử lý trong constructor nếu mảng rỗng
+    // .default('ConferenceAgent,JournalAgent,AdminContactAgent,NavigationAgent,WebsiteInfoAgent') // Cung cấp default string
+    // Mặc định sẽ được xử lý trong constructor nếu mảng rỗng
 
-    MAX_TURNS_HOST_AGENT: z.coerce.number().int().positive().default(5),
+    MAX_TURNS_HOST_AGENT: z.coerce.number().int().positive().default(6),
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++
 });
 
 // --- Define Interfaces for Structured Config (like Gemini API) ---
-// ... (giữ nguyên các interface GeminiApiConfig, GeminiApiConfigs)
+
+// Định nghĩa lại interface cho GeminiApiConfig để rõ ràng hơn
 export interface GeminiApiConfig {
-    generationConfig?: SDKGenerationConfig;
-    systemInstruction?: string;
-    modelName?: string;
-    modelNames?: string[];
-    inputs?: Record<string, string>;
-    outputs?: Record<string, string>;
+    generationConfig: SDKGenerationConfig;
+    systemInstruction: string | undefined;
+    modelNames?: string[]; // Cho API types dùng nhiều model (round-robin)
+    modelName?: string;   // Cho API types dùng một model cố định
+    inputs?: Record<string, string>;  // For few-shot examples (user prompts)
+    outputs?: Record<string, string>; // For few-shot examples (model responses)
+    allowCacheForNonTuned?: boolean;   // Cờ mới
+    allowFewShotForNonTuned?: boolean; // Cờ mới
+    fallbackModelName?: string; // <-- THUỘC TÍNH MỚI
+
 }
 
-export interface GeminiApiConfigs {
-    [apiType: string]: GeminiApiConfig;
-}
+export type GeminiApiConfigs = Record<string, GeminiApiConfig>;
+
 
 // --- Infer the main config type from the schema ---
 type AppConfigFromSchema = z.infer<typeof envSchema>;
@@ -230,12 +239,13 @@ export class ConfigService {
         try {
             const parsedConfig = envSchema.parse(process.env);
 
+
             const googleApiKeys: string[] = [];
             const keyPattern = /^CUSTOM_SEARCH_API_KEY_\d+$/;
             for (const envVar in process.env) {
                 if (keyPattern.test(envVar) && process.env[envVar]) {
                     googleApiKeys.push(process.env[envVar] as string);
-                    console.log(`   - Found Google Search API Key: ${envVar}`);
+                    // console.log(`   - Found Google Search API Key: ${envVar}`);
                 }
             }
 
@@ -243,6 +253,10 @@ export class ConfigService {
                 ...parsedConfig,
                 GOOGLE_CUSTOM_SEARCH_API_KEYS: googleApiKeys
             };
+
+            console.log("GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED);
+            console.log("GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED);
+            console.log("GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED);
 
             // --- Post-validation checks/defaults ---
             if (!this.config.CORS_ALLOWED_ORIGINS || this.config.CORS_ALLOWED_ORIGINS.length === 0) {
@@ -274,7 +288,7 @@ export class ConfigService {
                 throw new Error("GEMINI_CFP_MODEL_NAMES cannot be empty.");
             }
 
-             // ++++++++++ Initialize Generation Configs ++++++++++
+            // ++++++++++ Initialize Generation Configs ++++++++++
             this.hostAgentGenerationConfig = {
                 temperature: this.config.GEMINI_HOST_AGENT_TEMPERATURE,
                 topP: this.config.GEMINI_HOST_AGENT_TOP_P,
@@ -321,34 +335,79 @@ export class ConfigService {
         }
     }
 
-    // --- initializeExamples (Giữ nguyên) ---
+    // --- initializeExamples ---
     public async initializeExamples(): Promise<void> {
         if (!this.initializationPromise) {
             console.log("🚀 Starting loading of API examples...");
             this.initializationPromise = (async () => {
                 try {
-                    const [cfpExamples] = await Promise.all([
+                    // Gọi song song để load tất cả các file example
+                    const [determineExamples, extractExamples, cfpExamples] = await Promise.all([
+                        this.loadSpecificExampleData(DETERMINE_LINKS_CSV_PATH, API_TYPE_DETERMINE),
+                        this.loadSpecificExampleData(EXTRACT_INFORMATION_CSV_PATH, API_TYPE_EXTRACT),
                         this.loadSpecificExampleData(CFP_INFORMATION_CSV_PATH, API_TYPE_CFP),
                     ]);
 
+                    // Gán examples cho API_TYPE_DETERMINE
+                    if (determineExamples && this.geminiApiConfigs[API_TYPE_DETERMINE]) {
+                        this.geminiApiConfigs[API_TYPE_DETERMINE].inputs = determineExamples.inputs;
+                        this.geminiApiConfigs[API_TYPE_DETERMINE].outputs = determineExamples.outputs;
+                        console.log(`   👍 Loaded ${Object.keys(determineExamples.inputs).length} examples for ${API_TYPE_DETERMINE}.`);
+                    } else if (this.geminiApiConfigs[API_TYPE_DETERMINE]) {
+                        console.log(`   👎 No examples loaded or config missing for ${API_TYPE_DETERMINE}.`);
+                    }
+
+                    // Gán examples cho API_TYPE_EXTRACT
+                    if (extractExamples && this.geminiApiConfigs[API_TYPE_EXTRACT]) {
+                        this.geminiApiConfigs[API_TYPE_EXTRACT].inputs = extractExamples.inputs;
+                        this.geminiApiConfigs[API_TYPE_EXTRACT].outputs = extractExamples.outputs;
+                        console.log(`   👍 Loaded ${Object.keys(extractExamples.inputs).length} examples for ${API_TYPE_EXTRACT}.`);
+                    } else if (this.geminiApiConfigs[API_TYPE_EXTRACT]) {
+                        console.log(`   👎 No examples loaded or config missing for ${API_TYPE_EXTRACT}.`);
+                    }
+
+                    // Gán examples cho API_TYPE_CFP
                     if (cfpExamples && this.geminiApiConfigs[API_TYPE_CFP]) {
                         this.geminiApiConfigs[API_TYPE_CFP].inputs = cfpExamples.inputs;
                         this.geminiApiConfigs[API_TYPE_CFP].outputs = cfpExamples.outputs;
-                        console.log(`   - Loaded ${Object.keys(cfpExamples.inputs).length} examples for CFP.`);
+                        console.log(`   👍 Loaded ${Object.keys(cfpExamples.inputs).length} examples for ${API_TYPE_CFP}.`);
+                    } else if (this.geminiApiConfigs[API_TYPE_CFP]) {
+                        console.log(`   👎 No examples loaded or config missing for ${API_TYPE_CFP}.`);
                     }
 
-                    console.log("✅ API examples loaded and integrated successfully.");
+                    // Kiểm tra xem có API nào không load được example không (tùy chọn)
+                    const allApiTypes = [API_TYPE_DETERMINE, API_TYPE_EXTRACT, API_TYPE_CFP];
+                    let allLoadedSuccessfully = true;
+                    for (const apiType of allApiTypes) {
+                        if (this.geminiApiConfigs[apiType] && (!this.geminiApiConfigs[apiType].inputs || Object.keys(this.geminiApiConfigs[apiType].inputs!).length === 0)) {
+                            // Nếu API type đó được cấu hình để cho phép few-shot cho non-tuned model, thì việc không load được example có thể là vấn đề
+                            if (this.geminiApiConfigs[apiType].allowFewShotForNonTuned) {
+                                console.warn(`   ⚠️ WARNING: Examples for ${apiType} (which allows few-shot for non-tuned) were not loaded or are empty.`);
+                                // allLoadedSuccessfully = false; // Bạn có thể quyết định có ném lỗi ở đây không
+                            }
+                        }
+                    }
+
+                    if (allLoadedSuccessfully) { // Hoặc dựa trên một tiêu chí khác
+                        console.log("✅ API examples loaded and integrated successfully.");
+                    } else {
+                        console.warn("⚠️ Some API examples may not have loaded correctly, check logs.");
+                    }
 
                 } catch (error) {
-                    console.error("❌ Error loading API examples:", error);
+                    console.error("❌ Error during overall API examples loading process:", error);
                     this.initializationPromise = null; // Reset để có thể thử lại
-                    throw error; // Ném lỗi ra ngoài để báo hiệu thất bại
+                    // Không ném lỗi ra ngoài ở đây nữa nếu muốn ứng dụng vẫn chạy,
+                    // nhưng các service khác cần kiểm tra xem examples có thực sự được load không.
+                    // Hoặc ném lỗi nếu việc load examples là bắt buộc.
+                    // throw error; // Tùy thuộc vào yêu cầu của bạn
                 }
             })();
         } else {
             console.log("🔁 API examples loading already in progress or completed.");
         }
-        return this.initializationPromise;
+        // Chờ promise hoàn thành nếu nó đang chạy, hoặc promise đã hoàn thành trước đó
+        await this.initializationPromise;
     }
 
     // --- loadSpecificExampleData (Giữ nguyên) ---
@@ -363,7 +422,7 @@ export class ConfigService {
             }
             return createInputsOutputs(rawData);
         } catch (error: any) {
-             if (error.code === 'ENOENT') {
+            if (error.code === 'ENOENT') {
                 console.error(`   - ERROR: CSV file not found for ${apiType}: ${filePath}`);
             } else {
                 console.error(`   - ERROR: Failed to read/parse CSV for ${apiType} (${filePath}):`, error.message);
@@ -373,40 +432,22 @@ export class ConfigService {
     }
 
 
-    // --- buildGeminiApiConfigs (Giữ nguyên) ---
+    // --- buildGeminiApiConfigs ---
     private buildGeminiApiConfigs(): GeminiApiConfigs {
-        // ... (Nội dung hàm này giữ nguyên)
-        const extractInstruction = `
-            **Role:** ${this.config.GEMINI_EXTRACT_ROLE}
-            **Instruction:**
-              1. ${this.config.GEMINI_EXTRACT_INSTRUCTION_1 || ''}
-              2. ${this.config.GEMINI_EXTRACT_INSTRUCTION_2 || ''}
-              3. ${this.config.GEMINI_EXTRACT_INSTRUCTION_3 || ''}
-              4. ${this.config.GEMINI_EXTRACT_INSTRUCTION_4 || ''}
-              5. ${this.config.GEMINI_EXTRACT_INSTRUCTION_5 || ''}
-              6. ${this.config.GEMINI_EXTRACT_INSTRUCTION_6 || ''}
-            **Situation:** ${this.config.GEMINI_EXTRACT_SITUATION || ''}
-        `.trim().replace(/^ +/gm, '');
-
-        const determineInstruction = `
-            **Role:** ${this.config.GEMINI_DETERMINE_ROLE}
-            **Instruction:**
-              1. ${this.config.GEMINI_DETERMINE_INSTRUCTION_1 || ''}
-              2. ${this.config.GEMINI_DETERMINE_INSTRUCTION_2 || ''}
-              3. ${this.config.GEMINI_DETERMINE_INSTRUCTION_3 || ''}
-              4. ${this.config.GEMINI_DETERMINE_INSTRUCTION_4 || ''}
-            **Situation:** ${this.config.GEMINI_DETERMINE_SITUATION || ''}
-        `.trim().replace(/^ +/gm, '');
 
         return {
-             [API_TYPE_EXTRACT]: {
+            [API_TYPE_EXTRACT]: {
                 generationConfig: {
                     temperature: this.config.GEMINI_EXTRACT_TEMPERATURE,
                     maxOutputTokens: this.config.GEMINI_EXTRACT_MAX_OUTPUT_TOKENS,
-                    responseMimeType: this.config.GEMINI_EXTRACT_RESPONSE_MIME_TYPE,
                 },
-                // systemInstruction: extractInstruction,
+                systemInstruction: (this.config.GEMINI_EXTRACT_SYSTEM_INSTRUCTION || '').trim(),
                 modelNames: this.config.GEMINI_EXTRACT_MODEL_NAMES,
+                modelName: this.config.GEMINI_EXTRACT_MODEL_NAME,
+                fallbackModelName: this.config.GEMINI_EXTRACT_FALLBACK_MODEL_NAME || undefined, // Lấy từ env
+                // Mặc định cho EXTRACT: cho phép cache và few-shot cho non-tuned
+                allowCacheForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED, // Đã là boolean
+                allowFewShotForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED, // Đã là boolean
             },
             [API_TYPE_CFP]: {
                 generationConfig: {
@@ -414,7 +455,7 @@ export class ConfigService {
                     topP: this.config.GEMINI_CFP_TOP_P,
                     topK: this.config.GEMINI_CFP_TOP_K,
                     maxOutputTokens: this.config.GEMINI_CFP_MAX_OUTPUT_TOKENS,
-                    responseMimeType: this.config.GEMINI_CFP_RESPONSE_MIME_TYPE,
+                    // responseMimeType: this.config.GEMINI_CFP_RESPONSE_MIME_TYPE,
                     responseSchema: {
                         type: SchemaType.OBJECT,
                         properties: {
@@ -426,13 +467,17 @@ export class ConfigService {
                 },
                 systemInstruction: (this.config.GEMINI_CFP_SYSTEM_INSTRUCTION || '').trim(),
                 modelNames: this.config.GEMINI_CFP_MODEL_NAMES,
+                fallbackModelName: this.config.GEMINI_CFP_FALLBACK_MODEL_NAME || undefined,
+                // Cho CFP, nếu không phải tuned model, chúng ta muốn cho phép few-shot và cache
+                allowCacheForNonTuned: this.config.GEMINI_CFP_ALLOW_CACHE_NON_TUNED,
+                allowFewShotForNonTuned: this.config.GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED,
             },
             [API_TYPE_DETERMINE]: {
-                 generationConfig: {
+                generationConfig: {
                     temperature: this.config.GEMINI_DETERMINE_TEMPERATURE,
                     maxOutputTokens: this.config.GEMINI_DETERMINE_MAX_OUTPUT_TOKENS,
-                    responseMimeType: this.config.GEMINI_DETERMINE_RESPONSE_MIME_TYPE,
-                     responseSchema: {
+                    // responseMimeType: this.config.GEMINI_DETERMINE_RESPONSE_MIME_TYPE,
+                    responseSchema: {
                         type: SchemaType.OBJECT,
                         properties: {
                             "Official Website": { type: SchemaType.STRING },
@@ -442,8 +487,13 @@ export class ConfigService {
                         required: ["Official Website", "Call for papers link", "Important dates link"]
                     } as ObjectSchema,
                 },
-                // systemInstruction: determineInstruction,
+                systemInstruction: (this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION || '').trim(),
+                modelNames: this.config.GEMINI_DETERMINE_MODEL_NAMES,
                 modelName: this.config.GEMINI_DETERMINE_MODEL_NAME,
+                fallbackModelName: this.config.GEMINI_DETERMINE_FALLBACK_MODEL_NAME || undefined,
+                // Mặc định cho DETERMINE, dùng cache , dùng few shot
+                allowCacheForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED,
+                allowFewShotForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED,
             },
         };
     }
