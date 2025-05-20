@@ -8,7 +8,11 @@
  * - 'tuned': Model đã được fine-tune cho tác vụ cụ thể.
  */
 export type CrawlModelType = 'non-tuned' | 'tuned'; // CHUẨN HÓA: Sử dụng 'non-tuned' và 'tuned'
-
+export interface ApiModels {
+    determineLinks: CrawlModelType;
+    extractInfo: CrawlModelType;
+    extractCfp: CrawlModelType;
+}
 // --------------------- DỮ LIỆU ĐẦU VÀO BAN ĐẦU ---------------------
 
 /**

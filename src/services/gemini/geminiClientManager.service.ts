@@ -6,11 +6,10 @@ import {
     type GenerativeModel,
     type CachedContent,
     type Content,
-    // type Part, // Not directly used for model/cache creation here
-    // type SDKGenerationConfig, // Not directly used for model/cache creation here
+    type GenerationConfig as SDKGenerationConfig, // << IMPORT SDKGenerationConfig
 } from "@google/generative-ai";
-import { ConfigService } from '../../config/config.service'; // Adjust path as needed
-import { LoggingService } from '../logging.service'; // Adjust path as needed
+import { ConfigService } from '../../config/config.service';
+import { LoggingService } from '../logging.service';
 import { Logger } from 'pino';
 import { GoogleAICacheManager } from '@google/generative-ai/server';
 
@@ -28,13 +27,12 @@ export class GeminiClientManagerService {
         this.baseLogger = loggingService.getLogger({ service: 'GeminiClientManagerService' });
         this.geminiApiKey = this.configService.config.GEMINI_API_KEY;
 
-        this.initializeGoogleGenerativeAI(); // Called in constructor
-        // initializeCacheManager is called *after* genAI init, within its own method or here.
-        // For consistency with original, let's call it if genAI init succeeds.
+        this.initializeGoogleGenerativeAI();
         if (this._genAI) {
             this.initializeCacheManager();
         }
     }
+
 
     private initializeGoogleGenerativeAI(): void {
         const logger = this.baseLogger.child({ function: 'initializeGoogleGenerativeAI' }); // Context from original
@@ -101,27 +99,34 @@ export class GeminiClientManagerService {
         return this._cacheManager;
     }
 
-    // These methods are direct pass-throughs to the SDK, logging should be handled by the caller
-    // which has more semantic context (e.g., GeminiModelOrchestratorService or GeminiContextCacheService)
-
     public getGenerativeModel(
         modelName: string,
-        systemInstruction: Content | undefined, // Takes prepared Content object
-        _parentLogger: Logger // Logger for potential internal use, but SDK calls are atomic here
+        systemInstruction: Content | undefined,
+        _parentLogger: Logger, // Logger hiện không dùng trực tiếp ở đây, nhưng có thể giữ lại
+        generationConfig?: SDKGenerationConfig // << THÊM THAM SỐ MỚI
     ): GenerativeModel {
         const genAI = this.getGenAI();
-        // The logging for 'non_cached_setup_using_system_instruction' etc.
-        // should happen in the ModelOrchestrator BEFORE this call.
-        return genAI.getGenerativeModel({ model: modelName, systemInstruction });
+        // SDK cho phép truyền generationConfig khi lấy model.
+        // Điều này sẽ set cấu hình mặc định cho model đó.
+        return genAI.getGenerativeModel({
+            model: modelName,
+            systemInstruction,
+            generationConfig // << TRUYỀN VÀO ĐÂY
+        });
     }
+
 
     public getGenerativeModelFromCachedContent(
         cachedContent: CachedContent,
         _parentLogger: Logger
     ): GenerativeModel {
         const genAI = this.getGenAI();
+        // Khi lấy model từ cache, generationConfig của cache sẽ được ưu tiên.
+        // Tuy nhiên, bạn vẫn có thể ghi đè generationConfig khi gọi model.generateContent().
+        // ModelOrchestrator đang làm điều này khi contentRequest là object.
         return genAI.getGenerativeModelFromCachedContent(cachedContent);
     }
+
 
     public async createSdkCache(
         params: {
@@ -129,10 +134,14 @@ export class GeminiClientManagerService {
             contents: Content[];
             displayName: string;
             systemInstruction?: Content;
+            // generationConfig cũng có thể được truyền vào SDK khi tạo cache nếu SDK hỗ trợ
+            // để cache biết config mặc định của nó
         },
         _parentLogger: Logger
     ): Promise<CachedContent> {
         const manager = this.getCacheManager();
+        // Kiểm tra tài liệu SDK xem `manager.create` có chấp nhận `generationConfig` không.
+        // Nếu có, bạn nên truyền nó từ `GeminiContextCacheService` vào đây.
         return manager.create(params);
     }
 
@@ -141,6 +150,6 @@ export class GeminiClientManagerService {
         _parentLogger: Logger
     ): Promise<CachedContent | undefined> {
         const manager = this.getCacheManager();
-        return manager.get(cacheName); // SDK returns undefined if not found
+        return manager.get(cacheName);
     }
 }

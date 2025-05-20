@@ -134,7 +134,9 @@ const envSchema = z.object({
     // General Extract Configs
     GEMINI_EXTRACT_TEMPERATURE: z.coerce.number().min(0).max(2).default(0),
     GEMINI_EXTRACT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_EXTRACT_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_EXTRACT_SYSTEM_INSTRUCTION: z.string().min(1, "GEMINI_EXTRACT_SYSTEM_INSTRUCTION"),
+    GEMINI_EXTRACT_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL: z.string().min(1, "GEMINI_EXTRACT_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL"),
+
     GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
@@ -149,7 +151,8 @@ const envSchema = z.object({
     GEMINI_CFP_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_CFP_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_CFP_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_CFP_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_CFP_SYSTEM_INSTRUCTION: z.string().min(1, "GEMINI_CFP_SYSTEM_INSTRUCTION"),
+    GEMINI_CFP_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL: z.string().min(1, "GEMINI_CFP_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL"),
     GEMINI_CFP_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
@@ -164,7 +167,8 @@ const envSchema = z.object({
     GEMINI_DETERMINE_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_DETERMINE_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_DETERMINE_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_DETERMINE_SYSTEM_INSTRUCTION: z.string().optional(),
+    GEMINI_DETERMINE_SYSTEM_INSTRUCTION: z.string().min(1, "GEMINI_DETERMINE_SYSTEM_INSTRUCTION"),
+    GEMINI_DETERMINE_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL: z.string().min(1, "GEMINI_DETERMINE_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL"),
     GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
@@ -209,6 +213,7 @@ const envSchema = z.object({
 export interface GeminiApiConfig {
     generationConfig: SDKGenerationConfig;
     systemInstruction: string | undefined;
+    systemInstructionPrefixForNonTunedModel: string | undefined;
     modelNames?: string[]; // Cho API types dùng nhiều model (round-robin)
     modelName?: string;   // Cho API types dùng một model cố định
     inputs?: Record<string, string>;  // For few-shot examples (user prompts)
@@ -473,6 +478,8 @@ export class ConfigService {
                     maxOutputTokens: this.config.GEMINI_EXTRACT_MAX_OUTPUT_TOKENS,
                 },
                 systemInstruction: (this.config.GEMINI_EXTRACT_SYSTEM_INSTRUCTION || '').trim(),
+                systemInstructionPrefixForNonTunedModel: (this.config.GEMINI_EXTRACT_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL || '').trim(),
+
                 allowCacheForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED,
             },
@@ -492,6 +499,8 @@ export class ConfigService {
                     } as ObjectSchema,
                 },
                 systemInstruction: (this.config.GEMINI_CFP_SYSTEM_INSTRUCTION || '').trim(),
+                systemInstructionPrefixForNonTunedModel: (this.config.GEMINI_EXTRACT_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL || '').trim(),
+
                 allowCacheForNonTuned: this.config.GEMINI_CFP_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.config.GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED,
             },
@@ -512,6 +521,7 @@ export class ConfigService {
                     } as ObjectSchema,
                 },
                 systemInstruction: (this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION || '').trim(),
+                systemInstructionPrefixForNonTunedModel: (this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL || '').trim(),
                 allowCacheForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED,
             },
@@ -528,8 +538,8 @@ export class ConfigService {
     get batchesDir(): string { return path.join(this.baseOutputDir, 'batches'); }
     get tempDir(): string { return path.join(this.baseOutputDir, 'temp'); }
     get errorAccessLinkPath(): string { return path.join(this.baseOutputDir, 'error_access_link_log.txt'); }
-    
-    
+
+
     get playwrightConfig() { return { channel: this.config.PLAYWRIGHT_CHANNEL, headless: this.config.PLAYWRIGHT_HEADLESS, userAgent: this.config.USER_AGENT, }; }
     get googleSearchConfig() { return { cseId: this.config.GOOGLE_CSE_ID, apiKeys: this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS, maxUsagePerKey: this.config.MAX_USAGE_PER_KEY, rotationDelayMs: this.config.KEY_ROTATION_DELAY_MS, maxRetries: this.config.MAX_SEARCH_RETRIES, retryDelayMs: this.config.RETRY_DELAY_MS, }; }
     get journalRetryOptions() { return { retries: this.config.JOURNAL_RETRY_RETRIES, minTimeout: this.config.JOURNAL_RETRY_MIN_TIMEOUT, factor: this.config.JOURNAL_RETRY_FACTOR, }; }

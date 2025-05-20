@@ -30,17 +30,18 @@ export class GeminiModelOrchestratorService {
     public async prepareModel(
         apiType: string,
         modelName: string,
-        systemInstructionTextToUse: string, // Đã được quyết định bởi GeminiApiService
-        fewShotPartsToUse: Part[],          // Đã được quyết định bởi GeminiApiService
-        generationConfig: SDKGenerationConfig,
+        systemInstructionTextToUse: string,
+        fewShotPartsToUse: Part[],
+        generationConfig: SDKGenerationConfig, // generationConfig đã được chuẩn bị
         currentPrompt: string,
-        shouldUseCache: boolean,            // Đã được quyết định bởi GeminiApiService
-        logger: Logger                      // Logger từ GeminiApiService với context đầy đủ
+        shouldUseCache: boolean,
+        logger: Logger
     ): Promise<ModelPreparationResult> {
-        // logger đã có context từ GeminiApiService.callGeminiAPI
-
         let model: GenerativeModel | undefined;
-        let contentRequest: GenerateContentRequest | string;
+        // Khởi tạo để TypeScript không báo lỗi used before assigned nếu có đường dẫn phức tạp
+        // Dù logic của bạn có vẻ đã bao phủ, đây là cách an toàn để làm TypeScript hài lòng.
+        let contentRequest: GenerateContentRequest | string = ""; // Giá trị khởi tạo này sẽ bị ghi đè.
+
         let usingCacheActual = false;
         let currentCache: CachedContent | null = null;
         const cacheIdentifier = `${apiType}-${modelName}`;
@@ -51,40 +52,46 @@ export class GeminiModelOrchestratorService {
             try {
                 currentCache = await this.contextCacheService.getOrCreateContext(
                     apiType, modelName, systemInstructionTextToUse, fewShotPartsToUse,
-                    generationConfig, // Truyền generationConfig (đã có responseMimeType đúng)
+                    generationConfig, // Truyền generationConfig vào getOrCreateContext
                     logger
                 );
             } catch (cacheSetupError: unknown) {
                 const errorDetails = cacheSetupError instanceof Error ? { name: cacheSetupError.name, message: cacheSetupError.message } : { details: String(cacheSetupError) };
                 logger.error({ ...cacheSetupContext, err: errorDetails, event: 'gemini_call_cache_setup_failed' }, "Critical error during cache setup for call, proceeding without cache");
-                currentCache = null;
+                currentCache = null; // Đảm bảo currentCache là null nếu lỗi
             }
 
-            if (currentCache?.name) {
+            if (currentCache?.name) { // Chỉ thực hiện nếu currentCache hợp lệ
                 logger.info({ ...cacheSetupContext, cacheName: currentCache.name, apiType, modelName, event: 'cache_setup_use_success' }, "Attempting to use cached context object for call");
                 try {
+                    // Khi lấy model từ cache, generationConfig của cache sẽ được dùng.
+                    // Tuy nhiên, khi gọi model.generateContent, nếu contentRequest là object
+                    // thì generationConfig trong object đó sẽ ghi đè.
                     model = this.clientManager.getGenerativeModelFromCachedContent(currentCache, logger);
-                    contentRequest = currentPrompt;
+                    // Đối với model từ cache, contentRequest nên là object để có thể ghi đè generationConfig nếu cần
+                    contentRequest = {
+                        contents: [{ role: "user", parts: [{ text: currentPrompt }] }],
+                        generationConfig: generationConfig // Ghi đè generationConfig ở đây
+                    };
                     usingCacheActual = true;
-                    logger.info({ ...cacheSetupContext, cacheName: currentCache.name, event: 'cache_model_from_cache_success' }, "Using cached context model");
+                    logger.info({ ...cacheSetupContext, cacheName: currentCache.name, event: 'cache_model_from_cache_success' }, "Using cached context model with explicit generationConfig in request.");
                 } catch (getModelError: unknown) {
                     const errorDetails = getModelError instanceof Error ? { name: getModelError.name, message: getModelError.message } : { details: String(getModelError) };
                     logger.error({ ...cacheSetupContext, cacheName: currentCache?.name, err: errorDetails, event: 'gemini_call_model_from_cache_failed' }, "Error getting model from cached content, falling back to non-cached");
                     this.contextCacheService.deleteInMemoryOnly(cacheIdentifier, logger);
                     await this.contextCacheService.removePersistentEntry(cacheIdentifier, logger);
-                    currentCache = null;
-                    usingCacheActual = false;
+                    currentCache = null; // Đặt lại currentCache
+                    usingCacheActual = false; // Quan trọng: Phải set lại đây
                 }
-            } else {
+            } else { // currentCache không hợp lệ hoặc getOrCreateContext lỗi
                 logger.info({ ...cacheSetupContext, event: 'gemini_call_no_cache_available_or_setup_failed' }, "No valid cache object found/created or setup failed for call, proceeding without cache.");
                 usingCacheActual = false;
             }
-        } else { // shouldUseCache was false
-            // Event log cho trường hợp này đã được xử lý ở GeminiApiService
-            // logger.info({ ...logger.bindings(), event_group: 'cache_setup', event: 'gemini_cache_explicitly_disabled_by_caller' }, "Cache explicitly disabled by caller (e.g., tuned model or configuration).");
+        } else { // shouldUseCache là false
             usingCacheActual = false;
         }
 
+        // Khối này chỉ chạy nếu cache không được sử dụng HOẶC nếu việc sử dụng cache thất bại (usingCacheActual = false)
         if (!usingCacheActual) {
             const nonCachedSetupContext = { ...logger.bindings(), event_group: 'non_cached_setup' };
             if (shouldUseCache && !usingCacheActual) { // Cache được bật nhưng thất bại
@@ -101,7 +108,9 @@ export class GeminiModelOrchestratorService {
                 } else {
                     logger.info({ ...nonCachedSetupContext, event: 'non_cached_setup_skipping_system_instruction' }, "Model configured WITHOUT system instruction (dynamically determined).");
                 }
-                model = this.clientManager.getGenerativeModel(modelName, systemInstructionContentForSdk, logger);
+
+                // ++ TRUYỀN generationConfig vào getGenerativeModel
+                model = this.clientManager.getGenerativeModel(modelName, systemInstructionContentForSdk, logger, generationConfig);
 
                 if (fewShotPartsToUse.length > 0) {
                     const history: Content[] = [];
@@ -112,25 +121,38 @@ export class GeminiModelOrchestratorService {
                     history.push({ role: "user", parts: [{ text: currentPrompt }] });
                     contentRequest = {
                         contents: history,
-                        generationConfig: generationConfig,
+                        generationConfig: generationConfig, // Áp dụng generationConfig ở đây
                     };
-                    logger.info({ ...nonCachedSetupContext, historyLength: history.length, event: 'non_cached_setup_request_with_history' }, "Using non-cached model with history (dynamically determined).");
+                    logger.info({ ...nonCachedSetupContext, historyLength: history.length, event: 'non_cached_setup_request_with_history' }, "Using non-cached model with history and explicit generationConfig.");
                 } else {
-                    contentRequest = currentPrompt;
-                    logger.info({ ...nonCachedSetupContext, event: 'non_cached_setup_request_simple' }, "Using simple non-cached model request (dynamically determined).");
+                    // Khi không có few-shot, contentRequest nên là object để truyền generationConfig
+                    contentRequest = {
+                        contents: [{ role: "user", parts: [{ text: currentPrompt }] }],
+                        generationConfig: generationConfig // Áp dụng generationConfig ở đây
+                    };
+                    logger.info({ ...nonCachedSetupContext, event: 'non_cached_setup_request_simple_object' }, "Using simple non-cached model request (as object with explicit generationConfig).");
                 }
             } catch (getModelError: unknown) {
                 const errorDetails = getModelError instanceof Error ? { name: getModelError.name, message: getModelError.message } : { details: String(getModelError) };
                 logger.error({ ...nonCachedSetupContext, generationModelName: modelName, err: errorDetails, event: 'non_cached_setup_failed' }, "Error getting non-cached generative model");
-                throw getModelError;
+                throw getModelError; // Re-throw để dừng thực thi nếu model không thể tạo
             }
         }
 
+
+        // Tại thời điểm này, nếu không có lỗi nào được throw,
+        // 'model' phải có giá trị (nếu lỗi thì đã throw ở trên)
+        // và 'contentRequest' cũng phải có giá trị (do đã được gán trong nhánh cache hoặc non-cache).
+
         if (!model) {
-            logger.fatal({ ...logger.bindings(), event: 'model_orchestration_critical_failure' }, "Model instance is undefined after preparation logic.");
-            throw new Error("Critical: Model could not be prepared.");
+            // Dòng này gần như không thể đạt được nếu logic ở trên đúng và các lỗi được throw.
+            // Nhưng để an toàn và rõ ràng.
+            logger.fatal({ ...logger.bindings(), event: 'model_orchestration_critical_failure_final_check' }, "Model instance is undefined before final return.");
+            throw new Error("Critical: Model could not be prepared (final check).");
         }
-        // @ts-ignore : contentRequest is guaranteed to be assigned by the logic above
+
+        // contentRequest được đảm bảo đã gán ở đây nếu không có lỗi nào được throw.
+        // Không cần ép kiểu nếu ModelPreparationResult.contentRequest là union type.
         return { model, contentRequest, usingCacheActual, currentCache };
     }
 }

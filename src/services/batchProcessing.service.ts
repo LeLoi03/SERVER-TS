@@ -1,3 +1,4 @@
+// src/services/batchProcessing.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import fs from 'fs';
@@ -6,8 +7,10 @@ import { Page, BrowserContext } from 'playwright';
 
 // --- Types ---
 import {
-    BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData, CrawlModelType,
-    BatchEntryWithIds, BatchUpdateDataWithIds // ++ Import các type đã cập nhật
+    BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData,
+    BatchEntryWithIds, BatchUpdateDataWithIds,
+    ApiModels, // << IMPORT ApiModels
+    CrawlModelType // Vẫn cần CrawlModelType cho các lệnh gọi Gemini cụ thể
 } from '../types/crawl.types';
 
 // --- Service Imports ---
@@ -22,6 +25,7 @@ import { IConferenceDataAggregatorService, ContentPaths } from './batchProcessin
 
 import { Logger } from 'pino';
 import { addAcronymSafely } from '../conference/11_utils';
+
 
 
 // LogContext types might need to be adjusted or made more generic if they are to be shared
@@ -149,12 +153,13 @@ export class BatchProcessingService {
        */
     private async executeFinalExtractionApis(
         contentSendToAPI: string,
-        batchItemIndex: number, // Đã đổi tên để rõ ràng là index của item
+        batchItemIndex: number,
         titleForApis: string,
         acronymForApis: string,
         safeConferenceAcronym: string,
         isUpdate: boolean,
-        crawlModel: CrawlModelType,
+        extractModel: CrawlModelType, // << Model cho extractInfo
+        cfpModel: CrawlModelType,     // << Model cho ExtractCfp
         parentLogger: Logger
     ): Promise<{
         extractResponseTextPath?: string;
@@ -165,20 +170,20 @@ export class BatchProcessingService {
         const logger = parentLogger.child({
             batchServiceFunction: 'executeFinalExtractionApis',
             isUpdateContext: isUpdate,
-            crawlModelUsed: crawlModel,
-            batchItemIndex, // Log batchItemIndex
+            extractModelUsed: extractModel, // Log model cụ thể
+            cfpModelUsed: cfpModel,         // Log model cụ thể
+            batchItemIndex,
             service: 'BatchProcessingServiceOrchestrator'
-            // batchRequestId đã có trong parentLogger
         });
 
-        const suffix = isUpdate ? `_update_response_${batchItemIndex}` : `_response_${batchItemIndex}`; // Sử dụng batchItemIndex
+        const suffix = isUpdate ? `_update_response_${batchItemIndex}` : `_response_${batchItemIndex}`;
         const extractFileBase = `${safeConferenceAcronym}_extract${suffix}`;
         const cfpFileBase = `${safeConferenceAcronym}_cfp${suffix}`;
 
         logger.info({ event: 'batch_processing_parallel_final_apis_start', flow: isUpdate ? 'update' : 'save' });
 
         const commonApiParams: Omit<GeminiApiParams, 'batch'> = {
-            batchIndex: batchItemIndex, // ++ SỬA Ở ĐÂY: Gán batchItemIndex cho thuộc tính batchIndex
+            batchIndex: batchItemIndex,
             title: titleForApis,
             acronym: acronymForApis,
         };
@@ -187,10 +192,9 @@ export class BatchProcessingService {
             const extractApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_EXTRACT });
             extractApiLogger.info({ inputLength: contentSendToAPI.length, event: 'batch_processing_final_extract_api_call_start' });
             try {
-                // commonApiParams đã đúng
                 const response = await this.geminiApiService.extractInformation(
                     { ...commonApiParams, batch: contentSendToAPI },
-                    crawlModel,
+                    extractModel, // << SỬ DỤNG extractModel
                     extractApiLogger
                 );
                 const pathValue = await this.fileSystemService.saveTemporaryFile(
@@ -208,10 +212,9 @@ export class BatchProcessingService {
             const cfpApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_CFP });
             cfpApiLogger.info({ inputLength: contentSendToAPI.length, event: 'batch_processing_final_cfp_api_call_start' });
             try {
-                // commonApiParams đã đúng
                 const response = await this.geminiApiService.extractCfp(
                     { ...commonApiParams, batch: contentSendToAPI },
-                    crawlModel,
+                    cfpModel, // << SỬ DỤNG cfpModel
                     cfpApiLogger
                 );
                 const pathValue = await this.fileSystemService.saveTemporaryFile(
@@ -244,31 +247,31 @@ export class BatchProcessingService {
     }
 
 
-    public async processConferenceUpdate(
+
+     public async processConferenceUpdate(
         browserContext: BrowserContext,
         conference: ConferenceUpdateData,
-        parentLogger: Logger, // parentLogger từ HtmlPersistenceService, chứa batchRequestId và batchItemIndex
-        crawlModel: CrawlModelType
+        parentLogger: Logger,
+        apiModels: ApiModels // << THAY ĐỔI Ở ĐÂY
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
-        const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number; // Index của item ConferenceUpdateData này
+        const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number;
 
         if (!batchRequestIdFromParent || batchItemIndexFromParent === undefined) {
             parentLogger.error({ event: 'batch_processing_missing_ids_from_parent_logger', flow: 'update', conferenceAcronym: conference.Acronym });
             return false;
         }
 
-        const methodLogger = parentLogger.child({ // methodLogger sẽ kế thừa batchRequestId và batchItemIndex
+        const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceUpdate',
-            // batchItemIndex đã có từ parentLogger và được log, không cần thêm ở đây
             conferenceAcronym: conference.Acronym,
             conferenceTitle: conference.Title,
-            crawlModelUsed: crawlModel,
+            apiModelsUsed: apiModels, // << Log object apiModels
             service: 'BatchProcessingServiceOrchestrator'
         });
-
-        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'update' });
-        const pages: Page[] = []; // Khai báo pages ở đầu
+        const modelsDesc = `EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`; // Chỉ log model liên quan đến update
+        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'update', modelsForUpdate: modelsDesc });
+        const pages: Page[] = [];
 
         try {
             let mainPage: Page | null = null, cfpPage: Page | null = null, impPage: Page | null = null;
@@ -349,15 +352,11 @@ export class BatchProcessingService {
                 originalRequestId: conference.originalRequestId,
             };
 
-
-            // batchIndexRef.current++ không còn ở đây.
-            // methodLogger.info({ nextBatchItemIndex: batchIndexRef.current, event: 'batch_item_index_incremented_update_flow' }); // Bỏ log này
-
             const updateSuccess = await this._executeBatchTaskForUpdate(
                 batchDataForExecute,
-                batchItemIndexFromParent, // ++ TRUYỀN batchItemIndex của item này
-                batchRequestIdFromParent,  // ++ TRUYỀN batchRequestId của cả batch API
-                crawlModel,
+                batchItemIndexFromParent,
+                batchRequestIdFromParent,
+                apiModels, // << TRUYỀN apiModels
                 methodLogger
             );
             methodLogger.info({ event: 'batch_processing_flow_finish', success: updateSuccess, flow: 'update' });
@@ -371,12 +370,12 @@ export class BatchProcessingService {
         }
     }
 
-    public async processConferenceSave(
+     public async processConferenceSave(
         browserContext: BrowserContext,
         conference: ConferenceData,
         links: string[],
-        parentLogger: Logger, // parentLogger từ HtmlPersistenceService, chứa batchRequestId và batchItemIndex
-        crawlModel: CrawlModelType
+        parentLogger: Logger,
+        apiModels: ApiModels // << THAY ĐỔI Ở ĐÂY
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
         const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number; // Index của item ConferenceData này
@@ -387,16 +386,17 @@ export class BatchProcessingService {
         }
 
         const year = this.configService.config.YEAR2;
-        const methodLogger = parentLogger.child({ // methodLogger sẽ kế thừa batchRequestId và batchItemIndex
+         const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceSave',
             initialLinkCount: links.length,
             processingYear: year,
             conferenceAcronym: conference.Acronym,
             conferenceTitle: conference.Title,
-            crawlModelUsed: crawlModel,
+            apiModelsUsed: apiModels, // << Log object apiModels
             service: 'BatchProcessingServiceOrchestrator'
         });
-        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'save_initiation' });
+        const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
+        methodLogger.info({ event: 'batch_processing_flow_start', flow: 'save_initiation', modelsForSave: modelsDesc });
 
         if (!links || links.length === 0) {
             methodLogger.warn({ event: 'batch_processing_skipped_no_links_for_save' }); return false;
@@ -453,11 +453,11 @@ export class BatchProcessingService {
 
                 const batchPromise = this._executeBatchTaskForSave(
                     batchForDetermineApi,
-                    batchItemIndexFromParent,  // ++ TRUYỀN batchItemIndex của item này
-                    taskAcronymContext,        // Acronym (có thể là gốc) dùng cho tên file tạm
+                    batchItemIndexFromParent,
+                    taskAcronymContext,
                     browserContext,
-                    batchRequestIdFromParent,  // ++ TRUYỀN batchRequestId của cả batch API
-                    crawlModel,
+                    batchRequestIdFromParent,
+                    apiModels, // << TRUYỀN apiModels
                     batchTaskLogger
                 );
                 this.activeBatchSaves.add(batchPromise);
@@ -478,18 +478,17 @@ export class BatchProcessingService {
     }
 
 
-    private async _executeBatchTaskForUpdate(
-        batchInput: BatchUpdateEntry,    // Chứa originalRequestId
-        batchItemIndex: number,          // Index của item này trong batch API
-        batchRequestIdForTask: string,   // ID của cả batch API
-        crawlModel: CrawlModelType,
+     private async _executeBatchTaskForUpdate(
+        batchInput: BatchUpdateEntry,
+        batchItemIndex: number,
+        batchRequestIdForTask: string,
+        apiModels: ApiModels, // << THAY ĐỔI Ở ĐÂY
         parentLogger: Logger
     ): Promise<boolean> {
         const logger = parentLogger.child({
             batchServiceFunction: '_executeBatchTaskForUpdate',
-            crawlModelUsed: crawlModel,
+            apiModelsUsed: { extract: apiModels.extractInfo, cfp: apiModels.extractCfp }, // Log model liên quan
             batchItemIndex,
-            // batchRequestIdForTask đã có trong parentLogger
             service: 'BatchProcessingServiceOrchestrator'
         });
         logger.info({ event: 'batch_task_start_execution', flow: 'update' });
@@ -520,9 +519,12 @@ export class BatchProcessingService {
                 .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
 
             // 2. Execute Final Extraction APIs
-            const apiResults = await this.executeFinalExtractionApis(
+             const apiResults = await this.executeFinalExtractionApis(
                 contentSendToAPI, batchItemIndex, batchInput.conferenceTitle, batchInput.conferenceAcronym,
-                safeConferenceAcronym, true, crawlModel, logger
+                safeConferenceAcronym, true,
+                apiModels.extractInfo, // << Model cho extract
+                apiModels.extractCfp,  // << Model cho CFP
+                logger
             );
 
             await fileUpdatePromise; // Wait for non-critical write
@@ -554,15 +556,14 @@ export class BatchProcessingService {
             return false;
         }
     }
-
-    public async _executeBatchTaskForSave(
-        initialBatchEntries: BatchEntry[], // Mỗi BatchEntry đã chứa originalRequestId (nếu có)
-        batchItemIndex: number,            // Index của item ConferenceData này trong batch API
-        batchAcronymForFiles: string,      // Acronym (có thể là gốc) để tạo tên file tạm
+public async _executeBatchTaskForSave(
+        initialBatchEntries: BatchEntry[],
+        batchItemIndex: number,
+        batchAcronymForFiles: string,
         browserContext: BrowserContext,
-        batchRequestIdForTask: string,     // ID của cả batch API
-        crawlModel: CrawlModelType,
-        logger: Logger                     // Logger này đã có batchRequestId và batchItemIndex
+        batchRequestIdForTask: string,
+        apiModels: ApiModels, // << THAY ĐỔI Ở ĐÂY
+        logger: Logger
     ): Promise<boolean> {
         logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
 
@@ -625,8 +626,12 @@ export class BatchProcessingService {
                 title: primaryEntryForContext.conferenceTitle, acronym: primaryEntryForContext.conferenceAcronym,
             };
 
-            try {
-                determineLinksResponse = await this.geminiApiService.determineLinks(determineApiParams, crawlModel, determineApiLogger);
+             try {
+                determineLinksResponse = await this.geminiApiService.determineLinks(
+                    determineApiParams,
+                    apiModels.determineLinks, // << SỬ DỤNG apiModels.determineLinks
+                    determineApiLogger
+                );
                 determineResponseTextPath = await this.fileSystemService.saveTemporaryFile(
                     determineLinksResponse.responseText || "",
                     `${safeBatchAcronym}_item${batchItemIndex}_determine_response`, // Sửa tên file
@@ -718,9 +723,12 @@ export class BatchProcessingService {
             // 5. Execute Final Extraction APIs
             const finalApiResults = await this.executeFinalExtractionApis(
                 contentSendToFinalApi, batchItemIndex, mainEntryAfterDetermination.conferenceTitle,
-                mainEntryAfterDetermination.conferenceAcronym, // Sử dụng acronym đã an toàn
-                safeBatchAcronym, // safeBatchAcronym gốc dùng cho base tên file vẫn ổn
-                false, crawlModel, logger
+                mainEntryAfterDetermination.conferenceAcronym,
+                safeBatchAcronym,
+                false,
+                apiModels.extractInfo, // << Model cho extract
+                apiModels.extractCfp,  // << Model cho CFP
+                logger
             );
 
             await Promise.allSettled([writeFullLinksPromise, fileMainLinkPromise]);

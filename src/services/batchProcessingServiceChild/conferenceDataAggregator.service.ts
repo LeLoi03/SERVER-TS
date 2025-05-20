@@ -90,7 +90,7 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
         const logContext = { function: 'aggregateContentForApi', service: 'ConferenceDataAggregatorService' };
         const impContent = content.impText ? ` \n\nImportant Dates information:\n${content.impText.trim()}` : "";
         const cfpContentAggregated = content.cfpText ? ` \n\nCall for Papers information:\n${content.cfpText.trim()}` : "";
-        const aggregated = `Conference Title: ${title}\nConference Acronym: ${acronym}\n\nMain Website Content:\n${content.mainText.trim()}${cfpContentAggregated}${impContent}`;
+        const aggregated = `Conference ${title} (${acronym}):\n\n${content.mainText.trim()}${cfpContentAggregated}${impContent}`;
         logger.info({ ...logContext, charCount: aggregated.length, aggregatedItems: 1, event: 'save_batch_aggregate_content_end' });
         return aggregated;
     }
