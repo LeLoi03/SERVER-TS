@@ -13,32 +13,36 @@ import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
 import { ProcessedRowData, InputRowData, ProcessedResponseData } from '../types/crawl.types';
 import { readContentFromFile } from '../conference/11_utils';
+import { FileSystemService } from './fileSystem.service';
 
 
 @singleton()
 export class ResultProcessingService {
     private readonly serviceBaseLogger: Logger;
-    private readonly finalJsonlPath: string;
-    private readonly evaluateCsvPath: string;
+    // private readonly finalJsonlPath: string; // Bỏ
+    // private readonly evaluateCsvPath: string; // Bỏ
 
     private readonly VALID_CONTINENTS = new Set(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica']);
     private readonly VALID_TYPES = new Set(['Hybrid', 'Online', 'Offline']);
     private readonly YEAR_REGEX = /^\d{4}$/;
     private readonly CSV_FIELDS: (keyof ProcessedRowData | { label: string; value: keyof ProcessedRowData })[] = [
+        "requestId", "originalRequestId",
         "title", "acronym", "link", "cfpLink", "impLink",
         "information", "conferenceDates", "year",
         "location", "cityStateProvince", "country", "continent", "type",
         "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
         "otherDate", "topics", "publisher", "summary", "callForPapers"
+        // "determineLinks" // Object, cần formatter đặc biệt hoặc chuyển thành string trong _processJsonlStream
     ];
 
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
+        @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger({ service: 'ResultProcessingServiceBase' });
-        this.finalJsonlPath = this.configService.finalOutputJsonlPath;
-        this.evaluateCsvPath = this.configService.evaluateCsvPath;
+        // this.finalJsonlPath = this.configService.finalOutputJsonlPath; // Bỏ
+        // this.evaluateCsvPath = this.configService.evaluateCsvPath; // Bỏ
         this.serviceBaseLogger.info("ResultProcessingService initialized.");
     }
 
@@ -140,38 +144,42 @@ export class ResultProcessingService {
             }
 
             let inputRow: InputRowData | null = null;
-            let acronym: string | undefined = undefined;
-            let title: string | undefined = undefined;
-
-            try {
+            try { // Try cho việc parse dòng JSONL
                 inputRow = JSON.parse(line) as InputRowData;
-                acronym = inputRow?.conferenceAcronym;
-                title = inputRow?.conferenceTitle;
-
-                if (!inputRow || !acronym || !title) {
-                    lineLogger.warn({ event: 'jsonl_missing_core_data', hasInputRow: !!inputRow, hasAcronym: !!acronym, hasTitle: !!title, lineContentSubstring: line.substring(0, 100) }, "Parsed line missing essential data, skipping row.");
+                if (!inputRow || !inputRow.batchRequestId || !inputRow.conferenceAcronym || !inputRow.conferenceTitle) {
+                    lineLogger.warn({
+                        event: 'jsonl_missing_core_or_batchid_data',
+                        hasInputRow: !!inputRow,
+                        hasAcronym: !!inputRow?.conferenceAcronym,
+                        hasTitle: !!inputRow?.conferenceTitle,
+                        hasBatchRequestId: !!inputRow?.batchRequestId,
+                        lineContentSubstring: line.substring(0, 100)
+                    }, "Parsed line missing essential data (acronym, title, or batchRequestId), skipping row.");
                     yield null;
                     continue;
                 }
-
             } catch (parseError: any) {
                 lineLogger.error({ err: parseError, lineContentSubstring: line.substring(0, 100), event: 'jsonl_parse_error' }, "Failed to parse line in JSONL file, skipping row.");
                 yield null;
                 continue;
             }
 
-            const rowContextLogger = lineLogger.child({ acronym, title });
+            // inputRow đã được parse thành công ở đây
+            const acronym = inputRow.conferenceAcronym!; // Thêm ! vì đã kiểm tra ở trên
+            const title = inputRow.conferenceTitle!;   // Thêm ! vì đã kiểm tra ở trên
+            const rowContextLogger = lineLogger.child({ acronym, title, batchRequestId: inputRow.batchRequestId });
 
-            let parsedDetermineInfo: Record<string, any> = {};
-            let parsedExtractInfo: Record<string, any> = {};
-            let parsedCfpInfo: Record<string, any> = {};
-
+            // Gộp logic đọc file và xử lý finalRow vào một khối try...catch
             try {
+                let parsedDetermineInfo: Record<string, any> = {};
+                let parsedExtractInfo: Record<string, any> = {};
+                let parsedCfpInfo: Record<string, any> = {};
+
+                // Đọc content từ các path (vẫn giữ các try...catch con cho từng file để không dừng toàn bộ nếu 1 file lỗi)
                 if (inputRow.determineResponseTextPath) {
                     try {
-                        // Giả sử readContentFromFile có thể ném lỗi nếu file không tồn tại hoặc không đọc được
                         const content = await readContentFromFile(inputRow.determineResponseTextPath);
-                        const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim(); // Loại bỏ ký tự control
+                        const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
                     } catch (e: any) {
@@ -199,17 +207,20 @@ export class ResultProcessingService {
                     }
                 }
 
+                // Xử lý API response và tạo finalRow
                 const processedExtractResponse = this._processApiResponse(parsedExtractInfo, rowContextLogger);
                 const finalRow: ProcessedRowData = {
-                    title: title, // Đã lấy từ inputRow và kiểm tra
-                    acronym: acronym.replace(/_\d+$/, ''), // Loại bỏ suffix _<số> nếu có
+                    title: title,
+                    acronym: acronym.replace(/_\d+$/, ''),
                     link: inputRow.conferenceLink || "",
                     cfpLink: inputRow.cfpLink || "",
                     impLink: inputRow.impLink || "",
-                    determineLinks: parsedDetermineInfo, // Đây là object, không phải string
+                    determineLinks: parsedDetermineInfo,
                     ...processedExtractResponse,
-                    summary: String(parsedCfpInfo?.summary ?? parsedCfpInfo?.Summary ?? ''), // Xử lý cả "Summary"
-                    callForPapers: String(parsedCfpInfo?.callForPapers ?? parsedCfpInfo?.['Call for Papers'] ?? parsedCfpInfo?.['Call For Papers'] ?? parsedCfpInfo?.cfp ?? ''), // Xử lý các biến thể
+                    summary: String(parsedCfpInfo?.summary ?? parsedCfpInfo?.Summary ?? ''),
+                    callForPapers: String(parsedCfpInfo?.callForPapers ?? parsedCfpInfo?.['Call for Papers'] ?? parsedCfpInfo?.['Call For Papers'] ?? parsedCfpInfo?.cfp ?? ''),
+                    requestId: inputRow.batchRequestId,
+                    originalRequestId: inputRow.originalRequestId,
                 };
 
                 // --- Validation & Normalization ---
@@ -312,72 +323,33 @@ export class ResultProcessingService {
                 rowContextLogger.trace({ event: 'row_processed_successfully' }, "Row processed for yielding.");
                 yield finalRow;
 
-            } catch (rowProcessingError: any) {
-                rowContextLogger.error({ err: rowProcessingError, event: 'row_processing_error' }, "Error processing row data after parsing JSONL, skipping row.");
+            } catch (rowProcessingError: any) { // Catch cho toàn bộ quá trình đọc file và xử lý row
+                rowContextLogger.error({ err: rowProcessingError, event: 'row_data_or_content_processing_error' }, "Error processing row data or its content files, skipping row.");
                 yield null;
             }
-        }
+        } // Kết thúc for await
+
         streamLogger.info({ totalLinesProcessed: lineNumber, event: 'jsonl_processing_finished' }, 'Finished processing JSONL file stream');
     }
 
-    public async _writeCSVAndCollectDataInternal(
-        jsonlFilePath: string,
-        originalCsvFilePath: string,
+    // ++ MODIFIED: Nhận đường dẫn JSONL và CSV cụ thể của batch
+    private async _writeCSVAndCollectDataInternal(
+        jsonlFilePathForBatch: string,    // Đường dẫn JSONL cụ thể của batch
+        csvFilePathForBatch: string,      // Đường dẫn CSV cụ thể của batch sẽ được tạo
+        batchRequestId: string,           // ID của batch (chủ yếu để logging context)
         parentProcLogger: Logger
     ): Promise<ProcessedRowData[]> {
-        let extractedRequestId: string | undefined;
-
-        // Cố gắng lấy requestId từ bindings() nếu có
-        if (parentProcLogger && typeof (parentProcLogger as any).bindings === 'function') {
-            const bindings = (parentProcLogger as any).bindings();
-            if (bindings && typeof bindings.requestId === 'string' && bindings.requestId.length > 0) {
-                extractedRequestId = bindings.requestId;
-            } else {
-                parentProcLogger.warn({
-                    event: 'requestId_not_found_in_bindings',
-                    bindingsFound: !!bindings,
-                    requestIdType: typeof bindings?.requestId,
-                    requestIdValue: bindings?.requestId,
-                }, 'requestId không tìm thấy hoặc không hợp lệ trong logger bindings.');
-            }
-        }
-
-        // Nếu không tìm thấy trong bindings, thử truy cập trực tiếp (ít khả năng hơn)
-        if (!extractedRequestId && parentProcLogger && typeof (parentProcLogger as any).requestId === 'string' && (parentProcLogger as any).requestId.length > 0) {
-            extractedRequestId = (parentProcLogger as any).requestId;
-        }
-
-        // Sử dụng giá trị mặc định nếu không tìm thấy ở đâu cả
-        const finalRequestId = extractedRequestId || 'unknownRequestId';
-        if (finalRequestId === 'unknownRequestId' && extractedRequestId !== 'unknownRequestId') {
-            parentProcLogger.warn({
-                event: 'requestId_fallback_to_unknown',
-                attemptedRequestId: extractedRequestId
-            }, 'requestId không được trích xuất, sử dụng "unknownRequestId".');
-        }
-
-
-        const outputDir = path.dirname(originalCsvFilePath);
-        const fileExtension = path.extname(originalCsvFilePath);
-        const baseFilename = path.basename(originalCsvFilePath, fileExtension);
-
-        // Tạo tên file CSV mới với finalRequestId
-        const finalCsvFilename = `${baseFilename}_${finalRequestId}${fileExtension}`;
-        const csvFilePath = path.join(outputDir, finalCsvFilename);
-
         const taskLogger = parentProcLogger.child({
             csvTask: 'writeCSVAndCollectData',
-            jsonlInputFile: path.basename(jsonlFilePath),
-            csvOutputFile: path.basename(csvFilePath), // Sử dụng tên file đã được sửa đổi
-            // requestId sẽ tự động được kế thừa từ parentProcLogger nếu logger hỗ trợ
+            jsonlInputFile: path.basename(jsonlFilePathForBatch),
+            csvOutputFile: path.basename(csvFilePathForBatch),
+            batchRequestId: batchRequestId // Đảm bảo batchRequestId có trong context log
         });
 
-        // Ghi log tên file CSV cuối cùng và requestId được sử dụng
         taskLogger.info({
             event: 'csv_stream_collect_start',
-            usedRequestId: finalRequestId,
-            finalCsvPath: csvFilePath
-        }, 'Bắt đầu stream ghi CSV và thu thập dữ liệu');
+            finalCsvPath: csvFilePathForBatch // Sử dụng csvFilePathForBatch
+        }, `Bắt đầu stream ghi CSV (file: ${path.basename(csvFilePathForBatch)}) và thu thập dữ liệu`);
 
         const collectedData: ProcessedRowData[] = [];
         let rowObjectStream: Readable | null = null;
@@ -387,8 +359,10 @@ export class ResultProcessingService {
         let recordsProcessed = 0;
         let recordsWrittenToCsv = 0;
 
+
         try {
-            rowObjectStream = Readable.from(this._processJsonlStream(jsonlFilePath, taskLogger));
+            // Đọc từ file JSONL cụ thể của batch
+            rowObjectStream = Readable.from(this._processJsonlStream(jsonlFilePathForBatch, taskLogger));
 
             filterLogCollectTransform = new NodeTransform({
                 objectMode: true,
@@ -411,28 +385,41 @@ export class ResultProcessingService {
                         } else {
                             taskLogger.warn({ event: 'csv_null_record_skipped_in_transform' }, 'Bản ghi null bị bỏ qua trong transform để ghi CSV');
                         }
-                        callback(); // Bỏ qua chunk không hợp lệ hoặc null
+                        callback();
                     }
                 }
             });
 
+
+            // ++ DI CHUYỂN KHỞI TẠO csvTransform VÀO ĐÂY ++
             const csvOptions: ParserOptions<ProcessedRowData, ProcessedRowData> = { fields: this.CSV_FIELDS };
             csvTransform = new Json2CsvTransform(csvOptions, {}, { objectMode: true });
+            // ++++++++++++++++++++++++++++++++++++++++++++++
 
-            const csvDir = path.dirname(csvFilePath);
+            const csvDir = path.dirname(csvFilePathForBatch);
             if (!fs.existsSync(csvDir)) {
                 taskLogger.info({ directory: csvDir, event: 'create_csv_directory' }, "Tạo thư mục cho output CSV.");
-                await fs.promises.mkdir(csvDir, { recursive: true });
+                // Giả sử FileSystemService được inject vào ConfigService và có sẵn ở đây
+                // hoặc bạn inject FileSystemService trực tiếp vào ResultProcessingService
+                // Ví dụ nếu FileSystemService có sẵn trong ConfigService:
+                // await this.configService.fileSystemService.ensureDirExists(csvDir, taskLogger);
+                // Hoặc nếu bạn inject FileSystemService trực tiếp vào class này:
+                await this.fileSystemService.ensureDirExists(csvDir, taskLogger); // << GIẢ SỬ bạn đã inject FileSystemService
             }
-            csvWriteStream = fs.createWriteStream(csvFilePath);
+            csvWriteStream = fs.createWriteStream(csvFilePathForBatch);
 
             csvWriteStream.on('error', (err) => {
-                taskLogger.error({ err, event: 'csv_writestream_error', finalCsvFile: csvFilePath }, 'Lỗi từ WriteStream của CSV.');
+                taskLogger.error({ err, event: 'csv_writestream_error', finalCsvFile: csvFilePathForBatch }, 'Lỗi từ WriteStream của CSV.');
             });
             csvWriteStream.on('finish', () => {
-                taskLogger.info({ event: 'csv_writestream_finish', finalCsvFile: csvFilePath }, 'WriteStream của CSV đã hoàn thành.');
+                taskLogger.info({ event: 'csv_writestream_finish', finalCsvFile: csvFilePathForBatch }, 'WriteStream của CSV đã hoàn thành.');
             });
 
+            // Bây giờ các stream đã được khởi tạo đúng
+            if (!rowObjectStream || !filterLogCollectTransform || !csvTransform || !csvWriteStream) {
+                // Thêm một kiểm tra an toàn, mặc dù không nên xảy ra nếu logic đúng
+                throw new Error("Một hoặc nhiều stream cần thiết cho pipeline không được khởi tạo.");
+            }
 
             await streamPipeline(
                 rowObjectStream,
@@ -443,24 +430,17 @@ export class ResultProcessingService {
 
             taskLogger.info({
                 event: 'csv_stream_collect_success',
-                recordsProcessed,
-                recordsWrittenToCsv,
-                recordsCollected: collectedData.length,
-                finalCsvFile: csvFilePath
+                recordsProcessed, recordsWrittenToCsv, recordsCollected: collectedData.length,
+                finalCsvFile: csvFilePathForBatch
             }, 'Stream ghi CSV và thu thập dữ liệu hoàn thành thành công.');
             return collectedData;
 
         } catch (error: any) {
             taskLogger.error({
-                err: error,
-                recordsProcessed,
-                recordsWrittenToCsv,
-                recordsCollected: collectedData.length,
-                event: 'csv_stream_collect_failed',
-                finalCsvFile: csvFilePath
+                err: error, recordsProcessed, recordsWrittenToCsv, recordsCollected: collectedData.length,
+                event: 'csv_stream_collect_failed', finalCsvFile: csvFilePathForBatch
             }, 'Lỗi trong quá trình stream ghi CSV và thu thập dữ liệu');
 
-            // Dọn dẹp các stream
             const destroyStream = (stream: Readable | NodeTransform | fs.WriteStream | null, streamName: string, err?: Error) => {
                 if (stream && !stream.destroyed) {
                     stream.destroy(err);
@@ -470,67 +450,67 @@ export class ResultProcessingService {
 
             destroyStream(rowObjectStream, 'rowObjectStream', error instanceof Error ? error : undefined);
             destroyStream(filterLogCollectTransform, 'filterLogCollectTransform', error instanceof Error ? error : undefined);
-            destroyStream(csvTransform, 'csvTransform', error instanceof Error ? error : undefined);
+            destroyStream(csvTransform, 'csvTransform', error instanceof Error ? error : undefined); // csvTransform có thể vẫn là null nếu lỗi xảy ra trước khi nó được gán
             destroyStream(csvWriteStream, 'csvWriteStream', error instanceof Error ? error : new Error(String(error)));
 
-            // Cân nhắc xóa file CSV chưa hoàn chỉnh nếu có lỗi
-            if (csvFilePath && fs.existsSync(csvFilePath)) {
+            if (csvFilePathForBatch && fs.existsSync(csvFilePathForBatch)) {
                 try {
-                    // Kiểm tra xem file có dữ liệu không trước khi xóa, hoặc xóa luôn
-                    // const stats = await fs.promises.stat(csvFilePath);
-                    // if (stats.size === 0) { // Hoặc một tiêu chí khác
-                    await fs.promises.unlink(csvFilePath);
-                    taskLogger.info({ event: 'incomplete_csv_deleted', file: csvFilePath }, 'Đã xóa file CSV chưa hoàn chỉnh do lỗi.');
-                    // }
+                    await fs.promises.unlink(csvFilePathForBatch);
+                    taskLogger.info({ event: 'incomplete_csv_deleted', file: csvFilePathForBatch }, 'Đã xóa file CSV chưa hoàn chỉnh do lỗi.');
                 } catch (unlinkError) {
-                    taskLogger.warn({ err: unlinkError, event: 'incomplete_csv_delete_failed', file: csvFilePath }, 'Không thể xóa file CSV chưa hoàn chỉnh.');
+                    taskLogger.warn({ err: unlinkError, event: 'incomplete_csv_delete_failed', file: csvFilePathForBatch }, 'Không thể xóa file CSV chưa hoàn chỉnh.');
                 }
             }
-
-            throw error; // Ném lại lỗi để hàm gọi có thể bắt và xử lý
+            throw error;
         }
     }
 
 
 
-    public async processOutput(parentLogger?: Logger): Promise<ProcessedRowData[]> {
+    // ++ MODIFIED: Nhận batchRequestId
+    public async processOutput(parentLogger: Logger | undefined, batchRequestId: string): Promise<ProcessedRowData[]> {
+        // Lấy đường dẫn file JSONL và CSV động cho batch này
+        const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestId);
+        const csvPathForThisBatch = this.configService.getEvaluateCsvPathForBatch(batchRequestId); // Mặc định tên file là 'evaluate'
+
         const logger = this.getMethodLogger(parentLogger, 'processOutput', {
-            finalJsonlPath: this.finalJsonlPath,
-            evaluateCsvPath: this.evaluateCsvPath
+            jsonlPathForBatch: jsonlPathForThisBatch,
+            csvPathForBatch: csvPathForThisBatch,
+            batchRequestId // Thêm batchRequestId vào context của logger này
         });
-        logger.info("Processing final output (JSONL to CSV and data collection)...");
+        logger.info(`Processing output for batch ${batchRequestId} (JSONL: ${path.basename(jsonlPathForThisBatch)}, CSV: ${path.basename(csvPathForThisBatch)})...`);
+
 
         try {
-            // Kiểm tra sự tồn tại và kích thước của file JSONL
-            if (!fs.existsSync(this.finalJsonlPath)) {
-                logger.warn("Final JSONL file not found. No CSV will be generated, returning empty results.");
+            // Kiểm tra sự tồn tại và kích thước của file JSONL cụ thể của batch
+            if (!fs.existsSync(jsonlPathForThisBatch)) {
+                logger.warn(`JSONL file for batch ${batchRequestId} not found at ${jsonlPathForThisBatch}. No CSV will be generated, returning empty results.`);
                 return [];
             }
-            const stats = await fs.promises.stat(this.finalJsonlPath);
+            const stats = await fs.promises.stat(jsonlPathForThisBatch);
             if (stats.size === 0) {
-                logger.warn("Final JSONL file is empty. No CSV will be generated, returning empty results.");
-                // Optionally, create an empty CSV with headers
-                // await fs.promises.writeFile(this.evaluateCsvPath, this.CSV_FIELDS.map(f => typeof f === 'string' ? f : f.label).join(',') + '\n');
+                logger.warn(`JSONL file for batch ${batchRequestId} (${path.basename(jsonlPathForThisBatch)}) is empty. No CSV will be generated, returning empty results.`);
+                // Tùy chọn: Tạo file CSV rỗng với headers
+                // await fs.promises.writeFile(csvPathForThisBatch, this.CSV_FIELDS.map(f => typeof f === 'string' ? f : f.label).join(',') + '\n');
                 return [];
             }
         } catch (error: any) {
-            // ENOENT đã được xử lý ở trên, đây là các lỗi khác khi stat file
-            logger.error({ err: error }, "Error checking final JSONL file stats. Cannot proceed.");
+            logger.error({ err: error, batchRequestId }, `Error checking JSONL file for batch ${batchRequestId}. Cannot proceed.`);
             throw error;
         }
 
         try {
             const collectedData = await this._writeCSVAndCollectDataInternal(
-                this.finalJsonlPath,
-                this.evaluateCsvPath,
-                logger // Truyền logger của processOutput xuống
+                jsonlPathForThisBatch,    // Đường dẫn JSONL của batch
+                csvPathForThisBatch,      // Đường dẫn CSV sẽ được tạo cho batch
+                batchRequestId,           // ID của batch (cho logging context)
+                logger                    // Logger của processOutput
             );
-            logger.info({ collectedCount: collectedData.length }, 'CSV generation and data collection completed.');
+            logger.info({ collectedCount: collectedData.length, batchRequestId }, `CSV generation and data collection for batch ${batchRequestId} completed.`);
             return collectedData;
         } catch (processingError: any) {
-            // Lỗi này đã được log chi tiết bởi _writeCSVAndCollectDataInternal
-            logger.error({ err: processingError }, `Final output processing (CSV generation/collection) failed at a higher level. Check previous logs for details.`);
-            return []; // Trả về mảng rỗng để báo hiệu thất bại nhưng cho phép chương trình tiếp tục nếu cần
+            logger.error({ err: processingError, batchRequestId }, `Final output processing for batch ${batchRequestId} failed.`);
+            return [];
         }
     }
 }

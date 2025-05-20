@@ -95,7 +95,7 @@ export interface PlaywrightAnalysis {
     // --- Global Playwright Stats ---
     setupAttempts: number; // Number of times global Playwright initialization was attempted
     setupSuccess: boolean | null; // Final status of global Playwright initialization
-    setupError: string | null; // True if global init ever failed
+    setupError: boolean | string | null; // True if global init ever failed
     contextErrors: number; // Errors getting browser context
     // --- End Global Playwright Stats ---
 

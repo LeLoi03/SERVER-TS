@@ -177,30 +177,30 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   // 'retry_genai_not_init': geminiApi.handleGeminiIntermediateError, // Đã được xử lý bởi 'gemini_service_genai_not_ready' hoặc các lỗi setup khác
 
   // --- Batch Processing Events Group ---
-  'batch_task_create': batchProcessing.handleBatchTaskCreate,
+  'batch_task_start_execution': batchProcessing.handleBatchTaskCreate,
   'batch_task_create_delegation_start': batchProcessing.handleBatchTaskCreate, // Map vào cùng handler
 
-  'save_batch_unhandled_error_or_rethrown': batchProcessing.handleBatchRejectionOrLogicFailure,
+  'batch_task_execution_failed': batchProcessing.handleBatchRejectionOrLogicFailure,
   'batch_processing_abort_no_main_text': batchProcessing.handleBatchRejectionOrLogicFailure,
   'conference_link_processor_link_missing_for_update': batchProcessing.handleBatchRejectionOrLogicFailure,
   'conference_link_processor_update_link_failed': batchProcessing.handleBatchRejectionOrLogicFailure,
 
   'save_batch_determine_api_call_failed': batchProcessing.handleBatchApiFailure,
-  'save_batch_extract_api_call_failed': batchProcessing.handleBatchApiFailure,
-  'save_batch_cfp_api_call_failed': batchProcessing.handleBatchApiFailure, // Mới
+  'batch_extract_api_call_failed': batchProcessing.handleBatchApiFailure,
+  'batch_cfp_api_call_failed': batchProcessing.handleBatchApiFailure, // Mới
   'save_batch_process_determine_call_failed': batchProcessing.handleBatchApiFailure,
   'save_batch_process_determine_failed_invalid': batchProcessing.handleBatchApiFailure,
   'save_batch_api_response_parse_failed': batchProcessing.handleBatchApiFailure, // Mới
-  'save_batch_parallel_final_apis_both_failed': batchProcessing.handleBatchApiFailure, // Mới
+  'batch_parallel_final_apis_both_failed': batchProcessing.handleBatchApiFailure, // Mới
 
-  'save_batch_dir_create_failed': batchProcessing.handleBatchFileSystemFailure,
+  'batch_dir_create_failed': batchProcessing.handleBatchFileSystemFailure,
   'save_batch_read_content_failed': batchProcessing.handleBatchFileSystemFailure,
   'save_batch_read_content_failed_missing_path': batchProcessing.handleBatchFileSystemFailure, // Mới
   'save_batch_read_content_warn_non_critical': batchProcessing.handleBatchFileSystemFailure, // Map warning vào đây để đếm FS operations, nhưng không tăng failedBatches
   'save_batch_write_file_failed': batchProcessing.handleBatchFileSystemFailure,
 
   'save_batch_aggregate_content_end': batchProcessing.handleBatchAggregationEnd,
-  'save_batch_finish_success': batchProcessing.handleBatchFinishSuccess,
+  'batch_task_finish_success': batchProcessing.handleBatchFinishSuccess,
 
 
   // --- File Output (JSONL, CSV) ---

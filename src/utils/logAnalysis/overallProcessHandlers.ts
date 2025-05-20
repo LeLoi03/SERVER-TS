@@ -76,7 +76,7 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
             processedDataFromController.forEach((resultItem: any) => {
                 const acronym = resultItem.acronym;
                 const title = resultItem.title;
-                const currentRequestId = resultItem.requestId; // <<< Lấy requestId từ log entry của controller
+                const currentRequestId = logEntry.requestId; 
 
                 const compositeKey = createConferenceKey(currentRequestId, acronym, title);
 

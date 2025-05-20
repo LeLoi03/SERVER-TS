@@ -221,7 +221,7 @@ const acronymMutex = new Mutex(); // Kiểu được suy luận từ thư viện
 
 /**
  * Thêm một từ viết tắt vào Set một cách an toàn (thread-safe),
- * tự động thêm hậu tố _diffN nếu từ viết tắt đã tồn tại.
+ * tự động thêm hậu tố _N nếu từ viết tắt đã tồn tại.
  * @param set - Set chứa các từ viết tắt (phải là Set<string>).
  * @param acronymIndex - Từ viết tắt cần thêm.
  * @returns Từ viết tắt đã được điều chỉnh và thêm vào Set, hoặc chuỗi rỗng nếu đầu vào không hợp lệ hoặc có lỗi.

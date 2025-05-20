@@ -6,7 +6,7 @@ import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
 import { Logger } from 'pino';
 import { LoggingService } from '../../../services/logging.service';
 import { ConfigService } from '../../../config/config.service';
-import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/DatabasePersistence.service';
+import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service';
 import { CrawlModelType } from '../../../types/crawl.types';
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
 
@@ -15,8 +15,8 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     const crawlOrchestrator = container.resolve(CrawlOrchestratorService) as CrawlOrchestratorService;
 
     const reqLogger = (req as any).log as Logger || loggingService.getLogger();
-    const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    const routeLogger = reqLogger.child({ requestId, route: '/crawl-conferences' });
+    const currentBatchRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`; // ID for this specific API call
+    const routeLogger = reqLogger.child({ batchRequestId: currentBatchRequestId, route: '/crawl-conferences' });
 
     routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
 
@@ -70,12 +70,15 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         }
 
         routeLogger.info({ conferenceCount: conferenceList.length, dataSource, crawlModel }, "Calling CrawlOrchestratorService to run the process...");
-        
-        // *** ++ Pass crawlModel to the service ***
+
+
+        // The orchestrator should be aware of the currentBatchRequestId
+        // and also the originalRequestId for each item if provided.
         const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
-            conferenceList,
+            conferenceList, // Each item can now have originalRequestId
             routeLogger,
-            crawlModel as CrawlModelType // <--- PASSING THE MODEL TYPE
+            crawlModel as CrawlModelType,
+            currentBatchRequestId // Pass the ID of this batch operation
         );
 
         const operationEndTime = Date.now();
@@ -109,7 +112,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     } catch (error: any) {
         const operationEndTime = Date.now();
         const runTimeMs = operationEndTime - operationStartTime;
-        const errorLogger = routeLogger || loggingService.getLogger({ requestId });
+        const errorLogger = routeLogger || loggingService.getLogger({ currentBatchRequestId });
 
         errorLogger.error({
             err: error,
@@ -172,7 +175,7 @@ export async function handleSaveConference(req: Request, res: Response): Promise
         } else {
             routeLogger.error({ event: 'manual_db_save_failed', details: result }, "Manual save to database failed.");
             if (result.message.includes("CSV file not found")) {
-                 res.status(404).json({
+                res.status(404).json({
                     message: result.message,
                     error: result.error,
                     csvPath: configService.evaluateCsvPath

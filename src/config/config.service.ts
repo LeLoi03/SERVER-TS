@@ -125,7 +125,7 @@ const envSchema = z.object({
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-     // --- Gemini API - Extract Specific ---
+    // --- Gemini API - Extract Specific ---
     // ++ USE LISTS FOR TUNED/NON-TUNED MODELS
     GEMINI_EXTRACT_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_TUNED_MODEL_NAMES')),
     GEMINI_EXTRACT_TUNED_FALLBACK_MODEL_NAME: z.string().optional(), // Singular fallback for the list
@@ -195,7 +195,12 @@ const envSchema = z.object({
     // Mặc định sẽ được xử lý trong constructor nếu mảng rỗng
 
     MAX_TURNS_HOST_AGENT: z.coerce.number().int().positive().default(6),
-    // +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // ++ THÊM THƯ MỤC CHO JSONL VÀ CSV OUTPUTS (tùy chọn, có thể dùng BASE_OUTPUT_DIR trực tiếp)
+    JSONL_OUTPUT_SUBDIR: z.string().default('jsonl_outputs'), // Tên thư mục con cho JSONL
+    CSV_OUTPUT_SUBDIR: z.string().default('csv_outputs'),     // Tên thư mục con cho CSV
+    // Hoặc bạn có thể đặt tên file cố định cho CSV cơ sở nếu không muốn thư mục con
+    // EVALUATE_CSV_BASENAME: z.string().default('evaluate'), // Ví dụ
 });
 
 // --- Define Interfaces for Structured Config (like Gemini API) ---
@@ -241,6 +246,10 @@ export class ConfigService {
     public readonly subAgentGenerationConfig: SDKGenerationConfig;
     private initializationPromise: Promise<void> | null = null;
 
+    // ++ THÊM CÁC THUỘC TÍNH THƯ MỤC ĐỂ DỄ TRUY CẬP
+    public readonly jsonlOutputDir: string;
+    public readonly csvOutputDir: string;
+
     constructor() {
         dotenv.config();
         try {
@@ -261,7 +270,7 @@ export class ConfigService {
                 GOOGLE_CUSTOM_SEARCH_API_KEYS: googleApiKeys
             };
 
-              // Post-validation checks
+            // Post-validation checks
             const requiredModelLists = [
                 { key: 'GEMINI_EXTRACT_TUNED_MODEL_NAMES', value: this.config.GEMINI_EXTRACT_TUNED_MODEL_NAMES },
                 { key: 'GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES', value: this.config.GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES },
@@ -301,7 +310,7 @@ export class ConfigService {
             if (this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
                 console.warn("⚠️ WARN: No Google Custom Search API Keys found.");
             }
-            
+
             // ++++++++++ Initialize Generation Configs ++++++++++
             this.hostAgentGenerationConfig = {
                 temperature: this.config.GEMINI_HOST_AGENT_TEMPERATURE,
@@ -327,7 +336,14 @@ export class ConfigService {
             this.geminiApiConfigs = this.buildGeminiApiConfigs(); // buildGeminiApiConfigs không thay đổi
 
 
-            this.geminiApiConfigs = this.buildGeminiApiConfigs();
+
+            // ++ KHỞI TẠO ĐƯỜNG DẪN THƯ MỤC OUTPUT CHO JSONL VÀ CSV
+            this.jsonlOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.JSONL_OUTPUT_SUBDIR);
+            this.csvOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.CSV_OUTPUT_SUBDIR);
+
+            // Đảm bảo các thư mục này tồn tại khi service khởi tạo (tùy chọn, hoặc để các service khác tự tạo)
+            // fs.mkdirSync(this.jsonlOutputDir, { recursive: true });
+            // fs.mkdirSync(this.csvOutputDir, { recursive: true });
 
             console.log("✅ Configuration loaded and validated successfully.");
             console.log(`   - NODE_ENV: ${this.config.NODE_ENV}`);
@@ -508,14 +524,37 @@ export class ConfigService {
     get appLogFilePath(): string { return path.join(this.logsDirectory, this.config.LOG_FILE_NAME); }
     get baseOutputDir(): string { return path.resolve(this.config.BASE_OUTPUT_DIR); }
     get conferenceListPath(): string { return path.join(this.baseOutputDir, 'conference_list.json'); }
-    get finalOutputJsonlPath(): string { return path.join(this.baseOutputDir, 'final_output.jsonl'); }
-    get evaluateCsvPath(): string { return path.join(this.baseOutputDir, 'evaluate.csv'); }
     get customSearchDir(): string { return path.join(this.baseOutputDir, 'custom_search'); }
     get batchesDir(): string { return path.join(this.baseOutputDir, 'batches'); }
     get tempDir(): string { return path.join(this.baseOutputDir, 'temp'); }
     get errorAccessLinkPath(): string { return path.join(this.baseOutputDir, 'error_access_link_log.txt'); }
+    
+    
     get playwrightConfig() { return { channel: this.config.PLAYWRIGHT_CHANNEL, headless: this.config.PLAYWRIGHT_HEADLESS, userAgent: this.config.USER_AGENT, }; }
     get googleSearchConfig() { return { cseId: this.config.GOOGLE_CSE_ID, apiKeys: this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS, maxUsagePerKey: this.config.MAX_USAGE_PER_KEY, rotationDelayMs: this.config.KEY_ROTATION_DELAY_MS, maxRetries: this.config.MAX_SEARCH_RETRIES, retryDelayMs: this.config.RETRY_DELAY_MS, }; }
     get journalRetryOptions() { return { retries: this.config.JOURNAL_RETRY_RETRIES, minTimeout: this.config.JOURNAL_RETRY_MIN_TIMEOUT, factor: this.config.JOURNAL_RETRY_FACTOR, }; }
     get journalCacheOptions() { return { stdTTL: this.config.JOURNAL_CACHE_TTL, checkperiod: this.config.JOURNAL_CACHE_CHECK_PERIOD, }; }
+
+
+    // ++ HÀM MỚI ĐỂ LẤY ĐƯỜNG DẪN FILE JSONL CHO BATCH
+    public getFinalOutputJsonlPathForBatch(batchRequestId: string): string {
+        const filename = `final_output_${batchRequestId}.jsonl`;
+        // Sử dụng thuộc tính jsonlOutputDir đã được resolve
+        return path.join(this.jsonlOutputDir, filename);
+    }
+
+    // ++ HÀM MỚI ĐỂ LẤY ĐƯỜNG DẪN FILE CSV CHO BATCH
+    public getEvaluateCsvPathForBatch(batchRequestId: string, baseCsvFilename: string = 'evaluate'): string {
+        // baseCsvFilename có thể là 'evaluate' hoặc một tên khác nếu bạn có nhiều loại CSV
+        const filename = `${baseCsvFilename}_${batchRequestId}.csv`;
+        // Sử dụng thuộc tính csvOutputDir đã được resolve
+        return path.join(this.csvOutputDir, filename);
+    }
+
+    // (Tùy chọn) Giữ lại một hàm để lấy đường dẫn CSV cơ sở nếu vẫn cần dùng ở đâu đó
+    // mà không có batchRequestId (ví dụ: tên file mặc định cho UI)
+    public getBaseEvaluateCsvPath(): string {
+        return path.join(this.csvOutputDir, 'evaluate.csv'); // Hoặc tên file cơ sở bạn muốn
+    }
+
 }

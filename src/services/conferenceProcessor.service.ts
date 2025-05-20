@@ -7,7 +7,7 @@ import { GoogleSearchService } from './googleSearch.service';
 import { HtmlPersistenceService } from './htmlPersistence.service';
 import { FileSystemService } from './fileSystem.service';
 import { Logger } from 'pino';
-import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, CrawlModelType } from '../types/crawl.types'; // ++ Thêm CrawlModelType
+import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, CrawlModelType } from '../types/crawl.types';
 import { filterSearchResults } from '../utils/crawl/linkFiltering';
 
 @injectable()
@@ -40,27 +40,47 @@ export class ConferenceProcessorService {
         this.serviceBaseLogger.info("ConferenceProcessorService instance created.");
     }
 
+    // ++ MODIFIED: Added crawlModel and batchRequestId parameters
     async process(
-        conference: ConferenceData,
+        conference: ConferenceData, // Can contain originalRequestId
         taskIndex: number,
-        parentLogger: Logger,
-        crawlModel: CrawlModelType // ++ THAM SỐ MỚI
-    ): Promise<void> {
+        parentLogger: Logger, // This logger already contains the batchRequestId from orchestrator
+        crawlModel: CrawlModelType,
+        batchRequestId: string // Explicitly passed for clarity and potential direct use
+    ): Promise<void> { // Consider returning ProcessedRowData if this service is responsible for creating it
         const confAcronym = conference?.Acronym || `UnknownAcronym-${taskIndex}`;
         const confTitle = conference?.Title || `UnknownTitle-${taskIndex}`;
 
+        // parentLogger đã chứa batchRequestId.
+        // taskLogger sẽ kế thừa batchRequestId và thêm context của task này.
         const taskLogger = parentLogger.child({
             processorTask: 'ConferenceProcessor',
             title: confTitle,
             acronym: confAcronym,
             taskIndex: taskIndex + 1,
-            crawlModelUsed: crawlModel, // ++ LOG CRAWL MODEL
+            crawlModelUsed: crawlModel,
+            // batchRequestId sẽ được kế thừa từ parentLogger
+            originalRequestId: conference.originalRequestId, // Log originalRequestId if present
             event_group: 'conference_task_processing'
         });
 
-        taskLogger.info({ event: 'task_start' }, `Processing conference task using ${crawlModel} model settings`);
+        // Tạo một ID duy nhất cho lần xử lý cụ thể này của item (nếu cần thiết cho ProcessedRowData)
+        // const currentItemProcessingId = `${batchRequestId}-item-${taskIndex}`;
+        // taskLogger.info({ currentItemProcessingId }, "Generated current item processing ID.");
+
+
+        if (conference.originalRequestId) {
+            taskLogger.info({ event: 'recrawl_detected', originalRequestId: conference.originalRequestId },
+                `This is a re-crawl task for an item from original request: ${conference.originalRequestId}`);
+        }
+
+        taskLogger.info({ event: 'task_start' }, `Processing conference task using ${crawlModel} model`);
         let taskSuccessfullyCompleted = true;
         let specificTaskError: any = null;
+        // let processedDataForThisItem: Partial<ProcessedRowData> = { // Example if returning data
+        //     inputConference: conference,
+        //     newRequestId: currentItemProcessingId, // ID for this specific processing attempt
+        // };
 
         try {
             const hasAllRequiredKeys = 'mainLink' in conference &&
@@ -75,13 +95,23 @@ export class ConferenceProcessorService {
                     mainLink: conference.mainLink ?? "",
                     cfpLink: conference.cfpLink ?? "",
                     impLink: conference.impLink ?? ""
+                    // Nếu cần, có thể thêm originalRequestId vào ConferenceUpdateData
                 };
-                // ++ TRUYỀN CRAWLMODEL XUỐNG
-                const updateSuccess = await this.htmlPersistenceService.processUpdateFlow(conferenceUpdateData, taskLogger, crawlModel);
+                // ++ TRUYỀN CRAWLMODEL và taskLogger (chứa batchRequestId) XUỐNG
+                const updateSuccess = await this.htmlPersistenceService.processUpdateFlow(
+                    conferenceUpdateData,
+                    taskLogger, // taskLogger chứa thông tin batchRequestId và originalRequestId
+                    crawlModel
+                );
                 taskLogger.info({ event: 'update_flow_finish', success: updateSuccess }, `Update flow finished.`);
                 if (!updateSuccess) {
                     taskSuccessfullyCompleted = false;
                     specificTaskError = new Error("Update flow did not complete successfully.");
+                    // processedDataForThisItem.status = 'error';
+                    // processedDataForThisItem.message = "Update flow failed.";
+                } else {
+                    // processedDataForThisItem.status = 'success';
+                    // processedDataForThisItem.message = "Update flow successful.";
                 }
             } else {
                 taskLogger.info({ event: 'save_flow_start' }, `Searching and processing (SAVE flow)`);
@@ -94,6 +124,7 @@ export class ConferenceProcessorService {
                     .replace(/\${Year1}/g, String(this.year1));
 
                 try {
+                    // GoogleSearchService cũng nên nhận taskLogger
                     const searchResults: GoogleSearchResult[] = await this.googleSearchService.search(searchQuery, taskLogger);
                     const filteredResults = filterSearchResults(searchResults, this.unwantedDomains, this.skipKeywords);
                     const limitedResults = filteredResults.slice(0, this.maxLinks);
@@ -107,49 +138,67 @@ export class ConferenceProcessorService {
                     }, `Filtered search results`);
 
                     const allLinks = searchResults.map(result => result.link);
+                    // FileSystemService cũng nên nhận taskLogger
                     await this.fileSystemService.writeCustomSearchResults(confAcronym, allLinks, taskLogger);
                 } catch (searchError: any) {
                     taskLogger.error({ err: searchError, event: 'search_ultimately_failed_in_task' }, "Google Search failed for this conference, skipping save HTML step.");
-                    searchResultsLinks = []; // Ensure it's empty so save flow is skipped
+                    searchResultsLinks = [];
+                    // taskSuccessfullyCompleted = false; // Quyết định xem search lỗi có làm task fail không
+                    // specificTaskError = searchError;
+                    // processedDataForThisItem.status = 'error';
+                    // processedDataForThisItem.message = `Google Search failed: ${searchError.message}`;
                 }
 
                 if (searchResultsLinks.length > 0) {
-                    // ++ TRUYỀN CRAWLMODEL XUỐNG
-                    const saveSuccess = await this.htmlPersistenceService.processSaveFlow(conference, searchResultsLinks, taskLogger, crawlModel);
+                    // ++ TRUYỀN CRAWLMODEL và taskLogger XUỐNG
+                    const saveSuccess = await this.htmlPersistenceService.processSaveFlow(
+                        conference, // conference object (có thể chứa originalRequestId)
+                        searchResultsLinks,
+                        taskLogger, // taskLogger chứa thông tin batchRequestId và originalRequestId
+                        crawlModel
+                    );
                     if (saveSuccess === false) {
                         taskSuccessfullyCompleted = false;
                         specificTaskError = new Error("Save flow did not complete successfully (processSaveFlow returned false).");
+                        // processedDataForThisItem.status = 'error';
+                        // processedDataForThisItem.message = "Save flow failed.";
+                    } else {
+                        // processedDataForThisItem.status = 'success';
+                        // processedDataForThisItem.message = "Save flow successful.";
                     }
                 } else {
                     taskLogger.warn({ event: 'save_html_skipped_no_links_in_task' }, "Skipping save HTML step as no valid search links were found or processed.");
-                    // Consider if this should mark the task as failed or just a partial success.
-                    // For now, let's assume if we intended to save but couldn't get links, it's not a full success.
-                    // Setting taskSuccessfullyCompleted = false will reflect this in the summary.
-                    // If it's acceptable to have no links and still consider the task "done", then don't set this to false.
-                    // Based on the original logic, "Save HTML step as no valid search links were found or processed." -> Error, so false is correct.
-                    taskSuccessfullyCompleted = false;
+                    taskSuccessfullyCompleted = false; // Như logic gốc
                     specificTaskError = new Error("Save HTML step as no valid search links were found or processed.");
+                    // processedDataForThisItem.status = 'skipped'; // Hoặc 'error' tùy theo yêu cầu
+                    // processedDataForThisItem.message = "Skipped save HTML: No valid links.";
                 }
             }
         } catch (taskError: any) {
             taskSuccessfullyCompleted = false;
             specificTaskError = taskError;
             taskLogger.error({ err: taskError, stack: taskError.stack, event: 'task_unhandled_error' }, `Unhandled error processing conference task`);
+            // processedDataForThisItem.status = 'error';
+            // processedDataForThisItem.message = `Unhandled error: ${taskError.message}`;
         } finally {
             const finishContext: { event: string; success?: boolean; error_details?: string } = { event: 'task_finish' };
-            if (!specificTaskError && taskSuccessfullyCompleted) { // Only if truly no error AND explicitly completed
+            if (!specificTaskError && taskSuccessfullyCompleted) {
                 finishContext.success = true;
-            } else { // If there was any error or task didn't complete successfully
+            } else {
                 finishContext.success = false;
-                if (specificTaskError && !taskLogger.bindings().err) { // If specific error exists and no unhandled exception logged it
+                if (specificTaskError && !taskLogger.bindings().err) {
                      finishContext.error_details = specificTaskError instanceof Error ? specificTaskError.message : String(specificTaskError);
-                } else if (taskLogger.bindings().err) { // If an unhandled exception already logged the error
-                    // error_details is already part of the logger's bindings via taskLogger.error
-                } else if (!specificTaskError && !taskSuccessfullyCompleted) { // Generic incompletion
+                } else if (taskLogger.bindings().err) {
+                    // No need to set, already in logger
+                } else if (!specificTaskError && !taskSuccessfullyCompleted) {
                     finishContext.error_details = "Task did not complete successfully for an unspecified reason.";
                 }
             }
             taskLogger.info(finishContext, `Finished processing conference task.`);
+            // if (this service is responsible for returning ProcessedRowData)
+            // return processedDataForThisItem as ProcessedRowData;
         }
+        // If CrawlOrchestratorService's TaskQueue expects a Promise<void>, keep it this way.
+        // If TaskQueue expects Promise<ProcessedRowData>, then this method should return processedDataForThisItem.
     }
 }
