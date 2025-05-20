@@ -7,7 +7,7 @@ import { Logger } from 'pino';
 import { LoggingService } from '../../../services/logging.service';
 import { ConfigService } from '../../../config/config.service';
 import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/DatabasePersistence.service';
-
+import { CrawlModelType } from '../../../types/crawl.types';
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
 
     const loggingService = container.resolve(LoggingService) as LoggingService;
@@ -16,20 +16,28 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
 
     const reqLogger = (req as any).log as Logger || loggingService.getLogger();
     const requestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    // routeLogger này sẽ là logger cha cho toàn bộ request
     const routeLogger = reqLogger.child({ requestId, route: '/crawl-conferences' });
 
     routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
 
     const startTime = Date.now();
     const dataSource = (req.query.dataSource as string) || 'client';
+    // ++ GET crawlModel from query parameters
+    const crawlModel = (req.query.model as string | undefined) || 'non-tuned'; // Default to 'non-tuned' if not provided
 
-    const operationStartTime = Date.now(); // Thời gian bắt đầu của controller
+    // ++ VALIDATE crawlModel (optional but good practice)
+    if (crawlModel !== 'tuned' && crawlModel !== 'non-tuned') {
+        routeLogger.warn({ crawlModelReceived: crawlModel }, "Invalid 'model' query parameter received. Must be 'tuned' or 'non-tuned'.");
+        res.status(400).json({ message: "Invalid 'model' query parameter. Must be 'tuned' or 'non-tuned'." });
+        return;
+    }
+
+    const operationStartTime = Date.now();
 
     try {
         let conferenceList: ConferenceData[];
 
-        routeLogger.info({ dataSource }, "Determining conference data source");
+        routeLogger.info({ dataSource, crawlModel }, "Determining conference data source and selected model"); // ++ Log crawlModel
 
         if (dataSource === 'client') {
             conferenceList = req.body;
@@ -40,7 +48,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
             }
             routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
         } else {
-            routeLogger.warn("Internal data source ('api') is not implemented in this refactoring. Please provide data via 'client' source.");
+            routeLogger.warn("Internal data source ('api') is not implemented. Please provide data via 'client' source.");
             res.status(400).json({ message: "dataSource=api is not currently supported. Use dataSource=client and provide data in the body." });
             return;
         }
@@ -61,52 +69,56 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
             return;
         }
 
-        routeLogger.info({ conferenceCount: conferenceList.length, dataSource }, "Calling CrawlOrchestratorService to run the process...");
-        console.log(conferenceList.length);
-        // *** Truyền routeLogger vào service chính ***
-        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(conferenceList, routeLogger); // <--- THAY ĐỔI Ở ĐÂY
+        routeLogger.info({ conferenceCount: conferenceList.length, dataSource, crawlModel }, "Calling CrawlOrchestratorService to run the process...");
+        
+        // *** ++ Pass crawlModel to the service ***
+        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
+            conferenceList,
+            routeLogger,
+            crawlModel as CrawlModelType // <--- PASSING THE MODEL TYPE
+        );
 
-        const operationEndTime = Date.now(); // Thời gian kết thúc của controller
+        const operationEndTime = Date.now();
         const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
 
-         // Log event thành công với context đầy đủ
         routeLogger.info({
-            event: 'processing_finished_successfully', // EVENT
-            context: { // Đưa các thông tin vào context để handler dễ truy cập
+            event: 'processing_finished_successfully',
+            context: {
                 runtimeSeconds: parseFloat(runTimeSeconds),
                 totalInput: conferenceList.length,
                 resultsReturned: processedResults.length,
+                crawlModelUsed: crawlModel, // ++ Log the model used
                 outputJsonl: configService.finalOutputJsonlPath,
                 outputCsv: configService.evaluateCsvPath,
-                processed_results: processedResults, // GỬI KẾT QUẢ VÀO CONTEXT
-                startTime: new Date(operationStartTime).toISOString(), // Thời gian bắt đầu của controller
-                endTime: new Date(operationEndTime).toISOString(),     // Thời gian kết thúc của controller
+                processed_results: processedResults,
+                startTime: new Date(operationStartTime).toISOString(),
+                endTime: new Date(operationEndTime).toISOString(),
             }
         }, "Conference processing finished successfully via controller. Returning results.");
 
 
         res.status(200).json({
-            message: `Conference processing completed. Orchestrator returned ${processedResults.length} processed records. See server files for details.`,
+            message: `Conference processing completed using ${crawlModel} model. Orchestrator returned ${processedResults.length} processed records. See server files for details.`, // ++ Update message
             runtime: `${runTimeSeconds} s`,
             data: processedResults,
             outputJsonlPath: configService.finalOutputJsonlPath,
             outputCsvPath: configService.evaluateCsvPath
         });
-        routeLogger.info({ statusCode: 200, resultsCount: processedResults.length }, "Sent successful response");
+        routeLogger.info({ statusCode: 200, resultsCount: processedResults.length, crawlModelUsed: crawlModel }, "Sent successful response");
 
     } catch (error: any) {
         const operationEndTime = Date.now();
         const runTimeMs = operationEndTime - operationStartTime;
         const errorLogger = routeLogger || loggingService.getLogger({ requestId });
 
-        // Log event thất bại
         errorLogger.error({
             err: error,
             stack: error.stack,
-            event: 'processing_failed_in_controller', // EVENT MỚI
+            event: 'processing_failed_in_controller',
             context: {
                 runtimeMs: runTimeMs,
                 dataSource: (req.query.dataSource as string) || 'client',
+                crawlModelAttempted: crawlModel, // ++ Log attempted model
                 startTime: new Date(operationStartTime).toISOString(),
                 endTime: new Date(operationEndTime).toISOString(),
             }
@@ -123,6 +135,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         }
     }
 }
+
 
 // --- Cập nhật các handler khác tương tự ---
 export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {

@@ -1,19 +1,18 @@
-// src/client/utils/processingSteps.ts
+// src/utils/logAnalysis/processingSteps.ts
 import fs from 'fs';
 import readline from 'readline';
-import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../../types/logAnalysis.types';
+import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../../types/logAnalysis.types'; // Đảm bảo types đã được cập nhật
 import {
-    createConferenceKey,
-    initializeConferenceDetail,
-    addConferenceError, // Đảm bảo hàm này không tự log mà trả về object lỗi hoặc để processLogEntry log
+    createConferenceKey,      // Đảm bảo helper này nhận requestId
+    initializeConferenceDetail, // Đảm bảo helper này nhận requestId
+    addConferenceError,
     doesRequestOverlapFilter
-} from './helpers';
+} from './helpers'; // Đảm bảo helpers đã được cập nhật
 
-// Import eventHandlerMap từ vị trí mới của nó (thường là từ eventHandlers/index.ts)
-import { eventHandlerMap } from './index';
-// import { Logger } from 'pino';
+import { eventHandlerMap } from './index'; // Giả sử index.ts export eventHandlerMap
+// import { Logger } from 'pino'; // Bỏ comment nếu dùng logger
 
-// --- Step 1: readAndGroupLogs (Giữ nguyên, đã có tham số logger) ---
+// --- Step 1: readAndGroupLogs ---
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
     // const logger = baseLogger.child({ function: 'readAndGroupLogs', filePath: logFilePath });
     // logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by requestId');
@@ -78,92 +77,104 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
     };
 };
 
-// --- Step 2: filterRequestsByTime (Giữ nguyên, đã có tham số logger) ---
-export const filterRequestsByTime = (
+// --- Step 2: filterRequests ---
+export const filterRequests = (
     allRequestsData: Map<string, RequestLogData>,
     filterStartMillis: number | null,
     filterEndMillis: number | null,
-    // baseLogger: Logger
+    requestIdFilter?: string
+    // baseLogger?: Logger
 ): FilteredData => {
-    // const logger = baseLogger.child({ function: 'filterRequestsByTime' });
-    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis }, 'Starting Phase 2a: Filtering requests by time');
+    // const logger = baseLogger?.child({ function: 'filterRequests' }) || console;
+    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis, requestIdFilter }, 'Starting: Filtering requests');
 
     const filteredRequests = new Map<string, RequestLogData>();
     let analysisStartMillis: number | null = null;
     let analysisEndMillis: number | null = null;
 
-    for (const [requestId, requestInfo] of allRequestsData.entries()) {
-        const includeRequest = doesRequestOverlapFilter(
-            requestInfo.startTime,
-            requestInfo.endTime,
-            filterStartMillis,
-            filterEndMillis,
-            requestId,
-        );
+    if (requestIdFilter) {
+        // logger.info({ event: 'filter_mode_requestId', targetRequestId: requestIdFilter }, `Filtering for specific requestId: ${requestIdFilter}`);
+        const requestInfo = allRequestsData.get(requestIdFilter);
+        if (requestInfo) {
+            const overlapsTimeFilter = doesRequestOverlapFilter(
+                requestInfo.startTime,
+                requestInfo.endTime,
+                filterStartMillis,
+                filterEndMillis,
+                requestIdFilter //, logger
+            );
 
-        if (includeRequest) {
-            filteredRequests.set(requestId, requestInfo);
-            if (requestInfo.startTime !== null) {
-                analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
+            if (filterStartMillis === null && filterEndMillis === null) {
+                filteredRequests.set(requestIdFilter, requestInfo);
+                analysisStartMillis = requestInfo.startTime;
+                analysisEndMillis = requestInfo.endTime;
+            } else if (overlapsTimeFilter) {
+                filteredRequests.set(requestIdFilter, requestInfo);
+                analysisStartMillis = requestInfo.startTime;
+                analysisEndMillis = requestInfo.endTime;
+            } else {
+                // logger.info({event: 'filter_requestId_found_but_outside_time_filter', requestIdFilter, reqStart: requestInfo.startTime, reqEnd: requestInfo.endTime}, "RequestId found but outside specified time filter.")
             }
-            if (requestInfo.endTime !== null) {
-                analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
+        } else {
+            // logger.warn({ event: 'filter_requestId_not_found', targetRequestId: requestIdFilter }, `Specified requestId for filtering not found.`);
+        }
+    } else {
+        // logger.info({ event: 'filter_mode_time_range' }, `Filtering by time range for all requests.`);
+        for (const [requestId, requestInfo] of allRequestsData.entries()) {
+            const includeRequest = doesRequestOverlapFilter(
+                requestInfo.startTime,
+                requestInfo.endTime,
+                filterStartMillis,
+                filterEndMillis,
+                requestId //, logger
+            );
+
+            if (includeRequest) {
+                filteredRequests.set(requestId, requestInfo);
+                if (requestInfo.startTime !== null) {
+                    analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
+                }
+                if (requestInfo.endTime !== null) {
+                    analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
+                }
             }
         }
     }
 
-    // logger.info({ event: 'filter_end', totalRequests: allRequestsData.size, includedRequests: filteredRequests.size, analysisStartMillis, analysisEndMillis }, 'Finished Phase 2a: Filtering requests');
+    // logger.info({ event: 'filter_end', totalRequestsOriginal: allRequestsData.size, includedRequestsCount: filteredRequests.size, finalAnalysisStartMillis: analysisStartMillis, finalAnalysisEndMillis: analysisEndMillis }, 'Finished: Filtering requests');
     return { filteredRequests, analysisStartMillis, analysisEndMillis };
 };
 
-
-// --- Step 3: processLogEntry (ĐÃ ĐIỀU CHỈNH) ---
+// --- Step 3: processLogEntry ---
 export const processLogEntry = (
     logEntry: any,
     results: LogAnalysisResult,
-    conferenceLastTimestamp: { [compositeKey: string]: number },
-    // logContextBase: object, // Sẽ được tạo bên trong từ logger
-    // baseLoggerForEntry: Logger // Logger được truyền vào, có thể là logger của request cụ thể
+    conferenceLastTimestamp: { [compositeKey: string]: number }
+    // baseLoggerForEntry: Logger
 ): void => {
     const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
     const entryTimestampISO = !isNaN(entryTimeMillis) ? new Date(entryTimeMillis).toISOString() : new Date().toISOString() + '_INVALID_TIME';
+    // const entrySpecificLogger = baseLoggerForEntry.child({ /* ... */ });
 
-    // Tạo logger cụ thể cho log entry này, dựa trên baseLoggerForEntry
-    // baseLoggerForEntry thường là logger đã có context của requestId
-    // const entrySpecificLogger = baseLoggerForEntry.child({
-    //     event_being_processed: logEntry.event, // log context cho event đang xử lý
-    //     entry_timestamp_iso: entryTimestampISO
-    // });
-    // const logContextForHandler = { // Context để truyền vào handler
-    //     requestId: logEntry.requestId,
-    //     event: logEntry.event,
-    //     time: entryTimestampISO,
-    //     // Thêm các trường từ logEntry.context vào đây nếu handler cần
-    //     ...(logEntry.context || {})
-    // };
-
-
-    // Update overall error counts
     if (typeof logEntry.level === 'number') {
         if (logEntry.level >= 50) results.errorLogCount++;
         if (logEntry.level >= 60) results.fatalLogCount++;
-    } else if (logEntry.level !== undefined) {
-        // entrySpecificLogger.trace({ level_value: logEntry.level }, 'Log entry has invalid level type');
     }
 
-    const eventName = logEntry.event as string | undefined; // Tên event từ log entry
-
-    // Conference Identification
-    // Ưu tiên lấy từ logEntry.context nếu có, sau đó mới đến logEntry trực tiếp
+    const eventName = logEntry.event as string | undefined;
     const contextFields = logEntry.context || {};
     const acronym = contextFields.acronym || contextFields.conferenceAcronym || logEntry.acronym || logEntry.conferenceAcronym;
     const title = contextFields.title || contextFields.conferenceTitle || logEntry.title || logEntry.conferenceTitle;
-    const compositeKey = createConferenceKey(acronym, title);
+    const currentRequestId = logEntry.requestId; // <<< Lấy requestId từ log entry
+
+    // <<< MODIFIED: createConferenceKey now includes requestId >>>
+    const compositeKey = createConferenceKey(currentRequestId, acronym, title);
     let confDetail: ConferenceAnalysisDetail | null = null;
 
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
-            results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(acronym!, title!);
+            // <<< MODIFIED: initializeConferenceDetail now includes requestId >>>
+            results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(currentRequestId, acronym!, title!);
             // entrySpecificLogger.trace({ compositeKey }, 'Initialized new conference detail');
         }
         confDetail = results.conferenceAnalysis[compositeKey];
@@ -171,60 +182,56 @@ export const processLogEntry = (
             conferenceLastTimestamp[compositeKey] = Math.max(entryTimeMillis, conferenceLastTimestamp[compositeKey] ?? 0);
         }
     } else if (acronym && (eventName?.startsWith('task_') || eventName?.includes('conference') || eventName?.includes('gemini') || eventName?.includes('save_') || eventName?.includes('csv_'))) {
-        // entrySpecificLogger.warn({ logEvent: eventName, acronym }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
+        // entrySpecificLogger.warn({ logEvent: eventName, acronym, requestId: currentRequestId }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
     } else if (eventName && !compositeKey && !acronym) {
-        // entrySpecificLogger.trace({ logEvent: eventName }, 'Log entry event without acronym or title.');
+        // entrySpecificLogger.trace({ logEvent: eventName, requestId: currentRequestId }, 'Log entry event without acronym or title.');
     }
 
-    // --- Event-Based Analysis Dispatcher ---
     if (eventName && eventHandlerMap[eventName]) {
         const handler = eventHandlerMap[eventName];
         try {
-            // Truyền logContextForHandler chứa các trường đã được chuẩn hóa từ logEntry.context
-            // Handler sẽ sử dụng logger riêng của nó nếu cần log, hoặc chúng ta có thể truyền entrySpecificLogger
             handler(logEntry, results, confDetail, entryTimestampISO);
         } catch (handlerError: any) {
-            // entrySpecificLogger.error({
-            //     handler_event_name: eventName,
-            //     err_message: handlerError.message,
-            //     err_stack: handlerError.stack
-            // }, `Error executing handler for event: ${eventName}`);
+            // entrySpecificLogger.error({ /* ... */ }, `Error executing handler for event: ${eventName}`);
             if (confDetail) {
-                // addConferenceError không nên tự log, chỉ tạo object lỗi
                 addConferenceError(confDetail, entryTimestampISO, handlerError, `Internal error processing event ${eventName}`);
             }
-            // Ghi nhận lỗi xử lý handler vào một mục chung nếu cần
-            results.logProcessingErrors.push(`Handler error for event '${eventName}' on requestId '${logEntry.requestId}': ${handlerError.message}`);
+            results.logProcessingErrors.push(`Handler error for event '${eventName}' on requestId '${currentRequestId}': ${handlerError.message}`);
         }
     } else if (eventName) {
-        // entrySpecificLogger.trace(`No specific handler registered for event: ${eventName}`);
+        // entrySpecificLogger.trace({ eventName, requestId: currentRequestId }, `No specific handler registered for event: ${eventName}`);
     }
 };
 
-
-// --- Step 4: calculateFinalMetrics (Giữ nguyên, đã có tham số logger) ---
+// --- Step 4: calculateFinalMetrics ---
 export const calculateFinalMetrics = (
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
     analysisStartMillis: number | null,
     analysisEndMillis: number | null,
+    filteredRequestsData: Map<string, RequestLogData> // <<< NEW PARAMETER
     // baseLogger: Logger
 ): void => {
     // const logger = baseLogger.child({ function: 'calculateFinalMetrics' });
     // logger.info({ event: 'final_calc_start' }, "Performing final calculations on analyzed data");
 
-    // --- Calculate Overall Duration ---
+    // --- Calculate Overall Duration (for the set of analyzed requests) ---
+    // This logic is correct: overall start/end/duration reflects the scope of the analysis.
     if (analysisStartMillis !== null && analysisEndMillis !== null) {
         results.overall.startTime = new Date(analysisStartMillis).toISOString();
         results.overall.endTime = new Date(analysisEndMillis).toISOString();
         results.overall.durationSeconds = Math.round((analysisEndMillis - analysisStartMillis) / 1000);
     } else if (Object.keys(results.conferenceAnalysis).length > 0) {
+        // This fallback might still be useful if, for some reason, analysisStart/EndMillis are null
+        // but there are conference details (e.g., if filtering was very restrictive and only left partial data).
         let minConfStart: number | null = null;
         let maxConfEnd: number | null = null;
+
         Object.values(results.conferenceAnalysis).forEach(detail => {
             const detailEndTimeMillis = detail.endTime ? new Date(detail.endTime).getTime() : null;
-            const compositeKey = createConferenceKey(detail.acronym, detail.title);
-            const lastSeenTime = compositeKey ? conferenceLastTimestamp[compositeKey] ?? null : null;
+            // <<< MODIFIED: Use requestId from detail to create key for conferenceLastTimestamp >>>
+            const confKeyForTimestamp = createConferenceKey(detail.requestId, detail.acronym, detail.title);
+            const lastSeenTime = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] ?? null : null;
             const consideredEndTime = detailEndTimeMillis ?? ((detail.status === 'completed' || detail.status === 'failed' || detail.status === 'skipped') ? lastSeenTime : null);
 
             if (detail.startTime) {
@@ -244,22 +251,43 @@ export const calculateFinalMetrics = (
         }
     }
 
+
+    // --- Populate Per-Request Timings into results.requests ---
+    // results.analyzedRequestIds should have been populated by LogAnalysisService from filteredRequests.keys()
+    for (const reqId of results.analyzedRequestIds) {
+        const requestData = filteredRequestsData.get(reqId);
+        if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
+            results.requests[reqId] = {
+                startTime: new Date(requestData.startTime).toISOString(),
+                endTime: new Date(requestData.endTime).toISOString(),
+                durationSeconds: Math.round((requestData.endTime - requestData.startTime) / 1000),
+            };
+        } else if (requestData) { // startTime or endTime might be null if request had only one log entry
+            results.requests[reqId] = {
+                startTime: requestData.startTime ? new Date(requestData.startTime).toISOString() : null,
+                endTime: requestData.endTime ? new Date(requestData.endTime).toISOString() : null,
+                durationSeconds: 0, // Or null, depending on preference for incomplete data
+            };
+        }
+        else {
+            // This case implies reqId is in analyzedRequestIds but not in filteredRequestsData, which shouldn't happen.
+            results.requests[reqId] = {
+                startTime: null,
+                endTime: null,
+                durationSeconds: null,
+            };
+            // logger.warn({ event: 'final_calc_missing_request_data', requestId: reqId }, 'Request ID in analyzedRequestIds not found in filteredRequestsData.');
+        }
+    }
+
     // --- Finalize Conference Details and Counts ---
-    // Logic trong này phần lớn dựa vào trạng thái cuối cùng của confDetail
-    // đã được set bởi các handler.
-    // Cần xem xét lại cách tính processingCount.
-    let completionSuccessCount = 0; // Sẽ được tăng bởi handler csv_write_success
-    let completionFailCount = 0;    // Sẽ được tăng bởi các handler lỗi khác nhau
     let stillProcessingCount = 0;
-    // let extractionSuccessCount = 0; // Sẽ được tăng bởi gemini_api_response (extract success)
-
     const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
-    // results.overall.processedConferencesCount đã được tăng bởi handleTaskStart
+    // results.overall.processedConferencesCount is typically incremented by task_start handlers
 
-    processedCompositeKeys.forEach(key => {
+    processedCompositeKeys.forEach(key => { // key here is `${requestId}-${acronym}-${title}`
         const detail = results.conferenceAnalysis[key];
 
-        // Tính durationSeconds cho từng conference nếu chưa có và có thể tính
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
             try {
                 const startMillis = new Date(detail.startTime).getTime();
@@ -267,77 +295,65 @@ export const calculateFinalMetrics = (
                 if (!isNaN(startMillis) && !isNaN(endMillis) && endMillis >= startMillis) {
                     detail.durationSeconds = Math.round((endMillis - startMillis) / 1000);
                 }
-            } catch (e) { /* ignore */ }
+            } catch (e) { /* ignore date parsing errors */ }
         }
 
-        // Trạng thái 'completed' và 'failed' đã được set bởi các handler tương ứng.
-        // (ví dụ: handleCsvWriteSuccess set 'completed', handleTaskUnhandledError set 'failed')
-        // Logic ở đây chủ yếu là đếm.
-
-        if (detail.status === 'completed') {
-            // completionSuccessCount đã được tăng bởi handleCsvWriteSuccess
-        } else if (detail.status === 'failed') {
-            // completionFailCount đã được tăng bởi các handler lỗi
-        } else if (detail.status === 'processing' || detail.status === 'unknown' || detail.status === 'processed_ok') {
-            // Nếu status là 'processing', 'unknown' hoặc 'processed_ok' (chưa ra CSV)
-            // và không có endTime, thì coi là đang xử lý.
+        if (detail.status === 'processing' || detail.status === 'unknown' || detail.status === 'processed_ok') {
             if (!detail.endTime) {
                 stillProcessingCount++;
-                // logger.trace({ event: 'final_calc_task_still_processing', compositeKey: key, status: detail.status }, 'Task considered still actively processing at end of analysis window (no endTime).');
-            } else {
-                // Có endTime nhưng không phải completed/failed/skipped (ví dụ 'processed_ok')
-                // Có thể coi là một dạng "chưa hoàn tất" nhưng không hẳn là "đang xử lý".
-                // Quyết định cách đếm những trường hợp này.
-                // Hiện tại, nếu có endTime thì không tính vào stillProcessingCount.
             }
-        } else if (detail.status === 'skipped') {
-            // Đã được xử lý bởi handleTaskSkipped
         }
-
-        // extractionSuccessCount đã được tăng bởi gemini handler.
     });
 
-    // results.overall.completedTasks nên là tổng số conference đã thực sự hoàn thành (CSV success).
-    // Nó sẽ được cập nhật bởi handleCsvWriteSuccess.
-    // Tương tự cho failedOrCrashedTasks, đã được cập nhật bởi các handler lỗi.
-    // Và successfulExtractions từ gemini handler.
-
-    results.overall.processingTasks = stillProcessingCount; // Cập nhật processingTasks ở đây
+    results.overall.processingTasks = stillProcessingCount;
 
     // --- Calculate Derived Stats ---
     results.geminiApi.cacheContextMisses = Math.max(0, results.geminiApi.cacheContextAttempts - results.geminiApi.cacheContextHits);
 
     if (results.fileOutput.csvFileGenerated === false &&
-        (results.fileOutput.csvPipelineFailures > 0 /* một cờ khác từ orchestrator nếu cần */ )) {
+        (results.fileOutput.csvPipelineFailures > 0 /* || other orchestrator flags if needed */)) {
         Object.values(results.conferenceAnalysis).forEach(detail => {
-            // Nếu conference đã ghi JSONL thành công, và chưa được đánh dấu là completed/failed
-            // thì giờ nó sẽ bị coi là failed do pipeline CSV lỗi.
             if (detail.jsonlWriteSuccess === true &&
                 detail.status !== 'completed' &&
                 detail.status !== 'failed' &&
                 detail.status !== 'skipped') {
 
-                const oldStatusWasNotFailed = detail.status;
+                const oldStatus = detail.status; // Capture old status before changing
                 detail.status = 'failed';
-                detail.csvWriteSuccess = false; // Ghi nhận CSV thất bại
-                if (!detail.endTime) { // Set endTime nếu chưa có
-                    // Cố gắng lấy timestamp cuối cùng của conference nếu có
-                    const confKey = createConferenceKey(detail.acronym, detail.title);
-                    const lastTimestamp = confKey ? conferenceLastTimestamp[confKey] : null;
-                    detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : results.overall.endTime;
+                detail.csvWriteSuccess = false;
+
+                if (!detail.endTime) {
+                    // <<< MODIFIED: Use requestId from detail to create key for conferenceLastTimestamp >>>
+                    const confKeyForTimestamp = createConferenceKey(detail.requestId, detail.acronym, detail.title);
+                    const lastTimestamp = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
+                    detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : (results.overall.endTime || new Date().toISOString());
                 }
                 addConferenceError(detail, detail.endTime!, "CSV generation pipeline failed.", "csv_pipeline_failure");
 
-                if (oldStatusWasNotFailed) {
-                    results.overall.failedOrCrashedTasks = (results.overall.failedOrCrashedTasks || 0) + 1;
+                // Only increment failedOrCrashedTasks if it wasn't already considered failed/crashed
+                // This check might be overly simplistic; specific handlers should ideally manage these counts.
+                // However, this handles a global CSV failure impacting previously "ok" tasks.
+                results.overall.failedOrCrashedTasks = (results.overall.failedOrCrashedTasks || 0) + 1;
+                // If it was 'processing' or 'unknown', decrement that count if it was contributing
+                if ((oldStatus === 'processing' || oldStatus === 'unknown' || oldStatus === 'processed_ok') && !detail.endTime) { // If it was counted in stillProcessingCount
+                    // This logic is tricky as stillProcessingCount is calculated based on current state.
+                    // Better to let handlers update completed/failed counts directly.
+                    // The `processingTasks` will be recalculated correctly based on the new 'failed' status.
                 }
             }
         });
+        // Recalculate processingTasks after potential status changes due to CSV failure
+        let newStillProcessingCount = 0;
+        Object.values(results.conferenceAnalysis).forEach(d => {
+            if ((d.status === 'processing' || d.status === 'unknown' || d.status === 'processed_ok') && !d.endTime) {
+                newStillProcessingCount++;
+            }
+        });
+        results.overall.processingTasks = newStillProcessingCount;
     }
 
     // logger.info({
     //     event: 'final_calc_end',
-    //     // Các counter này nên phản ánh giá trị đã được cập nhật bởi các handler
     //     completed_final: results.overall.completedTasks,
     //     failed_final: results.overall.failedOrCrashedTasks,
     //     skipped_final: results.overall.skippedTasks,

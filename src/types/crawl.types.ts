@@ -1,6 +1,10 @@
 // ---------------------1_google_search.ts-----------------------
 
 
+export type CrawlModelType = 'tune' | 'non-tune';
+
+
+
 // Helper class to create Error objects with additional properties
 export class GoogleSearchError extends Error {
     details: any; // Define type for 'details' if you have a specific structure

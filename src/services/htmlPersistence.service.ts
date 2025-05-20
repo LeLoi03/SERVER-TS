@@ -7,68 +7,64 @@ import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { BatchProcessingService } from './batchProcessing.service';
 import { Logger } from 'pino';
-import { ConferenceData, ConferenceUpdateData } from '../types/crawl.types';
+import { ConferenceData, ConferenceUpdateData, CrawlModelType } from '../types/crawl.types'; // ++ Thêm CrawlModelType
 
 @singleton()
 export class HtmlPersistenceService {
-    private readonly serviceBaseLogger: Logger; // Đổi tên
+    private readonly serviceBaseLogger: Logger;
     private browserContext: BrowserContext | null = null;
-    // private readonly year2: number; // Giữ lại nếu cần, nếu không thì bỏ
-
     private existingAcronyms: Set<string> = new Set();
     private batchIndexRef = { current: 1 };
 
     constructor(
         @inject(PlaywrightService) private playwrightService: PlaywrightService,
-        @inject(ConfigService) private configService: ConfigService,
+        @inject(ConfigService) private configService: ConfigService, // Giữ lại nếu có config riêng cho service này
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(BatchProcessingService) private batchProcessingService: BatchProcessingService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'HtmlPersistenceServiceBase' }); // Đổi tên và context
-        // this.year2 = this.configService.config.YEAR2;
+        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'HtmlPersistenceServiceBase' });
         this.serviceBaseLogger.info("HtmlPersistenceService instance created.");
     }
 
-    // Helper để tạo logger cho phương thức (nếu cần thiết cho các phương thức public khác không nhận taskLogger)
-    // private getMethodLogger(parentLogger: Logger | undefined, methodName: string, additionalContext?: object): Logger {
-    //     const base = parentLogger || this.serviceBaseLogger;
-    //     return base.child({ serviceMethod: `HtmlPersistenceService.${methodName}`, ...additionalContext });
-    // }
-
-    public setBrowserContext(parentLogger?: Logger) { // Nhận parentLogger tùy chọn từ Orchestrator
+    public setBrowserContext(parentLogger?: Logger) {
         const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.setBrowserContext' }) : this.serviceBaseLogger;
         try {
-            // Truyền logger vào getBrowserContext của PlaywrightService nếu nó cũng được cập nhật để nhận logger
             this.browserContext = this.playwrightService.getBrowserContext(logger);
             logger.debug("BrowserContext set for HtmlPersistenceService.");
         } catch (error) {
             logger.error({ err: error, event: 'htmlpersistence_set_context_failed', reason: 'Failed to get browser context from PlaywrightService' }, "Failed to get browser context in HtmlPersistenceService.");
-            throw error; // Ném lại lỗi để Orchestrator biết
+            throw error;
         }
     }
 
-    private getContext(logger: Logger): BrowserContext { // Nhận logger để log lỗi nếu có
+    private getContext(logger: Logger): BrowserContext {
         if (!this.browserContext) {
             const errMsg = "BrowserContext not set in HtmlPersistenceService. Call setBrowserContext first.";
-            logger.error({ internalError: errMsg }, "BrowserContext not available."); // Log với logger được truyền vào
+            logger.error({ internalError: errMsg }, "BrowserContext not available.");
             throw new Error(errMsg);
         }
         return this.browserContext;
     }
 
-    async processUpdateFlow(conference: ConferenceUpdateData, taskLogger: Logger): Promise<boolean> {
-        // taskLogger đã có context đầy đủ từ ConferenceProcessorService
-        // Tạo một child logger cụ thể hơn cho flow này nếu muốn
-        const flowLogger = taskLogger.child({ persistenceFlow: 'update' });
+    async processUpdateFlow(
+        conference: ConferenceUpdateData,
+        taskLogger: Logger,
+        crawlModel: CrawlModelType // ++ THAM SỐ MỚI
+    ): Promise<boolean> {
+        const flowLogger = taskLogger.child({
+            persistenceFlow: 'update',
+            crawlModelUsed: crawlModel // ++ LOG CRAWL MODEL
+        });
 
-        flowLogger.info({ event: 'process_update_start' }, `Processing UPDATE flow by delegating to BatchProcessingService`);
+        flowLogger.info({ event: 'process_update_start' }, `Processing UPDATE flow (using ${crawlModel} settings) by delegating to BatchProcessingService`);
 
         try {
             const success = await this.batchProcessingService.processConferenceUpdate(
-                this.getContext(flowLogger), // Truyền flowLogger để getContext có thể log lỗi đúng context
+                this.getContext(flowLogger),
                 conference,
                 this.batchIndexRef,
-                flowLogger // <--- TRUYỀN flowLogger (hoặc taskLogger) XUỐNG BatchProcessingService
+                flowLogger,
+                crawlModel // ++ TRUYỀN CRAWLMODEL XUỐNG
             );
 
             if (success) {
@@ -84,41 +80,50 @@ export class HtmlPersistenceService {
         }
     }
 
-    async processSaveFlow(conference: ConferenceData, searchResultLinks: string[], taskLogger: Logger): Promise<boolean> {
-        // taskLogger đã có context đầy đủ từ ConferenceProcessorService
-        const flowLogger = taskLogger.child({ persistenceFlow: 'save' });
+    async processSaveFlow(
+        conference: ConferenceData,
+        searchResultLinks: string[],
+        taskLogger: Logger,
+        crawlModel: CrawlModelType // ++ THAM SỐ MỚI
+    ): Promise<boolean> {
+        const flowLogger = taskLogger.child({
+            persistenceFlow: 'save',
+            crawlModelUsed: crawlModel // ++ LOG CRAWL MODEL
+        });
 
-        flowLogger.info({ linksCount: searchResultLinks.length, event: 'save_html_start' }, `Processing SAVE flow by delegating to BatchProcessingService`);
+        flowLogger.info({ linksCount: searchResultLinks.length, event: 'save_html_start' }, `Processing SAVE flow (using ${crawlModel} settings) by delegating to BatchProcessingService`);
 
         if (searchResultLinks.length === 0) {
             flowLogger.warn({ event: 'process_save_skipped_no_links' }, "Skipping save flow as no search links were provided.");
-            return false;
+            return false; // Trả về false vì không có gì để xử lý
         }
 
         try {
+            // Giả sử processConferenceSave trả về boolean cho biết việc khởi tạo có thành công không
             const initiationSuccess = await this.batchProcessingService.processConferenceSave(
-                this.getContext(flowLogger), // Truyền flowLogger
+                this.getContext(flowLogger),
                 conference,
                 searchResultLinks,
                 this.batchIndexRef,
                 this.existingAcronyms,
-                flowLogger // <--- TRUYỀN flowLogger (hoặc taskLogger) XUỐNG BatchProcessingService
+                flowLogger,
+                crawlModel // ++ TRUYỀN CRAWLMODEL XUỐNG
             );
 
-            if (initiationSuccess === true) {
+            if (initiationSuccess === true) { // Check === true để rõ ràng hơn là boolean
                 flowLogger.info({ event: 'process_save_delegation_initiated' }, 'BatchProcessingService.processConferenceSave initiated successfully (batch save running async).');
                 return true;
-            } else {
+            } else { // initiationSuccess là false hoặc undefined
                 flowLogger.warn({ event: 'process_save_delegation_initiation_failed' }, 'BatchProcessingService.processConferenceSave reported failure during initiation.');
+                return false; // Trả về false vì khởi tạo không thành công
             }
-            return false;
         } catch (saveError: any) {
             flowLogger.error({ err: saveError, event: 'process_save_delegation_error' }, 'Error occurred while calling BatchProcessingService.processConferenceSave initiation');
-            return false;
+            return false; // Trả về false do lỗi
         }
     }
 
-    public resetState(parentLogger?: Logger): void { // Nhận parentLogger tùy chọn từ Orchestrator
+    public resetState(parentLogger?: Logger): void {
         const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.resetState' }) : this.serviceBaseLogger;
         this.existingAcronyms.clear();
         this.batchIndexRef.current = 1;

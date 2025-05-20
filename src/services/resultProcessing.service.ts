@@ -320,17 +320,64 @@ export class ResultProcessingService {
         streamLogger.info({ totalLinesProcessed: lineNumber, event: 'jsonl_processing_finished' }, 'Finished processing JSONL file stream');
     }
 
-    private async _writeCSVAndCollectDataInternal(
+    public async _writeCSVAndCollectDataInternal(
         jsonlFilePath: string,
-        csvFilePath: string,
+        originalCsvFilePath: string,
         parentProcLogger: Logger
     ): Promise<ProcessedRowData[]> {
+        let extractedRequestId: string | undefined;
+
+        // Cố gắng lấy requestId từ bindings() nếu có
+        if (parentProcLogger && typeof (parentProcLogger as any).bindings === 'function') {
+            const bindings = (parentProcLogger as any).bindings();
+            if (bindings && typeof bindings.requestId === 'string' && bindings.requestId.length > 0) {
+                extractedRequestId = bindings.requestId;
+            } else {
+                parentProcLogger.warn({
+                    event: 'requestId_not_found_in_bindings',
+                    bindingsFound: !!bindings,
+                    requestIdType: typeof bindings?.requestId,
+                    requestIdValue: bindings?.requestId,
+                }, 'requestId không tìm thấy hoặc không hợp lệ trong logger bindings.');
+            }
+        }
+
+        // Nếu không tìm thấy trong bindings, thử truy cập trực tiếp (ít khả năng hơn)
+        if (!extractedRequestId && parentProcLogger && typeof (parentProcLogger as any).requestId === 'string' && (parentProcLogger as any).requestId.length > 0) {
+            extractedRequestId = (parentProcLogger as any).requestId;
+        }
+
+        // Sử dụng giá trị mặc định nếu không tìm thấy ở đâu cả
+        const finalRequestId = extractedRequestId || 'unknownRequestId';
+        if (finalRequestId === 'unknownRequestId' && extractedRequestId !== 'unknownRequestId') {
+            parentProcLogger.warn({
+                event: 'requestId_fallback_to_unknown',
+                attemptedRequestId: extractedRequestId
+            }, 'requestId không được trích xuất, sử dụng "unknownRequestId".');
+        }
+
+
+        const outputDir = path.dirname(originalCsvFilePath);
+        const fileExtension = path.extname(originalCsvFilePath);
+        const baseFilename = path.basename(originalCsvFilePath, fileExtension);
+
+        // Tạo tên file CSV mới với finalRequestId
+        const finalCsvFilename = `${baseFilename}_${finalRequestId}${fileExtension}`;
+        const csvFilePath = path.join(outputDir, finalCsvFilename);
+
         const taskLogger = parentProcLogger.child({
             csvTask: 'writeCSVAndCollectData',
             jsonlInputFile: path.basename(jsonlFilePath),
-            csvOutputFile: path.basename(csvFilePath)
+            csvOutputFile: path.basename(csvFilePath), // Sử dụng tên file đã được sửa đổi
+            // requestId sẽ tự động được kế thừa từ parentProcLogger nếu logger hỗ trợ
         });
-        taskLogger.info({ event: 'csv_stream_collect_start' }, 'Starting CSV writing stream and data collection');
+
+        // Ghi log tên file CSV cuối cùng và requestId được sử dụng
+        taskLogger.info({
+            event: 'csv_stream_collect_start',
+            usedRequestId: finalRequestId,
+            finalCsvPath: csvFilePath
+        }, 'Bắt đầu stream ghi CSV và thu thập dữ liệu');
 
         const collectedData: ProcessedRowData[] = [];
         let rowObjectStream: Readable | null = null;
@@ -343,45 +390,48 @@ export class ResultProcessingService {
         try {
             rowObjectStream = Readable.from(this._processJsonlStream(jsonlFilePath, taskLogger));
 
-            // ResultProcessingService.ts (trích đoạn trong _writeCSVAndCollectDataInternal)
-
             filterLogCollectTransform = new NodeTransform({
                 objectMode: true,
                 transform: (chunk: ProcessedRowData | null, encoding, callback) => {
-                    recordsProcessed++; // Đây là tổng số dòng từ JSONL đã qua _processJsonlStream
+                    recordsProcessed++;
                     if (chunk !== null && chunk.acronym && chunk.title) {
-                        // Log event này trước khi đẩy vào CSV transform
-                        // Event này sẽ được LogProcessor bắt để tăng csvRecordsAttempted
-                        taskLogger.info({ // Sử dụng info level để đảm bảo nó được ghi lại
-                            event: 'csv_record_processed_for_writing', // EVENT
-                            conferenceAcronym: chunk.acronym, // Cung cấp context cho LogProcessor
+                        taskLogger.info({
+                            event: 'csv_record_processed_for_writing',
+                            conferenceAcronym: chunk.acronym,
                             conferenceTitle: chunk.title,
-                            // Không cần truyền thêm data của chunk ở đây, chỉ cần event và key
-                        }, `Record for ${chunk.acronym} processed and is being prepared for CSV writing.`);
+                        }, `Bản ghi cho ${chunk.acronym} đã xử lý và đang chuẩn bị để ghi vào CSV.`);
 
-                        taskLogger.trace({ event: 'csv_record_to_write_internal', acronym: chunk.acronym, title: chunk.title }, `Passing record to CSV transform (internal trace)`);
+                        taskLogger.trace({ event: 'csv_record_to_write_internal', acronym: chunk.acronym, title: chunk.title }, `Chuyển bản ghi sang CSV transform (internal trace)`);
                         collectedData.push(chunk);
                         recordsWrittenToCsv++;
                         callback(null, chunk);
                     } else {
                         if (chunk !== null) {
-                            taskLogger.warn({ event: 'csv_invalid_record_skipped_in_transform', recordData: { acronym: chunk.acronym, title: chunk.title } }, 'Invalid record skipped in transform for CSV writing');
+                            taskLogger.warn({ event: 'csv_invalid_record_skipped_in_transform', recordData: { acronym: chunk.acronym, title: chunk.title } }, 'Bản ghi không hợp lệ bị bỏ qua trong transform để ghi CSV');
+                        } else {
+                            taskLogger.warn({ event: 'csv_null_record_skipped_in_transform' }, 'Bản ghi null bị bỏ qua trong transform để ghi CSV');
                         }
-                        callback();
+                        callback(); // Bỏ qua chunk không hợp lệ hoặc null
                     }
                 }
             });
 
             const csvOptions: ParserOptions<ProcessedRowData, ProcessedRowData> = { fields: this.CSV_FIELDS };
             csvTransform = new Json2CsvTransform(csvOptions, {}, { objectMode: true });
-            csvWriteStream = fs.createWriteStream(csvFilePath);
 
-            // Đảm bảo thư mục tồn tại trước khi ghi file CSV
             const csvDir = path.dirname(csvFilePath);
             if (!fs.existsSync(csvDir)) {
-                taskLogger.info({ directory: csvDir }, "Creating directory for CSV output.");
+                taskLogger.info({ directory: csvDir, event: 'create_csv_directory' }, "Tạo thư mục cho output CSV.");
                 await fs.promises.mkdir(csvDir, { recursive: true });
             }
+            csvWriteStream = fs.createWriteStream(csvFilePath);
+
+            csvWriteStream.on('error', (err) => {
+                taskLogger.error({ err, event: 'csv_writestream_error', finalCsvFile: csvFilePath }, 'Lỗi từ WriteStream của CSV.');
+            });
+            csvWriteStream.on('finish', () => {
+                taskLogger.info({ event: 'csv_writestream_finish', finalCsvFile: csvFilePath }, 'WriteStream của CSV đã hoàn thành.');
+            });
 
 
             await streamPipeline(
@@ -391,20 +441,57 @@ export class ResultProcessingService {
                 csvWriteStream
             );
 
-            taskLogger.info({ event: 'csv_stream_collect_success', recordsProcessed, recordsWrittenToCsv, recordsCollected: collectedData.length }, 'CSV writing stream and data collection finished successfully.');
+            taskLogger.info({
+                event: 'csv_stream_collect_success',
+                recordsProcessed,
+                recordsWrittenToCsv,
+                recordsCollected: collectedData.length,
+                finalCsvFile: csvFilePath
+            }, 'Stream ghi CSV và thu thập dữ liệu hoàn thành thành công.');
             return collectedData;
 
         } catch (error: any) {
-            taskLogger.error({ err: error, recordsProcessed, recordsWrittenToCsv, recordsCollected: collectedData.length, event: 'csv_stream_collect_failed' }, 'Error during CSV writing stream and data collection pipeline');
-            rowObjectStream?.destroy(error instanceof Error ? error : undefined);
-            filterLogCollectTransform?.destroy(error instanceof Error ? error : undefined);
-            csvTransform?.destroy(error instanceof Error ? error : undefined);
-            if (csvWriteStream && !csvWriteStream.destroyed) {
-                csvWriteStream.destroy(error instanceof Error ? error : new Error(String(error)));
+            taskLogger.error({
+                err: error,
+                recordsProcessed,
+                recordsWrittenToCsv,
+                recordsCollected: collectedData.length,
+                event: 'csv_stream_collect_failed',
+                finalCsvFile: csvFilePath
+            }, 'Lỗi trong quá trình stream ghi CSV và thu thập dữ liệu');
+
+            // Dọn dẹp các stream
+            const destroyStream = (stream: Readable | NodeTransform | fs.WriteStream | null, streamName: string, err?: Error) => {
+                if (stream && !stream.destroyed) {
+                    stream.destroy(err);
+                    taskLogger.info({ event: 'stream_destroyed', streamName, error: !!err }, `Stream ${streamName} đã được hủy.`);
+                }
+            };
+
+            destroyStream(rowObjectStream, 'rowObjectStream', error instanceof Error ? error : undefined);
+            destroyStream(filterLogCollectTransform, 'filterLogCollectTransform', error instanceof Error ? error : undefined);
+            destroyStream(csvTransform, 'csvTransform', error instanceof Error ? error : undefined);
+            destroyStream(csvWriteStream, 'csvWriteStream', error instanceof Error ? error : new Error(String(error)));
+
+            // Cân nhắc xóa file CSV chưa hoàn chỉnh nếu có lỗi
+            if (csvFilePath && fs.existsSync(csvFilePath)) {
+                try {
+                    // Kiểm tra xem file có dữ liệu không trước khi xóa, hoặc xóa luôn
+                    // const stats = await fs.promises.stat(csvFilePath);
+                    // if (stats.size === 0) { // Hoặc một tiêu chí khác
+                    await fs.promises.unlink(csvFilePath);
+                    taskLogger.info({ event: 'incomplete_csv_deleted', file: csvFilePath }, 'Đã xóa file CSV chưa hoàn chỉnh do lỗi.');
+                    // }
+                } catch (unlinkError) {
+                    taskLogger.warn({ err: unlinkError, event: 'incomplete_csv_delete_failed', file: csvFilePath }, 'Không thể xóa file CSV chưa hoàn chỉnh.');
+                }
             }
-            throw error; // Ném lại lỗi để processOutput có thể bắt và xử lý
+
+            throw error; // Ném lại lỗi để hàm gọi có thể bắt và xử lý
         }
     }
+
+
 
     public async processOutput(parentLogger?: Logger): Promise<ProcessedRowData[]> {
         const logger = this.getMethodLogger(parentLogger, 'processOutput', {

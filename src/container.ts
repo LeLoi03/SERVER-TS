@@ -33,6 +33,7 @@ import { HtmlPersistenceService } from './services/htmlPersistence.service';
 import { ResultProcessingService } from './services/resultProcessing.service';
 import { ConferenceProcessorService } from './services/conferenceProcessor.service';
 import { CrawlOrchestratorService } from './services/crawlOrchestrator.service';
+import { DatabasePersistenceService } from './services/databasePersistence.service';
 
 // Register Core Services (assuming they are singletons)
 container.registerSingleton(ConfigService);
@@ -72,6 +73,7 @@ container.registerSingleton(ResultProcessingService);
 container.register(ConferenceProcessorService, ConferenceProcessorService); // Registers for transient scope (new instance each time resolved)
 
 container.registerSingleton(CrawlOrchestratorService);
+container.registerSingleton(DatabasePersistenceService);
 
 
 // Export the configured container if needed elsewhere, though usually not necessary

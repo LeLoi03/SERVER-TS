@@ -125,42 +125,49 @@ const envSchema = z.object({
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-    // --- Gemini API - Extract Specific ---
-    GEMINI_EXTRACT_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_MODEL_NAMES')),
-    GEMINI_EXTRACT_MODEL_NAME: z.string().min(1, "GEMINI_EXTRACT_MODEL_NAME required"),
-    GEMINI_EXTRACT_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_EXTRACT_FALLBACK_MODEL_NAME required"),
+     // --- Gemini API - Extract Specific ---
+    // ++ USE LISTS FOR TUNED/NON-TUNED MODELS
+    GEMINI_EXTRACT_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_TUNED_MODEL_NAMES')),
+    GEMINI_EXTRACT_TUNED_FALLBACK_MODEL_NAME: z.string().optional(), // Singular fallback for the list
+    GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES')),
+    GEMINI_EXTRACT_NON_TUNED_FALLBACK_MODEL_NAME: z.string().optional(), // Singular fallback for the list
+    // General Extract Configs
     GEMINI_EXTRACT_TEMPERATURE: z.coerce.number().min(0).max(2).default(0),
     GEMINI_EXTRACT_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_EXTRACT_RESPONSE_MIME_TYPE: z.string().default("text/plain"),
     GEMINI_EXTRACT_SYSTEM_INSTRUCTION: z.string().optional(),
     GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
     // --- Gemini API - CFP Specific ---
-    GEMINI_CFP_MODEL_NAMES: z.string().min(1, "GEMINI_CFP_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_CFP_MODEL_NAMES')),
-    GEMINI_CFP_MODEL_NAME: z.string().min(1, "GEMINI_CFP_MODEL_NAME required"),
-    GEMINI_CFP_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_CFP_FALLBACK_MODEL_NAME required"),
+    // ++ USE LISTS FOR TUNED/NON-TUNED MODELS
+    GEMINI_CFP_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_CFP_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_CFP_TUNED_MODEL_NAMES')),
+    GEMINI_CFP_TUNED_FALLBACK_MODEL_NAME: z.string().optional(),
+    GEMINI_CFP_NON_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_CFP_NON_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_CFP_NON_TUNED_MODEL_NAMES')),
+    GEMINI_CFP_NON_TUNED_FALLBACK_MODEL_NAME: z.string().optional(),
+    // General CFP Configs
     GEMINI_CFP_TEMPERATURE: z.coerce.number().min(0).max(2).default(1.0),
     GEMINI_CFP_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_CFP_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_CFP_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_CFP_RESPONSE_MIME_TYPE: z.string().default("application/json"),
     GEMINI_CFP_SYSTEM_INSTRUCTION: z.string().optional(),
     GEMINI_CFP_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
 
     // --- Gemini API - Determine Specific ---
-    GEMINI_DETERMINE_MODEL_NAMES: z.string().min(1, "GEMINI_DETERMINE_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_DETERMINE_MODEL_NAMES')),
-    GEMINI_DETERMINE_MODEL_NAME: z.string().min(1, "GEMINI_DETERMINE_MODEL_NAME required"),
-    GEMINI_DETERMINE_FALLBACK_MODEL_NAME: z.string().min(1, "GEMINI_DETERMINE_FALLBACK_MODEL_NAME required"),
+    // ++ USE LISTS FOR TUNED/NON-TUNED MODELS
+    GEMINI_DETERMINE_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_DETERMINE_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_DETERMINE_TUNED_MODEL_NAMES')),
+    GEMINI_DETERMINE_TUNED_FALLBACK_MODEL_NAME: z.string().optional(),
+    GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES: z.string().min(1, "GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES required").transform(parseCommaSeparatedString('GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES')),
+    GEMINI_DETERMINE_NON_TUNED_FALLBACK_MODEL_NAME: z.string().optional(),
+    // General Determine Configs
     GEMINI_DETERMINE_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.1),
     GEMINI_DETERMINE_TOP_P: z.coerce.number().min(0).max(1).default(0.9),
     GEMINI_DETERMINE_TOP_K: z.coerce.number().int().positive().default(32),
     GEMINI_DETERMINE_MAX_OUTPUT_TOKENS: z.coerce.number().int().positive().default(8192),
-    GEMINI_DETERMINE_RESPONSE_MIME_TYPE: z.string().default("application/json"),
     GEMINI_DETERMINE_SYSTEM_INSTRUCTION: z.string().optional(),
     GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED: z.boolean().default(false),
     GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED: z.boolean().default(true),
+
 
     // --- Gemini API - Conference Website Description ---
     WEBSITE_DESCRIPTION: z.string().optional(),
@@ -203,7 +210,7 @@ export interface GeminiApiConfig {
     outputs?: Record<string, string>; // For few-shot examples (model responses)
     allowCacheForNonTuned?: boolean;   // Cờ mới
     allowFewShotForNonTuned?: boolean; // Cờ mới
-    fallbackModelName?: string; // <-- THUỘC TÍNH MỚI
+    // fallbackModelName is removed, it will be selected explicitly
 
 }
 
@@ -254,9 +261,24 @@ export class ConfigService {
                 GOOGLE_CUSTOM_SEARCH_API_KEYS: googleApiKeys
             };
 
-            console.log("GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED);
-            console.log("GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED);
-            console.log("GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED:", this.config.GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED);
+              // Post-validation checks
+            const requiredModelLists = [
+                { key: 'GEMINI_EXTRACT_TUNED_MODEL_NAMES', value: this.config.GEMINI_EXTRACT_TUNED_MODEL_NAMES },
+                { key: 'GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES', value: this.config.GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES },
+                { key: 'GEMINI_CFP_TUNED_MODEL_NAMES', value: this.config.GEMINI_CFP_TUNED_MODEL_NAMES },
+                { key: 'GEMINI_CFP_NON_TUNED_MODEL_NAMES', value: this.config.GEMINI_CFP_NON_TUNED_MODEL_NAMES },
+                { key: 'GEMINI_DETERMINE_TUNED_MODEL_NAMES', value: this.config.GEMINI_DETERMINE_TUNED_MODEL_NAMES },
+                { key: 'GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES', value: this.config.GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES },
+            ];
+
+            for (const modelList of requiredModelLists) {
+                if (!modelList.value || modelList.value.length === 0) {
+                    const errorMsg = `Configuration error: ${modelList.key} must be a non-empty list of model names. Please check your .env file.`;
+                    console.error(`❌ FATAL: ${errorMsg}`);
+                    throw new Error(errorMsg);
+                }
+            }
+
 
             // --- Post-validation checks/defaults ---
             if (!this.config.CORS_ALLOWED_ORIGINS || this.config.CORS_ALLOWED_ORIGINS.length === 0) {
@@ -279,15 +301,7 @@ export class ConfigService {
             if (this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS.length === 0) {
                 console.warn("⚠️ WARN: No Google Custom Search API Keys found.");
             }
-            if (this.config.GEMINI_EXTRACT_MODEL_NAMES.length === 0) {
-                console.error("❌ FATAL: No models specified in GEMINI_EXTRACT_MODEL_NAMES.");
-                throw new Error("GEMINI_EXTRACT_MODEL_NAMES cannot be empty.");
-            }
-            if (this.config.GEMINI_CFP_MODEL_NAMES.length === 0) {
-                console.error("❌ FATAL: No models specified in GEMINI_CFP_MODEL_NAMES.");
-                throw new Error("GEMINI_CFP_MODEL_NAMES cannot be empty.");
-            }
-
+            
             // ++++++++++ Initialize Generation Configs ++++++++++
             this.hostAgentGenerationConfig = {
                 temperature: this.config.GEMINI_HOST_AGENT_TEMPERATURE,
@@ -434,29 +448,25 @@ export class ConfigService {
 
     // --- buildGeminiApiConfigs ---
     private buildGeminiApiConfigs(): GeminiApiConfigs {
-
+        // Model names and fallbacks are now selected in GeminiApiService
+        // This function sets up general configurations per API type
         return {
             [API_TYPE_EXTRACT]: {
-                generationConfig: {
+                generationConfig: { // Base config, responseMimeType will be overridden
                     temperature: this.config.GEMINI_EXTRACT_TEMPERATURE,
                     maxOutputTokens: this.config.GEMINI_EXTRACT_MAX_OUTPUT_TOKENS,
                 },
                 systemInstruction: (this.config.GEMINI_EXTRACT_SYSTEM_INSTRUCTION || '').trim(),
-                modelNames: this.config.GEMINI_EXTRACT_MODEL_NAMES,
-                modelName: this.config.GEMINI_EXTRACT_MODEL_NAME,
-                fallbackModelName: this.config.GEMINI_EXTRACT_FALLBACK_MODEL_NAME || undefined, // Lấy từ env
-                // Mặc định cho EXTRACT: cho phép cache và few-shot cho non-tuned
-                allowCacheForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED, // Đã là boolean
-                allowFewShotForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED, // Đã là boolean
+                allowCacheForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_CACHE_NON_TUNED,
+                allowFewShotForNonTuned: this.config.GEMINI_EXTRACT_ALLOW_FEWSHOT_NON_TUNED,
             },
             [API_TYPE_CFP]: {
-                generationConfig: {
+                generationConfig: { // Base config
                     temperature: this.config.GEMINI_CFP_TEMPERATURE,
                     topP: this.config.GEMINI_CFP_TOP_P,
                     topK: this.config.GEMINI_CFP_TOP_K,
                     maxOutputTokens: this.config.GEMINI_CFP_MAX_OUTPUT_TOKENS,
-                    // responseMimeType: this.config.GEMINI_CFP_RESPONSE_MIME_TYPE,
-                    responseSchema: {
+                    responseSchema: { // For non-tuned JSON mode
                         type: SchemaType.OBJECT,
                         properties: {
                             "summary": { type: SchemaType.STRING },
@@ -466,18 +476,16 @@ export class ConfigService {
                     } as ObjectSchema,
                 },
                 systemInstruction: (this.config.GEMINI_CFP_SYSTEM_INSTRUCTION || '').trim(),
-                modelNames: this.config.GEMINI_CFP_MODEL_NAMES,
-                fallbackModelName: this.config.GEMINI_CFP_FALLBACK_MODEL_NAME || undefined,
-                // Cho CFP, nếu không phải tuned model, chúng ta muốn cho phép few-shot và cache
                 allowCacheForNonTuned: this.config.GEMINI_CFP_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.config.GEMINI_CFP_ALLOW_FEWSHOT_NON_TUNED,
             },
             [API_TYPE_DETERMINE]: {
-                generationConfig: {
+                generationConfig: { // Base config
                     temperature: this.config.GEMINI_DETERMINE_TEMPERATURE,
+                    topP: this.config.GEMINI_DETERMINE_TOP_P, // Added
+                    topK: this.config.GEMINI_DETERMINE_TOP_K,   // Added
                     maxOutputTokens: this.config.GEMINI_DETERMINE_MAX_OUTPUT_TOKENS,
-                    // responseMimeType: this.config.GEMINI_DETERMINE_RESPONSE_MIME_TYPE,
-                    responseSchema: {
+                    responseSchema: { // For non-tuned JSON mode
                         type: SchemaType.OBJECT,
                         properties: {
                             "Official Website": { type: SchemaType.STRING },
@@ -488,15 +496,12 @@ export class ConfigService {
                     } as ObjectSchema,
                 },
                 systemInstruction: (this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION || '').trim(),
-                modelNames: this.config.GEMINI_DETERMINE_MODEL_NAMES,
-                modelName: this.config.GEMINI_DETERMINE_MODEL_NAME,
-                fallbackModelName: this.config.GEMINI_DETERMINE_FALLBACK_MODEL_NAME || undefined,
-                // Mặc định cho DETERMINE, dùng cache , dùng few shot
                 allowCacheForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.config.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED,
             },
         };
     }
+
 
     // --- Getters (Giữ nguyên) ---
     get logsDirectory(): string { return path.resolve(this.config.LOGS_DIRECTORY); }

@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/overallProcessHandlers.ts
+// src/utils/logAnalysis/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
 import { createConferenceKey } from './helpers';
 import { OverallAnalysis, ConferenceAnalysisDetail } from '../../types/logAnalysis.types';
@@ -10,7 +10,7 @@ const ensureOverallAnalysis = (results: any): OverallAnalysis => {
             startTime: null,
             endTime: null,
             durationSeconds: null,
-            totalConferencesInput: 0,
+            totalConferencesInput: 0, // Đảm bảo khởi tạo là 0
             processedConferencesCount: 0,
             completedTasks: 0,
             failedOrCrashedTasks: 0,
@@ -24,12 +24,19 @@ const ensureOverallAnalysis = (results: any): OverallAnalysis => {
 
 export const handleCrawlStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
-    // Lấy startTime từ context của logEntry nếu có, vì đó là thời điểm bắt đầu thực sự
-    overall.startTime = logEntry.context?.startTime ?? overall.startTime ?? entryTimestampISO;
 
-    // totalConferencesInput được gán một lần từ context của event này
+    // Lấy startTime từ logEntry nếu có, vì đó là thời điểm bắt đầu thực sự của event này
+    // overall.startTime nên là thời điểm sớm nhất của tất cả các crawl_start
+    const currentEventStartTime = logEntry.startTime || entryTimestampISO;
+    if (!overall.startTime || new Date(currentEventStartTime) < new Date(overall.startTime)) {
+        overall.startTime = currentEventStartTime;
+    }
+
+    // totalConferencesInput cần được cộng dồn từ các event crawl_start
     if (logEntry.totalConferences && typeof logEntry.totalConferences === 'number') {
-        overall.totalConferencesInput = logEntry.totalConferences;
+        // Sử dụng (overall.totalConferencesInput || 0) để đảm bảo an toàn nếu nó chưa được khởi tạo
+        // mặc dù ensureOverallAnalysis đã làm điều đó.
+        overall.totalConferencesInput = (overall.totalConferencesInput || 0) + logEntry.totalConferences;
     }
 };
 
@@ -67,9 +74,11 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
         const processedDataFromController = controllerContext.processed_results;
         if (processedDataFromController && Array.isArray(processedDataFromController)) {
             processedDataFromController.forEach((resultItem: any) => {
-                const acronym = resultItem?.acronym;
-                const title = resultItem?.title;
-                const compositeKey = createConferenceKey(acronym, title);
+                const acronym = resultItem.acronym;
+                const title = resultItem.title;
+                const currentRequestId = resultItem.requestId; // <<< Lấy requestId từ log entry của controller
+
+                const compositeKey = createConferenceKey(currentRequestId, acronym, title);
 
                 if (compositeKey && results.conferenceAnalysis[compositeKey]) {
                     const detailToUpdate = results.conferenceAnalysis[compositeKey] as ConferenceAnalysisDetail;
@@ -82,7 +91,7 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
                     // Ở đây, chỉ lưu trữ finalResult. Trạng thái 'completed' của conference
                     // nên được quản lý bởi handleCsvWriteSuccess.
 
-                } else if (acronym || title) {
+                } else if (acronym || title || currentRequestId) {
                     // logger.warn({...})
                 }
             });

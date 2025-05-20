@@ -1,3 +1,4 @@
+// src/utils/logAnalysis/helper.ts
 import { ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types';
 
 // --- Helper function: Normalize Error Key ---
@@ -13,19 +14,23 @@ export const normalizeErrorKey = (error: any): string => {
 };
 
 // --- Helper function: Create Composite Key ---
-export const createConferenceKey = (acronym?: string | null, title?: string | null): string | null => {
+export const createConferenceKey = (requestId: string, acronym: string, title: string): string | null => {
+    if (!requestId || typeof requestId !== 'string' || requestId.trim() === '') {
+        // logger.warn('Attempted to create conference key without a valid requestId.'); // Ghi log nếu cần
+        return null; // Request ID là bắt buộc
+    }
     if (acronym && typeof acronym === 'string' && acronym.trim() !== '' &&
         title && typeof title === 'string' && title.trim() !== '') {
-        // Only create key if both acronym and title are valid and non-empty
-        return `${acronym.trim()} - ${title.trim()}`;
+        return `${requestId.trim()} - ${acronym.trim()} - ${title.trim()}`;
     }
-    // Return null if missing information for a reliable unique key
     return null;
 };
 
 // --- Helper function: Initialize Conference Detail ---
 
-export const initializeConferenceDetail = (acronym: string, title: string): ConferenceAnalysisDetail => ({
+export const initializeConferenceDetail = (requestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
+    requestId: requestId, // <<< NEW
+
     title: title,
     acronym: acronym,
     status: 'unknown', // Initial status
@@ -87,11 +92,17 @@ export const addConferenceError = (
 
 // --- Helper function: Initialize Log Analysis Result Structure ---
 
-export const initializeLogAnalysisResult = (logFilePath: string): LogAnalysisResult => ({
+export const initializeLogAnalysisResult = (logFilePath: string, filterRequestId?: string): LogAnalysisResult => ({ // <<< Add filterRequestId
     analysisTimestamp: new Date().toISOString(),
     logFilePath: logFilePath,
     status: 'Processing', // Trạng thái ban đầu khi bắt đầu phân tích
     errorMessage: undefined, // Chưa có lỗi ban đầu
+
+    filterRequestId: filterRequestId, // <<< NEW
+    analyzedRequestIds: [],           // <<< NEW
+
+    requests: {}, // <<< NEW INITIALIZATION
+
 
     totalLogEntries: 0,
     parsedLogEntries: 0,
@@ -177,7 +188,7 @@ export const initializeLogAnalysisResult = (logFilePath: string): LogAnalysisRes
         cacheMapLoadSuccess: null, // Thêm mới
         cacheMapLoadFailures: 0, // Thêm mới
         cacheMapWriteAttempts: 0, // Thêm mới
-        cacheMapWriteSuccess: 0, // Thêm mới
+        cacheMapWriteSuccessCount: 0, // Thêm mới
         cacheMapWriteFailures: 0, // Thêm mới
         cacheManagerCreateFailures: 0, // Thêm mới
         blockedBySafety: 0,
