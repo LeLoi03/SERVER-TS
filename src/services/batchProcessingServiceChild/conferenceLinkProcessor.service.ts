@@ -160,7 +160,6 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             function: 'processInitialLinkForSave',
             linkBeingProcessedIndex: linkIndex + 1,
             originalUrlForLink: link,
-            // batchRequestId và batchItemIndex (của ConferenceData) đã được kế thừa
         });
 
         linkLogger.info({ event: 'single_link_processing_start' }, `Processing link ${linkIndex + 1} for item ${batchItemIndexFromLogger}`);

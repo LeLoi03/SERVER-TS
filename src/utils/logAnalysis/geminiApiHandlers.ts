@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/geminiApiHandlers.ts
+// src/utils/logAnalysis/geminiApiHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import { OverallAnalysis } from '../../types/logAnalysis.types'; // Đảm bảo đường dẫn đúng

@@ -91,10 +91,10 @@ export class CrawlOrchestratorService {
                 return () => {
                     const processor = container.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
-                        conferenceAcronym: conference.Acronym,
-                        conferenceTitle: conference.Title,
-                        batchItemIndex: itemIndex
-                    });
+    conferenceAcronym: conference.Acronym, // << BIND CHÍNH Ở ĐÂY
+    conferenceTitle: conference.Title,   // << BIND CHÍNH Ở ĐÂY
+    batchItemIndex: itemIndex
+});
                     // Giả sử ConferenceProcessorService.process được cập nhật để nhận ApiModels
                     return processor.process(
                         conference,
@@ -201,11 +201,9 @@ export class CrawlOrchestratorService {
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         logger.info({
             event: 'crawl_summary',
-            batchRequestId,
             totalConferencesInput: inputCount,
             finalRecordsInJsonlForThisBatch: finalRecordCountInJsonl,
             csvRecordsReturnedFromProcessing: outputCount,
-            apiModelsUsed: apiModels, // << Log object models
             modelsDescription: modelsDesc, // Log mô tả ngắn
             totalGoogleApiRequests: this.apiKeyManager.getTotalRequests(),
             keysExhausted: this.apiKeyManager.areAllKeysExhausted(),

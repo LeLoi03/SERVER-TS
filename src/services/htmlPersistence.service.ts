@@ -51,7 +51,6 @@ export class HtmlPersistenceService {
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
             persistenceFlow: 'update',
-            apiModelsUsed: apiModels // << Log object models
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         flowLogger.info({ event: 'process_update_start' }, `Processing UPDATE flow (using API models: ${modelsDesc})`);

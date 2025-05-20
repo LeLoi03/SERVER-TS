@@ -52,13 +52,11 @@ export class ConferenceProcessorService {
         const confAcronym = conference?.Acronym || `UnknownAcronym-${taskIndex}`;
         const confTitle = conference?.Title || `UnknownTitle-${taskIndex}`;
 
-        const taskLogger = parentLogger.child({
+        const taskLogger = parentLogger.child({ // parentLogger là itemLogger
             processorTask: 'ConferenceProcessor',
-            title: confTitle,
-            acronym: confAcronym,
+            // title: confTitle, // XÓA NẾU confTitle === conference.Title (kế thừa từ itemLogger)
+            // acronym: confAcronym, // XÓA NẾU confAcronym === conference.Acronym (kế thừa từ itemLogger)
             taskIndex: taskIndex + 1,
-            apiModelsUsed: apiModels, // << Log object models
-            originalRequestId: conference.originalRequestId,
             event_group: 'conference_task_processing'
         });
 
@@ -93,7 +91,7 @@ export class ConferenceProcessorService {
                     conferenceUpdateData,
                     taskLogger,
                     apiModels // << TRUYỀN TOÀN BỘ ApiModels
-                               // HtmlPersistenceService sẽ chọn model phù hợp (vd: extractInfo hoặc extractCfp)
+                    // HtmlPersistenceService sẽ chọn model phù hợp (vd: extractInfo hoặc extractCfp)
                 );
                 taskLogger.info({ event: 'update_flow_finish', success: updateSuccess }, `Update flow finished.`);
                 if (!updateSuccess) {
@@ -161,7 +159,7 @@ export class ConferenceProcessorService {
             } else {
                 finishContext.success = false;
                 if (specificTaskError && !taskLogger.bindings().err) {
-                     finishContext.error_details = specificTaskError instanceof Error ? specificTaskError.message : String(specificTaskError);
+                    finishContext.error_details = specificTaskError instanceof Error ? specificTaskError.message : String(specificTaskError);
                 } else if (!specificTaskError && !taskSuccessfullyCompleted) {
                     finishContext.error_details = "Task did not complete successfully for an unspecified reason.";
                 }

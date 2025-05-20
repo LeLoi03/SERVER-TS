@@ -257,7 +257,7 @@ export class GeminiApiService {
         let currentModelNameToUse = params.modelName;
         let explicitFallbackModelNameToUse = params.fallbackModelName;
 
-        const callOperationLoggerBase = parentMethodLogger.child({ function: 'callGeminiAPI', apiType, crawlModel }); // Log crawlModel
+        const callOperationLoggerBase = parentMethodLogger.child({ function: 'callGeminiAPI', apiType });
         const defaultApiResponse: ApiResponse = { responseText: "", metaData: null };
 
         for (let attemptPhase = 0; attemptPhase < 2; attemptPhase++) {
@@ -509,7 +509,7 @@ export class GeminiApiService {
 
     private prepareFewShotParts(apiType: string, configForApiType: GeneralApiTypeConfig, parentLogger: Logger): Part[] {
         const fewShotParts: Part[] = [];
-        const prepLogger = parentLogger.child({ function: 'prepareFewShotParts', apiType });
+        const prepLogger = parentLogger.child({ function: 'prepareFewShotParts' });
 
         if (!configForApiType.inputs || !configForApiType.outputs || Object.keys(configForApiType.inputs).length === 0) {
             prepLogger.debug({ event: 'few_shot_prep_skipped_no_data_in_config' }, "Skipping few-shot parts: No inputs/outputs found or inputs are empty in API config.");
@@ -578,7 +578,13 @@ export class GeminiApiService {
     // Chúng ta chỉ cần đảm bảo rằng `crawlModel` được truyền vào `callGeminiAPI` một cách chính xác.
 
     public async extractInformation(params: GeminiApiParams, crawlModel: CrawlModelType, parentLogger?: Logger): Promise<ApiResponse> {
-        const methodLogger = this.getMethodLogger(parentLogger, 'extractInformation', { ...params, crawlModel }); // Log crawlModel ở đây
+
+        const { batch, ...paramsWithoutBatch } = params; // Tách trường 'batch' ra
+        const methodLogger = this.getMethodLogger(
+            parentLogger,
+            'extractInformation',
+            { ...paramsWithoutBatch, crawlModel } // Chỉ bind các params còn lại và crawlModel
+        );
         this.ensureInitialized(methodLogger);
 
         const apiType = this.API_TYPE_EXTRACT;
@@ -607,7 +613,7 @@ export class GeminiApiService {
         try {
             // Truyền crawlModel vào InternalCallGeminiApiParams
             const { responseText, metaData } = await this.callGeminiAPI({
-                batchPrompt: params.batch,
+                batchPrompt: batch, // Sử dụng biến 'batch' đã tách ra ở trên
                 batchIndex: params.batchIndex,
                 title: params.title,
                 acronym: params.acronym,
@@ -615,7 +621,7 @@ export class GeminiApiService {
                 modelName: selectedModelName,
                 fallbackModelName: fallbackModelName,
                 crawlModel: crawlModel, // << TRUYỀN VÀO ĐÂY
-            }, methodLogger);
+            }, methodLogger); // methodLogger giờ đây không còn binding 'batch' (prompt)
 
             const cleaningLogger = methodLogger.child({ modelUsed: selectedModelName, sub_op: 'jsonClean' });
             const cleanedResponseText = this.responseHandler.cleanJsonResponse(responseText, cleaningLogger);
@@ -636,7 +642,13 @@ export class GeminiApiService {
     }
 
     public async extractCfp(params: GeminiApiParams, crawlModel: CrawlModelType, parentLogger?: Logger): Promise<ApiResponse> {
-        const methodLogger = this.getMethodLogger(parentLogger, 'extractCfp', { ...params, crawlModel });
+        const { batch, ...paramsWithoutBatch } = params;
+        const methodLogger = this.getMethodLogger(
+            parentLogger,
+            'extractCfp',
+            { ...paramsWithoutBatch, crawlModel }
+        );
+
         this.ensureInitialized(methodLogger);
         const apiType = this.API_TYPE_CFP;
         const defaultResponse: ApiResponse = { responseText: "", metaData: null };
@@ -663,7 +675,7 @@ export class GeminiApiService {
 
         try {
             const { responseText, metaData } = await this.callGeminiAPI({
-                batchPrompt: params.batch,
+                batchPrompt: batch, // Sử dụng biến 'batch' đã tách ra
                 batchIndex: params.batchIndex,
                 title: params.title,
                 acronym: params.acronym,
@@ -700,7 +712,12 @@ export class GeminiApiService {
     }
 
     public async determineLinks(params: GeminiApiParams, crawlModel: CrawlModelType, parentLogger?: Logger): Promise<ApiResponse> {
-        const methodLogger = this.getMethodLogger(parentLogger, 'determineLinks', { ...params, crawlModel });
+        const { batch, ...paramsWithoutBatch } = params;
+        const methodLogger = this.getMethodLogger(
+            parentLogger,
+            'determineLinks',
+            { ...paramsWithoutBatch, crawlModel }
+        );
         this.ensureInitialized(methodLogger);
         const apiType = this.API_TYPE_DETERMINE;
         const defaultResponse: ApiResponse = { responseText: "", metaData: null };
@@ -727,8 +744,8 @@ export class GeminiApiService {
 
         try {
             const { responseText, metaData } = await this.callGeminiAPI({
-                batchPrompt: params.batch,
-                batchIndex: params.batchIndex,
+                batchPrompt: batch, // Sử dụng biến 'batch' đã tách ra
+                batchIndex: params.batchIndex,  
                 title: params.title,
                 acronym: params.acronym,
                 apiType,

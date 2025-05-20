@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/taskLifecycleHandlers.ts
+// src/utils/logAnalysis/taskLifecycleHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import { OverallAnalysis } from '../../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu

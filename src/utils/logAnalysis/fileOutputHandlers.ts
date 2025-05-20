@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/fileOutputHandlers.ts
+// src/utils/logAnalysis/fileOutputHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import { FileOutputAnalysis, OverallAnalysis } from '../../types/logAnalysis.types'; // Giả sử bạn có type này
@@ -46,10 +46,10 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
 
     const acronym = logEntry.conferenceAcronym;
     const title = logEntry.conferenceTitle;
-    const requestId = logEntry.requestId; // <<< RẤT QUAN TRỌNG
+    const batchRequestId = logEntry.batchRequestId; // <<< RẤT QUAN TRỌNG
 
-    if (!requestId) {
-        // console.warn("CSV write success event is missing requestId:", logEntry);
+    if (!batchRequestId) {
+        // console.warn("CSV write success event is missing batchRequestId:", logEntry);
         fileOutput.csvOrphanedSuccessRecords = (fileOutput.csvOrphanedSuccessRecords || 0) + 1;
         return;
     }
@@ -59,7 +59,7 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
         return;
     }
 
-    const compositeKey = createConferenceKey(requestId, acronym, title);
+    const compositeKey = createConferenceKey(batchRequestId, acronym, title);
 
 
     if (compositeKey && results.conferenceAnalysis[compositeKey]) {
@@ -121,13 +121,13 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
 //     const context = logEntry.context || {};
 //     const acronym = context.acronym || logEntry.acronym;
 //     const title = context.title || logEntry.title;
-//     const requestId = context.requestId || logEntry.requestId; // Lấy requestId
+//     const batchRequestId = context.batchRequestId || logEntry.batchRequestId; // Lấy batchRequestId
 
 //     const errorMessage = logEntry.error?.message || logEntry.msg || "CSV write failed";
 //     const normalizedError = normalizeErrorKey(logEntry.error || errorMessage); // Giả sử bạn có normalizeErrorKey
 
-//     if (!requestId) {
-//         // console.warn("CSV write failed event is missing requestId:", logEntry);
+//     if (!batchRequestId) {
+//         // console.warn("CSV write failed event is missing batchRequestId:", logEntry);
 //         // Ghi nhận lỗi chung cho CSV nhưng không thể liên kết với conference cụ thể
 //         fileOutput.csvWriteErrors = (fileOutput.csvWriteErrors || 0) + 1; // Lỗi ghi CSV chung
 //         // Có thể không nên tăng csvPipelineFailures ở đây trừ khi đây là lỗi pipeline
@@ -139,7 +139,7 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
 //         return;
 //     }
 
-//     const compositeKey = createConferenceKey(requestId, acronym, title);
+//     const compositeKey = createConferenceKey(batchRequestId, acronym, title);
 
 //     if (compositeKey && results.conferenceAnalysis[compositeKey]) {
 //         const confDetail = results.conferenceAnalysis[compositeKey];

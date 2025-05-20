@@ -95,15 +95,10 @@ export class BatchProcessingService {
         this.conferenceLinkProcessorService = conferenceLinkProcessorService;
         this.conferenceDeterminationService = conferenceDeterminationService;
         this.conferenceDataAggregatorService = conferenceDataAggregatorService;
-
         this.serviceBaseLogger = loggingService.getLogger({ service: 'BatchProcessingServiceOrchestrator' });
-
-        this.serviceBaseLogger = loggingService.getLogger({ service: 'BatchProcessingServiceOrchestrator' });
-
         this.batchesDir = this.configService.batchesDir;
         this.tempDir = this.configService.tempDir;
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
-
         this.serviceBaseLogger.info("BatchProcessingService constructed.");
         this.serviceBaseLogger.info(`Batches Directory: ${this.batchesDir}`);
         this.serviceBaseLogger.info(`Temp Directory: ${this.tempDir}`);
@@ -172,8 +167,6 @@ export class BatchProcessingService {
             isUpdateContext: isUpdate,
             extractModelUsed: extractModel, // Log model cụ thể
             cfpModelUsed: cfpModel,         // Log model cụ thể
-            batchItemIndex,
-            service: 'BatchProcessingServiceOrchestrator'
         });
 
         const suffix = isUpdate ? `_update_response_${batchItemIndex}` : `_response_${batchItemIndex}`;
@@ -248,7 +241,7 @@ export class BatchProcessingService {
 
 
 
-     public async processConferenceUpdate(
+    public async processConferenceUpdate(
         browserContext: BrowserContext,
         conference: ConferenceUpdateData,
         parentLogger: Logger,
@@ -264,9 +257,8 @@ export class BatchProcessingService {
 
         const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceUpdate',
-            conferenceAcronym: conference.Acronym,
-            conferenceTitle: conference.Title,
-            apiModelsUsed: apiModels, // << Log object apiModels
+            // conferenceAcronym: conference.Acronym,
+            // conferenceTitle: conference.Title,
             service: 'BatchProcessingServiceOrchestrator'
         });
         const modelsDesc = `EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`; // Chỉ log model liên quan đến update
@@ -370,7 +362,7 @@ export class BatchProcessingService {
         }
     }
 
-     public async processConferenceSave(
+    public async processConferenceSave(
         browserContext: BrowserContext,
         conference: ConferenceData,
         links: string[],
@@ -386,14 +378,13 @@ export class BatchProcessingService {
         }
 
         const year = this.configService.config.YEAR2;
-         const methodLogger = parentLogger.child({
+        const methodLogger = parentLogger.child({ // parentLogger là flowLogger (từ HtmlPersistence)
             batchServiceMethod: 'processConferenceSave',
-            initialLinkCount: links.length,
-            processingYear: year,
-            conferenceAcronym: conference.Acronym,
-            conferenceTitle: conference.Title,
-            apiModelsUsed: apiModels, // << Log object apiModels
-            service: 'BatchProcessingServiceOrchestrator'
+            // initialLinkCount: links.length, // OK
+            // processingYear: year, // OK
+            // conferenceAcronym: conference.Acronym, // XÓA (kế thừa từ taskLogger/itemLogger)
+            // conferenceTitle: conference.Title,   // XÓA (kế thừa từ taskLogger/itemLogger)
+            service: 'BatchProcessingServiceOrchestrator' // Ghi đè service, OK
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         methodLogger.info({ event: 'batch_processing_flow_start', flow: 'save_initiation', modelsForSave: modelsDesc });
@@ -444,7 +435,6 @@ export class BatchProcessingService {
 
                 const batchTaskLogger = methodLogger.child({
                     asyncBatchTask: '_executeBatchTaskForSave',
-                    // batchItemIndexForAsyncTask: batchItemIndexFromParent, // Đã có trong methodLogger
                     conferenceAcronym: taskAcronymContext, // Acronym cho context của task này
                     conferenceTitle: taskTitleContext,
                 });
@@ -478,7 +468,7 @@ export class BatchProcessingService {
     }
 
 
-     private async _executeBatchTaskForUpdate(
+    private async _executeBatchTaskForUpdate(
         batchInput: BatchUpdateEntry,
         batchItemIndex: number,
         batchRequestIdForTask: string,
@@ -487,9 +477,6 @@ export class BatchProcessingService {
     ): Promise<boolean> {
         const logger = parentLogger.child({
             batchServiceFunction: '_executeBatchTaskForUpdate',
-            apiModelsUsed: { extract: apiModels.extractInfo, cfp: apiModels.extractCfp }, // Log model liên quan
-            batchItemIndex,
-            service: 'BatchProcessingServiceOrchestrator'
         });
         logger.info({ event: 'batch_task_start_execution', flow: 'update' });
 
@@ -519,7 +506,7 @@ export class BatchProcessingService {
                 .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
 
             // 2. Execute Final Extraction APIs
-             const apiResults = await this.executeFinalExtractionApis(
+            const apiResults = await this.executeFinalExtractionApis(
                 contentSendToAPI, batchItemIndex, batchInput.conferenceTitle, batchInput.conferenceAcronym,
                 safeConferenceAcronym, true,
                 apiModels.extractInfo, // << Model cho extract
@@ -556,13 +543,13 @@ export class BatchProcessingService {
             return false;
         }
     }
-public async _executeBatchTaskForSave(
+    public async _executeBatchTaskForSave(
         initialBatchEntries: BatchEntry[],
         batchItemIndex: number,
         batchAcronymForFiles: string,
         browserContext: BrowserContext,
         batchRequestIdForTask: string,
-        apiModels: ApiModels, // << THAY ĐỔI Ở ĐÂY
+        apiModels: ApiModels, // Nhận toàn bộ ApiModels
         logger: Logger
     ): Promise<boolean> {
         logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
@@ -619,14 +606,14 @@ public async _executeBatchTaskForSave(
 
             // 2. Call determine_links_api (API 1)
             // let determineLinksResponse: ApiResponse; // Đã khai báo ở trên
-            const determineApiLogger = logger.child({ geminiApiType: this.geminiApiService.API_TYPE_DETERMINE, geminiApiCallNumber: 1 });
+            const determineApiLogger = logger.child({ apiType: this.geminiApiService.API_TYPE_DETERMINE, geminiApiCallNumber: 1 });
             // Call determine_links_api (sử dụng batchItemIndex)
             const determineApiParams: GeminiApiParams = {
                 batch: batchContentForDetermine, batchIndex: batchItemIndex, // batchItemIndex của ConferenceData hiện tại
                 title: primaryEntryForContext.conferenceTitle, acronym: primaryEntryForContext.conferenceAcronym,
             };
 
-             try {
+            try {
                 determineLinksResponse = await this.geminiApiService.determineLinks(
                     determineApiParams,
                     apiModels.determineLinks, // << SỬ DỤNG apiModels.determineLinks
@@ -657,11 +644,12 @@ public async _executeBatchTaskForSave(
                     initialBatchEntries,
                     batchItemIndex,
                     browserContext,
+                    apiModels.determineLinks, // << TRUYỀN MODEL CHO DETERMINE Ở ĐÂY
                     processDetermineLogger // ++ TRUYỀN LOGGER ĐÃ KHỞI TẠO
                 );
             } catch (processError: any) {
                 processDetermineLogger.error({ err: processError, event: 'save_batch_process_determine_call_failed' });
-                throw processError;
+                throw processError; // Re-throw để bắt ở khối catch lớn hơn của _executeBatchTaskForSave
             }
 
             if (!processedMainEntries || processedMainEntries.length === 0 || !processedMainEntries[0] || processedMainEntries[0].conferenceLink === "None" || !processedMainEntries[0].conferenceTextPath) {
@@ -770,8 +758,6 @@ public async _executeBatchTaskForSave(
             batchServiceFunction: 'appendFinalRecord',
             outputPath: jsonlPathForBatch,
             recordAcronymForAppend: record.conferenceAcronym,
-            service: 'BatchProcessingServiceOrchestrator'
-            // batchRequestId đã có trong parentLogger
         });
         try {
             logger.info({ event: 'append_final_record_start' }, `Appending to ${path.basename(jsonlPathForBatch)}`);

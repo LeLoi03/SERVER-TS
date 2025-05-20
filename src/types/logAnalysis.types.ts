@@ -35,7 +35,7 @@ export interface FilteredData {
 /** Thông tin chi tiết về quá trình xử lý một conference cụ thể */
 export interface ConferenceAnalysisDetail {
 
-    requestId: string; // <<< NEW: Để dễ dàng truy cập requestId
+    batchRequestId: string; // <<< NEW: Để dễ dàng truy cập batchRequestId
     title: string;
     acronym: string;
     status: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped';
@@ -242,12 +242,12 @@ export interface LogAnalysisResult {
     status?: 'Completed' | 'Failed' | 'Processing';
     errorMessage?: string;
 
-    filterRequestId?: string; // <<< NEW: The specific requestId used for filtering, if any
-    analyzedRequestIds: string[]; // <<< NEW: List of all requestIds included in this analysis output
+    filterRequestId?: string; // <<< NEW: The specific batchRequestId used for filtering, if any
+    analyzedRequestIds: string[]; // <<< NEW: List of all batchRequestIds included in this analysis output
     
     // <<< NEW SECTION for per-request timings >>>
     requests: {
-        [requestId: string]: RequestTimings;
+        [batchRequestId: string]: RequestTimings;
     };
 
     totalLogEntries: number;
@@ -269,7 +269,7 @@ export interface LogAnalysisResult {
     logProcessingErrors: string[];
 
     conferenceAnalysis: {
-        // Key sẽ là: `${requestId}-${acronym}-${title}`
+        // Key sẽ là: `${batchRequestId}-${acronym}-${title}`
         [compositeKeyIncludingRequestId: string]: ConferenceAnalysisDetail;
     };
 }

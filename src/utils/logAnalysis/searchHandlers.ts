@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/searchHandlers.ts
+// src/utils/logAnalysis/searchHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
 

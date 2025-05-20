@@ -3,8 +3,8 @@ import fs from 'fs';
 import readline from 'readline';
 import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../../types/logAnalysis.types'; // Đảm bảo types đã được cập nhật
 import {
-    createConferenceKey,      // Đảm bảo helper này nhận requestId
-    initializeConferenceDetail, // Đảm bảo helper này nhận requestId
+    createConferenceKey,      // Đảm bảo helper này nhận batchRequestId
+    initializeConferenceDetail, // Đảm bảo helper này nhận batchRequestId
     addConferenceError,
     doesRequestOverlapFilter
 } from './helpers'; // Đảm bảo helpers đã được cập nhật
@@ -15,7 +15,7 @@ import { eventHandlerMap } from './index'; // Giả sử index.ts export eventHa
 // --- Step 1: readAndGroupLogs ---
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
     // const logger = baseLogger.child({ function: 'readAndGroupLogs', filePath: logFilePath });
-    // logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by requestId');
+    // logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by batchRequestId');
 
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
@@ -40,18 +40,18 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
                 const logEntry = JSON.parse(line);
                 parsedEntries++;
                 const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const requestId = logEntry.requestId;
+                const batchRequestId = logEntry.batchRequestId;
 
-                if (requestId && typeof requestId === 'string' && !isNaN(entryTimeMillis)) {
-                    if (!requestsData.has(requestId)) {
-                        requestsData.set(requestId, { logs: [], startTime: null, endTime: null });
+                if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
+                    if (!requestsData.has(batchRequestId)) {
+                        requestsData.set(batchRequestId, { logs: [], startTime: null, endTime: null });
                     }
-                    const requestInfo = requestsData.get(requestId)!;
+                    const requestInfo = requestsData.get(batchRequestId)!;
                     requestInfo.logs.push(logEntry);
                     requestInfo.startTime = Math.min(entryTimeMillis, requestInfo.startTime ?? entryTimeMillis);
                     requestInfo.endTime = Math.max(entryTimeMillis, requestInfo.endTime ?? entryTimeMillis);
                 } else {
-                    // logger.trace({ event: 'read_group_skip_entry', lineNum: totalEntries, hasRequestId: !!requestId, hasValidTime: !isNaN(entryTimeMillis), lineStart: line.substring(0, 50) }, "Skipping log entry (missing requestId or invalid time)");
+                    // logger.trace({ event: 'read_group_skip_entry', lineNum: totalEntries, hasRequestId: !!batchRequestId, hasValidTime: !isNaN(entryTimeMillis), lineStart: line.substring(0, 50) }, "Skipping log entry (missing batchRequestId or invalid time)");
                 }
 
             } catch (parseError: any) {
@@ -66,7 +66,7 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
         throw readError;
     }
 
-    // logger.info({ event: 'read_group_end', totalEntries, parsedEntries, requestIdsFound: requestsData.size, parseErrors: parseErrorsCount }, 'Finished Phase 1');
+    // logger.info({ event: 'read_group_end', totalEntries, parsedEntries, batchRequestIdsFound: requestsData.size, parseErrors: parseErrorsCount }, 'Finished Phase 1');
 
     return {
         requestsData,
@@ -82,55 +82,55 @@ export const filterRequests = (
     allRequestsData: Map<string, RequestLogData>,
     filterStartMillis: number | null,
     filterEndMillis: number | null,
-    requestIdFilter?: string
+    batchRequestIdFilter?: string
     // baseLogger?: Logger
 ): FilteredData => {
     // const logger = baseLogger?.child({ function: 'filterRequests' }) || console;
-    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis, requestIdFilter }, 'Starting: Filtering requests');
+    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis, batchRequestIdFilter }, 'Starting: Filtering requests');
 
     const filteredRequests = new Map<string, RequestLogData>();
     let analysisStartMillis: number | null = null;
     let analysisEndMillis: number | null = null;
 
-    if (requestIdFilter) {
-        // logger.info({ event: 'filter_mode_requestId', targetRequestId: requestIdFilter }, `Filtering for specific requestId: ${requestIdFilter}`);
-        const requestInfo = allRequestsData.get(requestIdFilter);
+    if (batchRequestIdFilter) {
+        // logger.info({ event: 'filter_mode_batchRequestId', targetRequestId: batchRequestIdFilter }, `Filtering for specific batchRequestId: ${batchRequestIdFilter}`);
+        const requestInfo = allRequestsData.get(batchRequestIdFilter);
         if (requestInfo) {
             const overlapsTimeFilter = doesRequestOverlapFilter(
                 requestInfo.startTime,
                 requestInfo.endTime,
                 filterStartMillis,
                 filterEndMillis,
-                requestIdFilter //, logger
+                batchRequestIdFilter //, logger
             );
 
             if (filterStartMillis === null && filterEndMillis === null) {
-                filteredRequests.set(requestIdFilter, requestInfo);
+                filteredRequests.set(batchRequestIdFilter, requestInfo);
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
             } else if (overlapsTimeFilter) {
-                filteredRequests.set(requestIdFilter, requestInfo);
+                filteredRequests.set(batchRequestIdFilter, requestInfo);
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
             } else {
-                // logger.info({event: 'filter_requestId_found_but_outside_time_filter', requestIdFilter, reqStart: requestInfo.startTime, reqEnd: requestInfo.endTime}, "RequestId found but outside specified time filter.")
+                // logger.info({event: 'filter_batchRequestId_found_but_outside_time_filter', batchRequestIdFilter, reqStart: requestInfo.startTime, reqEnd: requestInfo.endTime}, "RequestId found but outside specified time filter.")
             }
         } else {
-            // logger.warn({ event: 'filter_requestId_not_found', targetRequestId: requestIdFilter }, `Specified requestId for filtering not found.`);
+            // logger.warn({ event: 'filter_batchRequestId_not_found', targetRequestId: batchRequestIdFilter }, `Specified batchRequestId for filtering not found.`);
         }
     } else {
         // logger.info({ event: 'filter_mode_time_range' }, `Filtering by time range for all requests.`);
-        for (const [requestId, requestInfo] of allRequestsData.entries()) {
+        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
             const includeRequest = doesRequestOverlapFilter(
                 requestInfo.startTime,
                 requestInfo.endTime,
                 filterStartMillis,
                 filterEndMillis,
-                requestId //, logger
+                batchRequestId //, logger
             );
 
             if (includeRequest) {
-                filteredRequests.set(requestId, requestInfo);
+                filteredRequests.set(batchRequestId, requestInfo);
                 if (requestInfo.startTime !== null) {
                     analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
                 }
@@ -165,15 +165,15 @@ export const processLogEntry = (
     const contextFields = logEntry.context || {};
     const acronym = contextFields.acronym || contextFields.conferenceAcronym || logEntry.acronym || logEntry.conferenceAcronym;
     const title = contextFields.title || contextFields.conferenceTitle || logEntry.title || logEntry.conferenceTitle;
-    const currentRequestId = logEntry.requestId; // <<< Lấy requestId từ log entry
+    const currentRequestId = logEntry.batchRequestId;
 
-    // <<< MODIFIED: createConferenceKey now includes requestId >>>
+    // <<< MODIFIED: createConferenceKey now includes batchRequestId >>>
     const compositeKey = createConferenceKey(currentRequestId, acronym, title);
     let confDetail: ConferenceAnalysisDetail | null = null;
 
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
-            // <<< MODIFIED: initializeConferenceDetail now includes requestId >>>
+            // <<< MODIFIED: initializeConferenceDetail now includes batchRequestId >>>
             results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(currentRequestId, acronym!, title!);
             // entrySpecificLogger.trace({ compositeKey }, 'Initialized new conference detail');
         }
@@ -182,9 +182,9 @@ export const processLogEntry = (
             conferenceLastTimestamp[compositeKey] = Math.max(entryTimeMillis, conferenceLastTimestamp[compositeKey] ?? 0);
         }
     } else if (acronym && (eventName?.startsWith('task_') || eventName?.includes('conference') || eventName?.includes('gemini') || eventName?.includes('save_') || eventName?.includes('csv_'))) {
-        // entrySpecificLogger.warn({ logEvent: eventName, acronym, requestId: currentRequestId }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
+        // entrySpecificLogger.warn({ logEvent: eventName, acronym, batchRequestId: currentRequestId }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
     } else if (eventName && !compositeKey && !acronym) {
-        // entrySpecificLogger.trace({ logEvent: eventName, requestId: currentRequestId }, 'Log entry event without acronym or title.');
+        // entrySpecificLogger.trace({ logEvent: eventName, batchRequestId: currentRequestId }, 'Log entry event without acronym or title.');
     }
 
     if (eventName && eventHandlerMap[eventName]) {
@@ -196,10 +196,10 @@ export const processLogEntry = (
             if (confDetail) {
                 addConferenceError(confDetail, entryTimestampISO, handlerError, `Internal error processing event ${eventName}`);
             }
-            results.logProcessingErrors.push(`Handler error for event '${eventName}' on requestId '${currentRequestId}': ${handlerError.message}`);
+            results.logProcessingErrors.push(`Handler error for event '${eventName}' on batchRequestId '${currentRequestId}': ${handlerError.message}`);
         }
     } else if (eventName) {
-        // entrySpecificLogger.trace({ eventName, requestId: currentRequestId }, `No specific handler registered for event: ${eventName}`);
+        // entrySpecificLogger.trace({ eventName, batchRequestId: currentRequestId }, `No specific handler registered for event: ${eventName}`);
     }
 };
 
@@ -229,8 +229,8 @@ export const calculateFinalMetrics = (
 
         Object.values(results.conferenceAnalysis).forEach(detail => {
             const detailEndTimeMillis = detail.endTime ? new Date(detail.endTime).getTime() : null;
-            // <<< MODIFIED: Use requestId from detail to create key for conferenceLastTimestamp >>>
-            const confKeyForTimestamp = createConferenceKey(detail.requestId, detail.acronym, detail.title);
+            // <<< MODIFIED: Use batchRequestId from detail to create key for conferenceLastTimestamp >>>
+            const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
             const lastSeenTime = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] ?? null : null;
             const consideredEndTime = detailEndTimeMillis ?? ((detail.status === 'completed' || detail.status === 'failed' || detail.status === 'skipped') ? lastSeenTime : null);
 
@@ -276,7 +276,7 @@ export const calculateFinalMetrics = (
                 endTime: null,
                 durationSeconds: null,
             };
-            // logger.warn({ event: 'final_calc_missing_request_data', requestId: reqId }, 'Request ID in analyzedRequestIds not found in filteredRequestsData.');
+            // logger.warn({ event: 'final_calc_missing_request_data', batchRequestId: reqId }, 'Request ID in analyzedRequestIds not found in filteredRequestsData.');
         }
     }
 
@@ -285,7 +285,7 @@ export const calculateFinalMetrics = (
     const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
     // results.overall.processedConferencesCount is typically incremented by task_start handlers
 
-    processedCompositeKeys.forEach(key => { // key here is `${requestId}-${acronym}-${title}`
+    processedCompositeKeys.forEach(key => { // key here is `${batchRequestId}-${acronym}-${title}`
         const detail = results.conferenceAnalysis[key];
 
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
@@ -323,8 +323,8 @@ export const calculateFinalMetrics = (
                 detail.csvWriteSuccess = false;
 
                 if (!detail.endTime) {
-                    // <<< MODIFIED: Use requestId from detail to create key for conferenceLastTimestamp >>>
-                    const confKeyForTimestamp = createConferenceKey(detail.requestId, detail.acronym, detail.title);
+                    // <<< MODIFIED: Use batchRequestId from detail to create key for conferenceLastTimestamp >>>
+                    const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
                     const lastTimestamp = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
                     detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : (results.overall.endTime || new Date().toISOString());
                 }

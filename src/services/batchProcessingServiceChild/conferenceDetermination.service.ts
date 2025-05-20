@@ -4,7 +4,7 @@ import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
 import { GeminiApiService, GeminiApiParams, ApiResponse } from '../geminiApi.service';
 import { IConferenceLinkProcessorService } from './conferenceLinkProcessor.service';
-import { BatchEntry } from '../../types/crawl.types';
+import { BatchEntry, CrawlModelType, ApiModels } from '../../types/crawl.types'; // << IMPORT CrawlModelType và ApiModels
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 
@@ -14,6 +14,7 @@ export interface IConferenceDeterminationService {
         originalBatch: BatchEntry[], // Batch from initial link processing (SAVE flow)
         batchIndexForApi: number,    // Batch index used for the API call
         browserContext: BrowserContext,
+        determineModel: CrawlModelType, // << THÊM THAM SỐ MODEL
         logger: Logger
     ): Promise<BatchEntry[]>; // Returns array with the processed main entry, or original with error
 }
@@ -108,7 +109,6 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         logger: Logger
     ): Promise<BatchEntry> {
         const childLogger = logger.child({
-            service: 'ConferenceDeterminationService',
             function: 'handleDetermineMatchInternal',
             matchedLink: matchingEntry.conferenceLink,
         });
@@ -174,12 +174,14 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         officialWebsiteNormalizedFromApi1: string, // URL from API 1
         primaryEntryToUpdate: BatchEntry,         // The entry to update (usually batch[0])
         batchIndex: number,                       // For API calls and filenames
+        determineModelForApi2: CrawlModelType, // << THÊM THAM SỐ MODEL
         logger: Logger
     ): Promise<BatchEntry> {
         const childLogger = logger.child({
-            service: 'ConferenceDeterminationService',
             function: 'handleDetermineNoMatchInternal',
             initialOfficialWebsite: officialWebsiteNormalizedFromApi1,
+            determineModelUsedForApi2: determineModelForApi2 // Log model được dùng
+
         });
         childLogger.info({ event: 'start_no_match_handling' });
 
@@ -208,7 +210,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             fullTextForApi2 = await this.fileSystemService.readFileContent(mainTextPath, childLogger);
             childLogger.info({ filePath: mainTextPath, textLength: fullTextForApi2.length, event: 'read_fetched_main_content_success' });
         } catch (readErr: any) {
-            childLogger.error({ filePath: mainTextPath, err: readErr, event: 'save_batch_read_content_failed', contentType: 'main_for_api2_determination', isCritical: true });            
+            childLogger.error({ filePath: mainTextPath, err: readErr, event: 'save_batch_read_content_failed', contentType: 'main_for_api2_determination', isCritical: true });
             // Continue, API 2 might fail or give poor results
         }
 
@@ -226,9 +228,9 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
         try {
             childLogger.info({ ...api2LogContext, inputLength: batchContentForApi2.length, event: 'api2_determine_call_start' });
-            const api2Response = await this.geminiApiService.determineLinks(api2Params, childLogger);
+            // << SỬA LỖI Ở ĐÂY: Truyền determineModelForApi2 và childLogger đúng thứ tự
+            const api2Response = await this.geminiApiService.determineLinks(api2Params, determineModelForApi2, childLogger);
             api2ResponseText = api2Response.responseText || "";
-            // primaryEntryToUpdate.determineMetaDataApi2 = api2Response.metaData; // Store if needed
             childLogger.info({ ...api2LogContext, responseLength: api2ResponseText.length, event: 'api2_determine_call_success' });
         } catch (determineLinksError: any) {
             childLogger.error({ ...api2LogContext, err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 2 });
@@ -301,11 +303,13 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         originalBatch: BatchEntry[],
         batchIndexForApi: number,
         browserContext: BrowserContext,
+        determineModel: CrawlModelType, // << NHẬN MODEL Ở ĐÂY
+
         parentLogger: Logger
     ): Promise<BatchEntry[]> {
         const logger = parentLogger.child({
-            service: 'ConferenceDeterminationService',
             function: 'determineAndProcessOfficialSite',
+            determineModelUsed: determineModel // Log model được dùng
         });
         logger.info({ responseTextLength: api1ResponseText?.length ?? 0, inputBatchSize: originalBatch.length, event: 'start_processing_determine_api_response' });
 
@@ -362,12 +366,10 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             let processedEntry: BatchEntry | null = null;
             if (matchingEntryFromBatch) {
                 logger.info({ matchedLinkInBatch: matchingEntryFromBatch.conferenceLink, event: 'entry_match_found_in_batch' });
-                // If matched, its conferenceTextPath should already exist from initial processing.
-                // We just need to process its CFP/IMP links based on API 1.
-                processedEntry = await this.handleDetermineMatchInternal(
+                processedEntry = await this.handleDetermineMatchInternal( // Không cần truyền model vì hàm này không gọi API determine mới
                     page,
                     matchingEntryFromBatch,
-                    officialWebsiteNormalizedFromApi1, // Base for CFP/IMP links
+                    officialWebsiteNormalizedFromApi1,
                     cfpLinkNormalizedApi1,
                     impLinkNormalizedApi1,
                     batchIndexForApi,
@@ -375,12 +377,12 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 );
             } else {
                 logger.info({ officialWebsiteFromApi1: officialWebsiteNormalizedFromApi1, event: 'entry_match_not_found_in_batch_proceed_with_api1_link' });
-                // If no match, we process the officialWebsiteNormalizedFromApi1 from scratch
                 processedEntry = await this.handleDetermineNoMatchInternal(
                     page,
                     officialWebsiteNormalizedFromApi1,
-                    primaryEntryForContext, // Update this entry
+                    primaryEntryForContext,
                     batchIndexForApi,
+                    determineModel, // << TRUYỀN MODEL XUỐNG ĐÂY
                     logger
                 );
             }
@@ -395,7 +397,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 return [primaryEntryForContext];
             }
 
-         } catch (error: any) {
+        } catch (error: any) {
             // SỬA EVENT NAME và thêm context (nếu lỗi này không được bắt và rethrow ở BatchProcessingService)
             // Hiện tại, lỗi này nên được bắt bởi _executeBatchTaskForSave và log 'save_batch_process_determine_call_failed'
             // hoặc 'save_batch_unhandled_error_or_rethrown' ở cấp cao hơn.

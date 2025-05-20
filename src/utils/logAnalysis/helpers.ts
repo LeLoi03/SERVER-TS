@@ -14,22 +14,22 @@ export const normalizeErrorKey = (error: any): string => {
 };
 
 // --- Helper function: Create Composite Key ---
-export const createConferenceKey = (requestId: string, acronym: string, title: string): string | null => {
-    if (!requestId || typeof requestId !== 'string' || requestId.trim() === '') {
-        // logger.warn('Attempted to create conference key without a valid requestId.'); // Ghi log nếu cần
+export const createConferenceKey = (batchRequestId: string, acronym: string, title: string): string | null => {
+    if (!batchRequestId || typeof batchRequestId !== 'string' || batchRequestId.trim() === '') {
+        // logger.warn('Attempted to create conference key without a valid batchRequestId.'); // Ghi log nếu cần
         return null; // Request ID là bắt buộc
     }
     if (acronym && typeof acronym === 'string' && acronym.trim() !== '' &&
         title && typeof title === 'string' && title.trim() !== '') {
-        return `${requestId.trim()} - ${acronym.trim()} - ${title.trim()}`;
+        return `${batchRequestId.trim()} - ${acronym.trim()} - ${title.trim()}`;
     }
     return null;
 };
 
 // --- Helper function: Initialize Conference Detail ---
 
-export const initializeConferenceDetail = (requestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
-    requestId: requestId, // <<< NEW
+export const initializeConferenceDetail = (batchRequestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
+    batchRequestId: batchRequestId, // <<< NEW
 
     title: title,
     acronym: acronym,
@@ -239,9 +239,9 @@ export const doesRequestOverlapFilter = (
     reqEndMillis: number | null,
     filterStartMillis: number | null,
     filterEndMillis: number | null,
-    requestId: string // For logging context
+    batchRequestId: string // For logging context
 ): boolean => {
-    const logContext = { function: 'doesRequestOverlapFilter', requestId };
+    const logContext = { function: 'doesRequestOverlapFilter', batchRequestId };
 
     if (filterStartMillis === null && filterEndMillis === null) {
         return true; // No filter applied

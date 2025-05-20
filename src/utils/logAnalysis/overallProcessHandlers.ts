@@ -76,9 +76,9 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
             processedDataFromController.forEach((resultItem: any) => {
                 const acronym = resultItem.acronym;
                 const title = resultItem.title;
-                const currentRequestId = logEntry.requestId; 
+                const currentBatchRequestId = logEntry.batchRequestId; 
 
-                const compositeKey = createConferenceKey(currentRequestId, acronym, title);
+                const compositeKey = createConferenceKey(currentBatchRequestId, acronym, title);
 
                 if (compositeKey && results.conferenceAnalysis[compositeKey]) {
                     const detailToUpdate = results.conferenceAnalysis[compositeKey] as ConferenceAnalysisDetail;
@@ -91,7 +91,7 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
                     // Ở đây, chỉ lưu trữ finalResult. Trạng thái 'completed' của conference
                     // nên được quản lý bởi handleCsvWriteSuccess.
 
-                } else if (acronym || title || currentRequestId) {
+                } else if (acronym || title || currentBatchRequestId) {
                     // logger.warn({...})
                 }
             });

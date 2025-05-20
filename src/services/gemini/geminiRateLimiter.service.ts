@@ -31,7 +31,7 @@ export class GeminiRateLimiterService {
     public getLimiter(modelName: string, parentLogger: Logger): RateLimiterMemory {
         // Create child logger specific to this operation, using parent's context
         // and adding its own fixed context for log consistency.
-        const logger = parentLogger.child({ function: 'getRateLimiterForModel', modelName });
+        const logger = parentLogger.child({ function: 'getRateLimiterForModel' });
 
         if (!this.modelRateLimitersInternal.has(modelName)) {
             // Original log: "Creating new rate limiter" with context { modelName, function }

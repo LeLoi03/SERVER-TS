@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/batchProcessingHandlers.ts
+// src/utils/logAnalysis/batchProcessingHandlers.ts
 import { LogEventHandler } from './index'; // Hoặc từ './index'
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
 
@@ -143,11 +143,15 @@ export const handleBatchFinishSuccess: LogEventHandler = (logEntry, results, con
 
 export const handleBatchAggregationEnd: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event: 'save_batch_aggregate_content_end'
-    if (logEntry.context?.aggregatedCount !== undefined && logEntry.context?.aggregatedCount !== null) { // Ưu tiên aggregatedCount
-        results.batchProcessing.aggregatedResultsCount = logEntry.context.aggregatedCount;
-    } else if (logEntry.context?.aggregatedItems !== undefined && logEntry.context?.aggregatedItems !== null) { // Sau đó là aggregatedItems
-        results.batchProcessing.aggregatedResultsCount = logEntry.context.aggregatedItems;
-    } else if (logEntry.context?.charCount !== undefined && logEntry.context?.charCount !== null) { // Cuối cùng là charCount
-        results.batchProcessing.aggregatedResultsCount = logEntry.context.charCount;
+    const aggregatedCount = logEntry.aggregatedCount || logEntry.context?.aggregatedCount;
+    const aggregatedItems = logEntry.aggregatedItems || logEntry.context?.aggregatedItems;
+    const charCount = logEntry.charCount || logEntry.context?.charCount;
+
+    if (aggregatedCount !== undefined && aggregatedCount !== null) {
+        results.batchProcessing.aggregatedResultsCount = aggregatedCount;
+    } else if (aggregatedItems !== undefined && aggregatedItems !== null) {
+        results.batchProcessing.aggregatedResultsCount = aggregatedItems;
+    } else if (charCount !== undefined && charCount !== null) {
+        results.batchProcessing.aggregatedResultsCount = charCount;
     }
 };

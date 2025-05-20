@@ -30,7 +30,7 @@ export class GeminiContextCacheService {
         const cacheKey = `${apiType}-${modelName}`;
         // Create a child logger specific to this operation, inheriting parent context
         // and adding its own fixed context. This ensures logs are like the original.
-        const methodLogger = logger.child({ function: 'getOrCreateContextCache', cacheKey, apiType, modelName });
+        const methodLogger = logger.child({ function: 'getOrCreateContextCache', cacheKey });
 
         methodLogger.debug({ event: 'cache_context_get_or_create_start' }, "Getting or creating context cache");
 
