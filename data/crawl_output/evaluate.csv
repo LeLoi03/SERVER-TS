@@ -1,194 +1,102 @@
 "title","acronym","link","cfpLink","impLink","information","conferenceDates","year","location","cityStateProvince","country","continent","type","submissionDate","notificationDate","cameraReadyDate","registrationDate","otherDate","topics","publisher","summary","callForPapers"
-"Symposium of Asian Association for Algorithms and Computation","AAAC","https://conference.cs.cityu.edu.hk/aaac2025/","https://conference.cs.cityu.edu.hk/aaac2025/#call-for-papers","https://conference.cs.cityu.edu.hk/aaac2025/","conferenceDates: May 31 - June 1, 2025
+"ACM SIGGRAPH/Eurographics Symposium on Computer Animation","SCA","https://computeranimation.org/","https://computeranimation.org/instructions.html","https://computeranimation.org/","conferenceTitle: ACM SIGGRAPH/Eurographics Symposium on Computer Animation
+conferenceAcronym: SCA
 year: 2025
-location: City University of Hong Kong, Hong Kong, China
-cityStateProvince: Hong Kong
-country: China
-continent: Asia
-type: Offline
-submissionDate.Submission due: February 28, 2025
-notificationDate.Notification: March 28, 2025
-cameraReadyDate.Camera-ready version due: April 18, 2025
-registrationDate.Early Registration due: April 25, 2025
-topics: All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.
-publisher: Asian Association for Algorithms and Computation","May 31 - June 1, 2025","2025","City University of Hong Kong, Hong Kong, China","Hong Kong","China","Asia","Offline","{""Submission due"":""February 28, 2025""}","{""Notification"":""March 28, 2025""}","{""Camera-ready version due"":""April 18, 2025""}","{""Early Registration due"":""April 25, 2025""}","{}","All areas of theoretical computer science, especially design and analysis of algorithms and complexity theory.","Asian Association for Algorithms and Computation","AAAC 2025, the 16th Annual Meeting of the Asian Association for Algorithms and Computation, will take place in Hong Kong, China, from May 31 to June 1, 2025. The conference focuses on theoretical computer science, especially algorithms and complexity. Keynote speakers include Yossi Azar and Eunjung Kim. The conference invites one-page abstract submissions (PDF format) via EasyChair. Key dates include a submission deadline of February 28, 2025, and early registration by April 25, 2025. Registration fees are 1800 HKD for normal and 900 HKD for student registration.","# Call for Papers
+location: Vancouver, Canada
+date: August 8 to August 10, 2025
+submissionDate.Submission deadline (papers): April 7, 2025
+submissionDate.Submission deadline (posters): June 15, 2025
+notificationDate.Notification of acceptance: May 12, 2025
+notificationDate.Journal and poster notification: June 30, 2025
+cameraReadyDate.Revised version deadline: June 12, 2025
+cameraReadyDate.Camera-ready deadline: July 10, 2025
+topics: computer animation, time-based phenomena
+publisher: ACM","","2025","Vancouver, Canada","No city/state/province","No country","No continent","Offline","{""Submission deadline (papers)"":""April 7, 2025"",""Submission deadline (posters)"":""June 15, 2025""}","{""Notification of acceptance"":""May 12, 2025"",""Journal and poster notification"":""June 30, 2025""}","{""Revised version deadline"":""June 12, 2025"",""Camera-ready deadline"":""July 10, 2025""}","{}","{}","computer animation, time-based phenomena","ACM","The 24th annual Symposium on Computer Animation (SCA) will be held in Vancouver, Canada, from August 8 to August 10, 2025. SCA is the premier forum for innovations in the software and technology of computer animation. It brings together researchers and practitioners working on all aspects of time-based phenomena. The conference features a single-track program and emphasizes community interaction, making it an ideal venue for exchanging research results and fostering collaborations. The event invites submissions of original, high-quality papers and posters on computer animation, with accepted full papers published in the journal *Proceedings of the ACM in Computer Graphics and Interactive Techniques (PACMCGIT)*.","# Call for Papers
 
-## Introduction
-The 16th Annual Meeting of Asian Association for Algorithms and Computation (AAAC 2025) invites submissions of abstracts presenting original research or surveys of existing results in theoretical computer science. The meeting will be held at the City University of Hong Kong, Hong Kong, China on May 31 and June 1, 2025. This is a face-to-face event, and at least one author of each accepted submission is expected to register and present the work at the conference.
+We invite submissions of original, high-quality papers and posters on computer animation, broadly defined as computation dealing with time-varying phenomena. Accepted full papers will be published in the journal *Proceedings of the ACM in Computer Graphics and Interactive Techniques (PACMCGIT)*. Best Paper Awards will be given to excellent submissions that push the leading edge. Please refer to our [call-for-paper](instructions.html) page for paper submission information.
 
 ## Topics of Interest
-All areas of theoretical computer science, with a particular emphasis on:
 
--   Design and analysis of algorithms
--   Complexity theory
+The conference focuses on innovations in the software and technology of computer animation. It unites researchers and practitioners working on all aspects of time-based phenomena.
 
 ## Important Dates
 
--   **Submission due:** February 28 (Fri), 2025 (AoE)
--   **Notification:** March 28 (Fri), 2025
--   **Camera-ready version due:** April 18 (Fri), 2025
--   **Early Registration due:** April 25 (Fri), 2025
--   **Conference Dates:** May 31(Sat) - June 1(Sun), 2025
+1.  **Submission deadline (papers):** April 7, 2025 (23:59 Anywhere on Earth)
+2.  **Submission deadline (posters):** June 15, 2025 (23:59 AoE)
+3.  **Notification of acceptance:** May 12 2025
+4.  **Revised version deadline:** June 12, 2025 (23:59 AoE)
+5.  **Journal and poster notification:** June 30, 2025
+6.  **Camera-ready deadline:** July 10, 2025 (23:59 AoE)
 
 ## Submission Guidelines
 
-Authors are invited to submit one-page (A4) abstracts in PDF format. These abstracts can be based on original research or surveys of existing results. Informal working notes including the one-page abstracts will be distributed at the meeting. Such distribution does not prevent future publication of the same work.
-
-All submissions must be made electronically through the EasyChair Conference System:
-
-[https://easychair.org/conferences?conf=aaac2025](https://easychair.org/conferences?conf=aaac2025)
+Please refer to the [Author Instructions](instructions.html) page for detailed submission guidelines, including formatting requirements and submission system details.
 
 ## Submission Types
-Abstracts (one-page, PDF format)
 
-## Best Student Presentation Award
-The Best Student Presentation will be awarded. A paper presentation is eligible for the Best Student Presentation if the author who presents the paper is a full-time student. The award will be selected at the meeting by AAAC board members.
+*   **Papers:** Full papers will be published in the journal *Proceedings of the ACM in Computer Graphics and Interactive Techniques (PACMCGIT)*.
+*   **Posters:** Details to be announced.
 
-## Registration Fees
+## Contact Information
 
--   **Normal registration:** **1800 HKD**
--   **Student registration:** **900 HKD**
--   **Early bird registration:** by *April 25*
+For any questions, please refer to the conference website for contact information."
+"ACM SIGMOBILE International Conference on Mobile Systems, Applications and Services","Mobisys","https://www.sigmobile.org/mobisys/2025/","https://www.sigmobile.org/mobisys/2025/call_for_papers/","https://www.sigmobile.org/mobisys/2025/","conferenceTitle: ACM SIGMOBILE International Conference on Mobile Systems, Applications and Services
+conferenceAcronym: Mobisys
+topics: Mobile Computing, Wireless Systems, Mobile Applications, Mobile Services
+location: Anaheim, California, US
+year: 2025","","2025","Anaheim, California, US","No city/state/province","No country","No continent","Offline","{}","{}","{}","{}","{}","Mobile Computing, Wireless Systems, Mobile Applications, Mobile Services","No publisher","ACM MobiSys 2025, the 23rd ACM International Conference on Mobile Systems, Applications, and Services, will be held in Anaheim, California, US, from June 23rd to 27th, 2025. The conference focuses on innovative research in mobile computing, wireless systems, and related applications, and is sponsored by ACM SIGMOBILE. Key dates include a paper submission deadline of December 9th, 2024, and early registration due on May 23rd, 2025. MobiSys 2025 invites submissions covering various areas such as mobile networking, systems, applications, security, and IoT.","# Call for Papers
 
-[Registration Link](https://www.hkws.org/registration/aaac2025/reg.html)"
-"National Conference of the American Association for Artificial Intelligence","AAAI","https://aaai.org/conference/aaai/","","","conferenceDates: January 20 - 27, 2026
-year: 2026
-location: Singapore EXPO
-cityStateProvince: Singapore
-country: Singapore
-continent: Asia
-type: Offline
-topics: Artificial Intelligence
-publisher: Association for the Advancement of Artificial Intelligence","January 20 - 27, 2026","2026","Singapore EXPO","Singapore","Singapore","Asia","Offline","{}","{}","{}","{}","{}","Artificial Intelligence","Association for the Advancement of Artificial Intelligence","The AAAI Conference on Artificial Intelligence is a leading international conference dedicated to advancing the field of AI. AAAI promotes theoretical and applied AI research and facilitates intellectual exchange among researchers and practitioners. The conference will be held in Singapore EXPO from January 20 to January 27, 2026. The conference features presentations of substantial original research and practices, along with panel discussions and invited talks addressing important social, philosophical, and economic issues related to AI.","# Call for Papers
-
-The AAAI Conference on Artificial Intelligence (AAAI) is a premier venue for the presentation of original research in all areas of artificial intelligence. The conference promotes theoretical and applied AI research as well as intellectual interchange among researchers and practitioners. The technical program features substantial, original research and practices.
+The 23rd ACM International Conference on Mobile Systems, Applications, and Services (MobiSys 2025) invites submissions presenting innovative and significant research on the design, implementation, usage, and evaluation of mobile computing and wireless systems, applications, and services. The conference is sponsored by ACM SIGMOBILE and will be held in Anaheim, California, US, from June 23rd to 27th, 2025.
 
 ## Topics of Interest
 
-AAAI welcomes submissions on a broad range of topics in artificial intelligence, including but not limited to:
+MobiSys 2025 welcomes submissions on a wide range of topics, including but not limited to:
 
--   Machine Learning
--   Computer Vision
--   Natural Language Processing
--   Robotics
--   Knowledge Representation and Reasoning
--   Planning and Scheduling
--   Search and Constraint Satisfaction
--   Multiagent Systems
--   AI Ethics and Society
--   And more
+*   Mobile and wireless networking
+*   Mobile systems and operating systems
+*   Mobile applications and services
+*   Mobile sensing and context-awareness
+*   Mobile security and privacy
+*   Edge and cloud computing for mobile systems
+*   Internet of Things (IoT) and mobile devices
+*   Wearable computing
+*   Human-computer interaction for mobile devices
+*   Location-based services
+*   Mobile data analytics
+*   Systems and applications for augmented and virtual reality
+*   Systems for autonomous vehicles
 
 ## Important Dates
 
-_Please refer to the official AAAI conference website for the most up-to-date and specific deadlines. Note that the dates provided below are placeholders and should be verified._
-
-1.  **Submission Deadline**: [Insert Date]
-2.  **Notification of Acceptance**: [Insert Date]
-3.  **Camera-Ready Deadline**: [Insert Date]
-4.  **Conference Dates**: January 20 - January 27, 2026
+*   **Abstract Registration:** December 2nd, 2024 23:59 AoE
+*   **Paper Submission:** December 9th, 2024 23:59 AoE
+*   **Early Rejection Notification:** January 20th, 2025
+*   **Rebuttal Period:** February 13th - 17th, 2025
+*   **Final Decision Notification:** March 7th, 2025
+*   **Artifact Submission:** March 23rd, 2025 23:59 AoE
+*   **Poster/Demo/Rising Stars Submission:** April 11th, 2025 23:59 AoE
+*   **Workshop Submission:** April 19th, 2025
+*   **Student Volunteer Submission Deadline:** April 30th, 2025 23:59 AoE
+*   **Student Travel Grant Submission:** May 15th, 2025 23:59 AoE
+*   **N2Women Poster Submission:** May 18th, 2025 23:59 AoE
+*   **N2Women Travel Grant Submission:** May 18th, 2025 23:59 AoE
+*   **Early Registration Due:** May 23rd, 2025 23:59 PDT
+*   **Standard Registration Due:** June 16th, 2025 23:59 PDT
+*   **Main Conference:** June 23th - 27th, 2025
 
 ## Submission Guidelines
 
-1.  **Format**: Authors should follow the AAAI conference format guidelines. Details on the format will be available on the conference website.
-2.  **Length**: The maximum length for submissions is [Insert length, e.g., 8 pages] excluding references.
-3.  **Submission System**: Papers must be submitted electronically through the conference submission system, the link will be available on the conference website.
-4.  **Anonymization**: All submissions must be anonymized to facilitate a double-blind review process. Authors should remove their names and affiliations from the submitted paper and avoid any explicit references that might reveal their identity.
-5.  **Review Process**: All submissions will undergo a rigorous peer-review process by experts in the field.
-
-## Submission Types
-
-AAAI accepts several types of submissions, including:
-
--   Full Papers: Presenting original research contributions.
--   Short Papers: Presenting preliminary results, novel ideas, or work in progress.
--   [Other Submission Types, if any, specify requirements here]
+*   Submissions should be original and not previously published or under review elsewhere.
+*   All submissions must be in PDF format.
+*   Authors are encouraged to use the ACM conference format.
+*   Details about the submission process, including the submission link, can be found on the conference website.
+*   All submissions will be peer-reviewed by the Program Committee.
 
 ## Registration Fees
 
-_Registration details, fees, and deadlines will be announced on the conference website. This section is a placeholder._
-
--   **Regular Registration**: [Insert Fee]
--   **Student Registration**: [Insert Fee]
--   **Early Bird Registration**: [Insert Fee] (Deadline: *[Insert Date]*)
-
->   *Note: Registration fees typically include access to all conference sessions, the conference proceedings, and any meals or social events organized by the conference. Check the official website for specific details.*
+Registration details are available on the conference website:  [Registration](https://www.example.com/registration)
 
 ## Contact Information
 
-For inquiries regarding submissions or any other aspect of the conference, please contact the conference organizers at [Insert contact email address or link]."
-"International Conference on Distributed Computing Systems","ICDCS","https://icdcs2025.icdcs.org/","https://icdcs2025.icdcs.org/call-for-papers/","","conferenceDates: July 20 - 23, 2025
-year: 2025
-location: Glasgow, Scotland
-cityStateProvince: Glasgow
-country: Scotland
-continent: Europe
-type: Offline
-submissionDate.Paper Abstract Registration: December 11, 2024
-submissionDate.Paper Submission Due: December 18, 2024
-submissionDate.Workshop Proposals: November 27, 2024
-submissionDate.Doctoral Consortium: February 26, 2025
-submissionDate.Tutorial Proposals: February 26, 2025
-submissionDate.Posters Abstracts: January 29, 2025
-submissionDate.Posters Papers: February 5, 2025
-submissionDate.Demonstrations: February 5, 2025
-submissionDate.Industry Events: February 12, 2025
-notificationDate.Author Notification: April 2, 2025
-notificationDate.Workshop Proposals: January 15, 2025
-notificationDate.Doctoral Consortium: April 2, 2025
-cameraReadyDate.Camera-Ready Submission: April 16, 2025
-cameraReadyDate.Workshop Proposals: April 16, 2025
-cameraReadyDate.Doctoral Consortium: April 16, 2025
-cameraReadyDate.Posters: April 16, 2025
-cameraReadyDate.Demonstrations: April 16, 2025
-cameraReadyDate.Industry Events: April 16, 2025
-topics: Distributed Computing Systems
-publisher: IEEE","July 20 - 23, 2025","2025","Glasgow, Scotland","Glasgow","Scotland","Europe","Offline","{""Paper Abstract Registration"":""December 11, 2024"",""Paper Submission Due"":""December 18, 2024"",""Workshop Proposals"":""November 27, 2024"",""Doctoral Consortium"":""February 26, 2025"",""Tutorial Proposals"":""February 26, 2025"",""Posters Abstracts"":""January 29, 2025"",""Posters Papers"":""February 5, 2025"",""Demonstrations"":""February 5, 2025"",""Industry Events"":""February 12, 2025""}","{""Author Notification"":""April 2, 2025"",""Workshop Proposals"":""January 15, 2025"",""Doctoral Consortium"":""April 2, 2025""}","{""Camera-Ready Submission"":""April 16, 2025"",""Workshop Proposals"":""April 16, 2025"",""Doctoral Consortium"":""April 16, 2025"",""Posters"":""April 16, 2025"",""Demonstrations"":""April 16, 2025"",""Industry Events"":""April 16, 2025""}","{}","{}","Distributed Computing Systems","IEEE","The 45th IEEE International Conference on Distributed Computing Systems (ICDCS) will be held in Glasgow, Scotland, from July 20-23, 2025. This premier international forum invites researchers and practitioners to present and discuss cutting-edge ideas in distributed computing systems. The conference seeks original contributions across various tracks, including cloud computing, distributed algorithms, edge computing, and more. Key dates include abstract registration by December 11, 2024, paper submission by December 18, 2024, and author notification on April 2, 2025. Accepted papers will be presented at the in-person conference, and a selection of papers will be considered for publication in IEEE TPDS. Authors should adhere to IEEE's ethics and AI policies. The conference will also feature a Civic Reception and Closing Ceremony on July 23rd at the historic City Chambers, with social events and tours planned for delegates.","# Call for Papers
-
-## Scope
-The 45th IEEE International Conference on Distributed Computing Systems (IEEE ICDCS 2025) is the premier international forum for researchers and practitioners to present, discuss, and exchange cutting-edge ideas and the latest findings on topics related to all aspects of distributed computing systems. The conference will be held from July 20-23, 2025, in Glasgow, Scotland, UK. We invite you to submit original contributions to IEEE ICDCS 2025.
-
-## Topics of Interest
-Papers can be submitted to one of the following tracks:
-
--   Cloud Computing
--   Distributed Algorithms
--   Big Data, Models & Systems
--   Distributed Fault Tolerance
--   Distributed OS and Middleware
--   Edge Computing
--   IoT + CPS
--   Mobile Computing
--   Security, Privacy and Trust
--   Blockchains/Databases
--   Distributed Systems for AI/ML
--   AI/ML for Distributed Systems
--   Deployed/Emergent Applications & Infrastructures
-
-## Paper Submission
-The Paper strand provides the opportunity for researchers to present their new state-of-the-art research in Distributed Computing Systems, which makes, or has the potential to make, a significant contribution to the field.
-
-Papers must be original and unpublished and must not be submitted concurrently for publication elsewhere. All paper submissions should follow the IEEE 8.5″ x 11″ two-column format using 10pt fonts and the IEEE Conference template (downloadable by selecting “Conferences” in the IEEE-Template Selector [https://template-selector.ieee.org/](https://template-selector.ieee.org/)). Each submission can have up to eleven (11) pages (including figures, tables, appendices, and references). Papers exceeding this page limit or with smaller fonts will be desk-rejected without review.
-
-The paper review process is double-blind. Authors are required to take all reasonable steps to preserve the anonymity of their submission. The submission must not include author information and must not include citations or discussion of related work that would make the authorship apparent. While authors can upload their paper to institutional or other preprint repositories such as arXiv.org before reviewing is complete, we generally discourage this since it places anonymity at risk. If authors decide to upload their paper to a preprint site, they must make sure that the title and abstract of their submission to ICDCS are different from the title and abstract of the preprint version, so that it is not immediately obvious that the two versions are by the same authors and with the same content. To encourage reproducibility, we encourage the authors, whenever it is possible, to include in their paper a link to an anonymised GitHub repository with all source code, scripts, and data needed for the reproduction of their results.
-
-For each accepted paper, at least one author is required to pay a full author registration and attend the conference in-person to present their work on-site. Any no-show papers will be reported to the publisher and removed from the conference proceedings. For authors with multiple papers accepted by the conference, a separate author registration is required for each paper.
-
-Note that the authors should adhere to ethic and professional standards of IEEE. Please refer to [IEEE Code of Ethics](https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#ai-generated-text) and [IEEE Policy of AI-Generated Text](https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#ai-generated-text).
-
-Note: A set of highly selected IEEE ICDCS 2025 papers will be considered for publication in the IEEE Transactions on Parallel and Distributed Systems (TPDS). The selected papers will undergo an extension process, transforming them from their initial IEEE ICDCS conference format. These extended versions will then be subject to a review by an editor from IEEE TPDS.
-
-## Important Dates (Time zone: Anywhere on Earth (AoE))
-
-1.  Paper Abstract Registration: **December 4, 2024** (Extended to **December 11, 2024**)
-2.  Paper Submission Due: **December 11, 2024** (Extended to **December 18, 2024**)
-3.  Author Notification: **April 2, 2025**
-4.  Camera-Ready Submission: **April 16, 2025**
-
-## Submission
-
-*   Paper Submission Website: [https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Feasychair.org%2Fconferences%2F%3Fconf%3Dicdcs2025&data=05%7C02%7CChristos.Anagnostopoulos%40glasgow.ac.uk%7C6772c2b874c4403e9f2b08dcc354d5c2%7C6e725c29763a4f5081f22e254f0133c8%7C1%7C0%7C638600016320696355%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=NIhmRmg1GRSGaXJDn%2BKBvS%2FUOy17Qwi9zPNQP1p1jVg%3D&reserved=0](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Feasychair.org%2Fconferences%2F%3Fconf%3Dicdcs2025&data=05%7C02%7CChristos.Anagnostopoulos%40glasgow.ac.uk%7C6772c2b874c4403e9f2b08dcc354d5c2%7C6e725c29763a4f5081f22e254f0133c8%7C1%7C0%7C638600016320696355%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=NIhmRmg1GRSGaXJDn%2BKBvS%2FUOy17Qwi9zPNQP1p1jVg%3D&reserved=0) (Submission portal opens on 1 November 2024)
-
-## Contact Information
-
-For inquiries regarding the Call for Papers, email: [icdcs2025@easychair.org](mailto:icdcs2025@easychair.org)
+For any inquiries, please contact the conference organizers via the contact information provided on the conference website.
 "

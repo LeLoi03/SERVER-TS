@@ -1,0 +1,172 @@
+Conference Info:
+Title: ACM SIGGRAPH/Eurographics Symposium on Computer Animation
+Acronym: SCA
+
+Candidate Website Contents:
+Source Link [1]: https://computeranimation.org/
+Content [1]:
+href="index.html" - SCA 2025
+ProgramRegistrationhref="instructions.html" - Author Instructions
+AwardsPeopleVenue 
+
+THE 24TH ACM SIGGRAPH / Eurographics 
+ SYMPOSIUM ON COMPUTER ANIMATION (SCA 2025) 
+  
+ Vancouver, Canada 
+ August 8 to August 10, 2025 
+ Important Dates 
+  
+ Submission | Deadlines 
+ href="instructions.html#technical-papers" - Submission deadline (papers) | April 3April 7, 2025 (23:59 Anywhere on Earth) 
+ href="instructions.html#poster-abstract" - Submission deadline (posters) | June 15, 2025 (23:59 AoE) 
+ Notification of acceptance | May 12 2025 
+ Revised version deadline | June 12, 2025 (23:59 AoE) 
+ Journal and poster notification | June 30, 2025 
+ Camera-ready deadline | July 10, 2025 (23:59 AoE) 
+ News 
+ April 29, 2025: The submission deadline for SCA awards has been extended to May 18th. 
+ March 31, 2025: The submission deadline for papers has been pushed back to April 7th. 
+ March 13, 2025: Nominations for the Early Career Researcher and the Doctoral Dissertation awards are now open! More informationhere. 
+ SCA 2025 
+ The 24th annual Symposium on Computer Animation (SCA) will take place in Vancouver, Canada, from August 8 to August 10, 2025. 
+ SCA is the premier forum for innovations in the software and technology of computer animation. It unites researchers and practitioners working on all aspects of time-based phenomena. Our focused, intimate gathering, with a single track program and emphasis on community interaction, makes SCA the best venue to exchange research results, get inspired, and set up collaborations. 
+ We invite submission of original, high-quality papers and posters on computer animation, broadly defined as computation dealing with time-varying phenomena. Accepted full papers will be published in the journalProceedings of the ACM in Computer Graphics and Interactive Techniques (PACMCGIT). Best Paper Awards will be given to excellent submissions that push the leading edge. Please refer to ourhref="instructions.html" - call-for-paper
+page for paper submission information. 
+ Recent SCAs can be found here:href="https://computeranimation.org/2024/" - SCA 2024
+,href="https://computeranimation.org/2023/" - SCA 2023
+,href="https://computeranimation.org/2022/" - SCA 2022
+,href="https://computeranimation.org/2021/" - SCA 2021
+,href="https://computeranimation.org/2020/" - SCA 2020
+,href="https://web.archive.org/web/20230203185902/https://sca2019.kaist.ac.kr/wordpress/" - SCA 2019
+,href="https://sca2018.inria.fr/" - SCA 2018
+. For older conferences, seehref="https://www.cs.ubc.ca/~van/sca/sca.html" - here
+. 
+ Supported By 
+
+© SCA 2025 ACM SIGGRAPH / Eurographics Symposium on Computer Animation.
+
+---
+
+Source Link [2]: https://computeranimation.org/program.html
+Content [2]:
+href="index.html" - SCA 2025
+ProgramRegistrationhref="instructions.html" - Author Instructions
+AwardsPeopleVenue 
+
+THE 24TH ACM SIGGRAPH / Eurographics 
+ SYMPOSIUM ON COMPUTER ANIMATION (SCA 2025) 
+  
+ Vancouver, Canada 
+ August 8 to August 10, 2025 
+ The program has not been announced yet. Please check this page again in the near future! 
+ Supported By 
+
+© SCA 2025 ACM SIGGRAPH / Eurographics Symposium on Computer Animation.
+
+---
+
+Source Link [3]: https://easychair.org/cfp/SCA2025
+Content [3]:
+EasyChair Smart CFP | Docs/Log in | EasyChair Smart CFP | Docs/Log in 
+ EasyChair Smart CFP | Docs/Log in 
+ Home | New CFP | My CFPs | Watchlist 
+ CFP 
+  
+ SCA 2025: ACM SIGGRAPH / Eurographics Symposium on Computer Animation 
+ Vancouver, Canada, August 8-10, 2025 
+  
+ Conference website | https://computeranimation.org/ 
+ Submission link | href="https://easychair.org/conferences/?conf=sca2025" - https://easychair.org/conferences/?conf=sca2025 
+ Topics:href="/cfp/topic.cgi?tid=26644" - computer animation
+href="/cfp/topic.cgi?tid=385" - simulation
+ACM SIGGRAPH / Eurographics SCA ‘25 
+ https://computeranimation.org/ 
+ The 24th annual Symposium on Computer Animation (SCA) will take place in Vancouver, Canada from August 8-10 2025.Important Dates 
+ Submission Deadline (Papers):April 3, 2025 
+ Notification of Conditional Acceptance:May 12, 2025 
+ Revision Deadline (2nd review cycle):June 12, 2025 
+ Journal Notification:June 30, 2025 
+ Camera-ready due:July 10, 2025 
+ Conference:August 8 to 10, 2025 
+ All submission deadlines are 23:59 AoE timezone (Anywhere on Earth). 
+ Submission website:href="https://easychair.org/conferences/?conf=sca2025" - https://easychair.org/conferences/?conf=sca2025
+About the Conference 
+ SCA is the premier forum for presenting innovations on the theory, software, and technology of computer animation. The conference is a focused and intimate gathering of researchers and practitioners working on all aspects of time-based phenomena. Its single track program features paper sessions, poster presentations, panel discussions, and keynote talks. Plus its emphasis on community interaction makes SCA the best venue to exchange research results, get inspired, and initiate collaborations. 
+ We invite submissions of original, high-quality papers on computer animation, broadlydefined as computation dealing with time-varying phenomena. Papers will be submitted to theProceedings of the ACM in Computer Graphics and Interactive Techniques(PACMCGIT) journal and undergo two rounds of review. Accepted papers will appear in the PACMCGIT issue on SCA 2025, and authors of accepted papers will present their work at the conference. 
+ Topics of Interest 
+ We invite original work on a broad range of topics, including but not limited to: 
+ 2D, 3D, and N-D animation systems 
+ Autonomous agents 
+ Clothing animation and simulation 
+ Computational design of animated systems 
+ Expressive motion / communication 
+ Generative and morphable models 
+ 3D and 4D motion modeling 
+ Learned character control 
+ Facial animation 
+ Feature learning of motions, faces, body shapes and hand gestures 
+ Foundation models for animation 
+ Group and crowd behavior 
+ Interactive computer graphics 
+ Intuitive interfaces for creating and editing animations 
+ Mathematical foundations of animation 
+ Methods of control and artistic direction of simulations 
+ Machine learning techniques for animation 
+ Multimodal techniques for animation 
+ Modeling and simulation of natural phenomena 
+ Nature in motion (natural phenomena, plants, clouds, etc.) 
+ New time-based art forms on the computer 
+ Novel time-varying phenomena 
+ Perceptual metrics of animation 
+ Physical realism / measuring the real world for animation 
+ Physical simulation 
+ Fluid animation and simulation 
+ Planning / learning / optimization for animation 
+ Real-time and interactive methods 
+ Camera control methods for computer animation 
+ Sound and speech for animation 
+ ... as well as related problems in robotics game development, human-computer interaction, simulation visualization, and computer vision. SCA welcomes all kinds of contributions that advance the field of computer animation. This includes new and improved algorithms, but also: 
+ New datasets, or carefully and thoughtfully designed (collections of) datasets based on previously available data 
+ Advanced practices in data collection and curation 
+ Benchmarks and benchmarking tools 
+ Perceptual studies 
+ Experimental studies 
+ Material measurements 
+ Systems 
+ Hardware 
+ Theoretical foundations 
+ New promising approaches that do not yet achieve state-of-the-art performance 
+ Technical Papers 
+ We invite you to submit high-quality work on animation and simulation broadly defined as computation dealing with time-varying phenomena. Each submission will be reviewed by an international program committee for technical quality, novelty, significance, and clarity. 
+ Papers should be written and presented in English. There is no strict maximum length for submitted papers. However, we recommend that research papers be up to16 pages(excluding references), and longer papers should make a very significant contribution. Authors are encouraged to use supplementary documents to provide extra content. A paper submission should describe an original work of the authors. Authors must not use ideas or content originating from others without properly crediting their original sources. Optional supplemental material does not count towards this suggested limit. 
+ Supplementary material such as videos may also be submitted electronically and will be made available to reviewers (size up to 500MB). Videos are required for techniques involving motion or animation. 
+ Submitted articles will receive two rounds of reviewing by at least three (3) expert reviewers. Technical papers conditionally accepted in the first round will undergo a second round of revision and review and, conditional on final acceptance, will be published in thePACMCGITissue on SCA 2025. There is no rebuttal process. 
+ Papers can be submitted via thehref="https://easychair.org/conferences/?conf=sca2025" - EasyChair
+website. 
+ Paper Format 
+ Research papers should be inhref="https://www.siggraph.org/preparing-your-content/author-instructions/" - ACM article format
+using theACM small trimjournal size (“acmsmall”). For the review version, please use the command:\documentclass[acmsmall, screen, review, anonymous]{acmart} 
+ Anonymous Submissions 
+ Paper submissions must be anonymous and include the unique paper ID that will be assigned upon creating a submission using the online system. The review process isdouble-anonymous, so please remove all personal data, such as author names and affiliation from all your submission files. 
+ Papers should not have previously appeared in, or be currently submitted to, any other conference or journal. SCA follows the samehref="https://s2025.siggraph.org/anonymity-policy/" - anonymity policy as SIGGRAPH
+. Any case of violation will be determined by the chairs and could result in a desk rejection. 
+ Awards 
+ Best Paper Awards will be given to exceptional submissions on the cutting edge of computer animation. 
+ Presentations 
+ The author(s) of accepted papers must also attend the conference and present their work in-person. At least one (1) author from each accepted paper must register for the conference. 
+ Program Chairs 
+ Lingjie Liu, University of Pennsylvania 
+ Sheldon Andrews, École de Technologie Supérieure 
+ Conference Chairs 
+ Bo Zhu, Georgia Institute of Technology 
+ Yin Yang, University of Utah | Home | New CFP | My CFPs | Watchlist | SCA 2025: ACM SIGGRAPH / Eurographics Symposium on Computer Animation 
+ Vancouver, Canada, August 8-10, 2025 | Conference website | https://computeranimation.org/ | Submission link | href="https://easychair.org/conferences/?conf=sca2025" - https://easychair.org/conferences/?conf=sca2025 
+ Home | New CFP | My CFPs | Watchlist 
+ SCA 2025: ACM SIGGRAPH / Eurographics Symposium on Computer Animation 
+ Vancouver, Canada, August 8-10, 2025 
+ Conference website | https://computeranimation.org/ 
+ Submission link | href="https://easychair.org/conferences/?conf=sca2025" - https://easychair.org/conferences/?conf=sca2025 
+ Copyright © 2002 – 2025 EasyChair
+
+---
+

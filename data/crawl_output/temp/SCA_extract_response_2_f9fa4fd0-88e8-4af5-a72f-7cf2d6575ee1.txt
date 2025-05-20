@@ -1,0 +1,21 @@
+{
+  "conferenceTitle": "ACM SIGGRAPH/Eurographics Symposium on Computer Animation",
+  "conferenceAcronym": "SCA",
+  "year": "2025",
+  "location": "Vancouver, Canada",
+  "date": "August 8 to August 10, 2025",
+  "submissionDate": {
+    "Submission deadline (papers)": "April 7, 2025",
+    "Submission deadline (posters)": "June 15, 2025"
+  },
+  "notificationDate": {
+    "Notification of acceptance": "May 12, 2025",
+    "Journal and poster notification": "June 30, 2025"
+  },
+  "cameraReadyDate": {
+    "Revised version deadline": "June 12, 2025",
+    "Camera-ready deadline": "July 10, 2025"
+  },
+  "topics": "computer animation, time-based phenomena",
+  "publisher": "ACM"
+}
