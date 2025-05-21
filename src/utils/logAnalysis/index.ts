@@ -55,11 +55,11 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'search_attempt_failure_summary': search.handleSearchAttemptIssue,
   'search_quota_error_detected': search.handleSearchAttemptIssue,
   'api_key_usage_limit_reached': search.handleApiKeyUsageLimitReached,
-  'api_key_provided': search.handleApiKeyProvided,
-  'api_keys_all_exhausted_checked': search.handleAllApiKeysExhaustedInfo,
-  'api_keys_all_exhausted_status': search.handleAllApiKeysExhaustedInfo,
-  'api_key_force_rotated_success': search.handleApiKeyRotation,
-  'api_key_force_rotated_fail': search.handleApiKeyRotation,
+  'api_key_provided_locked': search.handleApiKeyProvided,
+  'api_key_usage_limit_reached_locked': search.handleApiKeyUsageLimitReached,
+  'api_keys_all_exhausted_checked_locked': search.handleAllApiKeysExhaustedInfo,
+  'api_key_force_rotated_success_locked': search.handleApiKeyRotation,
+  'api_key_force_rotated_fail_locked': search.handleApiKeyRotation,
 
 
   // --- Playwright Events Group ---

@@ -9,8 +9,8 @@ export const normalizeErrorKey = (error: any): string => {
     } else if (error) {
         message = String(error);
     }
-    // Limit length, replace numbers, normalize whitespace
-    return message.substring(0, 150).replace(/\d+/g, 'N').replace(/\s+/g, ' ').trim();
+    // Limit length, normalize whitespace. BỎ QUA replace(/\d+/g, 'N')
+    return message.substring(0, 150).replace(/\s+/g, ' ').trim();
 };
 
 // --- Helper function: Create Composite Key ---
