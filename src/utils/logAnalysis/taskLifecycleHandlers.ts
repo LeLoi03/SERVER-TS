@@ -34,11 +34,6 @@ export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, 
             confDetail.startTime = entryTimestampISO;
         }
 
-        // Nếu event logEntry cho task_start cũng chứa originalRequestId, bạn có thể xử lý ở đây:
-        // if (logEntry.originalRequestId && !confDetail.originalRequestId) {
-        //     confDetail.originalRequestId = logEntry.originalRequestId;
-        // }
-
         if (previousStatus === 'unknown' || previousStatus === 'skipped') {
             confDetail.status = 'processing';
             overall.processingTasks = (overall.processingTasks || 0) + 1;
@@ -55,22 +50,54 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
     if (confDetail) {
         const wasProcessing = confDetail.status === 'processing';
 
-        if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') {
+        // Ensure endTime is set if it hasn't been.
+        if (!confDetail.endTime) {
             confDetail.endTime = entryTimestampISO;
-            if (logEntry.success === true) {
-                confDetail.status = 'processed_ok';
-            } else if (logEntry.success === false) {
+        }
+
+        // Only update status if it's not already definitively set to 'failed' or 'skipped'
+        // by a more critical event (like unhandled error or explicit skip).
+        if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') {
+            if (logEntry.success === false) {
                 confDetail.status = 'failed';
                 const errorMsg = logEntry.error_details || "Task logic indicated failure.";
                 addConferenceError(confDetail, entryTimestampISO, errorMsg, normalizeErrorKey(errorMsg));
                 overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
+            } else { // logEntry.success === true (or undefined, treat as true for this block)
+                // <<< LOGIC SỬA ĐỔI ĐỂ KIỂM TRA LINK PROCESSING >>>
+                // Even if task_finish event reports success, check sub-step consistency
+                if (confDetail.steps.link_processing_attempted_count > 0 &&
+                    confDetail.steps.link_processing_success_count === 0) {
+                    
+                    confDetail.status = 'failed'; // Override to failed due to all link processing attempts failing
+                    const errorMsg = "All link processing attempts failed despite task reporting overall success.";
+                    // Sử dụng một mã lỗi cụ thể cho trường hợp này
+                    addConferenceError(confDetail, entryTimestampISO, errorMsg, "all_links_failed_override");
+                    
+                    // Quyết định xem có nên tăng overall.failedOrCrashedTasks ở đây không.
+                    // Hiện tại, logic chung là chỉ tăng khi logEntry.success === false.
+                    // Việc conference này bị đánh dấu 'failed' sẽ được phản ánh trong thống kê chi tiết.
+                } else {
+                    confDetail.status = 'processed_ok';
+                }
+                // <<< KẾT THÚC LOGIC SỬA ĐỔI >>>
             }
-        } else if (confDetail.status === 'failed' || confDetail.status === 'skipped') {
-            if (!confDetail.endTime) {
-                confDetail.endTime = entryTimestampISO;
-            }
+        } else if (confDetail.status === 'failed') {
+            // If status was already 'failed' (e.g., by handleTaskUnhandledError),
+            // ensure overall.failedOrCrashedTasks reflects this if task_finish also says success:false.
+            // This part primarily ensures that if a task_finish with success:false comes for an already failed task,
+            // the counter isn't missed if not already incremented.
+            // However, handleTaskUnhandledError already increments this.
+            // If task_finish comes with success:false and status was already 'failed', we assume
+            // the counter was handled by the event that first set it to 'failed'.
+            // If logEntry.success === false, and confDetail.status was already 'failed'
+            // (e.g. by handleTaskUnhandledError), overall.failedOrCrashedTasks
+            // would have been incremented by handleTaskUnhandledError.
+            // No double increment needed.
         }
+        // No specific action for confDetail.status === 'skipped' here, as its final state is already set.
 
+        // Calculate duration if possible
         if (confDetail.startTime && confDetail.endTime) {
             try {
                 const start = new Date(confDetail.startTime).getTime();
@@ -81,6 +108,7 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
             } catch (e) { /* ignore */ }
         }
 
+        // Update processing task count based on the fact that it's finishing
         if (wasProcessing && confDetail.endTime) {
             if (overall.processingTasks && overall.processingTasks > 0) {
                 overall.processingTasks--;
@@ -99,7 +127,7 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
         const wasProcessing = confDetail.status === 'processing';
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
         confDetail.status = 'failed';
-        confDetail.endTime = entryTimestampISO;
+        confDetail.endTime = entryTimestampISO; // Set endTime on failure
         overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
 
         if (confDetail.startTime && confDetail.endTime) {
@@ -118,6 +146,7 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
             }
         }
     } else {
+        // If confDetail doesn't exist for some reason, still count the error at an overall level
         overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
     }
 };
@@ -128,8 +157,8 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
     if (confDetail) {
         const wasProcessing = confDetail.status === 'processing';
         confDetail.status = 'skipped';
-        confDetail.startTime = confDetail.startTime || entryTimestampISO;
-        confDetail.endTime = entryTimestampISO;
+        if (!confDetail.startTime) confDetail.startTime = entryTimestampISO; // Set startTime if not already set
+        confDetail.endTime = entryTimestampISO; // Set endTime on skip
         overall.skippedTasks = (overall.skippedTasks || 0) + 1;
 
         if (confDetail.startTime && confDetail.endTime) {
@@ -150,19 +179,12 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
     }
 };
 
-// <<< THÊM HANDLER MỚI >>>
 export const handleRecrawlDetected: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const originalRequestId = logEntry.originalRequestId as string | undefined;
-    // const currentBatchRequestId = logEntry.batchRequestId as string | undefined; // Có thể dùng để debug
 
     if (confDetail && originalRequestId) {
-        // Gán originalRequestId vào ConferenceAnalysisDetail nếu nó được cung cấp qua event này.
-        // Đây là nơi chính để lấy thông tin này cho từng conference.
-        if (!confDetail.originalRequestId) { // Chỉ gán nếu chưa có, tránh ghi đè không cần thiết
+        if (!confDetail.originalRequestId) { 
             confDetail.originalRequestId = originalRequestId;
         }
-        // console.log(`RECRAWL_DETECTED: Conf: ${confDetail.acronym}, Original Req: ${originalRequestId}, Current Req: ${confDetail.batchRequestId}`);
     }
-    // Không cần else if cho results.requests[currentBatchRequestId] ở đây,
-    // vì `calculateFinalMetrics` sẽ tổng hợp originalRequestId cho request từ các conferences của nó.
 };

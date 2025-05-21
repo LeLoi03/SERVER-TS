@@ -380,10 +380,6 @@ export class BatchProcessingService {
         const year = this.configService.config.YEAR2;
         const methodLogger = parentLogger.child({ // parentLogger là flowLogger (từ HtmlPersistence)
             batchServiceMethod: 'processConferenceSave',
-            // initialLinkCount: links.length, // OK
-            // processingYear: year, // OK
-            // conferenceAcronym: conference.Acronym, // XÓA (kế thừa từ taskLogger/itemLogger)
-            // conferenceTitle: conference.Title,   // XÓA (kế thừa từ taskLogger/itemLogger)
             service: 'BatchProcessingServiceOrchestrator' // Ghi đè service, OK
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;

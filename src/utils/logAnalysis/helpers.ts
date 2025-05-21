@@ -88,7 +88,7 @@ export const initializeConferenceDetail = (batchRequestId: string, acronym: stri
         gemini_cfp_cache_used: null,
     },
     errors: [],
-    validationIssues: [],
+    dataQualityInsights: [],
     finalResultPreview: undefined, // Sửa lỗi type ở đây, finalResultPreview có thể là any
     finalResult: undefined,
 });
