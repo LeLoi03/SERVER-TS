@@ -30,7 +30,7 @@ export const createConferenceKey = (batchRequestId: string, acronym: string, tit
 
 export const initializeConferenceDetail = (batchRequestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
     batchRequestId: batchRequestId, // <<< NEW
-
+    originalRequestId: undefined, // <<< KHỞI TẠO
     title: title,
     acronym: acronym,
     status: 'unknown', // Initial status

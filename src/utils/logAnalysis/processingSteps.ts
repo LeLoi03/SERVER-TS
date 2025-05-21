@@ -260,13 +260,15 @@ export const calculateFinalMetrics = (
 
     // --- Populate Per-Request Timings AND STATUS ---
     // results.analyzedRequestIds should have been populated by LogAnalysisService from filteredRequests.keys()
-    for (const reqId of results.analyzedRequestIds) {
+    for (const reqId of results.analyzedRequestIds) { // reqId ở đây là batchRequestId
         const requestData = filteredRequestsData.get(reqId);
         let currentRequestTimings: RequestTimings = {
             startTime: null,
             endTime: null,
             durationSeconds: null,
             status: 'Unknown', // Default status
+            originalRequestId: undefined, // Khởi tạo
+
         };
 
         if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
@@ -279,15 +281,38 @@ export const calculateFinalMetrics = (
             // durationSeconds remains null or 0 if only one timestamp; prefer null for partial data
             currentRequestTimings.durationSeconds = (requestData.startTime && requestData.endTime) ? Math.round((requestData.endTime - requestData.startTime) / 1000) : null;
             if (currentRequestTimings.durationSeconds === null && (requestData.startTime || requestData.endTime)) {
-                 currentRequestTimings.durationSeconds = 0; // If only one time, duration is 0
+                currentRequestTimings.durationSeconds = 0; // If only one time, duration is 0
             }
         }
         // else: requestData is undefined, timings remain null, status 'Unknown' initially
 
         // Determine status for this reqId
-        // `cd.batchRequestId` refers to the `batchRequestId` stored within the ConferenceAnalysisDetail
         const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
-            .filter(cd => cd.batchRequestId === reqId);
+            .filter(cd => cd.batchRequestId === reqId); // cd.batchRequestId là ID của request hiện tại
+
+
+        // <<< THÊM LOGIC LẤY ORIGINAL_REQUEST_ID CHO REQUEST >>>
+        if (conferencesForThisRequest.length > 0) {
+            // Ưu tiên lấy originalRequestId từ conference đầu tiên có thông tin này
+            // (thường là từ event `recrawl_detected` hoặc `finalResult` của conference)
+            for (const conf of conferencesForThisRequest) {
+                if (conf.originalRequestId) {
+                    currentRequestTimings.originalRequestId = conf.originalRequestId;
+                    break; // Lấy cái đầu tiên tìm thấy
+                }
+                // Fallback: kiểm tra trong finalResult nếu có (ít ưu tiên hơn field trực tiếp)
+                if (!currentRequestTimings.originalRequestId && conf.finalResult?.originalRequestId) {
+                    currentRequestTimings.originalRequestId = conf.finalResult.originalRequestId;
+                    // không break ở đây nếu muốn field trực tiếp `conf.originalRequestId` được ưu tiên hơn
+                }
+            }
+        }
+        // Nếu sau khi duyệt conferences vẫn chưa có, mà handler `handleControllerProcessingFinished`
+        // đã gán trực tiếp vào `results.requests[reqId].originalRequestId` thì nó sẽ được giữ lại.
+        // Đoạn code trên chỉ cố gắng tìm nếu nó chưa được gán.
+        // Hoặc có thể gộp:
+        // currentRequestTimings.originalRequestId = results.requests[reqId]?.originalRequestId || foundOriginalIdFromConfs;
+
 
         if (conferencesForThisRequest.length === 0) {
             // If no conference tasks, base status on whether logs existed for this request ID.
@@ -338,7 +363,7 @@ export const calculateFinalMetrics = (
         results.requests[reqId] = currentRequestTimings;
     }
 
-     // --- Finalize Conference Details and Counts ---
+    // --- Finalize Conference Details and Counts ---
     let stillProcessingOverallCount = 0;
     const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
 

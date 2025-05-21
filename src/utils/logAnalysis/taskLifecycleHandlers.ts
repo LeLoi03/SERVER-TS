@@ -1,10 +1,10 @@
 // src/utils/logAnalysis/taskLifecycleHandlers.ts
-import { LogEventHandler } from './index';
+import { LogEventHandler } from './index'; // Đảm bảo LogEventHandler được export từ index.ts
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis } from '../../types/logAnalysis.types'; // Import thêm ConferenceAnalysisDetail nếu cần truy cập sâu
+import { OverallAnalysis, ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types'; // Thêm LogAnalysisResult và ConferenceAnalysisDetail
 
 // Khởi tạo overall analysis trong results nếu chưa có
-const ensureOverallAnalysis = (results: any): OverallAnalysis => {
+const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any thành LogAnalysisResult
     if (!results.overall) {
         results.overall = {
             startTime: null,
@@ -28,17 +28,20 @@ export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, 
     overall.processedConferencesCount = (overall.processedConferencesCount || 0) + 1;
 
     if (confDetail) {
-        const previousStatus = confDetail.status; // Lưu trạng thái cũ
+        const previousStatus = confDetail.status;
 
         if (!confDetail.startTime) {
             confDetail.startTime = entryTimestampISO;
         }
 
+        // Nếu event logEntry cho task_start cũng chứa originalRequestId, bạn có thể xử lý ở đây:
+        // if (logEntry.originalRequestId && !confDetail.originalRequestId) {
+        //     confDetail.originalRequestId = logEntry.originalRequestId;
+        // }
+
         if (previousStatus === 'unknown' || previousStatus === 'skipped') {
             confDetail.status = 'processing';
             overall.processingTasks = (overall.processingTasks || 0) + 1;
-
-            // Nếu trạng thái TRƯỚC ĐÓ là 'skipped', thì giảm counter skipped
             if (previousStatus === 'skipped' && overall.skippedTasks && overall.skippedTasks > 0) {
                 overall.skippedTasks--;
             }
@@ -50,30 +53,23 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
     const overall = ensureOverallAnalysis(results);
 
     if (confDetail) {
-        const wasProcessing = confDetail.status === 'processing'; // Kiểm tra xem nó có đang processing không
+        const wasProcessing = confDetail.status === 'processing';
 
-        // Chỉ cập nhật endTime và status nếu chưa bị set là 'failed' bởi 'task_unhandled_error'
-        // hoặc các lỗi nghiêm trọng khác đã set status.
-        if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') { // Thêm điều kiện !== 'skipped'
+        if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') {
             confDetail.endTime = entryTimestampISO;
             if (logEntry.success === true) {
-                // Status có thể là 'processed_ok' để phân biệt với 'completed' cuối cùng từ CSV
-                confDetail.status = 'processed_ok'; // Ví dụ: Đã xử lý xong các bước nội bộ
+                confDetail.status = 'processed_ok';
             } else if (logEntry.success === false) {
-                confDetail.status = 'failed'; // Lỗi logic trong task
+                confDetail.status = 'failed';
                 const errorMsg = logEntry.error_details || "Task logic indicated failure.";
                 addConferenceError(confDetail, entryTimestampISO, errorMsg, normalizeErrorKey(errorMsg));
-                // Lỗi logic làm task fail, tăng failedOrCrashedTasks
                 overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
             }
         } else if (confDetail.status === 'failed' || confDetail.status === 'skipped') {
-            // Nếu đã là 'failed' hoặc 'skipped', chỉ cập nhật endTime nếu chưa có
-            // để tính duration cho các task bị lỗi/skip sớm.
             if (!confDetail.endTime) {
                 confDetail.endTime = entryTimestampISO;
             }
         }
-
 
         if (confDetail.startTime && confDetail.endTime) {
             try {
@@ -85,8 +81,6 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
             } catch (e) { /* ignore */ }
         }
 
-        // Giảm processingTasks nếu nó TRƯỚC ĐÓ đang là 'processing' và bây giờ đã có endTime
-        // (nghĩa là nó không còn "đang xử lý" nữa)
         if (wasProcessing && confDetail.endTime) {
             if (overall.processingTasks && overall.processingTasks > 0) {
                 overall.processingTasks--;
@@ -101,14 +95,12 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
     const errorKey = normalizeErrorKey(error);
     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
 
-
     if (confDetail) {
-        const wasProcessing = confDetail.status === 'processing'; // Kiểm tra trước khi thay đổi status
-
+        const wasProcessing = confDetail.status === 'processing';
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
         confDetail.status = 'failed';
         confDetail.endTime = entryTimestampISO;
-        overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1; // Tăng ở đây khi có lỗi unhandled
+        overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
 
         if (confDetail.startTime && confDetail.endTime) {
              try {
@@ -120,12 +112,12 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
             } catch (e) { /* ignore */ }
         }
 
-        if (wasProcessing) { // Nếu nó đang là processing trước khi bị lỗi
+        if (wasProcessing) {
             if (overall.processingTasks && overall.processingTasks > 0) {
                 overall.processingTasks--;
             }
         }
-    } else { // Nếu không có confDetail nhưng vẫn là unhandled error liên quan đến task
+    } else {
         overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
     }
 };
@@ -134,14 +126,11 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
     const overall = ensureOverallAnalysis(results);
 
     if (confDetail) {
-        const wasProcessing = confDetail.status === 'processing'; // Lưu trạng thái cũ
-
+        const wasProcessing = confDetail.status === 'processing';
         confDetail.status = 'skipped';
-        // Nếu task được skip, nó cũng có startTime (nếu đã được log) và endTime (là lúc skip)
         confDetail.startTime = confDetail.startTime || entryTimestampISO;
         confDetail.endTime = entryTimestampISO;
         overall.skippedTasks = (overall.skippedTasks || 0) + 1;
-
 
         if (confDetail.startTime && confDetail.endTime) {
              try {
@@ -153,12 +142,27 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
             } catch (e) { /* ignore */ }
         }
 
-        // Nếu TRƯỚC ĐÓ nó đang được tính là processing, thì giảm processingTasks
         if (wasProcessing && overall.processingTasks && overall.processingTasks > 0) {
             overall.processingTasks--;
         }
     } else {
-        // Nếu event 'task_skipped' được log mà không có confDetail (ví dụ, skip ở mức cao hơn)
         overall.skippedTasks = (overall.skippedTasks || 0) + 1;
     }
+};
+
+// <<< THÊM HANDLER MỚI >>>
+export const handleRecrawlDetected: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    const originalRequestId = logEntry.originalRequestId as string | undefined;
+    // const currentBatchRequestId = logEntry.batchRequestId as string | undefined; // Có thể dùng để debug
+
+    if (confDetail && originalRequestId) {
+        // Gán originalRequestId vào ConferenceAnalysisDetail nếu nó được cung cấp qua event này.
+        // Đây là nơi chính để lấy thông tin này cho từng conference.
+        if (!confDetail.originalRequestId) { // Chỉ gán nếu chưa có, tránh ghi đè không cần thiết
+            confDetail.originalRequestId = originalRequestId;
+        }
+        // console.log(`RECRAWL_DETECTED: Conf: ${confDetail.acronym}, Original Req: ${originalRequestId}, Current Req: ${confDetail.batchRequestId}`);
+    }
+    // Không cần else if cho results.requests[currentBatchRequestId] ở đây,
+    // vì `calculateFinalMetrics` sẽ tổng hợp originalRequestId cho request từ các conferences của nó.
 };

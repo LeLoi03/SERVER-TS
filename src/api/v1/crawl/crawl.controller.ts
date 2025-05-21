@@ -1,165 +1,194 @@
 // src/api/v1/crawl/crawl.controller.ts
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+import { Mutex } from 'async-mutex'; // <<< THÊM IMPORT NÀY
 import { CrawlOrchestratorService } from '../../../services/crawlOrchestrator.service';
-import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types'; // Giả sử ApiModels sẽ ở đây hoặc file riêng
+import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
 import { Logger } from 'pino';
 import { LoggingService } from '../../../services/logging.service';
 import { ConfigService } from '../../../config/config.service';
 import { CrawlModelType, ApiModels } from '../../../types/crawl.types';
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
+
+// <<< TẠO MỘT MUTEX CHO ROUTE NÀY
+// Nó sẽ được chia sẻ giữa tất cả các request đến controller này.
+const crawlConferenceLock = new Mutex();
+
 // ------------------------------------------------------------------
 
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
+    // Lấy logger sớm để có thể log cả trường hợp bị từ chối do bận
+    const baseLoggingService = container.resolve(LoggingService) as LoggingService;
+    const baseReqLogger = (req as any).log as Logger || baseLoggingService.getLogger();
 
-    const loggingService = container.resolve(LoggingService) as LoggingService;
-    const configService = container.resolve(ConfigService) as ConfigService;
-    const crawlOrchestrator = container.resolve(CrawlOrchestratorService) as CrawlOrchestratorService;
-
-    const reqLogger = (req as any).log as Logger || loggingService.getLogger();
-    const currentBatchRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    const routeLogger = reqLogger.child({ batchRequestId: currentBatchRequestId, route: '/crawl-conferences' });
-
-    routeLogger.info({ query: req.query, method: req.method }, "Received request to process conferences");
-
-    const finalOutputJsonlPathForBatch = configService.getFinalOutputJsonlPathForBatch(currentBatchRequestId);
-    const evaluateCsvPathForBatch = configService.getEvaluateCsvPathForBatch(currentBatchRequestId);
-
-    const dataSource = (req.query.dataSource as string) || 'client';
-
-    // --- Xử lý query param 'models' mới ---
-    const apiModelsFromQuery = req.query.models as any; // Bắt đầu với 'any' để kiểm tra ban đầu
-    let parsedApiModels: ApiModels;
-
-    if (typeof apiModelsFromQuery !== 'object' || apiModelsFromQuery === null) {
-        routeLogger.warn({ modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter: not an object or is null.");
-        res.status(400).json({ message: "Invalid 'models' query parameter: must be an object with keys determineLinks, extractInfo, extractCfp." });
-        return;
-    }
-
-    const validationErrors: string[] = [];
-    for (const key of EXPECTED_API_MODEL_KEYS) {
-        const modelValue = apiModelsFromQuery[key];
-        if (!modelValue) {
-            validationErrors.push(`Missing model selection for API step: '${key}'.`);
-        } else if (modelValue !== 'tuned' && modelValue !== 'non-tuned') {
-            validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'.`);
-        }
-    }
-
-    if (validationErrors.length > 0) {
-        routeLogger.warn({ errors: validationErrors, modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter values.");
-        res.status(400).json({ message: "Invalid 'models' selection provided.", errors: validationErrors });
-        return;
-    }
-
-    parsedApiModels = apiModelsFromQuery as ApiModels; // Sau khi validate, có thể cast an toàn
-    // ---------------------------------------
-
-    const operationStartTime = Date.now();
-
-    try {
-        let conferenceList: ConferenceData[];
-
-        routeLogger.info({ dataSource, apiModels: parsedApiModels }, "Determining conference data source and selected API models");
-
-        if (dataSource === 'client') {
-            conferenceList = req.body;
-            if (!Array.isArray(conferenceList)) {
-                routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
-                res.status(400).json({ message: 'Invalid conference list provided in the request body (must be an array).' });
-                return;
-            }
-            routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
-        } else {
-            routeLogger.warn("Internal data source ('api') is not implemented. Please provide data via 'client' source.");
-            res.status(400).json({ message: "dataSource=api is not currently supported. Use dataSource=client and provide data in the body." });
-            return;
-        }
-
-        if (!conferenceList || !Array.isArray(conferenceList)) {
-            routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
-            res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
-            return;
-        }
-        if (conferenceList.length === 0) {
-            routeLogger.warn("Conference list is empty. Nothing to process.");
-            const operationEndTime = Date.now();
-            const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
-            res.status(200).json({
-                message: 'Conference list provided or fetched was empty. No processing performed.',
-                runtime: `${runTimeSeconds} s`,
-                outputJsonlPath: finalOutputJsonlPathForBatch,
-                outputCsvPath: evaluateCsvPathForBatch
-            });
-            return;
-        }
-
-        routeLogger.info({ conferenceCount: conferenceList.length, dataSource, apiModels: parsedApiModels }, "Calling CrawlOrchestratorService to run the process...");
-
-        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
-            conferenceList,
-            routeLogger,
-            parsedApiModels, // Truyền object ApiModels
-            currentBatchRequestId
-        );
-
-        const operationEndTime = Date.now();
-        const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
-
-        const modelsUsedDesc = `DL: ${parsedApiModels.determineLinks}, EI: ${parsedApiModels.extractInfo}, EC: ${parsedApiModels.extractCfp}`;
-        routeLogger.info({
-            event: 'processing_finished_successfully',
-            context: {
-                runtimeSeconds: parseFloat(runTimeSeconds),
-                totalInput: conferenceList.length,
-                resultsReturned: processedResults.length,
-                apiModelsUsed: parsedApiModels, // Log object models
-                outputJsonl: finalOutputJsonlPathForBatch,
-                outputCsv: evaluateCsvPathForBatch,
-                processed_results: processedResults, // GỬI KẾT QUẢ VÀO CONTEXT
-                startTime: new Date(operationStartTime).toISOString(),
-                endTime: new Date(operationEndTime).toISOString(),
-            }
-        }, `Conference processing finished successfully via controller using models (${modelsUsedDesc}). Returning results.`);
-
-
-        res.status(200).json({
-            message: `Conference processing completed using specified API models (${modelsUsedDesc}). Orchestrator returned ${processedResults.length} processed records. See server files for details.`,
-            runtime: `${runTimeSeconds} s`,
-            // data: processedResults,
-            outputJsonlPath: finalOutputJsonlPathForBatch,
-            outputCsvPath: evaluateCsvPathForBatch
+    // <<< KIỂM TRA XEM LOCK CÓ ĐANG ĐƯỢC GIỮ KHÔNG
+    if (crawlConferenceLock.isLocked()) {
+        baseReqLogger.warn({ route: '/crawl-conferences' }, "Request rejected: /crawl-conferences is busy processing another request.");
+        res.status(429).json({ // 429 Too Many Requests là một HTTP status code phù hợp
+            message: "The server is busy processing another crawl request. Please try again later."
         });
-        routeLogger.info({ statusCode: 200, resultsCount: processedResults.length, apiModelsUsed: parsedApiModels }, "Sent successful response");
+        return;
+    }
 
-    } catch (error: any) {
-        const operationEndTime = Date.now();
-        const runTimeMs = operationEndTime - operationStartTime;
-        const errorLogger = routeLogger || loggingService.getLogger({ currentBatchRequestId });
+    // <<< SỬ DỤNG runExclusive ĐỂ ĐẢM BẢO CHỈ CÓ MỘT REQUEST ĐƯỢC THỰC THI
+    // Toàn bộ logic xử lý hiện tại của bạn sẽ nằm trong callback của runExclusive
+    try {
+        await crawlConferenceLock.runExclusive(async () => {
+            // Các service và logger cần được resolve hoặc lấy lại bên trong runExclusive
+            // nếu chúng có state hoặc nếu bạn muốn đảm bảo phiên bản mới nhất cho mỗi lần chạy.
+            // Tuy nhiên, với các singleton service như LoggingService, ConfigService, CrawlOrchestratorService,
+            // việc resolve chúng ở ngoài trước đó rồi truyền vào hoặc resolve lại ở đây đều ổn.
+            // Để giữ code gọn, ta dùng baseReqLogger đã lấy ở trên và tạo routeLogger từ nó.
 
-        errorLogger.error({
-            err: error,
-            stack: error.stack,
-            event: 'processing_failed_in_controller',
-            context: {
-                runtimeMs: runTimeMs,
-                dataSource: (req.query.dataSource as string) || 'client',
-                apiModelsAttempted: parsedApiModels || apiModelsFromQuery, // Log models đã thử
-                startTime: new Date(operationStartTime).toISOString(),
-                endTime: new Date(operationEndTime).toISOString(),
+            const loggingService = baseLoggingService; // Hoặc resolve lại nếu cần
+            const configService = container.resolve(ConfigService) as ConfigService;
+            const crawlOrchestrator = container.resolve(CrawlOrchestratorService) as CrawlOrchestratorService;
+
+            const currentBatchRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+            const routeLogger = baseReqLogger.child({ batchRequestId: currentBatchRequestId, route: '/crawl-conferences' });
+
+            routeLogger.info({ query: req.query, method: req.method }, "Acquired lock. Processing request to crawl conferences");
+
+            const finalOutputJsonlPathForBatch = configService.getFinalOutputJsonlPathForBatch(currentBatchRequestId);
+            const evaluateCsvPathForBatch = configService.getEvaluateCsvPathForBatch(currentBatchRequestId);
+            const dataSource = (req.query.dataSource as string) || 'client';
+            const apiModelsFromQuery = req.query.models as any;
+            let parsedApiModels: ApiModels;
+
+            if (typeof apiModelsFromQuery !== 'object' || apiModelsFromQuery === null) {
+                routeLogger.warn({ modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter: not an object or is null.");
+                res.status(400).json({ message: "Invalid 'models' query parameter: must be an object with keys determineLinks, extractInfo, extractCfp." });
+                return; // Quan trọng: return ở đây sẽ thoát khỏi callback của runExclusive
             }
-        }, "Conference processing failed within route handler or orchestrator");
 
-        if (!res.headersSent) {
-            res.status(500).json({
-                message: 'Conference processing failed',
-                error: error.message
-            });
-            errorLogger.warn({ statusCode: 500 }, "Sent error response");
-        } else {
-            errorLogger.error("Headers already sent, could not send 500 error response.");
+            const validationErrors: string[] = [];
+            for (const key of EXPECTED_API_MODEL_KEYS) {
+                const modelValue = apiModelsFromQuery[key];
+                if (!modelValue) {
+                    validationErrors.push(`Missing model selection for API step: '${key}'.`);
+                } else if (modelValue !== 'tuned' && modelValue !== 'non-tuned') {
+                    validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'.`);
+                }
+            }
+
+            if (validationErrors.length > 0) {
+                routeLogger.warn({ errors: validationErrors, modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter values.");
+                res.status(400).json({ message: "Invalid 'models' selection provided.", errors: validationErrors });
+                return; // Quan trọng
+            }
+            parsedApiModels = apiModelsFromQuery as ApiModels;
+            const operationStartTime = Date.now();
+
+            try {
+                let conferenceList: ConferenceData[];
+                routeLogger.info({ dataSource, apiModels: parsedApiModels }, "Determining conference data source and selected API models");
+
+                if (dataSource === 'client') {
+                    conferenceList = req.body;
+                    if (!Array.isArray(conferenceList)) {
+                        routeLogger.warn({ bodyType: typeof conferenceList }, "Invalid conference list in request body for 'client' source.");
+                        res.status(400).json({ message: 'Invalid conference list provided in the request body (must be an array).' });
+                        return; // Quan trọng
+                    }
+                    routeLogger.info({ count: conferenceList.length }, "Using conference list provided by client");
+                } else {
+                    routeLogger.warn("Internal data source ('api') is not implemented. Please provide data via 'client' source.");
+                    res.status(400).json({ message: "dataSource=api is not currently supported. Use dataSource=client and provide data in the body." });
+                    return; // Quan trọng
+                }
+
+                if (!conferenceList || !Array.isArray(conferenceList)) {
+                    routeLogger.error("Internal Error: conferenceList is not a valid array after source determination.");
+                    res.status(500).json({ message: "Internal Server Error: Invalid conference list." });
+                    return; // Quan trọng
+                }
+                if (conferenceList.length === 0) {
+                    routeLogger.warn("Conference list is empty. Nothing to process.");
+                    const operationEndTime = Date.now();
+                    const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
+                    res.status(200).json({
+                        message: 'Conference list provided or fetched was empty. No processing performed.',
+                        runtime: `${runTimeSeconds} s`,
+                        outputJsonlPath: finalOutputJsonlPathForBatch,
+                        outputCsvPath: evaluateCsvPathForBatch
+                    });
+                    return; // Quan trọng
+                }
+
+                routeLogger.info({ conferenceCount: conferenceList.length, dataSource, apiModels: parsedApiModels }, "Calling CrawlOrchestratorService to run the process...");
+
+                const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
+                    conferenceList,
+                    routeLogger,
+                    parsedApiModels,
+                    currentBatchRequestId
+                );
+
+                const operationEndTime = Date.now();
+                const runTimeSeconds = ((operationEndTime - operationStartTime) / 1000).toFixed(2);
+                const modelsUsedDesc = `DL: ${parsedApiModels.determineLinks}, EI: ${parsedApiModels.extractInfo}, EC: ${parsedApiModels.extractCfp}`;
+                routeLogger.info({
+                    event: 'processing_finished_successfully',
+                    context: {
+                        runtimeSeconds: parseFloat(runTimeSeconds),
+                        totalInput: conferenceList.length,
+                        resultsReturned: processedResults.length,
+                        apiModelsUsed: parsedApiModels, // Log object models
+                        outputJsonl: finalOutputJsonlPathForBatch,
+                        outputCsv: evaluateCsvPathForBatch,
+                        processed_results: processedResults, // GỬI KẾT QUẢ VÀO CONTEXT
+                        startTime: new Date(operationStartTime).toISOString(),
+                        endTime: new Date(operationEndTime).toISOString(),
+                    }
+                }, `Conference processing finished successfully via controller using models (${modelsUsedDesc}). Returning results.`);
+
+                res.status(200).json({
+                    message: `Conference processing completed using specified API models (${modelsUsedDesc}). Orchestrator returned ${processedResults.length} processed records. See server files for details.`,
+                    runtime: `${runTimeSeconds} s`,
+                    outputJsonlPath: finalOutputJsonlPathForBatch,
+                    outputCsvPath: evaluateCsvPathForBatch
+                });
+                routeLogger.info({ statusCode: 200, resultsCount: processedResults.length, apiModelsUsed: parsedApiModels }, "Sent successful response");
+
+            } catch (error: any) {
+                const operationEndTime = Date.now();
+                const runTimeMs = operationEndTime - operationStartTime;
+                const errorLogger = routeLogger || loggingService.getLogger({ currentBatchRequestId });
+
+                errorLogger.error({
+                    err: error,
+                    stack: error.stack,
+                    event: 'processing_failed_in_controller',
+                    context: {
+                        runtimeMs: runTimeMs,
+                        dataSource: (req.query.dataSource as string) || 'client',
+                        apiModelsAttempted: parsedApiModels || apiModelsFromQuery, // Log models đã thử
+                        startTime: new Date(operationStartTime).toISOString(),
+                        endTime: new Date(operationEndTime).toISOString(),
+                    }
+                }, "Conference processing failed within route handler or orchestrator");
+
+                if (!res.headersSent) {
+                    res.status(500).json({
+                        message: 'Conference processing failed',
+                        error: error.message
+                    });
+                    errorLogger.warn({ statusCode: 500 }, "Sent error response");
+                } else {
+                    errorLogger.error("Headers already sent, could not send 500 error response.");
+                }
+            }
+            // Lock sẽ tự động được giải phóng khi callback của runExclusive hoàn thành hoặc ném lỗi
+        });
+    } catch (error) {
+        // Lỗi này chỉ xảy ra nếu runExclusive không thể acquire lock và bị cấu hình để throw lỗi
+        // hoặc nếu có lỗi khi cố gắng chạy hàm được bọc (ít khả năng hơn nếu bạn không dùng các tính năng nâng cao của mutex).
+        // Trong trường hợp của chúng ta, isLocked() đã xử lý việc không acquire được lock.
+        // Tuy nhiên, để an toàn, bạn có thể log lỗi ở đây.
+        if (!res.headersSent) { // Kiểm tra lại phòng trường hợp lỗi không mong muốn trước khi gửi response
+            baseReqLogger.error({ err: error, route: '/crawl-conferences' }, "Error during mutex execution or unexpected state.");
+            res.status(503).json({ message: "Server encountered an issue managing request queue. Please try again." });
         }
     }
 }

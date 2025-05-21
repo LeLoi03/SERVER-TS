@@ -6,6 +6,8 @@ export interface RequestTimings {
     endTime: string | null;
     durationSeconds: number | null;
     status?: 'Completed' | 'Failed' | 'Processing' | 'PartiallyCompleted' | 'Unknown'; // <<< THÊM MỚI
+    originalRequestId?: string; // <<< THÊM MỚI: Để lưu ID của request gốc nếu đây là re-crawl
+
     // Tùy chọn: có thể thêm số lượng conference được xử lý trong request này
     // processedConferencesInRequest?: number;
     // Hoặc danh sách các key của conference thuộc request này
@@ -35,7 +37,8 @@ export interface FilteredData {
 /** Thông tin chi tiết về quá trình xử lý một conference cụ thể */
 export interface ConferenceAnalysisDetail {
 
-    batchRequestId: string; // <<< NEW: Để dễ dàng truy cập batchRequestId
+    batchRequestId: string; // ID của request hiện tại (re-crawl request)
+    originalRequestId?: string; // <<< THÊM MỚI: ID của request gốc nếu conference này là một phần của re-crawl    title: string;
     title: string;
     acronym: string;
     status: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped';
@@ -244,7 +247,7 @@ export interface LogAnalysisResult {
 
     filterRequestId?: string; // <<< NEW: The specific batchRequestId used for filtering, if any
     analyzedRequestIds: string[]; // <<< NEW: List of all batchRequestIds included in this analysis output
-    
+
     requests: { // Object chứa thông tin của từng request
         [batchRequestId: string]: RequestTimings; // RequestTimings giờ đã bao gồm status
     };

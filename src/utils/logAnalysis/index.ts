@@ -28,7 +28,9 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   // 'task_crawl_stage_finish': taskLifecycle.handleTaskFinish, // Bỏ alias này nếu không dùng
   'task_finish': taskLifecycle.handleTaskFinish, // Event chính từ ConferenceProcessor
   'task_unhandled_error': taskLifecycle.handleTaskUnhandledError,
-  // 'task_skipped': taskLifecycle.handleTaskSkipped, // Thêm nếu bạn có event này
+  'task_skipped': taskLifecycle.handleTaskSkipped, // Thêm nếu bạn có event này
+  'recrawl_detected': taskLifecycle.handleRecrawlDetected, // <<< THÊM MỚI
+
 
   // --- Search Events Group ---
   // Search & ApiKeyManager
@@ -230,7 +232,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'crawl_orchestrator_start': overallProcess.handleCrawlStart,
 
   // Events từ Controller (hoặc service cao nhất kết thúc tiến trình)
-  'processing_finished_successfully': overallProcess.handleControllerProcessingFinished,
+  'processing_finished_successfully': overallProcess.handleControllerProcessingFinished, // Handler này cũng có thể cập nhật originalRequestId
   'processing_failed_in_controller': overallProcess.handleControllerProcessingFinished,
 
 };
