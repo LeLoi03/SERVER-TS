@@ -1,10 +1,8 @@
-// src/utils/logAnalysis/taskLifecycleHandlers.ts
-import { LogEventHandler } from './index'; // Đảm bảo LogEventHandler được export từ index.ts
+import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis, ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types'; // Thêm LogAnalysisResult và ConferenceAnalysisDetail
+import { OverallAnalysis, ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types';
 
-// Khởi tạo overall analysis trong results nếu chưa có
-const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any thành LogAnalysisResult
+const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
     if (!results.overall) {
         results.overall = {
             startTime: null,
@@ -21,7 +19,6 @@ const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
     }
     return results.overall as OverallAnalysis;
 };
-
 
 export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const overall = ensureOverallAnalysis(results);
@@ -55,47 +52,44 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
             confDetail.endTime = entryTimestampISO;
         }
 
-        // Only update status if it's not already definitively set to 'failed' or 'skipped'
-        // by a more critical event (like unhandled error or explicit skip).
-        if (confDetail.status !== 'failed' && confDetail.status !== 'skipped') {
+        // <<< LOGIC SỬA ĐỔI CHÍNH Ở ĐÂY >>>
+        // Nếu trạng thái đã là 'failed' hoặc 'skipped' từ một sự kiện nghiêm trọng hơn,
+        // thì không ghi đè nó bằng 'processed_ok' hoặc logic thất bại cấp thấp hơn.
+        if (confDetail.status === 'failed' || confDetail.status === 'skipped') {
+            // Trạng thái đã được đặt bởi một sự kiện khác (ví dụ: handleTaskUnhandledError, handleGeminiFinalFailure)
+            // Không làm gì thêm với status, nó đã đúng rồi.
+            // Đảm bảo endTime được cập nhật nếu có sự kiện task_finish sau đó.
+            if (!confDetail.endTime) {
+                confDetail.endTime = entryTimestampISO;
+            }
+        } else {
+            // Chỉ cập nhật status nếu nó chưa phải 'failed' hoặc 'skipped'
             if (logEntry.success === false) {
                 confDetail.status = 'failed';
                 const errorMsg = logEntry.error_details || "Task logic indicated failure.";
                 addConferenceError(confDetail, entryTimestampISO, errorMsg, normalizeErrorKey(errorMsg));
                 overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
-            } else { // logEntry.success === true (or undefined, treat as true for this block)
-                // <<< LOGIC SỬA ĐỔI ĐỂ KIỂM TRA LINK PROCESSING >>>
-                // Even if task_finish event reports success, check sub-step consistency
+            } else { // logEntry.success === true (hoặc undefined, coi là true cho block này)
+                // Kiểm tra logic link processing
                 if (confDetail.steps.link_processing_attempted_count > 0 &&
                     confDetail.steps.link_processing_success_count === 0) {
                     
-                    confDetail.status = 'failed'; // Override to failed due to all link processing attempts failing
+                    confDetail.status = 'failed'; // Ghi đè thành failed nếu tất cả link processing thất bại
                     const errorMsg = "All link processing attempts failed despite task reporting overall success.";
-                    // Sử dụng một mã lỗi cụ thể cho trường hợp này
                     addConferenceError(confDetail, entryTimestampISO, errorMsg, "all_links_failed_override");
-                    
-                    // Quyết định xem có nên tăng overall.failedOrCrashedTasks ở đây không.
-                    // Hiện tại, logic chung là chỉ tăng khi logEntry.success === false.
-                    // Việc conference này bị đánh dấu 'failed' sẽ được phản ánh trong thống kê chi tiết.
+                    // Tăng số lỗi tổng thể nếu nó chưa được tăng bởi lỗi khác
+                    // (Lưu ý: Nếu một lỗi khác đã đặt nó thành 'failed' và tăng, thì sẽ không vào đây)
+                    if (overall.failedOrCrashedTasks !== undefined) {
+                        overall.failedOrCrashedTasks++;
+                    } else {
+                        overall.failedOrCrashedTasks = 1;
+                    }
                 } else {
-                    confDetail.status = 'processed_ok';
+                    confDetail.status = 'processed_ok'; // Trạng thái mặc định nếu không có lỗi cấp cao
                 }
-                // <<< KẾT THÚC LOGIC SỬA ĐỔI >>>
             }
-        } else if (confDetail.status === 'failed') {
-            // If status was already 'failed' (e.g., by handleTaskUnhandledError),
-            // ensure overall.failedOrCrashedTasks reflects this if task_finish also says success:false.
-            // This part primarily ensures that if a task_finish with success:false comes for an already failed task,
-            // the counter isn't missed if not already incremented.
-            // However, handleTaskUnhandledError already increments this.
-            // If task_finish comes with success:false and status was already 'failed', we assume
-            // the counter was handled by the event that first set it to 'failed'.
-            // If logEntry.success === false, and confDetail.status was already 'failed'
-            // (e.g. by handleTaskUnhandledError), overall.failedOrCrashedTasks
-            // would have been incremented by handleTaskUnhandledError.
-            // No double increment needed.
         }
-        // No specific action for confDetail.status === 'skipped' here, as its final state is already set.
+        // <<< KẾT THÚC LOGIC SỬA ĐỔI >>>
 
         // Calculate duration if possible
         if (confDetail.startTime && confDetail.endTime) {
@@ -113,6 +107,10 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
             if (overall.processingTasks && overall.processingTasks > 0) {
                 overall.processingTasks--;
             }
+            // Nếu confDetail.status được chuyển từ 'processing' sang 'failed' trong `handleTaskFinish`
+            // thì `failedOrCrashedTasks` đã được tăng ở trên.
+            // Nếu nó đã là 'failed' từ trước, `failedOrCrashedTasks` cũng đã được tăng.
+            // Không cần xử lý lại ở đây để tránh trùng lặp.
         }
     }
 };
@@ -125,6 +123,7 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
 
     if (confDetail) {
         const wasProcessing = confDetail.status === 'processing';
+        // Luôn ghi đè trạng thái thành 'failed' vì đây là lỗi không xử lý
         addConferenceError(confDetail, entryTimestampISO, error, errorKey);
         confDetail.status = 'failed';
         confDetail.endTime = entryTimestampISO; // Set endTime on failure
@@ -183,7 +182,7 @@ export const handleRecrawlDetected: LogEventHandler = (logEntry, results, confDe
     const originalRequestId = logEntry.originalRequestId as string | undefined;
 
     if (confDetail && originalRequestId) {
-        if (!confDetail.originalRequestId) { 
+        if (!confDetail.originalRequestId) {
             confDetail.originalRequestId = originalRequestId;
         }
     }

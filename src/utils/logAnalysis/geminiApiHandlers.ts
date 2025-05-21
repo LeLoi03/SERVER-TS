@@ -1,21 +1,14 @@
-// src/utils/logAnalysis/geminiApiHandlers.ts
-import { LogEventHandler } from './index'; // Giả sử index.ts export LogEventHandler và LogAnalysisResults
+import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import {
     OverallAnalysis,
     GeminiApiAnalysis,
     ConferenceAnalysisDetail,
-    LogAnalysisResult, // Sử dụng LogAnalysisResult thay vì any cho results
+    LogAnalysisResult,
 } from '../../types/logAnalysis.types';
 
-// --- Helper Utilities ---
-
 const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
-    // Hàm này đã có, đảm bảo nó hoạt động đúng với LogAnalysisResult
     if (!results.overall) {
-        // Khởi tạo nếu chưa có, giả sử bạn có hàm getInitialOverallAnalysis
-        // results.overall = getInitialOverallAnalysis();
-        // Hoặc khởi tạo trực tiếp
         results.overall = {
             startTime: null,
             endTime: null,
@@ -32,46 +25,42 @@ const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
     return results.overall as OverallAnalysis;
 };
 
-// Trong geminiApiHandlers.ts
-
 const ensureNestedObject = (obj: any, path: string[], defaultValueFactory: () => any = () => ({})): any => {
     if (!obj || typeof obj !== 'object') {
-        // console.error("ensureNestedObject called with non-object or null initial object for path:", path);
-        // Hoặc throw lỗi, hoặc trả về một object rỗng mới để tránh lỗi lan truyền
-        // Tùy thuộc vào bạn muốn xử lý thế nào. Nếu obj là results.geminiApi, thì nó PHẢI là object.
-        // Nếu là results.geminiApi.modelUsageByApiType, nó cũng phải là object.
-        // Trường hợp này rất có thể là results.geminiApi.modelUsageByApiType chưa phải là object.
-        return defaultValueFactory(); // Cẩn thận với việc này, nó có thể che giấu lỗi gốc
+        // Có thể throw lỗi hoặc trả về một giá trị mặc định tùy thuộc vào ngữ cảnh.
+        // Trong trường hợp này, giả định obj ban đầu (results hoặc results.geminiApi) là hợp lệ.
+        // Nếu path đầu tiên của results.geminiApi là undefined, cần đảm bảo nó được khởi tạo.
+        if (path.length > 0 && path[0] === 'geminiApi' && (!obj || typeof obj !== 'object')) {
+            // Đây là trường hợp đặc biệt để khởi tạo results.geminiApi nếu nó chưa tồn tại
+            obj = {}; // Tạo object rỗng để bắt đầu xây dựng đường dẫn
+        } else {
+             // Nếu obj không hợp lệ và không phải trường hợp khởi tạo geminiApi, có thể là lỗi
+             // console.error("ensureNestedObject called with non-object or null initial object for path:", path, obj);
+             return defaultValueFactory(); // Trả về mặc định để tránh lỗi runtime
+        }
     }
 
     let current = obj;
     for (let i = 0; i < path.length; i++) {
         const key = path[i];
-        if (i === path.length - 1) { // Key cuối cùng trong path
+        if (i === path.length - 1) {
             if (current[key] === undefined) {
                 current[key] = defaultValueFactory();
             }
-        } else { // Key trung gian
+        } else {
             if (current[key] === undefined || typeof current[key] !== 'object' || current[key] === null) {
-                current[key] = {}; // Luôn tạo object rỗng cho key trung gian nếu chưa tồn tại hoặc không phải object
+                current[key] = {};
             }
         }
         current = current[key];
     }
-    return current; // Trả về giá trị ở cấp độ cuối cùng của path
+    return current;
 };
 
 const ensureModelUsageStatsEntry = (results: LogAnalysisResult, apiType: string, modelIdentifier: string) => {
-    // results.geminiApi.modelUsageByApiType PHẢI là một object ở đây.
-    // Path sẽ là [apiType, modelIdentifier]
-    // Nếu results.geminiApi.modelUsageByApiType là {},
-    // ensureNestedObject sẽ tạo:
-    // {}.determine = {}  (nếu apiType là 'determine')
-    // {}.determine[modelIdentifier] = defaultValueFactory()
-
     return ensureNestedObject(
-        results.geminiApi.modelUsageByApiType, // obj đầu vào
-        [apiType, modelIdentifier],            // path
+        results.geminiApi.modelUsageByApiType,
+        [apiType, modelIdentifier],
         () => ({ calls: 0, retries: 0, successes: 0, failures: 0, tokens: 0, safetyBlocks: 0 })
     );
 };
@@ -82,11 +71,10 @@ const updateModelUsageStats = (
     updateType: 'call' | 'retry' | 'success' | 'failure'
 ) => {
     const apiType = logEntry.apiType;
-    const modelName = logEntry.modelName; // Model thực sự được sử dụng
-    const crawlModel = logEntry.crawlModel; // 'tuned' hoặc 'non-tuned'
+    const modelName = logEntry.modelName;
+    const crawlModel = logEntry.crawlModel;
 
     if (!apiType || !modelName || !crawlModel) {
-        // console.warn(`[LogAnalysis] Missing apiType, modelName, or crawlModel for model usage stats. Event: ${logEntry.event}, Acronym: ${logEntry.acronym || 'N/A'}`);
         return;
     }
 
@@ -120,8 +108,6 @@ const updateModelUsageStats = (
     }
 };
 
-// --- Event Handlers ---
-
 // Gemini Final Failures
 export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     const error = logEntry.finalError || logEntry.err || logEntry.reason || logEntry.msg || `Unknown final failure`;
@@ -129,7 +115,10 @@ export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, con
     const failureMsg = typeof error === 'string' ? error : (error as Error)?.message || `Gemini API call failed (${event})`;
     const errorKey = normalizeErrorKey(failureMsg);
 
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    // Đảm bảo results.geminiApi được khởi tạo
+    results.geminiApi = results.geminiApi || {};
+    const geminiApi = results.geminiApi as GeminiApiAnalysis; // Ép kiểu sau khi đảm bảo tồn tại
+
     geminiApi.errorsByType[errorKey] = (geminiApi.errorsByType[errorKey] || 0) + 1;
     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
     geminiApi.failedCalls++;
@@ -155,6 +144,9 @@ export const handleGeminiFinalFailure: LogEventHandler = (logEntry, results, con
         if (apiTypeFromLog === 'determine') confDetail.steps.gemini_determine_success = false;
         else if (apiTypeFromLog === 'extract') confDetail.steps.gemini_extract_success = false;
         else if (apiTypeFromLog === 'cfp') confDetail.steps.gemini_cfp_success = false;
+        
+        // Đặt trạng thái là failed vàEndTime.
+        // handleTaskFinish sẽ tôn trọng trạng thái này.
         confDetail.status = 'failed';
         confDetail.endTime = entryTimestampISO;
         addConferenceError(confDetail, entryTimestampISO, failureMsg, errorKey);
@@ -167,7 +159,10 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
     const errorMsg = typeof error === 'string' ? error : (error as Error)?.message || `Gemini setup/init failed (${logEntry.event})`;
     const errorKey = normalizeErrorKey(errorMsg);
 
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    // Đảm bảo results.geminiApi được khởi tạo
+    results.geminiApi = results.geminiApi || {};
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
+
     geminiApi.errorsByType[errorKey] = (geminiApi.errorsByType[errorKey] || 0) + 1;
     results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
 
@@ -177,7 +172,7 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
 
     const serviceInitEvents = [
         'gemini_service_genai_init_failed', 'gemini_service_not_initialized', 'gemini_service_genai_not_ready',
-        'gemini_client_manager_no_genai_instance', 'gemini_client_manager_no_cache_manager_instance', // Added this
+        'gemini_client_manager_no_genai_instance', 'gemini_client_manager_no_cache_manager_instance',
         'cache_manager_create_failed', 'cache_manager_init_failed_no_apikey',
         'cache_manager_init_skipped_no_genai', 'cache_map_load_failed',
         'gemini_service_async_init_failed'
@@ -190,38 +185,31 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
         }
     } else if (event === 'gemini_service_critically_uninitialized') {
         initStats.criticallyUninitialized++;
-        initStats.failures++; // Also a service init failure
+        initStats.failures++;
     } else if (event === 'gemini_service_lazy_init_attempt') {
         initStats.lazyAttempts++;
     } else if (event === 'gemini_model_list_empty_or_missing') {
         geminiApi.apiCallSetupFailures++;
         configStats.modelListMissing++;
     } else if (event === 'few_shot_prep_odd_parts_count' || event === 'few_shot_prep_failed') {
-        // These are handled by handleFewShotPrep, but also count as apiCallSetupFailures.
-        // The specific counting for fewShotPrep will be in its own handler.
         geminiApi.apiCallSetupFailures++;
     } else {
-        // General API call setup failures
         geminiApi.apiCallSetupFailures++;
     }
 
-    // If a setup failure can be attributed to a specific call attempt (has apiType, modelName, crawlModel)
-    // it should also count as a failed call for that model.
     if (logEntry.apiType && logEntry.modelName && logEntry.crawlModel) {
         updateModelUsageStats(logEntry, results, 'failure');
-        geminiApi.failedCalls++; // Count as a general failed call too.
-    } else if (serviceInitEvents.includes(event) || event === 'gemini_service_critically_uninitialized') {
-        // Critical service-wide setup failures might not be tied to a specific API call/model yet,
-        // but they prevent any calls from succeeding.
-        // No model-specific update here, but it contributes to overall service health.
+        geminiApi.failedCalls++;
     }
-
 
     if (confDetail) {
         const apiTypeFromLog = logEntry.apiType;
         if (apiTypeFromLog === 'determine') confDetail.steps.gemini_determine_success = false;
         else if (apiTypeFromLog === 'extract') confDetail.steps.gemini_extract_success = false;
         else if (apiTypeFromLog === 'cfp') confDetail.steps.gemini_cfp_success = false;
+        
+        // Đặt trạng thái là failed vàEndTime.
+        // handleTaskFinish sẽ tôn trọng trạng thái này.
         confDetail.status = 'failed';
         confDetail.endTime = entryTimestampISO;
         addConferenceError(confDetail, entryTimestampISO, errorMsg, errorKey);
@@ -230,6 +218,7 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
 
 // Gemini Service Initialization Lifecycle
 export const handleServiceInitLifecycle: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
     const initStats = ensureNestedObject(results.geminiApi, ['serviceInitialization']);
     if (logEntry.event === 'gemini_service_async_init_start') {
         initStats.starts++;
@@ -241,7 +230,8 @@ export const handleServiceInitLifecycle: LogEventHandler = (logEntry, results, c
 // Gemini Success
 export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     ensureOverallAnalysis(results);
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
 
     geminiApi.successfulCalls++;
     const tokenCount = logEntry.tokens || logEntry.metaData?.totalTokenCount;
@@ -259,6 +249,7 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
         const apiType = logEntry.apiType;
         const usingCache = logEntry.usingCache ?? logEntry.usingCacheActual ?? false;
 
+        // Chỉ đặt success là true nếu nó chưa được đặt thành false bởi một lỗi khác
         if (apiType === 'determine') {
             if (confDetail.steps.gemini_determine_success !== false) confDetail.steps.gemini_determine_success = true;
             if (confDetail.steps.gemini_determine_cache_used === null) confDetail.steps.gemini_determine_cache_used = usingCache;
@@ -277,7 +268,8 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
 
 // Gemini Cache Specifics
 export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextHits++;
 
     if (confDetail) {
@@ -291,35 +283,39 @@ export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDet
 };
 
 export const handleCacheContextCreateStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextAttempts++;
 };
 
 export const handleCacheContextCreationSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextCreationSuccess++;
 };
 
 export const handleCacheContextCreationFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextCreationFailed++;
     const error = logEntry.err || logEntry.reason || logEntry.msg || `Cache context operation failed (${logEntry.event})`;
     const errorMsg = typeof error === 'string' ? error : (error as Error)?.message || `Cache context operation failed (${logEntry.event})`;
     const errorKey = normalizeErrorKey(errorMsg);
     geminiApi.errorsByType[errorKey] = (geminiApi.errorsByType[errorKey] || 0) + 1;
-    // This could also be considered an apiCallSetupFailure if it happens during a call prep
     if (logEntry.event === 'gemini_call_cache_setup_failed' || logEntry.event === 'gemini_call_model_from_cache_failed' || logEntry.event === 'gemini_call_no_cache_available_or_setup_failed') {
         geminiApi.apiCallSetupFailures++;
     }
 };
 
 export const handleCacheContextInvalidation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextInvalidations++;
 };
 
 export const handleCacheContextRetrievalFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheContextRetrievalFailures++;
     const error = logEntry.err || logEntry.reason || logEntry.msg || `Cache context retrieval failed (${logEntry.event})`;
     const errorMsg = typeof error === 'string' ? error : (error as Error)?.message || `Cache context retrieval failed (${logEntry.event})`;
@@ -328,23 +324,26 @@ export const handleCacheContextRetrievalFailure: LogEventHandler = (logEntry, re
 };
 
 export const handleCacheMapWriteSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheMapWriteSuccessCount++;
 };
 
 export const handleCacheMapWriteFailure: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.cacheMapWriteFailures++;
     geminiApi.errorsByType['cache_map_write_failed'] = (geminiApi.errorsByType['cache_map_write_failed'] || 0) + 1;
 };
 
 // Gemini Call & Retry Stats
 export const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.totalCalls++;
 
     const apiType = logEntry.apiType;
-    const modelName = logEntry.modelName; // Model chung
+    const modelName = logEntry.modelName;
 
     if (apiType) {
         geminiApi.callsByType[apiType] = (geminiApi.callsByType[apiType] || 0) + 1;
@@ -364,11 +363,12 @@ export const handleGeminiCallStart: LogEventHandler = (logEntry, results, confDe
 };
 
 export const handleRetryAttemptStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.totalRetries++;
 
     const apiType = logEntry.apiType;
-    const modelName = logEntry.modelName; // Model đang được retry
+    const modelName = logEntry.modelName;
 
     if (apiType) {
         geminiApi.retriesByType[apiType] = (geminiApi.retriesByType[apiType] || 0) + 1;
@@ -381,12 +381,14 @@ export const handleRetryAttemptStart: LogEventHandler = (logEntry, results, conf
 
 // Gemini Intermediate Errors & Limits
 export const handleRateLimitWait: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.rateLimitWaits++;
 };
 
 export const handleGeminiIntermediateError: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const geminiApi = ensureNestedObject(results, ['geminiApi']) as GeminiApiAnalysis;
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
+    const geminiApi = results.geminiApi as GeminiApiAnalysis;
     geminiApi.intermediateErrors++;
     const error = logEntry.err || logEntry.reason || logEntry.msg || `Gemini intermediate error (${logEntry.event})`;
     const errorMsg = typeof error === 'string' ? error : (error as Error)?.message || `Gemini intermediate error (${logEntry.event})`;
@@ -396,6 +398,7 @@ export const handleGeminiIntermediateError: LogEventHandler = (logEntry, results
 
 // Gemini Fallback Logic
 export const handleFallbackLogic: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
     const fallbackStats = ensureNestedObject(results.geminiApi, ['fallbackLogic']);
     const event = logEntry.event;
 
@@ -410,6 +413,7 @@ export const handleFallbackLogic: LogEventHandler = (logEntry, results, confDeta
 
 // Gemini Configuration & Few-Shot Prep
 export const handleFewShotPrep: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
     const prepStats = ensureNestedObject(results.geminiApi, ['fewShotPreparation']);
     const failures = ensureNestedObject(prepStats, ['failures']);
     const warnings = ensureNestedObject(prepStats, ['warnings']);
@@ -420,7 +424,6 @@ export const handleFewShotPrep: LogEventHandler = (logEntry, results, confDetail
         case 'few_shot_prep_success': prepStats.successes++; break;
         case 'few_shot_prep_odd_parts_count':
             failures.oddPartsCount++;
-            // This is also a setup failure for the call
             handleGeminiSetupFailure(logEntry, results, confDetail, entryTimestampISO);
             break;
         case 'few_shot_prep_failed':
@@ -437,6 +440,7 @@ export const handleFewShotPrep: LogEventHandler = (logEntry, results, confDetail
 
 // Gemini Request Payload Logging
 export const handleRequestPayloadLog: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
     const logStats = ensureNestedObject(results.geminiApi, ['requestPayloadLogging']);
     if (logEntry.event === 'gemini_api_request_payload_logged') {
         logStats.successes++;
@@ -447,6 +451,7 @@ export const handleRequestPayloadLog: LogEventHandler = (logEntry, results, conf
 
 // Gemini Generate Content Internals
 export const handleGenerateContentInternal: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
+    results.geminiApi = results.geminiApi || {}; // Đảm bảo khởi tạo
     const genStats = ensureNestedObject(results.geminiApi, ['generateContentInternal']);
     if (logEntry.event === 'gemini_api_generate_start') {
         genStats.attempts++;
