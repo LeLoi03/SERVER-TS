@@ -201,8 +201,6 @@ export class GeminiApiService {
                 maxAttempts: this.maxRetries,
             });
 
-
-
             if (attempt > 1) {
                 attemptLogger.info({
                     ...commonLogContext,

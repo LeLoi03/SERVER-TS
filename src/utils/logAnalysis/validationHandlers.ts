@@ -1,94 +1,154 @@
 // src/utils/logAnalysis/validationHandlers.ts
-import { LogEventHandler } from './index'; // Hoặc đường dẫn chính xác đến file export LogEventHandler
-import { ValidationStats, ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types'; // Đảm bảo đường dẫn và types chính xác
-import { createConferenceKey } from './helpers'; // Đảm bảo đường dẫn chính xác
+import { LogEventHandler } from './index';
+import { ValidationStats, LogAnalysisResult, DataQualityInsight } from '../../types/logAnalysis.types'; // Đảm bảo DataQualityInsight đã được export
+import { createConferenceKey } from './helpers';
 
-// Khởi tạo validationStats trong results nếu chưa có
+export const getInitialValidationStats = (): ValidationStats => ({
+    // Validation Warnings
+    totalValidationWarnings: 0,
+    warningsByField: {},
+    warningsBySeverity: {
+        Low: 0,
+        Medium: 0,
+        High: 0,
+    },
+    warningsByInsightMessage: {},
+
+    // Normalizations
+    totalNormalizationsApplied: 0,
+    normalizationsByField: {},
+    normalizationsByReason: {},
+});
+
+
 const ensureValidationStats = (results: LogAnalysisResult): ValidationStats => {
     if (!results.validationStats) {
-        results.validationStats = {
-            totalValidationWarnings: 0,
-            warningsByField: {},
-            totalNormalizationsApplied: 0,
-            normalizationsByField: {},
-        };
+        results.validationStats = getInitialValidationStats();
     }
+    results.validationStats.warningsBySeverity = results.validationStats.warningsBySeverity || { Low: 0, Medium: 0, High: 0 };
+    results.validationStats.warningsByInsightMessage = results.validationStats.warningsByInsightMessage || {};
+    results.validationStats.normalizationsByReason = results.validationStats.normalizationsByReason || {};
     return results.validationStats;
 };
 
-export const handleValidationWarning: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {
+
+export const handleValidationWarning: LogEventHandler = (logEntry, results, _irrelevantConfDetail, entryTimestampISO) => {
     const stats = ensureValidationStats(results);
 
-    // Lấy các trường từ logEntry, ưu tiên cấp cao nhất, sau đó là context
     const field = (logEntry.field || logEntry.context?.field) as string | undefined;
     const invalidValue = logEntry.invalidValue || logEntry.context?.invalidValue;
     const action = (logEntry.action || logEntry.context?.action) as string | undefined;
     const normalizedTo = logEntry.normalizedTo || logEntry.context?.normalizedTo;
-    const reason = logEntry.reason || logEntry.context?.reason || logEntry.msg; // msg có thể chứa lý do
+    const reasonMsgFromLog = logEntry.reason || logEntry.msg || "Validation warning";
+    const ruleViolated = (logEntry.ruleViolated || logEntry.context?.ruleViolated) as string | undefined;
 
-    const currentBatchRequestId = logEntry.batchRequestId || logEntry.requestId;
-    const acronym = logEntry.conferenceAcronym || logEntry.context?.conferenceAcronym;
-    const title = logEntry.conferenceTitle || logEntry.context?.conferenceTitle;
+    let severity: 'Low' | 'Medium' | 'High' = 'Low';
+    if (field === 'year' && action === 'logged_only') severity = 'Medium';
+    if (field === 'continent' && action === 'normalized' && invalidValue) severity = 'Medium';
+    if (logEntry.severity) {
+        const logSeverity = String(logEntry.severity).toLowerCase();
+        if (logSeverity === 'high') severity = 'High';
+        else if (logSeverity === 'medium') severity = 'Medium';
+    }
 
     stats.totalValidationWarnings++;
-
     if (field) {
         stats.warningsByField[field] = (stats.warningsByField[field] || 0) + 1;
     } else {
         stats.warningsByField['unknown_field_or_general_warning'] = (stats.warningsByField['unknown_field_or_general_warning'] || 0) + 1;
     }
+    stats.warningsBySeverity[severity] = (stats.warningsBySeverity[severity] || 0) + 1;
+    const standardizedMessage = field ? `Field '${field}': ${reasonMsgFromLog}` : reasonMsgFromLog;
+    stats.warningsByInsightMessage[standardizedMessage] = (stats.warningsByInsightMessage[standardizedMessage] || 0) + 1;
 
-    // Cập nhật chi tiết cho conference cụ thể nếu có thể xác định
+    const currentBatchRequestId = logEntry.batchRequestId || logEntry.requestId;
+    const acronym = logEntry.conferenceAcronym || logEntry.context?.conferenceAcronym;
+    const title = logEntry.conferenceTitle || logEntry.context?.conferenceTitle;
+
     if (currentBatchRequestId && acronym && title) {
         const compositeKey = createConferenceKey(currentBatchRequestId, acronym, title);
+        // SỬA LỖI Ở ĐÂY: Kiểm tra compositeKey không phải là null
         if (compositeKey && results.conferenceAnalysis[compositeKey]) {
-            const confDetailToUpdate = results.conferenceAnalysis[compositeKey] as ConferenceAnalysisDetail;
-            if (!confDetailToUpdate.validationIssues) {
-                confDetailToUpdate.validationIssues = [];
+            const confDetailToUpdate = results.conferenceAnalysis[compositeKey]!; // Thêm ! vì đã kiểm tra null
+            if (!confDetailToUpdate.dataQualityInsights) {
+                confDetailToUpdate.dataQualityInsights = [];
             }
-            confDetailToUpdate.validationIssues.push({
-                field: field || 'general', // Nếu không có field cụ thể, coi là general warning
-                value: invalidValue,
-                action: action || 'unknown_action',
-                normalizedTo: normalizedTo,
-                // reason: reason || 'No specific reason provided',
-                timestamp: entryTimestampISO
-            });
+
+            const insight: DataQualityInsight = {
+                timestamp: entryTimestampISO,
+                field: field || 'general',
+                originalValue: invalidValue,
+                currentValue: action === 'normalized' ? normalizedTo : invalidValue,
+                insightType: 'ValidationWarning',
+                severity: severity,
+                message: standardizedMessage,
+                details: {
+                    actionTaken: action || 'unknown_action',
+                    normalizedTo: action === 'normalized' ? normalizedTo : undefined,
+                    ruleViolated: ruleViolated,
+                }
+            };
+            confDetailToUpdate.dataQualityInsights.push(insight);
+        } else if (compositeKey === null) {
+            // Log hoặc xử lý trường hợp không tạo được compositeKey
+            // console.warn("Could not create composite key for validation warning:", logEntry);
         }
     }
 };
 
-export const handleNormalizationApplied: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {
+export const handleNormalizationApplied: LogEventHandler = (logEntry, results, _irrelevantConfDetail, entryTimestampISO) => {
     const stats = ensureValidationStats(results);
 
-    // Lấy các trường từ logEntry, ưu tiên cấp cao nhất
     const field = (logEntry.field || logEntry.context?.field) as string | undefined;
-    const reason = logEntry.reason || logEntry.context?.reason;
-    // const originalValue = logEntry.originalValue || logEntry.context?.originalValue;
-    // const normalizedValue = logEntry.normalizedValue || logEntry.context?.normalizedValue;
+    const reason = (logEntry.reason || logEntry.context?.reason) as string | undefined;
+    const originalValueFromLog = logEntry.originalValue !== undefined ? logEntry.originalValue : logEntry.context?.originalValue;
+    const normalizedValueFromLog = logEntry.normalizedValue !== undefined ? logEntry.normalizedValue : logEntry.context?.normalizedValue;
+    const messageFromLog = logEntry.msg || (field ? `Normalized field '${field}' due to ${reason || 'default rule'}` : 'Normalization applied');
+    const ruleApplied = (logEntry.ruleApplied || logEntry.context?.ruleApplied) as string | undefined;
 
-    // Không cần lấy conferenceAcronym, conferenceTitle, batchRequestId ở đây
-    // vì handler này chủ yếu cập nhật stats tổng.
-    // Nếu normalization cũng là một validation warning (ví dụ: giá trị không hợp lệ được chuẩn hóa),
-    // thì `handleValidationWarning` sẽ ghi lại chi tiết vào conference.
+    if (logEntry.event === 'validation_warning' && logEntry.action === 'normalized') {
+        return;
+    }
 
     stats.totalNormalizationsApplied++;
-
     if (field) {
         stats.normalizationsByField[field] = (stats.normalizationsByField[field] || 0) + 1;
     } else {
-        stats.normalizationsByField['unknown_field'] = (stats.normalizationsByField['unknown_field'] || 0) + 1;
+        stats.normalizationsByField['unknown_field_or_general_normalization'] = (stats.normalizationsByField['unknown_field_or_general_normalization'] || 0) + 1;
     }
+    const reasonKey = reason || 'unknown_reason';
+    stats.normalizationsByReason[reasonKey] = (stats.normalizationsByReason[reasonKey] || 0) + 1;
 
-    // Thông tin chi tiết về việc normalization (originalValue, normalizedValue, reason)
-    // sẽ được ghi vào `confDetail.validationIssues` bởi `handleValidationWarning` nếu
-    // `normalization_applied` được log cùng với `validation_warning` hoặc là kết quả của một validation.
-    // Nếu `normalization_applied` là một event độc lập (ví dụ: luôn chuẩn hóa trường trống mà không coi là warning),
-    // thì việc không ghi vào `confDetail.validationIssues` ở đây là hợp lý.
-    // Dựa trên log của bạn, event `normalization_applied` có vẻ là một hành động độc lập, ví dụ:
-    // `{"event":"normalization_applied","field":"publisher","originalValue":"","normalizedValue":"No publisher","reason":"empty_value",...}`
-    // Trong trường hợp này, nó không nhất thiết là một "issue" mà là một bước xử lý dữ liệu.
-    // Nếu bạn muốn theo dõi cụ thể từng lần normalization cho từng conference, bạn có thể thêm logic tương tự như `handleValidationWarning`
-    // để tìm `confDetail` và thêm vào một mảng riêng (ví dụ: `confDetail.normalizationsApplied`).
-    // Tuy nhiên, để đơn giản, hiện tại chỉ cập nhật stats tổng.
+    const currentBatchRequestId = logEntry.batchRequestId || logEntry.requestId;
+    const acronym = logEntry.conferenceAcronym || logEntry.context?.conferenceAcronym;
+    const title = logEntry.conferenceTitle || logEntry.context?.conferenceTitle;
+
+    if (currentBatchRequestId && acronym && title) {
+        const compositeKey = createConferenceKey(currentBatchRequestId, acronym, title);
+        // SỬA LỖI Ở ĐÂY: Kiểm tra compositeKey không phải là null
+        if (compositeKey && results.conferenceAnalysis[compositeKey]) {
+            const confDetailToUpdate = results.conferenceAnalysis[compositeKey]!; // Thêm ! vì đã kiểm tra null
+            if (!confDetailToUpdate.dataQualityInsights) {
+                confDetailToUpdate.dataQualityInsights = [];
+            }
+
+            const insight: DataQualityInsight = {
+                timestamp: entryTimestampISO,
+                field: field || 'unknown',
+                originalValue: originalValueFromLog,
+                currentValue: normalizedValueFromLog,
+                insightType: 'NormalizationApplied',
+                message: messageFromLog,
+                details: {
+                    actionTaken: `Normalized (reason: ${reason || 'default'})`,
+                    normalizedTo: normalizedValueFromLog,
+                    ruleViolated: ruleApplied,
+                }
+            };
+            confDetailToUpdate.dataQualityInsights.push(insight);
+        } else if (compositeKey === null) {
+            // Log hoặc xử lý trường hợp không tạo được compositeKey
+            // console.warn("Could not create composite key for normalization event:", logEntry);
+        }
+    }
 };

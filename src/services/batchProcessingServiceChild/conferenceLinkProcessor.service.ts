@@ -224,7 +224,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             }
 
             if (!accessSuccess) {
-                linkLogger.fatal("DEBUG: Entering !accessSuccess block for 'single_link_processing_failed_to_access_link'"); // DEBUG
+                // linkLogger.fatal("DEBUG: Entering !accessSuccess block for 'single_link_processing_failed_to_access_link'"); // DEBUG
                 linkLogger.error({ finalAttemptedUrl: finalLink, errMessage: accessError?.message, finalStatus: responseStatus, event: 'single_link_processing_failed_to_access_link' });
                 return null;
             }
@@ -282,7 +282,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             return batchEntry;
 
         } catch (error: any) {
-            linkLogger.fatal("DEBUG: Entering CATCH block for 'single_link_processing_unhandled_error'"); // DEBUGF
+            // linkLogger.fatal("DEBUG: Entering CATCH block for 'single_link_processing_unhandled_error'"); // DEBUGF
             linkLogger.error({ originalUrl: link, err: error, event: 'single_link_processing_unhandled_error' });
             return null;
         }

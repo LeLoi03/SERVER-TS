@@ -1,5 +1,13 @@
 // src/types/logAnalysis.types.ts
 
+export interface GoogleSearchHealthData {
+  rotationsSuccess: number;
+  rotationsFailed: number;
+  allKeysExhaustedOnGetNextKey: number;
+  maxUsageLimitsReachedTotal: number;
+  successfulSearchesWithNoItems: number;
+}
+
 export interface RequestTimings {
     startTime: string | null;
     endTime: string | null;
@@ -39,13 +47,29 @@ export interface FilteredData {
     analysisEndMillis: number | null;
 }
 
+
+export interface DataQualityInsight {
+    timestamp: string;    // ISO string
+    field: string;        // Trường bị ảnh hưởng
+    originalValue?: any;  // Giá trị gốc trước khi thay đổi/warning
+    currentValue: any;    // Giá trị hiện tại (sau khi normalized, hoặc giá trị gây warning)
+    insightType: 'ValidationWarning' | 'NormalizationApplied' | 'DataCorrection'; // Loại insight
+    severity?: 'Low' | 'Medium' | 'High'; // Mức độ nghiêm trọng (chủ yếu cho Warning)
+    message: string;      // Mô tả chi tiết
+    details?: {
+        actionTaken?: string;  // Ví dụ: "KeptAsIs", "NormalizedToDefault"
+        normalizedTo?: any;    // Giá trị sau khi normalize (nếu insightType là NormalizationApplied)
+        ruleViolated?: string; // Ví dụ: "YEAR_REGEX", "VALID_CONTINENTS"
+        // Có thể thêm các chi tiết khác nếu cần
+    }
+}
+
 /** Thông tin chi tiết về quá trình xử lý một conference cụ thể */
 export interface ConferenceAnalysisDetail {
     batchRequestId: string;
     originalRequestId?: string;
     title: string;
     acronym: string;
-    // Status của conference không thay đổi, vẫn giữ các trạng thái cơ bản
     status: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped';
     startTime: string | null; // ISO string
     endTime: string | null;   // ISO string
@@ -82,16 +106,22 @@ export interface ConferenceAnalysisDetail {
         gemini_cfp_success?: boolean | null;
         gemini_cfp_cache_used?: boolean | null;
     };
-    errors: Array<{ timestamp: string; message: string; details?: any; errorCode?: string }>; // << BỔ SUNG errorCode tùy chọn
-    validationIssues?: Array<{
-        field: string;
-        value: any;
-        action: string;
-        normalizedTo?: any;
-        timestamp: string; // ISO string
+    errors: Array<{
+        timestamp: string;
+        message: string;
+        details?: any;
+        errorCode?: string; // Giữ nguyên
+        sourceService?: string; // << BỔ SUNG: Service nào gây ra lỗi (nếu có)
+        errorType?: 'DataParsing' | 'Network' | 'APIQuota' | 'Logic' | 'FileSystem' | 'Unknown'; // << BỔ SUNG: Phân loại lỗi
     }>;
-    finalResultPreview?: any;
-    finalResult?: any;
+
+    dataQualityInsights?: DataQualityInsight[]; // Sử dụng DataQualityInsight[] ở đây
+
+
+    // Bỏ `validationIssues` riêng lẻ, đã được gộp vào `dataQualityInsights`
+
+    finalResultPreview?: any; // Giữ nguyên
+    finalResult?: any;        // Giữ nguyên
 }
 
 export interface PlaywrightAnalysis {
@@ -293,11 +323,24 @@ export interface OverallAnalysis {
 }
 
 export interface ValidationStats {
-    // ... (giữ nguyên)
+    // Các trường cho Validation Warnings
     totalValidationWarnings: number;
     warningsByField: { [fieldName: string]: number };
+    warningsBySeverity: { // << BỔ SUNG: Đếm warning theo mức độ nghiêm trọng
+        Low: number;
+        Medium: number;
+        High: number;
+    };
+    warningsByInsightMessage: { [message: string]: number }; // << BỔ SUNG: Đếm các loại warning cụ thể
+
+    // Các trường cho Normalizations
     totalNormalizationsApplied: number;
     normalizationsByField: { [fieldName: string]: number };
+    normalizationsByReason: { [reasonMessage: string]: number }; // << BỔ SUNG: Đếm normalization theo lý do (ví dụ: "empty_value")
+
+    // Có thể thêm các trường cho DataCorrections nếu có
+    totalDataCorrections?: number;
+    correctionsByField?: { [fieldName: string]: number };
 }
 
 /** Cấu trúc kết quả phân tích log tổng thể và chi tiết theo conference */
@@ -485,11 +528,45 @@ export const getInitialFileOutputAnalysis = (): FileOutputAnalysis => ({
 });
 
 export const getInitialValidationStats = (): ValidationStats => ({
+    // Validation Warnings
     totalValidationWarnings: 0,
     warningsByField: {},
+    warningsBySeverity: { // Khởi tạo các mức độ nghiêm trọng
+        Low: 0,
+        Medium: 0,
+        High: 0,
+    },
+    warningsByInsightMessage: {},
+
+    // Normalizations
     totalNormalizationsApplied: 0,
     normalizationsByField: {},
+    normalizationsByReason: {},
+
+    // Data Corrections (khởi tạo nếu bạn quyết định sử dụng chúng)
+    // totalDataCorrections: 0, // Bỏ comment nếu dùng
+    // correctionsByField: {},    // Bỏ comment nếu dùng
 });
+export interface ValidationStats {
+    // Các trường cho Validation Warnings
+    totalValidationWarnings: number;
+    warningsByField: { [fieldName: string]: number };
+    warningsBySeverity: { // << BỔ SUNG: Đếm warning theo mức độ nghiêm trọng
+        Low: number;
+        Medium: number;
+        High: number;
+    };
+    warningsByInsightMessage: { [message: string]: number }; // << BỔ SUNG: Đếm các loại warning cụ thể
+
+    // Các trường cho Normalizations
+    totalNormalizationsApplied: number;
+    normalizationsByField: { [fieldName: string]: number };
+    normalizationsByReason: { [reasonMessage: string]: number }; // << BỔ SUNG: Đếm normalization theo lý do (ví dụ: "empty_value")
+
+    // Có thể thêm các trường cho DataCorrections nếu có
+    totalDataCorrections?: number;
+    correctionsByField?: { [fieldName: string]: number };
+}
 
 // Hàm khởi tạo cho toàn bộ LogAnalysisResult
 export const getInitialLogAnalysisResult = (logFilePath: string = "N/A"): LogAnalysisResult => ({
