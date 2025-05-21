@@ -104,7 +104,7 @@ export interface PlaywrightAnalysis {
 
     // --- HTML Saving Stats (Aggregated across all conferences) ---
     htmlSaveAttempts: number; // Total conferences for which HTML saving was attempted ('process_save_start')
-    successfulSaves: number; // Total conferences where HTML saving was successfully initiated ('process_save_delegation_initiated')
+    successfulSaveInitiations: number; // Total conferences where HTML saving was successfully initiated ('process_save_delegation_initiated')
     failedSaves: number; // Total conferences where HTML saving initiation failed
     skippedSaves: number; // Total conferences where HTML saving was skipped ('process_save_skipped_no_links')
     // --- End HTML Saving Stats ---

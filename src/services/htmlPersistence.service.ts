@@ -88,7 +88,7 @@ export class HtmlPersistenceService {
             apiModelsUsed: apiModels // << Log object models
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
-        flowLogger.info({ linksCount: searchResultLinks.length, event: 'save_html_start' }, `Processing SAVE flow (using API models: ${modelsDesc}) by delegating to BatchProcessingService`);
+        flowLogger.info({ linksCount: searchResultLinks.length, event: 'process_save_start' }, `Processing SAVE flow (using API models: ${modelsDesc}) by delegating to BatchProcessingService`);
 
         if (searchResultLinks.length === 0) {
             flowLogger.warn({ event: 'process_save_skipped_no_links' }, "Skipping save flow as no search links were provided.");

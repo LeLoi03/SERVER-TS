@@ -224,6 +224,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             }
 
             if (!accessSuccess) {
+                linkLogger.fatal("DEBUG: Entering !accessSuccess block for 'single_link_processing_failed_to_access_link'"); // DEBUG
                 linkLogger.error({ finalAttemptedUrl: finalLink, errMessage: accessError?.message, finalStatus: responseStatus, event: 'single_link_processing_failed_to_access_link' });
                 return null;
             }
@@ -258,7 +259,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 linkLogger.error({ baseName: textFileBaseName, event: 'failed_to_save_initial_text' });
                 return null;
             }
-             linkLogger.debug({ filePath: textPath, event: 'initial_text_saved_successfully' });
+            linkLogger.debug({ filePath: textPath, event: 'initial_text_saved_successfully' });
 
             // ++ BỎ PHẦN addAcronymSafely ở đây
             // const acronymForEntryBasedOnLink = `${conference.Acronym}_link${linkIndex}`;
@@ -281,13 +282,14 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             return batchEntry;
 
         } catch (error: any) {
+            linkLogger.fatal("DEBUG: Entering CATCH block for 'single_link_processing_unhandled_error'"); // DEBUGF
             linkLogger.error({ originalUrl: link, err: error, event: 'single_link_processing_unhandled_error' });
             return null;
         }
     }
 
 
-     public async processMainLinkForUpdate(
+    public async processMainLinkForUpdate(
         page: Page,
         conference: ConferenceUpdateData,
         parentLogger: Logger
@@ -301,7 +303,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             conferenceAcronym: conference.Acronym
         });
 
-         let finalUrl: string | null = conference.mainLink;
+        let finalUrl: string | null = conference.mainLink;
         let textPath: string | null = null;
 
         if (!conference.mainLink) {
@@ -310,7 +312,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         }
         logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'main' });
 
-         try {
+        try {
             if (page.isClosed()) {
                 logger.warn({ event: 'html_processing_failed', reason: 'Page already closed', linkType: 'main' });
                 return { finalUrl: null, textPath: null };
@@ -337,7 +339,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'main' });
             }
         } catch (error: any) {
-             const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
             if (error.message?.includes('Navigation timeout') || error.message?.includes('Target page, context or browser has been closed')) {
                 logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'goto_failed', linkType: 'main' });
             } else {
@@ -351,7 +353,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
 
 
-     public async processCfpLinkForUpdate(
+    public async processCfpLinkForUpdate(
         page: Page | null,
         conference: ConferenceUpdateData,
         parentLogger: Logger
@@ -390,7 +392,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'cfp' });
             }
         } catch (error: any) {
-             const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
+            const errDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
             logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'cfp' });
             textPath = null;
         }

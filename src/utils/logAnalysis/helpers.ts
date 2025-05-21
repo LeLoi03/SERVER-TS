@@ -151,7 +151,7 @@ export const initializeLogAnalysisResult = (logFilePath: string, filterRequestId
         contextErrors: 0, // Thêm mới
         // --- HTML Saving ---
         htmlSaveAttempts: 0,
-        successfulSaves: 0,
+        successfulSaveInitiations: 0,
         failedSaves: 0,
         skippedSaves: 0, // Thêm mới
         // --- Link Processing ---

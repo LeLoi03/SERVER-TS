@@ -1,4 +1,4 @@
-// src/client/utils/eventHandlers/index.ts
+// src/utils/logAnalysis/index.ts
 
 // Import tất cả các handler từ các file con
 import * as taskLifecycle from './taskLifecycleHandlers';
@@ -79,7 +79,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
 
   // Link Processing (từ ConferenceLinkProcessorService.processInitialLinkForSave)
   'single_link_processing_start': playwright.handleLinkProcessingAttempt,
-  'link_access_final_success': playwright.handleLinkProcessingSuccess,
+  'single_link_processing_success': playwright.handleLinkProcessingSuccess, // SỬA Ở ĐÂY
   'single_link_processing_failed_to_access_link': playwright.handleLinkProcessingFailed,
   'single_link_processing_unhandled_error': playwright.handleLinkProcessingFailed, // Lỗi chung khi xử lý 1 link
   // 'redirect_detected': playwright.handleLinkRedirectDetected, // Giữ lại nếu bạn có log event này
@@ -87,7 +87,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   // Lỗi từ PageContentExtractorService liên quan đến Playwright
   'html_processing_failed': playwright.handleOtherPlaywrightFailure, // Khi page null hoặc closed
   'goto_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.goto()
-  // 'fetch_content_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.content()
+  'fetch_content_failed': playwright.handleOtherPlaywrightFailure, // Lỗi page.content()
   'unexpected_error': playwright.handleOtherPlaywrightFailure, // Lỗi chung trong PageContentExtractorService
 
 

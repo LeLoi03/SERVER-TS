@@ -47,7 +47,7 @@ export const handleSaveHtmlConferenceSkipped: LogEventHandler = (logEntry, resul
 
 export const handleSaveHtmlConferenceSuccess: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
     // Event này được gọi khi việc *khởi tạo* lưu batch thành công (process_save_delegation_initiated)
-    results.playwright.successfulSaves++; // Đếm số conference mà việc lưu HTML được bắt đầu thành công
+    results.playwright.successfulSaveInitiations++; // Đếm số conference mà việc lưu HTML được bắt đầu thành công
     if (confDetail && confDetail.steps.html_save_success !== false) {
         confDetail.steps.html_save_success = true;
     }
