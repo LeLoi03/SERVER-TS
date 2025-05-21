@@ -118,7 +118,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
                 apiModelsUsed: parsedApiModels, // Log object models
                 outputJsonl: finalOutputJsonlPathForBatch,
                 outputCsv: evaluateCsvPathForBatch,
-                processed_results_count: processedResults.length, // Log count instead of full array for brevity
+                processed_results: processedResults, // GỬI KẾT QUẢ VÀO CONTEXT
                 startTime: new Date(operationStartTime).toISOString(),
                 endTime: new Date(operationEndTime).toISOString(),
             }
@@ -128,7 +128,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         res.status(200).json({
             message: `Conference processing completed using specified API models (${modelsUsedDesc}). Orchestrator returned ${processedResults.length} processed records. See server files for details.`,
             runtime: `${runTimeSeconds} s`,
-            data: processedResults,
+            // data: processedResults,
             outputJsonlPath: finalOutputJsonlPathForBatch,
             outputCsvPath: evaluateCsvPathForBatch
         });

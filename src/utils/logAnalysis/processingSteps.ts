@@ -1,16 +1,25 @@
 // src/utils/logAnalysis/processingSteps.ts
 import fs from 'fs';
 import readline from 'readline';
-import { LogAnalysisResult, ConferenceAnalysisDetail, ReadLogResult, RequestLogData, FilteredData } from '../../types/logAnalysis.types'; // Đảm bảo types đã được cập nhật
 import {
-    createConferenceKey,      // Đảm bảo helper này nhận batchRequestId
-    initializeConferenceDetail, // Đảm bảo helper này nhận batchRequestId
+    LogAnalysisResult,
+    ConferenceAnalysisDetail,
+    ReadLogResult,
+    RequestLogData,
+    FilteredData,
+    RequestTimings // Ensure this is imported for currentRequestTimings
+} from '../../types/logAnalysis.types';
+import {
+    createConferenceKey,
+    initializeConferenceDetail,
     addConferenceError,
     doesRequestOverlapFilter
-} from './helpers'; // Đảm bảo helpers đã được cập nhật
+} from './helpers'; // Assuming helpers are correctly defined
 
-import { eventHandlerMap } from './index'; // Giả sử index.ts export eventHandlerMap
-// import { Logger } from 'pino'; // Bỏ comment nếu dùng logger
+import { eventHandlerMap } from './index'; // Assuming index.ts exports eventHandlerMap correctly
+// import { Logger, pino } from 'pino'; // Example if you were using pino
+
+// const baseLogger = pino({ level: 'info' }); // Example: Initialize a base logger if used
 
 // --- Step 1: readAndGroupLogs ---
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
@@ -40,7 +49,7 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
                 const logEntry = JSON.parse(line);
                 parsedEntries++;
                 const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const batchRequestId = logEntry.batchRequestId;
+                const batchRequestId = logEntry.batchRequestId; // Assuming 'batchRequestId' is the correct field
 
                 if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
                     if (!requestsData.has(batchRequestId)) {
@@ -83,9 +92,9 @@ export const filterRequests = (
     filterStartMillis: number | null,
     filterEndMillis: number | null,
     batchRequestIdFilter?: string
-    // baseLogger?: Logger
+    // baseLoggerParam?: Logger // Renamed to avoid conflict with global baseLogger
 ): FilteredData => {
-    // const logger = baseLogger?.child({ function: 'filterRequests' }) || console;
+    // const logger = baseLoggerParam?.child({ function: 'filterRequests' }) || baseLogger.child({ function: 'filterRequests' });
     // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis, batchRequestIdFilter }, 'Starting: Filtering requests');
 
     const filteredRequests = new Map<string, RequestLogData>();
@@ -96,19 +105,17 @@ export const filterRequests = (
         // logger.info({ event: 'filter_mode_batchRequestId', targetRequestId: batchRequestIdFilter }, `Filtering for specific batchRequestId: ${batchRequestIdFilter}`);
         const requestInfo = allRequestsData.get(batchRequestIdFilter);
         if (requestInfo) {
-            const overlapsTimeFilter = doesRequestOverlapFilter(
-                requestInfo.startTime,
-                requestInfo.endTime,
-                filterStartMillis,
-                filterEndMillis,
-                batchRequestIdFilter //, logger
-            );
+            // Apply time filter only if one is active, otherwise include if batchRequestId matches
+            const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
+                doesRequestOverlapFilter(
+                    requestInfo.startTime,
+                    requestInfo.endTime,
+                    filterStartMillis,
+                    filterEndMillis,
+                    batchRequestIdFilter //, logger
+                );
 
-            if (filterStartMillis === null && filterEndMillis === null) {
-                filteredRequests.set(batchRequestIdFilter, requestInfo);
-                analysisStartMillis = requestInfo.startTime;
-                analysisEndMillis = requestInfo.endTime;
-            } else if (overlapsTimeFilter) {
+            if (overlapsTimeFilter) {
                 filteredRequests.set(batchRequestIdFilter, requestInfo);
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
@@ -150,32 +157,34 @@ export const processLogEntry = (
     logEntry: any,
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number }
-    // baseLoggerForEntry: Logger
+    // baseLoggerForEntry?: Logger // Renamed to avoid conflict
 ): void => {
     const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
     const entryTimestampISO = !isNaN(entryTimeMillis) ? new Date(entryTimeMillis).toISOString() : new Date().toISOString() + '_INVALID_TIME';
-    // const entrySpecificLogger = baseLoggerForEntry.child({ /* ... */ });
+    // const entrySpecificLogger = baseLoggerForEntry?.child({ event: logEntry.event, time: entryTimestampISO }) || baseLogger.child({ event: logEntry.event, time: entryTimestampISO });
 
     if (typeof logEntry.level === 'number') {
-        if (logEntry.level >= 50) results.errorLogCount++;
-        if (logEntry.level >= 60) results.fatalLogCount++;
+        if (logEntry.level >= 50) results.errorLogCount++; // pino: error, fatal
+        if (logEntry.level >= 60) results.fatalLogCount++; // pino: fatal
     }
 
     const eventName = logEntry.event as string | undefined;
     const contextFields = logEntry.context || {};
     const acronym = contextFields.acronym || contextFields.conferenceAcronym || logEntry.acronym || logEntry.conferenceAcronym;
     const title = contextFields.title || contextFields.conferenceTitle || logEntry.title || logEntry.conferenceTitle;
-    const currentRequestId = logEntry.batchRequestId;
+    const currentRequestId = logEntry.batchRequestId; // This is the batchRequestId from the log entry
 
-    // <<< MODIFIED: createConferenceKey now includes batchRequestId >>>
+    // The `batchRequestId` field in `ConferenceAnalysisDetail` should store this `currentRequestId`.
+    // `createConferenceKey` uses `currentRequestId` to form the unique key.
     const compositeKey = createConferenceKey(currentRequestId, acronym, title);
     let confDetail: ConferenceAnalysisDetail | null = null;
 
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
-            // <<< MODIFIED: initializeConferenceDetail now includes batchRequestId >>>
+            // `initializeConferenceDetail` should correctly set `detail.batchRequestId = currentRequestId`
+            // (assuming its `batchRequestId` parameter maps to `detail.batchRequestId` field).
             results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(currentRequestId, acronym!, title!);
-            // entrySpecificLogger.trace({ compositeKey }, 'Initialized new conference detail');
+            // entrySpecificLogger.trace({ compositeKey, batchRequestId: currentRequestId }, 'Initialized new conference detail');
         }
         confDetail = results.conferenceAnalysis[compositeKey];
         if (!isNaN(entryTimeMillis)) {
@@ -190,9 +199,10 @@ export const processLogEntry = (
     if (eventName && eventHandlerMap[eventName]) {
         const handler = eventHandlerMap[eventName];
         try {
+            // Handler updates results and confDetail
             handler(logEntry, results, confDetail, entryTimestampISO);
         } catch (handlerError: any) {
-            // entrySpecificLogger.error({ /* ... */ }, `Error executing handler for event: ${eventName}`);
+            // entrySpecificLogger.error({ err: handlerError, eventName, batchRequestId: currentRequestId, confAcronym: confDetail?.acronym }, `Error executing handler for event: ${eventName}`);
             if (confDetail) {
                 addConferenceError(confDetail, entryTimestampISO, handlerError, `Internal error processing event ${eventName}`);
             }
@@ -203,33 +213,30 @@ export const processLogEntry = (
     }
 };
 
+
 // --- Step 4: calculateFinalMetrics ---
 export const calculateFinalMetrics = (
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
     analysisStartMillis: number | null,
     analysisEndMillis: number | null,
-    filteredRequestsData: Map<string, RequestLogData> // <<< NEW PARAMETER
-    // baseLogger: Logger
+    filteredRequestsData: Map<string, RequestLogData>
+    // baseLoggerParam?: Logger // Renamed
 ): void => {
-    // const logger = baseLogger.child({ function: 'calculateFinalMetrics' });
+    // const logger = baseLoggerParam?.child({ function: 'calculateFinalMetrics' }) || baseLogger.child({ function: 'calculateFinalMetrics' });
     // logger.info({ event: 'final_calc_start' }, "Performing final calculations on analyzed data");
 
     // --- Calculate Overall Duration (for the set of analyzed requests) ---
-    // This logic is correct: overall start/end/duration reflects the scope of the analysis.
     if (analysisStartMillis !== null && analysisEndMillis !== null) {
         results.overall.startTime = new Date(analysisStartMillis).toISOString();
         results.overall.endTime = new Date(analysisEndMillis).toISOString();
         results.overall.durationSeconds = Math.round((analysisEndMillis - analysisStartMillis) / 1000);
     } else if (Object.keys(results.conferenceAnalysis).length > 0) {
-        // This fallback might still be useful if, for some reason, analysisStart/EndMillis are null
-        // but there are conference details (e.g., if filtering was very restrictive and only left partial data).
         let minConfStart: number | null = null;
         let maxConfEnd: number | null = null;
-
         Object.values(results.conferenceAnalysis).forEach(detail => {
             const detailEndTimeMillis = detail.endTime ? new Date(detail.endTime).getTime() : null;
-            // <<< MODIFIED: Use batchRequestId from detail to create key for conferenceLastTimestamp >>>
+            // Use detail.batchRequestId here as it should hold the batchRequestId for that conference task
             const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
             const lastSeenTime = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] ?? null : null;
             const consideredEndTime = detailEndTimeMillis ?? ((detail.status === 'completed' || detail.status === 'failed' || detail.status === 'skipped') ? lastSeenTime : null);
@@ -251,41 +258,91 @@ export const calculateFinalMetrics = (
         }
     }
 
-
-    // --- Populate Per-Request Timings into results.requests ---
+    // --- Populate Per-Request Timings AND STATUS ---
     // results.analyzedRequestIds should have been populated by LogAnalysisService from filteredRequests.keys()
     for (const reqId of results.analyzedRequestIds) {
         const requestData = filteredRequestsData.get(reqId);
+        let currentRequestTimings: RequestTimings = {
+            startTime: null,
+            endTime: null,
+            durationSeconds: null,
+            status: 'Unknown', // Default status
+        };
+
         if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
-            results.requests[reqId] = {
-                startTime: new Date(requestData.startTime).toISOString(),
-                endTime: new Date(requestData.endTime).toISOString(),
-                durationSeconds: Math.round((requestData.endTime - requestData.startTime) / 1000),
-            };
+            currentRequestTimings.startTime = new Date(requestData.startTime).toISOString();
+            currentRequestTimings.endTime = new Date(requestData.endTime).toISOString();
+            currentRequestTimings.durationSeconds = Math.round((requestData.endTime - requestData.startTime) / 1000);
         } else if (requestData) { // startTime or endTime might be null if request had only one log entry
-            results.requests[reqId] = {
-                startTime: requestData.startTime ? new Date(requestData.startTime).toISOString() : null,
-                endTime: requestData.endTime ? new Date(requestData.endTime).toISOString() : null,
-                durationSeconds: 0, // Or null, depending on preference for incomplete data
-            };
+            currentRequestTimings.startTime = requestData.startTime ? new Date(requestData.startTime).toISOString() : null;
+            currentRequestTimings.endTime = requestData.endTime ? new Date(requestData.endTime).toISOString() : null;
+            // durationSeconds remains null or 0 if only one timestamp; prefer null for partial data
+            currentRequestTimings.durationSeconds = (requestData.startTime && requestData.endTime) ? Math.round((requestData.endTime - requestData.startTime) / 1000) : null;
+            if (currentRequestTimings.durationSeconds === null && (requestData.startTime || requestData.endTime)) {
+                 currentRequestTimings.durationSeconds = 0; // If only one time, duration is 0
+            }
         }
-        else {
-            // This case implies reqId is in analyzedRequestIds but not in filteredRequestsData, which shouldn't happen.
-            results.requests[reqId] = {
-                startTime: null,
-                endTime: null,
-                durationSeconds: null,
-            };
-            // logger.warn({ event: 'final_calc_missing_request_data', batchRequestId: reqId }, 'Request ID in analyzedRequestIds not found in filteredRequestsData.');
+        // else: requestData is undefined, timings remain null, status 'Unknown' initially
+
+        // Determine status for this reqId
+        // `cd.batchRequestId` refers to the `batchRequestId` stored within the ConferenceAnalysisDetail
+        const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
+            .filter(cd => cd.batchRequestId === reqId);
+
+        if (conferencesForThisRequest.length === 0) {
+            // If no conference tasks, base status on whether logs existed for this request ID.
+            if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
+                currentRequestTimings.status = 'Completed'; // Request had logs but no tasks, assume it ran and completed.
+            } else {
+                currentRequestTimings.status = 'Unknown';
+            }
+        } else {
+            let isProcessing = false;
+            let hasFailed = false;
+            let allCompletedOrSkipped = true;
+
+            for (const conf of conferencesForThisRequest) {
+                if (conf.status === 'processing' || ((conf.status === 'unknown' || conf.status === 'processed_ok') && !conf.endTime)) {
+                    isProcessing = true;
+                    // If any task is actively processing, the overall request is processing.
+                    // No need to check further for this loop if `isProcessing` is the highest priority.
+                    break;
+                }
+                if (conf.status === 'failed') {
+                    hasFailed = true;
+                }
+                if (conf.status !== 'completed' && conf.status !== 'skipped') {
+                    allCompletedOrSkipped = false;
+                }
+            }
+
+            if (isProcessing) {
+                currentRequestTimings.status = 'Processing';
+            } else if (hasFailed) {
+                // If not processing, but at least one task failed, the request is considered Failed.
+                // This covers scenarios where some tasks might have completed, but one or more failed.
+                currentRequestTimings.status = 'Failed';
+            } else if (allCompletedOrSkipped) {
+                // If not processing and no tasks failed, and all tasks are either completed or skipped.
+                currentRequestTimings.status = 'Completed';
+            }
+            // Add 'PartiallyCompleted' if needed:
+            // else if (conferencesForThisRequest.some(c => c.status === 'completed') && !allCompletedOrSkipped && !hasFailed && !isProcessing) {
+            //    currentRequestTimings.status = 'PartiallyCompleted';
+            // }
+            else {
+                // Catch-all for other states (e.g., all 'unknown' with endTimes, mix of 'unknown' and 'processed_ok' with endTimes)
+                currentRequestTimings.status = 'Unknown';
+            }
         }
+        results.requests[reqId] = currentRequestTimings;
     }
 
-    // --- Finalize Conference Details and Counts ---
-    let stillProcessingCount = 0;
+     // --- Finalize Conference Details and Counts ---
+    let stillProcessingOverallCount = 0;
     const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
-    // results.overall.processedConferencesCount is typically incremented by task_start handlers
 
-    processedCompositeKeys.forEach(key => { // key here is `${batchRequestId}-${acronym}-${title}`
+    processedCompositeKeys.forEach(key => {
         const detail = results.conferenceAnalysis[key];
 
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
@@ -294,62 +351,79 @@ export const calculateFinalMetrics = (
                 const endMillis = new Date(detail.endTime).getTime();
                 if (!isNaN(startMillis) && !isNaN(endMillis) && endMillis >= startMillis) {
                     detail.durationSeconds = Math.round((endMillis - startMillis) / 1000);
+                } else {
+                    detail.durationSeconds = 0;
                 }
-            } catch (e) { /* ignore date parsing errors */ }
-        }
-
-        if (detail.status === 'processing' || detail.status === 'unknown' || detail.status === 'processed_ok') {
-            if (!detail.endTime) {
-                stillProcessingCount++;
+            } catch (e) {
+                detail.durationSeconds = 0;
             }
         }
+
+        if (detail.status === 'processing' ||
+            ((detail.status === 'unknown' || detail.status === 'processed_ok') && !detail.endTime)) {
+            stillProcessingOverallCount++;
+        }
     });
+    results.overall.processingTasks = stillProcessingOverallCount;
 
-    results.overall.processingTasks = stillProcessingCount;
+    if (results.geminiApi) {
+        results.geminiApi.cacheContextMisses = Math.max(0, (results.geminiApi.cacheContextAttempts || 0) - (results.geminiApi.cacheContextHits || 0));
+    }
 
-    // --- Calculate Derived Stats ---
-    results.geminiApi.cacheContextMisses = Math.max(0, results.geminiApi.cacheContextAttempts - results.geminiApi.cacheContextHits);
+    // --- CSV Failure Impact on Conference Tasks and their Parent Requests ---
+    if (results.fileOutput && results.fileOutput.csvFileGenerated === false &&
+        (results.fileOutput.csvPipelineFailures > 0)) {
 
-    if (results.fileOutput.csvFileGenerated === false &&
-        (results.fileOutput.csvPipelineFailures > 0 /* || other orchestrator flags if needed */)) {
         Object.values(results.conferenceAnalysis).forEach(detail => {
-            if (detail.jsonlWriteSuccess === true &&
-                detail.status !== 'completed' &&
-                detail.status !== 'failed' &&
-                detail.status !== 'skipped') {
+            // Capture the status *before* deciding to change it.
+            const oldStatus = detail.status; // Type: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped'
 
-                const oldStatus = detail.status; // Capture old status before changing
+            // Condition for a task to be affected by CSV failure:
+            // 1. Its JSONL was successfully written (meaning it got to that stage).
+            // 2. It's not already in a 'failed' or 'skipped' state (those are terminal for other reasons).
+            if (detail.jsonlWriteSuccess === true &&
+                oldStatus !== 'failed' &&
+                oldStatus !== 'skipped') {
+
+                // Now that we are inside, if oldStatus was 'completed', 'processed_ok', 'processing', or 'unknown',
+                // we mark it as 'failed' due to the CSV issue.
                 detail.status = 'failed';
                 detail.csvWriteSuccess = false;
 
                 if (!detail.endTime) {
-                    // <<< MODIFIED: Use batchRequestId from detail to create key for conferenceLastTimestamp >>>
                     const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
                     const lastTimestamp = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
                     detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : (results.overall.endTime || new Date().toISOString());
                 }
-                addConferenceError(detail, detail.endTime!, "CSV generation pipeline failed.", "csv_pipeline_failure");
+                addConferenceError(detail, detail.endTime!, "CSV generation pipeline failed for this conference.", "csv_pipeline_failure_conf");
 
-                // Only increment failedOrCrashedTasks if it wasn't already considered failed/crashed
-                // This check might be overly simplistic; specific handlers should ideally manage these counts.
-                // However, this handles a global CSV failure impacting previously "ok" tasks.
+                // Adjust overall counts based on the oldStatus
+                if (oldStatus === 'completed') {
+                    results.overall.completedTasks = Math.max(0, (results.overall.completedTasks || 0) - 1);
+                } else if (oldStatus === 'processing' || oldStatus === 'unknown' || oldStatus === 'processed_ok') {
+                    // If it was contributing to processingTasks, it's no longer doing so.
+                    // This will be reflected when processingTasks is recalculated.
+                    // No direct decrement here as `stillProcessingOverallCount` is calculated based on current statuses.
+                }
+                // Increment failed tasks regardless of its previous state (unless it was already failed/skipped)
                 results.overall.failedOrCrashedTasks = (results.overall.failedOrCrashedTasks || 0) + 1;
-                // If it was 'processing' or 'unknown', decrement that count if it was contributing
-                if ((oldStatus === 'processing' || oldStatus === 'unknown' || oldStatus === 'processed_ok') && !detail.endTime) { // If it was counted in stillProcessingCount
-                    // This logic is tricky as stillProcessingCount is calculated based on current state.
-                    // Better to let handlers update completed/failed counts directly.
-                    // The `processingTasks` will be recalculated correctly based on the new 'failed' status.
+
+
+                const affectedReqId = detail.batchRequestId;
+                if (results.requests[affectedReqId] && results.requests[affectedReqId].status !== 'Failed') {
+                    results.requests[affectedReqId].status = 'Failed';
                 }
             }
         });
-        // Recalculate processingTasks after potential status changes due to CSV failure
-        let newStillProcessingCount = 0;
+
+        // Recalculate processingTasks for overall summary after potential status changes due to CSV failure
+        let newStillProcessingCountAfterCsv = 0;
         Object.values(results.conferenceAnalysis).forEach(d => {
-            if ((d.status === 'processing' || d.status === 'unknown' || d.status === 'processed_ok') && !d.endTime) {
-                newStillProcessingCount++;
+            if ((d.status === 'processing' || ((d.status === 'unknown' || d.status === 'processed_ok') && !d.endTime))) {
+                newStillProcessingCountAfterCsv++;
             }
         });
-        results.overall.processingTasks = newStillProcessingCount;
+        results.overall.processingTasks = newStillProcessingCountAfterCsv;
     }
 
     // logger.info({

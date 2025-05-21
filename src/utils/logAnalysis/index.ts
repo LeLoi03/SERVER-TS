@@ -227,7 +227,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
 
   // --- Overall Process ---
   // Event từ CrawlOrchestratorService
-  'crawl_start': overallProcess.handleCrawlStart,
+  'crawl_orchestrator_start': overallProcess.handleCrawlStart,
 
   // Events từ Controller (hoặc service cao nhất kết thúc tiến trình)
   'processing_finished_successfully': overallProcess.handleControllerProcessingFinished,
