@@ -8,24 +8,19 @@ import {
     RequestLogData,
     FilteredData,
     RequestTimings // Ensure this is imported for currentRequestTimings
-} from '../../types/logAnalysis.types';
+} from '../../types/logAnalysis.types'; // Đảm bảo các type này chính xác
 import {
     createConferenceKey,
-    initializeConferenceDetail,
+    initializeConferenceDetail, // Giả sử hàm này có logic đúng
     addConferenceError,
     doesRequestOverlapFilter
-} from './helpers'; // Assuming helpers are correctly defined
+} from './helpers'; // Giả sử helpers đúng
 
-import { eventHandlerMap } from './index'; // Assuming index.ts exports eventHandlerMap correctly
-// import { Logger, pino } from 'pino'; // Example if you were using pino
+import { eventHandlerMap } from './index'; // Giả sử index.ts exports eventHandlerMap
 
-// const baseLogger = pino({ level: 'info' }); // Example: Initialize a base logger if used
-
-// --- Step 1: readAndGroupLogs ---
+// --- Step 1: readAndGroupLogs --- (Giữ nguyên như bạn cung cấp)
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
-    // const logger = baseLogger.child({ function: 'readAndGroupLogs', filePath: logFilePath });
-    // logger.info({ event: 'read_group_start' }, 'Starting Phase 1: Reading and Grouping logs by batchRequestId');
-
+    // ... (code của bạn) ...
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
     let parsedEntries = 0;
@@ -33,7 +28,6 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
     const tempLogProcessingErrors: string[] = [];
 
     if (!fs.existsSync(logFilePath)) {
-        // logger.error({ event: 'read_group_error_file_not_found' }, 'Log file not found.');
         throw new Error(`Log file not found at ${logFilePath}`);
     }
 
@@ -49,7 +43,7 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
                 const logEntry = JSON.parse(line);
                 parsedEntries++;
                 const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const batchRequestId = logEntry.batchRequestId; // Assuming 'batchRequestId' is the correct field
+                const batchRequestId = logEntry.batchRequestId;
 
                 if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
                     if (!requestsData.has(batchRequestId)) {
@@ -57,25 +51,29 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
                     }
                     const requestInfo = requestsData.get(batchRequestId)!;
                     requestInfo.logs.push(logEntry);
-                    requestInfo.startTime = Math.min(entryTimeMillis, requestInfo.startTime ?? entryTimeMillis);
-                    requestInfo.endTime = Math.max(entryTimeMillis, requestInfo.endTime ?? entryTimeMillis);
-                } else {
-                    // logger.trace({ event: 'read_group_skip_entry', lineNum: totalEntries, hasRequestId: !!batchRequestId, hasValidTime: !isNaN(entryTimeMillis), lineStart: line.substring(0, 50) }, "Skipping log entry (missing batchRequestId or invalid time)");
-                }
 
+                    // Ensure startTime and endTime are numbers before Math.min/max
+                    const currentStartTime = requestInfo.startTime;
+                    const currentEndTime = requestInfo.endTime;
+
+                    requestInfo.startTime = (currentStartTime === null || isNaN(currentStartTime))
+                        ? entryTimeMillis
+                        : Math.min(entryTimeMillis, currentStartTime);
+
+                    requestInfo.endTime = (currentEndTime === null || isNaN(currentEndTime))
+                        ? entryTimeMillis
+                        : Math.max(entryTimeMillis, currentEndTime);
+
+                }
             } catch (parseError: any) {
                 parseErrorsCount++;
                 const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
                 tempLogProcessingErrors.push(errorMsg);
-                // logger.warn({ event: 'read_group_parse_error', lineNum: totalEntries, err: parseError.message, originalLine: line.substring(0, 200) }, "Error parsing log line during phase 1");
             }
         }
     } catch (readError: any) {
-        // logger.error({ event: 'read_group_stream_error', err: readError.message, stack: readError.stack }, 'Error reading log file stream');
         throw readError;
     }
-
-    // logger.info({ event: 'read_group_end', totalEntries, parsedEntries, batchRequestIdsFound: requestsData.size, parseErrors: parseErrorsCount }, 'Finished Phase 1');
 
     return {
         requestsData,
@@ -86,147 +84,119 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
     };
 };
 
-// --- Step 2: filterRequests ---
+// --- Step 2: filterRequests --- (Giữ nguyên như bạn cung cấp)
 export const filterRequests = (
     allRequestsData: Map<string, RequestLogData>,
     filterStartMillis: number | null,
     filterEndMillis: number | null,
     batchRequestIdFilter?: string
-    // baseLoggerParam?: Logger // Renamed to avoid conflict with global baseLogger
 ): FilteredData => {
-    // const logger = baseLoggerParam?.child({ function: 'filterRequests' }) || baseLogger.child({ function: 'filterRequests' });
-    // logger.info({ event: 'filter_start', filterStartMillis, filterEndMillis, batchRequestIdFilter }, 'Starting: Filtering requests');
-
+    // ... (code của bạn) ...
     const filteredRequests = new Map<string, RequestLogData>();
     let analysisStartMillis: number | null = null;
     let analysisEndMillis: number | null = null;
 
     if (batchRequestIdFilter) {
-        // logger.info({ event: 'filter_mode_batchRequestId', targetRequestId: batchRequestIdFilter }, `Filtering for specific batchRequestId: ${batchRequestIdFilter}`);
         const requestInfo = allRequestsData.get(batchRequestIdFilter);
-        if (requestInfo) {
-            // Apply time filter only if one is active, otherwise include if batchRequestId matches
+        if (requestInfo && requestInfo.startTime !== null && requestInfo.endTime !== null) { // Check for non-null times
             const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
                 doesRequestOverlapFilter(
                     requestInfo.startTime,
                     requestInfo.endTime,
                     filterStartMillis,
                     filterEndMillis,
-                    batchRequestIdFilter //, logger
+                    batchRequestIdFilter
                 );
 
             if (overlapsTimeFilter) {
                 filteredRequests.set(batchRequestIdFilter, requestInfo);
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
-            } else {
-                // logger.info({event: 'filter_batchRequestId_found_but_outside_time_filter', batchRequestIdFilter, reqStart: requestInfo.startTime, reqEnd: requestInfo.endTime}, "RequestId found but outside specified time filter.")
             }
-        } else {
-            // logger.warn({ event: 'filter_batchRequestId_not_found', targetRequestId: batchRequestIdFilter }, `Specified batchRequestId for filtering not found.`);
         }
     } else {
-        // logger.info({ event: 'filter_mode_time_range' }, `Filtering by time range for all requests.`);
         for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
-            const includeRequest = doesRequestOverlapFilter(
-                requestInfo.startTime,
-                requestInfo.endTime,
-                filterStartMillis,
-                filterEndMillis,
-                batchRequestId //, logger
-            );
+            if (requestInfo.startTime !== null && requestInfo.endTime !== null) { // Check for non-null times
+                const includeRequest = doesRequestOverlapFilter(
+                    requestInfo.startTime,
+                    requestInfo.endTime,
+                    filterStartMillis,
+                    filterEndMillis,
+                    batchRequestId
+                );
 
-            if (includeRequest) {
-                filteredRequests.set(batchRequestId, requestInfo);
-                if (requestInfo.startTime !== null) {
-                    analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
-                }
-                if (requestInfo.endTime !== null) {
-                    analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
+                if (includeRequest) {
+                    filteredRequests.set(batchRequestId, requestInfo);
+                    if (requestInfo.startTime !== null) {
+                        analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
+                    }
+                    if (requestInfo.endTime !== null) {
+                        analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
+                    }
                 }
             }
         }
     }
-
-    // logger.info({ event: 'filter_end', totalRequestsOriginal: allRequestsData.size, includedRequestsCount: filteredRequests.size, finalAnalysisStartMillis: analysisStartMillis, finalAnalysisEndMillis: analysisEndMillis }, 'Finished: Filtering requests');
     return { filteredRequests, analysisStartMillis, analysisEndMillis };
 };
 
-// --- Step 3: processLogEntry ---
+// --- Step 3: processLogEntry --- (Giữ nguyên như bạn cung cấp)
 export const processLogEntry = (
     logEntry: any,
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number }
-    // baseLoggerForEntry?: Logger // Renamed to avoid conflict
 ): void => {
+    // ... (code của bạn) ...
     const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
     const entryTimestampISO = !isNaN(entryTimeMillis) ? new Date(entryTimeMillis).toISOString() : new Date().toISOString() + '_INVALID_TIME';
-    // const entrySpecificLogger = baseLoggerForEntry?.child({ event: logEntry.event, time: entryTimestampISO }) || baseLogger.child({ event: logEntry.event, time: entryTimestampISO });
 
     if (typeof logEntry.level === 'number') {
-        if (logEntry.level >= 50) results.errorLogCount++; // pino: error, fatal
-        if (logEntry.level >= 60) results.fatalLogCount++; // pino: fatal
+        if (logEntry.level >= 50) results.errorLogCount++;
+        if (logEntry.level >= 60) results.fatalLogCount++;
     }
 
     const eventName = logEntry.event as string | undefined;
     const contextFields = logEntry.context || {};
     const acronym = contextFields.acronym || contextFields.conferenceAcronym || logEntry.acronym || logEntry.conferenceAcronym;
     const title = contextFields.title || contextFields.conferenceTitle || logEntry.title || logEntry.conferenceTitle;
-    const currentRequestId = logEntry.batchRequestId; // This is the batchRequestId from the log entry
+    const currentRequestId = logEntry.batchRequestId;
 
-    // The `batchRequestId` field in `ConferenceAnalysisDetail` should store this `currentRequestId`.
-    // `createConferenceKey` uses `currentRequestId` to form the unique key.
     const compositeKey = createConferenceKey(currentRequestId, acronym, title);
     let confDetail: ConferenceAnalysisDetail | null = null;
 
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
-            // `initializeConferenceDetail` should correctly set `detail.batchRequestId = currentRequestId`
-            // (assuming its `batchRequestId` parameter maps to `detail.batchRequestId` field).
             results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(currentRequestId, acronym!, title!);
-            // entrySpecificLogger.trace({ compositeKey, batchRequestId: currentRequestId }, 'Initialized new conference detail');
         }
         confDetail = results.conferenceAnalysis[compositeKey];
         if (!isNaN(entryTimeMillis)) {
             conferenceLastTimestamp[compositeKey] = Math.max(entryTimeMillis, conferenceLastTimestamp[compositeKey] ?? 0);
         }
-    } else if (acronym && (eventName?.startsWith('task_') || eventName?.includes('conference') || eventName?.includes('gemini') || eventName?.includes('save_') || eventName?.includes('csv_'))) {
-        // entrySpecificLogger.warn({ logEvent: eventName, acronym, batchRequestId: currentRequestId }, 'Log entry with acronym is missing title, cannot reliably track conference details.');
-    } else if (eventName && !compositeKey && !acronym) {
-        // entrySpecificLogger.trace({ logEvent: eventName, batchRequestId: currentRequestId }, 'Log entry event without acronym or title.');
     }
 
     if (eventName && eventHandlerMap[eventName]) {
         const handler = eventHandlerMap[eventName];
         try {
-            // Handler updates results and confDetail
             handler(logEntry, results, confDetail, entryTimestampISO);
         } catch (handlerError: any) {
-            // entrySpecificLogger.error({ err: handlerError, eventName, batchRequestId: currentRequestId, confAcronym: confDetail?.acronym }, `Error executing handler for event: ${eventName}`);
             if (confDetail) {
                 addConferenceError(confDetail, entryTimestampISO, handlerError, `Internal error processing event ${eventName}`);
             }
             results.logProcessingErrors.push(`Handler error for event '${eventName}' on batchRequestId '${currentRequestId}': ${handlerError.message}`);
         }
-    } else if (eventName) {
-        // entrySpecificLogger.trace({ eventName, batchRequestId: currentRequestId }, `No specific handler registered for event: ${eventName}`);
     }
 };
 
-
-// --- Step 4: calculateFinalMetrics ---
+// --- Step 4: calculateFinalMetrics --- (Cập nhật theo Phương án 3)
 export const calculateFinalMetrics = (
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
     analysisStartMillis: number | null,
     analysisEndMillis: number | null,
     filteredRequestsData: Map<string, RequestLogData>
-    // baseLoggerParam?: Logger // Renamed
 ): void => {
-    // const logger = baseLoggerParam?.child({ function: 'calculateFinalMetrics' }) || baseLogger.child({ function: 'calculateFinalMetrics' });
-    // logger.info({ event: 'final_calc_start' }, "Performing final calculations on analyzed data");
 
-    // --- Calculate Overall Duration (for the set of analyzed requests) ---
+    // STAGE 0: Calculate Overall Duration
     if (analysisStartMillis !== null && analysisEndMillis !== null) {
         results.overall.startTime = new Date(analysisStartMillis).toISOString();
         results.overall.endTime = new Date(analysisEndMillis).toISOString();
@@ -236,10 +206,9 @@ export const calculateFinalMetrics = (
         let maxConfEnd: number | null = null;
         Object.values(results.conferenceAnalysis).forEach(detail => {
             const detailEndTimeMillis = detail.endTime ? new Date(detail.endTime).getTime() : null;
-            // Use detail.batchRequestId here as it should hold the batchRequestId for that conference task
-            const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
-            const lastSeenTime = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] ?? null : null;
-            const consideredEndTime = detailEndTimeMillis ?? ((detail.status === 'completed' || detail.status === 'failed' || detail.status === 'skipped') ? lastSeenTime : null);
+            const confKeyForOverallTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
+            const lastSeenTimeForOverall = confKeyForOverallTimestamp ? conferenceLastTimestamp[confKeyForOverallTimestamp] ?? null : null;
+            const consideredEndTime = detailEndTimeMillis ?? ((detail.status === 'completed' || detail.status === 'failed' || detail.status === 'skipped') ? lastSeenTimeForOverall : null);
 
             if (detail.startTime) {
                 const startMs = new Date(detail.startTime).getTime();
@@ -258,118 +227,113 @@ export const calculateFinalMetrics = (
         }
     }
 
-    // --- Populate Per-Request Timings AND STATUS ---
-    // results.analyzedRequestIds should have been populated by LogAnalysisService from filteredRequests.keys()
-    for (const reqId of results.analyzedRequestIds) { // reqId ở đây là batchRequestId
+
+    // --- STAGE 1: Determine/Update status for each conference and then for each request ---
+    for (const reqId of results.analyzedRequestIds) {
         const requestData = filteredRequestsData.get(reqId);
         let currentRequestTimings: RequestTimings = {
             startTime: null,
             endTime: null,
             durationSeconds: null,
-            status: 'Unknown', // Default status
-            originalRequestId: undefined, // Khởi tạo
-
+            status: 'Unknown',
+            originalRequestId: results.requests[reqId]?.originalRequestId,
         };
 
         if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
             currentRequestTimings.startTime = new Date(requestData.startTime).toISOString();
             currentRequestTimings.endTime = new Date(requestData.endTime).toISOString();
             currentRequestTimings.durationSeconds = Math.round((requestData.endTime - requestData.startTime) / 1000);
-        } else if (requestData) { // startTime or endTime might be null if request had only one log entry
+        } else if (requestData) {
             currentRequestTimings.startTime = requestData.startTime ? new Date(requestData.startTime).toISOString() : null;
             currentRequestTimings.endTime = requestData.endTime ? new Date(requestData.endTime).toISOString() : null;
-            // durationSeconds remains null or 0 if only one timestamp; prefer null for partial data
-            currentRequestTimings.durationSeconds = (requestData.startTime && requestData.endTime) ? Math.round((requestData.endTime - requestData.startTime) / 1000) : null;
-            if (currentRequestTimings.durationSeconds === null && (requestData.startTime || requestData.endTime)) {
-                currentRequestTimings.durationSeconds = 0; // If only one time, duration is 0
-            }
+            currentRequestTimings.durationSeconds = (requestData.startTime && requestData.endTime) ? Math.round((requestData.endTime - requestData.startTime) / 1000) : (requestData.startTime || requestData.endTime ? 0 : null);
         }
-        // else: requestData is undefined, timings remain null, status 'Unknown' initially
 
-        // Determine status for this reqId
         const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
-            .filter(cd => cd.batchRequestId === reqId); // cd.batchRequestId là ID của request hiện tại
+            .filter(cd => cd.batchRequestId === reqId);
 
-
-        // <<< THÊM LOGIC LẤY ORIGINAL_REQUEST_ID CHO REQUEST >>>
-        if (conferencesForThisRequest.length > 0) {
-            // Ưu tiên lấy originalRequestId từ conference đầu tiên có thông tin này
-            // (thường là từ event `recrawl_detected` hoặc `finalResult` của conference)
+        if (conferencesForThisRequest.length > 0 && !currentRequestTimings.originalRequestId) {
             for (const conf of conferencesForThisRequest) {
                 if (conf.originalRequestId) {
                     currentRequestTimings.originalRequestId = conf.originalRequestId;
-                    break; // Lấy cái đầu tiên tìm thấy
+                    break;
                 }
-                // Fallback: kiểm tra trong finalResult nếu có (ít ưu tiên hơn field trực tiếp)
                 if (!currentRequestTimings.originalRequestId && conf.finalResult?.originalRequestId) {
                     currentRequestTimings.originalRequestId = conf.finalResult.originalRequestId;
-                    // không break ở đây nếu muốn field trực tiếp `conf.originalRequestId` được ưu tiên hơn
                 }
             }
         }
-        // Nếu sau khi duyệt conferences vẫn chưa có, mà handler `handleControllerProcessingFinished`
-        // đã gán trực tiếp vào `results.requests[reqId].originalRequestId` thì nó sẽ được giữ lại.
-        // Đoạn code trên chỉ cố gắng tìm nếu nó chưa được gán.
-        // Hoặc có thể gộp:
-        // currentRequestTimings.originalRequestId = results.requests[reqId]?.originalRequestId || foundOriginalIdFromConfs;
 
+        const requestEndTimeISO = currentRequestTimings.endTime;
+        if (requestEndTimeISO) {
+            conferencesForThisRequest.forEach(conf => {
+                if (!conf.endTime && (conf.status === 'processing' || conf.status === 'unknown' || conf.status === 'processed_ok')) {
+                    conf.status = 'failed';
+                    const confKeyForTimestampStuck = createConferenceKey(conf.batchRequestId, conf.acronym, conf.title);
+                    // FIX 1: Check for null key
+                    const lastSeenTimeForConf = confKeyForTimestampStuck ? conferenceLastTimestamp[confKeyForTimestampStuck] : null;
+                    conf.endTime = lastSeenTimeForConf ? new Date(lastSeenTimeForConf).toISOString() : requestEndTimeISO;
+                    addConferenceError(conf, conf.endTime, "Conference did not complete before its parent request finished.", "task_stuck_or_incomplete", { stuckReason: "Parent request ended" });
+                }
+            });
+        }
 
         if (conferencesForThisRequest.length === 0) {
-            // If no conference tasks, base status on whether logs existed for this request ID.
             if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
-                currentRequestTimings.status = 'Completed'; // Request had logs but no tasks, assume it ran and completed.
+                currentRequestTimings.status = 'Completed';
             } else {
-                currentRequestTimings.status = 'Unknown';
+                currentRequestTimings.status = 'NoData';
             }
         } else {
-            let isProcessing = false;
-            let hasFailed = false;
-            let allCompletedOrSkipped = true;
+            let numProcessing = 0;
+            let numFailed = 0;
+            let numCompleted = 0;
+            let numSkipped = 0;
 
             for (const conf of conferencesForThisRequest) {
                 if (conf.status === 'processing' || ((conf.status === 'unknown' || conf.status === 'processed_ok') && !conf.endTime)) {
-                    isProcessing = true;
-                    // If any task is actively processing, the overall request is processing.
-                    // No need to check further for this loop if `isProcessing` is the highest priority.
-                    break;
+                    numProcessing++;
                 }
                 if (conf.status === 'failed') {
-                    hasFailed = true;
+                    numFailed++;
                 }
-                if (conf.status !== 'completed' && conf.status !== 'skipped') {
-                    allCompletedOrSkipped = false;
+                if (conf.status === 'completed') {
+                    numCompleted++;
+                }
+                if (conf.status === 'skipped') {
+                    numSkipped++;
                 }
             }
 
-            if (isProcessing) {
+            const totalTasksInRequest = conferencesForThisRequest.length;
+
+            if (numProcessing > 0) {
                 currentRequestTimings.status = 'Processing';
-            } else if (hasFailed) {
-                // If not processing, but at least one task failed, the request is considered Failed.
-                // This covers scenarios where some tasks might have completed, but one or more failed.
-                currentRequestTimings.status = 'Failed';
-            } else if (allCompletedOrSkipped) {
-                // If not processing and no tasks failed, and all tasks are either completed or skipped.
-                currentRequestTimings.status = 'Completed';
-            }
-            // Add 'PartiallyCompleted' if needed:
-            // else if (conferencesForThisRequest.some(c => c.status === 'completed') && !allCompletedOrSkipped && !hasFailed && !isProcessing) {
-            //    currentRequestTimings.status = 'PartiallyCompleted';
-            // }
-            else {
-                // Catch-all for other states (e.g., all 'unknown' with endTimes, mix of 'unknown' and 'processed_ok' with endTimes)
-                currentRequestTimings.status = 'Unknown';
+            } else {
+                if (numFailed === totalTasksInRequest && totalTasksInRequest > 0) { // Ensure not 0/0
+                    currentRequestTimings.status = 'Failed';
+                } else if (numFailed > 0) {
+                    currentRequestTimings.status = 'CompletedWithErrors';
+                } else if (numCompleted === totalTasksInRequest || (numCompleted + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0) {
+                    currentRequestTimings.status = 'Completed';
+                } else if (numCompleted > 0 || numSkipped > 0) {
+                    currentRequestTimings.status = 'PartiallyCompleted';
+                } else if (totalTasksInRequest > 0 && numSkipped === totalTasksInRequest) {
+                     currentRequestTimings.status = 'Skipped';
+                }
+                else {
+                    currentRequestTimings.status = 'Unknown';
+                }
             }
         }
-        results.requests[reqId] = currentRequestTimings;
+        results.requests[reqId] = {
+            ...(results.requests[reqId] || {}),
+            ...currentRequestTimings
+        };
     }
 
-    // --- Finalize Conference Details and Counts ---
-    let stillProcessingOverallCount = 0;
-    const processedCompositeKeys = Object.keys(results.conferenceAnalysis);
-
-    processedCompositeKeys.forEach(key => {
-        const detail = results.conferenceAnalysis[key];
-
+    // --- STAGE 2: Finalize Conference Details (duration, status if affected by CSV) ---
+    Object.values(results.conferenceAnalysis).forEach(detail => {
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
             try {
                 const startMillis = new Date(detail.startTime).getTime();
@@ -379,84 +343,102 @@ export const calculateFinalMetrics = (
                 } else {
                     detail.durationSeconds = 0;
                 }
-            } catch (e) {
-                detail.durationSeconds = 0;
-            }
-        }
-
-        if (detail.status === 'processing' ||
-            ((detail.status === 'unknown' || detail.status === 'processed_ok') && !detail.endTime)) {
-            stillProcessingOverallCount++;
+            } catch (e) { detail.durationSeconds = 0; }
         }
     });
-    results.overall.processingTasks = stillProcessingOverallCount;
+
+    if (results.fileOutput &&
+        results.fileOutput.csvFileGenerated === false &&
+        (
+            (results.fileOutput.csvPipelineFailures || 0) > 0 || // FIX 2: Handle undefined
+            (results.fileOutput.csvOtherErrors || 0) > 0      // FIX 2: Handle undefined
+        )
+    ) {
+        Object.values(results.conferenceAnalysis).forEach(detail => {
+            if (!results.analyzedRequestIds.includes(detail.batchRequestId)) return;
+
+            const oldConfStatus = detail.status;
+            if (detail.jsonlWriteSuccess === true && oldConfStatus !== 'failed' && oldConfStatus !== 'skipped') {
+                detail.status = 'failed';
+                detail.csvWriteSuccess = false;
+
+                if (!detail.endTime) {
+                    const confKeyForTimestampCsv = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
+                    // FIX 1: Check for null key
+                    const lastTimestamp = confKeyForTimestampCsv ? conferenceLastTimestamp[confKeyForTimestampCsv] : null;
+                    detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : (results.requests[detail.batchRequestId]?.endTime || results.overall.endTime || new Date().toISOString());
+                }
+                addConferenceError(detail, detail.endTime!, "CSV generation pipeline failed for this conference.", "csv_pipeline_failure_conf", { csvErrorSource: "pipeline_or_other" });
+
+                const affectedReqId = detail.batchRequestId;
+                if (results.requests[affectedReqId]) {
+                    const currentReqStatus = results.requests[affectedReqId].status;
+                    if (currentReqStatus !== 'Failed' && currentReqStatus !== 'CompletedWithErrors' && currentReqStatus !== 'Processing') {
+                         results.requests[affectedReqId].status = 'CompletedWithErrors';
+                    }
+                }
+            }
+        });
+    }
+
+    // --- STAGE 3: Recalculate Overall Counts ---
+    let finalOverallCompletedTasks = 0;
+    let finalOverallFailedTasks = 0;
+    let finalOverallSkippedTasks = 0;
+    let finalOverallProcessingTasks = 0;
+    const uniqueConferenceKeysInAnalysis = new Set<string>();
+
+    Object.values(results.conferenceAnalysis).forEach(conf => {
+        if (results.analyzedRequestIds.includes(conf.batchRequestId)) {
+            const confKey = createConferenceKey(conf.batchRequestId, conf.acronym, conf.title);
+            if (confKey) uniqueConferenceKeysInAnalysis.add(confKey);
+
+            if (conf.status === 'completed') {
+                finalOverallCompletedTasks++;
+            } else if (conf.status === 'failed') {
+                finalOverallFailedTasks++;
+            } else if (conf.status === 'skipped') {
+                finalOverallSkippedTasks++;
+            }
+
+            if (conf.status === 'processing' || ((conf.status === 'unknown' || conf.status === 'processed_ok') && !conf.endTime)) {
+                finalOverallProcessingTasks++;
+            }
+        }
+    });
+
+    results.overall.completedTasks = finalOverallCompletedTasks;
+    results.overall.failedOrCrashedTasks = finalOverallFailedTasks;
+    results.overall.skippedTasks = finalOverallSkippedTasks; // Đảm bảo đây là number
+    results.overall.processingTasks = finalOverallProcessingTasks;
+    results.overall.processedConferencesCount = uniqueConferenceKeysInAnalysis.size;
 
     if (results.geminiApi) {
         results.geminiApi.cacheContextMisses = Math.max(0, (results.geminiApi.cacheContextAttempts || 0) - (results.geminiApi.cacheContextHits || 0));
     }
 
-    // --- CSV Failure Impact on Conference Tasks and their Parent Requests ---
-    if (results.fileOutput && results.fileOutput.csvFileGenerated === false &&
-        (results.fileOutput.csvPipelineFailures > 0)) {
+    // --- STAGE 4: Determine final overall analysis status ---
+    if (results.analyzedRequestIds.length > 0) {
+        const requestStatuses = results.analyzedRequestIds.map(id => results.requests[id]?.status);
 
-        Object.values(results.conferenceAnalysis).forEach(detail => {
-            // Capture the status *before* deciding to change it.
-            const oldStatus = detail.status; // Type: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped'
-
-            // Condition for a task to be affected by CSV failure:
-            // 1. Its JSONL was successfully written (meaning it got to that stage).
-            // 2. It's not already in a 'failed' or 'skipped' state (those are terminal for other reasons).
-            if (detail.jsonlWriteSuccess === true &&
-                oldStatus !== 'failed' &&
-                oldStatus !== 'skipped') {
-
-                // Now that we are inside, if oldStatus was 'completed', 'processed_ok', 'processing', or 'unknown',
-                // we mark it as 'failed' due to the CSV issue.
-                detail.status = 'failed';
-                detail.csvWriteSuccess = false;
-
-                if (!detail.endTime) {
-                    const confKeyForTimestamp = createConferenceKey(detail.batchRequestId, detail.acronym, detail.title);
-                    const lastTimestamp = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
-                    detail.endTime = lastTimestamp ? new Date(lastTimestamp).toISOString() : (results.overall.endTime || new Date().toISOString());
-                }
-                addConferenceError(detail, detail.endTime!, "CSV generation pipeline failed for this conference.", "csv_pipeline_failure_conf");
-
-                // Adjust overall counts based on the oldStatus
-                if (oldStatus === 'completed') {
-                    results.overall.completedTasks = Math.max(0, (results.overall.completedTasks || 0) - 1);
-                } else if (oldStatus === 'processing' || oldStatus === 'unknown' || oldStatus === 'processed_ok') {
-                    // If it was contributing to processingTasks, it's no longer doing so.
-                    // This will be reflected when processingTasks is recalculated.
-                    // No direct decrement here as `stillProcessingOverallCount` is calculated based on current statuses.
-                }
-                // Increment failed tasks regardless of its previous state (unless it was already failed/skipped)
-                results.overall.failedOrCrashedTasks = (results.overall.failedOrCrashedTasks || 0) + 1;
-
-
-                const affectedReqId = detail.batchRequestId;
-                if (results.requests[affectedReqId] && results.requests[affectedReqId].status !== 'Failed') {
-                    results.requests[affectedReqId].status = 'Failed';
-                }
+        if (requestStatuses.some(s => s === 'Processing')) {
+            results.status = 'Processing';
+        } else if (requestStatuses.every(s => s === 'Failed')) {
+            results.status = 'Failed';
+        } else if (requestStatuses.some(s => s === 'Failed' || s === 'CompletedWithErrors')) {
+            results.status = 'CompletedWithErrors';
+        } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData')) {
+            if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'NoData')) {
+                 results.status = 'Completed';
+            } else if (requestStatuses.some(s => s === 'PartiallyCompleted')){ // Cần else if để tránh ghi đè Completed
+                 results.status = 'PartiallyCompleted';
+            } else { // Trường hợp này chỉ còn lại một số request là Completed, một số là Skipped
+                 results.status = 'Completed'; // Vẫn có thể coi là completed nếu chỉ có completed và skipped
             }
-        });
-
-        // Recalculate processingTasks for overall summary after potential status changes due to CSV failure
-        let newStillProcessingCountAfterCsv = 0;
-        Object.values(results.conferenceAnalysis).forEach(d => {
-            if ((d.status === 'processing' || ((d.status === 'unknown' || d.status === 'processed_ok') && !d.endTime))) {
-                newStillProcessingCountAfterCsv++;
-            }
-        });
-        results.overall.processingTasks = newStillProcessingCountAfterCsv;
+        } else {
+            results.status = 'Unknown';
+        }
+    } else {
+        results.status = "NoRequestsAnalyzed";
     }
-
-    // logger.info({
-    //     event: 'final_calc_end',
-    //     completed_final: results.overall.completedTasks,
-    //     failed_final: results.overall.failedOrCrashedTasks,
-    //     skipped_final: results.overall.skippedTasks,
-    //     still_processing_final: results.overall.processingTasks,
-    //     processed_conferences_total: results.overall.processedConferencesCount
-    // }, "Finished final calculations.");
 };

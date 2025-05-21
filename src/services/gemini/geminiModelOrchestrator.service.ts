@@ -12,13 +12,16 @@ import {
 import { GeminiClientManagerService } from './geminiClientManager.service';
 import { GeminiContextCacheService } from './geminiContextCache.service';
 import { Logger } from 'pino';
-
+import { CrawlModelType } from '../../types/crawl.types';
 export interface ModelPreparationResult {
     model: GenerativeModel;
     contentRequest: GenerateContentRequest | string;
     usingCacheActual: boolean;
     currentCache: CachedContent | null;
+    crawlModelUsed: CrawlModelType; // <<< THÊM TRƯỜNG NÀY
+    modelNameUsed: string; // << Cũng nên thêm modelName thực tế đã được chuẩn bị
 }
+
 
 @singleton()
 export class GeminiModelOrchestratorService {
@@ -35,6 +38,7 @@ export class GeminiModelOrchestratorService {
         generationConfig: SDKGenerationConfig, // generationConfig đã được chuẩn bị
         currentPrompt: string,
         shouldUseCache: boolean,
+        crawlModel: CrawlModelType, // <<< NHẬN crawlModel LÀM THAM SỐ
         logger: Logger
     ): Promise<ModelPreparationResult> {
         let model: GenerativeModel | undefined;
@@ -140,19 +144,24 @@ export class GeminiModelOrchestratorService {
         }
 
 
-        // Tại thời điểm này, nếu không có lỗi nào được throw,
-        // 'model' phải có giá trị (nếu lỗi thì đã throw ở trên)
-        // và 'contentRequest' cũng phải có giá trị (do đã được gán trong nhánh cache hoặc non-cache).
+        // Đảm bảo model được trả về là model thực tế đã được get (ví dụ sau khi fallback nếu có logic đó ở đây)
+        // Giả sử modelName không thay đổi trong hàm này sau khi được truyền vào.
+        // Nếu có logic thay đổi modelName bên trong prepareModel, bạn cần dùng modelName cuối cùng.
 
-        if (!model) {
+        if (!model) { // model là biến chứa GenerativeModel đã được khởi tạo
             // Dòng này gần như không thể đạt được nếu logic ở trên đúng và các lỗi được throw.
             // Nhưng để an toàn và rõ ràng.
             logger.fatal({ ...logger.bindings(), event: 'model_orchestration_critical_failure_final_check' }, "Model instance is undefined before final return.");
-            throw new Error("Critical: Model could not be prepared (final check).");
+            throw new Error("Critical: Model could not be prepared (final check in orchestrator).");
         }
 
-        // contentRequest được đảm bảo đã gán ở đây nếu không có lỗi nào được throw.
-        // Không cần ép kiểu nếu ModelPreparationResult.contentRequest là union type.
-        return { model, contentRequest, usingCacheActual, currentCache };
+        return {
+            model,
+            contentRequest,
+            usingCacheActual,
+            currentCache,
+            crawlModelUsed: crawlModel, // <<< TRẢ VỀ crawlModel ĐÃ SỬ DỤNG
+            modelNameUsed: modelName,   // <<< TRẢ VỀ modelName ĐÃ SỬ DỤNG
+        };
     }
 }

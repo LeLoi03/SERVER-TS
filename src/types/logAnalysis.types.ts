@@ -1,27 +1,32 @@
 // src/types/logAnalysis.types.ts
 
-
 export interface RequestTimings {
     startTime: string | null;
     endTime: string | null;
     durationSeconds: number | null;
-    status?: 'Completed' | 'Failed' | 'Processing' | 'PartiallyCompleted' | 'Unknown'; // <<< THÊM MỚI
-    originalRequestId?: string; // <<< THÊM MỚI: Để lưu ID của request gốc nếu đây là re-crawl
-
-    // Tùy chọn: có thể thêm số lượng conference được xử lý trong request này
+    status?:
+    | 'Completed'
+    | 'Failed'
+    | 'Processing'
+    | 'CompletedWithErrors' // << THÊM MỚI: Cho request có lỗi nhưng không hoàn toàn thất bại
+    | 'PartiallyCompleted'  // << THÊM MỚI: Cho request hoàn thành một phần, không lỗi
+    | 'Skipped'             // << THÊM MỚI: Cho request mà tất cả task con đều skipped
+    | 'NoData'              // << THÊM MỚI: Cho request không có log hoặc task
+    | 'Unknown';
+    originalRequestId?: string;
+    // Tùy chọn:
     // processedConferencesInRequest?: number;
-    // Hoặc danh sách các key của conference thuộc request này
     // conferenceKeys?: string[];
 }
 
 export interface RequestLogData {
-    logs: any[];
-    startTime: number | null;
-    endTime: number | null;
+    logs: any[]; // Nên là kiểu cụ thể hơn nếu có thể, ví dụ: PinoLogEntry[]
+    startTime: number | null; // Unix timestamp (milliseconds)
+    endTime: number | null;   // Unix timestamp (milliseconds)
 }
 
 export interface ReadLogResult {
-    requestsData: Map<string, RequestLogData>;
+    requestsData: Map<string, RequestLogData>; // Key là batchRequestId
     totalEntries: number;
     parsedEntries: number;
     parseErrors: number;
@@ -29,23 +34,23 @@ export interface ReadLogResult {
 }
 
 export interface FilteredData {
-    filteredRequests: Map<string, RequestLogData>;
+    filteredRequests: Map<string, RequestLogData>; // Key là batchRequestId
     analysisStartMillis: number | null;
     analysisEndMillis: number | null;
 }
 
 /** Thông tin chi tiết về quá trình xử lý một conference cụ thể */
 export interface ConferenceAnalysisDetail {
-
-    batchRequestId: string; // ID của request hiện tại (re-crawl request)
-    originalRequestId?: string; // <<< THÊM MỚI: ID của request gốc nếu conference này là một phần của re-crawl    title: string;
+    batchRequestId: string;
+    originalRequestId?: string;
     title: string;
     acronym: string;
+    // Status của conference không thay đổi, vẫn giữ các trạng thái cơ bản
     status: 'unknown' | 'processing' | 'processed_ok' | 'completed' | 'failed' | 'skipped';
-    startTime: string | null;
-    endTime: string | null;
+    startTime: string | null; // ISO string
+    endTime: string | null;   // ISO string
     durationSeconds: number | null;
-    crawlEndTime?: string | null;
+    crawlEndTime?: string | null; // ISO string
     crawlSucceededWithoutError?: boolean | null;
     jsonlWriteSuccess?: boolean | null;
     csvWriteSuccess?: boolean | null;
@@ -56,126 +61,182 @@ export interface ConferenceAnalysisDetail {
         search_results_count: number | null;
         search_filtered_count: number | null;
 
-        // --- Playwright Step Details for Conference ---
-        html_save_attempted: boolean; // True if 'process_save_start' (was save_html_conference_start) seen for this conference
-        html_save_success: boolean | 'skipped' | null; // True if 'process_save_delegation_initiated' (was save_html_conference_success) seen
-        // 'skipped' if 'process_save_skipped_no_links' seen
-        link_processing_attempted_count: number; // Total 'single_link_processing_start' (was link_processing_attempt) for this conference
-        link_processing_success_count: number; // Total 'link_access_final_success' (was link_processing_success) for this conference
-        link_processing_failed_details: Array<{ // Details from 'single_link_processing_failed_to_access_link' or 'unhandled_error'
-            timestamp: string;
+        html_save_attempted: boolean;
+        html_save_success: boolean | 'skipped' | null;
+        link_processing_attempted_count: number;
+        link_processing_success_count: number;
+        link_processing_failed_details: Array<{
+            timestamp: string; // ISO string
             url?: string;
-            error?: string; // Normalized error key
-            event?: string; // Original event name for context
+            error?: string;
+            event?: string;
         }>;
-        // --- End Playwright Step Details ---
 
         gemini_determine_attempted: boolean;
         gemini_determine_success: boolean | null;
-        gemini_determine_cache_used: boolean | null; // true nếu 'cache_setup_use_success' cho 'determine'
+        gemini_determine_cache_used: boolean | null;
         gemini_extract_attempted: boolean;
         gemini_extract_success: boolean | null;
-        gemini_extract_cache_used: boolean | null; // true nếu 'cache_setup_use_success' cho 'extract'
-        // Thêm cho CFP nếu bạn có API type 'cfp' và theo dõi riêng ở conference level
+        gemini_extract_cache_used: boolean | null;
         gemini_cfp_attempted?: boolean;
         gemini_cfp_success?: boolean | null;
         gemini_cfp_cache_used?: boolean | null;
     };
-    errors: Array<{ timestamp: string; message: string; details?: any }>;
-    validationIssues?: Array<{ // Giữ nguyên từ handler
+    errors: Array<{ timestamp: string; message: string; details?: any; errorCode?: string }>; // << BỔ SUNG errorCode tùy chọn
+    validationIssues?: Array<{
         field: string;
-        value: any;        // Giá trị không hợp lệ ban đầu
-        action: string;    // 'normalized' hoặc 'logged_only'
-        normalizedTo?: any; // Giá trị sau khi normalize (nếu action là 'normalized')
-        timestamp: string;
+        value: any;
+        action: string;
+        normalizedTo?: any;
+        timestamp: string; // ISO string
     }>;
-    finalResultPreview?: any; // Renamed from finalResult for clarity
-    finalResult?: any; // The actual final result object from 'processing_finished_successfully'
+    finalResultPreview?: any;
+    finalResult?: any;
 }
 
 export interface PlaywrightAnalysis {
-
-    // --- Global Playwright Stats ---
-    setupAttempts: number; // Number of times global Playwright initialization was attempted
-    setupSuccess: boolean | null; // Final status of global Playwright initialization
-    setupError: boolean | string | null; // True if global init ever failed
-    contextErrors: number; // Errors getting browser context
-    // --- End Global Playwright Stats ---
-
-    // --- HTML Saving Stats (Aggregated across all conferences) ---
-    htmlSaveAttempts: number; // Total conferences for which HTML saving was attempted ('process_save_start')
-    successfulSaveInitiations: number; // Total conferences where HTML saving was successfully initiated ('process_save_delegation_initiated')
-    failedSaves: number; // Total conferences where HTML saving initiation failed
-    skippedSaves: number; // Total conferences where HTML saving was skipped ('process_save_skipped_no_links')
-    // --- End HTML Saving Stats ---
-
-    // --- Link Processing Stats (Aggregated across all links in all conferences) ---
+    // ... (giữ nguyên)
+    setupAttempts: number;
+    setupSuccess: boolean | null;
+    setupError: boolean | string | null;
+    contextErrors: number;
+    htmlSaveAttempts: number;
+    successfulSaveInitiations: number;
+    failedSaves: number;
+    skippedSaves: number;
     linkProcessing: {
-        totalLinksAttempted: number; // Total 'single_link_processing_start' events
-        successfulAccess: number; // Total 'link_access_final_success' events
-        failedAccess: number; // Total 'single_link_processing_failed_to_access_link' or 'unhandled_error' for links
-        redirects: number; // Total 'link_redirect_detected' events
+        totalLinksAttempted: number;
+        successfulAccess: number;
+        failedAccess: number;
+        redirects: number;
     };
-    // --- End Link Processing Stats ---
-
-    otherFailures: number; // Count of generic Playwright failures
-    errorsByType: { [key: string]: number }; // Aggregated errors for Playwright operations by normalized keyF
+    otherFailures: number;
+    errorsByType: { [normalizedErrorKey: string]: number };
 }
+
+
+// Interface GeminiApiAnalysis đã được cập nhật chi tiết
 export interface GeminiApiAnalysis {
     // --- Call Stats ---
-    totalCalls: number;                 // Counter for 'gemini_call_start'
-    successfulCalls: number;            // Counter for 'gemini_api_attempt_success'
-    failedCalls: number;                // Counter for final failures (safety, max_retries, non_retryable, serious setup)
+    totalCalls: number;
+    successfulCalls: number;
+    failedCalls: number;
 
-    callsByType: { [apiType: string]: number }; // From 'gemini_call_start'
-    callsByModel: { [modelName: string]: number };// From 'gemini_call_start'
+    callsByType: { [apiType: string]: number };
+    callsByModel: { [modelName: string]: number }; // Model chung, không phân biệt tuned/non-tuned
 
     // --- Retry Stats ---
-    totalRetries: number;               // Sum of all 'retry_attempt_start' events
-    retriesByType: { [apiType: string]: number }; // From 'retry_attempt_start'
-    retriesByModel: { [modelName: string]: number };// From 'retry_attempt_start'
+    totalRetries: number;
+    retriesByType: { [apiType: string]: number };
+    retriesByModel: { [modelName: string]: number }; // Model chung
+
+    // --- Model Usage by API Type and Crawl Model ---
+    modelUsageByApiType: {
+        [apiType: string]: { // 'extract', 'determine', 'cfp'
+            [modelIdentifier: string]: { // e.g., "gemini-pro (non-tuned)", "models/my-tuned-model (tuned)"
+                calls: number;
+                retries: number;
+                successes: number;
+                failures: number;
+                tokens: number;
+                safetyBlocks: number;
+            };
+        };
+    };
 
     // --- Token Usage ---
-    totalTokens: number;                // Sum from 'gemini_api_attempt_success'
-
-    // --- Cache Specific Stats ---
-    cacheContextAttempts: number;       // Attempts to create a new cache context ('cache_create_start')
-    cacheContextHits: number;           // Successful use of existing cache ('cache_setup_use_success')
-    cacheContextMisses: number;      // Calculated: totalCalls (for cacheable types) - cacheContextHits
-    cacheContextCreationSuccess: number;// Successful creation of new cache context ('cache_create_success')
-    cacheContextCreationFailed: number; // Failures to create new cache context (various 'cache_create_failed_*' events)
-    cacheContextInvalidations: number;  // Times a cache context was invalidated/removed ('cache_invalidate', 'retry_cache_invalidate', 'cache_create_failed_invalid_object')
-    cacheContextRetrievalFailures: number; // Failures to retrieve a known cache context from storage ('cache_retrieval_failed_*')
-
-    cacheMapLoadAttempts: number;       // Attempts to load cache map file (implicit, once per run)
-    cacheMapLoadSuccess: boolean | null;// Status of loading cache map file
-    cacheMapLoadFailures: number;       // Failures loading cache map file ('cache_load_failed')
-    cacheMapWriteAttempts: number;      // Attempts to write cache map file
-    cacheMapWriteSuccessCount: number;       // Successful writes of cache map ('cache_write_success' for map)
-    cacheMapWriteFailures: number;      // Failures writing cache map ('cache_write_failed' for map)
-
-    cacheManagerCreateFailures: number; // Failures to create GoogleAICacheManager ('cache_manager_create_failed')
+    totalTokens: number;
 
     // --- Error & Limit Stats ---
-    blockedBySafety: number;            // Final failures due to safety ('gemini_api_response_blocked', 'retry_attempt_error_safety_blocked')
-    rateLimitWaits: number;             // Times waited due to rate limits ('retry_wait_before_next', 'retry_internal_rate_limit_wait')
-    intermediateErrors: number;         // Total intermediate, retryable errors (sum of various 'retry_attempt_error_*' not leading to final failure)
-    errorsByType: { [normalizedErrorKey: string]: number }; // Detailed breakdown of intermediate and setup errors by normalized key
+    blockedBySafety: number;
+    rateLimitWaits: number;
+    intermediateErrors: number;
+    errorsByType: { [normalizedErrorKey: string]: number };
 
-    // --- Setup Failures (Critical for service operation) ---
-    serviceInitializationFailures: number; // Failures in GeminiApiService constructor or init() (e.g., GenAI init, CacheManager init)
-    apiCallSetupFailures: number;       // Failures preparing for an API call (missing config, model undefined, limiter init failed, non_cached_setup_failed)
+    // --- Service Initialization ---
+    serviceInitialization: {
+        starts: number;
+        completes: number;
+        failures: number;
+        lazyAttempts: number;
+        criticallyUninitialized: number;
+    };
+    apiCallSetupFailures: number;
+
+    // --- Fallback Logic ---
+    fallbackLogic: {
+        attemptsWithFallbackModel: number;
+        successWithFallbackModel: number;
+        primaryModelFailuresLeadingToFallback: number;
+        noFallbackConfigured: number;
+        failedAfterFallbackAttempts: number;
+    };
+
+    // --- Few-Shot Preparation ---
+    fewShotPreparation: {
+        attempts: number;
+        successes: number;
+        failures: {
+            oddPartsCount: number;
+            processingError: number;
+        };
+        warnings: {
+            missingInput: number;
+            missingOutput: number;
+            emptyResult: number;
+        };
+        configuredButNoData: number;
+        disabledByConfig: number;
+    };
+
+    // --- Request Payload Logging ---
+    requestPayloadLogging: {
+        successes: number;
+        failures: number;
+    };
+
+    // --- Generate Content (model.generateContent() calls) ---
+    generateContentInternal: {
+        attempts: number;
+        successes: number;
+    };
+
+    // --- Cache Specifics ---
+    cacheContextHits: number;
+    cacheContextAttempts: number; // getOrCreate
+    cacheContextCreationSuccess: number;
+    cacheContextMisses: number;
+    cacheContextCreationFailed: number;
+    cacheContextInvalidations: number;
+    cacheContextRetrievalFailures: number;
+    cacheMapLoadAttempts: number;
+    cacheMapLoadFailures: number;
+    cacheMapLoadSuccess?: boolean | null; // Có thể là null nếu chưa có event load
+    cacheMapWriteAttempts: number;
+    cacheManagerCreateFailures: number;
+    cacheMapWriteSuccessCount: number;
+    cacheMapWriteFailures: number;
+    // cacheManagerCreateFailures đã được tính trong serviceInitialization.failures hoặc apiCallSetupFailures
+
+    // --- Config Errors ---
+    serviceInitializationFailures: number;
+    configErrors: {
+        modelListMissing: number;
+        // Lỗi từ fewShotPreparation.failures cũng có thể được coi là config error
+    };
 }
 
-export interface GoogleSearchAnalysis {
 
+
+export interface GoogleSearchAnalysis {
+    // ... (giữ nguyên)
     totalRequests: number;
     successfulSearches: number;
     failedSearches: number;
-    skippedSearches: number; // Searches skipped due to no keys or all keys exhausted before loop
-    quotaErrors: number; // Deprecated or refine: use quotaErrorsEncountered
-    keyUsage: { [key: string]: number };
-    errorsByType: { [key: string]: number };
+    skippedSearches: number;
+    quotaErrors: number;
+    keyUsage: { [apiKey: string]: number };
+    errorsByType: { [normalizedErrorKey: string]: number };
     attemptIssues: number;
     attemptIssueDetails: Record<string, number>;
     quotaErrorsEncountered: number;
@@ -191,47 +252,48 @@ export interface GoogleSearchAnalysis {
 }
 
 export interface BatchProcessingAnalysis {
-    totalBatchesAttempted: number;       // Từ 'batch_task_create'
-    successfulBatches: number;           // Từ 'save_batch_finish_success'
-    failedBatches: number;               // Từ 'save_batch_unhandled_error_or_rethrown' và các lỗi API/FS nghiêm trọng khác
-    // Thêm các breakdown lỗi nếu cần:
-    apiFailures: number;                 // Tổng các 'save_batch_*_api_call_failed', 'save_batch_api_response_parse_failed'
-    fileSystemFailures: number;          // Tổng các 'save_batch_dir_create_failed', 'save_batch_read_content_failed', 'save_batch_write_file_failed'
-    logicRejections: number;             // Từ 'batch_processing_abort_no_main_text'
-    aggregatedResultsCount: number | null; // Từ 'save_batch_aggregate_content_end' (nếu có context.aggregatedCount)
-    // Hoặc chi tiết hơn
+    // ... (giữ nguyên)
+    totalBatchesAttempted: number;
+    successfulBatches: number;
+    failedBatches: number;
+    apiFailures: number;
+    fileSystemFailures: number;
+    logicRejections: number;
+    aggregatedResultsCount: number | null;
     determineApiFailures: number;
     extractApiFailures: number;
-    cfpApiFailures: number; // Mới
-    apiResponseParseFailures: number; // Mới
+    cfpApiFailures: number;
+    apiResponseParseFailures: number;
 }
-
 
 export interface FileOutputAnalysis {
+    // ... (giữ nguyên, nhưng có thể thêm `csvOtherErrors` nếu bạn dùng nó trong logic)
     jsonlRecordsSuccessfullyWritten: number;
     jsonlWriteErrors: number;
-    csvFileGenerated: boolean | null; // true, false, hoặc null nếu chưa xử lý
-    csvRecordsAttempted: number;      // Tổng số record JSONL được ResultProcessingService đọc và cố gắng xử lý cho CSV
-    csvRecordsSuccessfullyWritten: number; // Số record CSV được ghi thành công VÀ có confDetail
-    csvWriteErrors: number;           // Số record CSV ghi lỗi (nếu CrawlOrchestrator log event này)
-    csvOrphanedSuccessRecords: number;// Số record CSV ghi thành công nhưng không tìm thấy confDetail
-    csvPipelineFailures: number;      // Số lần toàn bộ pipeline tạo CSV thất bại
+    csvFileGenerated: boolean | null;
+    csvRecordsAttempted: number;
+    csvRecordsSuccessfullyWritten: number;
+    csvWriteErrors: number;
+    csvOrphanedSuccessRecords: number;
+    csvPipelineFailures: number;
+    csvOtherErrors?: number; // << THÊM MỚI (tùy chọn, nếu bạn sử dụng)
 }
 
-
 export interface OverallAnalysis {
-    startTime: string | null;
-    endTime: string | null;
+    startTime: string | null; // ISO string
+    endTime: string | null;   // ISO string
     durationSeconds: number | null;
     totalConferencesInput: number;
     processedConferencesCount: number;
     completedTasks: number;
     failedOrCrashedTasks: number;
     processingTasks: number;
-    skippedTasks?: number; // Added for conferences explicitly skipped
+    skippedTasks: number; // << Đảm bảo có, vì 'skipped' là một status của conference
     successfulExtractions: number;
 }
+
 export interface ValidationStats {
+    // ... (giữ nguyên)
     totalValidationWarnings: number;
     warningsByField: { [fieldName: string]: number };
     totalNormalizationsApplied: number;
@@ -240,16 +302,23 @@ export interface ValidationStats {
 
 /** Cấu trúc kết quả phân tích log tổng thể và chi tiết theo conference */
 export interface LogAnalysisResult {
-    analysisTimestamp: string;
+    analysisTimestamp: string; // ISO string
     logFilePath: string;
-    status?: 'Completed' | 'Failed' | 'Processing'; // Trạng thái tổng thể của việc phân tích
+    status?:
+    | 'Completed'
+    | 'Failed'
+    | 'Processing'
+    | 'CompletedWithErrors' // << THÊM MỚI: Cho trạng thái tổng thể của việc phân tích
+    | 'PartiallyCompleted'  // << THÊM MỚI: Cho trạng thái tổng thể của việc phân tích
+    | 'NoRequestsAnalyzed'  // << THÊM MỚI: Nếu không có request nào được phân tích
+    | 'Unknown';
     errorMessage?: string;
 
-    filterRequestId?: string; // <<< NEW: The specific batchRequestId used for filtering, if any
-    analyzedRequestIds: string[]; // <<< NEW: List of all batchRequestIds included in this analysis output
+    filterRequestId?: string;
+    analyzedRequestIds: string[];
 
-    requests: { // Object chứa thông tin của từng request
-        [batchRequestId: string]: RequestTimings; // RequestTimings giờ đã bao gồm status
+    requests: {
+        [batchRequestId: string]: RequestTimings; // Sử dụng RequestTimings đã được cập nhật
     };
 
     totalLogEntries: number;
@@ -260,18 +329,190 @@ export interface LogAnalysisResult {
 
     googleSearch: GoogleSearchAnalysis;
     playwright: PlaywrightAnalysis;
-    geminiApi: GeminiApiAnalysis; // Sử dụng interface mới
-    batchProcessing: BatchProcessingAnalysis; // Đảm bảo interface này được cập nhật
-    fileOutput: FileOutputAnalysis; // Thêm trường này
+    geminiApi: GeminiApiAnalysis;
+    batchProcessing: BatchProcessingAnalysis;
+    fileOutput: FileOutputAnalysis;
     validationStats: ValidationStats;
 
     overall: OverallAnalysis;
 
-    errorsAggregated: { [key: string]: number };
+    errorsAggregated: { [normalizedErrorKey: string]: number };
     logProcessingErrors: string[];
 
     conferenceAnalysis: {
-        // Key sẽ là: `${batchRequestId}-${acronym}-${title}`
         [compositeKeyIncludingBatchRequestId: string]: ConferenceAnalysisDetail;
     };
 }
+
+// Hàm khởi tạo giá trị ban đầu cho từng phần của analysis
+export const getInitialOverallAnalysis = (): OverallAnalysis => ({
+    startTime: null,
+    endTime: null,
+    durationSeconds: null,
+    totalConferencesInput: 0,
+    processedConferencesCount: 0,
+    completedTasks: 0,
+    failedOrCrashedTasks: 0,
+    processingTasks: 0,
+    skippedTasks: 0,
+    successfulExtractions: 0,
+});
+
+export const getInitialGoogleSearchAnalysis = (): GoogleSearchAnalysis => ({
+    totalRequests: 0,
+    successfulSearches: 0,
+    failedSearches: 0,
+    skippedSearches: 0,
+    quotaErrors: 0,
+    keyUsage: {},
+    errorsByType: {},
+    attemptIssues: 0,
+    attemptIssueDetails: {},
+    quotaErrorsEncountered: 0,
+    malformedResultItems: 0,
+    successfulSearchesWithNoItems: 0,
+    apiKeyLimitsReached: 0,
+    keySpecificLimitsReached: {},
+    apiKeysProvidedCount: 0,
+    allKeysExhaustedEvents_GetNextKey: 0,
+    allKeysExhaustedEvents_StatusCheck: 0,
+    apiKeyRotationsSuccess: 0,
+    apiKeyRotationsFailed: 0,
+});
+
+export const getInitialPlaywrightAnalysis = (): PlaywrightAnalysis => ({
+    setupAttempts: 0,
+    setupSuccess: null,
+    setupError: null,
+    contextErrors: 0,
+    htmlSaveAttempts: 0,
+    successfulSaveInitiations: 0,
+    failedSaves: 0,
+    skippedSaves: 0,
+    linkProcessing: {
+        totalLinksAttempted: 0,
+        successfulAccess: 0,
+        failedAccess: 0,
+        redirects: 0,
+    },
+    otherFailures: 0,
+    errorsByType: {},
+});
+
+export const getInitialGeminiApiAnalysis = (): GeminiApiAnalysis => ({
+    totalCalls: 0,
+    successfulCalls: 0,
+    failedCalls: 0,
+    callsByType: {},
+    callsByModel: {},
+    totalRetries: 0,
+    retriesByType: {},
+    retriesByModel: {},
+    modelUsageByApiType: {},
+    totalTokens: 0,
+    blockedBySafety: 0,
+    rateLimitWaits: 0,
+    intermediateErrors: 0,
+    errorsByType: {},
+    serviceInitialization: {
+        starts: 0,
+        completes: 0,
+        failures: 0,
+        lazyAttempts: 0,
+        criticallyUninitialized: 0,
+    },
+    apiCallSetupFailures: 0,
+    fallbackLogic: {
+        attemptsWithFallbackModel: 0,
+        successWithFallbackModel: 0,
+        primaryModelFailuresLeadingToFallback: 0,
+        noFallbackConfigured: 0,
+        failedAfterFallbackAttempts: 0,
+    },
+    fewShotPreparation: {
+        attempts: 0,
+        successes: 0,
+        failures: { oddPartsCount: 0, processingError: 0 },
+        warnings: { missingInput: 0, missingOutput: 0, emptyResult: 0 },
+        configuredButNoData: 0,
+        disabledByConfig: 0,
+    },
+    requestPayloadLogging: { successes: 0, failures: 0 },
+    generateContentInternal: { attempts: 0, successes: 0 },
+    cacheContextHits: 0,
+    cacheContextAttempts: 0,
+    cacheContextMisses: 0,
+    cacheContextCreationSuccess: 0,
+    cacheContextCreationFailed: 0,
+    cacheContextInvalidations: 0,
+    cacheContextRetrievalFailures: 0,
+    cacheMapLoadAttempts: 0,
+    cacheMapLoadFailures: 0,
+    cacheMapWriteAttempts: 0,
+    cacheMapLoadSuccess: null,
+    cacheManagerCreateFailures: 0,
+    cacheMapWriteSuccessCount: 0,
+    cacheMapWriteFailures: 0,
+    serviceInitializationFailures: 0,
+    configErrors: {
+        modelListMissing: 0,
+    },
+});
+
+export const getInitialBatchProcessingAnalysis = (): BatchProcessingAnalysis => ({
+    totalBatchesAttempted: 0,
+    successfulBatches: 0,
+    failedBatches: 0,
+    apiFailures: 0,
+    fileSystemFailures: 0,
+    logicRejections: 0,
+    aggregatedResultsCount: null,
+    determineApiFailures: 0,
+    extractApiFailures: 0,
+    cfpApiFailures: 0,
+    apiResponseParseFailures: 0,
+});
+
+export const getInitialFileOutputAnalysis = (): FileOutputAnalysis => ({
+    jsonlRecordsSuccessfullyWritten: 0,
+    jsonlWriteErrors: 0,
+    csvFileGenerated: null,
+    csvRecordsAttempted: 0,
+    csvRecordsSuccessfullyWritten: 0,
+    csvWriteErrors: 0,
+    csvOrphanedSuccessRecords: 0,
+    csvPipelineFailures: 0,
+});
+
+export const getInitialValidationStats = (): ValidationStats => ({
+    totalValidationWarnings: 0,
+    warningsByField: {},
+    totalNormalizationsApplied: 0,
+    normalizationsByField: {},
+});
+
+// Hàm khởi tạo cho toàn bộ LogAnalysisResult
+export const getInitialLogAnalysisResult = (logFilePath: string = "N/A"): LogAnalysisResult => ({
+    analysisTimestamp: new Date().toISOString(),
+    logFilePath: logFilePath,
+    status: 'Processing', // Mặc định khi bắt đầu
+    errorMessage: undefined,
+    filterRequestId: undefined,
+    analyzedRequestIds: [],
+    requests: {},
+    totalLogEntries: 0,
+    parsedLogEntries: 0,
+    parseErrors: 0,
+    errorLogCount: 0,
+    fatalLogCount: 0,
+    googleSearch: getInitialGoogleSearchAnalysis(),
+    playwright: getInitialPlaywrightAnalysis(),
+    geminiApi: getInitialGeminiApiAnalysis(),
+    batchProcessing: getInitialBatchProcessingAnalysis(),
+    fileOutput: getInitialFileOutputAnalysis(),
+    validationStats: getInitialValidationStats(),
+    overall: getInitialOverallAnalysis(),
+    errorsAggregated: {},
+    logProcessingErrors: [],
+    conferenceAnalysis: {},
+});

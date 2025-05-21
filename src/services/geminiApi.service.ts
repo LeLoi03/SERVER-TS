@@ -156,99 +156,179 @@ export class GeminiApiService {
         }
     }
 
-    // Unchanged: executeWithRetry
+
     private async executeWithRetry(
         apiCallFn: RetryableGeminiApiCall,
-        modelPreparation: ModelPreparationResult,
+        modelPreparation: ModelPreparationResult, // Giờ đây chứa crawlModelUsed và modelNameUsed
         apiType: string,
         batchIndex: number,
-        currentModelNameForRetry: string,
+        // currentModelNameForRetry không còn cần thiết nếu modelPreparation.modelNameUsed là chính xác
         limiter: RateLimiterMemory,
         parentOperationLogger: Logger
     ): Promise<ExecuteWithRetryResult> {
-        const retryLogicLogger = parentOperationLogger.child({ function: 'executeWithRetry', modelBeingRetried: currentModelNameForRetry });
-        const cacheKeyForInvalidation = `${apiType}-${currentModelNameForRetry}`;
+        // Sử dụng modelNameUsed và crawlModelUsed từ modelPreparation cho context
+        const modelNameForThisExecution = modelPreparation.modelNameUsed;
+        const crawlModelForThisExecution = modelPreparation.crawlModelUsed;
 
-        retryLogicLogger.debug({ event: 'retry_loop_start' }, "Executing with retry");
+        const retryLogicLogger = parentOperationLogger.child({
+            function: 'executeWithRetry',
+            apiType: apiType, // Context quan trọng
+            batchIndex: batchIndex, // Context quan trọng
+            modelBeingRetried: modelNameForThisExecution, // Sử dụng modelName từ modelPreparation
+            crawlModel: crawlModelForThisExecution, // Sử dụng crawlModel từ modelPreparation
+            // acronym, title sẽ được kế thừa từ parentOperationLogger nếu có
+        });
+
+        const cacheKeyForInvalidation = `${apiType}-${modelNameForThisExecution}`;
+
+        retryLogicLogger.debug({ event: 'retry_loop_start' }, "Executing with retry logic");
         let retryCount = 0;
         let currentDelay = this.initialDelayMs;
         const defaultResponse: ExecuteWithRetryResult = { responseText: "", metaData: null };
 
+        const commonLogContext = { // Context chung cho các log event trong attempt này
+            apiType: apiType,
+            modelName: modelNameForThisExecution,
+            crawlModel: crawlModelForThisExecution,
+            // batchIndex, acronym, title đã có trong logger
+        };
+
         while (retryCount < this.maxRetries) {
             const attempt = retryCount + 1;
-            const attemptLogger = retryLogicLogger.child({ attempt, maxAttempts: this.maxRetries });
-            if (attempt > 1)
-                attemptLogger.info({ event: 'retry_attempt_start' }, "Executing function attempt");
+            // attemptLogger kế thừa context từ retryLogicLogger (bao gồm apiType, modelName, crawlModel, batchIndex)
+            const attemptLogger = retryLogicLogger.child({
+                attempt,
+                maxAttempts: this.maxRetries,
+            });
+
+
+
+            if (attempt > 1) {
+                attemptLogger.info({
+                    ...commonLogContext,
+                    event: 'retry_attempt_start',
+                }, `Starting retry attempt ${attempt} for ${apiType} with model ${modelNameForThisExecution} (${crawlModelForThisExecution})`);
+            } else {
+                attemptLogger.info({
+                    ...commonLogContext,
+                    event: 'initial_attempt_start',
+                }, `Starting initial attempt for ${apiType} with model ${modelNameForThisExecution} (${crawlModelForThisExecution})`);
+            }
 
             try {
+                // apiCallFn (singleAttemptFunction) sẽ nhận attemptLogger,
+                // và nên log các event của nó (vd: gemini_api_generate_content_failed)
+                // với đầy đủ context (apiType, modelName, crawlModel) được bind vào attemptLogger
+                // hoặc được truyền rõ ràng.
                 const successResult = await apiCallFn(limiter, modelPreparation, attemptLogger);
+                // Nếu thành công, successResult được trả về, không cần log thêm ở đây.
+                // singleAttemptFunction đã log 'gemini_api_attempt_success'.
                 return { ...successResult, finalErrorType: undefined };
             } catch (error: unknown) {
                 let shouldRetry = true;
                 let invalidateCacheOnError = false;
                 const errorDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
                 const errorMessageLower = errorDetails.message?.toLowerCase() ?? '';
-                let errorEvent = 'retry_attempt_error_unknown';
+                let errorEventForThisAttempt = 'retry_attempt_error_unknown';
                 let is5xxError = false;
 
                 if (error instanceof RateLimiterRes) {
                     const waitTimeMs = error.msBeforeNext;
-                    attemptLogger.warn({ waitTimeMs, event: 'retry_internal_rate_limit_wait' }, `Internal rate limit exceeded. Waiting...`);
+                    attemptLogger.warn({
+                        ...commonLogContext,
+                        waitTimeMs,
+                        event: 'retry_internal_rate_limit_wait',
+                    }, `Internal rate limit for ${modelNameForThisExecution}. Waiting ${waitTimeMs}ms...`);
                     await new Promise(resolve => setTimeout(resolve, waitTimeMs));
-                    continue;
+                    continue; // Bỏ qua phần log lỗi chung và logic retry bên dưới
                 }
 
+                // Xác định loại lỗi
                 if (errorMessageLower.includes('503') || errorMessageLower.includes('500') || errorMessageLower.includes('unavailable') || errorMessageLower.includes('internal')) {
-                    errorEvent = 'retry_attempt_error_5xx';
+                    errorEventForThisAttempt = 'retry_attempt_error_5xx';
                     is5xxError = true;
-                    attemptLogger.warn({ status: 500, err: errorDetails, event: errorEvent }, "5xx/Server Error from API. Retrying current model or preparing for fallback...");
                 } else if (errorMessageLower.includes('cachedcontent not found') || errorMessageLower.includes('permission denied on cached content') || errorMessageLower.includes('cannot find cached content')) {
-                    errorEvent = 'retry_attempt_error_cache';
-                    attemptLogger.warn({ err: errorDetails, event: errorEvent }, "Cache related error detected. Invalidating cache reference and retrying.");
+                    errorEventForThisAttempt = 'retry_attempt_error_cache';
                     invalidateCacheOnError = true;
                 } else if (errorMessageLower.includes('429') || errorMessageLower.includes('resource_exhausted') || errorMessageLower.includes('rate limit')) {
-                    errorEvent = 'retry_attempt_error_429';
-                    attemptLogger.warn({ status: 429, err: errorDetails, event: errorEvent }, "429/Resource Exhausted/Rate Limit Error from API. Retrying...");
+                    errorEventForThisAttempt = 'retry_attempt_error_429';
                 } else if (errorMessageLower.includes("blocked") || errorMessageLower.includes("safety")) {
-                    errorEvent = 'retry_attempt_error_safety_blocked';
-                    attemptLogger.error({ err: errorDetails, event: errorEvent }, "Request blocked by safety settings. No further retries.");
+                    errorEventForThisAttempt = 'retry_attempt_error_safety_blocked';
                     shouldRetry = false;
-                } else {
-                    attemptLogger.warn({ err: errorDetails, event: errorEvent }, "Unhandled/other error during execution attempt. Retrying...");
                 }
 
+                // Log lỗi MỘT LẦN từ executeWithRetry cho attempt này
+                const logPayloadForAttemptError = {
+                    ...commonLogContext,
+                    err: errorDetails,
+                    event: errorEventForThisAttempt,
+                };
+
+                if (shouldRetry) {
+                    attemptLogger.warn(logPayloadForAttemptError, `Attempt ${attempt} failed with ${errorEventForThisAttempt}. Preparing for retry.`);
+                } else {
+                    attemptLogger.error(logPayloadForAttemptError, `Attempt ${attempt} failed with non-retryable error ${errorEventForThisAttempt}. Aborting.`);
+                }
+
+
                 if (invalidateCacheOnError) {
-                    attemptLogger.info({ cacheKeyToInvalidate: cacheKeyForInvalidation, event: 'retry_cache_invalidate' }, "Removing cache entry due to error during retry.");
-                    this.contextCache.deleteInMemoryOnly(cacheKeyForInvalidation, attemptLogger.child({ sub_op: 'deleteInMemoryCache' }));
-                    await this.contextCache.removePersistentEntry(cacheKeyForInvalidation, attemptLogger.child({ sub_op: 'removePersistentCache' }));
+                    attemptLogger.info({
+                        ...commonLogContext,
+                        cacheKeyToInvalidate: cacheKeyForInvalidation,
+                        event: 'retry_cache_invalidate',
+                    }, `Invalidating cache for ${cacheKeyForInvalidation} due to error.`);
+                    this.contextCache.deleteInMemoryOnly(cacheKeyForInvalidation, attemptLogger.child({ sub_op: 'deleteInMemoryOnly' }));
+                    await this.contextCache.removePersistentEntry(cacheKeyForInvalidation, attemptLogger.child({ sub_op: 'removePersistentEntry' }));
                 }
 
                 retryCount++;
-                const isLastAttempt = retryCount >= this.maxRetries;
+                const isLastAttemptAfterThisFailure = retryCount >= this.maxRetries;
 
-                if (!shouldRetry) {
-                    attemptLogger.error({ finalError: errorDetails, event: 'retry_abort_non_retryable' }, "Non-retryable error encountered. Aborting retries.");
+                if (!shouldRetry) { // Lỗi không thể retry (vd: safety block)
+                    attemptLogger.error({
+                        ...commonLogContext,
+                        finalError: errorDetails, // Sử dụng errorDetails thay vì error
+                        event: 'retry_abort_non_retryable',
+                    }, `Non-retryable error encountered with ${modelNameForThisExecution}. Aborting all retries for this model call.`);
+                    // Trả về defaultResponse, callGeminiAPI sẽ không thử fallback trong trường hợp này.
+                    // Nếu muốn thử fallback cho lỗi safety, logic cần thay đổi.
                     return defaultResponse;
                 }
 
-                if (isLastAttempt) {
+                if (isLastAttemptAfterThisFailure) { // Đã hết số lần retry cho model hiện tại
+                    const finalFailureEvent = is5xxError ? 'retry_failed_max_retries_5xx_current_model' : 'retry_failed_max_retries';
+                    attemptLogger.error({
+                        ...commonLogContext,
+                        maxRetries: this.maxRetries,
+                        finalError: errorDetails,
+                        event: finalFailureEvent,
+                    }, `Failed to process with model ${modelNameForThisExecution} after ${this.maxRetries} retries. Final error: ${errorEventForThisAttempt}`);
+
                     if (is5xxError) {
-                        attemptLogger.error({ maxRetries: this.maxRetries, finalError: errorDetails, event: 'retry_failed_max_retries_5xx_current_model' }, `Failed to process with model ${currentModelNameForRetry} after maximum retries due to 5xx error. Will attempt fallback if configured.`);
-                        return { ...defaultResponse, finalErrorType: '5xx_non_retryable_for_current_model' };
+                        return { ...defaultResponse, finalErrorType: '5xx_non_retryable_for_current_model' }; // Báo hiệu cho callGeminiAPI để thử fallback
                     } else {
-                        attemptLogger.error({ maxRetries: this.maxRetries, finalError: errorDetails, event: 'retry_failed_max_retries' }, `Failed to process with model ${currentModelNameForRetry} after maximum retries.`);
-                        return defaultResponse;
+                        return defaultResponse; // Không báo hiệu fallback cho lỗi không phải 5xx khi hết retry
                     }
                 }
 
+                // Nếu chưa phải lần thử cuối và lỗi có thể retry
                 const jitter = Math.random() * 500;
                 const delayWithJitter = Math.max(0, currentDelay + jitter);
-                attemptLogger.info({ nextAttempt: retryCount + 1, delaySeconds: (delayWithJitter / 1000).toFixed(2), event: 'retry_wait_before_next' }, `Waiting before next retry...`);
+                attemptLogger.info({
+                    ...commonLogContext,
+                    nextAttemptWillBe: attempt + 1, // Sửa tên để rõ ràng hơn
+                    delaySeconds: (delayWithJitter / 1000).toFixed(2),
+                    event: 'retry_wait_before_next',
+                }, `Waiting ${(delayWithJitter / 1000).toFixed(2)}s before next attempt with ${modelNameForThisExecution}.`);
                 await new Promise(resolve => setTimeout(resolve, delayWithJitter));
                 currentDelay = Math.min(currentDelay * 2, this.maxDelayMs);
-            }
-        }
-        retryLogicLogger.error({ event: 'retry_loop_exit_unexpected' }, "Exited retry loop unexpectedly.");
+            } // Kết thúc catch
+        } // Kết thúc while loop
+
+        retryLogicLogger.error({
+            ...commonLogContext, // Sử dụng commonLogContext nếu có thể
+            event: 'retry_loop_exit_unexpected',
+        }, `Exited retry loop unexpectedly for model ${modelNameForThisExecution} without returning a result or specific error.`);
         return defaultResponse;
     }
 
@@ -359,6 +439,7 @@ export class GeminiApiService {
                     finalGenerationConfig,      // Đã được quyết định
                     batchPrompt,
                     shouldUseCache,             // Đã được quyết định
+                    crawlModel, // <<< TRUYỀN crawlModel VÀO ĐÂY
                     callOperationLogger
                 );
             } catch (prepError: unknown) {
@@ -474,7 +555,7 @@ export class GeminiApiService {
             const retryResult = await this.executeWithRetry(
                 (limiter, modelPrep, logger) => singleAttemptFunction(limiter, modelPrep, logger, systemInstructionTextToUse, fewShotPartsToUse),
                 modelPrepResult, apiType, batchIndex,
-                currentModelNameToUse, modelRateLimiter, callOperationLogger
+                modelRateLimiter, callOperationLogger
             );
 
 
@@ -745,7 +826,7 @@ export class GeminiApiService {
         try {
             const { responseText, metaData } = await this.callGeminiAPI({
                 batchPrompt: batch, // Sử dụng biến 'batch' đã tách ra
-                batchIndex: params.batchIndex,  
+                batchIndex: params.batchIndex,
                 title: params.title,
                 acronym: params.acronym,
                 apiType,

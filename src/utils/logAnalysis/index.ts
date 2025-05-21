@@ -92,91 +92,122 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
 
 
   // --- Gemini API Events Group ---
-  // Gemini Final Failures
+
+  // Gemini Final Failures (Thất bại cuối cùng của một nỗ lực gọi API)
   'retry_failed_max_retries': geminiApi.handleGeminiFinalFailure,
   'retry_abort_non_retryable': geminiApi.handleGeminiFinalFailure,
-  'gemini_api_response_blocked': geminiApi.handleGeminiFinalFailure, // Giữ nguyên, event này vẫn tồn tại
-  'retry_attempt_error_safety_blocked': geminiApi.handleGeminiFinalFailure, // Giữ nguyên
+  'gemini_api_response_blocked': geminiApi.handleGeminiFinalFailure,
+  'retry_attempt_error_safety_blocked': geminiApi.handleGeminiFinalFailure,
+  'retry_failed_max_retries_5xx_current_model': geminiApi.handleGeminiFinalFailure, // (MỚI) Lỗi 5xx cuối cùng cho model hiện tại
+  'gemini_call_5xx_no_more_fallback_options': geminiApi.handleGeminiFinalFailure, // (MỚI) Hết lựa chọn fallback sau lỗi 5xx
+  'gemini_call_failed_no_more_options': geminiApi.handleGeminiFinalFailure, // (MỚI) Thất bại chung, không còn lựa chọn fallback
+  'gemini_call_unexpected_exit_after_attempts': geminiApi.handleGeminiFinalFailure, // (MỚI) Lỗi không mong muốn khi thoát vòng lặp gọi API
 
   // Gemini Setup & Critical Init Failures
-  'gemini_service_genai_init_failed': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_service_not_initialized': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_service_genai_not_ready': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_call_limiter_init_failed': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_call_missing_apiconfig': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_call_missing_model_config': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  // 'gemini_api_model_undefined': geminiApi.handleGeminiSetupFailure, // Đã đổi tên thành 'gemini_api_model_missing_before_generate' hoặc được xử lý bởi 'non_cached_setup_failed'
-  'gemini_api_model_missing_before_generate': geminiApi.handleGeminiSetupFailure, // (MỚI) Event khi model bị undefined ngay trước khi gọi generateContent
-  'non_cached_setup_failed': geminiApi.handleGeminiSetupFailure, // Giữ nguyên (lỗi khi getGenerativeModel không cache)
-  'gemini_public_method_unhandled_error': geminiApi.handleGeminiSetupFailure, // Giữ nguyên
-  'gemini_call_model_prep_orchestration_failed': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi từ model orchestrator nếu không chuẩn bị được model
-  'model_orchestration_critical_failure': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi nghiêm trọng khi model orchestrator không tạo được model
-  'gemini_client_manager_no_genai_instance': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi từ ClientManager nếu genAI instance null
-  'gemini_client_manager_no_cache_manager_instance': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi từ ClientManager nếu cacheManager instance null (có thể coi là setup failure nếu cache quan trọng)
+  'gemini_service_genai_init_failed': geminiApi.handleGeminiSetupFailure,
+  'gemini_service_not_initialized': geminiApi.handleGeminiSetupFailure,
+  'gemini_service_genai_not_ready': geminiApi.handleGeminiSetupFailure,
+  'gemini_call_limiter_init_failed': geminiApi.handleGeminiSetupFailure,
+  'gemini_call_missing_apiconfig': geminiApi.handleGeminiSetupFailure,
+  'gemini_call_missing_model_config': geminiApi.handleGeminiSetupFailure,
+  'gemini_api_model_missing_before_generate': geminiApi.handleGeminiSetupFailure,
+  'non_cached_setup_failed': geminiApi.handleGeminiSetupFailure,
+  'gemini_public_method_unhandled_error': geminiApi.handleGeminiSetupFailure, // Coi là setup failure cho method đó
+  'gemini_call_model_prep_orchestration_failed': geminiApi.handleGeminiSetupFailure,
+  'model_orchestration_critical_failure': geminiApi.handleGeminiSetupFailure,
+  'gemini_client_manager_no_genai_instance': geminiApi.handleGeminiSetupFailure,
+  'gemini_client_manager_no_cache_manager_instance': geminiApi.handleGeminiSetupFailure,
+  'cache_manager_create_failed': geminiApi.handleGeminiSetupFailure,
+  'cache_manager_init_failed_no_apikey': geminiApi.handleGeminiSetupFailure,
+  'cache_manager_init_skipped_no_genai': geminiApi.handleGeminiSetupFailure,
+  'cache_map_load_failed': geminiApi.handleGeminiSetupFailure, // Đồng thời cũng là lỗi init service
+  'gemini_service_async_init_failed': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi init bất đồng bộ
+  'gemini_service_lazy_init_attempt': geminiApi.handleGeminiSetupFailure, // (MỚI) Khi cố gắng lazy init
+  'gemini_service_critically_uninitialized': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi nghiêm trọng khi service chưa init
+  'gemini_model_list_empty_or_missing': geminiApi.handleGeminiSetupFailure, // (MỚI) Lỗi config model list
+  'few_shot_prep_odd_parts_count': geminiApi.handleFewShotPrep, // (MỚI) Lỗi config few-shot, cũng là một dạng setup failure
+  'few_shot_prep_failed': geminiApi.handleFewShotPrep, // (MỚI) Lỗi xử lý few-shot, cũng là một dạng setup failure
 
+  // Gemini Service Initialization Lifecycle (Thông tin)
+  'gemini_service_async_init_start': geminiApi.handleServiceInitLifecycle, // (MỚI)
+  'gemini_service_async_init_complete': geminiApi.handleServiceInitLifecycle, // (MỚI)
 
   // Gemini Success
-  'gemini_api_attempt_success': geminiApi.handleGeminiSuccess, // Giữ nguyên
+  'gemini_api_attempt_success': geminiApi.handleGeminiSuccess, // Thành công của một attempt (sau retry loop của attempt đó)
+  'gemini_call_success_with_model': geminiApi.handleGeminiSuccess, // (MỚI) Thành công của toàn bộ callGeminiAPI (primary hoặc fallback)
 
   // Gemini Cache Specifics
-  // Cache Context (Semantic Cache)
-  'cache_setup_use_success': geminiApi.handleGeminiCacheHit, // Giữ nguyên (Khi sử dụng cached context thành công)
-  'cache_context_hit_inmemory': geminiApi.handleGeminiCacheHit, // (MỚI/CHI TIẾT HƠN) Khi tìm thấy cache trong memory map của ContextCacheService
-
-  'cache_context_get_or_create_start': geminiApi.handleCacheContextCreateStart, // (MỚI) Bắt đầu quá trình get hoặc create context cache
-  'cache_context_create_attempt': geminiApi.handleCacheContextCreateStart, // (Đã có, có thể gộp với event trên hoặc giữ riêng nếu ý nghĩa khác) - dùng 'cache_context_get_or_create_start' có vẻ bao quát hơn
-
-  'cache_context_create_success': geminiApi.handleCacheContextCreationSuccess, // (SỬA EVENT) Tạo context cache thành công
-  'cache_context_retrieval_success': geminiApi.handleCacheContextCreationSuccess, // (SỬA EVENT) Lấy context cache từ manager thành công (coi như một dạng "creation" thành công cho lần dùng đó)
-
-  'cache_context_create_failed': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT)
-  'cache_context_create_failed_invalid_model': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT)
-  'cache_context_create_failed_permission': geminiApi.handleCacheContextCreationFailed, // (MỚI)
-  'cache_context_create_failed_invalid_response': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT)
-  'cache_context_setup_failed_no_manager': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT)
-  'cache_context_logic_unhandled_error': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT)
-  'gemini_call_cache_setup_failed': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT) Lỗi nghiêm trọng khi setup cache cho một API call
-  'gemini_call_model_from_cache_failed': geminiApi.handleCacheContextCreationFailed, // (SỬA EVENT) Lỗi khi lấy model từ cached content đã có
+  'cache_setup_use_success': geminiApi.handleGeminiCacheHit,
+  'cache_context_hit_inmemory': geminiApi.handleGeminiCacheHit,
+  'cache_model_from_cache_success': geminiApi.handleGeminiCacheHit, // (MỚI) Chi tiết hơn cache hit
+  'cache_context_get_or_create_start': geminiApi.handleCacheContextCreateStart,
+  'cache_context_create_success': geminiApi.handleCacheContextCreationSuccess,
+  'cache_context_retrieval_success': geminiApi.handleCacheContextCreationSuccess,
+  'cache_context_create_failed': geminiApi.handleCacheContextCreationFailed,
+  'cache_context_create_failed_invalid_model': geminiApi.handleCacheContextCreationFailed,
+  'cache_context_create_failed_permission': geminiApi.handleCacheContextCreationFailed,
+  'cache_context_create_failed_invalid_response': geminiApi.handleCacheContextCreationFailed,
+  'cache_context_setup_failed_no_manager': geminiApi.handleCacheContextCreationFailed,
+  'cache_context_logic_unhandled_error': geminiApi.handleCacheContextCreationFailed,
+  'gemini_call_cache_setup_failed': geminiApi.handleCacheContextCreationFailed,
+  'gemini_call_model_from_cache_failed': geminiApi.handleCacheContextCreationFailed,
+  'gemini_call_no_cache_available_or_setup_failed': geminiApi.handleCacheContextCreationFailed, // (MỚI) Khi cache được yêu cầu nhưng không dùng được cho call
 
   // Cache Invalidation / Removal
-  'retry_cache_invalidate': geminiApi.handleCacheContextInvalidation, // Giữ nguyên (Từ retry loop)
-  'cache_persistent_entry_remove_start': geminiApi.handleCacheContextInvalidation, // (MỚI) Bắt đầu xóa entry khỏi persistent map
-  'cache_inmemory_entry_remove': geminiApi.handleCacheContextInvalidation, // (MỚI) Xóa entry khỏi in-memory cache
+  'retry_cache_invalidate': geminiApi.handleCacheContextInvalidation,
+  'cache_persistent_entry_remove_start': geminiApi.handleCacheContextInvalidation,
+  'cache_inmemory_entry_remove': geminiApi.handleCacheContextInvalidation,
 
   // Cache Context Retrieval Failures (từ manager)
-  'cache_context_retrieval_failed_not_found_in_manager': geminiApi.handleCacheContextRetrievalFailure, // (SỬA EVENT)
-  'cache_context_retrieval_failed_exception': geminiApi.handleCacheContextRetrievalFailure, // (SỬA EVENT)
+  'cache_context_retrieval_failed_not_found_in_manager': geminiApi.handleCacheContextRetrievalFailure,
+  'cache_context_retrieval_failed_exception': geminiApi.handleCacheContextRetrievalFailure,
 
   // Cache Map File (gemini_cache_map.json)
-  'cache_map_load_failed': geminiApi.handleCacheMapLoadFailure, // (SỬA EVENT)
-  'cache_map_write_success': geminiApi.handleCacheMapWriteSuccess, // (SỬA EVENT)
-  'cache_map_write_failed': geminiApi.handleCacheMapWriteFailure, // (SỬA EVENT)
-
-  // Cache Manager (SDK's GoogleAICacheManager)
-  'cache_manager_init_failed_no_apikey': geminiApi.handleCacheManagerCreateFailure, // (MỚI) Từ ClientManager
-  'cache_manager_create_failed': geminiApi.handleCacheManagerCreateFailure, // Giữ nguyên (Từ ClientManager)
-  'cache_manager_init_skipped_no_genai': geminiApi.handleCacheManagerCreateFailure, // (MỚI) Từ ClientManager, có thể coi là một dạng init failure nếu cache manager là thiết yếu.
+  // 'cache_map_load_failed' đã được map ở Setup Failures
+  'cache_map_write_success': geminiApi.handleCacheMapWriteSuccess,
+  'cache_map_write_failed': geminiApi.handleCacheMapWriteFailure,
 
   // Gemini Call & Retry Stats
-  'gemini_call_start': geminiApi.handleGeminiCallStart, // Giữ nguyên
-  'retry_attempt_start': geminiApi.handleRetryAttemptStart, // (SỬA EVENT) (Đã có trong file handler của bạn, đảm bảo tên event khớp)
+  'gemini_call_start': geminiApi.handleGeminiCallStart, // Bắt đầu một cuộc gọi API (có thể là primary hoặc fallback)
+  'retry_attempt_start': geminiApi.handleRetryAttemptStart, // Bắt đầu một lần thử trong vòng lặp retry
 
-  // Gemini Intermediate Errors & Limits
-  'retry_wait_before_next': geminiApi.handleRateLimitWait, // Giữ nguyên
-  'retry_internal_rate_limit_wait': geminiApi.handleRateLimitWait, // Gi মানে
+  // Gemini Intermediate Errors & Limits (Lỗi trong quá trình retry, chưa phải final)
+  'retry_wait_before_next': geminiApi.handleRateLimitWait,
+  'retry_internal_rate_limit_wait': geminiApi.handleRateLimitWait,
+  'json_clean_parse_failed': geminiApi.handleGeminiIntermediateError,
+  'json_clean_structure_not_found': geminiApi.handleGeminiIntermediateError,
+  'retry_attempt_error_cache': geminiApi.handleGeminiIntermediateError,
+  'retry_attempt_error_429': geminiApi.handleGeminiIntermediateError,
+  'retry_attempt_error_5xx': geminiApi.handleGeminiIntermediateError,
+  'retry_attempt_error_unknown': geminiApi.handleGeminiIntermediateError,
+  'retry_loop_exit_unexpected': geminiApi.handleGeminiIntermediateError,
+  'gemini_api_generate_content_failed': geminiApi.handleGeminiIntermediateError, // Lỗi từ model.generateContent()
 
-  // Gemini Intermediate Errors
-  'json_clean_parse_failed': geminiApi.handleGeminiIntermediateError, // (MỚI/Đã có trong file handlers)
-  'json_clean_structure_not_found': geminiApi.handleGeminiIntermediateError, // (MỚI/Đã có trong file handlers)
+  // --- Gemini Fallback Logic (Thông tin & Quyết định) ---
+  'gemini_call_no_fallback_configured': geminiApi.handleFallbackLogic, // (MỚI)
+  'gemini_call_attempting_fallback_model': geminiApi.handleFallbackLogic, // (MỚI)
+  'gemini_call_attempting_primary_model': geminiApi.handleFallbackLogic, // (MỚI) (Có thể không cần hành động nhiều)
+  'gemini_call_5xx_switching_to_fallback': geminiApi.handleFallbackLogic, // (MỚI)
+  'gemini_call_primary_failed_non_5xx_checking_fallback': geminiApi.handleFallbackLogic, // (MỚI)
 
-  'retry_attempt_error_cache': geminiApi.handleGeminiIntermediateError, // Giữ nguyên
-  'retry_attempt_error_429': geminiApi.handleGeminiIntermediateError, // Giữ nguyên
-  'retry_attempt_error_5xx': geminiApi.handleGeminiIntermediateError, // Giữ nguyên
-  'retry_attempt_error_unknown': geminiApi.handleGeminiIntermediateError, // Giữ nguyên
-  'retry_loop_exit_unexpected': geminiApi.handleGeminiIntermediateError, // Giữ nguyên
-  'gemini_api_generate_content_failed': geminiApi.handleGeminiIntermediateError, // (SỬA EVENT) Lỗi từ model.generateContent()
-  // 'gemini_api_generate_failed': geminiApi.handleGeminiIntermediateError, // Tên cũ, đã đổi thành gemini_api_generate_content_failed
-  // 'retry_genai_not_init': geminiApi.handleGeminiIntermediateError, // Đã được xử lý bởi 'gemini_service_genai_not_ready' hoặc các lỗi setup khác
+  // --- Gemini Configuration & Few-Shot Prep (Thông tin & Quyết định) ---
+  'gemini_fewshot_allowed_but_no_config_data_for_non_tuned': geminiApi.handleFewShotPrep, // (MỚI)
+  'gemini_fewshot_disabled_for_non_tuned_by_config': geminiApi.handleFewShotPrep, // (MỚI)
+  'few_shot_prep_start': geminiApi.handleFewShotPrep, // (MỚI)
+  'few_shot_prep_success': geminiApi.handleFewShotPrep, // (MỚI)
+  'few_shot_prep_missing_or_empty_input_value': geminiApi.handleFewShotPrep, // (MỚI WARNING)
+  'few_shot_prep_missing_or_empty_output_value_for_input': geminiApi.handleFewShotPrep, // (MỚI WARNING)
+  'few_shot_prep_empty_result_after_processing': geminiApi.handleFewShotPrep, // (MỚI WARNING)
+  // 'few_shot_prep_odd_parts_count', 'few_shot_prep_failed' đã được map ở Setup Failures
+
+  // --- Gemini Request Payload Logging ---
+  'gemini_api_request_payload_logged': geminiApi.handleRequestPayloadLog, // (MỚI)
+  'gemini_api_request_payload_log_failed': geminiApi.handleRequestPayloadLog, // (MỚI)
+
+  // --- Gemini Generate Content Internals (model.generateContent() lifecycle) ---
+  'gemini_api_generate_start': geminiApi.handleGenerateContentInternal, // (MỚI)
+  'gemini_api_generate_success': geminiApi.handleGenerateContentInternal, // (MỚI) (Khác với gemini_api_attempt_success)
+
 
   // --- Batch Processing Events Group ---
   'batch_task_start_execution': batchProcessing.handleBatchTaskCreate,
