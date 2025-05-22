@@ -1,24 +1,33 @@
 // src/api/v1/index.ts
 import { Router } from 'express';
-import { container } from 'tsyringe'; // <<< Import container (nếu cần resolve ở đây, thường thì không)
-import crawlRouter from './crawl/crawl.routes'; // crawl router không cần service (trừ khi thay đổi)
-import logAnalysisRouter from './logAnalysis/logAnalysis.routes'; // <<< Import hàm tạo log analysis router
-// import { LogAnalysisService } from '../../services/logAnalysis.service'; // <<< Xóa import service
 
-// <<< Hàm tạo router không nhận service nữa
+// Import router creation functions for specific API feature areas (v1).
+// These functions will handle their own service dependencies internally.
+import createCrawlRouter from './crawl/crawl.routes';
+import createLogAnalysisRouter from './logAnalysis/logAnalysis.routes';
+
+/**
+ * Creates and configures the main API router for version 1 (v1) of the API.
+ * This router aggregates all feature-specific routers under the /api/v1 path.
+ *
+ * @returns {Router} An Express Router instance combining all v1 API feature routes.
+ */
 const createV1Router = (): Router => {
     const router = Router();
 
-    // crawl router không cần service (giữ nguyên)
-    router.use('/', crawlRouter);
+    // Mount the crawl-related routes under the base v1 path.
+    // `createCrawlRouter()` is called here to get the configured router instance.
+    router.use('/', createCrawlRouter());
 
-    // <<< logAnalysisRouter sẽ tự resolve service bên trong nó hoặc các handlers của nó
-    router.use('/logs/analysis', logAnalysisRouter()); // <<< Gọi hàm tạo không có tham số
+    // Mount the log analysis routes under '/logs/analysis' path.
+    // `createLogAnalysisRouter()` is called here to get the configured router instance.
+    router.use('/logs/analysis', createLogAnalysisRouter());
 
-    // Gắn các router khác nếu cần, chúng cũng sẽ tự resolve
-    // router.use('/users', userRouter());
+    // Add other v1 feature routers here if needed.
+    // Example: router.use('/users', createUserRouter());
 
     return router;
 };
 
-export default createV1Router; // <<< Export hàm tạo đã sửa
+// Export the router creation function for the v1 API.
+export default createV1Router;

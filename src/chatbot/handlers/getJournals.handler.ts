@@ -1,48 +1,91 @@
-// src/handlers/getJournals.handler.ts
-import { executeGetJournals } from '../services/getJournals.service'; 
-import { IFunctionHandler } from '../interface/functionHandler.interface'; 
-import { FunctionHandlerInput, FunctionHandlerOutput } from '../shared/types'; 
-import logToFile from '../../utils/logger'; 
+// src/chatbot/handlers/getJournals.handler.ts
+import { executeGetJournals } from '../services/getJournals.service';
+import { IFunctionHandler } from '../interface/functionHandler.interface';
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types';
+import logToFile from '../../utils/logger'; // Keeping logToFile as requested
+import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
+/**
+ * Handles the 'getJournals' function call from the LLM.
+ * This handler validates the search query, calls the `executeGetJournals` service,
+ * processes its result, and communicates status updates to the caller.
+ */
 export class GetJournalsHandler implements IFunctionHandler {
+    /**
+     * Executes the logic for retrieving journal information based on a search query.
+     *
+     * @param {FunctionHandlerInput} context - The input context for the function handler,
+     *                                       including arguments, handler ID, socket ID,
+     *                                       status update callback, and agent ID.
+     * @returns {Promise<FunctionHandlerOutput>} A Promise that resolves with the model's response content,
+     *                                          an optional frontend action, and a collection of `ThoughtStep`s.
+     */
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        const { args, handlerId, socketId, onStatusUpdate } = context;
-        const logPrefix = `[${handlerId} ${socketId}]`;
+        const {
+            args,
+            handlerId: handlerProcessId,
+            socketId,
+            onStatusUpdate,
+            agentId // ID of the sub-agent executing this function
+        } = context;
+        const logPrefix = `[${handlerProcessId} ${socketId} Handler:GetJournals Agent:${agentId}]`;
         const searchQuery = args?.searchQuery as string | undefined;
         const dataType = "journal"; // Constant for the data type
+        const localThoughts: ThoughtStep[] = []; // Collect thoughts specific to this handler
 
-        logToFile(`${logPrefix} Handler: GetJournals, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
 
-        // --- Helper function để gửi status update ---
-        const sendStatus = (step: string, message: string, details?: object) => {
+        /**
+         * Helper function to report a status update and collect a ThoughtStep.
+         * @param {string} step - A unique identifier for the current step.
+         * @param {string} message - A human-readable message.
+         * @param {object} [details] - Optional additional details.
+         */
+        const reportStep = (step: string, message: string, details?: object): void => {
+            const timestamp = new Date().toISOString();
+            const thought: ThoughtStep = {
+                step,
+                message,
+                details,
+                timestamp,
+                agentId: agentId,
+            };
+            localThoughts.push(thought);
+            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+
             if (onStatusUpdate) {
-                onStatusUpdate('status_update', {
+                const statusData: StatusUpdate = {
                     type: 'status',
                     step,
                     message,
                     details,
-                    timestamp: new Date().toISOString(),
-                });
+                    timestamp,
+                    agentId: agentId,
+                };
+                onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
             }
         };
 
         try {
             // --- 1. Validation (Guard Clause) ---
-            sendStatus('validating_function_args', `Validating arguments for getting ${dataType}...`, { args });
+            reportStep('validating_function_args', `Validating arguments for getting ${dataType}...`, { args });
 
             // Validate that searchQuery is a non-empty string
             if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '') {
                 const errorMsg = "Missing or empty search query.";
-                logToFile(`${logPrefix} GetJournals: Validation Failed - ${errorMsg}`);
-                sendStatus('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
-                return { modelResponseContent: `Error: ${errorMsg} Please provide a search query for journals.`, frontendAction: undefined };
+                logToFile(`${logPrefix} Validation Failed - ${errorMsg}`);
+                reportStep('function_error', `Invalid arguments: ${errorMsg}`, { error: errorMsg, args });
+                return {
+                    modelResponseContent: `Error: ${errorMsg} Please provide a search query for journals.`,
+                    frontendAction: undefined,
+                    thoughts: localThoughts
+                };
             }
-            // searchQuery is now confirmed to be a non-empty string
 
-            // --- 2. Prepare & Execute API Call ---
-            sendStatus('retrieving_info', `Retrieving ${dataType} data for query: "${searchQuery}"...`, { dataType, searchQuery });
+            // --- 2. Prepare & Execute Service Call ---
+            reportStep('retrieving_info', `Retrieving ${dataType} data for query: "${searchQuery}"...`, { dataType, searchQuery });
 
             const apiResult = await executeGetJournals(searchQuery);
             logToFile(`${logPrefix} API Result: Success=${apiResult.success}, Query="${searchQuery}"`);
@@ -51,46 +94,44 @@ export class GetJournalsHandler implements IFunctionHandler {
             let modelResponseContent: string;
 
             if (apiResult.success) {
-                // Successfully retrieved data, check formatting
+                reportStep('api_call_success', `API call for ${dataType} succeeded. Processing data...`, { query: searchQuery });
                 if (apiResult.formattedData !== null) {
-                    // Ideal case: data retrieved and formatted
                     modelResponseContent = apiResult.formattedData;
-                    sendStatus('data_found', `Successfully retrieved and processed ${dataType} data.`, { success: true, query: searchQuery });
+                    reportStep('data_found', `Successfully retrieved and processed ${dataType} data.`, { success: true, query: searchQuery, resultPreview: modelResponseContent.substring(0, 100) + "..." });
                 } else {
-                    // Data retrieved but formatting failed or returned null
-                    // Use rawData if available, otherwise use errorMessage, otherwise a default message
                     modelResponseContent = apiResult.rawData ?? (apiResult.errorMessage || `Received raw ${dataType} data for "${searchQuery}", but formatting was unavailable.`);
                     const warningMsg = `Data formatting issue for ${dataType}. Displaying raw data or error message.`;
                     logToFile(`${logPrefix} Warning: ${warningMsg}`);
-                    sendStatus('function_warning', warningMsg, {
+                    reportStep('function_warning', warningMsg, {
                         rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 100) + '...' : '[object]',
                         errorMessage: apiResult.errorMessage,
                         query: searchQuery
                     });
-                    // Still considered "data_found" but with issues
-                    sendStatus('data_found', `Retrieved ${dataType} data, but with formatting issues.`, { success: true, formattingIssue: true, query: searchQuery });
+                    reportStep('data_found_with_formatting_issues', `Retrieved ${dataType} data, but with formatting issues.`, { success: true, formattingIssue: true, query: searchQuery });
                 }
             } else {
                 // API call failed entirely
                 modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data for query: "${searchQuery}".`;
                 logToFile(`${logPrefix} API call failed: ${modelResponseContent}`);
-                sendStatus('api_call_failed', `API call failed for ${dataType}.`, { error: modelResponseContent, success: false, query: searchQuery });
+                reportStep('api_call_failed', `API call failed for ${dataType}: ${modelResponseContent}`, { error: modelResponseContent, success: false, query: searchQuery });
             }
 
             // --- 4. Return Result ---
+            reportStep('function_result_prepared', `Result for GetJournals prepared.`, { success: apiResult.success });
             return {
                 modelResponseContent,
-                frontendAction: undefined // No direct frontend action needed
+                frontendAction: undefined, // No direct frontend action needed
+                thoughts: localThoughts
             };
 
-        } catch (error: any) {
-            const errorMessage = error instanceof Error ? error.message : String(error);
-            logToFile(`${logPrefix} CRITICAL Error in GetJournalsHandler: ${errorMessage}\nStack: ${error.stack}`);
-            // Use optional chaining for sendStatus in catch
-            sendStatus?.('function_error', `Critical error during ${dataType} retrieval: ${errorMessage}`);
+        } catch (error: unknown) { // Catch as unknown
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+            logToFile(`${logPrefix} CRITICAL Error: ${errorMessage}\nStack: ${errorStack}`);
+            reportStep('function_error', `Critical error during ${dataType} retrieval: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred while trying to get journals: ${errorMessage}`,
-                frontendAction: undefined
+                frontendAction: undefined,
+                thoughts: localThoughts
             };
         }
     }

@@ -85,8 +85,8 @@ export const handleLinkProcessingSuccess: LogEventHandler = (logEntry, results, 
 };
 
 export const handleLinkProcessingFailed: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    console.log("DEBUG handleLinkProcessingFailed - logEntry.finalAttemptedUrl:", logEntry.finalAttemptedUrl);
-    console.log("DEBUG handleLinkProcessingFailed - logEntry.originalUrl:", logEntry.originalUrl);
+    // console.log("DEBUG handleLinkProcessingFailed - logEntry.finalAttemptedUrl:", logEntry.finalAttemptedUrl);
+    // console.log("DEBUG handleLinkProcessingFailed - logEntry.originalUrl:", logEntry.originalUrl);
 
     // Được gọi bởi 'single_link_processing_failed_to_access_link' hoặc 'single_link_processing_unhandled_error'
     results.playwright.linkProcessing.failedAccess++;
@@ -94,13 +94,13 @@ export const handleLinkProcessingFailed: LogEventHandler = (logEntry, results, c
 
 
     const rawErrorString = `Link processing failed: ${logEntry.finalAttemptedUrl || logEntry.originalUrl || 'N/A'}`;
-    console.log("DEBUG handleLinkProcessingFailed - rawErrorString:", rawErrorString);
+    // console.log("DEBUG handleLinkProcessingFailed - rawErrorString:", rawErrorString);
 
     const error = logEntry.err?.message || logEntry.err || logEntry.msg || rawErrorString;
-    console.log("DEBUG handleLinkProcessingFailed - error string before normalize:", error);
+    // console.log("DEBUG handleLinkProcessingFailed - error string before normalize:", error);
 
     const errorKey = normalizeErrorKey(error);
-    console.log("DEBUG handleLinkProcessingFailed - errorKey after normalize:", errorKey);
+    // console.log("DEBUG handleLinkProcessingFailed - errorKey after normalize:", errorKey);
 
     // Phân loại lỗi chi tiết hơn cho link processing
     const linkErrorKey = `link_access_err_${errorKey}`;

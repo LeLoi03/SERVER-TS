@@ -24,8 +24,7 @@ import { IConferenceDeterminationService } from './batchProcessingServiceChild/c
 import { IConferenceDataAggregatorService, ContentPaths } from './batchProcessingServiceChild/conferenceDataAggregator.service';
 
 import { Logger } from 'pino';
-import { addAcronymSafely } from '../conference/11_utils';
-
+import { addAcronymSafely } from '../utils/crawl/addAcronymSafely';
 
 
 // LogContext types might need to be adjusted or made more generic if they are to be shared

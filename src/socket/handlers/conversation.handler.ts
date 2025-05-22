@@ -1,6 +1,6 @@
 // src/socket/handlers/conversation.handler.ts
 import { HandlerDependencies } from './handler.types';
-// --- Import types --- (chỉ những type cần thiết cho file này)
+// --- Import types ---
 import {
     LoadConversationData,
     DeleteConversationData,
@@ -11,66 +11,77 @@ import {
     RenameResult,
     NewConversationResult,
     ChatMessage,
-    Language
+    Language,
+    ChatHistoryItem
 } from '../../chatbot/shared/types';
 import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper';
+// Import the new error utility
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-interface StartNewConversationPayload { // Giữ lại type này nếu chỉ dùng ở đây
+interface StartNewConversationPayload {
     language?: Language;
 }
 
-const CONVERSATION_HANDLER_NAME = 'conversationHandler';
+const CONVERSATION_HANDLER_NAME = 'ConversationHandler';
 
+/**
+ * Registers Socket.IO event handlers related to conversation management (e.g., listing, loading,
+ * creating, deleting, clearing, renaming, pinning conversations).
+ * These handlers interact with the `ConversationHistoryService`.
+ *
+ * @param {HandlerDependencies} deps - An object containing common dependencies for handlers.
+ */
 export const registerConversationHandlers = (deps: HandlerDependencies): void => {
     const {
         socket,
         conversationHistoryService,
         logToFile,
-        userId: currentUserId, // Lấy userId từ deps, nhưng sẽ re-check bằng ensureAuthenticated
         socketId,
         sendChatError,
         emitUpdatedConversationList,
         ensureAuthenticated,
+        DEFAULT_HISTORY_LIMIT,
     } = deps;
 
-    const baseLogContext = `[${CONVERSATION_HANDLER_NAME}][${socketId}]`; // userId sẽ được thêm sau khi xác thực
+    const baseLogContext = `[${CONVERSATION_HANDLER_NAME}][${socketId}]`;
 
-    logToFile(`${baseLogContext}[${currentUserId}] Registering conversation event handlers.`);
+    logToFile(`${baseLogContext}[${deps.userId}] Registering conversation event handlers.`);
 
     socket.on('get_conversation_list', async () => {
         const eventName = 'get_conversation_list';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
         logToFile(`[INFO] ${handlerLogContext} '${eventName}' request received.`);
         try {
-            const userLanguage = socket.data.language as string | undefined;
+            const userLanguage = socket.data.language as Language | undefined;
             const conversationList = await conversationHistoryService.getConversationListForUser(authenticatedUserId, undefined, userLanguage);
             socket.emit('conversation_list', conversationList as ClientConversationMetadata[]);
-            logToFile(`[INFO] ${handlerLogContext} Sent conversation list. Count: ${conversationList.length}, Lang used: ${userLanguage || 'service_default'}`);
-        } catch (error: any) {
-            sendChatError(handlerLogContext, 'Failed to retrieve conversation list.', 'list_fetch_fail', { error: error.message });
+            logToFile(`[INFO] ${handlerLogContext} Sent conversation list. Count: ${conversationList.length}, Lang used: ${userLanguage || 'service_default'}.`);
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(handlerLogContext, 'Failed to retrieve conversation list.', 'list_fetch_fail', { error: errorMessage });
         }
     });
 
     socket.on('load_conversation', async (data: unknown) => {
         const eventName = 'load_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        logToFile(`[INFO] ${handlerLogContext} Raw '${eventName}' event received. Data: ${JSON.stringify(data)?.substring(0, 200) + (JSON.stringify(data)?.length > 200 ? '...' : '')}`);
+        logToFile(`[INFO] ${handlerLogContext} Raw '${eventName}' event received. Data: ${JSON.stringify(data)?.substring(0, 200) + (JSON.stringify(data)?.length > 200 ? '...' : '')}.`);
 
-        if (typeof data !== 'object' || data === null || typeof (data as LoadConversationData)?.conversationId !== 'string' || !(data as LoadConversationData).conversationId) {
+        if (!isLoadConversationData(data)) {
             return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_load');
         }
-        const requestedConvId = (data as LoadConversationData).conversationId;
+        const requestedConvId = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${requestedConvId}]`;
 
-        logToFile(`[INFO] ${convLogContext} Request received.`);
+        logToFile(`[INFO] ${convLogContext} 'load_conversation' request received.`);
         try {
-            const history = await conversationHistoryService.getConversationHistory(requestedConvId, authenticatedUserId, deps.DEFAULT_HISTORY_LIMIT);
+            const history: ChatHistoryItem[] | null = await conversationHistoryService.getConversationHistory(requestedConvId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
 
             if (history === null) {
                 return sendChatError(convLogContext, 'Conversation not found or access denied.', 'history_not_found_load', { conversationId: requestedConvId });
@@ -78,24 +89,27 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
 
             const frontendMessages: ChatMessage[] = mapHistoryToFrontendMessages(history);
             socket.data.currentConversationId = requestedConvId;
-            logToFile(`[DEBUG] Emitting initial_history for conv ${requestedConvId}. Messages: ${JSON.stringify(frontendMessages.map(m => ({ id: m.id, text: m.message?.substring(0, 20), role: m.isUser ? 'user' : 'model' })))}`);
+
+            logToFile(`[DEBUG] ${convLogContext} Emitting 'initial_history'. Message Count: ${frontendMessages.length}.`);
             socket.emit('initial_history', { conversationId: requestedConvId, messages: frontendMessages });
-            logToFile(`[INFO] ${convLogContext} Sent history. Set as active. Message Count: ${frontendMessages.length}`);
-        } catch (error: any) {
-            sendChatError(convLogContext, `Server error loading conversation history.`, 'history_load_fail_server', { conversationId: requestedConvId, error: error.message });
+            logToFile(`[INFO] ${convLogContext} Sent conversation history. Set as active. Message Count: ${frontendMessages.length}.`);
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(convLogContext, `Server error loading conversation history: ${errorMessage}.`, 'history_load_fail_server', { conversationId: requestedConvId, error: errorMessage });
         }
     });
 
-    socket.on('start_new_conversation', async (payload: StartNewConversationPayload) => {
+    socket.on('start_new_conversation', async (payload: unknown) => {
         const eventName = 'start_new_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        const language = payload?.language;
+        const parsedPayload = isStartNewConversationPayload(payload) ? payload : {};
+        const language = parsedPayload.language;
         socket.data.language = language;
 
-        logToFile(`[INFO] ${handlerLogContext} Request received. Language: ${language || 'N/A'}`);
+        logToFile(`[INFO] ${handlerLogContext} '${eventName}' request received. Language: ${language || 'N/A'}.`);
         try {
             const newConversationData: NewConversationResult = await conversationHistoryService.createNewConversation(authenticatedUserId, language);
             socket.data.currentConversationId = newConversationData.conversationId;
@@ -107,30 +121,32 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 lastActivity: newConversationData.lastActivity.toISOString(),
                 isPinned: newConversationData.isPinned,
             });
-            logToFile(`[INFO] ${convLogContext} Started new conversation. Title: "${newConversationData.title}". Set as active.`);
+            logToFile(`[INFO] ${convLogContext} Successfully started new conversation. Title: "${newConversationData.title}". Set as active.`);
+
             await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, 'new conversation started', language);
-        } catch (error: any) {
-            sendChatError(handlerLogContext, `Could not start new conversation.`, 'new_conv_fail_server', { userId: authenticatedUserId, error: error.message });
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(handlerLogContext, `Could not start new conversation: ${errorMessage}.`, 'new_conv_fail_server', { userId: authenticatedUserId, error: errorMessage });
         }
     });
 
     socket.on('delete_conversation', async (data: unknown) => {
         const eventName = 'delete_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        if (typeof data !== 'object' || data === null || typeof (data as DeleteConversationData)?.conversationId !== 'string' || !(data as DeleteConversationData).conversationId) {
+        if (!isDeleteConversationData(data)) {
             return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_delete');
         }
-        const conversationIdToDelete = (data as DeleteConversationData).conversationId;
+        const conversationIdToDelete = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${conversationIdToDelete}]`;
 
-        logToFile(`[INFO] ${convLogContext} Request received.`);
+        logToFile(`[INFO] ${convLogContext} 'delete_conversation' request received.`);
         try {
             const success = await conversationHistoryService.deleteConversation(conversationIdToDelete, authenticatedUserId);
             if (success) {
-                logToFile(`[INFO] ${convLogContext} Successfully processed deletion.`);
+                logToFile(`[INFO] ${convLogContext} Successfully processed conversation deletion.`);
                 socket.emit('conversation_deleted', { conversationId: conversationIdToDelete });
                 if (socket.data.currentConversationId === conversationIdToDelete) {
                     socket.data.currentConversationId = undefined;
@@ -138,26 +154,27 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 const currentLanguage = socket.data.language as Language | undefined;
                 await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, `deleted conversation ${conversationIdToDelete}`, currentLanguage);
             } else {
-                sendChatError(convLogContext, 'Could not delete. Not found or no permission.', 'delete_fail_permission', { conversationId: conversationIdToDelete });
+                sendChatError(convLogContext, 'Could not delete conversation. Not found or no permission.', 'delete_fail_permission', { conversationId: conversationIdToDelete });
             }
-        } catch (error: any) {
-            sendChatError(convLogContext, `Server error deleting conversation.`, 'delete_fail_server', { conversationId: conversationIdToDelete, error: error.message });
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(convLogContext, `Server error deleting conversation: ${errorMessage}.`, 'delete_fail_server', { conversationId: conversationIdToDelete, error: errorMessage });
         }
     });
 
     socket.on('clear_conversation', async (data: unknown) => {
         const eventName = 'clear_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        if (typeof data !== 'object' || data === null || typeof (data as ClearConversationData)?.conversationId !== 'string' || !(data as ClearConversationData).conversationId) {
+        if (!isClearConversationData(data)) {
             return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_clear');
         }
-        const conversationIdToClear = (data as ClearConversationData).conversationId;
+        const conversationIdToClear = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${conversationIdToClear}]`;
 
-        logToFile(`[INFO] ${convLogContext} Request received.`);
+        logToFile(`[INFO] ${convLogContext} 'clear_conversation' request received.`);
         try {
             const success = await conversationHistoryService.clearConversationMessages(conversationIdToClear, authenticatedUserId);
             if (success) {
@@ -169,27 +186,27 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 const currentLanguage = socket.data.language as Language | undefined;
                 await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, `cleared conversation ${conversationIdToClear}`, currentLanguage);
             } else {
-                sendChatError(convLogContext, 'Could not clear. Not found or no permission.', 'clear_fail_permission', { conversationId: conversationIdToClear });
+                sendChatError(convLogContext, 'Could not clear conversation. Not found or no permission.', 'clear_fail_permission', { conversationId: conversationIdToClear });
             }
-        } catch (error: any) {
-            sendChatError(convLogContext, `Server error clearing messages.`, 'clear_fail_server', { conversationId: conversationIdToClear, error: error.message });
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(convLogContext, `Server error clearing messages: ${errorMessage}.`, 'clear_fail_server', { conversationId: conversationIdToClear, error: errorMessage });
         }
     });
 
     socket.on('rename_conversation', async (data: unknown) => {
         const eventName = 'rename_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        const payload = data as RenameConversationData;
-        if (!payload || typeof payload.conversationId !== 'string' || typeof payload.newTitle !== 'string') {
-            return sendChatError(handlerLogContext, 'Invalid request for rename.', 'invalid_request_rename');
+        if (!isRenameConversationData(data)) {
+            return sendChatError(handlerLogContext, 'Invalid request for rename: Missing "conversationId" or "newTitle".', 'invalid_request_rename');
         }
-        const { conversationId, newTitle } = payload;
+        const { conversationId, newTitle } = data;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`;
 
-        logToFile(`[INFO] ${convLogContext} Request received. New Title: "${newTitle.substring(0, 30)}"`);
+        logToFile(`[INFO] ${convLogContext} 'rename_conversation' request received. New Title: "${newTitle.substring(0, 30) + (newTitle.length > 30 ? '...' : '')}".`);
         try {
             const renameOpResult: RenameResult = await conversationHistoryService.renameConversation(conversationId, authenticatedUserId, newTitle);
             if (renameOpResult.success) {
@@ -197,27 +214,27 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 const currentLanguage = socket.data.language as Language | undefined;
                 await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, `renamed conv ${conversationId}`, currentLanguage);
             } else {
-                sendChatError(convLogContext, 'Could not rename. Check ID, permissions, or title.', 'rename_fail_logic', { conversationId });
+                sendChatError(convLogContext, 'Could not rename conversation. Check ID, permissions, or title validity.', 'rename_fail_logic', { conversationId });
             }
-        } catch (error: any) {
-            sendChatError(convLogContext, 'Server error renaming.', 'rename_fail_server', { conversationId, error: error.message });
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(convLogContext, `Server error renaming conversation: ${errorMessage}.`, 'rename_fail_server', { conversationId, error: errorMessage });
         }
     });
 
     socket.on('pin_conversation', async (data: unknown) => {
         const eventName = 'pin_conversation';
-        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${currentUserId}]`, eventName);
+        const authenticatedUserId = ensureAuthenticated(`${baseLogContext}[${deps.userId}]`, eventName);
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        const payload = data as PinConversationData;
-        if (!payload || typeof payload.conversationId !== 'string' || typeof payload.isPinned !== 'boolean') {
-            return sendChatError(handlerLogContext, 'Invalid request for pin.', 'invalid_request_pin');
+        if (!isPinConversationData(data)) {
+            return sendChatError(handlerLogContext, 'Invalid request for pin: Missing "conversationId" or "isPinned".', 'invalid_request_pin');
         }
-        const { conversationId, isPinned } = payload;
+        const { conversationId, isPinned } = data;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`;
 
-        logToFile(`[INFO] ${convLogContext} Request received. IsPinned: ${isPinned}`);
+        logToFile(`[INFO] ${convLogContext} 'pin_conversation' request received. IsPinned: ${isPinned}.`);
         try {
             const success = await conversationHistoryService.pinConversation(conversationId, authenticatedUserId, isPinned);
             if (success) {
@@ -225,12 +242,68 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 const currentLanguage = socket.data.language as Language | undefined;
                 await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, `pinned/unpinned conv ${conversationId}`, currentLanguage);
             } else {
-                sendChatError(convLogContext, 'Could not update pin status.', 'pin_fail', { conversationId });
+                sendChatError(convLogContext, 'Could not update pin status. Not found or no permission.', 'pin_fail', { conversationId });
             }
-        } catch (error: any) {
-            sendChatError(convLogContext, 'Server error updating pin status.', 'pin_fail_server', { conversationId, error: error.message });
+        } catch (error: unknown) { // Use unknown here
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            sendChatError(convLogContext, `Server error updating pin status: ${errorMessage}.`, 'pin_fail_server', { conversationId, error: errorMessage });
         }
     });
 
-    logToFile(`${baseLogContext}[${currentUserId}] Conversation event handlers registered.`);
+    logToFile(`${baseLogContext}[${deps.userId}] Conversation event handlers successfully registered.`);
 };
+
+function isLoadConversationData(data: unknown): data is LoadConversationData {
+    return (
+        typeof data === 'object' &&
+        data !== null &&
+        typeof (data as LoadConversationData).conversationId === 'string' &&
+        !!(data as LoadConversationData).conversationId
+    );
+}
+
+function isStartNewConversationPayload(payload: unknown): payload is StartNewConversationPayload {
+    return (
+        typeof payload === 'object' &&
+        payload !== null &&
+        (typeof (payload as StartNewConversationPayload).language === 'string' || (payload as StartNewConversationPayload).language === undefined)
+    );
+}
+
+function isDeleteConversationData(data: unknown): data is DeleteConversationData {
+    return (
+        typeof data === 'object' &&
+        data !== null &&
+        typeof (data as DeleteConversationData).conversationId === 'string' &&
+        !!(data as DeleteConversationData).conversationId
+    );
+}
+
+function isClearConversationData(data: unknown): data is ClearConversationData {
+    return (
+        typeof data === 'object' &&
+        data !== null &&
+        typeof (data as ClearConversationData).conversationId === 'string' &&
+        !!(data as ClearConversationData).conversationId
+    );
+}
+
+function isRenameConversationData(data: unknown): data is RenameConversationData {
+    return (
+        typeof data === 'object' &&
+        data !== null &&
+        typeof (data as RenameConversationData).conversationId === 'string' &&
+        !!(data as RenameConversationData).conversationId &&
+        typeof (data as RenameConversationData).newTitle === 'string'
+    );
+}
+
+function isPinConversationData(data: unknown): data is PinConversationData {
+    return (
+        typeof data === 'object' &&
+        data !== null &&
+        typeof (data as PinConversationData).conversationId === 'string' &&
+        !!(data as PinConversationData).conversationId &&
+        typeof (data as PinConversationData).isPinned === 'boolean'
+    );
+}

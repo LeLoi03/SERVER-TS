@@ -12,17 +12,36 @@ import { BatchProcessingService } from './batchProcessing.service';
 import { TaskQueueService } from './taskQueue.service';
 import { ConferenceProcessorService } from './conferenceProcessor.service';
 import { Logger } from 'pino';
-import { ConferenceData, ProcessedRowData } from '../types/crawl.types';
+import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl.types';
 import fs from 'fs';
 import { GeminiApiService } from './geminiApi.service';
-import { CrawlModelType, ApiModels } from '../types/crawl.types';
-// ------------------------------------------------------------------
+import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
 
+/**
+ * Orchestrates the entire crawling and data processing workflow.
+ * This service coordinates various sub-services like Playwright for crawling,
+ * Gemini API for data extraction, file system operations, and result processing.
+ * It manages the lifecycle of a batch crawling operation from start to finish.
+ */
 @singleton()
 export class CrawlOrchestratorService {
     private readonly configApp: AppConfig;
     private readonly baseLogger: Logger;
 
+    /**
+     * Constructs an instance of CrawlOrchestratorService.
+     * Dependencies are injected via tsyringe.
+     * @param {ConfigService} configService - Service for application configuration.
+     * @param {LoggingService} loggingService - Service for logging operations.
+     * @param {ApiKeyManager} apiKeyManager - Manages API keys (e.g., Google Custom Search).
+     * @param {PlaywrightService} playwrightService - Handles web scraping using Playwright.
+     * @param {FileSystemService} fileSystemService - Manages file and directory operations.
+     * @param {HtmlPersistenceService} htmlPersistenceService - Manages saving HTML content.
+     * @param {ResultProcessingService} resultProcessingService - Processes raw API outputs into structured data.
+     * @param {BatchProcessingService} batchProcessingService - Manages batch processing of conferences.
+     * @param {TaskQueueService} taskQueueService - Manages concurrent tasks.
+     * @param {GeminiApiService} geminiApiService - Handles interactions with the Gemini API.
+     */
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
@@ -39,16 +58,29 @@ export class CrawlOrchestratorService {
         this.configApp = this.configService.config;
     }
 
+    /**
+     * Executes the main crawling and processing pipeline for a list of conferences.
+     * This method orchestrates all phases: environment setup, task scheduling,
+     * waiting for completion, result processing, and cleanup.
+     *
+     * @param {ConferenceData[]} conferenceList - An array of conference data to be processed.
+     * @param {Logger} parentLogger - The parent Pino logger instance for contextual logging.
+     * @param {ApiModels} apiModels - An object specifying which model type ('tuned' or 'non-tuned') to use for each API stage.
+     * @param {string} batchRequestId - A unique identifier for the current batch processing request.
+     * @returns {Promise<ProcessedRowData[]>} A Promise that resolves with an array of processed conference data,
+     *                                      ready for CSV output or frontend display.
+     * @throws {Error} If a fatal error occurs during the crawling process.
+     */
     async run(
         conferenceList: ConferenceData[],
         parentLogger: Logger,
-        apiModels: ApiModels, // << THAY ĐỔI Ở ĐÂY
+        apiModels: ApiModels,
         batchRequestId: string
     ): Promise<ProcessedRowData[]> {
         const logger = parentLogger.child({
             service: 'CrawlOrchestratorRun',
-            apiModelsUsed: apiModels, // << Log object models
-            // batchRequestId đã được kế thừa
+            apiModelsUsed: apiModels, // Log the API models used for this run
+            batchRequestId: batchRequestId, // Ensure batchRequestId is explicitly bound for all child logs
         });
 
         const operationStartTime = Date.now();
@@ -57,130 +89,145 @@ export class CrawlOrchestratorService {
             event: 'crawl_orchestrator_start',
             totalConferences: conferenceList.length,
             concurrency: this.taskQueueService.concurrency,
-            startTime: new Date(operationStartTime).toISOString()
-        }, `Starting crawl process within orchestrator for batch ${batchRequestId} using API models (${modelsDesc})`);
+            startTime: new Date(operationStartTime).toISOString(),
+            modelsDescription: modelsDesc,
+        }, `Starting crawl process within orchestrator for batch ${batchRequestId} using API models (${modelsDesc}).`);
 
         let allProcessedData: ProcessedRowData[] = [];
-        let crawlError: Error | null = null;
+        let crawlError: Error | null = null; // Store any fatal error to re-throw later
 
-         try {
-            logger.info("Phase 0: Resetting state for new batch...");
-            this.batchProcessingService.resetGlobalAcronyms(logger);
-            this.htmlPersistenceService.resetState(logger);
+        try {
+            logger.info("Phase 0: Resetting service states for new batch...");
+            this.batchProcessingService.resetGlobalAcronyms(logger); // Clears global acronyms set
+            this.htmlPersistenceService.resetState(logger); // Clears temporary HTML file mappings
 
-            logger.info("Phase 1: Preparing environment...");
-            await this.fileSystemService.prepareOutputArea(logger);
-            await this.fileSystemService.writeConferenceInputList(conferenceList, logger);
+            logger.info("Phase 1: Preparing environment (filesystem, playwright, Gemini API)...");
+            await this.fileSystemService.prepareOutputArea(logger); // Ensures output directories exist and are clean
+            await this.fileSystemService.writeConferenceInputList(conferenceList, logger); // Writes the input list to a file for record-keeping
 
-            await this.playwrightService.initialize(logger);
-            // Giả sử geminiApiService.init được cập nhật để nhận ApiModels
-            // Hoặc, bạn có thể không cần init() ở đây nếu model được chọn cho mỗi request riêng lẻ.
-            // Nếu GeminiApiService cần biết trước tất cả các model sẽ được dùng, thì truyền apiModels.
-            // Nếu không, logic chọn model sẽ nằm ở nơi gọi geminiApiService.request().
-            // Tạm thời giả định init không cần apiModels nữa, hoặc nó tự xử lý.
-            // Nếu GeminiApiService cần biết model mặc định hoặc các model cụ thể để khởi tạo, bạn sẽ cần truyền:
-            // await this.geminiApiService.init(logger, apiModels); // Cần cập nhật GeminiApiService
-            await this.geminiApiService.init(logger); // Hoặc nếu init chỉ là khởi tạo chung
+            await this.playwrightService.initialize(logger); // Initializes Playwright browser context
+            // Note: GeminiApiService.init() might not need `apiModels` directly,
+            // as specific model selection often happens per-request within `GeminiApiService.request()`.
+            // We pass `apiModels` to `ConferenceProcessorService` which then uses it for each API call.
+            await this.geminiApiService.init(logger); // Initializes Gemini API client (e.g., sets up credentials)
 
-            this.htmlPersistenceService.setBrowserContext(logger);
+            this.htmlPersistenceService.setBrowserContext(logger); // Sets Playwright browser context for HTML saving
 
-            logger.info("Environment prepared.");
+            logger.info("Environment prepared successfully.");
 
             logger.info("Phase 2: Scheduling conference processing tasks...");
             const tasks = conferenceList.map((conference, itemIndex) => {
-                return () => {
+                return async () => { // Make sure the task function is async
+                    // Resolve ConferenceProcessorService instance for each task to ensure it's stateless or has fresh state
                     const processor = container.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
-    conferenceAcronym: conference.Acronym, // << BIND CHÍNH Ở ĐÂY
-    conferenceTitle: conference.Title,   // << BIND CHÍNH Ở ĐÂY
-    batchItemIndex: itemIndex
-});
-                    // Giả sử ConferenceProcessorService.process được cập nhật để nhận ApiModels
+                        conferenceAcronym: conference.Acronym,
+                        conferenceTitle: conference.Title,
+                        batchItemIndex: itemIndex,
+                        originalRequestId: conference.originalRequestId, // Carry original request ID if available
+                    });
+                    // Call the processor's process method, passing the specific API models for this batch
                     return processor.process(
                         conference,
                         itemIndex,
                         itemLogger,
-                        apiModels, // << TRUYỀN ApiModels
+                        apiModels, // Pass the ApiModels object to the processor
                         batchRequestId
                     );
                 };
             });
 
             tasks.forEach(taskFunc => this.taskQueueService.add(taskFunc));
-            logger.info(`Scheduled ${tasks.length} tasks.`);
+            logger.info(`Scheduled ${tasks.length} conference processing tasks with concurrency ${this.taskQueueService.concurrency}.`);
 
             logger.info("Phase 3: Waiting for all conference processing tasks to complete...");
-            await this.taskQueueService.onIdle();
+            await this.taskQueueService.onIdle(); // Waits until all scheduled tasks are finished
             logger.info("All conference processing tasks finished.");
 
             logger.info("Phase 3.5: Waiting for background batch save operations to complete...");
-            await this.batchProcessingService.awaitCompletion(logger);
+            await this.batchProcessingService.awaitCompletion(logger); // Ensures all background JSONL writes are done
             logger.info("All background batch save operations finished.");
 
-            logger.info("Phase 4: Processing final output (JSONL to CSV)...");
+            logger.info("Phase 4: Processing final output (reading JSONL and writing CSV)...");
+            // This step converts the raw JSONL outputs into the final CSV-ready format
             allProcessedData = await this.resultProcessingService.processOutput(logger, batchRequestId);
             logger.info(`ResultProcessingService finished for batch ${batchRequestId}. Collected ${allProcessedData.length} CSV-ready records.`);
 
             const csvPathForThisBatch = this.configService.getEvaluateCsvPathForBatch(batchRequestId);
 
-            if (allProcessedData.length > 0) {
-                allProcessedData.forEach(csvRow => {
-                    logger.info({
-                        event: 'csv_write_record_success',
-                        service: 'CrawlOrchestratorService',
-                        conferenceAcronym: csvRow.acronym,
-                        conferenceTitle: csvRow.title,
-                    }, `CSV record for ${csvRow.acronym} considered successfully written.`);
-                });
-             } else {
-                let csvActuallyGenerated = false;
-                try {
-                    if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {
-                        csvActuallyGenerated = true;
-                    }
-                } catch (e) { /* ignore stat error if file doesn't exist */ }
-
-                if (csvActuallyGenerated) {
-                    logger.info({ event: 'csv_generation_empty_but_file_exists' }, "CSV file generated but no data rows (possibly only headers).");
-                } else {
-                    logger.info({ event: 'csv_generation_failed_or_empty' }, "CSV file generation failed or resulted in an empty file (no data and possibly no file).");
+            // Additional check to log the state of the CSV output file
+            let csvActuallyGenerated = false;
+            try {
+                if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {
+                    csvActuallyGenerated = true;
                 }
+            } catch (e: unknown) {
+                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(e);
+                logger.warn({ err: { message: errorMessage, stack: errorStack }, path: csvPathForThisBatch, event: 'csv_file_stat_error' }, "Error checking generated CSV file status. Might not exist or accessible.");
             }
 
-        } catch (error: any) {
-            logger.fatal({ err: error, stack: error.stack, event: 'crawl_fatal_error', batchRequestId }, `Fatal error during crawling process for batch ${batchRequestId}`);
-            crawlError = error;
-            if (error.message?.includes('CSV writing stream') || error.message?.includes('final output processing')) {
-                logger.error({ event: 'csv_generation_pipeline_failed', err: error }, "CSV generation pipeline failed at orchestrator level.");
+            if (allProcessedData.length > 0 && csvActuallyGenerated) {
+                logger.info({ event: 'csv_generation_success', recordsCount: allProcessedData.length, csvPath: csvPathForThisBatch }, "CSV file successfully generated with data.");
+            } else if (allProcessedData.length === 0 && csvActuallyGenerated) {
+                logger.warn({ event: 'csv_generation_empty_but_file_exists', csvPath: csvPathForThisBatch }, "CSV file generated but no data rows (possibly only headers).");
+            } else if (allProcessedData.length > 0 && !csvActuallyGenerated) {
+                 logger.error({ event: 'csv_generation_data_but_no_file', recordsCount: allProcessedData.length, csvPath: csvPathForThisBatch }, "ResultProcessingService returned data, but no CSV file was generated or could be verified.");
+            } else { // allProcessedData.length === 0 && !csvActuallyGenerated
+                logger.info({ event: 'csv_generation_failed_or_empty', csvPath: csvPathForThisBatch }, "CSV file generation failed or resulted in an empty file (no data and no file).");
+            }
+
+
+        } catch (error: unknown) { // Catch as unknown for consistent error handling
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+            logger.fatal({ err: { message: errorMessage, stack: errorStack }, event: 'crawl_fatal_error', batchRequestId }, `Fatal error during crawling process for batch ${batchRequestId}: "${errorMessage}"`);
+            crawlError = error instanceof Error ? error : new Error(errorMessage); // Ensure it's an Error object if re-throwing
+
+            // Specific logging for CSV pipeline failures if error message matches
+            if (errorMessage?.includes('CSV writing stream') || errorMessage?.includes('final output processing')) {
+                logger.error({ event: 'csv_generation_pipeline_failed', err: { message: errorMessage, stack: errorStack } }, "CSV generation pipeline failed at orchestrator level due to stream or final processing error.");
             }
         } finally {
-            logger.info("Phase 5: Performing final cleanup...");
-            await this.playwrightService.close(logger);
+            logger.info("Phase 5: Performing final cleanup (closing browser, etc.)...");
+            await this.playwrightService.close(logger); // Ensures Playwright browser is closed
             logger.info("Cleanup finished.");
 
+            // Log a summary of the entire crawl operation
             await this.logSummary(
                 operationStartTime,
                 conferenceList.length,
                 allProcessedData.length,
-                apiModels, // << TRUYỀN ApiModels
+                apiModels,
                 batchRequestId,
                 logger
             );
 
-            logger.info({ event: 'crawl_orchestrator_end', resultsReturned: allProcessedData.length, batchRequestId }, `Crawl process finished for batch ${batchRequestId}.`);
+            logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
         }
 
+        // Re-throw the stored fatal error if one occurred
         if (crawlError) {
             throw crawlError;
         }
         return allProcessedData;
     }
 
+    /**
+     * Logs a summary of the completed crawling operation.
+     * This includes metrics like duration, input/output counts, model usage, and API key status.
+     *
+     * @param {number} startTime - The Unix timestamp (milliseconds) when the `run` method started.
+     * @param {number} inputCount - The number of conference items initially provided as input.
+     * @param {number} outputCount - The number of processed records returned by `ResultProcessingService`.
+     * @param {ApiModels} apiModels - The object specifying which model type was used for each API stage.
+     * @param {string} batchRequestId - The unique identifier for the current batch.
+     * @param {Logger} logger - The logger instance for logging the summary.
+     * @returns {Promise<void>} A Promise that resolves when the summary has been logged.
+     */
     private async logSummary(
         startTime: number,
         inputCount: number,
         outputCount: number,
-        apiModels: ApiModels, // << THAY ĐỔI Ở ĐÂY
+        apiModels: ApiModels,
         batchRequestId: string,
         logger: Logger
     ): Promise<void> {
@@ -194,8 +241,9 @@ export class CrawlOrchestratorService {
                 const content = fs.readFileSync(jsonlPathForThisBatch, 'utf8');
                 finalRecordCountInJsonl = content.split('\n').filter(l => l.trim()).length;
             }
-        } catch (readError: any) {
-            logger.warn({ err: readError, path: jsonlPathForThisBatch, event: 'final_count_read_error', batchRequestId });
+        } catch (readError: unknown) { // Catch as unknown
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(readError);
+            logger.warn({ err: { message: errorMessage, stack: errorStack }, path: jsonlPathForThisBatch, event: 'final_jsonl_count_read_error', batchRequestId }, `Warning: Could not read final JSONL record count for batch ${batchRequestId}: "${errorMessage}".`);
         }
 
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
@@ -204,12 +252,13 @@ export class CrawlOrchestratorService {
             totalConferencesInput: inputCount,
             finalRecordsInJsonlForThisBatch: finalRecordCountInJsonl,
             csvRecordsReturnedFromProcessing: outputCount,
-            modelsDescription: modelsDesc, // Log mô tả ngắn
+            modelsDescription: modelsDesc,
             totalGoogleApiRequests: this.apiKeyManager.getTotalRequests(),
             keysExhausted: this.apiKeyManager.areAllKeysExhausted(),
             durationSeconds,
             startTime: new Date(startTime).toISOString(),
-            endTime: new Date(operationEndTime).toISOString()
-        }, `Crawling process summary for batch ${batchRequestId}`);
+            endTime: new Date(operationEndTime).toISOString(),
+            batchRequestId: batchRequestId, // Ensure batchRequestId is in the log context
+        }, `Crawling process summary for batch ${batchRequestId}.`);
     }
 }

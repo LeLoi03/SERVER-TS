@@ -1,8 +1,8 @@
 // src/socket/handlers/core.handlers.ts
 import { Socket, Server as SocketIOServer } from 'socket.io';
-import { container } from 'tsyringe';
+import { container } from 'tsyringe'; // Dependency Injection container
 import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
-import logToFile from '../../utils/logger';
+import logToFile from '../../utils/logger'; // Import the custom logging utility
 
 // --- Import sub-handler registration functions ---
 import { registerConversationHandlers } from './conversation.handler';
@@ -14,82 +14,133 @@ import { HandlerDependencies } from './handler.types';
 import { ClientConversationMetadata, ErrorUpdate, Language, WarningUpdate } from '../../chatbot/shared/types';
 
 // --- Constants ---
-const CORE_ORCHESTRATOR_NAME = 'coreOrchestrator'; // Renamed for clarity
+/**
+ * A constant representing the name of the core Socket.IO handler orchestrator.
+ * Used for consistent logging context.
+ */
+const CORE_ORCHESTRATOR_NAME = 'CoreSocketOrchestrator';
+
+/**
+ * Default limit for fetching conversation history when not specified.
+ */
 const DEFAULT_HISTORY_LIMIT = 50;
 
+/**
+ * Registers the core set of Socket.IO event handlers for a given client socket.
+ * This function sets up common utility functions (like error/warning emitters, authentication check)
+ * and then delegates to specialized sub-handler registration functions.
+ *
+ * @param {SocketIOServer} io - The global Socket.IO server instance.
+ * @param {Socket} socket - The specific Socket instance for the connected client.
+ */
 export const registerCoreHandlers = (
     io: SocketIOServer,
     socket: Socket
 ): void => {
     const socketId = socket.id;
-    // userId sẽ được lấy trong ensureAuthenticated hoặc khi cần,
-    // nhưng chúng ta có thể lấy sớm nếu nó ổn định sau khi kết nối.
-    // socket.data.userId có thể chưa có ngay khi hàm này được gọi nếu auth là async.
-    // Tạm thời lấy ở đây, nhưng ensureAuthenticated vẫn là chốt chặn quan trọng.
-    const getUserId = () => socket.data.userId || 'Anonymous';
+
+    // A getter to dynamically retrieve the userId from socket.data.
+    // This ensures that even if `socket.data.userId` is set asynchronously after connection,
+    // subsequent calls to `getUserId()` within these handlers will get the updated value.
+    const getUserId = (): string => socket.data.userId || 'Anonymous';
+    let userIdForInitialLog = getUserId(); // Get initial value for early logging
 
     let conversationHistoryService: ConversationHistoryService;
     try {
+        // Resolve ConversationHistoryService from the DI container.
         conversationHistoryService = container.resolve(ConversationHistoryService);
     } catch (error: any) {
-        logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${getUserId()}] CRITICAL: Failed to resolve ConversationHistoryService: ${error.message}, Stack: ${error.stack}`);
+        // Log a critical error if the service cannot be resolved, indicating a DI setup issue.
+        logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${userIdForInitialLog}] CRITICAL ERROR: Failed to resolve ConversationHistoryService: ${error.message}, Stack: ${error.stack}`);
+        // Emit a critical error to the client and then disconnect.
         socket.emit('critical_error', { message: "Server configuration error. Please try reconnecting later." });
-        socket.disconnect(true);
-        return;
+        socket.disconnect(true); // Force disconnect
+        return; // Prevent further execution if critical service is unavailable.
     }
 
-    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${getUserId()}] Initializing handler registration.`);
+    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${userIdForInitialLog}] Initializing core Socket.IO handler registration.`);
 
-    // --- Common Utility Functions (sẽ được truyền cho sub-handlers) ---
+    // --- Common Utility Functions (to be passed to sub-handlers) ---
+
+    /**
+     * Emits a 'chat_error' event to the client and logs the error to file.
+     * @param {string} logContext - Context string for the log message (e.g., from which handler).
+     * @param {string} message - User-friendly error message.
+     * @param {string} step - The specific step or stage where the error occurred.
+     * @param {Record<string, any>} [details] - Optional additional details to include in logs.
+     */
     const sendChatError = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
-        const logMessage = `[ERROR] ${logContext} Chat error. Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        const fullLogContext = `${logContext}[ChatError][${getUserId()}]`;
+        const logMessage = `[ERROR] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
         logToFile(logMessage);
         socket.emit('chat_error', { type: 'error', message, step } as ErrorUpdate);
     };
 
+    /**
+     * Emits a 'chat_warning' event to the client and logs the warning to file.
+     * @param {string} logContext - Context string for the log message.
+     * @param {string} message - User-friendly warning message.
+     * @param {string} step - The specific step or stage where the warning occurred.
+     * @param {Record<string, any>} [details] - Optional additional details to include in logs.
+     */
     const sendChatWarning = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
-        const logMessage = `[WARNING] ${logContext} Chat warning. Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        const fullLogContext = `${logContext}[ChatWarning][${getUserId()}]`;
+        const logMessage = `[WARNING] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
         logToFile(logMessage);
         socket.emit('chat_warning', { type: 'warning', message, step } as WarningUpdate);
     };
 
+    /**
+     * Fetches the latest conversation list for a given user and emits it to the client.
+     * @param {string} logContext - Context string for the log message.
+     * @param {string} userIdToList - The ID of the user whose conversation list needs to be fetched.
+     * @param {string} reason - The reason for emitting the updated list (for logging).
+     * @param {Language} [language] - Optional language preference for conversation list.
+     * @returns {Promise<void>} A promise that resolves after emitting or logging failure.
+     */
     const emitUpdatedConversationList = async (
         logContext: string,
-        userIdToList: string, // Đảm bảo userId này là userId thực sự của user
+        userIdToList: string,
         reason: string,
         language?: Language
     ): Promise<void> => {
         const langForLog = language || 'N/A';
-        logToFile(`[DEBUG] ${logContext} Emitting updated conversation list. Reason: ${reason}, Lang: ${langForLog}, ForUser: ${userIdToList}`);
+        const fullLogContext = `${logContext}[EmitConversationList][${userIdToList}]`;
+        logToFile(`[DEBUG] ${fullLogContext} Attempting to emit updated conversation list. Reason: ${reason}, Lang: ${langForLog}.`);
         try {
             const updatedList: ConversationMetadata[] = await conversationHistoryService.getConversationListForUser(userIdToList, undefined, language);
             socket.emit('conversation_list', updatedList as ClientConversationMetadata[]);
-            logToFile(`[INFO] ${logContext} Emitted updated list. Reason: ${reason}, Count: ${updatedList.length}, Lang: ${langForLog}, ForUser: ${userIdToList}`);
+            logToFile(`[INFO] ${fullLogContext} Successfully emitted updated conversation list. Reason: ${reason}, Count: ${updatedList.length}, Lang: ${langForLog}.`);
         } catch (error: any) {
-            logToFile(`[WARNING] ${logContext} Failed to emit updated list. Reason: ${reason}, Error: ${error.message}, Lang: ${langForLog}, ForUser: ${userIdToList}`);
+            logToFile(`[WARNING] ${fullLogContext} Failed to emit updated conversation list. Reason: ${reason}, Error: ${error.message}, Lang: ${langForLog}, Stack: ${error.stack}`);
         }
     };
 
+    /**
+     * Utility function to ensure that the current socket has an authenticated user ID.
+     * If not, it emits a 'chat_error' and returns null.
+     * @param {string} logContext - Context string for the log message.
+     * @param {string} eventName - The name of the event requiring authentication.
+     * @returns {string | null} The user ID if authenticated, otherwise null.
+     */
     const ensureAuthenticated = (logContext: string, eventName: string): string | null => {
         const currentUserId = socket.data.userId as string | undefined;
         if (!currentUserId) {
-            sendChatError(logContext, `Authentication required for ${eventName}.`, 'auth_required', { event: eventName });
+            sendChatError(logContext, `Authentication required to process event '${eventName}'. Please log in.`, 'auth_required', { event: eventName });
             return null;
         }
         return currentUserId;
     };
 
-    // --- Prepare Dependencies for Sub-Handlers ---
-    // userId sẽ được cập nhật mỗi khi ensureAuthenticated được gọi trong các sub-handler,
-    // nhưng chúng ta cần một giá trị ban đầu hoặc một getter.
-    // Cách tốt hơn là để mỗi sub-handler gọi ensureAuthenticated và sử dụng userId trả về.
-    // Vậy, userId trong HandlerDependencies sẽ là giá trị user ID hiện tại của socket.
+    // --- Prepare Dependencies Object for Sub-Handlers ---
+    // The `userId` property is defined as a getter to ensure it always retrieves
+    // the most current `socket.data.userId` value, especially after authentication.
     const dependencies: HandlerDependencies = {
         io,
         socket,
         conversationHistoryService,
         logToFile,
-        get userId() { return socket.data.userId || 'Anonymous'; }, // Use a getter to always get the latest
+        get userId() { return socket.data.userId || 'Anonymous'; }, // Getter for dynamic userId
         socketId,
         sendChatError,
         sendChatWarning,
@@ -99,10 +150,11 @@ export const registerCoreHandlers = (
     };
 
     // --- Register Sub-Handlers ---
-    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] Registering sub-handlers.`);
+    // Delegate to specialized functions to register event handlers for different categories.
+    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] Registering sub-handlers (Conversation, Message, Confirmation).`);
     registerConversationHandlers(dependencies);
     registerMessageHandlers(dependencies);
     registerConfirmationHandlers(dependencies);
 
-    logToFile(`[INFO] [${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] All event handlers successfully registered.`);
+    logToFile(`[INFO] [${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] All core event handlers successfully registered.`);
 };

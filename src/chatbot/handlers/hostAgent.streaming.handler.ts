@@ -3,7 +3,7 @@ import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
 import { Tool, Part, FunctionResponsePart, EnhancedGenerateContentResponse, FunctionCall } from "@google/generative-ai"; // Import Part, FunctionCall
 import {
-    HistoryItem,
+    ChatHistoryItem,
     FrontendAction,
     Language,
     AgentId,
@@ -25,14 +25,14 @@ interface RouteToAgentArgs {
 
 export async function handleStreaming(
     userInput: string,
-    currentHistoryFromSocket: HistoryItem[],
+    currentHistoryFromSocket: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
     deps: HostAgentHandlerCustomDeps, // Nhận dependencies đã được cập nhật
     onActionGenerated?: (action: FrontendAction) => void,
     frontendMessageId?: string
-): Promise<HistoryItem[] | void> {
+): Promise<ChatHistoryItem[] | void> {
     const {
         geminiServiceForHost,         // Sử dụng service của Host
         hostAgentGenerationConfig,    // Sử dụng config của Host
@@ -50,7 +50,7 @@ export async function handleStreaming(
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentIdForHost);
     const hostAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
-    let history: HistoryItem[] = [...currentHistoryFromSocket];
+    let history: ChatHistoryItem[] = [...currentHistoryFromSocket];
     const allThoughtsCollectedStreaming: ThoughtStep[] = [];
     let finalFrontendActionStreaming: FrontendAction | undefined = undefined;
 
@@ -167,7 +167,7 @@ export async function handleStreaming(
             } else if (hostAgentLLMResult.functionCalls) { // Lưu ý: Gemini.ts trả về functionCalls (số nhiều) nhưng là một FunctionCall object đơn
                 const functionCall = hostAgentLLMResult.functionCalls as FunctionCall; // Ép kiểu nếu chắc chắn là 1
                 // Thêm lượt model (yêu cầu function call) vào history
-                const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
+                const modelFunctionCallTurn: ChatHistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
                 history.push(modelFunctionCallTurn);
                 logToFile(`[${handlerId} Streaming T${currentHostTurn}] HostAgent requests function: ${functionCall.name}. History size: ${history.length}`);
 
@@ -220,7 +220,7 @@ export async function handleStreaming(
                 if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected after routing/function execution.`); return; }
 
                 // Thêm lượt function (kết quả) vào history
-                const functionResponseTurn: HistoryItem = { role: 'function', parts: [functionResponseForNextTurn] };
+                const functionResponseTurn: ChatHistoryItem = { role: 'function', parts: [functionResponseForNextTurn] };
                 history.push(functionResponseTurn);
                 logToFile(`[${handlerId} Streaming T${currentHostTurn}] Appended function response for ${functionCall.name}. History size: ${history.length}`);
 
@@ -243,7 +243,7 @@ export async function handleStreaming(
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
                 if (streamOutput && socket.connected) { // Kiểm tra socket.connected lần nữa sau khi stream kết thúc
                     const botMessageUuid = uuidv4();
-                    const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }], uuid: botMessageUuid, timestamp: new Date() };
+                    const finalModelTurn: ChatHistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }], uuid: botMessageUuid, timestamp: new Date() };
                     history.push(finalModelTurn);
                     logToFile(`[${handlerId} Streaming - Final Result] Thoughts collected: ${JSON.stringify(allThoughtsCollectedStreaming)}`);
                     safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, id: botMessageUuid });

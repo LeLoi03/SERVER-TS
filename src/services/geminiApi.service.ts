@@ -331,7 +331,7 @@ export class GeminiApiService {
     }
 
     private async callGeminiAPI(params: InternalCallGeminiApiParams, parentMethodLogger: Logger): Promise<ApiResponse> {
-        const { batchPrompt, batchIndex, title, acronym, apiType, crawlModel } = params; // << crawlModel được lấy từ params
+        const { batchPrompt, batchIndex, title, acronym, apiType, crawlModel } = params; // crawlModel is available
         let currentModelNameToUse = params.modelName;
         let explicitFallbackModelNameToUse = params.fallbackModelName;
 
@@ -347,7 +347,7 @@ export class GeminiApiService {
                     break;
                 }
                 currentModelNameToUse = explicitFallbackModelNameToUse;
-                explicitFallbackModelNameToUse = undefined; // Chỉ dùng fallback một lần
+                explicitFallbackModelNameToUse = undefined;
                 callOperationLogger.info({ event: 'gemini_call_attempting_fallback_model', fallbackModel: currentModelNameToUse, originalModel: params.modelName }, "Attempting API call with fallback model.");
             } else {
                 callOperationLogger.info({ event: 'gemini_call_attempting_primary_model', primaryModel: currentModelNameToUse }, "Attempting API call with primary model.");
@@ -362,7 +362,7 @@ export class GeminiApiService {
             } catch (limiterError: unknown) {
                 const errorDetails = limiterError instanceof Error ? { name: limiterError.name, message: limiterError.message } : { details: String(limiterError) };
                 callOperationLogger.error({ err: errorDetails, event: 'gemini_call_limiter_init_failed' }, `Failed to get or create rate limiter for model ${currentModelNameToUse}. Aborting this phase.`);
-                if (attemptPhase === 0 && params.fallbackModelName) continue; // Thử fallback nếu có
+                if (attemptPhase === 0 && params.fallbackModelName) continue;
                 return defaultApiResponse;
             }
 
@@ -372,32 +372,44 @@ export class GeminiApiService {
                 return defaultApiResponse;
             }
 
-            // --- Logic quyết định cài đặt dựa trên crawlModel ---
             let systemInstructionTextToUse = "";
             let fewShotPartsToUse: Part[] = [];
             let shouldUseCache = false;
-            // Bắt đầu với generationConfig từ generalSettings và điều chỉnh nó
             let finalGenerationConfig: SDKGenerationConfig = { ...generalSettings.generationConfig };
 
-            // const isTunedCall = currentModelNameToUse.startsWith('models/'); // Một cách kiểm tra model tuned, HOẶC tốt hơn là dựa vào crawlModel
-            const isTunedCallBasedOnParam = crawlModel === 'tuned'; // Chính xác hơn dựa vào tham số từ frontend
+            let finalBatchPrompt = batchPrompt; // Initialize with the original batchPrompt
+
+            const isTunedCallBasedOnParam = crawlModel === 'tuned';
 
             if (isTunedCallBasedOnParam) {
                 callOperationLogger.info({ event: 'gemini_tuned_model_config_applied', modelName: currentModelNameToUse }, "Applying TUNED model configurations: text/plain, no system instruction, no few-shot, no cache.");
                 finalGenerationConfig.responseMimeType = "text/plain";
-                // Xóa responseSchema nếu có, vì tuned model không dùng JSON schema cho output
                 if (finalGenerationConfig.responseSchema) {
                     delete finalGenerationConfig.responseSchema;
                     callOperationLogger.debug("Removed responseSchema for tuned model call.");
                 }
-                // Tuned models thường không dùng system instruction hoặc few-shot qua API, chúng được baked-in.
-                // Cache cũng thường không cần thiết hoặc không hiệu quả với tuned models.
-                systemInstructionTextToUse = ""; // Ghi đè, không dùng system instruction
-                fewShotPartsToUse = [];       // Ghi đè, không dùng few-shot
-                shouldUseCache = false;       // Ghi đè, không dùng cache
+                systemInstructionTextToUse = "";
+                fewShotPartsToUse = [];
+                shouldUseCache = false;
+
+                // *** NEW LOGIC: Prepend system instruction prefix (for non-tuned) to the prompt for tuned models ***
+                const prefixForTunedPrompt = generalSettings.systemInstructionPrefixForNonTunedModel;
+                if (prefixForTunedPrompt && prefixForTunedPrompt.trim() !== "") {
+                    // Add a newline separator. Adjust if a different separator is preferred.
+                    finalBatchPrompt = `${prefixForTunedPrompt.trim()}\n\n${batchPrompt}`;
+                    callOperationLogger.info({
+                        event: 'gemini_tuned_model_prompt_prefixed',
+                        modelName: currentModelNameToUse,
+                        // prefixAdded: prefixForTunedPrompt.trim() // Avoid logging potentially large prefix directly here, or truncate
+                        prefixLength: prefixForTunedPrompt.trim().length
+                    }, "Prepended configured prefix to the prompt for tuned model.");
+                } else {
+                    callOperationLogger.info({ event: 'gemini_tuned_model_prompt_prefix_not_found_or_empty', modelName: currentModelNameToUse }, "No system instruction prefix (for non-tuned) found/configured or it's empty; prompt remains unchanged for tuned model.");
+                }
+                // finalBatchPrompt now contains the potentially prefixed prompt for tuned models
+
             } else { // 'non-tuned' model
                 callOperationLogger.info({ event: 'gemini_non_tuned_model_config_applied', modelName: currentModelNameToUse }, "Applying NON-TUNED model configurations.");
-                // Lấy MIME type từ config, mặc định là application/json nếu có schema
                 finalGenerationConfig.responseMimeType = generalSettings.generationConfig.responseMimeType || "application/json";
 
                 if (generalSettings.generationConfig.responseSchema && finalGenerationConfig.responseMimeType === "application/json") {
@@ -405,13 +417,14 @@ export class GeminiApiService {
                     callOperationLogger.debug("Applied responseSchema for non-tuned JSON call.");
                 } else {
                     if (finalGenerationConfig.responseSchema) {
-                        delete finalGenerationConfig.responseSchema; // Xóa nếu MIME type không phải JSON hoặc không có schema
+                        delete finalGenerationConfig.responseSchema;
                         callOperationLogger.debug("Removed responseSchema as MIME type is not JSON or schema not configured.");
                     }
                 }
 
+                systemInstructionTextToUse = generalSettings.systemInstruction || ""; // Standard system instruction for non-tuned
+                // For non-tuned models, finalBatchPrompt remains the original batchPrompt (no prefix added here)
 
-                systemInstructionTextToUse = generalSettings.systemInstruction || "";
                 if (generalSettings.allowFewShotForNonTuned) {
                     if (generalSettings.inputs && generalSettings.outputs && Object.keys(generalSettings.inputs).length > 0) {
                         fewShotPartsToUse = this.prepareFewShotParts(apiType, generalSettings, callOperationLogger);
@@ -425,37 +438,37 @@ export class GeminiApiService {
                     callOperationLogger.info({ event: 'gemini_cache_enabled_for_non_tuned_by_config', apiType }, "Cache enabled by config for non-tuned model.");
                 } else callOperationLogger.info({ event: 'gemini_cache_disabled_for_non_tuned_by_config', apiType }, "Cache explicitly disabled by config for non-tuned model.");
             }
-            // --- Kết thúc logic quyết định cài đặt ---
-
 
             let modelPrepResult: ModelPreparationResult;
             try {
                 modelPrepResult = await this.modelOrchestrator.prepareModel(
                     apiType, currentModelNameToUse,
-                    systemInstructionTextToUse, // Đã được quyết định
-                    fewShotPartsToUse,          // Đã được quyết định
-                    finalGenerationConfig,      // Đã được quyết định
-                    batchPrompt,
-                    shouldUseCache,             // Đã được quyết định
-                    crawlModel, // <<< TRUYỀN crawlModel VÀO ĐÂY
+                    systemInstructionTextToUse,
+                    fewShotPartsToUse,
+                    finalGenerationConfig,
+                    finalBatchPrompt,           // <<< USE THE POTENTIALLY MODIFIED PROMPT HERE
+                    shouldUseCache,
+                    crawlModel,
                     callOperationLogger
                 );
             } catch (prepError: unknown) {
                 const errorDetails = prepError instanceof Error ? { name: prepError.name, message: prepError.message } : { details: String(prepError) };
                 callOperationLogger.error({ err: errorDetails, event: 'gemini_call_model_prep_orchestration_failed' }, `Failed to prepare model ${currentModelNameToUse}. Aborting this phase.`);
-                if (attemptPhase === 0 && params.fallbackModelName) continue; // Thử fallback
+                if (attemptPhase === 0 && params.fallbackModelName) continue;
                 return defaultApiResponse;
             }
-
 
             // Sửa lại cách khai báo singleAttemptFunction để nhận thêm fewShotParts đã dùng
             const singleAttemptFunction = async (
                 limiterInstance: RateLimiterMemory,
-                currentModelPrep: ModelPreparationResult,
+                currentModelPrep: ModelPreparationResult, // This will contain the finalBatchPrompt within its contentRequest
                 attemptLogger: Logger,
-                systemInstructionApplied: string, // System instruction đã dùng
-                fewShotPartsApplied: Part[]      // Few-shot parts đã dùng
+                systemInstructionApplied: string,
+                fewShotPartsApplied: Part[]
             ): Promise<ProcessedGeminiResponse> => {
+                // ... (rest of singleAttemptFunction remains the same)
+                // The currentModelPrep.contentRequest will use the finalBatchPrompt,
+                // so logging of contentRequestSent will reflect the prefixed prompt if applicable.
                 const attemptApiCallLogger = attemptLogger.child({ event_group: 'gemini_api_attempt' });
 
                 if (!currentModelPrep.model) {
@@ -474,8 +487,8 @@ export class GeminiApiService {
                     const requestPayloadToLog: any = {
                         timestamp: new Date().toISOString(),
                         apiType: apiType,
-                        modelName: currentModelNameToUse, // Model thực sự được dùng
-                        crawlModelUsed: crawlModel,       // Loại model được yêu cầu (tuned/non-tuned)
+                        modelName: currentModelNameToUse,
+                        crawlModelUsed: crawlModel,
                         batchIndex: batchIndex,
                         attempt: attemptNumber,
                         title: title,
@@ -485,19 +498,17 @@ export class GeminiApiService {
                         systemInstructionApplied: systemInstructionApplied || "N/A",
                     };
 
-                    // Ghi lại few-shot parts nếu chúng được sử dụng
                     if (fewShotPartsApplied && fewShotPartsApplied.length > 0) {
                         requestPayloadToLog.fewShotPartsApplied = fewShotPartsApplied;
                     }
 
-                    // Ghi lại generation config hiệu lực
                     if (typeof currentModelPrep.contentRequest === 'object' && currentModelPrep.contentRequest.generationConfig) {
                         requestPayloadToLog.generationConfigSent = currentModelPrep.contentRequest.generationConfig;
                     } else if (currentModelPrep.model.generationConfig) {
                         requestPayloadToLog.generationConfigEffective = currentModelPrep.model.generationConfig;
                     }
 
-                    // Ghi lại toàn bộ contentRequest được gửi đi
+                    // This will log the potentially prefixed prompt
                     requestPayloadToLog.contentRequestSent = currentModelPrep.contentRequest;
 
 
@@ -560,12 +571,12 @@ export class GeminiApiService {
             if (retryResult.finalErrorType === '5xx_non_retryable_for_current_model') {
                 if (attemptPhase === 0 && params.fallbackModelName) {
                     callOperationLogger.warn({ event: 'gemini_call_5xx_switching_to_fallback', originalModel: currentModelNameToUse, fallbackModel: params.fallbackModelName }, `Switching to fallback model due to persistent 5xx error.`);
-                    continue; // Thử fallback
+                    continue;
                 } else {
                     callOperationLogger.error({ event: 'gemini_call_5xx_no_more_fallback_options', modelUsed: currentModelNameToUse }, `Persistent 5xx error with model ${currentModelNameToUse} and no further fallback options.`);
                     return defaultApiResponse;
                 }
-            } else if (retryResult.responseText || retryResult.metaData) { // Kiểm tra cả metaData vì có thể responseText rỗng nhưng vẫn thành công
+            } else if (retryResult.responseText || retryResult.metaData) {
                 callOperationLogger.info({ event: 'gemini_call_success_with_model', modelUsed: currentModelNameToUse, isFallback: attemptPhase === 1 }, `Successfully processed API call with model ${currentModelNameToUse}.`);
                 return {
                     responseText: retryResult.responseText,
@@ -573,17 +584,15 @@ export class GeminiApiService {
                 };
             }
 
-            // Nếu không thành công và còn fallback, vòng lặp sẽ tiếp tục
-            // Nếu không thành công và không còn fallback (hoặc phase 0 không có fallback), log lỗi
             if (attemptPhase === 0 && params.fallbackModelName) {
                 callOperationLogger.warn({ event: 'gemini_call_primary_failed_non_5xx_checking_fallback', model: currentModelNameToUse }, `Primary model ${currentModelNameToUse} failed. Checking fallback.`);
-            } else { // Hoặc là phase 1 (đã thử fallback) hoặc phase 0 không có fallback
+            } else {
                 callOperationLogger.error({ event: 'gemini_call_failed_no_more_options', modelUsed: currentModelNameToUse }, `API call failed with model ${currentModelNameToUse} and no further options.`);
-                return defaultApiResponse; // Trả về default nếu không thành công sau tất cả các thử nghiệm
+                return defaultApiResponse;
             }
         }
         callOperationLoggerBase.error({ event: 'gemini_call_unexpected_exit_after_attempts' }, "Unexpected exit from callGeminiAPI after primary/fallback attempts.");
-        return defaultApiResponse; // Đảm bảo luôn trả về một giá trị
+        return defaultApiResponse;
     }
 
     private prepareFewShotParts(apiType: string, configForApiType: GeneralApiTypeConfig, parentLogger: Logger): Part[] {

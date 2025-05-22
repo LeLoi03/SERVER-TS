@@ -1,41 +1,78 @@
-// src/handlers/getWebsiteInfo.handler.ts
+// src/chatbot/handlers/getWebsiteInfo.handler.ts
 import { executeGetWebsiteInfo } from '../services/getWebsiteInfo.service';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate } from '../shared/types';
-import logToFile from '../../utils/logger';
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types';
+import logToFile from '../../utils/logger'; // Keeping logToFile as requested
+import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
+/**
+ * Handles the 'getWebsiteInfo' function call from the LLM.
+ * This handler calls the `executeGetWebsiteInfo` service to retrieve general website information,
+ * processes its result, and communicates status updates to the caller.
+ */
 export class GetWebsiteInfoHandler implements IFunctionHandler {
+    /**
+     * Executes the logic for retrieving general website information.
+     *
+     * @param {FunctionHandlerInput} context - The input context for the function handler,
+     *                                       including arguments, handler ID, socket ID,
+     *                                       status update callback, and agent ID.
+     * @returns {Promise<FunctionHandlerOutput>} A Promise that resolves with the model's response content,
+     *                                          an optional frontend action, and a collection of `ThoughtStep`s.
+     */
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
-        // Destructure only what's needed. Args might not be used if executeGetWebsiteInfo takes no args.
-        const { args, handlerId, socketId, onStatusUpdate } = context;
-        const logPrefix = `[${handlerId} ${socketId}]`;
+        const {
+            args,
+            handlerId: handlerProcessId,
+            socketId,
+            onStatusUpdate,
+            agentId // ID of the sub-agent executing this function
+        } = context;
+        const logPrefix = `[${handlerProcessId} ${socketId} Handler:GetWebsiteInfo Agent:${agentId}]`;
+        const localThoughts: ThoughtStep[] = []; // Collect thoughts specific to this handler
 
-        logToFile(`${logPrefix} Handler: GetWebsiteInfo, Args: ${JSON.stringify(args)}`);
+        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
 
-        // --- Helper function để gửi status update ---
-        const sendStatus = (step: string, message: string, details?: object) => {
+        /**
+         * Helper function to report a status update and collect a ThoughtStep.
+         * @param {string} step - A unique identifier for the current step.
+         * @param {string} message - A human-readable message.
+         * @param {object} [details] - Optional additional details.
+         */
+        const reportStep = (step: string, message: string, details?: object): void => {
+            const timestamp = new Date().toISOString();
+            const thought: ThoughtStep = {
+                step,
+                message,
+                details,
+                timestamp,
+                agentId: agentId,
+            };
+            localThoughts.push(thought);
+            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+
             if (onStatusUpdate) {
-                onStatusUpdate('status_update', {
+                const statusData: StatusUpdate = {
                     type: 'status',
                     step,
                     message,
                     details,
-                    timestamp: new Date().toISOString(),
-                });
+                    timestamp,
+                    agentId: agentId,
+                };
+                onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate not provided for step: ${step}`);
+                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
             }
         };
 
         try {
             // --- 1. Validation (Minimal for this handler) ---
-            // Send status indicating validation step, even if no complex validation is done
-            sendStatus('validating_function_args', 'Validating arguments for getWebsiteInformation...', { args });
-            // Note: No specific argument validation (like searchQuery) seems needed here based on the original code.
-            // If there were required args, a Guard Clause would go here.
+            reportStep('validating_function_args', 'Validating arguments for getWebsiteInformation...', { args });
+            // Note: No specific argument validation (like searchQuery) is needed based on the original code's call to executeGetWebsiteInfo().
 
-            // --- 2. Prepare & Execute Call ---
-            sendStatus('retrieving_info', 'Retrieving general website information...', { target: 'general website info' });
+            // --- 2. Prepare & Execute Service Call ---
+            reportStep('retrieving_info', 'Retrieving general website information...', { target: 'general website info' });
 
             // Assuming executeGetWebsiteInfo returns { success: boolean, data?: string, errorMessage?: string }
             // And it doesn't require specific arguments from 'args' based on original call
@@ -45,29 +82,31 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
             // --- 3. Process Result ---
             if (result.success && result.data) {
                 // Successfully retrieved data
-                sendStatus('data_found', 'Successfully retrieved website information.', { success: true, infoLength: result.data.length });
+                reportStep('data_found', 'Successfully retrieved website information.', { success: true, infoLength: result.data.length, resultPreview: result.data.substring(0, 100) + "..." });
                 return {
                     modelResponseContent: result.data,
                     frontendAction: undefined,
+                    thoughts: localThoughts
                 };
             } else {
                 // Handle failure: API call failed OR succeeded but returned no data
                 const errorMsg = result.errorMessage || 'Failed to retrieve website information (no data or specific error returned).';
                 logToFile(`${logPrefix} Failed to retrieve website info: ${errorMsg}`);
-                sendStatus('api_call_failed', 'Failed to retrieve website information.', { error: errorMsg, success: result.success }); // Include success status from API if available
+                reportStep('api_call_failed', 'Failed to retrieve website information.', { error: errorMsg, success: result.success }); // Include success status from API if available
                 return {
                     modelResponseContent: `Error: ${errorMsg}`,
                     frontendAction: undefined,
+                    thoughts: localThoughts
                 };
             }
-        } catch (error: any) {
-            const errorMessage = error instanceof Error ? error.message : String(error);
-            logToFile(`${logPrefix} CRITICAL Error in GetWebsiteInfoHandler: ${errorMessage}\nStack: ${error.stack}`);
-            // Use optional chaining for sendStatus in catch
-            sendStatus?.('function_error', `Critical error during website info retrieval: ${errorMessage}`);
+        } catch (error: unknown) { // Catch as unknown
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+            logToFile(`${logPrefix} CRITICAL Error: ${errorMessage}\nStack: ${errorStack}`);
+            reportStep('function_error', `Critical error during website info retrieval: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred while trying to get website information: ${errorMessage}`,
-                frontendAction: undefined
+                frontendAction: undefined,
+                thoughts: localThoughts
             };
         }
     }

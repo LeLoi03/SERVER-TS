@@ -12,7 +12,6 @@ import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
 import { ProcessedRowData, InputRowData, ProcessedResponseData } from '../types/crawl.types';
-import { readContentFromFile } from '../conference/11_utils';
 import { FileSystemService } from './fileSystem.service';
 
 
@@ -178,7 +177,7 @@ export class ResultProcessingService {
                 // Đọc content từ các path (vẫn giữ các try...catch con cho từng file để không dừng toàn bộ nếu 1 file lỗi)
                 if (inputRow.determineResponseTextPath) {
                     try {
-                        const content = await readContentFromFile(inputRow.determineResponseTextPath);
+                        const content = await this.fileSystemService.readFileContent(inputRow.determineResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
@@ -188,7 +187,7 @@ export class ResultProcessingService {
                 }
                 if (inputRow.extractResponseTextPath) {
                     try {
-                        const content = await readContentFromFile(inputRow.extractResponseTextPath);
+                        const content = await this.fileSystemService.readFileContent(inputRow.extractResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedExtractInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedExtractInfo !== 'object' || parsedExtractInfo === null) parsedExtractInfo = {};
@@ -198,7 +197,7 @@ export class ResultProcessingService {
                 }
                 if (inputRow.cfpResponseTextPath) {
                     try {
-                        const content = await readContentFromFile(inputRow.cfpResponseTextPath);
+                        const content = await this.fileSystemService.readFileContent(inputRow.cfpResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedCfpInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedCfpInfo !== 'object' || parsedCfpInfo === null) parsedCfpInfo = {};

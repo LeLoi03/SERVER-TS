@@ -1,27 +1,36 @@
 // src/loaders/express.loader.ts
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
-import { container } from 'tsyringe';
+import { container } from 'tsyringe'; // For resolving ConfigService
 import { ConfigService } from '../config/config.service';
-import { requestLoggerMiddleware } from '../socket/middleware/logging.middleware'; // Assuming this uses LoggingService internally or gets logger passed
-// import logToFile from '../utils/logger'; // <<< XÓA
-import apiRouter from '../api';
-import { errorHandlerMiddleware, notFoundHandler } from '../socket/middleware/errorHandler.middleware'; // Assuming these use LoggingService internally or get logger passed
+
+// Import custom middleware and router, assuming they use `logToFile` or other logging mechanisms internally.
+import { requestLoggerMiddleware } from '../socket/middleware/requestLogger.middleware';
+import apiRouter from '../api'; // Your main API router
+import { errorHandlerMiddleware, notFoundHandler } from '../socket/middleware/errorHandler.middleware';
+
+// Import the custom logging utility for this loader.
 import logToFile from '../utils/logger';
 
+/**
+ * Configures and returns the Express application instance.
+ * This function sets up core middleware, routes, and error handlers for the Express app.
+ * It logs its configuration steps using `logToFile`.
+ *
+ * @returns {Express} The fully configured Express application instance.
+ */
 export const loadExpress = (): Express => {
-    // <<< Resolve services cần thiết
-    // LoggingService không cần resolve nữa
+    // Resolve ConfigService to access application configurations, e.g., CORS origins.
     const configService = container.resolve(ConfigService);
-    // const logger: Logger = loggingService.getLogger({ loader: 'Express' }); // Xóa logger
 
-    const logContext = `[ExpressLoader]`; // Chuỗi context cho log
+    // Define a consistent context string for logs originating from this loader.
+    const logContext = `[ExpressLoader]`;
 
-    // <<< Use logToFile
-    logToFile(`${logContext} Configuring Express app...`);
+    logToFile(`${logContext} Starting Express application configuration...`);
 
     const app = express();
 
+    // Configure CORS options based on `ConfigService`.
     const corsOptions = {
         origin: configService.config.CORS_ALLOWED_ORIGINS,
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
@@ -29,45 +38,51 @@ export const loadExpress = (): Express => {
         optionsSuccessStatus: 200
     };
 
-    // --- Core Middleware ---
-    app.use(cors(corsOptions));
-    // app.use(express.json());
-    // app.use(express.urlencoded({ extended: true }));
+    // --- Core Middleware Setup ---
+    app.use(cors(corsOptions)); // Enable Cross-Origin Resource Sharing
+    logToFile(`${logContext} CORS middleware applied with origins: ${configService.config.CORS_ALLOWED_ORIGINS.join(', ')}.`);
 
-    // Tăng giới hạn cho JSON payloads
-    app.use(express.json({ limit: '1mb' })); // Ví dụ: tăng lên 1mb
+    // Parse JSON payloads with an increased limit.
+    app.use(express.json({ limit: '1mb' }));
+    logToFile(`${logContext} JSON body parser middleware applied (limit: 1mb).`);
 
-    // Tăng giới hạn cho URL-encoded payloads (nếu bạn cũng dùng)
+    // Parse URL-encoded payloads with an increased limit.
     app.use(express.urlencoded({ limit: '1mb', extended: true }));
+    logToFile(`${logContext} URL-encoded body parser middleware applied (limit: 1mb).`);
+
+    // Parse text/plain and text/csv payloads.
     app.use(express.text({ type: ['text/plain', 'text/csv'] }));
-    // Middleware ghi log request đã được điều chỉnh để dùng logToFile
+    logToFile(`${logContext} Text/CSV body parser middleware applied.`);
+
+    // Apply the request logger middleware.
+    // This middleware is expected to handle its own logging internally using `logToFile` or similar.
     app.use(requestLoggerMiddleware);
-    // <<< Use logToFile
-    logToFile(`${logContext} Core middleware applied (CORS, JSON, URLencoded, Text, RequestLogger).`);
+    logToFile(`${logContext} Request logging middleware applied.`);
 
     // --- Basic Root Route ---
+    // A simple health check or welcome route.
     app.get('/', (req: Request, res: Response) => {
         res.status(200).send('Crawl, Chatbot, and Log Analysis Server is Running');
+        logToFile(`${logContext} Root route (/) accessed.`); // Optional: Log each access to root
     });
+    logToFile(`${logContext} Basic root route (/) registered.`);
 
-    // API Routes
-    app.use('/api', apiRouter()); // apiRouter tự resolve dependencies
-    // <<< Use logToFile
-    logToFile(`${logContext} Mounted API routes at /api.`);
+    // --- API Routes ---
+    // Mount the main API router under the '/api' path.
+    // `apiRouter()` is expected to resolve its own dependencies internally via DI.
+    app.use('/api', apiRouter());
+    logToFile(`${logContext} API routes mounted at /api.`);
 
-    // --- Not Found Handler ---
-    // notFoundHandler đã được điều chỉnh để chuyển lỗi đến errorHandlerMiddleware
+    // --- Error Handling Middleware ---
+    // `notFoundHandler` catches requests to undefined routes and forwards them to `errorHandlerMiddleware`.
+    // Both are expected to handle their own logging.
     app.use(notFoundHandler);
-    // <<< Use logToFile
-    logToFile(`${logContext} Registered Not Found handler.`);
+    logToFile(`${logContext} Not Found (404) handler registered.`);
 
-    // --- Global Error Handler ---
-    // errorHandlerMiddleware đã được điều chỉnh để dùng logToFile
+    // `errorHandlerMiddleware` is the global error handler for all Express errors.
     app.use(errorHandlerMiddleware);
-    // <<< Use logToFile
-    logToFile(`${logContext} Registered Global Error handler.`);
+    logToFile(`${logContext} Global error handler registered.`);
 
-    // <<< Use logToFile
     logToFile(`${logContext} Express app configured successfully.`);
     return app;
 };

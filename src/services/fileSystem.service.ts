@@ -12,8 +12,6 @@ import { v4 as uuidv4 } from 'uuid';
 @singleton()
 export class FileSystemService {
     private readonly serviceBaseLogger: Logger; // Logger cơ sở cho service, không có context request
-    private readonly finalJsonlPath: string;
-    private readonly evaluateCsvPath: string;
     private readonly conferenceListPath: string;
     private readonly customSearchDir: string;
     private readonly baseOutputDir: string;
@@ -24,8 +22,6 @@ export class FileSystemService {
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger({ service: 'FileSystemServiceBase' });
-        this.finalJsonlPath = this.configService.finalOutputJsonlPath;
-        this.evaluateCsvPath = this.configService.evaluateCsvPath;
         this.conferenceListPath = this.configService.conferenceListPath;
         this.customSearchDir = this.configService.customSearchDir;
         this.baseOutputDir = this.configService.baseOutputDir;
@@ -50,8 +46,8 @@ export class FileSystemService {
                 await fs.promises.mkdir(this.baseOutputDir, { recursive: true });
             }
 
-            await this.deleteFileIfExists(this.finalJsonlPath, 'final output JSONL', logger);
-            await this.deleteFileIfExists(this.evaluateCsvPath, 'evaluation CSV', logger);
+            // await this.deleteFileIfExists(this.finalJsonlPath, 'final output JSONL', logger);
+            // await this.deleteFileIfExists(this.evaluateCsvPath, 'evaluation CSV', logger);
             await this.ensureDirExists(this.customSearchDir, logger);
 
             logger.info("Output area prepared.");

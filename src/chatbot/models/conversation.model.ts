@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document, Model, Types } from 'mongoose'; // Thêm Types
-import { HistoryItem } from '../shared/types'; // Import kiểu dữ liệu HistoryItem
+import { ChatHistoryItem } from '../shared/types'; // Import kiểu dữ liệu ChatHistoryItem
 
 // Định nghĩa cấu trúc cho một Part (để Mongoose biết kiểu)
 const partSchema = new Schema({
@@ -18,7 +18,7 @@ const partSchema = new Schema({
     }
 }, { _id: false });
 
-// Định nghĩa cấu trúc cho một HistoryItem
+// Định nghĩa cấu trúc cho một ChatHistoryItem
 const historyItemSchema = new Schema({
     role: {
         type: String,
@@ -38,7 +38,7 @@ const historyItemSchema = new Schema({
 export interface IConversation extends Document {
     _id: Types.ObjectId; // Thêm _id tường minh
     userId: string;
-    messages: HistoryItem[];
+    messages: ChatHistoryItem[];
     language?: string;
     lastActivity: Date;
     status?: string;

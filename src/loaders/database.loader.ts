@@ -1,30 +1,35 @@
 // src/loaders/database.loader.ts
-import { container } from 'tsyringe';
-// import { Logger } from 'pino'; // Xóa import Logger
-// import { LoggingService } from '../services/logging.service'; // Xóa import LoggingService
-import { connectDB as connectMongo } from '../config/database'; // Giữ nguyên import và đổi tên
-import logToFile from '../utils/logger';
+import { container } from 'tsyringe'; // Keep container if needed for other potential DI resolutions (though not used directly here)
+import { connectDB as connectMongo } from '../config/database'; // Alias `connectDB` to `connectMongo` to avoid naming conflict
+import logToFile from '../utils/logger'; // Import the custom logging utility
 
+/**
+ * Connects to the application's MongoDB database.
+ * This function encapsulates the database connection logic and logs its status using `logToFile`.
+ *
+ * @returns {Promise<void>} A promise that resolves if the connection is successful,
+ *                          or rejects if an error occurs during connection.
+ * @throws {Error} If the database connection fails, the error is re-thrown.
+ */
 export const connectDB = async (): Promise<void> => {
-    // --- No Need to Resolve Services or Create Pino Logger ---
-    // const loggingService = container.resolve(LoggingService); // Xóa resolve
-    // const logger: Logger = loggingService.getLogger({ loader: 'Database' }); // Xóa logger
+    // Define a consistent context string for logs originating from this loader.
+    const logContext = `[DatabaseLoader]`;
 
-    const logContext = `[DatabaseLoader]`; // Chuỗi context cho log
-
-    // <<< Use logToFile
-    logToFile(`${logContext} Attempting database connection...`);
+    logToFile(`${logContext} Attempting to establish database connection...`);
 
     try {
-        await connectMongo(); // Gọi hàm kết nối từ config/database.ts
+        // Call the actual database connection function from `config/database.ts`.
+        await connectMongo();
 
-        // <<< Use logToFile
         logToFile(`${logContext} Database connection successful.`);
-    } catch (error: any) { // Chỉ định loại lỗi là any
+    } catch (error: any) {
+        // Catch and log any errors that occur during the database connection process.
         const errorMessage = error instanceof Error ? error.message : String(error);
-        // <<< Use logToFile
-        logToFile(`[ERROR] ${logContext} Database connection failed. Error: "${errorMessage}", Stack: ${error.stack}`);
-        // Ném lại lỗi để initLoaders có thể bắt và dừng khởi động server
+        const errorStack = error instanceof Error ? error.stack : 'No stack available.';
+
+        logToFile(`[ERROR] ${logContext} Database connection failed. Error: "${errorMessage}". Stack: ${errorStack}`);
+
+        // Re-throw the error to halt the application startup in `initLoaders` or `server.ts`.
         throw error;
     }
 };

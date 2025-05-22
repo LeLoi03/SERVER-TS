@@ -1,162 +1,213 @@
 // src/chatbot/shared/types.ts
 
-import { FunctionCall, Part } from "@google/generative-ai"; // SDK types
-import { Socket } from "socket.io";
+import { FunctionCall, Part } from "@google/generative-ai"; // Google AI SDK types for model interaction
+import { Socket } from "socket.io"; // Socket.IO types for handler context
 
-// --- Basic Types ---
+// --- Basic Utility Types ---
 
-/** Represents supported languages for the application. */
-export type Language = 'en' | 'vi' | 'zh' | 'de' | 'fr' | 'es' | 'ru' | 'ja' | 'ko' | 'ar' | 'fa'; // Add more as needed
+/**
+ * Represents the set of supported natural languages in the application.
+ */
+export type Language = 'en' | 'vi' | 'zh' | 'de' | 'fr' | 'es' | 'ru' | 'ja' | 'ko' | 'ar' | 'fa'; // Extend as needed
 
-/** Represents the available prebuilt voices for text-to-speech. */
+/**
+ * Represents the available prebuilt voices for text-to-speech functionality.
+ */
 export type PrebuiltVoice = "Puck" | "Charon" | "Kore" | "Fenrir" | "Aoede" | "Orus" | "Zephyr";
 
-/** Defines the possible output modalities (text, audio, image). */
+/**
+ * Defines the possible output modalities for AI responses.
+ */
 export type OutputModality = "text" | "audio" | "image";
 
-/** Defines the chat interaction mode (live streaming vs. regular request/response). */
+/**
+ * Defines the chat interaction mode, indicating if responses should be streamed live or sent as a single block.
+ */
 export type ChatMode = 'live' | 'regular';
 
-/** Defines the structure for a language option displayed to the user. */
+/**
+ * Defines the structure for a language option presented to the user in the UI.
+ */
 export interface LanguageOption {
+    /** The language code (e.g., 'en' for English). */
     code: Language;
+    /** The human-readable name of the language (e.g., 'English'). */
     name: string;
-    flagCode: string; // e.g., 'gb', 'vn', 'cn' for flag icons
+    /** The flag code for displaying country flag icons (e.g., 'gb' for Great Britain, 'vn' for Vietnam). */
+    flagCode: string;
 }
 
-/** Defines the structure for a single item in the conversation history. */
-export interface HistoryItem {
-    /** The role of the entity that produced this part of the conversation. */
-    role: "user" | "model" | "function"; // 'function' role represents the *result* returned to the model
-    /** The content parts, directly using the Google AI SDK's Part type. */
+/**
+ * Defines the structure for a single item in the conversation history,
+ * directly compatible with Google AI SDK's content structure.
+ */
+export interface ChatHistoryItem {
+    /** The role of the entity that produced this part of the conversation (e.g., 'user', 'model', 'function'). */
+    role: "user" | "model" | "function";
+    /** The content parts, directly using the Google AI SDK's Part type (e.g., text, inline_data, function_call, function_response). */
     parts: Part[];
-    /** Optional ISO timestamp indicating when the item was added. */
+    /** Optional ISO timestamp indicating when the history item was created/added. */
     timestamp?: string | Date;
+    /** Optional unique identifier for this history item (e.g., UUID for messages). */
     uuid?: string;
 }
 
 // --- API & Service Result Types ---
 
-/** Represents the result of an internal API call (e.g., to the backend service). */
+/**
+ * Represents the generic result structure for an internal API call or service operation.
+ */
 export interface ApiCallResult {
     /** Indicates whether the API call was successful in retrieving and processing data. */
     success: boolean;
-    /** The raw string data received from the API (may be JSON, error text, etc.). Null if no response obtained. */
+    /** The raw string data received from the API (could be JSON, plain text, or an error message). Null if no response was obtained. */
     rawData: string | null;
-    /** Optional formatted string data after transformation (null if not applicable or failed). */
+    /** Optional formatted string data after successful transformation (null if not applicable or transformation failed). */
     formattedData: string | null;
-    /** Optional error message describing issues during the call, parsing, or transformation. */
+    /** Optional error message describing issues during the API call, data parsing, or transformation. */
     errorMessage?: string;
 }
 
-
-
-export interface FollowItemDate {
-    fromDate: string; // ISO Date string
-    toDate: string;   // ISO Date string
+/**
+ * Defines the date range for an item, typically for conferences or journals.
+ */
+export interface ItemDateRange {
+    /** The start date of the item, in ISO Date string format. */
+    fromDate: string;
+    /** The end date of the item, in ISO Date string format. */
+    toDate: string;
 }
 
-export interface FollowItemLocation {
+/**
+ * Defines the location details for an item.
+ */
+export interface ItemLocation {
+    /** The specific address of the location. */
     address?: string;
+    /** The city, state, or province. */
     cityStateProvince?: string;
+    /** The country. */
     country?: string;
+    /** The continent. */
     continent?: string;
 }
 
+/**
+ * Represents a generic item (e.g., conference, journal) that can be followed by a user.
+ */
 export interface FollowItem {
+    /** The unique identifier of the item. */
     id: string;
-    title: string; // Sử dụng title thay vì name nếu API trả về title
+    /** The title or name of the item. */
+    title: string;
+    /** The acronym or abbreviation of the item. */
     acronym: string;
-    createdAt?: string; // ISO Date string, optional if not always present
-    updatedAt?: string;  // ISO Date string, optional
-    status?: string;     // Optional
-    dates?: FollowItemDate; // Optional
-    location?: FollowItemLocation; // Optional
+    /** Optional ISO timestamp when the item was created. */
+    createdAt?: string;
+    /** Optional ISO timestamp when the item was last updated. */
+    updatedAt?: string;
+    /** Optional status of the item. */
+    status?: string;
+    /** Optional date range associated with the item. */
+    dates?: ItemDateRange;
+    /** Optional location details for the item. */
+    location?: ItemLocation;
+    /** The type of the item. */
     itemType?: "conference" | "journal";
-    // Thêm các trường khác nếu cần từ API
-    // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
-    // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
-    // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
+    // Additional fields can be added here as needed for specific item types.
+    // E.g., `websiteUrl?: string;` for conferences, `publisher?: string;` for journals.
 }
 
-export interface BlacklistItemDate {
-    fromDate: string; // ISO Date string
-    toDate: string;   // ISO Date string
-}
-
-export interface BlacklistItemLocation {
-    address?: string;
-    cityStateProvince?: string;
-    country?: string;
-    continent?: string;
-}
-
-
-
+/**
+ * Represents a generic item (e.g., conference) that can be blacklisted by a user.
+ */
 export interface BlacklistItem {
+    /** The unique identifier of the item (e.g., conference ID). */
     conferenceId: string;
-    title: string; // Sử dụng title thay vì name nếu API trả về title
+    /** The title or name of the item. */
+    title: string;
+    /** The acronym or abbreviation of the item. */
     acronym: string;
-    createdAt?: string; // ISO Date string, optional if not always present
-    updatedAt?: string;  // ISO Date string, optional
-    status?: string;     // Optional
-    dates?: BlacklistItemDate; // Optional
-    location?: BlacklistItemLocation; // Optional
-    // Thêm các trường khác nếu cần từ API
-    // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
-    // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
-    // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
+    /** Optional ISO timestamp when the item was created. */
+    createdAt?: string;
+    /** Optional ISO timestamp when the item was last updated. */
+    updatedAt?: string;
+    /** Optional status of the item. */
+    status?: string;
+    /** Optional date range associated with the item. */
+    dates?: ItemDateRange;
+    /** Optional location details for the item. */
+    location?: ItemLocation;
+    // Additional fields can be added here if necessary.
 }
 
-
-
+/**
+ * Represents a generic item (e.g., conference) that can be added to a user's calendar.
+ */
+export interface CalendarItem {
+    /** The unique identifier of the item (e.g., conference ID). */
+    conferenceId: string;
+    /** The title or name of the conference. */
+    conference: string;
+    /** Optional acronym or abbreviation. */
+    acronym?: string;
+    /** Optional ISO timestamp when the item was created. */
+    createdAt?: string;
+    /** Optional ISO timestamp when the item was last updated. */
+    updatedAt?: string;
+    /** Optional status of the item. */
+    status?: string;
+    /** Optional date range associated with the item. */
+    dates?: ItemDateRange;
+    /** Optional location details for the item. */
+    location?: ItemLocation;
+    // Additional fields can be added here if necessary.
+}
 
 /**
  * Payload for the 'itemFollowStatusUpdated' frontend action.
- * Contains details of the item whose follow status changed.
+ * Contains details of the item whose follow status has changed.
  */
 export interface ItemFollowStatusUpdatePayload {
-    item: FollowItem; // The item whose follow status was updated
+    /** The item whose follow status was updated. */
+    item: FollowItem;
+    /** The type of the item (e.g., 'conference', 'journal'). */
     itemType: 'conference' | 'journal';
-    followed: boolean; // true if the item is now followed (after a 'follow' action),
-    // false if the item is now unfollowed (after an 'unfollow' action)
+    /** True if the item is now followed (after a 'follow' action), false if unfollowed. */
+    followed: boolean;
 }
 
+/**
+ * Payload for the 'itemBlacklistStatusUpdated' frontend action.
+ * Contains details of the item whose blacklist status has changed.
+ */
 export interface ItemBlacklistStatusUpdatePayload {
-    item: BlacklistItem; // The item whose Blacklist status was updated
+    /** The item whose blacklist status was updated. */
+    item: BlacklistItem;
+    /** The type of the item (e.g., 'conference'). */
     itemType: 'conference';
-    blacklisted: boolean; // true if the item is now Blacklisted (after a 'Blacklist' action),
-    // false if the item is now blacklist (after an 'remove' action)
+    /** True if the item is now blacklisted, false if removed from blacklist. */
+    blacklisted: boolean;
 }
 
+/**
+ * Payload for the 'itemCalendarStatusUpdated' frontend action.
+ * Contains details of the item whose calendar status has changed.
+ */
 export interface ItemCalendarStatusUpdatePayload {
-    item: CalendarItem; // The item whose Calendar status was updated
+    /** The item whose calendar status was updated. */
+    item: CalendarItem;
+    /** The type of the item (e.g., 'conference'). */
     itemType: 'conference';
-    calendar: boolean; // true if the item is now calendar (after a 'add' action),
-    // false if the item is now added (after an 'remove' action)
+    /** True if the item is now added to calendar, false if removed from calendar. */
+    calendar: boolean;
 }
 
-export interface CalendarItem {
-    conferenceId: string;
-    conference: string; // Sử dụng title thay vì name nếu API trả về title
-    acronym?: string;
-    createdAt?: string; // ISO Date string, optional if not always present
-    updatedAt?: string;  // ISO Date string, optional
-    status?: string;     // Optional
-    dates?: FollowItemDate; // Optional
-    location?: FollowItemLocation; // Optional
-    // Thêm các trường khác nếu cần từ API
-    // Ví dụ: nếu là journal, có thể có 'publisher', 'issn', etc.
-    // Nếu là conference, có thể có 'websiteUrl', 'submissionDeadline' etc.
-    // Hiện tại, chúng ta sẽ giữ các trường chung nhất từ ví dụ của bạn.
-}
+// --- Gemini Model Interaction Types ---
 
-
-
-
-// --- Gemini Model Interaction ---
-
-/** Defines the possible outcomes of a single interaction turn with the Gemini model. */
+/**
+ * Defines the possible outcomes of a single interaction turn with the Gemini model.
+ */
 export interface GeminiInteractionResult {
     /** The status indicating the outcome of the generation attempt. */
     status: "requires_function_call" | "final_text" | "error";
@@ -168,190 +219,206 @@ export interface GeminiInteractionResult {
     errorMessage?: string;
 }
 
-// --- Frontend Interaction & Updates ---
-
+// --- Frontend Interaction & Updates Types ---
 
 /**
  * Payload for the 'displayList' frontend action.
+ * Used to instruct the frontend to display a list of items.
  */
 export interface DisplayListPayload {
-    items: any[]; // Array of items to display (e.g., FollowItem[], CalendarItem[])
-    // Using 'any[]' for now for flexibility, but ideally should be more specific
-    // like (FollowItem[] | CalendarItem[])
-    itemType: 'conference' | 'journal'; // Type of items in the list
-    listType: 'followed' | 'calendar' | string; // Describes the nature of the list
-    title?: string; // Optional title for the list display
+    /** An array of items to display. Can be `FollowItem[]`, `CalendarItem[]`, etc. */
+    // Using `any[]` for broad compatibility, but consider a specific union type if possible:
+    // `(FollowItem[] | CalendarItem[])`
+    items: any[];
+    /** The type of items in the list (e.g., 'conference', 'journal'). */
+    itemType: 'conference' | 'journal';
+    /** Describes the nature of the list (e.g., 'followed', 'calendar', 'searchResults'). */
+    listType: 'followed' | 'calendar' | string;
+    /** Optional title to display above the list. */
+    title?: string;
 }
 
 /**
  * Payload for the 'addToCalendar' frontend action.
- * Details needed to create a calendar event.
+ * Contains all necessary details to create a calendar event on the client side.
  */
 export interface AddToCalendarPayload {
+    /** The unique ID of the conference to add. */
     conferenceId: string;
-    // conferenceDetails should contain all necessary info for a calendar event
-    // This structure should align with what your calendar integration needs
+    /** Comprehensive details of the conference required for calendar event creation. */
     conferenceDetails: {
         id: string;
         title: string;
         acronym?: string;
-        startDate?: string; // ISO string
-        endDate?: string;   // ISO string
-        startTime?: string; // e.g., "10:00" (optional, if not part of startDate)
-        endTime?: string;   // e.g., "18:00" (optional, if not part of endDate)
-        timezone?: string;  // e.g., "America/New_York" (optional)
-        location?: string;  // Text description of location
-        description?: string; // Summary or details of the conference
+        startDate?: string; // ISO string format (e.g., 'YYYY-MM-DD')
+        endDate?: string;   // ISO string format
+        startTime?: string; // Optional time (e.g., "10:00")
+        endTime?: string;   // Optional time (e.g., "18:00")
+        timezone?: string;  // Optional timezone (e.g., "America/New_York")
+        location?: string;  // Text description of the event's physical location
+        description?: string; // Summary or detailed description of the conference
         url?: string; // Link to the conference website
-        // Add any other fields your calendar event creation requires
+        // Add any other fields your specific calendar integration requires.
     };
 }
 
 /**
  * Payload for the 'removeFromCalendar' frontend action.
+ * Contains details needed to remove a calendar event.
  */
 export interface RemoveFromCalendarPayload {
+    /** The unique ID of the conference to remove from the calendar. */
     conferenceId: string;
-    // Optionally, you might need more details to uniquely identify the event
-    // in the user's calendar if conferenceId alone isn't sufficient,
-    // e.g., a specific event ID from the calendar provider.
+    /** Optional: A specific calendar event ID, if needed to uniquely identify the event in a calendar provider. */
     calendarEventId?: string;
 }
 
-// --- Updated FrontendAction type ---
-
-/** Defines the types of actions the backend can request the frontend to perform. */
+/**
+ * Defines the types of actions the backend can request the frontend to perform.
+ * This is a discriminated union type, where `type` distinguishes different actions.
+ */
 export type FrontendAction =
-    | { type: 'navigate'; url: string }
-    | { type: 'openMap'; location: string }
-    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Assuming ConfirmSendEmailAction is defined elsewhere
-    | { type: 'displayList'; payload: DisplayListPayload }
-    | { type: 'addToCalendar'; payload: AddToCalendarPayload }
-    | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload }
-    | { type: 'itemFollowStatusUpdated'; payload: ItemFollowStatusUpdatePayload } // Added new action
-    | { type: 'itemBlacklistStatusUpdated'; payload: ItemBlacklistStatusUpdatePayload } // Added new action
-    | { type: 'itemCalendarStatusUpdated'; payload: ItemCalendarStatusUpdatePayload } // Added new action
+    | { type: 'navigate'; url: string } // Instructs frontend to navigate to a URL.
+    | { type: 'openMap'; location: string } // Instructs frontend to open a map to a specific location.
+    | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Asks frontend to show an email confirmation dialog.
+    | { type: 'displayList'; payload: DisplayListPayload } // Instructs frontend to display a list of items.
+    | { type: 'addToCalendar'; payload: AddToCalendarPayload } // Instructs frontend to add an item to calendar.
+    | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload } // Instructs frontend to remove an item from calendar.
+    | { type: 'itemFollowStatusUpdated'; payload: ItemFollowStatusUpdatePayload } // Informs frontend about a change in item's follow status.
+    | { type: 'itemBlacklistStatusUpdated'; payload: ItemBlacklistStatusUpdatePayload } // Informs frontend about a change in item's blacklist status.
+    | { type: 'itemCalendarStatusUpdated'; payload: ItemCalendarStatusUpdatePayload } // Informs frontend about a change in item's calendar status.
+    | undefined; // Represents no action being requested.
 
-    | undefined; // Allows for no action
-
-
-/** Defines the payload for the 'confirmEmailSend' frontend action. */
+/**
+ * Defines the payload for the 'confirmEmailSend' frontend action.
+ * Contains details necessary for the frontend to display an email confirmation dialog.
+ */
 export interface ConfirmSendEmailAction {
-    /** A unique identifier for this specific confirmation request. */
+    /** A unique identifier for this specific confirmation request, used to track user response. */
     confirmationId: string;
-    /** The email subject line. */
+    /** The subject line for the email to be sent. */
     subject: string;
-    /** The type of email request (e.g., for contact or reporting). */
-    requestType: 'contact' | 'report'; // Use specific types if known
-    /** The main body/message of the email. */
+    /** The type of email request (e.g., 'contact', 'report', 'summary'). */
+    requestType: 'contact' | 'report';
+    /** The main body/message content of the email. */
     message: string;
-    /** The duration (in milliseconds) the confirmation dialog should wait for user input. */
+    /** The duration (in milliseconds) the confirmation dialog should remain open for user input. */
     timeoutMs: number;
 }
 
+/**
+ * Defines generic information about an item, potentially for confirmation.
+ * This looks similar to `ConfirmSendEmailAction` but might be for other item-related confirmations.
+ */
 export interface ItemInfo {
-    /** A unique identifier for this specific confirmation request. */
+    /** Unique identifier for the item. */
     itemId: string;
-    /** The email subject line. */
+    /** Subject line, potentially for an email or notification. */
     subject: string;
-    /** The type of email request (e.g., for contact or reporting). */
-    requestType: 'contact' | 'report'; // Use specific types if known
-    /** The main body/message of the email. */
+    /** Type of request related to the item (e.g., 'contact', 'report'). */
+    requestType: 'contact' | 'report' | string;
+    /** Main message body or details related to the item. */
     message: string;
-    /** The duration (in milliseconds) the confirmation dialog should wait for user input. */
+    /** Timeout duration for a confirmation dialog, if applicable. */
     timeoutMs: number;
 }
 
-/** Represents a single step in the backend's thought process during a request. */
+/**
+ * Represents a single step in the backend's thought process during a request,
+ * providing transparency into AI reasoning or system execution.
+ */
 export interface ThoughtStep {
-    /** An identifier for the stage (e.g., 'receiving_input', 'calling_gemini', 'executing_function'). */
+    /** An identifier for the processing stage (e.g., 'receiving_input', 'calling_gemini', 'executing_function', 'tool_lookup'). */
     step: string;
     /** A human-readable description of the step being performed. */
     message: string;
     /** ISO timestamp when the step occurred. */
     timestamp: string;
-    /** Optional: Additional details relevant to the step (e.g., function arguments, API endpoint). */
+    /** Optional: Additional JSON-serializable details relevant to the step (e.g., function arguments, API endpoint). */
     details?: any;
-
-    agentId?: string;
+    /** Optional: The ID of the agent currently performing this thought step. */
+    agentId?: AgentId;
 }
 
-export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'JournalAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent' | string; // Allow string for flexibility if needed
+/**
+ * Defines possible identifiers for different AI agents or modules within the system.
+ */
+export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'JournalAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent' | string; // Allows for dynamic or unlisted agents
 
-/** Represents a status update sent to the frontend during processing. */
+/**
+ * Represents a status update message sent from the backend to the frontend during processing.
+ * Used to provide real-time feedback on long-running operations.
+ */
 export interface StatusUpdate {
+    /** Always 'status' for discrimination. */
     type: 'status';
-    /** Identifier for the current processing stage. */
+    /** Identifier for the current processing stage (e.g., 'thinking', 'fetching_data'). */
     step: string;
-    /** User-friendly message describing the current status. */
+    /** User-friendly message describing the current status to display. */
     message: string;
-    /** Optional details relevant to this specific status update. */
+    /** Optional: Additional details relevant to this specific status update. */
     details?: any;
     /** Optional: The accumulated thought process steps up to this point. */
     thoughts?: ThoughtStep[];
-    /** Optional but recommended: ISO timestamp of the update. */
+    /** Optional but recommended: ISO timestamp of when the update was generated. */
     timestamp?: string;
-    agentId?: AgentId; // <<< THÊM DÒNG NÀY
-
+    /** Optional: The ID of the agent providing this status update. */
+    agentId?: AgentId;
 }
 
-/** Represents a chunk of text sent during streaming responses. */
+/**
+ * Represents a chunk of text sent from the backend to the frontend during streaming responses.
+ * This allows for live display of AI-generated text.
+ */
 export interface ChatUpdate {
+    /** Always 'partial_result' for discrimination. */
     type: 'partial_result';
     /** The piece of text generated in this chunk. */
     textChunk: string;
 }
 
-/** Represents the final result of a chat interaction turn sent to the frontend. */
+/**
+ * Represents the final result of a chat interaction turn sent to the frontend.
+ * This marks the completion of a bot's response.
+ */
 export interface ResultUpdate {
+    /** Always 'result' for discrimination. */
     type: 'result';
-    id?: string; // <<< ADD THIS OPTIONAL FIELD (it's the final backend ID of the bot message)
-
+    /** Optional: The unique identifier of the final bot message in the backend history. */
+    id?: string;
     /** The complete final text message to display to the user. */
     message: string;
-    /** Optional: The complete thought process for this interaction turn. */
+    /** Optional: The complete thought process that led to this result. */
     thoughts?: ThoughtStep[];
     /** Optional: An action for the frontend to perform alongside displaying the message. */
     action?: FrontendAction;
 }
 
-/** Represents an error update sent to the frontend. */
+/**
+ * Represents an error update sent from the backend to the frontend.
+ * Provides details about failures during chat processing.
+ */
 export interface ErrorUpdate {
-    type: 'error'; // Luôn là 'error' để phân biệt với các update khác
+    /** Always 'error' for discrimination. */
+    type: 'error';
+    /** The primary error message to display to the user. */
     message: string;
-    step?: string; // Bước mà lỗi có thể đã xảy ra (ví dụ: 'tool_execution', 'final_formatting')
-    // thought?: string; // Bỏ đi nếu thoughts đã bao gồm thông tin này
-    thoughts?: ThoughtStep[]; // Lịch sử quá trình suy nghĩ dẫn đến lỗi
-    code?: string; // Mã lỗi cụ thể từ server (ví dụ: 'CONVERSATION_NOT_FOUND', 'AUTH_REQUIRED')
-    details?: any; // Thông tin chi tiết thêm về lỗi
+    /** Optional: The specific step or stage where the error occurred (e.g., 'tool_execution', 'final_formatting'). */
+    step?: string;
+    /** Optional: The history of thought steps leading up to the error. */
+    thoughts?: ThoughtStep[];
+    /** Optional: A specific error code from the server (e.g., 'CONVERSATION_NOT_FOUND', 'AUTH_REQUIRED'). */
+    code?: string;
+    /** Optional: Additional JSON-serializable details about the error. */
+    details?: any;
 }
 
-
-//   // Ví dụ payload cho event 'chat_error' từ server
-// {
-//     "type": "error",
-//     "message": "Conversation with ID 'xyz123' not found.",
-//     "step": "load_conversation_db_query",
-//     "code": "CONVERSATION_NOT_FOUND",
-//     "details": { "conversationId": "xyz123" },
-//     "thoughts": [
-//       { "level": 0, "thought": "User requested to load conversation 'xyz123'." },
-//       { "level": 1, "thought": "Querying database for conversation 'xyz123'." },
-//       { "level": 2, "thought": "Database query returned no results." }
-//     ]
-//   }
-
-
-//   // Ví dụ payload cho event 'chat_error' từ server (lỗi nghiêm trọng)
-// {
-//     "type": "error",
-//     "message": "Authentication token is invalid or expired.",
-//     "code": "AUTH_REQUIRED",
-//     "details": { "reason": "token_expired" }
-//   }
-
-/** Represents an warning update sent to the frontend. */
+/**
+ * Represents a warning update sent from the backend to the frontend.
+ * Indicates non-critical issues that the user might need to be aware of.
+ */
 export interface WarningUpdate {
+    /** Always 'warning' for discrimination. */
     type: 'warning';
     /** The warning message to display to the user. */
     message: string;
@@ -361,37 +428,43 @@ export interface WarningUpdate {
     thoughts?: ThoughtStep[];
 }
 
+/**
+ * Defines the possible display types for a message rendered in the chat UI.
+ */
+export type ChatDisplayMessageType = 'text' | 'error' | 'warning' | 'map' | 'follow_update' | 'blacklist_update' | 'calendar_update' | undefined;
 
-/** Defines the possible types for a message displayed in the chat UI. */
-export type ChatDisplayMessageType = 'text' | 'error' | 'warning' | 'map' | 'follow_update' | undefined;
-
-/** Represents a single message object used for rendering the chat history in the UI. */
+/**
+ * Represents a single message object used for rendering the chat history in the UI.
+ * This is the frontend-facing message format.
+ */
 export interface ChatMessage {
     /** A unique identifier for the message (e.g., generated by UUID). */
     id: string;
-    /** The primary text content of the message (can be label for map). */
+    /** The primary text content of the message (can be a label for a map or other complex types). */
     message: string;
-    /** Flag indicating if the message originated from the user. */
+    /** Flag indicating if the message originated from the user (`true`) or the bot/system (`false`). */
     isUser: boolean;
-    /** The display type of the message (text, map, error, etc.). */
+    /** The display type of the message, dictating how it should be rendered. */
     type: ChatDisplayMessageType;
-    /** Optional: Accumulated thought steps associated with this message generation. */
+    /** Optional: Accumulated thought steps associated with this message's generation. */
     thoughts?: ThoughtStep[];
     /** Optional: Location string used if the message type is 'map'. */
     location?: string;
-    /** Optional: Timestamp when the message was created/received. */
-    timestamp?: string | Date; // Allow Date object as well
+    /** Optional: Timestamp when the message was created/received, in ISO string or Date object format. */
+    timestamp?: string | Date;
 }
 
-/** Payload informing the frontend about the result of a user confirmation action (e.g., email send). */
+/**
+ * Payload informing the frontend about the result of a user confirmation action (e.g., email send, item action).
+ */
 export interface ConfirmationResultPayload {
-    /** The ID matching the original `ConfirmSendEmailAction` request. */
+    /** The ID matching the original confirmation request. */
     confirmationId: string;
     /** The outcome status of the confirmation process. */
     status:
     | 'confirmed' // User clicked confirm, backend action succeeded (or attempted)
     | 'cancelled' // User clicked cancel/dismiss
-    | 'timeout'   // Confirmation window expired
+    | 'timeout'   // Confirmation window expired without user input
     | 'not_found' // Backend couldn't find a pending confirmation with this ID
     | 'failed'    // User confirmed, but subsequent backend action failed (e.g., sending email)
     | 'unauthorized' // Attempt to confirm/cancel by wrong user/session
@@ -402,31 +475,37 @@ export interface ConfirmationResultPayload {
     details?: any;
 }
 
-// --- Agent Communication Protocol (Example V1) ---
+// --- Agent Communication Protocol (Inter-agent messaging) ---
 
-/** Represents a request sent between agents (e.g., Host to ConferenceAgent). */
+/**
+ * Represents a request sent between different AI agents (e.g., Host Agent to Conference Agent).
+ * This defines the communication protocol for internal task delegation.
+ */
 export interface AgentCardRequest {
-    /** Unique ID for this specific task request. */
+    /** Unique ID for this specific task request (e.g., UUID). */
     taskId: string;
-    /** ID of the overarching conversation. */
+    /** ID of the overarching conversation to which this task belongs. */
     conversationId: string;
-    /** ID of the agent sending the request ('HostAgent' or another agent's ID). */
+    /** ID of the agent sending the request (e.g., 'HostAgent', 'ConferenceAgent'). */
     senderAgentId: 'HostAgent' | string;
-    /** ID of the agent designated to handle the request. */
+    /** ID of the agent designated to handle this request. */
     receiverAgentId: string;
     /** ISO timestamp of when the request was created. */
     timestamp: string;
     /** Natural language description of the task for the receiving agent. */
     taskDescription: string;
-    /** Optional context to provide the receiving agent. */
+    /** Optional context to provide the receiving agent, aiding in task execution. */
     context?: {
-        history?: HistoryItem[]; // e.g., last few messages
-        userToken?: string | null;
-        language?: Language;
+        history?: ChatHistoryItem[]; // e.g., last few messages relevant to the task
+        userToken?: string | null; // User's authentication token for authenticated tool calls
+        language?: Language; // Language preference for the task
     };
 }
 
-/** Represents a response sent back from a receiving agent to the sender. */
+/**
+ * Represents a response sent back from a receiving agent to the sender.
+ * This concludes a delegated task and returns results or errors.
+ */
 export interface AgentCardResponse {
     /** The ID of the original task request this response corresponds to. */
     taskId: string;
@@ -434,110 +513,189 @@ export interface AgentCardResponse {
     conversationId: string;
     /** ID of the agent sending this response. */
     senderAgentId: string;
-    /** ID of the intended recipient of the response ('HostAgent' or another agent). */
+    /** ID of the intended recipient of the response (e.g., 'HostAgent'). */
     receiverAgentId: 'HostAgent' | string;
     /** ISO timestamp of when the response was created. */
     timestamp: string;
     /** The status indicating the outcome of the task processing. */
     status: 'success' | 'error' | 'in_progress';
-    /** Optional data containing the result of the task (e.g., JSON string, text summary). */
+    /** Optional data containing the result of the task (e.g., JSON string, text summary, tool outputs). */
     resultData?: any;
     /** Optional error message if the status is 'error'. */
     errorMessage?: string;
-    /** Optional action requested by the sub-agent for the frontend to perform. */
+    /** Optional action requested by the sub-agent for the frontend to perform (e.g., navigate). */
     frontendAction?: FrontendAction;
-
-    thoughts?: ThoughtStep[]; // <<< THÊM DÒNG NÀY
-
+    /** Optional: The thought process steps generated by the sub-agent during task execution. */
+    thoughts?: ThoughtStep[];
 }
 
 
-// --- Socket Event Data Payloads --- <<< THÊM SECTION NÀY VÀ CÁC TYPE BÊN DƯỚI
+// --- Socket Event Data Payloads (Data sent between client and server via Socket.IO) ---
 
-/** Data structure expected when the client sends a message. */
+/**
+ * Data structure expected when the client sends a new message to the chatbot.
+ */
 export interface SendMessageData {
     /** The text input from the user. */
     userInput: string;
     /** Flag indicating if the response should be streamed (defaults to true if omitted). */
-    isStreaming: boolean;
+    isStreaming?: boolean;
     /** The language context for the message. */
     language: Language;
-    /** Conversation id */
-    conversationId: string | null; // Client sẽ gửi cái này
-    /** Message Id */
-    frontendMessageId: string;
-
+    /** Optional: The ID of the conversation to send the message to. If null/undefined, a new conversation is started. */
+    conversationId: string | null | undefined;
+    /** Optional: A unique ID generated by the frontend for this message, used for tracking. */
+    frontendMessageId?: string;
 }
 
-/** Data structure expected when the client requests to load a specific conversation. */
+/**
+ * Data structure expected when the client requests to load a specific conversation's history.
+ */
 export interface LoadConversationData {
     /** The unique ID of the conversation to load. */
     conversationId: string;
 }
 
-/** Data structure expected for email confirmation/cancellation events from the client. */
+/**
+ * Data structure expected for email confirmation/cancellation events from the client.
+ */
 export interface ConfirmationEventData {
-    /** The unique ID of the confirmation process being responded to. */
+    /** The unique ID of the confirmation process being responded to by the user. */
     confirmationId: string;
 }
 
-/** Data structure expected when the client requests to delete a conversation. */
+/**
+ * Data structure expected when the client requests to delete a conversation.
+ */
 export interface DeleteConversationData {
     /** The unique ID of the conversation to delete. */
     conversationId: string;
 }
 
-/** Data structure expected when the client requests to clear messages from a conversation. */
+/**
+ * Data structure expected when the client requests to clear all messages from a conversation.
+ */
 export interface ClearConversationData {
     /** The unique ID of the conversation whose messages should be cleared. */
     conversationId: string;
 }
 
+/**
+ * Data structure expected when the client requests to rename a conversation.
+ */
 export interface RenameConversationData {
+    /** The unique ID of the conversation to rename. */
     conversationId: string;
+    /** The new title for the conversation. */
     newTitle: string;
 }
 
+
+/**
+ * Represents the result of a conversation renaming operation.
+ */
 export interface RenameResult {
+    /** Indicates if the rename operation was successful. */
     success: boolean;
-    updatedTitle?: string; // Tiêu đề đã được chuẩn hóa và lưu
+    /** Optional: The updated (and potentially normalized) title of the conversation.
+     * This field is typically present on success.
+     */
+    updatedTitle?: string;
+    /** Optional: The ID of the conversation that was renamed.
+     * This field is typically present for both success and failure cases where the conversation ID is known.
+     */
     conversationId?: string;
+    /** Optional: An error message providing details if the operation failed.
+     * This field is typically present on failure.
+     */
+    errorMessage?: string; // Thêm trường errorMessage để cung cấp thông tin chi tiết hơn khi lỗi
 }
 
+/**
+ * Data structure expected when the client requests to pin or unpin a conversation.
+ */
 export interface PinConversationData {
+    /** The unique ID of the conversation to pin/unpin. */
     conversationId: string;
+    /** Boolean indicating the new pinned status (true for pinned, false for unpinned). */
     isPinned: boolean;
 }
 
+/**
+ * Data structure expected when the client requests to search conversations.
+ */
 export interface SearchConversationsData {
+    /** The search term or query string. */
     searchTerm: string;
-    limit?: number; // Tùy chọn, client có thể yêu cầu số lượng kết quả
+    /** Optional: Limit the number of search results returned. */
+    limit?: number;
 }
 
-// --- Metadata cho danh sách cuộc trò chuyện (để đảm bảo đồng bộ với service) ---
-// Bạn có thể import trực tiếp từ service nếu cấu trúc module cho phép,
-// hoặc định nghĩa lại ở đây để frontend sử dụng.
+/**
+ * Metadata for a conversation sent to the client, typically for displaying a list of conversations.
+ * This is a simplified view of the full `ConversationMetadata` on the backend.
+ */
 export interface ClientConversationMetadata {
+    /** The unique ID of the conversation. */
     id: string;
+    /** The title of the conversation. */
     title: string;
-    lastActivity: Date; // Hoặc string nếu bạn parse ở client
+    /** The timestamp of the last activity in the conversation. */
+    lastActivity: Date; // Use Date object, frontend can format it.
+    /** Boolean indicating if the conversation is pinned. */
     isPinned: boolean;
 }
 
+/**
+ * Result structure for creating a new conversation, containing all necessary details.
+ */
 export interface NewConversationResult {
+    /** The unique ID of the newly created conversation. */
     conversationId: string;
-    history: HistoryItem[];
-    title: string; // Thêm title
-    lastActivity: Date; // Thêm lastActivity
-    isPinned: boolean; // Thêm isPinned
+    /** The initial history of the new conversation (often empty or with a system message). */
+    history: ChatHistoryItem[];
+    /** The initial title of the new conversation. */
+    title: string;
+    /** The timestamp of the new conversation's creation. */
+    lastActivity: Date;
+    /** Boolean indicating if the new conversation is pinned (usually false by default). */
+    isPinned: boolean;
 }
 
+/**
+ * Payload for editing a user's message in a conversation.
+ * Sent from frontend to backend.
+ */
+export interface BackendEditUserMessagePayload {
+    /** The ID of the conversation containing the message to edit. */
+    conversationId: string;
+    /** The ID of the specific user message to be edited. */
+    messageIdToEdit: string;
+    /** The new text content for the user message. */
+    newText: string;
+    /** The language context of the conversation. */
+    language: Language;
+}
 
-
+/**
+ * Payload sent from backend to frontend after a user message has been edited
+ * and a new bot response has been generated.
+ */
+export interface BackendConversationUpdatedAfterEditPayload {
+    /** The user message with its original ID but updated content. */
+    editedUserMessage: ChatMessage;
+    /** The new bot response generated in reply to the edited user message. */
+    newBotMessage: ChatMessage;
+    /** The ID of the conversation that was updated. */
+    conversationId: string;
+}
 
 // --- Constants ---
 
-/** List of available language options for UI selection. */
+/**
+ * An array of available language options for UI selection,
+ * including their display name, code, and flag code.
+ */
 export const AVAILABLE_LANGUAGES: LanguageOption[] = [
     { name: 'English', code: 'en', flagCode: 'gb' },
     { name: 'Deutsch', code: 'de', flagCode: 'de' },
@@ -552,22 +710,30 @@ export const AVAILABLE_LANGUAGES: LanguageOption[] = [
     { name: 'فارسی', code: 'fa', flagCode: 'ir' }
 ];
 
-/** Default language used if none is specified or detected. */
+/**
+ * The default language used if none is specified or detected, for example, 'vi' (Vietnamese).
+ */
 export const DEFAULT_LANGUAGE: Language = 'vi';
-/** Default voice used for text-to-speech. */
+
+/**
+ * The default prebuilt voice used for text-to-speech, for example, 'Puck'.
+ */
 export const DEFAULT_VOICE: PrebuiltVoice = 'Puck';
-/** Default output modality. */
+
+/**
+ * The default output modality for AI responses, for example, 'audio'.
+ */
 export const DEFAULT_MODALITY: OutputModality = 'audio';
 
-// --- Gemini types ---
+// --- Gemini Specific Types ---
 
 /**
  * Input context provided to each function handler during execution.
  * Contains all necessary data and callbacks for the handler's operation.
  */
 export interface FunctionHandlerInput {
-    /** Arguments provided by the LLM for the function call. Structure varies per function. */
-    args: Record<string, any>; // Use Record<string, any> or a more specific union if possible
+    /** Arguments extracted by the LLM for the function call. Structure varies per function. */
+    args: Record<string, any>;
 
     /** Authentication token for the user associated with the request, if available. */
     userToken: string | null;
@@ -575,41 +741,42 @@ export interface FunctionHandlerInput {
     /** The current language setting for the interaction (e.g., 'en', 'vi'). */
     language: Language;
 
-    /** A unique identifier for this specific function execution instance (can trace back to parent process). */
+    /** A unique identifier for this specific function execution instance (can trace back to parent AI processing). */
     handlerId: string;
 
-    /** The unique ID of the client's socket connection. */
+    /** The unique ID of the client's Socket.IO connection. */
     socketId: string;
 
     /**
-     * Callback function to send status updates back to the central orchestrator (e.g., intentHandler).
-     * Should return `true` if the update was likely sent successfully, `false` if the underlying connection is likely closed.
+     * Callback function to send real-time status updates back to the central orchestrator
+     * (e.g., `intentHandler.orchestrator`).
      * @param eventName - Should always be 'status_update'.
-     * @param data - The StatusUpdate payload.
-     * @returns Boolean indicating likely success of sending the update.
+     * @param data - The `StatusUpdate` payload.
+     * @returns `true` if the update was likely sent successfully, `false` if the underlying connection is likely closed.
      */
     onStatusUpdate: (eventName: 'status_update', data: StatusUpdate) => boolean;
 
-    /** The raw Socket.IO client socket instance. Use with caution, prefer onStatusUpdate. */
+    /** The raw Socket.IO client socket instance. Use with caution; prefer `onStatusUpdate` for general logging. */
     socket: Socket;
 
-    /** Optional: The name of the function being executed, passed down from the registry for context. */
+    /** Optional: The name of the function being executed, passed down from the registry for contextual logging. */
     functionName?: string;
 
     /** Optional: Any additional context passed down from the calling layer (e.g., agent card context). */
     executionContext?: any;
 
+    /** Optional: The ID of the agent that is currently executing this function handler. */
     agentId?: string;
 }
 
 /**
  * Output structure expected from every function handler after execution.
+ * This response is typically processed by the LLM orchestrator to formulate the next bot message.
  */
 export interface FunctionHandlerOutput {
     /**
-     * The response content formulated for the LLM.
-     * This typically includes the results of the function's operation or a description of an error.
-     * It should guide the LLM on what to say next to the user.
+     * The response content formulated for the LLM. This typically includes the results of the
+     * function's operation or a description of an error. It should guide the LLM on what to say next to the user.
      */
     modelResponseContent: string;
 
@@ -617,37 +784,8 @@ export interface FunctionHandlerOutput {
      * Optional action to be triggered on the frontend UI after the function completes.
      * Examples include navigating to a URL, opening a map, or showing a confirmation dialog.
      */
-    frontendAction?: FrontendAction; // Use FrontendAction from shared types
+    frontendAction?: FrontendAction;
 
-    thoughts?: ThoughtStep[]; // <<< THÊM DÒNG NÀY
-
-}
-
-
-export interface EditUserMessagePayload {
-    conversationId: string;
-    messageIdToEdit: string;
-    newText: string;
-    language: Language; // Good to include for context if backend needs it
-}
-
-export interface ConversationUpdatedAfterEditPayload {
-    editedUserMessage: ChatMessage; // The user message with its original ID but updated content
-    newBotMessage: ChatMessage;     // The new bot response
-    conversationId: string;             // To ensure update is for the active conversation
-}
-
-// Add to your backend shared types as well (e.g., src/chatbot/shared/types.ts)
-// Assuming ChatMessage type on backend is similar or can be mapped from Frontend's ChatMessage
-export interface BackendEditUserMessagePayload {
-    conversationId: string;
-    messageIdToEdit: string;
-    newText: string;
-    language: Language;
-}
-
-export interface BackendConversationUpdatedAfterEditPayload {
-    editedUserMessage: ChatMessage; // << Use ChatMessage
-    newBotMessage: ChatMessage;     // << Use ChatMessage
-    conversationId: string;
+    /** Optional: The thought process steps generated during the function's execution. */
+    thoughts?: ThoughtStep[];
 }

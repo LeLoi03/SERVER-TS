@@ -3,7 +3,7 @@ import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
 import { Tool, Part, FunctionResponsePart } from "@google/generative-ai"; // Import FunctionResponsePart
 import {
-    HistoryItem,
+    ChatHistoryItem,
     FrontendAction,
     Language,
     AgentId,
@@ -18,7 +18,7 @@ import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
 interface NonStreamingHandlerResult {
-    history: HistoryItem[];
+    history: ChatHistoryItem[];
     action?: FrontendAction;
 }
 
@@ -29,7 +29,7 @@ interface RouteToAgentArgs {
 
 export async function handleNonStreaming(
     userInput: string,
-    historyForHandler: HistoryItem[],
+    historyForHandler: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
@@ -53,7 +53,7 @@ export async function handleNonStreaming(
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId);
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
-    let history: HistoryItem[] = [...historyForHandler];
+    let history: ChatHistoryItem[] = [...historyForHandler];
     const thoughts: ThoughtStep[] = [];
     let finalFrontendAction: FrontendAction | undefined = undefined;
     let currentTurn = 1;
@@ -137,7 +137,7 @@ export async function handleNonStreaming(
                 statusUpdateCallback('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
                 const finalModelResponseText = modelResult.text || (finalFrontendAction ? "Please follow instructions." : "Okay.");
                 const botMessageUuid = uuidv4();
-                const finalModelTurn: HistoryItem = { role: 'model', parts: [{ text: finalModelResponseText }], uuid: botMessageUuid, timestamp: new Date() };
+                const finalModelTurn: ChatHistoryItem = { role: 'model', parts: [{ text: finalModelResponseText }], uuid: botMessageUuid, timestamp: new Date() };
                 history.push(finalModelTurn);
                 logToFile(`[${handlerId} NonStreaming - Final Text] Appended final HostAgent response. History size: ${history.length}`);
                 safeEmit('chat_result', { type: 'result', message: finalModelResponseText, id: botMessageUuid });
@@ -151,7 +151,7 @@ export async function handleNonStreaming(
             else if (modelResult.status === "requires_function_call" && modelResult.functionCall) {
                 const functionCall = modelResult.functionCall;
                 // Thêm lượt model (yêu cầu function call) vào history
-                const modelFunctionCallTurn: HistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
+                const modelFunctionCallTurn: ChatHistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
                 history.push(modelFunctionCallTurn);
                 logToFile(`[${handlerId} NonStreaming T${currentTurn}] HostAgent requests function: ${functionCall.name}. History size: ${history.length}`);
 
@@ -209,7 +209,7 @@ export async function handleNonStreaming(
                 if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentTurn} - ${socketId}] Client disconnected after function execution.`); return; }
 
                 // Thêm lượt function (kết quả của function call) vào history
-                const functionResponseTurn: HistoryItem = { role: 'function', parts: [functionResponseForNextTurn] };
+                const functionResponseTurn: ChatHistoryItem = { role: 'function', parts: [functionResponseForNextTurn] };
                 history.push(functionResponseTurn);
                 logToFile(`[${handlerId} NonStreaming T${currentTurn}] Appended function response for ${functionCall.name}. History size: ${history.length}`);
 
