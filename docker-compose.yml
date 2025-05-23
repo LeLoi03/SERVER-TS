@@ -1,0 +1,16 @@
+# THIS DOCKERFILE IS INTENDED FOR DEVELOPMENT ENVIRONMENTS
+# DO NOT USE THIS FOR PRODUCTION USAGES.
+
+version: '3'
+
+services:
+  server:
+    build: 
+      context: .  
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001'
+    stdin_open: true
+    tty: true  # Keeps the container running for debugging
+    env_file:
+      - .env.product
