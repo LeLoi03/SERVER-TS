@@ -8,7 +8,7 @@ import {
     RequestLogData,
     FilteredData,
     RequestTimings // Ensure this is imported for currentRequestTimings
-} from '../../types/logAnalysis.types'; // Đảm bảo các type này chính xác
+} from '../../types'; // Đảm bảo các type này chính xác
 import {
     createConferenceKey,
     initializeConferenceDetail, // Giả sử hàm này có logic đúng
@@ -20,7 +20,6 @@ import { eventHandlerMap } from './index'; // Giả sử index.ts exports eventH
 
 // --- Step 1: readAndGroupLogs --- (Giữ nguyên như bạn cung cấp)
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
-    // ... (code của bạn) ...
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
     let parsedEntries = 0;
@@ -305,18 +304,33 @@ export const calculateFinalMetrics = (
                 }
             }
 
+            // Trong calculateFinalMetrics - STAGE 1
             const totalTasksInRequest = conferencesForThisRequest.length;
+            const FAILED_THRESHOLD_PERCENT = 0.15; // 15%
 
             if (numProcessing > 0) {
                 currentRequestTimings.status = 'Processing';
             } else {
-                if (numFailed === totalTasksInRequest && totalTasksInRequest > 0) { // Ensure not 0/0
+                if (numFailed === totalTasksInRequest && totalTasksInRequest > 0) {
                     currentRequestTimings.status = 'Failed';
                 } else if (numFailed > 0) {
-                    currentRequestTimings.status = 'CompletedWithErrors';
+                    // Áp dụng ngưỡng phần trăm ở đây
+                    if ((numFailed / totalTasksInRequest) > FAILED_THRESHOLD_PERCENT) {
+                        currentRequestTimings.status = 'CompletedWithErrors';
+                    } else {
+                        // Nếu dưới ngưỡng, và các task còn lại là completed hoặc skipped
+                        if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
+                            currentRequestTimings.status = 'Completed'; // Hoàn thành, các lỗi nhỏ nằm trong ngưỡng chấp nhận
+                        } else {
+                            // Trường hợp này có thể là PartiallyCompleted nếu một số task không chạy hết
+                            // hoặc vẫn là CompletedWithErrors nếu bạn muốn phân biệt rõ hơn.
+                            // Giả sử nếu dưới ngưỡng và phần còn lại không phải completed/skipped hết thì vẫn là lỗi.
+                            currentRequestTimings.status = 'CompletedWithErrors'; // Hoặc 'PartiallyCompleted' tùy định nghĩa
+                        }
+                    }
                 } else if (numCompleted === totalTasksInRequest || (numCompleted + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0) {
                     currentRequestTimings.status = 'Completed';
-                } else if (numCompleted > 0 || numSkipped > 0) {
+                } else if (numCompleted > 0 || numSkipped > 0) { // Có completed hoặc skipped, nhưng không phải tất cả (và không có failed)
                     currentRequestTimings.status = 'PartiallyCompleted';
                 } else if (totalTasksInRequest > 0 && numSkipped === totalTasksInRequest) {
                     currentRequestTimings.status = 'Skipped';

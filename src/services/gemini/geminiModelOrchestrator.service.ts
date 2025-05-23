@@ -32,7 +32,7 @@ export class GeminiModelOrchestratorService {
     ) { }
 
     public async prepareModel(
-        apiType: string,
+        apiType: string, // <-- THÊM apiType VÀO ĐÂY
         modelName: string,
         systemInstructionTextToUse: string,
         fewShotPartsToUse: Part[],
@@ -42,10 +42,16 @@ export class GeminiModelOrchestratorService {
         crawlModel: CrawlModelType,
         logger: Logger
     ): Promise<ModelPreparationResult> {
+        logger.info({ // Hoặc logger.debug
+            event: 'model_preparation_attempt', // EVENT MỚI
+            apiType,
+            modelNameForPrep: modelName, // Đổi tên để rõ ràng là model đang được chuẩn bị
+            crawlModelForPrep: crawlModel, // crawlModel là tham số của hàm này
+            shouldUseCache
+        }, `Attempting to prepare model ${modelName} for API type ${apiType}.`);
+
         let model: GenerativeModel | undefined;
-        // KHẮC PHỤC LỖI: Khởi tạo contentRequest với một giá trị mặc định hợp lệ.
-        // Giá trị này sẽ được ghi đè bởi logic bên dưới.
-        let contentRequest: GenerateContentRequest | string = ""; 
+        let contentRequest: GenerateContentRequest | string = "";
 
         let usingCacheActual = false;
         let currentCache: CachedContent | null = null;
@@ -56,6 +62,7 @@ export class GeminiModelOrchestratorService {
             const cacheSetupContext = logger.child({ cacheIdentifier, event_group: 'cache_setup' });
             cacheSetupContext.debug({ event: 'cache_context_attempt_setup_for_call' }, "Attempting to get or create cache for API call as per dynamic decision.");
             try {
+                // Pass apiType to getOrCreateContext
                 currentCache = await this.contextCacheService.getOrCreateContext(
                     apiType,
                     modelName,
@@ -73,7 +80,8 @@ export class GeminiModelOrchestratorService {
             if (currentCache?.name) {
                 cacheSetupContext.info({ cacheName: currentCache.name, apiType, modelName, event: 'cache_setup_use_success' }, "Attempting to use cached context object for call");
                 try {
-                    model = this.clientManager.getGenerativeModelFromCachedContent(currentCache, cacheSetupContext);
+                    // Pass apiType to getGenerativeModelFromCachedContent
+                    model = this.clientManager.getGenerativeModelFromCachedContent(currentCache, cacheSetupContext, apiType);
                     contentRequest = {
                         contents: [{ role: "user", parts: [{ text: currentPrompt }] }],
                         generationConfig: generationConfig
@@ -115,7 +123,8 @@ export class GeminiModelOrchestratorService {
                     nonCachedSetupContext.debug({ event: 'non_cached_setup_skipping_system_instruction' }, "Model configured WITHOUT system instruction.");
                 }
 
-                model = this.clientManager.getGenerativeModel(modelName, systemInstructionContentForSdk, nonCachedSetupContext, generationConfig);
+                // Pass apiType to getGenerativeModel
+                model = this.clientManager.getGenerativeModel(modelName, systemInstructionContentForSdk, nonCachedSetupContext, generationConfig, apiType);
 
                 if (fewShotPartsToUse.length > 0) {
                     const history: Content[] = [];
@@ -144,7 +153,7 @@ export class GeminiModelOrchestratorService {
         }
 
         // Final validation: ensure `model` and `contentRequest` are set before returning
-        if (!model || contentRequest === undefined) { // Check for undefined explicitly
+        if (!model || contentRequest === undefined) {
             const finalErrorMsg = "Critical: Model or content request could not be prepared (internal state error in orchestrator).";
             logger.fatal({ ...logger.bindings(), event: 'model_orchestration_critical_failure_final_check' }, finalErrorMsg);
             throw new Error(finalErrorMsg);

@@ -1,17 +1,5 @@
 // src/utils/logAnalysis/helper.ts
-import {
-    ConferenceAnalysisDetail,
-    LogAnalysisResult,
-    OverallAnalysis,        // Import các kiểu con nếu cần
-    GoogleSearchAnalysis,
-    PlaywrightAnalysis,
-    GeminiApiAnalysis,
-    BatchProcessingAnalysis,
-    FileOutputAnalysis,
-    ValidationStats,
-    RequestTimings // Thêm RequestTimings nếu chưa có
-} from '../../types/logAnalysis.types'; // Đảm bảo đường dẫn chính xác
-
+import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types';
 // --- Các helper function khác (normalizeErrorKey, createConferenceKey, initializeConferenceDetail, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
 
 // --- Helper function: Initialize Log Analysis Result Structure ---
@@ -29,7 +17,7 @@ import {
     getInitialBatchProcessingAnalysis,
     getInitialFileOutputAnalysis,
     getInitialValidationStats
-} from '../../types/logAnalysis.types';
+} from '../../types';
 
 
 export const normalizeErrorKey = (error: any): string => {
@@ -93,61 +81,92 @@ export const initializeConferenceDetail = (batchRequestId: string, acronym: stri
     finalResult: undefined,
 });
 
+
 export const addConferenceError = (
     detail: ConferenceAnalysisDetail,
     timestamp: string,
-    errorSource: any,
-    defaultMsgOrErrorCode: string,
-    detailsObject?: Record<string, any>
-) => {
-    let errorMessage: string;
-    let errorCode: string | undefined = undefined; // Khai báo rõ ràng type
+    errorSource: any, // Có thể là string, Error object, hoặc object log gốc
+    // Các tham số sau là tùy chọn và cung cấp thêm thông tin nếu errorSource không đủ
+    options?: {
+        defaultMessage?: string; // Thông điệp mặc định nếu không trích xuất được từ errorSource
+        errorCode?: string;      // Mã lỗi cụ thể
+        keyPrefix?: string;      // Tiền tố cho normalized key
+        sourceService?: string;
+        errorType?: LogError['errorType'];
+        context?: LogErrorContext;
+        // isRecovered?: boolean; // isRecovered nên được cập nhật bởi logic bên ngoài addConferenceError
+        additionalDetails?: Record<string, any>; // Chi tiết bổ sung muốn ghi đè hoặc thêm vào
+    }
+): void => {
+    let extractedMessage: string;
+    let extractedErrorCode: string | undefined = options?.errorCode;
+    let extractedDetails: any = {};
+    let finalSourceService: string | undefined = options?.sourceService;
+    let finalErrorType: LogError['errorType'] | undefined = options?.errorType;
 
+    // 1. Trích xuất thông tin từ errorSource
     if (typeof errorSource === 'string') {
-        errorMessage = errorSource;
+        extractedMessage = errorSource;
     } else if (errorSource instanceof Error) {
-        errorMessage = errorSource.message;
+        extractedMessage = errorSource.message;
+        if (!extractedDetails.name) extractedDetails.name = errorSource.name;
+        if (!extractedDetails.stack) extractedDetails.stack = errorSource.stack?.substring(0, 500);
+        // Cố gắng lấy errorCode từ các thuộc tính phổ biến của Error object (nếu có)
+        if (!extractedErrorCode && (errorSource as any).code) extractedErrorCode = String((errorSource as any).code);
+        if (!extractedErrorCode && (errorSource as any).errno) extractedErrorCode = String((errorSource as any).errno);
+    } else if (errorSource && typeof errorSource === 'object') {
+        // Nếu errorSource là một object (ví dụ: từ log entry)
+        extractedMessage = errorSource.message || errorSource.msg || errorSource.reason || errorSource.detail || options?.defaultMessage || 'Unknown error object';
+        if (!extractedErrorCode) extractedErrorCode = errorSource.errorCode || errorSource.code || errorSource.error_code;
+        if (!finalSourceService) finalSourceService = errorSource.service || errorSource.sourceService;
+        if (!finalErrorType) finalErrorType = errorSource.errorType || errorSource.type;
+
+        // Sao chép các thuộc tính của errorSource vào details, trừ các trường đã xử lý
+        const commonKeys = ['message', 'msg', 'reason', 'detail', 'errorCode', 'code', 'error_code', 'service', 'sourceService', 'errorType', 'type', 'timestamp', 'level', 'event'];
+        for (const key in errorSource) {
+            if (Object.prototype.hasOwnProperty.call(errorSource, key) && !commonKeys.includes(key)) {
+                extractedDetails[key] = errorSource[key];
+            }
+        }
     } else {
-        errorMessage = defaultMsgOrErrorCode;
+        extractedMessage = options?.defaultMessage || 'Unknown error source';
     }
 
-    if (!errorMessage.includes(' ') && defaultMsgOrErrorCode.includes('_')) {
-        errorCode = defaultMsgOrErrorCode;
-        if (errorMessage === defaultMsgOrErrorCode) {
-            errorMessage = `Error code: ${errorCode}`;
-        }
-    } else if (errorMessage !== defaultMsgOrErrorCode && defaultMsgOrErrorCode.includes('_')) {
-        errorCode = defaultMsgOrErrorCode;
+    // Ghi đè hoặc bổ sung details từ options.additionalDetails
+    if (options?.additionalDetails) {
+        extractedDetails = { ...extractedDetails, ...options.additionalDetails };
     }
 
-    let finalDetails: any = detailsObject || {};
+    // 2. Tạo normalized key
+    const keyPrefix = options?.keyPrefix ? `${options.keyPrefix}_` : '';
+    const keyBase = extractedErrorCode || extractedMessage;
+    const normalizedKey = keyPrefix + normalizeErrorKey(keyBase);
 
-    if (errorSource && typeof errorSource === 'object' && !(errorSource instanceof Error) && !detailsObject) {
-        try {
-            finalDetails = JSON.parse(JSON.stringify(errorSource, Object.getOwnPropertyNames(errorSource)));
-        } catch (e) {
-            finalDetails = { rawErrorSource: String(errorSource) };
-        }
-    } else if (errorSource instanceof Error && !detailsObject) {
-        finalDetails = {
-            name: errorSource.name,
-            // message: errorSource.message, // Đã có ở errorMessage
-            stack: errorSource.stack?.substring(0, 500),
-        };
-    }
-
-    // Sửa lỗi type ở đây: `detail.errors` mong đợi một object có `errorCode` tùy chọn.
-    const errorEntry: { timestamp: string; message: string; errorCode?: string; details?: any } = {
+    // 3. Tạo error entry
+    const errorEntry: LogError = {
         timestamp: timestamp,
-        message: errorMessage,
-        details: Object.keys(finalDetails).length > 0 ? finalDetails : undefined,
+        message: extractedMessage,
+        key: normalizedKey,
+        details: Object.keys(extractedDetails).length > 0 ? extractedDetails : undefined,
+        errorCode: extractedErrorCode,
+        sourceService: finalSourceService,
+        errorType: finalErrorType || 'Unknown',
+        isRecovered: false, // Mặc định lỗi mới là chưa được phục hồi
+        context: options?.context,
     };
-    if (errorCode) {
-        errorEntry.errorCode = errorCode;
+
+    // 4. Thêm vào mảng errors của ConferenceAnalysisDetail
+    if (!detail.errors) {
+        detail.errors = [];
     }
+
+    // Tùy chọn: Tránh thêm lỗi hoàn toàn giống hệt nhau (cùng key, cùng message, cùng timestamp)
+    // if (detail.errors.some(e => e.key === errorEntry.key && e.message === errorEntry.message && e.timestamp === errorEntry.timestamp)) {
+    //     return;
+    // }
+
     detail.errors.push(errorEntry);
 };
-
 
 export const initializeLogAnalysisResult = (logFilePath: string, filterRequestId?: string): LogAnalysisResult => {
     // Gọi các hàm khởi tạo chi tiết

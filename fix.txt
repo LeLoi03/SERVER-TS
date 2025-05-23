@@ -1,0 +1,14 @@
+lỗi 500
+lỗi 400
+không bung lỗi nếu chưa max retry
+fall bakc ngay lập tức có bất kỳ lỗi nào 
+fix process ok
+fix step search
+fix processing cho step det ext cfp
+requets status
+chỉnh suumary cho nhiều key gemini
+
+
+
+
+mine type là text/plain nhưng thực chát vẫn sẽ là json thì tôi đã tuned model để trả về json

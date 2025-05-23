@@ -6,106 +6,140 @@ import { promises as fsPromises, existsSync } from 'fs';
 import { type GenerateContentResult, type UsageMetadata } from "@google/generative-ai";
 import { ConfigService } from '../../config/config.service';
 import { Logger } from 'pino';
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-/**
- * Interface representing the processed response from Gemini API,
- * including extracted text and usage metadata.
- */
 export interface ProcessedGeminiResponse {
     responseText: string;
     metaData: UsageMetadata | null | undefined;
 }
 
-/**
- * Service responsible for processing raw responses from the Gemini API,
- * including extracting text content, handling safety feedback,
- * and persisting responses to files. It also provides utilities for cleaning
- * JSON-like strings from Gemini's text output.
- */
 @singleton()
 export class GeminiResponseHandlerService {
-    private readonly responseOutputDir: string; // Directory to save Gemini responses
+    private readonly responseOutputDir: string;
 
-    /**
-     * Constructs an instance of GeminiResponseHandlerService.
-     * @param {ConfigService} configService - The injected configuration service.
-     */
     constructor(
         @inject(ConfigService) private configService: ConfigService,
     ) {
-        // Define the output directory for Gemini responses
         this.responseOutputDir = path.join(this.configService.baseOutputDir, 'gemini_responses');
-        console.log(`[GeminiResponseHandlerService] Initialized. Response output directory: ${this.responseOutputDir}`); // Use console.log for early init
+        const initLogger = console; // Or a basic pino instance for early logs
+        initLogger.log(`[GeminiResponseHandlerService] Initialized. Response output directory: ${this.responseOutputDir}`);
     }
 
     /**
-     * Processes the raw `GenerateContentResult` from the Gemini SDK to extract the
-     * relevant text response and usage metadata. It also handles cases where the
-     * response might be blocked by safety settings.
-     *
-     * @param {GenerateContentResult} sdkResult - The raw result object from the Gemini SDK.
-     * @param {Logger} logger - The logger instance for contextual logging (e.g., from an API attempt).
-     * @returns {ProcessedGeminiResponse} An object containing the extracted response text and metadata.
-     * @throws {Error} If the response is missing, invalid, or blocked by safety settings.
+     * Helper to strip markdown code blocks (e.g., ```json ... ``` or ``` ... ```) if present.
+     * @param text The input string.
+     * @param logger A logger instance for contextual logging.
+     * @returns The text with markdown wrappers removed, or the original text if no wrapper was found.
      */
+    private stripMarkdownJsonWrapper(text: string, logger: Logger): string {
+        if (!text || text.trim() === "") {
+            logger.trace({ event: 'strip_markdown_empty_input' }, "Input to stripMarkdownJsonWrapper is empty.");
+            return "";
+        }
+
+        // Regex to find ```json ... ``` or ``` ... ``` (case-insensitive for 'json', multiline)
+        // It captures the content within the backticks.
+        const markdownJsonMatch = text.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/im);
+        if (markdownJsonMatch && markdownJsonMatch[1]) {
+            const extractedJson = markdownJsonMatch[1].trim();
+            logger.info({
+                event: 'gemini_api_response_markdown_stripped',
+                originalLength: text.length,
+                extractedLength: extractedJson.length,
+                // originalSnippet: text.substring(0, 100), // Optional: log snippets
+                // extractedSnippet: extractedJson.substring(0, 100)
+            }, "Stripped markdown JSON block from response text.");
+            return extractedJson;
+        }
+        logger.trace({ event: 'strip_markdown_no_wrapper_found' }, "No markdown wrapper found in text.");
+        return text; // Return original text if no markdown wrapper found
+    }
+
     public processResponse(
         sdkResult: GenerateContentResult,
         logger: Logger
     ): ProcessedGeminiResponse {
-        // The logger passed here (e.g., `attemptApiCallLogger`) already contains context
-        // like `apiType`, `batchIndex`, `modelName`, `attempt`, `event_group='gemini_api_attempt'`.
         const response = sdkResult?.response;
         const feedback = response?.promptFeedback;
 
+        // 1. Initial checks for response object and safety blocking
         if (!response) {
             logger.warn({ feedback, event: 'gemini_api_response_missing' }, "Gemini API returned result with missing `response` object.");
             if (feedback?.blockReason) {
-                // If response is missing but feedback indicates blocking, log it
-                logger.error({ blockReason: feedback.blockReason, safetyRatings: feedback.safetyRatings, event: 'gemini_api_response_blocked' }, "Request blocked by safety settings: Missing response body.");
+                logger.error({ blockReason: feedback.blockReason, safetyRatings: feedback.safetyRatings, event: 'gemini_api_response_blocked_missing_body' }, "Request blocked by safety settings: Missing response body.");
                 throw new Error(`Request blocked by safety settings: ${feedback.blockReason}. (Response object was missing)`);
             }
             throw new Error("Empty or invalid response object from Gemini API (response field was null/undefined).");
         }
 
-        // Check for safety blocking feedback again, now that we know `response` exists.
         if (feedback?.blockReason) {
             logger.error({ blockReason: feedback.blockReason, safetyRatings: feedback.safetyRatings, event: 'gemini_api_response_blocked' }, "Gemini API response was blocked by safety settings.");
             throw new Error(`Request blocked by safety settings: ${feedback.blockReason}.`);
         }
 
-        let responseText = "";
+        // 2. Extract raw text from SDK response
+        let rawResponseText = "";
         try {
-            responseText = response.text(); // Preferred method to extract text
+            rawResponseText = response.text();
             logger.debug({ event: 'gemini_api_text_extract_success' }, "Successfully extracted text using response.text().");
-        } catch (textError: unknown) { // Catch if response.text() fails (e.g., due to tool_code or content issues)
+        } catch (textError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(textError);
             logger.warn({ err: { message: errorMessage, stack: errorStack }, event: 'gemini_api_text_extract_failed' }, `Response.text() accessor failed: "${errorMessage}". Attempting fallback extraction.`);
-            // Fallback: try to access content directly from candidates
-            responseText = response.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-            if (!responseText) {
-                logger.error({ responseStructure: JSON.stringify(response)?.substring(0, 500), event: 'gemini_api_text_extract_fallback_failed' }, "Could not extract text content from response via fallback mechanism.");
-                // Original logic returned empty string, not throwing here.
+            rawResponseText = response.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+            if (!rawResponseText) {
+                logger.error({ responseStructure: JSON.stringify(response)?.substring(0, 500), event: 'gemini_api_text_extract_fallback_failed' }, "Could not extract text content from response via fallback mechanism. This will likely fail JSON parsing.");
             } else {
                 logger.debug({ event: 'gemini_api_text_extract_fallback_success' }, "Successfully extracted text using fallback method.");
             }
         }
-        const metaData = response.usageMetadata ?? null; // Extract usage metadata
 
-        return { responseText, metaData };
+        // 3. Strip Markdown (if any) from the raw text
+        let processedText = this.stripMarkdownJsonWrapper(rawResponseText, logger.child({ sub_op: 'stripMarkdownInProcess' }));
+
+        // 4. Fix Trailing Commas (on potentially unwrapped text)
+        const originalTextForCommaCheck = processedText;
+        if (processedText.trim().length > 0) { // Only attempt if there's content
+            processedText = processedText.replace(/,(\s*})/g, '$1'); // Fix for objects: { "key": "value", } -> { "key": "value" }
+            processedText = processedText.replace(/,(\s*])/g, '$1'); // Fix for arrays: [ "item1", ] -> [ "item1" ]
+
+            if (processedText !== originalTextForCommaCheck) {
+                logger.info({
+                    event: 'gemini_api_response_trailing_comma_fixed',
+                    originalSnippetTail: originalTextForCommaCheck.substring(Math.max(0, originalTextForCommaCheck.length - 70)),
+                    fixedSnippetTail: processedText.substring(Math.max(0, processedText.length - 70))
+                }, "Attempted to fix trailing commas in (potentially unwrapped) Gemini response text.");
+            }
+        }
+
+        // 5. Mandatory JSON parsing validation (on potentially unwrapped and comma-fixed text)
+        try {
+            // If text became empty after stripping markdown or was initially empty, it's an error.
+            if (processedText.trim() === "") {
+                logger.error({
+                    originalRawResponseSnippet: rawResponseText.substring(0, 200), // Show what it was before processing
+                    event: 'gemini_api_response_empty_after_processing'
+                }, "Response text became empty after stripping markdown or was initially empty. This will be treated as an API error.");
+                throw new Error("Response text is empty after processing (e.g., stripping markdown or initial empty response).");
+            }
+            JSON.parse(processedText); // Attempt to parse
+            logger.debug({ event: 'gemini_api_response_valid_json', responseTextLength: processedText.length, responseTextSnippet: processedText.substring(0,100) }, "Gemini response text successfully validated as JSON.");
+        } catch (jsonParseError: unknown) {
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(jsonParseError);
+            logger.error({
+                err: { message: errorMessage, stack: errorStack },
+                originalRawResponseSnippet: rawResponseText.substring(0, 500), // Log the original raw text for context
+                processedTextSnippet: processedText.substring(0, 500),       // Log the text that actually failed parsing
+                event: 'gemini_api_response_invalid_json'
+            }, "Gemini response text is not valid JSON (after markdown stripping and comma fixing attempts). This will be treated as an API error and should trigger a retry.");
+            throw new Error(`Gemini response is not valid JSON: ${errorMessage}. Processed text snippet (that failed): ${processedText.substring(0,100)}`);
+        }
+
+        const metaData = response.usageMetadata ?? null;
+
+        // Return the processedText which has been unwrapped, comma-fixed, and validated as JSON
+        return { responseText: processedText, metaData };
     }
 
-    /**
-     * Asynchronously writes the Gemini API response text to a file.
-     * The file path is constructed using API type, acronym, and batch index.
-     *
-     * @param {string} responseText - The text content of the Gemini response.
-     * @param {string} apiType - The type of API call (e.g., 'extractInfo').
-     * @param {string | undefined} acronym - The acronym of the conference, used for filename.
-     * @param {number} batchIndex - The index of the item within the batch, used for filename.
-     * @param {Logger} parentLogger - The logger from the specific API attempt (e.g., `attemptApiCallLogger`).
-     * @returns {Promise<void>} A Promise that resolves when the file writing operation is complete.
-     */
     public async writeResponseToFile(
         responseText: string,
         apiType: string,
@@ -113,23 +147,19 @@ export class GeminiResponseHandlerService {
         batchIndex: number,
         parentLogger: Logger
     ): Promise<void> {
-        // Sanitize acronym for filename
         const safeAcronym = (acronym || 'noacronym').replace(/[^a-zA-Z0-9_.-]/g, '-');
         const responseOutputPath = path.join(this.responseOutputDir, `result_${apiType}_${safeAcronym}_${batchIndex}.txt`);
         
-        // Create a child logger specifically for this async sub-operation, inheriting parent context.
         const fileWriteLogger = parentLogger.child({ sub_operation: 'response_file_write_async', filePath: responseOutputPath });
-        // Create a log context object for consistent logging payload
         const fileLogContext = { ...parentLogger.bindings(), filePath: responseOutputPath, event_group: 'response_file_write' };
 
         try {
-            // Ensure the output directory exists
             if (!existsSync(this.responseOutputDir)) {
                 await fsPromises.mkdir(this.responseOutputDir, { recursive: true });
                 fileWriteLogger.info({ directory: this.responseOutputDir, event: 'response_dir_created' }, "Created response output directory.");
             }
             fileWriteLogger.debug({ ...fileLogContext, event: 'response_file_write_start' }, "Attempting to write response to file.");
-            await fsPromises.writeFile(responseOutputPath, responseText || "", "utf8");
+            await fsPromises.writeFile(responseOutputPath, responseText || "", "utf8"); // Ensure responseText is not null/undefined
             fileWriteLogger.debug({ ...fileLogContext, event: 'response_file_write_success' }, "Successfully wrote response to file.");
         } catch (fileWriteError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(fileWriteError);
@@ -138,39 +168,68 @@ export class GeminiResponseHandlerService {
     }
 
     /**
-     * Attempts to clean a Gemini API response text by extracting a JSON object
-     * that might be wrapped in other text or markdown. It finds the first and last
-     * curly braces and tries to parse the content between them.
-     *
-     * @param {string} responseText - The raw text response from the Gemini API.
-     * @param {Logger} loggerForCleaning - The logger instance for contextual logging during cleaning.
-     * @returns {string} The cleaned JSON string, or an empty string if no valid JSON structure is found or parsing fails.
+     * cleanJsonResponse:
+     * This method is called by the public methods in GeminiApiService AFTER processResponse has succeeded.
+     * Its main role is a final cleanup, primarily focusing on extracting the core JSON object if, for some
+     * unexpected reason, the responseText (which should already be valid JSON) still contains some
+     * non-JSON artifacts or if this method is called directly with un-processed text.
+     * The heavy lifting of markdown stripping and comma fixing is done in `processResponse`.
      */
     public cleanJsonResponse(
-        responseText: string,
+        responseText: string, // This text should ideally be clean, validated JSON from processResponse
         loggerForCleaning: Logger
     ): string {
-        loggerForCleaning.trace({ rawResponseSnippet: responseText.substring(0, 500) }, "Attempting to clean JSON response.");
+        if (!responseText || responseText.trim() === "") {
+            loggerForCleaning.debug({ event: 'json_clean_empty_input' }, "Input to cleanJsonResponse is empty or whitespace. Returning empty string.");
+            return "";
+        }
+        loggerForCleaning.trace({ rawResponseSnippet: responseText.substring(0, 500) }, "Attempting to clean JSON response (final pass, or if called directly).");
 
-        const firstCurly = responseText.indexOf('{');
-        const lastCurly = responseText.lastIndexOf('}');
+        // Attempt to strip markdown again as a fallback, in case this method is called with raw text.
+        const textToClean = this.stripMarkdownJsonWrapper(responseText, loggerForCleaning.child({sub_op: 'stripMarkdownInCleanJson'}));
+
+        // If after stripping markdown, the text is empty, return empty.
+        if (textToClean.trim() === "") {
+            loggerForCleaning.debug({ event: 'json_clean_empty_after_markdown_strip_fallback' }, "Text became empty after markdown stripping in cleanJsonResponse. Returning empty string.");
+            return "";
+        }
+
+        // The primary goal now is to ensure we have just the JSON object,
+        // in case the validated JSON from processResponse was somehow still wrapped or had leading/trailing non-JSON text.
+        const firstCurly = textToClean.indexOf('{');
+        const lastCurly = textToClean.lastIndexOf('}');
         let cleanedResponseText = "";
 
         if (firstCurly !== -1 && lastCurly !== -1 && lastCurly >= firstCurly) {
-            const potentialJson = responseText.substring(firstCurly, lastCurly + 1);
+            const potentialJson = textToClean.substring(firstCurly, lastCurly + 1);
             try {
-                // Attempt to parse to validate it's actual JSON
+                // Validate that this extracted substring is indeed JSON.
+                // This is crucial because processResponse already validated the *entire* string it returned.
+                // Here, we are validating a *substring*.
                 JSON.parse(potentialJson);
-                cleanedResponseText = potentialJson.trim();
-                loggerForCleaning.debug({ event: 'json_clean_success' }, "Successfully extracted and validated JSON structure from response.");
+                cleanedResponseText = potentialJson.trim(); // .trim() is good practice
+                loggerForCleaning.debug({ event: 'json_clean_structure_validated_in_cleaner' }, "Validated JSON structure within cleanJsonResponse after potential final stripping.");
             } catch (parseError: unknown) {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
-                loggerForCleaning.warn({ rawResponseSnippet: responseText.substring(0, 200), err: { message: errorMessage, stack: errorStack }, event: 'json_clean_parse_failed' }, `Extracted potential JSON failed to parse: "${errorMessage}". Returning empty string.`);
-                cleanedResponseText = ""; // Parsing failed, return empty string
+                const { message: errorMessage } = getErrorMessageAndStack(parseError);
+                // This implies that even though processResponse thought the whole string was JSON,
+                // the substring between the first and last curly braces is NOT valid JSON.
+                // This is an unusual case but possible if the structure is like "{...} non-json {...}".
+                loggerForCleaning.warn({
+                    textSnippet: textToClean.substring(0, 200),
+                    potentialJsonSnippet: potentialJson.substring(0,200),
+                    err: { message: errorMessage },
+                    event: 'json_clean_substring_parse_failed_in_cleaner'
+                }, `Extracted potential JSON substring failed to parse within cleanJsonResponse: "${errorMessage}". Returning empty string.`);
+                cleanedResponseText = "";
             }
         } else {
-            loggerForCleaning.warn({ rawResponseSnippet: responseText.substring(0, 200), event: 'json_clean_structure_not_found' }, "No valid JSON structure ({...}) found in the response text. Returning empty string.");
-            cleanedResponseText = ""; // No curly braces or invalid range, return empty string
+            // This means the text (after potential markdown stripping) does not even contain a {...} structure.
+            // If processResponse worked correctly, this should not happen unless responseText was not JSON to begin with.
+            loggerForCleaning.warn({
+                textSnippet: textToClean.substring(0, 200),
+                event: 'json_clean_structure_not_found_in_cleaner'
+            }, "No valid JSON structure ({...}) found in the response text within cleanJsonResponse. Returning empty string.");
+            cleanedResponseText = "";
         }
         return cleanedResponseText;
     }

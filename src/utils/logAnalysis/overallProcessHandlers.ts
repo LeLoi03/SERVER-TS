@@ -1,23 +1,12 @@
 // src/utils/logAnalysis/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
 import { createConferenceKey } from './helpers'; // Đảm bảo helper này tồn tại và đúng
-import { OverallAnalysis, ConferenceAnalysisDetail, LogAnalysisResult } from '../../types/logAnalysis.types'; // Thêm LogAnalysisResult
+import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult } from '../../types'; // Thêm LogAnalysisResult
 
 // Khởi tạo overall analysis nếu chưa có
 const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any thành LogAnalysisResult
     if (!results.overall) {
-        results.overall = {
-            startTime: null,
-            endTime: null,
-            durationSeconds: null,
-            totalConferencesInput: 0,
-            processedConferencesCount: 0,
-            completedTasks: 0,
-            failedOrCrashedTasks: 0,
-            processingTasks: 0,
-            skippedTasks: 0,
-            successfulExtractions: 0,
-        };
+        results.overall = getInitialOverallAnalysis(); // Tái sử dụng ở đây!
     }
     return results.overall as OverallAnalysis;
 };
@@ -52,7 +41,7 @@ export const handleControllerProcessingFinished: LogEventHandler = (logEntry, re
         }
 
         const controllerContext = logEntry.context || {};
-        const processedDataFromController = controllerContext.processed_results;
+        const processedDataFromController = controllerContext.processedResults;
 
         if (processedDataFromController && Array.isArray(processedDataFromController) && currentBatchRequestId) {
             let foundOriginalIdForOverallRequest: string | undefined = undefined;

@@ -22,6 +22,10 @@ import { GeminiContextCacheService } from './services/gemini/geminiContextCache.
 import { GeminiRateLimiterService } from './services/gemini/geminiRateLimiter.service';
 import { GeminiModelOrchestratorService } from './services/gemini/geminiModelOrchestrator.service';
 import { GeminiResponseHandlerService } from './services/gemini/geminiResponseHandler.service';
+import { GeminiApiOrchestratorService } from './services/gemini/geminiApiOrchestrator.service';
+import { GeminiRequestPayloadFileLoggerService } from './services/gemini/geminiRequestPayloadFileLogger.service';
+import { GeminiSdkExecutorService } from './services/gemini/geminiSdkExecutor.service';
+import { GeminiRetryHandlerService } from './services/gemini/geminiRetryHandler.service';
 
 // --- Batch Processing Feature Services ---
 // This section defines services involved in the multi-step batch processing workflow.
@@ -73,6 +77,10 @@ container.registerSingleton(GeminiContextCacheService);
 container.registerSingleton(GeminiRateLimiterService);
 container.registerSingleton(GeminiModelOrchestratorService);
 container.registerSingleton(GeminiResponseHandlerService);
+container.registerSingleton(GeminiApiOrchestratorService);
+container.registerSingleton(GeminiRequestPayloadFileLoggerService);
+container.registerSingleton(GeminiRetryHandlerService);
+container.registerSingleton(GeminiSdkExecutorService);
 container.registerSingleton(GeminiApiService); // The main facade, typically depends on the above sub-services
 
 // --- 3. Register Batch Processing Sub-Services and the Orchestrator ---

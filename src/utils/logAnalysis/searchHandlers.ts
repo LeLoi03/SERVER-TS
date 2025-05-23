@@ -39,9 +39,10 @@ export const handleSearchAttemptIssue: LogEventHandler = (logEntry, results, con
     const issueKey = `${event}${error ? ':' + normalizeErrorKey(error) : ''}`;
     results.googleSearch.attemptIssueDetails[issueKey] = (results.googleSearch.attemptIssueDetails[issueKey] || 0) + 1;
 
-    if (event === 'search_quota_error_detected') {
-        results.googleSearch.quotaErrorsEncountered = (results.googleSearch.quotaErrorsEncountered || 0) + 1;
+    if (event === 'search_quota_error_detected' || event === 'search_quota_error_detected_forcing_rotation') { // Sửa ở đây
+        results.googleSearch.quotaErrors = (results.googleSearch.quotaErrors || 0) + 1;
     }
+
     if (event === 'search_result_item_malformed') {
         results.googleSearch.malformedResultItems = (results.googleSearch.malformedResultItems || 0) + 1;
     }
@@ -99,20 +100,19 @@ export const handleApiKeyProvided: LogEventHandler = (logEntry, results, confDet
 };
 
 export const handleAllApiKeysExhaustedInfo: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    // Phân biệt giữa 'api_keys_all_exhausted_checked' (khi getNextKey không tìm thấy)
-    // và 'api_keys_all_exhausted_status' (khi gọi hàm areAllKeysExhausted)
-    if (logEntry.event === 'api_keys_all_exhausted_checked') {
+    const event = logEntry.event; // Ví dụ: 'api_keys_all_exhausted_checked_locked'
+    if (event === 'api_keys_all_exhausted_checked_locked') { // SỬA Ở ĐÂY
         results.googleSearch.allKeysExhaustedEvents_GetNextKey = (results.googleSearch.allKeysExhaustedEvents_GetNextKey || 0) + 1;
-    } else if (logEntry.event === 'api_keys_all_exhausted_status') {
+    } else if (event === 'api_keys_all_exhausted_status') { // Giữ nguyên nếu event này được map
         results.googleSearch.allKeysExhaustedEvents_StatusCheck = (results.googleSearch.allKeysExhaustedEvents_StatusCheck || 0) + 1;
     }
 };
 
 export const handleApiKeyRotation: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {
-    const event = logEntry.event;
-    if (event === 'api_key_force_rotated_success') {
+    const event = logEntry.event; // Ví dụ: 'api_key_force_rotated_success_locked'
+    if (event === 'api_key_force_rotated_success_locked') { // SỬA Ở ĐÂY
         results.googleSearch.apiKeyRotationsSuccess = (results.googleSearch.apiKeyRotationsSuccess || 0) + 1;
-    } else if (event === 'api_key_force_rotated_fail') {
+    } else if (event === 'api_key_force_rotated_fail_locked') { // SỬA Ở ĐÂY
         results.googleSearch.apiKeyRotationsFailed = (results.googleSearch.apiKeyRotationsFailed || 0) + 1;
     }
 };

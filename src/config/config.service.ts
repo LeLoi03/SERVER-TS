@@ -39,19 +39,19 @@ const CFP_INFORMATION_CSV_PATH: string = path.resolve(__dirname, "../conference/
  * Identifier for the 'extract' API type in Gemini API configurations.
  * @type {string}
  */
-const API_TYPE_EXTRACT = "extract";
+const API_TYPE_EXTRACT: string = "extract";
 
 /**
  * Identifier for the 'cfp' API type in Gemini API configurations.
  * @type {string}
  */
-const API_TYPE_CFP = "cfp";
+const API_TYPE_CFP: string = "cfp";
 
 /**
  * Identifier for the 'determine' API type in Gemini API configurations.
  * @type {string}
  */
-const API_TYPE_DETERMINE = "determine";
+const API_TYPE_DETERMINE: string = "determine";
 
 // --- Helper Functions for Environment Variable Parsing ---
 
@@ -60,7 +60,7 @@ const API_TYPE_DETERMINE = "determine";
  * @param {string} key - The environment variable key (for logging/error messages).
  * @returns {(val: string | undefined) => string[]} A function that takes a string or undefined and returns a string array.
  */
-const parseCommaSeparatedString = (key: string) => (val: string | undefined): string[] => {
+const parseCommaSeparatedString = (key: string): (val: string | undefined) => string[] => (val: string | undefined): string[] => {
     if (!val) {
         console.warn(`[ConfigService] WARN: Environment variable '${key}' is not set or empty. Returning empty array.`);
         return [];
@@ -73,7 +73,7 @@ const parseCommaSeparatedString = (key: string) => (val: string | undefined): st
  * @param {string} key - The environment variable key (for logging/error messages).
  * @returns {(val: string | undefined) => string[]} A function that takes a string or undefined and returns a lowercase string array.
  */
-const parseCommaSeparatedStringLowerCase = (key: string) => (val: string | undefined): string[] => {
+const parseCommaSeparatedStringLowerCase = (key: string): (val: string | undefined) => string[] => (val: string | undefined): string[] => {
     if (!val) {
         console.warn(`[ConfigService] WARN: Environment variable '${key}' is not set or empty. Returning empty array.`);
         return [];
@@ -87,7 +87,7 @@ const parseCommaSeparatedStringLowerCase = (key: string) => (val: string | undef
  * @param {string} key - The environment variable key (for logging/error messages).
  * @returns {(val: string | undefined) => AgentId[]} A function that takes a string or undefined and returns an AgentId array.
  */
-const parseAgentIdArray = (key: string) => (val: string | undefined): AgentId[] => {
+const parseAgentIdArray = (key: string): (val: string | undefined) => AgentId[] => (val: string | undefined): AgentId[] => {
     if (!val) {
         console.warn(`[ConfigService] WARN: Environment variable '${key}' is not set or empty. Returning empty array.`);
         return [];
@@ -297,20 +297,20 @@ const envSchema = z.object({
 
     // --- Gemini API General Configuration ---
     /**
-     * Gemini API Key.
-     * @description Required for accessing Gemini models.
+     * Gemini API Key (or comma-separated list).
+     * @description Required for accessing Gemini models. Additional keys can be provided as GEMINI_API_KEY_1, GEMINI_API_KEY_2, etc.
      */
-    GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"),
+    GEMINI_API_KEY: z.string().optional().transform(parseCommaSeparatedString('GEMINI_API_KEY')), // Changed to transform to array
     /**
      * Maximum number of concurrent requests to the Gemini API.
      * @default 2
      */
-    GEMINI_API_CONCURRENCY: z.coerce.number().int().positive().default(2),
+    GEMINI_API_CONCURRENCY: z.coerce.number().int().positive().default(5),
     /**
      * Rate limit points per duration for Gemini API.
      * @default 2 (e.g., 2 requests per 60 seconds)
      */
-    GEMINI_RATE_LIMIT_POINTS: z.coerce.number().int().positive().default(2),
+    GEMINI_RATE_LIMIT_POINTS: z.coerce.number().int().positive().default(3),
     /**
      * Duration in seconds for the Gemini API rate limit.
      * @default 60
@@ -726,6 +726,11 @@ export type AppConfig = AppConfigFromSchema & {
      * Includes `GOOGLE_CUSTOM_SEARCH_API_KEYS` from the schema and any `CUSTOM_SEARCH_API_KEY_N`.
      */
     GOOGLE_CUSTOM_SEARCH_API_KEYS: string[];
+    /**
+     * A dynamically populated array of all Gemini API Keys found in environment variables.
+     * Includes `GEMINI_API_KEY` from the schema and any `GEMINI_API_KEY_N`.
+     */
+    GEMINI_API_KEYS: string[]; // Add the new property for Gemini API keys
 };
 
 /**
@@ -794,23 +799,41 @@ export class ConfigService {
 
             // Manually collect all Google Custom Search API Keys
             const googleApiKeys: string[] = [];
-            const keyPattern = /^CUSTOM_SEARCH_API_KEY_\d+$/;
+            const googleKeyPattern = /^CUSTOM_SEARCH_API_KEY_\d+$/;
             // Add the key from GOOGLE_CUSTOM_SEARCH_API_KEYS if it exists and is not empty
             if (parsedConfig.GOOGLE_CUSTOM_SEARCH_API_KEYS && parsedConfig.GOOGLE_CUSTOM_SEARCH_API_KEYS.length > 0) {
                 googleApiKeys.push(...parsedConfig.GOOGLE_CUSTOM_SEARCH_API_KEYS);
             }
-            // Add any dynamically numbered keys
+            // Add any dynamically numbered Google keys
             for (const envVar in process.env) {
-                if (keyPattern.test(envVar) && process.env[envVar]) {
+                if (googleKeyPattern.test(envVar) && process.env[envVar]) {
                     googleApiKeys.push(process.env[envVar] as string);
                 }
             }
-            // Ensure unique keys if there are duplicates from different sources
+            // Ensure unique Google keys
             const uniqueGoogleApiKeys = [...new Set(googleApiKeys)];
+
+            // Manually collect all Gemini API Keys
+            const geminiApiKeys: string[] = [];
+            const geminiKeyPattern = /^GEMINI_API_KEY_\d+$/;
+            // Add the key from GEMINI_API_KEY if it exists and is not empty
+            if (parsedConfig.GEMINI_API_KEY && parsedConfig.GEMINI_API_KEY.length > 0) {
+                geminiApiKeys.push(...parsedConfig.GEMINI_API_KEY);
+            }
+            // Add any dynamically numbered Gemini keys
+            for (const envVar in process.env) {
+                if (geminiKeyPattern.test(envVar) && process.env[envVar]) {
+                    geminiApiKeys.push(process.env[envVar] as string);
+                }
+            }
+            // Ensure unique Gemini keys
+            const uniqueGeminiApiKeys = [...new Set(geminiApiKeys)];
+
 
             this.config = {
                 ...parsedConfig,
-                GOOGLE_CUSTOM_SEARCH_API_KEYS: uniqueGoogleApiKeys
+                GOOGLE_CUSTOM_SEARCH_API_KEYS: uniqueGoogleApiKeys,
+                GEMINI_API_KEYS: uniqueGeminiApiKeys, // Assign the collected Gemini API keys
             };
 
             // --- Post-validation checks and default assignments ---
@@ -856,6 +879,11 @@ export class ConfigService {
                 console.warn("⚠️ WARN: No Google Custom Search API Keys found. Google Custom Search might not function.");
             }
 
+            // Warn if no Gemini API keys are found
+            if (this.config.GEMINI_API_KEYS.length === 0) {
+                console.warn("⚠️ WARN: No GEMINI_API_KEY or GEMINI_API_KEY_N environment variables found. Gemini API might not function.");
+            }
+
             // --- Initialize Generation Configs for Host and Sub Agents ---
             this.hostAgentGenerationConfig = {
                 temperature: this.config.GEMINI_HOST_AGENT_TEMPERATURE,
@@ -898,6 +926,7 @@ export class ConfigService {
             console.log(`   - Sub Agent Config: ${JSON.stringify(this.subAgentGenerationConfig)}`);
             console.log(`   - Allowed Sub Agents: ${this.config.ALLOWED_SUB_AGENTS.join(', ')}`);
             console.log(`   - Max Turns Host Agent: ${this.config.MAX_TURNS_HOST_AGENT}`);
+            console.log(`   - Number of Gemini API Keys: ${this.config.GEMINI_API_KEYS.length}`); // Log count of Gemini keys
         } catch (error) {
             // Handle Zod validation errors specifically
             if (error instanceof z.ZodError) {
@@ -1126,7 +1155,7 @@ export class ConfigService {
      * Gets the structured configuration object for Playwright.
      * @returns {{ channel: string | undefined; headless: boolean; userAgent: string; }} Playwright configuration.
      */
-    get playwrightConfig() {
+    get playwrightConfig(): { channel: string | undefined; headless: boolean; userAgent: string; } {
         return {
             channel: this.config.PLAYWRIGHT_CHANNEL,
             headless: this.config.PLAYWRIGHT_HEADLESS,
@@ -1138,7 +1167,7 @@ export class ConfigService {
      * Gets the structured configuration object for Google Custom Search.
      * @returns {{ cseId: string | undefined; apiKeys: string[]; maxUsagePerKey: number; rotationDelayMs: number; maxRetries: number; retryDelayMs: number; }} Google Search configuration.
      */
-    get googleSearchConfig() {
+    get googleSearchConfig(): { cseId: string | undefined; apiKeys: string[]; maxUsagePerKey: number; rotationDelayMs: number; maxRetries: number; retryDelayMs: number; } {
         return {
             cseId: this.config.GOOGLE_CSE_ID,
             apiKeys: this.config.GOOGLE_CUSTOM_SEARCH_API_KEYS,
@@ -1153,7 +1182,7 @@ export class ConfigService {
      * Gets the structured retry options for journal crawling.
      * @returns {{ retries: number; minTimeout: number; factor: number; }} Journal retry options.
      */
-    get journalRetryOptions() {
+    get journalRetryOptions(): { retries: number; minTimeout: number; factor: number; } {
         return {
             retries: this.config.JOURNAL_RETRY_RETRIES,
             minTimeout: this.config.JOURNAL_RETRY_MIN_TIMEOUT,
@@ -1165,7 +1194,7 @@ export class ConfigService {
      * Gets the structured cache options for journal crawling.
      * @returns {{ stdTTL: number; checkperiod: number; }} Journal cache options.
      */
-    get journalCacheOptions() {
+    get journalCacheOptions(): { stdTTL: number; checkperiod: number; } {
         return {
             stdTTL: this.config.JOURNAL_CACHE_TTL,
             checkperiod: this.config.JOURNAL_CACHE_CHECK_PERIOD,

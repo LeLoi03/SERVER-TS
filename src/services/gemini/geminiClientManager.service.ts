@@ -6,32 +6,36 @@ import {
     type GenerativeModel,
     type CachedContent,
     type Content,
-    type GenerationConfig as SDKGenerationConfig, // Import SDKGenerationConfig for type safety
-    type ChatSession, // Added for potential future use or completeness
+    type GenerationConfig as SDKGenerationConfig,
+    type ChatSession,
 } from "@google/generative-ai";
 import { ConfigService } from '../../config/config.service';
 import { LoggingService } from '../logging.service';
 import { Logger } from 'pino';
 import { GoogleAICacheManager } from '@google/generative-ai/server';
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
 /**
  * Manages the core Google Generative AI client and Cache Manager instances.
  * This service is responsible for initializing and providing access to the
  * `GoogleGenerativeAI` and `GoogleAICacheManager` SDK objects, ensuring they
  * are properly configured with the API key.
- * It acts as a centralized access point for Gemini SDK features.
+ * It acts as a centralized access point for Gemini SDK features, now supporting
+ * multiple API keys with selection based on API type.
  */
 @singleton()
 export class GeminiClientManagerService {
     private readonly baseLogger: Logger;
-    private _genAI: GoogleGenerativeAI | null = null; // Google Generative AI client instance
-    private _cacheManager: GoogleAICacheManager | null = null; // Google AI Cache Manager instance
-    private readonly geminiApiKey: string; // API key for Gemini
+    // Map to store GoogleGenerativeAI instances, keyed by API key index (e.g., 'key_0', 'key_1')
+    private readonly genAIInstances: Map<string, GoogleGenerativeAI> = new Map();
+    // Map to store GoogleAICacheManager instances, keyed by API key index
+    private readonly cacheManagerInstances: Map<string, GoogleAICacheManager> = new Map();
+    private readonly geminiApiKeys: string[]; // All available Gemini API keys
 
     /**
      * Constructs an instance of GeminiClientManagerService.
-     * Initializes the Google Generative AI client and Cache Manager on startup.
+     * Initializes the Google Generative AI client and Cache Manager instances
+     * for each configured API key on startup.
      * @param {ConfigService} configService - Injected configuration service.
      * @param {LoggingService} loggingService - Injected logging service.
      */
@@ -40,93 +44,119 @@ export class GeminiClientManagerService {
         @inject(LoggingService) loggingService: LoggingService,
     ) {
         this.baseLogger = loggingService.getLogger({ service: 'GeminiClientManagerService' });
-        this.geminiApiKey = this.configService.config.GEMINI_API_KEY;
+        this.geminiApiKeys = this.configService.config.GEMINI_API_KEYS;
 
-        // Attempt to initialize GenAI and CacheManager immediately
-        this.initializeGoogleGenerativeAI();
-        if (this._genAI) { // Only attempt to initialize CacheManager if GenAI succeeded
-            this.initializeCacheManager();
-        }
+        // Initialize all GenAI and CacheManager instances for each available key
+        this.initializeAllClients();
     }
 
     /**
-     * Initializes the `GoogleGenerativeAI` client using the configured API key.
-     * Logs success or fatal error if the API key is missing or initialization fails.
+     * Initializes GoogleGenerativeAI and GoogleAICacheManager clients for each
+     * API key provided in the configuration.
      */
-    private initializeGoogleGenerativeAI(): void {
-        const logger = this.baseLogger.child({ function: 'initializeGoogleGenerativeAI' });
-        try {
-            if (!this.geminiApiKey) {
-                // Log event consistent with original GeminiApiService constructor
-                logger.fatal({ event: 'gemini_service_config_error', reason: 'GEMINI_API_KEY missing' }, "Critical: GEMINI_API_KEY is missing in configuration. GoogleGenerativeAI will not be initialized.");
-                throw new Error("GEMINI_API_KEY is missing in configuration.");
-            }
-            this._genAI = new GoogleGenerativeAI(this.geminiApiKey);
-            // Log event consistent with original GeminiApiService constructor
-            logger.info({ event: 'gemini_service_genai_init_success' }, "GoogleGenerativeAI client initialized successfully.");
-        } catch (initError: unknown) { // Catch as unknown
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(initError);
-            // Log event consistent with original GeminiApiService constructor
-            logger.fatal({ err: { message: errorMessage, stack: errorStack }, event: 'gemini_service_genai_init_failed' }, `Failed to initialize GoogleGenerativeAI: "${errorMessage}".`);
-            this._genAI = null; // Ensure it's null on failure to prevent partial state
-        }
-    }
+    private initializeAllClients(): void {
+        const logger = this.baseLogger.child({ function: 'initializeAllClients' });
 
-    /**
-     * Initializes the `GoogleAICacheManager` client.
-     * Requires `GoogleGenerativeAI` to be already initialized.
-     * Logs success or error during initialization.
-     */
-    private initializeCacheManager(): void {
-        const logger = this.baseLogger.child({ function: 'initializeCacheManager' });
-        if (!this._genAI) {
-            logger.warn({ event: 'cache_manager_init_skipped_no_genai' }, "GoogleGenerativeAI client not initialized. Skipping CacheManager initialization.");
-            return;
-        }
-        if (this._cacheManager) {
-            logger.debug({ event: 'cache_manager_already_initialized' }, "CacheManager already initialized. Skipping.");
+        if (this.geminiApiKeys.length === 0) {
+            logger.fatal({ event: 'gemini_service_config_error', reason: 'GEMINI_API_KEYS missing' }, "Critical: No GEMINI_API_KEYs found in configuration. Gemini services will not be initialized.");
             return;
         }
 
-        logger.info({ event: 'cache_manager_init_start' }, "Initializing GoogleAICacheManager...");
-        try {
-            if (!this.geminiApiKey) {
-                // Defensive check, should be caught by initializeGoogleGenerativeAI already
-                throw new Error("Cannot initialize CacheManager without GEMINI_API_KEY.");
+        this.geminiApiKeys.forEach((apiKey, index) => {
+            const keyId = `key_${index}`;
+            logger.info({ keyId, event: 'gemini_client_init_start' }, `Attempting to initialize client for ${keyId}.`);
+            try {
+                // Initialize GoogleGenerativeAI
+                const genAI = new GoogleGenerativeAI(apiKey);
+                this.genAIInstances.set(keyId, genAI);
+                logger.info({ keyId, event: 'gemini_client_genai_init_success' }, `GoogleGenerativeAI client for ${keyId} initialized successfully.`);
+
+                // Initialize GoogleAICacheManager for this key
+                const cacheManager = new GoogleAICacheManager(apiKey);
+                this.cacheManagerInstances.set(keyId, cacheManager);
+                logger.info({ keyId, event: 'gemini_client_cache_manager_init_success' }, `GoogleAICacheManager for ${keyId} initialized successfully.`);
+
+            } catch (initError: unknown) {
+                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(initError);
+                logger.error({ keyId, err: { message: errorMessage, stack: errorStack }, event: 'gemini_client_init_failed' }, `Failed to initialize client for ${keyId}: "${errorMessage}". This key will not be available.`);
+                this.genAIInstances.delete(keyId);
+                this.cacheManagerInstances.delete(keyId);
             }
-            this._cacheManager = new GoogleAICacheManager(this.geminiApiKey);
-            logger.info({ event: 'cache_manager_init_success' }, "GoogleAICacheManager initialized successfully.");
-        } catch (error: unknown) { // Catch as unknown
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logger.error({ err: { message: errorMessage, stack: errorStack }, event: 'cache_manager_create_failed' }, `Failed to initialize GoogleAICacheManager: "${errorMessage}".`);
-            this._cacheManager = null; // Ensure it's null on failure
+        });
+
+        if (this.genAIInstances.size === 0) {
+            logger.fatal({ event: 'gemini_service_no_clients_initialized' }, "No Gemini API clients were successfully initialized. All Gemini functionality will be unavailable.");
+        } else {
+            logger.info({ initializedClients: this.genAIInstances.size }, `Successfully initialized ${this.genAIInstances.size} Gemini API client(s).`);
         }
     }
 
     /**
-     * Provides the initialized `GoogleGenerativeAI` client instance.
+     * Selects the appropriate API key index based on the API type.
+     * @param {string} apiType - The type of API call (e.g., 'determine', 'cfp', 'extract').
+     * @returns {string} The key ID (e.g., 'key_0', 'key_1') for the chosen API key.
+     * @throws {Error} If no suitable API key is found or configured.
+     */
+    private getApiKeyIndexForApiType(apiType: string): string {
+        // Logic: determine/cfp uses key 1 (index 0 if only one key, otherwise first key), extract uses key 2 (index 1)
+        let keyIndex: number;
+
+        if (apiType === 'determine' || apiType === 'cfp') {
+            keyIndex = 0; // Uses the first key (index 0)
+        } else if (apiType === 'extract') {
+            keyIndex = 1; // Uses the second key (index 1)
+        } else {
+            // Default or fallback to the first key if apiType is not explicitly handled
+            keyIndex = 0;
+            this.baseLogger.warn({ apiType, event: 'gemini_key_selection_unhandled_api_type' }, `Unhandled API type "${apiType}". Defaulting to first Gemini API key.`);
+        }
+
+        // Ensure the selected key index is within the bounds of available keys
+        if (keyIndex >= this.geminiApiKeys.length) {
+            // Fallback to the last available key if the requested index is out of bounds
+            keyIndex = this.geminiApiKeys.length > 0 ? this.geminiApiKeys.length - 1 : -1;
+            if (keyIndex === -1) {
+                const errorMsg = "No Gemini API keys are available at all to select from.";
+                this.baseLogger.fatal({ apiType, event: 'gemini_key_selection_no_keys_available' }, errorMsg);
+                throw new Error(errorMsg);
+            }
+            this.baseLogger.warn({ apiType, selectedKeyIndex: keyIndex, totalKeys: this.geminiApiKeys.length, event: 'gemini_key_selection_index_out_of_bounds' }, `Requested Gemini API key index ${keyIndex + 1} (for API type "${apiType}") is out of bounds. Falling back to key ${keyIndex + 1} (index ${keyIndex}).`);
+        }
+        return `key_${keyIndex}`;
+    }
+
+    /**
+     * Provides the initialized `GoogleGenerativeAI` client instance for a specific API type.
+     * @param {string} apiType - The type of API call (e.g., 'determine', 'cfp', 'extract') to select the appropriate client.
      * @returns {GoogleGenerativeAI} The initialized Google Generative AI client.
-     * @throws {Error} If the client has not been successfully initialized.
+     * @throws {Error} If the client for the specified API type has not been successfully initialized.
      */
-    public getGenAI(): GoogleGenerativeAI {
-        if (!this._genAI) {
-            // This error indicates a critical setup failure. The calling service should handle.
-            throw new Error("GoogleGenerativeAI client is not initialized in ClientManager.");
+    public getGenAI(apiType: string): GoogleGenerativeAI {
+        const keyId = this.getApiKeyIndexForApiType(apiType);
+        const genAI = this.genAIInstances.get(keyId);
+        if (!genAI) {
+            const errorMsg = `GoogleGenerativeAI client for API type '${apiType}' (key ID: ${keyId}) is not initialized.`;
+            this.baseLogger.error({ apiType, keyId, event: 'get_genai_client_failed' }, errorMsg);
+            throw new Error(errorMsg);
         }
-        return this._genAI;
+        return genAI;
     }
 
     /**
-     * Provides the initialized `GoogleAICacheManager` instance.
+     * Provides the initialized `GoogleAICacheManager` instance for a specific API type.
+     * @param {string} apiType - The type of API call to select the appropriate cache manager.
      * @returns {GoogleAICacheManager} The initialized Google AI Cache Manager.
-     * @throws {Error} If the cache manager has not been successfully initialized.
+     * @throws {Error} If the cache manager for the specified API type has not been successfully initialized.
      */
-    public getCacheManager(): GoogleAICacheManager {
-        if (!this._cacheManager) {
-            // This error indicates a critical setup failure related to caching.
-            throw new Error("GoogleAICacheManager is not initialized in ClientManager.");
+    public getCacheManager(apiType: string): GoogleAICacheManager {
+        const keyId = this.getApiKeyIndexForApiType(apiType);
+        const cacheManager = this.cacheManagerInstances.get(keyId);
+        if (!cacheManager) {
+            const errorMsg = `GoogleAICacheManager for API type '${apiType}' (key ID: ${keyId}) is not initialized.`;
+            this.baseLogger.error({ apiType, keyId, event: 'get_cache_manager_failed' }, errorMsg);
+            throw new Error(errorMsg);
         }
-        return this._cacheManager;
+        return cacheManager;
     }
 
     /**
@@ -138,21 +168,22 @@ export class GeminiClientManagerService {
      * @param {Content | undefined} systemInstruction - The system instruction content for the model.
      * @param {Logger} _parentLogger - (Unused directly in this method, but kept for consistency if needed in future.)
      * @param {SDKGenerationConfig} [generationConfig] - Optional generation configuration for the model.
+     * @param {string} apiType - The type of API call (e.g., 'determine', 'cfp', 'extract') to select the appropriate client.
      * @returns {GenerativeModel} An instance of `GenerativeModel`.
-     * @throws {Error} If `GoogleGenerativeAI` client is not initialized.
+     * @throws {Error} If `GoogleGenerativeAI` client is not initialized for the given apiType.
      */
     public getGenerativeModel(
         modelName: string,
         systemInstruction: Content | undefined,
         _parentLogger: Logger, // Logger might be useful for future enhancements in this method
-        generationConfig?: SDKGenerationConfig // New parameter to pass generationConfig
+        generationConfig: SDKGenerationConfig | undefined, // Now optional as per SDK usage
+        apiType: string // Pass apiType to select the correct client
     ): GenerativeModel {
-        const genAI = this.getGenAI();
-        // `getGenerativeModel` now correctly accepts `generationConfig` as an option.
+        const genAI = this.getGenAI(apiType); // Get specific GenAI instance
         return genAI.getGenerativeModel({
             model: modelName,
             systemInstruction,
-            generationConfig // Pass generationConfig here
+            generationConfig
         });
     }
 
@@ -162,16 +193,16 @@ export class GeminiClientManagerService {
      *
      * @param {CachedContent} cachedContent - The `CachedContent` object obtained from the SDK.
      * @param {Logger} _parentLogger - (Unused directly in this method, but kept for consistency if needed in future.)
+     * @param {string} apiType - The type of API call to select the appropriate client.
      * @returns {GenerativeModel} An instance of `GenerativeModel` linked to the cached content.
-     * @throws {Error} If `GoogleGenerativeAI` client is not initialized.
+     * @throws {Error} If `GoogleGenerativeAI` client is not initialized for the given apiType.
      */
     public getGenerativeModelFromCachedContent(
         cachedContent: CachedContent,
-        _parentLogger: Logger
+        _parentLogger: Logger,
+        apiType: string // Pass apiType to select the correct client
     ): GenerativeModel {
-        const genAI = this.getGenAI();
-        // When getting a model from cached content, the generationConfig of the cache is implicitly used.
-        // You can still override parameters in `model.generateContent()` calls later.
+        const genAI = this.getGenAI(apiType); // Get specific GenAI instance
         return genAI.getGenerativeModelFromCachedContent(cachedContent);
     }
 
@@ -187,8 +218,9 @@ export class GeminiClientManagerService {
      * @param {Content} [params.systemInstruction] - Optional system instruction for the cached content.
      * @param {SDKGenerationConfig} [params.generationConfig] - Optional generation configuration for the cached content.
      * @param {Logger} _parentLogger - (Unused directly in this method, but kept for consistency if needed in future.)
+     * @param {string} apiType - The type of API call to select the appropriate cache manager.
      * @returns {Promise<CachedContent>} A Promise that resolves with the created `CachedContent` object.
-     * @throws {Error} If `GoogleAICacheManager` is not initialized or cache creation fails.
+     * @throws {Error} If `GoogleAICacheManager` is not initialized for the given apiType or cache creation fails.
      */
     public async createSdkCache(
         params: {
@@ -196,12 +228,12 @@ export class GeminiClientManagerService {
             contents: Content[];
             displayName: string;
             systemInstruction?: Content;
-            generationConfig?: SDKGenerationConfig; // Added for cache creation
+            generationConfig?: SDKGenerationConfig;
         },
-        _parentLogger: Logger
+        _parentLogger: Logger,
+        apiType: string // Pass apiType to select the correct cache manager
     ): Promise<CachedContent> {
-        const manager = this.getCacheManager();
-        // `manager.create` accepts systemInstruction and generationConfig in its parameters.
+        const manager = this.getCacheManager(apiType); // Get specific CacheManager instance
         return manager.create(params);
     }
 
@@ -209,15 +241,17 @@ export class GeminiClientManagerService {
      * Retrieves an existing cached content entry from the Google AI backend by its cache name.
      * @param {string} cacheName - The full name of the cached content (e.g., 'cachedContents/your-cache-id').
      * @param {Logger} _parentLogger - (Unused directly in this method, but kept for consistency if needed in future.)
+     * @param {string} apiType - The type of API call to select the appropriate cache manager.
      * @returns {Promise<CachedContent | undefined>} A Promise that resolves with the `CachedContent` object,
      *                                               or `undefined` if the cache is not found.
-     * @throws {Error} If `GoogleAICacheManager` is not initialized.
+     * @throws {Error} If `GoogleAICacheManager` is not initialized for the given apiType.
      */
     public async getSdkCache(
         cacheName: string,
-        _parentLogger: Logger
+        _parentLogger: Logger,
+        apiType: string // Pass apiType to select the correct cache manager
     ): Promise<CachedContent | undefined> {
-        const manager = this.getCacheManager();
+        const manager = this.getCacheManager(apiType); // Get specific CacheManager instance
         return manager.get(cacheName);
     }
 }

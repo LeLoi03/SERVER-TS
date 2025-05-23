@@ -152,7 +152,7 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
                     context: {
                         runtimeSeconds: parseFloat(runTimeSeconds),
                         totalInputConferences: conferenceList.length,
-                        resultsReturnedCount: processedResults.length,
+                        processedResults: processedResults,
                         apiModelsUsed: parsedApiModels,
                         outputJsonlFilePath: finalOutputJsonlPathForBatch,
                         outputCsvFilePath: evaluateCsvPathForBatch,

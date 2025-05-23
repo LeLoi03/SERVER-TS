@@ -156,24 +156,28 @@ export class CrawlOrchestratorService {
             const csvPathForThisBatch = this.configService.getEvaluateCsvPathForBatch(batchRequestId);
 
             // Additional check to log the state of the CSV output file
-            let csvActuallyGenerated = false;
-            try {
-                if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {
-                    csvActuallyGenerated = true;
-                }
-            } catch (e: unknown) {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(e);
-                logger.warn({ err: { message: errorMessage, stack: errorStack }, path: csvPathForThisBatch, event: 'csv_file_stat_error' }, "Error checking generated CSV file status. Might not exist or accessible.");
-            }
+            if (allProcessedData.length > 0) {
+                allProcessedData.forEach(csvRow => {
+                    logger.info({
+                        event: 'csv_write_record_success',
+                        service: 'CrawlOrchestratorService',
+                        conferenceAcronym: csvRow.acronym,
+                        conferenceTitle: csvRow.title,
+                    }, `CSV record for ${csvRow.acronym} considered successfully written.`);
+                });
+             } else {
+                let csvActuallyGenerated = false;
+                try {
+                    if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {
+                        csvActuallyGenerated = true;
+                    }
+                } catch (e) { /* ignore stat error if file doesn't exist */ }
 
-            if (allProcessedData.length > 0 && csvActuallyGenerated) {
-                logger.info({ event: 'csv_generation_success', recordsCount: allProcessedData.length, csvPath: csvPathForThisBatch }, "CSV file successfully generated with data.");
-            } else if (allProcessedData.length === 0 && csvActuallyGenerated) {
-                logger.warn({ event: 'csv_generation_empty_but_file_exists', csvPath: csvPathForThisBatch }, "CSV file generated but no data rows (possibly only headers).");
-            } else if (allProcessedData.length > 0 && !csvActuallyGenerated) {
-                 logger.error({ event: 'csv_generation_data_but_no_file', recordsCount: allProcessedData.length, csvPath: csvPathForThisBatch }, "ResultProcessingService returned data, but no CSV file was generated or could be verified.");
-            } else { // allProcessedData.length === 0 && !csvActuallyGenerated
-                logger.info({ event: 'csv_generation_failed_or_empty', csvPath: csvPathForThisBatch }, "CSV file generation failed or resulted in an empty file (no data and no file).");
+                if (csvActuallyGenerated) {
+                    logger.info({ event: 'csv_generation_empty_but_file_exists' }, "CSV file generated but no data rows (possibly only headers).");
+                } else {
+                    logger.info({ event: 'csv_generation_failed_or_empty' }, "CSV file generation failed or resulted in an empty file (no data and possibly no file).");
+                }
             }
 
 

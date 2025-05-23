@@ -1,25 +1,7 @@
 // src/utils/logAnalysis/validationHandlers.ts
 import { LogEventHandler } from './index';
-import { ValidationStats, LogAnalysisResult, DataQualityInsight } from '../../types/logAnalysis.types'; // Đảm bảo DataQualityInsight đã được export
+import { ValidationStats, LogAnalysisResult, DataQualityInsight, getInitialValidationStats } from '../../types'; // Đảm bảo DataQualityInsight đã được export
 import { createConferenceKey } from './helpers';
-
-export const getInitialValidationStats = (): ValidationStats => ({
-    // Validation Warnings
-    totalValidationWarnings: 0,
-    warningsByField: {},
-    warningsBySeverity: {
-        Low: 0,
-        Medium: 0,
-        High: 0,
-    },
-    warningsByInsightMessage: {},
-
-    // Normalizations
-    totalNormalizationsApplied: 0,
-    normalizationsByField: {},
-    normalizationsByReason: {},
-});
-
 
 const ensureValidationStats = (results: LogAnalysisResult): ValidationStats => {
     if (!results.validationStats) {
