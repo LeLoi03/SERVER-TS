@@ -38,7 +38,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'search_key_rotation_failed_after_quota': search.handleSearchFailure,
   'search_attempt_success': search.handleSearchSuccess,
   'search_attempt_no_items': search.handleSearchSuccess,
-  'search_results_filtered': search.handleSearchResultsFiltered,
+  'search_results_filtered_completed': search.handleSearchResultsFiltered,
   'search_attempt_start': search.handleSearchAttempt,
   'search_attempt_google_api_error_in_body': search.handleSearchAttemptIssue,
   'search_result_item_malformed': search.handleSearchAttemptIssue,
@@ -149,10 +149,9 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
 
   // Gemini Success (various points of success)
   'gemini_api_attempt_success': geminiApi.handleGeminiSuccess,
-  'gemini_call_success_with_model': geminiApi.handleGeminiSuccess,
+  'gemini_public_method_finish': geminiApi.handleGeminiSuccess,
   'gemini_orchestration_primary_success': geminiApi.handleOrchestrationEvent,
   'gemini_orchestration_fallback_success': geminiApi.handleOrchestrationEvent,
-  // 'gemini_public_method_finish': geminiApi.handlePublicMethodCompletion, 
 
   // Gemini Cache Specifics
   'cache_setup_use_success': geminiApi.handleGeminiCacheHit,
@@ -195,6 +194,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_call_start': geminiApi.handleGeminiCallStart,
   'initial_attempt_start': geminiApi.handleRetryAttemptStart,
   'retry_attempt_start': geminiApi.handleRetryAttemptStart,
+  
 
   // Gemini Intermediate Errors & Limits (during retry loop, not final for the model yet)
   'retry_wait_before_next': geminiApi.handleRateLimitWait,
@@ -224,7 +224,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_orchestration_no_primary_model': geminiApi.handleOrchestrationEvent,
   'gemini_orchestration_primary_failed': geminiApi.handleOrchestrationEvent, // <<<< THAY ĐỔI MAPPING
   'gemini_call_no_fallback_configured': geminiApi.handleOrchestrationEvent,
-  'gemini_call_attempting_fallback_model': geminiApi.handleOrchestrationEvent,
+  'gemini_orchestration_fallback_start': geminiApi.handleOrchestrationEvent,
   'gemini_call_primary_failed_non_5xx_checking_fallback': geminiApi.handleOrchestrationEvent,
   'gemini_call_5xx_switching_to_fallback': geminiApi.handleOrchestrationEvent,
   'model_preparation_complete': geminiApi.handleModelPreparation,
