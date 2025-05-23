@@ -38,7 +38,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'search_key_rotation_failed_after_quota': search.handleSearchFailure,
   'search_attempt_success': search.handleSearchSuccess,
   'search_attempt_no_items': search.handleSearchSuccess,
-  'search_results_filtered_completed': search.handleSearchResultsFiltered,
+  'search_and_filter_completed': search.handleSearchResultsFiltered,
   'search_attempt_start': search.handleSearchAttempt,
   'search_attempt_google_api_error_in_body': search.handleSearchAttemptIssue,
   'search_result_item_malformed': search.handleSearchAttemptIssue,

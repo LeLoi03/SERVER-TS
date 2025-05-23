@@ -2,12 +2,6 @@
 import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types';
 // --- Các helper function khác (normalizeErrorKey, createConferenceKey, initializeConferenceDetail, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
 
-// --- Helper function: Initialize Log Analysis Result Structure ---
-
-// Sử dụng các hàm getInitial... từ file types để đảm bảo tính nhất quán
-// Nếu bạn chưa có các hàm này trong file types, bạn có thể định nghĩa chúng ở đây
-// hoặc import từ nơi bạn đã định nghĩa (ví dụ: getInitialGeminiApiAnalysis từ logAnalysis.types.ts)
-
 // Giả sử các hàm này đã được export từ logAnalysis.types.ts
 import {
     getInitialOverallAnalysis,
@@ -44,6 +38,7 @@ export const createConferenceKey = (batchRequestId: string, acronym: string, tit
 export const initializeConferenceDetail = (batchRequestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
     batchRequestId: batchRequestId,
     originalRequestId: undefined,
+    crawlType: null,
     title: title,
     acronym: acronym,
     status: 'unknown',

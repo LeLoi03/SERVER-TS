@@ -49,7 +49,6 @@ export class PageContentExtractorService implements IPageContentExtractorService
      */
     constructor(@inject(ConfigService) private configService: ConfigService) {
         this.mainContentKeywords = this.configService.config.MAIN_CONTENT_KEYWORDS ?? [];
-        console.log(`[PageContentExtractorService] Initialized with ${this.mainContentKeywords.length} main content keywords.`); // Use console.log for early init
     }
 
     /**

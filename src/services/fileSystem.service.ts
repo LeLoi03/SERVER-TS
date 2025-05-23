@@ -96,7 +96,6 @@ export class FileSystemService {
     }
 
     async saveTemporaryFile(content: string, baseName: string, parentLogger?: Logger): Promise<string> {
-        console.log(content.slice(0,200));
         const logger = this.getMethodLogger(parentLogger, 'saveTemporaryFile');
         const logContext = { baseName, tempDir: this.tempDir };
         logger.trace({ ...logContext, event: 'saveTemporaryFile_start' });

@@ -55,11 +55,11 @@ export interface ConferenceUpdateData {
     /** The acronym or abbreviation of the conference. */
     Acronym: string;
     /** The primary URL of the conference. */
-    mainLink: string;
+    mainLink: any;
     /** The URL for the Call for Papers (CFP). */
-    cfpLink: string;
+    cfpLink: any;
     /** The URL for important dates. */
-    impLink: string;
+    impLink: any;
     /** Optional: The ID of the original request if this is a re-crawl. */
     originalRequestId?: string;
 }

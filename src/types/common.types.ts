@@ -80,10 +80,10 @@ export interface FilteredData {
 
 
 export interface LogErrorContext {
-    phase?: 'primary_execution' | 'fallback_execution' | 'setup' | 'response_processing' | 'sdk_call' | string; // Mở rộng nếu cần
-    modelIdentifier?: string; // e.g., "gemini-pro (non-tuned)"
+    phase?: 'primary_execution' | 'fallback_execution' | 'setup' | 'response_processing' | 'sdk_call' | string;
+    modelIdentifier?: string;
     apiType?: string;
-    // Thêm các trường context khác nếu cần
+    [key: string]: any; // <-- Dòng này cho phép thêm bất kỳ thuộc tính nào khác
 }
 
 

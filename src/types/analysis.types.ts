@@ -42,6 +42,8 @@ export interface ConferenceAnalysisDetail {
     batchRequestId: string;
     /** Optional: The original request ID if this conference was part of a re-crawl. */
     originalRequestId?: string;
+    /** Crawl Type */
+    crawlType: 'crawl' | 'update' | null;
     /** The title of the conference. */
     title: string;
     /** The acronym of the conference. */

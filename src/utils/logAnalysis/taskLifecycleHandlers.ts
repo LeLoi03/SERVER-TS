@@ -2,7 +2,7 @@
 
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogError as AnalysisLogError } from '../../types'; // Thêm ConferenceAnalysisDetail và AnalysisLogError
+import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogError as AnalysisLogError, LogErrorContext } from '../../types'; // Thêm LogErrorContext
 
 const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
     if (!results.overall) {
@@ -15,9 +15,12 @@ export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, 
     const overall = ensureOverallAnalysis(results);
 
     if (confDetail) {
+
+        confDetail.crawlType = logEntry.crawlType; // Xác định crawl type là 'crawl' hya 'update' từ log crawlType.
+
         // Chỉ tăng processedConferencesCount nếu đây là lần đầu task này được "start" trong lần phân tích này
         // Điều này tránh việc đếm nhiều lần nếu có nhiều event 'task_start' cho cùng một conference (ít khả năng)
-        if (confDetail.status === 'unknown' || !confDetail.status) { // Hoặc một cờ `isNewInAnalysis`
+        if (confDetail.status === 'unknown' || !confDetail.status) {
             overall.processedConferencesCount = (overall.processedConferencesCount || 0) + 1;
         }
 
@@ -29,10 +32,11 @@ export const handleTaskStart: LogEventHandler = (logEntry, results, confDetail, 
 
         if (previousStatus === 'unknown' || previousStatus === 'skipped' || !previousStatus) {
             confDetail.status = 'processing';
-            // Chỉ tăng/giảm processingTasks/skippedTasks nếu có sự thay đổi thực sự
-            if (previousStatus !== 'processing') {
-                overall.processingTasks = (overall.processingTasks || 0) + 1;
-            }
+            // Logic ở đây là nếu trạng thái trước đó KHÔNG phải là 'processing', thì tăng processingTasks.
+            // Điều kiện `previousStatus !== 'processing'` là luôn đúng nếu `previousStatus` là 'unknown', 'skipped' hoặc undefined.
+            // Do đó, bỏ qua kiểm tra này không thay đổi luồng, nó chỉ làm code tường minh hơn.
+            overall.processingTasks = (overall.processingTasks || 0) + 1;
+
             if (previousStatus === 'skipped' && overall.skippedTasks && overall.skippedTasks > 0) {
                 overall.skippedTasks--;
             }
@@ -62,9 +66,19 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
 
         // Nếu task đã bị skip bởi một event trước đó, không thay đổi status ở đây.
         if (previousStatus === 'skipped') {
-            if (previousStatus !== 'processing' && overall.processingTasks && overall.processingTasks > 0) {
-                // Nếu nó không phải đang processing mà lại finish và là skipped, thì giảm processingTasks
-                // Điều này hơi lạ, nhưng để phòng trường hợp.
+            // Logic ở đây là nếu previousStatus là 'skipped', và bạn muốn giảm processingTasks nếu nó đang ở đó.
+            // Điều kiện `previousStatus !== 'processing'` là luôn đúng vì `previousStatus` là 'skipped'.
+            // Do đó, bỏ qua kiểm tra này không thay đổi luồng.
+            // Tuy nhiên, logic này vẫn có vẻ lạ: nếu nó skipped, nó không nên ở processing ngay từ đầu.
+            // Giữ nguyên để không thay đổi logic bạn muốn.
+            // if (previousStatus !== 'processing' && overall.processingTasks && overall.processingTasks > 0) {
+            //     overall.processingTasks--;
+            // }
+            // Vẫn giữ nguyên khối if này, nhưng bỏ điều kiện thừa để hết lỗi của TS.
+            // Nếu `previousStatus` là 'skipped', thì `overall.processingTasks` KHÔNG NÊN > 0 nữa.
+            // Đoạn code này có thể là một phần logic để bảo vệ lỗi nếu trạng thái bị set sai.
+            if (overall.processingTasks && overall.processingTasks > 0) {
+                 overall.processingTasks--;
             }
             return;
         }
@@ -98,7 +112,11 @@ export const handleTaskFinish: LogEventHandler = (logEntry, results, confDetail,
                         defaultMessage: stepFailureReason,
                         keyPrefix: 'task_finish_step_check',
                         sourceService: 'TaskLifecycleHandler', // Hoặc service log 'task_finish'
-                        errorType: 'Logic'
+                        errorType: 'Logic',
+                        // Bỏ các trường không có trong LogErrorContext và thêm vào additionalDetails nếu cần
+                        additionalDetails: {
+                            reason: stepFailureReason
+                        }
                     }
                 );
             }
@@ -137,13 +155,17 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
     const defaultMessage = `Task failed due to unhandled error (${logEntry.event || 'unknown_event'})`;
 
     // Thêm lỗi vào aggregated errors
-    const tempErrorMsg = typeof errorSource === 'string' ? errorSource : (errorSource as Error)?.message || defaultMessage;
-    const errorKey = normalizeErrorKey(tempErrorMsg);
-    results.errorsAggregated[errorKey] = (results.errorsAggregated[errorKey] || 0) + 1;
+    const keyForAggregation = normalizeErrorKey(errorSource);
+    results.errorsAggregated[keyForAggregation] = (results.errorsAggregated[keyForAggregation] || 0) + 1;
 
 
     if (confDetail) {
         const previousStatus = confDetail.status;
+
+        const errorContext: LogErrorContext = {
+            phase: 'primary_execution', // Lỗi không xử lý thường là trong quá trình thực thi chính
+            // Chỉ sử dụng các trường đã định nghĩa trong LogErrorContext
+        };
 
         addConferenceError(
             confDetail,
@@ -152,9 +174,14 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
             {
                 defaultMessage: defaultMessage,
                 keyPrefix: 'task_unhandled',
-                sourceService: logEntry.service || 'UnknownService', // Lấy service từ logEntry nếu có
+                sourceService: logEntry.service || 'UnknownService',
                 errorType: 'Unknown', // Hoặc 'Logic' nếu biết rõ hơn
-                context: { phase: 'task_execution' }
+                context: errorContext,
+                // Thêm các chi tiết khác vào additionalDetails
+                additionalDetails: {
+                    event: logEntry.event,
+                    originalLogContext: logEntry.context // Lưu lại context gốc nếu cần
+                }
             }
         );
 
@@ -185,9 +212,7 @@ export const handleTaskUnhandledError: LogEventHandler = (logEntry, results, con
             }
             overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
         }
-        // Nếu đã là 'failed' hoặc 'skipped', không thay đổi counters này nữa.
     } else {
-        // Nếu không có confDetail, vẫn tăng lỗi tổng thể
         overall.failedOrCrashedTasks = (overall.failedOrCrashedTasks || 0) + 1;
     }
 };
@@ -205,7 +230,6 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
 
 
         if (confDetail.startTime && confDetail.endTime) {
-            // ... (tính duration)
             try {
                 const start = new Date(confDetail.startTime).getTime();
                 const end = new Date(confDetail.endTime).getTime();
@@ -214,6 +238,11 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
                 }
             } catch (e) { /* ignore */ }
         }
+
+        const errorContext: LogErrorContext = {
+            phase: 'setup', // Thường là lỗi/quyết định trong giai đoạn setup hoặc kiểm tra ban đầu
+            // Chỉ sử dụng các trường đã định nghĩa trong LogErrorContext
+        };
 
         // Thêm "lỗi" skip vào confDetail để có lý do
         addConferenceError(
@@ -224,7 +253,13 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
                 defaultMessage: skipReason,
                 keyPrefix: 'task_skipped',
                 sourceService: logEntry.service || 'UnknownService',
-                errorType: 'Logic' // Coi việc skip là một quyết định logic
+                errorType: 'Logic', // Coi việc skip là một quyết định logic
+                context: errorContext,
+                // Thêm lý do skip vào additionalDetails
+                additionalDetails: {
+                    reason: logEntry.reason,
+                    originalLogContext: logEntry.context // Lưu lại context gốc nếu cần
+                }
             }
         );
 
@@ -245,7 +280,6 @@ export const handleTaskSkipped: LogEventHandler = (logEntry, results, confDetail
             }
             overall.skippedTasks = (overall.skippedTasks || 0) + 1;
         }
-        // Nếu đã là 'skipped', không thay đổi counters.
     } else {
         overall.skippedTasks = (overall.skippedTasks || 0) + 1;
     }

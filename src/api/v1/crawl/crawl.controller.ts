@@ -12,7 +12,7 @@ import { DatabasePersistenceService, DatabaseSaveResult } from '../../../service
 
 // Import custom types for request/response data
 import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
-import { ApiModels } from '../../../types/crawl.types';
+import { ApiModels, CrawlModelType } from '../../../types/crawl.types'; // Import CrawlModelType
 
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
@@ -24,12 +24,21 @@ import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 
 /**
+ * Default API models to use if not specified in the request.
+ */
+const DEFAULT_API_MODELS: ApiModels = {
+    determineLinks: 'tuned',
+    extractInfo: 'tuned',
+    extractCfp: 'non-tuned',
+};
+
+/**
  * A global Mutex instance to control concurrency for the `/crawl-conferences` route.
  * This ensures that only one complex crawl operation is processed at a time,
  * preventing server overload from simultaneous long-running tasks.
  * @type {Mutex}
  */
-const crawlConferenceLock = new Mutex();
+const crawlConferenceLock: Mutex = new Mutex();
 
 /**
  * Handles incoming requests to crawl conference data.
@@ -46,6 +55,17 @@ const crawlConferenceLock = new Mutex();
 export async function handleCrawlConferences(req: Request<{}, any, ConferenceData[]>, res: Response): Promise<void> {
     const baseLoggingService = container.resolve(LoggingService);
     const baseReqLogger = (req as any).log as Logger || baseLoggingService.getLogger();
+
+    // Log request body data (ConferenceData array)
+    console.log('\n--- API Request Body (ConferenceData) ---');
+    console.log(JSON.stringify(req.body, null, 2)); // Use JSON.stringify for pretty print
+    console.log('------------------------------------------');
+
+    // Log query parameters
+    console.log('\n--- API Request Query Parameters ---');
+    console.log(JSON.stringify(req.query, null, 2));
+    console.log('------------------------------------');
+
 
     if (crawlConferenceLock.isLocked()) {
         baseReqLogger.warn(
@@ -78,32 +98,46 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
                 return;
             }
 
-            const apiModelsFromQuery: unknown = req.query.models;
+            const apiModelsFromQuery = req.query.models;
+            let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS }; // Start with defaults
 
-            let parsedApiModels: ApiModels;
+            // If models query parameter is provided, try to parse it
+            if (typeof apiModelsFromQuery === 'object' && apiModelsFromQuery !== null) {
+                const validationErrors: string[] = [];
+                for (const key of EXPECTED_API_MODEL_KEYS) {
+                    const modelValue = (apiModelsFromQuery as Record<string, string>)[key];
 
-            if (typeof apiModelsFromQuery !== 'object' || apiModelsFromQuery === null) {
-                routeLogger.warn({ modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter: Expected an object but received non-object or null.");
-                res.status(400).json({ message: "Invalid 'models' query parameter: Must be an object with keys 'determineLinks', 'extractInfo', 'extractCfp'." });
-                return;
-            }
-
-            const validationErrors: string[] = [];
-            for (const key of EXPECTED_API_MODEL_KEYS) {
-                const modelValue = (apiModelsFromQuery as Record<string, string>)[key];
-                if (!modelValue) {
-                    validationErrors.push(`Missing model selection for API step: '${key}'.`);
-                } else if (modelValue !== 'tuned' && modelValue !== 'non-tuned') {
-                    validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'.`);
+                    if (modelValue) { // If a value is provided for this key
+                        if (modelValue === 'tuned' || modelValue === 'non-tuned') {
+                            parsedApiModels[key] = modelValue as CrawlModelType;
+                        } else {
+                            validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'. Defaulting to '${DEFAULT_API_MODELS[key]}'.`);
+                            // Keep default if invalid value provided
+                        }
+                    } else {
+                        // If modelValue is undefined or empty string, it means it's not provided in the query for this specific key.
+                        // We already initialized with DEFAULT_API_MODELS, so no action needed here.
+                        routeLogger.debug(`Model for '${key}' not provided in query. Using default: '${DEFAULT_API_MODELS[key]}'.`);
+                    }
                 }
+
+                if (validationErrors.length > 0) {
+                    routeLogger.warn({ errors: validationErrors, modelsReceived: apiModelsFromQuery }, "Some 'models' query parameter values were invalid. Using defaults for those invalid/missing entries.");
+                    // Do NOT send 400 here, as we are defaulting. Just log the warning.
+                }
+            } else if (apiModelsFromQuery !== undefined) {
+                // If 'models' parameter was provided but was not an object or was null (e.g., ?models=abc)
+                routeLogger.warn({ modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter: Expected an object but received non-object, or it was explicitly null. Using default models.");
+                // No 400 error, as we default gracefully.
+            } else {
+                // If 'models' parameter was not provided at all
+                routeLogger.info("No 'models' query parameter provided. Using default API models for all steps.");
             }
 
-            if (validationErrors.length > 0) {
-                routeLogger.warn({ errors: validationErrors, modelsReceived: apiModelsFromQuery }, "Invalid 'models' query parameter values detected.");
-                res.status(400).json({ message: "Invalid 'models' selection provided.", errors: validationErrors });
-                return;
-            }
-            parsedApiModels = apiModelsFromQuery as ApiModels;
+            // Log the final parsedApiModels
+            console.log('\n--- Parsed API Models Used ---');
+            console.log(JSON.stringify(parsedApiModels, null, 2));
+            console.log('------------------------------');
 
             const operationStartTime = Date.now();
 
@@ -161,9 +195,15 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
                     }
                 }, `Conference processing completed successfully via controller using models (${modelsUsedDesc}).`);
 
+                // Log the final processed results returned by the orchestrator
+                console.log('\n--- Final Processed Results (ProcessedRowData[]) ---');
+                console.log(JSON.stringify(processedResults, null, 2));
+                console.log('----------------------------------------------------');
+
                 res.status(200).json({
                     message: `Conference processing completed using specified API models (${modelsUsedDesc}). Orchestrator returned ${processedResults.length} processed records.`,
                     runtime: `${runTimeSeconds} s`,
+                    data: processedResults,
                     outputJsonlPath: finalOutputJsonlPathForBatch,
                     outputCsvPath: evaluateCsvPathForBatch
                 });
@@ -175,13 +215,19 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
                 const runTimeMs = operationEndTime - operationStartTime;
                 const errorLogger = routeLogger;
 
+                // Log any error details caught within the processing flow
+                console.error('\n--- Error Details from Controller ---');
+                console.error('Message:', errorMessage);
+                console.error('Stack:', errorStack);
+                console.error('-------------------------------------');
+
                 errorLogger.error({
                     err: { message: errorMessage, stack: errorStack }, // Use extracted info
                     event: 'processing_failed_in_controller',
                     context: {
                         runtimeMs: runTimeMs,
                         dataSource: (req.query.dataSource as string) || 'client',
-                        apiModelsAttempted: parsedApiModels || apiModelsFromQuery,
+                        apiModelsAttempted: parsedApiModels || apiModelsFromQuery, // parsedApiModels will always be defined now
                         operationStartTime: new Date(operationStartTime).toISOString(),
                         operationEndTime: new Date(operationEndTime).toISOString(),
                     }
@@ -200,6 +246,12 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
         });
     } catch (error: unknown) { // Use unknown here
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+        // Log any unexpected error during mutex acquisition/execution
+        console.error('\n--- Critical Error Details (Mutex) ---');
+        console.error('Message:', errorMessage);
+        console.error('Stack:', errorStack);
+        console.error('--------------------------------------');
+
         if (!res.headersSent) {
             baseReqLogger.error(
                 { err: { message: errorMessage, stack: errorStack }, route: '/crawl-conferences', event: 'mutex_execution_error' },
