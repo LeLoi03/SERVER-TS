@@ -119,6 +119,8 @@ export interface BatchUpdateEntry {
  * ready to be written to a JSONL file. Includes unique batch IDs and all metadata from AI API calls.
  */
 export interface BatchEntryWithIds extends BatchEntry {
+    internalProcessingAcronym: string; // Acronym after addAcronymSafely, for internal file uniqueness
+
     /** The unique identifier for the batch API call that processed this item. */
     batchRequestId: string;
     /** Optional: The file path to the raw response text from the 'determine_links' API. */
@@ -140,6 +142,8 @@ export interface BatchEntryWithIds extends BatchEntry {
  * ready to be written to a JSONL file.
  */
 export interface BatchUpdateDataWithIds extends BatchUpdateEntry {
+        internalProcessingAcronym: string; // Acronym after addAcronymSafely, for internal file uniqueness
+
     /** The unique identifier for the batch API call that processed this item. */
     batchRequestId: string;
     /** Optional: The file path to the raw response text from the 'extract_information' API. */

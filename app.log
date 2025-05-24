@@ -1535,3 +1535,219 @@
 [2025-05-24T09:03:51.510Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Fetching conversation list.
 [2025-05-24T09:03:51.594Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Found 0 conversations.
 [2025-05-24T09:03:51.595Z] [SocketConnectionHandler][bGptY7jLng2Qasa2AAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Sent initial conversation list. Count: 0.
+[2025-05-24T09:04:16.786Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:16.829Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 44ms.
+[2025-05-24T09:04:19.935Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:19.967Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 32ms.
+[2025-05-24T09:04:21.965Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:21.995Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 30ms.
+[2025-05-24T09:04:22.955Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:22.981Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 27ms.
+[2025-05-24T09:04:23.749Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:23.776Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 26ms.
+[2025-05-24T09:04:27.559Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:27.588Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 29ms.
+[2025-05-24T09:04:36.939Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:36.964Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 25ms.
+[2025-05-24T09:04:41.378Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:41.406Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 28ms.
+[2025-05-24T09:04:47.729Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:47.756Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 27ms.
+[2025-05-24T09:04:49.371Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:04:49.405Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 34ms.
+[2025-05-24T09:18:01.026Z] [BackendService] DATABASE_URL configured.
+[2025-05-24T09:18:01.093Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-24T09:18:01.218Z] [FollowService] DATABASE_URL configured.
+[2025-05-24T09:18:01.259Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-24T09:18:01.328Z] [CalendarService] DATABASE_URL configured.
+[2025-05-24T09:18:01.490Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-24T09:18:01.490Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-24T09:18:01.491Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-24T09:18:01.491Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-24T09:18:01.491Z] [Orchestrator] Base dependencies prepared.
+[2025-05-24T09:18:01.492Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-24T09:18:01.492Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-24T09:18:01.492Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-24T09:18:01.493Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-24T09:18:01.866Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-24T09:18:01.868Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-24T09:18:01.872Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-24T09:18:01.873Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-24T09:18:01.903Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-24T09:18:01.903Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-24T09:18:01.907Z] [MainLoader] Starting application loading process...
+[2025-05-24T09:18:01.907Z] [MainLoader] Attempting to connect to database...
+[2025-05-24T09:18:01.907Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-24T09:18:01.908Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-24T09:18:02.838Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-24T09:18:02.839Z] [DatabaseLoader] Database connection successful.
+[2025-05-24T09:18:02.839Z] [MainLoader] Database connection established successfully.
+[2025-05-24T09:18:02.839Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-24T09:18:02.840Z] [MainLoader] Initializing Express application...
+[2025-05-24T09:18:02.840Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-24T09:18:02.843Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-24T09:18:02.844Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-24T09:18:02.845Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-24T09:18:02.846Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-24T09:18:02.846Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-24T09:18:02.847Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-24T09:18:02.848Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-24T09:18:02.849Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-24T09:18:02.849Z] [ExpressLoader] Global error handler registered.
+[2025-05-24T09:18:02.849Z] [ExpressLoader] Express app configured successfully.
+[2025-05-24T09:18:02.850Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-24T09:18:02.850Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-24T09:18:02.851Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-24T09:18:02.854Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-24T09:18:02.855Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-24T09:18:02.855Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-24T09:18:02.855Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-24T09:18:02.855Z] [MainLoader] Socket.IO server initialized.
+[2025-05-24T09:18:02.856Z] [MainLoader] Scheduling cron jobs...
+[2025-05-24T09:18:02.856Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-24T09:18:02.894Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-24T09:18:02.894Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-24T09:18:02.895Z] [MainLoader] Cron jobs scheduled.
+[2025-05-24T09:18:02.895Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-24T09:18:02.943Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-24T09:18:02.943Z] [MainLoader] All basic application loaders completed successfully.
+[2025-05-24T09:18:07.508Z] [socketAuth][46O_gVHvhqSlIHA5AAAB] Attempting authentication. Token provided: true.
+[2025-05-24T09:18:07.514Z] [socketAuth][46O_gVHvhqSlIHA5AAAB] Token signature validated successfully. Storing token on socket data.
+[2025-05-24T09:18:07.516Z] [SocketIOLoader] New Socket.IO connection received from ID: 46O_gVHvhqSlIHA5AAAB.
+[2025-05-24T09:18:07.517Z] [HistoryService] Initialized.
+[2025-05-24T09:18:07.517Z] [SocketConnectionHandler][46O_gVHvhqSlIHA5AAAB] New client connection received. Initial socket.data.userId: N/A.
+[2025-05-24T09:18:07.518Z] [SocketConnectionHandler][46O_gVHvhqSlIHA5AAAB] Processing client authentication. Token present: true.
+[2025-05-24T09:18:07.518Z] [SocketConnectionHandler][46O_gVHvhqSlIHA5AAAB] Attempting to fetch user information using provided token...
+[2025-05-24T09:18:07.518Z] [API Client][fetchUserInfo] Attempting to fetch user info.
+[2025-05-24T09:18:07.519Z] [API Client][fetchUserInfo] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-24T09:18:17.521Z] [BackendService] DATABASE_URL configured.
+[2025-05-24T09:18:17.598Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-24T09:18:17.715Z] [FollowService] DATABASE_URL configured.
+[2025-05-24T09:18:17.751Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-24T09:18:17.815Z] [CalendarService] DATABASE_URL configured.
+[2025-05-24T09:18:17.963Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-24T09:18:17.964Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-24T09:18:17.964Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-24T09:18:17.964Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-24T09:18:17.964Z] [Orchestrator] Base dependencies prepared.
+[2025-05-24T09:18:17.965Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-24T09:18:17.965Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-24T09:18:17.965Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-24T09:18:17.965Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-24T09:18:18.339Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-24T09:18:18.341Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-24T09:18:18.344Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-24T09:18:18.345Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-24T09:18:18.373Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-24T09:18:18.374Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-24T09:18:18.377Z] [MainLoader] Starting application loading process...
+[2025-05-24T09:18:18.377Z] [MainLoader] Attempting to connect to database...
+[2025-05-24T09:18:18.378Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-24T09:18:18.378Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-24T09:18:19.202Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-24T09:18:19.202Z] [DatabaseLoader] Database connection successful.
+[2025-05-24T09:18:19.202Z] [MainLoader] Database connection established successfully.
+[2025-05-24T09:18:19.203Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-24T09:18:19.203Z] [MainLoader] Initializing Express application...
+[2025-05-24T09:18:19.203Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-24T09:18:19.206Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-24T09:18:19.207Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-24T09:18:19.208Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-24T09:18:19.209Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-24T09:18:19.209Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-24T09:18:19.210Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-24T09:18:19.211Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-24T09:18:19.211Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-24T09:18:19.211Z] [ExpressLoader] Global error handler registered.
+[2025-05-24T09:18:19.212Z] [ExpressLoader] Express app configured successfully.
+[2025-05-24T09:18:19.213Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-24T09:18:19.213Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-24T09:18:19.214Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-24T09:18:19.217Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-24T09:18:19.217Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-24T09:18:19.217Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-24T09:18:19.218Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-24T09:18:19.218Z] [MainLoader] Socket.IO server initialized.
+[2025-05-24T09:18:19.218Z] [MainLoader] Scheduling cron jobs...
+[2025-05-24T09:18:19.218Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-24T09:18:19.252Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-24T09:18:19.252Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-24T09:18:19.252Z] [MainLoader] Cron jobs scheduled.
+[2025-05-24T09:18:19.252Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-24T09:18:19.286Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-24T09:18:19.287Z] [MainLoader] All basic application loaders completed successfully.
+[2025-05-24T09:18:19.381Z] [socketAuth][dqCouQaxfSuFwBKsAAAB] Attempting authentication. Token provided: true.
+[2025-05-24T09:18:19.385Z] [socketAuth][dqCouQaxfSuFwBKsAAAB] Token signature validated successfully. Storing token on socket data.
+[2025-05-24T09:18:19.386Z] [SocketIOLoader] New Socket.IO connection received from ID: dqCouQaxfSuFwBKsAAAB.
+[2025-05-24T09:18:19.387Z] [HistoryService] Initialized.
+[2025-05-24T09:18:19.388Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB] New client connection received. Initial socket.data.userId: N/A.
+[2025-05-24T09:18:19.388Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB] Processing client authentication. Token present: true.
+[2025-05-24T09:18:19.388Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB] Attempting to fetch user information using provided token...
+[2025-05-24T09:18:19.389Z] [API Client][fetchUserInfo] Attempting to fetch user info.
+[2025-05-24T09:18:19.389Z] [API Client][fetchUserInfo] Checking user info from: https://confhub.westus3.cloudapp.azure.com/api/v1/user/me
+[2025-05-24T09:18:20.161Z] [API Client][fetchUserInfo] User authentication failed or user not found at https://confhub.westus3.cloudapp.azure.com/api/v1/user/me. Status: 403. Attempting admin check.
+[2025-05-24T09:18:20.161Z] [API Client][fetchUserInfo] Checking admin info from: https://confhub.westus3.cloudapp.azure.com/api/v1/auth/admin/me
+[2025-05-24T09:18:20.373Z] [API Client][fetchUserInfo] Successfully fetched admin info from https://confhub.westus3.cloudapp.azure.com/api/v1/auth/admin/me for ID: 077f9da9-5570-4b2e-80e3-35e875c8f8b2. Role: admin
+[2025-05-24T09:18:20.374Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] User info fetched successfully. Email: admin@admin.com, Role: admin.
+[2025-05-24T09:18:20.374Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Registering core event handlers for authenticated user.
+[2025-05-24T09:18:20.374Z] [HistoryService] Initialized.
+[2025-05-24T09:18:20.375Z] [CoreSocketOrchestrator][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Initializing core Socket.IO handler registration.
+[2025-05-24T09:18:20.375Z] [CoreSocketOrchestrator][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Registering sub-handlers (Conversation, Message, Confirmation).
+[2025-05-24T09:18:20.376Z] [ConversationHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Registering conversation event handlers.
+[2025-05-24T09:18:20.376Z] [ConversationHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Conversation event handlers successfully registered.
+[2025-05-24T09:18:20.377Z] [MessageHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Registering message event handlers.
+[2025-05-24T09:18:20.377Z] [MessageHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Message event handlers successfully registered.
+[2025-05-24T09:18:20.378Z] [ConfirmationHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Registering confirmation event handlers.
+[2025-05-24T09:18:20.378Z] [ConfirmationHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Confirmation event handlers successfully registered.
+[2025-05-24T09:18:20.378Z] [INFO] [CoreSocketOrchestrator][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] All core event handlers successfully registered.
+[2025-05-24T09:18:20.378Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Core event handlers registered successfully.
+[2025-05-24T09:18:20.379Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Authenticated user session ready. Emitting 'connection_ready'.
+[2025-05-24T09:18:20.380Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Emitting 'server_ready' to client.
+[2025-05-24T09:18:20.380Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Fetching initial conversation list for user.
+[2025-05-24T09:18:20.381Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Fetching conversation list.
+[2025-05-24T09:18:20.481Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Found 0 conversations.
+[2025-05-24T09:18:20.481Z] [SocketConnectionHandler][dqCouQaxfSuFwBKsAAAB][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Sent initial conversation list. Count: 0.
+[2025-05-24T09:18:21.108Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:21.136Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 28ms.
+[2025-05-24T09:18:22.795Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:22.825Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748075215301-8m1kk] Request finished. Status: 200, Duration: 30ms.
+[2025-05-24T09:18:28.098Z] [INFO] [requestLogger][POST /api/v1/crawl-conferences?dataSource=client&models[determineLinks]=tuned&models[extractInfo]=tuned&models[extractCfp]=non-tuned] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:29.276Z] [INFO] [SearchFilter] Filtered 8 results down to 3 results.
+[2025-05-24T09:18:29.317Z] [INFO] [SearchFilter] Filtered 8 results down to 5 results.
+[2025-05-24T09:18:30.018Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:30.089Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 72ms.
+[2025-05-24T09:18:31.156Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:31.202Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 46ms.
+[2025-05-24T09:18:31.978Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:32.037Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 59ms.
+[2025-05-24T09:18:37.403Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:37.457Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 54ms.
+[2025-05-24T09:18:46.561Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:46.614Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 53ms.
+[2025-05-24T09:18:47.925Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:47.976Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 51ms.
+[2025-05-24T09:18:48.731Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:48.766Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 36ms.
+[2025-05-24T09:18:49.877Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:49.912Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 35ms.
+[2025-05-24T09:18:55.009Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:55.049Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 40ms.
+[2025-05-24T09:18:56.123Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:56.166Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 43ms.
+[2025-05-24T09:18:57.445Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:18:57.487Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 42ms.
+[2025-05-24T09:18:57.859Z] [INFO] [requestLogger][POST /api/v1/crawl-conferences?dataSource=client&models[determineLinks]=tuned&models[extractInfo]=tuned&models[extractCfp]=non-tuned] Request finished. Status: 200, Duration: 29761ms.
+[2025-05-24T09:19:01.556Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:19:01.595Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 39ms.
+[2025-05-24T09:19:02.720Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:19:02.758Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 38ms.
+[2025-05-24T09:19:04.060Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:19:04.100Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 40ms.
+[2025-05-24T09:19:05.776Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:19:05.811Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 35ms.
+[2025-05-24T09:23:30.818Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:23:30.868Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest?requestId=req-1748078308115-3x6uz] Request finished. Status: 200, Duration: 50ms.
+[2025-05-24T09:26:09.789Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:26:09.845Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 56ms.
+[2025-05-24T09:26:21.170Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request received. IP: ::1, UserAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0".
+[2025-05-24T09:26:21.212Z] [INFO] [requestLogger][GET /api/v1/logs/analysis/latest] Request finished. Status: 200, Duration: 42ms.
