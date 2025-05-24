@@ -26,7 +26,7 @@ export class ResultProcessingService {
     private readonly YEAR_REGEX = /^\d{4}$/;
     private readonly CSV_FIELDS: (keyof ProcessedRowData | { label: string; value: keyof ProcessedRowData })[] = [
         "requestId", "originalRequestId",
-        "title", "acronym", "link", "cfpLink", "impLink",
+        "title", "acronym", "mainLink", "cfpLink", "impLink",
         "information", "conferenceDates", "year",
         "location", "cityStateProvince", "country", "continent", "type",
         "submissionDate", "notificationDate", "cameraReadyDate", "registrationDate",
@@ -211,7 +211,7 @@ export class ResultProcessingService {
                 const finalRow: ProcessedRowData = {
                     title: title,
                     acronym: acronym.replace(/_\d+$/, ''),
-                    link: inputRow.conferenceLink || "",
+                    mainLink: inputRow.mainLink || "",
                     cfpLink: inputRow.cfpLink || "",
                     impLink: inputRow.impLink || "",
                     determineLinks: parsedDetermineInfo,

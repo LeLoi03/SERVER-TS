@@ -169,12 +169,12 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
     ): Promise<BatchEntry> {
         const childLogger = logger.child({
             function: 'handleDetermineMatchInternal',
-            matchedLink: matchingEntry.conferenceLink,
+            matchedLink: matchingEntry.mainLink,
             title: matchingEntry.conferenceTitle,
             acronym: matchingEntry.conferenceAcronym,
             batchIndex,
         });
-        childLogger.info({ event: 'start_match_handling' }, `Handling determination match for: ${matchingEntry.conferenceLink}.`);
+        childLogger.info({ event: 'start_match_handling' }, `Handling determination match for: ${matchingEntry.mainLink}.`);
 
         // Update entry with links from API1 (already normalized relative to officialWebsiteNormalized)
         matchingEntry.cfpLink = cfpLinkFromApi1;
@@ -285,11 +285,11 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
         if (!websiteInfo) {
             childLogger.error({ event: 'fetch_main_website_failed_in_no_match' }, "Failed to fetch/process main website in no-match scenario. Marking entry as 'None'.");
-            primaryEntryToUpdate.conferenceLink = "None"; // Mark as failed to find official site
+            primaryEntryToUpdate.mainLink = "None"; // Mark as failed to find official site
             return primaryEntryToUpdate;
         }
         const { finalUrl: actualFinalUrl, textPath: mainTextPath } = websiteInfo;
-        primaryEntryToUpdate.conferenceLink = actualFinalUrl; // Update with the actual final URL
+        primaryEntryToUpdate.mainLink = actualFinalUrl; // Update with the actual final URL
         primaryEntryToUpdate.conferenceTextPath = mainTextPath; // Save the path to the main content
 
         // 2. Read fetched content for the second API call
@@ -324,7 +324,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         } catch (determineLinksError: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(determineLinksError);
             childLogger.error({ ...api2LogContext, err: { message: errorMessage, stack: errorStack }, event: 'save_batch_determine_api_call_failed', apiCallNumber: 2 }, `Failed on second determine_links API call: "${errorMessage}".`);
-            primaryEntryToUpdate.conferenceLink = "None"; // Mark as failed
+            primaryEntryToUpdate.mainLink = "None"; // Mark as failed
             return primaryEntryToUpdate;
         }
 
@@ -344,7 +344,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         } catch (parseError: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
             childLogger.error({ ...api2LogContext, err: { message: errorMessage, stack: errorStack }, responseTextPreview: api2ResponseText.substring(0, 200), event: 'save_batch_api_response_parse_failed', apiType: this.geminiApiService.API_TYPE_DETERMINE, apiCallNumber: 2 }, `Failed to parse API 2 response JSON: "${errorMessage}".`);
-            primaryEntryToUpdate.conferenceLink = "None"; // Mark as failed due to parse error
+            primaryEntryToUpdate.mainLink = "None"; // Mark as failed due to parse error
             return primaryEntryToUpdate;
         }
 
@@ -457,7 +457,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             } catch (parseError: unknown) { // Catch as unknown
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
                 logger.error({ err: { message: errorMessage, stack: errorStack }, responseTextPreview: String(api1ResponseText).substring(0, 200), event: 'save_batch_api_response_parse_failed', apiType: this.geminiApiService.API_TYPE_DETERMINE, apiCallNumber: 1 }, `Failed to parse API 1 response JSON: "${errorMessage}".`);
-                primaryEntryForContext.conferenceLink = "None"; // Mark as failed
+                primaryEntryForContext.mainLink = "None"; // Mark as failed
                 return [primaryEntryForContext];
             }
 
@@ -465,13 +465,13 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             // Validate official website from API 1
             if (!officialWebsiteRaw || typeof officialWebsiteRaw !== 'string' || officialWebsiteRaw.trim().toLowerCase() === "none" || officialWebsiteRaw.trim() === '') {
                 logger.warn({ officialWebsiteRawFromApi: officialWebsiteRaw, event: 'no_official_website_in_api1_response' }, "API 1 response did not contain a valid 'Official Website' link. Marking entry as 'None'.");
-                primaryEntryForContext.conferenceLink = "None";
+                primaryEntryForContext.mainLink = "None";
                 return [primaryEntryForContext];
             }
             const officialWebsiteNormalizedFromApi1 = normalizeAndJoinLink(officialWebsiteRaw, null, logger);
             if (!officialWebsiteNormalizedFromApi1) {
                 logger.error({ rawUrlFromApi: officialWebsiteRaw, event: 'official_website_url_invalid_after_normalization' }, `Official website URL from API 1 "${officialWebsiteRaw}" is invalid after normalization. Marking entry as 'None'.`);
-                primaryEntryForContext.conferenceLink = "None";
+                primaryEntryForContext.mainLink = "None";
                 return [primaryEntryForContext];
             }
             logger.info({ officialWebsiteNormalizedFromApi1, event: 'official_website_from_api1_normalized' }, `Official website normalized from API 1: ${officialWebsiteNormalizedFromApi1}.`);
@@ -485,13 +485,13 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
             // 2. Check if the official website from API 1 matches any entry in the original batch
             let matchingEntryFromBatch: BatchEntry | undefined = originalBatch.find(entry => {
-                const normalizedEntryLink = normalizeAndJoinLink(entry.conferenceLink, null, logger);
+                const normalizedEntryLink = normalizeAndJoinLink(entry.mainLink, null, logger);
                 return normalizedEntryLink && normalizedEntryLink === officialWebsiteNormalizedFromApi1;
             });
 
             let processedEntry: BatchEntry | null = null;
             if (matchingEntryFromBatch) {
-                logger.info({ matchedLinkInBatch: matchingEntryFromBatch.conferenceLink, event: 'entry_match_found_in_batch' }, `Official website "${officialWebsiteNormalizedFromApi1}" matched an entry in the original batch.`);
+                logger.info({ matchedLinkInBatch: matchingEntryFromBatch.mainLink, event: 'entry_match_found_in_batch' }, `Official website "${officialWebsiteNormalizedFromApi1}" matched an entry in the original batch.`);
                 processedEntry = await this.handleDetermineMatchInternal(
                     page,
                     matchingEntryFromBatch, // Pass the actual matching entry
@@ -515,19 +515,19 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
             // 3. Finalize and return the processed entry
             if (processedEntry) {
-                const finalStatus = processedEntry.conferenceLink === "None" ? 'failed' : 'success';
-                logger.info({ finalStatus, finalProcessedConferenceLink: processedEntry.conferenceLink, event: 'finish_processing_determine_api_response' }, `Finished processing determine API response. Final status: ${finalStatus}.`);
+                const finalStatus = processedEntry.mainLink === "None" ? 'failed' : 'success';
+                logger.info({ finalStatus, finalProcessedConferenceLink: processedEntry.mainLink, event: 'finish_processing_determine_api_response' }, `Finished processing determine API response. Final status: ${finalStatus}.`);
                 return [processedEntry];
             } else {
                 logger.error({ event: 'processed_entry_is_null_unexpected' }, "Processed entry is null after determination logic. This is unexpected.");
-                primaryEntryForContext.conferenceLink = "None";
+                primaryEntryForContext.mainLink = "None";
                 return [primaryEntryForContext];
             }
 
         } catch (error: unknown) { // Catch any unhandled errors in this public method
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.error({ err: { message: errorMessage, stack: errorStack }, event: 'conference_determination_service_unhandled_error' }, `Unhandled error in conference determination service: "${errorMessage}".`);
-            primaryEntryForContext.conferenceLink = "None"; // Ensure entry is marked as failed on critical error
+            primaryEntryForContext.mainLink = "None"; // Ensure entry is marked as failed on critical error
             return [primaryEntryForContext]; // Return the primary entry with failure status
         } finally {
             // Ensure the Playwright page is closed

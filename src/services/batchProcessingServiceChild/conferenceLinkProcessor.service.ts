@@ -384,7 +384,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             const batchEntry: BatchEntry = {
                 conferenceTitle: conference.Title,
                 conferenceAcronym: conference.Acronym, // Use the original Acronym
-                conferenceLink: finalLink,
+                mainLink: finalLink,
                 conferenceTextPath: textPath,
                 originalRequestId: conference.originalRequestId,
                 linkOrderIndex: linkIndex,
