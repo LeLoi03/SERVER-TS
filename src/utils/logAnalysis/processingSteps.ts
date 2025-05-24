@@ -7,19 +7,19 @@ import {
     ReadLogResult,
     RequestLogData,
     FilteredData,
-    RequestTimings, // Ensure this is imported for currentRequestTimings
-    LogErrorContext // <--- IMPORT THIS
-} from '../../types'; // Đảm bảo các type này chính xác
+    RequestTimings,
+    LogErrorContext
+} from '../../types';
 import {
     createConferenceKey,
-    initializeConferenceDetail, // Giả sử hàm này có logic đúng
+    initializeConferenceDetail,
     addConferenceError,
     doesRequestOverlapFilter
-} from './helpers'; // Giả sử helpers đúng
+} from './helpers';
 import { normalizeErrorKey } from './helpers';
-import { eventHandlerMap } from './index'; // Giả sử index.ts exports eventHandlerMap
+import { eventHandlerMap } from './index';
 
-// --- Step 1: readAndGroupLogs ---
+// --- readAndGroupLogs and filterRequests giữ nguyên ---
 export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
@@ -83,7 +83,6 @@ export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResu
     };
 };
 
-// --- Step 2: filterRequests ---
 export const filterRequests = (
     allRequestsData: Map<string, RequestLogData>,
     filterStartMillis: number | null,
@@ -138,7 +137,8 @@ export const filterRequests = (
     return { filteredRequests, analysisStartMillis, analysisEndMillis };
 };
 
-// --- Step 3: processLogEntry ---
+
+// --- processLogEntry giữ nguyên ---
 export const processLogEntry = (
     logEntry: any,
     results: LogAnalysisResult,
@@ -164,6 +164,12 @@ export const processLogEntry = (
     if (compositeKey) {
         if (!results.conferenceAnalysis[compositeKey]) {
             results.conferenceAnalysis[compositeKey] = initializeConferenceDetail(currentRequestId, acronym!, title!);
+            // Khi conference được khởi tạo lần đầu, nếu nó thuộc request đang được phân tích,
+            // thì tăng processedConferencesCount.
+            // Cần đảm bảo results.analyzedRequestIds đã được điền trước khi processLogEntry chạy,
+            // hoặc kiểm tra này phải được thực hiện ở nơi khác (ví dụ: cuối calculateFinalMetrics).
+            // Hiện tại, overall.processedConferencesCount được cập nhật trong handleTaskStart
+            // và calculateFinalMetrics (STAGE 3) sẽ đếm lại chính xác.
         }
         confDetail = results.conferenceAnalysis[compositeKey];
         if (!isNaN(entryTimeMillis)) {
@@ -177,20 +183,19 @@ export const processLogEntry = (
             handler(logEntry, results, confDetail, entryTimestampISO);
         } catch (handlerError: any) {
             if (confDetail) {
-                // Adjusting addConferenceError call here:
                 addConferenceError(
                     confDetail,
                     entryTimestampISO,
-                    handlerError, // errorSource: The actual error object caught
+                    handlerError,
                     {
                         defaultMessage: `Internal error processing event ${eventName}`,
                         keyPrefix: 'handler_internal_error',
-                        sourceService: 'LogAnalysisProcessor', // Service where handler error occurred
-                        errorType: 'Logic', // This is an internal logic error
+                        sourceService: 'LogAnalysisProcessor',
+                        errorType: 'Logic',
                         context: {
-                            phase: 'response_processing', // Error during log entry processing phase
+                            phase: 'response_processing',
                             eventName: eventName,
-                            ...logEntry.context // Include original log entry context
+                            ...logEntry.context
                         }
                     }
                 );
@@ -200,7 +205,7 @@ export const processLogEntry = (
     }
 };
 
-// --- Step 4: calculateFinalMetrics ---
+
 export const calculateFinalMetrics = (
     results: LogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
@@ -209,7 +214,7 @@ export const calculateFinalMetrics = (
     filteredRequestsData: Map<string, RequestLogData>
 ): void => {
 
-    // STAGE 0: Calculate Overall Duration
+    // STAGE 0: Calculate Overall Duration (Giữ nguyên)
     if (analysisStartMillis !== null && analysisEndMillis !== null) {
         results.overall.startTime = new Date(analysisStartMillis).toISOString();
         results.overall.endTime = new Date(analysisEndMillis).toISOString();
@@ -241,14 +246,14 @@ export const calculateFinalMetrics = (
     }
 
 
-    // --- STAGE 1: Determine/Update status for each conference and then for each request ---
+    // --- STAGE 1: Determine/Update status for each conference (stuck tasks) and then for each request ---
     for (const reqId of results.analyzedRequestIds) {
         const requestData = filteredRequestsData.get(reqId);
         let currentRequestTimings: RequestTimings = {
             startTime: null,
             endTime: null,
             durationSeconds: null,
-            status: 'Unknown',
+            status: 'Unknown', // Trạng thái ban đầu của request timing object
             originalRequestId: results.requests[reqId]?.originalRequestId,
         };
 
@@ -278,27 +283,28 @@ export const calculateFinalMetrics = (
         }
 
         const requestEndTimeISO = currentRequestTimings.endTime;
-        if (requestEndTimeISO) {
+        if (requestEndTimeISO) { // Chỉ áp dụng logic "stuck task" nếu request cha đã có endTime
             conferencesForThisRequest.forEach(conf => {
-                if (!conf.endTime && (conf.status === 'processing' || conf.status === 'unknown' || conf.status === 'processed_ok')) {
+                // THAY ĐỔI: Chỉ áp dụng cho 'processing' hoặc 'processed_ok'. Không áp dụng cho 'unknown'.
+                // 'unknown' nghĩa là không có đủ thông tin, không nên tự động coi là 'failed'.
+                if (!conf.endTime && (conf.status === 'processing' || conf.status === 'processed_ok')) {
                     conf.status = 'failed';
                     const confKeyForTimestampStuck = createConferenceKey(conf.batchRequestId, conf.acronym, conf.title);
                     const lastSeenTimeForConf = confKeyForTimestampStuck ? conferenceLastTimestamp[confKeyForTimestampStuck] : null;
                     conf.endTime = lastSeenTimeForConf ? new Date(lastSeenTimeForConf).toISOString() : requestEndTimeISO;
 
-                    // Adjusting addConferenceError call here:
                     addConferenceError(
                         conf,
                         conf.endTime,
-                        "Conference did not complete before its parent request finished.", // errorSource: The string reason
+                        "Conference did not complete (stuck in processing/processed_ok) before its parent request finished.",
                         {
                             defaultMessage: "Conference task stuck or incomplete.",
                             keyPrefix: 'task_stuck_or_incomplete',
-                            sourceService: 'FinalMetricsCalculation', // Service/phase where this determination is made
-                            errorType: 'Logic', // This is a logic determination based on state
+                            sourceService: 'FinalMetricsCalculation',
+                            errorType: 'Logic',
                             context: {
-                                phase: 'response_processing', // Error identified during final processing/analysis
-                                stuckReason: "Parent request ended"
+                                phase: 'response_processing',
+                                stuckReason: "Parent request ended while task active"
                             }
                         }
                     );
@@ -308,58 +314,86 @@ export const calculateFinalMetrics = (
 
         if (conferencesForThisRequest.length === 0) {
             if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
-                currentRequestTimings.status = 'Completed';
+                currentRequestTimings.status = 'Completed'; // Request có log nhưng không có conference nào được phân tích
             } else {
-                currentRequestTimings.status = 'NoData';
+                currentRequestTimings.status = 'NoData'; // Request không có log
             }
         } else {
             let numProcessing = 0;
             let numFailed = 0;
             let numCompleted = 0;
             let numSkipped = 0;
+            let numProcessedOk = 0; // <--- THÊM BIẾN ĐẾM CHO PROCESSED_OK
 
             for (const conf of conferencesForThisRequest) {
-                if (conf.status === 'processing' || ((conf.status === 'unknown' || conf.status === 'processed_ok') && !conf.endTime)) {
+                // Điều chỉnh cách đếm numProcessing:
+                // Một conference là "processing" nếu status của nó là 'processing' HOẶC 'processed_ok' (chờ CSV)
+                // và nó chưa có endTime.
+                // Tuy nhiên, ở bước này, nếu nó là 'processed_ok' và không có endTime,
+                // và request cha có endTime, nó đã bị chuyển thành 'failed' ở trên.
+                // Nên ta chỉ cần đếm các status hiện tại.
+
+                if (conf.status === 'processing') {
                     numProcessing++;
-                }
-                if (conf.status === 'failed') {
+                } else if (conf.status === 'processed_ok') { // <--- ĐẾM PROCESSED_OK
+                    numProcessedOk++;
+                } else if (conf.status === 'failed') {
                     numFailed++;
-                }
-                if (conf.status === 'completed') {
+                } else if (conf.status === 'completed') {
                     numCompleted++;
-                }
-                if (conf.status === 'skipped') {
+                } else if (conf.status === 'skipped') {
                     numSkipped++;
                 }
+                // Conference với status 'unknown' không được tính vào các nhóm này,
+                // chúng sẽ ảnh hưởng đến logic 'PartiallyCompleted' hoặc 'Unknown' của request.
             }
 
             const totalTasksInRequest = conferencesForThisRequest.length;
-            const FAILED_THRESHOLD_PERCENT = 0.15;
+            const FAILED_THRESHOLD_PERCENT = 0.15; // Giữ nguyên ngưỡng này
 
-            if (numProcessing > 0) {
+            // THAY ĐỔI: Request vẫn là 'Processing' nếu có bất kỳ conference nào là 'processing' HOẶC 'processed_ok'
+            if (numProcessing > 0 || numProcessedOk > 0) {
                 currentRequestTimings.status = 'Processing';
             } else {
+                // Logic còn lại để xác định Failed, CompletedWithErrors, Completed, Skipped, PartiallyCompleted, Unknown
                 if (numFailed === totalTasksInRequest && totalTasksInRequest > 0) {
                     currentRequestTimings.status = 'Failed';
                 } else if (numFailed > 0) {
+                    // Nếu có lỗi, nhưng không phải tất cả đều lỗi
                     if ((numFailed / totalTasksInRequest) > FAILED_THRESHOLD_PERCENT) {
-                        currentRequestTimings.status = 'CompletedWithErrors';
+                        currentRequestTimings.status = 'CompletedWithErrors'; // Nhiều lỗi đáng kể
                     } else {
+                        // Ít lỗi hơn ngưỡng
                         if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
-                            currentRequestTimings.status = 'Completed';
+                             // Tất cả các task không failed đều completed hoặc skipped
+                            currentRequestTimings.status = 'Completed'; // Coi là completed nếu lỗi ít và phần còn lại OK
                         } else {
-                            currentRequestTimings.status = 'CompletedWithErrors';
+                            currentRequestTimings.status = 'CompletedWithErrors'; // Có lỗi và có task chưa rõ ràng (unknown)
                         }
                     }
-                } else if (numCompleted === totalTasksInRequest || (numCompleted + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0) {
+                } else if (numCompleted === totalTasksInRequest || ((numCompleted + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0)) {
+                    // Không có lỗi, và tất cả đều completed hoặc (completed + skipped)
                     currentRequestTimings.status = 'Completed';
-                } else if (numCompleted > 0 || numSkipped > 0) {
-                    currentRequestTimings.status = 'PartiallyCompleted';
-                } else if (totalTasksInRequest > 0 && numSkipped === totalTasksInRequest) {
+                } else if (numSkipped === totalTasksInRequest && totalTasksInRequest > 0) {
+                    // Tất cả đều skipped
                     currentRequestTimings.status = 'Skipped';
+                } else if (numCompleted > 0 || numSkipped > 0) {
+                    // Có một số completed hoặc skipped, nhưng không phải tất cả (và không có processing/processed_ok/failed)
+                    // Điều này có nghĩa là có một số task ở trạng thái 'unknown'
+                    currentRequestTimings.status = 'PartiallyCompleted';
                 }
                 else {
-                    currentRequestTimings.status = 'Unknown';
+                    // Không có processing, processed_ok, failed, completed, skipped.
+                    // Tất cả các task phải là 'unknown' (hoặc không có task nào).
+                    // Nếu có task, và chúng là 'unknown', thì request là 'Unknown'.
+                    if (totalTasksInRequest > 0) {
+                        currentRequestTimings.status = 'Unknown';
+                    } else {
+                        // Trường hợp này đã được xử lý bởi `conferencesForThisRequest.length === 0` ở trên.
+                        // Để an toàn, nếu không có task nào, có thể đặt là 'NoData' hoặc 'Completed' tùy theo ngữ cảnh.
+                        // Giả sử `conferencesForThisRequest.length === 0` đã xử lý đúng.
+                        currentRequestTimings.status = 'Unknown'; // Mặc định cuối cùng
+                    }
                 }
             }
         }
@@ -370,6 +404,7 @@ export const calculateFinalMetrics = (
     }
 
     // --- STAGE 2: Finalize Conference Details (duration, status based on sub-steps and CSV) ---
+    // (Giữ nguyên phần lớn logic, chỉ đảm bảo nó tương tác đúng với 'processed_ok')
     Object.values(results.conferenceAnalysis).forEach(detail => {
         if (!results.analyzedRequestIds.includes(detail.batchRequestId)) {
             return;
@@ -389,16 +424,17 @@ export const calculateFinalMetrics = (
             if (!isCriticallyFailed &&
                 detail.steps.link_processing_attempted_count > 0 &&
                 detail.steps.link_processing_success_count === 0 &&
-                detail.status !== 'failed' && detail.status !== 'skipped') {
+                detail.status !== 'failed' && detail.status !== 'skipped') { // Kiểm tra status hiện tại
                 isCriticallyFailed = true;
                 criticalFailureReason = "All link processing attempts failed";
                 criticalFailureEventKey = "all_links_failed";
             }
         }
 
+        // Nếu một task đã là 'processed_ok' hoặc 'completed' nhưng phát hiện lỗi nghiêm trọng ở bước này
         if (isCriticallyFailed && detail.status !== 'failed' && detail.status !== 'skipped') {
             const oldStatus = detail.status;
-            detail.status = 'failed';
+            detail.status = 'failed'; // Ghi đè thành failed
 
             const failureTimestamp = detail.endTime ||
                 (results.requests[detail.batchRequestId]?.endTime) ||
@@ -409,34 +445,24 @@ export const calculateFinalMetrics = (
                 detail.endTime = failureTimestamp;
             }
 
-            // Adjusting addConferenceError call here:
             addConferenceError(
                 detail,
                 failureTimestamp,
-                `Task marked as failed in final metrics due to: ${criticalFailureReason}.`, // errorSource: The string reason
+                `Task marked as failed in final metrics due to: ${criticalFailureReason}.`,
                 {
                     defaultMessage: `Conference task status overridden to failed. Original status: ${oldStatus}.`,
                     keyPrefix: `final_metric_override_${normalizeErrorKey(criticalFailureEventKey)}`,
                     sourceService: 'FinalMetricsCalculation',
-                    errorType: 'Logic', // This is a logic determination based on step failures
+                    errorType: 'Logic',
                     context: {
-                        phase: 'response_processing', // Error identified during final processing/analysis
+                        phase: 'response_processing',
                         reason: criticalFailureReason,
                         originalStatus: oldStatus,
                         eventKey: criticalFailureEventKey
                     }
                 }
             );
-
-            const affectedReqId = detail.batchRequestId;
-            if (results.requests[affectedReqId]) {
-                const currentReqStatus = results.requests[affectedReqId].status;
-                if (currentReqStatus && !['Failed', 'CompletedWithErrors', 'Processing'].includes(currentReqStatus)) {
-                    results.requests[affectedReqId].status = 'CompletedWithErrors';
-                } else if (!currentReqStatus) {
-                    results.requests[affectedReqId].status = 'CompletedWithErrors';
-                }
-            }
+            // Không cần cập nhật lại request status ở đây, vì STAGE 3 & 4 sẽ làm điều đó dựa trên status conference cuối cùng.
         }
 
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
@@ -453,67 +479,69 @@ export const calculateFinalMetrics = (
             }
         }
 
-        if (results.fileOutput &&
-            results.fileOutput.csvFileGenerated === false &&
-            (
-                (results.fileOutput.csvPipelineFailures || 0) > 0 ||
-                (results.fileOutput.csvOtherErrors || 0) > 0
-            )
-        ) {
+        // Logic xử lý lỗi ghi CSV
+        // if (results.fileOutput &&
+        //     results.fileOutput.csvFileGenerated === false && // CSV không được tạo
+        //     (
+        //         (results.fileOutput.csvPipelineFailures || 0) > 0 ||
+        //         (results.fileOutput.csvOtherErrors || 0) > 0 // Hoặc có lỗi khác liên quan đến CSV
+        //     )
+        // ) {
+        if (results.fileOutput && (results.fileOutput.csvPipelineFailures || 0) > 0) {
+
+            // Áp dụng cho các conference không phải 'failed' hoặc 'skipped'
             if (detail.status !== 'failed' && detail.status !== 'skipped') {
-                const oldConfStatus = detail.status;
-                if (detail.jsonlWriteSuccess === true) {
-                    detail.status = 'failed';
-                    detail.csvWriteSuccess = false;
+                const oldConfStatus = detail.status; // Có thể là 'completed' (nếu CSV không phải bước cuối), 'processed_ok', 'processing'
 
-                    const csvFailureTimestamp = detail.endTime ||
-                        (results.requests[detail.batchRequestId]?.endTime) ||
-                        results.overall.endTime ||
-                        new Date().toISOString();
+                // Nếu JSONL ghi thành công nhưng CSV thất bại, conference này là 'failed'
+                // Hoặc nếu JSONL không thành công, nó cũng là 'failed' (đã được xử lý bởi handler JSONL)
+                // Điều kiện này đảm bảo rằng nếu CSV là một phần của pipeline thành công, thì nó phải thành công.
+                // if (detail.jsonlWriteSuccess === true) { // Bỏ điều kiện này, nếu CSV pipeline fail thì task fail bất kể JSONL
+                
+                detail.status = 'failed';
+                detail.csvWriteSuccess = false; // Đảm bảo cờ này đúng
 
-                    if (!detail.endTime || (detail.endTime && new Date(csvFailureTimestamp).getTime() > new Date(detail.endTime).getTime())) {
-                        detail.endTime = csvFailureTimestamp;
-                    }
+                const csvFailureTimestamp = detail.endTime || // Giữ endTime hiện tại nếu có
+                    (results.requests[detail.batchRequestId]?.endTime) ||
+                    results.overall.endTime ||
+                    new Date().toISOString();
 
-                    // Adjusting addConferenceError call here:
-                    addConferenceError(
-                        detail,
-                        csvFailureTimestamp,
-                        "Conference failed due to CSV generation pipeline failure (JSONL was successful).", // errorSource: The string reason
-                        {
-                            defaultMessage: "CSV generation pipeline failed for conference.",
-                            keyPrefix: "csv_pipeline_failure_override_conf",
-                            sourceService: 'FinalMetricsCalculation',
-                            errorType: 'FileSystem', // This is a file system/output error
-                            context: {
-                                phase: 'response_processing',
-                                csvErrorSource: "pipeline_or_other",
-                                originalStatus: oldConfStatus
-                            }
-                        }
-                    );
-
-                    const affectedReqId = detail.batchRequestId;
-                    if (results.requests[affectedReqId]) {
-                        const currentReqStatus = results.requests[affectedReqId].status;
-                        if (currentReqStatus && !['Failed', 'CompletedWithErrors', 'Processing'].includes(currentReqStatus)) {
-                            results.requests[affectedReqId].status = 'CompletedWithErrors';
-                        } else if (!currentReqStatus) {
-                            results.requests[affectedReqId].status = 'CompletedWithErrors';
-                        }
-                    }
+                // Chỉ cập nhật endTime nếu thời điểm lỗi CSV muộn hơn endTime hiện tại
+                if (!detail.endTime || (detail.endTime && new Date(csvFailureTimestamp).getTime() > new Date(detail.endTime).getTime())) {
+                    detail.endTime = csvFailureTimestamp;
                 }
+
+                addConferenceError(
+                    detail,
+                    csvFailureTimestamp,
+                    "Conference failed due to CSV generation pipeline failure.",
+                    {
+                        defaultMessage: "CSV generation pipeline failed for conference.",
+                        keyPrefix: "csv_pipeline_failure_override_conf",
+                        sourceService: 'FinalMetricsCalculation',
+                        errorType: 'FileSystem',
+                        context: {
+                            phase: 'response_processing',
+                            csvErrorSource: "pipeline_or_other",
+                            originalStatus: oldConfStatus
+                        }
+                    }
+                );
+                // } // Kết thúc if (detail.jsonlWriteSuccess === true)
             } else if (detail.status === 'failed') {
+                // Nếu đã failed từ trước, chỉ cần đảm bảo csvWriteSuccess là false
                 detail.csvWriteSuccess = false;
             }
         }
     });
 
-    // --- STAGE 3: Recalculate Overall Counts ---
-    let finalOverallCompletedTasks = 0;
-    let finalOverallFailedTasks = 0;
-    let finalOverallSkippedTasks = 0;
-    let finalOverallProcessingTasks = 0;
+    // --- STAGE 3: Recalculate Overall Counts & Request Statuses (Dựa trên status conference đã chốt ở STAGE 2) ---
+    // Đặt lại các counter tổng thể trước khi đếm lại
+    results.overall.completedTasks = 0;
+    results.overall.failedOrCrashedTasks = 0;
+    results.overall.skippedTasks = 0;
+    results.overall.processingTasks = 0; // Sẽ bao gồm cả 'processing' và 'processed_ok' cho mục đích hiển thị
+    
     const uniqueConferenceKeysInAnalysis = new Set<string>();
 
     Object.values(results.conferenceAnalysis).forEach(conf => {
@@ -522,30 +550,77 @@ export const calculateFinalMetrics = (
             if (confKey) uniqueConferenceKeysInAnalysis.add(confKey);
 
             if (conf.status === 'completed') {
-                finalOverallCompletedTasks++;
+                results.overall.completedTasks++;
             } else if (conf.status === 'failed') {
-                finalOverallFailedTasks++;
+                results.overall.failedOrCrashedTasks++;
             } else if (conf.status === 'skipped') {
-                finalOverallSkippedTasks++;
-            }
-
-            if (conf.status === 'processing' || ((conf.status === 'unknown' || conf.status === 'processed_ok') && !conf.endTime)) {
-                finalOverallProcessingTasks++;
+                results.overall.skippedTasks++;
+            } else if (conf.status === 'processing' || conf.status === 'processed_ok') {
+                // Cho mục đích đếm tổng thể "đang xử lý", gộp cả hai
+                results.overall.processingTasks++;
             }
         }
     });
-
-    results.overall.completedTasks = finalOverallCompletedTasks;
-    results.overall.failedOrCrashedTasks = finalOverallFailedTasks;
-    results.overall.skippedTasks = finalOverallSkippedTasks;
-    results.overall.processingTasks = finalOverallProcessingTasks;
     results.overall.processedConferencesCount = uniqueConferenceKeysInAnalysis.size;
+
+
+    // SAU KHI CẬP NHẬT TẤT CẢ CONFERENCE STATUS, TÍNH LẠI REQUEST STATUS
+    for (const reqId of results.analyzedRequestIds) {
+        const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
+            .filter(cd => cd.batchRequestId === reqId);
+        
+        const requestTimings = results.requests[reqId]; // Lấy lại request timings đã có startTime, endTime
+        if (!requestTimings) continue; // Bỏ qua nếu không tìm thấy request
+
+        if (conferencesForThisRequest.length === 0) {
+            // Status đã được set ở STAGE 1, không đổi
+        } else {
+            let numProcessing = 0, numFailed = 0, numCompleted = 0, numSkipped = 0, numProcessedOk = 0;
+            for (const conf of conferencesForThisRequest) {
+                if (conf.status === 'processing') numProcessing++;
+                else if (conf.status === 'processed_ok') numProcessedOk++;
+                else if (conf.status === 'failed') numFailed++;
+                else if (conf.status === 'completed') numCompleted++;
+                else if (conf.status === 'skipped') numSkipped++;
+            }
+
+            const totalTasksInRequest = conferencesForThisRequest.length;
+            const FAILED_THRESHOLD_PERCENT = 0.15;
+
+            if (numProcessing > 0 || numProcessedOk > 0) {
+                requestTimings.status = 'Processing';
+            } else {
+                if (numFailed === totalTasksInRequest) {
+                    requestTimings.status = 'Failed';
+                } else if (numFailed > 0) {
+                    if ((numFailed / totalTasksInRequest) > FAILED_THRESHOLD_PERCENT) {
+                        requestTimings.status = 'CompletedWithErrors';
+                    } else {
+                        if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
+                            requestTimings.status = 'Completed'; // Ít lỗi, còn lại xong -> Completed
+                        } else {
+                            requestTimings.status = 'CompletedWithErrors'; // Ít lỗi, nhưng có gì đó chưa xong (unknown)
+                        }
+                    }
+                } else if (numCompleted === totalTasksInRequest || (numCompleted + numSkipped) === totalTasksInRequest) {
+                    requestTimings.status = 'Completed';
+                } else if (numSkipped === totalTasksInRequest) {
+                    requestTimings.status = 'Skipped';
+                } else if (numCompleted > 0 || numSkipped > 0) {
+                    requestTimings.status = 'PartiallyCompleted'; // Có completed/skipped, nhưng có cả unknown
+                } else {
+                    requestTimings.status = 'Unknown'; // Tất cả là unknown
+                }
+            }
+        }
+    }
+
 
     if (results.geminiApi) {
         results.geminiApi.cacheContextMisses = Math.max(0, (results.geminiApi.cacheContextAttempts || 0) - (results.geminiApi.cacheContextHits || 0));
     }
 
-    // --- STAGE 4: Determine final overall analysis status ---
+    // --- STAGE 4: Determine final overall analysis status (Dựa trên request statuses đã chốt) ---
     if (results.analyzedRequestIds.length > 0) {
         const requestStatuses = results.analyzedRequestIds.map(id => results.requests[id]?.status);
 
@@ -555,16 +630,19 @@ export const calculateFinalMetrics = (
             results.status = 'Failed';
         } else if (requestStatuses.some(s => s === 'Failed' || s === 'CompletedWithErrors')) {
             results.status = 'CompletedWithErrors';
-        } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData')) {
+        } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData' || s === 'Unknown')) { // Thêm Unknown
             if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'NoData')) {
                 results.status = 'Completed';
             } else if (requestStatuses.some(s => s === 'PartiallyCompleted')) {
                 results.status = 'PartiallyCompleted';
-            } else {
+            } else if (requestStatuses.some(s => s === 'Unknown') && !requestStatuses.some(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted')) {
+                results.status = 'Unknown'; // Nếu chỉ có Unknown và NoData
+            }
+             else { // Mặc định là Completed nếu không rơi vào các trường hợp trên (ví dụ: mix của Completed và Unknown)
                 results.status = 'Completed';
             }
         } else {
-            results.status = 'Unknown';
+            results.status = 'Unknown'; // Trường hợp không xác định được
         }
     } else {
         results.status = "NoRequestsAnalyzed";

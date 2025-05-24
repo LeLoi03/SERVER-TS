@@ -1,25 +1,24 @@
 // src/utils/logAnalysis/fileOutputHandlers.ts
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { createConferenceKey } from './helpers'; // Đảm bảo đường dẫn đúng
-import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, LogErrorContext } from '../../types'; // Import LogErrorContext
+import { createConferenceKey } from './helpers';
+import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types'; // Thêm LogAnalysisResult, ConferenceAnalysisDetail
 
-// Khởi tạo fileOutput trong results nếu chưa có
-const ensureFileOutputAnalysis = (results: any): FileOutputAnalysis => {
+const ensureFileOutputAnalysis = (results: LogAnalysisResult): FileOutputAnalysis => { // Sửa any
     if (!results.fileOutput) {
-        results.fileOutput = getInitialFileOutputAnalysis(); // Tái sử dụng ở đây!
+        results.fileOutput = getInitialFileOutputAnalysis();
     }
     return results.fileOutput as FileOutputAnalysis;
 };
 
-const ensureOverallAnalysis = (results: any): OverallAnalysis => {
+const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any
     if (!results.overall) {
-        results.overall = getInitialOverallAnalysis(); // Tái sử dụng ở đây!
+        results.overall = getInitialOverallAnalysis();
     }
     return results.overall as OverallAnalysis;
 };
 
-export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {
+export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confDetailIgnored, entryTimestampISO) => {
     const fileOutput = ensureFileOutputAnalysis(results);
     const overall = ensureOverallAnalysis(results);
 
@@ -29,67 +28,58 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
 
     if (!batchRequestId) {
         fileOutput.csvOrphanedSuccessRecords = (fileOutput.csvOrphanedSuccessRecords || 0) + 1;
-        // Có thể thêm lỗi vào đây nếu cần theo dõi các bản ghi thành công "mồ côi"
-        // addConferenceError(null, entryTimestampISO, "CSV success event missing batchRequestId", {
-        //     keyPrefix: 'csv_orphan_success',
-        //     sourceService: logEntry.service || 'FileOutputService',
-        //     errorType: 'Logic',
-        //     details: logEntry,
-        //     isRecovered: false, // Vì không có conference để gán
-        //     context: { phase: 'response_processing' }
-        // });
         return;
     }
     if (!acronym || !title) {
         fileOutput.csvOrphanedSuccessRecords = (fileOutput.csvOrphanedSuccessRecords || 0) + 1;
-        // Tương tự, có thể thêm lỗi vào đây
         return;
     }
 
     const compositeKey = createConferenceKey(batchRequestId, acronym, title);
 
-
     if (compositeKey && results.conferenceAnalysis[compositeKey]) {
         const confDetail = results.conferenceAnalysis[compositeKey];
-
         const previousStatus = confDetail.status;
 
-        confDetail.csvWriteSuccess = true;
-        confDetail.status = 'completed';
-        if (!confDetail.endTime) {
-            confDetail.endTime = entryTimestampISO;
-        }
-        if (confDetail.startTime && confDetail.endTime && !confDetail.durationSeconds) {
-            try {
-                const start = new Date(confDetail.startTime).getTime();
-                const end = new Date(confDetail.endTime).getTime();
-                if (!isNaN(start) && !isNaN(end) && end >= start) {
-                    confDetail.durationSeconds = Math.round((end - start) / 1000);
-                }
-            } catch (e) { /* ignore */ }
-        }
-
-        fileOutput.csvRecordsSuccessfullyWritten = (fileOutput.csvRecordsSuccessfullyWritten || 0) + 1;
-
+        // Chỉ thay đổi status và counters nếu nó thực sự chuyển sang completed
         if (previousStatus !== 'completed') {
+            confDetail.status = 'completed'; // <--- ĐÚNG: Ghi CSV thành công là completed
+            confDetail.csvWriteSuccess = true;
+
+            if (!confDetail.endTime) { // Có thể endTime đã được set bởi task_finish
+                confDetail.endTime = entryTimestampISO;
+            }
+            // Recalculate duration if endTime changed or wasn't set by task_finish
+            if (confDetail.startTime && confDetail.endTime) {
+                 try {
+                    const start = new Date(confDetail.startTime).getTime();
+                    const end = new Date(confDetail.endTime).getTime();
+                    if (!isNaN(start) && !isNaN(end) && end >= start) {
+                        confDetail.durationSeconds = Math.round((end - start) / 1000);
+                    }
+                } catch (e) { /* ignore */ }
+            }
+
+
             overall.completedTasks = (overall.completedTasks || 0) + 1;
+
+            if (previousStatus === 'processing') {
+                if (overall.processingTasks && overall.processingTasks > 0) overall.processingTasks--;
+            } else if (previousStatus === 'failed') {
+                if (overall.failedOrCrashedTasks && overall.failedOrCrashedTasks > 0) overall.failedOrCrashedTasks--;
+                // Đánh dấu lỗi trước đó là recovered nếu lỗi đó liên quan đến output
+                confDetail.errors.forEach(err => {
+                    if (!err.isRecovered && (err.errorType === 'FileSystem' || (err.errorType === 'Logic' && err.key.includes('csv_write_failed')))) {
+                        err.isRecovered = true;
+                    }
+                });
+            } else if (previousStatus === 'skipped') {
+                if (overall.skippedTasks && overall.skippedTasks > 0) overall.skippedTasks--;
+            }
+            // Nếu previousStatus là 'processed_ok', nó không nằm trong processingTasks, failedTasks, hay skippedTasks
+            // Nó chỉ đơn giản là chuyển từ processed_ok -> completed, và completedTasks tăng lên.
         }
-        if (previousStatus === 'failed') {
-            overall.failedOrCrashedTasks = Math.max(0, (overall.failedOrCrashedTasks || 0) - 1);
-            // Đánh dấu các lỗi trước đó đã được phục hồi nếu event này thành công
-            confDetail.errors.forEach(err => {
-                // Nếu lỗi liên quan đến việc không ghi được file đầu ra hoặc là lỗi dẫn đến status 'failed'
-                // và bây giờ đã thành công, thì coi như được phục hồi.
-                // Logic này có thể phức tạp tùy vào cách bạn định nghĩa "phục hồi".
-                // Ví dụ: chỉ phục hồi lỗi file output, không phải lỗi API.
-                if (!err.isRecovered && err.errorType === 'FileSystem' || err.errorType === 'Logic' && err.key.includes('csv_write_failed')) {
-                    err.isRecovered = true;
-                }
-            });
-        }
-        if (previousStatus === 'skipped') {
-            overall.skippedTasks = Math.max(0, (overall.skippedTasks || 0) - 1);
-        }
+        fileOutput.csvRecordsSuccessfullyWritten = (fileOutput.csvRecordsSuccessfullyWritten || 0) + 1;
 
     } else {
         fileOutput.csvOrphanedSuccessRecords = (fileOutput.csvOrphanedSuccessRecords || 0) + 1;
@@ -102,6 +92,10 @@ export const handleJsonlWriteSuccess: LogEventHandler = (logEntry, results, conf
     if (confDetail) {
         confDetail.jsonlWriteSuccess = true;
         fileOutputStats.jsonlRecordsSuccessfullyWritten = (fileOutputStats.jsonlRecordsSuccessfullyWritten || 0) + 1;
+        // Ghi JSONL thành công không tự động thay đổi status của conference sang 'completed'.
+        // Status 'completed' thường được xác định bởi ghi CSV thành công hoặc task_finish nếu không có CSV.
+        // Tuy nhiên, nếu logic của bạn coi JSONL là bước cuối cùng, bạn có thể cập nhật status ở đây.
+        // Hiện tại, để nó không thay đổi status, chờ CSV hoặc calculateFinalMetrics.
     }
 };
 
@@ -109,57 +103,57 @@ export const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confD
     const fileOutputStats = ensureFileOutputAnalysis(results);
     const overallStats = ensureOverallAnalysis(results);
 
-    // Sử dụng logEntry.err hoặc toàn bộ logEntry làm errorSource
     const errorSource = logEntry.err || logEntry;
     const defaultMessage = 'Jsonl record write failed';
 
-    // normalizeErrorKey vẫn cần cho errorsAggregated
     const keyForAggregation = normalizeErrorKey(errorSource);
     results.errorsAggregated[keyForAggregation] = (results.errorsAggregated[keyForAggregation] || 0) + 1;
     fileOutputStats.jsonlWriteErrors = (fileOutputStats.jsonlWriteErrors || 0) + 1;
 
     if (confDetail) {
         const previousStatus = confDetail.status;
-        if (previousStatus !== 'failed' && previousStatus !== 'skipped') { // Chỉ tăng nếu chưa bị đánh dấu failed/skipped
+        confDetail.jsonlWriteSuccess = false; // Đánh dấu ghi JSONL thất bại
+
+        // Nếu lỗi ghi JSONL được coi là lỗi nghiêm trọng làm hỏng cả conference:
+        if (previousStatus !== 'failed' && previousStatus !== 'skipped') {
+            confDetail.status = 'failed';
+            confDetail.endTime = entryTimestampISO; // Cập nhật endTime nếu lỗi này kết thúc task
+
             overallStats.failedOrCrashedTasks = (overallStats.failedOrCrashedTasks || 0) + 1;
-            // Nếu trước đó là completed, giảm số completed
-            if (previousStatus === 'completed' && overallStats.completedTasks && overallStats.completedTasks > 0) {
+            if (previousStatus === 'processing' && overallStats.processingTasks && overallStats.processingTasks > 0) {
+                overallStats.processingTasks--;
+            } else if (previousStatus === 'completed' && overallStats.completedTasks && overallStats.completedTasks > 0) {
                 overallStats.completedTasks--;
+            } else if (previousStatus === 'processed_ok') {
+                // Không có counter riêng cho processed_ok, nó chỉ chuyển sang failed
             }
         }
-        confDetail.status = 'failed';
-        confDetail.jsonlWriteSuccess = false;
-        confDetail.endTime = entryTimestampISO;
+
 
         const errorContext: LogErrorContext = {
-            phase: 'response_processing', // Lỗi xảy ra trong quá trình xử lý/ghi kết quả
-            ...logEntry.context // Bao gồm context gốc của logEntry
+            phase: 'response_processing',
+            ...logEntry.context
         };
 
         addConferenceError(
             confDetail,
             entryTimestampISO,
-            errorSource, // Truyền trực tiếp errorSource
+            errorSource,
             {
                 defaultMessage: defaultMessage,
                 keyPrefix: 'jsonl_write_failed',
                 sourceService: logEntry.service || 'FileOutputService',
-                errorType: 'FileSystem', // Giả định là lỗi ghi file
+                errorType: 'FileSystem',
                 context: errorContext,
-                additionalDetails: {
-                    filePath: logEntry.filePath, // Thêm chi tiết về đường dẫn file nếu có
-                    batchSize: logEntry.batchSize // và các chi tiết khác liên quan đến batch ghi
-                }
+                additionalDetails: { filePath: logEntry.filePath, batchSize: logEntry.batchSize }
             }
         );
     }
 };
 
-// Handler mới cho các event từ ResultProcessingService (nội bộ, không trực tiếp cập nhật confDetail)
+// handleCsvProcessingEvent giữ nguyên
 export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {
-    const fileOutput = ensureFileOutputAnalysis(results);
-    const overall = ensureOverallAnalysis(results); // Cần overall nếu có lỗi
-
+   const fileOutput = ensureFileOutputAnalysis(results);
     const eventName = logEntry.event;
 
     switch (eventName) {
@@ -167,38 +161,50 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, _co
             fileOutput.csvRecordsAttempted = (fileOutput.csvRecordsAttempted || 0) + 1;
             break;
         case 'csv_stream_collect_success':
-            if (fileOutput.csvRecordsSuccessfullyWritten > 0) {
-                 fileOutput.csvFileGenerated = true;
+            const recordsWritten = typeof logEntry.recordsWrittenToCsv === 'number'
+                ? logEntry.recordsWrittenToCsv
+                : (typeof logEntry.context?.recordsWrittenToCsv === 'number' ? logEntry.context.recordsWrittenToCsv : -1);
+
+            if (recordsWritten > 0 || logEntry.context?.allowEmptyFile) {
+                fileOutput.csvFileGenerated = true;
+                // QUAN TRỌNG: Nếu trước đó pipeline failure đã được set do hiểu lầm,
+                // và giờ stream collect success xác nhận file được tạo, có thể reset pipeline failure.
+                // Tuy nhiên, điều này cần cẩn thận. Nếu có một lỗi pipeline THỰC SỰ trước đó,
+                // việc reset ở đây có thể che giấu lỗi.
+                // Chỉ reset nếu chúng ta chắc chắn rằng pipeline failure trước đó là do
+                // việc 'csv_stream_collect_success' bị đánh giá sai.
+                // Ví dụ: if (fileOutput.csvPipelineFailures > 0 && recordsWritten > 0) {
+                //    // Có thể log một cảnh báo ở đây là đang reset một pipeline failure tiềm năng
+                //    // fileOutput.csvPipelineFailures = 0; // Cân nhắc kỹ lưỡng dòng này
+                // }
+            } else if (recordsWritten === 0 && !logEntry.context?.allowEmptyFile) {
+                fileOutput.csvFileGenerated = false;
+                fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
             }
+            // Nếu recordsWritten === -1 (không có thông tin), không thay đổi gì, để các event khác quyết định.
             break;
         case 'csv_stream_collect_failed':
-        case 'csv_generation_failed_or_empty':
+        case 'csv_generation_failed_or_empty': // Nếu empty mà không được phép thì là lỗi
+             if (eventName === 'csv_generation_failed_or_empty' && logEntry.context?.allowEmptyFileIfNoRecords && fileOutput.csvRecordsAttempted === 0) {
+                fileOutput.csvFileGenerated = true; // Cho phép rỗng nếu không có record nào để ghi
+             } else {
+                fileOutput.csvFileGenerated = false;
+                fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
+                const errorSourceFc = logEntry.err || logEntry;
+                const defaultMessageFc = `CSV pipeline failed (${eventName})`;
+                const keyForAggregationFc = normalizeErrorKey(errorSourceFc);
+                results.errorsAggregated[keyForAggregationFc] = (results.errorsAggregated[keyForAggregationFc] || 0) + 1;
+             }
+            break;
         case 'csv_generation_pipeline_failed':
             fileOutput.csvFileGenerated = false;
             fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
-
-            // Nếu có confDetail liên quan đến lỗi này (ví dụ: lỗi xảy ra trong bối cảnh một conference cụ thể)
-            // (Tuy nhiên, các event này thường là global hơn, không gắn với 1 confDetail cụ thể qua batchRequestId/acronym/title)
-            // Nếu bạn muốn gán lỗi này cho một conference, bạn cần logic để tìm confDetail trước.
-            // Hiện tại, chúng ta chỉ ghi log lỗi và tăng overall count.
             const errorSource = logEntry.err || logEntry;
             const defaultMessage = `CSV pipeline failed (${eventName})`;
             const keyForAggregation = normalizeErrorKey(errorSource);
             results.errorsAggregated[keyForAggregation] = (results.errorsAggregated[keyForAggregation] || 0) + 1;
-
-            // Nếu đây là lỗi hệ thống toàn bộ, có thể tăng overall.failedOrCrashedTasks
-            // Nhưng cẩn thận tránh double count nếu lỗi này cũng dẫn đến handleTaskUnhandledError.
-            // Thường thì những lỗi pipeline này sẽ được phản ánh qua status của task.
-            // addConferenceError(confDetail, entryTimestampISO, errorSource, {
-            //     defaultMessage: defaultMessage,
-            //     keyPrefix: 'csv_pipeline_failure',
-            //     sourceService: logEntry.service || 'ResultProcessingService',
-            //     errorType: 'FileSystem', // Hoặc 'Logic' nếu do logic trống rỗng
-            //     context: { phase: 'response_processing', ...logEntry.context }
-            // });
-
             break;
-        case 'csv_generation_empty_but_file_exists':
+        case 'csv_generation_empty_but_file_exists': // File rỗng được tạo thành công
             fileOutput.csvFileGenerated = true;
             break;
     }

@@ -5,7 +5,7 @@ import { Router } from 'express';
 // These functions will handle their own service dependencies internally.
 import createCrawlRouter from './crawl/crawl.routes';
 import createLogAnalysisRouter from './logAnalysis/logAnalysis.routes';
-
+import { handleConferenceSaveEvent } from './save/save.controller';
 /**
  * Creates and configures the main API router for version 1 (v1) of the API.
  * This router aggregates all feature-specific routers under the /api/v1 path.
@@ -23,8 +23,8 @@ const createV1Router = (): Router => {
     // `createLogAnalysisRouter()` is called here to get the configured router instance.
     router.use('/logs/analysis', createLogAnalysisRouter());
 
-    // Add other v1 feature routers here if needed.
-    // Example: router.use('/users', createUserRouter());
+    // Route mới để ghi log save event
+    router.use('/log/conference-save-event', handleConferenceSaveEvent);
 
     return router;
 };

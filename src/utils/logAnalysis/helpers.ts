@@ -1,17 +1,17 @@
-// src/utils/logAnalysis/helper.ts
-import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types';
-// --- Các helper function khác (normalizeErrorKey, createConferenceKey, initializeConferenceDetail, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
+// src/utils/logAnalysis/helpers.ts
+import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types'; // Thêm ConferenceCrawlType
+// --- Các helper function khác (normalizeErrorKey, createConferenceKey, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
 
-// Giả sử các hàm này đã được export từ logAnalysis.types.ts
+// Giả sử các hàm này đã được export từ logAnalysis.types.ts hoặc types/index.ts
 import {
     getInitialOverallAnalysis,
     getInitialGoogleSearchAnalysis,
     getInitialPlaywrightAnalysis,
-    getInitialGeminiApiAnalysis, // Quan trọng: hàm này cần được định nghĩa và export
+    getInitialGeminiApiAnalysis,
     getInitialBatchProcessingAnalysis,
     getInitialFileOutputAnalysis,
     getInitialValidationStats
-} from '../../types';
+} from '../../types'; // Đảm bảo đường dẫn này đúng
 
 
 export const normalizeErrorKey = (error: any): string => {
@@ -38,7 +38,7 @@ export const createConferenceKey = (batchRequestId: string, acronym: string, tit
 export const initializeConferenceDetail = (batchRequestId: string, acronym: string, title: string): ConferenceAnalysisDetail => ({
     batchRequestId: batchRequestId,
     originalRequestId: undefined,
-    crawlType: null,
+    crawlType: 'crawl', // Hoặc 'crawl' nếu đó là mặc định phổ biến nhất và type là ConferenceCrawlType (không phải ConferenceCrawlType | null)
     title: title,
     acronym: acronym,
     status: 'unknown',
@@ -49,6 +49,9 @@ export const initializeConferenceDetail = (batchRequestId: string, acronym: stri
     crawlSucceededWithoutError: null,
     jsonlWriteSuccess: null,
     csvWriteSuccess: null,
+    // Thêm các trường mới với giá trị mặc định
+    persistedSaveStatus: undefined,
+    persistedSaveTimestamp: undefined,
     steps: {
         search_attempted: false,
         search_success: null,
@@ -72,9 +75,10 @@ export const initializeConferenceDetail = (batchRequestId: string, acronym: stri
     },
     errors: [],
     dataQualityInsights: [],
-    finalResultPreview: undefined, // Sửa lỗi type ở đây, finalResultPreview có thể là any
+    finalResultPreview: undefined,
     finalResult: undefined,
 });
+
 
 
 export const addConferenceError = (

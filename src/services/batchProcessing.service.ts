@@ -94,7 +94,7 @@ export class BatchProcessingService {
         this.conferenceLinkProcessorService = conferenceLinkProcessorService;
         this.conferenceDeterminationService = conferenceDeterminationService;
         this.conferenceDataAggregatorService = conferenceDataAggregatorService;
-        this.serviceBaseLogger = loggingService.getLogger({ service: 'BatchProcessingServiceOrchestrator' });
+        this.serviceBaseLogger = loggingService.getLogger('main', { service: 'BatchProcessingServiceOrchestrator' });
         this.batchesDir = this.configService.batchesDir;
         this.tempDir = this.configService.tempDir;
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');

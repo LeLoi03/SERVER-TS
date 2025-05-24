@@ -35,7 +35,7 @@ export class GeminiRetryHandlerService {
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(GeminiContextCacheService) private contextCache: GeminiContextCacheService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'GeminiRetryHandlerService' });
+        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GeminiRetryHandlerService' });
         this.appConfig = this.configService.config;
         this.defaultMaxRetries = this.configService.config.GEMINI_MAX_RETRIES; // Sử dụng tên mới
         this.initialDelayMs = this.appConfig.GEMINI_INITIAL_DELAY_MS;

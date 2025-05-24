@@ -35,7 +35,7 @@ export class PlaywrightService {
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(ConfigService) private configService: ConfigService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'PlaywrightServiceBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'PlaywrightServiceBase' });
 
         // Load Playwright-specific configurations from ConfigService
         this.PLAYWRIGHT_CHANNEL = this.configService.config.PLAYWRIGHT_CHANNEL;

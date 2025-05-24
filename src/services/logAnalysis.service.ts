@@ -2,73 +2,130 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import fs from 'fs';
-import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis.types';
+import readline from 'readline'; // Thêm readline
+import { LogAnalysisResult, ReadLogResult, FilteredData, ConferenceAnalysisDetail } from '../types'; // Thêm ConferenceAnalysisDetail
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
-import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
+import { getErrorMessageAndStack } from '../utils/errorUtils';
 
 import {
     initializeLogAnalysisResult,
-    readAndGroupLogs,
+    readAndGroupLogs, // Sẽ giữ nguyên cho log chính
     filterRequests,
     processLogEntry,
     calculateFinalMetrics
 } from '../utils/logAnalysis/logProcessing.utils';
+import { createConferenceKey } from '../utils/logAnalysis/helpers'; // Import helper
 
-/**
- * Service responsible for performing real-time or historical analysis of application logs.
- * It reads the configured log file, processes log entries, extracts metrics,
- * and provides summarized results for monitoring and debugging.
- */
+// Interface cho một entry trong conference_save_events.jsonl
+interface SaveEventLogEntry {
+    time: string; // Server timestamp
+    level: number;
+    // Các trường pino khác như pid, hostname có thể có nếu không loại bỏ ở base
+    event?: 'CONFERENCE_SAVE_EVENT_RECORDED' | string; // Thêm ? vì có thể có log entry khác trong file
+    details?: { // Thêm ? vì có thể có log entry khác trong file
+        batchRequestId: string;
+        acronym: string;
+        title: string;
+        recordedStatus: 'SAVED_TO_DATABASE' | string;
+        clientTimestamp: string;
+    };
+}
+
 @singleton()
 export class LogAnalysisService {
     private readonly logger: Logger;
-    private latestResult: LogAnalysisResult | null = null; // Stores the result of the most recent analysis
-    private logFilePath: string; // Path to the log file to be analyzed
+    private latestResult: LogAnalysisResult | null = null;
+    private mainLogFilePath: string;
+    private saveEventsLogFilePath: string; // Thêm path cho file save events
 
-    /**
-     * Constructs an instance of LogAnalysisService.
-     * @param {ConfigService} configService - Injected service for application configuration.
-     * @param {LoggingService} loggingService - Injected service for obtaining a logger instance.
-     */
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService
     ) {
-        this.logger = this.loggingService.getLogger({ service: 'LogAnalysisService' });
+        // Sử dụng logger chính cho LogAnalysisService
+        this.logger = this.loggingService.getLogger('main', { service: 'LogAnalysisService' });
 
-        // Retrieve the application log file path from ConfigService
-        this.logFilePath = this.configService.appLogFilePath;
+        this.mainLogFilePath = this.configService.appLogFilePath;
+        this.saveEventsLogFilePath = this.configService.getSaveEventLogFilePath(); // Lấy từ config
 
-        this.logger.info({ event: 'log_analysis_init_success', logFilePath: this.logFilePath }, `LogAnalysisService initialized. Log file path: ${this.logFilePath}.`);
+        this.logger.info({
+            event: 'log_analysis_init_success',
+            mainLogFilePath: this.mainLogFilePath,
+            saveEventsLogFilePath: this.saveEventsLogFilePath
+        }, `LogAnalysisService initialized. Main log: ${this.mainLogFilePath}, Save Events log: ${this.saveEventsLogFilePath}.`);
 
-        // Warn if the log file doesn't exist at startup (analysis might still be requested later)
-        if (!fs.existsSync(this.logFilePath)) {
-            this.logger.warn({ event: 'log_file_not_found_on_init', logFilePath: this.logFilePath }, `Log file not found at configured path: ${this.logFilePath}. Analysis attempts might fail or return empty results until the file is created.`);
+        if (!fs.existsSync(this.mainLogFilePath)) {
+            this.logger.warn({ event: 'main_log_file_not_found_on_init', logFilePath: this.mainLogFilePath }, `Main log file not found: ${this.mainLogFilePath}.`);
+        }
+        if (!fs.existsSync(this.saveEventsLogFilePath)) {
+            this.logger.warn({ event: 'save_events_log_file_not_found_on_init', logFilePath: this.saveEventsLogFilePath }, `Save events log file not found: ${this.saveEventsLogFilePath}. Persisted save statuses might be missing.`);
         }
     }
 
     /**
-     * Performs a comprehensive analysis of the application log file.
-     * It reads, parses, filters, processes, and calculates various metrics.
-     * The results are stored internally and also returned.
-     *
-     * @param {Date | number} [filterStartTime] - Optional: Start timestamp (Date object or Unix timestamp) to filter log entries.
-     * @param {Date | number} [filterEndTime] - Optional: End timestamp (Date object or Unix timestamp) to filter log entries.
-     * @param {string} [filterRequestId] - Optional: A specific request ID to filter log entries by.
-     * @returns {Promise<LogAnalysisResult>} A Promise that resolves with the detailed log analysis result.
+     * Reads conference save event logs and maps them by a composite key.
+     * @returns {Promise<Map<string, SaveEventLogEntry['details']>>} A map of save event details.
      */
+    private async readConferenceSaveEvents(): Promise<Map<string, NonNullable<SaveEventLogEntry['details']>>> {
+        const saveEventsMap = new Map<string, NonNullable<SaveEventLogEntry['details']>>();
+        const logContext = { function: 'readConferenceSaveEvents', logFilePath: this.saveEventsLogFilePath };
+
+        if (!fs.existsSync(this.saveEventsLogFilePath)) {
+            this.logger.warn({ ...logContext, event: 'save_event_log_not_found' }, 'Save event log file not found. No persisted save statuses will be loaded.');
+            return saveEventsMap;
+        }
+
+        this.logger.info({ ...logContext, event: 'read_save_events_start' }, 'Starting to read conference save events log.');
+        let lineCount = 0;
+        let parsedCount = 0;
+
+        const fileStream = fs.createReadStream(this.saveEventsLogFilePath);
+        const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
+
+        try {
+            for await (const line of rl) {
+                lineCount++;
+                if (!line.trim()) continue;
+                try {
+                    const logEntry = JSON.parse(line) as SaveEventLogEntry;
+                    // Kiểm tra kỹ hơn cấu trúc của log entry
+                    if (logEntry.event === 'CONFERENCE_SAVE_EVENT_RECORDED' && logEntry.details &&
+                        logEntry.details.batchRequestId && logEntry.details.acronym && logEntry.details.title) {
+
+                        const { batchRequestId, acronym, title } = logEntry.details;
+                        const key = createConferenceKey(batchRequestId, acronym, title);
+                        if (key) {
+                            // Ghi đè với entry mới nhất nếu có trùng key (dựa vào thứ tự đọc file)
+                            saveEventsMap.set(key, logEntry.details);
+                            parsedCount++;
+                        }
+                    }
+                } catch (parseError) {
+                    this.logger.warn({ ...logContext, event: 'parse_save_event_line_error', lineNumber: lineCount, error: getErrorMessageAndStack(parseError).message }, `Failed to parse line from save event log.`);
+                }
+            }
+            this.logger.info({ ...logContext, event: 'read_save_events_finish', totalLines: lineCount, parsedEvents: parsedCount }, `Finished reading save events log. Parsed ${parsedCount} save events.`);
+        } catch (readError) {
+            const { message, stack } = getErrorMessageAndStack(readError);
+            this.logger.error({ ...logContext, event: 'read_save_events_file_error', err: { message, stack } }, `Error reading save events log file: ${message}`);
+        }
+        return saveEventsMap;
+    }
+
+
     async performAnalysisAndUpdate(
         filterStartTime?: Date | number,
         filterEndTime?: Date | number,
         filterRequestId?: string
     ): Promise<LogAnalysisResult> {
-        const logContext = { function: 'performAnalysisAndUpdate', logFilePath: this.logFilePath, filterRequestId, filterStartTime, filterEndTime };
+        const logContext = { function: 'performAnalysisAndUpdate', mainLogFilePath: this.mainLogFilePath, filterRequestId, filterStartTime, filterEndTime };
         this.logger.info({ ...logContext, event: 'analysis_start' }, 'Starting log analysis execution.');
 
+
         // Initialize a new result object for the current analysis run
-        const results: LogAnalysisResult = initializeLogAnalysisResult(this.logFilePath, filterRequestId);
+        const results: LogAnalysisResult = initializeLogAnalysisResult(this.mainLogFilePath, filterRequestId);
 
         // Convert filter times to milliseconds for consistent comparison
         const filterStartMillis = filterStartTime ? new Date(filterStartTime).getTime() : null;
@@ -86,9 +143,9 @@ export class LogAnalysisService {
         }
 
         try {
-            // Phase 0: Pre-check if log file exists
-            if (!fs.existsSync(this.logFilePath)) {
-                const errorMsg = `Log file not found at path: ${this.logFilePath}. Cannot perform analysis.`;
+            // Phase 0a: Pre-check main log file
+            if (!fs.existsSync(this.mainLogFilePath)) {
+                const errorMsg = `Log file not found at path: ${this.mainLogFilePath}. Cannot perform analysis.`;
                 this.logger.error({ ...logContext, event: 'analysis_error_file_not_found' }, errorMsg);
                 results.status = 'Failed';
                 results.errorMessage = errorMsg;
@@ -97,9 +154,15 @@ export class LogAnalysisService {
                 return results;
             }
 
-            // Phase 1: Read and Group Logs
-            this.logger.info({ ...logContext, event: 'analysis_read_start' }, 'Phase 1: Starting to read and group logs.');
-            const readResult: ReadLogResult = await readAndGroupLogs(this.logFilePath);
+            // Phase 0b: Read Conference Save Events (Đọc trước để có thể merge)
+            this.logger.info({ ...logContext, event: 'analysis_read_save_events_start' }, 'Phase 0b: Starting to read conference save events.');
+            const conferenceSaveEventsMap = await this.readConferenceSaveEvents();
+            this.logger.info({ ...logContext, event: 'analysis_read_save_events_finish', count: conferenceSaveEventsMap.size }, `Phase 0b: Finished reading ${conferenceSaveEventsMap.size} conference save events.`);
+
+
+            // Phase 1: Read and Group Main Logs
+            this.logger.info({ ...logContext, event: 'analysis_read_main_log_start' }, 'Phase 1: Starting to read and group main logs.');
+            const readResult: ReadLogResult = await readAndGroupLogs(this.mainLogFilePath); // Sử dụng hàm gốc
             results.totalLogEntries = readResult.totalEntries;
             results.parsedLogEntries = readResult.parsedEntries;
             results.parseErrors = readResult.parseErrors;
@@ -147,19 +210,33 @@ export class LogAnalysisService {
 
             // Phase 2b: Process Log Entries for Included Requests
             this.logger.info({ ...logContext, event: 'analysis_processing_start', requestCount: filteredRequests.size }, 'Phase 2b: Starting to process log entries for included requests.');
-            const conferenceLastTimestamp: { [compositeKey: string]: number } = {}; // To track last timestamp for each conference
+            const conferenceLastTimestamp: { [compositeKey: string]: number } = {};
             for (const [requestId, requestInfo] of filteredRequests.entries()) {
-                const requestLogger = this.logger.child({ requestId }); // Child logger for specific request ID
                 for (const logEntry of requestInfo.logs) {
+                    // processLogEntry sẽ tạo ConferenceAnalysisDetail nếu chưa có
                     processLogEntry(logEntry, results, conferenceLastTimestamp);
                 }
             }
             this.logger.info({ ...logContext, event: 'analysis_processing_end' }, 'Phase 2b: Finished processing log entries.');
 
+            // Phase 2c: Merge Persisted Save Statuses
+            this.logger.info({ ...logContext, event: 'analysis_merge_save_status_start', count: conferenceSaveEventsMap.size }, 'Phase 2c: Starting to merge persisted save statuses.');
+            Object.entries(results.conferenceAnalysis).forEach(([confKey, detail]) => {
+                const savedEventDetails = conferenceSaveEventsMap.get(confKey);
+                if (savedEventDetails) {
+                    detail.persistedSaveStatus = savedEventDetails.recordedStatus;
+                    detail.persistedSaveTimestamp = savedEventDetails.clientTimestamp;
+                    // Log nếu tìm thấy và merge
+                    // this.logger.debug({ ...logContext, event: 'merged_save_status', confKey }, `Merged persisted save status for ${confKey}`);
+                }
+            });
+            this.logger.info({ ...logContext, event: 'analysis_merge_save_status_finish' }, 'Phase 2c: Finished merging persisted save statuses.');
+
+
             // Phase 3: Calculate Final Metrics
             this.logger.info({ ...logContext, event: 'analysis_calculate_metrics_start' }, 'Phase 3: Starting to calculate final metrics.');
             calculateFinalMetrics(results, conferenceLastTimestamp, analysisStartMillis, analysisEndMillis, filteredRequests);
-            results.status = 'Completed';
+            results.status = 'Completed'; // Đặt status completed sau khi calculateFinalMetrics thành công
             this.logger.info({ ...logContext, event: 'analysis_calculate_metrics_finish' }, 'Phase 3: Finished calculating final metrics. Analysis completed successfully.');
 
             // Store the latest successful result

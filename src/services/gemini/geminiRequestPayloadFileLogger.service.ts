@@ -33,7 +33,7 @@ export class GeminiRequestPayloadFileLoggerService {
     constructor(
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'GeminiRequestPayloadFileLoggerService' });
+        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GeminiRequestPayloadFileLoggerService' });
         this.serviceBaseLogger.info("Constructing GeminiRequestPayloadFileLoggerService.");
     }
 

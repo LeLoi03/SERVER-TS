@@ -54,7 +54,7 @@ export class CrawlOrchestratorService {
         @inject(TaskQueueService) private taskQueueService: TaskQueueService,
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
     ) {
-        this.baseLogger = this.loggingService.getLogger({ service: 'CrawlOrchestratorServiceBase' });
+        this.baseLogger = this.loggingService.getLogger('main', { service: 'CrawlOrchestratorServiceBase' });
         this.configApp = this.configService.config;
     }
 

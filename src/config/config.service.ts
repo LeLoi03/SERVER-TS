@@ -657,6 +657,9 @@ const envSchema = z.object({
      * @default 'csv_outputs'
      */
     CSV_OUTPUT_SUBDIR: z.string().default('csv_outputs'),
+
+    SAVE_STATUS_OUTPUT_SUBDIR: z.string().default('save_status_outputs'),
+
 });
 
 // --- Define Interfaces for Structured Config ---
@@ -776,6 +779,12 @@ export class ConfigService {
      * @readonly
      */
     public readonly csvOutputDir: string;
+
+    /**
+     * Resolved path to the directory for CSV output files.
+     * @readonly
+     */
+    public readonly saveStatusDir: string;
 
     /**
      * A promise that resolves when the few-shot examples have been loaded.
@@ -911,6 +920,7 @@ export class ConfigService {
             // Resolve and store paths for output directories
             this.jsonlOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.JSONL_OUTPUT_SUBDIR);
             this.csvOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.CSV_OUTPUT_SUBDIR);
+            this.saveStatusDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.SAVE_STATUS_OUTPUT_SUBDIR);
 
             // Log successful configuration loading
             console.log("✅ Configuration loaded and validated successfully.");
@@ -920,6 +930,7 @@ export class ConfigService {
             console.log(`   - Base Output Dir: ${this.baseOutputDir}`);
             console.log(`   - JSONL Output Dir: ${this.jsonlOutputDir}`);
             console.log(`   - CSV Output Dir: ${this.csvOutputDir}`);
+            console.log(`   - Save Status Output Dir: ${this.saveStatusDir}`);
             console.log(`   - Host Agent Model: ${this.config.GEMINI_HOST_AGENT_MODEL_NAME}`);
             console.log(`   - Host Agent Config: ${JSON.stringify(this.hostAgentGenerationConfig)}`);
             console.log(`   - Sub Agent Model: ${this.config.GEMINI_SUB_AGENT_MODEL_NAME}`);
@@ -1229,5 +1240,10 @@ export class ConfigService {
      */
     public getBaseEvaluateCsvPath(): string {
         return path.join(this.csvOutputDir, 'evaluate.csv');
+    }
+
+
+    public getSaveEventLogFilePath(): string {
+        return path.join(this.saveStatusDir, 'conference_save_events.jsonl');
     }
 }

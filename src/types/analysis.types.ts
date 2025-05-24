@@ -33,6 +33,10 @@ export interface OverallAnalysis {
     successfulExtractions: number;
 }
 
+
+export type ConferenceCrawlType = 'crawl' | 'update' | null; // Đảm bảo type này tồn tại
+
+
 /**
  * Detailed analysis of the processing of a specific conference within a batch.
  * Provides a granular view of each step of the crawl for a single conference.
@@ -43,7 +47,9 @@ export interface ConferenceAnalysisDetail {
     /** Optional: The original request ID if this conference was part of a re-crawl. */
     originalRequestId?: string;
     /** Crawl Type */
-    crawlType: 'crawl' | 'update' | null;
+    crawlType: ConferenceCrawlType;
+    persistedSaveStatus?: 'SAVED_TO_DATABASE' | string; // Trạng thái lưu trữ bền vững
+    persistedSaveTimestamp?: string; // Thời điểm ghi nhận lưu trữ bền vững (từ clientTimestamp)
     /** The title of the conference. */
     title: string;
     /** The acronym of the conference. */

@@ -27,7 +27,7 @@ export class TaskQueueService {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
-        this.logger = this.loggingService.getLogger({ service: 'TaskQueueService' });
+        this.logger = this.loggingService.getLogger('main', { service: 'TaskQueueService' });
         // Retrieve the concurrency limit from application configuration
         this.concurrency = this.configService.config.CRAWL_CONCURRENCY;
 

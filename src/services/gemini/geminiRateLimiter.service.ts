@@ -33,7 +33,7 @@ export class GeminiRateLimiterService {
         @inject(ConfigService) configService: ConfigService,
         @inject(LoggingService) loggingService: LoggingService,
     ) {
-        this.baseLogger = loggingService.getLogger({ service: 'GeminiRateLimiterService' });
+        this.baseLogger = loggingService.getLogger('main', { service: 'GeminiRateLimiterService' });
         // Load rate limit configurations from ConfigService
         this.rateLimitPoints = configService.config.GEMINI_RATE_LIMIT_POINTS;
         this.rateLimitDuration = configService.config.GEMINI_RATE_LIMIT_DURATION;

@@ -29,7 +29,7 @@ export class ConferenceProcessorService {
         @inject(HtmlPersistenceService) private htmlPersistenceService: HtmlPersistenceService,
         @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'ConferenceProcessorBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'ConferenceProcessorBase' });
         this.searchQueryTemplate = this.configService.config.SEARCH_QUERY_TEMPLATE;
         this.year1 = this.configService.config.YEAR1;
         this.year2 = this.configService.config.YEAR2;

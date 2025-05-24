@@ -21,7 +21,7 @@ export const scheduleLogAnalysisJob = (): void => {
     // Resolve the LoggingService early to obtain a logger for the scheduling process itself.
     const loggingService = container.resolve(LoggingService);
     // Create a parent logger specific to the job scheduler.
-    const parentLogger: Logger = loggingService.getLogger({ job: 'LogAnalysisScheduler' });
+    const parentLogger: Logger = loggingService.getLogger('main', { job: 'LogAnalysisScheduler' });
 
     try {
         // Resolve ConfigService to get job-specific configurations.
@@ -42,7 +42,7 @@ export const scheduleLogAnalysisJob = (): void => {
             const jobStartTime = Date.now();
             // Create a *new child logger* for each job run. This helps in tracing individual job executions
             // by attaching a unique `runId` to all logs generated within this specific run.
-            const jobLogger: Logger = loggingService.getLogger({ job: 'LogAnalysisRun', runId: jobStartTime });
+            const jobLogger: Logger = loggingService.getLogger('main', { job: 'LogAnalysisRun', runId: jobStartTime });
 
             jobLogger.info('Starting scheduled log analysis task...');
 

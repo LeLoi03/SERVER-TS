@@ -32,7 +32,7 @@ export class GeminiSdkExecutorService {
         @inject(GeminiResponseHandlerService) private responseHandler: GeminiResponseHandlerService,
         @inject(GeminiRequestPayloadFileLoggerService) private payloadFileLogger: GeminiRequestPayloadFileLoggerService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger({ service: 'GeminiSdkExecutorService' });
+        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GeminiSdkExecutorService' });
         this.serviceBaseLogger.info("Constructing GeminiSdkExecutorService.");
     }
 
