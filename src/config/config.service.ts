@@ -298,9 +298,10 @@ const envSchema = z.object({
     // --- Gemini API General Configuration ---
     /**
      * Gemini API Key (or comma-separated list).
-     * @description Required for accessing Gemini models. Additional keys can be provided as GEMINI_API_KEY_1, GEMINI_API_KEY_2, etc.
+     * @description Required for accessing Gemini models.
      */
-    GEMINI_API_KEY: z.string().optional().transform(parseCommaSeparatedString('GEMINI_API_KEY')), // Changed to transform to array
+    GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"), // Changed to transform to array
+    
     /**
      * Maximum number of concurrent requests to the Gemini API.
      * @default 2
@@ -731,7 +732,7 @@ export type AppConfig = AppConfigFromSchema & {
     GOOGLE_CUSTOM_SEARCH_API_KEYS: string[];
     /**
      * A dynamically populated array of all Gemini API Keys found in environment variables.
-     * Includes `GEMINI_API_KEY` from the schema and any `GEMINI_API_KEY_N`.
+     * `GEMINI_API_KEY_N`.
      */
     GEMINI_API_KEYS: string[]; // Add the new property for Gemini API keys
 };
@@ -826,9 +827,9 @@ export class ConfigService {
             const geminiApiKeys: string[] = [];
             const geminiKeyPattern = /^GEMINI_API_KEY_\d+$/;
             // Add the key from GEMINI_API_KEY if it exists and is not empty
-            if (parsedConfig.GEMINI_API_KEY && parsedConfig.GEMINI_API_KEY.length > 0) {
-                geminiApiKeys.push(...parsedConfig.GEMINI_API_KEY);
-            }
+            // if (parsedConfig.GEMINI_API_KEY && parsedConfig.GEMINI_API_KEY.length > 0) {
+            //     geminiApiKeys.push(...parsedConfig.GEMINI_API_KEY);
+            // }
             // Add any dynamically numbered Gemini keys
             for (const envVar in process.env) {
                 if (geminiKeyPattern.test(envVar) && process.env[envVar]) {
