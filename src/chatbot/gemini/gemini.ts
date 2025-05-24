@@ -50,7 +50,7 @@ export class Gemini {
         // Construct system instruction part only if provided
         // SDK now recommends 'system' role for system instructions
         const systemInstructionPart = systemInstruction
-            ? { role: "system", parts: [{ text: systemInstruction }] }
+            ? { role: "model", parts: [{ text: systemInstruction }] }
             : undefined;
 
         const modelOptions: any = {

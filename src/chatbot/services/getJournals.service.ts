@@ -18,7 +18,7 @@ export async function executeGetJournals(searchQuery: string): Promise<ApiCallRe
     try {
         // Assuming journal transformation is not yet implemented or needed for link extraction only
         // The `backendService` will handle if a transformer is registered for 'journal' or not.
-        const result = await executeApiCall('journal', `q=${encodeURIComponent(searchQuery)}`); // Will likely have formattedData=null if no transformer
+        const result = await executeApiCall('journal', `${searchQuery}`); // Will likely have formattedData=null if no transformer
         if (result.success) {
             logToFile(`${logPrefix} API call for journals successful.`);
         } else {

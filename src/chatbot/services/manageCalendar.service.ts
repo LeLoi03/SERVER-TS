@@ -137,7 +137,7 @@ export async function executeManageCalendarApi(
     const url = getCalendarApiUrl(action); // 'add' or 'remove' operation
     // API might require different methods (POST, PUT, DELETE). Adjust as needed.
     // This example uses PUT for both add and remove, modify if your API differs.
-    const method = 'PUT';
+    const method = 'POST';
     const bodyPayload = { conferenceId: conferenceId };
 
     logToFile(`${logContext} Executing action: ${method} ${url} with payload: ${JSON.stringify(bodyPayload)}`);

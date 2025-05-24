@@ -17,7 +17,7 @@ export async function executeGetConferences(searchQuery: string): Promise<ApiCal
     logToFile(`${logPrefix} Initiating API call for conferences with query: "${searchQuery}"`);
     try {
         // The actual API call and processing logic is handled by backendService
-        const result = await executeApiCall('conference', `q=${encodeURIComponent(searchQuery)}`);
+        const result = await executeApiCall('conference', `${searchQuery}`);
         if (result.success) {
             logToFile(`${logPrefix} API call for conferences successful.`);
         } else {

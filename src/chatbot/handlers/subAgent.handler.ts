@@ -141,7 +141,7 @@ export async function callSubAgent(
     const subAgentInputText = `Received Task Request (ID: ${requestCard.taskId}):\nDescription: ${taskDesc}\nPlease execute.`;
     // Original logic: wrap string in Part[] and then extract text again.
     // Keeping this structure as requested, though direct string might be simpler.
-    const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
+    // const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
     const subAgentIsolatedHistory: ChatHistoryItem[] = []; // Sub-agents typically start with a fresh history for their specific task
 
     // Initialize result variables
@@ -184,14 +184,13 @@ export async function callSubAgent(
     try {
         recordThoughtAndEmitStatus('sub_agent_thinking', `Sub Agent ${subAgentId} processing task: ${taskDesc.substring(0, 50)}...`);
 
-        // Extract the text content from the prepared `Part[]` for `generateTurn`.
-        // This adheres to the existing logic structure.
-        const nextTurnInputForSubAgent: string | Part[] = subAgentInputParts; // Passing Part[] directly
+        // const nextTurnInputForSubAgent: string | Part[] = subAgentInputParts; // <<--- THAY ĐỔI DÒNG NÀY
+        const nextTurnInputForSubAgent: string = subAgentInputText; // <<--- SỬA THÀNH STRING
 
-        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Calling Gemini service for sub-agent with input type: ${typeof nextTurnInputForSubAgent === 'string' ? 'string' : 'Part[]'}`);
+        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Calling Gemini service for sub-agent with input type: ${typeof nextTurnInputForSubAgent === 'string' ? 'string' : 'Part[]'}`); // Log này vẫn sẽ đúng
 
         const subAgentLlmResult = await geminiServiceForSubAgent.generateTurn(
-            nextTurnInputForSubAgent, // Use the prepared input (Part[])
+            nextTurnInputForSubAgent, // <<--- Bây giờ là string
             subAgentIsolatedHistory,
             subAgentGenerationConfig,
             systemInstructions,
