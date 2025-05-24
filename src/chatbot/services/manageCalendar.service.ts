@@ -47,11 +47,11 @@ function getCalendarApiUrl(
     const base = 'calendar'; // Your API base path for calendar operations
     switch (operation) {
         case 'calendarList':
-            return `${DATABASE_URL}/${base}/events`; // Endpoint to get list of calendar events
+            return `${DATABASE_URL}/${base}/conference-events`; // Endpoint to get list of calendar events
         case 'add':
-            return `${DATABASE_URL}/${base}/add-event`; // Endpoint to add an event
+            return `${DATABASE_URL}/${base}/add`; // Endpoint to add an event
         case 'remove':
-            return `${DATABASE_URL}/${base}/remove-event`; // Endpoint to remove an event
+            return `${DATABASE_URL}/${base}/remove`; // Endpoint to remove an event
         default:
             // This case should ideally not be reached if types are used correctly, but provides a fallback.
             logToFile(`${LOG_PREFIX} Error: Invalid operation type for URL construction: ${operation}`);
