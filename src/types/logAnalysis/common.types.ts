@@ -121,7 +121,7 @@ export interface LogErrorContext {
     /**
      * @property {'primary_execution' | 'fallback_execution' | 'setup' | 'response_processing' | 'sdk_call' | string} [phase] - Giai đoạn của quá trình xử lý mà lỗi xảy ra.
      */
-    phase?: 'primary_execution' | 'fallback_execution' | 'setup' | 'response_processing' | 'sdk_call' | string;
+    phase?: 'primary_execution' | 'fallback_execution' | 'setup' | 'response_processing' | 'sdk_call' | 'response_processing' | string;
     /**
      * @property {string} [modelIdentifier] - Định danh của mô hình được sử dụng khi lỗi xảy ra.
      */

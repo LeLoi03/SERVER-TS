@@ -45,7 +45,7 @@ export const handlePlaywrightGetContextFailed: LogEventHandler = (logEntry, resu
     // Nếu confDetail tồn tại và có ý nghĩa khi ghi lỗi này, bạn có thể thêm vào.
     // Ví dụ: nếu đây là lần đầu tiên get context cho một task cụ thể.
     if (confDetail) {
-         addConferenceError(
+        addConferenceError(
             confDetail,
             entryTimestampISO,
             errorSource,
@@ -204,21 +204,31 @@ export const handleOtherPlaywrightFailure: LogEventHandler = (logEntry, results,
     results.playwright.errorsByType[errorKey] = (results.playwright.errorsByType[errorKey] || 0) + 1;
 
     if (confDetail) {
-        addConferenceError(
-            confDetail,
-            entryTimestampISO,
-            errorSource, // Truyền trực tiếp errorSource
-            {
-                defaultMessage: defaultMessage,
-                keyPrefix: 'playwright_generic_failure',
-                sourceService: logEntry.service || 'Playwright',
-                errorType: 'Unknown', // Hoặc xác định cụ thể hơn nếu event cho phép
-                context: {
-                    phase: 'primary_execution',
-                    event: logEntry.event, // Thêm event vào context
-                    ...logEntry.context // Bảo toàn context gốc
-                }
-            }
-        );
+        if (!confDetail.steps.link_processing_failed_details) {
+            confDetail.steps.link_processing_failed_details = [];
+        }
+        confDetail.steps.link_processing_failed_details.push({
+            timestamp: entryTimestampISO,
+            url: logEntry.finalAttemptedUrl || logEntry.originalUrl,
+            error: errorKey,
+            event: logEntry.event
+        });
+
+        // addConferenceError(
+        //     confDetail,
+        //     entryTimestampISO,
+        //     errorSource, // Truyền trực tiếp errorSource
+        //     {
+        //         defaultMessage: defaultMessage,
+        //         keyPrefix: 'playwright_generic_failure',
+        //         sourceService: logEntry.service || 'Playwright',
+        //         errorType: 'Unknown', // Hoặc xác định cụ thể hơn nếu event cho phép
+        //         context: {
+        //             phase: 'primary_execution',
+        //             event: logEntry.event, // Thêm event vào context
+        //             ...logEntry.context // Bảo toàn context gốc
+        //         }
+        //     }
+        // );
     }
 };

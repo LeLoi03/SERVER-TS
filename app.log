@@ -7238,3 +7238,229 @@
 [2025-05-25T04:08:59.405Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Fetching conversation list.
 [2025-05-25T04:08:59.483Z] [HistoryService] [List User: 077f9da9-5570-4b2e-80e3-35e875c8f8b2, Limit: 20, Lang: N/A] Found 0 conversations.
 [2025-05-25T04:08:59.483Z] [SocketConnectionHandler][n9Z2AKeCPQc4fK4lAAAF][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Sent initial conversation list. Count: 0.
+[2025-05-25T04:31:56.829Z] [SocketConnectionHandler][n9Z2AKeCPQc4fK4lAAAF][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Client disconnected. Reason: "transport close", Active ConvId: N/A.
+[2025-05-25T04:31:57.289Z] [SocketConnectionHandler][xQbiSo-cpReijQSFAAAD][077f9da9-5570-4b2e-80e3-35e875c8f8b2] Client disconnected. Reason: "transport close", Active ConvId: N/A.
+[2025-05-25T05:02:51.584Z] [BackendService] DATABASE_URL configured.
+[2025-05-25T05:02:51.649Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-25T05:02:51.751Z] [FollowService] DATABASE_URL configured.
+[2025-05-25T05:02:51.788Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-25T05:02:51.886Z] [CalendarService] DATABASE_URL configured.
+[2025-05-25T05:02:52.043Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-25T05:02:52.044Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-25T05:02:52.044Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-25T05:02:52.044Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-25T05:02:52.045Z] [Orchestrator] Base dependencies prepared.
+[2025-05-25T05:02:52.045Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-25T05:02:52.045Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-25T05:02:52.045Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-25T05:02:52.045Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-25T05:02:52.388Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-25T05:02:52.390Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-25T05:02:52.393Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-25T05:02:52.394Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-25T05:02:52.415Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-25T05:02:52.416Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-25T05:02:52.419Z] [MainLoader] Starting application loading process...
+[2025-05-25T05:02:52.420Z] [MainLoader] Attempting to connect to database...
+[2025-05-25T05:02:52.420Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-25T05:02:52.421Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-25T05:02:53.317Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-25T05:02:53.318Z] [DatabaseLoader] Database connection successful.
+[2025-05-25T05:02:53.318Z] [MainLoader] Database connection established successfully.
+[2025-05-25T05:02:53.318Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-25T05:02:53.318Z] [MainLoader] Initializing Express application...
+[2025-05-25T05:02:53.319Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-25T05:02:53.321Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-25T05:02:53.322Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-25T05:02:53.323Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-25T05:02:53.324Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-25T05:02:53.324Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-25T05:02:53.325Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-25T05:02:53.326Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-25T05:02:53.326Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-25T05:02:53.326Z] [ExpressLoader] Global error handler registered.
+[2025-05-25T05:02:53.327Z] [ExpressLoader] Express app configured successfully.
+[2025-05-25T05:02:53.327Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-25T05:02:53.328Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-25T05:02:53.328Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-25T05:02:53.331Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-25T05:02:53.332Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-25T05:02:53.332Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-25T05:02:53.332Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-25T05:02:53.332Z] [MainLoader] Socket.IO server initialized.
+[2025-05-25T05:02:53.333Z] [MainLoader] Scheduling cron jobs...
+[2025-05-25T05:02:53.333Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-25T05:02:53.364Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-25T05:02:53.364Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-25T05:02:53.365Z] [MainLoader] Cron jobs scheduled.
+[2025-05-25T05:02:53.365Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-25T05:02:53.506Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-25T05:02:53.506Z] [MainLoader] All basic application loaders completed successfully.
+[2025-05-25T05:09:53.082Z] [BackendService] DATABASE_URL configured.
+[2025-05-25T05:09:53.149Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-25T05:09:53.307Z] [FollowService] DATABASE_URL configured.
+[2025-05-25T05:09:53.355Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-25T05:09:53.436Z] [CalendarService] DATABASE_URL configured.
+[2025-05-25T05:09:53.582Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-25T05:09:53.582Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-25T05:09:53.583Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-25T05:09:53.583Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-25T05:09:53.583Z] [Orchestrator] Base dependencies prepared.
+[2025-05-25T05:09:53.583Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-25T05:09:53.584Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-25T05:09:53.584Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-25T05:09:53.584Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-25T05:09:53.914Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-25T05:09:53.916Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-25T05:09:53.921Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-25T05:09:53.921Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-25T05:09:53.944Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-25T05:09:53.945Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-25T05:09:53.948Z] [MainLoader] Starting application loading process...
+[2025-05-25T05:09:53.948Z] [MainLoader] Attempting to connect to database...
+[2025-05-25T05:09:53.948Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-25T05:09:53.949Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-25T05:09:58.372Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-25T05:09:58.373Z] [DatabaseLoader] Database connection successful.
+[2025-05-25T05:09:58.373Z] [MainLoader] Database connection established successfully.
+[2025-05-25T05:09:58.373Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-25T05:09:58.373Z] [MainLoader] Initializing Express application...
+[2025-05-25T05:09:58.374Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-25T05:09:58.376Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-25T05:09:58.377Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-25T05:09:58.380Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-25T05:09:58.381Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-25T05:09:58.381Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-25T05:09:58.382Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-25T05:09:58.383Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-25T05:09:58.383Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-25T05:09:58.383Z] [ExpressLoader] Global error handler registered.
+[2025-05-25T05:09:58.384Z] [ExpressLoader] Express app configured successfully.
+[2025-05-25T05:09:58.384Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-25T05:09:58.385Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-25T05:09:58.385Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-25T05:09:58.388Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-25T05:09:58.389Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-25T05:09:58.389Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-25T05:09:58.389Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-25T05:09:58.389Z] [MainLoader] Socket.IO server initialized.
+[2025-05-25T05:09:58.389Z] [MainLoader] Scheduling cron jobs...
+[2025-05-25T05:09:58.390Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-25T05:09:58.426Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-25T05:09:58.426Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-25T05:09:58.427Z] [MainLoader] Cron jobs scheduled.
+[2025-05-25T05:09:58.427Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-25T05:09:58.636Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-25T05:09:58.637Z] [MainLoader] All basic application loaders completed successfully.
+[2025-05-25T05:11:16.271Z] [BackendService] DATABASE_URL configured.
+[2025-05-25T05:11:16.366Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-25T05:11:16.537Z] [FollowService] DATABASE_URL configured.
+[2025-05-25T05:11:16.606Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-25T05:11:16.700Z] [CalendarService] DATABASE_URL configured.
+[2025-05-25T05:11:17.023Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-25T05:11:17.023Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-25T05:11:17.024Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-25T05:11:17.024Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-25T05:11:17.024Z] [Orchestrator] Base dependencies prepared.
+[2025-05-25T05:11:17.024Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-25T05:11:17.025Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-25T05:11:17.025Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-25T05:11:17.025Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-25T05:11:17.423Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-25T05:11:17.425Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-25T05:11:17.429Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-25T05:11:17.429Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-25T05:11:17.462Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-25T05:11:17.463Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-25T05:11:17.466Z] [MainLoader] Starting application loading process...
+[2025-05-25T05:11:17.466Z] [MainLoader] Attempting to connect to database...
+[2025-05-25T05:11:17.467Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-25T05:11:17.467Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-25T05:11:18.415Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-25T05:11:18.415Z] [DatabaseLoader] Database connection successful.
+[2025-05-25T05:11:18.416Z] [MainLoader] Database connection established successfully.
+[2025-05-25T05:11:18.416Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-25T05:11:18.416Z] [MainLoader] Initializing Express application...
+[2025-05-25T05:11:18.417Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-25T05:11:18.419Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-25T05:11:18.420Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-25T05:11:18.421Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-25T05:11:18.422Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-25T05:11:18.422Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-25T05:11:18.423Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-25T05:11:18.424Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-25T05:11:18.424Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-25T05:11:18.425Z] [ExpressLoader] Global error handler registered.
+[2025-05-25T05:11:18.425Z] [ExpressLoader] Express app configured successfully.
+[2025-05-25T05:11:18.426Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-25T05:11:18.426Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-25T05:11:18.427Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-25T05:11:18.430Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-25T05:11:18.430Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-25T05:11:18.431Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-25T05:11:18.431Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-25T05:11:18.431Z] [MainLoader] Socket.IO server initialized.
+[2025-05-25T05:11:18.431Z] [MainLoader] Scheduling cron jobs...
+[2025-05-25T05:11:18.432Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-25T05:11:18.468Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-25T05:11:18.468Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-25T05:11:18.468Z] [MainLoader] Cron jobs scheduled.
+[2025-05-25T05:11:18.469Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-25T05:11:18.622Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-25T05:11:18.623Z] [MainLoader] All basic application loaders completed successfully.
+[2025-05-25T05:20:40.184Z] [BackendService] DATABASE_URL configured.
+[2025-05-25T05:20:40.363Z] [GetWebsiteInfoService] WEBSITE_DESCRIPTION configured.
+[2025-05-25T05:20:40.580Z] [FollowService] DATABASE_URL configured.
+[2025-05-25T05:20:40.629Z] [BlacklistService] DATABASE_URL configured.
+[2025-05-25T05:20:40.822Z] [CalendarService] DATABASE_URL configured.
+[2025-05-25T05:20:41.079Z] [Orchestrator] GEMINI_API_KEY is configured.
+[2025-05-25T05:20:41.079Z] [GeminiService] Initialized for model: gemini-2.0-flash
+[2025-05-25T05:20:41.079Z] [GeminiService] Initialized for model: gemini-1.5-flash-002
+[2025-05-25T05:20:41.080Z] [Orchestrator] Initialized Gemini services. Host Model: 'gemini-2.0-flash', Sub-Agent Model: 'gemini-1.5-flash-002'.
+[2025-05-25T05:20:41.080Z] [Orchestrator] Base dependencies prepared.
+[2025-05-25T05:20:41.080Z] [Orchestrator] Sub-Agent handler dependencies prepared.
+[2025-05-25T05:20:41.080Z] [Orchestrator] 'boundCallSubAgentHandler' created.
+[2025-05-25T05:20:41.081Z] [Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.
+[2025-05-25T05:20:41.081Z] [Orchestrator] Intent handler functions ready for export.
+[2025-05-25T05:20:41.496Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_cfp.csv] Successfully read 4 valid rows from CSV.
+[2025-05-25T05:20:41.499Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 4 items.
+[2025-05-25T05:20:41.502Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\determine_links.csv] Successfully read 20 valid rows from CSV.
+[2025-05-25T05:20:41.503Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 20 items.
+[2025-05-25T05:20:41.524Z] [INFO] [FewShotInit][read_csv][D:\NEW-SERVER-TS\src\conference\examples\extract_info.csv] Successfully read 23 valid rows from CSV.
+[2025-05-25T05:20:41.525Z] [INFO] [FewShotInit][createInputsOutputs] Successfully created InputsOutputs structure for 23 items.
+[2025-05-25T05:20:41.527Z] [MainLoader] Starting application loading process...
+[2025-05-25T05:20:41.528Z] [MainLoader] Attempting to connect to database...
+[2025-05-25T05:20:41.528Z] [DatabaseLoader] Attempting to establish database connection...
+[2025-05-25T05:20:41.528Z] [MongoDBService] Attempting to establish MongoDB connection...
+[2025-05-25T05:20:42.407Z] [MongoDBService] MongoDB Connected Successfully.
+[2025-05-25T05:20:42.408Z] [DatabaseLoader] Database connection successful.
+[2025-05-25T05:20:42.408Z] [MainLoader] Database connection established successfully.
+[2025-05-25T05:20:42.408Z] [MainLoader] Core services managed by Dependency Injection container are ready.
+[2025-05-25T05:20:42.408Z] [MainLoader] Initializing Express application...
+[2025-05-25T05:20:42.409Z] [ExpressLoader] Starting Express application configuration...
+[2025-05-25T05:20:42.411Z] [ExpressLoader] CORS middleware applied with origins: http://localhost:8386, https://confhub.ddns.net, http://localhost:1314.
+[2025-05-25T05:20:42.412Z] [ExpressLoader] JSON body parser middleware applied (limit: 1mb).
+[2025-05-25T05:20:42.413Z] [ExpressLoader] URL-encoded body parser middleware applied (limit: 1mb).
+[2025-05-25T05:20:42.414Z] [ExpressLoader] Text/CSV body parser middleware applied.
+[2025-05-25T05:20:42.414Z] [ExpressLoader] Request logging middleware applied.
+[2025-05-25T05:20:42.415Z] [ExpressLoader] Basic root route (/) registered.
+[2025-05-25T05:20:42.416Z] [ExpressLoader] API routes mounted at /api.
+[2025-05-25T05:20:42.416Z] [ExpressLoader] Not Found (404) handler registered.
+[2025-05-25T05:20:42.416Z] [ExpressLoader] Global error handler registered.
+[2025-05-25T05:20:42.416Z] [ExpressLoader] Express app configured successfully.
+[2025-05-25T05:20:42.417Z] [MainLoader] Express application initialized and HTTP server created.
+[2025-05-25T05:20:42.418Z] [MainLoader] Initializing Socket.IO server...
+[2025-05-25T05:20:42.418Z] [SocketIOLoader] Starting Socket.IO server initialization...
+[2025-05-25T05:20:42.422Z] [SocketIOLoader] Socket.IO server instance created.
+[2025-05-25T05:20:42.422Z] [SocketIOLoader] Socket.IO authentication middleware applied.
+[2025-05-25T05:20:42.423Z] [SocketIOLoader] Socket.IO 'connection' event handler registered.
+[2025-05-25T05:20:42.423Z] [SocketIOLoader] Socket.IO server initialized successfully and ready for connections.
+[2025-05-25T05:20:42.423Z] [MainLoader] Socket.IO server initialized.
+[2025-05-25T05:20:42.423Z] [MainLoader] Scheduling cron jobs...
+[2025-05-25T05:20:42.424Z] [JobsLoader] Starting background jobs scheduling...
+[2025-05-25T05:20:42.460Z] [JobsLoader] Log analysis job scheduling initiated.
+[2025-05-25T05:20:42.460Z] [JobsLoader] All background jobs scheduling initiated.
+[2025-05-25T05:20:42.461Z] [MainLoader] Cron jobs scheduled.
+[2025-05-25T05:20:42.461Z] [MainLoader][Task:InitialLogAnalysis] Performing initial log analysis...
+[2025-05-25T05:20:42.608Z] [MainLoader][Task:InitialLogAnalysis] Initial log analysis completed successfully.
+[2025-05-25T05:20:42.608Z] [MainLoader] All basic application loaders completed successfully.
