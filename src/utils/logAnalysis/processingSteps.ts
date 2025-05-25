@@ -1,141 +1,18 @@
 // src/utils/logAnalysis/processingSteps.ts
-import fs from 'fs';
-import readline from 'readline';
 import {
     LogAnalysisResult,
     ConferenceAnalysisDetail,
-    ReadLogResult,
     RequestLogData,
-    FilteredData,
     RequestTimings,
-    LogErrorContext
 } from '../../types';
 import {
     createConferenceKey,
     initializeConferenceDetail,
     addConferenceError,
-    doesRequestOverlapFilter
+
 } from './helpers';
 import { normalizeErrorKey } from './helpers';
 import { eventHandlerMap } from './index';
-
-// --- readAndGroupLogs and filterRequests giữ nguyên ---
-export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
-    const requestsData = new Map<string, RequestLogData>();
-    let totalEntries = 0;
-    let parsedEntries = 0;
-    let parseErrorsCount = 0;
-    const tempLogProcessingErrors: string[] = [];
-
-    if (!fs.existsSync(logFilePath)) {
-        throw new Error(`Log file not found at ${logFilePath}`);
-    }
-
-    const fileStream = fs.createReadStream(logFilePath);
-    const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
-
-    try {
-        for await (const line of rl) {
-            totalEntries++;
-            if (!line.trim()) continue;
-
-            try {
-                const logEntry = JSON.parse(line);
-                parsedEntries++;
-                const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const batchRequestId = logEntry.batchRequestId;
-
-                if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
-                    if (!requestsData.has(batchRequestId)) {
-                        requestsData.set(batchRequestId, { logs: [], startTime: null, endTime: null });
-                    }
-                    const requestInfo = requestsData.get(batchRequestId)!;
-                    requestInfo.logs.push(logEntry);
-
-                    const currentStartTime = requestInfo.startTime;
-                    const currentEndTime = requestInfo.endTime;
-
-                    requestInfo.startTime = (currentStartTime === null || isNaN(currentStartTime))
-                        ? entryTimeMillis
-                        : Math.min(entryTimeMillis, currentStartTime);
-
-                    requestInfo.endTime = (currentEndTime === null || isNaN(currentEndTime))
-                        ? entryTimeMillis
-                        : Math.max(entryTimeMillis, currentEndTime);
-
-                }
-            } catch (parseError: any) {
-                parseErrorsCount++;
-                const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
-                tempLogProcessingErrors.push(errorMsg);
-            }
-        }
-    } catch (readError: any) {
-        throw readError;
-    }
-
-    return {
-        requestsData,
-        totalEntries,
-        parsedEntries,
-        parseErrors: parseErrorsCount,
-        logProcessingErrors: tempLogProcessingErrors,
-    };
-};
-
-export const filterRequests = (
-    allRequestsData: Map<string, RequestLogData>,
-    filterStartMillis: number | null,
-    filterEndMillis: number | null,
-    batchRequestIdFilter?: string
-): FilteredData => {
-    const filteredRequests = new Map<string, RequestLogData>();
-    let analysisStartMillis: number | null = null;
-    let analysisEndMillis: number | null = null;
-
-    if (batchRequestIdFilter) {
-        const requestInfo = allRequestsData.get(batchRequestIdFilter);
-        if (requestInfo && requestInfo.startTime !== null && requestInfo.endTime !== null) {
-            const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
-                doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestIdFilter
-                );
-
-            if (overlapsTimeFilter) {
-                filteredRequests.set(batchRequestIdFilter, requestInfo);
-                analysisStartMillis = requestInfo.startTime;
-                analysisEndMillis = requestInfo.endTime;
-            }
-        }
-    } else {
-        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
-            if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
-                const includeRequest = doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestId
-                );
-
-                if (includeRequest) {
-                    filteredRequests.set(batchRequestId, requestInfo);
-                    if (requestInfo.startTime !== null) {
-                        analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
-                    }
-                    if (requestInfo.endTime !== null) {
-                        analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
-                    }
-                }
-            }
-        }
-    }
-    return { filteredRequests, analysisStartMillis, analysisEndMillis };
-};
 
 
 // --- processLogEntry giữ nguyên ---
@@ -283,31 +160,72 @@ export const calculateFinalMetrics = (
         }
 
         const requestEndTimeISO = currentRequestTimings.endTime;
-        if (requestEndTimeISO) { // Chỉ áp dụng logic "stuck task" nếu request cha đã có endTime
-            conferencesForThisRequest.forEach(conf => {
-                // THAY ĐỔI: Chỉ áp dụng cho 'processing' hoặc 'processed_ok'. Không áp dụng cho 'unknown'.
-                // 'unknown' nghĩa là không có đủ thông tin, không nên tự động coi là 'failed'.
-                if (!conf.endTime && (conf.status === 'processing' || conf.status === 'processed_ok')) {
-                    conf.status = 'failed';
-                    const confKeyForTimestampStuck = createConferenceKey(conf.batchRequestId, conf.acronym, conf.title);
-                    const lastSeenTimeForConf = confKeyForTimestampStuck ? conferenceLastTimestamp[confKeyForTimestampStuck] : null;
-                    conf.endTime = lastSeenTimeForConf ? new Date(lastSeenTimeForConf).toISOString() : requestEndTimeISO;
 
-                    addConferenceError(
-                        conf,
-                        conf.endTime,
-                        "Conference did not complete (stuck in processing/processed_ok) before its parent request finished.",
-                        {
-                            defaultMessage: "Conference task stuck or incomplete.",
-                            keyPrefix: 'task_stuck_or_incomplete',
-                            sourceService: 'FinalMetricsCalculation',
-                            errorType: 'Logic',
-                            context: {
-                                phase: 'response_processing',
-                                stuckReason: "Parent request ended while task active"
+        if (requestEndTimeISO) { // Chỉ áp dụng logic "stuck task" nếu request cha đã có endTime
+            const requestEndTimeMillis = new Date(requestEndTimeISO).getTime();
+
+            conferencesForThisRequest.forEach(conf => {
+                if (!conf.endTime && (conf.status === 'processing' || conf.status === 'processed_ok')) {
+                    const confKeyForTimestamp = createConferenceKey(conf.batchRequestId, conf.acronym, conf.title);
+                    const lastLogTimeForThisConferenceMillis = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
+                    const confStartTimeMillis = conf.startTime ? new Date(conf.startTime).getTime() : null;
+
+                    let isConsideredStuck = true; // Mặc định là stuck
+
+                    if (lastLogTimeForThisConferenceMillis !== null) {
+                        // Tiêu chí 1: Conference chỉ vừa mới bắt đầu và chưa có log hoạt động nào đáng kể sau đó.
+                        // (lastLogTime <= startTime có nghĩa là chỉ có log task_start hoặc các log cùng thời điểm)
+                        if (confStartTimeMillis !== null && lastLogTimeForThisConferenceMillis <= confStartTimeMillis) {
+                            isConsideredStuck = false;
+                        } else {
+                            // Tiêu chí 2: Log cuối cùng của conference này không quá xa so với thời điểm kết thúc của request cha.
+                            // Nếu khoảng cách này nhỏ, có thể luồng log của request cha đã dừng đột ngột.
+                            // Ngưỡng này có thể cần điều chỉnh. Ví dụ: 2-5 giây.
+                            const MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS = 3000; // 3 giây
+
+                            if ((requestEndTimeMillis - lastLogTimeForThisConferenceMillis) < MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS) {
+                                // Nếu thời gian từ log cuối của conference đến khi request cha kết thúc là nhỏ,
+                                // thì không coi là stuck.
+                                // Điều này bao gồm cả trường hợp log cuối của conference chính là log cuối của request.
+                                isConsideredStuck = false;
                             }
                         }
-                    );
+                    }
+                    // Nếu confStartTimeMillis hoặc lastLogTimeForThisConferenceMillis là null,
+                    // isConsideredStuck sẽ vẫn là true (mặc định an toàn).
+
+                    if (isConsideredStuck) {
+                        conf.status = 'failed';
+                        let failureTimestampMillis = requestEndTimeMillis;
+                        if (lastLogTimeForThisConferenceMillis !== null) {
+                            failureTimestampMillis = Math.max(failureTimestampMillis, lastLogTimeForThisConferenceMillis);
+                        }
+                        conf.endTime = new Date(failureTimestampMillis).toISOString();
+
+                        addConferenceError(
+                            conf,
+                            conf.endTime,
+                            "Conference did not complete (stuck in processing/processed_ok) before its parent request finished.",
+                            {
+                                defaultMessage: "Conference task considered stuck or incomplete as parent request ended.",
+                                keyPrefix: 'task_stuck_or_incomplete',
+                                sourceService: 'FinalMetricsCalculation',
+                                errorType: 'Logic',
+                                context: {
+                                    phase: 'response_processing',
+                                    stuckReason: "Parent request ended while task active. Task had prior activity but no final status log.",
+                                    conferenceStartTime: conf.startTime,
+                                    conferenceLastSeenLogTime: lastLogTimeForThisConferenceMillis ? new Date(lastLogTimeForThisConferenceMillis).toISOString() : null,
+                                    parentRequestEndTime: requestEndTimeISO,
+                                    timeDiffLastConfLogAndReqEndMs: lastLogTimeForThisConferenceMillis ? (requestEndTimeMillis - lastLogTimeForThisConferenceMillis) : null
+                                }
+                            }
+                        );
+                    }
+                    // else {
+                    //    // Nếu isConsideredStuck là false, conference này sẽ giữ nguyên status 'processing' (hoặc 'processed_ok').
+                    //    // Nó sẽ được tính là 'Processing' cho request cha và cho tổng thể (nếu chưa có endTime).
+                    // }
                 }
             });
         }
@@ -365,7 +283,7 @@ export const calculateFinalMetrics = (
                     } else {
                         // Ít lỗi hơn ngưỡng
                         if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
-                             // Tất cả các task không failed đều completed hoặc skipped
+                            // Tất cả các task không failed đều completed hoặc skipped
                             currentRequestTimings.status = 'Completed'; // Coi là completed nếu lỗi ít và phần còn lại OK
                         } else {
                             currentRequestTimings.status = 'CompletedWithErrors'; // Có lỗi và có task chưa rõ ràng (unknown)
@@ -497,7 +415,7 @@ export const calculateFinalMetrics = (
                 // Hoặc nếu JSONL không thành công, nó cũng là 'failed' (đã được xử lý bởi handler JSONL)
                 // Điều kiện này đảm bảo rằng nếu CSV là một phần của pipeline thành công, thì nó phải thành công.
                 // if (detail.jsonlWriteSuccess === true) { // Bỏ điều kiện này, nếu CSV pipeline fail thì task fail bất kể JSONL
-                
+
                 detail.status = 'failed';
                 detail.csvWriteSuccess = false; // Đảm bảo cờ này đúng
 
@@ -541,7 +459,7 @@ export const calculateFinalMetrics = (
     results.overall.failedOrCrashedTasks = 0;
     results.overall.skippedTasks = 0;
     results.overall.processingTasks = 0; // Sẽ bao gồm cả 'processing' và 'processed_ok' cho mục đích hiển thị
-    
+
     const uniqueConferenceKeysInAnalysis = new Set<string>();
 
     Object.values(results.conferenceAnalysis).forEach(conf => {
@@ -568,7 +486,7 @@ export const calculateFinalMetrics = (
     for (const reqId of results.analyzedRequestIds) {
         const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
             .filter(cd => cd.batchRequestId === reqId);
-        
+
         const requestTimings = results.requests[reqId]; // Lấy lại request timings đã có startTime, endTime
         if (!requestTimings) continue; // Bỏ qua nếu không tìm thấy request
 
@@ -638,7 +556,7 @@ export const calculateFinalMetrics = (
             } else if (requestStatuses.some(s => s === 'Unknown') && !requestStatuses.some(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted')) {
                 results.status = 'Unknown'; // Nếu chỉ có Unknown và NoData
             }
-             else { // Mặc định là Completed nếu không rơi vào các trường hợp trên (ví dụ: mix của Completed và Unknown)
+            else { // Mặc định là Completed nếu không rơi vào các trường hợp trên (ví dụ: mix của Completed và Unknown)
                 results.status = 'Completed';
             }
         } else {

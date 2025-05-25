@@ -12,7 +12,15 @@ import {
     getInitialFileOutputAnalysis,
     getInitialValidationStats
 } from '../../types'; // Đảm bảo đường dẫn này đúng
-
+// src/utils/logAnalysis/processingSteps.ts
+import fs from 'fs';
+import readline from 'readline';
+import {
+    ReadLogResult,
+    RequestLogData,
+    FilteredData,
+    RequestTimings,
+} from '../../types';
 
 export const normalizeErrorKey = (error: any): string => {
     let message = 'Unknown Error Structure';
@@ -227,4 +235,127 @@ export const doesRequestOverlapFilter = (
         (filterStartMillis === null || reqEndMillis >= filterStartMillis);
 
     return overlaps;
+};
+
+
+
+
+
+
+// --- readAndGroupLogs and filterRequests giữ nguyên ---
+export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
+    const requestsData = new Map<string, RequestLogData>();
+    let totalEntries = 0;
+    let parsedEntries = 0;
+    let parseErrorsCount = 0;
+    const tempLogProcessingErrors: string[] = [];
+
+    if (!fs.existsSync(logFilePath)) {
+        throw new Error(`Log file not found at ${logFilePath}`);
+    }
+
+    const fileStream = fs.createReadStream(logFilePath);
+    const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
+
+    try {
+        for await (const line of rl) {
+            totalEntries++;
+            if (!line.trim()) continue;
+
+            try {
+                const logEntry = JSON.parse(line);
+                parsedEntries++;
+                const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
+                const batchRequestId = logEntry.batchRequestId;
+
+                if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
+                    if (!requestsData.has(batchRequestId)) {
+                        requestsData.set(batchRequestId, { logs: [], startTime: null, endTime: null });
+                    }
+                    const requestInfo = requestsData.get(batchRequestId)!;
+                    requestInfo.logs.push(logEntry);
+
+                    const currentStartTime = requestInfo.startTime;
+                    const currentEndTime = requestInfo.endTime;
+
+                    requestInfo.startTime = (currentStartTime === null || isNaN(currentStartTime))
+                        ? entryTimeMillis
+                        : Math.min(entryTimeMillis, currentStartTime);
+
+                    requestInfo.endTime = (currentEndTime === null || isNaN(currentEndTime))
+                        ? entryTimeMillis
+                        : Math.max(entryTimeMillis, currentEndTime);
+
+                }
+            } catch (parseError: any) {
+                parseErrorsCount++;
+                const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
+                tempLogProcessingErrors.push(errorMsg);
+            }
+        }
+    } catch (readError: any) {
+        throw readError;
+    }
+
+    return {
+        requestsData,
+        totalEntries,
+        parsedEntries,
+        parseErrors: parseErrorsCount,
+        logProcessingErrors: tempLogProcessingErrors,
+    };
+};
+
+export const filterRequests = (
+    allRequestsData: Map<string, RequestLogData>,
+    filterStartMillis: number | null,
+    filterEndMillis: number | null,
+    batchRequestIdFilter?: string
+): FilteredData => {
+    const filteredRequests = new Map<string, RequestLogData>();
+    let analysisStartMillis: number | null = null;
+    let analysisEndMillis: number | null = null;
+
+    if (batchRequestIdFilter) {
+        const requestInfo = allRequestsData.get(batchRequestIdFilter);
+        if (requestInfo && requestInfo.startTime !== null && requestInfo.endTime !== null) {
+            const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
+                doesRequestOverlapFilter(
+                    requestInfo.startTime,
+                    requestInfo.endTime,
+                    filterStartMillis,
+                    filterEndMillis,
+                    batchRequestIdFilter
+                );
+
+            if (overlapsTimeFilter) {
+                filteredRequests.set(batchRequestIdFilter, requestInfo);
+                analysisStartMillis = requestInfo.startTime;
+                analysisEndMillis = requestInfo.endTime;
+            }
+        }
+    } else {
+        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
+            if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
+                const includeRequest = doesRequestOverlapFilter(
+                    requestInfo.startTime,
+                    requestInfo.endTime,
+                    filterStartMillis,
+                    filterEndMillis,
+                    batchRequestId
+                );
+
+                if (includeRequest) {
+                    filteredRequests.set(batchRequestId, requestInfo);
+                    if (requestInfo.startTime !== null) {
+                        analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
+                    }
+                    if (requestInfo.endTime !== null) {
+                        analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
+                    }
+                }
+            }
+        }
+    }
+    return { filteredRequests, analysisStartMillis, analysisEndMillis };
 };

@@ -168,23 +168,23 @@ export const handleLinkProcessingFailed: LogEventHandler = (logEntry, results, c
             event: logEntry.event
         });
 
-        addConferenceError(
-            confDetail,
-            entryTimestampISO,
-            errorSource, // Truyền trực tiếp errorSource
-            {
-                defaultMessage: defaultMessage,
-                keyPrefix: 'link_access_failed',
-                sourceService: logEntry.service || 'ConferenceLinkProcessor',
-                errorType: 'Network', // Giả định là lỗi mạng hoặc không truy cập được
-                context: {
-                    phase: 'primary_execution',
-                    url: logEntry.finalAttemptedUrl || logEntry.originalUrl, // Thêm URL vào context
-                    event: logEntry.event, // Thêm event vào context
-                    ...logEntry.context // Bảo toàn context gốc
-                }
-            }
-        );
+        // addConferenceError(
+        //     confDetail,
+        //     entryTimestampISO,
+        //     errorSource, // Truyền trực tiếp errorSource
+        //     {
+        //         defaultMessage: defaultMessage,
+        //         keyPrefix: 'link_access_failed',
+        //         sourceService: logEntry.service || 'ConferenceLinkProcessor',
+        //         errorType: 'Network', // Giả định là lỗi mạng hoặc không truy cập được
+        //         context: {
+        //             phase: 'primary_execution',
+        //             url: logEntry.finalAttemptedUrl || logEntry.originalUrl, // Thêm URL vào context
+        //             event: logEntry.event, // Thêm event vào context
+        //             ...logEntry.context // Bảo toàn context gốc
+        //         }
+        //     }
+        // );
     }
 };
 

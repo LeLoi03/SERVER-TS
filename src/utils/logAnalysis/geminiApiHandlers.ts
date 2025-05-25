@@ -347,7 +347,7 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
 
         if (confDetail && logEntry.isFallbackSuccess === true) {
             confDetail.errors.forEach((err: LogError) => {
-                if (err.context?.phase === 'primary_execution' && !err.isRecovered) {
+                if ((err.context?.phase === 'primary_execution' || err.context?.phase === 'sdk_call') && !err.isRecovered) {
                     // Chỉ đánh dấu isRecovered nếu lỗi đó thực sự là của primary model attempt
                     // và không phải là lỗi setup chung chung.
                     // Có thể cần kiểm tra thêm err.key hoặc err.sourceService

@@ -34,7 +34,7 @@ export interface OverallAnalysis {
 }
 
 
-export type ConferenceCrawlType = 'crawl' | 'update' | null; // Đảm bảo type này tồn tại
+export type ConferenceCrawlType = 'crawl' | 'update'; // Đảm bảo type này tồn tại
 
 
 /**
