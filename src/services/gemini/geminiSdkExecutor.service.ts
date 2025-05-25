@@ -1,28 +1,12 @@
 // src/services/gemini/geminiSdkExecutor.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
-import { type RateLimiterMemory } from 'rate-limiter-flexible';
 import { Logger } from 'pino';
 import { type GenerateContentResult, Part } from "@google/generative-ai"; // Thêm Part
-import { GeminiResponseHandlerService, type ProcessedGeminiResponse } from './geminiResponseHandler.service';
+import { GeminiResponseHandlerService } from './geminiResponseHandler.service';
 import { GeminiRequestPayloadFileLoggerService } from './geminiRequestPayloadFileLogger.service';
-import { type ModelPreparationResult } from './geminiModelOrchestrator.service';
 import { LoggingService } from '../logging.service';
-import { CrawlModelType } from '../../types/crawl.types';
-
-export interface SdkExecutorParams {
-    limiterInstance: RateLimiterMemory;
-    currentModelPrep: ModelPreparationResult;
-    apiType: string;
-    batchIndex: number;
-    acronym: string | undefined;
-    title: string | undefined;
-    crawlModel: CrawlModelType;
-    systemInstructionTextToUse: string;
-    fewShotPartsToUse: Part[]; // Sửa kiểu dữ liệu
-    requestLogDir: string;
-}
-
+import { SdkExecutorParams, ProcessedGeminiResponse } from '../../types/crawl';
 @singleton()
 export class GeminiSdkExecutorService {
     private readonly serviceBaseLogger: Logger;

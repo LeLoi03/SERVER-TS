@@ -12,7 +12,7 @@ import {
 } from "@google/generative-ai";
 import { read_csv, createInputsOutputs } from '../utils/crawl/fewShotExamplesInit';
 import fs from 'fs';
-import { InputsOutputs } from '../types/crawl.types';
+import { InputsOutputs } from '../types/crawl/crawl.types';
 import { AgentId } from '../chatbot/shared/types'; // IMPORTANT: Import AgentId type
 
 // --- Constants for File Paths ---

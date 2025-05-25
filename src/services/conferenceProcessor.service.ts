@@ -7,7 +7,7 @@ import { GoogleSearchService } from './googleSearch.service';
 import { HtmlPersistenceService } from './htmlPersistence.service';
 import { FileSystemService } from './fileSystem.service';
 import { Logger } from 'pino';
-import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, ApiModels } from '../types/crawl.types';
+import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, ApiModels } from '../types/crawl/crawl.types';
 import { filterSearchResults } from '../utils/crawl/linkFiltering';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
 

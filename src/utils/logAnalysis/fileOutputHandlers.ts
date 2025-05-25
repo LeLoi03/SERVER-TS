@@ -2,7 +2,7 @@
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import { createConferenceKey } from './helpers';
-import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types'; // Thêm LogAnalysisResult, ConferenceAnalysisDetail
+import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types/logAnalysis'; // Thêm LogAnalysisResult, ConferenceAnalysisDetail
 
 const ensureFileOutputAnalysis = (results: LogAnalysisResult): FileOutputAnalysis => { // Sửa any
     if (!results.fileOutput) {

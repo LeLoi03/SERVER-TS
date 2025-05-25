@@ -6,21 +6,8 @@ import { Logger } from 'pino';
 import { ConfigService, AppConfig } from '../../config/config.service';
 import { LoggingService } from '../logging.service';
 import { GeminiContextCacheService } from './geminiContextCache.service';
-import { type ModelPreparationResult } from './geminiModelOrchestrator.service';
-import { type ProcessedGeminiResponse } from './geminiResponseHandler.service';
+import { RetryableGeminiApiCall, ExecuteWithRetryResult, ModelPreparationResult } from '../../types/crawl';
 
-export type RetryableGeminiApiCall = (
-    limiter: RateLimiterMemory,
-    modelPrep: ModelPreparationResult,
-    apiType: string,
-    attemptLogger: Logger
-) => Promise<ProcessedGeminiResponse>;
-
-export interface ExecuteWithRetryResult extends ProcessedGeminiResponse {
-    finalErrorType?: '5xx_non_retryable_for_current_model' | 'failed_first_attempt' | 'non_retryable_error'; // Thêm các loại lỗi
-    firstAttemptFailed?: boolean; // Cho biết lần thử đầu tiên có thất bại không
-    errorDetails?: any; // Chi tiết lỗi của lần thử đầu tiên nếu thất bại
-}
 
 @singleton()
 export class GeminiRetryHandlerService {

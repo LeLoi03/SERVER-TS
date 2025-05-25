@@ -3,54 +3,18 @@ import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
 import { type Part, GenerationConfig as SDKGenerationConfig, type UsageMetadata } from "@google/generative-ai";
-import { type RateLimiterMemory } from 'rate-limiter-flexible';
-
 import { ConfigService, type GeminiApiConfig as GeneralApiTypeConfig } from '../../config/config.service';
 import { LoggingService } from '../logging.service';
-import { GeminiModelOrchestratorService, type ModelPreparationResult } from './geminiModelOrchestrator.service';
+import { GeminiModelOrchestratorService } from './geminiModelOrchestrator.service';
 import { GeminiRateLimiterService } from './geminiRateLimiter.service';
-import { GeminiRetryHandlerService, type ExecuteWithRetryResult, type RetryableGeminiApiCall } from './geminiRetryHandler.service';
+import { GeminiRetryHandlerService, } from './geminiRetryHandler.service';
 import { GeminiSdkExecutorService } from './geminiSdkExecutor.service';
 
-import { CrawlModelType } from '../../types/crawl.types';
+import { CrawlModelType } from '../../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
+import { OrchestrationResult, InternalCallGeminiApiParams, ModelExecutionConfig, type ExecuteWithRetryResult, type RetryableGeminiApiCall } from '../../types/crawl';
 
-export interface ApiResponse {
-    responseText: string;
-    metaData: UsageMetadata | null | undefined;
-}
-
-export interface InternalCallGeminiApiParams {
-    batchPrompt: string;
-    batchIndex: number;
-    title: string | undefined;
-    acronym: string | undefined;
-    apiType: string;
-    modelName: string; // Primary model
-    fallbackModelName?: string;
-    crawlModel: CrawlModelType; // This is the initial/intended crawl model type for the primary model
-    requestLogDir: string;
-}
-
-interface ModelExecutionConfig {
-    systemInstructionText: string;
-    fewShotParts: Part[];
-    shouldUseCache: boolean;
-    finalGenerationConfig: SDKGenerationConfig;
-    finalBatchPrompt: string; // The prompt after potential prefixing for tuned models
-    modelRateLimiter: RateLimiterMemory;
-    modelPrepResult: ModelPreparationResult;
-}
-
-export interface OrchestrationResult extends ApiResponse {
-    success: boolean; // True nếu có responseText hoặc metaData hợp lệ
-    usedFallback: boolean;
-    modelActuallyUsed?: string; // Model đã thực sự tạo ra kết quả (primary hoặc fallback)
-    crawlModelActuallyUsed?: CrawlModelType; // Crawl model của model đã tạo ra kết quả
-    finalErrorType?: string; // Loại lỗi cuối cùng nếu thất bại hoàn toàn
-    finalErrorDetails?: any; // Chi tiết lỗi cuối cùng nếu thất bại hoàn toàn
-}
 
 @singleton()
 export class GeminiApiOrchestratorService {

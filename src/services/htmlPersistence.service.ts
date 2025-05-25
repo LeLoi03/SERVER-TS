@@ -6,7 +6,7 @@ import { PlaywrightService } from './playwright.service';
 import { LoggingService } from './logging.service';
 import { BatchProcessingService } from './batchProcessing.service';
 import { Logger } from 'pino';
-import { ConferenceData, ConferenceUpdateData, ApiModels } from '../types/crawl.types';
+import { ConferenceData, ConferenceUpdateData, ApiModels } from '../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
 
 /**

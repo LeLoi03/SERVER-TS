@@ -6,7 +6,7 @@ import path from 'path';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
-import { ConferenceData } from '../types/crawl.types'; // ProcessedRowData không dùng ở đây
+import { ConferenceData } from '../types/crawl/crawl.types'; // ProcessedRowData không dùng ở đây
 import { v4 as uuidv4 } from 'uuid';
 
 @singleton()

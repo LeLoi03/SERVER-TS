@@ -12,7 +12,7 @@ import { BatchProcessingService } from './batchProcessing.service';
 import { TaskQueueService } from './taskQueue.service';
 import { ConferenceProcessorService } from './conferenceProcessor.service';
 import { Logger } from 'pino';
-import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl.types';
+import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl/crawl.types';
 import fs from 'fs';
 import { GeminiApiService } from './geminiApi.service';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility

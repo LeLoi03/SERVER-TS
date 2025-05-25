@@ -2,13 +2,13 @@
 import { Page, BrowserContext } from 'playwright';
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
-import { GeminiApiService, GeminiApiParams } from '../geminiApi.service';
+import { GeminiApiService } from '../geminiApi.service';
 import { IConferenceLinkProcessorService } from './conferenceLinkProcessor.service';
-import { BatchEntry, CrawlModelType } from '../../types/crawl.types';
+import { BatchEntry, CrawlModelType } from '../../types/crawl/crawl.types';
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
-
+import { GeminiApiParams } from '../../types/crawl';
 /**
  * Interface for the service responsible for determining the official website
  * and processing associated links (CFP, Important Dates) for conferences.

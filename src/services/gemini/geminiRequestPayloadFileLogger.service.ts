@@ -5,26 +5,8 @@ import path from 'path';
 import { promises as fsPromises, existsSync } from 'fs';
 import { Logger } from 'pino';
 import { LoggingService } from '../logging.service'; // ConfigService không cần thiết nếu requestLogDir được truyền vào
-import { CrawlModelType } from '../../types/crawl.types';
-import { Part, GenerationConfig as SDKGenerationConfig } from "@google/generative-ai";
+import { LogRequestPayloadParams } from '../../types/crawl';
 
-interface LogRequestPayloadParams {
-    parentAttemptLogger: Logger;
-    requestLogDir: string;
-    apiType: string;
-    modelNameUsed: string;
-    acronym: string | undefined;
-    batchIndex: number;
-    title: string | undefined;
-    crawlModel: CrawlModelType;
-    usingCacheActual: boolean;
-    currentCacheName: string | undefined | null;
-    systemInstructionApplied: string;
-    fewShotPartsApplied: Part[];
-    contentRequest: string | Part | (string | Part)[];
-    generationConfigSent?: SDKGenerationConfig;
-    generationConfigEffective?: SDKGenerationConfig;
-}
 
 @singleton()
 export class GeminiRequestPayloadFileLoggerService {

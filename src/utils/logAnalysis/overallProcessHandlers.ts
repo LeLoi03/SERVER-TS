@@ -1,7 +1,7 @@
 // src/utils/logAnalysis/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
 import { createConferenceKey } from './helpers'; // Đảm bảo helper này tồn tại và đúng
-import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult } from '../../types'; // Thêm LogAnalysisResult
+import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult } from '../../types/logAnalysis'; // Thêm LogAnalysisResult
 
 // Khởi tạo overall analysis nếu chưa có
 const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any thành LogAnalysisResult

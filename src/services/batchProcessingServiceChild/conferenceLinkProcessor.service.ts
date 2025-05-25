@@ -4,7 +4,7 @@ import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
 import { IPageContentExtractorService } from './pageContentExtractor.service';
 import { ConfigService } from '../../config/config.service';
-import { ConferenceData, ConferenceUpdateData, BatchEntry } from '../../types/crawl.types';
+import { ConferenceData, ConferenceUpdateData, BatchEntry } from '../../types/crawl';
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility

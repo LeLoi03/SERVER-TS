@@ -9,21 +9,11 @@ import path from 'path';
 
 import { GeminiCachePersistenceService } from './gemini/geminiCachePersistence.service';
 import { GeminiResponseHandlerService } from './gemini/geminiResponseHandler.service';
-import { GeminiApiOrchestratorService, type OrchestrationResult } from './gemini/geminiApiOrchestrator.service';
+import { GeminiApiOrchestratorService } from './gemini/geminiApiOrchestrator.service';
 
-import { CrawlModelType } from '../types/crawl.types';
+import { CrawlModelType } from '../types/crawl/crawl.types';
+import { ApiResponse, GeminiApiParams, OrchestrationResult } from '../types/crawl';
 
-export interface ApiResponse {
-    responseText: string;
-    metaData: UsageMetadata | null | undefined;
-}
-
-export interface GeminiApiParams {
-    batch: string;
-    batchIndex: number;
-    title: string | undefined;
-    acronym: string | undefined;
-}
 
 @singleton()
 export class GeminiApiService {

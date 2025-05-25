@@ -6,7 +6,7 @@ import { ApiKeyManager } from './apiKey.manager';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
-import { GoogleSearchResult, GoogleCSEApiResponse, GoogleSearchError } from '../types/crawl.types';
+import { GoogleSearchResult, GoogleCSEApiResponse, GoogleSearchError } from '../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
 
 /**

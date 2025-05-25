@@ -11,12 +11,12 @@ import {
     BatchEntryWithIds, BatchUpdateDataWithIds, // Assuming these are updated as per suggestion
     ApiModels,
     CrawlModelType
-} from '../types/crawl.types';
+} from '../types/crawl';
 
 // --- Service Imports ---
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
-import { GeminiApiService, ApiResponse, GeminiApiParams } from './geminiApi.service';
+import { GeminiApiService } from './geminiApi.service';
 import { FileSystemService } from './fileSystem.service';
 import { IPageContentExtractorService } from './batchProcessingServiceChild/pageContentExtractor.service';
 import { IConferenceLinkProcessorService } from './batchProcessingServiceChild/conferenceLinkProcessor.service';
@@ -25,38 +25,8 @@ import { IConferenceDataAggregatorService, ContentPaths } from './batchProcessin
 import { normalizeAndJoinLink } from '../utils/crawl/url.utils';
 import { Logger } from 'pino';
 import { addAcronymSafely } from '../utils/crawl/addAcronymSafely';
+import { GeminiApiParams, ApiResponse } from '../types/crawl';
 
-
-// LogContext types might need to be adjusted or made more generic if they are to be shared
-export type LogContextBase = {
-    batchIndex: number;
-    conferenceAcronym: string | undefined; // This might represent original or internal depending on context
-    originalConferenceAcronym?: string;
-    internalProcessingAcronym?: string;
-    conferenceTitle: string | undefined;
-    function: string;
-    apiCallNumber?: 1 | 2;
-};
-
-// --- Specific Log Context Type for this Module ---
-// Inherit from the base context provided by LoggingService
-
-export interface BatchProcessingLogContext extends LogContextBase {
-    batchIndex: number;
-    conferenceAcronym: string; // Contextual acronym
-    conferenceTitle: string;
-    fileType?: 'full_links' | 'main_link' | 'update_intermediate' | 'determine_response' | 'extract_response' | 'cfp_response' | 'initial_text';
-    aggregationPurpose?: 'determine_api' | 'extract_cfp_api';
-    apiType?: 'determine' | 'extract' | 'cfp';
-    contentType?: 'main' | 'cfp' | 'imp';
-    event_group?: string;
-    linkIndex?: number;
-    originalUrl?: string;
-    url?: string;
-    finalUrl?: string;
-    linkType?: 'main' | 'cfp' | 'imp' | 'modified' | 'original';
-    status?: number | null;
-}
 @singleton()
 export class BatchProcessingService {
     private readonly serviceBaseLogger: Logger;
@@ -949,3 +919,5 @@ export class BatchProcessingService {
         logger.debug({ closedCount, failedCount, totalAttemptedToClose: pageCount, event: 'closing_pages_finish' });
     }
 }
+
+

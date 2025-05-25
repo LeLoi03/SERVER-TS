@@ -7,7 +7,6 @@ import {
     type CachedContent,
     type Content,
     type GenerationConfig as SDKGenerationConfig,
-    type ChatSession,
 } from "@google/generative-ai";
 import { ConfigService } from '../../config/config.service';
 import { LoggingService } from '../logging.service';

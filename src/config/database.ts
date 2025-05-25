@@ -9,7 +9,7 @@ import { ConfigService } from './config.service'; // Import the application's co
  * A consistent prefix for log messages originating from the MongoDB connection service.
  * @type {string}
  */
-const LOG_PREFIX = "[MongoDBService]";
+const LOG_PREFIX: string = "[MongoDBService]";
 
 // --- Resolve ConfigService Instance ---
 // Resolve the singleton instance of ConfigService to access application configurations.

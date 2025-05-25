@@ -3,7 +3,7 @@ import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import fs from 'fs';
 import readline from 'readline'; // Thêm readline
-import { LogAnalysisResult, ReadLogResult, FilteredData, ConferenceAnalysisDetail } from '../types'; // Thêm ConferenceAnalysisDetail
+import { LogAnalysisResult, ReadLogResult, FilteredData } from '../types/logAnalysis';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';

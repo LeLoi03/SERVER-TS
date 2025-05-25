@@ -2,7 +2,7 @@
 
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers'; // Giả sử có ensureConferenceDetail
-import { LogError, LogAnalysisResult, OverallAnalysis, GeminiApiAnalysis, getInitialOverallAnalysis, getInitialGeminiApiAnalysis, ConferenceAnalysisDetail } from '../../types';
+import { LogError, LogAnalysisResult, OverallAnalysis, GeminiApiAnalysis, getInitialOverallAnalysis, getInitialGeminiApiAnalysis, ConferenceAnalysisDetail } from '../../types/logAnalysis';
 
 const ensureGeminiApiAnalysis = (results: LogAnalysisResult): GeminiApiAnalysis => {
     if (!results.geminiApi) {

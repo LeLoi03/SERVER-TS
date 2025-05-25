@@ -1,7 +1,7 @@
 // src/utils/crawl/fewshotExamplesInit.ts
 import csv from 'csv-parser';
 import { createReadStream, promises as fsPromises, ReadStream } from 'fs';
-import { InputsOutputs, CsvRowData } from '../../types/crawl.types';
+import { InputsOutputs, CsvRowData } from '../../types/crawl/crawl.types';
 import logToFile from '../logger'; // Assuming logger is in ../logger or similar
 import { getErrorMessageAndStack } from '../errorUtils'; // Import the error utility
 

@@ -1,5 +1,5 @@
 // src/utils/crawl/searchFilter.ts
-import { GoogleSearchResult } from "../../types/crawl.types"; // Using GoogleSearchResult as the type for search results.
+import { GoogleSearchResult } from "../../types/crawl/crawl.types"; // Using GoogleSearchResult as the type for search results.
 import logToFile from '../logger'; // Assuming logger is in ../logger or similar
 import { getErrorMessageAndStack } from '../errorUtils'; // Import the error utility
 

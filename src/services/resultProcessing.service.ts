@@ -11,15 +11,13 @@ import path from 'path';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
-import { ProcessedRowData, InputRowData, ProcessedResponseData } from '../types/crawl.types';
+import { ProcessedRowData, InputRowData, ProcessedResponseData } from '../types/crawl/crawl.types';
 import { FileSystemService } from './fileSystem.service';
 
 
 @singleton()
 export class ResultProcessingService {
     private readonly serviceBaseLogger: Logger;
-    // private readonly finalJsonlPath: string; // Bỏ
-    // private readonly evaluateCsvPath: string; // Bỏ
 
     private readonly VALID_CONTINENTS = new Set(['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica']);
     private readonly VALID_TYPES = new Set(['Hybrid', 'Online', 'Offline']);

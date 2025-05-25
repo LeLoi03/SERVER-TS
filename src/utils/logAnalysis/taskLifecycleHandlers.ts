@@ -2,7 +2,7 @@
 
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
-import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogError as AnalysisLogError, LogErrorContext } from '../../types';
+import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogError as AnalysisLogError, LogErrorContext } from '../../types/logAnalysis';
 
 const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => {
     if (!results.overall) {

@@ -1,6 +1,6 @@
 // src/utils/logAnalysis/validationHandlers.ts
 import { LogEventHandler } from './index';
-import { ValidationStats, LogAnalysisResult, DataQualityInsight, getInitialValidationStats } from '../../types'; // Đảm bảo DataQualityInsight đã được export
+import { ValidationStats, LogAnalysisResult, DataQualityInsight, getInitialValidationStats } from '../../types/logAnalysis'; // Đảm bảo DataQualityInsight đã được export
 import { createConferenceKey } from './helpers';
 
 const ensureValidationStats = (results: LogAnalysisResult): ValidationStats => {

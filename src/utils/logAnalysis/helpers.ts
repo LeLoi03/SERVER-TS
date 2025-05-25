@@ -1,5 +1,5 @@
 // src/utils/logAnalysis/helpers.ts
-import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types'; // Thêm ConferenceCrawlType
+import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types/logAnalysis'; // Thêm ConferenceCrawlType
 // --- Các helper function khác (normalizeErrorKey, createConferenceKey, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
 
 // Giả sử các hàm này đã được export từ logAnalysis.types.ts hoặc types/index.ts
@@ -11,7 +11,7 @@ import {
     getInitialBatchProcessingAnalysis,
     getInitialFileOutputAnalysis,
     getInitialValidationStats
-} from '../../types'; // Đảm bảo đường dẫn này đúng
+} from '../../types/logAnalysis'; // Đảm bảo đường dẫn này đúng
 // src/utils/logAnalysis/processingSteps.ts
 import fs from 'fs';
 import readline from 'readline';
@@ -20,7 +20,7 @@ import {
     RequestLogData,
     FilteredData,
     RequestTimings,
-} from '../../types';
+} from '../../types/logAnalysis';
 
 export const normalizeErrorKey = (error: any): string => {
     let message = 'Unknown Error Structure';

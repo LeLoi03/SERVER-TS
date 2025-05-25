@@ -12,17 +12,10 @@ import {
 import { GeminiClientManagerService } from './geminiClientManager.service';
 import { GeminiContextCacheService } from './geminiContextCache.service';
 import { Logger } from 'pino';
-import { CrawlModelType } from '../../types/crawl.types';
+import { CrawlModelType } from '../../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-export interface ModelPreparationResult {
-    model: GenerativeModel;
-    contentRequest: GenerateContentRequest | string;
-    usingCacheActual: boolean;
-    currentCache: CachedContent | null;
-    crawlModelUsed: CrawlModelType;
-    modelNameUsed: string;
-}
+import { ModelPreparationResult } from '../../types/crawl';
 
 @singleton()
 export class GeminiModelOrchestratorService {

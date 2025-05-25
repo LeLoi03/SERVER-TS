@@ -4,7 +4,7 @@ import {
     ConferenceAnalysisDetail,
     RequestLogData,
     RequestTimings,
-} from '../../types';
+} from '../../types/logAnalysis';
 import {
     createConferenceKey,
     initializeConferenceDetail,

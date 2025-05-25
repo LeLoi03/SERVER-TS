@@ -3,15 +3,12 @@ import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import path from 'path';
 import { promises as fsPromises, existsSync } from 'fs';
-import { type GenerateContentResult, type UsageMetadata } from "@google/generative-ai";
+import { type GenerateContentResult } from "@google/generative-ai";
 import { ConfigService } from '../../config/config.service';
 import { Logger } from 'pino';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-export interface ProcessedGeminiResponse {
-    responseText: string;
-    metaData: UsageMetadata | null | undefined;
-}
+import { ProcessedGeminiResponse } from '../../types/crawl';
 
 @singleton()
 export class GeminiResponseHandlerService {

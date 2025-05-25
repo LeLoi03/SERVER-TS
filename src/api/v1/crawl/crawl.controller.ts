@@ -11,8 +11,8 @@ import { ConfigService } from '../../../config/config.service';
 import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service';
 
 // Import custom types for request/response data
-import { ConferenceData, ProcessedRowData } from '../../../types/crawl.types';
-import { ApiModels, CrawlModelType } from '../../../types/crawl.types'; // Import CrawlModelType
+import { ConferenceData, ProcessedRowData } from '../../../types/crawl/crawl.types';
+import { ApiModels, CrawlModelType } from '../../../types/crawl/crawl.types'; // Import CrawlModelType
 
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
