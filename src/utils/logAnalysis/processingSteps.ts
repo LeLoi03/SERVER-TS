@@ -135,6 +135,8 @@ export const calculateFinalMetrics = (
             durationSeconds: null,
             status: 'Unknown', // Trạng thái ban đầu của request timing object
             originalRequestId: results.requests[reqId]?.originalRequestId,
+            csvOutputStreamFailed: false, // <--- KHỞI TẠO LÀ FALSE
+
             // KHÔNG THÊM totalConferencesInputForRequest và processedConferencesCountForRequest ở đây
             // vì chúng sẽ được tính toán sau khi trạng thái của từng conference được xác định.
         };
@@ -248,38 +250,41 @@ export const calculateFinalMetrics = (
             // totalConferencesInputForRequest và processedConferencesCountForRequest sẽ được cập nhật ở STAGE 3
         };
     }
-    // --- STAGE 2: Finalize Conference Details (duration, status based on sub-steps and CSV) ---
-    // (Giữ nguyên phần lớn logic, chỉ đảm bảo nó tương tác đúng với 'processed_ok')
+
+
+
+    // --- STAGE 2: Finalize Conference Details (duration, status based on sub-steps, and request-level CSV failures) ---
     Object.values(results.conferenceAnalysis).forEach(detail => {
+        // Chỉ xử lý các conference thuộc các request đang được phân tích
         if (!results.analyzedRequestIds.includes(detail.batchRequestId)) {
             return;
         }
 
-        let isCriticallyFailed = false;
+        let isCriticallyFailedInternally = false;
         let criticalFailureReason = "";
         let criticalFailureEventKey = "";
 
+        // A. Kiểm tra các lỗi nghiêm trọng nội tại của conference (không liên quan đến CSV output của request)
         if (detail.steps) {
             if (detail.steps.gemini_extract_attempted && detail.steps.gemini_extract_success === false) {
-                isCriticallyFailed = true;
+                isCriticallyFailedInternally = true;
                 criticalFailureReason = "Gemini extract failed";
                 criticalFailureEventKey = "gemini_extract_failed";
             }
 
-            if (!isCriticallyFailed &&
+            if (!isCriticallyFailedInternally &&
                 detail.steps.link_processing_attempted_count > 0 &&
                 detail.steps.link_processing_success_count === 0 &&
-                detail.status !== 'failed' && detail.status !== 'skipped') { // Kiểm tra status hiện tại
-                isCriticallyFailed = true;
+                detail.status !== 'failed' && detail.status !== 'skipped') {
+                isCriticallyFailedInternally = true;
                 criticalFailureReason = "All link processing attempts failed";
                 criticalFailureEventKey = "all_links_failed";
             }
         }
 
-        // Nếu một task đã là 'processed_ok' hoặc 'completed' nhưng phát hiện lỗi nghiêm trọng ở bước này
-        if (isCriticallyFailed && detail.status !== 'failed' && detail.status !== 'skipped') {
+        if (isCriticallyFailedInternally && detail.status !== 'failed' && detail.status !== 'skipped') {
             const oldStatus = detail.status;
-            detail.status = 'failed'; // Ghi đè thành failed
+            detail.status = 'failed';
 
             const failureTimestamp = detail.endTime ||
                 (results.requests[detail.batchRequestId]?.endTime) ||
@@ -307,9 +312,60 @@ export const calculateFinalMetrics = (
                     }
                 }
             );
-            // Không cần cập nhật lại request status ở đây, vì STAGE 3 & 4 sẽ làm điều đó dựa trên status conference cuối cùng.
         }
 
+        // B. Xử lý lỗi ghi CSV ở mức Request (nếu file CSV của toàn bộ request bị lỗi)
+        // Giả sử bạn có một cờ `csvOutputStreamFailed` trong `results.requests[reqId]`
+        // được đặt bởi `handleCsvProcessingEvent` khi có lỗi stream/pipeline cho request đó.
+        const requestData = results.requests[detail.batchRequestId];
+        if (requestData && requestData.csvOutputStreamFailed === true) {
+            // Nếu conference này chưa ghi CSV thành công và chưa bị failed/skipped vì lý do khác
+            if (detail.csvWriteSuccess !== true && detail.status !== 'failed' && detail.status !== 'skipped') {
+                const oldConfStatus = detail.status; // Có thể là 'completed' (nếu CSV không phải bước cuối), 'processed_ok', 'processing'
+
+                detail.status = 'failed';
+                detail.csvWriteSuccess = false; // Đảm bảo cờ này đúng
+
+                const csvFailureTimestamp = detail.endTime || // Giữ endTime hiện tại nếu có
+                    requestData.endTime || // Thời gian kết thúc của request
+                    results.overall.endTime ||
+                    new Date().toISOString();
+
+                if (!detail.endTime || (detail.endTime && new Date(csvFailureTimestamp).getTime() > new Date(detail.endTime).getTime())) {
+                    detail.endTime = csvFailureTimestamp;
+                }
+
+                addConferenceError(
+                    detail,
+                    csvFailureTimestamp,
+                    `Conference failed due to CSV output stream failure for its parent request (ID: ${detail.batchRequestId}).`,
+                    {
+                        defaultMessage: "CSV output stream failed for the request this conference belongs to.",
+                        keyPrefix: "request_csv_stream_failure_override_conf",
+                        sourceService: 'FinalMetricsCalculation',
+                        errorType: 'FileSystem', // Hoặc 'PipelineError' nếu bạn có type đó
+                        context: {
+                            phase: 'response_processing',
+                            csvErrorSource: "request_output_stream",
+                            originalStatus: oldConfStatus,
+                            parentRequestId: detail.batchRequestId
+                        }
+                    }
+                );
+            } else if (detail.status === 'failed' && detail.csvWriteSuccess !== false) {
+                // Nếu đã failed từ trước vì lý do khác, nhưng chưa đánh dấu lỗi CSV, thì cập nhật
+                detail.csvWriteSuccess = false;
+            }
+        }
+        // Lưu ý: Nếu một conference cụ thể đã có `detail.csvWriteSuccess = true` (từ `handleCsvWriteSuccess`),
+        // nó sẽ không bị ảnh hưởng bởi `requestData.csvOutputStreamFailed` ở đây.
+        // Điều này hợp lý nếu `handleCsvWriteSuccess` ghi nhận từng record thành công vào stream
+        // TRƯỚC KHI stream đó bị lỗi ở giai đoạn cuối (flush, close).
+        // Tuy nhiên, nếu `csvOutputStreamFailed` có nghĩa là TOÀN BỘ file CSV của request đó không hợp lệ/mất mát,
+        // bạn có thể cần xem xét lại logic này để ghi đè cả những conference đã có `csvWriteSuccess = true`
+        // (nhưng điều này có vẻ ít trực quan hơn).
+
+        // C. Tính toán duration cho conference (nếu chưa có)
         if (!detail.durationSeconds && detail.startTime && detail.endTime) {
             try {
                 const startMillis = new Date(detail.startTime).getTime();
@@ -320,67 +376,13 @@ export const calculateFinalMetrics = (
                     detail.durationSeconds = 0;
                 }
             } catch (e) {
-                detail.durationSeconds = 0;
+                detail.durationSeconds = 0; // Hoặc null nếu bạn muốn phân biệt
             }
         }
+    }); // Kết thúc vòng lặp Object.values(results.conferenceAnalysis)
 
-        // Logic xử lý lỗi ghi CSV
-        // if (results.fileOutput &&
-        //     results.fileOutput.csvFileGenerated === false && // CSV không được tạo
-        //     (
-        //         (results.fileOutput.csvPipelineFailures || 0) > 0 ||
-        //         (results.fileOutput.csvOtherErrors || 0) > 0 // Hoặc có lỗi khác liên quan đến CSV
-        //     )
-        // ) {
-        if (results.fileOutput && (results.fileOutput.csvPipelineFailures || 0) > 0) {
 
-            // Áp dụng cho các conference không phải 'failed' hoặc 'skipped'
-            if (detail.status !== 'failed' && detail.status !== 'skipped') {
-                const oldConfStatus = detail.status; // Có thể là 'completed' (nếu CSV không phải bước cuối), 'processed_ok', 'processing'
-
-                // Nếu JSONL ghi thành công nhưng CSV thất bại, conference này là 'failed'
-                // Hoặc nếu JSONL không thành công, nó cũng là 'failed' (đã được xử lý bởi handler JSONL)
-                // Điều kiện này đảm bảo rằng nếu CSV là một phần của pipeline thành công, thì nó phải thành công.
-                // if (detail.jsonlWriteSuccess === true) { // Bỏ điều kiện này, nếu CSV pipeline fail thì task fail bất kể JSONL
-
-                detail.status = 'failed';
-                detail.csvWriteSuccess = false; // Đảm bảo cờ này đúng
-
-                const csvFailureTimestamp = detail.endTime || // Giữ endTime hiện tại nếu có
-                    (results.requests[detail.batchRequestId]?.endTime) ||
-                    results.overall.endTime ||
-                    new Date().toISOString();
-
-                // Chỉ cập nhật endTime nếu thời điểm lỗi CSV muộn hơn endTime hiện tại
-                if (!detail.endTime || (detail.endTime && new Date(csvFailureTimestamp).getTime() > new Date(detail.endTime).getTime())) {
-                    detail.endTime = csvFailureTimestamp;
-                }
-
-                addConferenceError(
-                    detail,
-                    csvFailureTimestamp,
-                    "Conference failed due to CSV generation pipeline failure.",
-                    {
-                        defaultMessage: "CSV generation pipeline failed for conference.",
-                        keyPrefix: "csv_pipeline_failure_override_conf",
-                        sourceService: 'FinalMetricsCalculation',
-                        errorType: 'FileSystem',
-                        context: {
-                            phase: 'response_processing',
-                            csvErrorSource: "pipeline_or_other",
-                            originalStatus: oldConfStatus
-                        }
-                    }
-                );
-                // } // Kết thúc if (detail.jsonlWriteSuccess === true)
-            } else if (detail.status === 'failed') {
-                // Nếu đã failed từ trước, chỉ cần đảm bảo csvWriteSuccess là false
-                detail.csvWriteSuccess = false;
-            }
-        }
-    });
-
-     // --- STAGE 3: Recalculate Overall Counts & Update Request Statuses AND Conference Counts ---
+    // --- STAGE 3: Recalculate Overall Counts & Update Request Statuses AND Conference Counts ---
     // Đặt lại các counter tổng thể trước khi đếm lại
     results.overall.completedTasks = 0;
     results.overall.failedOrCrashedTasks = 0;
@@ -448,9 +450,9 @@ export const calculateFinalMetrics = (
 
         // LÀM LẠI LOGIC XÁC ĐỊNH TRẠNG THÁI CỦA REQUEST
         if (conferencesForThisRequest.length === 0) {
-             // Nếu không có conference nào được phân tích cho request này,
-             // nhưng requestData có log, có thể coi là completed.
-             // Nếu không có log, thì là NoData.
+            // Nếu không có conference nào được phân tích cho request này,
+            // nhưng requestData có log, có thể coi là completed.
+            // Nếu không có log, thì là NoData.
             const requestData = filteredRequestsData.get(reqId);
             if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
                 requestTimings.status = 'Completed'; // Request có log nhưng không có conference nào được phân tích

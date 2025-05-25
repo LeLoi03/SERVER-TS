@@ -189,18 +189,29 @@ server {
     # --- Proxy cho Backend API (Qua /api/) ---
     # Block này PHẢI đứng TRƯỚC các location frontend
     location /api/ {
-        rewrite ^/api/(.*)$ /$1 break;
-        proxy_pass http://localhost:3001/;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        # proxy_connect_timeout 60s;
-        # proxy_send_timeout 60s;
-        # proxy_read_timeout 60s;
+    rewrite ^/api/(.*)$ /$1 break;
+    proxy_pass http://localhost:3001/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+
+    # Tăng thời gian chờ phản hồi từ backend
+    # Giá trị này nên đủ lớn để backend xử lý một batch
+    # Ví dụ: 10 phút (600 giây). Điều chỉnh nếu cần.
+    # Nếu một batch 50 items có thể mất nhiều hơn, hãy tăng thêm.
+    # Frontend của bạn đang đặt timeout axios là 2 giờ (7200000ms),
+    # nhưng không nên đặt Nginx timeout quá cao như vậy.
+    # Hãy ước lượng thời gian tối đa cho 1 batch.
+    proxy_connect_timeout 600s;
+    proxy_send_timeout 600s;
+    proxy_read_timeout 600s; # Quan trọng nhất
+
+    # Cân nhắc thêm nếu payload request lớn (dù không phải nguyên nhân 504)
+    # client_max_body_size 50M; # Ví dụ: cho phép payload lên tới 50MB
     }
 
     # --- Proxy cho Frontend ADMIN (Qua /admin/) ---

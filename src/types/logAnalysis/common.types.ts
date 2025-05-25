@@ -43,6 +43,7 @@ export interface RequestTimings {
     totalConferencesInputForRequest?: number;
     /** NEW: Số lượng hội nghị đã được xử lý hoàn tất cho yêu cầu cụ thể này. */
     processedConferencesCountForRequest?: number;
+    csvOutputStreamFailed?: boolean;
 }
 
 /**

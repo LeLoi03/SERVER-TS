@@ -51,7 +51,7 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
             }
             // Recalculate duration if endTime changed or wasn't set by task_finish
             if (confDetail.startTime && confDetail.endTime) {
-                 try {
+                try {
                     const start = new Date(confDetail.startTime).getTime();
                     const end = new Date(confDetail.endTime).getTime();
                     if (!isNaN(start) && !isNaN(end) && end >= start) {
@@ -153,8 +153,12 @@ export const handleJsonlWriteFailed: LogEventHandler = (logEntry, results, confD
 
 // handleCsvProcessingEvent giữ nguyên
 export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {
-   const fileOutput = ensureFileOutputAnalysis(results);
-    const eventName = logEntry.event;
+    const fileOutput = ensureFileOutputAnalysis(results); // Đảm bảo results.fileOutput tồn tại
+    // const overall = ensureOverallAnalysis(results); // Nếu cần cập nhật overall stats
+
+    const eventName = logEntry.event as string | undefined;
+    const batchRequestId = logEntry.batchRequestId as string | undefined; // Lấy batchRequestId từ log entry
+
 
     switch (eventName) {
         case 'csv_record_processed_for_writing':
@@ -184,26 +188,49 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results, _co
             // Nếu recordsWritten === -1 (không có thông tin), không thay đổi gì, để các event khác quyết định.
             break;
         case 'csv_stream_collect_failed':
-        case 'csv_generation_failed_or_empty': // Nếu empty mà không được phép thì là lỗi
-             if (eventName === 'csv_generation_failed_or_empty' && logEntry.context?.allowEmptyFileIfNoRecords && fileOutput.csvRecordsAttempted === 0) {
-                fileOutput.csvFileGenerated = true; // Cho phép rỗng nếu không có record nào để ghi
-             } else {
-                fileOutput.csvFileGenerated = false;
-                fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
-                const errorSourceFc = logEntry.err || logEntry;
-                const defaultMessageFc = `CSV pipeline failed (${eventName})`;
-                const keyForAggregationFc = normalizeErrorKey(errorSourceFc);
-                results.errorsAggregated[keyForAggregationFc] = (results.errorsAggregated[keyForAggregationFc] || 0) + 1;
-             }
-            break;
-        case 'csv_generation_pipeline_failed':
-            fileOutput.csvFileGenerated = false;
+        case 'csv_generation_pipeline_failed': // Event này thường chỉ ra lỗi cho cả một pipeline/request
+            // Tăng bộ đếm lỗi pipeline toàn cục (vẫn hữu ích cho thống kê)
             fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
+
+            // Đặt cờ lỗi CSV cho request cụ thể nếu có batchRequestId
+            if (batchRequestId && results.requests[batchRequestId]) {
+                results.requests[batchRequestId].csvOutputStreamFailed = true; // <--- ĐÂY LÀ NƠI CỜ ĐƯỢC ĐẶT
+                // Bạn có thể muốn lưu thêm chi tiết lỗi vào request đó nếu cần
+                // Ví dụ: results.requests[batchRequestId].csvErrorDetails = logEntry.err || logEntry.message;
+                console.warn(`CSV output stream failed for request: ${batchRequestId}. Flag set.`); // Log để debug
+            } else {
+                // Nếu không có batchRequestId, lỗi này không thể gán cho request cụ thể
+                // Nó sẽ chỉ được tính vào csvPipelineFailures toàn cục
+                console.warn(`CSV pipeline/stream failed but no batchRequestId provided in log entry for event: ${eventName}. Log:`, logEntry);
+            }
+
+            // Ghi nhận lỗi vào aggregated errors nếu cần
             const errorSource = logEntry.err || logEntry;
-            const defaultMessage = `CSV pipeline failed (${eventName})`;
+            const defaultMessage = `CSV pipeline/stream failed (${eventName})`;
             const keyForAggregation = normalizeErrorKey(errorSource);
             results.errorsAggregated[keyForAggregation] = (results.errorsAggregated[keyForAggregation] || 0) + 1;
             break;
+
+        case 'csv_generation_failed_or_empty':
+            if (logEntry.context?.allowEmptyFileIfNoRecords && fileOutput.csvRecordsAttempted === 0) {
+                // fileOutput.csvFileGenerated = true; // Không cần thiết nếu file riêng
+            } else {
+                // fileOutput.csvFileGenerated = false; // Không cần thiết nếu file riêng
+                fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1; // Đếm lỗi toàn cục
+
+                if (batchRequestId && results.requests[batchRequestId]) {
+                    results.requests[batchRequestId].csvOutputStreamFailed = true; // <--- ĐẶT CỜ CHO REQUEST
+                    console.warn(`CSV generation failed or empty for request: ${batchRequestId}. Flag set.`);
+                } else {
+                    console.warn(`CSV generation failed or empty but no batchRequestId for event: ${eventName}. Log:`, logEntry);
+                }
+                const errorSourceFc = logEntry.err || logEntry;
+                const defaultMessageFc = `CSV generation failed or empty (${eventName})`;
+                const keyForAggregationFc = normalizeErrorKey(errorSourceFc);
+                results.errorsAggregated[keyForAggregationFc] = (results.errorsAggregated[keyForAggregationFc] || 0) + 1;
+            }
+            break;
+
         case 'csv_generation_empty_but_file_exists': // File rỗng được tạo thành công
             fileOutput.csvFileGenerated = true;
             break;
