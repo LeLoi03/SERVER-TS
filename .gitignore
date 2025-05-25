@@ -47,9 +47,10 @@ src/chat_history.txt
 
 
 /logs
+/src/app.log
 src/app.log
 
-
+/logs
 /data
 
 
