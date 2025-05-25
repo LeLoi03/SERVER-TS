@@ -97,7 +97,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_call_unexpected_exit_after_attempts': geminiApi.handleGeminiFinalFailure,
   'gemini_orchestration_fallback_failed_after_retries': geminiApi.handleGeminiFinalFailure,
   'retry_internal_rate_limit_first_attempt_fail_single_shot': geminiApi.handleGeminiFinalFailure,
-  'gemini_public_method_orchestration_failed': geminiApi.handleGeminiFinalFailure, // THÊM (cần logic kiểm tra trong handler)
+  'gemini_public_method_orchestration_failed_local': geminiApi.handleGeminiFinalFailure, // THÊM (cần logic kiểm tra trong handler)
   
   
   // Gemini Setup, Init, Config Failures
@@ -109,7 +109,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_call_missing_model_config': geminiApi.handleGeminiSetupFailure,
   'gemini_api_model_missing_before_generate': geminiApi.handleGeminiSetupFailure,
   'non_cached_setup_failed': geminiApi.handleGeminiSetupFailure,
-  'gemini_public_method_unhandled_error': geminiApi.handleGeminiSetupFailure,
+  'gemini_public_method_unhandled_error_local': geminiApi.handleGeminiSetupFailure,
   'gemini_call_model_prep_orchestration_failed': geminiApi.handleGeminiSetupFailure,
   'model_orchestration_critical_failure_final_check': geminiApi.handleGeminiSetupFailure,
   'gemini_client_manager_no_genai_instance': geminiApi.handleGeminiSetupFailure,
@@ -149,7 +149,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
 
   // Gemini Success (various points of success)
   'gemini_api_attempt_success': geminiApi.handleGeminiSuccess,
-  'gemini_public_method_finish': geminiApi.handleGeminiSuccess,
+  'gemini_public_method_finish_local': geminiApi.handleGeminiSuccess,
   'gemini_orchestration_primary_success': geminiApi.handleOrchestrationEvent,
   'gemini_orchestration_fallback_success': geminiApi.handleOrchestrationEvent,
 

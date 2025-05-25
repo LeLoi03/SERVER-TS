@@ -301,7 +301,7 @@ const envSchema = z.object({
      * @description Required for accessing Gemini models.
      */
     GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"), // Changed to transform to array
-    
+
     /**
      * Maximum number of concurrent requests to the Gemini API.
      * @default 2
@@ -661,6 +661,29 @@ const envSchema = z.object({
 
     SAVE_STATUS_OUTPUT_SUBDIR: z.string().default('save_status_outputs'),
 
+
+    // --- Thêm cấu hình cho VPS Worker vào Zod Schema ---
+    /**
+     * URL của VPS Worker để offload các Gemini API call.
+     * @example "http://your-vps-ip:3001/api/v1/call-gemini"
+     */
+    VPS_WORKER_URL: z.string().url("VPS_WORKER_URL phải là một URL hợp lệ").optional(),
+    /**
+     * Shared secret token để xác thực với VPS Worker.
+     */
+    VPS_WORKER_AUTH_TOKEN: z.string().optional(),
+    /**
+     * Comma-separated list các API types (extract, cfp, determine) sẽ được phép offload sang VPS.
+     * @example "extract,cfp"
+     */
+    VPS_WORKER_ENABLED_FOR_API_TYPES: z.string().optional().transform(parseCommaSeparatedString('VPS_WORKER_ENABLED_FOR_API_TYPES')),
+    /**
+     * Tỷ lệ request được gửi tới VPS. Ví dụ: 2 nghĩa là 1 trong 2 request hợp lệ sẽ đi qua VPS.
+     * Nếu là 1, tất cả request hợp lệ sẽ qua VPS. Nếu là 0 hoặc không set, VPS không được sử dụng cho phân tải.
+     * @default 0 (không sử dụng VPS cho phân tải)
+     */
+    VPS_WORKER_LOAD_RATIO: z.coerce.number().int().nonnegative().default(0),
+
 });
 
 // --- Define Interfaces for Structured Config ---
@@ -735,6 +758,12 @@ export type AppConfig = AppConfigFromSchema & {
      * `GEMINI_API_KEY_N`.
      */
     GEMINI_API_KEYS: string[]; // Add the new property for Gemini API keys
+
+    // Thêm cấu hình cho VPS Worker
+    VPS_WORKER_URL?: string; // Ví dụ: http://your-vps-ip:3001/api/v1/call-gemini
+    VPS_WORKER_AUTH_TOKEN?: string; // Shared secret
+    VPS_WORKER_ENABLED_FOR_API_TYPES?: string[]; // Ví dụ: ['extract', 'cfp']
+    VPS_WORKER_LOAD_RATIO?: number; // Ví dụ: 2 (1 trong 2 request sẽ đi qua VPS)
 };
 
 /**
@@ -939,6 +968,10 @@ export class ConfigService {
             console.log(`   - Allowed Sub Agents: ${this.config.ALLOWED_SUB_AGENTS.join(', ')}`);
             console.log(`   - Max Turns Host Agent: ${this.config.MAX_TURNS_HOST_AGENT}`);
             console.log(`   - Number of Gemini API Keys: ${this.config.GEMINI_API_KEYS.length}`); // Log count of Gemini keys
+
+            console.log(`   - VPS Worker URL: ${this.config.VPS_WORKER_URL || 'Not configured'}`);
+            console.log(`   - VPS Worker Enabled For: ${this.config.VPS_WORKER_ENABLED_FOR_API_TYPES?.join(', ') || 'None'}`);
+            console.log(`   - VPS Worker Load Ratio: ${this.config.VPS_WORKER_LOAD_RATIO}`);
         } catch (error) {
             // Handle Zod validation errors specifically
             if (error instanceof z.ZodError) {

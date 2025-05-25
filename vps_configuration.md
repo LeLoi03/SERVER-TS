@@ -5,7 +5,7 @@ sudo apt install curl -y
 
 
 
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 
 sudo apt install -y nodejs
 
@@ -94,26 +94,31 @@ sudo systemctl daemon-reload
 sudo systemctl enable client.service
 sudo systemctl enable admin.service
 sudo systemctl enable server-ts.service
+sudo systemctl enable server.service
 
 
 sudo systemctl start client.service
 sudo systemctl start admin.service
 sudo systemctl start server-ts.service
+sudo systemctl start server.service
 
 sudo systemctl restart client.service
 sudo systemctl restart admin.service
 sudo systemctl restart server-ts.service
+sudo systemctl restart server.service
 
 sudo systemctl status client.service
 sudo systemctl status admin.service
 sudo systemctl status server-ts.service
+sudo systemctl status server.service
 
 
 sudo journalctl -u admin.service -f
 sudo journalctl -u client.service -f
 sudo journalctl -u server-ts.service -f
+sudo journalctl -u server.service -f
 
-
+sudo ufw allow 3001
 =====================================
 
 **1. Cài đặt Nginx:**

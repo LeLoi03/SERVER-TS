@@ -46,7 +46,9 @@ export class ConferenceProcessorService {
         taskIndex: number,
         parentLogger: Logger,
         apiModels: ApiModels,
-        batchRequestId: string
+        batchRequestId: string,
+        useVpsForThisConference: boolean // <<< THAM SỐ MỚI
+
     ): Promise<void> {
         const confAcronym = conference?.Acronym || `UnknownAcronym-${taskIndex}`;
         const confTitle = conference?.Title || `UnknownTitle-${taskIndex}`;
@@ -55,8 +57,8 @@ export class ConferenceProcessorService {
         // Kiểm tra xem các thuộc tính có tồn tại trong đối tượng 'conference' hay không.
         // Bất kể giá trị của chúng là gì (string, null, rỗng, v.v.), chỉ cần chúng có mặt.
         const hasAllRequiredLinksProvided = 'mainLink' in conference &&
-                                            'cfpLink' in conference &&
-                                            'impLink' in conference;
+            'cfpLink' in conference &&
+            'impLink' in conference;
 
         const crawlType = hasAllRequiredLinksProvided ? "update" : "crawl";
         // *******************************************************
@@ -70,6 +72,8 @@ export class ConferenceProcessorService {
             batchRequestId: batchRequestId,
             originalRequestId: conference.originalRequestId,
             crawlType: crawlType,
+            useVps: useVpsForThisConference // Log quyết định VPS
+
         });
 
         if (conference.originalRequestId) {
@@ -86,7 +90,7 @@ export class ConferenceProcessorService {
         try {
             // *************** SỬ DỤNG BIẾN ĐIỀU CHỈNH ***************
             if (hasAllRequiredLinksProvided) {
-            // *******************************************************
+                // *******************************************************
                 taskLogger.info({ event: 'update_flow_start' }, `Conference item has pre-defined links. Initiating UPDATE flow.`);
                 const conferenceUpdateData: ConferenceUpdateData = {
                     Acronym: conference.Acronym,
@@ -101,7 +105,9 @@ export class ConferenceProcessorService {
                 const updateSuccess = await this.htmlPersistenceService.processUpdateFlow(
                     conferenceUpdateData,
                     taskLogger,
-                    apiModels
+                    apiModels,
+                    useVpsForThisConference // <<< TRUYỀN XUỐNG
+
                 );
 
                 if (!updateSuccess) {
@@ -152,7 +158,9 @@ export class ConferenceProcessorService {
                         conference,
                         searchResultsLinks,
                         taskLogger,
-                        apiModels
+                        apiModels,
+                        useVpsForThisConference // <<< TRUYỀN XUỐNG
+
                     );
                     if (saveSuccess === false) {
                         taskSuccessfullyCompleted = false;

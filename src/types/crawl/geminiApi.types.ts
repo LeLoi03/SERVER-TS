@@ -359,3 +359,37 @@ export interface GeminiApiParams {
      */
     acronym: string | undefined;
 }
+
+
+// Payload server chính gửi cho VPS
+export interface VpsApiPayload { // Đổi tên từ VpsTaskPayload của VPS để tránh nhầm lẫn context
+    baseParams: { // Giữ lại các params cơ bản cho context
+        batchIndex: number;
+        title: string;
+        acronym: string;
+    };
+    apiType: string;
+    modelName: string;
+    prompt: string;
+    systemInstruction?: string;
+    fewShotParts?: Part[];
+    generationConfig: SDKGenerationConfig;
+}
+
+// Kết quả trả về từ VPS (phần data nếu thành công)
+export interface VpsSdkResult {
+    responseText: string;
+    metaData: UsageMetadata | null;
+}
+
+// Response đầy đủ từ VPS
+export interface VpsApiResponse {
+    success: boolean;
+    data?: VpsSdkResult;
+    error?: {
+        message: string;
+        name?: string;
+        stack?: string;
+        details?: any; // Ví dụ: { msBeforeNext: number } cho rate limit
+    };
+}

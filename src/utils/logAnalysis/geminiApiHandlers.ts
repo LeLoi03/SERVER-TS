@@ -276,7 +276,7 @@ export const handleGeminiSetupFailure: LogEventHandler = (logEntry, results, con
     }
 
     // Lỗi chung không xác định trong public method (coi là setup/logic failure của method đó)
-    else if (event === 'gemini_public_method_unhandled_error') {
+    else if (event === 'gemini_public_method_unhandled_error_local') {
         geminiApi.apiCallSetupFailures++;
         // `failedCalls` sẽ được tăng bởi event `gemini_call_failed_no_more_options` nếu Orchestrator log nó
     }
@@ -341,7 +341,7 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
     const geminiApi = ensureGeminiApiAnalysis(results);
 
     // KEY EVENT for geminiApi.successfulCalls
-    if (logEntry.event === 'gemini_public_method_finish') {
+    if (logEntry.event === 'gemini_public_method_finish_local') {
         geminiApi.successfulCalls++;
         geminiApi.responseProcessingStats.publicMethodFinishes++;
 
@@ -362,10 +362,10 @@ export const handleGeminiSuccess: LogEventHandler = (logEntry, results, confDeta
     }
 
     // Cập nhật confDetail.steps
-    // Điều này nên xảy ra cho cả gemini_public_method_finish (kết quả cuối cùng)
+    // Điều này nên xảy ra cho cả gemini_public_method_finish_local (kết quả cuối cùng)
     // và gemini_api_attempt_success (kết quả của một attempt, có thể là primary hoặc fallback)
     // để đảm bảo step được đánh dấu success ngay khi có attempt thành công.
-    if (confDetail && (logEntry.event === 'gemini_public_method_finish' || logEntry.event === 'gemini_api_attempt_success')) {
+    if (confDetail && (logEntry.event === 'gemini_public_method_finish_local' || logEntry.event === 'gemini_api_attempt_success')) {
         const apiType = logEntry.apiType;
         const usingCache = logEntry.usingCache ?? logEntry.usingCacheActual ?? false;
         // modelUsed sẽ cho biết model nào đã thành công (primary hay fallback)

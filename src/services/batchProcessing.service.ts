@@ -8,13 +8,13 @@ import { Page, BrowserContext } from 'playwright';
 // --- Types ---
 import {
     BatchEntry, BatchUpdateEntry, ConferenceData, ConferenceUpdateData,
-    BatchEntryWithIds, BatchUpdateDataWithIds, // Assuming these are updated as per suggestion
+    BatchEntryWithIds, BatchUpdateDataWithIds,
     ApiModels,
     CrawlModelType
 } from '../types/crawl';
 
 // --- Service Imports ---
-import { ConfigService } from '../config/config.service';
+import { ConfigService, AppConfig } from '../config/config.service'; // Giữ AppConfig nếu cần cho các config khác
 import { LoggingService } from './logging.service';
 import { GeminiApiService } from './geminiApi.service';
 import { FileSystemService } from './fileSystem.service';
@@ -30,7 +30,8 @@ import { GeminiApiParams, ApiResponse } from '../types/crawl';
 @singleton()
 export class BatchProcessingService {
     private readonly serviceBaseLogger: Logger;
-    private readonly configService: ConfigService;
+    private readonly configServiceInstance: ConfigService; // Đổi tên để rõ ràng là instance
+    private readonly appConfig: AppConfig; // Vẫn giữ AppConfig để truy cập các config thô nếu cần
     private readonly geminiApiService: GeminiApiService;
     private readonly fileSystemService: FileSystemService;
     private readonly pageContentExtractorService: IPageContentExtractorService;
@@ -38,16 +39,16 @@ export class BatchProcessingService {
     private readonly conferenceDeterminationService: IConferenceDeterminationService;
     private readonly conferenceDataAggregatorService: IConferenceDataAggregatorService;
 
-
     private readonly batchesDir: string;
     private readonly tempDir: string;
     private readonly errorLogPath: string;
 
-    private globalProcessedAcronymsSet: Set<string> = new Set(); // ++ Thêm Set toàn cục
+    private globalProcessedAcronymsSet: Set<string> = new Set();
     private activeBatchSaves: Set<Promise<boolean>> = new Set();
+    private vpsDecisionCounter: number = 0;
 
     constructor(
-        @inject(ConfigService) configService: ConfigService,
+        @inject(ConfigService) configService: ConfigService, // Inject ConfigService
         @inject(LoggingService) loggingService: LoggingService,
         @inject(GeminiApiService) geminiApiService: GeminiApiService,
         @inject(FileSystemService) fileSystemService: FileSystemService,
@@ -56,7 +57,8 @@ export class BatchProcessingService {
         @inject('IConferenceDeterminationService') conferenceDeterminationService: IConferenceDeterminationService,
         @inject('IConferenceDataAggregatorService') conferenceDataAggregatorService: IConferenceDataAggregatorService
     ) {
-        this.configService = configService;
+        this.configServiceInstance = configService; // Lưu instance của ConfigService
+        this.appConfig = configService.config; // Lấy AppConfig từ instance
         this.geminiApiService = geminiApiService;
         this.fileSystemService = fileSystemService;
         this.pageContentExtractorService = pageContentExtractorService;
@@ -64,17 +66,19 @@ export class BatchProcessingService {
         this.conferenceDeterminationService = conferenceDeterminationService;
         this.conferenceDataAggregatorService = conferenceDataAggregatorService;
         this.serviceBaseLogger = loggingService.getLogger('main', { service: 'BatchProcessingServiceOrchestrator' });
-        this.batchesDir = this.configService.batchesDir;
-        this.tempDir = this.configService.tempDir;
-        this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
+
+        // SỬA LỖI: Sử dụng getters từ configServiceInstance
+        this.batchesDir = this.configServiceInstance.batchesDir;
+        this.tempDir = this.configServiceInstance.tempDir;
+        this.errorLogPath = path.join(this.configServiceInstance.baseOutputDir, 'batch_processing_errors.log');
+        // Hoặc nếu bạn đã có getter errorAccessLinkPath trong ConfigService:
+        // this.errorLogPath = this.configServiceInstance.errorAccessLinkPath; // Giả sử bạn có getter này
+
         this.serviceBaseLogger.info("BatchProcessingService constructed.");
         this.serviceBaseLogger.info(`Batches Directory: ${this.batchesDir}`);
         this.serviceBaseLogger.info(`Temp Directory: ${this.tempDir}`);
-        // Khởi tạo globalProcessedAcronymsSet nếu cần (ví dụ, đọc từ file nếu muốn duy trì giữa các lần chạy app)
-        // Hoặc đơn giản là để nó trống cho mỗi lần service được tạo.
     }
 
-    // resetGlobalAcronyms có thể được gọi từ một service quản lý phiên crawl cao hơn
     public resetGlobalAcronyms(logger: Logger) {
         this.globalProcessedAcronymsSet.clear();
         logger.info({ event: 'global_processed_acronyms_reset', service: 'BatchProcessingService' });
@@ -84,63 +88,52 @@ export class BatchProcessingService {
         const logger = loggerToUse || this.serviceBaseLogger;
         const logContext = { function: 'ensureDirectories', service: 'BatchProcessingServiceOrchestrator' };
         for (const dirPath of paths) {
-            // Đảm bảo dirPath là một thư mục, không phải file
             let effectiveDirPath = dirPath;
             try {
                 if (fs.existsSync(dirPath) && fs.statSync(dirPath).isFile()) {
                     effectiveDirPath = path.dirname(dirPath);
                 } else if (!fs.existsSync(dirPath)) {
-                    effectiveDirPath = path.dirname(dirPath); // Nếu path không tồn tại, giả sử nó là file để lấy dirname
+                    effectiveDirPath = path.dirname(dirPath);
                 }
-            } catch (e) { /* ignore error, path.dirname will handle it or mkdir will fail */
+            } catch (e) {
                 effectiveDirPath = path.dirname(dirPath);
             }
-
-
             if (!fs.existsSync(effectiveDirPath)) {
                 logger.info({ ...logContext, path: effectiveDirPath, event: 'batch_processing_ensure_dir_create_attempt' });
                 try {
                     await this.fileSystemService.ensureDirExists(effectiveDirPath, logger);
                 } catch (mkdirError: unknown) {
-                    logger.error({ ...logContext, path: effectiveDirPath, err: mkdirError, event: 'batch_dir_create_failed' }); // Sửa event
+                    logger.error({ ...logContext, path: effectiveDirPath, err: mkdirError, event: 'batch_dir_create_failed' });
                     throw mkdirError;
                 }
             }
         }
     }
 
-
-    /**
-       * Executes extractInformation and extractCfp APIs in parallel using GeminiApiService.
-       * This remains in the orchestrator as it's a distinct final API step.
-       */
     private async executeFinalExtractionApis(
         contentSendToAPI: string,
         batchItemIndex: number,
         titleForApis: string,
-        originalAcronymForApis: string, // CHANGED: This is the original acronym
-        safeConferenceAcronymForFiles: string, // CHANGED: This is the sanitized internal processing acronym for file naming
+        originalAcronymForApis: string,
+        safeConferenceAcronymForFiles: string,
         isUpdate: boolean,
         extractModel: CrawlModelType,
         cfpModel: CrawlModelType,
+        useVpsForThisBatch: boolean, // THAM SỐ MỚI
         parentLogger: Logger
-    ): Promise<{
-        extractResponseTextPath?: string;
-        extractMetaData: any | null;
-        cfpResponseTextPath?: string;
-        cfpMetaData: any | null;
-    }> {
+    ): Promise<any>  // Sửa kiểu trả về cho phù hợp
+    {
         const logger = parentLogger.child({
             batchServiceFunction: 'executeFinalExtractionApis',
             isUpdateContext: isUpdate,
             extractModelUsed: extractModel,
             cfpModelUsed: cfpModel,
-            originalConferenceAcronym: originalAcronymForApis, // Log original acronym
-            fileNameBaseAcronym: safeConferenceAcronymForFiles // Log acronym used for files
+            originalConferenceAcronym: originalAcronymForApis,
+            fileNameBaseAcronym: safeConferenceAcronymForFiles,
+            useVps: useVpsForThisBatch // Log quyết định VPS
         });
 
         const suffix = isUpdate ? `_update_response_${batchItemIndex}` : `_response_${batchItemIndex}`;
-        // Files are named using the safe, unique-for-run acronym
         const extractFileBase = `${safeConferenceAcronymForFiles}_extract${suffix}`;
         const cfpFileBase = `${safeConferenceAcronymForFiles}_cfp${suffix}`;
 
@@ -149,7 +142,7 @@ export class BatchProcessingService {
         const commonApiParams: Omit<GeminiApiParams, 'batch'> = {
             batchIndex: batchItemIndex,
             title: titleForApis,
-            acronym: originalAcronymForApis, // API call uses the original acronym
+            acronym: originalAcronymForApis,
         };
 
         const extractPromise = (async () => {
@@ -159,6 +152,7 @@ export class BatchProcessingService {
                 const response = await this.geminiApiService.extractInformation(
                     { ...commonApiParams, batch: contentSendToAPI },
                     extractModel,
+                    useVpsForThisBatch, // TRUYỀN FLAG VPS
                     extractApiLogger
                 );
                 const pathValue = await this.fileSystemService.saveTemporaryFile(
@@ -178,7 +172,8 @@ export class BatchProcessingService {
             try {
                 const response = await this.geminiApiService.extractCfp(
                     { ...commonApiParams, batch: contentSendToAPI },
-                    cfpModel, // << SỬ DỤNG cfpModel
+                    cfpModel,
+                    useVpsForThisBatch, // TRUYỀN FLAG VPS
                     cfpApiLogger
                 );
                 const pathValue = await this.fileSystemService.saveTemporaryFile(
@@ -210,14 +205,15 @@ export class BatchProcessingService {
         };
     }
 
-
-
     public async processConferenceUpdate(
         browserContext: BrowserContext,
-        conference: ConferenceUpdateData, // Acronym here is original
+        conference: ConferenceUpdateData,
         parentLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        useVpsForThisConference: boolean // <<< THAM SỐ MỚI TỪ HTML_PERSISTENCE
+
     ): Promise<boolean> {
+
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
         const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number;
 
@@ -228,12 +224,15 @@ export class BatchProcessingService {
 
         const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceUpdate',
-            originalConferenceAcronym: conference.Acronym, // Log original
+            originalConferenceAcronym: conference.Acronym,
             conferenceTitle: conference.Title,
-            service: 'BatchProcessingServiceOrchestrator'
+            service: 'BatchProcessingServiceOrchestrator',
+            useVps: useVpsForThisConference // Log quyết định
+            // Log quyết định
         });
 
-        const modelsDesc = `EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`; // Chỉ log model liên quan đến update
+        // ... (logic tạo page, process link giữ nguyên)
+        const modelsDesc = `EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         methodLogger.info({ event: 'batch_processing_flow_start', flow: 'update', modelsForUpdate: modelsDesc });
         const pages: Page[] = [];
 
@@ -266,21 +265,17 @@ export class BatchProcessingService {
 
             methodLogger.info({ event: 'parallel_link_fetch_start_update_flow' });
 
-            // Pass child loggers to service calls
             const mainPromise = mainPage ? this.conferenceLinkProcessorService.processMainLinkForUpdate(mainPage, conference, methodLogger.child({ linkType: 'main_update' })) : Promise.resolve({ finalUrl: null, textPath: null });
-            // For CFP/IMP, if no page was created (e.g. PDF), pass null for page. The service handles it.
             const cfpPromise = this.conferenceLinkProcessorService.processCfpLinkForUpdate(cfpPage, conference, methodLogger.child({ linkType: 'cfp_update' }));
 
-            // IMP processing depends on CFP result for path if they are the same
-            let impPromiseVal: Promise<string | null>; // Sửa tên biến để tránh xung đột
+            let impPromiseVal: Promise<string | null>;
             if (isImpSameAsNavigableCfp) {
                 impPromiseVal = cfpPromise.then(cfpPath => {
                     methodLogger.info({ event: 'imp_link_resolved_as_same_as_cfp_update', cfpPath });
-                    return cfpPath ? "" : null;
+                    return cfpPath ? "" : null; // Empty string to signify it's handled by CFP, null if CFP failed
                 });
             } else {
-                // If impPage is null (e.g. PDF or no link), service handles it
-                impPromiseVal = cfpPromise.then(cfpPath =>
+                impPromiseVal = cfpPromise.then(cfpPath => // Ensure cfpPromise resolves before impPromise logic that might depend on it
                     this.conferenceLinkProcessorService.processImpLinkForUpdate(impPage, conference, cfpPath, methodLogger.child({ linkType: 'imp_update' }))
                 );
             }
@@ -303,14 +298,13 @@ export class BatchProcessingService {
 
 
             if (!mainResult.textPath) {
-                methodLogger.error({ event: 'batch_processing_abort_no_main_text', flow: 'update', reason: 'Main text path missing' }); // Sửa event
-                return false; // Không await _closePages ở đây, finally sẽ làm
+                methodLogger.error({ event: 'batch_processing_abort_no_main_text', flow: 'update', reason: 'Main text path missing' });
+                return false;
             }
 
-            // conference.Acronym is the original acronym
             const batchDataForExecute: BatchUpdateEntry = {
                 conferenceTitle: conference.Title,
-                conferenceAcronym: conference.Acronym, // Pass ORIGINAL acronym
+                conferenceAcronym: conference.Acronym,
                 mainLink: conference.mainLink,
                 impLink: conference.impLink,
                 cfpLink: conference.cfpLink,
@@ -324,6 +318,7 @@ export class BatchProcessingService {
                 batchItemIndexFromParent,
                 batchRequestIdFromParent,
                 apiModels,
+                useVpsForThisConference, // TRUYỀN FLAG VPS
                 methodLogger
             );
             methodLogger.info({ event: 'batch_processing_flow_finish', success: updateSuccess, flow: 'update' });
@@ -337,29 +332,34 @@ export class BatchProcessingService {
         }
     }
 
+
     public async processConferenceSave(
         browserContext: BrowserContext,
-        conference: ConferenceData, // Acronym here is original
+        conference: ConferenceData,
         links: string[],
         parentLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        useVpsForThisConference: boolean // <<< THAM SỐ MỚI TỪ HTML_PERSISTENCE
+
     ): Promise<boolean> {
+
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
-        const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number; // Index của item ConferenceData này
+        const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number;
 
         if (!batchRequestIdFromParent || batchItemIndexFromParent === undefined) {
             parentLogger.error({ event: 'batch_processing_missing_ids_from_parent_logger', flow: 'save', conferenceAcronym: conference.Acronym });
             return false;
         }
 
-        const year = this.configService.config.YEAR2;
+        const year = this.appConfig.YEAR2; // Sử dụng appConfig
         const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceSave',
-            originalConferenceAcronym: conference.Acronym, // Log original
+            originalConferenceAcronym: conference.Acronym,
             conferenceTitle: conference.Title,
-            service: 'BatchProcessingServiceOrchestrator'
+            service: 'BatchProcessingServiceOrchestrator',
+            useVps: useVpsForThisConference // Log quyết định
         });
-
+        // ... (logic còn lại của processConferenceSave giữ nguyên cho đến khi gọi _executeBatchTaskForSave)
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         methodLogger.info({ event: 'batch_processing_flow_start', flow: 'save_initiation', modelsForSave: modelsDesc });
 
@@ -368,10 +368,9 @@ export class BatchProcessingService {
         }
 
         let page: Page | null = null;
-        const batchForDetermineApi: BatchEntry[] = []; // BatchEntry.conferenceAcronym is original
+        const batchForDetermineApi: BatchEntry[] = [];
         let linkProcessingSuccessCount = 0;
         let linkProcessingFailedCount = 0;
-
 
         try {
             page = await browserContext.newPage();
@@ -380,10 +379,7 @@ export class BatchProcessingService {
             for (let i = 0; i < links.length; i++) {
                 const link = links[i];
                 const singleLinkLogger = methodLogger.child({ linkProcessingIndex: i, originalLinkForProcessing: link });
-
                 try {
-                    // conferenceLinkProcessorService.processInitialLinkForSave should return BatchEntry
-                    // where conferenceAcronym is the original one from 'conference' input
                     const batchEntry = await this.conferenceLinkProcessorService.processInitialLinkForSave(
                         page, link, i, conference, year, singleLinkLogger
                     );
@@ -402,16 +398,12 @@ export class BatchProcessingService {
                 event: 'all_links_processed_for_save_flow'
             });
 
-
             if (batchForDetermineApi.length > 0) {
-                // Use original acronym from the first entry for initial file naming context if needed
-                // This is the 'batchAcronymForFiles' concept
                 const primaryOriginalAcronymForTask = batchForDetermineApi[0]?.conferenceAcronym || conference.Acronym;
                 const taskTitleContext = batchForDetermineApi[0]?.conferenceTitle || conference.Title;
 
                 const batchTaskLogger = methodLogger.child({
                     asyncBatchTask: '_executeBatchTaskForSave',
-                    // Log original acronym for context of this task
                     originalConferenceAcronym: primaryOriginalAcronymForTask,
                     conferenceTitle: taskTitleContext,
                 });
@@ -419,13 +411,14 @@ export class BatchProcessingService {
                 methodLogger.info({ entriesInBatch: batchForDetermineApi.length, assignedBatchItemIndex: batchItemIndexFromParent, event: 'batch_task_create_delegation_start', flow: 'save' });
 
                 const batchPromise = this._executeBatchTaskForSave(
-                    batchForDetermineApi, // Contains original acronyms
+                    batchForDetermineApi,
                     batchItemIndexFromParent,
-                    primaryOriginalAcronymForTask, // This is for pre-determination file prefix
+                    primaryOriginalAcronymForTask, // primaryOriginalAcronymForTask đã được xác định
                     browserContext,
                     batchRequestIdFromParent,
                     apiModels,
-                    batchTaskLogger
+                    useVpsForThisConference, // <<< TRUYỀN XUỐNG
+                    batchTaskLogger // batchTaskLogger đã được tạo
                 );
 
                 this.activeBatchSaves.add(batchPromise);
@@ -437,7 +430,7 @@ export class BatchProcessingService {
             methodLogger.info({ event: 'batch_processing_flow_finish', success: true, flow: 'save_initiation' });
             return true;
         } catch (error: any) {
-            methodLogger.error({ err: error, event: 'batch_process_save_unhandled_error', flow: 'save_initiation_error' }); // Sửa event
+            methodLogger.error({ err: error, event: 'batch_process_save_unhandled_error', flow: 'save_initiation_error' });
             return false;
         } finally {
             if (page && !page.isClosed()) await this._closePages([page], methodLogger);
@@ -447,29 +440,28 @@ export class BatchProcessingService {
 
 
     private async _executeBatchTaskForUpdate(
-        batchInput: BatchUpdateEntry, // batchInput.conferenceAcronym is ORIGINAL
+        batchInput: BatchUpdateEntry,
         batchItemIndex: number,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
+        useVpsForThisBatch: boolean, // <<< NHẬN TỪ processConferenceUpdate
         parentLogger: Logger
     ): Promise<boolean> {
         const originalAcronym = batchInput.conferenceAcronym;
 
         const logger = parentLogger.child({
             batchServiceFunction: '_executeBatchTaskForUpdate',
+            useVps: useVpsForThisBatch // Log quyết định
         });
         logger.info({ event: 'batch_task_start_execution', flow: 'update' });
 
         try {
-            // Generate internal processing acronym and its safe version for file naming
             const internalProcessingAcronym = await addAcronymSafely(this.globalProcessedAcronymsSet, originalAcronym);
             const safeInternalAcronymForFiles = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
             logger.info({ internalProcessingAcronym, safeInternalAcronymForFiles, event: 'acronym_generated_for_update_files' });
 
-
-            const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
+            const jsonlPathForThisBatch = this.configServiceInstance.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
             await this.ensureDirectories([this.batchesDir, path.dirname(jsonlPathForThisBatch)], logger);
-
 
             const contentPaths: ContentPaths = {
                 conferenceTextPath: batchInput.conferenceTextPath,
@@ -477,55 +469,42 @@ export class BatchProcessingService {
                 impTextPath: batchInput.impTextPath,
             };
             const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
-            // Aggregate content using ORIGINAL acronym
             const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
                 batchInput.conferenceTitle, originalAcronym, aggregatedFileContent, logger
             );
 
             const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
-            // Name intermediate file using the safe internal acronym
             const fileUpdateName = `${safeInternalAcronymForFiles}_update_item${batchItemIndex}.txt`;
             const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
             const fileUpdatePromise = this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
                 .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
                 .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
 
-            // 2. Execute Final Extraction APIs
-            // Execute APIs using ORIGINAL acronym for API call, and safe internal acronym for response file naming
             const apiResults = await this.executeFinalExtractionApis(
                 contentSendToAPI, batchItemIndex, batchInput.conferenceTitle,
-                originalAcronym, // Pass ORIGINAL acronym to API
-                safeInternalAcronymForFiles, // Pass safe internal acronym for file naming
+                originalAcronym,
+                safeInternalAcronymForFiles,
                 true,
                 apiModels.extractInfo,
                 apiModels.extractCfp,
+                useVpsForThisBatch, // <<< TRUYỀN XUỐNG
                 logger
             );
 
-            await fileUpdatePromise; // Wait for non-critical write
+            await fileUpdatePromise;
             logger.debug({ event: 'intermediate_update_file_write_settled' });
 
-
-            // 3. Prepare and Append Final Record
-
-            // An toàn hóa acronym nếu cần (thường không cần cho update vì acronym ít thay đổi)
-            // const finalAcronym = await addAcronymSafely(this.globalProcessedAcronymsSet, batchInput.conferenceAcronym);
-
-            // Trong _executeBatchTaskForUpdate
             const finalRecord: BatchUpdateDataWithIds = {
                 conferenceTitle: batchInput.conferenceTitle,
                 conferenceAcronym: originalAcronym,
-                // ++ THÊM CÁC LINK VÀO ĐÂY CHO UPDATE FLOW ++
-                mainLink: batchInput.mainLink, // Giả sử BatchUpdateEntry có mainLink
-                cfpLink: batchInput.cfpLink,   // Giả sử BatchUpdateEntry có cfpLink
-                impLink: batchInput.impLink,   // Giả sử BatchUpdateEntry có impLink
-                // ++ ------------------------------------ ++
+                mainLink: batchInput.mainLink,
+                cfpLink: batchInput.cfpLink,
+                impLink: batchInput.impLink,
                 conferenceTextPath: batchInput.conferenceTextPath,
                 cfpTextPath: batchInput.cfpTextPath,
                 impTextPath: batchInput.impTextPath,
                 originalRequestId: batchInput.originalRequestId,
-
-                internalProcessingAcronym: internalProcessingAcronym, // Store the generated internal acronym
+                internalProcessingAcronym: internalProcessingAcronym,
                 batchRequestId: batchRequestIdForTask,
                 extractResponseTextPath: apiResults.extractResponseTextPath,
                 extractMetaData: apiResults.extractMetaData,
@@ -534,16 +513,17 @@ export class BatchProcessingService {
             };
 
             await this.appendFinalRecord(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_update_record' }));
-            logger.info({ event: 'batch_task_finish_success', flow: 'update' }); // Sửa event
+            logger.info({ event: 'batch_task_finish_success', flow: 'update' });
             return true;
         } catch (error: any) {
-            logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'update' }); // Sửa event
+            logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'update' });
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
             this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_update_task_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
             return false;
         }
     }
+
     public async _executeBatchTaskForSave(
         initialBatchEntries: BatchEntry[],
         batchItemIndex: number,
@@ -551,44 +531,38 @@ export class BatchProcessingService {
         browserContext: BrowserContext,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
+        useVpsForThisBatch: boolean, // <<< NHẬN TỪ processConferenceSave
         logger: Logger
     ): Promise<boolean> {
-        logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
+        logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length, useVps: useVpsForThisBatch }); // Log quyết định
 
+        // ... (logic chuẩn bị file, aggregate content for determine API giữ nguyên)
         if (!initialBatchEntries || initialBatchEntries.length === 0 || !initialBatchEntries[0]?.conferenceAcronym || !initialBatchEntries[0]?.conferenceTitle) {
             logger.warn({ event: 'invalid_batch_input_for_save_task' });
             return false;
         }
-        const primaryEntryForContext = initialBatchEntries[0]; // Used for initial title/acronym context
-        // Sanitize the primary original acronym for naming initial aggregate files (pre-determination)
+        const primaryEntryForContext = initialBatchEntries[0];
         const safePrimaryOriginalAcronymForInitialFiles = primaryOriginalAcronymForInitialFilesPrefix.replace(/[^a-zA-Z0-9_.-]/g, '-');
 
         let determineResponseTextPath: string | undefined = undefined;
         let determineMetaData: any | null = null;
         let determineLinksResponse: ApiResponse;
 
-
-        // ++ Biến để lưu trữ các link từ API 1 ++
         let officialWebsiteFromApi1: string | null = null;
         let cfpLinkFromApi1: string | null = null;
         let impLinkFromApi1: string | null = null;
-        // ++ Path của text từ API 1 (nếu có match ban đầu) ++
-        let cfpTextPathFromApi1Match: string | null = null;
-        let impTextPathFromApi1Match: string | null = null;
 
         try {
-            const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
+            const jsonlPathForThisBatch = this.configServiceInstance.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
             await this.ensureDirectories([this.batchesDir, path.dirname(jsonlPathForThisBatch)], logger.child({ subOperation: 'ensure_directories_save_task' }));
 
-            // 1. Aggregate content from initialBatchEntries for determine_links_api
             logger.debug({ event: 'aggregate_content_for_determine_api_start_save_task' });
             let batchContentParts: string[] = [];
-            // This part could also be a method in ConferenceDataAggregatorService if complex/reused
             const readPromises = initialBatchEntries.map(async (entry, i) => {
                 const entryLogger = logger.child({ entryIndexInBatch: i, entryLink: entry.mainLink });
                 if (!entry.conferenceTextPath) {
                     entryLogger.warn({ event: 'read_content_skipped_no_path_for_determine_aggregation_save_task' });
-                    return { index: i, content: `${i + 1}. WARNING: Missing text path for ${entry.mainLink}\n\n` }; // Less critical here
+                    return { index: i, content: `${i + 1}. WARNING: Missing text path for ${entry.mainLink}\n\n` };
                 }
                 try {
                     const text = await this.fileSystemService.readFileContent(entry.conferenceTextPath, entryLogger);
@@ -601,11 +575,9 @@ export class BatchProcessingService {
             const readResults = await Promise.all(readPromises);
             readResults.sort((a, b) => a.index - b.index);
             batchContentParts = readResults.map(r => r.content);
-            // Use original acronym from primary entry for this aggregation
             const batchContentForDetermine = `Conference Info:\nTitle: ${primaryEntryForContext.conferenceTitle}\nAcronym: ${primaryEntryForContext.conferenceAcronym}\n\nCandidate Website Contents:\n${batchContentParts.join("")}`;
             logger.debug({ charCount: batchContentForDetermine.length, event: 'aggregate_content_for_determine_api_end_save_task' });
 
-            // Name this intermediate file using the sanitized primary original acronym for initial files
             const fileFullLinksName = `${safePrimaryOriginalAcronymForInitialFiles}_item${batchItemIndex}_full_links.txt`;
             const fileFullLinksPath = path.join(this.batchesDir, fileFullLinksName);
             const writeFileFullLinksLogger = logger.child({ fileOperation: 'write_intermediate_full_links_save', filePath: fileFullLinksPath });
@@ -613,24 +585,20 @@ export class BatchProcessingService {
                 .then(() => writeFileFullLinksLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
                 .catch(writeError => writeFileFullLinksLogger.error({ err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_full_links_content' }));
 
-
-            // 2. Call determine_links_api (API 1)
-            // let determineLinksResponse: ApiResponse; // Đã khai báo ở trên
             const determineApiLogger = logger.child({ apiType: this.geminiApiService.API_TYPE_DETERMINE, geminiApiCallNumber: 1 });
-            // Call determine_links_api (sử dụng batchItemIndex)
             const determineApiParams: GeminiApiParams = {
                 batch: batchContentForDetermine, batchIndex: batchItemIndex,
                 title: primaryEntryForContext.conferenceTitle,
-                acronym: primaryEntryForContext.conferenceAcronym, // Use ORIGINAL acronym for API
+                acronym: primaryEntryForContext.conferenceAcronym,
             };
 
             try {
                 determineLinksResponse = await this.geminiApiService.determineLinks(
-                    determineApiParams,
-                    apiModels.determineLinks, // << SỬ DỤNG apiModels.determineLinks
-                    determineApiLogger
+                    determineApiParams, // determineApiParams đã được tạo
+                    apiModels.determineLinks,
+                    useVpsForThisBatch, // <<< TRUYỀN XUỐNG
+                    determineApiLogger // determineApiLogger đã được tạo
                 );
-                // Name determine response file using the sanitized primary original acronym for initial files
                 determineResponseTextPath = await this.fileSystemService.saveTemporaryFile(
                     determineLinksResponse.responseText || "",
                     `${safePrimaryOriginalAcronymForInitialFiles}_item${batchItemIndex}_determine_response`,
@@ -638,7 +606,6 @@ export class BatchProcessingService {
                 );
                 determineMetaData = determineLinksResponse.metaData;
 
-                // ++ Parse và lưu trữ các link từ API 1 ngay sau khi gọi ++
                 if (determineLinksResponse.responseText) {
                     try {
                         const parsedApi1Data = JSON.parse(determineLinksResponse.responseText);
@@ -647,7 +614,7 @@ export class BatchProcessingService {
                             officialWebsiteFromApi1 = normalizeAndJoinLink(rawOfficialWebsite, null, determineApiLogger.child({ linkParseContext: 'api1_official' }));
                         }
 
-                        if (officialWebsiteFromApi1) { // Chỉ parse CFP/IMP nếu có official website hợp lệ từ API 1
+                        if (officialWebsiteFromApi1) {
                             const rawCfpLink = String(parsedApi1Data?.["Call for papers link"] ?? '').trim();
                             cfpLinkFromApi1 = normalizeAndJoinLink(officialWebsiteFromApi1, rawCfpLink, determineApiLogger.child({ linkParseContext: 'api1_cfp' }));
 
@@ -658,38 +625,36 @@ export class BatchProcessingService {
 
                     } catch (parseError) {
                         determineApiLogger.error({ err: parseError, event: 'api1_response_parse_failed_for_fallback_links' });
-                        // Không throw, để flow tiếp tục, các link fallback sẽ là null
                     }
                 }
-
-                determineApiLogger.info({ responseLength: determineLinksResponse.responseText?.length, filePath: determineResponseTextPath, event: 'gemini_determine_api_call_end_save_task', success: !!determineResponseTextPath }); // Log sau khi có kết quả
+                determineApiLogger.info({ responseLength: determineLinksResponse.responseText?.length, filePath: determineResponseTextPath, event: 'gemini_determine_api_call_end_save_task', success: !!determineResponseTextPath });
             } catch (determineLinksError: any) {
                 determineApiLogger.error({ err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 1 });
-                await writeFullLinksPromise;
-                throw new Error(`Critical: Determine links API failed for item ${batchItemIndex} (SAVE): ${determineLinksError.message}`); // Sửa lỗi "batch" thành "item"
+                await writeFullLinksPromise; // Đảm bảo file được ghi trước khi throw
+                throw new Error(`Critical: Determine links API failed for item ${batchItemIndex} (SAVE): ${determineLinksError.message}`);
             }
 
-            // 3. Process determine_links_api response using ConferenceDeterminationService
+            // ... (logic process determine response, aggregate content for final APIs giữ nguyên)
             const processDetermineLogger = logger.child({ subOperation: 'process_determine_api_response_save_task' });
             let processedMainEntries: BatchEntry[];
 
             try {
-                // conferenceDeterminationService should return BatchEntry with original acronym
                 processedMainEntries = await this.conferenceDeterminationService.determineAndProcessOfficialSite(
                     determineLinksResponse.responseText || "",
-                    initialBatchEntries, // Pass entries with original acronyms
+                    initialBatchEntries,
                     batchItemIndex,
                     browserContext,
-                    apiModels.determineLinks,
+                    apiModels.determineLinks, // Model type for logging/context within service, not for direct API call
                     processDetermineLogger
                 );
             } catch (processError: any) {
                 processDetermineLogger.error({ err: processError, event: 'save_batch_process_determine_call_failed' });
-                throw processError; // Re-throw để bắt ở khối catch lớn hơn của _executeBatchTaskForSave
+                await writeFullLinksPromise; // Ensure write before re-throwing
+                throw processError;
             }
 
             if (!processedMainEntries || processedMainEntries.length === 0 || !processedMainEntries[0] || processedMainEntries[0].mainLink === "None" || !processedMainEntries[0].conferenceTextPath) {
-                processDetermineLogger.error({ // Sử dụng processDetermineLogger đã khởi tạo
+                processDetermineLogger.error({
                     resultCount: processedMainEntries?.length,
                     mainLinkResult: processedMainEntries?.[0]?.mainLink,
                     mainTextPathResult: processedMainEntries?.[0]?.conferenceTextPath,
@@ -702,72 +667,62 @@ export class BatchProcessingService {
                 return false;
             }
 
-            const mainEntryAfterDetermination = processedMainEntries[0]; // mainEntryAfterDetermination.conferenceAcronym is ORIGINAL
+            const mainEntryAfterDetermination = processedMainEntries[0];
             const originalAcronymFromDetermination = mainEntryAfterDetermination.conferenceAcronym;
 
-
-            // ++ Logic fallback cho cfpLink, impLink, cfpTextPath, impTextPath ++
-            let finalCfpLink = mainEntryAfterDetermination.cfpLink;
-            let finalImpLink = mainEntryAfterDetermination.impLink;
+            let finalCfpLink = mainEntryAfterDetermination.cfpLink; // Start with determined
+            let finalImpLink = mainEntryAfterDetermination.impLink; // Start with determined
             let finalCfpTextPath = mainEntryAfterDetermination.cfpTextPath;
             let finalImpTextPath = mainEntryAfterDetermination.impTextPath;
 
-            // Kiểm tra xem có "match" ban đầu không để lấy cfpTextPath/impTextPath từ API 1
-            // Điều này giả định rằng nếu có match, conferenceDeterminationService đã xử lý và lưu text path
-            // cho các link từ API 1 vào `matchingEntryFromBatch`
-            const matchedEntryFromApi1Processing = initialBatchEntries.find(entry => {
-                const normalizedEntryLink = normalizeAndJoinLink(entry.mainLink, null, logger);
-                return normalizedEntryLink && officialWebsiteFromApi1 && normalizedEntryLink === officialWebsiteFromApi1;
-            });
-
-            if (matchedEntryFromApi1Processing) {
-                // Nếu có match, `mainEntryAfterDetermination` chính là `matchedEntryFromApi1Processing` đã được cập nhật
-                // `mainEntryAfterDetermination.cfpTextPath` và `impTextPath` đã là của API 1 rồi.
-                // Không cần làm gì thêm ở đây cho text path nếu là match.
-                // Tuy nhiên, link có thể đã được chuẩn hóa lại, nên vẫn ưu tiên link từ mainEntryAfterDetermination
-                // nếu nó không null/rỗng.
-                processDetermineLogger.info({
-                    event: 'api1_match_detected_for_fallback_context',
-                    api1_cfp: cfpLinkFromApi1, api1_imp: impLinkFromApi1,
-                    determined_cfp: mainEntryAfterDetermination.cfpLink, determined_imp: mainEntryAfterDetermination.impLink
-                });
+            // Logic fallback nếu link từ API 1 tốt hơn (hoặc nếu determined link là 'None')
+            if (cfpLinkFromApi1 && (finalCfpLink === "None" || !finalCfpLink)) {
+                finalCfpLink = cfpLinkFromApi1;
+                // Nếu link CFP thay đổi, reset text path của nó, vì text path cũ có thể không còn đúng
+                finalCfpTextPath = null; // Sẽ được crawl lại nếu cần hoặc bỏ qua
+                processDetermineLogger.info({ event: 'cfp_link_fallback_to_api1', newCfpLink: finalCfpLink });
             }
+            if (impLinkFromApi1 && (finalImpLink === "None" || !finalImpLink)) {
+                finalImpLink = impLinkFromApi1;
+                finalImpTextPath = null; // Tương tự, reset text path
+                processDetermineLogger.info({ event: 'imp_link_fallback_to_api1', newImpLink: finalImpLink });
+            }
+            // TODO: Cần logic crawl lại text cho finalCfpLink/finalImpLink nếu chúng được fallback và finalCfpTextPath/finalImpTextPath là null
+            // Điều này có thể cần gọi lại conferenceLinkProcessorService.processCfpLinkForUpdate / processImpLinkForUpdate
+            // với các link mới này. Hoặc, nếu không có text, thì để API tự xử lý.
+            // Hiện tại, nếu text path là null, aggregateContentForApi sẽ bỏ qua.
 
 
-            // Generate internal processing acronym from the determined original acronym
             const internalProcessingAcronym = await addAcronymSafely(this.globalProcessedAcronymsSet, originalAcronymFromDetermination);
-            // Create a safe version of this internal acronym for post-determination file naming
             const safeInternalAcronymOfDeterminedConference = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
 
-            // Log both original determined and the internal processing acronym
             logger.info({
                 originalDeterminedAcronym: originalAcronymFromDetermination,
                 internalProcessingAcronymForFiles: internalProcessingAcronym,
                 safeInternalAcronymForFiles: safeInternalAcronymOfDeterminedConference,
-                event: 'acronym_safely_adjusted_for_save' // Event name kept same
+                event: 'acronym_safely_adjusted_for_save'
             });
 
             processDetermineLogger.info({
                 finalMainLink: mainEntryAfterDetermination.mainLink,
                 mainTextPath: mainEntryAfterDetermination.conferenceTextPath,
-                cfpPath: mainEntryAfterDetermination.cfpTextPath,
-                impPath: mainEntryAfterDetermination.impTextPath,
-                originalAcronymAfterDetermination: originalAcronymFromDetermination, // Log original
-                internalProcessingAcronymForFiles: internalProcessingAcronym, // Log internal for files
+                finalCfpLinkUsed: finalCfpLink, // Log link cuối cùng được dùng
+                finalImpLinkUsed: finalImpLink, // Log link cuối cùng được dùng
+                cfpPath: finalCfpTextPath, // Log text path
+                impPath: finalImpTextPath, // Log text path
+                originalAcronymFromDetermination,
+                internalProcessingAcronymForFiles: internalProcessingAcronym,
                 event: 'successfully_processed_determine_response_save_task'
             });
 
-
-            // 4. Read and Aggregate Content for Final APIs
             const contentPathsForFinalApi: ContentPaths = {
-                conferenceTextPath: mainEntryAfterDetermination.conferenceTextPath, // Luôn là của trang chính thức đã xác định
-                cfpTextPath: finalCfpTextPath, // Sử dụng text path đã có thể được fallback/reset
-                impTextPath: finalImpTextPath, // Sử dụng text path đã có thể được fallback/reset
+                conferenceTextPath: mainEntryAfterDetermination.conferenceTextPath,
+                cfpTextPath: finalCfpTextPath,
+                impTextPath: finalImpTextPath,
             };
             const aggregatedContentForFinalApi = await this.conferenceDataAggregatorService.readContentFiles(
                 contentPathsForFinalApi, logger.child({ subOperation: 'read_determined_content_files_save_task' })
             );
-            // Aggregate content using ORIGINAL determined acronym
             const contentSendToFinalApi = this.conferenceDataAggregatorService.aggregateContentForApi(
                 mainEntryAfterDetermination.conferenceTitle,
                 originalAcronymFromDetermination,
@@ -775,7 +730,6 @@ export class BatchProcessingService {
                 logger.child({ subOperation: 'aggregate_for_extract_cfp_apis_save_task' })
             );
 
-            // Name main link content file using the safe internal acronym of the determined conference
             const fileMainLinkName = `${safeInternalAcronymOfDeterminedConference}_item${batchItemIndex}_main_link_content.txt`;
             const fileMainLinkPath = path.join(this.batchesDir, fileMainLinkName);
             const writeFileMainLinkLogger = logger.child({ fileOperation: 'write_intermediate_main_link_content_save', filePath: fileMainLinkPath });
@@ -783,38 +737,36 @@ export class BatchProcessingService {
                 .then(() => writeFileMainLinkLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
                 .catch(writeError => writeFileMainLinkLogger.error({ err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_main_link_content' }));
 
-            // 5. Execute Final Extraction APIs
-            // Execute final APIs using ORIGINAL determined acronym for API, and safe internal acronym for response file naming
+
             const finalApiResults = await this.executeFinalExtractionApis(
                 contentSendToFinalApi, batchItemIndex, mainEntryAfterDetermination.conferenceTitle,
-                originalAcronymFromDetermination, // Pass ORIGINAL acronym
-                safeInternalAcronymOfDeterminedConference, // Pass safe internal acronym for file naming
+                originalAcronymFromDetermination,
+                safeInternalAcronymOfDeterminedConference,
                 false,
                 apiModels.extractInfo,
                 apiModels.extractCfp,
+                useVpsForThisBatch, // <<< TRUYỀN XUỐNG
                 logger
             );
 
-            await Promise.allSettled([writeFullLinksPromise, fileMainLinkPromise]);
+            await Promise.allSettled([writeFullLinksPromise, fileMainLinkPromise]); // Chờ tất cả các file ghi xong
             logger.debug({ event: 'intermediate_file_writes_settled_save_task' });
 
-            // 6. Prepare and Append Final Record
-            // 6. Prepare and Append Final Record
             const finalRecord: BatchEntryWithIds = {
                 conferenceTitle: mainEntryAfterDetermination.conferenceTitle,
                 conferenceAcronym: originalAcronymFromDetermination,
-                mainLink: mainEntryAfterDetermination.mainLink, // Link chính thức
+                mainLink: mainEntryAfterDetermination.mainLink,
                 conferenceTextPath: mainEntryAfterDetermination.conferenceTextPath,
                 cfpLink: finalCfpLink, // Sử dụng link đã fallback
-                cfpTextPath: finalCfpTextPath, // Sử dụng text path đã fallback/reset
+                cfpTextPath: finalCfpTextPath,
                 impLink: finalImpLink, // Sử dụng link đã fallback
-                impTextPath: finalImpTextPath, // Sử dụng text path đã fallback/reset
+                impTextPath: finalImpTextPath,
                 linkOrderIndex: mainEntryAfterDetermination.linkOrderIndex,
                 originalRequestId: mainEntryAfterDetermination.originalRequestId,
                 internalProcessingAcronym: internalProcessingAcronym,
                 batchRequestId: batchRequestIdForTask,
-                determineResponseTextPath: determineResponseTextPath, // Vẫn là của API 1
-                determineMetaData: determineMetaData,                 // Vẫn là của API 1
+                determineResponseTextPath: determineResponseTextPath,
+                determineMetaData: determineMetaData,
                 extractResponseTextPath: finalApiResults.extractResponseTextPath,
                 extractMetaData: finalApiResults.extractMetaData,
                 cfpResponseTextPath: finalApiResults.cfpResponseTextPath,
@@ -835,16 +787,17 @@ export class BatchProcessingService {
     }
 
     private async appendFinalRecord(
-        record: BatchEntryWithIds | BatchUpdateDataWithIds, // These types now include internalProcessingAcronym
+        record: BatchEntryWithIds | BatchUpdateDataWithIds,
         batchRequestIdForFile: string,
         parentLogger: Logger
     ): Promise<void> {
-        const jsonlPathForBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdForFile);
+        // ... (giữ nguyên logic)
+        const jsonlPathForBatch = this.configServiceInstance.getFinalOutputJsonlPathForBatch(batchRequestIdForFile);
         const logger = parentLogger.child({
             batchServiceFunction: 'appendFinalRecord',
             outputPath: jsonlPathForBatch,
-            recordOriginalAcronymForAppend: record.conferenceAcronym, // Log original acronym
-            recordInternalAcronymForAppend: record.internalProcessingAcronym, // Log internal acronym
+            recordOriginalAcronymForAppend: record.conferenceAcronym,
+            recordInternalAcronymForAppend: record.internalProcessingAcronym,
         });
         try {
             logger.info({ event: 'append_final_record_start' }, `Appending to ${path.basename(jsonlPathForBatch)}`);
@@ -858,9 +811,8 @@ export class BatchProcessingService {
         }
     }
 
-
     public async awaitCompletion(parentLogger?: Logger): Promise<void> {
-        // Logic không đổi, chỉ cần đảm bảo logger được truyền đúng
+        // ... (giữ nguyên logic)
         const logger = (parentLogger || this.serviceBaseLogger).child({
             batchServiceMethod: 'awaitCompletion',
             service: 'BatchProcessingServiceOrchestrator'
@@ -884,13 +836,14 @@ export class BatchProcessingService {
 
         if (this.activeBatchSaves.size > 0) {
             logger.warn({ remainingActiveSaves: this.activeBatchSaves.size, event: 'new_active_batch_saves_found_after_await_recursion' });
-            await this.awaitCompletion(logger); // Recursive call with the same logger
+            await this.awaitCompletion(logger);
         } else {
             logger.info({ initialAwaitedCount: initialCount, event: 'all_tracked_batch_save_operations_completed_await' });
         }
     }
 
     private async _closePages(pages: Page[], parentLogger: Logger): Promise<void> {
+        // ... (giữ nguyên logic)
         const logger = parentLogger.child({
             batchServiceFunction: '_closePages',
             service: 'BatchProcessingServiceOrchestrator'
@@ -919,5 +872,3 @@ export class BatchProcessingService {
         logger.debug({ closedCount, failedCount, totalAttemptedToClose: pageCount, event: 'closing_pages_finish' });
     }
 }
-
-

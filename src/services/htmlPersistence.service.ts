@@ -81,11 +81,15 @@ export class HtmlPersistenceService {
     async processUpdateFlow(
         conference: ConferenceUpdateData,
         taskLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        useVpsForThisConference: boolean // <<< THAM SỐ MỚI
+
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
             persistenceFlow: 'update',
             apiModelsUsed: apiModels,
+            useVps: useVpsForThisConference // Log quyết định
+
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         flowLogger.info({ event: 'process_update_start' }, `Initiating UPDATE flow for conference "${conference.Acronym}" using API models (${modelsDesc}).`);
@@ -97,7 +101,9 @@ export class HtmlPersistenceService {
                 this.getContext(flowLogger), // Ensure context is available
                 conference,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingService
+                apiModels, // Pass ApiModels to BatchProcessingService
+                useVpsForThisConference // <<< TRUYỀN XUỐNG
+
             );
 
             if (success) {
@@ -129,11 +135,15 @@ export class HtmlPersistenceService {
         conference: ConferenceData,
         searchResultLinks: string[],
         taskLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        useVpsForThisConference: boolean // <<< THAM SỐ MỚI
+
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
             persistenceFlow: 'save',
             apiModelsUsed: apiModels, // Log the models for this flow
+            useVps: useVpsForThisConference // Log quyết định
+
         });
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         flowLogger.info({ linksCount: searchResultLinks.length, event: 'process_save_start' }, `Initiating SAVE flow for conference "${conference.Acronym}" with ${searchResultLinks.length} links (using API models: ${modelsDesc}).`);
@@ -151,7 +161,9 @@ export class HtmlPersistenceService {
                 conference,
                 searchResultLinks,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingService
+                apiModels, // Pass ApiModels to BatchProcessingService
+                useVpsForThisConference // <<< TRUYỀN XUỐNG
+
             );
 
             if (initiationSuccess === true) {
@@ -174,7 +186,7 @@ export class HtmlPersistenceService {
      * @param {Logger} [parentLogger] - An optional parent logger for contextual logging.
      * @returns {void}
      */
-     public resetState(parentLogger?: Logger): void {
+    public resetState(parentLogger?: Logger): void {
         const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.resetState' }) : this.serviceBaseLogger;
         // The browserContext is managed by PlaywrightService lifecycle, so we don't explicitly reset it here.
         // It becomes null on PlaywrightService.close().

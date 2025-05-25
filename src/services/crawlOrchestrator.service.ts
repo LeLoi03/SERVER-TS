@@ -27,6 +27,7 @@ import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the err
 export class CrawlOrchestratorService {
     private readonly configApp: AppConfig;
     private readonly baseLogger: Logger;
+    private conferenceProcessingCounterForVps: number = 0; // Bộ đếm cho quyết định VPS
 
     /**
      * Constructs an instance of CrawlOrchestratorService.
@@ -126,14 +127,67 @@ export class CrawlOrchestratorService {
                         batchItemIndex: itemIndex,
                         originalRequestId: conference.originalRequestId, // Carry original request ID if available
                     });
-                    // Call the processor's process method, passing the specific API models for this batch
+
+
+                    // ***** QUYẾT ĐỊNH SỬ DỤNG VPS CHO CONFERENCE NÀY *****
+                    let useVpsForThisConference = false;
+                    const { VPS_WORKER_URL, VPS_WORKER_ENABLED_FOR_API_TYPES, VPS_WORKER_LOAD_RATIO } = this.configApp;
+
+                    if (VPS_WORKER_URL && VPS_WORKER_LOAD_RATIO && VPS_WORKER_LOAD_RATIO > 0) {
+                        // Logic ví dụ: 1 batch VPS, 2 batch local (tỷ lệ 1/3 cho VPS)
+                        // Hoặc theo yêu cầu của bạn: "gửi 2 batch bằng server gốc, rồi batch kế sẽ dùng vps"
+                        // Điều này có nghĩa là tỷ lệ có thể là 1 VPS cho mỗi X local.
+                        // Ví dụ: Nếu bạn muốn 1 VPS sau 2 local (tức là batch thứ 3, 6, 9... dùng VPS)
+                        // this.conferenceProcessingCounterForVps++;
+                        // if (this.conferenceProcessingCounterForVps % 3 === 0) { // Batch thứ 3
+                        //     useVpsForThisConference = true;
+                        // }
+                        // Reset counter nếu cần
+                        // if (this.conferenceProcessingCounterForVps >= 300) this.conferenceProcessingCounterForVps = 0;
+
+                        // Hoặc đơn giản là chẵn/lẻ theo itemIndex (batchRequestId thì áp dụng cho cả batch lớn)
+                        // if (itemIndex % 2 !== 0) { // Conference lẻ dùng VPS
+                        //    useVpsForThisConference = true;
+                        // }
+
+                        // LOGIC THEO YÊU CẦU: "gửi lần đầu dùng VPS"
+                        // Giả sử "batch" ở đây là từng conference item.
+                        this.conferenceProcessingCounterForVps++;
+
+                        let useVpsForThisConference = false; // Khởi tạo mặc định
+
+                        // Kiểm tra xem có API type nào được enable cho VPS không
+                        const isAnyApiTypeEnabledForVps =
+                            VPS_WORKER_ENABLED_FOR_API_TYPES?.includes(this.geminiApiService.API_TYPE_DETERMINE) ||
+                            VPS_WORKER_ENABLED_FOR_API_TYPES?.includes(this.geminiApiService.API_TYPE_EXTRACT) ||
+                            VPS_WORKER_ENABLED_FOR_API_TYPES?.includes(this.geminiApiService.API_TYPE_CFP);
+
+                        if (isAnyApiTypeEnabledForVps) {
+                            // Điều chỉnh logic ở đây:
+                            // Nếu là conference đầu tiên (counter = 1) HOẶC là các conference thứ 3, 6, 9... sau đó
+                            if (this.conferenceProcessingCounterForVps === 1 || // Lần đầu tiên, dùng VPS ngay ở conference thứ 1
+                                (this.conferenceProcessingCounterForVps > 1 && (this.conferenceProcessingCounterForVps - 1) % 3 === 0) // Sau lần đầu, áp dụng chu kỳ 2 local, 1 VPS (conference 4, 7, 10...)
+                            ) {
+                                useVpsForThisConference = true;
+                            }
+                        }
+
+                        if (this.conferenceProcessingCounterForVps >= 3 * 100) { // Reset để tránh tràn
+                            this.conferenceProcessingCounterForVps = 0;
+                        }
+                    }
+                    itemLogger.info({ useVpsDecision: useVpsForThisConference, counter: this.conferenceProcessingCounterForVps }, "VPS usage decision for this conference item.");
+                    // *****************************************************
+
                     return processor.process(
                         conference,
                         itemIndex,
                         itemLogger,
-                        apiModels, // Pass the ApiModels object to the processor
-                        batchRequestId
+                        apiModels,
+                        batchRequestId,
+                        useVpsForThisConference // <<< TRUYỀN XUỐNG
                     );
+
                 };
             });
 
@@ -165,7 +219,7 @@ export class CrawlOrchestratorService {
                         conferenceTitle: csvRow.title,
                     }, `CSV record for ${csvRow.acronym} considered successfully written.`);
                 });
-             } else {
+            } else {
                 let csvActuallyGenerated = false;
                 try {
                     if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {
