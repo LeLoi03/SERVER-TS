@@ -209,7 +209,7 @@ export const handleOtherPlaywrightFailure: LogEventHandler = (logEntry, results,
         }
         confDetail.steps.link_processing_failed_details.push({
             timestamp: entryTimestampISO,
-            url: logEntry.finalAttemptedUrl || logEntry.originalUrl,
+            url: logEntry.finalAttemptedUrl || logEntry.originalUrl || logEntry.url,
             error: errorKey,
             event: logEntry.event
         });
