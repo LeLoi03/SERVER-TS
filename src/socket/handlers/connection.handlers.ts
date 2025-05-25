@@ -5,7 +5,7 @@ import { container } from 'tsyringe'; // Dependency Injection container
 // Import necessary services and utilities
 import { ConversationHistoryService } from '../../chatbot/services/conversationHistory.service';
 import { registerCoreHandlers } from './core.handlers'; // Function to register core Socket.IO event handlers
-import { fetchUserInfo } from '../../utils/chatbot/auth'; // Utility to fetch user info based on token
+import { fetchUserInfo } from '../../chatbot/utils/auth'; // Utility to fetch user info based on token
 import logToFile from '../../utils/logger'; // Import the custom logging utility
 
 /**

@@ -123,7 +123,10 @@ export const calculateFinalMetrics = (
     }
 
 
-    // --- STAGE 1: Determine/Update status for each conference (stuck tasks) and then for each request ---
+
+    // --- STAGE 1: Determine/Update status for each conference (stuck tasks) and then initialize request timings ---
+    // (Phần này có thể giữ nguyên, nhưng đảm bảo currentRequestTimings được khởi tạo đúng cách
+    // và originalRequestId được gán. Các counter mới sẽ tính ở STAGE 3.)
     for (const reqId of results.analyzedRequestIds) {
         const requestData = filteredRequestsData.get(reqId);
         let currentRequestTimings: RequestTimings = {
@@ -132,6 +135,8 @@ export const calculateFinalMetrics = (
             durationSeconds: null,
             status: 'Unknown', // Trạng thái ban đầu của request timing object
             originalRequestId: results.requests[reqId]?.originalRequestId,
+            // KHÔNG THÊM totalConferencesInputForRequest và processedConferencesCountForRequest ở đây
+            // vì chúng sẽ được tính toán sau khi trạng thái của từng conference được xác định.
         };
 
         if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
@@ -161,7 +166,7 @@ export const calculateFinalMetrics = (
 
         const requestEndTimeISO = currentRequestTimings.endTime;
 
-        if (requestEndTimeISO) { // Chỉ áp dụng logic "stuck task" nếu request cha đã có endTime
+        if (requestEndTimeISO) {
             const requestEndTimeMillis = new Date(requestEndTimeISO).getTime();
 
             conferencesForThisRequest.forEach(conf => {
@@ -170,29 +175,19 @@ export const calculateFinalMetrics = (
                     const lastLogTimeForThisConferenceMillis = confKeyForTimestamp ? conferenceLastTimestamp[confKeyForTimestamp] : null;
                     const confStartTimeMillis = conf.startTime ? new Date(conf.startTime).getTime() : null;
 
-                    let isConsideredStuck = true; // Mặc định là stuck
+                    let isConsideredStuck = true;
 
                     if (lastLogTimeForThisConferenceMillis !== null) {
-                        // Tiêu chí 1: Conference chỉ vừa mới bắt đầu và chưa có log hoạt động nào đáng kể sau đó.
-                        // (lastLogTime <= startTime có nghĩa là chỉ có log task_start hoặc các log cùng thời điểm)
                         if (confStartTimeMillis !== null && lastLogTimeForThisConferenceMillis <= confStartTimeMillis) {
                             isConsideredStuck = false;
                         } else {
-                            // Tiêu chí 2: Log cuối cùng của conference này không quá xa so với thời điểm kết thúc của request cha.
-                            // Nếu khoảng cách này nhỏ, có thể luồng log của request cha đã dừng đột ngột.
-                            // Ngưỡng này có thể cần điều chỉnh. Ví dụ: 2-5 giây.
-                            const MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS = 3000; // 3 giây
+                            const MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS = 3000;
 
                             if ((requestEndTimeMillis - lastLogTimeForThisConferenceMillis) < MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS) {
-                                // Nếu thời gian từ log cuối của conference đến khi request cha kết thúc là nhỏ,
-                                // thì không coi là stuck.
-                                // Điều này bao gồm cả trường hợp log cuối của conference chính là log cuối của request.
                                 isConsideredStuck = false;
                             }
                         }
                     }
-                    // Nếu confStartTimeMillis hoặc lastLogTimeForThisConferenceMillis là null,
-                    // isConsideredStuck sẽ vẫn là true (mặc định an toàn).
 
                     if (isConsideredStuck) {
                         conf.status = 'failed';
@@ -222,105 +217,37 @@ export const calculateFinalMetrics = (
                             }
                         );
                     }
-                    // else {
-                    //    // Nếu isConsideredStuck là false, conference này sẽ giữ nguyên status 'processing' (hoặc 'processed_ok').
-                    //    // Nó sẽ được tính là 'Processing' cho request cha và cho tổng thể (nếu chưa có endTime).
-                    // }
                 }
             });
         }
 
-        if (conferencesForThisRequest.length === 0) {
-            if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
-                currentRequestTimings.status = 'Completed'; // Request có log nhưng không có conference nào được phân tích
-            } else {
-                currentRequestTimings.status = 'NoData'; // Request không có log
-            }
-        } else {
-            let numProcessing = 0;
-            let numFailed = 0;
-            let numCompleted = 0;
-            let numSkipped = 0;
-            let numProcessedOk = 0; // <--- THÊM BIẾN ĐẾM CHO PROCESSED_OK
+        // --- OLD LOGIC, WILL BE MOVED/REFINED IN STAGE 3 ---
+        // if (conferencesForThisRequest.length === 0) {
+        //     if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
+        //         currentRequestTimings.status = 'Completed';
+        //     } else {
+        //         currentRequestTimings.status = 'NoData';
+        //     }
+        // } else {
+        //     // ... OLD LOGIC TO DETERMINE STATUS ...
+        // }
+        // results.requests[reqId] = {
+        //     ...(results.requests[reqId] || {}),
+        //     ...currentRequestTimings
+        // };
+        // --- END OLD LOGIC ---
 
-            for (const conf of conferencesForThisRequest) {
-                // Điều chỉnh cách đếm numProcessing:
-                // Một conference là "processing" nếu status của nó là 'processing' HOẶC 'processed_ok' (chờ CSV)
-                // và nó chưa có endTime.
-                // Tuy nhiên, ở bước này, nếu nó là 'processed_ok' và không có endTime,
-                // và request cha có endTime, nó đã bị chuyển thành 'failed' ở trên.
-                // Nên ta chỉ cần đếm các status hiện tại.
-
-                if (conf.status === 'processing') {
-                    numProcessing++;
-                } else if (conf.status === 'processed_ok') { // <--- ĐẾM PROCESSED_OK
-                    numProcessedOk++;
-                } else if (conf.status === 'failed') {
-                    numFailed++;
-                } else if (conf.status === 'completed') {
-                    numCompleted++;
-                } else if (conf.status === 'skipped') {
-                    numSkipped++;
-                }
-                // Conference với status 'unknown' không được tính vào các nhóm này,
-                // chúng sẽ ảnh hưởng đến logic 'PartiallyCompleted' hoặc 'Unknown' của request.
-            }
-
-            const totalTasksInRequest = conferencesForThisRequest.length;
-            const FAILED_THRESHOLD_PERCENT = 0.15; // Giữ nguyên ngưỡng này
-
-            // THAY ĐỔI: Request vẫn là 'Processing' nếu có bất kỳ conference nào là 'processing' HOẶC 'processed_ok'
-            if (numProcessing > 0 || numProcessedOk > 0) {
-                currentRequestTimings.status = 'Processing';
-            } else {
-                // Logic còn lại để xác định Failed, CompletedWithErrors, Completed, Skipped, PartiallyCompleted, Unknown
-                if (numFailed === totalTasksInRequest && totalTasksInRequest > 0) {
-                    currentRequestTimings.status = 'Failed';
-                } else if (numFailed > 0) {
-                    // Nếu có lỗi, nhưng không phải tất cả đều lỗi
-                    if ((numFailed / totalTasksInRequest) > FAILED_THRESHOLD_PERCENT) {
-                        currentRequestTimings.status = 'CompletedWithErrors'; // Nhiều lỗi đáng kể
-                    } else {
-                        // Ít lỗi hơn ngưỡng
-                        if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
-                            // Tất cả các task không failed đều completed hoặc skipped
-                            currentRequestTimings.status = 'Completed'; // Coi là completed nếu lỗi ít và phần còn lại OK
-                        } else {
-                            currentRequestTimings.status = 'CompletedWithErrors'; // Có lỗi và có task chưa rõ ràng (unknown)
-                        }
-                    }
-                } else if (numCompleted === totalTasksInRequest || ((numCompleted + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0)) {
-                    // Không có lỗi, và tất cả đều completed hoặc (completed + skipped)
-                    currentRequestTimings.status = 'Completed';
-                } else if (numSkipped === totalTasksInRequest && totalTasksInRequest > 0) {
-                    // Tất cả đều skipped
-                    currentRequestTimings.status = 'Skipped';
-                } else if (numCompleted > 0 || numSkipped > 0) {
-                    // Có một số completed hoặc skipped, nhưng không phải tất cả (và không có processing/processed_ok/failed)
-                    // Điều này có nghĩa là có một số task ở trạng thái 'unknown'
-                    currentRequestTimings.status = 'PartiallyCompleted';
-                }
-                else {
-                    // Không có processing, processed_ok, failed, completed, skipped.
-                    // Tất cả các task phải là 'unknown' (hoặc không có task nào).
-                    // Nếu có task, và chúng là 'unknown', thì request là 'Unknown'.
-                    if (totalTasksInRequest > 0) {
-                        currentRequestTimings.status = 'Unknown';
-                    } else {
-                        // Trường hợp này đã được xử lý bởi `conferencesForThisRequest.length === 0` ở trên.
-                        // Để an toàn, nếu không có task nào, có thể đặt là 'NoData' hoặc 'Completed' tùy theo ngữ cảnh.
-                        // Giả sử `conferencesForThisRequest.length === 0` đã xử lý đúng.
-                        currentRequestTimings.status = 'Unknown'; // Mặc định cuối cùng
-                    }
-                }
-            }
-        }
+        // Khởi tạo/cập nhật RequestTimings cơ bản (thời gian, originalRequestId)
+        // Các trạng thái (status) và số lượng conferences sẽ được tính toán lại sau.
         results.requests[reqId] = {
-            ...(results.requests[reqId] || {}),
-            ...currentRequestTimings
+            ...(results.requests[reqId] || {}), // Giữ lại bất kỳ thông tin nào đã có
+            startTime: currentRequestTimings.startTime,
+            endTime: currentRequestTimings.endTime,
+            durationSeconds: currentRequestTimings.durationSeconds,
+            originalRequestId: currentRequestTimings.originalRequestId,
+            // totalConferencesInputForRequest và processedConferencesCountForRequest sẽ được cập nhật ở STAGE 3
         };
     }
-
     // --- STAGE 2: Finalize Conference Details (duration, status based on sub-steps and CSV) ---
     // (Giữ nguyên phần lớn logic, chỉ đảm bảo nó tương tác đúng với 'processed_ok')
     Object.values(results.conferenceAnalysis).forEach(detail => {
@@ -453,12 +380,12 @@ export const calculateFinalMetrics = (
         }
     });
 
-    // --- STAGE 3: Recalculate Overall Counts & Request Statuses (Dựa trên status conference đã chốt ở STAGE 2) ---
+     // --- STAGE 3: Recalculate Overall Counts & Update Request Statuses AND Conference Counts ---
     // Đặt lại các counter tổng thể trước khi đếm lại
     results.overall.completedTasks = 0;
     results.overall.failedOrCrashedTasks = 0;
     results.overall.skippedTasks = 0;
-    results.overall.processingTasks = 0; // Sẽ bao gồm cả 'processing' và 'processed_ok' cho mục đích hiển thị
+    results.overall.processingTasks = 0;
 
     const uniqueConferenceKeysInAnalysis = new Set<string>();
 
@@ -474,60 +401,97 @@ export const calculateFinalMetrics = (
             } else if (conf.status === 'skipped') {
                 results.overall.skippedTasks++;
             } else if (conf.status === 'processing' || conf.status === 'processed_ok') {
-                // Cho mục đích đếm tổng thể "đang xử lý", gộp cả hai
                 results.overall.processingTasks++;
             }
         }
     });
-    results.overall.processedConferencesCount = uniqueConferenceKeysInAnalysis.size;
+    results.overall.processedConferencesCount = uniqueConferenceKeysInAnalysis.size; // This is actually total conferences processed by log analysis, not input. Let's assume it maps to 'total input' for simplicity if no specific 'input' log.
 
 
-    // SAU KHI CẬP NHẬT TẤT CẢ CONFERENCE STATUS, TÍNH LẠI REQUEST STATUS
+    // --- Lặp lại các requests để cập nhật trạng thái VÀ CÁC THÔNG SỐ CONFERENCES ---
     for (const reqId of results.analyzedRequestIds) {
         const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
             .filter(cd => cd.batchRequestId === reqId);
 
-        const requestTimings = results.requests[reqId]; // Lấy lại request timings đã có startTime, endTime
-        if (!requestTimings) continue; // Bỏ qua nếu không tìm thấy request
+        const requestTimings = results.requests[reqId];
+        if (!requestTimings) continue;
 
-        if (conferencesForThisRequest.length === 0) {
-            // Status đã được set ở STAGE 1, không đổi
-        } else {
-            let numProcessing = 0, numFailed = 0, numCompleted = 0, numSkipped = 0, numProcessedOk = 0;
-            for (const conf of conferencesForThisRequest) {
-                if (conf.status === 'processing') numProcessing++;
-                else if (conf.status === 'processed_ok') numProcessedOk++;
-                else if (conf.status === 'failed') numFailed++;
-                else if (conf.status === 'completed') numCompleted++;
-                else if (conf.status === 'skipped') numSkipped++;
+        // BẮT ĐẦU TÍNH TOÁN CÁC CHỈ SỐ MỚI CHO TỪNG REQUEST
+        let currentReqProcessedConferences = 0;
+        let currentReqTotalInputConferences = 0; // Giả sử mỗi confDetail là 1 input conference
+
+        let numProcessing = 0, numFailed = 0, numCompleted = 0, numSkipped = 0, numProcessedOk = 0;
+
+        // Duyệt qua các conference của request này để đếm và xác định trạng thái request
+        for (const conf of conferencesForThisRequest) {
+            currentReqTotalInputConferences++; // Mỗi conference detail được coi là một đầu vào
+            if (conf.status === 'completed') {
+                numCompleted++;
+                currentReqProcessedConferences++; // 'Completed' là trạng thái processed thành công
+            } else if (conf.status === 'processed_ok') {
+                numProcessedOk++;
+                currentReqProcessedConferences++; // 'processed_ok' cũng được coi là processed thành công (chờ CSV)
+            } else if (conf.status === 'processing') {
+                numProcessing++;
+            } else if (conf.status === 'failed') {
+                numFailed++;
+            } else if (conf.status === 'skipped') {
+                numSkipped++;
             }
+            // 'unknown' không đếm vào các nhóm này
+        }
 
+        // CẬP NHẬT CÁC THÔNG SỐ VÀO RequestTimings
+        requestTimings.totalConferencesInputForRequest = currentReqTotalInputConferences;
+        requestTimings.processedConferencesCountForRequest = currentReqProcessedConferences;
+
+
+        // LÀM LẠI LOGIC XÁC ĐỊNH TRẠNG THÁI CỦA REQUEST
+        if (conferencesForThisRequest.length === 0) {
+             // Nếu không có conference nào được phân tích cho request này,
+             // nhưng requestData có log, có thể coi là completed.
+             // Nếu không có log, thì là NoData.
+            const requestData = filteredRequestsData.get(reqId);
+            if (requestData && Array.isArray(requestData.logs) && requestData.logs.length > 0) {
+                requestTimings.status = 'Completed'; // Request có log nhưng không có conference nào được phân tích
+            } else {
+                requestTimings.status = 'NoData'; // Request không có log
+            }
+        } else {
             const totalTasksInRequest = conferencesForThisRequest.length;
             const FAILED_THRESHOLD_PERCENT = 0.15;
 
             if (numProcessing > 0 || numProcessedOk > 0) {
                 requestTimings.status = 'Processing';
             } else {
-                if (numFailed === totalTasksInRequest) {
+                if (numFailed === totalTasksInRequest) { // Tất cả các tasks đều failed
                     requestTimings.status = 'Failed';
-                } else if (numFailed > 0) {
+                } else if (numFailed > 0) { // Có ít nhất một task failed
                     if ((numFailed / totalTasksInRequest) > FAILED_THRESHOLD_PERCENT) {
-                        requestTimings.status = 'CompletedWithErrors';
+                        requestTimings.status = 'CompletedWithErrors'; // Nhiều lỗi đáng kể
                     } else {
-                        if ((numCompleted + numSkipped) === (totalTasksInRequest - numFailed)) {
-                            requestTimings.status = 'Completed'; // Ít lỗi, còn lại xong -> Completed
+                        // Ít lỗi hơn ngưỡng, kiểm tra các task khác
+                        if ((numCompleted + numProcessedOk + numSkipped) === (totalTasksInRequest - numFailed)) {
+                            // Tất cả các task không failed đều completed, processed_ok, hoặc skipped
+                            requestTimings.status = 'Completed'; // Coi là completed nếu lỗi ít và phần còn lại OK
                         } else {
-                            requestTimings.status = 'CompletedWithErrors'; // Ít lỗi, nhưng có gì đó chưa xong (unknown)
+                            requestTimings.status = 'CompletedWithErrors'; // Có lỗi và có task chưa rõ ràng (unknown)
                         }
                     }
-                } else if (numCompleted === totalTasksInRequest || (numCompleted + numSkipped) === totalTasksInRequest) {
+                } else if ((numCompleted + numProcessedOk) === totalTasksInRequest || ((numCompleted + numProcessedOk + numSkipped) === totalTasksInRequest && totalTasksInRequest > 0)) {
+                    // Không có lỗi, và tất cả đều completed/processed_ok hoặc (completed/processed_ok + skipped)
                     requestTimings.status = 'Completed';
-                } else if (numSkipped === totalTasksInRequest) {
+                } else if (numSkipped === totalTasksInRequest && totalTasksInRequest > 0) {
+                    // Tất cả đều skipped
                     requestTimings.status = 'Skipped';
-                } else if (numCompleted > 0 || numSkipped > 0) {
-                    requestTimings.status = 'PartiallyCompleted'; // Có completed/skipped, nhưng có cả unknown
+                } else if (numCompleted > 0 || numProcessedOk > 0 || numSkipped > 0) {
+                    // Có một số completed/processed_ok/skipped, nhưng không phải tất cả (và không có processing/failed)
+                    // Điều này có nghĩa là có một số task ở trạng thái 'unknown'
+                    requestTimings.status = 'PartiallyCompleted';
                 } else {
-                    requestTimings.status = 'Unknown'; // Tất cả là unknown
+                    // Không có processing, processed_ok, failed, completed, skipped.
+                    // Tất cả các task phải là 'unknown'.
+                    requestTimings.status = 'Unknown';
                 }
             }
         }

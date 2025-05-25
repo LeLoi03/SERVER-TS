@@ -22,14 +22,7 @@ export interface RequestTimings {
     durationSeconds: number | null;
     /**
      * @property {'Completed' | 'Failed' | 'Processing' | 'CompletedWithErrors' | 'PartiallyCompleted' | 'Skipped' | 'NoData' | 'Unknown'} [status] - Trạng thái tổng thể của quá trình xử lý yêu cầu.
-     * - 'Completed': Tất cả các tác vụ trong yêu cầu đã hoàn thành thành công.
-     * - 'Failed': Quá trình xử lý yêu cầu thất bại hoàn toàn.
-     * - 'Processing': Yêu cầu vẫn đang diễn ra.
-     * - 'CompletedWithErrors': Yêu cầu đã hoàn thành, nhưng một số tác vụ con có lỗi.
-     * - 'PartiallyCompleted': Yêu cầu đã hoàn thành một phần, một số phần thành công, những phần khác không bắt đầu hoặc bị dừng mà không có lỗi.
-     * - 'Skipped': Tất cả các tác vụ trong yêu cầu đã bị bỏ qua (ví dụ: do cấu hình).
-     * - 'NoData': Không tìm thấy dữ liệu nhật ký liên quan cho ID yêu cầu này.
-     * - 'Unknown': Không thể xác định trạng thái.
+     * ...
      */
     status?:
     | 'Completed'
@@ -44,6 +37,12 @@ export interface RequestTimings {
      * @property {string} [originalRequestId] - Tùy chọn: ID gốc được cung cấp cho yêu cầu, nếu đó là một lần thu thập lại.
      */
     originalRequestId?: string;
+
+    // THÊM CÁC THUỘC TÍNH MỚI NÀY VÀO RequestTimings
+    /** NEW: Tổng số hội nghị đầu vào ban đầu cho yêu cầu cụ thể này. */
+    totalConferencesInputForRequest?: number;
+    /** NEW: Số lượng hội nghị đã được xử lý hoàn tất cho yêu cầu cụ thể này. */
+    processedConferencesCountForRequest?: number;
 }
 
 /**

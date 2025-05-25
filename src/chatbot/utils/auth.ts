@@ -1,8 +1,8 @@
 // src/utils/apiClient.ts
 import { container } from 'tsyringe';
 import axios, { AxiosError } from 'axios';
-import logToFile from '../logger'; // Đã cập nhật đường dẫn tới logger
-import { getErrorMessageAndStack } from '../errorUtils'; // Import getErrorMessageAndStack
+import logToFile from '../../utils/logger'; // Đã cập nhật đường dẫn tới logger
+import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import getErrorMessageAndStack
 
 import { ConfigService } from '../../config/config.service';
 
