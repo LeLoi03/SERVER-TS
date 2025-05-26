@@ -260,7 +260,7 @@ export class Gemini {
         tools?: Tool[]
     ): Promise<{ stream?: AsyncGenerator<EnhancedGenerateContentResponse>; error?: string; functionCalls?: FunctionCall }> {
 
-        console.log(systemInstruction);
+        // console.log(systemInstruction); 
         const model = this.getModel(systemInstruction, tools);
 
         logToFile(`[GeminiService:generateStream] Received history with ${history.length} items before mapping.`);
