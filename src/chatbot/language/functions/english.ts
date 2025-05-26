@@ -1,7 +1,7 @@
 import {
     FunctionDeclaration,
-    SchemaType,
-} from "@google/generative-ai";
+    Type
+} from "@google/genai";
 
 
 // English
@@ -11,14 +11,14 @@ export const englishRouteToAgentDeclaration: FunctionDeclaration = {
     name: "routeToAgent",
     description: "Routes a specific task to a designated specialist agent.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             targetAgent: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The unique identifier of the specialist agent to route the task to (e.g., 'ConferenceAgent').",
             },
             taskDescription: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "A details natural language description of the task for the target agent.",
             }
         },
@@ -35,11 +35,11 @@ export const englishGetConferencesDeclaration: FunctionDeclaration = {
         " The backend API may be case-sensitive for certain parameters (e.g., `country`, `continent`). Ensure the casing of the values matches the expected format." +
         " A comprehensive example combining multiple criteria: `acronym=AAAI&topics=AI&topics=Machine+Learning&country=Vietnam&fromDate=2024-01-01&toDate=2024-12-31&rank=A*`",
     parameters: {
-        type: SchemaType.OBJECT, // Vẫn là OBJECT theo cấu trúc chung
+        type: Type.OBJECT, // Vẫn là OBJECT theo cấu trúc chung
         properties: {
             // Định nghĩa một tham số duy nhất để chứa query string
             searchQuery: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 // Hướng dẫn chi tiết cách tạo query string
                 description: "A URL-encoded query string constructed from the user's search criteria for conferences. Format as key=value pairs separated by '&'. " +
                     "**Crucially, regardless of the input language (e.g., Vietnamese, English, French, etc.), all values used in the query string MUST be in English.** " +
@@ -99,94 +99,94 @@ export const englishGetJournalsDeclaration: FunctionDeclaration = {
     name: "getJournals",
     description: "Retrieves information about journals based on filtering criteria.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             "Rank": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of journal ranks to filter by.",
                 "items": {
-                    "type": SchemaType.NUMBER
+                    "type": Type.NUMBER
                 }
             },
             "Title": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of journal titles to filter by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Issn": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of journal ISSNs to filter by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "SJR": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of journal SJR values to filter by.",
                 "items": {
-                    "type": SchemaType.NUMBER
+                    "type": Type.NUMBER
                 }
             },
             "SJRBestQuartile": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of journal SJR Best Quartile values to filter by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "HIndex": {
-                "type": SchemaType.INTEGER,
+                "type": Type.INTEGER,
                 "description": "Journal H index to filter by."
             },
             "Country": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of countries to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Region": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of regions to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Publisher": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of publishers to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Areas": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of areas to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Categories": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of categories to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             },
             "Overton": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of Overton values to filter journals by.",
                 "items": {
-                    "type": SchemaType.NUMBER
+                    "type": Type.NUMBER
                 }
             },
             "SDG": {
-                "type": SchemaType.ARRAY,
+                "type": Type.ARRAY,
                 "description": "List of SDGs to filter journals by.",
                 "items": {
-                    "type": SchemaType.STRING
+                    "type": Type.STRING
                 }
             }
         }
@@ -202,10 +202,10 @@ export const englishDrawChartDeclaration: FunctionDeclaration = {
     name: "drawChart",
     description: "Draws a chart based on the provided data.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             chartType: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The type of chart (e.g., bar, line, pie).",
             }
         },
@@ -244,10 +244,10 @@ export const englishNavigationDeclaration: FunctionDeclaration = {
     - Specifically for the '/dashboard' path, you can navigate to specific tabs by appending '?tab=' followed by the tab name. Allowed dashboard tabs are: 'profile', 'myconferences', 'followed', 'note' (calendar page), 'notifications', 'blacklisted', 'setting'. Example for navigating to the profile tab: {"url": "/dashboard?tab=profile"}.
     - For EXTERNAL conference/journal sites: Provide the full, valid URL starting with 'http://' or 'https://'.`,
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             url: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: `The internal path (starting with '/', e.g., '/dashboard?tab=profile') or the full external URL (starting with 'http://' or 'https://', e.g., 'https://some-journal.com/article') to navigate to.`
             }
         },
@@ -259,10 +259,10 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
     name: "openGoogleMap",
     description: "Opens Google Maps in a new browser tab directed to a specific location string (e.g., city, address, landmark).",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             location: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The geographical location string to search for on Google Maps (e.g., 'Delphi, Greece', 'Eiffel Tower, Paris', '1600 Amphitheatre Parkway, Mountain View, CA').",
             },
         },
@@ -277,24 +277,24 @@ export const englishManageFollowDeclaration: FunctionDeclaration = {
     name: "manageFollow",
     description: "Follows, unfollows, or lists followed conferences or journals for the user.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             itemType: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The type of item.",
                 enum: ["conference", "journal"]
             },
             action: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The desired action: 'follow', 'unfollow', or 'list'.",
                 enum: ["follow", "unfollow", "list"]
             },
             identifier: { // Optional when action is 'list'
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "A unique identifier for the item (e.g., acronym, title, ID). Required for 'follow'/'unfollow'.",
             },
             identifierType: { // Optional when action is 'list'
-                 type: SchemaType.STRING,
+                 type: Type.STRING,
                  description: "The type of the identifier. Required for 'follow'/'unfollow'.",
                  enum: ["acronym", "title", "id"],
             },
@@ -308,24 +308,24 @@ export const englishManageCalendarDeclaration: FunctionDeclaration = {
     name: "manageCalendar",
     description: "Adds, removes, or lists conferences in the user's calendar.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             itemType: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The type of item. Must be 'conference' for calendar actions.",
                 enum: ["conference"]
             },
             action: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The desired action: 'add', 'remove', or 'list'.",
                 enum: ["add", "remove", "list"]
             },
             identifier: { // Optional when action is 'list'
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "A unique identifier for the conference. Required for 'add'/'remove'.",
             },
              identifierType: { // Optional when action is 'list'
-                 type: SchemaType.STRING,
+                 type: Type.STRING,
                  description: "The type of the identifier. Required for 'add'/'remove'.",
                  enum: ["acronym", "title", "id"],
             },
@@ -340,24 +340,24 @@ export const englishManageBlacklistDeclaration: FunctionDeclaration = {
     name: "manageBlacklist",
     description: "Adds, removes, or lists conferences in the user's blacklist.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             itemType: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The type of item. Must be 'conference' for blacklist actions.",
                 enum: ["conference"]
             },
             action: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The desired action: 'add', 'remove', or 'list'.",
                 enum: ["add", "remove", "list"]
             },
             identifier: { // Optional when action is 'list'
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "A unique identifier for the conference. Required for 'add'/'remove'.",
             },
              identifierType: { // Optional when action is 'list'
-                 type: SchemaType.STRING,
+                 type: Type.STRING,
                  description: "The type of the identifier. Required for 'add'/'remove'.",
                  enum: ["acronym", "title", "id"],
             },
@@ -370,19 +370,19 @@ export const englishSendEmailToAdminDeclaration: FunctionDeclaration = {
     name: "sendEmailToAdmin",
     description: "Sends an email to the website administrator on behalf of the user. Use this function when the user explicitly wants to contact the admin, report an issue, provide feedback, or request specific help that requires admin intervention. You should help the user formulate the subject, message, and confirm the request type ('contact' or 'report') before calling this function.",
     parameters: {
-        type: SchemaType.OBJECT,
+        type: Type.OBJECT,
         properties: {
             subject: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The subject line for the email to the admin. Should be concise and reflect the email's purpose.",
             },
             requestType: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The type of request. Use 'contact' for general inquiries, feedback, or contact requests. Use 'report' for reporting issues, errors, or problems with the website or its content.",
                 enum: ["contact", "report"], // Specify allowed values
             },
             message: {
-                type: SchemaType.STRING,
+                type: Type.STRING,
                 description: "The main body/content of the email message detailing the user's request, report, or feedback.",
             },
         },

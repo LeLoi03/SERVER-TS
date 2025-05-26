@@ -1,7 +1,16 @@
 // src/chatbot/handlers/hostAgent.streaming.handler.ts
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
-import { Tool, Part, FunctionResponsePart, EnhancedGenerateContentResponse, FunctionCall } from "@google/generative-ai"; // Import Part, FunctionCall
+// Import types from the new SDK
+import {
+    Tool,
+    Part,
+    FunctionCall,
+    FunctionResponse,
+    GenerateContentResponse, // New SDK type for stream chunks
+    GenerateContentConfig
+} from '@google/genai';
+
 import {
     ChatHistoryItem,
     FrontendAction,
@@ -18,10 +27,21 @@ import {
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
+// Define RouteToAgentArgs if it's not already defined elsewhere accessible
 interface RouteToAgentArgs {
     targetAgent: string;
     taskDescription: string;
 }
+
+// Type guard to check if the args object is a valid RouteToAgentArgs
+function isRouteToAgentArgs(args: any): args is RouteToAgentArgs {
+    if (typeof args !== 'object' || args === null) {
+        return false;
+    }
+    return typeof args.targetAgent === 'string' &&
+           typeof args.taskDescription === 'string';
+}
+
 
 export async function handleStreaming(
     userInput: string,
@@ -29,13 +49,13 @@ export async function handleStreaming(
     socket: Socket,
     language: Language,
     handlerId: string,
-    deps: HostAgentHandlerCustomDeps, // Nhận dependencies đã được cập nhật
+    deps: HostAgentHandlerCustomDeps,
     onActionGenerated?: (action: FrontendAction) => void,
     frontendMessageId?: string
 ): Promise<ChatHistoryItem[] | void> {
     const {
-        geminiServiceForHost,         // Sử dụng service của Host
-        hostAgentGenerationConfig,    // Sử dụng config của Host
+        geminiServiceForHost,
+        hostAgentGenerationConfig, // Should be compatible with GenerateContentConfig
         logToFile,
         allowedSubAgents,
         maxTurnsHostAgent,
@@ -70,7 +90,6 @@ export async function handleStreaming(
         logToFile(`[${handlerId} Streaming - UserTurn] Skipping adding userTurn (edit/processed). frontendMessageId: ${frontendMessageId}`);
     }
 
-
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',
         data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate
@@ -82,14 +101,12 @@ export async function handleStreaming(
         try {
             let dataToSend: any = { ...data };
             if (eventName === 'status_update' && data.type === 'status') {
-                // Chỉ thu thập thoughts nếu agentId là HostAgent hoặc không được chỉ định (mặc định là HostAgent)
                 if (!data.agentId || data.agentId === 'HostAgent') {
                     allThoughtsCollectedStreaming.push({
-                        step: data.step, message: data.message, agentId: 'HostAgent', // Luôn là HostAgent ở đây
+                        step: data.step, message: data.message, agentId: 'HostAgent',
                         timestamp: (data as StatusUpdate).timestamp || new Date().toISOString(), details: (data as StatusUpdate).details
                     });
                 }
-                // Đảm bảo status_update luôn có agentId
                 dataToSend.agentId = data.agentId || 'HostAgent';
             }
 
@@ -112,35 +129,45 @@ export async function handleStreaming(
         return safeEmitStreaming(eventName, { ...data, agentId: 'HostAgent' });
     };
 
-
-    async function processAndEmitStream(stream: AsyncGenerator<EnhancedGenerateContentResponse>): Promise<{ fullText: string } | null> {
+    // Updated to use GenerateContentResponse from the new SDK
+    async function processAndEmitStream(stream: AsyncGenerator<GenerateContentResponse>): Promise<{ fullText: string } | null> {
         let accumulatedText = "";
-        let streamFinished = false;
+        let streamFinishedSuccessfully = false; // Changed variable name for clarity
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) return null;
 
         try {
             for await (const chunk of stream) {
                 if (!socket.connected) { logToFile(`[${handlerId} Stream Abort - ${socketId}] Disconnected.`); return null; }
-                const chunkText = chunk.text();
-                if (chunkText) {
+                // Use the .text getter from the new SDK's GenerateContentResponse
+                const chunkText = chunk.text;
+                if (chunkText !== undefined) { // Getter might return undefined
                     accumulatedText += chunkText;
                     if (!safeEmitStreaming('chat_update', { type: 'partial_result', textChunk: chunkText })) return null;
                 }
+                // Check for function calls or other data in chunks if necessary, though typically stream is for text.
+                // The primary function call check is done on the *first* chunk before calling this function.
             }
-            streamFinished = true;
+            streamFinishedSuccessfully = true;
+            logToFile(`[${handlerId} Stream Processing - ${socketId}] Stream finished successfully. Accumulated text length: ${accumulatedText.length}`);
             return { fullText: accumulatedText };
         } catch (error: any) {
             logToFile(`[${handlerId} Stream Processing Error - ${socketId}] ${error.message}`);
-            throw error;
+            // Do not re-throw here, let the caller handle it or return null
+            // based on socket connection status.
+            if (socket.connected) {
+                 safeEmitStreaming('chat_error', { type: 'error', message: `Error processing stream: ${error.message}`, step: 'streaming_processing_error' });
+            }
+            return null; // Indicate failure
         } finally {
-            if (!streamFinished) logToFile(`[${handlerId} Stream Processing Warn - ${socketId}] Stream loop exited unexpectedly.`);
+            if (!streamFinishedSuccessfully) {
+                logToFile(`[${handlerId} Stream Processing Warn - ${socketId}] Stream loop exited unexpectedly or with an error.`);
+            }
         }
     }
 
     try {
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return;
 
-        // Khởi tạo nextTurnInputForHost với userInput ban đầu.
         let nextTurnInputForHost: string | Part[] = userInput;
         let currentHostTurn = 1;
 
@@ -149,13 +176,16 @@ export async function handleStreaming(
             if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process based on previous action (Turn ${currentHostTurn})...` : 'Thinking...' })) return;
             if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected before Host model call.`); return; }
 
-            // Gọi generateStream với nextTurnInputForHost và history TÍCH LŨY của Host
+            const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | import('@google/genai').Content; tools?: Tool[] } = {
+                ...hostAgentGenerationConfig,
+                systemInstruction: systemInstructions,
+                tools: hostAgentTools
+            };
+
             const hostAgentLLMResult = await geminiServiceForHost.generateStream(
                 nextTurnInputForHost,
                 history,
-                hostAgentGenerationConfig,
-                systemInstructions,
-                hostAgentTools
+                combinedConfig
             );
 
             if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected after Host model call initiated.`); return; }
@@ -163,85 +193,88 @@ export async function handleStreaming(
             if (hostAgentLLMResult.error) {
                 logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] HostAgent model error: ${hostAgentLLMResult.error}`);
                 safeEmitStreaming('chat_error', { type: 'error', message: hostAgentLLMResult.error, step: 'host_llm_error' });
-                return history; // Trả về history hiện tại
-            } else if (hostAgentLLMResult.functionCalls) { // Lưu ý: Gemini.ts trả về functionCalls (số nhiều) nhưng là một FunctionCall object đơn
-                const functionCall = hostAgentLLMResult.functionCalls as FunctionCall; // Ép kiểu nếu chắc chắn là 1
-                // Thêm lượt model (yêu cầu function call) vào history
+                return history;
+            } else if (hostAgentLLMResult.functionCall) { // Note: gemini.ts returns singular functionCall
+                const functionCall = hostAgentLLMResult.functionCall; // Already singular
                 const modelFunctionCallTurn: ChatHistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
                 history.push(modelFunctionCallTurn);
                 logToFile(`[${handlerId} Streaming T${currentHostTurn}] HostAgent requests function: ${functionCall.name}. History size: ${history.length}`);
 
-                let functionResponseForNextTurn: FunctionResponsePart;
+                let functionResponsePartForHistory: Part;
                 let functionErrorOccurred = false;
 
                 if (functionCall.name === 'routeToAgent') {
-                    const routeArgs = functionCall.args as RouteToAgentArgs;
-                    hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${routeArgs.targetAgent}...`, details: functionCall.args });
+                    if (isRouteToAgentArgs(functionCall.args)) {
+                        const routeArgs = functionCall.args;
+                        hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${routeArgs.targetAgent}...`, details: routeArgs });
 
-                    if (!routeArgs.targetAgent || !routeArgs.taskDescription) {
-                        functionResponseForNextTurn = { functionResponse: { name: functionCall.name, response: { error: "Routing failed: Missing targetAgent or taskDescription." } } };
-                        functionErrorOccurred = true;
-                    } else if (!allowedSubAgents.includes(routeArgs.targetAgent as AgentId)) {
-                        functionResponseForNextTurn = { functionResponse: { name: functionCall.name, response: { error: `Routing failed: Agent "${routeArgs.targetAgent}" is not allowed or supported.` } } };
-                        functionErrorOccurred = true;
-                    } else {
-                        const requestCard: AgentCardRequest = {
-                            taskId: uuidv4(), conversationId, senderAgentId: 'HostAgent',
-                            receiverAgentId: routeArgs.targetAgent as AgentId,
-                            timestamp: new Date().toISOString(), taskDescription: routeArgs.taskDescription,
-                            context: { userToken: socket.data.token, language },
-                        };
-                        const subAgentResponse: AgentCardResponse = await callSubAgentHandler(
-                            requestCard, handlerId, language, socket
-                        );
-
-                        if (subAgentResponse.thoughts && subAgentResponse.thoughts.length > 0) {
-                            allThoughtsCollectedStreaming.push(...subAgentResponse.thoughts);
-                        }
-
-                        if (subAgentResponse.status === 'success') {
-                            functionResponseForNextTurn = { functionResponse: { name: functionCall.name, response: { content: JSON.stringify(subAgentResponse.resultData || "Sub agent task completed.") } } };
-                            if (subAgentResponse.frontendAction) {
-                                finalFrontendActionStreaming = subAgentResponse.frontendAction;
-                                onActionGenerated?.(finalFrontendActionStreaming);
-                            }
-                        } else {
-                            functionResponseForNextTurn = { functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } } };
+                        if (!allowedSubAgents.includes(routeArgs.targetAgent as AgentId)) {
+                            functionResponsePartForHistory = {
+                                functionResponse: { name: functionCall.name, response: { error: `Routing failed: Agent "${routeArgs.targetAgent}" is not allowed or supported.` } }
+                            };
                             functionErrorOccurred = true;
+                        } else {
+                            const requestCard: AgentCardRequest = {
+                                taskId: uuidv4(), conversationId, senderAgentId: 'HostAgent',
+                                receiverAgentId: routeArgs.targetAgent as AgentId,
+                                timestamp: new Date().toISOString(), taskDescription: routeArgs.taskDescription,
+                                context: { userToken: socket.data.token, language },
+                            };
+                            const subAgentResponse: AgentCardResponse = await callSubAgentHandler(
+                                requestCard, handlerId, language, socket
+                            );
+
+                            if (subAgentResponse.thoughts && subAgentResponse.thoughts.length > 0) {
+                                allThoughtsCollectedStreaming.push(...subAgentResponse.thoughts);
+                            }
+
+                            if (subAgentResponse.status === 'success') {
+                                functionResponsePartForHistory = {
+                                    functionResponse: { name: functionCall.name, response: { content: JSON.stringify(subAgentResponse.resultData || "Sub agent task completed.") } }
+                                };
+                                if (subAgentResponse.frontendAction) {
+                                    finalFrontendActionStreaming = subAgentResponse.frontendAction;
+                                    onActionGenerated?.(finalFrontendActionStreaming);
+                                }
+                            } else {
+                                functionResponsePartForHistory = {
+                                    functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } }
+                                };
+                                functionErrorOccurred = true;
+                            }
                         }
+                    } else {
+                        functionResponsePartForHistory = {
+                            functionResponse: { name: functionCall.name, response: { error: "Routing failed: Invalid or missing arguments for routeToAgent." } }
+                        };
+                        functionErrorOccurred = true;
+                        logToFile(`[${handlerId} Streaming T${currentHostTurn}] Invalid or missing routeToAgent args: ${JSON.stringify(functionCall.args)}`);
+                        hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: 'Failed to understand routing instruction.', details: functionCall.args });
                     }
                 } else {
                     const errMsg = `Internal config error: HostAgent (streaming) cannot directly call '${functionCall.name}'.`;
-                    functionResponseForNextTurn = { functionResponse: { name: functionCall.name, response: { error: errMsg } } };
+                    functionResponsePartForHistory = {
+                        functionResponse: { name: functionCall.name, response: { error: errMsg } }
+                    };
                     functionErrorOccurred = true;
                     hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'host_agent_config_error', message: errMsg, details: { functionName: functionCall.name } });
                 }
 
                 if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected after routing/function execution.`); return; }
 
-                // Thêm lượt function (kết quả) vào history
-                const functionResponseTurn: ChatHistoryItem = { role: 'function', parts: [functionResponseForNextTurn] };
+                const functionResponseTurn: ChatHistoryItem = { role: 'function', parts: [functionResponsePartForHistory] };
                 history.push(functionResponseTurn);
                 logToFile(`[${handlerId} Streaming T${currentHostTurn}] Appended function response for ${functionCall.name}. History size: ${history.length}`);
 
-                // CẬP NHẬT input cho lượt tiếp theo của Host Agent
-                // CHO LƯỢT TIẾP THEO CỦA HOST, chúng ta muốn model xử lý history đã được cập nhật.
-                // Không cần truyền lại FunctionResponsePart làm nextTurnInput nữa.
-                // Truyền một chuỗi rỗng hoặc một user input mới nếu có.
-                // Nếu truyền chuỗi rỗng, Gemini class sẽ không thêm lượt 'user' mới.
-                nextTurnInputForHost = ""; // Hoặc một thông điệp user mới nếu user có thể ngắt lời
+                nextTurnInputForHost = "";
                 currentHostTurn++;
-                // if (functionErrorOccurred && some_condition_to_stop_streaming) {
-                //     safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to execute required action (streaming).', step: 'function_execution_failed_stream' });
-                //     return history;
-                // }
-                continue; // Vòng lặp tiếp theo của Host Agent
+                continue;
 
             } else if (hostAgentLLMResult.stream) {
-                // Host Agent quyết định trả lời trực tiếp bằng stream
                 hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
-                if (streamOutput && socket.connected) { // Kiểm tra socket.connected lần nữa sau khi stream kết thúc
+
+                if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
                     const finalModelTurn: ChatHistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }], uuid: botMessageUuid, timestamp: new Date() };
                     history.push(finalModelTurn);
@@ -249,20 +282,18 @@ export async function handleStreaming(
                     safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, id: botMessageUuid });
                     return history;
                 } else {
-                    // Lỗi trong processAndEmitStream hoặc client disconnected
                     logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] Failed to process final stream or client disconnected.`);
-                    if (socket.connected) { // Chỉ emit lỗi nếu socket còn kết nối
+                    if (socket.connected) {
                         safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });
                     }
-                    return history; // Trả về history hiện tại
+                    return history;
                 }
             } else {
-                // Trường hợp không mong muốn từ generateStream (ví dụ: không error, không functionCalls, không stream)
                 logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] HostAgent model unexpected response (streaming).`);
                 safeEmitStreaming('chat_error', { type: 'error', message: 'Internal error: Unexpected AI response (streaming).', step: 'unknown_host_llm_status_stream' });
                 return history;
             }
-        } // Kết thúc while loop
+        } // End while loop
 
         if (currentHostTurn > maxTurnsHostAgent) {
             logToFile(`[${handlerId} Streaming Error] Exceeded maximum HostAgent turns (${maxTurnsHostAgent}).`);
@@ -276,7 +307,7 @@ export async function handleStreaming(
         if (socket.connected) {
             safeEmitStreaming('chat_error', { type: "error", message: criticalErrorMsg, step: 'unknown_handler_error_stream' });
         }
-        return history; // Trả về history hiện tại
+        return history;
     } finally {
         logToFile(`--- [${handlerId} Socket ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
     }

@@ -1,7 +1,7 @@
 // src/chatbot/shared/types.ts
 
-import { FunctionCall, Part } from "@google/generative-ai"; // Google AI SDK types for model interaction
 import { Socket } from "socket.io"; // Socket.IO types for handler context
+import { FunctionCall, Part } from "@google/genai";
 
 // --- Basic Utility Types ---
 

@@ -1,6 +1,7 @@
 // src/chatbot/utils/historyMapper.ts
 import { ChatHistoryItem, ChatMessage } from '../shared/types';
-import { Part } from '@google/generative-ai'; // Explicitly import Part if using its type directly
+// Import Part from the new SDK
+import { Part } from '@google/genai';
 
 /**
  * Maps an array of internal `ChatHistoryItem` objects (used by the backend/LLM)
@@ -12,47 +13,44 @@ import { Part } from '@google/generative-ai'; // Explicitly import Part if using
  * @returns {ChatMessage[]} An array of `ChatMessage` objects, ready for frontend consumption.
  */
 export const mapHistoryToFrontendMessages = (history: ChatHistoryItem[]): ChatMessage[] => {
-    // Robust input validation
     if (!history || !Array.isArray(history)) {
         console.warn('[historyMapper] mapHistoryToFrontendMessages received invalid history (not an array or null/undefined):', history);
         return [];
     }
 
-    // Filter out items that don't have a user or model role with actual text content.
     const filteredHistory = history.filter(item => {
-        // Ensure item has a role and at least one part with non-empty text.
-        return item.role && item.parts?.some(part => 'text' in part && typeof part.text === 'string' && part.text.trim() !== '');
+        // Check if item.role exists and item.parts is an array
+        // Then check if any part has a 'text' property that is a non-empty string
+        return item.role &&
+               Array.isArray(item.parts) &&
+               item.parts.some(part => part && typeof part.text === 'string' && part.text.trim() !== '');
     });
 
-    // Map filtered history items to ChatMessage format.
     return filteredHistory.map((item): ChatMessage | null => {
         // Find the first part that contains valid text.
+        // The 'part as Part' cast is okay if ChatHistoryItem.parts elements are indeed SDK Parts.
         const textPart = item.parts?.find(part =>
-            'text' in part && typeof (part as Part & { text: string }).text === 'string' && (part as Part & { text: string }).text.trim() !== ''
-        ) as (Part & { text: string }) | undefined;
+            part && typeof part.text === 'string' && part.text.trim() !== ''
+        ) as Part | undefined; // Cast to SDK Part for clarity, or ensure ChatHistoryItem.parts are typed as Part[]
 
-        // If no valid text part or UUID is missing, this item cannot be mapped to a displayable message.
-        if (!textPart || !item.uuid) {
+        if (!textPart || !item.uuid) { // textPart.text will be checked below
             console.warn('[historyMapper] Skipping history item due to missing text content or UUID:', item);
-            return null; // Return null to be filtered out later
+            return null;
         }
 
-        const messageText = textPart.text;
+        // textPart is now guaranteed to be a Part with a non-empty text string
+        const messageText = textPart.text!; // Use non-null assertion if find guarantees it due to filter
 
-        // Determine the basic message type. For now, assuming all mapped messages are 'text'.
         const messageType: ChatMessage['type'] = 'text';
 
-        // Construct the ChatMessage object.
         return {
-            id: item.uuid, // Use the unique ID from the internal ChatHistoryItem
+            id: item.uuid,
             message: messageText,
             isUser: item.role === 'user',
             type: messageType,
-            // These properties are undefined unless explicitly populated later or in another mapping step.
             thoughts: undefined,
             location: undefined,
-            timestamp: item.timestamp || new Date().toISOString(), // Use existing timestamp or current
-            // Other properties of ChatMessage might be populated based on context or further processing
+            timestamp: item.timestamp || new Date().toISOString(),
         };
-    }).filter(Boolean) as ChatMessage[]; // Filter out any nulls resulting from invalid items and assert type.
+    }).filter(Boolean) as ChatMessage[];
 };

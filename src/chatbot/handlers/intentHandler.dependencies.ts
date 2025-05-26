@@ -15,7 +15,7 @@ import {
     ChatUpdate
 } from '../shared/types';
 import type logToFileType from '../../utils/logger'; // Import type for logToFile
-import { GenerationConfig as SDKGenerationConfig } from '@google/generative-ai'; // Renamed to avoid conflicts
+import { GenerationConfig as SDKGenerationConfig } from '@google/genai'; // Renamed to avoid conflicts
 
 /**
  * Defines the base set of common dependencies shared across all intent handlers (Host and Sub Agents).

@@ -1,35 +1,32 @@
 // src/chatbot/handlers/subAgent.handler.ts
 import { Socket } from 'socket.io';
-import { Tool, Part, GenerationConfig as SDKGenerationConfig } from "@google/generative-ai";
-import { ChatHistoryItem, StatusUpdate, FrontendAction, Language, AgentCardRequest, AgentCardResponse, AgentId, ThoughtStep, FunctionHandlerOutput } from '../shared/types';
+import {
+    Tool,
+    Part,
+    GenerateContentConfig,
+    FunctionCall // Make sure this is imported
+} from '@google/genai';
+
+import {
+    ChatHistoryItem,
+    StatusUpdate,
+    FrontendAction,
+    Language,
+    AgentCardRequest,
+    AgentCardResponse,
+    AgentId,
+    ThoughtStep,
+    FunctionHandlerOutput
+} from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { executeFunction } from '../gemini/functionRegistry';
 import { SubAgentHandlerCustomDeps } from './intentHandler.dependencies';
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-/**
- * Type guard to check if a string is a valid AgentId and is present in the allowed list.
- * @param {string} id - The ID to validate.
- * @param {AgentId[]} allowedAgents - An array of allowed AgentIds.
- * @returns {boolean} True if the ID is a valid and allowed AgentId, false otherwise.
- */
 function isValidAgentId(id: string, allowedAgents: AgentId[]): id is AgentId {
     return (allowedAgents as string[]).includes(id);
 }
 
-/**
- * Orchestrates the interaction with a sub-agent to fulfill a specific task.
- * This function handles sub-agent validation, prepares input for the LLM,
- * manages LLM interaction (including function calls), and processes the sub-agent's response.
- *
- * @param {AgentCardRequest} requestCard - The request object containing task details for the sub-agent.
- * @param {string} parentHandlerId - The unique ID of the parent handler (e.g., Host Agent) that initiated this sub-agent call.
- * @param {Language} language - The current language context for the interaction.
- * @param {Socket} socket - The client Socket.IO socket, used for emitting status updates.
- * @param {SubAgentHandlerCustomDeps} deps - Dependency injection object containing services and configurations for the sub-agent handler.
- * @returns {Promise<AgentCardResponse>} A Promise that resolves with the sub-agent's response,
- *                                       including status, result data, error messages, frontend actions, and collected thoughts.
- */
 export async function callSubAgent(
     requestCard: AgentCardRequest,
     parentHandlerId: string,
@@ -40,23 +37,15 @@ export async function callSubAgent(
     const {
         geminiServiceForSubAgent,
         subAgentGenerationConfig,
-        logToFile, // logToFile is now available via deps, but we use direct import as per requirement.
+        logToFile,
         allowedSubAgents
     } = deps;
 
     const subAgentId = requestCard.receiverAgentId;
-    // Generate a unique process ID for this specific sub-agent execution
     const subHandlerProcessId = `${parentHandlerId}-Sub-${subAgentId}-${Date.now()}`;
     const socketId = socket.id;
-    const subAgentLocalThoughts: ThoughtStep[] = []; // Collect thoughts specific to this sub-agent execution
+    const subAgentLocalThoughts: ThoughtStep[] = [];
 
-    /**
-     * Helper function to record a thought and emit a status update for the sub-agent.
-     * This ensures consistency in how status updates and thoughts are generated.
-     * @param {string} step - A unique identifier for the current step (e.g., 'sub_agent_thinking').
-     * @param {string} message - A human-readable message describing the step.
-     * @param {object} [details] - Optional additional details to include in the status update and thought.
-     */
     const recordThoughtAndEmitStatus = (step: string, message: string, details?: object): void => {
         const timestamp = new Date().toISOString();
         const thought: ThoughtStep = {
@@ -64,7 +53,7 @@ export async function callSubAgent(
             message,
             details,
             timestamp,
-            agentId: subAgentId, // Thoughts are by the sub-agent itself
+            agentId: subAgentId,
         };
         subAgentLocalThoughts.push(thought);
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Thought added: Step: ${step}, Message: ${message}`);
@@ -77,7 +66,7 @@ export async function callSubAgent(
                     message,
                     details,
                     timestamp,
-                    agentId: subAgentId, // Ensure agentId is correctly set for frontend
+                    agentId: subAgentId,
                 };
                 socket.emit('status_update', statusData);
             } catch (error: unknown) {
@@ -89,7 +78,6 @@ export async function callSubAgent(
         }
     };
 
-    // --- 1. Validate Sub-Agent ID ---
     recordThoughtAndEmitStatus('sub_agent_validation', `Validating sub-agent ID: ${subAgentId}.`);
     if (!isValidAgentId(subAgentId, allowedSubAgents)) {
         const errorMsg = `Invalid or disallowed sub-agent ID: "${subAgentId}".`;
@@ -107,9 +95,8 @@ export async function callSubAgent(
         };
     }
 
-    logToFile(`--- [${subHandlerProcessId} Socket ${socketId}] Calling Sub Agent: ${subAgentId} using model: ${(geminiServiceForSubAgent as any).modelName}, Task ID: ${requestCard.taskId}, Description: "${requestCard.taskDescription?.substring(0, 50)}..." ---`);
+    logToFile(`--- [${subHandlerProcessId} Socket ${socketId}] Calling Sub Agent: ${subAgentId}, Task ID: ${requestCard.taskId}, Description: "${requestCard.taskDescription?.substring(0, 50)}..." ---`);
 
-    // --- 2. Load Agent Configuration and Tools ---
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, subAgentId);
     const subAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
     if (subAgentTools.length > 0) {
@@ -118,8 +105,6 @@ export async function callSubAgent(
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] No functions loaded for sub-agent.`);
     }
 
-
-    // --- 3. Validate Task Description ---
     const taskDesc = requestCard.taskDescription?.trim();
     if (!taskDesc) {
         const errorMsg = `Sub Agent ${subAgentId} received an empty task description for task ID ${requestCard.taskId}.`;
@@ -137,29 +122,20 @@ export async function callSubAgent(
         };
     }
 
-    // Prepare input for the sub-agent's LLM
     const subAgentInputText = `Received Task Request (ID: ${requestCard.taskId}):\nDescription: ${taskDesc}\nPlease execute.`;
-    // Original logic: wrap string in Part[] and then extract text again.
-    // Keeping this structure as requested, though direct string might be simpler.
-    // const subAgentInputParts: Part[] = [{ text: subAgentInputText }];
-    const subAgentIsolatedHistory: ChatHistoryItem[] = []; // Sub-agents typically start with a fresh history for their specific task
+    const subAgentIsolatedHistory: ChatHistoryItem[] = [];
 
-    // Initialize result variables
     let subAgentResultData: any = null;
     let subAgentErrorMessage: string | undefined = undefined;
     let subAgentFrontendAction: FrontendAction | undefined = undefined;
     let subAgentStatus: 'success' | 'error' = 'error';
 
-    // --- 4. Define `onSubAgentFunctionStatusUpdate` for `executeFunction` ---
-    // This callback is passed to `executeFunction` so it can report its own steps.
-    // These steps are then captured by `subAgentLocalThoughts` and emitted to frontend.
     const onSubAgentFunctionStatusUpdate = (eventName: 'status_update', data: StatusUpdate): boolean => {
         if (!socket.connected) {
             logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Client disconnected during function status update. Aborting.`);
             return false;
         }
         try {
-            // Ensure agentId and handlerId are consistently set for frontend
             const effectiveAgentId = data.agentId || subAgentId;
             const effectiveHandlerId = subHandlerProcessId;
 
@@ -171,7 +147,6 @@ export async function callSubAgent(
                 agentId: effectiveAgentId,
             };
             subAgentLocalThoughts.push(thought);
-            // Emit to frontend, ensuring consistent agentId and handlerId
             socket.emit(eventName, { ...data, agentId: effectiveAgentId, handlerId: effectiveHandlerId });
             return true;
         } catch (error: unknown) {
@@ -184,90 +159,99 @@ export async function callSubAgent(
     try {
         recordThoughtAndEmitStatus('sub_agent_thinking', `Sub Agent ${subAgentId} processing task: ${taskDesc.substring(0, 50)}...`);
 
-        // const nextTurnInputForSubAgent: string | Part[] = subAgentInputParts; // <<--- THAY ĐỔI DÒNG NÀY
-        const nextTurnInputForSubAgent: string = subAgentInputText; // <<--- SỬA THÀNH STRING
+        const nextTurnInputForSubAgent: string = subAgentInputText;
 
-        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Calling Gemini service for sub-agent with input type: ${typeof nextTurnInputForSubAgent === 'string' ? 'string' : 'Part[]'}`); // Log này vẫn sẽ đúng
+        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Calling Gemini service for sub-agent with input type: string`);
+
+        const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | import('@google/genai').Content; tools?: Tool[] } = {
+            ...subAgentGenerationConfig,
+            systemInstruction: systemInstructions,
+            tools: subAgentTools
+        };
 
         const subAgentLlmResult = await geminiServiceForSubAgent.generateTurn(
-            nextTurnInputForSubAgent, // <<--- Bây giờ là string
+            nextTurnInputForSubAgent,
             subAgentIsolatedHistory,
-            subAgentGenerationConfig,
-            systemInstructions,
-            subAgentTools
+            combinedConfig
         );
 
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] LLM result: Status ${subAgentLlmResult.status}`);
 
-        // --- 5. Process LLM Result ---
         if (subAgentLlmResult.status === "requires_function_call" && subAgentLlmResult.functionCall) {
-            const functionCall = subAgentLlmResult.functionCall;
-            logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] LLM requested function call: ${functionCall.name}`);
-            recordThoughtAndEmitStatus('sub_agent_function_call_requested', `Sub-agent requested function: ${functionCall.name}`, { functionName: functionCall.name, args: functionCall.args });
+            const functionCallFromLLM = subAgentLlmResult.functionCall; // This is of type FunctionCall from SDK
 
-            // Execute the function requested by the sub-agent LLM
-            const functionOutput: FunctionHandlerOutput = await executeFunction(
-                functionCall,
-                subAgentId, // The agent making the function call
-                subHandlerProcessId, // The ID of the current process
-                language,
-                onSubAgentFunctionStatusUpdate, // Pass our specific callback
-                socket,
-                // NO logger parameter here anymore
-                requestCard.context // Pass through additional context
-            );
+            // **FIX APPLIED HERE**
+            if (typeof functionCallFromLLM.name === 'string') {
+                // Now functionCallFromLLM.name is guaranteed to be a string
+                const validFunctionCall = {
+                    name: functionCallFromLLM.name,
+                    args: functionCallFromLLM.args || {} // Ensure args is an object
+                };
 
-            // Process the output from the executed function
-            if (functionOutput.modelResponseContent && typeof functionOutput.modelResponseContent === 'string' && functionOutput.modelResponseContent.toLowerCase().startsWith('error:')) {
-                subAgentErrorMessage = functionOutput.modelResponseContent;
-                subAgentStatus = 'error';
-                recordThoughtAndEmitStatus('sub_agent_function_execution_failed', `Function execution returned an error: ${subAgentErrorMessage.substring(0, 100)}...`, { error: subAgentErrorMessage });
+                logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] LLM requested function call: ${validFunctionCall.name}`);
+                recordThoughtAndEmitStatus('sub_agent_function_call_requested', `Sub-agent requested function: ${validFunctionCall.name}`, { functionName: validFunctionCall.name, args: validFunctionCall.args });
+
+                const functionOutput: FunctionHandlerOutput = await executeFunction(
+                    validFunctionCall, // Pass the validated object
+                    subAgentId,
+                    subHandlerProcessId,
+                    language,
+                    onSubAgentFunctionStatusUpdate,
+                    socket,
+                    requestCard.context
+                );
+
+                if (functionOutput.modelResponseContent && typeof functionOutput.modelResponseContent === 'string' && functionOutput.modelResponseContent.toLowerCase().startsWith('error:')) {
+                    subAgentErrorMessage = functionOutput.modelResponseContent;
+                    subAgentStatus = 'error';
+                    recordThoughtAndEmitStatus('sub_agent_function_execution_failed', `Function execution returned an error: ${subAgentErrorMessage.substring(0, 100)}...`, { error: subAgentErrorMessage });
+                } else {
+                    subAgentResultData = functionOutput.modelResponseContent;
+                    subAgentStatus = 'success';
+                    subAgentFrontendAction = functionOutput.frontendAction;
+                    recordThoughtAndEmitStatus('sub_agent_function_execution_success', `Function execution successful.`, { resultPreview: JSON.stringify(subAgentResultData)?.substring(0, 100) });
+                }
             } else {
-                subAgentResultData = functionOutput.modelResponseContent;
-                subAgentStatus = 'success';
-                subAgentFrontendAction = functionOutput.frontendAction;
-                recordThoughtAndEmitStatus('sub_agent_function_execution_success', `Function execution successful.`, { resultPreview: JSON.stringify(subAgentResultData)?.substring(0, 100) });
+                // Handle the case where functionCall.name is undefined (should be rare if model behaves)
+                subAgentErrorMessage = `LLM returned a function call without a name.`;
+                subAgentStatus = 'error';
+                logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] ERROR: ${subAgentErrorMessage} Args: ${JSON.stringify(functionCallFromLLM.args)}`);
+                recordThoughtAndEmitStatus('sub_agent_llm_error', subAgentErrorMessage, { args: functionCallFromLLM.args });
             }
 
         } else if (subAgentLlmResult.status === "final_text") {
             subAgentResultData = subAgentLlmResult.text || "Sub agent provided a text response.";
             subAgentStatus = 'success';
-            recordThoughtAndEmitStatus('sub_agent_text_response_generated', `Sub Agent ${subAgentId} generated a direct text response.`, { textPreview: subAgentResultData?.substring(0, 100) });
+            recordThoughtAndEmitStatus('sub_agent_text_response_generated', `Sub Agent ${subAgentId} generated a direct text response.`, { textPreview: String(subAgentResultData)?.substring(0, 100) });
         } else {
-            // LLM result is an error or unexpected status
             subAgentErrorMessage = subAgentLlmResult.errorMessage || `Error processing task in ${subAgentId}. Unexpected LLM status: ${subAgentLlmResult.status}`;
             subAgentStatus = 'error';
             recordThoughtAndEmitStatus('sub_agent_llm_error', `Sub Agent ${subAgentId} LLM error or unexpected status: ${subAgentErrorMessage}`, { error: subAgentErrorMessage, llmStatus: subAgentLlmResult.status });
         }
 
-    } catch (error: unknown) { // Catch as unknown for safer error handling
+    } catch (error: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] CRITICAL Error during sub-agent processing: ${errorMessage}\nStack: ${errorStack}`);
-
-        // If an errorMessage was already set (e.g., from validation), keep it.
-        // Otherwise, set a new error message.
         if (!subAgentErrorMessage) {
             subAgentErrorMessage = `An unexpected system error occurred while Sub Agent ${subAgentId} was processing: ${errorMessage}`;
         }
-        subAgentStatus = 'error'; // Ensure status is error in case of critical failure
-
+        subAgentStatus = 'error';
         recordThoughtAndEmitStatus('sub_agent_critical_error', `A critical system error occurred while Sub Agent ${subAgentId} was processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
     }
 
-    // --- 6. Final Status Update and Response ---
     recordThoughtAndEmitStatus('sub_agent_processing_complete', `Sub Agent ${subAgentId} has completed its task. Final Status: ${subAgentStatus}.`, { finalStatus: subAgentStatus, resultPreview: JSON.stringify(subAgentResultData)?.substring(0, 100) });
 
     const responseCard: AgentCardResponse = {
         taskId: requestCard.taskId,
         conversationId: requestCard.conversationId,
-        senderAgentId: subAgentId, // The sub-agent is the sender of this response card
-        receiverAgentId: requestCard.senderAgentId, // The parent agent is the receiver
+        senderAgentId: subAgentId,
+        receiverAgentId: requestCard.senderAgentId,
         timestamp: new Date().toISOString(),
         status: subAgentStatus,
         resultData: subAgentResultData,
         errorMessage: subAgentErrorMessage,
         frontendAction: subAgentFrontendAction,
-        thoughts: subAgentLocalThoughts // Return all collected thoughts
+        thoughts: subAgentLocalThoughts
     };
 
     logToFile(`--- [${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Sub Agent finished. Status: ${responseCard.status}, Thoughts collected: ${subAgentLocalThoughts.length} ---`);
