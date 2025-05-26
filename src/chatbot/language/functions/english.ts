@@ -222,7 +222,7 @@ const internalPaths = [
     '/chatbot/regularchat',
     '/chatbot/livechat',
     '/chatbot/history',
-    '/visualization/landingvisualization',
+    //'/visualization/landingvisualization',
     '/visualization',
     '/support',
     '/other',
