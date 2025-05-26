@@ -50,18 +50,18 @@ export class Gemini {
         // Construct system instruction part only if provided
         // SDK now recommends 'system' role for system instructions
         const systemInstructionPart = systemInstruction
-            ? { role: "model", parts: [{ text: systemInstruction }] }
+            ? { role: "system", parts: [{ text: systemInstruction }] }
             : undefined;
 
         const modelOptions: any = {
             model: this.modelName,
         };
 
-        // Conditionally add systemInstruction
         if (systemInstructionPart) {
             modelOptions.systemInstruction = systemInstructionPart;
+            // THÊM DÒNG LOG NÀY ĐỂ KIỂM TRA
+            logToFile(`[GeminiService:getModel] Actual System Instruction being set for model: "${systemInstructionPart.parts[0].text.substring(0, 200)}..."`);
         }
-
         // Conditionally add tools
         if (tools && tools.length > 0) {
             modelOptions.tools = tools;
@@ -260,6 +260,7 @@ export class Gemini {
         tools?: Tool[]
     ): Promise<{ stream?: AsyncGenerator<EnhancedGenerateContentResponse>; error?: string; functionCalls?: FunctionCall }> {
 
+        console.log(systemInstruction);
         const model = this.getModel(systemInstruction, tools);
 
         logToFile(`[GeminiService:generateStream] Received history with ${history.length} items before mapping.`);

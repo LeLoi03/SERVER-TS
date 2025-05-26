@@ -118,12 +118,14 @@ export interface FollowItem {
     // E.g., `websiteUrl?: string;` for conferences, `publisher?: string;` for journals.
 }
 
+
 /**
  * Represents a generic item (e.g., conference) that can be blacklisted by a user.
+ * Dữ liệu blacklist API có vẻ vẫn dùng conferenceId, nên giữ nguyên.
  */
 export interface BlacklistItem {
-    /** The unique identifier of the item (e.g., conference ID). */
-    conferenceId: string;
+    /** The unique identifier of the item (e.g., conference ID) in the blacklist context. */
+    conferenceId: string; // Tên thuộc tính trong API nhận blacklist
     /** The title or name of the item. */
     title: string;
     /** The acronym or abbreviation of the item. */
@@ -138,30 +140,43 @@ export interface BlacklistItem {
     dates?: ItemDateRange;
     /** Optional location details for the item. */
     location?: ItemLocation;
-    // Additional fields can be added here if necessary.
 }
+
 
 /**
  * Represents a generic item (e.g., conference) that can be added to a user's calendar.
  */
+// src/shared/types.ts (hoặc nơi bạn định nghĩa CalendarItem)
 export interface CalendarItem {
-    /** The unique identifier of the item (e.g., conference ID). */
-    conferenceId: string;
+    /** The unique identifier of the conference event. */
+    id: string; // Tên thuộc tính trong API là 'id'
     /** The title or name of the conference. */
-    conference: string;
+    title: string; // Tên thuộc tính trong API là 'title'
     /** Optional acronym or abbreviation. */
     acronym?: string;
-    /** Optional ISO timestamp when the item was created. */
-    createdAt?: string;
-    /** Optional ISO timestamp when the item was last updated. */
-    updatedAt?: string;
-    /** Optional status of the item. */
-    status?: string;
+    /** The unique identifier of the creator. */
+    creatorId: string | null;
+    /** The unique identifier of the administrator. */
+    adminId: string;
+    /** ISO timestamp when the item was followed. */
+    followedAt: string;
+    /** ISO timestamp when the item was last updated. */
+    updatedAt: string;
+    /** The status of the item (e.g., "CRAWLED"). */
+    status: string;
     /** Optional date range associated with the item. */
-    dates?: ItemDateRange;
+    dates: ItemDateRange;
     /** Optional location details for the item. */
-    location?: ItemLocation;
-    // Additional fields can be added here if necessary.
+    location: {
+        address: string;
+        cityStateProvince: string;
+        country: string;
+        continent: string;
+    };
+    // Thêm các trường khác nếu cần, ví dụ:
+    // status?: string;
+    // dates?: ItemDateRange;
+    // location?: ItemLocation;
 }
 
 /**

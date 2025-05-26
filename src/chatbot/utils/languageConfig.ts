@@ -18,67 +18,67 @@ interface LanguageAgentConfig {
 const agentLanguageConfigurations: Record<AgentId, Partial<Record<Language, LanguageAgentConfig>>> = {
     'HostAgent': {
         'en': {
-            systemInstructions: LangData.englishHostAgentSystemInstructions,
+            systemInstructions: LangData.enHostAgentSystemInstructions,
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration,
             ],
         },
         'vi': {
-            systemInstructions: LangData.vietnameseHostAgentSystemInstructions, // Giữ tiếng Việt cho HostAgent system instructions
+            systemInstructions: LangData.viHostAgentSystemInstructions, // Giữ tiếng Việt cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'zh': {
-            systemInstructions: LangData.chineseSimplifiedHostAgentSystemInstructions, // Giữ tiếng Trung cho HostAgent system instructions
+            systemInstructions: LangData.zhHostAgentSystemInstructions, // Giữ tiếng Trung cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'de': {
-            systemInstructions: LangData.germanHostAgentSystemInstructions, // Giữ tiếng Đức cho HostAgent system instructions
+            systemInstructions: LangData.deHostAgentSystemInstructions, // Giữ tiếng Đức cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'fr': {
-            systemInstructions: LangData.frenchHostAgentSystemInstructions, // Giữ tiếng Pháp cho HostAgent system instructions
+            systemInstructions: LangData.frHostAgentSystemInstructions, // Giữ tiếng Pháp cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'es': {
-            systemInstructions: LangData.spanishHostAgentSystemInstructions, // Giữ tiếng Tây Ban Nha cho HostAgent system instructions
+            systemInstructions: LangData.esHostAgentSystemInstructions, // Giữ tiếng Tây Ban Nha cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ru': {
-            systemInstructions: LangData.russianHostAgentSystemInstructions, // Giữ tiếng Nga cho HostAgent system instructions
+            systemInstructions: LangData.ruHostAgentSystemInstructions, // Giữ tiếng Nga cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ja': {
-            systemInstructions: LangData.japaneseHostAgentSystemInstructions, // Giữ tiếng Nhật cho HostAgent system instructions
+            systemInstructions: LangData.jaHostAgentSystemInstructions, // Giữ tiếng Nhật cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ko': {
-            systemInstructions: LangData.koreanHostAgentSystemInstructions, // Giữ tiếng Hàn cho HostAgent system instructions
+            systemInstructions: LangData.koHostAgentSystemInstructions, // Giữ tiếng Hàn cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'ar': {
-            systemInstructions: LangData.arabicHostAgentSystemInstructions, // Giữ tiếng Ả Rập cho HostAgent system instructions
+            systemInstructions: LangData.arHostAgentSystemInstructions, // Giữ tiếng Ả Rập cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
         },
         'fa': {
-            systemInstructions: LangData.persianHostAgentSystemInstructions, // Giữ tiếng Ba Tư cho HostAgent system instructions
+            systemInstructions: LangData.faHostAgentSystemInstructions, // Giữ tiếng Ba Tư cho HostAgent system instructions
             functionDeclarations: [
                 LangData.englishRouteToAgentDeclaration, // Giữ tiếng Anh cho function declarations
             ],
@@ -515,7 +515,7 @@ export function getAgentLanguageConfig(
     let systemInstructionsForAgent: any;
     if (agentId === 'HostAgent') {
         // Try to get the HostAgent instructions in the requested language
-        systemInstructionsForAgent = LangData[`${targetLang}HostAgentSystemInstructions` as keyof typeof LangData] || LangData.englishHostAgentSystemInstructions; // Fallback to English if specific language not found
+        systemInstructionsForAgent = LangData[`${targetLang}HostAgentSystemInstructions` as keyof typeof LangData] || LangData.enHostAgentSystemInstructions; // Fallback to English if specific language not found
     } else {
         // For other agents, always use the English system instructions
         systemInstructionsForAgent = LangData[`english${agentId}SystemInstructions` as keyof typeof LangData] || "Error: English instructions missing."; // Fallback to error message

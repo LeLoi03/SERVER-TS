@@ -1,8 +1,9 @@
 // src/chatbot/handlers/manageCalendar.handler.ts
 import {
-    findConferenceItemId, // Using ID lookup from manageBlacklist.service
-    executeGetUserBlacklisted, // Importing blacklist check from manageBlacklist.service
-} from '../services/manageBlacklist.service'; // Import from Blacklist service
+    findConferenceItemId,
+    // executeGetUserBlacklisted đã được cập nhật để trả về id và title
+    executeGetUserBlacklisted,
+} from '../services/manageBlacklist.service';
 import {
     executeGetUserCalendar,
     executeManageCalendarApi,
@@ -11,44 +12,20 @@ import { IFunctionHandler } from '../interface/functionHandler.interface';
 import {
     FunctionHandlerInput,
     FunctionHandlerOutput,
-    CalendarItem,
+    CalendarItem, // Đảm bảo CalendarItem được import từ shared/types.ts đã cập nhật
     FrontendAction,
-    ThoughtStep, // Added ThoughtStep for logging
-    StatusUpdate
+    ThoughtStep,
+    StatusUpdate,
+    ItemCalendarStatusUpdatePayload // Import payload mới
 } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
+import logToFile from '../../utils/logger';
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
-/**
- * Valid item types supported by the calendar feature.
- * Currently limited to 'conference'.
- */
 type ValidItemTypeCalendar = 'conference';
-/**
- * Valid identifier types for finding a conference item for calendar.
- */
 type ValidIdentifierTypeCalendar = 'acronym' | 'title' | 'id';
-/**
- * Valid actions for managing calendar entries.
- */
 type ValidActionCalendar = 'add' | 'remove' | 'list';
 
-/**
- * Handles the 'manageCalendar' function call from the LLM.
- * This handler allows users to add, remove, or list conferences in their calendar.
- * It includes validation, authentication checks, item lookup, and cross-checks with
- * blacklisted items to prevent conflicts.
- */
 export class ManageCalendarHandler implements IFunctionHandler {
-    /**
-     * Executes the calendar management logic.
-     *
-     * @param {FunctionHandlerInput} context - The input context for the function handler,
-     *                                       including arguments, user token, handler ID,
-     *                                       socket ID, status update callback, and agent ID.
-     * @returns {Promise<FunctionHandlerOutput>} A Promise that resolves with the model's response content,
-     *                                          an optional frontend action, and a collection of `ThoughtStep`s.
-     */
     async execute(context: FunctionHandlerInput): Promise<FunctionHandlerOutput> {
         const {
             args,
@@ -56,19 +33,13 @@ export class ManageCalendarHandler implements IFunctionHandler {
             handlerId: handlerProcessId,
             socketId,
             onStatusUpdate,
-            agentId // Agent ID from the calling context
+            agentId
         } = context;
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:ManageCalendar Agent:${agentId}]`;
-        const localThoughts: ThoughtStep[] = []; // Collection for thoughts
+        const localThoughts: ThoughtStep[] = [];
 
         logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
 
-        /**
-         * Helper function to report a status update and collect a ThoughtStep.
-         * @param {string} step - A unique identifier for the current step.
-         * @param {string} message - A human-readable message.
-         * @param {object} [details] - Optional additional details.
-         */
         const reportStep = (step: string, message: string, details?: object): void => {
             const timestamp = new Date().toISOString();
             const thought: ThoughtStep = {
@@ -101,8 +72,8 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
             const itemType = args?.itemType as string | undefined;
             const action = args?.action as string | undefined;
-            const identifier = args?.identifier as string | undefined; // Optional for 'list'
-            const identifierType = args?.identifierType as string | undefined; // Optional for 'list'
+            const identifier = args?.identifier as string | undefined;
+            const identifierType = args?.identifierType as string | undefined;
 
             if (!itemType) {
                 const errorMsg = "Missing required item type for calendar action.";
@@ -138,7 +109,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 return { modelResponseContent: `Error: ${validationError}`, frontendAction: undefined, thoughts: localThoughts };
             }
 
-            const validItemType = itemType as ValidItemTypeCalendar; // Always 'conference'
+            const validItemType = itemType as ValidItemTypeCalendar;
             const validAction = action as ValidActionCalendar;
             const validIdentifier = (action === 'add' || action === 'remove') ? identifier! : undefined;
             const validIdentifierType = (action === 'add' || action === 'remove') ? identifierType! as ValidIdentifierTypeCalendar : undefined;
@@ -150,7 +121,6 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 reportStep('function_error', 'User not authenticated.', { error: errorMsg });
                 return { modelResponseContent: "Error: You must be logged in to manage calendar items.", frontendAction: undefined, thoughts: localThoughts };
             }
-
 
             // --- BRANCH LOGIC BASED ON ACTION ---
             if (validAction === 'list') {
@@ -172,11 +142,13 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 }
 
                 const displayItemsForModelResponse = listResult.items.map((item: CalendarItem) => {
-                    let details = `${item.conference} (${item.acronym})`;
-                    if (item.dates?.fromDate) {
-                        details += ` | Dates: ${new Date(item.dates.fromDate).toLocaleDateString()}`;
-                        if (item.dates.toDate && item.dates.fromDate !== item.dates.toDate) {
-                            details += ` - ${new Date(item.dates.toDate).toLocaleDateString()}`;
+                    // Cập nhật: Sử dụng item.title và item.id
+                    let details = `${item.title} (${item.acronym})`;
+                    if (item.dates && item.dates.length > 0) { // Đảm bảo dates là mảng
+                        const firstDate = item.dates[0];
+                        details += ` | Dates: ${new Date(firstDate.fromDate).toLocaleDateString()}`;
+                        if (firstDate.toDate && firstDate.fromDate !== firstDate.toDate) {
+                            details += ` - ${new Date(firstDate.toDate).toLocaleDateString()}`;
                         }
                     }
                     if (item.location?.cityStateProvince && item.location?.country) {
@@ -184,7 +156,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                     } else if (item.location?.country) {
                         details += ` | Location: ${item.location.country}`;
                     }
-                    return { id: item.conferenceId, displayText: details };
+                    return { id: item.id, displayText: details }; // Sử dụng item.id
                 });
 
                 const successMessage = `Here are the conferences in your calendar:`;
@@ -196,8 +168,8 @@ export class ManageCalendarHandler implements IFunctionHandler {
                     frontendAction: {
                         type: 'displayList',
                         payload: {
-                            items: listResult.items, // Array of full CalendarItem
-                            itemType: validItemType, // 'conference'
+                            items: listResult.items, // listResult.items đã là CalendarItem[] chính xác
+                            itemType: validItemType,
                             listType: 'calendar',
                             title: `Your Calendar ${validItemType.charAt(0).toUpperCase() + validItemType.slice(1)}s`
                         }
@@ -210,9 +182,8 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 const currentIdentifierType = validIdentifierType!;
 
                 reportStep('finding_calendar_item_id', `Searching for ${validItemType} with ${currentIdentifierType}: "${currentIdentifier}"...`, { identifier: currentIdentifier, identifierType: currentIdentifierType, itemType: validItemType });
-                // Using findConferenceItemId from blacklist service (reusable for conferences)
+                // findConferenceItemId trả về itemId (sẽ là ID của conference)
                 const idResult = await findConferenceItemId(currentIdentifier, currentIdentifierType);
-
 
                 if (!idResult.success || !idResult.itemId) {
                     const errorMsg = idResult.errorMessage || `Could not find ${validItemType} "${currentIdentifier}".`;
@@ -220,8 +191,8 @@ export class ManageCalendarHandler implements IFunctionHandler {
                     reportStep('calendar_item_id_not_found', `Could not find ${validItemType} "${currentIdentifier}".`, { error: errorMsg, identifier: currentIdentifier, identifierType: currentIdentifierType, itemType: validItemType });
                     return { modelResponseContent: errorMsg, frontendAction: undefined, thoughts: localThoughts };
                 }
-                const itemId = idResult.itemId;
-                // idResult.details is Partial<BlacklistItem> or Partial<CalendarItem> - uses common fields
+                const itemId = idResult.itemId; // Đây là ID duy nhất của conference
+                // itemDetailsFromFind sẽ có id và title nếu được trả về từ findConferenceItemId
                 const itemDetailsFromFind = idResult.details || {};
                 const itemNameForMessage = itemDetailsFromFind.title || itemDetailsFromFind.acronym || currentIdentifier;
 
@@ -241,10 +212,10 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 reportStep('calendar_status_checked', `Current calendar status: ${isCurrentlyInCalendar ? 'In Calendar' : 'Not In Calendar'}.`, { itemId, isCurrentlyInCalendar });
 
                 // --- CROSS-CHECK WHEN 'ADD' TO CALENDAR ---
-                if (validAction === 'add' && !isCurrentlyInCalendar) { // Only check if intending to add and not already in Calendar
+                if (validAction === 'add' && !isCurrentlyInCalendar) {
                     reportStep('checking_blacklist_status_for_calendar', `Checking if conference ${itemId} ("${itemNameForMessage}") is blacklisted before adding to calendar...`);
-                    // itemType for executeGetUserBlacklisted is always 'conference' as blacklist is only for conferences
-                    const blacklistStatusResult = await executeGetUserBlacklisted(userToken);
+                    const blacklistStatusResult = await executeGetUserBlacklisted(userToken); // BlacklistService trả về conferenceId
+                    // Kiểm tra xem itemId (conference ID) có trong danh sách blacklist hay không
                     if (blacklistStatusResult.success && blacklistStatusResult.itemIds.includes(itemId)) {
                         const conflictMsg = `The conference "${itemNameForMessage}" is currently in your blacklist. You must remove it from blacklist before adding it to calendar.`;
                         logToFile(`${logPrefix} ManageCalendar: Conflict - Item ${itemId} is blacklisted, cannot add to calendar.`);
@@ -261,7 +232,6 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 }
                 // --- END CROSS-CHECK ---
 
-
                 reportStep('determining_calendar_action', `Determining required action based on request ('${validAction}') and status...`);
                 const needsApiCall = (validAction === 'add' && !isCurrentlyInCalendar) || (validAction === 'remove' && isCurrentlyInCalendar);
                 reportStep('calendar_action_determined', needsApiCall ? `API call required to ${validAction} item ${itemId} to/from calendar.` : `No API call needed (action: '${validAction}', current status: ${isCurrentlyInCalendar ? 'In Calendar' : 'Not In Calendar'}).`, { needsApiCall, currentStatus: isCurrentlyInCalendar, requestedAction: validAction, itemId });
@@ -271,6 +241,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                 if (needsApiCall) {
                     reportStep('preparing_calendar_api_call', `${validAction === 'add' ? 'Adding' : 'Removing'} item ${itemNameForMessage} (ID: ${itemId}) ${validAction === 'add' ? 'to' : 'from'} calendar...`, { action: validAction, itemId, itemType: validItemType });
+                    // executeManageCalendarApi nhận conferenceId (là itemId ở đây)
                     const apiActionResult = await executeManageCalendarApi(itemId, validAction as 'add' | 'remove', userToken);
 
                     if (apiActionResult.success) {
@@ -278,26 +249,30 @@ export class ManageCalendarHandler implements IFunctionHandler {
                         logToFile(`${logPrefix} ManageCalendar: API call for ${validAction} successful for conference ${itemId}.`);
                         reportStep('calendar_update_success', `Successfully updated calendar for conference "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
 
-                        // Use details from idResult or apiActionResult.conferenceDetails if available
+                        // Sử dụng details từ idResult hoặc apiActionResult.conferenceDetails
+                        // itemDetailsForFrontend phải khớp với CalendarItem đã cập nhật
                         const itemDetailsForFrontend: Partial<CalendarItem> = apiActionResult.conferenceDetails || itemDetailsFromFind;
 
                         const itemDataForFrontend: CalendarItem = {
-                            conferenceId: itemId,
-                            conference: itemDetailsForFrontend.conference || itemNameForMessage,
+                            id: itemId, // Cập nhật: Sử dụng 'id'
+                            title: itemDetailsForFrontend.title || itemNameForMessage, // Cập nhật: Sử dụng 'title'
                             acronym: itemDetailsForFrontend.acronym || '',
-                            // Ensure other relevant fields are copied if available
-                            dates: itemDetailsForFrontend.dates,
-                            location: itemDetailsForFrontend.location,
+                            creatorId: itemDetailsForFrontend.creatorId || null,
+                            adminId: itemDetailsForFrontend.adminId || '', // Cung cấp giá trị mặc định nếu cần
+                            followedAt: itemDetailsForFrontend.followedAt || new Date().toISOString(), // Cung cấp giá trị mặc định nếu cần
+                            updatedAt: itemDetailsForFrontend.updatedAt || new Date().toISOString(), // Cung cấp giá trị mặc định nếu cần
+                            status: itemDetailsForFrontend.status || 'CRAWLED', // Cung cấp giá trị mặc định nếu cần
+                            dates: itemDetailsFromFind.dates,
+                            location: itemDetailsForFrontend.location || { address: '', cityStateProvince: '', country: '', continent: '' }, // Cung cấp giá trị mặc định nếu cần
                         };
 
-
                         finalFrontendAction = {
-                            type: 'itemCalendarStatusUpdated', // New name for Calendar related updates
+                            type: 'itemCalendarStatusUpdated',
                             payload: {
                                 item: itemDataForFrontend,
-                                itemType: validItemType, // 'conference'
+                                itemType: validItemType,
                                 calendar: validAction === 'add',
-                            }
+                            } as ItemCalendarStatusUpdatePayload // Ép kiểu rõ ràng
                         };
 
                     } else {
@@ -306,9 +281,9 @@ export class ManageCalendarHandler implements IFunctionHandler {
                         reportStep('calendar_update_failed', `Failed to update calendar for "${itemNameForMessage}".`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     }
                 } else {
-                    if (validAction === 'add') { // Already in calendar
+                    if (validAction === 'add') {
                         finalMessage = `The ${validItemType} "${itemNameForMessage}" (ID: ${itemId}) is already in your calendar.`;
-                    } else { // action === 'remove', not in calendar
+                    } else {
                         finalMessage = `The ${validItemType} "${itemNameForMessage}" (ID: ${itemId}) is not currently in your calendar.`;
                     }
                     logToFile(`${logPrefix} ManageCalendar: No API call executed for action '${validAction}' on conference ${itemId}. Current status: ${isCurrentlyInCalendar ? 'In Calendar' : 'Not In Calendar'}`);
@@ -316,14 +291,13 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 }
                 return { modelResponseContent: finalMessage, frontendAction: finalFrontendAction, thoughts: localThoughts };
             } else {
-                // This case should ideally not be reached due to prior validation
                 const errorMsg = `Unsupported action for calendar: ${validAction}`;
                 logToFile(`${logPrefix} ManageCalendar: Validation Error - ${errorMsg}`);
                 reportStep('function_error', 'Unsupported action.', { error: errorMsg, action: validAction });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
 
-        } catch (error: unknown) { // Catch as unknown for safer error handling
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logToFile(`${logPrefix} CRITICAL Error in ManageCalendarHandler: ${errorMessage}\nStack: ${errorStack}`);
             reportStep('function_error', `Critical error during calendar management processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
