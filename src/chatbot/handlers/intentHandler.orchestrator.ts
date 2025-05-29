@@ -3,7 +3,7 @@ import 'reflect-metadata'; // Required for tsyringe dependency injection
 import { container } from 'tsyringe';
 import { Socket } from 'socket.io';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
-import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse } from '../shared/types';
+import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse, PersonalizationPayload } from '../shared/types';
 import { Gemini } from '../gemini/gemini';
 import { ConfigService } from "../../config/config.service";
 // Import the new dependency types
@@ -163,21 +163,29 @@ export async function handleNonStreaming(
     socket: Socket,
     language: Language,
     handlerId: string,
-    frontendMessageId?: string
-): ReturnType<typeof handleNonStreamingActual> {
+    frontendMessageId?: string,
+    personalizationData?: PersonalizationPayload | null // <<< ADDED
+): ReturnType<typeof handleNonStreamingActual> { // ReturnType should be Promise<NonStreamingHandlerResult | void>
+
     // Perform a runtime check to ensure dependencies were initialized.
     // This provides a clearer error message than a raw TypeError.
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleNonStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
-    logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}`);
+    logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
     return handleNonStreamingActual(
-        userInput, historyForHandler, socket, language, handlerId,
-        hostAgentDependencies, // Pass Host Agent's dependencies
-        frontendMessageId
+        userInput,
+        historyForHandler,
+        socket,
+        language,
+        handlerId,
+        hostAgentDependencies,
+        frontendMessageId,
+        personalizationData // <<< PASS
     );
 }
+
 
 /**
  * Handles streaming user input using the Host Agent.
@@ -198,17 +206,23 @@ export async function handleStreaming(
     language: Language,
     handlerId: string,
     onActionGenerated?: (action: FrontendAction) => void,
-    frontendMessageId?: string
-): ReturnType<typeof handleStreamingActual> {
+    frontendMessageId?: string,
+    personalizationData?: PersonalizationPayload | null // <<< ADDED
+): ReturnType<typeof handleStreamingActual> { // ReturnType should be Promise<ChatHistoryItem[] | void>
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
-    logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}`);
+    logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
     return handleStreamingActual(
-        userInput, currentHistoryFromSocket, socket, language, handlerId,
-        hostAgentDependencies, // Pass Host Agent's dependencies
+        userInput,
+        currentHistoryFromSocket,
+        socket,
+        language,
+        handlerId,
+        hostAgentDependencies,
         onActionGenerated,
-        frontendMessageId
+        frontendMessageId,
+        personalizationData // <<< PASS
     );
 }

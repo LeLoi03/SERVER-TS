@@ -19,9 +19,11 @@ import {
     ResultUpdate,
     ErrorUpdate,
     AgentCardRequest,
-    AgentCardResponse
+    AgentCardResponse,
+    PersonalizationPayload // <<< IMPORT
+
 } from '../shared/types';
-import { getAgentLanguageConfig } from '../utils/languageConfig';
+import { getAgentLanguageConfig } from '../utils/languageConfig'; // This will be updated
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
 interface NonStreamingHandlerResult {
@@ -41,7 +43,7 @@ function isRouteToAgentArgs(args: any): args is RouteToAgentArgs {
         return false;
     }
     return typeof args.targetAgent === 'string' &&
-           typeof args.taskDescription === 'string';
+        typeof args.taskDescription === 'string';
 }
 
 
@@ -52,8 +54,10 @@ export async function handleNonStreaming(
     language: Language,
     handlerId: string,
     deps: HostAgentHandlerCustomDeps,
-    frontendMessageId?: string
+    frontendMessageId?: string,
+    personalizationData?: PersonalizationPayload | null // <<< ADDED
 ): Promise<NonStreamingHandlerResult | void> {
+
     const {
         geminiServiceForHost,
         hostAgentGenerationConfig,
@@ -65,10 +69,20 @@ export async function handleNonStreaming(
 
     const socketId = socket.id;
     const conversationId = handlerId;
-    logToFile(`--- [${handlerId} Socket ${socketId}] Handling NON-STREAMING input: "${userInput.substring(0, 50)}...", Lang: ${language} ---`);
+    logToFile(`--- [${handlerId} Socket ${socketId}] Handling NON-STREAMING input: "${userInput.substring(0, 50)}...", Lang: ${language}` + (personalizationData ? `, Personalization: Enabled` : ``) + ` ---`);
+
+    if (personalizationData) {
+        logToFile(`[DEBUG ${handlerId}] NonStreaming Personalization Data: ${JSON.stringify(personalizationData)}`);
+    }
 
     const currentAgentId: AgentId = 'HostAgent';
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId);
+    // VVV PASS personalizationData to getAgentLanguageConfig VVV
+    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
+        language,
+        currentAgentId,
+        personalizationData // <<< PASS
+    );
+
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
     let history: ChatHistoryItem[] = [...historyForHandler];
@@ -138,7 +152,7 @@ export async function handleNonStreaming(
 
             const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | import('@google/genai').Content; tools?: Tool[] } = {
                 ...hostAgentGenerationConfig,
-                systemInstruction: systemInstructions,
+                systemInstruction: systemInstructions, // This now potentially includes personalization
                 tools: tools
             };
 
@@ -163,7 +177,7 @@ export async function handleNonStreaming(
             else if (modelResult.status === "error") {
                 logToFile(`[${handlerId} NonStreaming Error T${currentTurn}] HostAgent model error: ${modelResult.errorMessage}`);
                 safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `Error processing your request (Turn ${currentTurn}).`, step: 'host_llm_error' });
-                return { history: history };
+                return { history: history }; // Return void or history based on your error handling strategy
             }
             else if (modelResult.status === "requires_function_call" && modelResult.functionCall) {
                 const functionCall = modelResult.functionCall;
@@ -175,7 +189,7 @@ export async function handleNonStreaming(
                 logToFile(`[${handlerId} NonStreaming T${currentTurn}] HostAgent requests function: ${functionCall.name}. History size: ${history.length}`);
 
                 let functionResponsePartForHistory: Part;
-                let functionErrorOccurred = false;
+                // let functionErrorOccurred = false; // Not strictly needed if not changing flow based on it
 
                 if (functionCall.name === 'routeToAgent') {
                     // Use the type guard here
@@ -191,14 +205,14 @@ export async function handleNonStreaming(
                             functionResponsePartForHistory = {
                                 functionResponse: { name: functionCall.name, response: { error: `Routing failed: Agent "${routeArgs.targetAgent}" is not allowed or supported.` } }
                             };
-                            functionErrorOccurred = true;
+                            // functionErrorOccurred = true;
                             logToFile(`[${handlerId} NonStreaming T${currentTurn}] Disallowed agent: ${routeArgs.targetAgent}`);
                         } else {
                             const requestCard: AgentCardRequest = {
                                 taskId: uuidv4(), conversationId, senderAgentId: 'HostAgent',
                                 receiverAgentId: routeArgs.targetAgent as AgentId, // Already checked it's a string
                                 timestamp: new Date().toISOString(), taskDescription: routeArgs.taskDescription, // Already checked it's a string
-                                context: { userToken: socket.data.token, language },
+                                context: { userToken: socket.data.token, language }, // Pass language here
                             };
                             const subAgentResponse: AgentCardResponse = await callSubAgentHandler(
                                 requestCard, handlerId, language, socket
@@ -219,7 +233,7 @@ export async function handleNonStreaming(
                                 functionResponsePartForHistory = {
                                     functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } }
                                 };
-                                functionErrorOccurred = true;
+                                // functionErrorOccurred = true;
                             }
                         }
                     } else {
@@ -227,7 +241,7 @@ export async function handleNonStreaming(
                         functionResponsePartForHistory = {
                             functionResponse: { name: functionCall.name, response: { error: "Routing failed: Invalid or missing arguments for routeToAgent." } }
                         };
-                        functionErrorOccurred = true;
+                        // functionErrorOccurred = true;
                         logToFile(`[${handlerId} NonStreaming T${currentTurn}] Invalid or missing routeToAgent args: ${JSON.stringify(functionCall.args)}`);
                         statusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: 'Failed to understand routing instruction.', details: functionCall.args });
                     }
@@ -236,7 +250,7 @@ export async function handleNonStreaming(
                     functionResponsePartForHistory = {
                         functionResponse: { name: functionCall.name, response: { error: errMsg } }
                     };
-                    functionErrorOccurred = true;
+                    // functionErrorOccurred = true;
                     statusUpdateCallback('status_update', { type: 'status', step: 'host_agent_config_error', message: errMsg, details: { functionName: functionCall.name } });
                     logToFile(`[${handlerId} NonStreaming T${currentTurn}] HostAgent invalid direct call: ${functionCall.name}`);
                 }
@@ -250,32 +264,33 @@ export async function handleNonStreaming(
                 history.push(functionResponseTurn);
                 logToFile(`[${handlerId} NonStreaming T${currentTurn}] Appended function response for ${functionCall.name}. History size: ${history.length}`);
 
-                nextTurnInputForHost = "";
+                nextTurnInputForHost = ""; // Reset input for next turn, model will use history
                 currentTurn++;
-                continue;
+                continue; // Continue to the next iteration of the while loop
             }
-            else {
+            else { // Should not happen if geminiService.generateTurn is well-behaved
                 logToFile(`[${handlerId} NonStreaming Error T${currentTurn}] HostAgent model unexpected status: ${modelResult.status}`);
                 safeEmit('chat_error', { type: 'error', message: `An unexpected internal error occurred (Turn ${currentTurn}).`, step: 'unknown_model_status' });
-                return { history: history };
+                return { history: history }; // Or return void
             }
-        }
+        } // End while loop
 
         if (currentTurn > maxTurnsHostAgent) {
             logToFile(`[${handlerId} NonStreaming Error] Exceeded maximum HostAgent turns (${maxTurnsHostAgent}).`);
             safeEmit('chat_error', { type: 'error', message: 'Request processing took too long or got stuck in a loop.', step: 'max_turns_exceeded' });
-            return { history: history };
+            return { history: history }; // Or return void
         }
 
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : "An unknown error occurred";
         logToFile(`[${handlerId} NonStreaming CRITICAL Error - ${socketId}] ${errorMsg}\nStack: ${error.stack}`);
         safeEmit('chat_error', { type: "error", message: errorMsg, step: 'unknown_handler_error' });
-        return { history: history };
+        return { history: history }; // Or return void
     } finally {
         logToFile(`--- [${handlerId} Socket ${socketId} Lang: ${language}] NON-STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
     }
 
+    // This part should ideally not be reached if the while loop logic is correct
     logToFile(`[${handlerId} NonStreaming WARN] Reached end of handler unexpectedly. Returning current history.`);
     return { history: history, action: finalFrontendAction };
 }

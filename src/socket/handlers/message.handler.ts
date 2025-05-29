@@ -11,12 +11,13 @@ import { mapHistoryItemToChatMessage } from '../../chatbot/utils/mapHistoryItemT
 import {
     FrontendAction,
     ConfirmSendEmailAction,
-    SendMessageData,
+    SendMessageData, // This will now include personalizationData
     Language,
-    BackendEditUserMessagePayload,
+    BackendEditUserMessagePayload, // This will now include personalizationData
     BackendConversationUpdatedAfterEditPayload,
     ChatHistoryItem,
     ChatMessage,
+    PersonalizationPayload, // Import if needed for explicit typing
 } from '../../chatbot/shared/types';
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
@@ -61,18 +62,31 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             return sendChatError(handlerLogContext, 'Authentication session error: token missing. Please re-login.', 'missing_token_auth', { userId: authenticatedUserId });
         }
 
-        if (!isSendMessageData(data)) {
+        if (!isSendMessageData(data)) { // isSendMessageData will use the updated type
             return sendChatError(handlerLogContext, 'Invalid message payload: Missing "userInput" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
-        const { userInput, isStreaming = true, language, conversationId: payloadConversationId, frontendMessageId } = data;
+        const {
+            userInput,
+            isStreaming = true,
+            language,
+            conversationId: payloadConversationId,
+            frontendMessageId,
+            personalizationData // <<< EXTRACT personalizationData
+        } = data;
         socket.data.language = language;
+
 
         logToFile(
             `[INFO] ${handlerLogContext} 'send_message' request received.` +
             ` Input: "${userInput.substring(0, 30) + (userInput.length > 30 ? '...' : '')}"` +
-            `, Streaming: ${isStreaming}, Language: ${language}, PayloadConvId: ${payloadConversationId || 'N/A'}.`
+            `, Streaming: ${isStreaming}, Language: ${language}, PayloadConvId: ${payloadConversationId || 'N/A'}` +
+            (personalizationData ? `, Personalization: Enabled` : `, Personalization: Disabled`) // Log if personalization data is present
         );
+        if (personalizationData) {
+            logToFile(`[DEBUG] ${handlerLogContext} Personalization Data: ${JSON.stringify(personalizationData)}`);
+        }
+
 
         let targetConversationId: string;
         let currentConvLogContext = handlerLogContext;
@@ -136,15 +150,31 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             };
 
             if (isStreaming) {
-                updatedHistory = await handleStreaming(userInput, currentHistory, socket, language, handlerId, handleAction, frontendMessageId);
+                updatedHistory = await handleStreaming(
+                    userInput,
+                    currentHistory,
+                    socket,
+                    language,
+                    handlerId,
+                    handleAction,
+                    frontendMessageId,
+                    personalizationData // <<< PASS personalizationData
+                );
             } else {
-                const handlerResult = await handleNonStreaming(userInput, currentHistory, socket, language, handlerId, frontendMessageId);
+                const handlerResult = await handleNonStreaming(
+                    userInput,
+                    currentHistory,
+                    socket,
+                    language,
+                    handlerId,
+                    frontendMessageId,
+                    personalizationData // <<< PASS personalizationData
+                );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
                     handleAction(handlerResult.action);
                 }
             }
-
             if (Array.isArray(updatedHistory)) {
                 const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, authenticatedUserId, updatedHistory);
                 if (updateSuccess) {
@@ -170,14 +200,27 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         if (!authenticatedUserId) return;
         const handlerLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}][${authenticatedUserId}][Req:${handlerIdSuffix}]`;
 
-        if (!isBackendEditUserMessagePayload(data)) {
+        if (!isBackendEditUserMessagePayload(data)) { // isBackendEditUserMessagePayload will use the updated type
             return sendChatError(handlerLogContext, 'Invalid payload for edit_user_message. Missing required fields.', 'invalid_payload_edit', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
-        const { conversationId, messageIdToEdit, newText, language } = data;
+        const {
+            conversationId,
+            messageIdToEdit,
+            newText,
+            language,
+            personalizationData // <<< EXTRACT personalizationData
+        } = data;
+
         const isStreaming = socket.data.isStreamingEnabled ?? true;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
-        logToFile(`[INFO] ${convLogContext} 'edit_user_message' request received. New text: "${newText.substring(0, 30) + (newText.length > 30 ? '...' : '')}", Streaming: ${isStreaming}, Language: ${language}.`);
+        logToFile(
+            `[INFO] ${convLogContext} 'edit_user_message' request received. New text: "${newText.substring(0, 30) + (newText.length > 30 ? '...' : '')}", Streaming: ${isStreaming}, Language: ${language}` +
+            (personalizationData ? `, Personalization: Enabled` : `, Personalization: Disabled`)
+        );
+        if (personalizationData) {
+            logToFile(`[DEBUG] ${convLogContext} Personalization Data for edit: ${JSON.stringify(personalizationData)}`);
+        }
 
         try {
             const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(authenticatedUserId, conversationId, messageIdToEdit, newText);
@@ -204,9 +247,26 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             };
 
             if (isStreaming) {
-                finalHistoryFromAI = await handleStreaming(newText, historyForNewBotResponse, socket, language, aiHandlerId, handleAIActionCallback, messageIdToEdit);
+                finalHistoryFromAI = await handleStreaming(
+                    newText, // User input is the newText for the AI
+                    historyForNewBotResponse,
+                    socket,
+                    language,
+                    aiHandlerId, // Use a unique handler ID for this AI interaction
+                    handleAIActionCallback,
+                    messageIdToEdit, // Pass the original user message ID as frontendMessageId for context
+                    personalizationData // <<< PASS personalizationData
+                );
             } else {
-                const nonStreamingResult = await handleNonStreaming(newText, historyForNewBotResponse, socket, language, aiHandlerId, messageIdToEdit);
+                const nonStreamingResult = await handleNonStreaming(
+                    newText, // User input is the newText for the AI
+                    historyForNewBotResponse,
+                    socket,
+                    language,
+                    aiHandlerId, // Use a unique handler ID
+                    messageIdToEdit, // Pass the original user message ID
+                    personalizationData // <<< PASS personalizationData
+                );
                 if (nonStreamingResult) {
                     finalHistoryFromAI = nonStreamingResult.history;
                     if (nonStreamingResult.action) handleAIActionCallback(nonStreamingResult.action);
@@ -234,12 +294,16 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
 
             let newBotMessageForClient: ChatHistoryItem | undefined;
+            // Find the new bot message from the history returned by the AI handler
+            // It should be after the `historyForNewBotResponse` part.
             for (let i = historyToSaveInDB.length - 1; i >= historyForNewBotResponse.length; i--) {
                 if (historyToSaveInDB[i].role === 'model') {
                     newBotMessageForClient = historyToSaveInDB[i];
                     break;
                 }
             }
+
+            // Fallback if the loop didn't find it but the last message is a model response
             if (!newBotMessageForClient && historyToSaveInDB.length > 0) {
                 const lastMessageInSavedHistory = historyToSaveInDB[historyToSaveInDB.length - 1];
                 if (lastMessageInSavedHistory.role === 'model') newBotMessageForClient = lastMessageInSavedHistory;
@@ -273,6 +337,8 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
     logToFile(`${baseLogContext}[${deps.userId}] Message event handlers successfully registered.`);
 };
 
+// Type guards remain the same, but they will now correctly infer the types
+// including the optional personalizationData field.
 function isSendMessageData(data: unknown): data is SendMessageData {
     return (
         typeof data === 'object' &&
@@ -281,6 +347,7 @@ function isSendMessageData(data: unknown): data is SendMessageData {
         !!(data as SendMessageData).userInput?.trim() &&
         typeof (data as SendMessageData).language === 'string' &&
         !!(data as SendMessageData).language
+        // No need to check for personalizationData as it's optional
     );
 }
 
@@ -292,5 +359,6 @@ function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEd
         typeof (payload as BackendEditUserMessagePayload).messageIdToEdit === 'string' &&
         typeof (payload as BackendEditUserMessagePayload).newText === 'string' &&
         typeof (payload as BackendEditUserMessagePayload).language === 'string'
+        // No need to check for personalizationData as it's optional
     );
 }
