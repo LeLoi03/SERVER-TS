@@ -288,6 +288,21 @@ export interface RemoveFromCalendarPayload {
     calendarEventId?: string;
 }
 
+// Định nghĩa payload cho action hiển thị nguồn hội nghị
+export interface DisplayConferenceSourcesPayload {
+    conferences: Array<{
+        id: string;
+        title: string;
+        acronym?: string; // Tên viết tắt có thể không có
+        rank?: string;    // Rank có thể không có hoặc là 'N/A'
+        source?: string;  // Nguồn rank
+        conferenceDates?: string; // Chuỗi ngày đã được format, ví dụ: "May 10 - 12, 2024"
+        location?: string; // Chuỗi địa điểm đã được format
+        // Thêm các trường khác nếu bạn muốn hiển thị trên card ở frontend
+    }>;
+    title?: string; // Tiêu đề cho phần hiển thị này, ví dụ: "Conferences Found"
+}
+
 /**
  * Defines the types of actions the backend can request the frontend to perform.
  * This is a discriminated union type, where `type` distinguishes different actions.
@@ -297,6 +312,7 @@ export type FrontendAction =
     | { type: 'openMap'; location: string } // Instructs frontend to open a map to a specific location.
     | { type: 'confirmEmailSend'; payload: ConfirmSendEmailAction } // Asks frontend to show an email confirmation dialog.
     | { type: 'displayList'; payload: DisplayListPayload } // Instructs frontend to display a list of items.
+    | { type: 'displayConferenceSources'; payload: DisplayConferenceSourcesPayload } // <<< ACTION MỚI
     | { type: 'addToCalendar'; payload: AddToCalendarPayload } // Instructs frontend to add an item to calendar.
     | { type: 'removeFromCalendar'; payload: RemoveFromCalendarPayload } // Instructs frontend to remove an item from calendar.
     | { type: 'itemFollowStatusUpdated'; payload: ItemFollowStatusUpdatePayload } // Informs frontend about a change in item's follow status.
