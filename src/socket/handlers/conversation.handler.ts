@@ -10,11 +10,10 @@ import {
     ClientConversationMetadata,
     RenameResult,
     NewConversationResult,
-    ChatMessage,
     Language,
-    ChatHistoryItem
+    ChatHistoryItem,
+    InitialHistoryPayload
 } from '../../chatbot/shared/types';
-import { mapHistoryToFrontendMessages } from '../../chatbot/utils/historyMapper';
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
@@ -81,19 +80,27 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
 
         logToFile(`[INFO] ${convLogContext} 'load_conversation' request received.`);
         try {
-            const history: ChatHistoryItem[] | null = await conversationHistoryService.getConversationHistory(requestedConvId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
+            const historyItems: ChatHistoryItem[] | null = await conversationHistoryService.getConversationHistory(requestedConvId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
 
-            if (history === null) {
+            if (historyItems === null) {
                 return sendChatError(convLogContext, 'Conversation not found or access denied.', 'history_not_found_load', { conversationId: requestedConvId });
             }
 
-            const frontendMessages: ChatMessage[] = mapHistoryToFrontendMessages(history);
+            // Không cần map sang frontendMessages ở đây nữa
+            // const frontendMessages: ChatMessage[] = mapHistoryToFrontendMessages(historyItems); // <<< LOẠI BỎ DÒNG NÀY
+
             socket.data.currentConversationId = requestedConvId;
 
-            logToFile(`[DEBUG] ${convLogContext} Emitting 'initial_history'. Message Count: ${frontendMessages.length}.`);
-            socket.emit('initial_history', { conversationId: requestedConvId, messages: frontendMessages });
-            logToFile(`[INFO] ${convLogContext} Sent conversation history. Set as active. Message Count: ${frontendMessages.length}.`);
-        } catch (error: unknown) { // Use unknown here
+            const payloadForClient: InitialHistoryPayload = { // Sử dụng type đã cập nhật
+                conversationId: requestedConvId,
+                messages: historyItems // <<< GỬI TRỰC TIẾP ChatHistoryItem[]
+            };
+
+            logToFile(`[DEBUG] ${convLogContext} Emitting 'initial_history'. HistoryItem Count: ${historyItems.length}.`);
+            socket.emit('initial_history', payloadForClient);
+            logToFile(`[INFO] ${convLogContext} Sent conversation history (as ChatHistoryItem[]). Set as active. Item Count: ${historyItems.length}.`);
+
+        } catch (error: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(error);
             sendChatError(convLogContext, `Server error loading conversation history: ${errorMessage}.`, 'history_load_fail_server', { conversationId: requestedConvId, error: errorMessage });
         }

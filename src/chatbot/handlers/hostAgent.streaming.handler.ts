@@ -1,114 +1,60 @@
 // src/chatbot/handlers/hostAgent.streaming.handler.ts
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
-// Import types from the new SDK
-import {
-    Tool,
-    Part,
-    FunctionCall,
-    FunctionResponse,
-    GenerateContentResponse, // New SDK type for stream chunks
-    GenerateContentConfig
-} from '@google/genai';
-
-import {
-    ChatHistoryItem,
-    FrontendAction,
-    Language,
-    AgentId,
-    ThoughtStep,
-    StatusUpdate,
-    ResultUpdate,
-    ErrorUpdate,
-    ChatUpdate,
-    AgentCardRequest,
-    AgentCardResponse,
-    PersonalizationPayload // <<< IMPORT
-
-} from '../shared/types';
+import { Tool, Part, GenerateContentResponse, GenerateContentConfig, Content } from '@google/genai';
+import { ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate, ResultUpdate, ErrorUpdate, ChatUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload } from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
-// Define RouteToAgentArgs if it's not already defined elsewhere accessible
-interface RouteToAgentArgs {
-    targetAgent: string;
-    taskDescription: string;
-}
-
-// Type guard to check if the args object is a valid RouteToAgentArgs
+interface RouteToAgentArgs { targetAgent: string; taskDescription: string; }
 function isRouteToAgentArgs(args: any): args is RouteToAgentArgs {
-    if (typeof args !== 'object' || args === null) {
-        return false;
-    }
-    return typeof args.targetAgent === 'string' &&
-        typeof args.taskDescription === 'string';
+    if (typeof args !== 'object' || args === null) return false;
+    return typeof args.targetAgent === 'string' && typeof args.taskDescription === 'string';
 }
-
 
 export async function handleStreaming(
-    userInput: string,
-    currentHistoryFromSocket: ChatHistoryItem[],
+    userInputParts: Part[],
+    initialHistoryFromSocket: ChatHistoryItem[],
     socket: Socket,
     language: Language,
-    handlerId: string,
+    handlerId: string, // Đây sẽ được dùng như conversationId cho logic bên trong
     deps: HostAgentHandlerCustomDeps,
     onActionGenerated?: (action: FrontendAction) => void,
     frontendMessageId?: string,
-    personalizationData?: PersonalizationPayload | null // <<< ADDED
-
+    personalizationData?: PersonalizationPayload | null
 ): Promise<ChatHistoryItem[] | void> {
-    const {
-        geminiServiceForHost,
-        hostAgentGenerationConfig, // Should be compatible with GenerateContentConfig
-        logToFile,
-        allowedSubAgents,
-        maxTurnsHostAgent,
-        callSubAgentHandler
-    } = deps;
+    const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
+    const baseLogContext = `[${handlerId} Streaming Socket ${socket.id}]`;
+    const inputTextSummary = userInputParts.find(p => p.text)?.text || `[${userInputParts.length} parts content]`;
+    logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}, Personalization: ${!!personalizationData} ---`);
 
-    const socketId = socket.id;
-    const conversationId = handlerId;
-    logToFile(`--- [${handlerId} Socket ${socketId}] Handling STREAMING input: "${userInput.substring(0, 50)}...", Lang: ${language}` + (personalizationData ? `, Personalization: Enabled` : ``) + ` ---`);
-    if (personalizationData) {
-        logToFile(`[DEBUG ${handlerId}] Streaming Personalization Data: ${JSON.stringify(personalizationData)}`);
-    }
+    // Sử dụng handlerId như là conversationId cho AgentCardRequest
+    const conversationIdForSubAgent = handlerId;
 
-    const currentAgentIdForHost: AgentId = 'HostAgent';
-    // VVV PASS personalizationData to getAgentLanguageConfig VVV
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
-        language,
-        currentAgentIdForHost,
-        personalizationData // <<< PASS
-    );
-
+    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, 'HostAgent', personalizationData);
     const hostAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
-    let history: ChatHistoryItem[] = [...currentHistoryFromSocket];
+    let completeHistoryToSave: ChatHistoryItem[] = [...initialHistoryFromSocket];
+    let historyForApiCall: ChatHistoryItem[] = [...initialHistoryFromSocket];
+
     const allThoughtsCollectedStreaming: ThoughtStep[] = [];
     let finalFrontendActionStreaming: FrontendAction | undefined = undefined;
 
-    const isEditContextOrAlreadyProcessed = frontendMessageId &&
-        history.length > 0 &&
-        history[history.length - 1].role === 'user' &&
-        history[history.length - 1].uuid === frontendMessageId &&
-        history[history.length - 1].parts[0]?.text === userInput;
+    const currentUserTurn: ChatHistoryItem = {
+        role: 'user',
+        parts: userInputParts,
+        timestamp: new Date(),
+        uuid: frontendMessageId || `user-stream-${handlerId}-${Date.now()}`
+    };
+    completeHistoryToSave.push(currentUserTurn);
+    logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) added to completeHistoryToSave. Total: ${completeHistoryToSave.length}`);
 
-    if (!isEditContextOrAlreadyProcessed) {
-        logToFile(`[${handlerId} Streaming - UserTurn] Adding new userTurn. frontendMessageId: ${frontendMessageId}`);
-        history.push({
-            role: 'user', parts: [{ text: userInput }],
-            timestamp: new Date(), uuid: frontendMessageId || `user-fallback-${handlerId}-${Date.now()}`
-        });
-    } else {
-        logToFile(`[${handlerId} Streaming - UserTurn] Skipping adding userTurn (edit/processed). frontendMessageId: ${frontendMessageId}`);
-    }
 
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',
         data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate
     ): boolean => {
         if (!socket.connected) {
-            logToFile(`[${handlerId} Streaming Emit SKIPPED - ${socketId}] Client disconnected. Event: ${eventName}`);
             return false;
         }
         try {
@@ -131,122 +77,152 @@ export async function handleStreaming(
                 }
             }
             socket.emit(eventName, dataToSend);
-            logToFile(`[${handlerId} Streaming Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}, Agent: ${dataToSend.agentId || 'N/A'}`);
             return true;
         } catch (error: any) {
-            logToFile(`[${handlerId} Streaming Emit FAILED - ${socketId}] Error: ${error.message}. Event: ${eventName}`);
             return false;
         }
     };
 
     const hostAgentStreamingStatusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
-        // Ensure agentId is HostAgent for status updates originating from here
         return safeEmitStreaming(eventName, { ...data, agentId: 'HostAgent' });
     };
 
-    // Updated to use GenerateContentResponse from the new SDK
-    async function processAndEmitStream(stream: AsyncGenerator<GenerateContentResponse>): Promise<{ fullText: string } | null> {
+    async function processAndEmitStream(stream: AsyncGenerator<GenerateContentResponse>): Promise<{ fullText: string; parts?: Part[] } | null> {
         let accumulatedText = "";
-        let streamFinishedSuccessfully = false; // Changed variable name for clarity
+        let accumulatedParts: Part[] = []; // To store all parts from the stream if needed
+        let streamFinishedSuccessfully = false;
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) return null;
 
         try {
-            for await (const chunk of stream) {
-                if (!socket.connected) { logToFile(`[${handlerId} Stream Abort - ${socketId}] Disconnected.`); return null; }
-                // Use the .text getter from the new SDK's GenerateContentResponse
-                const chunkText = chunk.text; // text is a getter in the new SDK
-                if (chunkText !== undefined) { // Getter might return undefined
+            for await (const chunk of stream) { // chunk is GenerateContentResponse
+
+                const chunkText = chunk.text; // text is a direct property
+                if (chunkText !== undefined && chunkText !== null) {
                     accumulatedText += chunkText;
                     if (!safeEmitStreaming('chat_update', { type: 'partial_result', textChunk: chunkText })) return null;
                 }
-                // Check for function calls or other data in chunks if necessary, though typically stream is for text.
-                // The primary function call check is done on the *first* chunk before calling this function.
+
+                // Accumulate all parts from the chunk if they exist
+                // chunk.candidates[0].content.parts
+                const chunkParts = chunk.candidates?.[0]?.content?.parts;
+                if (chunkParts) {
+                    // A simple way to merge: if the last accumulated part is text and current chunkPart is text, append.
+                    // Otherwise, push. This is a basic merge.
+                    chunkParts.forEach(cp => {
+                        if (cp.text && accumulatedParts.length > 0 && accumulatedParts[accumulatedParts.length - 1].text) {
+                            accumulatedParts[accumulatedParts.length - 1].text += cp.text;
+                        } else {
+                            accumulatedParts.push(cp);
+                        }
+                    });
+                }
             }
             streamFinishedSuccessfully = true;
-            logToFile(`[${handlerId} Stream Processing - ${socketId}] Stream finished successfully. Accumulated text length: ${accumulatedText.length}`);
-            return { fullText: accumulatedText };
+            // If accumulatedParts is empty but text is not, create a text part
+            if (accumulatedParts.length === 0 && accumulatedText) {
+                accumulatedParts.push({ text: accumulatedText });
+            }
+            return { fullText: accumulatedText, parts: accumulatedParts };
         } catch (error: any) {
-            logToFile(`[${handlerId} Stream Processing Error - ${socketId}] ${error.message}`);
-            // Do not re-throw here, let the caller handle it or return null
-            // based on socket connection status.
             if (socket.connected) {
                 safeEmitStreaming('chat_error', { type: 'error', message: `Error processing stream: ${error.message}`, step: 'streaming_processing_error' });
             }
-            return null; // Indicate failure
+            return null;
         } finally {
             if (!streamFinishedSuccessfully) {
-                logToFile(`[${handlerId} Stream Processing Warn - ${socketId}] Stream loop exited unexpectedly or with an error.`);
             }
         }
     }
+     try {
+        if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return completeHistoryToSave;
 
-    try {
-        if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return;
-
-        let nextTurnInputForHost: string | Part[] = userInput;
+        let nextTurnInputForLlm: Part[] = userInputParts;
         let currentHostTurn = 1;
 
         while (currentHostTurn <= maxTurnsHostAgent) {
-            logToFile(`--- [${handlerId} HostAgent Streaming Turn ${currentHostTurn} Start - Socket ${socketId}] Input type: ${typeof nextTurnInputForHost === 'string' ? 'string' : 'Part[]'}, History size: ${history.length} ---`);
-            if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process based on previous action (Turn ${currentHostTurn})...` : 'Thinking...' })) return;
-            if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected before Host model call.`); return; }
+            const turnLogContext = `${baseLogContext} Turn ${currentHostTurn}`;
+            
+            logToFile(`--- ${turnLogContext} Start --- Input type: Part[] length ${nextTurnInputForLlm.length}, API History (to send): ${historyForApiCall.length} ---`);
+            if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process (Turn ${currentHostTurn})...` : 'Thinking...' })) return completeHistoryToSave;
+            if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected before Host model call.`); return completeHistoryToSave; }
 
-            const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | import('@google/genai').Content; tools?: Tool[] } = {
-                ...hostAgentGenerationConfig,
-                systemInstruction: systemInstructions, // This now potentially includes personalization
-                tools: hostAgentTools
+            const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | Content; tools?: Tool[] } = {
+                ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: hostAgentTools
             };
 
             const hostAgentLLMResult = await geminiServiceForHost.generateStream(
-                nextTurnInputForHost,
-                history,
+                nextTurnInputForLlm,
+                historyForApiCall,
                 combinedConfig
             );
 
-            if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected after Host model call initiated.`); return; }
+            if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected after Host model call initiated.`); return completeHistoryToSave; }
+
+            // Cập nhật historyForApiCall SAU KHI gọi API, với lượt mà nextTurnInputForLlm vừa đại diện
+            if (currentHostTurn === 1) {
+                historyForApiCall.push(currentUserTurn);
+            } else {
+                // Tìm lượt function response cuối cùng trong completeHistoryToSave
+                // (đã được thêm ở vòng lặp trước khi nextTurnInputForLlm là function response đó)
+                let lastFunctionResponseTurn: ChatHistoryItem | undefined;
+                for (let i = completeHistoryToSave.length - 1; i >= 0; i--) {
+                    if (completeHistoryToSave[i].role === 'function') {
+                        lastFunctionResponseTurn = completeHistoryToSave[i];
+                        break;
+                    }
+                }
+
+                if (lastFunctionResponseTurn) {
+                    // Chỉ thêm nếu nó chưa có trong historyForApiCall (để tránh trùng lặp nếu logic phức tạp hơn)
+                    // Cách đơn giản là giả định nó chưa có và push.
+                    // Hoặc, đảm bảo rằng historyForApiCall được xây dựng lại chính xác.
+                    // Với logic hiện tại, nó nên được push.
+                    historyForApiCall.push(lastFunctionResponseTurn);
+                } else {
+                    logToFile(`${turnLogContext} WARNING: Could not find last function response in completeHistoryToSave to update historyForApiCall for turn > 1. This might be an issue if multiple function calls occur without intervening user/model text turns.`);
+                }
+            }
 
             if (hostAgentLLMResult.error) {
-                logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] HostAgent model error: ${hostAgentLLMResult.error}`);
+                logToFile(`${turnLogContext} Error - HostAgent model error: ${hostAgentLLMResult.error}`);
                 safeEmitStreaming('chat_error', { type: 'error', message: hostAgentLLMResult.error, step: 'host_llm_error' });
-                return history; // Return current history on error
-            } else if (hostAgentLLMResult.functionCall) { // Note: gemini.ts returns singular functionCall
-                const functionCall = hostAgentLLMResult.functionCall; // Already singular
-                const modelFunctionCallTurn: ChatHistoryItem = { role: 'model', parts: [{ functionCall: functionCall }] };
-                history.push(modelFunctionCallTurn);
-                logToFile(`[${handlerId} Streaming T${currentHostTurn}] HostAgent requests function: ${functionCall.name}. History size: ${history.length}`);
+                return completeHistoryToSave;
+            } else if (hostAgentLLMResult.functionCall) {
+                const functionCall = hostAgentLLMResult.functionCall;
+                const modelUuid = uuidv4();
+                const modelFunctionCallTurn: ChatHistoryItem = {
+                    role: 'model', parts: [{ functionCall: functionCall }], uuid: modelUuid, timestamp: new Date()
+                };
+                
+                completeHistoryToSave.push(modelFunctionCallTurn);
+                historyForApiCall.push(modelFunctionCallTurn);
+                logToFile(`${turnLogContext} HostAgent requests function: ${functionCall.name}. Save history: ${completeHistoryToSave.length}, API history: ${historyForApiCall.length}`);
 
-                let functionResponsePartForHistory: Part;
-                // let functionErrorOccurred = false; // Not strictly needed
-
+                let functionResponseContentPart: Part;
                 if (functionCall.name === 'routeToAgent') {
                     if (isRouteToAgentArgs(functionCall.args)) {
                         const routeArgs = functionCall.args;
                         hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'routing_task', message: `Routing task to ${routeArgs.targetAgent}...`, details: routeArgs });
 
                         if (!allowedSubAgents.includes(routeArgs.targetAgent as AgentId)) {
-                            functionResponsePartForHistory = {
+                            functionResponseContentPart = {
                                 functionResponse: { name: functionCall.name, response: { error: `Routing failed: Agent "${routeArgs.targetAgent}" is not allowed or supported.` } }
                             };
-                            // functionErrorOccurred = true;
                         } else {
                             const requestCard: AgentCardRequest = {
-                                taskId: uuidv4(), conversationId, senderAgentId: 'HostAgent',
+                                taskId: uuidv4(),
+                                conversationId: conversationIdForSubAgent, // Sử dụng biến đã khai báo
+                                senderAgentId: 'HostAgent',
                                 receiverAgentId: routeArgs.targetAgent as AgentId,
-                                timestamp: new Date().toISOString(), taskDescription: routeArgs.taskDescription,
+                                timestamp: new Date().toISOString(),
+                                taskDescription: routeArgs.taskDescription,
                                 context: { userToken: socket.data.token, language },
                             };
-                            const subAgentResponse: AgentCardResponse = await callSubAgentHandler(
-                                requestCard, handlerId, language, socket
-                            );
-
-                            if (subAgentResponse.thoughts && subAgentResponse.thoughts.length > 0) {
-                                // Add sub-agent thoughts to the main collection
-
-                                allThoughtsCollectedStreaming.push(...subAgentResponse.thoughts);
-                            }
+                            const subAgentResponse: AgentCardResponse = await callSubAgentHandler(requestCard, handlerId, language, socket);
+                            if (subAgentResponse.thoughts) allThoughtsCollectedStreaming.push(...subAgentResponse.thoughts);
 
                             if (subAgentResponse.status === 'success') {
-                                functionResponsePartForHistory = {
+                                functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { content: JSON.stringify(subAgentResponse.resultData || "Sub agent task completed.") } }
                                 };
                                 if (subAgentResponse.frontendAction) {
@@ -254,83 +230,72 @@ export async function handleStreaming(
                                     onActionGenerated?.(finalFrontendActionStreaming);
                                 }
                             } else {
-                                functionResponsePartForHistory = {
+                                functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } }
                                 };
-                                // functionErrorOccurred = true;
                             }
                         }
-                    } else { // Invalid args for routeToAgent
-                        functionResponsePartForHistory = {
+                    } else {
+                        functionResponseContentPart = {
                             functionResponse: { name: functionCall.name, response: { error: "Routing failed: Invalid or missing arguments for routeToAgent." } }
                         };
-                        // functionErrorOccurred = true;
-                        logToFile(`[${handlerId} Streaming T${currentHostTurn}] Invalid or missing routeToAgent args: ${JSON.stringify(functionCall.args)}`);
-                        hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'routing_error', message: 'Failed to understand routing instruction.', details: functionCall.args });
                     }
-                } else { // Function name not 'routeToAgent'
+                } else {
                     const errMsg = `Internal config error: HostAgent (streaming) cannot directly call '${functionCall.name}'.`;
-                    functionResponsePartForHistory = {
+                    functionResponseContentPart = {
                         functionResponse: { name: functionCall.name, response: { error: errMsg } }
                     };
-                    // functionErrorOccurred = true;
-                    hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'host_agent_config_error', message: errMsg, details: { functionName: functionCall.name } });
                 }
 
-                if (!socket.connected) { logToFile(`[${handlerId} Abort T${currentHostTurn} - ${socketId}] Disconnected after routing/function execution.`); return; }
+                if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected after routing/function execution.`); return completeHistoryToSave; }
 
-                const functionResponseTurn: ChatHistoryItem = { role: 'function', parts: [functionResponsePartForHistory] };
-                history.push(functionResponseTurn);
-                logToFile(`[${handlerId} Streaming T${currentHostTurn}] Appended function response for ${functionCall.name}. History size: ${history.length}`);
-
-                nextTurnInputForHost = ""; // Reset input for next turn
+                const functionResponseUuid = uuidv4();
+                const functionResponseTurn: ChatHistoryItem = {
+                    role: 'function', parts: [functionResponseContentPart], uuid: functionResponseUuid, timestamp: new Date()
+                };
+                completeHistoryToSave.push(functionResponseTurn);
+                // Lượt function response này sẽ được thêm vào historyForApiCall ở ĐẦU vòng lặp tiếp theo
+                // thông qua logic cập nhật historyForApiCall ở trên, nếu nó trở thành nextTurnInputForLlm.
+                logToFile(`${turnLogContext} Appended function response for ${functionCall.name}. Save history: ${completeHistoryToSave.length}`);
+                
+                nextTurnInputForLlm = [functionResponseContentPart];
                 currentHostTurn++;
-                continue; // Continue to the next iteration of the while loop
-
-            } else if (hostAgentLLMResult.stream) { // Stream is available for text response
-                hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'generating_response', message: 'Generating final answer...' });
+                continue;
+            } else if (hostAgentLLMResult.stream) {
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
-
                 if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
-                    const finalModelTurn: ChatHistoryItem = { role: 'model', parts: [{ text: streamOutput.fullText }], uuid: botMessageUuid, timestamp: new Date() };
-                    history.push(finalModelTurn);
-                    logToFile(`[${handlerId} Streaming - Final Result] Thoughts collected: ${JSON.stringify(allThoughtsCollectedStreaming)}`);
-                    safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, id: botMessageUuid });
-                    return history; // Successfully processed and returned history
-                } else { // Stream processing failed or client disconnected
-                    logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] Failed to process final stream or client disconnected.`);
-                    if (socket.connected) { // Only emit error if still connected
-                        safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });
-                    }
-                    return history; // Return current history
+                    const finalModelParts = streamOutput.parts && streamOutput.parts.length > 0 ? streamOutput.parts : [{ text: streamOutput.fullText }];
+                    const finalModelTurn: ChatHistoryItem = {
+                        role: 'model', parts: finalModelParts, uuid: botMessageUuid, timestamp: new Date()
+                    };
+                    completeHistoryToSave.push(finalModelTurn);
+                    safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, parts: finalModelParts, id: botMessageUuid });
+                    return completeHistoryToSave;
+                } else { 
+                    logToFile(`${turnLogContext} Error - Failed to process final stream or client disconnected.`);
+                    if (socket.connected) safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });
+                    return completeHistoryToSave;
                 }
-            } else { // Unexpected response from geminiService.generateStream
-                logToFile(`[${handlerId} Streaming Error T${currentHostTurn}] HostAgent model unexpected response (streaming).`);
+            } else { 
+                logToFile(`${turnLogContext} Error - HostAgent model unexpected response (streaming).`);
                 safeEmitStreaming('chat_error', { type: 'error', message: 'Internal error: Unexpected AI response (streaming).', step: 'unknown_host_llm_status_stream' });
-                return history; // Return current history
+                return completeHistoryToSave;
             }
-        } // End while loop
+        }
 
-        if (currentHostTurn > maxTurnsHostAgent) {
-            logToFile(`[${handlerId} Streaming Error] Exceeded maximum HostAgent turns (${maxTurnsHostAgent}).`);
+        if (currentHostTurn > maxTurnsHostAgent) { 
+            logToFile(`${baseLogContext} Error - Exceeded maximum HostAgent turns (${maxTurnsHostAgent}).`);
             safeEmitStreaming('chat_error', { type: 'error', message: 'Processing took too long or got stuck in a loop (streaming).', step: 'max_turns_exceeded_stream' });
-            return history; // Return current history
         }
-
-    } catch (error: any) {
+        return completeHistoryToSave;
+    } catch (error: any) { 
         const criticalErrorMsg = error instanceof Error ? error.message : "An unknown critical error occurred";
-        logToFile(`[${handlerId} Streaming CRITICAL Error - ${socketId} Lang: ${language}] ${criticalErrorMsg}\nStack: ${error.stack}`);
-        if (socket.connected) {
-            safeEmitStreaming('chat_error', { type: "error", message: criticalErrorMsg, step: 'unknown_handler_error_stream' });
-        }
-        return history; // Return current history on critical error
-    } finally {
-        logToFile(`--- [${handlerId} Socket ${socketId} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
+        logToFile(`${baseLogContext} CRITICAL Error - Lang: ${language}] ${criticalErrorMsg}\nStack: ${error.stack}`);
+        if (socket.connected) safeEmitStreaming('chat_error', { type: "error", message: criticalErrorMsg, step: 'unknown_handler_error_stream' });
+        return completeHistoryToSave;
     }
-
-    // This part should ideally not be reached
-
-    logToFile(`[${handlerId} Streaming WARN] Reached end of handler unexpectedly. Returning current history.`);
-    return history;
+    finally { 
+        logToFile(`--- ${baseLogContext} Lang: ${language}] STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
+    }
 }

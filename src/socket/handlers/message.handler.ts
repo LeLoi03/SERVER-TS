@@ -11,17 +11,16 @@ import { mapHistoryItemToChatMessage } from '../../chatbot/utils/mapHistoryItemT
 import {
     FrontendAction,
     ConfirmSendEmailAction,
-    SendMessageData, // This will now include personalizationData
+    SendMessageData, // Expects `parts: Part[]` now
     Language,
     BackendEditUserMessagePayload, // This will now include personalizationData
     BackendConversationUpdatedAfterEditPayload,
     ChatHistoryItem,
-    ChatMessage,
     PersonalizationPayload, // Import if needed for explicit typing
 } from '../../chatbot/shared/types';
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
-
+import { Part } from '@google/genai';
 const MESSAGE_HANDLER_NAME = 'MessageHandler';
 
 /**
@@ -62,29 +61,32 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             return sendChatError(handlerLogContext, 'Authentication session error: token missing. Please re-login.', 'missing_token_auth', { userId: authenticatedUserId });
         }
 
-        if (!isSendMessageData(data)) { // isSendMessageData will use the updated type
-            return sendChatError(handlerLogContext, 'Invalid message payload: Missing "userInput" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
+        if (!isSendMessageData(data)) { // isSendMessageData needs to check for `parts`
+            return sendChatError(handlerLogContext, 'Invalid message payload: Missing "parts" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
         const {
-            userInput,
+            parts, // <<< USE `parts` from data
             isStreaming = true,
             language,
             conversationId: payloadConversationId,
             frontendMessageId,
-            personalizationData // <<< EXTRACT personalizationData
+            personalizationData
         } = data;
         socket.data.language = language;
 
 
+
+        // Extract a text summary for logging if possible
+        const textForLog = parts.find(p => p.text)?.text || `[${parts.length} parts, non-text content]`;
         logToFile(
             `[INFO] ${handlerLogContext} 'send_message' request received.` +
-            ` Input: "${userInput.substring(0, 30) + (userInput.length > 30 ? '...' : '')}"` +
+            ` Input Parts: "${textForLog.substring(0, 50) + (textForLog.length > 50 ? '...' : '')}"` +
             `, Streaming: ${isStreaming}, Language: ${language}, PayloadConvId: ${payloadConversationId || 'N/A'}` +
-            (personalizationData ? `, Personalization: Enabled` : `, Personalization: Disabled`) // Log if personalization data is present
+            (personalizationData ? `, Personalization: Enabled` : ``)
         );
-        if (personalizationData) {
-            logToFile(`[DEBUG] ${handlerLogContext} Personalization Data: ${JSON.stringify(personalizationData)}`);
+        if (parts.some(p => p.inlineData || p.fileData)) {
+            logToFile(`[DEBUG] ${handlerLogContext} Message contains file/image data.`);
         }
 
 
@@ -151,30 +153,31 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
             if (isStreaming) {
                 updatedHistory = await handleStreaming(
-                    userInput,
+                    parts, // <<< PASS `parts`
                     currentHistory,
                     socket,
                     language,
                     handlerId,
                     handleAction,
                     frontendMessageId,
-                    personalizationData // <<< PASS personalizationData
+                    personalizationData
                 );
             } else {
                 const handlerResult = await handleNonStreaming(
-                    userInput,
+                    parts, // <<< PASS `parts`
                     currentHistory,
                     socket,
                     language,
                     handlerId,
                     frontendMessageId,
-                    personalizationData // <<< PASS personalizationData
+                    personalizationData
                 );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
                     handleAction(handlerResult.action);
                 }
             }
+
             if (Array.isArray(updatedHistory)) {
                 const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, authenticatedUserId, updatedHistory);
                 if (updateSuccess) {
@@ -192,6 +195,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
     });
 
     socket.on('edit_user_message', async (data: unknown) => {
+        // Editing multimodal messages is complex. For now, 'edit_user_message'
+        // will continue to assume text-only edits as per BackendEditUserMessagePayload.
+        // If you need to edit images/files in a message, that's a much larger feature.
         const eventName = 'edit_user_message';
         const handlerIdSuffix = Date.now();
         let tempLogContext = `${baseLogContext}[${deps.userId}][Req:${handlerIdSuffix}]`;
@@ -235,7 +241,18 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 return sendChatError(convLogContext, 'Message to edit not found or is not the latest user message in the conversation.', 'edit_msg_invalid_target');
             }
 
+            // Now that we've checked the flags, we need to assert that the history items are present.
+            // If messageFoundAndIsLastUserMessage is true, these *should* be defined.
+            // If they are not, it's an internal logical inconsistency in the service's contract.
             const { editedUserMessage, historyForNewBotResponse } = prepareResult;
+
+            if (!editedUserMessage) {
+                return sendChatError(convLogContext, 'Internal error: Edited user message object is missing despite successful preparation.', 'edit_user_msg_missing_after_prepare');
+            }
+            if (!historyForNewBotResponse) {
+                return sendChatError(convLogContext, 'Internal error: Prepared history for new bot response is missing despite successful preparation.', 'edit_history_missing_after_prepare');
+            }
+
             let finalHistoryFromAI: ChatHistoryItem[] | void | undefined;
             const tokenForAction = socket.data.token as string | undefined;
             const aiHandlerId = `${eventName}-${handlerIdSuffix}`;
@@ -246,26 +263,24 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 }
             };
 
+            // For text edits, the input to the AI is the newText.
+            // If we were editing multimodal, this would be newParts.
+            // Chuyển đổi newText (string) thành Part[]
+            const inputPartsForAI: Part[] = [{ text: newText }]; // <<< THAY ĐỔI Ở ĐÂY
+            
             if (isStreaming) {
                 finalHistoryFromAI = await handleStreaming(
-                    newText, // User input is the newText for the AI
+                    inputPartsForAI, // <<< TRUYỀN Part[]
                     historyForNewBotResponse,
-                    socket,
-                    language,
-                    aiHandlerId, // Use a unique handler ID for this AI interaction
-                    handleAIActionCallback,
-                    messageIdToEdit, // Pass the original user message ID as frontendMessageId for context
-                    personalizationData // <<< PASS personalizationData
+                    socket, language, aiHandlerId,
+                    handleAIActionCallback, messageIdToEdit, personalizationData
                 );
             } else {
                 const nonStreamingResult = await handleNonStreaming(
-                    newText, // User input is the newText for the AI
+                    inputPartsForAI, // <<< TRUYỀN Part[]
                     historyForNewBotResponse,
-                    socket,
-                    language,
-                    aiHandlerId, // Use a unique handler ID
-                    messageIdToEdit, // Pass the original user message ID
-                    personalizationData // <<< PASS personalizationData
+                    socket, language, aiHandlerId,
+                    messageIdToEdit, personalizationData
                 );
                 if (nonStreamingResult) {
                     finalHistoryFromAI = nonStreamingResult.history;
@@ -273,13 +288,15 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 }
             }
 
+
+
             if (!Array.isArray(finalHistoryFromAI) || finalHistoryFromAI.length === 0) {
                 sendChatWarning(convLogContext, 'User message edited, but AI response was inconclusive or no new history generated.', 'edit_ai_no_history');
-                const partialFrontendPayload: Partial<BackendConversationUpdatedAfterEditPayload> = {
-                    editedUserMessage: mapHistoryItemToChatMessage(editedUserMessage),
+                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = { // Sử dụng Partial nếu newBotMessage có thể undefined
+                    editedUserMessage: editedUserMessage, // Gửi ChatHistoryItem
                     conversationId: conversationId,
                 };
-                socket.emit('conversation_updated_after_edit', partialFrontendPayload);
+                socket.emit('conversation_updated_after_edit', partialPayload);
                 await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited (AI inconclusive) in conv ${conversationId}`, language);
                 return;
             }
@@ -312,17 +329,16 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
             if (!newBotMessageForClient) {
                 sendChatWarning(convLogContext, 'User message edited, but no clear new bot response was generated.', 'edit_bot_response_unclear');
-                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = {
-                    editedUserMessage: mapHistoryItemToChatMessage(editedUserMessage),
+                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = { // Sử dụng Partial nếu newBotMessage có thể undefined
+                    editedUserMessage: editedUserMessage, // Gửi ChatHistoryItem
                     conversationId: conversationId,
                 };
                 socket.emit('conversation_updated_after_edit', partialPayload);
                 return;
             }
-
             const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
-                editedUserMessage: mapHistoryItemToChatMessage(editedUserMessage),
-                newBotMessage: mapHistoryItemToChatMessage(newBotMessageForClient),
+                editedUserMessage: editedUserMessage,         // Gửi ChatHistoryItem
+                newBotMessage: newBotMessageForClient,    // Gửi ChatHistoryItem
                 conversationId: conversationId,
             };
             socket.emit('conversation_updated_after_edit', frontendPayload);
@@ -337,21 +353,22 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
     logToFile(`${baseLogContext}[${deps.userId}] Message event handlers successfully registered.`);
 };
 
-// Type guards remain the same, but they will now correctly infer the types
-// including the optional personalizationData field.
+
+// Update type guard for SendMessageData
 function isSendMessageData(data: unknown): data is SendMessageData {
     return (
         typeof data === 'object' &&
         data !== null &&
-        typeof (data as SendMessageData).userInput === 'string' &&
-        !!(data as SendMessageData).userInput?.trim() &&
+        Array.isArray((data as SendMessageData).parts) && // Check for parts array
+        // (data as SendMessageData).parts.length > 0 && // Allow empty parts if language is present (e.g. just an image)
         typeof (data as SendMessageData).language === 'string' &&
         !!(data as SendMessageData).language
-        // No need to check for personalizationData as it's optional
+        // userInput is no longer a primary check here
     );
 }
 
 function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEditUserMessagePayload {
+    // This remains the same as we are only supporting text edits for now
     return (
         typeof payload === 'object' &&
         payload !== null &&
@@ -359,6 +376,5 @@ function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEd
         typeof (payload as BackendEditUserMessagePayload).messageIdToEdit === 'string' &&
         typeof (payload as BackendEditUserMessagePayload).newText === 'string' &&
         typeof (payload as BackendEditUserMessagePayload).language === 'string'
-        // No need to check for personalizationData as it's optional
     );
 }

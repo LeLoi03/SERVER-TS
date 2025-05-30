@@ -14,6 +14,7 @@ import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import erro
 import { callSubAgent as callSubAgentActual } from './subAgent.handler';
 import { handleNonStreaming as handleNonStreamingActual } from './hostAgent.nonStreaming.handler';
 import { handleStreaming as handleStreamingActual } from './hostAgent.streaming.handler';
+import { Part } from '@google/genai'; // If not already imported via shared/types
 
 // --- Declare variables at the top level, potentially with undefined or null initial values ---
 // These will be assigned within the try block. If try fails, they remain undefined/null.
@@ -149,7 +150,7 @@ try {
 /**
  * Handles non-streaming user input using the Host Agent.
  * This function is the entry point for non-streaming chat interactions.
- * @param {string} userInput - The user's current input.
+ * @param {string} inputParts - The user's current input.
  * @param {ChatHistoryItem[]} historyForHandler - The relevant chat history for the handler.
  * @param {Socket} socket - The client socket.
  * @param {Language} language - The current language.
@@ -158,15 +159,14 @@ try {
  * @returns {ReturnType<typeof handleNonStreamingActual>} The result of the non-streaming interaction.
  */
 export async function handleNonStreaming(
-    userInput: string,
+    inputParts: Part[], // <<< CHANGED from userInput: string
     historyForHandler: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
     frontendMessageId?: string,
-    personalizationData?: PersonalizationPayload | null // <<< ADDED
-): ReturnType<typeof handleNonStreamingActual> { // ReturnType should be Promise<NonStreamingHandlerResult | void>
-
+    personalizationData?: PersonalizationPayload | null
+): ReturnType<typeof handleNonStreamingActual> {
     // Perform a runtime check to ensure dependencies were initialized.
     // This provides a clearer error message than a raw TypeError.
     if (!hostAgentDependencies) {
@@ -175,14 +175,14 @@ export async function handleNonStreaming(
     }
     logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
     return handleNonStreamingActual(
-        userInput,
+        inputParts, // <<< PASS inputParts
         historyForHandler,
         socket,
         language,
         handlerId,
         hostAgentDependencies,
         frontendMessageId,
-        personalizationData // <<< PASS
+        personalizationData
     );
 }
 
@@ -190,7 +190,7 @@ export async function handleNonStreaming(
 /**
  * Handles streaming user input using the Host Agent.
  * This function is the entry point for streaming chat interactions.
- * @param {string} userInput - The user's current input.
+ * @param {string} inputParts - The user's current input.
  * @param {ChatHistoryItem[]} currentHistoryFromSocket - The current chat history from the socket.
  * @param {Socket} socket - The client socket.
  * @param {Language} language - The current language.
@@ -200,7 +200,7 @@ export async function handleNonStreaming(
  * @returns {ReturnType<typeof handleStreamingActual>} The result of the streaming interaction.
  */
 export async function handleStreaming(
-    userInput: string,
+    inputParts: Part[], // <<< CHANGED from userInput: string
     currentHistoryFromSocket: ChatHistoryItem[],
     socket: Socket,
     language: Language,
@@ -215,7 +215,7 @@ export async function handleStreaming(
     }
     logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
     return handleStreamingActual(
-        userInput,
+        inputParts, // <<< PASS inputParts
         currentHistoryFromSocket,
         socket,
         language,
@@ -223,6 +223,6 @@ export async function handleStreaming(
         hostAgentDependencies,
         onActionGenerated,
         frontendMessageId,
-        personalizationData // <<< PASS
+        personalizationData
     );
 }

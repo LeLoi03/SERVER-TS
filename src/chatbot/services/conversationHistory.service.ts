@@ -23,7 +23,6 @@ const DEFAULT_TITLES_BY_LANGUAGE: { [key: string]: string } = {
     ja: "新しいチャット",             // Japanese
     ko: "새 채팅",                   // Korean
     ar: "دردشة جديدة",             // Arabic
-    fa: "چت جدید",                  // Persian (Farsi)
 };
 const FALLBACK_DEFAULT_TITLE = "New Chat"; // Fallback if language not found or not provided
 
