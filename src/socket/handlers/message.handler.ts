@@ -193,11 +193,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             sendChatError(currentConvLogContext, `Error processing message with AI: ${errorMessage}.`, 'handler_exception', { error: errorMessage });
         }
     });
-
     socket.on('edit_user_message', async (data: unknown) => {
-        // Editing multimodal messages is complex. For now, 'edit_user_message'
-        // will continue to assume text-only edits as per BackendEditUserMessagePayload.
-        // If you need to edit images/files in a message, that's a much larger feature.
         const eventName = 'edit_user_message';
         const handlerIdSuffix = Date.now();
         let tempLogContext = `${baseLogContext}[${deps.userId}][Req:${handlerIdSuffix}]`;
@@ -206,54 +202,65 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         if (!authenticatedUserId) return;
         const handlerLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}][${authenticatedUserId}][Req:${handlerIdSuffix}]`;
 
-        if (!isBackendEditUserMessagePayload(data)) { // isBackendEditUserMessagePayload will use the updated type
+        if (!isBackendEditUserMessagePayload(data)) {
             return sendChatError(handlerLogContext, 'Invalid payload for edit_user_message. Missing required fields.', 'invalid_payload_edit', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
         const {
             conversationId,
-            messageIdToEdit,
+            messageIdToEdit, // Đây là UUID của tin nhắn user cần edit
             newText,
             language,
-            personalizationData // <<< EXTRACT personalizationData
+            personalizationData
         } = data;
 
-        const isStreaming = socket.data.isStreamingEnabled ?? true;
+        const isStreaming = socket.data.isStreamingEnabled ?? true; // Lấy từ socket data hoặc default
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
         logToFile(
             `[INFO] ${convLogContext} 'edit_user_message' request received. New text: "${newText.substring(0, 30) + (newText.length > 30 ? '...' : '')}", Streaming: ${isStreaming}, Language: ${language}` +
             (personalizationData ? `, Personalization: Enabled` : `, Personalization: Disabled`)
         );
-        if (personalizationData) {
-            logToFile(`[DEBUG] ${convLogContext} Personalization Data for edit: ${JSON.stringify(personalizationData)}`);
-        }
 
         try {
-            const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(authenticatedUserId, conversationId, messageIdToEdit, newText);
+            // Bước 1: Chuẩn bị lịch sử từ DB.
+            // `updateUserMessageAndPrepareHistory` sẽ trả về:
+            // - `editedUserMessage`: Object ChatHistoryItem của tin nhắn người dùng đã được cập nhật (chưa lưu DB).
+            // - `historyForNewBotResponse`: Lịch sử bao gồm các tin nhắn TRƯỚC tin nhắn được edit, VÀ tin nhắn đã edit.
+            //                               VD: [UserMsg1, ModelMsg1, UserMsg2_edited]
+            const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(
+                authenticatedUserId,
+                conversationId,
+                messageIdToEdit, // UUID của tin nhắn user
+                newText
+            );
 
             if (!prepareResult) {
-                return sendChatError(convLogContext, 'Internal error preparing conversation history for edit.', 'edit_prepare_service_critical_fail');
+                return sendChatError(convLogContext, 'Internal error preparing conversation history for edit (service returned null).', 'edit_prepare_service_null');
             }
             if (!prepareResult.originalConversationFound) {
                 return sendChatError(convLogContext, 'Conversation not found for edit operation.', 'edit_conv_not_found');
             }
-            if (!prepareResult.messageFoundAndIsLastUserMessage) {
-                return sendChatError(convLogContext, 'Message to edit not found or is not the latest user message in the conversation.', 'edit_msg_invalid_target');
+            if (!prepareResult.messageFoundAndIsLastUserMessage || !prepareResult.editedUserMessage || !prepareResult.historyForNewBotResponse) {
+                // messageFoundAndIsLastUserMessage bao gồm cả việc messageIdToEdit có hợp lệ không.
+                // editedUserMessage và historyForNewBotResponse phải tồn tại nếu messageFoundAndIsLastUserMessage là true.
+                return sendChatError(convLogContext, 'Message to edit not found, is not the latest user message, or history preparation failed.', 'edit_msg_invalid_target_or_prepare_fail');
             }
 
-            // Now that we've checked the flags, we need to assert that the history items are present.
-            // If messageFoundAndIsLastUserMessage is true, these *should* be defined.
-            // If they are not, it's an internal logical inconsistency in the service's contract.
-            const { editedUserMessage, historyForNewBotResponse } = prepareResult;
+            const {
+                editedUserMessage, // Tin nhắn user đã được cập nhật (chưa lưu DB)
+                historyForNewBotResponse // Lịch sử dạng [..., editedUserMessage]
+            } = prepareResult;
 
-            if (!editedUserMessage) {
-                return sendChatError(convLogContext, 'Internal error: Edited user message object is missing despite successful preparation.', 'edit_user_msg_missing_after_prepare');
-            }
-            if (!historyForNewBotResponse) {
-                return sendChatError(convLogContext, 'Internal error: Prepared history for new bot response is missing despite successful preparation.', 'edit_history_missing_after_prepare');
-            }
+            // Bước 2: Chuẩn bị input cho AI handler.
+            // Lịch sử cho AI handler KHÔNG nên bao gồm tin nhắn user đang được edit.
+            // `partsForAIHandler` sẽ là nội dung mới của tin nhắn đó.
+            const historyForAIHandler = historyForNewBotResponse.slice(0, -1); // Bỏ tin nhắn user đã edit ở cuối ra
+            const partsForAIHandler = editedUserMessage.parts; // Lấy parts từ tin nhắn user đã edit
 
-            let finalHistoryFromAI: ChatHistoryItem[] | void | undefined;
+            logToFile(`[DEBUG] ${convLogContext} History for AI Handler (length ${historyForAIHandler.length}): ${historyForAIHandler.map(m => m.uuid).join(', ')}. Parts for AI: ${partsForAIHandler.find(p => p.text)?.text?.substring(0, 20)}...`);
+
+
+            let finalHistoryFromAIHandler: ChatHistoryItem[] | void | undefined;
             const tokenForAction = socket.data.token as string | undefined;
             const aiHandlerId = `${eventName}-${handlerIdSuffix}`;
 
@@ -261,90 +268,80 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 if (action?.type === 'confirmEmailSend' && tokenForAction) {
                     stageEmailConfirmation(action.payload as ConfirmSendEmailAction, tokenForAction, socket.id, aiHandlerId, io);
                 }
+                // Các action khác có thể được xử lý ở đây nếu cần
             };
 
-            // For text edits, the input to the AI is the newText.
-            // If we were editing multimodal, this would be newParts.
-            // Chuyển đổi newText (string) thành Part[]
-            const inputPartsForAI: Part[] = [{ text: newText }]; // <<< THAY ĐỔI Ở ĐÂY
-            
             if (isStreaming) {
-                finalHistoryFromAI = await handleStreaming(
-                    inputPartsForAI, // <<< TRUYỀN Part[]
-                    historyForNewBotResponse,
+                finalHistoryFromAIHandler = await handleStreaming(
+                    partsForAIHandler,
+                    historyForAIHandler,
                     socket, language, aiHandlerId,
-                    handleAIActionCallback, messageIdToEdit, personalizationData
+                    handleAIActionCallback, messageIdToEdit, personalizationData // messageIdToEdit dùng làm frontendMessageId cho AI handler
                 );
             } else {
                 const nonStreamingResult = await handleNonStreaming(
-                    inputPartsForAI, // <<< TRUYỀN Part[]
-                    historyForNewBotResponse,
+                    partsForAIHandler,
+                    historyForAIHandler,
                     socket, language, aiHandlerId,
-                    messageIdToEdit, personalizationData
+                    messageIdToEdit, personalizationData // messageIdToEdit dùng làm frontendMessageId cho AI handler
                 );
                 if (nonStreamingResult) {
-                    finalHistoryFromAI = nonStreamingResult.history;
+                    finalHistoryFromAIHandler = nonStreamingResult.history;
                     if (nonStreamingResult.action) handleAIActionCallback(nonStreamingResult.action);
                 }
             }
 
+            // Bước 3: Xử lý kết quả từ AI handler và lưu vào DB.
+            let newBotMessageForClient: ChatHistoryItem | undefined = undefined;
+            let historyToSaveInDB: ChatHistoryItem[];
 
-
-            if (!Array.isArray(finalHistoryFromAI) || finalHistoryFromAI.length === 0) {
-                sendChatWarning(convLogContext, 'User message edited, but AI response was inconclusive or no new history generated.', 'edit_ai_no_history');
-                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = { // Sử dụng Partial nếu newBotMessage có thể undefined
-                    editedUserMessage: editedUserMessage, // Gửi ChatHistoryItem
-                    conversationId: conversationId,
-                };
-                socket.emit('conversation_updated_after_edit', partialPayload);
-                await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited (AI inconclusive) in conv ${conversationId}`, language);
-                return;
+            if (Array.isArray(finalHistoryFromAIHandler) && finalHistoryFromAIHandler.length > 0) {
+                // finalHistoryFromAIHandler được trả về từ handleStreaming/NonStreaming.
+                // Nó nên chứa: [...historyForAIHandler, user_turn_corresponding_to_partsForAIHandler, new_bot_message (nếu có)]
+                // Chúng ta cần trích xuất new_bot_message.
+                const lastMessageFromAI = finalHistoryFromAIHandler[finalHistoryFromAIHandler.length - 1];
+                if (lastMessageFromAI.role === 'model') {
+                    newBotMessageForClient = lastMessageFromAI;
+                    // Lịch sử để lưu vào DB sẽ là:
+                    // historyForNewBotResponse (đã chứa editedUserMessage ở cuối) + newBotMessageForClient
+                    historyToSaveInDB = [...historyForNewBotResponse, newBotMessageForClient];
+                    logToFile(`[INFO] ${convLogContext} AI responded. New bot message UUID: ${newBotMessageForClient.uuid}. History to save length: ${historyToSaveInDB.length}`);
+                } else {
+                    // AI handler không trả về model message ở cuối (có thể là lỗi hoặc function call không được xử lý hết)
+                    logToFile(`[WARN] ${convLogContext} AI handler finished, but last message was not 'model'. Last role: ${lastMessageFromAI.role}.`);
+                    historyToSaveInDB = [...historyForNewBotResponse]; // Chỉ lưu đến tin nhắn user đã edit
+                }
+            } else {
+                // AI handler không trả về gì hoặc trả về rỗng.
+                logToFile(`[WARN] ${convLogContext} User message edited, but AI handler returned no history or inconclusive response.`);
+                historyToSaveInDB = [...historyForNewBotResponse]; // Chỉ lưu đến tin nhắn user đã edit
             }
 
-            const historyToSaveInDB = finalHistoryFromAI;
-            const saveSuccess = await conversationHistoryService.updateConversationHistory(conversationId, authenticatedUserId, historyToSaveInDB);
+            const saveSuccess = await conversationHistoryService.updateConversationHistory(
+                conversationId,
+                authenticatedUserId,
+                historyToSaveInDB // Ghi đè toàn bộ lịch sử bằng phiên bản mới này
+            );
 
             if (!saveSuccess) {
-                return sendChatError(convLogContext, 'Failed to save edited message and new AI response to database.', 'edit_final_save_fail_db');
+                // Gửi lỗi nhưng không dừng hẳn, vẫn cố gắng cập nhật client nếu có thể
+                sendChatError(convLogContext, 'Failed to save edited message and new AI response to database. Client data might be inconsistent.', 'edit_final_save_fail_db');
+            } else {
+                logToFile(`[INFO] ${convLogContext} Successfully saved updated history to DB. Length: ${historyToSaveInDB.length}`);
             }
 
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
 
-            let newBotMessageForClient: ChatHistoryItem | undefined;
-            // Find the new bot message from the history returned by the AI handler
-            // It should be after the `historyForNewBotResponse` part.
-            for (let i = historyToSaveInDB.length - 1; i >= historyForNewBotResponse.length; i--) {
-                if (historyToSaveInDB[i].role === 'model') {
-                    newBotMessageForClient = historyToSaveInDB[i];
-                    break;
-                }
-            }
-
-            // Fallback if the loop didn't find it but the last message is a model response
-            if (!newBotMessageForClient && historyToSaveInDB.length > 0) {
-                const lastMessageInSavedHistory = historyToSaveInDB[historyToSaveInDB.length - 1];
-                if (lastMessageInSavedHistory.role === 'model') newBotMessageForClient = lastMessageInSavedHistory;
-            }
-
-
-            if (!newBotMessageForClient) {
-                sendChatWarning(convLogContext, 'User message edited, but no clear new bot response was generated.', 'edit_bot_response_unclear');
-                const partialPayload: Partial<BackendConversationUpdatedAfterEditPayload> = { // Sử dụng Partial nếu newBotMessage có thể undefined
-                    editedUserMessage: editedUserMessage, // Gửi ChatHistoryItem
-                    conversationId: conversationId,
-                };
-                socket.emit('conversation_updated_after_edit', partialPayload);
-                return;
-            }
+            // Bước 4: Gửi kết quả cuối cùng cho client.
             const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
-                editedUserMessage: editedUserMessage,         // Gửi ChatHistoryItem
-                newBotMessage: newBotMessageForClient,    // Gửi ChatHistoryItem
+                editedUserMessage: editedUserMessage, // Tin nhắn user đã được cập nhật (từ prepareResult)
+                newBotMessage: newBotMessageForClient, // Tin nhắn bot mới (nếu có)
                 conversationId: conversationId,
             };
             socket.emit('conversation_updated_after_edit', frontendPayload);
-            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' event.`);
+            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' event. BotMsg UUID: ${newBotMessageForClient?.uuid || 'N/A'}`);
 
-        } catch (error: unknown) { // Use unknown here
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             sendChatError(convLogContext, `Server error during message edit: ${errorMessage || 'Unknown'}.`, 'edit_exception_unhandled', { errorDetails: errorMessage, stack: errorStack });
         }
@@ -354,21 +351,19 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 };
 
 
+
 // Update type guard for SendMessageData
 function isSendMessageData(data: unknown): data is SendMessageData {
     return (
         typeof data === 'object' &&
         data !== null &&
-        Array.isArray((data as SendMessageData).parts) && // Check for parts array
-        // (data as SendMessageData).parts.length > 0 && // Allow empty parts if language is present (e.g. just an image)
+        Array.isArray((data as SendMessageData).parts) &&
         typeof (data as SendMessageData).language === 'string' &&
         !!(data as SendMessageData).language
-        // userInput is no longer a primary check here
     );
 }
 
 function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEditUserMessagePayload {
-    // This remains the same as we are only supporting text edits for now
     return (
         typeof payload === 'object' &&
         payload !== null &&
