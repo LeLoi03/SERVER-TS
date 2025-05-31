@@ -15,10 +15,14 @@ import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import multer from 'multer';
 import { File as NodeFile } from 'node:buffer';
 
+// Điều chỉnh giới hạn file size lên 50MB
+const MAX_FILE_SIZE_MB = 50;
+const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
+
 const storage = multer.memoryStorage();
 const upload = multer({
     storage: storage,
-    limits: { fileSize: 2 * 1024 * 1024 * 1024 }
+    limits: { fileSize: MAX_FILE_SIZE_BYTES } // Điều chỉnh tại đây
 });
 
 interface UploadedFileResponse {
@@ -75,6 +79,23 @@ export class ChatController {
 
         for (const file of files) {
             reqLogger.info(`Processing file: ${file.originalname}, size: ${file.size}, mimetype: ${file.mimetype}`);
+            // Thêm kiểm tra kích thước file ngay tại đây để bắt lỗi sớm hơn
+            if (file.size > MAX_FILE_SIZE_BYTES) {
+                reqLogger.warn(`File ${file.originalname} (${file.size} bytes) exceeds the maximum allowed size of ${MAX_FILE_SIZE_MB}MB.`);
+                uploadPromises.push(
+                    Promise.resolve({ // Trả về một đối tượng lỗi để client biết
+                        name: file.originalname,
+                        uri: undefined,
+                        mimeType: file.mimetype,
+                        size: file.size,
+                        googleFileState: FileState.FAILED, // Hoặc một trạng thái lỗi tùy chỉnh
+                        googleFileDisplayName: 'File too large',
+                        googleFileName: undefined,
+                        googleSizeBytes: String(file.size),
+                    })
+                );
+                continue; // Bỏ qua việc upload file này lên Google
+            }
             uploadPromises.push(this.uploadFileToGoogle(file, reqLogger));
         }
 
@@ -91,16 +112,16 @@ export class ChatController {
                 }));
 
             if (successfulUploads.length === 0 && files.length > 0) {
-                reqLogger.error('All file uploads to Google File API failed to get a URI.');
+                reqLogger.error('All file uploads to Google File API failed to get a URI or were too large.');
                 // Trả về mảng results đầy đủ để client có thể thấy lỗi từng file nếu muốn
                 res.status(500).json({
-                    message: 'Failed to upload any files to Google File API meaningfully.',
+                    message: 'Failed to upload any files to Google File API meaningfully or files were too large.',
                     files: results.filter(r => r !== null) // Loại bỏ null nếu có
                 });
                 return;
             }
             if (successfulUploads.length < files.length) {
-                reqLogger.warn('Some files failed to upload to Google File API or did not return a URI.');
+                reqLogger.warn('Some files failed to upload to Google File API, did not return a URI, or were too large.');
                 res.status(207).json({ // 207 Multi-Status
                     message: 'Some files were processed, some failed.',
                     files: results.filter(r => r !== null), // Client sẽ check từng file
@@ -182,5 +203,5 @@ export class ChatController {
 
 export const filesUploadMiddleware = multer({
     storage: multer.memoryStorage(),
-    limits: { fileSize: 2 * 1024 * 1024 * 1024 }
+    limits: { fileSize: MAX_FILE_SIZE_BYTES } // Điều chỉnh tại đây
 }).array('files', 5);
