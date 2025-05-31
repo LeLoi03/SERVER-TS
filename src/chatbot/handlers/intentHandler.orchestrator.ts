@@ -3,7 +3,7 @@ import 'reflect-metadata'; // Required for tsyringe dependency injection
 import { container } from 'tsyringe';
 import { Socket } from 'socket.io';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
-import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse, PersonalizationPayload } from '../shared/types';
+import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo } from '../shared/types';
 import { Gemini } from '../gemini/gemini';
 import { ConfigService } from "../../config/config.service";
 // Import the new dependency types
@@ -61,7 +61,7 @@ try {
         throw new Error(errorMsg); // Throw an error that will be caught by the outer catch block
     }
     geminiApiKey = key; // Assert that it's a string after the check
-    logToFile(`[Orchestrator] GEMINI_API_KEY is configured.`);
+    // logToFile(`[Orchestrator] GEMINI_API_KEY is configured.`);
 
     // Model names
     hostAgentModelName = configService.config.GEMINI_HOST_AGENT_MODEL_NAME;
@@ -82,7 +82,7 @@ try {
     GEMINI_SERVICE_FOR_HOST = new Gemini(geminiApiKey, hostAgentModelName);
     GEMINI_SERVICE_FOR_SUB_AGENT = new Gemini(geminiApiKey, subAgentModelName || hostAgentModelName);
 
-    logToFile(`[Orchestrator] Initialized Gemini services. Host Model: '${hostAgentModelName}', Sub-Agent Model: '${subAgentModelName || hostAgentModelName}'.`);
+    // logToFile(`[Orchestrator] Initialized Gemini services. Host Model: '${hostAgentModelName}', Sub-Agent Model: '${subAgentModelName || hostAgentModelName}'.`);
 
     // --- Create Base Dependencies ---
     baseDependencies = {
@@ -91,7 +91,7 @@ try {
         allowedSubAgents: ALLOWED_SUB_AGENTS,
         maxTurnsHostAgent: MAX_TURNS_HOST_AGENT,
     };
-    logToFile(`[Orchestrator] Base dependencies prepared.`);
+    // logToFile(`[Orchestrator] Base dependencies prepared.`);
 
     // --- Create Dependencies for SubAgent Handler ---
     subAgentHandlerDependencies = {
@@ -99,7 +99,7 @@ try {
         geminiServiceForSubAgent: GEMINI_SERVICE_FOR_SUB_AGENT,
         subAgentGenerationConfig: subAgentGenerationConfig,
     };
-    logToFile(`[Orchestrator] Sub-Agent handler dependencies prepared.`);
+    // logToFile(`[Orchestrator] Sub-Agent handler dependencies prepared.`);
 
     /**
      * A "curried" or "bound" version of the `callSubAgentActual` function.
@@ -119,7 +119,7 @@ try {
     ): Promise<AgentCardResponse> => {
         return callSubAgentActual(requestCard, parentHandlerId, language, socket, subAgentHandlerDependencies);
     };
-    logToFile(`[Orchestrator] 'boundCallSubAgentHandler' created.`);
+    // logToFile(`[Orchestrator] 'boundCallSubAgentHandler' created.`);
 
     // --- Create Dependencies for HostAgent Handlers ---
     hostAgentDependencies = {
@@ -128,9 +128,9 @@ try {
         hostAgentGenerationConfig: hostAgentGenerationConfig,
         callSubAgentHandler: boundCallSubAgentHandler,
     };
-    logToFile(`[Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.`);
+    // logToFile(`[Orchestrator] Host Agent handler dependencies prepared, including bound sub-agent caller.`);
 
-    logToFile(`[Orchestrator] Intent handler functions ready for export.`);
+    // logToFile(`[Orchestrator] Intent handler functions ready for export.`);
 
 } catch (err: unknown) {
     const { message, stack } = getErrorMessageAndStack(err);
@@ -159,30 +159,32 @@ try {
  * @returns {ReturnType<typeof handleNonStreamingActual>} The result of the non-streaming interaction.
  */
 export async function handleNonStreaming(
-    inputParts: Part[], // <<< CHANGED from userInput: string
+    inputParts: Part[],
     historyForHandler: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
     frontendMessageId?: string,
-    personalizationData?: PersonalizationPayload | null
+    personalizationData?: PersonalizationPayload | null,
+    originalUserFiles?: OriginalUserFileInfo[] // <<< THÊM PARAMETER
 ): ReturnType<typeof handleNonStreamingActual> {
-    // Perform a runtime check to ensure dependencies were initialized.
-    // This provides a clearer error message than a raw TypeError.
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleNonStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
-    logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
+    logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}` +
+              (personalizationData ? `, Personalization: Enabled` : ``) +
+              (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``));
     return handleNonStreamingActual(
-        inputParts, // <<< PASS inputParts
+        inputParts,
         historyForHandler,
         socket,
         language,
         handlerId,
         hostAgentDependencies,
         frontendMessageId,
-        personalizationData
+        personalizationData,
+        originalUserFiles // <<< TRUYỀN XUỐNG
     );
 }
 
@@ -200,22 +202,25 @@ export async function handleNonStreaming(
  * @returns {ReturnType<typeof handleStreamingActual>} The result of the streaming interaction.
  */
 export async function handleStreaming(
-    inputParts: Part[], // <<< CHANGED from userInput: string
+    inputParts: Part[],
     currentHistoryFromSocket: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
     onActionGenerated?: (action: FrontendAction) => void,
     frontendMessageId?: string,
-    personalizationData?: PersonalizationPayload | null // <<< ADDED
-): ReturnType<typeof handleStreamingActual> { // ReturnType should be Promise<ChatHistoryItem[] | void>
+    personalizationData?: PersonalizationPayload | null,
+    originalUserFiles?: OriginalUserFileInfo[] // <<< THÊM PARAMETER
+): ReturnType<typeof handleStreamingActual> {
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
-    logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}` + (personalizationData ? `, Personalization: Enabled` : ``));
+    logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}` +
+              (personalizationData ? `, Personalization: Enabled` : ``) +
+              (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``));
     return handleStreamingActual(
-        inputParts, // <<< PASS inputParts
+        inputParts,
         currentHistoryFromSocket,
         socket,
         language,
@@ -223,6 +228,7 @@ export async function handleStreaming(
         hostAgentDependencies,
         onActionGenerated,
         frontendMessageId,
-        personalizationData
+        personalizationData,
+        originalUserFiles // <<< TRUYỀN XUỐNG
     );
 }

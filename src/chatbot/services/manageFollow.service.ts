@@ -21,7 +21,7 @@ if (!DATABASE_URL) {
     // Throwing an error here prevents the module from loading
     throw new Error(errorMsg);
 } else {
-    logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
 }
 
 // Defines the types of items that can be followed/unfollowed.

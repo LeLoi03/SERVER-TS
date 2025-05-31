@@ -50,7 +50,12 @@ export interface ChatHistoryItem {
     timestamp?: string | Date;
     /** Optional unique identifier for this history item (e.g., UUID for messages). */
     uuid?: string;
+    thoughts?: ThoughtStep[]; // Optional: Model's thought process
+    action?: FrontendAction;  // Optional: Action requested by the model
+    // Thông tin file gốc của người dùng, chỉ có ý nghĩa với role: 'user'
+    userFileInfo?: OriginalUserFileInfo[];
 }
+
 
 // --- API & Service Result Types ---
 
@@ -573,11 +578,20 @@ export interface AgentCardResponse {
 
 // --- Socket Event Data Payloads (Data sent between client and server via Socket.IO) ---
 
+
+export interface OriginalUserFileInfo {
+    name: string;
+    size: number;
+    type: string;
+    googleFileUri: string; // URI từ Google File API sau khi upload, frontend nên đảm bảo có
+    // dataUrl không cần thiết ở backend cho mục đích này
+}
+
 /**
  * Data structure expected when the client sends a new message to the chatbot.
  */
 export interface SendMessageData {
-     // userInput: string; // <<< OLD: Will be replaced by parts
+    // userInput: string; // <<< OLD: Will be replaced by parts
     parts: Part[]; // <<< NEW: Array of content parts (text, image, file)
     /** Flag indicating if the response should be streamed (defaults to true if omitted). */
     isStreaming?: boolean;
@@ -589,6 +603,8 @@ export interface SendMessageData {
     frontendMessageId?: string;
     /** Optional: User personalize data */
     personalizationData?: PersonalizationPayload | null; // <<< ADDED
+    originalUserFiles?: OriginalUserFileInfo[]; // Thêm trường này
+
 
 }
 

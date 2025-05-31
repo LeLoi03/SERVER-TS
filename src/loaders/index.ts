@@ -45,20 +45,20 @@ export const initLoaders = async (): Promise<LoadersResult> => {
     const logContext = `[MainLoader]`;
 
     // Log the start of the overall loading process.
-    logToFile(`${logContext} Starting application loading process...`);
+    // logToFile(`${logContext} Starting application loading process...`);
 
     try {
         // --- 1. Connect to Database ---
         // `connectDB` is expected to use `logToFile` internally for its own logging.
         logToFile(`${logContext} Attempting to connect to database...`);
         await connectDB();
-        logToFile(`${logContext} Database connection established successfully.`);
+        // logToFile(`${logContext} Database connection established successfully.`);
 
         // --- 2. Initialize Services Managed by DI Container ---
         // Note: Services themselves are registered in `src/container.ts` and
         // are resolved by `tsyringe` where needed. This step merely acknowledges
         // their availability via DI for subsequent use if needed.
-        logToFile(`${logContext} Core services managed by Dependency Injection container are ready.`);
+        // logToFile(`${logContext} Core services managed by Dependency Injection container are ready.`);
 
         // --- 3. Load Express Application ---
         // `loadExpress` is expected to set up routes, middleware, etc., and use `logToFile`.
@@ -66,33 +66,33 @@ export const initLoaders = async (): Promise<LoadersResult> => {
         const app = loadExpress();
         // Create a new HTTP server instance using the Express app.
         const httpServer = new HttpServer(app);
-        logToFile(`${logContext} Express application initialized and HTTP server created.`);
+        // logToFile(`${logContext} Express application initialized and HTTP server created.`);
 
         // --- 4. Initialize Socket.IO Server ---
         // `initSocketIO` is expected to attach Socket.IO to the HTTP server and use `logToFile`.
         logToFile(`${logContext} Initializing Socket.IO server...`);
         const io = initSocketIO(httpServer);
-        logToFile(`${logContext} Socket.IO server initialized.`);
+        // logToFile(`${logContext} Socket.IO server initialized.`);
 
         // --- 5. Schedule Cron Jobs ---
         // `scheduleJobs` is expected to define and start cron tasks, and should use `logToFile`.
         logToFile(`${logContext} Scheduling cron jobs...`);
         scheduleJobs();
-        logToFile(`${logContext} Cron jobs scheduled.`);
+        // logToFile(`${logContext} Cron jobs scheduled.`);
 
         // --- 6. Perform Initial Application Tasks ---
         // This section executes any necessary one-time tasks on startup.
         try {
             // Define a specific context for this initial task for clearer logs.
             const taskLogContext = `${logContext}[Task:InitialLogAnalysis]`;
-            logToFile(`${taskLogContext} Performing initial log analysis...`);
+            // logToFile(`${taskLogContext} Performing initial log analysis...`);
 
             // Resolve and invoke the LogAnalysisService.
             // This service is expected to use `logToFile` internally for its operations.
             const logAnalysisService = container.resolve(LogAnalysisService);
             await logAnalysisService.performAnalysisAndUpdate();
 
-            logToFile(`${taskLogContext} Initial log analysis completed successfully.`);
+            // logToFile(`${taskLogContext} Initial log analysis completed successfully.`);
         } catch (error: any) {
             // Catch and log errors specific to the initial log analysis task.
             const errorMessage = error instanceof Error ? error.message : String(error);

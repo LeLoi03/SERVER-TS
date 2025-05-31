@@ -20,7 +20,7 @@ if (!DATABASE_URL) {
     // Throwing an error here prevents the module from loading
     throw new Error(errorMsg);
 } else {
-    logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
 }
 
 // Blacklist operations are currently restricted to 'conference' items.

@@ -50,7 +50,7 @@ export async function read_csv(filePath: string): Promise<CsvRowData[]> {
                                 logToFile(`[WARNING] ${logContext} No valid 'input:' and 'output:' data found in CSV file. Resolved with empty array.`);
                                 resolve([]);
                             } else {
-                                logToFile(`[INFO] ${logContext} Successfully read ${results.length} valid rows from CSV.`);
+                                // logToFile(`[INFO] ${logContext} Successfully read ${results.length} valid rows from CSV.`);
                                 resolve(results);
                             }
                         })

@@ -1,12 +1,18 @@
-import mongoose, { Schema, Document, Model, Types } from 'mongoose'; // Thêm Types
+// src/chatbot/models/conversation.model.ts
+import mongoose, { Schema, Document, Model, Types } from 'mongoose';
 import { ChatHistoryItem } from '../shared/types'; // Import kiểu dữ liệu ChatHistoryItem
 
 // Định nghĩa cấu trúc cho một Part (để Mongoose biết kiểu)
 const partSchema = new Schema({
     text: { type: String },
-    inlineData: {
+    inlineData: { // Dành cho ảnh nhỏ, v.v. gửi trực tiếp
         mimeType: { type: String },
         data: { type: String } // Base64 encoded data
+    },
+    fileData: { // Dành cho file lớn đã upload qua File API
+        mimeType: { type: String, required: true },
+        fileUri: { type: String, required: true },
+        // KHÔNG CÓ displayName, originalSize ở đây
     },
     functionCall: {
         name: { type: String },
@@ -16,36 +22,41 @@ const partSchema = new Schema({
         name: { type: String },
         response: { type: Schema.Types.Mixed }
     }
-}, { _id: false });
+}, { _id: false, minimize: false }); // minimize: false để giữ lại các object rỗng nếu cần
 
-// Định nghĩa cấu trúc cho một ChatHistoryItem
 const historyItemSchema = new Schema({
     role: {
         type: String,
         required: true,
-        enum: ['user', 'model', 'function', 'system'] // Thêm 'system' nếu cần
+        enum: ['user', 'model', 'function', 'system']
     },
     parts: {
-        type: [partSchema],
+        type: [partSchema], // Mảng các Part objects
         required: true
     },
     timestamp: { type: Date, default: Date.now },
-    uuid: { type: String, index: true, sparse: true } // <<< ADD THIS: Frontend message ID
+    uuid: { type: String, index: true, sparse: true },
+     userFileInfo: [{ // Chỉ có ý nghĩa với role: 'user'
+        name: { type: String, required: true }, // Thêm required nếu cần
+        size: { type: Number, required: true },
+        type: { type: String, required: true },
+        googleFileUri: { type: String, required: true },
+        _id: false // QUAN TRỌNG: Đảm bảo có dòng này
+    }]
+}, { _id: false, minimize: false }); // minimize: false có thể vẫn cần thiết cho parts
 
-}, { _id: false });
 
-// Định nghĩa Schema chính cho Conversation
 export interface IConversation extends Document {
-    _id: Types.ObjectId; // Thêm _id tường minh
+    _id: Types.ObjectId;
     userId: string;
-    messages: ChatHistoryItem[];
+    messages: ChatHistoryItem[]; // messages sẽ là một mảng các ChatHistoryItem
     language?: string;
     lastActivity: Date;
     status?: string;
-    customTitle?: string; // Cho phép người dùng đặt tên tùy chỉnh
-    isPinned?: boolean;   // Để ghim cuộc trò chuyện
-    createdAt: Date;      // Từ timestamps
-    updatedAt: Date;      // Từ timestamps
+    customTitle?: string;
+    isPinned?: boolean;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 const conversationSchema = new Schema<IConversation>({
@@ -55,18 +66,19 @@ const conversationSchema = new Schema<IConversation>({
         index: true
     },
     messages: {
-        type: [historyItemSchema],
+        type: [historyItemSchema], // Sử dụng historyItemSchema đã định nghĩa
         default: []
     },
     language: { type: String },
     lastActivity: { type: Date, default: Date.now, index: true },
     status: { type: String, default: 'active' },
-    customTitle: { type: String, trim: true, maxlength: 120 }, // Tên tùy chỉnh
-    isPinned: { type: Boolean, default: false, index: true },   // Trạng thái ghim, index để sort
+    customTitle: { type: String, trim: true, maxlength: 120 },
+    isPinned: { type: Boolean, default: false, index: true },
 }, {
     timestamps: true,
     collection: 'conversations'
 });
+
 
 // Cập nhật lastActivity mỗi khi document được save
 conversationSchema.pre('save', function (next) {
@@ -150,5 +162,4 @@ conversationSchema.index(
 
 
 const ConversationModel: Model<IConversation> = mongoose.model<IConversation>('Conversation', conversationSchema);
-
 export default ConversationModel;

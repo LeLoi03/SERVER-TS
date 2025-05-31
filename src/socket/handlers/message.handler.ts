@@ -5,22 +5,18 @@ import {
     handleNonStreaming
 } from '../../chatbot/handlers/intentHandler.orchestrator';
 import { stageEmailConfirmation } from '../../chatbot/utils/confirmationManager';
-import { mapHistoryItemToChatMessage } from '../../chatbot/utils/mapHistoryItemToChatMessage';
 
 // --- Import types from shared/types.ts ---
 import {
     FrontendAction,
     ConfirmSendEmailAction,
     SendMessageData, // Expects `parts: Part[]` now
-    Language,
     BackendEditUserMessagePayload, // This will now include personalizationData
     BackendConversationUpdatedAfterEditPayload,
     ChatHistoryItem,
-    PersonalizationPayload, // Import if needed for explicit typing
 } from '../../chatbot/shared/types';
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
-import { Part } from '@google/genai';
 const MESSAGE_HANDLER_NAME = 'MessageHandler';
 
 /**
@@ -65,36 +61,25 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             return sendChatError(handlerLogContext, 'Invalid message payload: Missing "parts" or "language".', 'invalid_input_send', { dataReceived: JSON.stringify(data)?.substring(0, 200) });
         }
 
+        const payload = data as SendMessageData; // Giả sử bạn đã có type SendMessageData
         const {
-            parts, // <<< USE `parts` from data
-            isStreaming = true,
+            parts,
+            isStreaming,
             language,
-            conversationId: payloadConversationId,
+            conversationId: payloadConvId,
             frontendMessageId,
-            personalizationData
-        } = data;
+            personalizationData,
+            originalUserFiles // <<< LẤY RA TỪ PAYLOAD
+        } = payload;
+
         socket.data.language = language;
-
-
-
-        // Extract a text summary for logging if possible
-        const textForLog = parts.find(p => p.text)?.text || `[${parts.length} parts, non-text content]`;
-        logToFile(
-            `[INFO] ${handlerLogContext} 'send_message' request received.` +
-            ` Input Parts: "${textForLog.substring(0, 50) + (textForLog.length > 50 ? '...' : '')}"` +
-            `, Streaming: ${isStreaming}, Language: ${language}, PayloadConvId: ${payloadConversationId || 'N/A'}` +
-            (personalizationData ? `, Personalization: Enabled` : ``)
-        );
-        if (parts.some(p => p.inlineData || p.fileData)) {
-            logToFile(`[DEBUG] ${handlerLogContext} Message contains file/image data.`);
-        }
 
 
         let targetConversationId: string;
         let currentConvLogContext = handlerLogContext;
 
-        if (payloadConversationId) {
-            targetConversationId = payloadConversationId;
+        if (payloadConvId) {
+            targetConversationId = payloadConvId;
             currentConvLogContext = `${handlerLogContext}[Conv:${targetConversationId}]`;
             if (socket.data.currentConversationId !== targetConversationId) {
                 socket.data.currentConversationId = targetConversationId;
@@ -151,26 +136,34 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 }
             };
 
+            // Khi gọi handleStreaming/handleNonStreaming, `parts` được truyền vào.
+            // `handleStreaming` sẽ tạo `currentUserTurn` với `parts` này.
+            // `ChatHistoryItem` này sau đó sẽ được lưu vào DB bởi `conversationHistoryService.updateConversationHistory`.
+            // Vì `partSchema` đã được cập nhật để lưu `displayName` và `originalSize` trong `fileData`,
+            // nếu `parts` từ client chứa các thông tin này, chúng sẽ được lưu.
+
             if (isStreaming) {
                 updatedHistory = await handleStreaming(
-                    parts, // <<< PASS `parts`
+                    parts,
                     currentHistory,
                     socket,
                     language,
                     handlerId,
-                    handleAction,
+                    handleAction, // Callback để emit 'frontend_action'
                     frontendMessageId,
-                    personalizationData
+                    personalizationData,
+                    originalUserFiles // <<< TRUYỀN VÀO
                 );
             } else {
                 const handlerResult = await handleNonStreaming(
-                    parts, // <<< PASS `parts`
+                    parts,
                     currentHistory,
                     socket,
                     language,
                     handlerId,
                     frontendMessageId,
-                    personalizationData
+                    personalizationData,
+                    originalUserFiles // <<< TRUYỀN VÀO
                 );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
@@ -296,23 +289,16 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             let historyToSaveInDB: ChatHistoryItem[];
 
             if (Array.isArray(finalHistoryFromAIHandler) && finalHistoryFromAIHandler.length > 0) {
-                // finalHistoryFromAIHandler được trả về từ handleStreaming/NonStreaming.
-                // Nó nên chứa: [...historyForAIHandler, user_turn_corresponding_to_partsForAIHandler, new_bot_message (nếu có)]
-                // Chúng ta cần trích xuất new_bot_message.
                 const lastMessageFromAI = finalHistoryFromAIHandler[finalHistoryFromAIHandler.length - 1];
                 if (lastMessageFromAI.role === 'model') {
                     newBotMessageForClient = lastMessageFromAI;
-                    // Lịch sử để lưu vào DB sẽ là:
-                    // historyForNewBotResponse (đã chứa editedUserMessage ở cuối) + newBotMessageForClient
                     historyToSaveInDB = [...historyForNewBotResponse, newBotMessageForClient];
                     logToFile(`[INFO] ${convLogContext} AI responded. New bot message UUID: ${newBotMessageForClient.uuid}. History to save length: ${historyToSaveInDB.length}`);
                 } else {
-                    // AI handler không trả về model message ở cuối (có thể là lỗi hoặc function call không được xử lý hết)
                     logToFile(`[WARN] ${convLogContext} AI handler finished, but last message was not 'model'. Last role: ${lastMessageFromAI.role}.`);
                     historyToSaveInDB = [...historyForNewBotResponse]; // Chỉ lưu đến tin nhắn user đã edit
                 }
             } else {
-                // AI handler không trả về gì hoặc trả về rỗng.
                 logToFile(`[WARN] ${convLogContext} User message edited, but AI handler returned no history or inconclusive response.`);
                 historyToSaveInDB = [...historyForNewBotResponse]; // Chỉ lưu đến tin nhắn user đã edit
             }
@@ -320,11 +306,10 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             const saveSuccess = await conversationHistoryService.updateConversationHistory(
                 conversationId,
                 authenticatedUserId,
-                historyToSaveInDB // Ghi đè toàn bộ lịch sử bằng phiên bản mới này
+                historyToSaveInDB
             );
 
             if (!saveSuccess) {
-                // Gửi lỗi nhưng không dừng hẳn, vẫn cố gắng cập nhật client nếu có thể
                 sendChatError(convLogContext, 'Failed to save edited message and new AI response to database. Client data might be inconsistent.', 'edit_final_save_fail_db');
             } else {
                 logToFile(`[INFO] ${convLogContext} Successfully saved updated history to DB. Length: ${historyToSaveInDB.length}`);
@@ -333,22 +318,45 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
 
             // Bước 4: Gửi kết quả cuối cùng cho client.
-            const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
-                editedUserMessage: editedUserMessage, // Tin nhắn user đã được cập nhật (từ prepareResult)
-                newBotMessage: newBotMessageForClient, // Tin nhắn bot mới (nếu có)
-                conversationId: conversationId,
-            };
-            socket.emit('conversation_updated_after_edit', frontendPayload);
-            logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' event. BotMsg UUID: ${newBotMessageForClient?.uuid || 'N/A'}`);
+            // Only emit 'conversation_updated_after_edit' if a new bot message was generated,
+            // to satisfy the strict type BackendConversationUpdatedAfterEditPayload.newBotMessage: ChatHistoryItem.
+            if (newBotMessageForClient) {
+                const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
+                    editedUserMessage: editedUserMessage, // Tin nhắn user đã được cập nhật (từ prepareResult)
+                    newBotMessage: newBotMessageForClient, // newBotMessageForClient is confirmed to be ChatHistoryItem here
+                    conversationId: conversationId,
+                };
+                socket.emit('conversation_updated_after_edit', frontendPayload);
+                // The log message can now safely access .uuid as newBotMessageForClient is defined.
+                logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' event. BotMsg UUID: ${newBotMessageForClient.uuid}`);
+            } else {
+                // If no new bot message was generated, we cannot satisfy the BackendConversationUpdatedAfterEditPayload type.
+                // The edited user message IS saved, but this specific event isn't sent.
+                // This might require the client to have other ways to update the UI for the edited user message
+                // if no bot reply follows, or the type definition for newBotMessage should be made optional.
+                logToFile(
+                    `[WARN] ${convLogContext} User message (ID: ${editedUserMessage.uuid}) was edited and saved, ` +
+                    `but no new bot message was generated by the AI. ` +
+                    `The 'conversation_updated_after_edit' event was NOT sent because the 'BackendConversationUpdatedAfterEditPayload' type strictly requires a 'newBotMessage'. ` +
+                    `Consider making 'newBotMessage' optional in 'types.ts' or using a different event to notify client of user message edits without a bot reply.`
+                );
+                // To ensure the client *always* knows the user message was updated, even without a new bot message,
+                // you might consider emitting a simpler, different event here, e.g.:
+                // socket.emit('user_message_text_updated', {
+                //     conversationId: conversationId,
+                //     messageId: editedUserMessage.uuid,
+                //     newText: editedUserMessage.text, // or newParts
+                //     timestamp: editedUserMessage.timestamp,
+                // });
+                // This would be a separate client-side handling path.
+            }
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             sendChatError(convLogContext, `Server error during message edit: ${errorMessage || 'Unknown'}.`, 'edit_exception_unhandled', { errorDetails: errorMessage, stack: errorStack });
         }
-    });
-
-    logToFile(`${baseLogContext}[${deps.userId}] Message event handlers successfully registered.`);
-};
+    })
+}
 
 
 

@@ -18,7 +18,7 @@ if (!DATABASE_URL) {
     logToFile(errorMsg);
     throw new Error(errorMsg);
 } else {
-    logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
 }
 
 type ServiceApiActionTypeCalendar = 'add' | 'remove';

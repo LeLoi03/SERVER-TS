@@ -2,7 +2,7 @@
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
 import { Tool, Part, GenerateContentResponse, GenerateContentConfig, Content } from '@google/genai';
-import { ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate, ResultUpdate, ErrorUpdate, ChatUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload } from '../shared/types';
+import { ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate, ResultUpdate, ErrorUpdate, ChatUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo } from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
@@ -21,7 +21,9 @@ export async function handleStreaming(
     deps: HostAgentHandlerCustomDeps,
     onActionGenerated?: (action: FrontendAction) => void,
     frontendMessageId?: string, // UUID của tin nhắn user hiện tại (quan trọng cho edit)
-    personalizationData?: PersonalizationPayload | null
+    personalizationData?: PersonalizationPayload | null,
+    originalUserFiles?: OriginalUserFileInfo[] // <<< THÊM PARAMETER
+
 ): Promise<ChatHistoryItem[] | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const baseLogContext = `[${handlerId} Streaming Socket ${socket.id}]`;
@@ -48,16 +50,20 @@ export async function handleStreaming(
         role: 'user',
         parts: userInputParts,
         timestamp: new Date(),
-        // frontendMessageId được truyền từ MessageHandler, nó là UUID của tin nhắn user (mới hoặc đang edit)
-        uuid: frontendMessageId || `user-stream-${handlerId}-${Date.now()}`
+        uuid: frontendMessageId || `user-stream-${handlerId}-${Date.now()}`,
+        userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined // <<< SỬ DỤNG originalUserFiles
     };
+
 
     // Thêm lượt user hiện tại vào cả hai mảng lịch sử
     completeHistoryToSave.push(currentUserTurn);
     // historyForApiCall sẽ được dùng để gọi LLM, nó cần chứa lượt user này
     // historyForApiCall.push(currentUserTurn); // Sẽ được thêm vào historyForApiCall ngay trước khi gọi LLM ở lượt đầu tiên
 
-    logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) constructed. completeHistoryToSave length: ${completeHistoryToSave.length}.`);
+    // Đảm bảo rằng khi bạn log `currentUserTurn`, bạn có thể thấy `userFileInfo` nếu có.
+    logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) constructed. ` +
+        `userFileInfo: ${currentUserTurn.userFileInfo ? currentUserTurn.userFileInfo.length + ' files' : 'none'}. ` +
+        `completeHistoryToSave length: ${completeHistoryToSave.length}.`);
 
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',

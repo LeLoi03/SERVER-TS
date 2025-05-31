@@ -28,7 +28,7 @@ if (!DATABASE_URL) {
     // and thus prevent the application from starting in an unconfigured state.
     throw new Error(errorMsg);
 } else {
-    logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
 }
 
 

@@ -29,6 +29,26 @@ function createFunctionResponseContent(functionResponseParts: Part[]): Content {
 }
 
 
+function cleanPart(part: Part): Part {
+    if (part.text && typeof part.text === 'string' && part.text.trim() !== "") { // Chỉ trả về nếu text có nội dung
+        return { text: part.text };
+    }
+    if (part.inlineData && typeof part.inlineData.mimeType === 'string' && typeof part.inlineData.data === 'string') {
+        return { inlineData: { mimeType: part.inlineData.mimeType, data: part.inlineData.data } };
+    }
+    // QUAN TRỌNG: Chỉ trả về fileData nếu có cả mimeType và fileUri
+    if (part.fileData && typeof part.fileData.mimeType === 'string' && typeof part.fileData.fileUri === 'string') {
+        return { fileData: { mimeType: part.fileData.mimeType, fileUri: part.fileData.fileUri } };
+    }
+    if (part.functionCall && typeof part.functionCall.name === 'string') {
+        return { functionCall: part.functionCall };
+    }
+    if (part.functionResponse && typeof part.functionResponse.name === 'string') {
+        return { functionResponse: part.functionResponse };
+    }
+    // console.warn("[GeminiService cleanPart] Part is empty or invalid after cleaning:", part);
+    return {}; // Sẽ được lọc ra
+}
 /**
  * A service class for interacting with the Google Gemini API using the @google/genai SDK.
  * Handles both one-shot content generation and streaming responses,
@@ -46,7 +66,7 @@ export class Gemini {
         // Initialize the GoogleGenAI client
         this.ai = new GoogleGenAI({ apiKey }); // Pass apiKey in options object
         this.modelId = modelId;
-        logToFile(`[GeminiService] Initialized for model: ${this.modelId} using @google/genai SDK.`);
+        // logToFile(`[GeminiService] Initialized for model: ${this.modelId} using @google/genai SDK.`);
     }
 
     /**
@@ -71,10 +91,20 @@ export class Gemini {
         const handlerIdForLog = `[GeminiService:generateTurn ${Date.now().toString().slice(-4)}]`;
         logToFile(`${handlerIdForLog} History items received: ${history.length}.`);
 
-        const effectiveHistory: Content[] = history.map(item => ({
-            role: item.role,
-            parts: item.parts
-        }));
+        const effectiveHistory: Content[] = history
+            .map(item => {
+                const cleanedParts = item.parts.map(cleanPart).filter(p => Object.keys(p).length > 0);
+                // Nếu không có part nào hợp lệ sau khi clean, không tạo content item này
+                if (cleanedParts.length === 0) {
+                    logToFile(`[GeminiService] Warning: All parts for role ${item.role} (uuid: ${item.uuid}) became empty after cleaning. Original parts: ${JSON.stringify(item.parts)}. Skipping this history item.`);
+                    return null; // Sẽ được lọc bỏ ở bước sau
+                }
+                return {
+                    role: item.role,
+                    parts: cleanedParts
+                };
+            })
+            .filter(contentItem => contentItem !== null) as Content[]; // Lọc bỏ các item null
 
         const apiConfig: GenerateContentConfig = { ...generationAndSystemConfig };
 
@@ -85,7 +115,7 @@ export class Gemini {
         }
 
 
-        logToFile(`[GeminiService:generateTurn] Effective Generation Config: ${JSON.stringify(apiConfig)}`);
+        // logToFile(`[GeminiService:generateTurn] Effective Generation Config: ${JSON.stringify(apiConfig)}`);
 
         if (apiConfig.tools && apiConfig.tools.length > 0) {
             const toolNames = apiConfig.tools.map(t => {
@@ -111,12 +141,18 @@ export class Gemini {
                 currentTurnContent = { role: 'user', parts: [{ text: nextTurnInput }] };
             }
         } else if (Array.isArray(nextTurnInput) && nextTurnInput.length > 0) {
-            if (nextTurnInput.some(part => part.functionResponse)) {
-                currentTurnContent = createFunctionResponseContent(nextTurnInput);
+            const cleanedInputParts = nextTurnInput.map(cleanPart).filter(p => Object.keys(p).length > 0);
+            if (cleanedInputParts.length > 0) {
+                if (cleanedInputParts.some(part => part.functionResponse)) {
+                    currentTurnContent = createFunctionResponseContent(cleanedInputParts);
+                } else {
+                    currentTurnContent = createUserContentFromParts(cleanedInputParts);
+                }
             } else {
-                currentTurnContent = createUserContentFromParts(nextTurnInput);
+                logToFile(`[GeminiService] Warning: nextTurnInput (Part[]) became empty after cleaning. Original: ${JSON.stringify(nextTurnInput)}`);
             }
         }
+
 
         const contentsToSend: Content[] = [...effectiveHistory];
         if (currentTurnContent) {
@@ -228,11 +264,20 @@ export class Gemini {
         const handlerIdForLog = `[GeminiService:generateStream ${Date.now().toString().slice(-4)}]`;
         logToFile(`${handlerIdForLog} History items received: ${history.length}.`);
 
-        const effectiveHistory: Content[] = history.map(item => ({
-            role: item.role,
-            parts: item.parts
-        }));
-
+        const effectiveHistory: Content[] = history
+            .map(item => {
+                const cleanedParts = item.parts.map(cleanPart).filter(p => Object.keys(p).length > 0);
+                // Nếu không có part nào hợp lệ sau khi clean, không tạo content item này
+                if (cleanedParts.length === 0) {
+                    logToFile(`[GeminiService] Warning: All parts for role ${item.role} (uuid: ${item.uuid}) became empty after cleaning. Original parts: ${JSON.stringify(item.parts)}. Skipping this history item.`);
+                    return null; // Sẽ được lọc bỏ ở bước sau
+                }
+                return {
+                    role: item.role,
+                    parts: cleanedParts
+                };
+            })
+            .filter(contentItem => contentItem !== null) as Content[]; // Lọc bỏ các item null
 
         const apiConfig: GenerateContentConfig = { ...generationAndSystemConfig };
         if (typeof generationAndSystemConfig.systemInstruction === 'string') {
@@ -241,7 +286,7 @@ export class Gemini {
             apiConfig.systemInstruction = generationAndSystemConfig.systemInstruction;
         }
 
-        logToFile(`[GeminiService:generateStream] Effective Generation Config: ${JSON.stringify(apiConfig)}`);
+        // logToFile(`[GeminiService:generateStream] Effective Generation Config: ${JSON.stringify(apiConfig)}`);
         if (apiConfig.tools && apiConfig.tools.length > 0) {
             const toolNames = apiConfig.tools.map(t => {
                 if (t.functionDeclarations) { return t.functionDeclarations.map(fd => fd.name); }
@@ -261,12 +306,18 @@ export class Gemini {
                 currentTurnContent = { role: 'user', parts: [{ text: nextTurnInput }] };
             }
         } else if (Array.isArray(nextTurnInput) && nextTurnInput.length > 0) {
-            if (nextTurnInput.some(part => part.functionResponse)) {
-                currentTurnContent = createFunctionResponseContent(nextTurnInput);
+            const cleanedInputParts = nextTurnInput.map(cleanPart).filter(p => Object.keys(p).length > 0);
+            if (cleanedInputParts.length > 0) {
+                if (cleanedInputParts.some(part => part.functionResponse)) {
+                    currentTurnContent = createFunctionResponseContent(cleanedInputParts);
+                } else {
+                    currentTurnContent = createUserContentFromParts(cleanedInputParts);
+                }
             } else {
-                currentTurnContent = createUserContentFromParts(nextTurnInput);
+                logToFile(`[GeminiService] Warning: nextTurnInput (Part[]) became empty after cleaning. Original: ${JSON.stringify(nextTurnInput)}`);
             }
         }
+
 
         const contentsToSend: Content[] = [...effectiveHistory];
         if (currentTurnContent) {
