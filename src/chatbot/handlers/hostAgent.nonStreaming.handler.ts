@@ -52,8 +52,7 @@ export async function handleNonStreaming(
     if (personalizationData) logToFile(`[DEBUG ${baseLogContext}] Personalization Data: ${JSON.stringify(personalizationData)}`);
 
     const currentAgentId: AgentId = 'HostAgent';
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId, personalizationData);
-    const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
+    const { systemInstructions, tools } = getAgentLanguageConfig(language, 'HostAgent', personalizationData); // <<< Lấy tools
 
     let historyForApiCall: ChatHistoryItem[] = [...initialHistoryFromSocket];
     let completeHistoryToSave: ChatHistoryItem[] = [...initialHistoryFromSocket];
@@ -147,7 +146,9 @@ export async function handleNonStreaming(
             if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected before Model call.`); return { history: completeHistoryToSave, action: finalFrontendAction }; }
 
             const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | Content; tools?: Tool[] } = {
-                ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: tools
+                ...hostAgentGenerationConfig,
+                systemInstruction: systemInstructions,
+                tools: tools // <<< SỬ DỤNG tools
             };
 
             const modelResult = await geminiServiceForHost.generateTurn(

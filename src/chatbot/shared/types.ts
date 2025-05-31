@@ -610,14 +610,19 @@ export interface SendMessageData {
 
 
 
-// Define the PersonalizationPayload if it's not already here
-// This should match the one on the frontend
-export interface PersonalizationPayload {
-    firstName?: string;
-    lastName?: string;
-    aboutMe?: string;
-    interestedTopics?: string[];
+export interface UserProfileData {
+  firstName?: string | null;
+  lastName?: string | null;
+  aboutMe?: string | null;
+  interestedTopics?: string[];
 }
+
+export interface PersonalizationPayload { // Đổi tên từ CombinedSettingsPayload nếu bạn muốn
+  isPersonalizationEnabled: boolean;
+  userProfile?: UserProfileData;
+  isGoogleSearchEnabled: boolean; // <<< Đảm bảo cờ này có ở đây
+}
+
 
 /**
  * Data structure for editing a user message.

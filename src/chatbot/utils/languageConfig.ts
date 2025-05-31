@@ -1,18 +1,15 @@
 // src/chatbot/utils/languageConfig.ts
-import { FunctionDeclaration } from '@google/genai'; // Assuming '@google/genai'
+import { FunctionDeclaration, Tool, GoogleSearch, GoogleSearchRetrieval, DynamicRetrievalConfigMode } from '@google/genai'; // Thêm các type cần thiết
 import { Language, AgentId, PersonalizationPayload } from '../shared/types';
 import logToFile from '../../utils/logger';
 import * as LangData from '../language';
 
-// --- Define the structure for language-specific configuration per agent ---
 interface LanguageAgentConfig {
     systemInstructions: string;
-    functionDeclarations: FunctionDeclaration[]; // Now uses new SDK's FunctionDeclaration
+    tools: Tool[];
 }
 
-// --- Common English Function Declarations for all agents ---
-// This assumes that the objects in LangData (e.g., englishGetConferencesDeclaration)
-// will be updated to conform to the new SDK's FunctionDeclaration structure.
+// --- Common English Function Declarations for other agents (NON-GROUNDING TOOLS) ---
 const commonEnglishFunctionDeclarations: Record<AgentId, FunctionDeclaration[]> = {
     'ConferenceAgent': [
         LangData.englishGetConferencesDeclaration,
@@ -34,11 +31,27 @@ const commonEnglishFunctionDeclarations: Record<AgentId, FunctionDeclaration[]> 
     'WebsiteInfoAgent': [
         LangData.englishGetWebsiteInfoDeclaration,
     ],
-    'HostAgent': [
+    'HostAgent': [ // Các function call tùy chỉnh của HostAgent (nếu có, ngoài grounding)
         LangData.englishRouteToAgentDeclaration,
     ]
 };
 
+// --- Google Search Tools for Grounding (theo type SDK) ---
+
+// Tool cho Google Search cơ bản (grounding)
+const googleSearchBasicGroundingTool: Tool = {
+    googleSearch: {} // Theo SDK, đây là một object GoogleSearch rỗng
+};
+
+// Tool cho Google Search Retrieval với cấu hình động
+const googleSearchDynamicRetrievalTool: Tool = {
+    googleSearchRetrieval: { // Đây là một object GoogleSearchRetrieval
+        dynamicRetrievalConfig: {
+            dynamicThreshold: 0.3, // Ví dụ threshold
+            mode: DynamicRetrievalConfigMode.MODE_DYNAMIC // Sử dụng enum từ SDK nếu có, hoặc string "MODE_DYNAMIC"
+        }
+    }
+};
 // --- Map configurations (chỉ cho systemInstructions thay đổi theo ngôn ngữ) ---
 const agentBaseSystemInstructions: Record<AgentId, Partial<Record<Language, string>>> = {
     'HostAgent': {
@@ -70,108 +83,127 @@ const DEFAULT_AGENT_ID: AgentId = 'HostAgent';
 export function getAgentLanguageConfig(
     lang: Language | undefined,
     agentId: AgentId = DEFAULT_AGENT_ID,
-    personalizationData?: PersonalizationPayload | null // <<< Existing parameter
-
+    personalizationData?: PersonalizationPayload | null
 ): LanguageAgentConfig {
     const targetLang = lang || DEFAULT_LANGUAGE;
-    let baseSystemInstructionsText: string = ""; // <<< INITIALIZE HERE
+    let baseSystemInstructionsText: string = "";
     let useEffectivePersonalizedInstructions = false;
 
-    if (agentId === 'HostAgent' && personalizationData && Object.keys(personalizationData).length > 0) {
+    if (agentId === 'HostAgent' && personalizationData?.isPersonalizationEnabled && (personalizationData.userProfile && Object.keys(personalizationData.userProfile).length > 0)) {
         const personalizedInstructionsForLang = personalizedAgentBaseSystemInstructions.HostAgent?.[targetLang];
         const personalizedInstructionsForEn = personalizedAgentBaseSystemInstructions.HostAgent?.['en'];
 
         if (personalizedInstructionsForLang) {
             baseSystemInstructionsText = personalizedInstructionsForLang;
             useEffectivePersonalizedInstructions = true;
-            logToFile(`[Language Config] Using PERSONALIZED base instructions for HostAgent, Lang: ${targetLang}`);
         } else if (personalizedInstructionsForEn) {
-            // Fallback to default personalized English if target language personalized not found
             baseSystemInstructionsText = personalizedInstructionsForEn;
             useEffectivePersonalizedInstructions = true;
             logToFile(`[Language Config] WARN: Personalized HostAgent instructions not found for Lang: ${targetLang}. Falling back to PERSONALIZED English.`);
         } else {
-            // This case means even personalized English is missing, which is a config error.
-            // Fallback to default non-personalized English as a last resort.
             logToFile(`[Language Config] CRITICAL ERROR: Personalized English instructions for HostAgent are missing. Falling back to DEFAULT English.`);
-            baseSystemInstructionsText = LangData.enHostAgentSystemInstructions; // Default non-personalized English
-            // useEffectivePersonalizedInstructions remains false
+            baseSystemInstructionsText = LangData.enHostAgentSystemInstructions;
         }
     }
 
-    // If not using personalized (either by condition or because personalized templates were missing),
-    // or if it's not HostAgent, get default instructions.
     if (!useEffectivePersonalizedInstructions) {
         if (agentId === 'HostAgent') {
             const defaultHostInstructionsForLang = agentBaseSystemInstructions.HostAgent?.[targetLang];
             if (defaultHostInstructionsForLang) {
                 baseSystemInstructionsText = defaultHostInstructionsForLang;
             } else {
-                // Dynamic lookup as a fallback (ensure LangData keys match)
                 const dynamicInstructionsKey = `${targetLang}HostAgentSystemInstructions` as keyof typeof LangData;
                 const dynamicInstructions = LangData[dynamicInstructionsKey];
                 if (typeof dynamicInstructions === 'string') {
                     baseSystemInstructionsText = dynamicInstructions;
                 } else {
                     logToFile(`[Language Config] WARN: HostAgent system instructions not found for Lang: "${targetLang}". Falling back to DEFAULT English.`);
-                    baseSystemInstructionsText = LangData.enHostAgentSystemInstructions; // Default non-personalized English
+                    baseSystemInstructionsText = LangData.enHostAgentSystemInstructions;
                 }
             }
-            logToFile(`[Language Config] Using DEFAULT base instructions for HostAgent, Lang: ${targetLang}`);
-        } else { // For other agents, assume English instructions for now
+            if (!useEffectivePersonalizedInstructions) {
+                logToFile(`[Language Config] Using DEFAULT base instructions for HostAgent, Lang: ${targetLang}`);
+            }
+        } else {
             const englishInstructionsKey = `english${agentId}SystemInstructions` as keyof typeof LangData;
             const englishInstructions = LangData[englishInstructionsKey];
             if (typeof englishInstructions === 'string') {
                 baseSystemInstructionsText = englishInstructions;
             } else {
                 logToFile(`[Language Config] CRITICAL: English system instructions missing or not a string for agent "${agentId}".`);
-                baseSystemInstructionsText = "Error: English instructions missing or malformed."; // Fallback error string
+                baseSystemInstructionsText = "Error: English instructions missing or malformed.";
             }
         }
     }
-
-    // At this point, baseSystemInstructionsText should always be assigned.
-    // If it's still an empty string due to a major config error, the LLM will get an empty system prompt.
     if (baseSystemInstructionsText === "") {
-        logToFile(`[Language Config] CRITICAL ERROR: baseSystemInstructionsText is empty for Agent: ${agentId}, Lang: ${targetLang}. This indicates a serious configuration issue.`);
-        // Provide a very generic fallback to prevent crashes, though the bot's behavior will be poor.
+        logToFile(`[Language Config] CRITICAL ERROR: baseSystemInstructionsText is empty for Agent: ${agentId}, Lang: ${targetLang}.`);
         baseSystemInstructionsText = "You are a helpful assistant. Please respond to the user's query.";
     }
 
-
     let finalSystemInstructions = baseSystemInstructionsText;
 
-    if (useEffectivePersonalizedInstructions && personalizationData) {
-        // Ensure baseSystemInstructionsText was actually set to a personalized template
-        // This check is a bit redundant if useEffectivePersonalizedInstructions is true,
-        // but good for safety if logic changes.
-        if (finalSystemInstructions.includes("[User's First Name]")) { // Check for a placeholder
-            finalSystemInstructions = finalSystemInstructions.replace(/\[User's First Name\]/g, personalizationData.firstName || 'User');
-            finalSystemInstructions = finalSystemInstructions.replace(/\[User's Last Name\]/g, personalizationData.lastName || '');
-            finalSystemInstructions = finalSystemInstructions.replace(/\[User's About Me section\]/g, personalizationData.aboutMe || 'Not specified');
-            const topics = personalizationData.interestedTopics && personalizationData.interestedTopics.length > 0
-                ? personalizationData.interestedTopics.join(', ')
+    if (useEffectivePersonalizedInstructions && personalizationData?.isPersonalizationEnabled && personalizationData.userProfile) {
+        if (finalSystemInstructions.includes("[User's First Name]")) {
+            finalSystemInstructions = finalSystemInstructions.replace(/\[User's First Name\]/g, personalizationData.userProfile.firstName || 'User');
+            finalSystemInstructions = finalSystemInstructions.replace(/\[User's Last Name\]/g, personalizationData.userProfile.lastName || '');
+            finalSystemInstructions = finalSystemInstructions.replace(/\[User's About Me section\]/g, personalizationData.userProfile.aboutMe || 'Not specified');
+            const topics = personalizationData.userProfile.interestedTopics && personalizationData.userProfile.interestedTopics.length > 0
+                ? personalizationData.userProfile.interestedTopics.join(', ')
                 : 'Not specified';
             finalSystemInstructions = finalSystemInstructions.replace(/\[List of User's Interested Topics\]/g, topics);
-            logToFile(`[Language Config] Injected personalization data into HostAgent instructions.`);
         } else {
-            logToFile(`[Language Config] WARN: useEffectivePersonalizedInstructions was true, but the loaded baseSystemInstructionsText did not seem to be a personalized template (missing placeholders). Personalization data not injected.`);
+            logToFile(`[Language Config] WARN: useEffectivePersonalizedInstructions was true, but the loaded baseSystemInstructionsText did not seem to be a personalized template.`);
         }
     }
 
-    const functionDeclarations: FunctionDeclaration[] = commonEnglishFunctionDeclarations[agentId] || [];
-    if (functionDeclarations.length === 0 && agentId !== 'HostAgent') {
-        logToFile(`[Language Config] INFO: No specific English function declarations found for agent "${agentId}". This might be intended.`);
-    }
-    if (agentId === 'HostAgent' && (!functionDeclarations.find(fn => fn.name === LangData.englishRouteToAgentDeclaration.name))) {
-        logToFile(`[Language Config] WARN: HostAgent is missing its 'englishRouteToAgentDeclaration'. Consider adding it if it's not implicitly handled.`);
-        // Example: if (LangData.englishRouteToAgentDeclaration) functionDeclarations.push(LangData.englishRouteToAgentDeclaration);
+    // --- Xây dựng tools ---
+    const tools: Tool[] = [];
+
+    // Thêm các function declarations tùy chỉnh (NON-GROUNDING)
+    const customFunctionDeclarations: FunctionDeclaration[] = commonEnglishFunctionDeclarations[agentId] || [];
+    if (customFunctionDeclarations.length > 0) {
+        tools.push({ functionDeclarations: customFunctionDeclarations });
     }
 
-    logToFile(`[Language Config] Finalized config for Agent: ${agentId}, Lang: ${targetLang}. Personalization active: ${useEffectivePersonalizedInstructions}`);
+    // Thêm Google Search Grounding Tools cho HostAgent nếu được bật
+    if (agentId === 'HostAgent' && personalizationData?.isGoogleSearchEnabled) {
+        // Bạn có thể chọn một hoặc cả hai, hoặc có logic để quyết định dùng cái nào
+        // Ví dụ: chỉ dùng basic grounding
+        tools.push(googleSearchBasicGroundingTool);
+        logToFile(`[Language Config] Added GoogleSearch Basic Grounding Tool for HostAgent.`);
+
+        // Hoặc nếu bạn muốn dùng dynamic retrieval (như yêu cầu ban đầu của bạn)
+        // tools.push(googleSearchDynamicRetrievalTool);
+        // logToFile(`[Language Config] Added GoogleSearch Dynamic Retrieval Tool for HostAgent.`);
+
+        // Hoặc cả hai nếu API cho phép và có ý nghĩa (thường thì không cần cả hai cùng lúc)
+        // tools.push(googleSearchBasicGroundingTool);
+        // tools.push(googleSearchDynamicRetrievalTool);
+
+        // QUAN TRỌNG: System instruction của bạn nên hướng dẫn mô hình cách sử dụng
+        // các tool này một cách hiệu quả. Nếu bạn cung cấp cả hai,
+        // system instruction có thể cần phải rõ ràng hơn về việc khi nào dùng tool nào,
+        // mặc dù thường thì mô hình sẽ tự quyết định.
+        // Để đơn giản, thường chỉ cần một loại Google Search grounding tool.
+    } else if (agentId === 'HostAgent') {
+        logToFile(`[Language Config] Google Search Grounding is DISABLED for HostAgent.`);
+    }
+
+    logToFile(`[Language Config] Finalized config for Agent: ${agentId}, Lang: ${targetLang}. Personalization active: ${useEffectivePersonalizedInstructions}, Google Search active: ${!!personalizationData?.isGoogleSearchEnabled}. Tools count: ${tools.length}`);
+    if (tools.length > 0) {
+        tools.forEach(tool => {
+            if (tool.functionDeclarations) {
+                logToFile(`[Language Config] Tool: FunctionDeclarations (${tool.functionDeclarations.map(fd => fd.name).join(', ')})`);
+            } else if (tool.googleSearch) {
+                logToFile(`[Language Config] Tool: GoogleSearch (Basic Grounding)`);
+            } else if (tool.googleSearchRetrieval) {
+                logToFile(`[Language Config] Tool: GoogleSearchRetrieval (Dynamic Retrieval)`);
+            }
+        });
+    }
 
     return {
         systemInstructions: finalSystemInstructions,
-        functionDeclarations
+        tools
     };
 }

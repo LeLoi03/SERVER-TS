@@ -4,7 +4,7 @@ import {
     Tool,
     Part,
     GenerateContentConfig,
-    FunctionCall // Make sure this is imported
+    Content
 } from '@google/genai';
 
 import {
@@ -97,13 +97,18 @@ export async function callSubAgent(
 
     logToFile(`--- [${subHandlerProcessId} Socket ${socketId}] Calling Sub Agent: ${subAgentId}, Task ID: ${requestCard.taskId}, Description: "${requestCard.taskDescription?.substring(0, 50)}..." ---`);
 
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, subAgentId);
-    const subAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
-    if (subAgentTools.length > 0) {
-        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Loaded ${functionDeclarations.length} functions for sub-agent.`);
+
+    // <<< THAY ĐỔI Ở ĐÂY
+    const { systemInstructions, tools: subAgentTools } = getAgentLanguageConfig(language, subAgentId);
+    // subAgentTools giờ đây là một mảng Tool[]
+
+    if (subAgentTools.length > 0 && subAgentTools[0]?.functionDeclarations) {
+        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Loaded ${subAgentTools[0].functionDeclarations.length} functions for sub-agent.`);
     } else {
-        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] No functions loaded for sub-agent.`);
+        logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] No functions loaded for sub-agent or tools structure is different.`);
     }
+    // >>> KẾT THÚC THAY ĐỔI
+
 
     const taskDesc = requestCard.taskDescription?.trim();
     if (!taskDesc) {
@@ -163,16 +168,18 @@ export async function callSubAgent(
 
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] Calling Gemini service for sub-agent with input type: string`);
 
-        const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | import('@google/genai').Content; tools?: Tool[] } = {
+        // <<< THAY ĐỔI Ở ĐÂY
+        const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | Content; tools?: Tool[] } = {
             ...subAgentGenerationConfig,
-            systemInstruction: systemInstructions,
-            tools: subAgentTools
+            systemInstruction: systemInstructions, // systemInstructions đã là string
+            tools: subAgentTools // subAgentTools đã là Tool[]
         };
+        // >>> KẾT THÚC THAY ĐỔI
 
         const subAgentLlmResult = await geminiServiceForSubAgent.generateTurn(
-            nextTurnInputForSubAgent,
-            subAgentIsolatedHistory,
-            combinedConfig
+            nextTurnInputForSubAgent, // Input cho sub-agent
+            subAgentIsolatedHistory,  // Lịch sử (thường là rỗng cho sub-agent)
+            combinedConfig            // Config đã bao gồm tools
         );
 
         logToFile(`[${subHandlerProcessId} Socket ${socketId} Agent:${subAgentId}] LLM result: Status ${subAgentLlmResult.status}`);
