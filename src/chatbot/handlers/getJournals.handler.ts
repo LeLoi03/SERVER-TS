@@ -1,7 +1,7 @@
 // src/chatbot/handlers/getJournals.handler.ts
 import { executeGetJournals } from '../services/getJournals.service';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
-import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types';
+import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdatePayload, ThoughtStep } from '../shared/types';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
@@ -54,7 +54,7 @@ export class GetJournalsHandler implements IFunctionHandler {
             logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
 
             if (onStatusUpdate) {
-                const statusData: StatusUpdate = {
+                const statusData: StatusUpdatePayload = {
                     type: 'status',
                     step,
                     message,

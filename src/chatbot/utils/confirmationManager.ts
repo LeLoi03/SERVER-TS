@@ -2,7 +2,7 @@
 import { Socket } from 'socket.io';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
-import { ConfirmSendEmailAction } from '../shared/types'; // Assuming types are in shared/types
+import { ConfirmSendEmailActionPayload } from '../shared/types'; // Assuming types are in shared/types
 import { executeSendEmailToAdmin } from '../services/sendEmailToAdmin.service'; // Adjust path
 
 /**
@@ -12,7 +12,7 @@ import { executeSendEmailToAdmin } from '../services/sendEmailToAdmin.service'; 
  */
 interface PendingConfirmationInfo {
     /** The details of the email to be sent, as provided by the AI. */
-    details: ConfirmSendEmailAction;
+    details: ConfirmSendEmailActionPayload;
     /** The authentication token of the user who initiated the request. */
     userToken: string | null;
     /** The Socket.IO ID of the client session. */
@@ -27,7 +27,7 @@ interface PendingConfirmationInfo {
 
 /**
  * A Map to store pending email confirmation requests.
- * The key is the `confirmationId` from the `ConfirmSendEmailAction`.
+ * The key is the `confirmationId` from the `ConfirmSendEmailActionPayload`.
  */
 const pendingEmailConfirmations: Map<string, PendingConfirmationInfo> = new Map();
 
@@ -35,14 +35,14 @@ const pendingEmailConfirmations: Map<string, PendingConfirmationInfo> = new Map(
  * Stages an email confirmation request, storing its details and setting a timeout.
  * This function is called when the AI requests a user confirmation before sending an email.
  *
- * @param {ConfirmSendEmailAction} payload - The details of the email and confirmation request.
+ * @param {ConfirmSendEmailActionPayload} payload - The details of the email and confirmation request.
  * @param {string | null} userToken - The authentication token of the user.
  * @param {string} socketId - The Socket.IO ID of the client.
  * @param {string} handlerId - The unique ID of the handler process.
  * @param {any} io - The Socket.IO server instance, used for emitting timeout results.
  */
 export function stageEmailConfirmation(
-    payload: ConfirmSendEmailAction,
+    payload: ConfirmSendEmailActionPayload,
     userToken: string | null,
     socketId: string,
     handlerId: string,

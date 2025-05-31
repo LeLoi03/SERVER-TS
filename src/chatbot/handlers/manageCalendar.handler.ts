@@ -15,7 +15,7 @@ import {
     CalendarItem, // Đảm bảo CalendarItem được import từ shared/types.ts đã cập nhật
     FrontendAction,
     ThoughtStep,
-    StatusUpdate,
+    StatusUpdatePayload,
     ItemCalendarStatusUpdatePayload // Import payload mới
 } from '../shared/types';
 import logToFile from '../../utils/logger';
@@ -53,7 +53,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
             logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
 
             if (onStatusUpdate) {
-                const statusData: StatusUpdate = {
+                const statusData: StatusUpdatePayload = {
                     type: 'status',
                     step,
                     message,

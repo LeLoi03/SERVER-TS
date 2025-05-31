@@ -4,11 +4,10 @@ import { IFunctionHandler } from '../interface/functionHandler.interface';
 import {
     FunctionHandlerInput,
     FunctionHandlerOutput,
-    StatusUpdate,
+    StatusUpdatePayload,
     ThoughtStep,
-    AgentId,
-    FrontendAction, // <<< Import FrontendAction
-    DisplayConferenceSourcesPayload // <<< Import payload mới
+    FrontendAction,
+    DisplayConferenceSourcesPayload
 } from '../shared/types';
 import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
@@ -71,7 +70,7 @@ export class GetConferencesHandler implements IFunctionHandler {
             localThoughts.push(thought);
             logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
             if (onStatusUpdate) {
-                const statusData: StatusUpdate = {
+                const statusData: StatusUpdatePayload = {
                     type: 'status', step, message, details, timestamp, agentId: agentId,
                 };
                 onStatusUpdate('status_update', statusData);

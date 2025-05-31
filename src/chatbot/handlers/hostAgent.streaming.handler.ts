@@ -2,7 +2,10 @@
 import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
 import { Tool, Part, GenerateContentResponse, GenerateContentConfig, Content } from '@google/genai';
-import { ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate, ResultUpdate, ErrorUpdate, ChatUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo } from '../shared/types';
+import {
+    ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdatePayload, FinalResultPayload, ErrorUpdatePayload,
+    ChatStreamUpdatePayload, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo
+} from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
 
@@ -67,38 +70,44 @@ export async function handleStreaming(
 
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',
-        data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate
+        data: StatusUpdatePayload | ChatStreamUpdatePayload | FinalResultPayload | ErrorUpdatePayload
     ): boolean => {
         if (!socket.connected) {
+            logToFile(`[${handlerId} Socket Emit Attempt (Streaming) - ${socket.id}] SKIPPED: Client disconnected. Event: ${eventName}`);
             return false;
         }
         try {
             let dataToSend: any = { ...data };
+
             if (eventName === 'status_update' && data.type === 'status') {
-                if (!data.agentId || data.agentId === 'HostAgent') { // Only add HostAgent thoughts here
+                if (!data.agentId || data.agentId === 'HostAgent') {
                     allThoughtsCollectedStreaming.push({
                         step: data.step, message: data.message, agentId: 'HostAgent',
-                        timestamp: (data as StatusUpdate).timestamp || new Date().toISOString(), details: (data as StatusUpdate).details
+                        timestamp: (data as StatusUpdatePayload).timestamp || new Date().toISOString(), details: (data as StatusUpdatePayload).details
                     });
                 }
-                // Ensure agentId is set for the emitted event, defaulting to HostAgent if not specified by a sub-agent
                 dataToSend.agentId = data.agentId || 'HostAgent';
+                // Status updates can also send accumulated thoughts up to that point
+                dataToSend.thoughts = [...allThoughtsCollectedStreaming];
             }
 
-            if (eventName === 'chat_result' || eventName === 'chat_error') {
-                dataToSend.thoughts = [...allThoughtsCollectedStreaming]; // Send all collected thoughts
-                if (eventName === 'chat_result' && finalFrontendActionStreaming) {
-                    (dataToSend as ResultUpdate).action = finalFrontendActionStreaming;
-                }
+            if (eventName === 'chat_error' && data.type === 'error') {
+                dataToSend.thoughts = [...allThoughtsCollectedStreaming]; // ErrorUpdatePayload has its own thoughts field
             }
+
+            // For chat_result, thoughts and action are part of the ChatHistoryItem within FinalResultPayload.message
+            // No need to add them at the top level of dataToSend for chat_result here.
+
             socket.emit(eventName, dataToSend);
+            logToFile(`[${handlerId} Socket Emit Sent (Streaming) - ${socket.id}] Event: ${eventName}, Type: ${data.type}, Agent: ${dataToSend.agentId || (data.type === 'result' ? (data.message as ChatHistoryItem).role : 'N/A')}`);
             return true;
         } catch (error: any) {
+            logToFile(`[${handlerId} Socket Emit Attempt (Streaming) - ${socket.id}] FAILED: Error during emit. Event: ${eventName}, Error: ${error.message}`);
             return false;
         }
     };
 
-    const hostAgentStreamingStatusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
+    const hostAgentStreamingStatusUpdateCallback = (eventName: 'status_update', data: StatusUpdatePayload): boolean => {
         return safeEmitStreaming(eventName, { ...data, agentId: 'HostAgent' });
     };
 
@@ -293,13 +302,22 @@ export async function handleStreaming(
                 if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
                     const finalModelParts = streamOutput.parts && streamOutput.parts.length > 0 ? streamOutput.parts : [{ text: streamOutput.fullText }];
-                    const finalModelTurn: ChatHistoryItem = {
-                        role: 'model', parts: finalModelParts, uuid: botMessageUuid, timestamp: new Date()
+                    // Create the complete ChatHistoryItem for the bot's final streamed response
+                    const finalBotMessage: ChatHistoryItem = {
+                        uuid: botMessageUuid,
+                        role: 'model',
+                        parts: finalModelParts,
+                        timestamp: new Date(),
+                        thoughts: [...allThoughtsCollectedStreaming], // Include all accumulated thoughts
+                        action: finalFrontendActionStreaming // Include the final action, if any
                     };
-                    completeHistoryToSave.push(finalModelTurn); // Thêm phản hồi cuối cùng của bot
-                    safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, parts: finalModelParts, id: botMessageUuid });
+
+                    completeHistoryToSave.push(finalBotMessage);
                     logToFile(`${turnLogContext} Stream processed. Final model turn UUID: ${botMessageUuid} added. completeHistoryToSave length: ${completeHistoryToSave.length}`);
-                    return completeHistoryToSave; // Kết thúc và trả về lịch sử hoàn chỉnh
+
+                    // Emit the final result containing the complete ChatHistoryItem
+                    safeEmitStreaming('chat_result', { type: 'result', message: finalBotMessage });
+                    return completeHistoryToSave;
                 } else {
                     logToFile(`${turnLogContext} Error - Failed to process final stream or client disconnected.`);
                     if (socket.connected) safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });

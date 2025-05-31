@@ -13,7 +13,7 @@ interface SendEmailArgs {
     /** The subject line of the email. */
     subject: string;
     /** The type of request (e.g., 'contact' for general inquiries, 'report' for issues). */
-    requestType: 'contact' | 'report';
+    requestType: 'contact' | 'report' | string;
     /** The main body message of the email. */
     message: string;
 }

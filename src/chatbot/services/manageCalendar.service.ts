@@ -1,7 +1,7 @@
 // src/services/manageCalendar.service.ts
 import 'reflect-metadata';
 import { container } from 'tsyringe';
-import { ApiCallResult, CalendarItem, FollowItem } from '../shared/types'; // Import CalendarItem, FollowItem
+import { CalendarItem } from '../shared/types';
 import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 import { ConfigService } from '../../config/config.service';

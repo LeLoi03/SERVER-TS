@@ -15,7 +15,7 @@ import {
     BlacklistItem,
     FrontendAction,
     ThoughtStep, // Added ThoughtStep for logging
-    StatusUpdate
+    StatusUpdatePayload
 } from '../shared/types';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
@@ -84,7 +84,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
             logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
 
             if (onStatusUpdate) {
-                const statusData: StatusUpdate = {
+                const statusData: StatusUpdatePayload = {
                     type: 'status',
                     step,
                     message,

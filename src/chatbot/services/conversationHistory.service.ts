@@ -1,7 +1,7 @@
 // src/chatbot/services/conversationHistory.service.ts
 import mongoose, { Types, Error as MongooseError } from 'mongoose';
 import ConversationModel, { IConversation } from '../models/conversation.model';
-import { ChatHistoryItem, RenameResult, NewConversationResult, Language } from '../shared/types';
+import { ChatHistoryItem, NewConversationResult, RenameConversationResultPayload } from '../shared/types';
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility for robust error handling
 
@@ -411,14 +411,14 @@ export class ConversationHistoryService {
      * @param {string} conversationId - The ID of the conversation to rename.
      * @param {string} userId - The ID of the user (for authorization).
      * @param {string} newTitle - The new title for the conversation.
-     * @returns {Promise<RenameResult>} A Promise resolving to a `RenameResult` object,
+     * @returns {Promise<RenameConversationResultPayload>} A Promise resolving to a `RenameConversationResultPayload` object,
      *                                 indicating success, the updated title, and the conversation ID.
      */
     async renameConversation(
         conversationId: string,
         userId: string,
         newTitle: string
-    ): Promise<RenameResult> {
+    ): Promise<RenameConversationResultPayload> {
         const logContext = `${LOG_PREFIX} [Rename Conv: ${conversationId}, User: ${userId}]`;
         logToFile(`${logContext} Attempting to rename to "${newTitle.substring(0, Math.min(newTitle.length, 30))}..."`);
 

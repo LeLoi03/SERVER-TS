@@ -5,14 +5,14 @@ import { ConfigService } from '../../config/config.service';
 import {
     Language,
     FrontendAction,
-    StatusUpdate,
-    ResultUpdate,
-    ErrorUpdate,
+    StatusUpdatePayload,
+    FinalResultPayload,
+    ErrorUpdatePayload,
     AgentId,
     ThoughtStep,
     AgentCardRequest,
     AgentCardResponse,
-    ChatUpdate
+    ChatStreamUpdatePayload
 } from '../shared/types';
 import type logToFileType from '../../utils/logger'; // Import type for logToFile
 import { GenerationConfig as SDKGenerationConfig } from '@google/genai'; // Renamed to avoid conflicts
@@ -73,7 +73,7 @@ export interface HostAgentHandlerCustomDeps extends BaseIntentHandlerDeps {
  * Type definition for a safe emit function, typically used to send updates to the frontend
  * while ensuring logging and error handling.
  * @param {'status_update' | 'chat_result' | 'chat_error' | 'chat_update'} eventName - The name of the socket event to emit.
- * @param {StatusUpdate | ResultUpdate | ErrorUpdate | ChatUpdate} data - The data payload for the event.
+ * @param {StatusUpdatePayload | FinalResultPayload | ErrorUpdatePayload | ChatStreamUpdatePayload} data - The data payload for the event.
  * @param {Socket} socket - The Socket.IO client socket.
  * @param {string} handlerId - A unique ID for the current handler process.
  * @param {typeof logToFileType} logToFile - The logging utility function.
@@ -83,7 +83,7 @@ export interface HostAgentHandlerCustomDeps extends BaseIntentHandlerDeps {
  */
 export type SafeEmitFn = (
     eventName: 'status_update' | 'chat_result' | 'chat_error' | 'chat_update',
-    data: StatusUpdate | ResultUpdate | ErrorUpdate | ChatUpdate,
+    data: StatusUpdatePayload | FinalResultPayload | ErrorUpdatePayload | ChatStreamUpdatePayload,
     socket: Socket,
     handlerId: string,
     logToFile: typeof logToFileType,

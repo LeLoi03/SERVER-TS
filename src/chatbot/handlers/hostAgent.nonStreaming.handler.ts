@@ -3,8 +3,8 @@ import { Socket } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
 import { Tool, Part, GenerateContentConfig, Content } from '@google/genai';
 import {
-    ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate,
-    ResultUpdate, ErrorUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload,
+    ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdatePayload,
+    FinalResultPayload, ErrorUpdatePayload, AgentCardRequest, AgentCardResponse, PersonalizationPayload,
     OriginalUserFileInfo // Đảm bảo đã import
 } from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
@@ -97,29 +97,37 @@ export async function handleNonStreaming(
     }
 
 
-    const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ResultUpdate | ErrorUpdate): boolean => {
+    const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdatePayload | FinalResultPayload | ErrorUpdatePayload): boolean => {
         if (!socket.connected) {
             logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] SKIPPED: Client disconnected. Event: ${eventName}`);
             return false;
         }
         try {
+            let dataToSend: any = { ...data }; // Start with a copy
+
             if (eventName === 'status_update' && data.type === 'status') {
+                // Add to local thoughts array for accumulation
                 thoughts.push({
                     step: data.step, message: data.message, agentId: currentAgentId,
-                    timestamp: (data as StatusUpdate).timestamp || new Date().toISOString(), details: (data as StatusUpdate).details
+                    timestamp: (data as StatusUpdatePayload).timestamp || new Date().toISOString(), details: (data as StatusUpdatePayload).details
                 });
+                // Ensure agentId is on the status update itself if not already present
+                if (!dataToSend.agentId) dataToSend.agentId = currentAgentId;
+                // Status updates can also send accumulated thoughts up to that point
+                dataToSend.thoughts = [...thoughts];
             }
-            let dataToSend: any = { ...data };
-            if (eventName === 'status_update' && !dataToSend.agentId) dataToSend.agentId = currentAgentId;
 
-            if (eventName === 'chat_result' || eventName === 'chat_error') {
-                dataToSend = { ...dataToSend, thoughts: [...thoughts] }; // Send a copy
-                if (eventName === 'chat_result' && finalFrontendAction) {
-                    (dataToSend as ResultUpdate).action = finalFrontendAction;
-                }
+            // For chat_error, we add accumulated thoughts directly to the payload
+            if (eventName === 'chat_error' && data.type === 'error') {
+                dataToSend.thoughts = [...thoughts]; // ErrorUpdatePayload has its own thoughts field
             }
+
+            // For chat_result, thoughts and action are part of the ChatHistoryItem within FinalResultPayload.message
+            // No need to add them at the top level of dataToSend for chat_result here.
+            // They are already prepared in the finalBotMessage object before calling safeEmit.
+
             socket.emit(eventName, dataToSend);
-            logToFile(`[${handlerId} Socket Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}, Agent: ${dataToSend.agentId || 'N/A'}`);
+            logToFile(`[${handlerId} Socket Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}, Agent: ${dataToSend.agentId || (data.type === 'result' ? (data.message as ChatHistoryItem).role : 'N/A')}`);
             return true;
         } catch (error: any) {
             logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] FAILED: Error during emit. Event: ${eventName}, Error: ${error.message}`);
@@ -127,7 +135,7 @@ export async function handleNonStreaming(
         }
     };
 
-    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdate): boolean => {
+    const statusUpdateCallback = (eventName: 'status_update', data: StatusUpdatePayload): boolean => {
         return safeEmit(eventName, data);
     };
 
@@ -189,14 +197,23 @@ export async function handleNonStreaming(
                 const botMessageUuid = uuidv4();
                 const modelResponseParts = modelResult.parts || [{ text: finalModelResponseText }];
 
-                const finalModelTurn: ChatHistoryItem = {
-                    role: 'model', parts: modelResponseParts, uuid: botMessageUuid, timestamp: new Date()
-                    // userFileInfo không áp dụng cho model turn
+
+                // Create the complete ChatHistoryItem for the bot's final response
+                const finalBotMessage: ChatHistoryItem = {
+                    uuid: botMessageUuid,
+                    role: 'model',
+                    parts: modelResponseParts,
+                    timestamp: new Date(),
+                    thoughts: [...thoughts], // Include all accumulated thoughts for this final message
+                    action: finalFrontendAction // Include the final action, if any
                 };
-                completeHistoryToSave.push(finalModelTurn);
+
+                completeHistoryToSave.push(finalBotMessage);
                 logToFile(`${turnLogContext} Final Text - Appended HostAgent response. Save history: ${completeHistoryToSave.length}`);
-                safeEmit('chat_result', { type: 'result', message: finalModelResponseText, parts: modelResponseParts, id: botMessageUuid });
-                return { history: completeHistoryToSave, action: finalFrontendAction };
+
+                // Emit the final result containing the complete ChatHistoryItem
+                safeEmit('chat_result', { type: 'result', message: finalBotMessage });
+                return { history: completeHistoryToSave, action: finalFrontendAction }; // Return history and action
 
             }
             else if (modelResult.status === "error") {

@@ -1,9 +1,9 @@
 // src/services/manageFollow.service.ts
-import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
+import 'reflect-metadata';
 import { container } from 'tsyringe';
-import { ApiCallResult, FollowItem } from '../shared/types'; // Ensure FollowItem is imported
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
+import { ApiCallResult, FollowableItem } from '../shared/types';
+import logToFile from '../../utils/logger';
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
 import { executeGetConferences } from './getConferences.service';
 import { executeGetJournals } from './getJournals.service';
 import { ConfigService } from '../../config/config.service';
@@ -70,14 +70,14 @@ function getApiUrl(
  *
  * @param {ServiceItemType} itemType - The type of item to fetch the followed list for ('conference' or 'journal').
  * @param {string | null} token - The user's authentication token (Bearer token).
- * @returns {Promise<{ success: boolean; itemIds: string[]; items?: FollowItem[]; errorMessage?: string }>}
+ * @returns {Promise<{ success: boolean; itemIds: string[]; items?: FollowableItem[]; errorMessage?: string }>}
  *          A Promise resolving to an object indicating success, a list of followed item IDs,
- *          optional full `FollowItem` details, and an error message if the call fails.
+ *          optional full `FollowableItem` details, and an error message if the call fails.
  */
 export async function executeGetUserFollowed(
     itemType: ServiceItemType,
     token: string | null
-): Promise<{ success: boolean; itemIds: string[]; items?: FollowItem[]; errorMessage?: string }> {
+): Promise<{ success: boolean; itemIds: string[]; items?: FollowableItem[]; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [GetFollowed ${itemType}]`;
 
     if (!token) {
@@ -100,8 +100,8 @@ export async function executeGetUserFollowed(
             return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching followed ${itemType} list.` };
         }
 
-        // API is expected to return an array of objects matching FollowItem
-        const followedItems: FollowItem[] = await response.json();
+        // API is expected to return an array of objects matching FollowableItem
+        const followedItems: FollowableItem[] = await response.json();
         const itemIds = followedItems.map(item => item.id);
 
         logToFile(`${logContext} Success. Found ${itemIds.length} followed item(s).`);
@@ -194,15 +194,15 @@ export async function executeFollowUnfollowApi(
  * @param {string} identifier - The value used for searching (e.g., "ICCV", "Nature", "12345").
  * @param {ServiceIdentifierType} identifierType - The type of the identifier provided ('id', 'acronym', or 'title').
  * @param {ServiceItemType} itemType - The type of item to search for ('conference' or 'journal').
- * @returns {Promise<{ success: boolean; itemId?: string; details?: Partial<FollowItem>; errorMessage?: string }>}
+ * @returns {Promise<{ success: boolean; itemId?: string; details?: Partial<FollowableItem>; errorMessage?: string }>}
  *          A Promise resolving to an object indicating success, the found item's ID,
- *          partial `FollowItem` details, and an error message if not found or an error occurs.
+ *          partial `FollowableItem` details, and an error message if not found or an error occurs.
  */
 export async function findItemId(
     identifier: string,
     identifierType: ServiceIdentifierType,
     itemType: ServiceItemType
-): Promise<{ success: boolean; itemId?: string; details?: Partial<FollowItem>; errorMessage?: string }> {
+): Promise<{ success: boolean; itemId?: string; details?: Partial<FollowableItem>; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [FindID ${itemType} Ident:"${identifier}" Type:${identifierType}]`;
     logToFile(`${logContext} Attempting to find item ID.`);
 
@@ -215,7 +215,7 @@ export async function findItemId(
     if (identifierType === 'id') {
         logToFile(`${logContext} Identifier type is ID. Returning ID directly: ${identifier}`);
         // If you have a specific 'getById' API, you could call it here to fetch full details.
-        // For now, we return only the ID and a partial FollowItem with just the ID.
+        // For now, we return only the ID and a partial FollowableItem with just the ID.
         return { success: true, itemId: identifier, details: { id: identifier } };
     }
 
@@ -244,7 +244,7 @@ export async function findItemId(
 
     try {
         const parsedData = JSON.parse(apiResult.rawData);
-        let itemData: any = null; // This will hold the extracted item details, compatible with Partial<FollowItem>
+        let itemData: any = null; // This will hold the extracted item details, compatible with Partial<FollowableItem>
 
         // Logic to extract the first relevant item from the parsed response,
         // accounting for different possible API response structures (e.g., direct array, nested payload).
@@ -259,13 +259,13 @@ export async function findItemId(
 
         if (itemData && itemData.id && typeof itemData.id === 'string') {
             logToFile(`${logContext} Successfully found ID: ${itemData.id}. Details preview: ${JSON.stringify(itemData).substring(0, Math.min(JSON.stringify(itemData).length, 100))}`);
-            // Return relevant details from itemData, conforming to Partial<FollowItem>
-            const detailsToReturn: Partial<FollowItem> = {
+            // Return relevant details from itemData, conforming to Partial<FollowableItem>
+            const detailsToReturn: Partial<FollowableItem> = {
                 id: itemData.id,
                 title: itemData.title,
                 acronym: itemData.acronym,
                 // Add other relevant fields from the API response if they are needed and available
-                // e.g., location, dates, publisher, etc., depending on what FollowItem expects.
+                // e.g., location, dates, publisher, etc., depending on what FollowableItem expects.
             };
             return { success: true, itemId: itemData.id, details: detailsToReturn };
         } else {
