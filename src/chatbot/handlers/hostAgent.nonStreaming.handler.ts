@@ -5,7 +5,7 @@ import { Tool, Part, GenerateContentConfig, Content } from '@google/genai';
 import {
     ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate,
     ResultUpdate, ErrorUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload,
-    OriginalUserFileInfo // Đảm bảo đã import
+    OriginalUserFileInfo
 } from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
@@ -37,26 +37,48 @@ export async function handleNonStreaming(
     deps: HostAgentHandlerCustomDeps,
     frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
-    originalUserFiles?: OriginalUserFileInfo[] // <<< ĐÃ THÊM
+    originalUserFiles?: OriginalUserFileInfo[],
+    pageContextText?: string // <<< THÊM PARAMETER
 ): Promise<NonStreamingHandlerResult | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const socketId = socket.id;
     const conversationIdForSubAgent = handlerId;
-    const inputTextSummary = userInputParts.find(p => p.text)?.text || `[${userInputParts.length} parts content]`;
+    const inputTextSummary = userInputParts.find(p => p.text)?.text || (userInputParts.length > 0 ? `[${userInputParts.length} parts content]` : "[No user text query]");
     const baseLogContext = `[${handlerId} NonStreaming Socket ${socketId}]`;
 
     logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}` +
         (personalizationData ? `, Personalization: Enabled` : ``) +
-        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.map(f => f.name).join(', ')}` : ``) + // Log thông tin file
+        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.map(f => f.name).join(', ')}` : ``) +
+        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) + // Log page context
         ` ---`);
     if (personalizationData) logToFile(`[DEBUG ${baseLogContext}] Personalization Data: ${JSON.stringify(personalizationData)}`);
 
     const currentAgentId: AgentId = 'HostAgent';
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, currentAgentId, personalizationData);
+    // <<< SỬA ĐỔI ĐỂ TRUYỀN PAGE CONTEXT VÀO LANGUAGE CONFIG >>>
+    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
+        language, 
+        currentAgentId, 
+        personalizationData,
+        pageContextText // <<< TRUYỀN PAGE CONTEXT
+    );
     const tools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
-    let historyForApiCall: ChatHistoryItem[] = [...initialHistoryFromSocket];
+    let historyForApiCall: ChatHistoryItem[] = []; // Sẽ được xây dựng cẩn thận
     let completeHistoryToSave: ChatHistoryItem[] = [...initialHistoryFromSocket];
+
+    // <<< XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
+    if (pageContextText) {
+        const pageContextTurn: ChatHistoryItem = {
+            role: 'user',
+            parts: [{ text: pageContextText }],
+            uuid: `context-ns-${handlerId}-${Date.now()}`,
+            timestamp: new Date(Date.now() - 1000)
+        };
+        historyForApiCall.push(pageContextTurn);
+        logToFile(`${baseLogContext} Added page context as a pseudo user turn to API history. UUID: ${pageContextTurn.uuid}`);
+    }
+    historyForApiCall.push(...initialHistoryFromSocket);
+    // <<< KẾT THÚC XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
 
     const thoughts: ThoughtStep[] = [];
     let finalFrontendAction: FrontendAction | undefined = undefined;
@@ -64,12 +86,11 @@ export async function handleNonStreaming(
 
     const currentUserTurnForHistory: ChatHistoryItem = {
         role: 'user',
-        parts: userInputParts,
+        parts: userInputParts, // userInputParts đã được làm sạch ở message.handler
         timestamp: new Date(),
         uuid: frontendMessageId || `user-ns-${handlerId}-${Date.now()}`,
-        userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined // <<< SỬ DỤNG originalUserFiles
+        userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined
     };
-
 
     // Logic isEditContextAndUnchanged (cần triển khai nếu muốn tránh xử lý lại tin nhắn edit không đổi)
     let isEditContextAndUnchanged = false;
@@ -87,14 +108,20 @@ export async function handleNonStreaming(
         }
     }
 
-    if (!isEditContextAndUnchanged) {
+    
+    // Chỉ thêm currentUserTurnForHistory vào completeHistoryToSave nếu nó có nội dung
+    // hoặc nếu không có parts nhưng có pageContext
+    if (!isEditContextAndUnchanged && (currentUserTurnForHistory.parts.length > 0 || pageContextText)) {
         completeHistoryToSave.push(currentUserTurnForHistory);
         logToFile(`${baseLogContext} User turn added to completeHistoryToSave. UUID: ${currentUserTurnForHistory.uuid}. ` +
             `userFileInfo: ${currentUserTurnForHistory.userFileInfo ? currentUserTurnForHistory.userFileInfo.length + ' files' : 'none'}. ` +
             `Total save history: ${completeHistoryToSave.length}`);
+    } else if (!isEditContextAndUnchanged) {
+         logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurnForHistory.uuid}) has no parts and no page context, not added to completeHistoryToSave.`);
     } else {
         logToFile(`${baseLogContext} User turn (UUID: ${frontendMessageId}) likely an edit with no content change, not re-added to completeHistoryToSave.`);
     }
+
 
 
     const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ResultUpdate | ErrorUpdate): boolean => {
@@ -138,10 +165,11 @@ export async function handleNonStreaming(
 
         while (currentTurn <= maxTurnsHostAgent) {
             const turnLogContext = `${baseLogContext} Turn ${currentTurn}`;
-            // Log API history bao gồm thông tin file nếu có
+            const currentApiHistoryForThisCall = [...historyForApiCall]; // Tạo bản sao
+
             logToFile(`--- ${turnLogContext} Start --- Input type: Part[] length ${nextTurnInputForHost.length}, ` +
-                `API History size: ${historyForApiCall.length} ` +
-                `(${historyForApiCall.map(m => m.role + (m.userFileInfo ? `[${m.userFileInfo.length}f]` : '')).join(', ')}) ---`);
+                `API History size: ${currentApiHistoryForThisCall.length} ` +
+                `(${currentApiHistoryForThisCall.map(m => m.role + (m.userFileInfo ? `[${m.userFileInfo.length}f]` : '')).join(', ')}) ---`);
 
             if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentTurn > 1 ? `Thinking based on previous action (Turn ${currentTurn})...` : 'Thinking...' })) return { history: completeHistoryToSave, action: finalFrontendAction };
             if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected before Model call.`); return { history: completeHistoryToSave, action: finalFrontendAction }; }
@@ -152,7 +180,7 @@ export async function handleNonStreaming(
 
             const modelResult = await geminiServiceForHost.generateTurn(
                 nextTurnInputForHost,
-                historyForApiCall, // Lịch sử các lượt TRƯỚC ĐÓ
+                currentApiHistoryForThisCall, // Sử dụng bản sao
                 combinedConfig
             );
 
@@ -160,15 +188,10 @@ export async function handleNonStreaming(
 
             // Cập nhật historyForApiCall SAU KHI gọi API
             if (currentTurn === 1) {
-                // Chỉ thêm currentUserTurnForHistory vào historyForApiCall nếu nó thực sự là một lượt mới
-                // (tức là không phải là edit không thay đổi nội dung đã được bỏ qua trước đó)
-                if (!isEditContextAndUnchanged) {
-                    historyForApiCall.push(currentUserTurnForHistory); // currentUserTurnForHistory đã có userFileInfo
+                if (!isEditContextAndUnchanged && (currentUserTurnForHistory.parts.length > 0 || pageContextText)) {
+                    historyForApiCall.push(currentUserTurnForHistory);
                 }
-                // Nếu isEditContextAndUnchanged là true, historyForApiCall đã chứa lượt user gốc, không cần thêm lại.
             } else {
-                // Nếu currentTurn > 1, nextTurnInputForHost là functionResponseParts.
-                // Tìm ChatHistoryItem tương ứng với functionResponse đã được lưu trong completeHistoryToSave.
                 const lastFunctionResponseTurnInComplete = completeHistoryToSave.find(
                     (msg, index, arr) => index === arr.length - 1 && msg.role === 'function' && msg.parts[0] === nextTurnInputForHost[0]
                 );
@@ -179,7 +202,6 @@ export async function handleNonStreaming(
                 }
             }
             logToFile(`${turnLogContext} Updated historyForApiCall (after adding current input turn, length ${historyForApiCall.length}): ${historyForApiCall.map(m => m.role + ':' + (m.uuid || 'no-uuid') + (m.userFileInfo ? `[${m.userFileInfo.length}f]` : '')).join(', ')}`);
-
 
 
 

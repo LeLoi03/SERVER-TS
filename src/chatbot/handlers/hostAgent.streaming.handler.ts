@@ -13,57 +13,78 @@ function isRouteToAgentArgs(args: any): args is RouteToAgentArgs {
 }
 
 export async function handleStreaming(
-    userInputParts: Part[], // Đây là parts của tin nhắn user hiện tại (mới hoặc đã edit)
-    initialHistoryFromSocket: ChatHistoryItem[], // Đây là lịch sử TRƯỚC tin nhắn user hiện tại
+    userInputParts: Part[],
+    initialHistoryFromSocket: ChatHistoryItem[],
     socket: Socket,
     language: Language,
     handlerId: string,
     deps: HostAgentHandlerCustomDeps,
     onActionGenerated?: (action: FrontendAction) => void,
-    frontendMessageId?: string, // UUID của tin nhắn user hiện tại (quan trọng cho edit)
+    frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
-    originalUserFiles?: OriginalUserFileInfo[] // <<< THÊM PARAMETER
-
+    originalUserFiles?: OriginalUserFileInfo[],
+    pageContextText?: string // <<< THÊM PARAMETER
 ): Promise<ChatHistoryItem[] | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const baseLogContext = `[${handlerId} Streaming Socket ${socket.id}]`;
-    const inputTextSummary = userInputParts.find(p => p.text)?.text || `[${userInputParts.length} parts content]`;
-    logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}, Personalization: ${!!personalizationData} ---`);
+    const inputTextSummary = userInputParts.find(p => p.text)?.text || (userInputParts.length > 0 ? `[${userInputParts.length} parts content]` : "[No user text query]");
+    
+    logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}, Personalization: ${!!personalizationData}` +
+              (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) + ` ---`);
     logToFile(`[DEBUG] ${baseLogContext} Initial history from socket (length ${initialHistoryFromSocket.length}): ${initialHistoryFromSocket.map(m => m.uuid).join(', ')}`);
 
-    const conversationIdForSubAgent = handlerId; // Sử dụng handlerId cho sub-agent context
+    const conversationIdForSubAgent = handlerId;
 
-    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(language, 'HostAgent', personalizationData);
+    // <<< SỬA ĐỔI ĐỂ TRUYỀN PAGE CONTEXT VÀO LANGUAGE CONFIG >>>
+    const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
+        language, 
+        'HostAgent', 
+        personalizationData,
+        pageContextText // <<< TRUYỀN PAGE CONTEXT
+    );
     const hostAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
-    // Khởi tạo lịch sử:
-    // - completeHistoryToSave: Sẽ chứa TOÀN BỘ lịch sử, bao gồm cả initialHistoryFromSocket, userInputParts, và các lượt của AI.
-    // - historyForApiCall: Sẽ được xây dựng dần để gửi cho Gemini API.
     let completeHistoryToSave: ChatHistoryItem[] = [...initialHistoryFromSocket];
-    let historyForApiCall: ChatHistoryItem[] = [...initialHistoryFromSocket]; // Lịch sử gửi cho LLM ban đầu
+    let historyForApiCall: ChatHistoryItem[] = []; // Sẽ được xây dựng cẩn thận
+
+    // <<< XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
+    if (pageContextText) {
+        const pageContextTurn: ChatHistoryItem = {
+            role: 'user', // Coi như một tin nhắn user "ngầm"
+            parts: [{ text: pageContextText }],
+            uuid: `context-${handlerId}-${Date.now()}`, // ID tạm thời, không lưu DB
+            timestamp: new Date(Date.now() - 1000) // Thời gian trước tin nhắn user thật một chút
+            // Không có userFileInfo cho context này
+        };
+        historyForApiCall.push(pageContextTurn);
+        logToFile(`${baseLogContext} Added page context as a pseudo user turn to API history. UUID: ${pageContextTurn.uuid}`);
+    }
+    // Thêm lịch sử thật từ DB vào sau context (nếu có)
+    historyForApiCall.push(...initialHistoryFromSocket);
+    // <<< KẾT THÚC XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
+
 
     const allThoughtsCollectedStreaming: ThoughtStep[] = [];
     let finalFrontendActionStreaming: FrontendAction | undefined = undefined;
 
-    // Tạo object ChatHistoryItem cho lượt user hiện tại
     const currentUserTurn: ChatHistoryItem = {
         role: 'user',
-        parts: userInputParts,
+        parts: userInputParts, // userInputParts đã được làm sạch ở message.handler
         timestamp: new Date(),
         uuid: frontendMessageId || `user-stream-${handlerId}-${Date.now()}`,
-        userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined // <<< SỬ DỤNG originalUserFiles
+        userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined
     };
 
-
-    // Thêm lượt user hiện tại vào cả hai mảng lịch sử
-    completeHistoryToSave.push(currentUserTurn);
-    // historyForApiCall sẽ được dùng để gọi LLM, nó cần chứa lượt user này
-    // historyForApiCall.push(currentUserTurn); // Sẽ được thêm vào historyForApiCall ngay trước khi gọi LLM ở lượt đầu tiên
-
-    // Đảm bảo rằng khi bạn log `currentUserTurn`, bạn có thể thấy `userFileInfo` nếu có.
-    logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) constructed. ` +
-        `userFileInfo: ${currentUserTurn.userFileInfo ? currentUserTurn.userFileInfo.length + ' files' : 'none'}. ` +
-        `completeHistoryToSave length: ${completeHistoryToSave.length}.`);
+    // Chỉ thêm currentUserTurn vào completeHistoryToSave nếu nó có nội dung (parts)
+    // hoặc nếu không có parts nhưng có pageContext (trường hợp user chỉ gửi @currentpage)
+    if (currentUserTurn.parts.length > 0 || pageContextText) {
+        completeHistoryToSave.push(currentUserTurn);
+        logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) constructed and added to completeHistoryToSave. ` +
+            `userFileInfo: ${currentUserTurn.userFileInfo ? currentUserTurn.userFileInfo.length + ' files' : 'none'}. ` +
+            `completeHistoryToSave length: ${completeHistoryToSave.length}.`);
+    } else {
+        logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurn.uuid}) has no parts and no page context, not added to completeHistoryToSave.`);
+    }
 
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',
@@ -148,26 +169,24 @@ export async function handleStreaming(
             }
         }
     }
-    try {
+     try {
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return completeHistoryToSave;
 
-        let nextTurnInputForLlm: Part[] = userInputParts; // Input cho lượt LLM đầu tiên
+        let nextTurnInputForLlm: Part[] = userInputParts;
         let currentHostTurn = 1;
-
-        // historyForApiCall ban đầu là initialHistoryFromSocket (KHÔNG chứa currentUserTurn)
-        // Nó sẽ được cập nhật trong vòng lặp.
 
         while (currentHostTurn <= maxTurnsHostAgent) {
             const turnLogContext = `${baseLogContext} Turn ${currentHostTurn}`;
-
+            
             // Lịch sử gửi cho API ở lượt này:
-            // - Lượt 1: initialHistoryFromSocket (không có currentUserTurn) + nextTurnInputForLlm (là userInputParts)
-            // - Các lượt sau (sau function call): historyForApiCall đã được cập nhật với model_FC và function_FR + nextTurnInputForLlm (là function_response_part)
-            const currentApiHistory = [...historyForApiCall]; // Tạo bản sao để log, tránh thay đổi historyForApiCall ngoài ý muốn ở đây
+            // - Lượt 1: historyForApiCall (đã có pageContext nếu có, và initialHistoryFromSocket)
+            //            + nextTurnInputForLlm (là userInputParts)
+            // - Các lượt sau: historyForApiCall (đã được cập nhật với model_FC và function_FR)
+            //            + nextTurnInputForLlm (là function_response_part)
+            const currentApiHistoryForThisCall = [...historyForApiCall]; // Tạo bản sao để log và sử dụng
 
-            logToFile(`--- ${turnLogContext} Start --- Input Parts for LLM (nextTurnInputForLlm length ${nextTurnInputForLlm.length}): "${nextTurnInputForLlm.find(p => p.text)?.text?.substring(0, 30) || '[non-text]'}..." ---`);
-            logToFile(`--- ${turnLogContext} API History (currentApiHistory length ${currentApiHistory.length}): ${currentApiHistory.map(m => m.role + ':' + (m.uuid || 'no-uuid')).join(', ')} ---`);
-
+            logToFile(`--- ${turnLogContext} Start --- Input Parts for LLM (nextTurnInputForLlm length ${nextTurnInputForLlm.length}): "${nextTurnInputForLlm.find(p => p.text)?.text?.substring(0, 30) || (nextTurnInputForLlm.length > 0 ? '[non-text]' : '[empty input]') }..." ---`);
+            logToFile(`--- ${turnLogContext} API History (currentApiHistoryForThisCall length ${currentApiHistoryForThisCall.length}): ${currentApiHistoryForThisCall.map(m => m.role + ':' + (m.uuid || 'no-uuid')).join(', ')} ---`);
 
             if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process (Turn ${currentHostTurn})...` : 'Thinking...' })) return completeHistoryToSave;
             if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected before Host model call.`); return completeHistoryToSave; }
@@ -176,10 +195,9 @@ export async function handleStreaming(
                 ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: hostAgentTools
             };
 
-            // Gọi Gemini API
             const hostAgentLLMResult = await geminiServiceForHost.generateStream(
-                nextTurnInputForLlm, // Parts cho lượt hiện tại
-                currentApiHistory,   // Lịch sử các lượt TRƯỚC ĐÓ
+                nextTurnInputForLlm,
+                currentApiHistoryForThisCall, // Sử dụng bản sao đã chuẩn bị
                 combinedConfig
             );
 
@@ -189,20 +207,19 @@ export async function handleStreaming(
             // Thêm lượt input (user hoặc function response part) mà LLM vừa xử lý vào historyForApiCall
             if (currentHostTurn === 1) {
                 // Lượt đầu tiên, nextTurnInputForLlm là userInputParts (currentUserTurn)
-                historyForApiCall.push(currentUserTurn);
+                // Chỉ thêm nếu currentUserTurn có nội dung
+                if (currentUserTurn.parts.length > 0 || pageContextText) {
+                    historyForApiCall.push(currentUserTurn);
+                }
             } else {
                 // Các lượt sau, nextTurnInputForLlm là functionResponseContentPart.
-                // Cần tìm ChatHistoryItem tương ứng với functionResponseContentPart đã được lưu trong completeHistoryToSave.
                 const lastFunctionResponseTurnInComplete = completeHistoryToSave.find(
-                    msg => msg.role === 'function' && msg.parts[0] === nextTurnInputForLlm[0] // So sánh part đầu tiên
+                    msg => msg.role === 'function' && msg.parts[0] === nextTurnInputForLlm[0]
                 );
                 if (lastFunctionResponseTurnInComplete) {
                     historyForApiCall.push(lastFunctionResponseTurnInComplete);
                 } else {
-                    // Đây là trường hợp hy hữu, có thể tạo một turn 'function' tạm thời nếu cần
-                    logToFile(`[WARN] ${turnLogContext} Could not find exact function response turn in completeHistoryToSave to add to historyForApiCall. This might indicate an issue if parts are complex.`);
-                    // Fallback: tạo một turn mới (ít lý tưởng hơn)
-                    // historyForApiCall.push({ role: 'function', parts: nextTurnInputForLlm, uuid: uuidv4(), timestamp: new Date() });
+                    logToFile(`[WARN] ${turnLogContext} Could not find exact function response turn in completeHistoryToSave to add to historyForApiCall.`);
                 }
             }
             logToFile(`${turnLogContext} Updated historyForApiCall (after adding current input turn, length ${historyForApiCall.length}): ${historyForApiCall.map(m => m.role + ':' + (m.uuid || 'no-uuid')).join(', ')}`);
