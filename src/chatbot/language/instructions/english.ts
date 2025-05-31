@@ -96,6 +96,8 @@ Always be clear if your answer is derived from the page context.
 [END CURRENT PAGE CONTEXT]
 
 Now, please respond to the user's query.
+
+**Your response MUST be in clear, well-structured, and aesthetically pleasing Markdown format.**
 `;
 // Lưu ý: {page_context_placeholder} sẽ KHÔNG được thay thế ở đây.
 // Text context thực sự sẽ được truyền như một tin nhắn user "ngầm" trong history.
@@ -220,6 +222,8 @@ Always be clear if your answer is derived from the page context.
 [END CURRENT PAGE CONTEXT]
 
 Now, please respond to the user's query.
+
+**Your response MUST be in clear, well-structured, and aesthetically pleasing Markdown format.**
 `;
 
 
