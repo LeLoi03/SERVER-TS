@@ -1,20 +1,20 @@
 // src/bioxbio.ts
 
-import { Page } from 'playwright';
-// Import logger type/instance and the modified retryAsync
-import { logger as baseLogger, retryAsync } from './utils';
-import { RETRY_OPTIONS, CACHE_OPTIONS } from '../config';
+import { Page, Route } from 'playwright'; // Import Route for better typing
+import { logger as baseLogger, retryAsync, RetryOptions } from './utils'; // Import RetryOptions
 import NodeCache from 'node-cache';
+import { ConfigService } from '../config/config.service';
 
-const bioxbioCache = new NodeCache(CACHE_OPTIONS);
+// bioxbioCache will be initialized in the function that receives ConfigService
+// let bioxbioCache: NodeCache | null = null; // Or initialize it globally if ConfigService is resolved globally
 
 export const fetchBioxbioData = async (
     page: Page,
     bioxbioSearchUrl: string,
     journalName: string,
-    parentLogger: typeof baseLogger // <-- Accept parent logger instance
-): Promise<any | null> => {
-    // Create a child logger for this specific execution
+    parentLogger: typeof baseLogger,
+    configService: ConfigService // <<<< ADD ConfigService
+): Promise<any[] | null> => { // Return type explicitly any[] | null
     const logger = parentLogger.child({
         function: 'fetchBioxbioData',
         journalName,
@@ -23,20 +23,36 @@ export const fetchBioxbioData = async (
 
     logger.info({ event: 'bioxbio_fetch_start' }, 'Starting Bioxbio data fetch attempt.');
 
-    const cacheKey = `bioxbio:${journalName}`;
+    // --- Initialize Cache with options from ConfigService ---
+    // It's better to create the cache instance here if it depends on config,
+    // or ensure a global cache is configured with these options.
+    // For simplicity, creating it here. If used across multiple calls, consider a singleton cache service.
+    const bioxbioCache = new NodeCache({
+        stdTTL: configService.config.JOURNAL_CACHE_TTL,
+        checkperiod: configService.config.JOURNAL_CACHE_CHECK_PERIOD,
+        useClones: false, // Recommended for performance if not mutating cached objects
+    });
+
+    // --- Define Retry Options from ConfigService ---
+    const bioxbioRetryOptions: RetryOptions = {
+        retries: configService.config.JOURNAL_RETRY_RETRIES,
+        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
+        factor: configService.config.JOURNAL_RETRY_FACTOR,
+    };
+
+    const cacheKey = `bioxbio:${journalName.toLowerCase().replace(/\s+/g, '-')}`; // Normalize cache key
     logger.debug({ event: 'bioxbio_cache_check', cacheKey }, 'Checking cache.');
-    const cachedData = bioxbioCache.get(cacheKey);
+    const cachedData = bioxbioCache.get<any[]>(cacheKey); // Specify type for get
 
     if (cachedData) {
-        logger.info({ event: 'bioxbio_cache_hit', cacheKey }, 'Returning cached Bioxbio data.');
+        logger.info({ event: 'bioxbio_cache_hit', cacheKey, itemCount: cachedData.length }, 'Returning cached Bioxbio data.');
         return cachedData;
     }
     logger.info({ event: 'bioxbio_cache_miss', cacheKey }, 'No cached data found, proceeding with fetch.');
 
-    // Define route handler - **IMPORTANT**: Needs unrouting in finally block
-    const routeHandler = (route: any) => { // Use 'any' or specific Playwright Route type
+    const routeHandler = (route: Route) => { // Use Playwright's Route type
         const request = route.request();
-        const resourceType = route.request().resourceType();
+        const resourceType = request.resourceType();
         const url = request.url();
         if (['image', 'media', 'font', 'stylesheet'].includes(resourceType) ||
             url.includes("google-analytics") ||
@@ -44,179 +60,142 @@ export const fetchBioxbioData = async (
             url.includes("tracking") ||
             url.includes("google_vignette")
         ) {
-            // logger.debug({ event: 'bioxbio_route_abort', resourceType, url }, 'Aborting request.'); // Optional: very verbose
-            route.abort().catch((err: any) => logger.warn({ event: 'bioxbio_route_abort_error', err }, 'Error aborting route'));
+            route.abort().catch((err: any) => logger.warn({ event: 'bioxbio_route_abort_error', url, errMessage: err.message }, 'Error aborting route'));
         } else {
-            // logger.debug({ event: 'bioxbio_route_continue', resourceType, url }, 'Continuing request.'); // Optional: very verbose
-            route.continue().catch((err: any) => logger.warn({ event: 'bioxbio_route_continue_error', err }, 'Error continuing route'));;
+            route.continue().catch((err: any) => logger.warn({ event: 'bioxbio_route_continue_error', url, errMessage: err.message }, 'Error continuing route'));
         }
     };
 
     try {
-        // Set up routing *before* navigation
         logger.debug({ event: 'bioxbio_route_setup' }, 'Setting up request interception.');
         await page.route("**/*", routeHandler);
 
-        logger.debug({ event: 'bioxbio_retry_start', retryOptions: RETRY_OPTIONS });
-        const bioxbioData = await retryAsync(async (attempt) => {
+        logger.debug({ event: 'bioxbio_retry_start', retryOptions: bioxbioRetryOptions });
+        const bioxbioData = await retryAsync<any[] | null>(async (attempt) => { // Specify return type for retryAsync
             const attemptLogger = logger.child({ attempt });
             attemptLogger.info({ event: 'bioxbio_attempt_start' }, `Starting Bioxbio fetch attempt ${attempt}.`);
 
-            // 1. Navigate to Search Results Page
-            attemptLogger.debug({ event: 'bioxbio_goto_search_start', url: bioxbioSearchUrl });
             try {
+                attemptLogger.debug({ event: 'bioxbio_goto_search_start', url: bioxbioSearchUrl });
                 await page.goto(bioxbioSearchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                attemptLogger.debug({ event: 'bioxbio_goto_search_success' });
             } catch (gotoError: any) {
-                 attemptLogger.error({ err: gotoError, event: 'bioxbio_goto_search_failed', url: bioxbioSearchUrl }, `Attempt ${attempt}: Failed initial navigation to search page.`);
-                 throw gotoError; // Trigger retry
+                 attemptLogger.error({ errMessage: gotoError.message, event: 'bioxbio_goto_search_failed', url: bioxbioSearchUrl }, `Attempt ${attempt}: Failed initial navigation to search page.`);
+                 throw gotoError;
             }
-            attemptLogger.debug({ event: 'bioxbio_goto_search_success' });
 
-            // 2. Wait for and evaluate search result link
             const selector = 'a.gs-title';
             try {
                 attemptLogger.debug({ event: 'bioxbio_wait_selector_start', selector });
-                await page.waitForSelector(selector, { timeout: 10000 }); // Increased timeout slightly
+                await page.waitForSelector(selector, { timeout: 15000 }); // Adjusted timeout
                 attemptLogger.debug({ event: 'bioxbio_wait_selector_success' });
             } catch (waitError: any) {
-                attemptLogger.warn({ event: 'bioxbio_wait_selector_timeout', selector, err: waitError }, `Attempt ${attempt}: Timeout or error waiting for selector.`);
-                // Consider this a potentially temporary issue, let's retry
-                throw new Error(`Timeout waiting for selector '${selector}' on Bioxbio search page.`);
+                attemptLogger.warn({ event: 'bioxbio_wait_selector_timeout', selector, errMessage: waitError.message }, `Attempt ${attempt}: Timeout or error waiting for selector. This might indicate no results.`);
+                // If the selector for search results isn't found, it's likely no Bioxbio page exists for this journal.
+                // Return null to stop retries for this specific journal and indicate no data.
+                return null;
             }
 
             attemptLogger.debug({ event: 'bioxbio_evaluate_search_start' });
             const searchResult = await page.evaluate((targetJournalName: string) => {
                 const linkElement = document.querySelector('a.gs-title');
-                if (!linkElement) {
-                    // console.warn('[Evaluate] No gs-title link found.'); // Browser log
-                    return { found: false, reason: 'no_gs_title' };
-                }
-                const linkTextElement = linkElement.querySelector('b');
-                const linkText = linkTextElement?.textContent?.trim().toLowerCase().replace(/\s+/g, ' ') || null;
+                if (!linkElement) return { found: false, reason: 'no_gs_title_link_element' };
+
+                const linkTextElement = linkElement.querySelector('b'); // Title is usually within <b>
+                const linkText = linkTextElement?.textContent?.trim().toLowerCase().replace(/\s+/g, ' ') ||
+                                 linkElement.textContent?.trim().toLowerCase().replace(/\s+/g, ' '); // Fallback to link's direct text
+
                 const targetNameNorm = targetJournalName.toLowerCase().replace(/\s+/g, ' ');
 
-                if (linkText && linkText === targetNameNorm) {
+                // More lenient matching: check if targetNameNorm is a substring of linkText
+                // This handles cases where Bioxbio might add "The" or other minor variations.
+                if (linkText && linkText.includes(targetNameNorm)) {
                     const dataCtorig = linkElement.getAttribute('data-ctorig');
                     if (dataCtorig) {
-                        // console.info('[Evaluate] Found matching link with data-ctorig:', dataCtorig); // Browser log
-                        return { found: true, redirectUrl: dataCtorig, linkText: linkTextElement?.textContent?.trim() };
-                    } else {
-                        // console.warn('[Evaluate] Found matching link text, but data-ctorig attribute is missing.'); // Browser log
-                        return { found: false, reason: 'missing_attribute', actualText: linkTextElement?.textContent?.trim() };
+                        return { found: true, redirectUrl: dataCtorig, linkText: linkTextElement?.textContent?.trim() || linkElement.textContent?.trim() };
                     }
-                } else {
-                    // console.warn('[Evaluate] Link found, but text does not match.', { expected: targetNameNorm, actual: linkText }); // Browser log
-                    return { found: false, reason: 'text_mismatch', actualText: linkTextElement?.textContent?.trim() };
+                    return { found: false, reason: 'missing_data_ctorig_attribute', actualText: linkTextElement?.textContent?.trim() || linkElement.textContent?.trim() };
                 }
+                return { found: false, reason: 'search_result_text_mismatch', actualText: linkTextElement?.textContent?.trim() || linkElement.textContent?.trim() };
             }, journalName);
             attemptLogger.debug({ event: 'bioxbio_evaluate_search_success', result: searchResult });
 
-            // 3. Process search result and navigate to details page (if found)
-            let redirectUrl: string | null = null;
             if (searchResult.found && searchResult.redirectUrl) {
-                redirectUrl = searchResult.redirectUrl;
-                attemptLogger.info({ event: 'bioxbio_redirect_url_found', url: redirectUrl, linkText: searchResult.linkText });
-            } else {
-                // Log failure reason
-                 let failureReason = searchResult.reason || 'unknown';
-                 attemptLogger.warn({
-                     event: 'bioxbio_redirect_url_fail',
-                     reason: failureReason,
-                     foundText: searchResult.actualText // Include text found, if any
-                 }, `Attempt ${attempt}: Could not find matching redirect URL. Reason: ${failureReason}.`);
+                attemptLogger.info({ event: 'bioxbio_redirect_url_found', url: searchResult.redirectUrl, linkText: searchResult.linkText });
+                const redirectUrl = searchResult.redirectUrl;
 
-                 // Decide if this failure should stop retries for this journal
-                 // If a link IS found but mismatched, maybe stop trying?
-                 // If no link is found at all, maybe retry?
-                 // For simplicity now, let's assume any failure here means no Bioxbio data exists -> return null.
-                 // Returning null here will stop the retry loop for this journal *successfully* with a null result.
-                 return null;
-            }
-
-            // If redirectUrl is still null (shouldn't happen with logic above, but check), return null
-            if (!redirectUrl) {
-                 attemptLogger.error({ event: 'bioxbio_internal_logic_error' }, 'Internal error: redirectUrl is null after successful check.');
-                 return null;
-            }
-
-            // 4. Navigate to Details Page
-            attemptLogger.debug({ event: 'bioxbio_goto_details_start', url: redirectUrl });
-             try {
-                await page.goto(redirectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
-             } catch (gotoError: any) {
-                 attemptLogger.error({ err: gotoError, event: 'bioxbio_goto_details_failed', url: redirectUrl }, `Attempt ${attempt}: Failed navigation to details page.`);
-                 throw gotoError; // Trigger retry
-             }
-            attemptLogger.debug({ event: 'bioxbio_goto_details_success' });
-
-            // 5. Evaluate Details Page for Impact Factors
-            // Optional: Wait for table
-            const tableSelector = 'table tr'; // Adjust if a more specific selector is known
-            try {
-                 attemptLogger.debug({ event: 'bioxbio_wait_table_start', selector: tableSelector});
-                 await page.waitForSelector(tableSelector, { timeout: 10000 });
-                 attemptLogger.debug({ event: 'bioxbio_wait_table_success'});
-            } catch (waitError: any) {
-                 attemptLogger.warn({ event: 'bioxbio_wait_table_timeout', selector: tableSelector, err: waitError }, `Attempt ${attempt}: Timeout or error waiting for details table. Proceeding to evaluate anyway.`);
-                 // Don't throw, maybe the evaluate can still find something or return empty []
-            }
-
-            attemptLogger.debug({ event: 'bioxbio_evaluate_details_start' });
-            const impactFactors: { Year: string; Impact_factor: string; }[] = await page.evaluate(() => {
-                const data: { Year: string; Impact_factor: string; }[] = [];
-                // Be specific if possible: document.querySelector('#impactFactorTable tbody tr:nth-child(n+2)')
-                const rows = document.querySelectorAll('table tr:nth-child(n+2)');
-                if (rows.length === 0) {
-                     // console.warn('[Evaluate] No table rows found for impact factors.'); // Browser log
-                     return [];
+                try {
+                    attemptLogger.debug({ event: 'bioxbio_goto_details_start', url: redirectUrl });
+                    await page.goto(redirectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                    attemptLogger.debug({ event: 'bioxbio_goto_details_success' });
+                } catch (gotoError: any) {
+                    attemptLogger.error({ errMessage: gotoError.message, event: 'bioxbio_goto_details_failed', url: redirectUrl }, `Attempt ${attempt}: Failed navigation to details page.`);
+                    throw gotoError;
                 }
-                rows.forEach((row) => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 2) {
-                        const year = cells[0]?.textContent?.trim();
-                        const impactFactor = cells[1]?.textContent?.trim();
-                        if (year && impactFactor) {
-                            data.push({ Year: year, Impact_factor: impactFactor });
+
+                const tableSelector = 'table tr';
+                try {
+                     attemptLogger.debug({ event: 'bioxbio_wait_table_start', selector: tableSelector});
+                     await page.waitForSelector(tableSelector, { timeout: 10000 });
+                     attemptLogger.debug({ event: 'bioxbio_wait_table_success'});
+                } catch (waitError: any) {
+                     attemptLogger.warn({ event: 'bioxbio_wait_table_timeout', selector: tableSelector, errMessage: waitError.message }, `Attempt ${attempt}: Timeout or error waiting for details table. Evaluating anyway.`);
+                }
+
+                attemptLogger.debug({ event: 'bioxbio_evaluate_details_start' });
+                const impactFactors: { Year: string; Impact_factor: string; }[] = await page.evaluate(() => {
+                    const data: { Year: string; Impact_factor: string; }[] = [];
+                    const rows = document.querySelectorAll('table tr'); // Simpler selector, then filter
+                    if (rows.length === 0) return [];
+
+                    rows.forEach((row, index) => {
+                        if (index === 0) return; // Skip header row if present
+                        const cells = row.querySelectorAll('td');
+                        if (cells.length >= 2) {
+                            const year = cells[0]?.textContent?.trim();
+                            const impactFactor = cells[1]?.textContent?.trim();
+                            if (year && impactFactor && /^\d{4}$/.test(year) && !isNaN(parseFloat(impactFactor))) { // Basic validation
+                                data.push({ Year: year, Impact_factor: impactFactor });
+                            }
                         }
-                    }
+                    });
+                    return data;
                 });
-                return data;
-            });
-            attemptLogger.debug({ event: 'bioxbio_evaluate_details_success', count: impactFactors.length });
+                attemptLogger.debug({ event: 'bioxbio_evaluate_details_success', count: impactFactors.length });
+                return impactFactors; // Return the array of impact factors
+            } else {
+                 attemptLogger.warn({
+                     event: 'bioxbio_redirect_url_fail_or_not_found',
+                     reason: searchResult.reason,
+                     foundText: searchResult.actualText
+                 }, `Attempt ${attempt}: Could not find matching redirect URL or search result. Reason: ${searchResult.reason}.`);
+                 return null; // No matching journal found on Bioxbio search, stop retries for this journal.
+            }
+        }, bioxbioRetryOptions, logger);
 
-            // Return the extracted data for this attempt
-            return impactFactors;
-
-        }, RETRY_OPTIONS, logger); // Pass logger instance to retryAsync
-
-        // After retryAsync completes successfully (even if it returned null or [])
         logger.debug({ event: 'bioxbio_retry_finish' });
 
         if (bioxbioData && bioxbioData.length > 0) {
             bioxbioCache.set(cacheKey, bioxbioData);
             logger.info({ event: 'bioxbio_cache_set', cacheKey, itemCount: bioxbioData.length }, 'Bioxbio data fetched and cached.');
-        } else if (bioxbioData) { // Data is an empty array []
-            logger.warn({ event: 'bioxbio_fetch_success_empty', cacheKey }, 'Bioxbio fetch successful but returned no impact factor data. Not caching empty array.');
-        } else { // Data is null (likely returned early from retry loop)
-             logger.warn({ event: 'bioxbio_fetch_failed_no_match', cacheKey }, 'Bioxbio fetch did not find a matching journal or details. Not caching.');
+        } else if (bioxbioData) { // bioxbioData is an empty array []
+            logger.info({ event: 'bioxbio_fetch_success_empty_data', cacheKey }, 'Bioxbio fetch successful but returned no impact factor data. Not caching empty result.');
+        } else { // bioxbioData is null
+             logger.info({ event: 'bioxbio_fetch_no_match_or_failure', cacheKey }, 'Bioxbio fetch did not find a matching journal or failed to retrieve details. Not caching.');
         }
-        return bioxbioData; // Return null, [], or the data
+        return bioxbioData;
 
     } catch (error: any) {
-        // This catches errors if retryAsync ultimately fails (e.g., repeated navigation errors)
-        logger.error({ err: error, event: 'bioxbio_fetch_failed_final', cacheKey }, `Failed to fetch Bioxbio data after all retries.`);
-        return null; // Return null as per original logic on final failure
+        logger.error({ errMessage: error.message, stack: error.stack, event: 'bioxbio_fetch_failed_final', cacheKey }, `Failed to fetch Bioxbio data after all retries.`);
+        return null;
     } finally {
-        // **IMPORTANT**: Clean up routing
         logger.debug({ event: 'bioxbio_route_cleanup_start' }, 'Attempting to remove Bioxbio request interception.');
         try {
-            // Use the same pattern used in page.route
             await page.unroute("**/*", routeHandler);
             logger.debug({ event: 'bioxbio_route_cleanup_success' }, 'Successfully unrouted Bioxbio request interception.');
         } catch(unrouteError: any) {
-            // Log warning, but don't throw, as the main operation might have succeeded
-            logger.warn({ event: 'bioxbio_route_cleanup_failed', err: unrouteError }, 'Failed to unroute Bioxbio request interception. This might affect subsequent uses of this Page object.');
+            logger.warn({ event: 'bioxbio_route_cleanup_failed', errMessage: unrouteError.message }, 'Failed to unroute Bioxbio request interception.');
         }
-        logger.info({ event: 'bioxbio_fetch_finish'}, 'Finished Bioxbio data fetch process.');
+        logger.info({ event: 'bioxbio_fetch_finish_overall'}, 'Finished Bioxbio data fetch process.');
     }
 };

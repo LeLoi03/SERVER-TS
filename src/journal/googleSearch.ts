@@ -1,53 +1,77 @@
 // src/googleSearch.ts
 
-import axios, { AxiosError } from 'axios';
-// Import the modified retryAsync and base logger type/instance
-import { retryAsync, logger as baseLogger } from './utils';
-import { RETRY_OPTIONS } from '../config';
+import axios, { AxiosError, AxiosResponse } from 'axios'; // Import AxiosResponse
+import { retryAsync, logger as baseLogger, RetryOptions } from './utils'; // <<<< IMPORT RetryOptions if defined in utils
+import { ConfigService } from '../config/config.service';
 
 interface GoogleSearchResult {
     imageLink: string | null;
     contextLink: string | null;
 }
 
+// If RetryOptions is not exported from './utils', define it here based on what retryAsync expects
+// For example:
+// interface RetryOptions {
+//   retries: number;
+//   minTimeout: number;
+//   factor: number;
+//   // maxTimeout?: number;
+//   // randomize?: boolean;
+// }
+
+
 export const fetchGoogleImage = async (
     title: string | null,
     formattedISSN: string,
     apiKey: string | null,
-    cseId: string | null,
-    logger: typeof baseLogger // <-- Accept logger instance
+    logger: typeof baseLogger,
+    configService: ConfigService
 ): Promise<GoogleSearchResult> => {
-    // Create a child logger specific to this function execution
     const childLogger = logger.child({ function: 'fetchGoogleImage', issn: formattedISSN, title: title || 'N/A' });
-
     childLogger.info({ event: 'fetch_google_image_start' }, 'Starting Google image search.');
 
+    const cseId = configService.config.GOOGLE_CSE_ID;
+
+    // --- Adjust retryOptions to match the RetryOptions type ---
+    const retryOptions: RetryOptions = {
+        retries: configService.config.MAX_SEARCH_RETRIES,
+        minTimeout: configService.config.RETRY_DELAY_MS, // Map 'delay' to 'minTimeout'
+        factor: configService.config.JOURNAL_RETRY_FACTOR || 2, // Use a sensible default or add a specific config for search retry factor
+        // Add other properties if needed by your RetryOptions, e.g.:
+        // maxTimeout: configService.config.MAX_RETRY_DELAY_MS || 60000, // Example
+    };
+
     if (!apiKey || !cseId) {
-        childLogger.error({ event: 'fetch_google_image_skip_missing_creds' }, 'Missing API Key or CSE ID.');
-        // Return immediately as we cannot proceed
+        childLogger.error(
+            {
+                event: 'fetch_google_image_skip_missing_creds',
+                hasApiKey: !!apiKey,
+                hasCseId: !!cseId
+            },
+            'Missing API Key or CSE ID. Cannot proceed with Google Search.'
+        );
         return { imageLink: null, contextLink: null };
     }
 
-    // Generate a hint for logging without exposing the full key
     const apiKeyHint = apiKey ? `${apiKey.substring(0, 5)}...` : 'N/A';
-    const encodedQuery = encodeURIComponent(`${title || ''} ISSN "${formattedISSN}"`.trim()); // Ensure title doesn't add extra space if null
+    const encodedQuery = encodeURIComponent(`${title || ''} ISSN "${formattedISSN}"`.trim());
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodedQuery}&key=${apiKey}&cx=${cseId}&searchType=image&num=1`;
-    const displayUrl = url.replace(/key=[^&]+/, 'key=REDACTED'); // For safer logging
+    const displayUrl = url.replace(/key=[^&]+/, 'key=REDACTED');
 
     childLogger.debug({ event: 'fetch_google_image_url', url: displayUrl }, 'Constructed Google Search API URL.');
 
     try {
-        childLogger.debug({ event: 'fetch_google_image_attempt_start', retryOptions: RETRY_OPTIONS }, 'Attempting Google API request with retries.');
+        childLogger.debug({ event: 'fetch_google_image_attempt_start', retryOptions }, 'Attempting Google API request with retries.');
 
-        const response = await retryAsync(async (attempt) => {
-            // Create logger for this specific attempt
+        // --- Specify the expected return type for retryAsync ---
+        const response = await retryAsync<AxiosResponse<any>>(async (attempt) => { // <<<< Specify AxiosResponse<any>
             const attemptLogger = childLogger.child({ attempt });
             attemptLogger.debug({ event: 'google_api_request_start' }, `Attempt ${attempt}: Sending GET request.`);
 
             try {
-                const res = await axios.get(url, { timeout: 15000 }); // Add a reasonable timeout
+                // axios.get already returns Promise<AxiosResponse<any>>
+                const res = await axios.get(url, { timeout: 15000 });
 
-                // Check for Google's structured error first
                 if (res.data && res.data.error) {
                     const googleError = res.data.error;
                     const code = googleError.code || 'N/A';
@@ -55,14 +79,12 @@ export const fetchGoogleImage = async (
                     const reason = googleError.errors?.[0]?.reason || 'unknown';
                     attemptLogger.warn({ event: 'google_api_structured_error', keyHint: apiKeyHint, googleError: { code, message, reason } },
                         `Attempt ${attempt}: Google API returned error structure - Code: ${code}, Reason: ${reason}, Message: ${message}`);
-                    // Throw an error that includes status code if available, useful for caller
-                    const error = new Error(`Google API Error (${code} - ${reason}): ${message}`) as any; // Cast to any to add properties
-                    error.statusCode = code; // Add status code for easier checking later
+                    const error = new Error(`Google API Error (${code} - ${reason}): ${message}`) as any;
+                    error.statusCode = code;
                     error.reason = reason;
                     throw error;
                 }
 
-                // Check for non-2xx HTTP status (should be redundant if axios throws, but good practice)
                 if (res.status < 200 || res.status >= 300) {
                     attemptLogger.warn({ event: 'google_api_http_error', keyHint: apiKeyHint, status: res.status, statusText: res.statusText },
                         `Attempt ${attempt}: Google API returned non-2xx status: ${res.status} ${res.statusText}`);
@@ -72,10 +94,9 @@ export const fetchGoogleImage = async (
                 }
 
                 attemptLogger.debug({ event: 'google_api_request_success', status: res.status }, `Attempt ${attempt}: Request successful.`);
-                return res; // Return the successful response
+                return res; // This is AxiosResponse<any>
 
             } catch (axiosError: any) {
-                 // Handle Axios-specific errors (network, timeout, non-2xx status)
                  if (axios.isAxiosError(axiosError)) {
                      const status = axiosError.response?.status;
                      const data = axiosError.response?.data;
@@ -83,25 +104,22 @@ export const fetchGoogleImage = async (
                          event: 'google_api_axios_error',
                          keyHint: apiKeyHint,
                          status: status || 'N/A',
-                         code: axiosError.code, // e.g., 'ECONNABORTED' for timeout
+                         code: axiosError.code,
                          message: axiosError.message,
-                         responseData: data // Log response data if available (might contain details)
+                         responseData: data
                      }, `Attempt ${attempt}: Axios request failed - Status: ${status || 'N/A'}, Code: ${axiosError.code}, Message: ${axiosError.message}`);
-                      // Add statusCode if available for the caller
                       if(status) (axiosError as any).statusCode = status;
                  } else {
-                     // Handle unexpected errors during the request
                      attemptLogger.warn({ event: 'google_api_unknown_error', keyHint: apiKeyHint, err: axiosError },
                          `Attempt ${attempt}: Unknown error during API request.`);
                  }
-                 // Re-throw the error for retryAsync to catch
                  throw axiosError;
             }
-        }, RETRY_OPTIONS, childLogger); // Pass childLogger to retryAsync for its logs
+        }, retryOptions, childLogger);
 
-        // If retryAsync succeeds:
+        // Now 'response' is correctly typed as AxiosResponse<any>
         childLogger.info({ event: 'fetch_google_image_api_success', status: response.status }, 'Google API request successful after retries.');
-        const data: any = response.data;
+        const data: any = response.data; // response.data will be 'any' because of AxiosResponse<any>
 
         if (data.items && data.items.length > 0) {
             const firstItem: any = data.items[0];
@@ -119,17 +137,13 @@ export const fetchGoogleImage = async (
         }
 
     } catch (error: any) {
-        // This catch block executes if retryAsync ultimately fails (throws its lastError)
-        const statusCode = error.statusCode || error.response?.status || 'N/A'; // Extract status code if possible
+        const statusCode = error.statusCode || error.response?.status || 'N/A';
         childLogger.error({
-            err: error, // Log the full error
+            err: error,
             event: 'fetch_google_image_failed_after_retries',
             keyHint: apiKeyHint,
             statusCode: statusCode
         }, `Failed to fetch image after all retries. Status Code: ${statusCode}.`);
-
-        // IMPORTANT: Re-throw the error so the caller (performImageSearch) knows about the failure
-        // and can potentially trigger API key rotation based on the error/statusCode.
         throw error;
     }
 };

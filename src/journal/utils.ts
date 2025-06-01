@@ -12,6 +12,16 @@ import { JournalDetails } from './types'; // Assuming you have this interface de
 import { ConfigService } from '../config/config.service';
 import { PinoFileDestination } from './types';
 
+
+
+
+export interface RetryOptions {
+    retries: number;
+    minTimeout: number; // Corresponds to your 'delay'
+    factor: number;     // Exponential backoff factor
+    // Potentially other properties like maxTimeout, randomize, onRetry, etc.
+}
+
 // --- Resolve ConfigService via tsyringe ---
 // Ensure this runs early enough for subsequent code needing config
 let configService: ConfigService;
@@ -26,7 +36,7 @@ try {
 // --- Get configuration values from ConfigService ---
 // Use getters for resolved paths
 const LOGS_DIRECTORY: string = configService.logsDirectory;
-const APP_LOG_FILE_PATH: string = configService.appLogFilePath;
+const APP_LOG_FILE_PATH: string = configService.journalLogFilePath;
 // Get log level directly from the parsed config object
 const LOG_LEVEL: LevelWithSilent = configService.config.LOG_LEVEL;
 
@@ -315,12 +325,6 @@ export const formatISSN = (issn: string): string | null => {
 };
 
 
-
-interface RetryOptions {
-    retries: number;
-    minTimeout: number; // Base delay in ms
-    factor: number;     // Multiplier for exponential backoff
-}
 
 /**
 * Executes an async function with retries on failure.

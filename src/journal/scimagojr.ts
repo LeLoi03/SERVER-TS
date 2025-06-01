@@ -1,25 +1,30 @@
-
 // ============================================
-// File: src/journal/scimagojr.ts (Modified)
+// File: src/journal/scimagojr.ts
 // ============================================
 import { Page } from 'playwright';
-import { formatISSN, retryAsync } from './utils'; // retryAsync is NOT modified
-// Assume fetchGoogleImage is modified to accept logger
-import { fetchGoogleImage } from './googleSearch';
-import { RETRY_OPTIONS } from '../config';
+import { formatISSN, retryAsync, RetryOptions } from './utils'; // <<<< IMPORT RetryOptions
+import { fetchGoogleImage } from './googleSearch'; // Adjusted path assuming googleSearch.ts is in src/
 import { TableRowData, JournalDetails, ImageResult } from './types';
-import { logger as baseLogger } from './utils'; // Import base logger type/instance
+import { logger as baseLogger } from './utils';
+import { ConfigService } from '../config/config.service'; // <<<< IMPORT ConfigService
 
 // --- processPage ---
 export const processPage = async (
     page: Page,
     url: string,
-    logger: typeof baseLogger // <-- Accept logger
+    logger: typeof baseLogger,
+    configService: ConfigService // <<<< ADD ConfigService
 ): Promise<TableRowData[]> => {
     const childLogger = logger.child({ function: 'processPage', url });
     childLogger.info({ event: 'process_page_start' }, 'Starting page processing.');
 
-    // Route blocking logic remains the same
+    const scimagoRetryOptions: RetryOptions = {
+        retries: configService.config.JOURNAL_RETRY_RETRIES,
+        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
+        factor: configService.config.JOURNAL_RETRY_FACTOR,
+    };
+
+    // Route blocking logic
     await page.route("**/*", (route) => {
         const request = route.request();
         const resourceType = route.request().resourceType();
@@ -36,14 +41,14 @@ export const processPage = async (
     });
 
     try {
-        // Log *around* retryAsync, not inside it
-        childLogger.debug({ event: 'process_page_attempt_start', retryOptions: RETRY_OPTIONS }, 'Attempting to process page with retries.');
+        childLogger.debug({ event: 'process_page_attempt_start', retryOptions: scimagoRetryOptions }, 'Attempting to process page with retries.');
         const tableData: TableRowData[] = await retryAsync(async (attempt) => {
-            // Log inside the function passed to retryAsync
             const attemptLogger = childLogger.child({ attempt });
             attemptLogger.debug({ event: 'process_page_goto_start' }, 'Navigating to URL.');
             await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-            const tableData: TableRowData[] = await page.evaluate(() => {
+            // page.evaluate logic remains the same
+            const evaluatedTableData: TableRowData[] = await page.evaluate(() => {
+                // ... (your existing page.evaluate logic for processPage)
                 const traverseNodes = (node: Node | null): string => {
                     if (!node) return '';
                     if (node.nodeType === Node.TEXT_NODE) {
@@ -64,25 +69,23 @@ export const processPage = async (
                         let rowData: TableRowData = { csvRow: '', journalLink: null, journalName: null, country: 'N/A' };
 
                         cells.forEach((cell, index) => {
-                            if (index === 0) return;
+                            if (index === 0) return; // Skip rank
 
-                            if (index === 1) {
+                            if (index === 1) { // Journal Name and Link
                                 const linkElement = cell.querySelector('a');
-                                rowData.journalLink = linkElement ? linkElement.href : null;
+                                rowData.journalLink = linkElement ? (linkElement as HTMLAnchorElement).href : null;
                                 rowData.journalName = linkElement ? linkElement.textContent?.trim() || null : null;
                                 rowData.csvRow += traverseNodes(cell) + ',';
-                            } else if (index < cells.length - 1) {
+                            } else if (index < cells.length - 1) { // Other cells before country
                                 rowData.csvRow += traverseNodes(cell) + ',';
-                            } else {
+                            } else { // Last cell is country
                                 const country = cell.querySelector('img')?.getAttribute('title') || 'N/A';
-                                rowData.csvRow += country;
+                                rowData.csvRow += country; // No trailing comma for the last item
                                 rowData.country = country;
                             }
                         });
-
                         tableRows.push(rowData);
                     });
-
                     return tableRows;
                 };
 
@@ -90,20 +93,18 @@ export const processPage = async (
                 if (table) {
                     return processTable(table);
                 } else {
+                    console.warn('[Evaluate processPage] Main table not found.');
                     return [];
                 }
             });
-            return tableData;
-        }, RETRY_OPTIONS, childLogger );
+            return evaluatedTableData;
+        }, scimagoRetryOptions, childLogger );
 
         childLogger.info({ event: 'process_page_success', rowCount: tableData.length }, 'Successfully processed page.');
         return tableData;
     } catch (error: any) {
         childLogger.error({ err: error, event: 'process_page_failed' }, `Error processing page`);
-        // Re-throw or return empty array based on desired behavior
-        // Re-throwing is often better to signal failure upstream
         throw error;
-        // return []; // Alternative: return empty on failure
     } finally {
         childLogger.info({ event: 'process_page_finish' }, 'Finished page processing attempt.');
     }
@@ -113,7 +114,8 @@ export const processPage = async (
 export const fetchDetails = async (
     page: Page,
     journalUrl: string | null,
-    logger: typeof baseLogger // <-- Accept logger
+    logger: typeof baseLogger,
+    configService: ConfigService // <<<< ADD ConfigService
 ): Promise<JournalDetails | null> => {
     const childLogger = logger.child({ function: 'fetchDetails', journalUrl });
 
@@ -123,8 +125,14 @@ export const fetchDetails = async (
     }
     childLogger.info({ event: 'fetch_details_start' }, `Starting detail fetch.`);
 
+    const scimagoRetryOptions: RetryOptions = {
+        retries: configService.config.JOURNAL_RETRY_RETRIES,
+        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
+        factor: configService.config.JOURNAL_RETRY_FACTOR,
+    };
+
     try {
-        childLogger.debug({ event: 'fetch_details_attempt_start', retryOptions: RETRY_OPTIONS }, 'Attempting to fetch details with retries.');
+        childLogger.debug({ event: 'fetch_details_attempt_start', retryOptions: scimagoRetryOptions }, 'Attempting to fetch details with retries.');
         const details: JournalDetails = await retryAsync(async (attempt) => {
             const attemptLogger = childLogger.child({ attempt });
             attemptLogger.debug({ event: 'fetch_details_goto_start' }, 'Navigating to journal URL.');
@@ -132,231 +140,130 @@ export const fetchDetails = async (
             attemptLogger.debug({ event: 'fetch_details_goto_success' }, 'Navigation successful. Evaluating page content.');
 
             const tableRowSelector = 'body > div:nth-child(15) > div > div.cellcontent > div:nth-child(2) > table tbody tr';
-            // Selector waiting (optional but good practice)
             try {
                  attemptLogger.debug({ event: 'wait_for_selector_start', selector: tableRowSelector });
-                 await page.waitForSelector(tableRowSelector, { timeout: 10000 });
+                 await page.waitForSelector(tableRowSelector, { timeout: 10000 }); // Reduced timeout for optional element
                  attemptLogger.debug({ event: 'wait_for_selector_success', selector: tableRowSelector });
             } catch (e) {
-                attemptLogger.warn({ event: 'wait_for_selector_timeout', selector: tableRowSelector }, `Optional table rows selector not found within timeout.`);
-                // Continue anyway, evaluate might still work or find other data
+                attemptLogger.warn({ event: 'wait_for_selector_timeout', selector: tableRowSelector }, `Optional table rows selector not found within timeout. This might be okay.`);
            }
 
            attemptLogger.debug({ event: 'fetch_details_evaluate_start' });
-    
+            // page.evaluate logic for fetchDetails remains the same
             const evaluatedDetails: JournalDetails = await page.evaluate(() => {
-                // --- Hàm trợ giúp để thử nhiều selector ---
+                // ... (your existing page.evaluate logic for fetchDetails)
                 function querySelectorWithIndices(baseSelectorPattern: string, indices: number[]): { element: Element | null; successfulSelector: string | null } {
                     for (const index of indices) {
                         const selector = baseSelectorPattern.replace('{index}', index.toString());
-                        // console.log(`[Query Helper] Trying selector: ${selector}`); // Bật nếu cần debug sâu
                         const element = document.querySelector(selector);
-                        if (element) {
-                            // console.log(`[Query Helper] Found element with selector: ${selector}`);
-                            return { element, successfulSelector: selector }; // Trả về cả element và selector thành công
-                        }
+                        if (element) return { element, successfulSelector: selector };
                     }
-                    // console.log(`[Query Helper] Element not found for pattern: ${baseSelectorPattern} with indices: ${indices}`);
-                    return { element: null, successfulSelector: null }; // Không tìm thấy
+                    return { element: null, successfulSelector: null };
                 }
-                // --- Kết thúc hàm trợ giúp ---
-
-                // Các chỉ số cần thử
-                const mainIndices = [13, 14, 15];
-                const tableIndices = [15, 16];
+                const mainIndices = [13, 14, 15, 16]; // Expanded indices slightly
+                const tableIndices = [15, 16, 17]; // Expanded indices slightly
 
                 const result: JournalDetails = {};
-                console.log('[Evaluation] Starting data extraction...');
+                // console.log('[Evaluation fetchDetails] Starting data extraction...');
 
-                // --- Xử lý các selector chính ---
-                console.log('[Evaluation] Processing main selectors...');
                 const selectorPatterns = [
-                    { type: 'Subject Area', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(2)' },
-                    { type: 'Publisher', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(3)' },
-                    { type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(6)' },
-                    { type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' },
+                    { keyName: 'Subject Area and Category', type: 'Subject Area', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(2)' },
+                    { keyName: 'Publisher', type: 'Publisher', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(3)' },
+                    { keyName: 'H index', type: 'H index', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(4)' }, // Added H-index
+                    { keyName: 'Publication type', type: 'Publication type', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(5)' }, // Added Publication type
+                    { keyName: 'ISSN', type: 'ISSN', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(6)' }, // Adjusted index
+                    { keyName: 'Coverage', type: 'Coverage', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(7)' }, // Adjusted index
+                    { keyName: 'Scope', type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' }, // Adjusted index
+                    { keyName: 'Contact', type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(10)' }, // Adjusted index for contact
                 ];
 
-                selectorPatterns.forEach(({ type, pattern }) => {
-                    // console.log(`[Main Selectors] Attempting pattern: "${pattern}" with indices: ${mainIndices}`);
-                    const { element, successfulSelector } = querySelectorWithIndices(pattern, mainIndices);
+                selectorPatterns.forEach(({ keyName, type, pattern }) => {
+                    const { element } = querySelectorWithIndices(pattern, mainIndices);
                     if (element) {
-                        // console.log(`[Main Selectors] Found element for type "${type}" with selector: "${successfulSelector}"`);
-                        const keyElement = element.querySelector('h2');
-                        const key = keyElement?.textContent?.trim();
-                        if (key) {
-                            // console.log(`[Main Selectors] Found key "${key}" for type "${type}"`);
-                            if (type === 'Contact') {
-                                const links = element.querySelectorAll('p > a');
-                                const homepage = (links[0] as HTMLAnchorElement)?.href || null;
-                                const howToPublish = (links[1] as HTMLAnchorElement)?.href || null;
-                                const mail = links[2]?.textContent?.includes('@') ? links[2].textContent.trim() : null;
+                        const h2Element = element.querySelector('h2');
+                        const actualKey = h2Element?.textContent?.trim(); // Use actual key from h2 if present
 
-                                result[key] = {
-                                    Homepage: homepage,
-                                    "How to publish in this journal": howToPublish,
-                                    Mail: mail,
-                                };
-                                // console.log(`[Main Selectors] Contact data extracted for key "${key}"`);
-                            } else if (type === 'Subject Area') {
-                                const subjectAreaElement = element.querySelector('ul');
-                                const fieldOfResearch: JournalDetails['Subject Area and Category'] = {};
-
-                                if (subjectAreaElement) {
-                                    const mainTopicElement = subjectAreaElement.querySelector('li > a');
-                                    if (mainTopicElement) {
-                                        const mainTopic = mainTopicElement.textContent?.trim();
-                                        fieldOfResearch['Field of Research'] = mainTopic || null;
-                                        const subTopicElements = subjectAreaElement.querySelectorAll('.treecategory li a');
-                                        const topics: string[] = [];
-                                        subTopicElements.forEach((item) => {
-                                            const subTopic = item.textContent?.trim();
-                                            if (subTopic) { topics.push(subTopic); }
-                                        });
-                                        fieldOfResearch['Topics'] = topics;
-                                        // console.log(`[Main Selectors] Subject Area data extracted for key "${key}"`, fieldOfResearch);
-                                    } else {
-                                        console.warn(`[Main Selectors] Could not find main topic link (li > a) within subject area ul for key "${key}"`);
-                                    }
-                                } else {
-                                    console.warn(`[Main Selectors] Could not find subject area list (ul) within element for key "${key}"`);
+                        if (type === 'Contact') {
+                            const links = element.querySelectorAll('p > a');
+                            const homepage = (links[0] as HTMLAnchorElement)?.href || null;
+                            const howToPublish = (links[1] as HTMLAnchorElement)?.href || null;
+                            const mailLink = Array.from(links).find(a => a.textContent?.includes('@'));
+                            const mail = mailLink ? mailLink.textContent!.trim() : null;
+                            result[keyName] = { Homepage: homepage, "How to publish in this journal": howToPublish, Mail: mail };
+                        } else if (type === 'Subject Area') {
+                            const subjectAreaElement = element.querySelector('ul');
+                            const fieldOfResearch: JournalDetails['Subject Area and Category'] = {};
+                            if (subjectAreaElement) {
+                                const mainTopicElement = subjectAreaElement.querySelector('li > a');
+                                if (mainTopicElement) {
+                                    fieldOfResearch['Field of Research'] = mainTopicElement.textContent?.trim() || null;
+                                    const subTopicElements = subjectAreaElement.querySelectorAll('.treecategory li a');
+                                    const topics: string[] = [];
+                                    subTopicElements.forEach(item => {
+                                        const subTopic = item.textContent?.trim();
+                                        if (subTopic) topics.push(subTopic);
+                                    });
+                                    fieldOfResearch['Topics'] = topics;
                                 }
-                                result['Subject Area and Category'] = fieldOfResearch;
-
-                            } else {
-                                // Lấy text nodes và các element nodes không phải h2
-                                const value = Array.from(element.childNodes)
-                                    .filter((node) => node.nodeType === Node.TEXT_NODE ||
-                                        (node.nodeType === Node.ELEMENT_NODE &&
-                                            (node as Element).tagName.toLowerCase() !== 'h2' &&
-                                            node.textContent?.trim()))
-                                    .map((node) => node.textContent?.trim() || '')
-                                    .join(' ')
-                                    .replace(/\s+/g, ' ') // Chuẩn hóa khoảng trắng
-                                    .trim();
-                                result[key] = value;
-                                // console.log(`[Main Selectors] Generic data extracted for key "${key}": "${value.substring(0, 50)}..."`);
                             }
+                            result[keyName] = fieldOfResearch;
                         } else {
-                            console.warn(`[Main Selectors] Key (h2) not found within element for type "${type}" using selector "${successfulSelector}"`);
+                            const value = Array.from(element.childNodes)
+                                .filter(node => node.nodeType === Node.TEXT_NODE || (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName.toLowerCase() !== 'h2' && node.textContent?.trim()))
+                                .map(node => node.textContent?.trim() || '')
+                                .join(' ').replace(/\s+/g, ' ').trim();
+                            result[actualKey || keyName] = value; // Prefer actualKey from H2
                         }
-                    } else {
-                        // console.warn(`[Main Selectors] Element not found for type "${type}" using pattern "${pattern}" with indices ${mainIndices}`);
                     }
                 });
-                console.log('[Evaluation] Finished processing main selectors.');
 
-                // --- Xử lý phần tử fullwidth ---
-                console.log('[Evaluation] Processing fullwidth element...');
                 const fullwidthPattern = 'body > div:nth-child({index}) > div > div > div.fullwidth';
-                // console.log(`[Fullwidth] Attempting pattern: "${fullwidthPattern}" with indices: ${mainIndices}`);
-                const { element: fullwidthElement, successfulSelector: fwSelector } = querySelectorWithIndices(fullwidthPattern, mainIndices);
+                const { element: fullwidthElement } = querySelectorWithIndices(fullwidthPattern, mainIndices);
                 if (fullwidthElement) {
-                    // console.log(`[Fullwidth] Found element with selector: "${fwSelector}"`);
-                    const keyElement = fullwidthElement.firstElementChild; // Thường là h2
-                    const key = keyElement?.textContent?.trim() || 'Additional Info';
-                    // console.log(`[Fullwidth] Found key: "${key}"`);
+                    const keyElement = fullwidthElement.firstElementChild;
+                    const key = keyElement?.textContent?.trim() || 'Journal Description'; // More specific default
                     const value = Array.from(fullwidthElement.childNodes)
-                        .filter((node) => node.nodeType === Node.TEXT_NODE ||
-                            (node.nodeType === Node.ELEMENT_NODE &&
-                                keyElement && node !== keyElement && // Bỏ qua chính element chứa key
-                                (node as Element).tagName.toLowerCase() !== 'a' &&
-                                node.textContent?.trim()))
-                        .map((node) => node.textContent?.trim() || '')
-                        .join(' ')
-                        .replace(/\s+/g, ' ') // Chuẩn hóa khoảng trắng
-                        .trim();
+                        .filter(node => node !== keyElement && (node.nodeType === Node.TEXT_NODE || (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName.toLowerCase() !== 'a' && node.textContent?.trim())))
+                        .map(node => node.textContent?.trim() || '')
+                        .join(' ').replace(/\s+/g, ' ').trim();
                     result[key] = value;
-                    // console.log(`[Fullwidth] Extracted value for key "${key}": "${value.substring(0, 50)}..."`);
-                } else {
-                    console.warn(`[Fullwidth] Element not found using pattern "${fullwidthPattern}" with indices ${mainIndices}`);
                 }
-                console.log('[Evaluation] Finished processing fullwidth element.');
 
-                // --- Xử lý bảng phụ ---
-                console.log('[Table Section] Starting supplementary table processing...');
                 const supplementaryTablePattern = 'body > div:nth-child({index}) > div > div.cellcontent > div:nth-child(2) > table';
-                console.log(`[Table Query] Attempting to find table with pattern: "${supplementaryTablePattern}" and indices: ${tableIndices}`);
-
-                const { element: supplementaryTable, successfulSelector: tableSelector } = querySelectorWithIndices(supplementaryTablePattern, tableIndices);
-
+                const { element: supplementaryTable } = querySelectorWithIndices(supplementaryTablePattern, tableIndices);
                 if (supplementaryTable) {
-                    console.log(`[Table Query] SUCCESS: Found supplementary table using selector: "${tableSelector}"`);
                     const supplementaryData: any[] = [];
-                    const tableBody = supplementaryTable.querySelector('tbody');
-                    if (!tableBody) {
-                        console.warn('[Table Parse] WARNING: Found table element, but it does not contain a <tbody>. Parsing rows directly from table.');
-                    }
-                    const rows = (tableBody || supplementaryTable).querySelectorAll('tr');
-                    console.log(`[Table Parse] Found ${rows.length} rows in the table body (or table). Starting row parsing...`);
-
-                    rows.forEach((row, rowIndex) => {
+                    const rows = (supplementaryTable.querySelector('tbody') || supplementaryTable).querySelectorAll('tr');
+                    rows.forEach(row => {
                         const cells = row.querySelectorAll('td');
                         if (cells.length === 3) {
-                            const rowData = {
-                                Category: cells[0]?.textContent?.trim() || '',
-                                Year: cells[1]?.textContent?.trim() || '',
-                                Quartile: cells[2]?.textContent?.trim() || '',
-                            };
-                            supplementaryData.push(rowData);
-                        } else if (cells.length > 0) { // Log cảnh báo nếu hàng không trống nhưng sai cấu trúc
-                            console.warn(`[Table Parse] WARNING: Skipping row ${rowIndex}. Expected 3 cells (td), but found ${cells.length}. Row HTML: ${row.innerHTML}`);
+                            supplementaryData.push({ Category: cells[0]?.textContent?.trim() || '', Year: cells[1]?.textContent?.trim() || '', Quartile: cells[2]?.textContent?.trim() || '' });
                         }
-                        // Không log hàng hoàn toàn trống (cells.length === 0)
                     });
-
-                    console.log(`[Table Parse] Finished parsing rows. Extracted data for ${supplementaryData.length} rows.`);
-                    if (supplementaryData.length > 0) {
-                        result['SupplementaryTable'] = supplementaryData;
-                        console.log('[Table Section] Added "SupplementaryTable" key to results.');
-                    } else {
-                        console.warn('[Table Section] No valid data rows found in the supplementary table. "SupplementaryTable" key not added.');
-                    }
-                } else {
-                    // Sử dụng console.warn thay vì error để không gây nhầm lẫn với lỗi thực sự của hàm
-                    console.warn(`[Table Query] FAILED: Could not find supplementary table using pattern "${supplementaryTablePattern}" with indices ${tableIndices}. This might be expected if the table doesn't exist on this page.`);
+                    if (supplementaryData.length > 0) result['QuartilesByCategory'] = supplementaryData; // Renamed key
                 }
-                console.log('[Table Section] Finished supplementary table processing.');
 
-                // --- Xử lý mã nhúng (thumbnail) ---
-                console.log('[Evaluation] Processing embed code...');
                 const embedCodeElement = document.querySelector('#embed_code');
                 if (embedCodeElement) {
-                    console.log('[Embed Code] Found #embed_code element.');
-                    const valueAttr = embedCodeElement.getAttribute('value');
-                    const textContent = embedCodeElement.textContent;
-                    const thumbnailText = valueAttr ?? textContent;
-
-                    if (thumbnailText) {
-                        result['Thumbnail'] = thumbnailText.trim();
-                        console.log('[Embed Code] Extracted thumbnail text.');
-                    } else {
-                        console.warn('[Embed Code] #embed_code element found, but has no value attribute or text content.');
-                    }
-                } else {
-                    console.log('[Embed Code] #embed_code element not found.');
+                    const thumbnailText = embedCodeElement.getAttribute('value') ?? embedCodeElement.textContent;
+                    if (thumbnailText) result['SJRWidgetCode'] = thumbnailText.trim(); // Renamed key
                 }
-                console.log('[Evaluation] Finished processing embed code.');
-
-                console.log('[Evaluation] Data extraction finished.');
+                // console.log('[Evaluation fetchDetails] Data extraction finished.');
                 return result;
             });
             attemptLogger.debug({ event: 'fetch_details_evaluate_success', detailKeys: Object.keys(evaluatedDetails) }, 'Page evaluation complete.');
 
             if (Object.keys(evaluatedDetails).length === 0) {
-                 attemptLogger.warn({ event: 'fetch_details_warn_empty' }, "Evaluation finished, but no details were extracted. Selectors might have failed or page structure changed.");
-                // Optional: throw error here if empty details mean failure for retry
-                // throw new Error(`No details extracted for ${journalUrl} on attempt ${attempt}`);
+                 attemptLogger.warn({ event: 'fetch_details_warn_empty' }, "Evaluation finished, but no details were extracted.");
             }
-
             return evaluatedDetails;
-        }, RETRY_OPTIONS, childLogger);
+        }, scimagoRetryOptions, childLogger);
 
         childLogger.info({ event: 'fetch_details_success', detailCount: Object.keys(details).length }, `Successfully fetched details.`);
         return details;
     } catch (error: any) {
         childLogger.error({ err: error, event: 'fetch_details_failed', stack: error.stack }, `CRITICAL ERROR fetching details`);
-        return null; // Return null on failure after retries
+        return null;
     } finally {
          childLogger.info({ event: 'fetch_details_finish' }, 'Finished detail fetch attempt.');
     }
@@ -365,55 +272,63 @@ export const fetchDetails = async (
 // --- getImageUrlAndDetails ---
 export const getImageUrlAndDetails = async (
     details: JournalDetails | null,
-    row: any = null, // Consider using a more specific type like TableRowData | CSVRow | null
+    row: TableRowData | any = null, // any for flexibility if CSVRow is also passed
     apiKey: string | null,
-    cseId: string | null,
-    logger: typeof baseLogger // <-- Accept logger
+    // cseId: string | null, // CSE ID will come from configService via fetchGoogleImage
+    logger: typeof baseLogger,
+    configService: ConfigService // <<<< ADD ConfigService
 ): Promise<ImageResult> => {
     const childLogger = logger.child({ function: 'getImageUrlAndDetails' });
     childLogger.info({ event: 'get_image_start' }, 'Attempting to get image URL.');
 
     let issnText: string | null = null;
-
-    if (row && row.Issn) {
-        issnText = row.Issn.trim();
+    if (row && row.Issn) { // Assuming CSVRow might have 'Issn'
+        issnText = String(row.Issn).trim();
+    } else if (row && row.journalName && typeof row.journalName === 'string' && row.journalName.includes('ISSN:')) { // Fallback for TableRowData if ISSN is in name
+        const match = row.journalName.match(/ISSN:\s*([\dX-]+)/i);
+        if (match && match[1]) issnText = match[1].trim();
     } else if (details && details['ISSN']) {
-        issnText = details['ISSN']?.trim() || null;  // Null-safe access
+        issnText = String(details['ISSN']).trim() || null;
     }
+
 
     let title: string | null = null;
-
-    if (row && row.Title) {
-        title = row.Title.trim();
-    } else if (details && details['title']) {
-        title = details['title']?.trim() || null;  // Null-safe access
-    } else if (details && details['Title']) {
-        title = details['Title']?.trim() || null;  // Null-safe access
+    if (row && row.Title) { // Assuming CSVRow might have 'Title'
+        title = String(row.Title).trim();
+    } else if (row && row.journalName) { // From TableRowData
+        title = String(row.journalName).trim();
+        // Remove ISSN part from title if present
+        if (title && title.includes('ISSN:')) {
+            title = title.split('ISSN:')[0].trim();
+        }
+    } else if (details && details['title']) { // From fetched details (if 'title' key exists)
+        title = String(details['title']).trim() || null;
+    } else if (details && details['Publication type'] && typeof details['Publication type'] === 'string') { // Fallback to publication type if it's the main title
+        title = String(details['Publication type']).trim();
     }
+
 
     let imageResult: ImageResult = { Image: null, Image_Context: null };
 
     if (issnText) {
         childLogger.debug({ event: 'get_image_issn_found', issnRaw: issnText });
-        const formattedISSN = formatISSN(issnText); // formatISSN doesn't need logger
+        const formattedISSN = formatISSN(issnText);
         if (formattedISSN) {
             childLogger.debug({ event: 'get_image_issn_formatted', issnFormatted: formattedISSN, title });
-            if (apiKey && cseId) {
-                childLogger.info({ event: 'fetch_google_image_start' }, `Calling Google Image search for ISSN: ${formattedISSN}`);
+            // API key is passed, CSE ID is handled by fetchGoogleImage via configService
+            if (apiKey) { // Only need API key here
+                childLogger.info({ event: 'fetch_google_image_start_proxy' }, `Calling Google Image search for ISSN: ${formattedISSN}`);
                 try {
-                    // ---> Pass logger to fetchGoogleImage (assuming it accepts one)
-                    const { imageLink, contextLink } = await fetchGoogleImage(title, formattedISSN, apiKey, cseId, childLogger);
-                        imageResult = { Image: imageLink, Image_Context: contextLink };
-                    childLogger.info({ event: 'fetch_google_image_result', hasImage: !!imageLink, hasContext: !!contextLink }, 'Google Image search finished.');
+                    // Pass configService to fetchGoogleImage
+                    const { imageLink, contextLink } = await fetchGoogleImage(title, formattedISSN, apiKey, childLogger, configService);
+                    imageResult = { Image: imageLink, Image_Context: contextLink };
+                    childLogger.info({ event: 'fetch_google_image_result_proxy', hasImage: !!imageLink, hasContext: !!contextLink }, 'Google Image search finished.');
                 } catch (fetchError: any) {
-                    // Log the error from fetchGoogleImage
-                    childLogger.error({ err: fetchError, event: 'fetch_google_image_failed', issn: formattedISSN }, `Error during fetchGoogleImage call.`);
-                    // Re-throw the error to be caught by performImageSearch in crawlJournals.ts
-                    // This allows the ApiKeyManager rotation logic to trigger correctly
+                    childLogger.error({ err: fetchError, event: 'fetch_google_image_failed_proxy', issn: formattedISSN }, `Error during fetchGoogleImage call.`);
                     throw fetchError;
                 }
             } else {
-                childLogger.warn({ event: 'get_image_skip_missing_creds', issn: formattedISSN }, `Skipping image search: API key or CSE ID is missing.`);
+                childLogger.warn({ event: 'get_image_skip_missing_apikey', issn: formattedISSN }, `Skipping image search: API key is missing.`);
             }
         } else {
             childLogger.warn({ event: 'get_image_warn_invalid_issn', originalIssn: issnText }, `Invalid ISSN format after processing.`);
@@ -430,48 +345,71 @@ export const getImageUrlAndDetails = async (
 export const getLastPageNumber = async (
     firstPage: Page,
     baseUrl: string,
-    logger: typeof baseLogger // <-- Accept logger
+    logger: typeof baseLogger,
+    configService: ConfigService // <<<< ADD ConfigService
 ): Promise<number> => {
     const childLogger = logger.child({ function: 'getLastPageNumber', baseUrl });
     childLogger.info({ event: 'get_last_page_start' }, 'Attempting to determine last page number.');
-    const url = `${baseUrl}&page=1`; // Construct URL once
+    const url = `${baseUrl}&page=1`;
+
+    // Retry options for this specific operation (can be same as others or different)
+    const scimagoRetryOptions: RetryOptions = {
+        retries: configService.config.JOURNAL_RETRY_RETRIES,
+        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
+        factor: configService.config.JOURNAL_RETRY_FACTOR,
+    };
 
     try {
-        childLogger.debug({ event: 'get_last_page_navigating', url });
-        await firstPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-        childLogger.debug({ event: 'get_last_page_evaluating' });
+        childLogger.debug({ event: 'get_last_page_navigating', url, retryOptions: scimagoRetryOptions });
+        // Wrap the core logic (navigation + evaluation) in retryAsync
+        const lastPageNumber = await retryAsync(async (attempt) => {
+            const attemptLogger = childLogger.child({ attempt });
+            attemptLogger.debug({ event: 'get_last_page_goto_start' }, 'Navigating to URL for last page number.');
+            await firstPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+            attemptLogger.debug({ event: 'get_last_page_evaluating' });
 
-        const lastPageNumber = await firstPage.evaluate(() => {
-            const selector = 'body > div.ranking_body > div:nth-child(9) > div';
-            const text = document.querySelector(selector)?.textContent?.trim();
-            if (!text) {
-                console.warn(`[Evaluate] Selector '${selector}' not found or has no text.`);
-                return 1; // Default to 1 if selector fails
-            }
-            try {
-                const parts = text.split('of');
-                if (parts.length < 2) {
-                     console.warn(`[Evaluate] Text '${text}' does not contain 'of'.`);
-                     return 1;
+            const pageNumber = await firstPage.evaluate(() => {
+                const selector = 'body > div.ranking_body > div:nth-child(9) > div'; // This selector might need adjustment
+                const text = document.querySelector(selector)?.textContent?.trim();
+                if (!text) {
+                    console.warn(`[Evaluate getLastPage] Selector '${selector}' not found or has no text. Defaulting to 1 page.`);
+                    return 1;
                 }
-                const totalItemsStr = parts[1].trim().split(' ')[0].replace(/,/g, ''); // Handle commas in numbers
-                const totalItems = parseInt(totalItemsStr);
-                 if (isNaN(totalItems)) {
-                     console.warn(`[Evaluate] Could not parse total items from '${parts[1].trim()}'. Text was: ${text}`);
-                     return 1;
-                 }
-                return Math.ceil(totalItems / 50); // Assuming 50 items per page
-            } catch (e) {
-                console.error('[Evaluate] Error parsing last page number:', e);
-                return 1; // Default on parsing error
+                try {
+                    const parts = text.split('of');
+                    if (parts.length < 2) {
+                         console.warn(`[Evaluate getLastPage] Text '${text}' does not contain 'of'. Defaulting to 1 page.`);
+                         return 1;
+                    }
+                    const totalItemsStr = parts[1].trim().split(' ')[0].replace(/,/g, '');
+                    const totalItems = parseInt(totalItemsStr);
+                     if (isNaN(totalItems) || totalItems <= 0) {
+                         console.warn(`[Evaluate getLastPage] Could not parse valid total items from '${parts[1].trim()}'. Text was: ${text}. Defaulting to 1 page.`);
+                         return 1;
+                     }
+                    return Math.ceil(totalItems / 50); // Assuming 50 items per page
+                } catch (e: any) {
+                    console.error('[Evaluate getLastPage] Error parsing last page number:', e.message);
+                    return 1;
+                }
+            });
+            // If pageNumber is 0 or 1 due to an error/no items, and it's not the first attempt,
+            // it might indicate a temporary issue or that the page structure changed.
+            // For now, we accept it. More sophisticated error handling could be added.
+            if (pageNumber <= 0) { // Should not be 0 if parsing is correct
+                attemptLogger.warn({ event: 'get_last_page_eval_returned_zero_or_less', pageNumber }, "Evaluation returned zero or less pages, might indicate an issue.");
+                // throw new Error("Failed to evaluate a valid last page number."); // Optionally throw to force retry
             }
-        });
+            return pageNumber;
+        }, scimagoRetryOptions, childLogger);
+
 
         childLogger.info({ event: 'get_last_page_success', pageCount: lastPageNumber }, `Determined last page number: ${lastPageNumber}`);
-        return lastPageNumber;
+        return lastPageNumber > 0 ? lastPageNumber : 1; // Ensure at least 1 page
     } catch (error: any) {
-        childLogger.error({ err: error, event: 'get_last_page_failed', url }, `Failed to get last page number`);
-        throw error; // Re-throw to signal failure
+        childLogger.error({ err: error, event: 'get_last_page_failed', url }, `Failed to get last page number after retries`);
+        // throw error; // Re-throw if critical, or return a default
+        return 1; // Default to 1 page on ultimate failure to prevent crawl from stopping
     } finally {
          childLogger.info({ event: 'get_last_page_finish' }, 'Finished attempt to get last page number.');
     }

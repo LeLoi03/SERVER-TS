@@ -17,6 +17,10 @@ import { ApiModels, CrawlModelType } from '../../../types/crawl/crawl.types'; //
 // Import the new error utility
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 
+
+// Import the journal crawling function
+import { crawlJournals } from '../../../journal/crawlJournals';
+
 /**
  * Defines the expected keys for the `apiModels` query parameter.
  * These keys map to different stages of the AI model processing pipeline.
@@ -39,6 +43,12 @@ const DEFAULT_API_MODELS: ApiModels = {
  * @type {Mutex}
  */
 const crawlConferenceLock: Mutex = new Mutex();
+
+/**
+ * A global Mutex instance to control concurrency for the `/crawl-journals` route.
+ */
+const crawlJournalLock: Mutex = new Mutex(); // <<<< ADD Mutex for journal crawling
+
 
 /**
  * Handles incoming requests to crawl conference data.
@@ -267,13 +277,124 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
     }
 }
 
+
+
+// --- Function to handle the crawl-journals logic ---
 export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
-    const loggingService = container.resolve(LoggingService);
-    const reqLogger = (req as any).log as Logger || loggingService.getLogger();
-    const routeLogger = reqLogger.child({ route: '/crawl-journals' });
-    routeLogger.warn("Endpoint /crawl-journals is under development. Journal crawling functionality is not yet fully implemented and refactored.");
-    res.status(501).json({ message: "Journal crawling endpoint is currently not implemented. Please check back later." });
+    const baseLoggingService = container.resolve(LoggingService);
+    const baseReqLogger = (req as any).log as Logger || baseLoggingService.getLogger();
+    const configService = container.resolve(ConfigService); // <<<< Get ConfigService instance
+
+    const requestId = (req as any).id || `req-journal-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    const routeLogger = baseReqLogger.child({ requestId, route: '/crawl-journals' });
+
+    routeLogger.info({ method: req.method, query: req.query }, "Received request to crawl journals");
+
+    if (crawlJournalLock.isLocked()) {
+        routeLogger.warn(
+            { route: '/crawl-journals' },
+            "Request to /crawl-journals rejected: Server is currently busy processing another journal crawl request."
+        );
+        res.status(429).json({
+            message: "The server is busy processing another journal crawl request. Please try again later."
+        });
+        return;
+    }
+
+    const startTime = Date.now();
+
+    try {
+        await crawlJournalLock.runExclusive(async () => {
+            routeLogger.info("Mutex lock acquired for journal crawl. Starting journal crawling...");
+
+            // Determine dataSource for journals: 'scimago' or 'client'
+            // 'scimago' is default if not specified or invalid
+            // 'client' requires CSV data in the request body
+            let dataSource: 'scimago' | 'client' = 'scimago';
+            const dataSourceQuery = req.query.dataSource as string;
+            let clientData: string | null = null;
+
+            if (dataSourceQuery === 'client') {
+                dataSource = 'client';
+                // For 'client' mode, expect CSV data in the body
+                // Assuming body-parser or similar middleware handles raw text/csv body
+                if (typeof req.body === 'string' && req.body.trim().length > 0) {
+                    clientData = req.body;
+                    routeLogger.info({ dataSource: 'client', bodyLength: clientData.length }, "Journal crawl mode: client. Using CSV data from request body.");
+                } else {
+                    routeLogger.error({ dataSource: 'client', bodyType: typeof req.body }, "Journal crawl mode 'client' selected, but no valid CSV string found in request body.");
+                    if (!res.headersSent) {
+                        res.status(400).json({ message: "For 'client' dataSource, a non-empty CSV string is required in the request body." });
+                    }
+                    // To prevent further execution within runExclusive if headers already sent or to stop processing
+                    throw new Error("Client data missing for journal crawl.");
+                }
+            } else if (dataSourceQuery) {
+                routeLogger.warn({ dataSourceQueryProvided: dataSourceQuery }, "Invalid 'dataSource' for journals. Defaulting to 'scimago'. Supported: 'scimago', 'client'.");
+                // dataSource remains 'scimago'
+            } else {
+                routeLogger.info({ dataSource: 'scimago' }, "Journal crawl mode: scimago (default).");
+            }
+
+            // Call crawlJournals function with ConfigService and determined dataSource/clientData
+            await crawlJournals(dataSource, clientData, routeLogger, configService);
+
+            routeLogger.info("Journal crawling completed by the service.");
+
+            const endTime = Date.now();
+            const runTime = endTime - startTime;
+            const runTimeSeconds = (runTime / 1000).toFixed(2);
+
+            routeLogger.info({ runtimeSeconds: runTimeSeconds, dataSourceUsed: dataSource }, "Journal crawling finished successfully.");
+
+            // The journal_data.jsonl path is now managed by ConfigService and crawlJournals
+            const journalOutputPath = configService.journalOutputJsonlPath;
+
+            if (!res.headersSent) {
+                res.status(200).json({
+                    message: `Journal crawling completed successfully using '${dataSource}' source!`,
+                    runtime: `${runTimeSeconds} s`,
+                    outputPath: journalOutputPath
+                });
+                routeLogger.info({ statusCode: 200, outputPath: journalOutputPath }, "Sent successful response for journal crawl.");
+            }
+        });
+
+    } catch (error: unknown) { // Catch errors from runExclusive or crawlJournals itself
+        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+        const endTime = Date.now();
+        const runTimeMs = endTime - startTime;
+
+        console.error('\n--- Error Details from Journal Controller ---');
+        console.error('Message:', errorMessage);
+        console.error('Stack:', errorStack);
+        console.error('---------------------------------------------');
+
+        routeLogger.error({
+            err: { message: errorMessage, stack: errorStack },
+            event: 'journal_processing_failed_in_controller',
+            context: { runtimeMs: runTimeMs }
+        }, "Journal crawling failed within the /crawl-journals route handler or service.");
+
+        if (!res.headersSent) {
+            // If the error was due to missing client data, it might have already sent a 400
+            if (errorMessage === "Client data missing for journal crawl.") {
+                // The 400 response was likely already sent, or this is a fallback.
+                // Avoid sending another response if one was already sent.
+                // The check for res.headersSent should handle this, but being explicit.
+            } else {
+                res.status(500).json({
+                    message: 'Journal crawling failed due to an internal server error.',
+                    error: errorMessage,
+                });
+                routeLogger.warn({ statusCode: 500 }, "Sent 500 Internal Server Error response for journal crawl.");
+            }
+        } else {
+            routeLogger.error("Headers already sent for /crawl-journals request, could not send 500 error response.");
+        }
+    }
 }
+
 
 export async function handleSaveConference(req: Request, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);

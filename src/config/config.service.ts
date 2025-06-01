@@ -167,7 +167,12 @@ const envSchema = z.object({
      * Name of the main application log file.
      * @default 'app.log'
      */
-    LOG_FILE_NAME: z.string().default('app.log'),
+    CONFERENCE_LOG_FILE_NAME: z.string().default('app.log'),
+    /**
+     * Name of the main application log file.
+     * @default 'app.log'
+     */
+    JOURNAL_LOG_FILE_NAME: z.string().default('journal.log'),
     /**
      * Whether logs should also be output to the console.
      * @default false
@@ -1125,7 +1130,13 @@ export class ConfigService {
      * Gets the resolved absolute path to the main application log file.
      * @returns {string} The path to the application log file.
      */
-    get appLogFilePath(): string { return path.join(this.logsDirectory, this.config.LOG_FILE_NAME); }
+    get appLogFilePath(): string { return path.join(this.logsDirectory, this.config.CONFERENCE_LOG_FILE_NAME); }
+
+    /**
+     * Gets the resolved absolute path to the main application log file.
+     * @returns {string} The path to the application log file.
+     */
+    get journalLogFilePath(): string { return path.join(this.logsDirectory, this.config.JOURNAL_LOG_FILE_NAME); }
 
     /**
      * Gets the resolved absolute path to the base output directory.
@@ -1213,6 +1224,16 @@ export class ConfigService {
         };
     }
 
+     /**
+     * Gets the resolved absolute path to the journal data output JSONL file.
+     * @returns {string} The path to the journal_data.jsonl file.
+     */
+    get journalOutputJsonlPath(): string {
+        // You can decide if this goes into jsonlOutputDir or a specific journal subdir
+        // For simplicity, let's put it directly in jsonlOutputDir for now.
+        return path.join(this.jsonlOutputDir, 'journal_data.jsonl');
+    }
+    
     /**
      * Generates the absolute path for a final JSONL output file for a specific batch request.
      * @param {string} batchRequestId - The unique identifier for the batch request.
