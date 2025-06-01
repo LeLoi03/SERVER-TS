@@ -1,6 +1,6 @@
 // src/chatbot/models/conversation.model.ts
 import mongoose, { Schema, Document, Model, Types } from 'mongoose';
-import { ChatHistoryItem } from '../shared/types'; // Import kiểu dữ liệu ChatHistoryItem
+import { ChatHistoryItem, SourceItem } from '../shared/types'; // Import thêm SourceItem
 
 // Định nghĩa cấu trúc cho một Part (để Mongoose biết kiểu)
 const partSchema = new Schema({
@@ -9,10 +9,9 @@ const partSchema = new Schema({
         mimeType: { type: String },
         data: { type: String } // Base64 encoded data
     },
-    fileData: { // Dành cho file lớn đã upload qua File API
-        mimeType: { type: String, required: true },
-        fileUri: { type: String, required: true },
-        // KHÔNG CÓ displayName, originalSize ở đây
+    fileData: {
+        mimeType: { type: String, required: false }, // required: false vì không phải part nào cũng là fileData
+        fileUri: { type: String, required: false }   // required: false
     },
     functionCall: {
         name: { type: String },
@@ -24,26 +23,40 @@ const partSchema = new Schema({
     }
 }, { _id: false, minimize: false }); // minimize: false để giữ lại các object rỗng nếu cần
 
-const historyItemSchema = new Schema({
+const sourceItemSchema = new Schema<SourceItem>({
+    name: { type: String, required: true },
+    url: { type: String, required: true },
+    type: { type: String }
+}, { _id: false });
+
+const historyItemSchema = new Schema<ChatHistoryItem>({ // Explicitly type with ChatHistoryItem
     role: {
         type: String,
         required: true,
         enum: ['user', 'model', 'function', 'system']
     },
     parts: {
-        type: [partSchema], // Mảng các Part objects
+        type: [partSchema],
         required: true
     },
     timestamp: { type: Date, default: Date.now },
-    uuid: { type: String, index: true, sparse: true },
-     userFileInfo: [{ // Chỉ có ý nghĩa với role: 'user'
-        name: { type: String, required: true }, // Thêm required nếu cần
+    uuid: { type: String, index: true, sparse: true }, // sparse: true nếu không phải mọi item đều có uuid
+    userFileInfo: [{
+        name: { type: String, required: true },
         size: { type: Number, required: true },
         type: { type: String, required: true },
         googleFileUri: { type: String, required: true },
-        _id: false // QUAN TRỌNG: Đảm bảo có dòng này
-    }]
-}, { _id: false, minimize: false }); // minimize: false có thể vẫn cần thiết cho parts
+        _id: false
+    }],
+    sources: { // <<< THÊM MỚI: Chỉ có ý nghĩa với role: 'model'
+        type: [sourceItemSchema], // Mảng các SourceItem
+        default: undefined // Để không tạo mảng rỗng nếu không có sources
+    },
+    // Các trường khác của ChatHistoryItem nếu có (ví dụ: action, thoughts)
+    // thoughts và action có thể cần schema riêng nếu cấu trúc phức tạp
+    thoughts: { type: Schema.Types.Mixed, default: undefined }, // Giữ linh hoạt
+    action: { type: Schema.Types.Mixed, default: undefined }    // Giữ linh hoạt
+}, { _id: false, minimize: false });
 
 
 export interface IConversation extends Document {
@@ -71,18 +84,16 @@ const conversationSchema = new Schema<IConversation>({
     },
     language: { type: String },
     lastActivity: { type: Date, default: Date.now, index: true },
-    status: { type: String, default: 'active' },
+    status: { type: String, default: 'active' }, // Ví dụ: 'active', 'archived', 'deleted'
     customTitle: { type: String, trim: true, maxlength: 120 },
     isPinned: { type: Boolean, default: false, index: true },
 }, {
-    timestamps: true,
+    timestamps: true, // Tự động thêm createdAt và updatedAt
     collection: 'conversations'
 });
 
-
 // Cập nhật lastActivity mỗi khi document được save
 conversationSchema.pre('save', function (next) {
-    // Chỉ cập nhật nếu có thay đổi thực sự hoặc là document mới
     if (this.isModified() || this.isNew) {
         this.lastActivity = new Date();
     }
@@ -93,49 +104,7 @@ conversationSchema.pre('save', function (next) {
 
 conversationSchema.pre('findOneAndUpdate', function (next) {
     const update = this.getUpdate();
-
-    // Kiểm tra xem update có phải là một đối tượng và không phải là aggregation pipeline
-    // (Aggregation pipeline thường là một mảng các stages)
     if (update && typeof update === 'object' && !Array.isArray(update)) {
-        // Kiểm tra xem có toán tử update nào được sử dụng không
-        // Nếu không có, có thể không cần thêm $set
-        const updateOperators = ['$set', '$unset', '$inc', '$mul', '$rename', '$min', '$max', '$currentDate'];
-        const usesUpdateOperator = Object.keys(update).some(key => updateOperators.includes(key));
-
-        if (usesUpdateOperator) {
-            // Nếu đã có $set, thêm lastActivity vào đó
-            if (update.$set) {
-                (update.$set as any).lastActivity = new Date();
-            } else {
-                // Nếu chưa có $set, nhưng có các toán tử khác, chúng ta vẫn có thể thêm $set mới
-                // Tuy nhiên, cần cẩn thận hơn nếu bạn sử dụng các toán tử phức tạp.
-                // Một cách an toàn là chỉ thêm nếu không có $set nào khác
-                // hoặc nếu bạn chắc chắn về cấu trúc update.
-                // Để đơn giản, nếu không có $set, ta tạo mới:
-                this.set({ '$set': { lastActivity: new Date() } }); // Sử dụng this.set() của Query
-            }
-        } else if (Object.keys(update).length > 0 && !update.$set) {
-            // Trường hợp update trực tiếp các trường (ví dụ: { field: value })
-            // Mongoose sẽ tự động chuyển thành $set, nhưng để chắc chắn,
-            // ta có thể can thiệp ở đây hoặc để Mongoose xử lý.
-            // Để an toàn nhất, nếu không có toán tử và có các trường được update trực tiếp,
-            // ta cũng có thể thêm lastActivity vào $set.
-            // Tuy nhiên, cách tiếp cận tốt nhất là luôn sử dụng toán tử $set trong service.
-            // Giữ nguyên logic cũ của bạn bằng cách thêm vào $set:
-            // Cách này không hoàn toàn chính xác vì this.getUpdate() trả về toàn bộ object update
-            // Nếu update là { name: "new name" }, thì (update as any).$set sẽ là undefined.
-            // Cách đúng hơn là dùng this.updateOne({}, { $set: { lastActivity: new Date() } })
-            // hoặc this.set({ '$set': { lastActivity: new Date() }})
-            this.set({ '$set': { lastActivity: new Date() } });
-        }
-    }
-    next();
-});
-
-conversationSchema.pre('updateOne', function (next) {
-    const update = this.getUpdate();
-    if (update && typeof update === 'object' && !Array.isArray(update)) {
-        // Logic tương tự như findOneAndUpdate
         const updateOperators = ['$set', '$unset', '$inc', '$mul', '$rename', '$min', '$max', '$currentDate'];
         const usesUpdateOperator = Object.keys(update).some(key => updateOperators.includes(key));
 
@@ -153,13 +122,30 @@ conversationSchema.pre('updateOne', function (next) {
 });
 
 
-// Đánh text index trên trường messages.parts.text để tìm kiếm
-// MongoDB sẽ tự động xử lý việc index các phần tử trong mảng messages và parts
+conversationSchema.pre('updateOne', function (next) { // Thường dùng cho các update không trả về document
+    const update = this.getUpdate();
+    if (update && typeof update === 'object' && !Array.isArray(update)) {
+        const updateOperators = ['$set', '$unset', '$inc', '$mul', '$rename', '$min', '$max', '$currentDate'];
+        const usesUpdateOperator = Object.keys(update).some(key => updateOperators.includes(key));
+
+        if (usesUpdateOperator) {
+            if (update.$set) {
+                (update.$set as any).lastActivity = new Date();
+            } else {
+                this.set({ '$set': { lastActivity: new Date() } });
+            }
+        } else if (Object.keys(update).length > 0 && !update.$set) {
+            this.set({ '$set': { lastActivity: new Date() } });
+        }
+    }
+    next();
+});
+
+
 conversationSchema.index(
     { 'messages.parts.text': 'text' },
-    { default_language: 'english' } // Có thể đặt ngôn ngữ mặc định cho text search
+    { default_language: 'english' }
 );
-
 
 const ConversationModel: Model<IConversation> = mongoose.model<IConversation>('Conversation', conversationSchema);
 export default ConversationModel;

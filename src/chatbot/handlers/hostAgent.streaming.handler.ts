@@ -23,22 +23,24 @@ export async function handleStreaming(
     frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
-    pageContextText?: string // <<< THÊM PARAMETER
+    pageContextText?: string,
+    pageContextUrl?: string // <<< THÊM PARAMETER
+
 ): Promise<ChatHistoryItem[] | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const baseLogContext = `[${handlerId} Streaming Socket ${socket.id}]`;
     const inputTextSummary = userInputParts.find(p => p.text)?.text || (userInputParts.length > 0 ? `[${userInputParts.length} parts content]` : "[No user text query]");
-    
+
     logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}, Personalization: ${!!personalizationData}` +
-              (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) + ` ---`);
+        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) + ` ---`);
     logToFile(`[DEBUG] ${baseLogContext} Initial history from socket (length ${initialHistoryFromSocket.length}): ${initialHistoryFromSocket.map(m => m.uuid).join(', ')}`);
 
     const conversationIdForSubAgent = handlerId;
 
     // <<< SỬA ĐỔI ĐỂ TRUYỀN PAGE CONTEXT VÀO LANGUAGE CONFIG >>>
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
-        language, 
-        'HostAgent', 
+        language,
+        'HostAgent',
         personalizationData,
         pageContextText // <<< TRUYỀN PAGE CONTEXT
     );
@@ -111,6 +113,10 @@ export async function handleStreaming(
                 if (eventName === 'chat_result' && finalFrontendActionStreaming) {
                     (dataToSend as ResultUpdate).action = finalFrontendActionStreaming;
                 }
+                 // Đảm bảo data.sources được truyền nếu có
+                    if ((data as ResultUpdate).sources) { // data ở đây là ResultUpdate
+                        dataToSend.sources = (data as ResultUpdate).sources;
+                    }
             }
             socket.emit(eventName, dataToSend);
             return true;
@@ -169,7 +175,7 @@ export async function handleStreaming(
             }
         }
     }
-     try {
+    try {
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return completeHistoryToSave;
 
         let nextTurnInputForLlm: Part[] = userInputParts;
@@ -177,7 +183,7 @@ export async function handleStreaming(
 
         while (currentHostTurn <= maxTurnsHostAgent) {
             const turnLogContext = `${baseLogContext} Turn ${currentHostTurn}`;
-            
+
             // Lịch sử gửi cho API ở lượt này:
             // - Lượt 1: historyForApiCall (đã có pageContext nếu có, và initialHistoryFromSocket)
             //            + nextTurnInputForLlm (là userInputParts)
@@ -185,7 +191,7 @@ export async function handleStreaming(
             //            + nextTurnInputForLlm (là function_response_part)
             const currentApiHistoryForThisCall = [...historyForApiCall]; // Tạo bản sao để log và sử dụng
 
-            logToFile(`--- ${turnLogContext} Start --- Input Parts for LLM (nextTurnInputForLlm length ${nextTurnInputForLlm.length}): "${nextTurnInputForLlm.find(p => p.text)?.text?.substring(0, 30) || (nextTurnInputForLlm.length > 0 ? '[non-text]' : '[empty input]') }..." ---`);
+            logToFile(`--- ${turnLogContext} Start --- Input Parts for LLM (nextTurnInputForLlm length ${nextTurnInputForLlm.length}): "${nextTurnInputForLlm.find(p => p.text)?.text?.substring(0, 30) || (nextTurnInputForLlm.length > 0 ? '[non-text]' : '[empty input]')}..." ---`);
             logToFile(`--- ${turnLogContext} API History (currentApiHistoryForThisCall length ${currentApiHistoryForThisCall.length}): ${currentApiHistoryForThisCall.map(m => m.role + ':' + (m.uuid || 'no-uuid')).join(', ')} ---`);
 
             if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process (Turn ${currentHostTurn})...` : 'Thinking...' })) return completeHistoryToSave;
@@ -305,27 +311,62 @@ export async function handleStreaming(
                 nextTurnInputForLlm = [functionResponseContentPart]; // Đây sẽ là input cho lượt LLM tiếp theo
                 currentHostTurn++;
                 continue; // Tiếp tục vòng lặp để LLM xử lý function response
-            } else if (hostAgentLLMResult.stream) {
+             } else if (hostAgentLLMResult.stream) {
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
                 if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
                     const finalModelParts = streamOutput.parts && streamOutput.parts.length > 0 ? streamOutput.parts : [{ text: streamOutput.fullText }];
+                    
                     const finalModelTurn: ChatHistoryItem = {
-                        role: 'model', parts: finalModelParts, uuid: botMessageUuid, timestamp: new Date()
+                        role: 'model',
+                        parts: finalModelParts,
+                        uuid: botMessageUuid,
+                        timestamp: new Date(),
+                        sources: [] // Khởi tạo mảng sources
                     };
-                    completeHistoryToSave.push(finalModelTurn); // Thêm phản hồi cuối cùng của bot
-                    safeEmitStreaming('chat_result', { type: 'result', message: streamOutput.fullText, parts: finalModelParts, id: botMessageUuid });
-                    logToFile(`${turnLogContext} Stream processed. Final model turn UUID: ${botMessageUuid} added. completeHistoryToSave length: ${completeHistoryToSave.length}`);
+
+                    // <<< THÊM PAGE CONTEXT URL VÀO SOURCES CỦA MODEL (CHỈ MỘT LẦN) >>>
+                    if (pageContextUrl && pageContextText) { // Chỉ thêm nếu context thực sự được dùng (có text)
+                        try {
+                            const urlObj = new URL(pageContextUrl);
+                            finalModelTurn.sources?.push({
+                                name: urlObj.hostname, // Lấy domain làm tên
+                                url: pageContextUrl,
+                                type: 'page_context'
+                            });
+                        } catch (e) {
+                            logToFile(`[WARN] ${turnLogContext} Invalid pageContextUrl: ${pageContextUrl}. Cannot extract hostname.`);
+                            finalModelTurn.sources?.push({
+                                name: pageContextUrl, // Dùng URL đầy đủ nếu không parse được
+                                url: pageContextUrl,
+                                type: 'page_context'
+                            });
+                        }
+                    }
+                    // Bạn có thể thêm logic để LLM tự xác định sources khác ở đây nếu cần (ví dụ từ nội dung trả về của LLM)
+
+                    completeHistoryToSave.push(finalModelTurn);
+                    
+                    const resultPayload: ResultUpdate = { 
+                        type: 'result', 
+                        message: streamOutput.fullText, 
+                        parts: finalModelParts, 
+                        id: botMessageUuid,
+                        sources: finalModelTurn.sources // <<< TRUYỀN SOURCES
+                    };
+                    safeEmitStreaming('chat_result', resultPayload);
+                    
+                    logToFile(`${turnLogContext} Stream processed. Final model turn UUID: ${botMessageUuid} added. Sources: ${JSON.stringify(finalModelTurn.sources)}. completeHistoryToSave length: ${completeHistoryToSave.length}`);
                     return completeHistoryToSave; // Kết thúc và trả về lịch sử hoàn chỉnh
                 } else {
                     logToFile(`${turnLogContext} Error - Failed to process final stream or client disconnected.`);
                     if (socket.connected) safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });
-                    return completeHistoryToSave; // Trả về lịch sử đã có currentUserTurn
+                    return completeHistoryToSave;
                 }
             } else {
                 logToFile(`${turnLogContext} Error - HostAgent model unexpected response (streaming).`);
                 safeEmitStreaming('chat_error', { type: 'error', message: 'Internal error: Unexpected AI response (streaming).', step: 'unknown_host_llm_status_stream' });
-                return completeHistoryToSave; // Trả về lịch sử đã có currentUserTurn
+                return completeHistoryToSave;
             }
         } // Kết thúc while loop
 

@@ -38,7 +38,9 @@ export async function handleNonStreaming(
     frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
-    pageContextText?: string // <<< THÊM PARAMETER
+    pageContextText?: string,
+        pageContextUrl?: string // <<< THÊM PARAMETER
+
 ): Promise<NonStreamingHandlerResult | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const socketId = socket.id;
@@ -211,13 +213,44 @@ export async function handleNonStreaming(
                 const botMessageUuid = uuidv4();
                 const modelResponseParts = modelResult.parts || [{ text: finalModelResponseText }];
 
-                const finalModelTurn: ChatHistoryItem = {
-                    role: 'model', parts: modelResponseParts, uuid: botMessageUuid, timestamp: new Date()
-                    // userFileInfo không áp dụng cho model turn
+                 const finalModelTurn: ChatHistoryItem = {
+                    role: 'model', 
+                    parts: modelResponseParts, 
+                    uuid: botMessageUuid, 
+                    timestamp: new Date(),
+                    sources: [] // Khởi tạo
                 };
+
+                // <<< THÊM PAGE CONTEXT URL VÀO SOURCES CỦA MODEL >>>
+                if (pageContextUrl && pageContextText) {
+                     try {
+                        const urlObj = new URL(pageContextUrl);
+                        finalModelTurn.sources?.push({
+                            name: urlObj.hostname,
+                            url: pageContextUrl,
+                            type: 'page_context'
+                        });
+                    } catch (e) {
+                        logToFile(`[WARN] ${turnLogContext} Invalid pageContextUrl: ${pageContextUrl}. Cannot extract hostname.`);
+                        finalModelTurn.sources?.push({
+                            name: pageContextUrl,
+                            url: pageContextUrl,
+                            type: 'page_context'
+                        });
+                    }
+                }
+
                 completeHistoryToSave.push(finalModelTurn);
-                logToFile(`${turnLogContext} Final Text - Appended HostAgent response. Save history: ${completeHistoryToSave.length}`);
-                safeEmit('chat_result', { type: 'result', message: finalModelResponseText, parts: modelResponseParts, id: botMessageUuid });
+                logToFile(`${turnLogContext} Final Text - Appended HostAgent response. Sources: ${JSON.stringify(finalModelTurn.sources)}. Save history: ${completeHistoryToSave.length}`);
+                
+                const resultPayload: ResultUpdate = { // Sử dụng ResultUpdate đã được cập nhật type
+                    type: 'result', 
+                    message: finalModelResponseText, 
+                    parts: modelResponseParts, 
+                    id: botMessageUuid,
+                    sources: finalModelTurn.sources // <<< TRUYỀN SOURCES
+                };
+                safeEmit('chat_result', resultPayload);
                 return { history: completeHistoryToSave, action: finalFrontendAction };
 
             }

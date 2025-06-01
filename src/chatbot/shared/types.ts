@@ -54,6 +54,8 @@ export interface ChatHistoryItem {
     action?: FrontendAction;  // Optional: Action requested by the model
     // Thông tin file gốc của người dùng, chỉ có ý nghĩa với role: 'user'
     userFileInfo?: OriginalUserFileInfo[];
+    sources?: SourceItem[]; // <<< THÊM MỚI: Chỉ cho role 'model'
+
 }
 
 
@@ -436,6 +438,8 @@ export interface ResultUpdate {
     thoughts?: ThoughtStep[];
     /** Optional: An action for the frontend to perform alongside displaying the message. */
     action?: FrontendAction;
+    sources?: SourceItem[]; // <<< THÊM MỚI
+
 }
 
 /**
@@ -587,6 +591,15 @@ export interface OriginalUserFileInfo {
     // dataUrl không cần thiết ở backend cho mục đích này
 }
 
+// Định nghĩa SourceItem (nếu chưa có hoặc cần chuẩn hóa)
+export interface SourceItem {
+    name: string; // Tên hiển thị (ví dụ: domain)
+    url: string;  // URL đầy đủ
+    type?: 'page_context' | 'web_search' | 'document' | string; // Loại source
+    // Có thể thêm các trường khác nếu cần, ví dụ: snippet, title của trang
+}
+
+
 /**
  * Data structure expected when the client sends a new message to the chatbot.
  */
@@ -605,6 +618,7 @@ export interface SendMessageData {
     personalizationData?: PersonalizationPayload | null; // <<< ADDED
     originalUserFiles?: OriginalUserFileInfo[]; // Thêm trường này
 
+    pageContextUrl?: string; // <<< THÊM MỚI
 
 }
 

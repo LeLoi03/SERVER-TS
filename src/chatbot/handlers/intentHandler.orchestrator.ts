@@ -18,11 +18,11 @@ import { handleStreaming as handleStreamingActual } from './hostAgent.streaming.
 let configService: ConfigService;
 let MAX_TURNS_HOST_AGENT: number;
 let ALLOWED_SUB_AGENTS: AgentId[];
-let geminiApiKey: string; 
+let geminiApiKey: string;
 let hostAgentModelName: string;
 let subAgentModelName: string | undefined;
-let hostAgentGenerationConfig: any; 
-let subAgentGenerationConfig: any; 
+let hostAgentGenerationConfig: any;
+let subAgentGenerationConfig: any;
 let GEMINI_SERVICE_FOR_HOST: Gemini;
 let GEMINI_SERVICE_FOR_SUB_AGENT: Gemini;
 let baseDependencies: BaseIntentHandlerDeps;
@@ -43,9 +43,9 @@ try {
     if (!key) {
         const errorMsg = "CRITICAL: GEMINI_API_KEY is not configured. The application cannot proceed without an API key.";
         logToFile(errorMsg);
-        throw new Error(errorMsg); 
+        throw new Error(errorMsg);
     }
-    geminiApiKey = key; 
+    geminiApiKey = key;
     hostAgentModelName = configService.config.GEMINI_HOST_AGENT_MODEL_NAME;
     subAgentModelName = configService.config.GEMINI_SUB_AGENT_MODEL_NAME;
     hostAgentGenerationConfig = configService.hostAgentGenerationConfig;
@@ -86,7 +86,7 @@ try {
 } catch (err: unknown) {
     const { message, stack } = getErrorMessageAndStack(err);
     logToFile(`CRITICAL ERROR during Orchestrator initialization: ${message}\nStack: ${stack}`);
-    throw err; 
+    throw err;
 }
 
 
@@ -99,16 +99,20 @@ export async function handleNonStreaming(
     frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
-    pageContextText?: string // <<< THÊM PARAMETER
+    pageContextText?: string,
+    pageContextUrl?: string // <<< THÊM PARAMETER
+
 ): ReturnType<typeof handleNonStreamingActual> {
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleNonStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
     logToFile(`[Orchestrator] Calling handleNonStreaming for handlerId: ${handlerId}, userId: ${socket.id}` +
-              (personalizationData ? `, Personalization: Enabled` : ``) +
-              (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
-              (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``)); // Log page context
+        (personalizationData ? `, Personalization: Enabled` : ``) +
+        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
+        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) +
+        (pageContextUrl ? `, PageContextURL: ${pageContextUrl}` : ``)); // Log URL
+
     return handleNonStreamingActual(
         inputParts,
         historyForHandler,
@@ -119,7 +123,9 @@ export async function handleNonStreaming(
         frontendMessageId,
         personalizationData,
         originalUserFiles,
-        pageContextText // <<< TRUYỀN XUỐNG
+        pageContextText,
+        pageContextUrl // <<< TRUYỀN XUỐNG
+
     );
 }
 
@@ -133,16 +139,19 @@ export async function handleStreaming(
     frontendMessageId?: string,
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
-    pageContextText?: string // <<< THÊM PARAMETER
+    pageContextText?: string,
+    pageContextUrl?: string // <<< THÊM PARAMETER
+
 ): ReturnType<typeof handleStreamingActual> {
     if (!hostAgentDependencies) {
         logToFile(`[Orchestrator] ERROR: handleStreaming called before hostAgentDependencies were initialized.`);
         throw new Error("Intent handler not initialized. Please check application startup configuration.");
     }
     logToFile(`[Orchestrator] Calling handleStreaming for handlerId: ${handlerId}, userId: ${socket.id}` +
-              (personalizationData ? `, Personalization: Enabled` : ``) +
-              (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
-              (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``)); // Log page context
+        (personalizationData ? `, Personalization: Enabled` : ``) +
+        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
+        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) +
+        (pageContextUrl ? `, PageContextURL: ${pageContextUrl}` : ``));
     return handleStreamingActual(
         inputParts,
         currentHistoryFromSocket,
@@ -154,6 +163,8 @@ export async function handleStreaming(
         frontendMessageId,
         personalizationData,
         originalUserFiles,
-        pageContextText // <<< TRUYỀN XUỐNG
+        pageContextText,
+        pageContextUrl // <<< TRUYỀN XUỐNG
+
     );
 }

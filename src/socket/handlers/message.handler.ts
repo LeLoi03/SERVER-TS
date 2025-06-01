@@ -61,6 +61,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         }
 
         const payload = data as SendMessageData;
+        // Thêm log ở đây để kiểm tra payload nhận được từ client
+        console.log('[MessageHandler BE] Received send_message payload:', JSON.stringify(payload, null, 2));
+
         let { // <<< Sử dụng let để có thể thay đổi parts
             parts: originalPartsFromClient, // Đổi tên để rõ ràng
             isStreaming,
@@ -68,8 +71,13 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             conversationId: payloadConvId,
             frontendMessageId,
             personalizationData,
-            originalUserFiles
+            originalUserFiles,
+            pageContextUrl // <<< LẤY URL TỪ PAYLOAD
+
         } = payload;
+
+        console.log('[MessageHandler BE] Extracted pageContextUrl:', pageContextUrl); // Kiểm tra giá trị này
+
 
         socket.data.language = language;
 
@@ -84,10 +92,10 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 if (endIndex > -1) {
                     // Trích xuất context
                     pageContextText = firstPart.text.substring(PAGE_CONTEXT_START_MARKER.length, endIndex).trim();
-                    
+
                     // Phần còn lại của firstPart (nếu có) là query của user
                     let remainingFirstPartText = firstPart.text.substring(endIndex + PAGE_CONTEXT_END_MARKER.length).trim();
-                    
+
                     // Tìm vị trí "User query:" và loại bỏ nó nếu có
                     const userQueryMarker = "User query:";
                     if (remainingFirstPartText.startsWith(userQueryMarker)) {
@@ -114,11 +122,11 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         }
         // Nếu userQueryParts rỗng và có pageContext, vẫn cho phép xử lý (ví dụ: user chỉ gửi @currentpage)
         if (userQueryParts.length === 0 && pageContextText) {
-             logToFile(`[INFO] ${handlerLogContext} No explicit user query parts, but page context is present. Proceeding with context.`);
+            logToFile(`[INFO] ${handlerLogContext} No explicit user query parts, but page context is present. Proceeding with context.`);
         } else if (userQueryParts.length === 0 && !pageContextText) {
             // Không có query, không có context -> không làm gì
-             logToFile(`[WARN] ${handlerLogContext} No user query parts and no page context. Aborting send_message.`);
-             return sendChatError(handlerLogContext, 'Cannot send an empty message without page context.', 'empty_message_no_context');
+            logToFile(`[WARN] ${handlerLogContext} No user query parts and no page context. Aborting send_message.`);
+            return sendChatError(handlerLogContext, 'Cannot send an empty message without page context.', 'empty_message_no_context');
         }
         // --- KẾT THÚC XỬ LÝ PAGE CONTEXT ---
 
@@ -197,7 +205,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
-                    pageContextText // <<< TRUYỀN PAGE CONTEXT
+                    pageContextText, // <<< TRUYỀN PAGE CONTEXT
+                    pageContextUrl // <<< TRUYỀN URL
+
                 );
             } else {
                 const handlerResult = await handleNonStreaming(
@@ -209,7 +219,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
-                    pageContextText // <<< TRUYỀN PAGE CONTEXT
+                    pageContextText, // <<< TRUYỀN PAGE CONTEXT
+                    pageContextUrl // <<< TRUYỀN URL
+
                 );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
@@ -251,13 +263,13 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
         const {
             conversationId,
-            messageIdToEdit, 
+            messageIdToEdit,
             newText,
             language,
             personalizationData
         } = data;
 
-        const isStreaming = socket.data.isStreamingEnabled ?? true; 
+        const isStreaming = socket.data.isStreamingEnabled ?? true;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
         logToFile(
             `[INFO] ${convLogContext} 'edit_user_message' request received. New text: "${newText.substring(0, 30) + (newText.length > 30 ? '...' : '')}", Streaming: ${isStreaming}, Language: ${language}` +
@@ -268,7 +280,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(
                 authenticatedUserId,
                 conversationId,
-                messageIdToEdit, 
+                messageIdToEdit,
                 newText
             );
 
@@ -283,12 +295,12 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             }
 
             const {
-                editedUserMessage, 
-                historyForNewBotResponse 
+                editedUserMessage,
+                historyForNewBotResponse
             } = prepareResult;
 
-            const historyForAIHandler = historyForNewBotResponse.slice(0, -1); 
-            const partsForAIHandler = editedUserMessage.parts; 
+            const historyForAIHandler = historyForNewBotResponse.slice(0, -1);
+            const partsForAIHandler = editedUserMessage.parts;
 
             logToFile(`[DEBUG] ${convLogContext} History for AI Handler (length ${historyForAIHandler.length}): ${historyForAIHandler.map(m => m.uuid).join(', ')}. Parts for AI: ${partsForAIHandler.find(p => p.text)?.text?.substring(0, 20)}...`);
 
@@ -338,11 +350,11 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     logToFile(`[INFO] ${convLogContext} AI responded. New bot message UUID: ${newBotMessageForClient.uuid}. History to save length: ${historyToSaveInDB.length}`);
                 } else {
                     logToFile(`[WARN] ${convLogContext} AI handler finished, but last message was not 'model'. Last role: ${lastMessageFromAI.role}.`);
-                    historyToSaveInDB = [...historyForNewBotResponse]; 
+                    historyToSaveInDB = [...historyForNewBotResponse];
                 }
             } else {
                 logToFile(`[WARN] ${convLogContext} User message edited, but AI handler returned no history or inconclusive response.`);
-                historyToSaveInDB = [...historyForNewBotResponse]; 
+                historyToSaveInDB = [...historyForNewBotResponse];
             }
 
             const saveSuccess = await conversationHistoryService.updateConversationHistory(
@@ -358,11 +370,11 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             }
 
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
-            
+
             if (newBotMessageForClient) {
                 const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
-                    editedUserMessage: editedUserMessage, 
-                    newBotMessage: newBotMessageForClient, 
+                    editedUserMessage: editedUserMessage,
+                    newBotMessage: newBotMessageForClient,
                     conversationId: conversationId,
                 };
                 socket.emit('conversation_updated_after_edit', frontendPayload);
