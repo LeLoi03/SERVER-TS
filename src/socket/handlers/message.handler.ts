@@ -62,21 +62,25 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
         const payload = data as SendMessageData;
         // Thêm log ở đây để kiểm tra payload nhận được từ client
-        console.log('[MessageHandler BE] Received send_message payload:', JSON.stringify(payload, null, 2));
+        console.log(`[${handlerLogContext}] Received send_message payload:`, JSON.stringify(payload, null, 2)); // Sử dụng console.log để dễ copy/paste
+        logToFile(`[${handlerLogContext}] Received send_message payload: ${JSON.stringify(payload)}`);
 
-        let { // <<< Sử dụng let để có thể thay đổi parts
-            parts: originalPartsFromClient, // Đổi tên để rõ ràng
+
+        let {
+            parts: originalPartsFromClient,
             isStreaming,
             language,
             conversationId: payloadConvId,
             frontendMessageId,
             personalizationData,
             originalUserFiles,
-            pageContextUrl // <<< LẤY URL TỪ PAYLOAD
-
+            pageContextUrl,
+            model // <<< TRÍCH XUẤT MODEL
         } = payload;
 
-        console.log('[MessageHandler BE] Extracted pageContextUrl:', pageContextUrl); // Kiểm tra giá trị này
+
+        logToFile(`[${handlerLogContext}] Extracted model from payload: ${model || 'Not provided (will use default)'}`);
+        console.log(`[${handlerLogContext}] Extracted pageContextUrl:`, pageContextUrl);
 
 
         socket.data.language = language;
@@ -191,12 +195,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, handlerId, io);
                 }
             };
-
-            // userQueryParts là parts của user sẽ được lưu vào DB.
-            // pageContextText sẽ được truyền riêng cho AI handler.
             if (isStreaming) {
                 updatedHistory = await handleStreaming(
-                    userQueryParts, // <<< Chỉ truyền parts của user
+                    userQueryParts,
                     currentHistory,
                     socket,
                     language,
@@ -205,13 +206,13 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
-                    pageContextText, // <<< TRUYỀN PAGE CONTEXT
-                    pageContextUrl // <<< TRUYỀN URL
-
+                    pageContextText,
+                    pageContextUrl,
+                    model // <<< TRUYỀN MODEL XUỐNG
                 );
             } else {
                 const handlerResult = await handleNonStreaming(
-                    userQueryParts, // <<< Chỉ truyền parts của user
+                    userQueryParts,
                     currentHistory,
                     socket,
                     language,
@@ -219,9 +220,9 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
-                    pageContextText, // <<< TRUYỀN PAGE CONTEXT
-                    pageContextUrl // <<< TRUYỀN URL
-
+                    pageContextText,
+                    pageContextUrl,
+                    model // <<< TRUYỀN MODEL XUỐNG
                 );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
@@ -295,12 +296,13 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             }
 
             const {
-                editedUserMessage,
-                historyForNewBotResponse
+                editedUserMessage, // Tin nhắn user đã được cập nhật (để gửi lại cho client)
+                historyForNewBotResponse // Lịch sử bao gồm tin nhắn user đã sửa, dùng để lưu DB
             } = prepareResult;
 
-            const historyForAIHandler = historyForNewBotResponse.slice(0, -1);
-            const partsForAIHandler = editedUserMessage.parts;
+            // Lịch sử cho AI handler không bao gồm tin nhắn user vừa sửa (vì nó sẽ là input cho LLM)
+            const historyForAIHandler = historyForNewBotResponse.slice(0, -1); // Bỏ tin nhắn user đã sửa ra khỏi history cho AI
+            const partsForAIHandler = editedUserMessage.parts; // Parts của tin nhắn user đã sửa làm input cho AI
 
             logToFile(`[DEBUG] ${convLogContext} History for AI Handler (length ${historyForAIHandler.length}): ${historyForAIHandler.map(m => m.uuid).join(', ')}. Parts for AI: ${partsForAIHandler.find(p => p.text)?.text?.substring(0, 20)}...`);
 
@@ -315,14 +317,15 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 }
             };
 
-            if (isStreaming) {
+             if (isStreaming) {
                 finalHistoryFromAIHandler = await handleStreaming(
-                    partsForAIHandler,
-                    historyForAIHandler,
+                    partsForAIHandler, // Input là tin nhắn user đã sửa
+                    historyForAIHandler, // Lịch sử KHÔNG bao gồm tin nhắn user đã sửa
                     socket, language, aiHandlerId,
                     handleAIActionCallback, messageIdToEdit, personalizationData,
-                    undefined // originalUserFiles không áp dụng cho edit
-                    // pageContextText không áp dụng cho edit
+                    undefined, // originalUserFiles không áp dụng cho edit
+                    undefined, // pageContextText không áp dụng cho edit
+                    undefined // model không áp dụng cho edit, dùng default
                 );
             } else {
                 const nonStreamingResult = await handleNonStreaming(
@@ -331,7 +334,8 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     socket, language, aiHandlerId,
                     messageIdToEdit, personalizationData,
                     undefined, // originalUserFiles không áp dụng cho edit
-                    undefined // pageContextText không áp dụng cho edit
+                    undefined, // pageContextText không áp dụng cho edit
+                    undefined // model không áp dụng cho edit, dùng default
                 );
                 if (nonStreamingResult) {
                     finalHistoryFromAIHandler = nonStreamingResult.history;

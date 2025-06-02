@@ -6,10 +6,10 @@ import { z } from 'zod';
 import path from 'path';
 import { LevelWithSilent } from 'pino';
 import {
-    SchemaType,
-    type ObjectSchema,
+    Type,
+    type Schema,
     type GenerationConfig as SDKGenerationConfig,
-} from "@google/generative-ai";
+} from "@google/genai";
 import { read_csv, createInputsOutputs } from '../utils/crawl/fewShotExamplesInit';
 import fs from 'fs';
 import { InputsOutputs } from '../types/crawl/crawl.types';
@@ -1090,13 +1090,13 @@ export class ConfigService {
                     maxOutputTokens: this.config.GEMINI_CFP_MAX_OUTPUT_TOKENS,
                     // Define a response schema for non-tuned JSON mode to guide model output
                     responseSchema: {
-                        type: SchemaType.OBJECT,
+                        type: Type.OBJECT,
                         properties: {
-                            "summary": { type: SchemaType.STRING, description: "A brief summary of the conference." },
-                            "callForPapers": { type: SchemaType.STRING, description: "The detailed Call for Papers information, including important dates, topics, submission guidelines." },
+                            "summary": { type: Type.STRING, description: "A brief summary of the conference." },
+                            "callForPapers": { type: Type.STRING, description: "The detailed Call for Papers information, including important dates, topics, submission guidelines." },
                         },
                         required: ["summary", "callForPapers"]
-                    } as ObjectSchema,
+                    } as Schema,
                 },
                 systemInstruction: this.config.GEMINI_CFP_SYSTEM_INSTRUCTION.trim(),
                 systemInstructionPrefixForNonTunedModel: this.config.GEMINI_CFP_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL.trim(),
@@ -1111,14 +1111,14 @@ export class ConfigService {
                     maxOutputTokens: this.config.GEMINI_DETERMINE_MAX_OUTPUT_TOKENS,
                     // Define a response schema for non-tuned JSON mode
                     responseSchema: {
-                        type: SchemaType.OBJECT,
+                        type: Type.OBJECT,
                         properties: {
-                            "Official Website": { type: SchemaType.STRING, description: "The official website URL for the conference." },
-                            "Call for papers link": { type: SchemaType.STRING, description: "The direct link to the Call for Papers page." },
-                            "Important dates link": { type: SchemaType.STRING, description: "The direct link to the Important Dates page." }
+                            "Official Website": { type: Type.STRING, description: "The official website URL for the conference." },
+                            "Call for papers link": { type: Type.STRING, description: "The direct link to the Call for Papers page." },
+                            "Important dates link": { type: Type.STRING, description: "The direct link to the Important Dates page." }
                         },
                         required: ["Official Website", "Call for papers link", "Important dates link"]
-                    } as ObjectSchema,
+                    } as Schema,
                 },
                 systemInstruction: this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION.trim(),
                 systemInstructionPrefixForNonTunedModel: this.config.GEMINI_DETERMINE_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL.trim(),

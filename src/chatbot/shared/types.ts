@@ -619,6 +619,7 @@ export interface SendMessageData {
     originalUserFiles?: OriginalUserFileInfo[]; // Thêm trường này
 
     pageContextUrl?: string; // <<< THÊM MỚI
+    model?: string; // <<< TRƯỜNG MODEL
 
 }
 
