@@ -23,7 +23,7 @@ interface ConferenceSaveEventLogPayload extends PersistSaveStatusPayload {
 export async function handleConferenceSaveEvent(req: Request, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);
     // Sử dụng logger chuyên dụng cho save events
-    const saveEventLogger = loggingService.getLogger('saveEvent'); 
+    const saveEventLogger = loggingService.getLogger('saveConferenceEvent'); 
     const baseReqLogger = (req as any).log as Logger || saveEventLogger; // Dùng saveEventLogger làm fallback
 
     const payload = req.body as ConferenceSaveEventLogPayload;
