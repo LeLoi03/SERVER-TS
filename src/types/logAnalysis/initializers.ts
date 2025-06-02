@@ -4,7 +4,7 @@
  * cho các cấu trúc dữ liệu phân tích nhật ký.
  */
 
-import { OverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, ConferenceCrawlType } from './analysis.types';
+import { OverallAnalysis, ConferenceLogAnalysisResult, ConferenceAnalysisDetail, ConferenceCrawlType } from './analysis.types';
 import { GoogleSearchAnalysis, GoogleSearchHealthData } from './search.types';
 import { GeminiApiAnalysis } from './gemini.types';
 import { PlaywrightAnalysis } from './playwright.types';
@@ -309,11 +309,11 @@ export const getInitialValidationStats = (): ValidationStats => ({
 
 /**
  * @function getInitialLogAnalysisResult
- * @description Khởi tạo một đối tượng `LogAnalysisResult` hoàn chỉnh với các giá trị mặc định cho tất cả các thành phần của nó.
+ * @description Khởi tạo một đối tượng `ConferenceLogAnalysisResult` hoàn chỉnh với các giá trị mặc định cho tất cả các thành phần của nó.
  * @param {string} [logFilePath="N/A"] - Đường dẫn đến tệp nhật ký đang được phân tích. Mặc định là "N/A".
- * @returns {LogAnalysisResult} Một thể hiện `LogAnalysisResult` mới.
+ * @returns {ConferenceLogAnalysisResult} Một thể hiện `ConferenceLogAnalysisResult` mới.
  */
-export const getInitialLogAnalysisResult = (logFilePath: string = "N/A"): LogAnalysisResult => ({
+export const getInitialLogAnalysisResult = (logFilePath: string = "N/A"): ConferenceLogAnalysisResult => ({
     analysisTimestamp: new Date().toISOString(),
     logFilePath: logFilePath,
     status: 'Processing',

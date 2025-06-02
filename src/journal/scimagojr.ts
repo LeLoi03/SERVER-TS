@@ -98,7 +98,7 @@ export const processPage = async (
                 }
             });
             return evaluatedTableData;
-        }, scimagoRetryOptions, childLogger );
+        }, scimagoRetryOptions, childLogger);
 
         childLogger.info({ event: 'process_page_success', rowCount: tableData.length }, 'Successfully processed page.');
         return tableData;
@@ -141,14 +141,14 @@ export const fetchDetails = async (
 
             const tableRowSelector = 'body > div:nth-child(15) > div > div.cellcontent > div:nth-child(2) > table tbody tr';
             try {
-                 attemptLogger.debug({ event: 'wait_for_selector_start', selector: tableRowSelector });
-                 await page.waitForSelector(tableRowSelector, { timeout: 10000 }); // Reduced timeout for optional element
-                 attemptLogger.debug({ event: 'wait_for_selector_success', selector: tableRowSelector });
+                attemptLogger.debug({ event: 'wait_for_selector_start', selector: tableRowSelector });
+                await page.waitForSelector(tableRowSelector, { timeout: 10000 }); // Reduced timeout for optional element
+                attemptLogger.debug({ event: 'wait_for_selector_success', selector: tableRowSelector });
             } catch (e) {
                 attemptLogger.warn({ event: 'wait_for_selector_timeout', selector: tableRowSelector }, `Optional table rows selector not found within timeout. This might be okay.`);
-           }
+            }
 
-           attemptLogger.debug({ event: 'fetch_details_evaluate_start' });
+            attemptLogger.debug({ event: 'fetch_details_evaluate_start' });
             // page.evaluate logic for fetchDetails remains the same
             const evaluatedDetails: JournalDetails = await page.evaluate(() => {
                 // ... (your existing page.evaluate logic for fetchDetails)
@@ -173,23 +173,40 @@ export const fetchDetails = async (
                     { keyName: 'Publication type', type: 'Publication type', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(5)' }, // Added Publication type
                     { keyName: 'ISSN', type: 'ISSN', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(6)' }, // Adjusted index
                     { keyName: 'Coverage', type: 'Coverage', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(7)' }, // Adjusted index
-                    { keyName: 'Scope', type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' }, // Adjusted index
-                    { keyName: 'Contact', type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(10)' }, // Adjusted index for contact
+                    { keyName: 'InformationHeading', type: 'DynamicLinks', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' },
+
+                    // { keyName: 'Scope', type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' }, // Adjusted index
+                    // { keyName: 'Contact', type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(10)' }, // Adjusted index for contact
                 ];
 
                 selectorPatterns.forEach(({ keyName, type, pattern }) => {
                     const { element } = querySelectorWithIndices(pattern, mainIndices);
                     if (element) {
                         const h2Element = element.querySelector('h2');
-                        const actualKey = h2Element?.textContent?.trim(); // Use actual key from h2 if present
+                        const actualKey = h2Element?.textContent?.trim(); // Ví dụ: "Information"
 
-                        if (type === 'Contact') {
-                            const links = element.querySelectorAll('p > a');
-                            const homepage = (links[0] as HTMLAnchorElement)?.href || null;
-                            const howToPublish = (links[1] as HTMLAnchorElement)?.href || null;
-                            const mailLink = Array.from(links).find(a => a.textContent?.includes('@'));
-                            const mail = mailLink ? mailLink.textContent!.trim() : null;
-                            result[keyName] = { Homepage: homepage, "How to publish in this journal": howToPublish, Mail: mail };
+                        if (type === 'DynamicLinks') { // Sử dụng type mới đã định nghĩa
+                            const linksData: { [key: string]: string | null } = {};
+                            const linkElements = element.querySelectorAll('p > a');
+
+                            linkElements.forEach(aNode => {
+                                const a = aNode as HTMLAnchorElement;
+                                const keyFromLinkText = a.textContent?.trim();
+                                const href = a.getAttribute('href'); // Dùng getAttribute để lấy cả mailto:
+
+                                if (keyFromLinkText && href) {
+                                    if (href.startsWith('mailto:')) {
+                                        linksData['Mail'] = keyFromLinkText; // Key là "Mail", value là email address (text của link)
+                                    } else {
+                                        linksData[keyFromLinkText] = href; // Key là text của link, value là href
+                                    }
+                                }
+                            });
+                            // actualKey ở đây sẽ là "Information" nếu h2.textContent là "Information"
+                            if (Object.keys(linksData).length > 0) {
+                                result[actualKey || keyName] = linksData;
+                            }
+
                         } else if (type === 'Subject Area') {
                             const subjectAreaElement = element.querySelector('ul');
                             const fieldOfResearch: JournalDetails['Subject Area and Category'] = {};
@@ -254,7 +271,7 @@ export const fetchDetails = async (
             attemptLogger.debug({ event: 'fetch_details_evaluate_success', detailKeys: Object.keys(evaluatedDetails) }, 'Page evaluation complete.');
 
             if (Object.keys(evaluatedDetails).length === 0) {
-                 attemptLogger.warn({ event: 'fetch_details_warn_empty' }, "Evaluation finished, but no details were extracted.");
+                attemptLogger.warn({ event: 'fetch_details_warn_empty' }, "Evaluation finished, but no details were extracted.");
             }
             return evaluatedDetails;
         }, scimagoRetryOptions, childLogger);
@@ -265,7 +282,7 @@ export const fetchDetails = async (
         childLogger.error({ err: error, event: 'fetch_details_failed', stack: error.stack }, `CRITICAL ERROR fetching details`);
         return null;
     } finally {
-         childLogger.info({ event: 'fetch_details_finish' }, 'Finished detail fetch attempt.');
+        childLogger.info({ event: 'fetch_details_finish' }, 'Finished detail fetch attempt.');
     }
 };
 
@@ -378,15 +395,15 @@ export const getLastPageNumber = async (
                 try {
                     const parts = text.split('of');
                     if (parts.length < 2) {
-                         console.warn(`[Evaluate getLastPage] Text '${text}' does not contain 'of'. Defaulting to 1 page.`);
-                         return 1;
+                        console.warn(`[Evaluate getLastPage] Text '${text}' does not contain 'of'. Defaulting to 1 page.`);
+                        return 1;
                     }
                     const totalItemsStr = parts[1].trim().split(' ')[0].replace(/,/g, '');
                     const totalItems = parseInt(totalItemsStr);
-                     if (isNaN(totalItems) || totalItems <= 0) {
-                         console.warn(`[Evaluate getLastPage] Could not parse valid total items from '${parts[1].trim()}'. Text was: ${text}. Defaulting to 1 page.`);
-                         return 1;
-                     }
+                    if (isNaN(totalItems) || totalItems <= 0) {
+                        console.warn(`[Evaluate getLastPage] Could not parse valid total items from '${parts[1].trim()}'. Text was: ${text}. Defaulting to 1 page.`);
+                        return 1;
+                    }
                     return Math.ceil(totalItems / 50); // Assuming 50 items per page
                 } catch (e: any) {
                     console.error('[Evaluate getLastPage] Error parsing last page number:', e.message);
@@ -411,6 +428,6 @@ export const getLastPageNumber = async (
         // throw error; // Re-throw if critical, or return a default
         return 1; // Default to 1 page on ultimate failure to prevent crawl from stopping
     } finally {
-         childLogger.info({ event: 'get_last_page_finish' }, 'Finished attempt to get last page number.');
+        childLogger.info({ event: 'get_last_page_finish' }, 'Finished attempt to get last page number.');
     }
 };

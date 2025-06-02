@@ -37,7 +37,7 @@ export class ResultProcessingService {
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'ResultProcessingServiceBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ResultProcessingServiceBase' });
         // this.finalJsonlPath = this.configService.finalOutputJsonlPath; // Bỏ
         // this.evaluateCsvPath = this.configService.evaluateCsvPath; // Bỏ
         this.serviceBaseLogger.info("ResultProcessingService initialized.");

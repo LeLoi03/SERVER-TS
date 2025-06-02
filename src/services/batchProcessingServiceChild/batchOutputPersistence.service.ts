@@ -21,7 +21,7 @@ export class BatchOutputPersistenceService implements IBatchOutputPersistenceSer
         @inject(LoggingService) loggingService: LoggingService,
         @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
-        this.serviceLogger = loggingService.getLogger('main', { service: 'BatchOutputPersistenceService' });
+        this.serviceLogger = loggingService.getLogger('conference', { service: 'BatchOutputPersistenceService' });
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
         this.serviceLogger.info("BatchOutputPersistenceService constructed.");
     }

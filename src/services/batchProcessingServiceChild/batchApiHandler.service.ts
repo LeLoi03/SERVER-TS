@@ -19,7 +19,7 @@ export class BatchApiHandlerService implements IBatchApiHandlerService {
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
         @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
-        this.serviceLogger = loggingService.getLogger('main', { service: 'BatchApiHandlerService' });
+        this.serviceLogger = loggingService.getLogger('conference', { service: 'BatchApiHandlerService' });
         this.serviceLogger.info("BatchApiHandlerService constructed.");
     }
 

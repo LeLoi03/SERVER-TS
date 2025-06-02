@@ -1,6 +1,6 @@
 // src/utils/logAnalysis/processingSteps.ts
 import {
-    LogAnalysisResult,
+    ConferenceLogAnalysisResult,
     ConferenceAnalysisDetail,
     RequestLogData,
     RequestTimings,
@@ -18,7 +18,7 @@ import { eventHandlerMap } from './index';
 // --- processLogEntry giữ nguyên ---
 export const processLogEntry = (
     logEntry: any,
-    results: LogAnalysisResult,
+    results: ConferenceLogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number }
 ): void => {
     const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
@@ -84,7 +84,7 @@ export const processLogEntry = (
 
 
 export const calculateFinalMetrics = (
-    results: LogAnalysisResult,
+    results: ConferenceLogAnalysisResult,
     conferenceLastTimestamp: { [compositeKey: string]: number },
     analysisStartMillis: number | null,
     analysisEndMillis: number | null,

@@ -6,7 +6,7 @@ import { Logger } from 'pino';
 
 // Import core services and types
 import { CrawlOrchestratorService } from '../../../services/crawlOrchestrator.service';
-import { LoggingService } from '../../../services/logging.service';
+import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
 import { ConfigService } from '../../../config/config.service';
 import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service';
 
@@ -281,12 +281,21 @@ export async function handleCrawlConferences(req: Request<{}, any, ConferenceDat
 
 // --- Function to handle the crawl-journals logic ---
 export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
-    const baseLoggingService = container.resolve(LoggingService);
-    const baseReqLogger = (req as any).log as Logger || baseLoggingService.getLogger();
-    const configService = container.resolve(ConfigService); // <<<< Get ConfigService instance
+    const configService = container.resolve(ConfigService);
 
-    const requestId = (req as any).id || `req-journal-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    const routeLogger = baseReqLogger.child({ requestId, route: '/crawl-journals' });
+    const baseLoggingService = container.resolve(LoggingService);
+    // <<<< THAY ĐỔI QUAN TRỌNG Ở ĐÂY >>>>
+    // Lấy logger loại 'journal'
+    const baseReqLogger = (req as any).log as Logger || baseLoggingService.getLogger('journal');
+    // Nếu (req as any).log đã được pino-http middleware gán sẵn một logger,
+    // và logger đó là logger 'conference' (mặc định của pino-http nếu không cấu hình riêng),
+    // thì chúng ta cần ghi đè hoặc lấy một child logger mới từ logger 'journal' gốc.
+    // Cách an toàn hơn là luôn lấy logger mới từ LoggingService cho mục đích cụ thể:
+    const journalRouteLoggerInitial = baseLoggingService.getLogger('journal');
+
+    const batchRequestId = (req as any).id || `req-journal-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    // Tạo child logger từ logger 'journal' đã lấy
+    const routeLogger = journalRouteLoggerInitial.child({ batchRequestId, route: '/crawl-journals' });
 
     routeLogger.info({ method: req.method, query: req.query }, "Received request to crawl journals");
 
@@ -329,15 +338,18 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
                     // To prevent further execution within runExclusive if headers already sent or to stop processing
                     throw new Error("Client data missing for journal crawl.");
                 }
-            } else if (dataSourceQuery) {
+            } else if (dataSourceQuery && dataSourceQuery !== 'scimago') { // Only warn if an invalid value other than 'scimago' is provided
                 routeLogger.warn({ dataSourceQueryProvided: dataSourceQuery }, "Invalid 'dataSource' for journals. Defaulting to 'scimago'. Supported: 'scimago', 'client'.");
                 // dataSource remains 'scimago'
-            } else {
+            } else { // 'scimago' or undefined
+                dataSource = 'scimago'; // Ensure it's set if undefined
                 routeLogger.info({ dataSource: 'scimago' }, "Journal crawl mode: scimago (default).");
             }
 
-            // Call crawlJournals function with ConfigService and determined dataSource/clientData
-            await crawlJournals(dataSource, clientData, routeLogger, configService);
+
+            // Quan trọng: Truyền routeLogger (đã là child của journalLogger) vào crawlJournals
+            await crawlJournals(dataSource, clientData, routeLogger, configService, batchRequestId);
+
 
             routeLogger.info("Journal crawling completed by the service.");
 
@@ -347,8 +359,8 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
 
             routeLogger.info({ runtimeSeconds: runTimeSeconds, dataSourceUsed: dataSource }, "Journal crawling finished successfully.");
 
-            // The journal_data.jsonl path is now managed by ConfigService and crawlJournals
-            const journalOutputPath = configService.journalOutputJsonlPath;
+            // <<<< Use the correct ConfigService method with batchRequestId >>>>
+            const journalOutputPath = configService.getJournalOutputJsonlPathForBatch(batchRequestId);
 
             if (!res.headersSent) {
                 res.status(200).json({

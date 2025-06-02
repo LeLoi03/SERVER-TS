@@ -1,10 +1,10 @@
 // src/utils/logAnalysis/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
 import { createConferenceKey } from './helpers'; // Đảm bảo helper này tồn tại và đúng
-import { OverallAnalysis, getInitialOverallAnalysis, LogAnalysisResult } from '../../types/logAnalysis'; // Thêm LogAnalysisResult
+import { OverallAnalysis, getInitialOverallAnalysis, ConferenceLogAnalysisResult } from '../../types/logAnalysis'; // Thêm ConferenceLogAnalysisResult
 
 // Khởi tạo overall analysis nếu chưa có
-const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any thành LogAnalysisResult
+const ensureOverallAnalysis = (results: ConferenceLogAnalysisResult): OverallAnalysis => { // Sửa any thành ConferenceLogAnalysisResult
     if (!results.overall) {
         results.overall = getInitialOverallAnalysis(); // Tái sử dụng ở đây!
     }

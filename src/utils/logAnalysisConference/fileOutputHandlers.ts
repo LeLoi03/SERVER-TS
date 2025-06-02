@@ -2,16 +2,16 @@
 import { LogEventHandler } from './index';
 import { normalizeErrorKey, addConferenceError } from './helpers';
 import { createConferenceKey } from './helpers';
-import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, LogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types/logAnalysis'; // Thêm LogAnalysisResult, ConferenceAnalysisDetail
+import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, ConferenceLogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types/logAnalysis'; // Thêm ConferenceLogAnalysisResult, ConferenceAnalysisDetail
 
-const ensureFileOutputAnalysis = (results: LogAnalysisResult): FileOutputAnalysis => { // Sửa any
+const ensureFileOutputAnalysis = (results: ConferenceLogAnalysisResult): FileOutputAnalysis => { // Sửa any
     if (!results.fileOutput) {
         results.fileOutput = getInitialFileOutputAnalysis();
     }
     return results.fileOutput as FileOutputAnalysis;
 };
 
-const ensureOverallAnalysis = (results: LogAnalysisResult): OverallAnalysis => { // Sửa any
+const ensureOverallAnalysis = (results: ConferenceLogAnalysisResult): OverallAnalysis => { // Sửa any
     if (!results.overall) {
         results.overall = getInitialOverallAnalysis();
     }
@@ -68,7 +68,7 @@ export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confD
             } else if (previousStatus === 'failed') {
                 if (overall.failedOrCrashedTasks && overall.failedOrCrashedTasks > 0) overall.failedOrCrashedTasks--;
                 // Đánh dấu lỗi trước đó là recovered nếu lỗi đó liên quan đến output
-                confDetail.errors.forEach(err => {
+                confDetail.errors.forEach((err: any) => {
                     if (!err.isRecovered && (err.errorType === 'FileSystem' || (err.errorType === 'Logic' && err.key.includes('csv_write_failed')))) {
                         err.isRecovered = true;
                     }

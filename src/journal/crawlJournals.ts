@@ -15,8 +15,6 @@ import { createURLList, appendJournalToFile } from './utils'; // readCSV and par
 import { TableRowData, JournalDetails, CSVRow } from './types';
 import { parseCSVString } from './utils'; // Keep if used for clientData parsing
 
-const MAX_TABS = 5;
-
 // ============================================
 // Lớp quản lý API Key (ApiKeyManager)
 // ============================================
@@ -130,17 +128,22 @@ export const crawlJournals = async (
   dataSource: 'scimago' | 'client', // Input: Source type
   clientData: string | null,       // Input: Raw CSV string if dataSource is 'client'
   parentLogger: typeof rootLogger,  // Input: Logger instance
-  configService: ConfigService     // <<<< ADD ConfigService parameter
+  configService: ConfigService,     // <<<< ADD ConfigService parameter
+  batchRequestId: string // <<<< ADD batchRequestId parameter
+
 ): Promise<void> => {
 
-  const config = configService.config; // Get the raw config object
+  const config = configService.config;
+  // The parentLogger already includes batchRequestId from the controller
   const journalLogger = parentLogger.child({ service: 'crawlJournals', dataSource });
 
-  // --- Get output path from ConfigService ---
-  const OUTPUT_JSON = configService.journalOutputJsonlPath;
-  const OUTPUT_DIR = path.dirname(OUTPUT_JSON); // Derive output directory
+  // --- Get output path using batchRequestId ---
+  const OUTPUT_JSON = configService.getJournalOutputJsonlPathForBatch(batchRequestId);
+  const MAX_TABS = configService.config.CRAWL_CONCURRENCY;
+  const OUTPUT_DIR = path.dirname(OUTPUT_JSON);
 
-  journalLogger.info({ event: 'init_start', outputFile: OUTPUT_JSON }, "Initializing journal crawl...");
+
+  journalLogger.info({ event: 'init_start', outputFile: OUTPUT_JSON, batchRequestId }, "Initializing journal crawl for batch.");
 
   // --- Khởi tạo API Key Manager using ConfigService ---
   const apiKeyManager = new ApiKeyManager(
@@ -163,7 +166,7 @@ export const crawlJournals = async (
       await fs.promises.mkdir(OUTPUT_DIR, { recursive: true });
       journalLogger.info({ event: 'prepare_output_dir_success', path: OUTPUT_DIR }, "Output directory ensured.");
       journalLogger.info({ event: 'prepare_output_file_start', path: OUTPUT_JSON }, `Initializing output file: ${OUTPUT_JSON}`);
-      await fs.promises.writeFile(OUTPUT_JSON, '', 'utf8');
+      await fs.promises.writeFile(OUTPUT_JSON, '', 'utf8'); // Clear/create file
       journalLogger.info({ event: 'prepare_output_file_success', path: OUTPUT_JSON }, "Output file initialized.");
     } catch (outputPrepError: any) {
       journalLogger.error({ err: outputPrepError, path: OUTPUT_DIR, event: 'prepare_output_failed' }, `Could not ensure output directory or initialize file. Crawling cannot proceed reliably.`);
@@ -171,9 +174,9 @@ export const crawlJournals = async (
     }
 
     journalLogger.info({
-        event: 'browser_launch_start',
-        headless: config.PLAYWRIGHT_HEADLESS, // From ConfigService
-        channel: config.PLAYWRIGHT_CHANNEL    // From ConfigService
+      event: 'browser_launch_start',
+      headless: config.PLAYWRIGHT_HEADLESS, // From ConfigService
+      channel: config.PLAYWRIGHT_CHANNEL    // From ConfigService
     }, "Launching browser...");
     browser = await chromium.launch({
       channel: config.PLAYWRIGHT_CHANNEL,  // From ConfigService
@@ -313,7 +316,7 @@ export const crawlJournals = async (
           if (config.JOURNAL_CRAWL_BIOXBIO && row.journalName) {
             taskLogger.info({ event: 'bioxbio_fetch_start' }, "Fetching BioxBio data.");
             const bioxbioSearchUrl = `https://www.bioxbio.com/?q=${encodeURIComponent(row.journalName)}`;
-            journalData.bioxbio = await fetchBioxbioData(page, bioxbioSearchUrl, row.journalName, taskLogger);
+            journalData.bioxbio = await fetchBioxbioData(page, bioxbioSearchUrl, row.journalName, taskLogger, configService);
             taskLogger.info({ event: 'bioxbio_fetch_complete', hasData: !!journalData.bioxbio }, "BioxBio fetch complete.");
           }
 
@@ -380,7 +383,7 @@ export const crawlJournals = async (
         if (config.JOURNAL_CRAWL_BIOXBIO && journalName && journalName !== `Row-${rowIndex}`) {
           taskLogger.info({ event: 'bioxbio_fetch_start' }, "Fetching BioxBio data.");
           const bioxbioSearchUrl = `https://www.bioxbio.com/?q=${encodeURIComponent(journalName)}`;
-          journalData.bioxbio = await fetchBioxbioData(page, bioxbioSearchUrl, journalName, taskLogger);
+          journalData.bioxbio = await fetchBioxbioData(page, bioxbioSearchUrl, journalName, taskLogger, configService);
           taskLogger.info({ event: 'bioxbio_fetch_complete', hasData: !!journalData.bioxbio }, "BioxBio fetch complete.");
         }
 
@@ -495,6 +498,8 @@ export const crawlJournals = async (
 
     journalLogger.info({
       event: 'crawl_summary',
+      batchRequestId, // Log the batchRequestId
+
       dataSource: dataSource,
       totalTasksDefined: totalTasks,
       journalsProcessedAndSaved: processedCount,

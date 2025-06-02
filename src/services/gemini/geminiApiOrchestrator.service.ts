@@ -30,7 +30,7 @@ export class GeminiApiOrchestratorService {
         @inject(GeminiRetryHandlerService) private retryHandler: GeminiRetryHandlerService,
         @inject(GeminiSdkExecutorService) private sdkExecutor: GeminiSdkExecutorService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GeminiApiOrchestratorService' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiOrchestratorService' });
         this.generalApiTypeSettings = this.configService.geminiApiConfigs;
         this.defaultMaxRetriesForFallback = this.configService.config.GEMINI_MAX_RETRIES;
         this.serviceBaseLogger.info("Constructing GeminiApiOrchestratorService with updated retry/fallback logic.");

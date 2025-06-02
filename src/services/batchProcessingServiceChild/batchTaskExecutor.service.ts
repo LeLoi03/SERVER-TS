@@ -44,7 +44,7 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
         @inject('IBatchApiHandlerService') private batchApiHandlerService: IBatchApiHandlerService,
         @inject('IBatchOutputPersistenceService') private batchOutputPersistenceService: IBatchOutputPersistenceService
     ) {
-        this.serviceLogger = loggingService.getLogger('main', { service: 'BatchTaskExecutorService' });
+        this.serviceLogger = loggingService.getLogger('conference', { service: 'BatchTaskExecutorService' });
         this.serviceLogger.info("BatchTaskExecutorService constructed.");
     }
 

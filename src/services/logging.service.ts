@@ -12,21 +12,26 @@ export interface PinoFileDestination extends Writable {
     flushSync(): void;
 }
 
-// Định nghĩa kiểu cho context của getLogger để rõ ràng hơn
 export type LoggerContext = { service?: string;[key: string]: any };
-export type LoggerType = 'main' | 'saveEvent'; // Thêm kiểu logger
+export type LoggerType = 'conference' | 'journal' | 'saveConferenceEvent' | 'saveJournalEvent';
 
 @singleton()
 export class LoggingService {
-    private mainLogger: Logger; // Đổi tên từ logger thành mainLogger
-    private saveEventLogger: Logger; // Logger mới cho save events
+    private conferenceLogger!: Logger; // Sử dụng ! để báo TypeScript sẽ được khởi tạo trong constructor
+    private journalLogger!: Logger;
+    private saveConferenceEventLogger!: Logger;
+    private saveJournalEventLogger!: Logger;
 
-    private mainFileDestination: PinoFileDestination | null = null;
-    private saveEventFileDestination: PinoFileDestination | null = null; // Destination cho save events
+    private conferenceFileDestination: PinoFileDestination | null = null;
+    private journalFileDestination: PinoFileDestination | null = null;
+    private saveConferenceEventFileDestination: PinoFileDestination | null = null;
+    private saveJournalEventFileDestination: PinoFileDestination | null = null;
 
     private readonly logLevel: LevelWithSilent;
-    private readonly mainLogFilePath: string; // Path cho log chính
-    private readonly saveEventLogFilePath: string; // Path cho log save events
+    private readonly conferenceLogFilePath: string;
+    private readonly journalLogFilePath: string;
+    private readonly saveConferenceEventLogFilePath: string;
+    private readonly saveJournalEventLogFilePath: string;
 
     private isShuttingDown = false;
 
@@ -34,20 +39,22 @@ export class LoggingService {
         console.log('[LoggingService:Constructor] Initializing loggers...');
 
         this.logLevel = this.configService.config.LOG_LEVEL;
-        this.mainLogFilePath = this.configService.appLogFilePath; // Log chính từ config
-
-        // Lấy đường dẫn cho save event log từ ConfigService hoặc đặt mặc định
-        // Giả sử ConfigService có phương thức getSaveEventLogFilePath()
-        // Hoặc bạn có thể hardcode/tính toán ở đây
-        this.saveEventLogFilePath = this.configService.getSaveEventLogFilePath(); // BẠN CẦN THÊM PHƯƠNG THỨC NÀY VÀO ConfigService
-
-        const mainLogDir = path.dirname(this.mainLogFilePath);
-        const saveEventLogDir = path.dirname(this.saveEventLogFilePath);
+        this.conferenceLogFilePath = this.configService.conferenceLogFilePath;
+        this.journalLogFilePath = this.configService.journalLogFilePath; // Đảm bảo ConfigService có journalLogFilePath
+        this.saveConferenceEventLogFilePath = this.configService.getSaveConferenceEventLogFilePath();
+        this.saveJournalEventLogFilePath = this.configService.getSaveJournalEventLogFilePath();
 
         // --- Phase 1: Ensure Log Directories Exist and are Writable ---
-        this.ensureDirectory(mainLogDir, 'Main Log');
-        this.ensureDirectory(saveEventLogDir, 'Save Event Log');
+        const conferenceLogDir = path.dirname(this.conferenceLogFilePath);
+        const journalLogDir = path.dirname(this.journalLogFilePath);
+        // Lấy thư mục từ đường dẫn file log save event
+        const saveConferenceEventLogDir = path.dirname(this.saveConferenceEventLogFilePath);
+        const saveJournalEventLogDir = path.dirname(this.saveJournalEventLogFilePath);
 
+        this.ensureDirectory(conferenceLogDir, 'Conference Log');
+        this.ensureDirectory(journalLogDir, 'Journal Log');
+        this.ensureDirectory(saveConferenceEventLogDir, 'Save Conference Event Log'); // SỬA Ở ĐÂY
+        this.ensureDirectory(saveJournalEventLogDir, 'Save Journal Event Log');       // SỬA Ở ĐÂY
 
         // --- Phase 2: Configure Pino Options and Streams ---
         const pinoOptions: LoggerOptions = {
@@ -57,27 +64,21 @@ export class LoggingService {
             base: undefined,
         };
 
-        // --- Configure Main Logger ---
-        const mainPinoStreams: pino.StreamEntry[] = this.getPinoStreams('main', this.mainLogFilePath);
-        if (mainPinoStreams.length > 0) {
-            this.mainLogger = pino(pinoOptions, pino.multistream(mainPinoStreams));
-            this.mainLogger.info({ service: 'LoggingService', event: 'main_logger_initialized_success', path: this.mainLogFilePath }, 'Main logger initialized.');
-        } else {
-            console.error('[LoggingService:Constructor] CRITICAL: No valid streams for main logger. Falling back.');
-            this.mainLogger = pino({ level: this.logLevel || 'info' });
-            this.mainLogger.error({ service: 'LoggingService', event: 'main_logger_fallback_active' }, 'Main logger fallback active.');
-        }
+        // --- Configure Conference Logger ---
+        const conferencePinoStreams: pino.StreamEntry[] = this.getPinoStreams('conference', this.conferenceLogFilePath);
+        this.conferenceLogger = this.createPinoInstance(pinoOptions, conferencePinoStreams, 'Conference', this.conferenceLogFilePath);
 
-        // --- Configure Save Event Logger ---
-        const saveEventPinoStreams: pino.StreamEntry[] = this.getPinoStreams('saveEvent', this.saveEventLogFilePath);
-        if (saveEventPinoStreams.length > 0) {
-            this.saveEventLogger = pino(pinoOptions, pino.multistream(saveEventPinoStreams));
-            this.saveEventLogger.info({ service: 'LoggingService', event: 'save_event_logger_initialized_success', path: this.saveEventLogFilePath }, 'Save Event logger initialized.');
-        } else {
-            console.error('[LoggingService:Constructor] CRITICAL: No valid streams for save event logger. Falling back.');
-            this.saveEventLogger = pino({ level: this.logLevel || 'info' }); // Dùng logger riêng, không child từ main
-            this.saveEventLogger.error({ service: 'LoggingService', event: 'save_event_logger_fallback_active' }, 'Save Event logger fallback active.');
-        }
+        // --- Configure Journal Logger ---
+        const journalPinoStreams: pino.StreamEntry[] = this.getPinoStreams('journal', this.journalLogFilePath);
+        this.journalLogger = this.createPinoInstance(pinoOptions, journalPinoStreams, 'Journal', this.journalLogFilePath);
+
+        // --- Configure Save Conference Event Logger ---
+        const saveConferenceEventPinoStreams: pino.StreamEntry[] = this.getPinoStreams('saveConferenceEvent', this.saveConferenceEventLogFilePath);
+        this.saveConferenceEventLogger = this.createPinoInstance(pinoOptions, saveConferenceEventPinoStreams, 'SaveConferenceEvent', this.saveConferenceEventLogFilePath);
+
+        // --- Configure Save Journal Event Logger ---
+        const saveJournalEventPinoStreams: pino.StreamEntry[] = this.getPinoStreams('saveJournalEvent', this.saveJournalEventLogFilePath);
+        this.saveJournalEventLogger = this.createPinoInstance(pinoOptions, saveJournalEventPinoStreams, 'SaveJournalEvent', this.saveJournalEventLogFilePath);
     }
 
     private ensureDirectory(dirPath: string, logType: string): void {
@@ -86,19 +87,36 @@ export class LoggingService {
                 fs.mkdirSync(dirPath, { recursive: true });
                 console.log(`[LoggingService:EnsureDir] ${logType} directory created: ${dirPath}`);
             }
+            // Kiểm tra quyền ghi sau khi tạo (hoặc nếu đã tồn tại)
             fs.accessSync(dirPath, fs.constants.W_OK);
             console.log(`[LoggingService:EnsureDir] ${logType} directory is writable: ${dirPath}`);
         } catch (err: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(err);
             console.error(`[LoggingService:EnsureDir] CRITICAL: Error ensuring ${logType} directory "${dirPath}" exists or is writable: "${errorMessage}". Stack: ${errorStack}`);
-            process.exit(1);
+            // Cân nhắc không exit(1) ở đây mà throw lỗi để service khởi tạo có thể bắt và xử lý
+            // Hoặc log một lỗi nghiêm trọng và tiếp tục với console logging nếu có thể
+            // process.exit(1); // Tạm thời comment để tránh dừng đột ngột khi dev
+            throw new Error(`Failed to ensure directory for ${logType}: ${errorMessage}`);
+        }
+    }
+
+    // Hàm helper để tránh lặp code khởi tạo pino
+    private createPinoInstance(options: LoggerOptions, streams: pino.StreamEntry[], typeName: string, filePath: string): Logger {
+        if (streams.length > 0) {
+            const logger = pino(options, pino.multistream(streams));
+            logger.info({ service: 'LoggingService', event: `${typeName.toLowerCase()}_logger_initialized_success`, path: filePath }, `${typeName} logger initialized.`);
+            return logger;
+        } else {
+            console.error(`[LoggingService:CreatePino] CRITICAL: No valid streams for ${typeName} logger (Path: ${filePath}). Falling back to basic console logger.`);
+            const fallbackLogger = pino({ level: this.logLevel || 'info', name: `${typeName}Fallback` });
+            fallbackLogger.error({ service: 'LoggingService', event: `${typeName.toLowerCase()}_logger_fallback_active`, path: filePath }, `${typeName} logger fallback active due to no streams.`);
+            return fallbackLogger;
         }
     }
 
     private getPinoStreams(loggerType: LoggerType, logFilePath: string): pino.StreamEntry[] {
         const streams: pino.StreamEntry[] = [];
 
-        // Console Transport
         if (this.configService.config.LOG_TO_CONSOLE) {
             if (this.configService.config.NODE_ENV !== 'production') {
                 streams.push({
@@ -114,8 +132,18 @@ export class LoggingService {
 
         // File Transport
         try {
+            // Đảm bảo thư mục đã tồn tại trước khi tạo destination
+            // ensureDirectory đã được gọi trong constructor cho các thư mục log chính
+            const logDir = path.dirname(logFilePath);
+            if (!fs.existsSync(logDir)) {
+                 // Điều này không nên xảy ra nếu ensureDirectory hoạt động đúng
+                console.warn(`[LoggingService:getPinoStreams] Log directory ${logDir} for ${loggerType} does not exist. Attempting to create.`);
+                this.ensureDirectory(logDir, `${loggerType} Log (runtime check)`);
+            }
+
+
             const fileDest = pino.destination({
-                dest: logFilePath, sync: false, minLength: 1, mkdir: false,
+                dest: logFilePath, sync: false, minLength: 1, mkdir: false, // mkdir: false vì ensureDirectory đã làm
             }) as unknown as PinoFileDestination;
 
             fileDest.on('error', (err: unknown) => {
@@ -125,19 +153,25 @@ export class LoggingService {
 
             streams.push({ level: this.logLevel as Level, stream: fileDest });
 
-            // Gán destination cho việc flush sau này
-            if (loggerType === 'main') {
-                this.mainFileDestination = fileDest;
-            } else if (loggerType === 'saveEvent') {
-                this.saveEventFileDestination = fileDest;
+            if (loggerType === 'conference') {
+                this.conferenceFileDestination = fileDest;
+            } else if (loggerType === 'journal') {
+                this.journalFileDestination = fileDest;
+            } else if (loggerType === 'saveConferenceEvent') {
+                this.saveConferenceEventFileDestination = fileDest;
+            } else if (loggerType === 'saveJournalEvent') {
+                this.saveJournalEventFileDestination = fileDest;
             }
             console.log(`[LoggingService:getPinoStreams] File logging configured for ${loggerType}. File: ${logFilePath}`);
 
         } catch (err: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(err);
             console.error(`[LoggingService:getPinoStreams] CRITICAL: Failed to create pino file destination for ${loggerType} at "${logFilePath}": "${errorMessage}". Stack: ${errorStack}`);
-            if (loggerType === 'main') this.mainFileDestination = null;
-            else if (loggerType === 'saveEvent') this.saveEventFileDestination = null;
+            // Gán null cho destination tương ứng nếu tạo thất bại
+            if (loggerType === 'conference') this.conferenceFileDestination = null;
+            else if (loggerType === 'journal') this.journalFileDestination = null;
+            else if (loggerType === 'saveConferenceEvent') this.saveConferenceEventFileDestination = null;
+            else if (loggerType === 'saveJournalEvent') this.saveJournalEventFileDestination = null;
         }
         return streams;
     }
@@ -150,64 +184,73 @@ export class LoggingService {
         }
         this.isShuttingDown = true;
 
-        this.mainLogger?.info({ service: 'LoggingService', event: 'log_flush_start' }, 'Initiating log flush before application exit...');
+        // Log sự kiện bắt đầu flush bằng một logger chắc chắn hoạt động (ví dụ: conferenceLogger hoặc console)
+        const primaryLoggerForFlush = this.conferenceLogger || console;
+        primaryLoggerForFlush.info({ service: 'LoggingService', event: 'log_flush_start_all' }, 'Initiating log flush for all loggers before application exit...');
         console.log('[LoggingService:Flush] Attempting to flush logs...');
 
-        this.flushDestination(this.mainFileDestination, 'Main Log', this.mainLogger);
-        this.flushDestination(this.saveEventFileDestination, 'Save Event Log', this.saveEventLogger); // Flush cả logger mới
+        this.flushDestination(this.conferenceFileDestination, 'Conference Log', this.conferenceLogger);
+        this.flushDestination(this.journalFileDestination, 'Journal Log', this.journalLogger);
+        this.flushDestination(this.saveConferenceEventFileDestination, 'Save Conference Event Log', this.saveConferenceEventLogger);
+        this.flushDestination(this.saveJournalEventFileDestination, 'Save Journal Event Log', this.saveJournalEventLogger);
     }
 
-    private flushDestination(destination: PinoFileDestination | null, logTypeName: string, loggerInstance: Logger): void {
+    private flushDestination(destination: PinoFileDestination | null, logTypeName: string, loggerInstance?: Logger): void {
+        // Thêm kiểm tra loggerInstance tồn tại
+        const effectiveLogger = loggerInstance || console; // Fallback về console nếu loggerInstance không có
+
         if (destination && typeof destination.flushSync === 'function') {
             try {
                 destination.flushSync();
                 console.log(`[LoggingService:Flush] ${logTypeName} logs flushed successfully.`);
-                loggerInstance?.info({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(' ', '_')}_log_flush_success` }, `${logTypeName} logs flushed to file successfully.`);
+                effectiveLogger.info({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_success` }, `${logTypeName} logs flushed to file successfully.`);
             } catch (flushErr: unknown) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(flushErr);
                 console.error(`[LoggingService:Flush] CRITICAL: Error flushing ${logTypeName} logs to file: "${errorMessage}". Stack: ${errorStack}`);
-                loggerInstance?.error({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(' ', '_')}_log_flush_error`, err: { message: errorMessage, stack: errorStack } }, `Critical error during ${logTypeName} log flush.`);
+                effectiveLogger.error({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_error`, err: { message: errorMessage, stack: errorStack } }, `Critical error during ${logTypeName} log flush.`);
             }
         } else {
-            console.log(`[LoggingService:Flush] No file destination to flush for ${logTypeName} or flushSync method not available.`);
-            loggerInstance?.warn({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(' ', '_')}_log_flush_skipped` }, `Skipped ${logTypeName} log flush: No file destination or flushSync missing.`);
+            // console.log(`[LoggingService:Flush] No file destination to flush for ${logTypeName} or flushSync method not available.`);
+            effectiveLogger.warn({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_skipped` }, `Skipped ${logTypeName} log flush: No file destination or flushSync missing.`);
         }
     }
 
-    // Getter để truy cập mainLogger (tùy chọn)
-    public get logger(): Logger {
-        return this.mainLogger;
-    }
-
-    /**
-     * Retrieves a specific Pino logger instance (main or saveEvent).
-     * If a context object is provided, it returns a child logger with that context bound.
-     * @param {LoggerType} [type='main'] - The type of logger to retrieve ('main' or 'saveEvent').
-     * @param {LoggerContext} [context] - Optional: An object containing properties to bind to the logger.
-     * @returns {Logger} A Pino logger instance.
-     */
-    public getLogger(type: LoggerType = 'main', context?: LoggerContext): Logger {
-        let targetLogger: Logger;
+    public getLogger(type: LoggerType = 'conference', context?: LoggerContext): Logger {
+        let targetLogger: Logger | undefined; // Cho phép undefined ban đầu
 
         switch (type) {
-            case 'saveEvent':
-                targetLogger = this.saveEventLogger;
+            case 'journal':
+                targetLogger = this.journalLogger;
                 break;
-            case 'main':
+            case 'saveJournalEvent':
+                targetLogger = this.saveJournalEventLogger;
+                break;
+            case 'saveConferenceEvent':
+                targetLogger = this.saveConferenceEventLogger;
+                break;
+            case 'conference':
             default:
-                targetLogger = this.mainLogger;
+                targetLogger = this.conferenceLogger;
                 break;
         }
 
         if (!targetLogger) {
-            // Fallback nếu logger chưa được khởi tạo (rất khó xảy ra)
-            const fallbackMsg = `[LoggingService:getLogger] Logger type '${type}' not fully initialized. Returning basic console logger.`;
-            console.warn(fallbackMsg);
-            const fallbackLogger = pino({ level: this.logLevel || 'info' });
+            const fallbackMsg = `[LoggingService:getLogger] Logger type '${type}' not fully initialized or available. Returning basic console logger. This is unexpected.`;
+            console.error(fallbackMsg); // Log lỗi này nghiêm trọng hơn
+            const fallbackPinoOptions: LoggerOptions = {
+                level: this.logLevel || 'info',
+                name: `FallbackLogger-${type}`,
+                timestamp: stdTimeFunctions.isoTime,
+            };
+            const fallbackLogger = pino(fallbackPinoOptions);
             if (context) return fallbackLogger.child(context);
             return fallbackLogger;
         }
 
         return context ? targetLogger.child(context) : targetLogger;
+    }
+
+    public get conferenceLog(): Logger {
+        return this.conferenceLogger;
     }
 }

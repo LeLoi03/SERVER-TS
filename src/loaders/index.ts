@@ -11,7 +11,8 @@ import { initSocketIO } from './socket.loader'; // No need for getIO here unless
 import { scheduleJobs } from './jobs.loader';
 
 // Import services that need to be resolved and invoked
-import { LogAnalysisService } from '../services/logAnalysis.service';
+import { LogAnalysisService } from '../services/logAnalysisConference.service';
+import { LogAnalysisJournalService } from '../services/logAnalysisJournal.service';
 
 // Import the custom logging utility
 import logToFile from '../utils/logger';
@@ -89,8 +90,11 @@ export const initLoaders = async (): Promise<LoadersResult> => {
 
             // Resolve and invoke the LogAnalysisService.
             // This service is expected to use `logToFile` internally for its operations.
-            const logAnalysisService = container.resolve(LogAnalysisService);
-            await logAnalysisService.performAnalysisAndUpdate();
+            const conferenceLogAnalysisService = container.resolve(LogAnalysisService);
+            const journalLogAnalysisService = container.resolve(LogAnalysisJournalService);
+
+            await conferenceLogAnalysisService.performConferenceAnalysisAndUpdate();
+            await journalLogAnalysisService.performJournalAnalysisAndUpdate();
 
             // logToFile(`${taskLogContext} Initial log analysis completed successfully.`);
         } catch (error: any) {

@@ -10,10 +10,10 @@ import * as fileOutput from './fileOutputHandlers';
 import * as validation from './validationHandlers';
 import * as overallProcess from './overallProcessHandlers';
 
-import { LogAnalysisResult, ConferenceAnalysisDetail } from '../../types/logAnalysis';
+import { ConferenceLogAnalysisResult, ConferenceAnalysisDetail } from '../../types/logAnalysis';
 export type LogEventHandler = (
   logEntry: any,
-  results: LogAnalysisResult,
+  results: ConferenceLogAnalysisResult,
   confDetail: ConferenceAnalysisDetail | null,
   entryTimestampISO: string,
 ) => void;

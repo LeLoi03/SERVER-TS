@@ -27,7 +27,7 @@ export class DatabasePersistenceService {
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
         this.config = this.configService.config;
-        this.baseLogger = this.loggingService.getLogger('main', { service: 'DatabasePersistenceServiceBase' });
+        this.baseLogger = this.loggingService.getLogger('conference', { service: 'DatabasePersistenceServiceBase' });
     }
 
     public async saveEvaluatedData(parentLogger: Logger): Promise<DatabaseSaveResult> {

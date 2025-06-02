@@ -1,6 +1,6 @@
 // src/loaders/jobs.loader.ts
 import { container } from 'tsyringe'; // Keep container if needed for other potential DI resolutions
-import { scheduleLogAnalysisJob } from '../jobs/logAnalysis.job'; // Import the specific job scheduling function
+import { scheduleLogAnalysisJob } from '../jobs/conferenceLogAnalysis.job'; // Import the specific job scheduling function
 import logToFile from '../utils/logger'; // Import the custom logging utility
 
 /**

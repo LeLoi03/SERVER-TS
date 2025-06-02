@@ -33,7 +33,7 @@ export class GoogleSearchService {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GoogleSearchServiceBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GoogleSearchServiceBase' });
 
         const cseIdFromConfig = this.configService.config.GOOGLE_CSE_ID;
         if (!cseIdFromConfig) {

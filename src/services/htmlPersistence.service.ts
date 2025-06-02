@@ -32,7 +32,7 @@ export class HtmlPersistenceService {
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(BatchProcessingService) private batchProcessingService: BatchProcessingService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'HtmlPersistenceServiceBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'HtmlPersistenceServiceBase' });
         this.serviceBaseLogger.info({ event: 'html_persistence_init_success' }, "HtmlPersistenceService instance created.");
     }
 

@@ -42,7 +42,7 @@ export class GeminiClientManagerService {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) loggingService: LoggingService,
     ) {
-        this.baseLogger = loggingService.getLogger('main', { service: 'GeminiClientManagerService' });
+        this.baseLogger = loggingService.getLogger('conference', { service: 'GeminiClientManagerService' });
         this.geminiApiKeys = this.configService.config.GEMINI_API_KEYS;
 
         // Initialize all GenAI and CacheManager instances for each available key

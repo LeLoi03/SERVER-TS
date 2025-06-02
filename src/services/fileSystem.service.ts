@@ -21,7 +21,7 @@ export class FileSystemService {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'FileSystemServiceBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'FileSystemServiceBase' });
         this.conferenceListPath = this.configService.conferenceListPath;
         this.customSearchDir = this.configService.customSearchDir;
         this.baseOutputDir = this.configService.baseOutputDir;

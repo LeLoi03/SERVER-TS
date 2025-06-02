@@ -1,5 +1,5 @@
 // src/utils/logAnalysis/helpers.ts
-import { LogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types/logAnalysis'; // Thêm ConferenceCrawlType
+import { ConferenceLogAnalysisResult, ConferenceAnalysisDetail, LogError, LogErrorContext } from '../../types/logAnalysis'; // Thêm ConferenceCrawlType
 // --- Các helper function khác (normalizeErrorKey, createConferenceKey, addConferenceError, doesRequestOverlapFilter) giữ nguyên ---
 
 // Giả sử các hàm này đã được export từ logAnalysis.types.ts hoặc types/index.ts
@@ -175,7 +175,7 @@ export const addConferenceError = (
     detail.errors.push(errorEntry);
 };
 
-export const initializeLogAnalysisResult = (logFilePath: string, filterRequestId?: string): LogAnalysisResult => {
+export const initializeConferenceLogAnalysisResult = (logFilePath: string, filterRequestId?: string): ConferenceLogAnalysisResult => {
     // Gọi các hàm khởi tạo chi tiết
     const overall = getInitialOverallAnalysis();
     const googleSearch = getInitialGoogleSearchAnalysis();
@@ -242,8 +242,8 @@ export const doesRequestOverlapFilter = (
 
 
 
-// --- readAndGroupLogs and filterRequests giữ nguyên ---
-export const readAndGroupLogs = async (logFilePath: string): Promise<ReadLogResult> => {
+// --- readAndGroupConferenceLogs and filterRequests giữ nguyên ---
+export const readAndGroupConferenceLogs = async (logFilePath: string): Promise<ReadLogResult> => {
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
     let parsedEntries = 0;

@@ -6,9 +6,8 @@ import { Logger } from 'pino'; // Import the Logger type from pino for type safe
 // Import necessary services
 import { LoggingService } from '../services/logging.service';
 import { getIO } from '../loaders/socket.loader'; // Function to get the Socket.IO server instance
-import { LogAnalysisService } from '../services/logAnalysis.service';
 import { ConfigService } from '../config/config.service';
-
+import { LogAnalysisJournalService } from '../services/logAnalysisJournal.service';
 /**
  * Schedules the recurring log analysis job.
  * This function retrieves the cron schedule and timezone from `ConfigService`,
@@ -19,9 +18,10 @@ import { ConfigService } from '../config/config.service';
  */
 export const scheduleLogAnalysisJob = (): void => {
     // Resolve the LoggingService early to obtain a logger for the scheduling process itself.
-    const loggingService = container.resolve(LoggingService);
+    // const loggingService = container.resolve(LoggingService);
     // Create a parent logger specific to the job scheduler.
-    const parentLogger: Logger = loggingService.getLogger('main', { job: 'LogAnalysisScheduler' });
+    // const parentLogger: Logger = loggingService.getLogger('conference', { job: 'LogAnalysisScheduler' });
+    // const parentLogger: Logger = loggingService.getLogger('journal', { job: 'LogAnalysisScheduler' });
 
     try {
         // Resolve ConfigService to get job-specific configurations.
@@ -31,10 +31,10 @@ export const scheduleLogAnalysisJob = (): void => {
         // Retrieve timezone for cron job, defaulting to Vietnam's timezone.
         const timezone = configService.config.CRON_TIMEZONE || "Asia/Ho_Chi_Minh";
 
-        parentLogger.info(
-            { schedule: cronSchedule, timezone },
-            `Attempting to schedule log analysis job with cron expression: '${cronSchedule}' and timezone: '${timezone}'.`
-        );
+        // parentLogger.info(
+        //     { schedule: cronSchedule, timezone },
+        //     `Attempting to schedule log analysis job with cron expression: '${cronSchedule}' and timezone: '${timezone}'.`
+        // );
 
         // Schedule the cron job using `node-cron`.
         cron.schedule(cronSchedule, async () => {
@@ -42,28 +42,28 @@ export const scheduleLogAnalysisJob = (): void => {
             const jobStartTime = Date.now();
             // Create a *new child logger* for each job run. This helps in tracing individual job executions
             // by attaching a unique `runId` to all logs generated within this specific run.
-            const jobLogger: Logger = loggingService.getLogger('main', { job: 'LogAnalysisRun', runId: jobStartTime });
+            // const jobLogger: Logger = loggingService.getLogger('main', { job: 'LogAnalysisRun', runId: jobStartTime });
 
-            jobLogger.info('Starting scheduled log analysis task...');
+            // jobLogger.info('Starting scheduled log analysis task...');
 
             try {
                 // Resolve services needed for the job inside the callback.
                 // This ensures that if services were re-registered or needed a fresh instance,
                 // the job gets the latest available. For singletons, it's just getting the instance.
-                const logAnalysisService = container.resolve(LogAnalysisService);
+                const logAnalysisService = container.resolve(LogAnalysisJournalService);
                 const io = getIO(); // Get the global Socket.IO server instance.
 
                 // Perform the log analysis and update results.
-                const results = await logAnalysisService.performAnalysisAndUpdate();
+                const results = await logAnalysisService.performJournalAnalysisAndUpdate();
 
                 // Emit the updated analysis results to all connected Socket.IO clients.
                 io.emit('log_analysis_update', results);
 
                 const duration = Date.now() - jobStartTime;
-                jobLogger.info(
-                    { durationMs: duration, timestamp: new Date(jobStartTime).toISOString() },
-                    'Scheduled log analysis task completed successfully. Results broadcasted via Socket.IO.'
-                );
+                // jobLogger.info(
+                //     { durationMs: duration, timestamp: new Date(jobStartTime).toISOString() },
+                //     'Scheduled log analysis task completed successfully. Results broadcasted via Socket.IO.'
+                // );
 
             } catch (error: any) {
                 // Handle errors occurring during the execution of a scheduled job run.
@@ -71,10 +71,10 @@ export const scheduleLogAnalysisJob = (): void => {
                 const errorMessage = error instanceof Error ? error.message : String(error);
                 const errorStack = error instanceof Error ? error.stack : undefined;
 
-                jobLogger.error(
-                    { durationMs: duration, error: errorMessage, stack: errorStack, timestamp: new Date(jobStartTime).toISOString() },
-                    'Scheduled log analysis task failed to complete.'
-                );
+                // jobLogger.error(
+                //     { durationMs: duration, error: errorMessage, stack: errorStack, timestamp: new Date(jobStartTime).toISOString() },
+                //     'Scheduled log analysis task failed to complete.'
+                // );
 
                 // Attempt to broadcast the error to connected Socket.IO clients.
                 try {
@@ -86,10 +86,10 @@ export const scheduleLogAnalysisJob = (): void => {
                     });
                 } catch (ioError: any) {
                     // Log if there's an error even while trying to emit the error via Socket.IO.
-                    jobLogger.error(
-                        { error: ioError.message, stack: ioError.stack },
-                        'Failed to emit log analysis error via Socket.IO after a job failure.'
-                    );
+                    // jobLogger.error(
+                    //     { error: ioError.message, stack: ioError.stack },
+                    //     'Failed to emit log analysis error via Socket.IO after a job failure.'
+                    // );
                 }
             }
         }, {
@@ -98,7 +98,7 @@ export const scheduleLogAnalysisJob = (): void => {
             timezone: timezone // Specifies the timezone for cron scheduling.
         });
 
-        parentLogger.info('Log analysis job scheduled successfully.');
+        // parentLogger.info('Log analysis job scheduled successfully.');
 
     } catch (scheduleError: any) {
         // This catch block handles errors that occur *during the scheduling process itself*
@@ -106,10 +106,10 @@ export const scheduleLogAnalysisJob = (): void => {
         const errorMessage = scheduleError instanceof Error ? scheduleError.message : String(scheduleError);
         const errorStack = scheduleError instanceof Error ? scheduleError.stack : undefined;
 
-        parentLogger.fatal(
-            { error: errorMessage, stack: errorStack },
-            'CRITICAL ERROR: Failed to schedule log analysis job. Application might not function as expected.'
-        );
+        // parentLogger.fatal(
+        //     { error: errorMessage, stack: errorStack },
+        //     'CRITICAL ERROR: Failed to schedule log analysis job. Application might not function as expected.'
+        // );
         // Optionally, re-throw if this failure is critical enough to halt application startup.
         // throw new Error(`Failed to schedule log analysis job: ${errorMessage}`);
     }

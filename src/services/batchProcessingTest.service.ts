@@ -67,7 +67,7 @@ export class BatchProcessingService { // Renaming to BatchProcessingOrchestrator
 
         // Note: The service name in logger is 'BatchProcessingServiceOrchestrator' in original.
         // If class name remains BatchProcessingService, this might be slightly confusing but per spec.
-        this.serviceBaseLogger = loggingService.getLogger('main', { service: 'BatchProcessingServiceOrchestrator' });
+        this.serviceBaseLogger = loggingService.getLogger('conference', { service: 'BatchProcessingServiceOrchestrator' });
 
         // batchesDir is used by BatchTaskExecutorService via ConfigService.
         // tempDir might be used for orchestrator specific temporary files if any, or just for logging.

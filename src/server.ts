@@ -49,24 +49,24 @@ async function startServer(): Promise<void> {
         // Resolve ConfigService first as other services might depend on its configurations.
         configService = container.resolve(ConfigService);
         // Resolve LoggingService to set up the application's logging infrastructure.
-        loggingService = container.resolve(LoggingService);
+        // loggingService = container.resolve(LoggingService);
         // Get the pino Logger instance from the LoggingService.
-        logger = loggingService.logger;
+        // logger = loggingService.logger;
 
-        logger.info('[Server Start] Core services (Config, Logging) resolved successfully.');
+        // logger.info('[Server Start] Core services (Config, Logging) resolved successfully.');
 
         // --- 2. Initialize API Examples from ConfigService ---
         // This step is crucial for LLM-dependent features that use few-shot examples.
-        logger.info('[Server Start] Initiating API examples loading...');
+        // logger.info('[Server Start] Initiating API examples loading...');
         try {
             await configService.initializeExamples(); // Call the async function to load examples
-            logger.info('[Server Start] API examples initialized successfully.');
+            // logger.info('[Server Start] API examples initialized successfully.');
         } catch (exampleError: any) {
             // If example loading fails, decide whether to halt or continue with a warning.
             // Current decision: Log error and re-throw to halt if examples are considered critical.
             const errorMessage = exampleError instanceof Error ? exampleError.message : String(exampleError);
             const errorStack = exampleError instanceof Error ? exampleError.stack : undefined;
-            logger.error(`[Server Start] FAILED to initialize API examples: ${errorMessage}`, { stack: errorStack });
+            // logger.error(`[Server Start] FAILED to initialize API examples: ${errorMessage}`, { stack: errorStack });
             throw new Error(`Critical: Failed to load necessary API examples. Server cannot proceed.`);
             // Alternative: If examples are optional, use logger.warn and continue:
             // logger.warn(`[Server Start] Continuing without all API examples due to loading error: ${errorMessage}`);
@@ -74,20 +74,20 @@ async function startServer(): Promise<void> {
 
         // --- 3. Initialize Loaders (Database, Express App, Socket.IO, Cron Jobs, etc.) ---
         // Loaders can now safely access `configService` and `loggingService` (which holds `logger`).
-        logger.info('[Server Start] Initializing application loaders...');
+        // logger.info('[Server Start] Initializing application loaders...');
         const loaderResult = await initLoaders();
         // The HTTP server instance is returned by `initLoaders`.
         httpServer = loaderResult.httpServer;
-        logger.info('[Server Start] All loaders initialized successfully.');
+        // logger.info('[Server Start] All loaders initialized successfully.');
 
         // --- 4. Start the HTTP Server ---
         const port = configService.config.PORT;
         httpServer.listen(port, () => {
             const serverUrl = `http://localhost:${port}`; // Or `https://your-domain.com:${port}` in production
-            logger.info(`🚀 Server (HTTP & Socket.IO) is now listening on port ${port}`);
-            logger.info(`🔗 Application accessible at: ${serverUrl}`);
+            // logger.info(`🚀 Server (HTTP & Socket.IO) is now listening on port ${port}`);
+            // logger.info(`🔗 Application accessible at: ${serverUrl}`);
             const allowedOrigins = configService.config.CORS_ALLOWED_ORIGINS.join(', ');
-            logger.info(`🌐 Configured CORS allowed origins: ${allowedOrigins}`);
+            // logger.info(`🌐 Configured CORS allowed origins: ${allowedOrigins}`);
             // A basic console log for quick visibility during development
             console.log(`🚀 Server ready at ${serverUrl}`);
         });
@@ -95,11 +95,11 @@ async function startServer(): Promise<void> {
     } catch (error: any) {
         // This catch block handles errors during the initial server startup sequence.
         // It's important to use the logger if available, otherwise fall back to `console`.
-        const currentLogger = logger || console;
+        // const currentLogger = logger || console;
         const errorMessage = error instanceof Error ? error.message : String(error);
         const errorStack = error instanceof Error ? error.stack : undefined;
 
-        currentLogger.fatal(`[Server Start] FATAL ERROR during application initialization: ${errorMessage}`, { stack: errorStack });
+        // currentLogger.fatal(`[Server Start] FATAL ERROR during application initialization: ${errorMessage}`, { stack: errorStack });
 
         // Attempt a graceful shutdown if not already in the process of shutting down.
         if (!isShuttingDown) {
@@ -124,7 +124,7 @@ async function gracefulShutdown(signal: string, error?: Error | unknown): Promis
 
     // Prevent multiple shutdown sequences from running simultaneously.
     if (isShuttingDown) {
-        logger?.warn(`[Shutdown] Already in shutdown process (triggered by ${reason}). Ignoring subsequent trigger (${signal}).`);
+        // logger?.warn(`[Shutdown] Already in shutdown process (triggered by ${reason}). Ignoring subsequent trigger (${signal}).`);
         return;
     }
     isShuttingDown = true; // Set the global shutdown flag.
@@ -133,77 +133,77 @@ async function gracefulShutdown(signal: string, error?: Error | unknown): Promis
     let exitCode = error ? 1 : 0;
 
     // Use the main logger if available, otherwise fall back to console for critical early errors.
-    const currentLogger = logger || console;
-    currentLogger.info(`[Shutdown] Received ${reason}. Initiating graceful shutdown...`);
+    // const currentLogger = logger || console;
+    // currentLogger.info(`[Shutdown] Received ${reason}. Initiating graceful shutdown...`);
 
     // Set a timeout for the graceful shutdown process. If exceeded, force exit.
     const shutdownTimeoutMs = 15000; // You might want to get this from `configService.config.SHUTDOWN_TIMEOUT_MS`
     const shutdownTimeout = setTimeout(() => {
-        currentLogger.error(`[Shutdown] Graceful shutdown timeout of ${shutdownTimeoutMs}ms exceeded. Forcing application exit.`);
+        // currentLogger.error(`[Shutdown] Graceful shutdown timeout of ${shutdownTimeoutMs}ms exceeded. Forcing application exit.`);
         // Attempt a final log flush if `loggingService` is available.
-        loggingService?.flushLogsAndClose();
+        // loggingService?.flushLogsAndClose();
         process.exit(1); // Force exit with error code 1.
     }, shutdownTimeoutMs);
 
     try {
         // --- Cleanup Step 1: Close HTTP Server ---
         if (httpServer && httpServer.listening) {
-            currentLogger.info('[Shutdown] Attempting to close HTTP server...');
+            // currentLogger.info('[Shutdown] Attempting to close HTTP server...');
             await new Promise<void>((resolve) => {
                 httpServer.close((err) => {
                     if (err) {
-                        currentLogger.error('[Shutdown] Error while closing HTTP server:', err);
+                        // currentLogger.error('[Shutdown] Error while closing HTTP server:', err);
                         // Do not reject here; allow other cleanup steps to proceed even if HTTP server closing fails.
                     } else {
-                        currentLogger.info('[Shutdown] HTTP server closed successfully.');
+                        // currentLogger.info('[Shutdown] HTTP server closed successfully.');
                     }
                     resolve(); // Always resolve the promise.
                 });
             });
         } else {
-            currentLogger.info('[Shutdown] HTTP server not listening or not initialized. Skipping HTTP server close.');
+            // currentLogger.info('[Shutdown] HTTP server not listening or not initialized. Skipping HTTP server close.');
         }
 
         // --- Cleanup Step 2: Close Database Connection (MongoDB) ---
         try {
             // Check if Mongoose connection is active (readyState === 1 means connected).
             if (mongoose.connection && mongoose.connection.readyState === 1) {
-                currentLogger.info('[Shutdown] Attempting to close MongoDB connection...');
+                // currentLogger.info('[Shutdown] Attempting to close MongoDB connection...');
                 await mongoose.connection.close();
-                currentLogger.info('[Shutdown] MongoDB connection closed successfully.');
+                // currentLogger.info('[Shutdown] MongoDB connection closed successfully.');
             } else {
-                currentLogger.info('[Shutdown] MongoDB connection not active or not initialized. Skipping MongoDB close.');
+                // currentLogger.info('[Shutdown] MongoDB connection not active or not initialized. Skipping MongoDB close.');
             }
         } catch (dbErr: any) {
-            currentLogger.error('[Shutdown] Error during MongoDB connection close:', dbErr);
+            // currentLogger.error('[Shutdown] Error during MongoDB connection close:', dbErr);
             exitCode = 1; // Mark exit as failure if DB close fails.
         }
 
         // --- Cleanup Step 3: Add any other application-specific cleanup tasks here ---
         // Examples: Close Redis connections, stop job queues, release file handles.
-        currentLogger.info('[Shutdown] Executing additional cleanup tasks...');
+        // currentLogger.info('[Shutdown] Executing additional cleanup tasks...');
         // await someOtherCleanupFunction(); // Placeholder for other cleanup
-        currentLogger.info('[Shutdown] Additional cleanup tasks completed.');
+        // currentLogger.info('[Shutdown] Additional cleanup tasks completed.');
 
     } catch (cleanupError: any) {
         // Catch any errors that occur during the cleanup phase.
-        currentLogger.error('[Shutdown] An unexpected error occurred during cleanup tasks:', cleanupError);
+        // currentLogger.error('[Shutdown] An unexpected error occurred during cleanup tasks:', cleanupError);
         exitCode = 1; // Mark exit as failure.
     } finally {
         // --- Final Cleanup Step: Flush Logs and Exit Process ---
-        currentLogger.info('[Shutdown] Performing final log flush...');
-        if (loggingService) {
-            // Assuming `flushLogsAndClose` is asynchronous and handles graceful closing of log transports.
-            await loggingService.flushLogsAndClose();
-            currentLogger.info('[Shutdown] Logs flushed and transports closed.');
-        } else {
-            // Fallback for extremely early errors where loggingService might not be available.
-            console.error("[Shutdown] Logging service not available for final flush. Logs might be incomplete.");
-        }
+        // currentLogger.info('[Shutdown] Performing final log flush...');
+        // if (loggingService) {
+        //     // Assuming `flushLogsAndClose` is asynchronous and handles graceful closing of log transports.
+        //     await loggingService.flushLogsAndClose();
+        //     // currentLogger.info('[Shutdown] Logs flushed and transports closed.');
+        // } else {
+        //     // Fallback for extremely early errors where loggingService might not be available.
+        //     console.error("[Shutdown] Logging service not available for final flush. Logs might be incomplete.");
+        // }
 
         // Clear the shutdown timeout as graceful shutdown is completing.
         clearTimeout(shutdownTimeout);
-        currentLogger.info(`[Shutdown] Graceful shutdown process finalized. Exiting application with code ${exitCode}.`);
+        // currentLogger.info(`[Shutdown] Graceful shutdown process finalized. Exiting application with code ${exitCode}.`);
 
         // A small delay to ensure all async log writes complete before process exits.
         await new Promise(resolve => setTimeout(resolve, 100));
@@ -222,7 +222,7 @@ const shutdownSignals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
 shutdownSignals.forEach((signal) => {
     process.on(signal, () => {
         // Log the received signal for debugging purposes.
-        logger?.info(`[Process Event] Received signal: ${signal}`);
+        // logger?.info(`[Process Event] Received signal: ${signal}`);
         gracefulShutdown(signal);
     });
 });
@@ -233,13 +233,13 @@ shutdownSignals.forEach((signal) => {
  * Logs the error and attempts a graceful shutdown.
  */
 process.on('uncaughtException', (err: Error, origin: string) => {
-    const currentLogger = logger || console; // Use logger if available
-    currentLogger.fatal({ err: { message: err.message, stack: err.stack, name: err.name }, origin }, 'Uncaught Exception detected. Initiating emergency shutdown.');
+    // const currentLogger = logger || console; // Use logger if available
+    // currentLogger.fatal({ err: { message: err.message, stack: err.stack, name: err.name }, origin }, 'Uncaught Exception detected. Initiating emergency shutdown.');
     // Only trigger shutdown if not already in the process of shutting down.
     if (!isShuttingDown) {
         gracefulShutdown('uncaughtException', err);
     } else {
-        currentLogger.warn('[Shutdown] Uncaught exception occurred during an ongoing shutdown. Forcing immediate exit.');
+        // currentLogger.warn('[Shutdown] Uncaught exception occurred during an ongoing shutdown. Forcing immediate exit.');
         process.exit(1); // Force exit to prevent a hung process.
     }
 });
@@ -250,15 +250,15 @@ process.on('uncaughtException', (err: Error, origin: string) => {
  * Logs the rejection reason and attempts a graceful shutdown.
  */
 process.on('unhandledRejection', (reason: unknown, promise: Promise<any>) => {
-    const currentLogger = logger || console; // Use logger if available
+    // const currentLogger = logger || console; // Use logger if available
     // Attempt to convert reason to an Error object for consistent logging.
     const error = reason instanceof Error ? reason : new Error(String(reason ?? 'Unknown unhandled rejection reason'));
-    currentLogger.fatal({ err: { message: error.message, stack: error.stack, name: error.name }, reason }, 'Unhandled Promise Rejection detected. Initiating emergency shutdown.');
+    // currentLogger.fatal({ err: { message: error.message, stack: error.stack, name: error.name }, reason }, 'Unhandled Promise Rejection detected. Initiating emergency shutdown.');
     // Only trigger shutdown if not already in the process of shutting down.
     if (!isShuttingDown) {
         gracefulShutdown('unhandledRejection', error);
     } else {
-        currentLogger.warn('[Shutdown] Unhandled rejection occurred during an ongoing shutdown. Forcing immediate exit.');
+        // currentLogger.warn('[Shutdown] Unhandled rejection occurred during an ongoing shutdown. Forcing immediate exit.');
         process.exit(1); // Force exit to prevent a hung process.
     }
 });

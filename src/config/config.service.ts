@@ -165,12 +165,12 @@ const envSchema = z.object({
     LOGS_DIRECTORY: z.string().default('./logs'),
     /**
      * Name of the main application log file.
-     * @default 'app.log'
+     * @default 'conference.log'
      */
-    CONFERENCE_LOG_FILE_NAME: z.string().default('app.log'),
+    CONFERENCE_LOG_FILE_NAME: z.string().default('conference.log'),
     /**
      * Name of the main application log file.
-     * @default 'app.log'
+     * @default 'conference.log'
      */
     JOURNAL_LOG_FILE_NAME: z.string().default('journal.log'),
     /**
@@ -306,7 +306,7 @@ const envSchema = z.object({
      * @description Required for accessing Gemini models.
      */
     GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"), // Changed to transform to array
-    
+
     /**
      * Maximum number of concurrent requests to the Gemini API.
      * @default 2
@@ -664,7 +664,8 @@ const envSchema = z.object({
      */
     CSV_OUTPUT_SUBDIR: z.string().default('csv_outputs'),
 
-    SAVE_STATUS_OUTPUT_SUBDIR: z.string().default('save_status_outputs'),
+    SAVE_CONFERENCE_STATUS_OUTPUT_SUBDIR: z.string().default('save_conference_status_outputs'),
+    SAVE_JOURNAL_STATUS_OUTPUT_SUBDIR: z.string().default('save_journal_status_outputs'),
 
 });
 
@@ -787,10 +788,16 @@ export class ConfigService {
     public readonly csvOutputDir: string;
 
     /**
-     * Resolved path to the directory for CSV output files.
+     * Resolved path to the directory for JSONL output files.
      * @readonly
      */
-    public readonly saveStatusDir: string;
+    public readonly saveConferenceStatusDir: string;
+
+    /**
+     * Resolved path to the directory for JSONL output files.
+     * @readonly
+     */
+    public readonly saveJournalStatusDir: string;
 
     /**
      * A promise that resolves when the few-shot examples have been loaded.
@@ -926,7 +933,8 @@ export class ConfigService {
             // Resolve and store paths for output directories
             this.jsonlOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.JSONL_OUTPUT_SUBDIR);
             this.csvOutputDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.CSV_OUTPUT_SUBDIR);
-            this.saveStatusDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.SAVE_STATUS_OUTPUT_SUBDIR);
+            this.saveConferenceStatusDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.SAVE_CONFERENCE_STATUS_OUTPUT_SUBDIR);
+            this.saveJournalStatusDir = path.resolve(this.config.BASE_OUTPUT_DIR, this.config.SAVE_JOURNAL_STATUS_OUTPUT_SUBDIR);
 
             // Log successful configuration loading
             console.log("✅ Configuration loaded and validated successfully.");
@@ -936,7 +944,9 @@ export class ConfigService {
             console.log(`   - Base Output Dir: ${this.baseOutputDir}`);
             console.log(`   - JSONL Output Dir: ${this.jsonlOutputDir}`);
             console.log(`   - CSV Output Dir: ${this.csvOutputDir}`);
-            console.log(`   - Save Status Output Dir: ${this.saveStatusDir}`);
+            console.log(`   - Save Status Output Dir: ${this.saveConferenceStatusDir}`);
+            console.log(`   - Save Status Output Dir: ${this.saveJournalStatusDir}`);
+
             console.log(`   - Host Agent Model: ${this.config.GEMINI_HOST_AGENT_MODEL_NAME}`);
             console.log(`   - Host Agent Config: ${JSON.stringify(this.hostAgentGenerationConfig)}`);
             console.log(`   - Sub Agent Model: ${this.config.GEMINI_SUB_AGENT_MODEL_NAME}`);
@@ -1130,7 +1140,7 @@ export class ConfigService {
      * Gets the resolved absolute path to the main application log file.
      * @returns {string} The path to the application log file.
      */
-    get appLogFilePath(): string { return path.join(this.logsDirectory, this.config.CONFERENCE_LOG_FILE_NAME); }
+    get conferenceLogFilePath(): string { return path.join(this.logsDirectory, this.config.CONFERENCE_LOG_FILE_NAME); }
 
     /**
      * Gets the resolved absolute path to the main application log file.
@@ -1224,16 +1234,27 @@ export class ConfigService {
         };
     }
 
-     /**
-     * Gets the resolved absolute path to the journal data output JSONL file.
-     * @returns {string} The path to the journal_data.jsonl file.
-     */
+    /**
+    * Gets the resolved absolute path to the journal data output JSONL file.
+    * @returns {string} The path to the journal_data.jsonl file.
+    */
     get journalOutputJsonlPath(): string {
         // You can decide if this goes into jsonlOutputDir or a specific journal subdir
         // For simplicity, let's put it directly in jsonlOutputDir for now.
         return path.join(this.jsonlOutputDir, 'journal_data.jsonl');
     }
-    
+
+    /**
+    * Generates the absolute path for a journal data JSONL output file for a specific batch request.
+    * @param {string} batchRequestId - The unique identifier for the batch request.
+    * @returns {string} The absolute path to the journal JSONL output file.
+    */
+    public getJournalOutputJsonlPathForBatch(batchRequestId: string): string { // Renamed for clarity
+        const filename = `journal_data_${batchRequestId}.jsonl`;
+        return path.join(this.jsonlOutputDir, filename); // Uses the common jsonlOutputDir
+    }
+
+
     /**
      * Generates the absolute path for a final JSONL output file for a specific batch request.
      * @param {string} batchRequestId - The unique identifier for the batch request.
@@ -1265,7 +1286,12 @@ export class ConfigService {
     }
 
 
-    public getSaveEventLogFilePath(): string {
-        return path.join(this.saveStatusDir, 'conference_save_events.jsonl');
+    public getSaveConferenceEventLogFilePath(): string {
+        return path.join(this.saveConferenceStatusDir, 'conference_save_events.jsonl');
     }
+
+    public getSaveJournalEventLogFilePath(): string {
+        return path.join(this.saveJournalStatusDir, 'journal_save_events.jsonl');
+    }
+
 }

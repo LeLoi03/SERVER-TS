@@ -39,7 +39,7 @@ export class GeminiApiService {
         @inject(GeminiApiOrchestratorService) private apiOrchestrator: GeminiApiOrchestratorService,
         @inject(GeminiResponseHandlerService) private responseHandler: GeminiResponseHandlerService,
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'GeminiApiService' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiService' });
         this.serviceBaseLogger.info("Constructing GeminiApiService...");
 
         this.appConfig = this.configService.config;
@@ -67,7 +67,7 @@ export class GeminiApiService {
         }
         logger.info({ event: 'gemini_service_async_init_start' }, "Running async initialization for GeminiApiService...");
         try {
-            await this.cachePersistence.loadMap(this.loggingService.getLogger('main', { service: 'GeminiCachePersistenceService', operation: 'loadMapOnInit' }));
+            await this.cachePersistence.loadMap(this.loggingService.getLogger('conference', { service: 'GeminiCachePersistenceService', operation: 'loadMapOnInit' }));
             this.serviceInitialized = true;
             logger.info({ event: 'gemini_service_async_init_complete' }, "GeminiApiService async initialization complete.");
         } catch (error) {

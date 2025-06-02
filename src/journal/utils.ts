@@ -286,100 +286,90 @@ process.on('unhandledRejection', (reason: unknown, promise: Promise<any>) => {
 });
 
 
+
+// 1. traverseNodes: Giữ nguyên, đã khá tốt.
 export const traverseNodes = (node: Node | null): string => {
     if (!node) return '';
     if (node.nodeType === Node.TEXT_NODE) {
-        return node.textContent?.trim() || ''; // Null safe access
+        return node.textContent?.trim() || '';
     } else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length > 0) {
         return Array.from(node.childNodes).map(traverseNodes).join(' ').trim();
     }
     return '';
 };
 
+// 2. createURLList: Giữ nguyên, đã khá tốt.
 export const createURLList = (baseURL: string, lastPageNumber: number): string[] => {
-    return Array.from({ length: lastPageNumber }, (_, i) => `${baseURL}&page=${i + 1}`); // Corrected length
+    return Array.from({ length: lastPageNumber }, (_, i) => `${baseURL}&page=${i + 1}`);
 };
 
+// 3. formatISSN: Giữ nguyên, logic đã được cải thiện.
 export const formatISSN = (issn: string): string | null => {
-    if (!issn) { // Thêm kiểm tra đầu vào null/undefined/empty
+    if (!issn) {
         return null;
     }
     const issnValues = issn.split(',').map(item => item.trim());
-    // Ưu tiên phần tử thứ 2 nếu có, nếu không lấy phần tử đầu tiên
-    const issnToSearch = (issnValues[1] || issnValues[0] || '').replace(/-/g, ''); // Xóa dấu gạch nối cũ nếu có
-
-    // Regex mới: 4 số, sau đó là 3 số và ký tự cuối cùng là số hoặc X
-    // Thêm ^ và $ để đảm bảo khớp toàn bộ chuỗi 8 ký tự sau khi xóa gạch nối
-    const issnRegex = /^(\d{4})(\d{3}[\dX])$/i; // i để không phân biệt hoa thường cho X
-
+    const issnToSearch = (issnValues[1] || issnValues[0] || '').replace(/-/g, '');
+    const issnRegex = /^(\d{4})(\d{3}[\dX])$/i;
     const match = issnToSearch.match(issnRegex);
-
     if (match) {
-        // match[1] là group 1 (\d{4})
-        // match[2] là group 2 (\d{3}[\dX])
         return `${match[1]}-${match[2]}`;
     }
-
-    // Nếu không khớp định dạng 8 ký tự chuẩn (vd: 12345, ABCDEFGH) thì trả về null
     return null;
 };
 
 
 
-/**
-* Executes an async function with retries on failure.
-* @param fn The async function to execute. It receives the current attempt number (starting from 1).
-* @param options Retry configuration.
-* @param logger A logger instance (e.g., Pino) for logging retry attempts.
-* @returns The result of the function `fn` if successful.
-* @throws The error from the last attempt if all retries fail.
-*/
+
+// 4. retryAsync:
+//    - Đã có logging cơ bản.
+//    - Đảm bảo logger được truyền vào và sử dụng đúng cách.
+//    - Event names đã có (`retry_max_attempts_reached`, `retry_attempt_failed`) là tốt.
 export const retryAsync = async <T>(
-    fn: (attempt: number) => Promise<T>, // Function now accepts attempt number
+    fn: (attempt: number) => Promise<T>,
     options: RetryOptions,
-    logger: Logger | MinimalLogger // Accept logger instance
+    logger: Logger | MinimalLogger // Đảm bảo logger được truyền vào
 ): Promise<T> => {
     const { retries, minTimeout, factor } = options;
-    let lastError: any = null; // Store the last error
+    let lastError: any = null;
 
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
-            // Pass the current attempt number to the function
             return await fn(attempt);
         } catch (error: any) {
-            lastError = error; // Store the error
-            if (attempt >= retries) {
-                logger.error({
-                    event: 'retry_max_attempts_reached',
-                    attempt,
-                    maxRetries: retries,
-                    err: lastError // Log the actual error object
-                }, `Function failed after maximum ${retries} attempts. Throwing last error.`);
-                throw lastError; // Throw the actual error from the last attempt
-            }
-
-            // Calculate delay using exponential backoff
-            // Delay = minTimeout * (factor ^ (attempt - 1)) -> Common pattern
-            // Or use factor ^ attempt for slightly faster increase: minTimeout * (factor ^ attempt)
+            lastError = error;
+            const isLastAttempt = attempt >= retries;
             const timeout = Math.round(minTimeout * Math.pow(factor, attempt - 1));
 
-            logger.warn({
-                event: 'retry_attempt_failed',
+            // Chuẩn bị context log
+            const logContext = {
+                event: isLastAttempt ? 'retry_max_attempts_reached' : 'retry_attempt_failed',
                 attempt,
                 maxRetries: retries,
-                delayMs: timeout,
-                err: error // Log the error for this specific attempt
-            }, `Attempt ${attempt}/${retries} failed. Retrying in ${timeout}ms...`);
+                err: { // Log chi tiết lỗi
+                    message: error.message,
+                    name: error.name,
+                    stack: error.stack?.substring(0, 500), // Giới hạn stack trace
+                    ...(error.response && { responseStatus: error.response.status, responseData: error.response.data }), // Nếu là lỗi HTTP
+                    ...(error.code && { code: error.code }), // Mã lỗi (vd: ECONNREFUSED)
+                },
+                ...(isLastAttempt ? {} : { delayMs: timeout }), // Chỉ log delayMs nếu không phải lần cuối
+            };
 
-            await new Promise((resolve) => setTimeout(resolve, timeout));
+            if (isLastAttempt) {
+                logger.error(logContext, `Function failed after maximum ${retries} attempts. Throwing last error.`);
+                throw lastError;
+            } else {
+                logger.warn(logContext, `Attempt ${attempt}/${retries} failed. Retrying in ${timeout}ms...`);
+                await new Promise((resolve) => setTimeout(resolve, timeout));
+            }
         }
     }
-
-    // This part should theoretically not be reached if retries >= 1
-    // But it satisfies TypeScript's need for a return/throw at the end
-    logger.error({ event: 'retry_logic_error', err: lastError }, "Retry loop completed without success or throwing an error (unexpected). Throwing last encountered error.");
+    // Fallback, không nên xảy ra nếu retries >= 1
+    logger.error({ event: 'retry_logic_error', err: lastError }, "Retry loop completed without success or throwing an error (unexpected).");
     throw lastError || new Error("Retry failed after multiple attempts, but no specific error was captured.");
 };
+
 
 
 /**
@@ -392,7 +382,7 @@ export const retryAsync = async <T>(
  * @param {string} delimiter The delimiter character (default: ';').
  * @returns {string} The processed CSV string with inner quotes properly escaped.
  */
-const escapeQuotesInQuotedFields = (csvString: string, delimiter = ';') => {
+const escapeQuotesInQuotedFields = (csvString: string, delimiter = ';', logger?: Logger | MinimalLogger) => {
     let result = '';
     let inQuotes = false;
     const len = csvString.length;
@@ -437,7 +427,7 @@ const escapeQuotesInQuotedFields = (csvString: string, delimiter = ';') => {
 
     // Optional: Check for unterminated quotes
     if (inQuotes) {
-        logger.warn("[escapeQuotesInQuotedFields] Warning: CSV string potentially ended with an unterminated quoted field.");
+        logger?.warn("[escapeQuotesInQuotedFields] Warning: CSV string potentially ended with an unterminated quoted field.");
         // Consider adding a closing quote if recovery is desired, though this might hide data issues.
         // result += '"';
     }
@@ -456,41 +446,47 @@ const escapeQuotesInQuotedFields = (csvString: string, delimiter = ';') => {
  * @returns A promise resolving to an array of parsed CSV records (objects).
  * @throws Error if parsing fails.
  */
-export const parseCSVString = async (csvContent: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
-    const csvLogger = parentLogger.child({ service: 'parseCSVString' });
-    csvLogger.info({ event: 'parse_start', inputLength: csvContent.length }, `Attempting to parse CSV string content.`);
-    console.log(`[parseCSVString][parse_start] Attempting to parse CSV string content (Length: ${csvContent.length}).`);
+export const parseCSVString = async (
+    csvContent: string,
+    parentLogger: Logger | MinimalLogger // Yêu cầu logger
+): Promise<CSVRecord[]> => {
+    // Tạo child logger với context batchRequestId nếu có từ parentLogger
+    // Điều này quan trọng để các log từ đây được nhóm đúng.
+    // Nếu parentLogger không có batchRequestId, nó sẽ không được thêm.
+    const csvLogger = parentLogger.child({
+        service: 'parseCSVStringUtil', // Đặt tên service cụ thể cho utility này
+        // batchRequestId: (parentLogger as any).bindings?.()?.batchRequestId // Cách lấy batchRequestId nếu có
+    });
 
-    // --- BEGIN PRE-PROCESSING ---
+    // Log event cho log analysis
+    csvLogger.info({
+        event: 'parse_csv_string_start', // EVENT CHO LOG ANALYSIS
+        inputLength: csvContent.length,
+        // batchRequestId: (csvLogger as any).bindings?.()?.batchRequestId // Đảm bảo batchRequestId được log
+    }, `Attempting to parse CSV string content.`);
+
     let processedCsvContent: string;
     try {
-        csvLogger.info({ event: 'preprocess_start' }, `Starting pre-processing to escape inner quotes.`);
-        console.log(`[parseCSVString][preprocess_start] Starting pre-processing to escape inner quotes.`); // CONSOLE ADDED
-        processedCsvContent = escapeQuotesInQuotedFields(csvContent, ';');
-        csvLogger.info({ event: 'preprocess_success', outputLength: processedCsvContent.length }, `Finished pre-processing.`);
-        console.log(`[parseCSVString][preprocess_success] Finished pre-processing (New Length: ${processedCsvContent.length}).`); // CONSOLE ADDED
-        // Optional: Log diff if significant changes occurred (for debugging)
-        // if (processedCsvContent !== csvContent) {
-        //     csvLogger.debug({ event: 'preprocess_diff' }, `CSV content modified by pre-processing.`);
-        // }
+        // csvLogger.debug({ event: 'csv_preprocess_start' }, `Starting pre-processing to escape inner quotes.`);
+        processedCsvContent = escapeQuotesInQuotedFields(csvContent, ';', csvLogger); // Truyền logger vào escapeQuotes
+        // csvLogger.debug({ event: 'csv_preprocess_success', outputLength: processedCsvContent.length }, `Finished pre-processing.`);
     } catch (preProcessError: any) {
-        csvLogger.error({ err: preProcessError, stack: preProcessError?.stack, event: 'preprocess_failed' }, `Error during CSV pre-processing.`);
-        console.error(`[parseCSVString][preprocess_failed] Error during CSV pre-processing:`, preProcessError.message || preProcessError); // CONSOLE ADDED
-        return Promise.reject(new Error(`Failed during CSV pre-processing: ${preProcessError.message}`));
+        csvLogger.error({
+            event: 'parse_csv_string_failed', // EVENT CHO LOG ANALYSIS
+            stage: 'preprocessing',
+            err: { message: preProcessError.message, stack: preProcessError.stack?.substring(0, 500) },
+            // batchRequestId: (csvLogger as any).bindings?.()?.batchRequestId
+        }, `Error during CSV pre-processing.`);
+        throw new Error(`Failed during CSV pre-processing: ${preProcessError.message}`);
     }
-    // --- END PRE-PROCESSING ---
 
     return new Promise((resolve, reject) => {
         const records: CSVRecord[] = [];
-        // Use the processed content here
         const parser: Parser = parse(processedCsvContent, {
-            columns: true, // Use the first line as headers
+            columns: true,
             skip_empty_lines: true,
-            delimiter: ';', // Specify the semicolon delimiter
-            trim: true,     // Trim whitespace from headers and fields
-            // relax_column_count: true, // Consider if needed based on data quality
-            // relax_quotes: false, // Keep this false or default. We want strict quotes *after* our pre-processing.
-            // escape: '"', // Default is already '"'
+            delimiter: ';',
+            trim: true,
         });
 
         parser.on('readable', () => {
@@ -501,25 +497,22 @@ export const parseCSVString = async (csvContent: string, parentLogger: typeof lo
         });
 
         parser.on('error', (err) => {
-            csvLogger.error({ err: err, stack: err.stack, event: 'parse_failed' }, `Error parsing pre-processed CSV string.`);
-            console.error(`[parseCSVString][parse_failed] Error parsing pre-processed CSV string:`, err.message || err); // CONSOLE ADDED
-            console.error(`[parseCSVString][parse_failed] Stack trace:`, err.stack); // CONSOLE ADDED
-            // Provide context about pre-processing
+            csvLogger.error({
+                event: 'parse_csv_string_failed', // EVENT CHO LOG ANALYSIS
+                stage: 'parsing',
+                err: { message: err.message, stack: err.stack?.substring(0, 500) },
+                // batchRequestId: (csvLogger as any).bindings?.()?.batchRequestId
+            }, `Error parsing pre-processed CSV string.`);
             reject(new Error(`Failed to parse CSV string (after pre-processing): ${err.message}`));
         });
 
         parser.on('end', () => {
-            csvLogger.info({ event: 'parse_success', recordCount: records.length }, `Successfully parsed ${records.length} records from CSV string.`);
-            console.log(`[parseCSVString][parse_success] Successfully parsed ${records.length} records from CSV string.`); // CONSOLE ADDED
-            resolve(records); // Resolve the promise with the parsed records
-        });
-
-        // Error handling for the stream itself
-        parser.on('error', (streamError) => {
-            if (!parser.destroyed) {
-                csvLogger.error({ err: streamError, event: 'parse_stream_error' }, `CSV parsing stream error.`);
-                reject(new Error(`CSV parsing stream error: ${streamError.message}`));
-            }
+            csvLogger.info({
+                event: 'parse_csv_string_success', // EVENT CHO LOG ANALYSIS
+                recordCount: records.length,
+                // batchRequestId: (csvLogger as any).bindings?.()?.batchRequestId
+            }, `Successfully parsed ${records.length} records from CSV string.`);
+            resolve(records);
         });
     });
 };
@@ -531,69 +524,99 @@ export const parseCSVString = async (csvContent: string, parentLogger: typeof lo
  * @param parentLogger Optional logger instance to use.
  * @returns A promise resolving to an array of parsed CSV records (objects). Returns empty array on file read error.
  */
-export const readCSV = async (filePath: string, parentLogger: typeof logger = logger): Promise<CSVRecord[]> => {
-    const fileReadLogger = parentLogger.child({ service: 'readCSV', filePath });
-    fileReadLogger.info({ event: 'read_start' }, `Attempting to read CSV file.`);
-    console.log(`[readCSV][read_start] Attempting to read CSV file: ${filePath}`); // CONSOLE ADDED
+export const readCSV = async (
+    filePath: string,
+    parentLogger: Logger | MinimalLogger // Yêu cầu logger
+): Promise<CSVRecord[]> => {
+    const fileReadLogger = parentLogger.child({
+        service: 'readCSVUtil',
+        filePath
+        // batchRequestId: (parentLogger as any).bindings?.()?.batchRequestId
+    });
+
+    fileReadLogger.info({
+        event: 'read_csv_file_start', // EVENT CHO LOG ANALYSIS
+        // batchRequestId: (fileReadLogger as any).bindings?.()?.batchRequestId
+    }, `Attempting to read CSV file.`);
 
     try {
         const fileContent = await fs.promises.readFile(filePath, { encoding: 'utf8' });
-        fileReadLogger.debug({ event: 'read_success', fileSize: fileContent.length }, `Successfully read file content.`);
-        console.log(`[readCSV][read_success] Successfully read file content (Size: ${fileContent.length} bytes).`); // CONSOLE ADDED
+        // fileReadLogger.debug({ event: 'csv_file_read_raw_success', fileSize: fileContent.length }, `Successfully read file content.`);
 
-        // Delegate parsing to the dedicated string parsing function
-        return await parseCSVString(fileContent, fileReadLogger); // Pass logger down
+        // Gọi parseCSVString, nó sẽ log các event parse_csv_string_*
+        const records = await parseCSVString(fileContent, fileReadLogger);
 
-    } catch (error: any) {
-        fileReadLogger.error({ err: error, stack: error.stack, event: 'read_failed' }, `Error reading CSV file.`);
-        console.error(`[readCSV][read_failed] Error reading CSV file ${filePath}:`, error.message || error); // CONSOLE ADDED
-        console.error(`[readCSV][read_failed] Stack trace:`, error.stack); // CONSOLE ADDED
-        return []; // Return empty array on file reading failure
+        fileReadLogger.info({
+            event: 'read_csv_file_success', // EVENT CHO LOG ANALYSIS (bao gồm cả parse thành công)
+            recordCount: records.length,
+            // batchRequestId: (fileReadLogger as any).bindings?.()?.batchRequestId
+        }, `Successfully read and parsed CSV file.`);
+        return records;
+
+    } catch (error: any) { // Lỗi có thể từ readFile hoặc từ parseCSVString (nếu reject)
+        fileReadLogger.error({
+            event: 'read_csv_file_failed', // EVENT CHO LOG ANALYSIS
+            err: { message: error.message, stack: error.stack?.substring(0, 500) },
+            // batchRequestId: (fileReadLogger as any).bindings?.()?.batchRequestId
+        }, `Error reading or parsing CSV file.`);
+        // Quyết định trả về mảng rỗng hay throw lỗi tùy theo yêu cầu.
+        // Hiện tại đang trả về mảng rỗng. Nếu muốn throw, hãy throw error;
+        return [];
     }
 };
 
 
-// Define OUTPUT_JSON path if not already globally available in this scope
+
 export async function appendJournalToFile(
     journalData: JournalDetails,
     filePath: string,
-    taskLogger: typeof logger // Sử dụng kiểu logger được truyền vào
+    taskLogger: Logger | MinimalLogger // Yêu cầu logger
 ): Promise<void> {
-    let jsonLine: string | undefined = undefined;
+    // taskLogger đã là child logger từ crawlJournals, nên đã có context (batchRequestId, journalTitle, etc.)
+    taskLogger.debug({
+        event: 'append_journal_to_file_start', // EVENT CHO LOG ANALYSIS
+        // journalTitle: journalData?.title || 'Untitled', // Đã có trong taskLogger bindings
+        // filePath: filePath // Đã có trong taskLogger bindings nếu bạn thêm vào
+    }, "Attempting to append journal to file.");
+
+    let jsonLine: string;
     try {
-        // Log đối tượng gốc (sẽ trông giống Object Literal trên console)
-        taskLogger.debug({ event: 'append_received_object', journalTitle: journalData?.title || 'Untitled' }, "Received journalData object for appending.");
-        // console.log("Object received:", journalData); // Bật nếu cần xem chi tiết
+        jsonLine = JSON.stringify(journalData);
+    } catch (stringifyError: any) {
+        taskLogger.error({
+            event: 'append_journal_to_file_failed', // EVENT CHO LOG ANALYSIS
+            stage: 'stringify',
+            // journalTitle: journalData?.title || 'Untitled',
+            err: { message: stringifyError.message, stack: stringifyError.stack?.substring(0, 500) }
+        }, "CRITICAL ERROR DURING JSON.stringify!");
+        // Không throw lỗi ở đây để không làm dừng toàn bộ batch nếu chỉ 1 record lỗi stringify,
+        // nhưng log analysis sẽ ghi nhận lỗi này cho journal cụ thể.
+        return;
+    }
 
-        taskLogger.debug({ event: 'stringify_start' }, "Attempting to stringify journal data...");
-        // ----> Bước 1: Cô lập lỗi stringify <----
-        try {
-            jsonLine = JSON.stringify(journalData);
-            if (!jsonLine) {
-                taskLogger.error({ event: 'stringify_failed_undefined', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL: JSON.stringify returned undefined!");
-                console.error(`!!!!!!!! STRINGIFY RETURNED UNDEFINED for ${journalData?.title || 'Untitled'} !!!!!!!!`);
-                return;
-            }
-            // Log một phần chuỗi JSON đã được stringify
-            taskLogger.debug({ event: 'stringify_success', firstChars: jsonLine.substring(0, 150) + "..." }, "Successfully stringified data. Output starts with keys in quotes.");
-            // console.log("Stringified JSON:", jsonLine.substring(0,150)+"..."); // Bật nếu cần xem chuỗi JSON thực tế
-        } catch (stringifyError: any) {
-            taskLogger.error({ err: stringifyError, event: 'stringify_failed_exception', journalTitle: journalData?.title || 'Untitled' }, "CRITICAL ERROR DURING JSON.stringify!");
-            console.error(`!!!!!!!! STRINGIFY FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, stringifyError);
-            // Xem xét stack trace của lỗi stringifyError để tìm nguyên nhân (ví dụ: circular structure)
-            return; // Dừng lại nếu không stringify được
-        }
+    if (!jsonLine) { // Trường hợp hiếm JSON.stringify trả về undefined (ví dụ input là undefined)
+        taskLogger.error({
+            event: 'append_journal_to_file_failed', // EVENT CHO LOG ANALYSIS
+            stage: 'stringify_undefined',
+            // journalTitle: journalData?.title || 'Untitled',
+        }, "CRITICAL: JSON.stringify returned undefined!");
+        return;
+    }
 
-        // ----> Bước 2: Thực hiện ghi file <----
-        const lineToWrite = jsonLine + '\n';
-        taskLogger.debug({ event: 'append_start', path: filePath }, `Attempting to append stringified data...`);
+    const lineToWrite = jsonLine + '\n';
+    try {
         await fs.promises.appendFile(filePath, lineToWrite, 'utf8');
-        taskLogger.info({ event: 'append_success', path: filePath, journalTitle: journalData?.title || 'Untitled' }, `Successfully appended journal.`);
-        // console.log("Append successful for:", journalData?.title);
-
+        taskLogger.info({
+            event: 'append_journal_to_file_success', // EVENT CHO LOG ANALYSIS
+            // journalTitle: journalData?.title || 'Untitled',
+        }, `Successfully appended journal.`);
     } catch (appendError: any) {
-        // Lỗi này là lỗi của fs.promises.appendFile
-        taskLogger.error({ err: appendError, path: filePath, event: 'append_failed_fs', journalTitle: journalData?.title || 'Untitled' }, `CRITICAL ERROR during fs.appendFile!`);
-        console.error(`!!!!!!!! FS APPEND FAILED for ${journalData?.title || 'Untitled'} !!!!!!!!`, appendError);
+        taskLogger.error({
+            event: 'append_journal_to_file_failed', // EVENT CHO LOG ANALYSIS
+            stage: 'append_fs',
+            // journalTitle: journalData?.title || 'Untitled',
+            err: { message: appendError.message, stack: appendError.stack?.substring(0, 500), code: appendError.code }
+        }, `CRITICAL ERROR during fs.appendFile!`);
+        // Tương tự, không throw để batch có thể tiếp tục, lỗi được ghi nhận.
     }
 }

@@ -201,11 +201,11 @@ export interface ConferenceAnalysisDetail {
 }
 
 /**
- * @interface LogAnalysisResult
+ * @interface ConferenceLogAnalysisResult
  * @description Cấu trúc kết quả toàn diện cho một hoạt động phân tích nhật ký hoàn chỉnh.
  * Tổng hợp tất cả các thông tin chi tiết từ các thành phần khác nhau của pipeline thu thập dữ liệu.
  */
-export interface LogAnalysisResult {
+export interface ConferenceLogAnalysisResult {
     /**
      * @property {string} analysisTimestamp - Dấu thời gian ISO khi phân tích này được tạo.
      */

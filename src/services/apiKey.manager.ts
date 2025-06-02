@@ -48,7 +48,7 @@ export class ApiKeyManager {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService
     ) {
-        this.serviceBaseLogger = this.loggingService.getLogger('main', { service: 'ApiKeyManagerBase' });
+        this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ApiKeyManagerBase' });
 
         const apiKeys = this.configService.config.GOOGLE_CUSTOM_SEARCH_API_KEYS;
         this.maxUsagePerKey = this.configService.config.MAX_USAGE_PER_KEY;
