@@ -37,9 +37,9 @@ export class GoogleSearchService {
 
         const cseIdFromConfig = this.configService.config.GOOGLE_CSE_ID;
         if (!cseIdFromConfig) {
-             const errorMsg = "Critical: Google CSE ID (GOOGLE_CSE_ID) is missing in configuration. Google Search will not function.";
-             this.serviceBaseLogger.fatal({ event: 'google_search_init_config_error' }, errorMsg);
-             throw new Error(errorMsg);
+            const errorMsg = "Critical: Google CSE ID (GOOGLE_CSE_ID) is missing in configuration. Google Search will not function.";
+            this.serviceBaseLogger.fatal({ event: 'google_search_init_config_error' }, errorMsg);
+            throw new Error(errorMsg);
         }
         this.cseId = cseIdFromConfig;
 
@@ -75,13 +75,12 @@ export class GoogleSearchService {
     async search(searchQuery: string, parentLogger?: Logger): Promise<GoogleSearchResult[]> {
         const logger = this.getMethodLogger(parentLogger, 'search', { searchQuery });
 
-        logger.info({ event: 'search_attempt_start' }, `Starting Google Search for query: "${searchQuery}"`);
         let lastSearchError: GoogleSearchError | null = null; // Store the last encountered error
 
         // Loop for retries + initial attempt
         for (let attempt = 1; attempt <= this.maxRetries + 1; attempt++) {
             const attemptContext = { attempt, maxAttempts: this.maxRetries + 1 };
-            logger.debug({ ...attemptContext, event: 'search_attempt_current_status' }, `Current attempt ${attempt}/${this.maxRetries + 1}.`);
+            // logger.debug({ ...attemptContext, event: 'search_attempt_current_status' }, `Current attempt ${attempt}/${this.maxRetries + 1}.`);
 
             // Early exit if all API keys are globally exhausted
             if (this.apiKeyManager.areAllKeysExhausted(logger)) {
@@ -102,7 +101,16 @@ export class GoogleSearchService {
 
             const keyIndex = this.apiKeyManager.getCurrentKeyIndex();
             const keyPrefix = apiKey.substring(0, 5) + '...'; // Log only prefix for security
-            logger.info({ ...attemptContext, keyIndex, keyPrefix, event: 'search_attempt_executing' }, `Executing Google Search attempt ${attempt} with key at index ${keyIndex}.`);
+            // *** SỬA Ở ĐÂY: Log 'search_attempt_start' với keyIndex ***
+            logger.info({
+                ...attemptContext,
+                keyIndex, // Thêm keyIndex
+                keyPrefix,
+                searchQuery, // Có thể thêm lại searchQuery nếu cần trong log này
+                event: 'search_attempt_start' // Giữ tên event này để handler hiện tại bắt được
+            }, `Starting Google Search attempt ${attempt} for query: "${searchQuery}" with key index ${keyIndex}.`);
+
+            // logger.info({ ...attemptContext, keyIndex, keyPrefix, event: 'search_attempt_executing' }, `Executing Google Search attempt ${attempt} with key at index ${keyIndex}.`);
 
             // Construct the search URL
             // `num=8` requests 8 results per query, which is the maximum allowed by Google CSE API for a single request.
@@ -205,9 +213,9 @@ export class GoogleSearchService {
                 const status = lastSearchError.details?.httpStatus || lastSearchError.details?.axiosCode || 'Unknown';
                 const googleErrorCode = lastSearchError.details?.googleErrorCode;
                 const isQuotaError = status === 429 || status === 403 || googleErrorCode === 429 || googleErrorCode === 403 ||
-                                     lastSearchError.details?.googleErrors?.some((e: any) =>
-                                         e.reason === 'rateLimitExceeded' || e.reason === 'dailyLimitExceeded' || e.reason === 'userRateLimitExceeded' || e.reason === 'quotaExceeded' || e.reason === 'forbidden'
-                                     ) || (typeof lastSearchError.message === 'string' && (lastSearchError.message.toLowerCase().includes('quota') || lastSearchError.message.toLowerCase().includes('limit')));
+                    lastSearchError.details?.googleErrors?.some((e: any) =>
+                        e.reason === 'rateLimitExceeded' || e.reason === 'dailyLimitExceeded' || e.reason === 'userRateLimitExceeded' || e.reason === 'quotaExceeded' || e.reason === 'forbidden'
+                    ) || (typeof lastSearchError.message === 'string' && (lastSearchError.message.toLowerCase().includes('quota') || lastSearchError.message.toLowerCase().includes('limit')));
 
                 logger.debug({ ...attemptContext, isQuotaError, event: 'search_error_type_check' }, `Quota error detected: ${isQuotaError}.`);
 
@@ -225,25 +233,25 @@ export class GoogleSearchService {
                     logger.error({ finalAttempt: attempt, keyPrefix, err: lastSearchError.message, details: lastSearchError.details, event: 'search_failed_max_retries' }, `Google Search failed after maximum retries for query "${searchQuery}".`);
                     // The `lastSearchError` will be thrown at the end of the loop.
                 } else if (!this.apiKeyManager.areAllKeysExhausted(logger)) { // Only retry if not all keys are exhausted
-                     if (!isQuotaError) {
+                    if (!isQuotaError) {
                         // If not a quota error, wait for the `retryDelay`
                         logger.info({ ...attemptContext, delaySeconds: this.retryDelay / 1000, event: 'search_retry_delay_start' }, `Waiting ${this.retryDelay / 1000}s before retry attempt ${attempt + 1}...`);
                         await new Promise(resolve => setTimeout(resolve, this.retryDelay));
-                     } else {
-                         // If it was a quota error, we already rotated the key, so retry immediately with the new key.
-                         logger.info({ ...attemptContext, event: 'search_retry_after_quota_rotation' }, `Quota error handled by key rotation. Proceeding to attempt ${attempt + 1} immediately with new key.`);
-                     }
+                    } else {
+                        // If it was a quota error, we already rotated the key, so retry immediately with the new key.
+                        logger.info({ ...attemptContext, event: 'search_retry_after_quota_rotation' }, `Quota error handled by key rotation. Proceeding to attempt ${attempt + 1} immediately with new key.`);
+                    }
                 } else {
-                     // All keys are exhausted and no further retries are possible
-                     logger.warn({ ...attemptContext, event: 'search_retry_skipped_all_keys_exhausted' }, "Skipping wait/retry as all keys are exhausted. No more attempts possible.");
-                     break; // Exit retry loop
+                    // All keys are exhausted and no further retries are possible
+                    logger.warn({ ...attemptContext, event: 'search_retry_skipped_all_keys_exhausted' }, "Skipping wait/retry as all keys are exhausted. No more attempts possible.");
+                    break; // Exit retry loop
                 }
             }
         }
 
         // After the loop, if `lastSearchError` is set, it means all attempts failed.
         if (lastSearchError) {
-             logger.error({
+            logger.error({
                 err: lastSearchError.message,
                 details: lastSearchError.details,
                 searchQuery,

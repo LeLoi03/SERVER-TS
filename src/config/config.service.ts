@@ -582,9 +582,9 @@ const envSchema = z.object({
     // --- Journal Crawl Configuration ---
     /**
      * Base URL for journal crawling (e.g., Scimago Journal Rank).
-     * @default 'https://www.scimagojr.com/journalrank.php?year=2023&type=j'
+     * @default 'https://www.scimagojr.com/journalrank.php?year=2024&type=j'
      */
-    JOURNAL_BASE_URL: z.string().default('https://www.scimagojr.com/journalrank.php?year=2023&type=j'),
+    JOURNAL_BASE_URL: z.string().default('https://www.scimagojr.com/journalrank.php?year=2024&type=j'),
     /**
      * Number of retries for failed journal crawl requests.
      * @default 3
@@ -628,7 +628,7 @@ const envSchema = z.object({
     /**
      * Comma-separated headers expected in the journal CSV file if `JOURNAL_CRAWL_MODE` is 'csv'.
      */
-    JOURNAL_CSV_HEADERS: z.string().default("Title,Type,SJR,H index,Total Docs. (2023),Total Docs. (3years),Total Refs. (2023),Total Cites (3years),Citable Docs. (3years),Cites / Doc. (2years),Ref. / Doc. (2023),Country,Details"),
+    JOURNAL_CSV_HEADERS: z.string().default("Title,Type,SJR,H index,Total Docs. (2024),Total Docs. (3years),Total Refs. (2024),Total Cites (3years),Citable Docs. (3years),Cites / Doc. (2years),Ref. / Doc. (2024),Country,Details"),
 
     // --- Other Configuration ---
     /**
