@@ -449,77 +449,107 @@ export const readAndGroupJournalLogs = async (
     };
 };
 
-export const doesRequestOverlapFilter = ( // Re-using from conference, should be fine
+export const doesRequestOverlapFilter = (
     reqStartMillis: number | null,
     reqEndMillis: number | null,
-    filterStartMillis: number | null,
-    filterEndMillis: number | null,
-    batchRequestId: string // Added for potential logging, not used in logic
+    filterStartMillisFromUser: number | null, // Đổi tên để rõ ràng
+    filterEndMillisFromUser: number | null,   // Đổi tên để rõ ràng
+    batchRequestId: string
 ): boolean => {
-    if (filterStartMillis === null && filterEndMillis === null) {
-        return true; // No time filter means all requests overlap
+    // Nếu không có filter thời gian từ người dùng, coi như luôn chồng lấn (bao gồm request)
+    if (filterStartMillisFromUser === null && filterEndMillisFromUser === null) {
+        return true;
     }
+
+    // Nếu request không có startTime hoặc endTime, không thể xác định chồng lấn nếu có filter
+    // (trừ khi filter cũng là null, đã xử lý ở trên)
     if (reqStartMillis === null || reqEndMillis === null) {
-        return false; // Request has no valid time, cannot overlap
+        return false;
     }
-    // Check for overlap
-    const overlaps = (filterEndMillis === null || reqStartMillis <= filterEndMillis) &&
-                     (filterStartMillis === null || reqEndMillis >= filterStartMillis);
+
+    // Điều kiện chồng lấn chuẩn:
+    // (Request bắt đầu TRƯỚC KHI Filter kết thúc) VÀ (Request kết thúc SAU KHI Filter bắt đầu)
+    const overlaps =
+        (filterEndMillisFromUser === null || reqStartMillis <= filterEndMillisFromUser) &&
+        (filterStartMillisFromUser === null || reqEndMillis >= filterStartMillisFromUser);
+
     return overlaps;
 };
 
-
-// --- filterJournalRequests giữ nguyên ---
-// Hàm này vẫn hữu ích để lọc theo thời gian cho dữ liệu của một request cụ thể
 export const filterJournalRequests = (
     allRequestsData: Map<string, JournalRequestLogData>, // Sử dụng JournalRequestLogData
-    filterStartMillis: number | null,
-    filterEndMillis: number | null,
+    filterStartMillisFromUser: number | null, // Tham số filter từ người dùng
+    filterEndMillisFromUser: number | null,   // Tham số filter từ người dùng
     batchRequestIdFilter?: string
 ): JournalFilteredData => { // Sử dụng JournalFilteredData
-    const filteredRequests = new Map<string, JournalRequestLogData>(); // Sử dụng JournalRequestLogData
-    let analysisStartMillis: number | null = null;
-    let analysisEndMillis: number | null = null;
+    const filteredRequestsOutput = new Map<string, JournalRequestLogData>(); // Sử dụng JournalRequestLogData
 
-    const targetRequestId = batchRequestIdFilter;
+    // Biến để theo dõi min/max start/end time của các *request được chọn*,
+    // dùng khi người dùng không cung cấp filter.
+    let minActualRequestStartTime: number | null = null;
+    let maxActualRequestEndTime: number | null = null;
 
-    if (targetRequestId) {
-        const requestInfo = allRequestsData.get(targetRequestId);
-        if (requestInfo) {
-            const overlapsTimeFilter = doesRequestOverlapFilter(
-                requestInfo.startTime,
-                requestInfo.endTime,
-                filterStartMillis,
-                filterEndMillis,
-                targetRequestId
-            );
-            if (overlapsTimeFilter) {
-                filteredRequests.set(targetRequestId, requestInfo);
-                analysisStartMillis = requestInfo.startTime;
-                analysisEndMillis = requestInfo.endTime;
+    const processSingleRequest = (batchRequestId: string, requestInfo: JournalRequestLogData) => {
+        const includeThisRequest = doesRequestOverlapFilter(
+            requestInfo.startTime,
+            requestInfo.endTime,
+            filterStartMillisFromUser,
+            filterEndMillisFromUser,
+            batchRequestId
+        );
+
+        if (includeThisRequest) {
+            filteredRequestsOutput.set(batchRequestId, requestInfo); // Lấy toàn bộ request
+
+            // Cập nhật min/max start/end time thực tế từ các request được chọn.
+            if (requestInfo.startTime !== null) {
+                if (minActualRequestStartTime === null || requestInfo.startTime < minActualRequestStartTime) {
+                    minActualRequestStartTime = requestInfo.startTime;
+                }
             }
-        }
-    } else {
-        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
-            if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
-                const includeRequest = doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestId
-                );
-                if (includeRequest) {
-                    filteredRequests.set(batchRequestId, requestInfo);
-                    if (requestInfo.startTime !== null) {
-                        analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
-                    }
-                    if (requestInfo.endTime !== null) {
-                        analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
-                    }
+            if (requestInfo.endTime !== null) {
+                // Sửa lỗi logic: phải là > maxActualRequestEndTime
+                if (maxActualRequestEndTime === null || requestInfo.endTime > maxActualRequestEndTime) {
+                    maxActualRequestEndTime = requestInfo.endTime;
                 }
             }
         }
+    };
+
+    if (batchRequestIdFilter) {
+        const requestInfo = allRequestsData.get(batchRequestIdFilter);
+        if (requestInfo) {
+            processSingleRequest(batchRequestIdFilter, requestInfo);
+        }
+    } else {
+        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
+            // Không cần kiểm tra requestInfo.startTime/endTime !== null ở đây nữa
+            // vì doesRequestOverlapFilter sẽ xử lý trường hợp đó.
+            processSingleRequest(batchRequestId, requestInfo);
+        }
     }
-    return { filteredRequests, analysisStartMillis, analysisEndMillis };
+
+    // Xác định analysisStartMillis và analysisEndMillis cho kết quả trả về.
+    // Đây sẽ là khoảng thời gian được sử dụng bởi calculateJournalFinalMetrics để đặt
+    // results.overall.startTime và results.overall.endTime.
+    let finalAnalysisStartMillis: number | null;
+    let finalAnalysisEndMillis: number | null;
+
+    if (filterStartMillisFromUser !== null || filterEndMillisFromUser !== null) {
+        // Nếu người dùng CÓ cung cấp filter, thì khoảng thời gian phân tích TỔNG THỂ
+        // (overall.startTime/endTime) sẽ phản ánh đúng filter của người dùng.
+        finalAnalysisStartMillis = filterStartMillisFromUser;
+        finalAnalysisEndMillis = filterEndMillisFromUser;
+    } else {
+        // Nếu người dùng KHÔNG cung cấp filter, thì khoảng thời gian phân tích TỔNG THỂ
+        // sẽ là min/max thực tế của các request được chọn.
+        finalAnalysisStartMillis = minActualRequestStartTime;
+        finalAnalysisEndMillis = maxActualRequestEndTime;
+    }
+
+    return {
+        filteredRequests: filteredRequestsOutput,
+        analysisStartMillis: finalAnalysisStartMillis,
+        analysisEndMillis: finalAnalysisEndMillis
+    };
 };

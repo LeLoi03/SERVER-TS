@@ -1,37 +1,33 @@
 // src/services/journalLogAnalysis.service.ts
 import 'reflect-metadata';
 import { singleton, inject, delay } from 'tsyringe';
-import fsPromises from 'fs/promises'; // Sử dụng fs.promises
-import fsSync from 'fs'; // Sử dụng fsSync cho existsSync
-import path from 'path'; // Thêm path
-// readline không cần thiết ở đây nếu readAndGroupJournalLogs xử lý nó
+import fsPromises from 'fs/promises';
+import fsSync from 'fs';
+import path from 'path';
 
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import {
     initializeJournalLogAnalysisResult,
-    readAndGroupJournalLogs, // Sẽ được cập nhật
+    readAndGroupJournalLogs,
     filterJournalRequests,
     processJournalLogEntry,
     calculateJournalFinalMetrics
-} from '../utils/logAnalysisJournal/logProcessingJournal.utils'; // Đảm bảo đường dẫn đúng
+} from '../utils/logAnalysisJournal/logProcessingJournal.utils';
 import {
     JournalLogAnalysisResult,
     JournalRequestSummary,
-    // Các kiểu chi tiết cho aggregation sẽ được xử lý bởi merger utils
-} from '../types/logAnalysisJournal/logAnalysisJournal.types'; // Đảm bảo đường dẫn đúng
+} from '../types/logAnalysisJournal/logAnalysisJournal.types';
 import { Logger } from 'pino';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
 import { LogAnalysisCacheService } from './logAnalysisCache.service';
-import { ReadLogResult } from '../types/logAnalysis'; // Import ReadLogResult
+import { ReadLogResult } from '../types/logAnalysis';
 
-// Import module gộp tiện ích
-import * as JournalAnalysisMerger from '../utils/logAnalysisJournal/journalAnalysisMerger.utils'; // Đảm bảo đường dẫn đúng
+import * as JournalAnalysisMerger from '../utils/logAnalysisJournal/journalAnalysisMerger.utils';
 
 @singleton()
 export class JournalLogAnalysisService {
-    // private readonly journalLogFilePath: string; // Bỏ đi
-    private readonly journalRequestLogBaseDir: string; // Thư mục chứa các file log theo request
+    private readonly journalRequestLogBaseDir: string;
     private readonly serviceLogger: Logger;
 
     constructor(
@@ -39,9 +35,8 @@ export class JournalLogAnalysisService {
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(delay(() => LogAnalysisCacheService)) private cacheService: LogAnalysisCacheService
     ) {
-        // this.journalLogFilePath = this.configService.journalLogFilePathForReading; // Bỏ đi
         this.journalRequestLogBaseDir = this.configService.appConfiguration.journalRequestLogDirectory;
-        this.serviceLogger = this.loggingService.getLogger('app', { // Dùng app logger cho service này
+        this.serviceLogger = this.loggingService.getLogger('app', {
             service: 'JournalLogAnalysisService'
         });
         this.serviceLogger.info(`Journal log analysis service initialized. Request log base dir: ${this.journalRequestLogBaseDir}`);
@@ -54,7 +49,7 @@ export class JournalLogAnalysisService {
     public async performJournalAnalysisAndUpdate(
         filterStartTimeInput?: number, // Unix ms
         filterEndTimeInput?: number,   // Unix ms
-        filterRequestId?: string // Đây sẽ là batchRequestId
+        filterRequestId?: string
     ): Promise<JournalLogAnalysisResult> {
         const logContext = {
             function: 'performJournalAnalysisAndUpdate',
@@ -64,20 +59,25 @@ export class JournalLogAnalysisService {
         };
         const logger = this.serviceLogger.child(logContext);
 
+        // --- XÁC ĐỊNH XEM CÓ FILTER THỜI GIAN ĐƯỢC ÁP DỤNG KHÔNG ---
+        const hasTimeFilter = filterStartTimeInput !== undefined || filterEndTimeInput !== undefined;
+
         if (filterRequestId) {
-            logger.info(`Analyzing specific journal request ID: ${filterRequestId}`);
-            let analysisResult: JournalLogAnalysisResult | null = null;
-
-            // Đường dẫn file log cụ thể cho request này
+            logger.info(`Analyzing specific journal request ID: ${filterRequestId}${hasTimeFilter ? ' WITH time filter.' : '.'}`);
             const requestLogFilePath = this.configService.getRequestSpecificLogFilePath('journal', filterRequestId);
+            let analysisResult: JournalLogAnalysisResult; // Không cần null nữa
 
-            if (this.configService.analysisCacheEnabled) {
+            // --- LOGIC ĐỌC CACHE ĐƯỢC SỬA ĐỔI ---
+            if (this.configService.analysisCacheEnabled && !hasTimeFilter) { // <<<< THAY ĐỔI Ở ĐÂY
+                logger.debug(`Attempting to read from cache for journal request ${filterRequestId} as no time filter is applied.`);
                 const cachedResult = await this.cacheService.readFromCache<JournalLogAnalysisResult>('journal', filterRequestId);
                 if (cachedResult) {
-                    if (!['Processing', 'Unknown'].includes(cachedResult.status || '')) {
+                    if (cachedResult.status && !['Processing', 'Unknown'].includes(cachedResult.status)) { // Sửa: cachedResult.status (không phải cachedResult.status || '')
                         logger.info(`Returning valid cached journal result for request ID: ${filterRequestId} with status: ${cachedResult.status}`);
-                        cachedResult.logFilePath = requestLogFilePath; // Cập nhật logFilePath
+                        cachedResult.logFilePath = requestLogFilePath;
                         cachedResult.analysisTimestamp = new Date().toISOString();
+                        // Đối với journal, có thể không cần "trang trí" thêm gì đặc biệt từ cache
+                        // trừ khi có logic tương tự saveEvents của conference.
                         return cachedResult;
                     } else {
                         logger.info(`Cached journal result for ${filterRequestId} is '${cachedResult.status}'. Will perform live analysis.`);
@@ -85,35 +85,42 @@ export class JournalLogAnalysisService {
                 } else {
                     logger.info(`No cache found for journal request ${filterRequestId}. Performing live analysis.`);
                 }
-            } else {
+            } else if (hasTimeFilter) {
+                logger.info(`Time filter is active for journal request ${filterRequestId}. Skipping cache read. Performing live analysis.`);
+            } else { // Caching is disabled
                 logger.info('Caching is disabled. Performing live analysis for journal request.');
             }
 
             // Phân tích live cho request ID cụ thể
             analysisResult = await this.analyzeJournalLiveLogsForRequest(
-                filterRequestId, // Luôn truyền ID
-                requestLogFilePath, // Truyền đường dẫn file log
+                filterRequestId,
+                requestLogFilePath,
                 filterStartTimeInput,
                 filterEndTimeInput
             );
 
-            if (this.configService.analysisCacheEnabled &&
+            // --- LOGIC GHI CACHE ĐƯỢC SỬA ĐỔI ---
+            // Chỉ ghi vào cache nếu kết quả này được tạo ra MÀ KHÔNG CÓ filter thời gian.
+            if (this.configService.analysisCacheEnabled && !hasTimeFilter && // <<<< THAY ĐỔI Ở ĐÂY
                 analysisResult.status && !['Processing', 'Unknown'].includes(analysisResult.status)) {
-                logger.info(`Caching live journal analysis result for ${filterRequestId} with status ${analysisResult.status}.`);
+                logger.info(`Caching live journal analysis result (generated without time filter) for ${filterRequestId} with status ${analysisResult.status}.`);
                 await this.cacheService.writeToCache('journal', filterRequestId, analysisResult);
+            } else if (this.configService.analysisCacheEnabled && hasTimeFilter) {
+                logger.info(`Live journal analysis result for ${filterRequestId} was generated WITH a time filter. Skipping cache write.`);
             }
             return analysisResult;
 
         } else { // Không có filterRequestId -> aggregation
-            logger.info('Analyzing all journal requests (aggregation).');
+            logger.info(`Aggregating all journal requests${hasTimeFilter ? ' WITH time filter.' : '.'}`);
             return this.aggregateAllJournalAnalyses(filterStartTimeInput, filterEndTimeInput);
         }
     }
 
-    // Đổi tên và sửa đổi hàm này để phân tích một file log cụ thể của request
+    // Hàm analyzeJournalLiveLogsForRequest giữ nguyên logic bên trong của nó.
+    // Nó nhận filterStartTimeInput, filterEndTimeInput và sẽ áp dụng chúng.
     private async analyzeJournalLiveLogsForRequest(
-        batchRequestId: string, // Bắt buộc
-        requestLogFilePath: string, // Đường dẫn file log của request
+        batchRequestId: string,
+        requestLogFilePath: string,
         filterStartTimeInput?: number,
         filterEndTimeInput?: number
     ): Promise<JournalLogAnalysisResult> {
@@ -121,7 +128,6 @@ export class JournalLogAnalysisService {
         const logger = this.serviceLogger.child(logContext);
         logger.info('Performing live journal log analysis for a specific request.');
 
-        // Sử dụng requestLogFilePath và batchRequestId khi khởi tạo
         const results = initializeJournalLogAnalysisResult(requestLogFilePath, batchRequestId);
         const filterStartMillis = filterStartTimeInput || null;
         const filterEndMillis = filterEndTimeInput || null;
@@ -135,14 +141,12 @@ export class JournalLogAnalysisService {
 
         try {
             if (!fsSync.existsSync(requestLogFilePath)) {
-                results.status = 'Failed'; // Hoặc 'NoRequestsAnalyzed'
+                results.status = 'Failed';
                 results.errorMessage = `Journal log file for request ${batchRequestId} not found: ${requestLogFilePath}.`;
                 logger.error(results.errorMessage);
                 return results;
             }
 
-            // readAndGroupJournalLogs cần được gọi với đường dẫn file log của request
-            // và batchRequestId để nó biết chỉ xử lý ID đó.
             const { requestsData, totalEntries, parsedEntries, parseErrors, logProcessingErrors: readLogErrors }: ReadLogResult =
                 await readAndGroupJournalLogs(requestLogFilePath, batchRequestId);
 
@@ -151,7 +155,6 @@ export class JournalLogAnalysisService {
             results.parseErrors = parseErrors;
             results.logProcessingErrors.push(...readLogErrors);
 
-            // Các kiểm tra sớm về dữ liệu log
             if (requestsData.size === 0 && parsedEntries > 0) {
                 results.status = 'NoRequestsAnalyzed';
                 results.errorMessage = `No journal request data found for ${batchRequestId} in its log file, though entries were parsed.`;
@@ -168,16 +171,15 @@ export class JournalLogAnalysisService {
                 logger.warn(results.errorMessage); return results;
             }
 
-
             const {
-                filteredRequests, // Sẽ chỉ chứa 1 entry nếu readAndGroupJournalLogs hoạt động đúng
+                filteredRequests,
                 analysisStartMillis: actualAnalysisStartMillis,
                 analysisEndMillis: actualAnalysisEndMillis
-            } = filterJournalRequests( // Hàm này vẫn dùng để lọc theo thời gian
+            } = filterJournalRequests(
                 requestsData,
                 filterStartMillis,
                 filterEndMillis,
-                batchRequestId // Luôn truyền batchRequestId
+                batchRequestId
             );
 
             results.analyzedRequestIds = Array.from(filteredRequests.keys());
@@ -189,20 +191,18 @@ export class JournalLogAnalysisService {
                 return results;
             }
 
-            const journalLastTimestamp: { [compositeKey: string]: number } = {}; // compositeKey có thể là journalName hoặc tương tự
+            const journalLastTimestamp: { [compositeKey: string]: number } = {};
             const requestLogData = filteredRequests.get(batchRequestId);
 
             if (requestLogData) {
-                // Khởi tạo request summary cho batchRequestId này
                 results.requests[batchRequestId] = {
                     batchRequestId,
                     startTime: requestLogData.startTime ? new Date(requestLogData.startTime).toISOString() : null,
                     endTime: requestLogData.endTime ? new Date(requestLogData.endTime).toISOString() : null,
                     durationSeconds: (requestLogData.startTime && requestLogData.endTime) ? Math.round((requestLogData.endTime - requestLogData.startTime) / 1000) : null,
                     status: 'Processing',
-                    dataSource: requestLogData.dataSource, // dataSource nên được thêm vào RequestLogData bởi readAndGroupJournalLogs
+                    dataSource: requestLogData.dataSource,
                     errorMessages: [],
-                    // Các trường count sẽ được cập nhật trong calculateJournalFinalMetrics
                 };
 
                 for (const logEntry of requestLogData.logs) {
@@ -215,7 +215,7 @@ export class JournalLogAnalysisService {
             logger.info(`Live journal analysis for ${batchRequestId} finished with status: ${results.status}, errorMessage: ${results.errorMessage}`);
             return results;
 
-        } catch (error: any) {
+        } catch (error: any) { // Giữ any để bắt mọi loại lỗi
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.error({ err: { message: errorMessage, stack: errorStack } }, `Fatal error during live journal analysis for ${batchRequestId}: "${errorMessage}".`);
             results.status = 'Failed';
@@ -225,6 +225,9 @@ export class JournalLogAnalysisService {
         }
     }
 
+    // Hàm aggregateAllJournalAnalyses giữ nguyên logic bên trong của nó.
+    // Nó sẽ gọi lại performJournalAnalysisAndUpdate, và logic bỏ qua cache khi có filter
+    // sẽ được áp dụng ở đó cho từng request con.
     private async aggregateAllJournalAnalyses(
         filterStartTimeInput?: number,
         filterEndTimeInput?: number
@@ -232,12 +235,11 @@ export class JournalLogAnalysisService {
         const logger = this.serviceLogger.child({ function: 'aggregateAllJournalAnalyses' });
         logger.info('Aggregating analysis for all journal requests.');
 
-        // aggregatedResults sẽ không có logFilePath chung nữa
         const aggregatedResults: JournalLogAnalysisResult = initializeJournalLogAnalysisResult(undefined);
         aggregatedResults.status = 'Processing';
 
-        const filterStartMillis = filterStartTimeInput || null;
-        const filterEndMillis = filterEndTimeInput || null;
+        // const filterStartMillis = filterStartTimeInput || null; // Không cần ở đây vì sẽ truyền xuống
+        // const filterEndMillis = filterEndTimeInput || null;
 
         let cachedRequestIds: string[] = [];
         if (this.configService.analysisCacheEnabled) {
@@ -274,17 +276,17 @@ export class JournalLogAnalysisService {
             return aggregatedResults;
         }
 
-
         let overallMinStartTimeMs: number | null = null;
         let overallMaxEndTimeMs: number | null = null;
         let totalAggregatedDurationSeconds = 0;
 
         for (const reqId of allUniqueRequestIds) {
+            // performJournalAnalysisAndUpdate sẽ xử lý việc đọc cache (hoặc bỏ qua nếu có filter)
+            // hoặc phân tích live cho reqId này
             const singleRequestAnalysis = await this.performJournalAnalysisAndUpdate(
                 filterStartTimeInput, filterEndTimeInput, reqId
             );
 
-            // Xử lý các request không hợp lệ hoặc không có dữ liệu
             if (singleRequestAnalysis.status === 'Failed' ||
                 singleRequestAnalysis.status === 'NoRequestsAnalyzed' ||
                 (singleRequestAnalysis.analyzedRequestIds.length === 0 && singleRequestAnalysis.filterRequestId === reqId)) {
@@ -294,7 +296,7 @@ export class JournalLogAnalysisService {
                         batchRequestId: reqId, startTime: null, endTime: null, durationSeconds: 0,
                         totalJournalsInputForRequest: 0, processedJournalsCountForRequest: 0,
                         status: singleRequestAnalysis.status || 'NotFoundInAggregation',
-                        dataSource: undefined, // Hoặc lấy từ singleRequestAnalysis nếu có
+                        dataSource: singleRequestAnalysis.requests[reqId]?.dataSource, // Cố gắng lấy dataSource
                         errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
                     } as JournalRequestSummary;
                 } else {
@@ -339,7 +341,6 @@ export class JournalLogAnalysisService {
                     totalAggregatedDurationSeconds += reqSummary.durationSeconds;
                 }
 
-                // Sử dụng merger functions
                 JournalAnalysisMerger.mergeOverallJournalAnalysis(aggregatedResults.overall, singleRequestAnalysis.overall, reqSummary.dataSource);
                 JournalAnalysisMerger.mergePlaywrightJournalAnalysis(aggregatedResults.playwright, singleRequestAnalysis.playwright);
                 JournalAnalysisMerger.mergeApiKeyManagerJournalAnalysis(aggregatedResults.apiKeyManager, singleRequestAnalysis.apiKeyManager);
@@ -363,7 +364,7 @@ export class JournalLogAnalysisService {
 
             } else {
                 logger.warn(`No request data found in single analysis for journal request ${reqId}, though it was expected.`);
-                if (!aggregatedResults.requests[reqId]) {
+                 if (!aggregatedResults.requests[reqId]) {
                     aggregatedResults.requests[reqId] = {
                         batchRequestId: reqId, startTime: null, endTime: null, durationSeconds: 0,
                         status: 'Unknown', dataSource: undefined, errorMessages: ['Data missing in aggregation step']
@@ -375,12 +376,11 @@ export class JournalLogAnalysisService {
             }
         }
 
-        // Tính toán lại các trường tổng hợp cuối cùng nếu cần
         if (overallMinStartTimeMs) aggregatedResults.overall.startTime = new Date(overallMinStartTimeMs).toISOString();
         if (overallMaxEndTimeMs) aggregatedResults.overall.endTime = new Date(overallMaxEndTimeMs).toISOString();
         aggregatedResults.overall.durationSeconds = totalAggregatedDurationSeconds;
 
-        // --- Logic xác định status và errorMessage tổng hợp cho aggregatedResults ---
+        // --- Logic xác định status và errorMessage tổng hợp cho aggregatedResults (giữ nguyên như trước) ---
         if (aggregatedResults.analyzedRequestIds.length > 0) {
             const requestStatuses = aggregatedResults.analyzedRequestIds.map(id => aggregatedResults.requests[id]?.status);
             const requestErrorMessagesMap = new Map<string, string[]>();
@@ -447,7 +447,7 @@ export class JournalLogAnalysisService {
         }
 
         if ((aggregatedResults.status === 'Failed' || aggregatedResults.status === 'CompletedWithErrors') && !aggregatedResults.errorMessage) {
-            if (aggregatedResults.overall.totalJournalsFailed > 0) { // Sử dụng một metric tổng hợp của journal
+            if (aggregatedResults.overall.totalJournalsFailed > 0) {
                 aggregatedResults.errorMessage = `Aggregation completed with ${aggregatedResults.overall.totalJournalsFailed} failed journal processing tasks.`;
             } else {
                 aggregatedResults.errorMessage = `Aggregation finished with status ${aggregatedResults.status}, but no specific error message was generated.`;
@@ -459,9 +459,9 @@ export class JournalLogAnalysisService {
                 aggregatedResults.errorMessage = `Aggregation completed, but ${aggregatedResults.overall.totalJournalsFailed} journal processing tasks failed.`;
             }
         }
-        if (aggregatedResults.status === 'Completed' && aggregatedResults.overall.totalJournalsFailed === 0 /* && không có lỗi processing nào khác */) {
+        if (aggregatedResults.status === 'Completed' && aggregatedResults.overall.totalJournalsFailed === 0) {
             const hasRequestLevelErrors = aggregatedResults.analyzedRequestIds.some(id => {
-                const requestSummary = aggregatedResults.requests[id]; // Lấy ra một lần
+                const requestSummary = aggregatedResults.requests[id];
                 return requestSummary && requestSummary.errorMessages && requestSummary.errorMessages.length > 0;
             });
 
