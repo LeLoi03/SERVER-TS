@@ -261,25 +261,73 @@ export function mergeBatchProcessingAnalysis(target: BatchProcessingAnalysis, so
     target.apiResponseParseFailures += source.apiResponseParseFailures;
 }
 
+
+
 export function mergeFileOutputAnalysis(target: FileOutputAnalysis, source: FileOutputAnalysis): void {
     target.jsonlRecordsSuccessfullyWritten += source.jsonlRecordsSuccessfullyWritten;
     target.jsonlWriteErrors += source.jsonlWriteErrors;
-    if (source.csvFileGenerated) target.csvFileGenerated = true; // If any source generated it, mark as true
+
+    // Logic for csvFileGenerated: if any source is true, target becomes true.
+    // If target is initially null, and all sources are false or null, it remains null.
+    // If target is initially false, and all sources are false or null, it remains false.
+    if (source.csvFileGenerated === true) {
+        target.csvFileGenerated = true;
+    }
+    // Optional: if you want a 'false' from source to override a 'null' in target
+    // else if (target.csvFileGenerated === null && source.csvFileGenerated === false) {
+    //     target.csvFileGenerated = false;
+    // }
+
+
     target.csvRecordsAttempted += source.csvRecordsAttempted;
     target.csvRecordsSuccessfullyWritten += source.csvRecordsSuccessfullyWritten;
     target.csvWriteErrors += source.csvWriteErrors;
     target.csvOrphanedSuccessRecords += source.csvOrphanedSuccessRecords;
     target.csvPipelineFailures += source.csvPipelineFailures;
+
+    // Merge csvOtherErrors if it exists in the source
+    if (source.csvOtherErrors !== undefined) {
+        target.csvOtherErrors = (target.csvOtherErrors || 0) + source.csvOtherErrors;
+    }
 }
 
 export function mergeValidationStats(target: ValidationStats, source: ValidationStats): void {
+    // --- Validation Warnings ---
     target.totalValidationWarnings += source.totalValidationWarnings;
-    for (const field in source.warningsByField) target.warningsByField[field] = (target.warningsByField[field] || 0) + source.warningsByField[field];
+    for (const field in source.warningsByField) {
+        target.warningsByField[field] = (target.warningsByField[field] || 0) + source.warningsByField[field];
+    }
     target.warningsBySeverity.Low += source.warningsBySeverity.Low;
     target.warningsBySeverity.Medium += source.warningsBySeverity.Medium;
     target.warningsBySeverity.High += source.warningsBySeverity.High;
-    for (const msg in source.warningsByInsightMessage) target.warningsByInsightMessage[msg] = (target.warningsByInsightMessage[msg] || 0) + source.warningsByInsightMessage[msg];
+    for (const msg in source.warningsByInsightMessage) {
+        target.warningsByInsightMessage[msg] = (target.warningsByInsightMessage[msg] || 0) + source.warningsByInsightMessage[msg];
+    }
+
+    // --- Normalizations ---
     target.totalNormalizationsApplied += source.totalNormalizationsApplied;
-    for (const field in source.normalizationsByField) target.normalizationsByField[field] = (target.normalizationsByField[field] || 0) + source.normalizationsByField[field];
-    for (const reason in source.normalizationsByReason) target.normalizationsByReason[reason] = (target.normalizationsByReason[reason] || 0) + source.normalizationsByReason[reason];
+    for (const field in source.normalizationsByField) {
+        target.normalizationsByField[field] = (target.normalizationsByField[field] || 0) + source.normalizationsByField[field];
+    }
+    for (const reason in source.normalizationsByReason) {
+        target.normalizationsByReason[reason] = (target.normalizationsByReason[reason] || 0) + source.normalizationsByReason[reason];
+    }
+
+    // --- Data Corrections (Optional) ---
+    if (source.totalDataCorrections !== undefined) {
+        target.totalDataCorrections = (target.totalDataCorrections || 0) + source.totalDataCorrections;
+    }
+
+    if (source.correctionsByField) {
+        if (!target.correctionsByField) {
+            target.correctionsByField = {};
+        }
+        for (const field in source.correctionsByField) {
+            // Ensure source.correctionsByField[field] is a number before adding
+            const sourceValue = source.correctionsByField[field];
+            if (typeof sourceValue === 'number') {
+                 target.correctionsByField[field] = (target.correctionsByField[field] || 0) + sourceValue;
+            }
+        }
+    }
 }
