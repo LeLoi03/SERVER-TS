@@ -11,7 +11,7 @@ const LOG_PREFIX = "[BlacklistService]";
 
 // --- Get ConfigService Instance ---
 const configService = container.resolve(ConfigService);
-const DATABASE_URL: string | undefined = configService.config.DATABASE_URL;
+const DATABASE_URL: string | undefined = configService.databaseUrl;
 
 // Critical check for DATABASE_URL at module load time
 if (!DATABASE_URL) {

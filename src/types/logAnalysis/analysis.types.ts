@@ -213,7 +213,7 @@ export interface ConferenceLogAnalysisResult {
     /**
      * @property {string} logFilePath - Đường dẫn tệp của (các) tệp nhật ký đã được phân tích.
      */
-    logFilePath: string;
+    logFilePath: string | undefined;
     /**
      * @property {'Completed' | 'Failed' | 'Processing' | 'CompletedWithErrors' | 'PartiallyCompleted' | 'NoRequestsAnalyzed' | 'Unknown'} [status] - Trạng thái tổng thể của quá trình phân tích.
      * - 'Completed': Phân tích đã chạy hoàn tất. (Tất cả tác vụ hoàn thành)

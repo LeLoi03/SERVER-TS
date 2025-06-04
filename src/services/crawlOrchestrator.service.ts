@@ -1,7 +1,9 @@
 // src/services/crawlOrchestrator.service.ts
 import 'reflect-metadata';
 import { singleton, inject, container } from 'tsyringe';
-import { ConfigService, AppConfig } from '../config/config.service';
+// Import AppConfig from the new types file
+import { AppConfig } from '../config/types'; // Changed path
+import { ConfigService } from '../config'; // Assuming index.ts in config folder
 import { LoggingService } from './logging.service';
 import { ApiKeyManager } from './apiKey.manager';
 import { PlaywrightService } from './playwright.service';
@@ -10,7 +12,7 @@ import { HtmlPersistenceService } from './htmlPersistence.service';
 import { ResultProcessingService } from './resultProcessing.service';
 import { BatchProcessingService } from './batchProcessing.service';
 import { TaskQueueService } from './taskQueue.service';
-import { ConferenceProcessorService } from './conferenceProcessor.service';
+import { ConferenceProcessorService } from './conferenceProcessor.service'; // Assuming this is used later
 import { Logger } from 'pino';
 import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl/crawl.types';
 import fs from 'fs';
@@ -25,7 +27,7 @@ import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the err
  */
 @singleton()
 export class CrawlOrchestratorService {
-    private readonly configApp: AppConfig;
+    private readonly configApp: AppConfig; // This will now hold the rawConfig
     private readonly baseLogger: Logger;
 
     /**
@@ -55,7 +57,8 @@ export class CrawlOrchestratorService {
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
     ) {
         this.baseLogger = this.loggingService.getLogger('conference', { service: 'CrawlOrchestratorServiceBase' });
-        this.configApp = this.configService.config;
+        // Initialize configApp with rawConfig from ConfigService
+        this.configApp = this.configService.rawConfig; // Corrected
     }
 
     /**
@@ -165,7 +168,7 @@ export class CrawlOrchestratorService {
                         conferenceTitle: csvRow.title,
                     }, `CSV record for ${csvRow.acronym} considered successfully written.`);
                 });
-             } else {
+            } else {
                 let csvActuallyGenerated = false;
                 try {
                     if (fs.existsSync(csvPathForThisBatch) && fs.statSync(csvPathForThisBatch).size > 0) {

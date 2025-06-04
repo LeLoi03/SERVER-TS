@@ -31,17 +31,17 @@ const MERCURY_MODEL_VALUE = 'gemini-2.5-flash-preview-05-20';
 
 try {
     configService = container.resolve(ConfigService);
-    MAX_TURNS_HOST_AGENT = configService.config.MAX_TURNS_HOST_AGENT;
-    ALLOWED_SUB_AGENTS = configService.config.ALLOWED_SUB_AGENTS;
-    const key = configService.config.GEMINI_API_KEY;
+    MAX_TURNS_HOST_AGENT = configService.maxTurnsHostAgent;
+    ALLOWED_SUB_AGENTS = configService.allowedSubAgents;
+    const key = configService.primaryGeminiApiKey;
     if (!key) {
         const errorMsg = "CRITICAL: GEMINI_API_KEY is not configured.";
         logToFile(errorMsg);
         throw new Error(errorMsg);
     }
     geminiApiKey = key;
-    defaultHostAgentModelName = configService.config.GEMINI_HOST_AGENT_MODEL_NAME;
-    subAgentModelName = configService.config.GEMINI_SUB_AGENT_MODEL_NAME;
+    defaultHostAgentModelName = configService.hostAgentModelName;
+    subAgentModelName = configService.subAgentModelName;
     // hostAgentGenerationConfig sẽ được lấy và điều chỉnh trong getHostAgentDependencies
     subAgentGenerationConfig = configService.subAgentGenerationConfig; // Giữ nguyên cho sub-agent
 

@@ -30,13 +30,13 @@ export const fetchGoogleImage = async (
     const childLogger = logger.child({ function: 'fetchGoogleImage', issn: formattedISSN, title: title || 'N/A' });
     childLogger.info({ event: 'fetch_google_image_start' }, 'Starting Google image search.');
 
-    const cseId = configService.config.GOOGLE_CSE_ID;
+    const cseId = configService.googleSearchConfig.cseId;
 
     // --- Adjust retryOptions to match the RetryOptions type ---
     const retryOptions: RetryOptions = {
-        retries: configService.config.MAX_SEARCH_RETRIES,
-        minTimeout: configService.config.RETRY_DELAY_MS, // Map 'delay' to 'minTimeout'
-        factor: configService.config.JOURNAL_RETRY_FACTOR || 2, // Use a sensible default or add a specific config for search retry factor
+        retries: configService.journalRetryOptions.retries,
+        minTimeout: configService.journalRetryOptions.minTimeout, // Map 'delay' to 'minTimeout'
+        factor: configService.journalRetryOptions.factor || 2, // Use a sensible default or add a specific config for search retry factor
         // Add other properties if needed by your RetryOptions, e.g.:
         // maxTimeout: configService.config.MAX_RETRY_DELAY_MS || 60000, // Example
     };

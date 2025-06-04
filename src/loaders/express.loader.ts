@@ -32,7 +32,7 @@ export const loadExpress = (): Express => {
 
     // Configure CORS options based on `ConfigService`.
     const corsOptions = {
-        origin: configService.config.CORS_ALLOWED_ORIGINS,
+        origin: configService.corsAllowedOrigins,
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         credentials: true,
         optionsSuccessStatus: 200

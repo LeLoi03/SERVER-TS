@@ -352,7 +352,7 @@ export class BatchProcessingService {
             return false;
         }
 
-        const year = this.configService.config.YEAR2;
+        const year = this.configService.year2;
         const methodLogger = parentLogger.child({
             batchServiceMethod: 'processConferenceSave',
             originalConferenceAcronym: conference.Acronym, // Log original

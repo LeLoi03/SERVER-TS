@@ -19,9 +19,9 @@ export const processPage = async (
     childLogger.info({ event: 'process_page_start' }, 'Starting page processing.');
 
     const scimagoRetryOptions: RetryOptions = {
-        retries: configService.config.JOURNAL_RETRY_RETRIES,
-        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
-        factor: configService.config.JOURNAL_RETRY_FACTOR,
+        retries: configService.journalRetryOptions.retries,
+        minTimeout: configService.journalRetryOptions.minTimeout,
+        factor: configService.journalRetryOptions.factor,
     };
 
     // Route blocking logic
@@ -126,9 +126,9 @@ export const fetchDetails = async (
     childLogger.info({ event: 'fetch_details_start' }, `Starting detail fetch.`);
 
     const scimagoRetryOptions: RetryOptions = {
-        retries: configService.config.JOURNAL_RETRY_RETRIES,
-        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
-        factor: configService.config.JOURNAL_RETRY_FACTOR,
+        retries: configService.journalRetryOptions.retries,
+        minTimeout: configService.journalRetryOptions.minTimeout,
+        factor: configService.journalRetryOptions.factor,
     };
 
     try {
@@ -369,11 +369,10 @@ export const getLastPageNumber = async (
     childLogger.info({ event: 'get_last_page_start' }, 'Attempting to determine last page number.');
     const url = `${baseUrl}&page=1`;
 
-    // Retry options for this specific operation (can be same as others or different)
     const scimagoRetryOptions: RetryOptions = {
-        retries: configService.config.JOURNAL_RETRY_RETRIES,
-        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
-        factor: configService.config.JOURNAL_RETRY_FACTOR,
+        retries: configService.journalRetryOptions.retries,
+        minTimeout: configService.journalRetryOptions.minTimeout,
+        factor: configService.journalRetryOptions.factor,
     };
 
     try {

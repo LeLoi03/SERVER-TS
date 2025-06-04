@@ -2,7 +2,9 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { type UsageMetadata } from "@google/generative-ai";
-import { ConfigService, type AppConfig } from '../config/config.service';
+// Import AppConfig from the new types file
+import { AppConfig } from '../config/types'; // Changed path
+import { ConfigService } from '../config'; // Assuming index.ts in config folder
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
 import path from 'path';
@@ -14,15 +16,19 @@ import { GeminiApiOrchestratorService } from './gemini/geminiApiOrchestrator.ser
 import { CrawlModelType } from '../types/crawl/crawl.types';
 import { ApiResponse, GeminiApiParams, OrchestrationResult } from '../types/crawl';
 
+// Import constants for API types
+import { API_TYPE_EXTRACT, API_TYPE_DETERMINE, API_TYPE_CFP } from '../config/constants';
+
 
 @singleton()
 export class GeminiApiService {
     private readonly serviceBaseLogger: Logger;
-    private readonly appConfig: AppConfig;
+    // Remove: private readonly appConfig: AppConfig; // No longer needed as a direct member
 
-    public readonly API_TYPE_EXTRACT = 'extract';
-    public readonly API_TYPE_DETERMINE = 'determine';
-    public readonly API_TYPE_CFP = 'cfp';
+    // Use constants imported from constants.ts
+    public readonly API_TYPE_EXTRACT = API_TYPE_EXTRACT;
+    public readonly API_TYPE_DETERMINE = API_TYPE_DETERMINE;
+    public readonly API_TYPE_CFP = API_TYPE_CFP;
 
     private modelIndices: {
         [apiType: string]: number;
@@ -34,7 +40,6 @@ export class GeminiApiService {
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
-        // @inject(GeminiClientManagerService) private clientManager: GeminiClientManagerService, // Không dùng trực tiếp
         @inject(GeminiCachePersistenceService) private cachePersistence: GeminiCachePersistenceService,
         @inject(GeminiApiOrchestratorService) private apiOrchestrator: GeminiApiOrchestratorService,
         @inject(GeminiResponseHandlerService) private responseHandler: GeminiResponseHandlerService,
@@ -42,8 +47,10 @@ export class GeminiApiService {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiService' });
         this.serviceBaseLogger.info("Constructing GeminiApiService...");
 
-        this.appConfig = this.configService.config;
-        const baseOutputDir = this.configService.baseOutputDir || path.join(process.cwd(), 'outputs');
+        // Remove: this.appConfig = this.configService.config;
+
+        // Use the specific getter for baseOutputDir
+        const baseOutputDir = this.configService.baseOutputDir; // Corrected
         this.requestLogDir = path.join(baseOutputDir, 'gemini_api_requests_log');
         this.serviceBaseLogger.info({ requestLogDir: this.requestLogDir }, "Gemini API request logging directory initialized.");
 
@@ -99,22 +106,40 @@ export class GeminiApiService {
         let modelList: string[];
         let fallbackModelName: string | undefined;
 
+
+        const geminiApiTypeConfig = this.configService.geminiApiTypeConfiguration;
+
+
         switch (apiType) {
-            case this.API_TYPE_EXTRACT:
-                modelList = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_EXTRACT_TUNED_MODEL_NAMES : this.appConfig.GEMINI_EXTRACT_NON_TUNED_MODEL_NAMES;
-                fallbackModelName = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_EXTRACT_TUNED_FALLBACK_MODEL_NAME : this.appConfig.GEMINI_EXTRACT_NON_TUNED_FALLBACK_MODEL_NAME;
+            case API_TYPE_EXTRACT: // Use imported constants
+                modelList = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.extractTunedModelNames
+                    : geminiApiTypeConfig.extractNonTunedModelNames;
+                fallbackModelName = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.extractTunedFallbackModelName
+                    : geminiApiTypeConfig.extractNonTunedFallbackModelName;
                 break;
-            case this.API_TYPE_DETERMINE:
-                modelList = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_DETERMINE_TUNED_MODEL_NAMES : this.appConfig.GEMINI_DETERMINE_NON_TUNED_MODEL_NAMES;
-                fallbackModelName = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_DETERMINE_TUNED_FALLBACK_MODEL_NAME : this.appConfig.GEMINI_DETERMINE_NON_TUNED_FALLBACK_MODEL_NAME;
+            case API_TYPE_DETERMINE: // Use imported constants
+                modelList = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.determineTunedModelNames
+                    : geminiApiTypeConfig.determineNonTunedModelNames;
+                fallbackModelName = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.determineTunedFallbackModelName
+                    : geminiApiTypeConfig.determineNonTunedFallbackModelName;
                 break;
-            case this.API_TYPE_CFP:
-                modelList = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_CFP_TUNED_MODEL_NAMES : this.appConfig.GEMINI_CFP_NON_TUNED_MODEL_NAMES;
-                fallbackModelName = initialCrawlModelType === 'tuned' ? this.appConfig.GEMINI_CFP_TUNED_FALLBACK_MODEL_NAME : this.appConfig.GEMINI_CFP_NON_TUNED_FALLBACK_MODEL_NAME;
+            case API_TYPE_CFP: // Use imported constants
+                modelList = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.cfpTunedModelNames
+                    : geminiApiTypeConfig.cfpNonTunedModelNames;
+                fallbackModelName = initialCrawlModelType === 'tuned'
+                    ? geminiApiTypeConfig.cfpTunedFallbackModelName
+                    : geminiApiTypeConfig.cfpNonTunedFallbackModelName;
                 break;
             default:
                 methodLogger.error({ event: 'gemini_unknown_api_type', apiTypeReceived: apiType }, `Unknown API type: ${apiType}`);
-                return defaultApiResponse;
+                // return defaultApiResponse; // Or throw error
+                // Ensure defaultApiResponse is defined or handle appropriately
+                throw new Error(`Unknown API type: ${apiType}`); // More robust to throw
         }
 
         if (!modelList || modelList.length === 0) {
@@ -136,7 +161,7 @@ export class GeminiApiService {
         try {
             const orchestrationResult: OrchestrationResult = await this.apiOrchestrator.orchestrateApiCall({
                 batchPrompt: batch, batchIndex, title, acronym,
-                apiType, modelName: selectedModelName, fallbackModelName, 
+                apiType, modelName: selectedModelName, fallbackModelName,
                 crawlModel: initialCrawlModelType, // Truyền initialCrawlModelType vào orchestrator
                 requestLogDir: this.requestLogDir,
             }, methodLogger);
@@ -159,9 +184,9 @@ export class GeminiApiService {
                 } else if (cleanedResponseText !== orchestrationResult.responseText) {
                     cleaningLogger.debug({ event: 'json_clean_applied', apiType }, `Successfully cleaned JSON response for ${apiType}.`);
                 } else {
-                     cleaningLogger.trace({ event: 'json_clean_not_needed', apiType }, `JSON response for ${apiType} did not require cleaning.`);
+                    cleaningLogger.trace({ event: 'json_clean_not_needed', apiType }, `JSON response for ${apiType} did not require cleaning.`);
                 }
-                 // Đặc biệt cho determineLinks và cfp, kiểm tra cấu trúc JSON sau khi clean
+                // Đặc biệt cho determineLinks và cfp, kiểm tra cấu trúc JSON sau khi clean
                 if (apiType === this.API_TYPE_DETERMINE || apiType === this.API_TYPE_CFP) {
                     if (!cleanedResponseText && orchestrationResult.responseText) { // Nếu clean làm rỗng
                         const originalFirstCurly = orchestrationResult.responseText.indexOf('{');
@@ -172,12 +197,12 @@ export class GeminiApiService {
                             cleaningLogger.warn({ rawResponseSnippet: orchestrationResult.responseText.substring(0, 200), event: `json_clean_structure_not_found_after_clean_for_${apiType}` }, `No JSON structure in ${apiType} response after cleaning (resulted in empty).`);
                         }
                     } else if (cleanedResponseText) {
-                         try {
+                        try {
                             JSON.parse(cleanedResponseText);
-                            cleaningLogger.debug({ event: `json_clean_final_valid_for_${apiType}`}, `Cleaned response for ${apiType} is valid JSON.`);
-                         } catch (e) {
-                            cleaningLogger.error({ rawResponseSnippet: cleanedResponseText.substring(0,200), event: `json_clean_final_invalid_for_${apiType}`}, `Cleaned response for ${apiType} is NOT valid JSON.`);
-                         }
+                            cleaningLogger.debug({ event: `json_clean_final_valid_for_${apiType}` }, `Cleaned response for ${apiType} is valid JSON.`);
+                        } catch (e) {
+                            cleaningLogger.error({ rawResponseSnippet: cleanedResponseText.substring(0, 200), event: `json_clean_final_invalid_for_${apiType}` }, `Cleaned response for ${apiType} is NOT valid JSON.`);
+                        }
                     }
                 }
 
@@ -205,7 +230,7 @@ export class GeminiApiService {
                 return defaultApiResponse;
             }
         } catch (error: unknown) {
-            const errorDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0,300) } : { details: String(error) };
+            const errorDetails = error instanceof Error ? { name: error.name, message: error.message, stack: error.stack?.substring(0, 300) } : { details: String(error) };
             methodLogger.error({
                 event: 'gemini_public_method_unhandled_error',
                 apiType,

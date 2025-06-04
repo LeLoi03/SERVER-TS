@@ -8,11 +8,11 @@ import { container } from 'tsyringe'; // Tsyringe IoC container for dependency r
 import { loadExpress } from './express.loader';
 import { connectDB } from './database.loader';
 import { initSocketIO } from './socket.loader'; // No need for getIO here unless directly used
-import { scheduleJobs } from './jobs.loader';
+// import { scheduleJobs } from './jobs.loader';
 
 // Import services that need to be resolved and invoked
-import { LogAnalysisService } from '../services/logAnalysisConference.service';
-import { LogAnalysisJournalService } from '../services/logAnalysisJournal.service';
+import { ConferenceLogAnalysisService } from '../services/conferenceLogAnalysis.service';
+import { JournalLogAnalysisService } from '../services/journalLogAnalysis.service';
 
 // Import the custom logging utility
 import logToFile from '../utils/logger';
@@ -75,11 +75,11 @@ export const initLoaders = async (): Promise<LoadersResult> => {
         const io = initSocketIO(httpServer);
         // logToFile(`${logContext} Socket.IO server initialized.`);
 
-        // --- 5. Schedule Cron Jobs ---
-        // `scheduleJobs` is expected to define and start cron tasks, and should use `logToFile`.
-        logToFile(`${logContext} Scheduling cron jobs...`);
-        scheduleJobs();
-        // logToFile(`${logContext} Cron jobs scheduled.`);
+        // // --- 5. Schedule Cron Jobs ---
+        // // `scheduleJobs` is expected to define and start cron tasks, and should use `logToFile`.
+        // logToFile(`${logContext} Scheduling cron jobs...`);
+        // scheduleJobs();
+        // // logToFile(`${logContext} Cron jobs scheduled.`);
 
         // --- 6. Perform Initial Application Tasks ---
         // This section executes any necessary one-time tasks on startup.
@@ -88,12 +88,12 @@ export const initLoaders = async (): Promise<LoadersResult> => {
             const taskLogContext = `${logContext}[Task:InitialLogAnalysis]`;
             // logToFile(`${taskLogContext} Performing initial log analysis...`);
 
-            // Resolve and invoke the LogAnalysisService.
+            // Resolve and invoke the ConferenceLogAnalysis.
             // This service is expected to use `logToFile` internally for its operations.
-            const conferenceLogAnalysisService = container.resolve(LogAnalysisService);
-            const journalLogAnalysisService = container.resolve(LogAnalysisJournalService);
+            const conferenceConferenceLogAnalysis = container.resolve(ConferenceLogAnalysisService);
+            const journalLogAnalysisService = container.resolve(JournalLogAnalysisService);
 
-            await conferenceLogAnalysisService.performConferenceAnalysisAndUpdate();
+            await conferenceConferenceLogAnalysis.performConferenceAnalysisAndUpdate();
             await journalLogAnalysisService.performJournalAnalysisAndUpdate();
 
             // logToFile(`${taskLogContext} Initial log analysis completed successfully.`);

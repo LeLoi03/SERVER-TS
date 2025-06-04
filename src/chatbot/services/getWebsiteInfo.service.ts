@@ -22,7 +22,7 @@ const configService = container.resolve(ConfigService); // Resolve singleton ins
 
 // --- Retrieve configuration from ConfigService ---
 // Ensure WEBSITE_DESCRIPTION exists in config
-const WEBSITE_DESCRIPTION: string | undefined = configService.config.WEBSITE_DESCRIPTION;
+const WEBSITE_DESCRIPTION: string | undefined = configService.websiteDescription;
 
 // Critical check for WEBSITE_DESCRIPTION at module load time
 if (!WEBSITE_DESCRIPTION) {

@@ -2,9 +2,11 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
-import { type Part, GenerationConfig as SDKGenerationConfig, type UsageMetadata } from "@google/generative-ai";
-import { ConfigService, type GeminiApiConfig as GeneralApiTypeConfig } from '../../config/config.service';
+import { type Part, GenerateContentConfig as SDKGenerateContentConfig } from "@google/genai";
+import { type GeminiApiConfig as GeneralApiTypeConfig } from '../../config/types'; // <<<< THIS LINE IS CHANGED
 import { LoggingService } from '../logging.service';
+import { ConfigService } from '../../config'; 
+
 import { GeminiModelOrchestratorService } from './geminiModelOrchestrator.service';
 import { GeminiRateLimiterService } from './geminiRateLimiter.service';
 import { GeminiRetryHandlerService, } from './geminiRetryHandler.service';
@@ -32,7 +34,7 @@ export class GeminiApiOrchestratorService {
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiOrchestratorService' });
         this.generalApiTypeSettings = this.configService.geminiApiConfigs;
-        this.defaultMaxRetriesForFallback = this.configService.config.GEMINI_MAX_RETRIES;
+        this.defaultMaxRetriesForFallback = this.configService.geminiMaxRetries;
         this.serviceBaseLogger.info("Constructing GeminiApiOrchestratorService with updated retry/fallback logic.");
     }
 
@@ -96,7 +98,7 @@ export class GeminiApiOrchestratorService {
             let systemInstructionText = "";
             let fewShotParts: Part[] = [];
             let shouldUseCache = false;
-            let finalGenerationConfig: SDKGenerationConfig = { ...generalSettings.generationConfig };
+            let finalGenerationConfig: SDKGenerateContentConfig = { ...generalSettings.generationConfig };
             let finalBatchPromptForThisCall = originalBatchPrompt; // Start with the original prompt
 
             const isEffectivelyTunedCall = effectiveCrawlModelType === 'tuned';

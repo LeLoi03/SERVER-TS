@@ -7,7 +7,7 @@ import createCrawlRouter from './crawl/crawl.routes';
 import createLogAnalysisRouter from './logAnalysis/logAnalysis.routes';
 import createChatRouter from './chatbot/chat.routes'; // <<< ADD THIS IMPORT
 
-import { handleConferenceSaveEvent } from './save/save.controller';
+import { handleBatchConferenceSaveEvents } from './save/save.controller';
 /**
  * Creates and configures the main API router for version 1 (v1) of the API.
  * This router aggregates all feature-specific routers under the /api/v1 path.
@@ -26,7 +26,7 @@ const createV1Router = (): Router => {
     router.use('/logs/analysis', createLogAnalysisRouter());
 
     // Route mới để ghi log save event
-    router.use('/log/conference-save-event', handleConferenceSaveEvent);
+    router.use('/log/conference-save-event', handleBatchConferenceSaveEvents);
 
     router.use('/chatbot', createChatRouter()); // <<< ADD THIS LINE (e.g. /api/v1/chatbot/upload-files)
 

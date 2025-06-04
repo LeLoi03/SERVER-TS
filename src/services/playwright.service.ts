@@ -38,9 +38,9 @@ export class PlaywrightService {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'PlaywrightServiceBase' });
 
         // Load Playwright-specific configurations from ConfigService
-        this.PLAYWRIGHT_CHANNEL = this.configService.config.PLAYWRIGHT_CHANNEL;
-        this.PLAYWRIGHT_HEADLESS = this.configService.config.PLAYWRIGHT_HEADLESS === true; // Ensure boolean
-        this.USER_AGENT = this.configService.config.USER_AGENT;
+        this.PLAYWRIGHT_CHANNEL = this.configService.playwrightConfig.channel;
+        this.PLAYWRIGHT_HEADLESS = this.configService.playwrightConfig.headless === true; // Ensure boolean
+        this.USER_AGENT = this.configService.playwrightConfig.userAgent;
 
         this.serviceBaseLogger.info(
             { event: 'playwright_service_init_constructor', channel: this.PLAYWRIGHT_CHANNEL, headless: this.PLAYWRIGHT_HEADLESS },

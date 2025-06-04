@@ -11,7 +11,7 @@ export { findItemId } from './manageFollow.service';
 const LOG_PREFIX = "[CalendarService]";
 
 const configService = container.resolve(ConfigService);
-const DATABASE_URL: string | undefined = configService.config.DATABASE_URL;
+const DATABASE_URL: string | undefined = configService.databaseUrl;
 
 if (!DATABASE_URL) {
     const errorMsg = `${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`;

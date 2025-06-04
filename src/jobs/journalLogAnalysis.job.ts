@@ -7,7 +7,7 @@ import { Logger } from 'pino'; // Import the Logger type from pino for type safe
 import { LoggingService } from '../services/logging.service';
 import { getIO } from '../loaders/socket.loader'; // Function to get the Socket.IO server instance
 import { ConfigService } from '../config/config.service';
-import { LogAnalysisJournalService } from '../services/logAnalysisJournal.service';
+import { JournalLogAnalysisService } from '../services/journalLogAnalysis.service';
 /**
  * Schedules the recurring log analysis job.
  * This function retrieves the cron schedule and timezone from `ConfigService`,
@@ -27,9 +27,9 @@ export const scheduleLogAnalysisJob = (): void => {
         // Resolve ConfigService to get job-specific configurations.
         const configService = container.resolve(ConfigService);
         // Retrieve cron schedule from config, defaulting to every 30 minutes if not set.
-        const cronSchedule = configService.config.LOG_ANALYSIS_CRON_SCHEDULE || '*/30 * * * *';
+        const cronSchedule = configService.logAnalysisCronSchedule || '*/30 * * * *';
         // Retrieve timezone for cron job, defaulting to Vietnam's timezone.
-        const timezone = configService.config.CRON_TIMEZONE || "Asia/Ho_Chi_Minh";
+        const timezone = configService.cronTimezone || "Asia/Ho_Chi_Minh";
 
         // parentLogger.info(
         //     { schedule: cronSchedule, timezone },
@@ -50,7 +50,7 @@ export const scheduleLogAnalysisJob = (): void => {
                 // Resolve services needed for the job inside the callback.
                 // This ensures that if services were re-registered or needed a fresh instance,
                 // the job gets the latest available. For singletons, it's just getting the instance.
-                const logAnalysisService = container.resolve(LogAnalysisJournalService);
+                const logAnalysisService = container.resolve(JournalLogAnalysisService);
                 const io = getIO(); // Get the global Socket.IO server instance.
 
                 // Perform the log analysis and update results.

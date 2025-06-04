@@ -30,13 +30,13 @@ export class ConferenceProcessorService {
         @inject(FileSystemService) private fileSystemService: FileSystemService
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ConferenceProcessorBase' });
-        this.searchQueryTemplate = this.configService.config.SEARCH_QUERY_TEMPLATE;
-        this.year1 = this.configService.config.YEAR1;
-        this.year2 = this.configService.config.YEAR2;
-        this.year3 = this.configService.config.YEAR3;
-        this.unwantedDomains = this.configService.config.UNWANTED_DOMAINS;
-        this.skipKeywords = this.configService.config.SKIP_KEYWORDS;
-        this.maxLinks = this.configService.config.MAX_LINKS;
+        this.searchQueryTemplate = this.configService.searchQueryTemplate;
+        this.year1 = this.configService.year1;
+        this.year2 = this.configService.year2;
+        this.year3 = this.configService.year3;
+        this.unwantedDomains = this.configService.unwantedDomains;
+        this.skipKeywords = this.configService.skipKeywords;
+        this.maxLinks = this.configService.maxLinks;
 
         this.serviceBaseLogger.info("ConferenceProcessorService instance created and initialized with configurations.");
     }

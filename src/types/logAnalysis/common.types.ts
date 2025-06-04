@@ -32,7 +32,9 @@ export interface RequestTimings {
     | 'PartiallyCompleted'
     | 'Skipped'
     | 'NoData'
-    | 'Unknown';
+    | 'Unknown'
+    | 'NoRequestsAnalyzed'      // THÊM VÀO
+    | 'NotFoundInAggregation';  // THÊM VÀO
     /**
      * @property {string} [originalRequestId] - Tùy chọn: ID gốc được cung cấp cho yêu cầu, nếu đó là một lần thu thập lại.
      */
@@ -44,20 +46,91 @@ export interface RequestTimings {
     /** NEW: Số lượng hội nghị đã được xử lý hoàn tất cho yêu cầu cụ thể này. */
     processedConferencesCountForRequest?: number;
     csvOutputStreamFailed?: boolean;
+    /**
+        * @property {string[]} [errorMessages] - Mảng các thông báo lỗi tóm tắt cho yêu cầu này.
+        * Được điền nếu request `status` là `Failed` hoặc `CompletedWithErrors`.
+        */
+    errorMessages: string[]; // <<< THÊM TRƯỜNG MỚI NÀY >>>
 }
+
+
+
+
+// Định nghĩa LogEntry ở đây
+/**
+ * @interface LogEntry
+ * @description Đại diện cho một dòng log đã được parse từ file log.
+ * Đây là một cấu trúc chung; các log entry cụ thể có thể có nhiều trường hơn.
+ */
+export interface LogEntry {
+    /**
+     * @property {string | number} time - Timestamp của log entry (chuỗi ISO hoặc Unix ms).
+     * Pino thường output dạng Unix ms, nhưng khi parse từ JSON có thể là string nếu stdTimeFunctions.isoTime được dùng.
+     */
+    time: string | number;
+    /**
+     * @property {number} level - Cấp độ log của Pino (ví dụ: 10 trace, 20 debug, 30 info, 40 warn, 50 error, 60 fatal).
+     */
+    level: number;
+    /**
+     * @property {string} [msg] - Thông điệp chính của log entry.
+     * Pino thường sử dụng 'msg'.
+     */
+    msg?: string;
+    /**
+     * @property {string} [message] - Trường thay thế cho thông điệp chính (để tương thích).
+     */
+    message?: string;
+    /**
+     * @property {string} [batchRequestId] - ID của batch request mà log entry này thuộc về.
+     * Trường này sẽ được tự động thêm bởi request-specific logger.
+     */
+    batchRequestId?: string;
+    /**
+     * @property {string} [service] - Tên service hoặc module đã tạo ra log.
+     */
+    service?: string;
+    /**
+     * @property {string} [event] - Tên một sự kiện cụ thể liên quan đến log.
+     */
+    event?: string;
+    /**
+     * @property {string} [conferenceAcronym] - Từ viết tắt của hội nghị (nếu có).
+     */
+    conferenceAcronym?: string;
+    /**
+     * @property {string} [conferenceTitle] - Tiêu đề của hội nghị (nếu có).
+     */
+    conferenceTitle?: string;
+    /**
+     * @property {string} [url] - URL liên quan đến log entry (nếu có).
+     */
+    url?: string;
+    /**
+     * @property {any} [err] - Đối tượng lỗi (nếu log entry này là một lỗi).
+     * Pino thường đặt lỗi vào trường 'err'.
+     */
+    err?: any;
+    /**
+     * @property {number} [durationMs] - Thời gian thực thi một tác vụ (tính bằng mili giây).
+     */
+    durationMs?: number;
+    // Cho phép các thuộc tính khác không được định nghĩa tường minh
+    [key: string]: any;
+}
+
+
+
 
 /**
  * @interface RequestLogData
  * @description Tổng hợp tất cả các mục nhật ký liên quan cho một ID yêu cầu lô nhất định.
- * Điều này hoạt động như một vùng chứa cho dữ liệu nhật ký thô thuộc về một yêu cầu duy nhất.
  */
 export interface RequestLogData {
     /**
-     * @property {any[]} logs - Một mảng các mục nhật ký thô được liên kết với yêu cầu này.
-     * (Lý tưởng nhất, đây sẽ là `PinoLogEntry[]` nếu nhật ký Pino có một giao diện nhất quán.
-     * Hiện tại, `any[]` được sử dụng để linh hoạt.)
+     * @property {LogEntry[]} logs - Một mảng các mục nhật ký đã được parse, liên kết với yêu cầu này.
      */
-    logs: any[];
+    logs: LogEntry[]; // <-- THAY ĐỔI TỪ any[] thành LogEntry[]
     /**
      * @property {number | null} startTime - Dấu thời gian Unix sớm nhất (mili giây) được tìm thấy cho yêu cầu này.
      */

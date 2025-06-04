@@ -67,8 +67,8 @@ export interface JournalRequestSummary {
     startTime: string | null;
     endTime: string | null;
     durationSeconds: number | null;
-    status: 'Unknown' | 'Processing' | 'Completed' | 'CompletedWithErrors' | 'Failed' | 'NoData' | 'PartiallyCompleted' | 'Skipped';
-    dataSource?: 'scimago' | 'client';
+    status: 'Unknown' | 'Processing' | 'Completed' | 'CompletedWithErrors' | 'Failed' | 'NoData' | 'PartiallyCompleted' | 'Skipped' | 'NotFoundInAggregation' | 'NoRequestsAnalyzed';
+    dataSource?: 'scimago' | 'client' | string; // Cho phép 'scimago', 'client', hoặc bất kỳ string nào khác
     totalJournalsInputForRequest?: number; // Total Scimago URLs or CSV rows for this batch
     processedJournalsCountForRequest?: number; // Journals successfully written to JSONL
     failedJournalsCountForRequest?: number;
@@ -167,8 +167,18 @@ export interface JournalFileOutputAnalysis {
 // --- Main Log Analysis Result Structure for Journals ---
 export interface JournalLogAnalysisResult {
     analysisTimestamp: string;
-    logFilePath: string;
-    status: 'Processing' | 'Completed' | 'CompletedWithErrors' | 'Failed' | 'NoRequestsAnalyzed' | 'PartiallyCompleted' | 'Unknown';
+    logFilePath?: string | undefined;
+    status?:
+    | 'Completed'
+    | 'Failed'
+    | 'Processing'
+    | 'CompletedWithErrors'
+    | 'PartiallyCompleted'
+    | 'Skipped'
+    | 'NoData'
+    | 'Unknown'
+    | 'NoRequestsAnalyzed'      // THÊM VÀO
+    | 'NotFoundInAggregation';  // THÊM VÀO
     errorMessage?: string;
     filterRequestId?: string; // If analysis was filtered to a single batchRequestId
     analyzedRequestIds: string[];
@@ -200,7 +210,7 @@ export interface JournalRequestLogData {
     logs: any[];
     startTime: number | null;
     endTime: number | null;
-    dataSource?: 'scimago' | 'client'; // To be populated early
+    dataSource?: 'scimago' | 'client' | string; // Cho phép 'scimago', 'client', hoặc bất kỳ string nào khác
 }
 
 export interface JournalReadLogResult {
@@ -219,5 +229,5 @@ export interface JournalFilteredData {
 
 // For pino.destination
 export interface PinoFileDestination extends Writable {
-  flushSync(): void;
+    flushSync(): void;
 }

@@ -6,10 +6,9 @@ import {
     File as GoogleFileSDK,
     FileState,
     UploadFileParameters,
-    // UploadFileConfig // Không cần import trực tiếp nếu dùng trong UploadFileParameters
 } from '@google/genai';
 import { Logger } from 'pino';
-import { ConfigService } from '../../../config/config.service';
+import { ConfigService } from '../../../config/config.service'; // Correct path
 import { LoggingService } from '../../../services/logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import multer from 'multer';
@@ -19,11 +18,11 @@ import { File as NodeFile } from 'node:buffer';
 const MAX_FILE_SIZE_MB = 50;
 const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
 
-const storage = multer.memoryStorage();
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: MAX_FILE_SIZE_BYTES } // Điều chỉnh tại đây
-});
+// const storage = multer.memoryStorage(); // Not needed here if using filesUploadMiddleware
+// const upload = multer({ // Not needed here if using filesUploadMiddleware
+//     storage: storage,
+//     limits: { fileSize: MAX_FILE_SIZE_BYTES }
+// });
 
 interface UploadedFileResponse {
     name: string;           // Tên file gốc từ client (file.originalname)
@@ -56,12 +55,14 @@ export class ChatController {
         const loggingService = container.resolve(LoggingService);
         this.logger = loggingService.getLogger().child({ context: 'ChatController' });
 
-        const apiKey = this.configService.config.GEMINI_API_KEY;
+        // Use the specific getter for the primary Gemini API key
+        const apiKey = this.configService.primaryGeminiApiKey;
         if (!apiKey) {
             this.logger.error('GEMINI_API_KEY is not configured. File uploads will fail.');
             throw new Error('GEMINI_API_KEY is not configured.');
         }
-        this.genAI = new GoogleGenAI({ apiKey });
+        // The GoogleGenAI constructor expects an object with an apiKey property
+        this.genAI = new GoogleGenAI({apiKey});
     }
 
     public async handleFileUpload(req: Request, res: Response): Promise<void> {
@@ -75,57 +76,54 @@ export class ChatController {
         }
 
         const files = req.files as Express.Multer.File[];
-        const uploadPromises: Promise<UploadedFileResponse | null>[] = []; // Có thể là null nếu lỗi nghiêm trọng
+        const uploadPromises: Promise<UploadedFileResponse | null>[] = [];
 
         for (const file of files) {
             reqLogger.info(`Processing file: ${file.originalname}, size: ${file.size}, mimetype: ${file.mimetype}`);
-            // Thêm kiểm tra kích thước file ngay tại đây để bắt lỗi sớm hơn
             if (file.size > MAX_FILE_SIZE_BYTES) {
                 reqLogger.warn(`File ${file.originalname} (${file.size} bytes) exceeds the maximum allowed size of ${MAX_FILE_SIZE_MB}MB.`);
                 uploadPromises.push(
-                    Promise.resolve({ // Trả về một đối tượng lỗi để client biết
+                    Promise.resolve({
                         name: file.originalname,
                         uri: undefined,
                         mimeType: file.mimetype,
                         size: file.size,
-                        googleFileState: FileState.FAILED, // Hoặc một trạng thái lỗi tùy chỉnh
+                        googleFileState: FileState.FAILED,
                         googleFileDisplayName: 'File too large',
                         googleFileName: undefined,
                         googleSizeBytes: String(file.size),
                     })
                 );
-                continue; // Bỏ qua việc upload file này lên Google
+                continue;
             }
             uploadPromises.push(this.uploadFileToGoogle(file, reqLogger));
         }
 
         try {
             const results = await Promise.all(uploadPromises);
-            // Lọc ra những file upload thành công và có URI
             const successfulUploads: ClientReadyFilePartData[] = results
                 .filter((r): r is UploadedFileResponse => r !== null && r.uri !== undefined && r.uri !== '')
-                .map(r => ({ // Chỉ chọn các trường cần thiết cho client để tạo Part
+                .map(r => ({
                     name: r.name,
-                    uri: r.uri!, // Đã filter nên uri chắc chắn có
+                    uri: r.uri!,
                     mimeType: r.mimeType,
                     size: r.size,
                 }));
 
             if (successfulUploads.length === 0 && files.length > 0) {
                 reqLogger.error('All file uploads to Google File API failed to get a URI or were too large.');
-                // Trả về mảng results đầy đủ để client có thể thấy lỗi từng file nếu muốn
                 res.status(500).json({
                     message: 'Failed to upload any files to Google File API meaningfully or files were too large.',
-                    files: results.filter(r => r !== null) // Loại bỏ null nếu có
+                    files: results.filter(r => r !== null)
                 });
                 return;
             }
             if (successfulUploads.length < files.length) {
                 reqLogger.warn('Some files failed to upload to Google File API, did not return a URI, or were too large.');
-                res.status(207).json({ // 207 Multi-Status
+                res.status(207).json({
                     message: 'Some files were processed, some failed.',
-                    files: results.filter(r => r !== null), // Client sẽ check từng file
-                    successfulFiles: successfulUploads // Client có thể dùng mảng này trực tiếp
+                    files: results.filter(r => r !== null),
+                    successfulFiles: successfulUploads
                 });
                 return;
             }
@@ -133,7 +131,7 @@ export class ChatController {
             reqLogger.info(`Successfully uploaded ${successfulUploads.length} files to Google File API.`);
             res.status(200).json({
                 message: 'All files uploaded successfully.',
-                files: successfulUploads, // Chỉ trả về các file thành công với cấu trúc ClientReadyFilePartData
+                files: successfulUploads,
             });
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);
@@ -145,13 +143,13 @@ export class ChatController {
     private async uploadFileToGoogle(
         file: Express.Multer.File,
         logger: Logger
-    ): Promise<UploadedFileResponse | null> { // Return null on critical failure
+    ): Promise<UploadedFileResponse | null> {
         try {
             logger.info(`Preparing ${file.originalname} for Google File API upload...`);
             const nodeJsFile = new NodeFile([file.buffer], file.originalname, { type: file.mimetype });
 
             const params: UploadFileParameters = {
-                file: nodeJsFile as unknown as globalThis.Blob, // Cast vì SDK type có thể hơi khác
+                file: nodeJsFile as unknown as globalThis.Blob,
                 config: {
                     displayName: file.originalname,
                     mimeType: file.mimetype,
@@ -164,7 +162,6 @@ export class ChatController {
 
             if (!googleFileResult.uri) {
                 logger.error(`Google File API did not return a URI for ${file.originalname}. State: ${googleFileResult.state}. Google Name: ${googleFileResult.name}`);
-                // Trả về object với uri undefined để client biết file này lỗi
                 return {
                     name: file.originalname,
                     uri: undefined,
@@ -190,12 +187,11 @@ export class ChatController {
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);
             logger.error({ err: { message, stack }, fileName: file.originalname }, `Failed to upload ${file.originalname} to Google File API.`);
-            // Trả về object với uri undefined cho file lỗi này
             return {
                 name: file.originalname,
                 mimeType: file.mimetype,
                 size: file.size,
-                uri: undefined, // Đánh dấu lỗi
+                uri: undefined,
             };
         }
     }
@@ -203,5 +199,5 @@ export class ChatController {
 
 export const filesUploadMiddleware = multer({
     storage: multer.memoryStorage(),
-    limits: { fileSize: MAX_FILE_SIZE_BYTES } // Điều chỉnh tại đây
+    limits: { fileSize: MAX_FILE_SIZE_BYTES }
 }).array('files', 5);

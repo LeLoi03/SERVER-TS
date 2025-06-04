@@ -134,7 +134,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         @inject('IPageContentExtractorService') private pageContentExtractorService: IPageContentExtractorService,
         @inject(ConfigService) private configService: ConfigService
     ) {
-        this.year2 = this.configService.config.YEAR2;
+        this.year2 = this.configService.year2;
     }
 
     /**

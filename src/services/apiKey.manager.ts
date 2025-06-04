@@ -50,9 +50,9 @@ export class ApiKeyManager {
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ApiKeyManagerBase' });
 
-        const apiKeys = this.configService.config.GOOGLE_CUSTOM_SEARCH_API_KEYS;
-        this.maxUsagePerKey = this.configService.config.MAX_USAGE_PER_KEY;
-        this.rotationDelay = this.configService.config.KEY_ROTATION_DELAY_MS;
+        const apiKeys = this.configService.googleSearchConfig.apiKeys;
+        this.maxUsagePerKey = this.configService.googleSearchConfig.maxUsagePerKey;
+        this.rotationDelay = this.configService.googleSearchConfig.rotationDelayMs;
 
         if (!apiKeys || apiKeys.length === 0) {
             this.serviceBaseLogger.error({ event: 'api_key_manager_init_no_keys_error' }, 'Critical: No Google Search API keys found in configuration. Please set GOOGLE_CUSTOM_SEARCH_API_KEYS.');

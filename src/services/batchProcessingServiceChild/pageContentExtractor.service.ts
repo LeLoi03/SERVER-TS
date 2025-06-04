@@ -48,7 +48,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
      * @param {ConfigService} configService - The injected configuration service to get `MAIN_CONTENT_KEYWORDS`.
      */
     constructor(@inject(ConfigService) private configService: ConfigService) {
-        this.mainContentKeywords = this.configService.config.MAIN_CONTENT_KEYWORDS ?? [];
+        this.mainContentKeywords = this.configService.mainContentKeywords ?? [];
     }
 
     /**

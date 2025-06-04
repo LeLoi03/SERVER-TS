@@ -35,9 +35,9 @@ export class GeminiRateLimiterService {
     ) {
         this.baseLogger = loggingService.getLogger('conference', { service: 'GeminiRateLimiterService' });
         // Load rate limit configurations from ConfigService
-        this.rateLimitPoints = configService.config.GEMINI_RATE_LIMIT_POINTS;
-        this.rateLimitDuration = configService.config.GEMINI_RATE_LIMIT_DURATION;
-        this.rateLimitBlockDuration = configService.config.GEMINI_RATE_LIMIT_BLOCK_DURATION;
+        this.rateLimitPoints = configService.geminiRateLimitPoints;
+        this.rateLimitDuration = configService.geminiRateLimitDuration;
+        this.rateLimitBlockDuration = configService.geminiRateLimitBlockDuration;
 
         this.baseLogger.info(
             {

@@ -1,128 +1,125 @@
 // src/services/logging.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
-import pino, { Logger, LoggerOptions, LevelWithSilent, stdTimeFunctions, Level } from 'pino';
+import pino, { Logger, LoggerOptions, LevelWithSilent, stdTimeFunctions, Level, StreamEntry, DestinationStream } from 'pino';
 import fs from 'fs';
 import path from 'path';
 import { ConfigService } from '../config/config.service';
-import { Writable } from 'stream';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
+// pino-roll sẽ được require có điều kiện
+// import pinoRoll, { PinoRollOptions, PinoRollStream, Frequency as PinoRollFrequency } from 'pino-roll'; // Gỡ bỏ import trực tiếp
+import { Writable } from 'stream';
+import { LogDescriptor } from 'pino';
 
-export interface PinoFileDestination extends Writable {
-    flushSync(): void;
+export type LoggerContext = { service?: string; batchRequestId?: string;[key: string]: any };
+export type LoggerType = 'app' | 'conference' | 'journal' | 'saveConferenceEvent' | 'saveJournalEvent';
+export type RequestSpecificLoggerType = 'conference' | 'journal';
+export type SharedLoggerType = 'app' | 'saveConferenceEvent' | 'saveJournalEvent';
+
+interface RequestLoggerEntry {
+    logger: Logger;
+    stream: DestinationStream; // pino.destination() trả về DestinationStream
+    filePath: string;
 }
-
-export type LoggerContext = { service?: string;[key: string]: any };
-export type LoggerType = 'conference' | 'journal' | 'saveConferenceEvent' | 'saveJournalEvent';
 
 @singleton()
 export class LoggingService {
-    private conferenceLogger!: Logger; // Sử dụng ! để báo TypeScript sẽ được khởi tạo trong constructor
-    private journalLogger!: Logger;
-    private saveConferenceEventLogger!: Logger;
-    private saveJournalEventLogger!: Logger;
+    private appLoggerInternal!: Logger;
+    private saveConferenceEventLoggerInternal!: Logger;
+    private saveJournalEventLoggerInternal!: Logger;
 
-    private conferenceFileDestination: PinoFileDestination | null = null;
-    private journalFileDestination: PinoFileDestination | null = null;
-    private saveConferenceEventFileDestination: PinoFileDestination | null = null;
-    private saveJournalEventFileDestination: PinoFileDestination | null = null;
+    private requestLoggers: Map<string, RequestLoggerEntry> = new Map();
+    private sharedPinoRollStreams: { [key in SharedLoggerType]?: any } = {}; // Kiểu 'any' cho pino-roll stream
 
     private readonly logLevel: LevelWithSilent;
-    private readonly conferenceLogFilePath: string;
-    private readonly journalLogFilePath: string;
-    private readonly saveConferenceEventLogFilePath: string;
-    private readonly saveJournalEventLogFilePath: string;
+    private readonly appLogFilePathForWriting: string;
+    private readonly saveConferenceEventLogFilePathForWriting: string;
+    private readonly saveJournalEventLogFilePathForWriting: string;
+    private readonly appLoggerForInternalOps: Logger; // Logger riêng cho các hoạt động nội bộ của LoggingService
 
     private isShuttingDown = false;
+    private isInitialized = false;
 
     constructor(@inject(ConfigService) private configService: ConfigService) {
-        console.log('[LoggingService:Constructor] Initializing loggers...');
+        this.logLevel = this.configService.logLevel;
 
-        this.logLevel = this.configService.config.LOG_LEVEL;
-        this.conferenceLogFilePath = this.configService.conferenceLogFilePath;
-        this.journalLogFilePath = this.configService.journalLogFilePath; // Đảm bảo ConfigService có journalLogFilePath
-        this.saveConferenceEventLogFilePath = this.configService.getSaveConferenceEventLogFilePath();
-        this.saveJournalEventLogFilePath = this.configService.getSaveJournalEventLogFilePath();
+        this.appLogFilePathForWriting = this.configService.appLogFilePathForWriting;
+        this.saveConferenceEventLogFilePathForWriting = this.configService.getSaveConferenceEventLogFilePath();
+        this.saveJournalEventLogFilePathForWriting = this.configService.getSaveJournalEventLogFilePath();
+        this.appLoggerForInternalOps = pino({ name: 'LoggingServiceInternal', level: this.logLevel });
 
-        // --- Phase 1: Ensure Log Directories Exist and are Writable ---
-        const conferenceLogDir = path.dirname(this.conferenceLogFilePath);
-        const journalLogDir = path.dirname(this.journalLogFilePath);
-        // Lấy thư mục từ đường dẫn file log save event
-        const saveConferenceEventLogDir = path.dirname(this.saveConferenceEventLogFilePath);
-        const saveJournalEventLogDir = path.dirname(this.saveJournalEventLogFilePath);
+        console.log('[LoggingService:Constructor] Service instantiated. Call initialize() to setup loggers.');
+    }
 
-        this.ensureDirectory(conferenceLogDir, 'Conference Log');
-        this.ensureDirectory(journalLogDir, 'Journal Log');
-        this.ensureDirectory(saveConferenceEventLogDir, 'Save Conference Event Log'); // SỬA Ở ĐÂY
-        this.ensureDirectory(saveJournalEventLogDir, 'Save Journal Event Log');       // SỬA Ở ĐÂY
+    public async initialize(): Promise<void> {
+        if (this.isInitialized) {
+            console.warn('[LoggingService:Initialize] Loggers already initialized.');
+            return;
+        }
+        console.log('[LoggingService:Initialize] Initializing loggers...');
 
-        // --- Phase 2: Configure Pino Options and Streams ---
-        const pinoOptions: LoggerOptions = {
+        // Đảm bảo các thư mục log chính và thư mục con tồn tại
+        this.ensureDirectory(this.configService.logsDirectory, 'Main Logs Directory');
+        this.ensureDirectory(this.configService.appConfiguration.appLogDirectory, 'App Log Directory');
+        this.ensureDirectory(this.configService.appConfiguration.conferenceRequestLogDirectory, 'Conference Request Logs Directory');
+        this.ensureDirectory(this.configService.appConfiguration.journalRequestLogDirectory, 'Journal Request Logs Directory');
+        this.ensureDirectory(this.configService.appConfiguration.saveConferenceEventLogDirectory, 'Save Conference Event Log Directory');
+        this.ensureDirectory(this.configService.appConfiguration.saveJournalEventLogDirectory, 'Save Journal Event Log Directory');
+
+        if (this.configService.logArchiveDirectoryPath &&
+            !this.configService.logArchiveDirectoryPath.startsWith(this.configService.logsDirectory)) {
+            this.ensureDirectory(this.configService.logArchiveDirectoryPath, 'Log Archive Directory (custom path)');
+        }
+
+        const pinoBaseOptions: LoggerOptions = {
             level: this.logLevel,
             timestamp: stdTimeFunctions.isoTime,
             formatters: { level: (label) => ({ level: label }) },
-            base: undefined,
+            base: undefined, // Không tự động thêm pid, hostname
         };
 
-        // --- Configure Conference Logger ---
-        const conferencePinoStreams: pino.StreamEntry[] = this.getPinoStreams('conference', this.conferenceLogFilePath);
-        this.conferenceLogger = this.createPinoInstance(pinoOptions, conferencePinoStreams, 'Conference', this.conferenceLogFilePath);
+        try {
+            this.appLoggerInternal = await this.createSharedLogger('app', this.appLogFilePathForWriting, pinoBaseOptions);
+            this.saveConferenceEventLoggerInternal = await this.createSharedLogger('saveConferenceEvent', this.saveConferenceEventLogFilePathForWriting, pinoBaseOptions);
+            this.saveJournalEventLoggerInternal = await this.createSharedLogger('saveJournalEvent', this.saveJournalEventLogFilePathForWriting, pinoBaseOptions);
 
-        // --- Configure Journal Logger ---
-        const journalPinoStreams: pino.StreamEntry[] = this.getPinoStreams('journal', this.journalLogFilePath);
-        this.journalLogger = this.createPinoInstance(pinoOptions, journalPinoStreams, 'Journal', this.journalLogFilePath);
-
-        // --- Configure Save Conference Event Logger ---
-        const saveConferenceEventPinoStreams: pino.StreamEntry[] = this.getPinoStreams('saveConferenceEvent', this.saveConferenceEventLogFilePath);
-        this.saveConferenceEventLogger = this.createPinoInstance(pinoOptions, saveConferenceEventPinoStreams, 'SaveConferenceEvent', this.saveConferenceEventLogFilePath);
-
-        // --- Configure Save Journal Event Logger ---
-        const saveJournalEventPinoStreams: pino.StreamEntry[] = this.getPinoStreams('saveJournalEvent', this.saveJournalEventLogFilePath);
-        this.saveJournalEventLogger = this.createPinoInstance(pinoOptions, saveJournalEventPinoStreams, 'SaveJournalEvent', this.saveJournalEventLogFilePath);
+            this.isInitialized = true;
+            this.appLogger.info({ service: 'LoggingService' }, 'Shared loggers initialized.');
+        } catch (error) {
+            const { message, stack } = getErrorMessageAndStack(error);
+            console.error(`[LoggingService:Initialize] CRITICAL: Failed to initialize shared loggers: ${message}. Stack: ${stack}.`, error);
+            throw error; // Ném lỗi để báo hiệu khởi tạo thất bại
+        }
     }
 
-    private ensureDirectory(dirPath: string, logType: string): void {
+    private ensureDirectory(dirPath: string, logTypeDesc: string): void {
         try {
             if (!fs.existsSync(dirPath)) {
                 fs.mkdirSync(dirPath, { recursive: true });
-                console.log(`[LoggingService:EnsureDir] ${logType} directory created: ${dirPath}`);
+                console.log(`[LoggingService:EnsureDir] ${logTypeDesc} directory created: ${dirPath}`);
             }
-            // Kiểm tra quyền ghi sau khi tạo (hoặc nếu đã tồn tại)
-            fs.accessSync(dirPath, fs.constants.W_OK);
-            console.log(`[LoggingService:EnsureDir] ${logType} directory is writable: ${dirPath}`);
+            fs.accessSync(dirPath, fs.constants.W_OK); // Kiểm tra quyền ghi
         } catch (err: unknown) {
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(err);
-            console.error(`[LoggingService:EnsureDir] CRITICAL: Error ensuring ${logType} directory "${dirPath}" exists or is writable: "${errorMessage}". Stack: ${errorStack}`);
-            // Cân nhắc không exit(1) ở đây mà throw lỗi để service khởi tạo có thể bắt và xử lý
-            // Hoặc log một lỗi nghiêm trọng và tiếp tục với console logging nếu có thể
-            // process.exit(1); // Tạm thời comment để tránh dừng đột ngột khi dev
-            throw new Error(`Failed to ensure directory for ${logType}: ${errorMessage}`);
+            const { message: errorMessage } = getErrorMessageAndStack(err);
+            const errorMsg = `CRITICAL: Error ensuring ${logTypeDesc} directory "${dirPath}" exists or is writable: "${errorMessage}". Logging to this path may fail.`;
+            console.error(`[LoggingService:EnsureDir] ${errorMsg}`);
+            throw new Error(errorMsg);
         }
     }
 
-    // Hàm helper để tránh lặp code khởi tạo pino
-    private createPinoInstance(options: LoggerOptions, streams: pino.StreamEntry[], typeName: string, filePath: string): Logger {
-        if (streams.length > 0) {
-            const logger = pino(options, pino.multistream(streams));
-            logger.info({ service: 'LoggingService', event: `${typeName.toLowerCase()}_logger_initialized_success`, path: filePath }, `${typeName} logger initialized.`);
-            return logger;
-        } else {
-            console.error(`[LoggingService:CreatePino] CRITICAL: No valid streams for ${typeName} logger (Path: ${filePath}). Falling back to basic console logger.`);
-            const fallbackLogger = pino({ level: this.logLevel || 'info', name: `${typeName}Fallback` });
-            fallbackLogger.error({ service: 'LoggingService', event: `${typeName.toLowerCase()}_logger_fallback_active`, path: filePath }, `${typeName} logger fallback active due to no streams.`);
-            return fallbackLogger;
-        }
-    }
+    private async createSharedLogger(
+        loggerType: SharedLoggerType,
+        logFilePath: string,
+        basePinoOptions: LoggerOptions
+    ): Promise<Logger> {
+        const streams: StreamEntry[] = [];
 
-    private getPinoStreams(loggerType: LoggerType, logFilePath: string): pino.StreamEntry[] {
-        const streams: pino.StreamEntry[] = [];
-
-        if (this.configService.config.LOG_TO_CONSOLE) {
-            if (this.configService.config.NODE_ENV !== 'production') {
+        if (this.configService.logToConsole) {
+            if (this.configService.nodeEnv !== 'production') {
                 streams.push({
                     level: this.logLevel as Level,
                     stream: require('pino-pretty')({
-                        colorize: true, levelFirst: true, translateTime: 'SYS:standard', ignore: 'pid,hostname',
+                        colorize: true, levelFirst: true, translateTime: 'SYS:standard', ignore: 'pid,hostname,service',
                     }),
                 });
             } else {
@@ -130,127 +127,351 @@ export class LoggingService {
             }
         }
 
-        // File Transport
+        // Chỉ dùng pino-roll nếu có cấu hình xoay vòng
+        // const useRotation = this.configService.logRotationFrequency && this.configService.logRotationSize;
+
+        // if (useRotation) {
+        //     try {
+        //         const pinoRoll = require('pino-roll'); // require pino-roll ở đây
+        //         const pinoRollFileOptions: any = { // Kiểu PinoRollOptions
+        //             file: logFilePath,
+        //             // frequency: this.configService.logRotationFrequency,
+        //             // size: this.configService.logRotationSize,
+        //             mkdir: true, // pino-roll tự tạo thư mục cha trực tiếp của file log
+        //             // symlink: true, // Tạo current.log
+        //         };
+        //         if (this.configService.logRotationDateFormat) pinoRollFileOptions.dateFormat = this.configService.logRotationDateFormat;
+        //         if (this.configService.logRotationLimitCount && this.configService.logRotationLimitCount > 0) {
+        //             pinoRollFileOptions.limit = { count: this.configService.logRotationLimitCount };
+        //         }
+
+        //         const rollStream = await pinoRoll(pinoRollFileOptions);
+        //         rollStream.on('error', (err: unknown) => {
+        //             const { message: errMsg } = getErrorMessageAndStack(err);
+        //             console.error(`[LoggingService:PinoRoll:${loggerType}] CRITICAL: Error in pino-roll stream for ${logFilePath}: "${errMsg}".`);
+        //         });
+        //         streams.push({ level: this.logLevel as Level, stream: rollStream });
+        //         this.sharedPinoRollStreams[loggerType] = rollStream;
+        //         console.log(`[LoggingService:CreateSharedLogger] File logging with pino-roll for ${loggerType}. File: ${logFilePath}.`);
+        //     } catch (err) {
+        //         const { message: errMsg, stack } = getErrorMessageAndStack(err);
+        //         console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Failed to create pino-roll stream for ${loggerType} at "${logFilePath}". Error: "${errMsg}". Stack: ${stack}. Falling back to simple file logging if possible.`, err);
+        //         // Fallback to simple file logging if pino-roll fails
+        //         try {
+        //             const fileStream = pino.destination({ dest: logFilePath, mkdir: true, sync: false });
+        //             streams.push({ level: this.logLevel as Level, stream: fileStream });
+        //             console.warn(`[LoggingService:CreateSharedLogger] Fallback: Simple file logging for ${loggerType}. File: ${logFilePath}.`);
+        //         } catch (fallbackErr) {
+        //             const { message: fallbackMsg } = getErrorMessageAndStack(fallbackErr);
+        //             console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Fallback simple file stream also failed for ${loggerType} at "${logFilePath}". Error: "${fallbackMsg}".`, fallbackErr);
+        //             // Nếu không có stream nào, pino sẽ log ra stdout theo mặc định nếu không có stream nào được cung cấp
+        //         }
+        //     }
+        // } else {
+        // Ghi file đơn giản nếu không có cấu hình xoay vòng
         try {
-            // Đảm bảo thư mục đã tồn tại trước khi tạo destination
-            // ensureDirectory đã được gọi trong constructor cho các thư mục log chính
-            const logDir = path.dirname(logFilePath);
-            if (!fs.existsSync(logDir)) {
-                 // Điều này không nên xảy ra nếu ensureDirectory hoạt động đúng
-                console.warn(`[LoggingService:getPinoStreams] Log directory ${logDir} for ${loggerType} does not exist. Attempting to create.`);
-                this.ensureDirectory(logDir, `${loggerType} Log (runtime check)`);
-            }
-
-
-            const fileDest = pino.destination({
-                dest: logFilePath, sync: false, minLength: 1, mkdir: false, // mkdir: false vì ensureDirectory đã làm
-            }) as unknown as PinoFileDestination;
-
-            fileDest.on('error', (err: unknown) => {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(err);
-                console.error(`[LoggingService:FileDestination:${loggerType}] CRITICAL: Error in log file destination stream for ${logFilePath}: "${errorMessage}". Stack: ${errorStack}`);
-            });
-
-            streams.push({ level: this.logLevel as Level, stream: fileDest });
-
-            if (loggerType === 'conference') {
-                this.conferenceFileDestination = fileDest;
-            } else if (loggerType === 'journal') {
-                this.journalFileDestination = fileDest;
-            } else if (loggerType === 'saveConferenceEvent') {
-                this.saveConferenceEventFileDestination = fileDest;
-            } else if (loggerType === 'saveJournalEvent') {
-                this.saveJournalEventFileDestination = fileDest;
-            }
-            console.log(`[LoggingService:getPinoStreams] File logging configured for ${loggerType}. File: ${logFilePath}`);
-
-        } catch (err: unknown) {
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(err);
-            console.error(`[LoggingService:getPinoStreams] CRITICAL: Failed to create pino file destination for ${loggerType} at "${logFilePath}": "${errorMessage}". Stack: ${errorStack}`);
-            // Gán null cho destination tương ứng nếu tạo thất bại
-            if (loggerType === 'conference') this.conferenceFileDestination = null;
-            else if (loggerType === 'journal') this.journalFileDestination = null;
-            else if (loggerType === 'saveConferenceEvent') this.saveConferenceEventFileDestination = null;
-            else if (loggerType === 'saveJournalEvent') this.saveJournalEventFileDestination = null;
+            const fileStream = pino.destination({ dest: logFilePath, mkdir: true, sync: false });
+            streams.push({ level: this.logLevel as Level, stream: fileStream });
+            console.log(`[LoggingService:CreateSharedLogger] Simple file logging for ${loggerType}. File: ${logFilePath}.`);
+        } catch (err) {
+            const { message: errMsg } = getErrorMessageAndStack(err);
+            console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Failed to create simple file stream for ${loggerType} at "${logFilePath}". Error: "${errMsg}".`, err);
         }
-        return streams;
+        // }
+
+        if (streams.length > 0) {
+            return pino(basePinoOptions, pino.multistream(streams));
+        } else {
+            console.warn(`[LoggingService:CreateSharedLogger] WARNING: No streams configured for ${loggerType} (not even console). Fallback to basic console pino.`);
+            return pino({ ...basePinoOptions, name: `${loggerType}EmergencyFallback` });
+        }
     }
 
+    public getRequestSpecificLogger(
+        type: RequestSpecificLoggerType,
+        batchRequestId: string,
+        baseContext?: LoggerContext
+    ): Logger {
+        this.checkInitialized(); // Kiểm tra service đã init chưa
+        const loggerKey = `${type}-${batchRequestId}`;
+
+        if (this.requestLoggers.has(loggerKey)) {
+            const entry = this.requestLoggers.get(loggerKey)!;
+            return baseContext ? entry.logger.child(baseContext) : entry.logger;
+        }
+
+        const logFilePath = this.configService.getRequestSpecificLogFilePath(type, batchRequestId);
+        // Đảm bảo thư mục cha của file log này tồn tại (đã được làm trong initialize, nhưng kiểm tra lại không thừa)
+        try {
+            this.ensureDirectory(path.dirname(logFilePath), `${type} request log directory for ${batchRequestId}`);
+        } catch (dirError) {
+            // Nếu không tạo được thư mục, log ra console và trả về một logger khẩn cấp
+            console.error(`[LoggingService:GetRequestLogger] Failed to ensure directory for ${loggerKey}. Error: ${getErrorMessageAndStack(dirError).message}. Using emergency console logger.`);
+            const emergencyLogger = pino({ level: 'info', name: `Emergency-${loggerKey}` });
+            return baseContext ? emergencyLogger.child(baseContext) : emergencyLogger;
+        }
+
+
+        const pinoOptions: LoggerOptions = {
+            level: this.logLevel,
+            timestamp: stdTimeFunctions.isoTime,
+            formatters: { level: (label) => ({ level: label }) },
+            base: { batchRequestId }, // Tự động thêm batchRequestId vào mỗi log entry
+        };
+
+        const streams: StreamEntry[] = [];
+        if (this.configService.logToConsole) {
+            if (this.configService.nodeEnv !== 'production') {
+                streams.push({
+                    level: this.logLevel as Level,
+                    stream: require('pino-pretty')({
+                        colorize: true,
+                        levelFirst: true,
+                        translateTime: 'SYS:standard',
+                        ignore: 'pid,hostname,service', // 'service' sẽ được hiển thị qua messageFormat
+                        messageFormat: (log: LogDescriptor, messageKey: string): string => {
+                            // LogDescriptor là một kiểu từ pino, bao gồm các trường cơ bản
+                            // Bạn có thể mở rộng nó nếu cần: interface MyLog extends LogDescriptor { myField: string; }
+                            // Hoặc dùng Record<string, any> nếu không chắc chắn: (log: Record<string, any>, messageKey: string)
+                            const { batchRequestId: bId, service, ...restOfLog } = log as any; // Ép kiểu nếu các trường này không có trong LogDescriptor chuẩn
+                            const msg = (restOfLog as any)[messageKey] || ''; // Lấy message, fallback về chuỗi rỗng
+
+                            const bIdDisplay = bId ? String(bId).slice(-6) : 'NO_ID';
+                            const serviceDisplay = service ? ` (${service})` : '';
+
+                            return `[${bIdDisplay}]${serviceDisplay} ${msg}`;
+                        }
+                    }),
+                });
+            } else {
+                // Production: log JSON ra stdout
+                streams.push({ level: this.logLevel as Level, stream: process.stdout });
+            }
+        }
+
+        let fileStream: DestinationStream;
+        try {
+            fileStream = pino.destination({ dest: logFilePath, mkdir: true, sync: false }); // sync: false cho hiệu suất
+            streams.push({ level: this.logLevel as Level, stream: fileStream });
+        } catch (fileStreamError) {
+            console.error(`[LoggingService:GetRequestLogger] CRITICAL: Failed to create file stream for ${loggerKey} at "${logFilePath}". Error: "${getErrorMessageAndStack(fileStreamError).message}". Request-specific file logging will be disabled for this request.`);
+            // Nếu không tạo được file stream, logger sẽ chỉ log ra console (nếu được bật)
+            // Hoặc sẽ là một logger không làm gì nếu console cũng tắt.
+            // Cần đảm bảo `newLogger` vẫn được tạo.
+            const emergencyLogger = pino({ level: 'info', name: `Emergency-${loggerKey}-NoFile` });
+            return baseContext ? emergencyLogger.child(baseContext) : emergencyLogger;
+        }
+
+
+        const newLogger = streams.length > 0
+            ? pino(pinoOptions, pino.multistream(streams))
+            : pino({ ...pinoOptions, name: `${loggerKey}EmergencyFallbackNoStreams` }); // Logger khẩn cấp nếu không có stream nào
+
+        this.requestLoggers.set(loggerKey, { logger: newLogger, stream: fileStream, filePath: logFilePath });
+        console.log(`[LoggingService:GetRequestLogger] Created logger for ${loggerKey}. File: ${logFilePath}`);
+        newLogger.info({ event: 'request_logger_created', logFilePath }, `Logger initialized for this request.`);
+
+        return baseContext ? newLogger.child(baseContext) : newLogger;
+    }
+
+    public async closeRequestSpecificLogger(type: RequestSpecificLoggerType, batchRequestId: string): Promise<void> {
+        const loggerKey = `${type}-${batchRequestId}`;
+        const entry = this.requestLoggers.get(loggerKey);
+
+        if (entry) {
+            const { logger, stream, filePath } = entry; // logger ở đây là request logger sắp bị đóng
+
+            // Log ý định đóng bằng logger của request (lần cuối nó được dùng)
+            logger.info({ event: 'request_logger_closing_initiated', logFilePath: filePath }, `Initiating closure for request logger ${batchRequestId}.`);
+
+            const writableStream = stream as unknown as Writable;
+
+            return new Promise((resolve, reject) => {
+                if (writableStream && typeof writableStream.end === 'function') {
+                    let finished = false;
+                    let errored = false;
+
+                    const onFinish = () => {
+                        if (!finished && !errored) {
+                            finished = true;
+                            this.requestLoggers.delete(loggerKey);
+                            // Sử dụng appLoggerForInternalOps để log việc stream đã đóng
+                            this.appLoggerForInternalOps.info({
+                                event: 'request_logger_stream_closed',
+                                loggerKey,
+                                filePath
+                            }, `Stream closed and logger removed for ${loggerKey}.`);
+                            resolve();
+                        }
+                    };
+
+                    const onError = (err: Error) => {
+                        if (!finished && !errored) {
+                            errored = true;
+                            // Sử dụng appLoggerForInternalOps để log lỗi
+                            this.appLoggerForInternalOps.error({
+                                err,
+                                event: 'request_logger_stream_close_error',
+                                loggerKey,
+                                filePath
+                            }, `Error closing stream for ${loggerKey}.`);
+                            this.requestLoggers.delete(loggerKey);
+                            reject(err);
+                        }
+                    };
+
+                    writableStream.on('finish', onFinish);
+                    writableStream.on('error', onError);
+                    writableStream.end();
+
+                    setTimeout(() => {
+                        if (!finished && !errored) {
+                            // Sử dụng appLoggerForInternalOps
+                            this.appLoggerForInternalOps.warn({
+                                event: 'request_logger_stream_close_timeout',
+                                loggerKey,
+                                filePath
+                            }, `Timeout waiting for 'finish' or 'error' event for ${loggerKey}. Assuming closed.`);
+                            this.requestLoggers.delete(loggerKey);
+                            resolve();
+                        }
+                    }, 3000);
+
+                } else {
+                    // Sử dụng appLoggerForInternalOps
+                    this.appLoggerForInternalOps.warn({
+                        event: 'request_logger_stream_not_closable',
+                        loggerKey
+                    }, `Stream for ${loggerKey} not found or not closable. Removing from map.`);
+                    this.requestLoggers.delete(loggerKey);
+                    resolve();
+                }
+            });
+        }
+        return Promise.resolve();
+    }
 
     public flushLogsAndClose(): void {
-        if (this.isShuttingDown) {
-            console.log('[LoggingService:Flush] Flush already in progress or completed. Skipping.');
+        if (!this.isInitialized || this.isShuttingDown) {
+            if (!this.isInitialized) console.warn('[LoggingService:Flush] Attempted to flush logs before initialization.');
+            if (this.isShuttingDown) console.warn('[LoggingService:Flush] Attempted to flush logs while already shutting down.');
             return;
         }
         this.isShuttingDown = true;
+        const currentAppLogger = this.appLoggerInternal || pino({ name: `EmergencyFlushLogger-${Date.now()}`, level: 'info' });
+        currentAppLogger.info({ service: 'LoggingService', event: 'log_stream_close_start_all' }, 'Initiating stream close for all loggers before application exit...');
 
-        // Log sự kiện bắt đầu flush bằng một logger chắc chắn hoạt động (ví dụ: conferenceLogger hoặc console)
-        const primaryLoggerForFlush = this.conferenceLogger || console;
-        primaryLoggerForFlush.info({ service: 'LoggingService', event: 'log_flush_start_all' }, 'Initiating log flush for all loggers before application exit...');
-        console.log('[LoggingService:Flush] Attempting to flush logs...');
+        const sharedStreamClosePromises = Object.entries(this.sharedPinoRollStreams).map(([type, stream]) => {
+            if (stream && typeof stream.end === 'function') {
+                currentAppLogger.info({ service: 'LoggingService', event: 'shared_stream_closing', loggerType: type }, `Closing shared stream for ${type}.`);
+                return new Promise<void>((resolve, reject) => {
+                    let resolved = false;
+                    const timeoutId = setTimeout(() => {
+                        if (!resolved) {
+                            resolved = true;
+                            currentAppLogger.warn({ service: 'LoggingService', event: 'shared_stream_close_timeout', loggerType: type }, `Timeout closing shared stream for ${type}.`);
+                            reject(new Error(`Timeout closing shared stream for ${type}`));
+                        }
+                    }, 5000);
 
-        this.flushDestination(this.conferenceFileDestination, 'Conference Log', this.conferenceLogger);
-        this.flushDestination(this.journalFileDestination, 'Journal Log', this.journalLogger);
-        this.flushDestination(this.saveConferenceEventFileDestination, 'Save Conference Event Log', this.saveConferenceEventLogger);
-        this.flushDestination(this.saveJournalEventFileDestination, 'Save Journal Event Log', this.saveJournalEventLogger);
+                    stream.once('close', () => {
+                        if (!resolved) { resolved = true; clearTimeout(timeoutId); currentAppLogger.info({ service: 'LoggingService', event: 'shared_stream_closed', loggerType: type }, `Shared stream for ${type} closed.`); resolve(); }
+                    });
+                    stream.once('error', (err: any) => {
+                        if (!resolved) { resolved = true; clearTimeout(timeoutId); currentAppLogger.error({ service: 'LoggingService', event: 'shared_stream_close_error', loggerType: type, error: getErrorMessageAndStack(err).message }, `Error closing shared stream for ${type}.`); reject(err); }
+                    });
+                    stream.end();
+                });
+            }
+            return Promise.resolve();
+        });
+
+        const requestLoggerClosePromises = Array.from(this.requestLoggers.keys()).map(loggerKey => {
+            const [type, batchRequestId] = loggerKey.split('-') as [RequestSpecificLoggerType, string];
+            const entry = this.requestLoggers.get(loggerKey); // Lấy lại entry để đảm bảo nó vẫn còn
+            if (entry) {
+                currentAppLogger.info({ service: 'LoggingService', event: 'request_specific_logger_closing_on_shutdown', loggerKey, filePath: entry.filePath }, `Closing request-specific logger for ${loggerKey}.`);
+                return this.closeRequestSpecificLogger(type, batchRequestId)
+                    .catch(err => {
+                        currentAppLogger.error({ service: 'LoggingService', event: 'request_specific_logger_close_on_shutdown_error', loggerKey, error: getErrorMessageAndStack(err).message }, `Error closing ${loggerKey} during shutdown.`);
+                    });
+            }
+            return Promise.resolve();
+        });
+
+
+        Promise.allSettled([...sharedStreamClosePromises, ...requestLoggerClosePromises])
+            .then((results) => {
+                results.forEach((result, index) => {
+                    if (result.status === 'rejected') {
+                        currentAppLogger.error({ service: 'LoggingService', event: 'any_stream_close_settled_error', index, error: result.reason?.message || result.reason }, `A stream (index ${index}) failed to close properly during shutdown.`);
+                    }
+                });
+                currentAppLogger.info({ service: 'LoggingService', event: 'all_streams_close_attempted' }, 'All stream close attempts finished during shutdown.');
+            })
+            .catch(err => {
+                currentAppLogger.error({ service: 'LoggingService', event: 'error_processing_stream_close_promises', error: getErrorMessageAndStack(err) }, 'Unexpected error processing stream close promises.');
+            })
+            .finally(() => {
+                this.isInitialized = false;
+                this.sharedPinoRollStreams = {};
+                this.requestLoggers.clear();
+                console.log('[LoggingService:Flush] LoggingService shutdown complete.');
+            });
     }
 
-    private flushDestination(destination: PinoFileDestination | null, logTypeName: string, loggerInstance?: Logger): void {
-        // Thêm kiểm tra loggerInstance tồn tại
-        const effectiveLogger = loggerInstance || console; // Fallback về console nếu loggerInstance không có
-
-        if (destination && typeof destination.flushSync === 'function') {
-            try {
-                destination.flushSync();
-                console.log(`[LoggingService:Flush] ${logTypeName} logs flushed successfully.`);
-                effectiveLogger.info({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_success` }, `${logTypeName} logs flushed to file successfully.`);
-            } catch (flushErr: unknown) {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(flushErr);
-                console.error(`[LoggingService:Flush] CRITICAL: Error flushing ${logTypeName} logs to file: "${errorMessage}". Stack: ${errorStack}`);
-                effectiveLogger.error({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_error`, err: { message: errorMessage, stack: errorStack } }, `Critical error during ${logTypeName} log flush.`);
-            }
-        } else {
-            // console.log(`[LoggingService:Flush] No file destination to flush for ${logTypeName} or flushSync method not available.`);
-            effectiveLogger.warn({ service: 'LoggingService', event: `${logTypeName.toLowerCase().replace(/\s+/g, '_')}_log_flush_skipped` }, `Skipped ${logTypeName} log flush: No file destination or flushSync missing.`);
+    private checkInitialized(loggerType?: LoggerType): void {
+        if (!this.isInitialized && !this.isShuttingDown) { // Chỉ log lỗi nếu chưa init và không phải đang shutdown
+            console.error(`[LoggingService:Error] Logger accessed before LoggingService.initialize() was completed. Type: ${loggerType || 'N/A'}. Fallback to emergency logger if possible.`);
         }
     }
 
-    public getLogger(type: LoggerType = 'conference', context?: LoggerContext): Logger {
-        let targetLogger: Logger | undefined; // Cho phép undefined ban đầu
+    public getLogger(type: LoggerType = 'app', context?: LoggerContext): Logger {
+        // Nếu service chưa init và không phải đang shutdown, log cảnh báo và trả về logger khẩn cấp
+        if (!this.isInitialized && !this.isShuttingDown) {
+            console.warn(`[LoggingService:getLogger] Attempting to get logger type '${type}' before initialization or after shutdown. Returning emergency logger.`);
+            const emergencyLogger = pino({ level: 'info', name: `PreInitEmergencyLogger-${type}-${Date.now()}` });
+            return context ? emergencyLogger.child(context) : emergencyLogger;
+        }
+        // Nếu đang shutdown, cũng trả về logger khẩn cấp
+        if (this.isShuttingDown) {
+            const shutdownEmergencyLogger = pino({ level: 'info', name: `ShutdownEmergencyLogger-${type}-${Date.now()}` });
+            return context ? shutdownEmergencyLogger.child(context) : shutdownEmergencyLogger;
+        }
 
+
+        if (context?.batchRequestId && (type === 'conference' || type === 'journal')) {
+            return this.getRequestSpecificLogger(type, context.batchRequestId, context);
+        }
+
+        let targetLogger: Logger | undefined;
         switch (type) {
-            case 'journal':
-                targetLogger = this.journalLogger;
-                break;
-            case 'saveJournalEvent':
-                targetLogger = this.saveJournalEventLogger;
-                break;
-            case 'saveConferenceEvent':
-                targetLogger = this.saveConferenceEventLogger;
-                break;
-            case 'conference':
-            default:
-                targetLogger = this.conferenceLogger;
-                break;
+            case 'saveConferenceEvent': targetLogger = this.saveConferenceEventLoggerInternal; break;
+            case 'saveJournalEvent': targetLogger = this.saveJournalEventLoggerInternal; break;
+            case 'app': default: targetLogger = this.appLoggerInternal; break;
         }
 
         if (!targetLogger) {
-            const fallbackMsg = `[LoggingService:getLogger] Logger type '${type}' not fully initialized or available. Returning basic console logger. This is unexpected.`;
-            console.error(fallbackMsg); // Log lỗi này nghiêm trọng hơn
-            const fallbackPinoOptions: LoggerOptions = {
-                level: this.logLevel || 'info',
-                name: `FallbackLogger-${type}`,
-                timestamp: stdTimeFunctions.isoTime,
-            };
-            const fallbackLogger = pino(fallbackPinoOptions);
-            if (context) return fallbackLogger.child(context);
-            return fallbackLogger;
+            const emergencyLogger = pino({ level: 'info', name: `EmergencyLogger-${type}-${Date.now()}` });
+            console.error(`[LoggingService:getLogger] CRITICAL: Shared logger type '${type}' is unexpectedly undefined AFTER initialization. Using emergency logger.`);
+            return context ? emergencyLogger.child(context) : emergencyLogger;
         }
-
         return context ? targetLogger.child(context) : targetLogger;
     }
 
-    public get conferenceLog(): Logger {
-        return this.conferenceLogger;
+    public get appLogger(): Logger {
+        if (!this.isInitialized && !this.isShuttingDown) return pino({ name: `PreInitEmergencyAppLogger-${Date.now()}`, level: 'info' });
+        if (this.isShuttingDown) return pino({ name: `ShutdownEmergencyAppLogger-${Date.now()}`, level: 'info' });
+        return this.appLoggerInternal;
+    }
+    public get saveConferenceEvent(): Logger {
+        if (!this.isInitialized && !this.isShuttingDown) return pino({ name: `PreInitEmergencySaveConfEvent-${Date.now()}`, level: 'info' });
+        if (this.isShuttingDown) return pino({ name: `ShutdownEmergencySaveConfEvent-${Date.now()}`, level: 'info' });
+        return this.saveConferenceEventLoggerInternal;
+    }
+    public get saveJournalEvent(): Logger {
+        if (!this.isInitialized && !this.isShuttingDown) return pino({ name: `PreInitEmergencySaveJourEvent-${Date.now()}`, level: 'info' });
+        if (this.isShuttingDown) return pino({ name: `ShutdownEmergencySaveJourEvent-${Date.now()}`, level: 'info' });
+        return this.saveJournalEventLoggerInternal;
     }
 }

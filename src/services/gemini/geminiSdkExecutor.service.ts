@@ -2,11 +2,24 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
-import { type GenerateContentResult, Part } from "@google/generative-ai"; // Thêm Part
+import {
+    type GenerateContentResponse,
+    // Alias cho rõ ràng
+    GenerateContentParameters as SDKGenerateContentParameters,
+    GenerateContentConfig as SDKGenerateContentConfig,
+    ContentListUnion as SDKContentListUnion
+} from "@google/genai";
 import { GeminiResponseHandlerService } from './geminiResponseHandler.service';
 import { GeminiRequestPayloadFileLoggerService } from './geminiRequestPayloadFileLogger.service';
 import { LoggingService } from '../logging.service';
-import { SdkExecutorParams, ProcessedGeminiResponse } from '../../types/crawl';
+import {
+    SdkExecutorParams,
+    ProcessedGeminiResponse,
+    ModelPreparationResult // Đã được cập nhật
+} from '../../types/crawl';
+
+
+
 @singleton()
 export class GeminiSdkExecutorService {
     private readonly serviceBaseLogger: Logger;
@@ -21,26 +34,62 @@ export class GeminiSdkExecutorService {
     }
 
     public async executeSdkCall(
-        params: SdkExecutorParams,
+        params: SdkExecutorParams, // SdkExecutorParams chứa systemInstructionTextToUse và fewShotPartsToUse (đã được Orchestrator xử lý)
         parentAttemptLogger: Logger
     ): Promise<ProcessedGeminiResponse> {
         const attemptApiCallLogger = parentAttemptLogger.child({
-            // serviceMethod, function (của retry), attempt đã có từ parentAttemptLogger
-            // Thêm định danh cho function của service này và giữ event_group
             sdkExecFunc: 'GeminiSdkExecutorService.executeSdkCall',
-            event_group: 'gemini_api_attempt' // Giữ nguyên event_group từ gốc
+            event_group: 'gemini_api_attempt'
         });
 
         const {
             limiterInstance, currentModelPrep, apiType, batchIndex, acronym, title,
-            crawlModel, systemInstructionTextToUse, fewShotPartsToUse, requestLogDir
+            crawlModel, // crawlModel từ SdkExecutorParams, có thể so sánh với currentModelPrep.crawlModelUsed
+            systemInstructionTextToUse, // Sẽ được thêm vào config ở đây
+            // fewShotPartsToUse từ SdkExecutorParams đã được Orchestrator đưa vào currentModelPrep.contentRequest
+            requestLogDir
         } = params;
 
-        if (!currentModelPrep.model) {
-            attemptApiCallLogger.error({ event: 'gemini_api_model_missing_before_generate' }, "Model object is undefined before calling generateContent.");
-            throw new Error("Model is not initialized for generateContent");
+        // currentModelPrep.model là service Models
+        if (!currentModelPrep.model || typeof currentModelPrep.model.generateContent !== 'function') {
+            attemptApiCallLogger.error({ event: 'gemini_api_models_service_missing_before_generate' }, "Models service object is undefined or invalid.");
+            throw new Error("Models service is not initialized for generateContent");
+        }
+        if (!currentModelPrep.contentRequest) {
+            attemptApiCallLogger.error({ event: 'gemini_api_content_request_missing_from_prep' }, "Content request is missing from model preparation result.");
+            throw new Error("Content request is missing from model preparation result.");
         }
 
+        // --- Xây dựng tham số cho SDK call ---
+        const sdkCallConfig: SDKGenerateContentConfig = {
+            ...(currentModelPrep.finalGenerationConfig || {}), // Bắt đầu với config từ Orchestrator
+        };
+
+        // 1. Thêm System Instruction vào config
+        if (systemInstructionTextToUse) {
+            // SDK mới cho phép systemInstruction là string, Part, hoặc Content
+            // Để đơn giản và nhất quán, có thể dùng cấu trúc Content hoặc Part
+            sdkCallConfig.systemInstruction = { role: "system", parts: [{ text: systemInstructionTextToUse }] };
+            // Hoặc đơn giản là: sdkCallConfig.systemInstruction = systemInstructionTextToUse; nếu SDK hỗ trợ trực tiếp string
+        }
+
+        // 2. Thêm Cached Content vào config nếu có
+        if (currentModelPrep.usingCacheActual && currentModelPrep.currentCache?.name) {
+            sdkCallConfig.cachedContent = currentModelPrep.currentCache.name;
+            attemptApiCallLogger.info({ cacheName: currentModelPrep.currentCache.name, event: 'gemini_api_using_cache_in_config' }, "Cache will be used for this SDK call.");
+        }
+
+        // `currentModelPrep.contentRequest` đã bao gồm few-shot (nếu có) và prompt chính từ Orchestrator
+        const sdkCallContents: SDKContentListUnion = currentModelPrep.contentRequest;
+
+        const paramsForSDK: SDKGenerateContentParameters = {
+            model: currentModelPrep.modelNameUsed, // Tên model đã được Orchestrator quyết định
+            contents: sdkCallContents,
+            config: sdkCallConfig,
+        };
+
+        // --- Ghi log payload (nếu bỏ comment và điều chỉnh) ---
+        // const generationConfigForLogging = paramsForSDK.generationConfig;
         // await this.payloadFileLogger.logRequestPayload({
         //     parentAttemptLogger: attemptApiCallLogger,
         //     requestLogDir,
@@ -49,36 +98,45 @@ export class GeminiSdkExecutorService {
         //     acronym,
         //     batchIndex,
         //     title,
-        //     crawlModel,
+        //     crawlModel: params.crawlModel, // crawlModel gốc của request
         //     usingCacheActual: currentModelPrep.usingCacheActual,
         //     currentCacheName: currentModelPrep.currentCache?.name,
-        //     systemInstructionApplied: systemInstructionTextToUse,
-        //     fewShotPartsApplied: fewShotPartsToUse,
-        //     contentRequest: currentModelPrep.contentRequest,
-        //     generationConfigSent: (typeof currentModelPrep.contentRequest === 'object' && currentModelPrep.contentRequest.generationConfig)
-        //         ? currentModelPrep.contentRequest.generationConfig
-        //         : undefined,
-        //     generationConfigEffective: currentModelPrep.model.generationConfig
+        //     systemInstructionApplied: systemInstructionTextToUse, 
+        //     fewShotPartsApplied: params.fewShotPartsToUse, // fewShotParts gốc của request (Orchestrator đã xử lý chúng)
+        //     contentRequest: paramsForSDK.contents, 
+        //     generationConfigSent: generationConfigForLogging,
+        //     // generationConfigEffective: // Khó xác định chính xác trước khi gọi
         // });
 
         const rateLimitKey = `${apiType}_${batchIndex}_${currentModelPrep.modelNameUsed}`;
-        attemptApiCallLogger.debug({ event: 'gemini_api_rate_limit_consume' }, `Attempting to consume rate limit points`);
+        attemptApiCallLogger.debug({ event: 'gemini_api_rate_limit_consume' }, `Attempting to consume rate limit points for ${rateLimitKey}`);
         try {
             await limiterInstance.consume(rateLimitKey, 1);
-            attemptApiCallLogger.debug({ event: 'gemini_api_rate_limit_passed' }, `Rate limit check passed. Sending request...`);
+            attemptApiCallLogger.debug({ event: 'gemini_api_rate_limit_passed' }, `Rate limit check passed for ${rateLimitKey}.`);
         } catch (rlError: unknown) {
-            attemptApiCallLogger.warn({ event: 'gemini_api_rate_limit_failed' }, `Rate limit consumption failed.`);
+            attemptApiCallLogger.warn({ event: 'gemini_api_rate_limit_failed' }, `Rate limit consumption failed for ${rateLimitKey}.`);
             throw rlError;
         }
 
-        let sdkApiResult: GenerateContentResult;
+        let sdkApiResult: GenerateContentResponse;
         try {
-            attemptApiCallLogger.info({ requestType: typeof currentModelPrep.contentRequest === 'string' ? 'string' : 'object', event: 'gemini_api_generate_start' }, "Calling model.generateContent");
-            sdkApiResult = await currentModelPrep.model.generateContent(currentModelPrep.contentRequest);
-            attemptApiCallLogger.info({ event: 'gemini_api_generate_success' }, "model.generateContent successful");
+            attemptApiCallLogger.info({
+                requestModel: paramsForSDK.model,
+                requestConfigPreview: {
+                    temp: paramsForSDK.config?.temperature,
+                    sysInstruction: !!paramsForSDK.config?.systemInstruction,
+                    cachedContent: paramsForSDK.config?.cachedContent
+                },
+                contentLength: Array.isArray(paramsForSDK.contents) ? paramsForSDK.contents.length : typeof paramsForSDK.contents === 'string' ? 1 : 'object',
+                event: 'gemini_api_generate_start'
+            }, "Calling ModelsService.generateContent");
+
+            sdkApiResult = await currentModelPrep.model.generateContent(paramsForSDK);
+
+            attemptApiCallLogger.info({ event: 'gemini_api_generate_success' }, "ModelsService.generateContent successful");
         } catch (genError: unknown) {
             const errorDetails = genError instanceof Error ? { name: genError.name, message: genError.message } : { details: String(genError) };
-            attemptApiCallLogger.error({ err: errorDetails, event: 'gemini_api_generate_content_failed' }, "Error during model.generateContent");
+            attemptApiCallLogger.error({ err: errorDetails, event: 'gemini_api_generate_content_failed' }, "Error during ModelsService.generateContent");
             throw genError;
         }
 
@@ -95,9 +153,9 @@ export class GeminiSdkExecutorService {
             metaData: processed.metaData,
             tokens: processed.metaData?.totalTokenCount,
             usingCache: currentModelPrep.usingCacheActual,
-            cacheName: currentModelPrep.usingCacheActual ? currentModelPrep.currentCache?.name : 'N/A',
-            modelUsed: currentModelPrep.modelNameUsed, // THÊM
-            crawlModel: currentModelPrep.crawlModelUsed, // THÊM
+            cacheName: currentModelPrep.currentCache?.name || 'N/A',
+            modelUsed: currentModelPrep.modelNameUsed,
+            crawlModel: currentModelPrep.crawlModelUsed,
             event: 'gemini_api_attempt_success'
         }, "Gemini API request processed successfully for this attempt.");
         return processed;

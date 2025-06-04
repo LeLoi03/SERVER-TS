@@ -48,11 +48,13 @@ async function startServer(): Promise<void> {
         // --- 1. Initialize Core Services (Config and Logging must be first) ---
         // Resolve ConfigService first as other services might depend on its configurations.
         configService = container.resolve(ConfigService);
-        // Resolve LoggingService to set up the application's logging infrastructure.
-        // loggingService = container.resolve(LoggingService);
-        // Get the pino Logger instance from the LoggingService.
-        // logger = loggingService.logger;
-
+        const loggingService = container.resolve(LoggingService);
+        try {
+            await loggingService.initialize(); // QUAN TRỌNG: Khởi tạo logger
+        } catch (error) {
+            console.error("FATAL: Failed to initialize logging service. Exiting.", error);
+            process.exit(1);
+        }
         // logger.info('[Server Start] Core services (Config, Logging) resolved successfully.');
 
         // --- 2. Initialize API Examples from ConfigService ---
@@ -81,12 +83,12 @@ async function startServer(): Promise<void> {
         // logger.info('[Server Start] All loaders initialized successfully.');
 
         // --- 4. Start the HTTP Server ---
-        const port = configService.config.PORT;
+        const port = configService.port;
         httpServer.listen(port, () => {
             const serverUrl = `http://localhost:${port}`; // Or `https://your-domain.com:${port}` in production
             // logger.info(`🚀 Server (HTTP & Socket.IO) is now listening on port ${port}`);
             // logger.info(`🔗 Application accessible at: ${serverUrl}`);
-            const allowedOrigins = configService.config.CORS_ALLOWED_ORIGINS.join(', ');
+            const allowedOrigins = configService.corsAllowedOrigins.join(', ');
             // logger.info(`🌐 Configured CORS allowed origins: ${allowedOrigins}`);
             // A basic console log for quick visibility during development
             console.log(`🚀 Server ready at ${serverUrl}`);

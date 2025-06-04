@@ -10,10 +10,10 @@ const configService = container.resolve(ConfigService);
 
 // --- Get configuration values from ConfigService ---
 // These are essential for the DOM processing logic, especially for link filtering and text extraction.
-const EXCLUDE_TEXTS = configService.config.EXCLUDE_TEXTS;
-const CFP_TAB_KEYWORDS = configService.config.CFP_TAB_KEYWORDS;
-const IMPORTANT_DATES_TABS = configService.config.IMPORTANT_DATES_TABS;
-const EXACT_KEYWORDS = configService.config.EXACT_KEYWORDS;
+const EXCLUDE_TEXTS = configService.excludeTexts;
+const CFP_TAB_KEYWORDS = configService.cfpTabKeywords;
+const IMPORTANT_DATES_TABS = configService.importantDatesTabs;
+const EXACT_KEYWORDS = configService.exactKeywords;
 
 // --- CRITICAL CONFIGURATION CHECK FOR THIS MODULE ---
 // Ensure that the necessary keywords for DOM processing are configured.

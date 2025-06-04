@@ -3,7 +3,7 @@ import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { RateLimiterRes, type RateLimiterMemory } from 'rate-limiter-flexible';
 import { Logger } from 'pino';
-import { ConfigService, AppConfig } from '../../config/config.service';
+import { ConfigService } from '../../config';
 import { LoggingService } from '../logging.service';
 import { GeminiContextCacheService } from './geminiContextCache.service';
 import { RetryableGeminiApiCall, ExecuteWithRetryResult, ModelPreparationResult } from '../../types/crawl';
@@ -12,8 +12,8 @@ import { RetryableGeminiApiCall, ExecuteWithRetryResult, ModelPreparationResult 
 @singleton()
 export class GeminiRetryHandlerService {
     private readonly serviceBaseLogger: Logger;
-    private readonly appConfig: AppConfig;
-    private readonly defaultMaxRetries: number; // Đổi tên từ maxRetries
+    // Remove: private readonly appConfig: AppConfig; // No longer needed as a direct member
+    private readonly defaultMaxRetries: number;
     private readonly initialDelayMs: number;
     private readonly maxDelayMs: number;
 
@@ -23,10 +23,13 @@ export class GeminiRetryHandlerService {
         @inject(GeminiContextCacheService) private contextCache: GeminiContextCacheService,
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiRetryHandlerService' });
-        this.appConfig = this.configService.config;
-        this.defaultMaxRetries = this.configService.config.GEMINI_MAX_RETRIES; // Sử dụng tên mới
-        this.initialDelayMs = this.appConfig.GEMINI_INITIAL_DELAY_MS;
-        this.maxDelayMs = this.appConfig.GEMINI_MAX_DELAY_MS;
+        // Remove: this.appConfig = this.configService.config;
+
+        // Use the specific getter for GEMINI_MAX_RETRIES
+        this.defaultMaxRetries = this.configService.geminiMaxRetries;
+        this.initialDelayMs = this.configService.geminiInitialDelayMs;
+        this.maxDelayMs = this.configService.geminiMaxDelayMs;      
+
         this.serviceBaseLogger.info("Constructing GeminiRetryHandlerService.");
     }
 
@@ -52,7 +55,7 @@ export class GeminiRetryHandlerService {
         const cacheKeyForInvalidation = `${apiType}-${modelNameForThisExecution}`;
         retryLogicLogger.debug({ event: 'retry_loop_start' }, "Executing with retry logic");
         let retryCount = 0;
-        let currentDelay = this.initialDelayMs;
+        let currentDelay = this.initialDelayMs; // Uses the corrected member variable
         const defaultResponse: ExecuteWithRetryResult = { responseText: "", metaData: null };
 
         const commonLogContext = {
@@ -90,8 +93,6 @@ export class GeminiRetryHandlerService {
                     const waitTimeMs = error.msBeforeNext;
                     attemptLogger.warn({ ...commonLogContext, waitTimeMs, event: 'retry_internal_rate_limit_wait' }, `Internal rate limit for ${modelNameForThisExecution}. Waiting ${waitTimeMs}ms...`);
                     await new Promise(resolve => setTimeout(resolve, waitTimeMs));
-                    // Quan trọng: Không tăng retryCount cho lỗi rate limit nội bộ, để nó thử lại ngay
-                    // Nhưng nếu maxAttemptsForThisCall là 1, chúng ta vẫn muốn nó thoát ra để Orchestrator xử lý
                     if (maxAttemptsForThisCall === 1) {
                         attemptLogger.warn({ ...commonLogContext, event: 'retry_internal_rate_limit_first_attempt_fail_single_shot' }, `Internal rate limit on first and only attempt for ${modelNameForThisExecution}. Failing this shot.`);
                         return { ...defaultResponse, firstAttemptFailed: true, finalErrorType: 'failed_first_attempt', errorDetails };
@@ -112,7 +113,6 @@ export class GeminiRetryHandlerService {
                     errorEventForThisAttempt = 'retry_attempt_error_safety_blocked';
                     shouldRetry = false;
                 }
-                // Lỗi parse JSON cũng sẽ rơi vào trường hợp chung, shouldRetry = true
 
                 const logPayloadForAttemptError = { ...commonLogContext, err: errorDetails, event: errorEventForThisAttempt };
 
@@ -135,8 +135,6 @@ export class GeminiRetryHandlerService {
                 retryCount++;
                 const isLastAttemptAfterThisFailure = retryCount >= maxAttemptsForThisCall;
 
-                // Nếu đây là lần thử đầu tiên (attempt === 1) và thất bại, và chúng ta chỉ được phép 1 lần thử (maxAttemptsForThisCall === 1)
-                // hoặc nếu lỗi không thể retry (shouldRetry === false)
                 if ((attempt === 1 && maxAttemptsForThisCall === 1) || !shouldRetry) {
                     const finalErrorType = !shouldRetry ? 'non_retryable_error' : 'failed_first_attempt';
                     attemptLogger.error({ ...commonLogContext, finalError: errorDetails, event: `retry_abort_${finalErrorType.replace('_', '_')}` },
@@ -158,7 +156,7 @@ export class GeminiRetryHandlerService {
                 attemptLogger.info({ ...commonLogContext, nextAttemptWillBe: attempt + 1, delaySeconds: (delayWithJitter / 1000).toFixed(2), event: 'retry_wait_before_next' },
                     `Waiting ${(delayWithJitter / 1000).toFixed(2)}s before next attempt with ${modelNameForThisExecution}.`);
                 await new Promise(resolve => setTimeout(resolve, delayWithJitter));
-                currentDelay = Math.min(currentDelay * 2, this.maxDelayMs);
+                currentDelay = Math.min(currentDelay * 2, this.maxDelayMs); // Uses the corrected member variable
             }
         }
         retryLogicLogger.error({ ...commonLogContext, event: 'retry_loop_exit_unexpected' }, `Exited retry loop unexpectedly for model ${modelNameForThisExecution} without returning a result or specific error.`);

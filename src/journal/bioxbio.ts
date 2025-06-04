@@ -3,7 +3,7 @@
 import { Page, Route } from 'playwright'; // Import Route for better typing
 import { logger as baseLogger, retryAsync, RetryOptions } from './utils'; // Import RetryOptions
 import NodeCache from 'node-cache';
-import { ConfigService } from '../config/config.service';
+import { ConfigService } from '../config/config.service'; // Correct path if bioxbio.ts is in src/
 
 // bioxbioCache will be initialized in the function that receives ConfigService
 // let bioxbioCache: NodeCache | null = null; // Or initialize it globally if ConfigService is resolved globally
@@ -28,16 +28,16 @@ export const fetchBioxbioData = async (
     // or ensure a global cache is configured with these options.
     // For simplicity, creating it here. If used across multiple calls, consider a singleton cache service.
     const bioxbioCache = new NodeCache({
-        stdTTL: configService.config.JOURNAL_CACHE_TTL,
-        checkperiod: configService.config.JOURNAL_CACHE_CHECK_PERIOD,
+        stdTTL: configService.journalCacheOptions.stdTTL, // Use getter: journalCacheOptions
+        checkperiod: configService.journalCacheOptions.checkperiod, // Use getter: journalCacheOptions
         useClones: false, // Recommended for performance if not mutating cached objects
     });
 
     // --- Define Retry Options from ConfigService ---
     const bioxbioRetryOptions: RetryOptions = {
-        retries: configService.config.JOURNAL_RETRY_RETRIES,
-        minTimeout: configService.config.JOURNAL_RETRY_MIN_TIMEOUT,
-        factor: configService.config.JOURNAL_RETRY_FACTOR,
+        retries: configService.journalRetryOptions.retries, // Use getter: journalRetryOptions
+        minTimeout: configService.journalRetryOptions.minTimeout, // Use getter: journalRetryOptions
+        factor: configService.journalRetryOptions.factor, // Use getter: journalRetryOptions
     };
 
     const cacheKey = `bioxbio:${journalName.toLowerCase().replace(/\s+/g, '-')}`; // Normalize cache key

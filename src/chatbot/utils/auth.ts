@@ -9,7 +9,7 @@ import { ConfigService } from '../../config/config.service';
 const configService = container.resolve(ConfigService);
 
 // --- Lấy cấu hình từ ConfigService ---
-const DATABASE_URL = configService.config.DATABASE_URL;
+const DATABASE_URL = configService.databaseUrl;
 if (!DATABASE_URL) {
     // Đây là lỗi cấu hình nghiêm trọng, nên log FATAL và throw error
     logToFile(`[FATAL ERROR] [API Client] DATABASE_URL is not configured. Aborting application startup.`);

@@ -16,8 +16,9 @@ import {
     ScimagoJournalAnalysis,
     JournalFileOutputAnalysis
 } from '../../types/logAnalysisJournal/logAnalysisJournal.types';
-import fs from 'fs';
+import fsSync from 'fs'; // Sử dụng fsSync cho existsSync
 import readline from 'readline';
+import { LogEntry } from '../../types/logAnalysis';
 
 
 // Hàm helper mới hoặc cải tiến để lấy JournalAnalysisDetail
@@ -303,10 +304,13 @@ export const getInitialJournalFileOutputAnalysis = (): JournalFileOutputAnalysis
 });
 
 
-export const initializeJournalLogAnalysisResult = (logFilePath: string, filterRequestId?: string): JournalLogAnalysisResult => {
+export const initializeJournalLogAnalysisResult = (
+    logFilePath?: string, // logFilePath giờ là optional
+    filterRequestId?: string
+): JournalLogAnalysisResult => {
     return {
         analysisTimestamp: new Date().toISOString(),
-        logFilePath: logFilePath,
+        logFilePath: logFilePath, // Sẽ là undefined khi tổng hợp
         status: 'Processing',
         errorMessage: undefined,
         filterRequestId: filterRequestId,
@@ -330,19 +334,47 @@ export const initializeJournalLogAnalysisResult = (logFilePath: string, filterRe
     };
 };
 
-export const readAndGroupJournalLogs = async (logFilePath: string): Promise<JournalReadLogResult> => {
-    const requestsData = new Map<string, JournalRequestLogData>();
+
+// --- CẬP NHẬT readAndGroupJournalLogs ---
+/**
+ * Reads a single journal log file (expected to contain logs for only one batchRequestId)
+ * and groups them.
+ * @param logFilePath Path to the specific request's log file.
+ * @param expectedBatchRequestId The batchRequestId expected to be in this log file.
+ */
+export const readAndGroupJournalLogs = async (
+    logFilePath: string,
+    expectedBatchRequestId: string // Bắt buộc phải có ID của request mà file này thuộc về
+): Promise<JournalReadLogResult> => { // Sử dụng JournalReadLogResult
+    const requestsData = new Map<string, JournalRequestLogData>(); // Sử dụng JournalRequestLogData
     let totalEntries = 0;
     let parsedEntries = 0;
     let parseErrorsCount = 0;
     const tempLogProcessingErrors: string[] = [];
 
-    if (!fs.existsSync(logFilePath)) {
-        throw new Error(`Log file not found at ${logFilePath}`);
+    if (!expectedBatchRequestId) {
+        tempLogProcessingErrors.push("CRITICAL: readAndGroupJournalLogs called without an expectedBatchRequestId.");
+        return { requestsData, totalEntries, parsedEntries, parseErrors: parseErrorsCount, logProcessingErrors: tempLogProcessingErrors };
     }
 
-    const fileStream = fs.createReadStream(logFilePath);
+    if (!fsSync.existsSync(logFilePath)) {
+        tempLogProcessingErrors.push(`Log file not found at ${logFilePath} for request ${expectedBatchRequestId}`);
+        return { requestsData, totalEntries, parsedEntries, parseErrors: parseErrorsCount, logProcessingErrors: tempLogProcessingErrors };
+    }
+
+    const fileStream = fsSync.createReadStream(logFilePath);
     const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
+
+    // Khởi tạo JournalRequestLogData cho expectedBatchRequestId
+    // Đảm bảo JournalRequestLogData có trường dataSource
+    const requestInfo: JournalRequestLogData = {
+        logs: [],
+        startTime: null,
+        endTime: null,
+        dataSource: undefined // Sẽ được cập nhật nếu tìm thấy trong log
+    };
+    requestsData.set(expectedBatchRequestId, requestInfo);
+    let dataSourceFound: ('scimago' | 'client' | string | undefined) = undefined;
 
     try {
         for await (const line of rl) {
@@ -350,41 +382,62 @@ export const readAndGroupJournalLogs = async (logFilePath: string): Promise<Jour
             if (!line.trim()) continue;
 
             try {
-                const logEntry = JSON.parse(line);
+                const logEntry = JSON.parse(line) as LogEntry; // Sử dụng LogEntry đã import
                 parsedEntries++;
                 const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const batchRequestId = logEntry.batchRequestId;
-                const dataSource = logEntry.dataSource || (logEntry.context && logEntry.context.dataSource);
 
+                if (logEntry.batchRequestId && logEntry.batchRequestId !== expectedBatchRequestId) {
+                    tempLogProcessingErrors.push(
+                        `Line ${totalEntries}: Mismatched batchRequestId. Expected '${expectedBatchRequestId}', found '${logEntry.batchRequestId}' in file ${logFilePath}.`
+                    );
+                    continue;
+                }
 
-                if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
-                    if (!requestsData.has(batchRequestId)) {
-                        requestsData.set(batchRequestId, { logs: [], startTime: null, endTime: null, dataSource: undefined });
-                    }
-                    const requestInfo = requestsData.get(batchRequestId)!;
+                if (!isNaN(entryTimeMillis)) {
                     requestInfo.logs.push(logEntry);
 
-                    if (dataSource && !requestInfo.dataSource) {
-                        requestInfo.dataSource = dataSource;
+                    if (requestInfo.startTime === null || entryTimeMillis < requestInfo.startTime) {
+                        requestInfo.startTime = entryTimeMillis;
+                    }
+                    if (requestInfo.endTime === null || entryTimeMillis > requestInfo.endTime) {
+                        requestInfo.endTime = entryTimeMillis;
                     }
 
-
-                    requestInfo.startTime = (requestInfo.startTime === null || isNaN(requestInfo.startTime))
-                        ? entryTimeMillis
-                        : Math.min(entryTimeMillis, requestInfo.startTime);
-
-                    requestInfo.endTime = (requestInfo.endTime === null || isNaN(requestInfo.endTime))
-                        ? entryTimeMillis
-                        : Math.max(entryTimeMillis, requestInfo.endTime);
+                    // Cố gắng tìm dataSource từ log entry, ưu tiên entry đầu tiên có thông tin này
+                    if (!dataSourceFound && logEntry.dataSource) {
+                        dataSourceFound = logEntry.dataSource as ('scimago' | 'client' | string);
+                    }
+                } else {
+                    tempLogProcessingErrors.push(`Line ${totalEntries}: Invalid or missing time field in ${logFilePath}`);
                 }
             } catch (parseError: any) {
                 parseErrorsCount++;
-                const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
-                tempLogProcessingErrors.push(errorMsg);
+                tempLogProcessingErrors.push(`Line ${totalEntries} in ${logFilePath}: ${parseError.message}`);
             }
         }
     } catch (readError: any) {
-        throw readError;
+        tempLogProcessingErrors.push(`Error reading file ${logFilePath}: ${readError.message}`);
+    }
+
+    // Gán dataSource đã tìm thấy vào requestInfo
+    if (dataSourceFound) {
+        requestInfo.dataSource = dataSourceFound;
+    } else if (requestInfo.logs.length > 0) {
+        // Nếu không tìm thấy ở entry đầu, thử tìm trong các entry khác (ít hiệu quả hơn)
+        for (const entry of requestInfo.logs) {
+            if (entry.dataSource) {
+                requestInfo.dataSource = entry.dataSource as ('scimago' | 'client' | string);
+                break;
+            }
+        }
+        if (!requestInfo.dataSource) {
+             tempLogProcessingErrors.push(`DataSource not found in logs for request ${expectedBatchRequestId} in file ${logFilePath}.`);
+        }
+    }
+
+
+    if (requestInfo.logs.length === 0 && totalEntries > 0) {
+        tempLogProcessingErrors.push(`No valid log entries processed for request ${expectedBatchRequestId} in file ${logFilePath}, though ${totalEntries} lines were read.`);
     }
 
     return {
@@ -416,30 +469,32 @@ export const doesRequestOverlapFilter = ( // Re-using from conference, should be
 };
 
 
+// --- filterJournalRequests giữ nguyên ---
+// Hàm này vẫn hữu ích để lọc theo thời gian cho dữ liệu của một request cụ thể
 export const filterJournalRequests = (
-    allRequestsData: Map<string, JournalRequestLogData>,
+    allRequestsData: Map<string, JournalRequestLogData>, // Sử dụng JournalRequestLogData
     filterStartMillis: number | null,
     filterEndMillis: number | null,
     batchRequestIdFilter?: string
-): JournalFilteredData => {
-    const filteredRequests = new Map<string, JournalRequestLogData>();
+): JournalFilteredData => { // Sử dụng JournalFilteredData
+    const filteredRequests = new Map<string, JournalRequestLogData>(); // Sử dụng JournalRequestLogData
     let analysisStartMillis: number | null = null;
     let analysisEndMillis: number | null = null;
 
-    if (batchRequestIdFilter) {
-        const requestInfo = allRequestsData.get(batchRequestIdFilter);
-        if (requestInfo && requestInfo.startTime !== null && requestInfo.endTime !== null) {
-             const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
-                doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestIdFilter
-                );
+    const targetRequestId = batchRequestIdFilter;
 
+    if (targetRequestId) {
+        const requestInfo = allRequestsData.get(targetRequestId);
+        if (requestInfo) {
+            const overlapsTimeFilter = doesRequestOverlapFilter(
+                requestInfo.startTime,
+                requestInfo.endTime,
+                filterStartMillis,
+                filterEndMillis,
+                targetRequestId
+            );
             if (overlapsTimeFilter) {
-                filteredRequests.set(batchRequestIdFilter, requestInfo);
+                filteredRequests.set(targetRequestId, requestInfo);
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
             }
@@ -447,14 +502,13 @@ export const filterJournalRequests = (
     } else {
         for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
             if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
-                 const includeRequest = doesRequestOverlapFilter(
+                const includeRequest = doesRequestOverlapFilter(
                     requestInfo.startTime,
                     requestInfo.endTime,
                     filterStartMillis,
                     filterEndMillis,
                     batchRequestId
                 );
-
                 if (includeRequest) {
                     filteredRequests.set(batchRequestId, requestInfo);
                     if (requestInfo.startTime !== null) {

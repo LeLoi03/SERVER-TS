@@ -3,7 +3,7 @@ import 'reflect-metadata'; // Essential for Tsyringe to work with decorators and
 import { container } from 'tsyringe'; // Import the Tsyringe IoC container for dependency resolution.
 import mongoose from 'mongoose'; // MongoDB Object-Document Mapper (ODM).
 import logToFile from '../utils/logger'; // Import the custom logging utility.
-import { ConfigService } from './config.service'; // Import the application's configuration service.
+import { ConfigService } from './index'; // Import the application's configuration service.
 
 /**
  * A consistent prefix for log messages originating from the MongoDB connection service.
@@ -17,7 +17,8 @@ const LOG_PREFIX: string = "[MongoDBService]";
 const configService = container.resolve(ConfigService);
 
 // --- Retrieve MongoDB Connection URI from ConfigService ---
-const MONGODB_URI = configService.config.MONGODB_URI;
+// Access MONGODB_URI using the specific getter provided by the refactored ConfigService
+const MONGODB_URI = configService.mongodbUri;
 
 // Perform an immediate critical check for MONGODB_URI.
 // If it's missing, log a fatal error and throw to prevent application startup.

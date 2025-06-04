@@ -12,14 +12,13 @@ import {
     getInitialFileOutputAnalysis,
     getInitialValidationStats
 } from '../../types/logAnalysis'; // Đảm bảo đường dẫn này đúng
-// src/utils/logAnalysis/processingSteps.ts
-import fs from 'fs';
+import fsSync from 'fs'; // Sử dụng fsSync cho existsSync
 import readline from 'readline';
 import {
     ReadLogResult,
     RequestLogData,
     FilteredData,
-    RequestTimings,
+    LogEntry
 } from '../../types/logAnalysis';
 
 export const normalizeErrorKey = (error: any): string => {
@@ -175,39 +174,40 @@ export const addConferenceError = (
     detail.errors.push(errorEntry);
 };
 
-export const initializeConferenceLogAnalysisResult = (logFilePath: string, filterRequestId?: string): ConferenceLogAnalysisResult => {
-    // Gọi các hàm khởi tạo chi tiết
+
+// --- CẬP NHẬT initializeConferenceLogAnalysisResult ---
+export const initializeConferenceLogAnalysisResult = (
+    logFilePath?: string, // logFilePath giờ là optional
+    filterRequestId?: string
+): ConferenceLogAnalysisResult => {
     const overall = getInitialOverallAnalysis();
     const googleSearch = getInitialGoogleSearchAnalysis();
     const playwright = getInitialPlaywrightAnalysis();
-    const geminiApi = getInitialGeminiApiAnalysis(); // <-- SỬ DỤNG HÀM KHỞI TẠO MỚI CHO GEMINI
+    const geminiApi = getInitialGeminiApiAnalysis();
     const batchProcessing = getInitialBatchProcessingAnalysis();
     const fileOutput = getInitialFileOutputAnalysis();
     const validationStats = getInitialValidationStats();
 
     return {
         analysisTimestamp: new Date().toISOString(),
-        logFilePath: logFilePath,
+        logFilePath: logFilePath, // Sẽ là undefined khi tổng hợp, hoặc đường dẫn file cụ thể khi phân tích đơn lẻ
         status: 'Processing',
         errorMessage: undefined,
         filterRequestId: filterRequestId,
         analyzedRequestIds: [],
-        requests: {}, // Khởi tạo rỗng, sẽ được điền sau
+        requests: {},
         totalLogEntries: 0,
         parsedLogEntries: 0,
-        parseErrors: 0,
+        parseErrors: 0, // Nên là number
         errorLogCount: 0,
         fatalLogCount: 0,
-
-        // Gán các phần đã khởi tạo
         overall: overall,
         googleSearch: googleSearch,
         playwright: playwright,
-        geminiApi: geminiApi, // <-- GÁN OBJECT GEMINI ĐÃ KHỞI TẠO ĐẦY ĐỦ
+        geminiApi: geminiApi,
         batchProcessing: batchProcessing,
         fileOutput: fileOutput,
         validationStats: validationStats,
-
         errorsAggregated: {},
         logProcessingErrors: [],
         conferenceAnalysis: {},
@@ -239,23 +239,55 @@ export const doesRequestOverlapFilter = (
 
 
 
-
-
-
-// --- readAndGroupConferenceLogs and filterRequests giữ nguyên ---
-export const readAndGroupConferenceLogs = async (logFilePath: string): Promise<ReadLogResult> => {
+// --- CẬP NHẬT readAndGroupConferenceLogs ---
+/**
+ * Reads a single conference log file (expected to contain logs for only one batchRequestId)
+ * and groups them.
+ * @param logFilePath Path to the specific request's log file.
+ * @param expectedBatchRequestId The batchRequestId expected to be in this log file.
+ *                               This is used for validation and as the key in the returned map.
+ */
+export const readAndGroupConferenceLogs = async (
+    logFilePath: string,
+    expectedBatchRequestId: string // Bắt buộc phải có ID của request mà file này thuộc về
+): Promise<ReadLogResult> => {
     const requestsData = new Map<string, RequestLogData>();
     let totalEntries = 0;
     let parsedEntries = 0;
     let parseErrorsCount = 0;
     const tempLogProcessingErrors: string[] = [];
 
-    if (!fs.existsSync(logFilePath)) {
-        throw new Error(`Log file not found at ${logFilePath}`);
+    if (!expectedBatchRequestId) {
+        // Đây là một lỗi logic nếu hàm này được gọi mà không có expectedBatchRequestId
+        // trong kiến trúc mới.
+        tempLogProcessingErrors.push("CRITICAL: readAndGroupConferenceLogs called without an expectedBatchRequestId.");
+        return {
+            requestsData,
+            totalEntries,
+            parsedEntries,
+            parseErrors: parseErrorsCount,
+            logProcessingErrors: tempLogProcessingErrors,
+        };
     }
 
-    const fileStream = fs.createReadStream(logFilePath);
+    if (!fsSync.existsSync(logFilePath)) {
+        tempLogProcessingErrors.push(`Log file not found at ${logFilePath} for request ${expectedBatchRequestId}`);
+        // Trả về kết quả rỗng nhưng có lỗi, để service phân tích biết file không tồn tại
+        return {
+            requestsData, // Rỗng
+            totalEntries: 0,
+            parsedEntries: 0,
+            parseErrors: 0,
+            logProcessingErrors: tempLogProcessingErrors,
+        };
+    }
+
+    const fileStream = fsSync.createReadStream(logFilePath);
     const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
+
+    let requestInfo: RequestLogData = { logs: [], startTime: null, endTime: null };
+    // Vì file này chỉ cho một request, chúng ta có thể đặt nó vào map ngay từ đầu
+    requestsData.set(expectedBatchRequestId, requestInfo);
 
     try {
         for await (const line of rl) {
@@ -263,42 +295,54 @@ export const readAndGroupConferenceLogs = async (logFilePath: string): Promise<R
             if (!line.trim()) continue;
 
             try {
-                const logEntry = JSON.parse(line);
+                const logEntry = JSON.parse(line) as LogEntry; // Đảm bảo LogEntry có trường 'time' và 'batchRequestId' (optional)
                 parsedEntries++;
                 const entryTimeMillis = logEntry.time ? new Date(logEntry.time).getTime() : NaN;
-                const batchRequestId = logEntry.batchRequestId;
 
-                if (batchRequestId && typeof batchRequestId === 'string' && !isNaN(entryTimeMillis)) {
-                    if (!requestsData.has(batchRequestId)) {
-                        requestsData.set(batchRequestId, { logs: [], startTime: null, endTime: null });
-                    }
-                    const requestInfo = requestsData.get(batchRequestId)!;
+                // Kiểm tra xem batchRequestId trong log entry (nếu có) có khớp với expectedBatchRequestId không
+                // Logger của request đã tự động thêm batchRequestId vào base, nên nó sẽ có ở đây.
+                if (logEntry.batchRequestId && logEntry.batchRequestId !== expectedBatchRequestId) {
+                    tempLogProcessingErrors.push(
+                        `Line ${totalEntries}: Mismatched batchRequestId. Expected '${expectedBatchRequestId}', found '${logEntry.batchRequestId}' in file ${logFilePath}.`
+                    );
+                    continue; // Bỏ qua entry này nếu không khớp
+                }
+                // Nếu logEntry không có batchRequestId, ta giả định nó thuộc về expectedBatchRequestId
+                // vì đây là file log riêng của request đó.
+
+                if (!isNaN(entryTimeMillis)) {
                     requestInfo.logs.push(logEntry);
 
-                    const currentStartTime = requestInfo.startTime;
-                    const currentEndTime = requestInfo.endTime;
-
-                    requestInfo.startTime = (currentStartTime === null || isNaN(currentStartTime))
-                        ? entryTimeMillis
-                        : Math.min(entryTimeMillis, currentStartTime);
-
-                    requestInfo.endTime = (currentEndTime === null || isNaN(currentEndTime))
-                        ? entryTimeMillis
-                        : Math.max(entryTimeMillis, currentEndTime);
-
+                    if (requestInfo.startTime === null || entryTimeMillis < requestInfo.startTime) {
+                        requestInfo.startTime = entryTimeMillis;
+                    }
+                    if (requestInfo.endTime === null || entryTimeMillis > requestInfo.endTime) {
+                        requestInfo.endTime = entryTimeMillis;
+                    }
+                } else {
+                    tempLogProcessingErrors.push(`Line ${totalEntries}: Invalid or missing time field.`);
                 }
             } catch (parseError: any) {
                 parseErrorsCount++;
-                const errorMsg = `Line ${totalEntries}: ${parseError.message}`;
+                const errorMsg = `Line ${totalEntries} in ${logFilePath}: ${parseError.message}`;
                 tempLogProcessingErrors.push(errorMsg);
             }
         }
     } catch (readError: any) {
-        throw readError;
+        // Ném lỗi đọc file để service phân tích có thể bắt và xử lý
+        tempLogProcessingErrors.push(`Error reading file ${logFilePath}: ${readError.message}`);
+        // throw readError; // Hoặc chỉ ghi lỗi và trả về dữ liệu đã parse được
     }
 
+    // Nếu không có entry nào được parse thành công cho request này, nhưng file có nội dung
+    if (requestInfo.logs.length === 0 && totalEntries > 0) {
+        tempLogProcessingErrors.push(`No valid log entries processed for request ${expectedBatchRequestId} in file ${logFilePath}, though ${totalEntries} lines were read.`);
+        // Không xóa requestInfo khỏi requestsData, để service phân tích biết đã cố đọc file này
+    }
+
+
     return {
-        requestsData,
+        requestsData, // Sẽ chỉ chứa một entry với key là expectedBatchRequestId
         totalEntries,
         parsedEntries,
         parseErrors: parseErrorsCount,
@@ -306,35 +350,49 @@ export const readAndGroupConferenceLogs = async (logFilePath: string): Promise<R
     };
 };
 
+
+// --- filterRequests giữ nguyên ---
+// Hàm này vẫn hữu ích để lọc theo thời gian cho dữ liệu của một request cụ thể
+// hoặc khi tổng hợp (mặc dù khi tổng hợp, việc lọc thời gian có thể được xử lý bởi
+// việc chỉ phân tích các request có file log được sửa đổi trong khoảng thời gian đó,
+// hoặc để `analyzeLiveLogsForRequest` tự lọc).
 export const filterRequests = (
-    allRequestsData: Map<string, RequestLogData>,
+    allRequestsData: Map<string, RequestLogData>, // Trong trường hợp phân tích đơn lẻ, map này chỉ có 1 entry
     filterStartMillis: number | null,
     filterEndMillis: number | null,
-    batchRequestIdFilter?: string
+    batchRequestIdFilter?: string // Khi phân tích đơn lẻ, đây sẽ là ID của request đó
 ): FilteredData => {
     const filteredRequests = new Map<string, RequestLogData>();
     let analysisStartMillis: number | null = null;
     let analysisEndMillis: number | null = null;
 
-    if (batchRequestIdFilter) {
-        const requestInfo = allRequestsData.get(batchRequestIdFilter);
-        if (requestInfo && requestInfo.startTime !== null && requestInfo.endTime !== null) {
-            const overlapsTimeFilter = (filterStartMillis === null && filterEndMillis === null) ||
-                doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestIdFilter
-                );
+    const targetRequestId = batchRequestIdFilter;
+
+    if (targetRequestId) {
+        const requestInfo = allRequestsData.get(targetRequestId);
+        if (requestInfo) { // Không cần kiểm tra startTime/endTime ở đây vì chúng ta muốn lấy requestInfo dù có log hay không
+            // Việc lọc theo thời gian sẽ áp dụng cho các log *bên trong* requestInfo này sau đó,
+            // hoặc để quyết định có nên xử lý requestInfo này không.
+            // Ở đây, chúng ta chỉ cần lấy requestInfo nếu ID khớp.
+            // Việc requestInfo.startTime/endTime có null hay không sẽ được xử lý bởi doesRequestOverlapFilter.
+
+            const overlapsTimeFilter = doesRequestOverlapFilter(
+                requestInfo.startTime, // startTime và endTime của request
+                requestInfo.endTime,
+                filterStartMillis,     // filter của người dùng
+                filterEndMillis,
+                targetRequestId
+            );
 
             if (overlapsTimeFilter) {
-                filteredRequests.set(batchRequestIdFilter, requestInfo);
+                filteredRequests.set(targetRequestId, requestInfo);
+                // analysisStartMillis/EndMillis nên là thời gian thực tế của request này nếu nó được chọn
                 analysisStartMillis = requestInfo.startTime;
                 analysisEndMillis = requestInfo.endTime;
             }
         }
-    } else {
+    } else { // Trường hợp tổng hợp (không nên xảy ra nếu `readAndGroupConferenceLogs` chỉ trả về 1 request)
+        // Tuy nhiên, giữ lại logic này nếu `filterRequests` có thể được gọi với nhiều request
         for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
             if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
                 const includeRequest = doesRequestOverlapFilter(

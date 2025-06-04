@@ -139,6 +139,7 @@ export const calculateFinalMetrics = (
             status: 'Unknown',
             originalRequestId: results.requests[reqId]?.originalRequestId,
             csvOutputStreamFailed: false,
+            errorMessages: []
         };
 
         if (requestData && requestData.startTime !== null && requestData.endTime !== null) {
@@ -227,9 +228,22 @@ export const calculateFinalMetrics = (
             endTime: currentRequestTimings.endTime,
             durationSeconds: currentRequestTimings.durationSeconds,
             originalRequestId: currentRequestTimings.originalRequestId,
-            // csvOutputStreamFailed will be set by handleCsvProcessingEvent if needed
-            // status, totalConferencesInputForRequest and processedConferencesCountForRequest will be updated in STAGE 3
+            errorMessages: [], // Khởi tạo mảng errorMessages
+            // status, totalConferencesInputForRequest và processedConferencesCountForRequest sẽ được cập nhật ở STAGE 3
         };
+
+        // Sau khi xử lý stuck conferences và thêm lỗi vào conf.errors
+        // Lặp lại qua conferencesForThisRequest để tổng hợp lỗi vào requestTimings.errorMessages
+        const requestErrorMessages = new Set<string>();
+        conferencesForThisRequest.forEach(conf => {
+            if (conf.errors && conf.errors.length > 0) {
+                // Lấy message của lỗi đầu tiên hoặc một thông báo tóm tắt
+                requestErrorMessages.add(`Conference '${conf.acronym}': ${conf.errors[0].message}`);
+            }
+        });
+        if (results.requests[reqId]) { // Kiểm tra lại vì có thể đã bị xóa nếu logic thay đổi
+            results.requests[reqId].errorMessages = Array.from(requestErrorMessages).slice(0, 5); // Giới hạn số lượng error messages
+        }
     }
 
     // --- NEW: RECALCULATE OVERALL DURATION BASED ON SUM OF ANALYZED REQUEST DURATIONS ---
@@ -462,31 +476,140 @@ export const calculateFinalMetrics = (
         results.geminiApi.cacheContextMisses = Math.max(0, (results.geminiApi.cacheContextAttempts || 0) - (results.geminiApi.cacheContextHits || 0));
     }
 
-    // --- STAGE 4: Determine final overall analysis status (Dựa trên request statuses đã chốt) ---
+     // --- STAGE 4: Determine final overall analysis status and error message ---
     if (results.analyzedRequestIds.length > 0) {
         const requestStatuses = results.analyzedRequestIds.map(id => results.requests[id]?.status);
+        const requestErrorMessagesMap = new Map<string, string[]>();
+        results.analyzedRequestIds.forEach(id => {
+            if (results.requests[id]?.errorMessages?.length) {
+                requestErrorMessagesMap.set(id, results.requests[id].errorMessages);
+            }
+        });
 
         if (requestStatuses.some(s => s === 'Processing')) {
             results.status = 'Processing';
+            results.errorMessage = 'One or more requests are still processing.';
         } else if (requestStatuses.every(s => s === 'Failed')) {
             results.status = 'Failed';
+            if (results.analyzedRequestIds.length === 1) {
+                const failedReqId = results.analyzedRequestIds[0];
+                const errorMsgs = requestErrorMessagesMap.get(failedReqId);
+                results.errorMessage = errorMsgs?.join('; ') || `Request ${failedReqId} failed.`;
+            } else {
+                results.errorMessage = 'All analyzed requests failed.';
+            }
         } else if (requestStatuses.some(s => s === 'Failed' || s === 'CompletedWithErrors')) {
             results.status = 'CompletedWithErrors';
-        } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData' || s === 'Unknown')) {
-            if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'NoData')) {
-                results.status = 'Completed';
-            } else if (requestStatuses.some(s => s === 'PartiallyCompleted')) {
-                results.status = 'PartiallyCompleted';
-            } else if (requestStatuses.some(s => s === 'Unknown') && !requestStatuses.some(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted')) {
-                results.status = 'Unknown';
+            const problematicRequestIds = results.analyzedRequestIds.filter(id =>
+                results.requests[id]?.status === 'Failed' || results.requests[id]?.status === 'CompletedWithErrors'
+            );
+            if (problematicRequestIds.length === 1) {
+                 const problemReqId = problematicRequestIds[0];
+                 const errorMsgs = requestErrorMessagesMap.get(problemReqId);
+                 results.errorMessage = errorMsgs?.join('; ') || `Request ${problemReqId} completed with errors or failed.`;
+            } else {
+                // Lấy một vài thông điệp lỗi đầu tiên từ các request có vấn đề
+                const collectedErrorMessages: string[] = [];
+                let count = 0;
+                for (const reqId of problematicRequestIds) {
+                    if (count >= 2) break; // Lấy tối đa 2 message
+                    const errorMsgs = requestErrorMessagesMap.get(reqId);
+                    if (errorMsgs?.length) {
+                        collectedErrorMessages.push(`Req ${reqId.slice(-6)}: ${errorMsgs[0]}`); // Lấy lỗi đầu tiên của request đó
+                        count++;
+                    }
+                }
+                if (collectedErrorMessages.length > 0) {
+                    results.errorMessage = `Multiple requests had issues. Examples: ${collectedErrorMessages.join('; ')}. Total problematic: ${problematicRequestIds.length}.`;
+                } else {
+                    results.errorMessage = `${problematicRequestIds.length} requests completed with errors or failed.`;
+                }
             }
-            else {
+        } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData' || s === 'Unknown')) {
+            // Ưu tiên các trạng thái ít "hoàn hảo" hơn
+            if (requestStatuses.some(s => s === 'PartiallyCompleted')) {
+                results.status = 'PartiallyCompleted';
+                results.errorMessage = 'Some requests were only partially completed.';
+            } else if (requestStatuses.some(s => s === 'Unknown')) {
+                results.status = 'Unknown';
+                results.errorMessage = 'The status of some requests could not be determined.';
+            } else if (requestStatuses.some(s => s === 'NoData')) {
+                // Nếu tất cả là NoData, hoặc Completed/Skipped/NoData
+                if (requestStatuses.every(s => s === 'NoData' || s === 'Completed' || s === 'Skipped')) {
+                    if (requestStatuses.every(s => s === 'NoData')) {
+                        results.status = 'Completed'; // Coi như completed nhưng không có data
+                        results.errorMessage = 'All analyzed requests had no data to process.';
+                    } else {
+                        results.status = 'Completed';
+                        results.errorMessage = 'All requests completed; some may have had no data or were skipped.';
+                    }
+                } else { // Trường hợp này khó xảy ra nếu logic trên đúng
+                    results.status = 'PartiallyCompleted';
+                    results.errorMessage = 'Requests completed with mixed results (some had no data).';
+                }
+            } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped')) {
                 results.status = 'Completed';
+                if (requestStatuses.some(s => s === 'Skipped')) {
+                    results.errorMessage = 'All analyzed requests completed or were skipped.';
+                } else {
+                    // Không cần errorMessage nếu tất cả đều 'Completed' thuần túy
+                }
+            } else {
+                // Fallback nếu logic trên chưa bao phủ hết (khó xảy ra)
+                results.status = 'Completed'; // Mặc định là completed nếu không có lỗi rõ ràng
             }
         } else {
+            // Trường hợp không khớp với bất kỳ logic nào ở trên (rất hiếm)
             results.status = 'Unknown';
+            results.errorMessage = "The overall analysis status could not be determined due to an unexpected combination of request statuses.";
         }
-    } else {
+    } else { // Không có request ID nào được phân tích
         results.status = "NoRequestsAnalyzed";
+        results.errorMessage = "No requests were found matching the filter criteria for analysis.";
+        // Nếu có filterRequestId được truyền vào, thông báo cụ thể hơn
+        if (results.filterRequestId) {
+            results.errorMessage = `Request ID '${results.filterRequestId}' not found or no logs available for it.`;
+        }
+    }
+
+    // --- Đảm bảo errorMessage được đặt nếu status là Failed hoặc CompletedWithErrors và chưa có ---
+    // Đoạn này có thể được tinh chỉnh hoặc gộp vào logic ở trên.
+    if ((results.status === 'Failed' || results.status === 'CompletedWithErrors') && !results.errorMessage) {
+        if (results.analyzedRequestIds.length === 1) {
+            const reqId = results.analyzedRequestIds[0];
+            const reqSummary = results.requests[reqId];
+            if (reqSummary?.errorMessages?.length) {
+                results.errorMessage = reqSummary.errorMessages.join('; ');
+            } else if (reqSummary?.status === 'Failed') {
+                results.errorMessage = `Request ${reqId} failed with an unspecified error.`;
+            } else if (reqSummary?.status === 'CompletedWithErrors') {
+                results.errorMessage = `Request ${reqId} completed with unspecified errors.`;
+            }
+        } else if (results.overall.failedOrCrashedTasks > 0) {
+            results.errorMessage = `Analysis completed with ${results.overall.failedOrCrashedTasks} failed/crashed conference tasks across all requests.`;
+        } else {
+            results.errorMessage = `Analysis finished with status ${results.status}, but no specific error message was generated.`;
+        }
+    }
+
+    // Nếu status là Completed nhưng có lỗi ở conference con, có thể đổi thành CompletedWithErrors
+    if (results.status === 'Completed' && results.overall.failedOrCrashedTasks > 0) {
+        results.status = 'CompletedWithErrors';
+        if (!results.errorMessage) { // Chỉ đặt nếu chưa có errorMessage cụ thể hơn
+            results.errorMessage = `Analysis completed, but ${results.overall.failedOrCrashedTasks} conference tasks failed or crashed.`;
+        }
+    }
+
+    // Nếu không có lỗi gì và status là Completed, xóa errorMessage (nếu có từ các trường hợp khác)
+    if (results.status === 'Completed' && results.overall.failedOrCrashedTasks === 0 && results.overall.processingTasks === 0) {
+        // Kiểm tra xem có errorMessages nào ở các request con không
+        const hasRequestLevelErrors = results.analyzedRequestIds.some(id => results.requests[id]?.errorMessages?.length > 0);
+        if (!hasRequestLevelErrors) {
+            results.errorMessage = undefined; // Xóa errorMessage nếu thực sự không có lỗi nào
+        } else if (!results.errorMessage) {
+            // Nếu có lỗi ở request con nhưng chưa có errorMessage tổng thể
+            results.status = 'CompletedWithErrors'; // Nâng cấp status
+            results.errorMessage = "Some requests completed but had internal processing issues.";
+        }
     }
 };

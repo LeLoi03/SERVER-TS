@@ -1,158 +1,175 @@
 // src/api/v1/logAnalysis/logAnalysis.controller.ts
 import { Request, Response, NextFunction } from 'express';
 import { container } from 'tsyringe';
+import { Logger } from 'pino';
 
-// Import services and types
-import { LogAnalysisService } from '../../../services/logAnalysisConference.service';
+// Đổi tên import để rõ ràng hơn
+import { ConferenceLogAnalysisService } from '../../../services/conferenceLogAnalysis.service';
 import { ConferenceLogAnalysisResult } from '../../../types/logAnalysis';
-import { LogAnalysisJournalService } from '../../../services/logAnalysisJournal.service';
+import { JournalLogAnalysisService } from '../../../services/journalLogAnalysis.service';
 import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logAnalysisJournal.types';
-
-// Import the new error utility
+// initializeJournalLogAnalysisResult có thể không cần import trực tiếp ở controller
+// import { initializeJournalLogAnalysisResult } from '../../../utils/logAnalysisJournal/helpers';
+import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.service';
+import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
+// ConfigService không cần thiết nếu controller không tự tạo emptyResult
+// import { ConfigService } from '../../../config/config.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 
-/**
- * Handles GET requests to retrieve the latest log analysis results.
- * This endpoint triggers a new log analysis operation on demand, allowing
- * clients to specify time filters (start/end) and a specific request ID for analysis.
- *
- * @param {Request} req - The Express request object, potentially containing `filterStartTime`,
- *                        `filterEndTime` (as Unix timestamps in ms), and `requestId` in query parameters.
- * @param {Response} res - The Express response object.
- * @param {NextFunction} next - The Express next middleware function for error handling.
- * @returns {Promise<void>} A promise that resolves when the response is sent or error is passed to next.
- */
+const getControllerLogger = (req: Request, loggerType: LoggerType, routeName: string): Logger => {
+    const loggingService = container.resolve(LoggingService);
+    // Lấy pinoRequestId từ middleware (nếu có, ví dụ từ pino-http)
+    // Hoặc tạo một ID duy nhất cho request nếu không có
+    const pinoRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    return loggingService.getLogger(loggerType).child({
+        controller: 'LogAnalysisController',
+        route: routeName,
+        pinoRequestId: pinoRequestId, // Sử dụng ID này để trace log
+    });
+};
+
+const handleAnalysisResponse = (
+    res: Response,
+    results: ConferenceLogAnalysisResult | JournalLogAnalysisResult,
+    logger: Logger
+) => {
+    // Logic chung để xử lý response dựa trên results.status
+    // Luôn trả về 200 OK, FE sẽ dựa vào 'status' và 'errorMessage' trong payload để hiển thị
+    logger.info({
+        finalStatus: results.status,
+        analyzedIdsCount: results.analyzedRequestIds?.length,
+        requestIdParam: results.filterRequestId,
+        errorMessage: results.errorMessage
+    }, "Analysis processing complete. Sending response.");
+    res.status(200).json(results);
+};
+
+
 export const getLatestConferenceAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logAnalysisService = container.resolve(LogAnalysisService);
+    const logger = getControllerLogger(req, 'conference', 'getLatestConferenceAnalysis');
+    logger.info({ query: req.query }, "Request received for latest conference analysis.");
+
+    const conferenceAnalysisService = container.resolve(ConferenceLogAnalysisService);
 
     try {
         const {
             filterStartTime: filterStartTimeStr,
             filterEndTime: filterEndTimeStr,
-            requestId: filterRequestId
+            requestId: filterRequestIdQuery
         } = req.query;
 
         const filterStartTime = typeof filterStartTimeStr === 'string' && !isNaN(parseInt(filterStartTimeStr, 10))
-            ? parseInt(filterStartTimeStr, 10)
-            : undefined;
-
+            ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
-            ? parseInt(filterEndTimeStr, 10)
-            : undefined;
+            ? parseInt(filterEndTimeStr, 10) : undefined;
+        const requestIdParam = typeof filterRequestIdQuery === 'string' ? filterRequestIdQuery : undefined;
 
-        const requestIdParam = typeof filterRequestId === 'string' ? filterRequestId : undefined;
-
-        const results: ConferenceLogAnalysisResult = await logAnalysisService.performConferenceAnalysisAndUpdate(
-            filterStartTime,
-            filterEndTime,
-            requestIdParam
+        logger.debug({ filterStartTime, filterEndTime, requestIdParam }, "Performing conference analysis.");
+        const results: ConferenceLogAnalysisResult = await conferenceAnalysisService.performConferenceAnalysisAndUpdate(
+            filterStartTime, filterEndTime, requestIdParam
         );
 
-        res.status(200).json(results);
+        handleAnalysisResponse(res, results, logger);
 
-    } catch (error: unknown) { // Use unknown here
-        const { message: errorMessage } = getErrorMessageAndStack(error); // Only need message here
-
-        if (errorMessage?.includes('Log file not found')) {
-            res.status(404).json({ message: errorMessage || 'Log file not found, cannot perform analysis.' });
-        } else if (errorMessage?.includes('No log data found')) {
-            res.status(404).json({ message: errorMessage || 'No log data found for the selected period or requestId.' });
-        } else {
-            next(error); // Pass the original error object to next for global error handler
-        }
+    } catch (error: unknown) { // Lỗi không mong muốn từ service hoặc logic controller
+        const { message } = getErrorMessageAndStack(error);
+        logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, "Unhandled error in getLatestConferenceAnalysis.");
+        // Chuyển cho global error handler
+        next(error);
     }
 };
 
-/**
- * Handles POST requests to manually trigger a log analysis.
- * This endpoint initiates a background log analysis task without waiting for its completion.
- * Results will be updated asynchronously.
- *
- * @param {Request} req - The Express request object.
- * @param {Response} res - The Express response object.
- * @param {NextFunction} next - The Express next middleware function for error handling.
- * @returns {Promise<void>} A promise that resolves when the response is sent or error is passed to next.
- */
-export const triggerConferenceAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logAnalysisService = container.resolve(LogAnalysisService);
+export const triggerConferenceCacheRegeneration = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const logger = getControllerLogger(req, 'conference', 'triggerConferenceCacheRegeneration');
+    const { requestId } = req.query;
 
+    if (!requestId || typeof requestId !== 'string') {
+        logger.warn({ query: req.query }, "Bad request: 'requestId' query parameter is required.");
+        res.status(400).json({ message: "'requestId' query parameter is required." });
+        return;
+    }
+    logger.info({ requestId }, "Request received to trigger conference cache regeneration.");
+
+    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
     try {
-        logAnalysisService.performConferenceAnalysisAndUpdate().catch((backgroundError: unknown) => { // Use unknown here
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(backgroundError);
-            console.error('[Background Task Error] Log analysis background process failed:', { message: errorMessage, stack: errorStack });
-        });
+        // Chạy bất đồng bộ, không await
+        logAnalysisCacheService.generateAndCacheAnalysis('conference', requestId)
+            .then(() => {
+                logger.info({ requestId }, `Background cache regeneration for conference request ${requestId} initiated successfully.`);
+            })
+            .catch((backgroundError: unknown) => {
+                const { message: errorMessage } = getErrorMessageAndStack(backgroundError);
+                logger.error({ err: backgroundError, requestId, errorMessage: errorMessage }, `Background cache regeneration failed for conference request ${requestId}.`);
+            });
 
-        res.status(202).json({ message: 'Log analysis task triggered successfully. Results will be updated asynchronously.' });
-
-    } catch (error: unknown) { // Use unknown here
-        next(error); // Pass the original error object to next for global error handler
+        res.status(202).json({ message: `Analysis cache regeneration triggered for conference request ${requestId}. Results will be updated asynchronously.` });
+    } catch (error: unknown) { // Lỗi đồng bộ khi gọi generateAndCacheAnalysis (rất hiếm)
+        const { message } = getErrorMessageAndStack(error);
+        logger.error({ err: error, requestId, errorMessage: message }, "Error triggering conference cache regeneration.");
+        next(error);
     }
 };
 
-
-
-// --- Journal Analysis Handlers ---
 export const getLatestJournalAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const journalLogAnalysisService = container.resolve(LogAnalysisJournalService); // <<< SỬ DỤNG SERVICE MỚI
+    const logger = getControllerLogger(req, 'journal', 'getLatestJournalAnalysis');
+    logger.info({ query: req.query }, "Request received for latest journal analysis.");
+
+    const journalLogAnalysisService = container.resolve(JournalLogAnalysisService);
+
     try {
         const {
             filterStartTime: filterStartTimeStr,
             filterEndTime: filterEndTimeStr,
-            requestId: filterRequestId
+            requestId: filterRequestIdQuery
         } = req.query;
 
         const filterStartTime = typeof filterStartTimeStr === 'string' && !isNaN(parseInt(filterStartTimeStr, 10))
-            ? parseInt(filterStartTimeStr, 10)
-            : undefined;
+            ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
-            ? parseInt(filterEndTimeStr, 10)
-            : undefined;
-        const requestIdParam = typeof filterRequestId === 'string' ? filterRequestId : undefined;
+            ? parseInt(filterEndTimeStr, 10) : undefined;
+        const requestIdParam = typeof filterRequestIdQuery === 'string' ? filterRequestIdQuery : undefined;
 
+        logger.debug({ filterStartTime, filterEndTime, requestIdParam }, "Performing journal analysis.");
         const results: JournalLogAnalysisResult = await journalLogAnalysisService.performJournalAnalysisAndUpdate(
-            filterStartTime,
-            filterEndTime,
-            requestIdParam
+            filterStartTime, filterEndTime, requestIdParam
         );
 
-        // Xử lý response tương tự như conference, nhưng với thông báo của journal
-        if (results.status === 'Failed' && results.errorMessage?.includes('Log file not found')) {
-            res.status(404).json({ message: results.errorMessage });
-        } else if (results.errorMessage && results.analyzedRequestIds?.length === 0 && results.status !== 'Failed') {
-            res.status(200).json(results); // Trả về results với errorMessage (vd: No data found)
-        } else if (results.status === 'Failed') {
-            res.status(500).json({ message: results.errorMessage || "Journal analysis failed." });
-        }
-         else {
-            res.status(200).json(results);
-        }
+        handleAnalysisResponse(res, results, logger);
 
-    } catch (error: unknown) {
-        const { message: errorMessage } = getErrorMessageAndStack(error);
-        if (res.headersSent) return;
-
-        if (errorMessage?.includes('Log file not found')) {
-             res.status(404).json({ message: errorMessage });
-        } else if (errorMessage?.includes('No log data found')) { // Mặc dù service trả về completed, controller có thể quyết định 404
-             res.status(404).json({ message: errorMessage });
-        } else if (errorMessage?.includes('Analysis is already in progress')) {
-            res.status(429).json({ message: errorMessage });
-        }
-        else {
-            next(error);
-        }
+    } catch (error: unknown) { // Lỗi không mong muốn từ service hoặc logic controller
+        const { message } = getErrorMessageAndStack(error);
+        logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, `Unhandled error in getLatestJournalAnalysis.`);
+        // Chuyển cho global error handler
+        next(error);
     }
 };
 
-export const triggerJournalAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const journalLogAnalysisService = container.resolve(LogAnalysisJournalService); // <<< SỬ DỤNG SERVICE MỚI
+export const triggerJournalCacheRegeneration = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const logger = getControllerLogger(req, 'journal', 'triggerJournalCacheRegeneration');
+    const { requestId } = req.query;
+
+    if (!requestId || typeof requestId !== 'string') {
+        logger.warn({ query: req.query }, "Bad request: 'requestId' query parameter is required.");
+        res.status(400).json({ message: "'requestId' query parameter is required." });
+        return;
+    }
+    logger.info({ requestId }, "Request received to trigger journal cache regeneration.");
+
+    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
     try {
-        journalLogAnalysisService.performJournalAnalysisAndUpdate().catch((backgroundError: unknown) => {
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(backgroundError);
-            console.error('[Background Task Error] Journal log analysis failed:', { message: errorMessage, stack: errorStack });
-        });
-        res.status(202).json({ message: 'Journal log analysis triggered.' });
-    } catch (error: unknown) {
+        // Chạy bất đồng bộ, không await
+        logAnalysisCacheService.generateAndCacheAnalysis('journal', requestId)
+            .then(() => {
+                logger.info({ requestId }, `Background cache regeneration for journal request ${requestId} initiated successfully.`);
+            })
+            .catch((backgroundError: unknown) => {
+                const { message: errorMessage } = getErrorMessageAndStack(backgroundError);
+                logger.error({ err: backgroundError, requestId, errorMessage: errorMessage }, `Background cache regeneration failed for journal request ${requestId}.`);
+            });
+        res.status(202).json({ message: `Analysis cache regeneration triggered for journal request ${requestId}.` });
+    } catch (error: unknown) { // Lỗi đồng bộ khi gọi generateAndCacheAnalysis (rất hiếm)
+        const { message } = getErrorMessageAndStack(error);
+        logger.error({ err: error, requestId, errorMessage: message }, "Error triggering journal cache regeneration.");
         next(error);
     }
 };

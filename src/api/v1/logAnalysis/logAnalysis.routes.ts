@@ -2,9 +2,9 @@
 import { Router } from 'express';
 import {
     getLatestConferenceAnalysis,
-    triggerConferenceAnalysis,
-    getLatestJournalAnalysis,  // <<< NEW IMPORT
-    triggerJournalAnalysis     // <<< NEW IMPORT
+    triggerConferenceCacheRegeneration,
+    getLatestJournalAnalysis,
+    triggerJournalCacheRegeneration
 } from './logAnalysis.controller';
 
 const createLogAnalysisRouter = (): Router => {
@@ -12,11 +12,11 @@ const createLogAnalysisRouter = (): Router => {
 
     // --- Conference Log Analysis Routes ---
     router.get('/conference/latest', getLatestConferenceAnalysis);
-    router.post('/conference/trigger', triggerConferenceAnalysis);
+    router.post('/conference/trigger', triggerConferenceCacheRegeneration);
 
     // --- Journal Log Analysis Routes ---
-    router.get('/journal/latest', getLatestJournalAnalysis); // <<< NEW ROUTE
-    router.post('/journal/trigger', triggerJournalAnalysis);   // <<< NEW ROUTE
+    router.get('/journal/latest', getLatestJournalAnalysis);
+    router.post('/journal/trigger', triggerJournalCacheRegeneration);
 
     return router;
 }

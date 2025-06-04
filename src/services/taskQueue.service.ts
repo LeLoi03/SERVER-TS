@@ -29,7 +29,7 @@ export class TaskQueueService {
     ) {
         this.logger = this.loggingService.getLogger('conference', { service: 'TaskQueueService' });
         // Retrieve the concurrency limit from application configuration
-        this.concurrency = this.configService.config.CRAWL_CONCURRENCY;
+        this.concurrency = this.configService.crawlConcurrency;
 
         // Initialize the PQueue instance with the configured concurrency
         this.queue = new PQueue({ concurrency: this.concurrency });

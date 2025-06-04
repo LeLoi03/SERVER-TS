@@ -35,7 +35,7 @@ export class GoogleSearchService {
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GoogleSearchServiceBase' });
 
-        const cseIdFromConfig = this.configService.config.GOOGLE_CSE_ID;
+        const cseIdFromConfig = this.configService.googleSearchConfig.cseId;
         if (!cseIdFromConfig) {
             const errorMsg = "Critical: Google CSE ID (GOOGLE_CSE_ID) is missing in configuration. Google Search will not function.";
             this.serviceBaseLogger.fatal({ event: 'google_search_init_config_error' }, errorMsg);
@@ -43,8 +43,8 @@ export class GoogleSearchService {
         }
         this.cseId = cseIdFromConfig;
 
-        this.maxRetries = this.configService.config.MAX_SEARCH_RETRIES;
-        this.retryDelay = this.configService.config.RETRY_DELAY_MS;
+        this.maxRetries = this.configService.googleSearchConfig.maxRetries;
+        this.retryDelay = this.configService.googleSearchConfig.retryDelayMs;
         this.serviceBaseLogger.info(
             { event: 'google_search_init_success', cseId: this.cseId, maxRetries: this.maxRetries, retryDelayMs: this.retryDelay },
             "GoogleSearchService initialized with CSE ID and retry configurations."

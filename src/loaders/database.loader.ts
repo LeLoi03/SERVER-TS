@@ -1,5 +1,4 @@
 // src/loaders/database.loader.ts
-import { container } from 'tsyringe'; // Keep container if needed for other potential DI resolutions (though not used directly here)
 import { connectDB as connectMongo } from '../config/database'; // Alias `connectDB` to `connectMongo` to avoid naming conflict
 import logToFile from '../utils/logger'; // Import the custom logging utility
 

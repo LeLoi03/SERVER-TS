@@ -53,7 +53,7 @@ export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError)
     }
 
     try {
-        const jwtSecret = configService.config.JWT_SECRET;
+        const jwtSecret = configService.jwtSecret;
         if (!jwtSecret) {
             // This is a critical server configuration error.
             logToFile(`[FATAL ERROR] ${logContext} JWT_SECRET is not configured in environment variables. Cannot authenticate.`);

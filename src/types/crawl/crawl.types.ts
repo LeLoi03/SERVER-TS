@@ -7,7 +7,6 @@
 // --------------------- GLOBAL CRAWL FLOW TYPES ---------------------
 
 /**
- * @typedef {'non-tuned' | 'tuned'} CrawlModelType
  * @description Định nghĩa loại mô hình AI Gemini sẽ được sử dụng cho các cuộc gọi API khác nhau trong quá trình thu thập dữ liệu.
  * - `'non-tuned'`: Đề cập đến mô hình Gemini cơ sở, nền tảng (ví dụ: `gemini-pro`).
  * - `'tuned'`: Đề cập đến phiên bản mô hình Gemini đã được tinh chỉnh, tối ưu hóa cho các tác vụ cụ thể.

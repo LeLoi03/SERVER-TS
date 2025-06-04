@@ -24,13 +24,13 @@ const conferences = [
         "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
         "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml",
     },
-    {
-        cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-        impLink: '',
-        Acronym: 'ICDCS',
-        Title: 'International Conference on Distributed Computing Systems',
-        mainLink: 'https://icdcs2025.icdcs.org/'
-    },
+    // {
+    //     cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
+    //     impLink: '',
+    //     Acronym: 'ICDCS',
+    //     Title: 'International Conference on Distributed Computing Systems',
+    //     mainLink: 'https://icdcs2025.icdcs.org/'
+    // },
     // {
     //     // cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
     //     // impLink: '',
