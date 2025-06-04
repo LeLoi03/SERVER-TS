@@ -1,3 +1,4 @@
+
 // src/services/conferenceLogAnalysis.service.ts
 import 'reflect-metadata';
 import { singleton, inject, delay } from 'tsyringe';

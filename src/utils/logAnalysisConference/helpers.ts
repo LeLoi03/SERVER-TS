@@ -388,7 +388,7 @@ export const filterRequests = (
                 }
             }
             if (requestInfo.endTime !== null) {
-                if (maxActualRequestEndTime === null || requestInfo.endTime < maxActualRequestEndTime) { // Sửa lỗi: phải là > maxActualRequestEndTime
+                if (maxActualRequestEndTime === null || requestInfo.endTime > maxActualRequestEndTime) { // Sửa lỗi: phải là > maxActualRequestEndTime
                     maxActualRequestEndTime = requestInfo.endTime;
                 }
             }

@@ -11,15 +11,18 @@ import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logA
 import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 
-const getControllerLogger = (req: Request, loggerType: LoggerType, routeName: string): Logger => {
+const getControllerLogger = (req: Request, /* loggerType: LoggerType, */ routeName: string): Logger => {
     const loggingService = container.resolve(LoggingService);
-    // Lấy pinoRequestId từ middleware (nếu có, ví dụ từ pino-http)
-    // Hoặc tạo một ID duy nhất cho request nếu không có
     const pinoRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    return loggingService.getLogger(loggerType).child({
+
+    // Luôn sử dụng logger 'app' (hoặc một logger chung khác) cho controller này
+    // Context cụ thể của controller và route được thêm qua child()
+    return loggingService.getLogger('app').child({ // Giả sử 'app' là logger chung
         controller: 'LogAnalysisController',
         route: routeName,
-        pinoRequestId: pinoRequestId, // Sử dụng ID này để trace log
+        pinoRequestId: pinoRequestId,
+        // Nếu bạn vẫn muốn biết nó liên quan đến conference hay journal analysis:
+        analysisType: routeName.includes('Conference') ? 'conference' : 'journal'
     });
 };
 
@@ -41,7 +44,7 @@ const handleAnalysisResponse = (
 
 
 export const getLatestConferenceAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'conference', 'getLatestConferenceAnalysis');
+    const logger = getControllerLogger(req, 'getLatestConferenceAnalysis'); // Không cần truyền loggerType nữa nếu dùng cách trên
     logger.info({ query: req.query }, "Request received for latest conference analysis.");
 
     const conferenceAnalysisService = container.resolve(ConferenceLogAnalysisService);
@@ -75,7 +78,7 @@ export const getLatestConferenceAnalysis = async (req: Request, res: Response, n
 };
 
 export const getLatestJournalAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'journal', 'getLatestJournalAnalysis');
+    const logger = getControllerLogger(req, 'getLatestJournalAnalysis'); // Không cần truyền loggerType nữa nếu dùng cách trên
     logger.info({ query: req.query }, "Request received for latest journal analysis.");
 
     const journalLogAnalysisService = container.resolve(JournalLogAnalysisService);
