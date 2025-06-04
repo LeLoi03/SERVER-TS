@@ -8,12 +8,7 @@ import { ConferenceLogAnalysisService } from '../../../services/conferenceLogAna
 import { ConferenceLogAnalysisResult } from '../../../types/logAnalysis';
 import { JournalLogAnalysisService } from '../../../services/journalLogAnalysis.service';
 import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logAnalysisJournal.types';
-// initializeJournalLogAnalysisResult có thể không cần import trực tiếp ở controller
-// import { initializeJournalLogAnalysisResult } from '../../../utils/logAnalysisJournal/helpers';
-import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.service';
 import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
-// ConfigService không cần thiết nếu controller không tự tạo emptyResult
-// import { ConfigService } from '../../../config/config.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 
 const getControllerLogger = (req: Request, loggerType: LoggerType, routeName: string): Logger => {
@@ -79,37 +74,6 @@ export const getLatestConferenceAnalysis = async (req: Request, res: Response, n
     }
 };
 
-export const triggerConferenceCacheRegeneration = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'conference', 'triggerConferenceCacheRegeneration');
-    const { requestId } = req.query;
-
-    if (!requestId || typeof requestId !== 'string') {
-        logger.warn({ query: req.query }, "Bad request: 'requestId' query parameter is required.");
-        res.status(400).json({ message: "'requestId' query parameter is required." });
-        return;
-    }
-    logger.info({ requestId }, "Request received to trigger conference cache regeneration.");
-
-    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
-    try {
-        // Chạy bất đồng bộ, không await
-        logAnalysisCacheService.generateAndCacheAnalysis('conference', requestId)
-            .then(() => {
-                logger.info({ requestId }, `Background cache regeneration for conference request ${requestId} initiated successfully.`);
-            })
-            .catch((backgroundError: unknown) => {
-                const { message: errorMessage } = getErrorMessageAndStack(backgroundError);
-                logger.error({ err: backgroundError, requestId, errorMessage: errorMessage }, `Background cache regeneration failed for conference request ${requestId}.`);
-            });
-
-        res.status(202).json({ message: `Analysis cache regeneration triggered for conference request ${requestId}. Results will be updated asynchronously.` });
-    } catch (error: unknown) { // Lỗi đồng bộ khi gọi generateAndCacheAnalysis (rất hiếm)
-        const { message } = getErrorMessageAndStack(error);
-        logger.error({ err: error, requestId, errorMessage: message }, "Error triggering conference cache regeneration.");
-        next(error);
-    }
-};
-
 export const getLatestJournalAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const logger = getControllerLogger(req, 'journal', 'getLatestJournalAnalysis');
     logger.info({ query: req.query }, "Request received for latest journal analysis.");
@@ -140,36 +104,6 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
         const { message } = getErrorMessageAndStack(error);
         logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, `Unhandled error in getLatestJournalAnalysis.`);
         // Chuyển cho global error handler
-        next(error);
-    }
-};
-
-export const triggerJournalCacheRegeneration = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'journal', 'triggerJournalCacheRegeneration');
-    const { requestId } = req.query;
-
-    if (!requestId || typeof requestId !== 'string') {
-        logger.warn({ query: req.query }, "Bad request: 'requestId' query parameter is required.");
-        res.status(400).json({ message: "'requestId' query parameter is required." });
-        return;
-    }
-    logger.info({ requestId }, "Request received to trigger journal cache regeneration.");
-
-    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
-    try {
-        // Chạy bất đồng bộ, không await
-        logAnalysisCacheService.generateAndCacheAnalysis('journal', requestId)
-            .then(() => {
-                logger.info({ requestId }, `Background cache regeneration for journal request ${requestId} initiated successfully.`);
-            })
-            .catch((backgroundError: unknown) => {
-                const { message: errorMessage } = getErrorMessageAndStack(backgroundError);
-                logger.error({ err: backgroundError, requestId, errorMessage: errorMessage }, `Background cache regeneration failed for journal request ${requestId}.`);
-            });
-        res.status(202).json({ message: `Analysis cache regeneration triggered for journal request ${requestId}.` });
-    } catch (error: unknown) { // Lỗi đồng bộ khi gọi generateAndCacheAnalysis (rất hiếm)
-        const { message } = getErrorMessageAndStack(error);
-        logger.error({ err: error, requestId, errorMessage: message }, "Error triggering journal cache regeneration.");
         next(error);
     }
 };
