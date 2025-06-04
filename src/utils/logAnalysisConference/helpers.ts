@@ -352,68 +352,81 @@ export const readAndGroupConferenceLogs = async (
 
 
 // --- filterRequests giữ nguyên ---
-// Hàm này vẫn hữu ích để lọc theo thời gian cho dữ liệu của một request cụ thể
-// hoặc khi tổng hợp (mặc dù khi tổng hợp, việc lọc thời gian có thể được xử lý bởi
-// việc chỉ phân tích các request có file log được sửa đổi trong khoảng thời gian đó,
-// hoặc để `analyzeLiveLogsForRequest` tự lọc).
+// --- CẬP NHẬT HÀM filterRequests THEO YÊU CẦU MỚI ---
 export const filterRequests = (
-    allRequestsData: Map<string, RequestLogData>, // Trong trường hợp phân tích đơn lẻ, map này chỉ có 1 entry
-    filterStartMillis: number | null,
-    filterEndMillis: number | null,
-    batchRequestIdFilter?: string // Khi phân tích đơn lẻ, đây sẽ là ID của request đó
+    allRequestsData: Map<string, RequestLogData>,
+    filterStartMillisFromUser: number | null, // Tham số filter từ người dùng
+    filterEndMillisFromUser: number | null,   // Tham số filter từ người dùng
+    batchRequestIdFilter?: string // Lọc theo một batchRequestId cụ thể (nếu có)
 ): FilteredData => {
-    const filteredRequests = new Map<string, RequestLogData>();
-    let analysisStartMillis: number | null = null;
-    let analysisEndMillis: number | null = null;
+    const filteredRequestsOutput = new Map<string, RequestLogData>();
 
-    const targetRequestId = batchRequestIdFilter;
+    // Biến để theo dõi min/max start/end time của các *request được chọn*,
+    // dùng khi người dùng không cung cấp filter.
+    let minActualRequestStartTime: number | null = null;
+    let maxActualRequestEndTime: number | null = null;
 
-    if (targetRequestId) {
-        const requestInfo = allRequestsData.get(targetRequestId);
-        if (requestInfo) { // Không cần kiểm tra startTime/endTime ở đây vì chúng ta muốn lấy requestInfo dù có log hay không
-            // Việc lọc theo thời gian sẽ áp dụng cho các log *bên trong* requestInfo này sau đó,
-            // hoặc để quyết định có nên xử lý requestInfo này không.
-            // Ở đây, chúng ta chỉ cần lấy requestInfo nếu ID khớp.
-            // Việc requestInfo.startTime/endTime có null hay không sẽ được xử lý bởi doesRequestOverlapFilter.
+    const processSingleRequest = (batchRequestId: string, requestInfo: RequestLogData) => {
+        // Kiểm tra xem khoảng thời gian của request (requestInfo.startTime, requestInfo.endTime)
+        // có chồng lấn với khoảng filter của người dùng hay không.
+        const includeThisRequest = doesRequestOverlapFilter(
+            requestInfo.startTime, // startTime của toàn bộ request
+            requestInfo.endTime,   // endTime của toàn bộ request
+            filterStartMillisFromUser,
+            filterEndMillisFromUser,
+            batchRequestId
+        );
 
-            const overlapsTimeFilter = doesRequestOverlapFilter(
-                requestInfo.startTime, // startTime và endTime của request
-                requestInfo.endTime,
-                filterStartMillis,     // filter của người dùng
-                filterEndMillis,
-                targetRequestId
-            );
+        if (includeThisRequest) {
+            // Nếu có chồng lấn, thêm TOÀN BỘ requestInfo (với tất cả log gốc) vào kết quả.
+            filteredRequestsOutput.set(batchRequestId, requestInfo);
 
-            if (overlapsTimeFilter) {
-                filteredRequests.set(targetRequestId, requestInfo);
-                // analysisStartMillis/EndMillis nên là thời gian thực tế của request này nếu nó được chọn
-                analysisStartMillis = requestInfo.startTime;
-                analysisEndMillis = requestInfo.endTime;
+            // Cập nhật min/max start/end time thực tế từ các request được chọn.
+            if (requestInfo.startTime !== null) {
+                if (minActualRequestStartTime === null || requestInfo.startTime < minActualRequestStartTime) {
+                    minActualRequestStartTime = requestInfo.startTime;
+                }
             }
-        }
-    } else { // Trường hợp tổng hợp (không nên xảy ra nếu `readAndGroupConferenceLogs` chỉ trả về 1 request)
-        // Tuy nhiên, giữ lại logic này nếu `filterRequests` có thể được gọi với nhiều request
-        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
-            if (requestInfo.startTime !== null && requestInfo.endTime !== null) {
-                const includeRequest = doesRequestOverlapFilter(
-                    requestInfo.startTime,
-                    requestInfo.endTime,
-                    filterStartMillis,
-                    filterEndMillis,
-                    batchRequestId
-                );
-
-                if (includeRequest) {
-                    filteredRequests.set(batchRequestId, requestInfo);
-                    if (requestInfo.startTime !== null) {
-                        analysisStartMillis = Math.min(requestInfo.startTime, analysisStartMillis ?? requestInfo.startTime);
-                    }
-                    if (requestInfo.endTime !== null) {
-                        analysisEndMillis = Math.max(requestInfo.endTime, analysisEndMillis ?? requestInfo.endTime);
-                    }
+            if (requestInfo.endTime !== null) {
+                if (maxActualRequestEndTime === null || requestInfo.endTime < maxActualRequestEndTime) { // Sửa lỗi: phải là > maxActualRequestEndTime
+                    maxActualRequestEndTime = requestInfo.endTime;
                 }
             }
         }
+    };
+
+    if (batchRequestIdFilter) { // Nếu chỉ phân tích một request ID cụ thể
+        const requestInfo = allRequestsData.get(batchRequestIdFilter);
+        if (requestInfo) {
+            processSingleRequest(batchRequestIdFilter, requestInfo);
+        }
+    } else { // Nếu phân tích tổng hợp nhiều request
+        for (const [batchRequestId, requestInfo] of allRequestsData.entries()) {
+            processSingleRequest(batchRequestId, requestInfo);
+        }
     }
-    return { filteredRequests, analysisStartMillis, analysisEndMillis };
+
+    // Xác định analysisStartMillis và analysisEndMillis cho kết quả trả về.
+    // Đây sẽ là khoảng thời gian được sử dụng bởi calculateFinalMetrics để đặt
+    // results.overall.startTime và results.overall.endTime.
+    let finalAnalysisStartMillis: number | null;
+    let finalAnalysisEndMillis: number | null;
+
+    if (filterStartMillisFromUser !== null || filterEndMillisFromUser !== null) {
+        // Nếu người dùng CÓ cung cấp filter, thì khoảng thời gian phân tích TỔNG THỂ
+        // (overall.startTime/endTime) sẽ phản ánh đúng filter của người dùng.
+        finalAnalysisStartMillis = filterStartMillisFromUser;
+        finalAnalysisEndMillis = filterEndMillisFromUser;
+    } else {
+        // Nếu người dùng KHÔNG cung cấp filter, thì khoảng thời gian phân tích TỔNG THỂ
+        // sẽ là min/max thực tế của các request được chọn.
+        finalAnalysisStartMillis = minActualRequestStartTime;
+        finalAnalysisEndMillis = maxActualRequestEndTime;
+    }
+
+    return {
+        filteredRequests: filteredRequestsOutput,
+        analysisStartMillis: finalAnalysisStartMillis,
+        analysisEndMillis: finalAnalysisEndMillis
+    };
 };

@@ -137,26 +137,24 @@ export class ConferenceLogAnalysisService {
             filterStartTime: filterStartTimeInput ? new Date(filterStartTimeInput).toISOString() : undefined,
             filterEndTime: filterEndTimeInput ? new Date(filterEndTimeInput).toISOString() : undefined
         };
-        // Sử dụng logger của service, không phải logger theo request ở đây,
-        // vì hàm này có thể xử lý cả aggregation (không có request ID cụ thể)
-        // hoặc một request ID cụ thể (lúc đó các hàm con như analyzeLiveLogsForRequest
-        // có thể chọn sử dụng logger theo request nếu cần log chi tiết vào file của request đó).
         const logger = this.serviceLogger.child(logContext);
+
+        // --- XÁC ĐỊNH XEM CÓ FILTER THỜI GIAN ĐƯỢC ÁP DỤNG KHÔNG ---
+        const hasTimeFilter = filterStartTimeInput !== undefined || filterEndTimeInput !== undefined;
 
         if (filterRequestId) {
             // --- XỬ LÝ CHO MỘT REQUEST ID CỤ THỂ ---
-            logger.info(`Analyzing specific conference request ID: ${filterRequestId}`);
+            logger.info(`Analyzing specific conference request ID: ${filterRequestId}${hasTimeFilter ? ' WITH time filter.' : '.'}`);
             const requestLogFilePath = this.configService.getRequestSpecificLogFilePath('conference', filterRequestId);
-            let analysisResult: ConferenceLogAnalysisResult; // Không cần null nữa
+            let analysisResult: ConferenceLogAnalysisResult;
 
-            if (this.configService.analysisCacheEnabled) {
+            // --- LOGIC ĐỌC CACHE ĐƯỢC SỬA ĐỔI ---
+            if (this.configService.analysisCacheEnabled && !hasTimeFilter) { // <<<< THAY ĐỔI Ở ĐÂY: Chỉ đọc cache nếu KHÔNG có filter thời gian
+                logger.debug(`Attempting to read from cache for ${filterRequestId} as no time filter is applied.`);
                 const cachedResult = await this.cacheService.readFromCache<ConferenceLogAnalysisResult>('conference', filterRequestId);
                 if (cachedResult) {
-                    // Kiểm tra xem cache có hợp lệ để sử dụng không (không phải 'Processing' hoặc 'Unknown')
                     if (cachedResult.status && !['Processing', 'Unknown'].includes(cachedResult.status)) {
                         logger.info(`Valid cached conference result found for request ID: ${filterRequestId} with status: ${cachedResult.status}. Decorating with latest save events.`);
-
-                        // Cập nhật các trường metadata cho "view" này của cache
                         cachedResult.logFilePath = requestLogFilePath;
                         cachedResult.analysisTimestamp = new Date().toISOString();
 
@@ -205,13 +203,13 @@ export class ConferenceLogAnalysisService {
                     // Không tìm thấy cache.
                     logger.info(`No cache found for ${filterRequestId}. Performing live analysis.`);
                 }
-            } else {
+            } else if (hasTimeFilter) {
+                logger.info(`Time filter is active. Skipping cache read for ${filterRequestId}. Performing live analysis.`);
+            } else { // Caching is disabled
                 logger.info('Caching is disabled. Performing live analysis for conference request.');
             }
 
-            // Nếu không có cache hợp lệ, hoặc caching bị tắt -> Phân tích live
-            // `analyzeLiveLogsForRequest` đã bao gồm việc đọc `saveConferenceEventsLogFilePath`
-            // và gán `persistedSaveStatus` vào kết quả.
+            // Nếu không có cache hợp lệ, hoặc caching bị tắt, hoặc CÓ TIME FILTER -> Phân tích live
             analysisResult = await this.analyzeLiveLogsForRequest(
                 filterRequestId,
                 requestLogFilePath,
@@ -219,25 +217,27 @@ export class ConferenceLogAnalysisService {
                 filterEndTimeInput
             );
 
-            // Sau khi phân tích live, nếu kết quả là final, ghi vào cache.
-            // Kết quả này đã bao gồm thông tin save events tại thời điểm phân tích live.
-            if (this.configService.analysisCacheEnabled &&
+
+            // --- LOGIC GHI CACHE ĐƯỢC SỬA ĐỔI ---
+            // Chỉ ghi vào cache nếu kết quả này được tạo ra MÀ KHÔNG CÓ filter thời gian.
+            // Điều này đảm bảo cache luôn chứa phiên bản "đầy đủ" của request.
+            if (this.configService.analysisCacheEnabled && !hasTimeFilter && // <<<< THAY ĐỔI Ở ĐÂY
                 analysisResult.status && !['Processing', 'Unknown'].includes(analysisResult.status)) {
-                logger.info(`Caching live analysis result for ${filterRequestId} with status ${analysisResult.status}.`);
+                logger.info(`Caching live analysis result (generated without time filter) for ${filterRequestId} with status ${analysisResult.status}.`);
                 await this.cacheService.writeToCache('conference', filterRequestId, analysisResult);
+            } else if (this.configService.analysisCacheEnabled && hasTimeFilter) {
+                logger.info(`Live analysis result for ${filterRequestId} was generated WITH a time filter. Skipping cache write.`);
             }
             return analysisResult;
 
-        } else {
+          } else {
             // --- XỬ LÝ CHO TRƯỜNG HỢP TỔNG HỢP (KHÔNG CÓ filterRequestId) ---
-            logger.info('Analyzing all conference requests (aggregation).');
-            // `aggregateAllConferenceAnalyses` sẽ gọi lại `performConferenceAnalysisAndUpdate`
-            // cho từng request ID. Logic xử lý cache và "trang trí" ở trên sẽ được áp dụng
-            // cho mỗi request ID đó khi nó được đọc từ cache trong quá trình tổng hợp.
+            // Khi tổng hợp, chúng ta sẽ gọi lại performConferenceAnalysisAndUpdate cho từng request ID.
+            // Logic ở trên (bao gồm cả việc bỏ qua cache nếu có time filter) sẽ được áp dụng cho mỗi request đó.
+            logger.info(`Aggregating all conference requests${hasTimeFilter ? ' WITH time filter.' : '.'}`);
             return this.aggregateAllConferenceAnalyses(filterStartTimeInput, filterEndTimeInput);
         }
     }
-
 
     // Đổi tên và sửa đổi hàm này để phân tích một file log cụ thể của request
     private async analyzeLiveLogsForRequest(
