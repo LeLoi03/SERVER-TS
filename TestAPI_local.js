@@ -1,95 +1,85 @@
 // test_api.js
 import axios from 'axios';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// fs, path, fileURLToPath, __filename, __dirname không cần thiết cho bản test này nữa
+// trừ khi bạn muốn đọc dữ liệu từ file.
 
 const API_CONFERENCE_ENDPOINT = 'http://localhost:3001/api/v1/crawl-conferences';
-// const API_JOURNAL_ENDPOINT = 'http://localhost:3001/crawl-journals'; // Giữ lại nếu bạn cũng test journal
 
-// *** Đặt thành true để test luồng UPDATE và nhận kết quả ***
-const USE_CLIENT_DATA = true;
-// *** Hoặc đặt thành false để test luồng CRAWL/SAVE (chỉ nhận xác nhận file) ***
-// const USE_CLIENT_DATA = false;
+// *** Cấu hình cho test ***
+const TEST_DESCRIPTION = "Test crawl request from test_api.js"; // Mô tả cho request
+// const TEST_DESCRIPTION = ""; // Test với description rỗng
+// const TEST_DESCRIPTION = undefined; // Test với không có key description (FE sẽ không gửi key nếu rỗng)
 
+const API_MODELS_TO_USE = {
+    determineLinks: 'tuned', // 'tuned', 'non-tuned', hoặc null (để BE dùng default)
+    extractInfo: 'tuned',
+    extractCfp: 'non-tuned'
+};
+// Hoặc để test trường hợp BE dùng default:
+// const API_MODELS_TO_USE = {
+//     determineLinks: null,
+//     extractInfo: null,
+//     extractCfp: null
+// };
 
-// Dữ liệu mẫu chỉ dùng khi USE_CLIENT_DATA = true
-const conferences = [
+// Dữ liệu mẫu cho items
+const conferenceItems = [
     {
         "Title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
         "Acronym": "PODS",
-        "mainLink": "https://2025.sigmod.org/",
-        "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
-        "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml",
+        // Luồng CRAWL (không có mainLink, cfpLink, impLink)
     },
     // {
-    //     cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-    //     impLink: '',
-    //     Acronym: 'ICDCS',
-    //     Title: 'International Conference on Distributed Computing Systems',
-    //     mainLink: 'https://icdcs2025.icdcs.org/'
+    //     "Title": "International Conference on Machine Learning",
+    //     "Acronym": "ICML",
+    //     // Luồng CRAWL
     // },
     // {
-    //     // cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-    //     // impLink: '',
-    //     Acronym: 'AAAC',
-    //     Title: 'Symposium of Asian Association for Algorithms and Computation',
-    //     // mainLink: 'https://icdcs2025.icdcs.org/'
+    //     "Title": "Conference on Neural Information Processing Systems",
+    //     "Acronym": "NeurIPS",
+    //     "mainLink": "https://nips.cc/", // Ví dụ cho luồng UPDATE (FE sẽ gửi nếu crawlType là update)
+    //     "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
+    //     "impLink": null, // Ví dụ impLink không có
     // },
-    // {
-    //     // cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-    //     // impLink: '',
-    //     Acronym: 'AAAI',
-    //     Title: 'National Conference of the American Association for Artificial Intelligence',
-    //     // mainLink: 'https://icdcs2025.icdcs.org/'
-    // },
-    // {
-    //     // cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-    //     // impLink: '',
-    //     Acronym: 'ACC',
-    //     Title: 'Applied Computing Conference',
-    //     // mainLink: 'https://icdcs2025.icdcs.org/'
-    // },
-    // {
-    //     // cfpLink: 'https://icdcs2025.icdcs.org/call-for-papers/',
-    //     // impLink: '',
-    //     Acronym: 'ACCV',
-    //     Title: 'Asian Conference on Computer Vision',
-    //     // mainLink: 'https://icdcs2025.icdcs.org/'
-    // }
-
 ];
 
 async function crawlConferences() {
-    console.log(`--- Starting Conference Test (Using Client Data: ${USE_CLIENT_DATA}) ---`);
+    console.log(`--- Starting Conference Test ---`);
     try {
-        let params = {};
-        let requestData = null; // Đổi tên biến để rõ ràng hơn
+        // Xây dựng payload mới
+        const requestPayload = {
+            items: conferenceItems,
+            models: API_MODELS_TO_USE,
+        };
 
-        if (USE_CLIENT_DATA) {
-            params = { dataSource: 'client' };
-            requestData = conferences; // Sử dụng dữ liệu conference
-            console.log('Sending client data:', JSON.stringify(requestData, null, 2));
-        } else {
-            params = { dataSource: 'api' };
-            console.log('Using API data source (no request body sent).');
+        // Thêm description vào payload nếu nó được định nghĩa và không phải undefined
+        // Nếu TEST_DESCRIPTION là undefined, key 'description' sẽ không được thêm vào payload,
+        // mô phỏng việc FE không gửi key này nếu người dùng không nhập.
+        if (typeof TEST_DESCRIPTION !== 'undefined') {
+            requestPayload.description = TEST_DESCRIPTION;
         }
 
-        const response = await axios.post(API_CONFERENCE_ENDPOINT, requestData, { // Gửi requestData
+
+        console.log('Sending API request with payload:');
+        console.log(JSON.stringify(requestPayload, null, 2));
+
+        // dataSource vẫn là query parameter
+        const params = { dataSource: 'client' };
+
+        const response = await axios.post(API_CONFERENCE_ENDPOINT, requestPayload, {
             params: params,
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            timeout: 120000 // Tăng timeout nếu cần cho các request lớn
         });
 
-        // Log thông tin chung từ response
         console.log('\n--- Backend Response ---');
         console.log('Status:', response.status);
         console.log('Message:', response.data.message);
         console.log('Runtime:', response.data.runtime);
-        // Luôn log đường dẫn file output nếu có
+        console.log('Description Received by Server:', response.data.description); // Log description BE trả về
+
         if (response.data.outputJsonlPath) {
             console.log('Output JSONL Path:', response.data.outputJsonlPath);
         }
@@ -97,56 +87,40 @@ async function crawlConferences() {
             console.log('Output CSV Path:', response.data.outputCsvPath);
         }
 
-
-        // *** THAY ĐỔI: Kiểm tra và log trường 'data' ***
-        if (USE_CLIENT_DATA && response.data.data) {
-            // Kiểm tra xem data có phải là mảng và có phần tử không
+        if (response.data.data) {
             if (Array.isArray(response.data.data) && response.data.data.length > 0) {
                 console.log(`\n--- Processed Results Received (${response.data.data.length}) ---`);
-                // Log kết quả nhận được
-                console.log(JSON.stringify(response.data.data, null, 2));
+                // console.log(JSON.stringify(response.data.data, null, 2)); // Có thể rất dài
+                console.log("First processed result sample:", JSON.stringify(response.data.data[0], null, 2));
+                if (response.data.data.length > 1) {
+                    console.log("Last processed result sample:", JSON.stringify(response.data.data[response.data.data.length - 1], null, 2));
+                }
             } else if (Array.isArray(response.data.data) && response.data.data.length === 0) {
                 console.log('\n--- Processed Results Received (Empty Array) ---');
                 console.log("The process completed, but the returned data array is empty.");
             } else {
-                // Trường hợp response.data.data tồn tại nhưng không phải mảng hợp lệ
                 console.warn('\n--- Warning: Received "data" field is not a non-empty array ---');
                 console.log('Raw "data" field:', response.data.data);
             }
-        } else if (USE_CLIENT_DATA) {
-            // Trường hợp dataSource=client nhưng không có trường 'data'
-            console.log('\n--- No "data" field received in the response despite using client data source. ---');
-            // Có thể log toàn bộ response.data để debug
-            // console.log('Full Response Data:', JSON.stringify(response.data, null, 2));
         } else {
-            // Trường hợp dataSource=api, không mong đợi 'data'
-            console.log('\n--- API data source used. Results written to server files (no data returned in response body). ---');
+            console.log('\n--- No "data" field received in the response. ---');
         }
-        // --- Kết thúc thay đổi ---
-
-        // Bỏ đi log 'Data:' cũ vì đã thay bằng 'data'
-        // if (response.data.data) {
-        //     console.log('Data:', JSON.stringify(response.data.data, null, 2));
-        // }
 
     } catch (error) {
         console.error('\n--- Error Occurred ---');
-        // Log lỗi chi tiết hơn
         if (error.response) {
-            // Lỗi từ phía server (status code không phải 2xx)
             console.error('Error Status:', error.response.status);
             console.error('Error Message from Server:', error.response.data?.message || 'No message field');
-            console.error('Error Details:', JSON.stringify(error.response.data?.error || error.response.data, null, 2)); // Log lỗi chi tiết hơn nếu có
+            console.error('Error Details:', JSON.stringify(error.response.data?.error || error.response.data, null, 2));
+            if (error.response.data?.description) {
+                 console.error('Request Description (from error response):', error.response.data.description);
+            }
         } else if (error.request) {
-            // Request đã được gửi nhưng không nhận được response
             console.error('Error Request:', 'No response received from the server. Is the server running?');
             console.error('API Endpoint:', API_CONFERENCE_ENDPOINT);
         } else {
-            // Lỗi xảy ra khi thiết lập request
             console.error('Error Setting Up Request:', error.message);
         }
-        // Log thêm config của request có thể hữu ích khi debug
-        // console.error('Request Config:', error.config);
     } finally {
         console.log('\n--- Test Finished ---');
     }
@@ -154,6 +128,3 @@ async function crawlConferences() {
 
 // Gọi hàm test
 crawlConferences();
-
-
-
