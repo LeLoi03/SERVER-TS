@@ -274,7 +274,7 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
         requestProcessed = true; // Assume processing will start
         routeLogger.info("Starting journal crawling..."); // Adjusted log message
 
-        let dataSource: 'scimago' | 'client' = 'scimago';
+        let dataSource: 'scimago' | 'client' = 'client';
         const dataSourceQuery = req.query.dataSource as string;
         let clientData: string | null = null;
 
