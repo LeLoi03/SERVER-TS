@@ -98,8 +98,8 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_orchestration_fallback_failed_after_retries': geminiApi.handleGeminiFinalFailure,
   'retry_internal_rate_limit_first_attempt_fail_single_shot': geminiApi.handleGeminiFinalFailure,
   'gemini_public_method_orchestration_failed': geminiApi.handleGeminiFinalFailure, // THÊM (cần logic kiểm tra trong handler)
-  
-  
+
+
   // Gemini Setup, Init, Config Failures
   'gemini_service_genai_init_failed': geminiApi.handleGeminiSetupFailure,
   'gemini_service_not_initialized': geminiApi.handleGeminiSetupFailure,
@@ -194,7 +194,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'gemini_call_start': geminiApi.handleGeminiCallStart,
   'initial_attempt_start': geminiApi.handleRetryAttemptStart,
   'retry_attempt_start': geminiApi.handleRetryAttemptStart,
-  
+
 
   // Gemini Intermediate Errors & Limits (during retry loop, not final for the model yet)
   'retry_wait_before_next': geminiApi.handleRateLimitWait,
@@ -298,6 +298,7 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   'normalization_applied': validation.handleNormalizationApplied,
 
   // --- Overall Process ---
+  'received_request': overallProcess.handleReceivedRequest, // <<< ĐĂNG KÝ HANDLER MỚI
   'crawl_orchestrator_start': overallProcess.handleCrawlStart,
   'processing_finished_successfully': overallProcess.handleControllerProcessingFinished,
   'processing_failed_in_controller': overallProcess.handleControllerProcessingFinished,

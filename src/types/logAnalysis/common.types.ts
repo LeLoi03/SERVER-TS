@@ -50,7 +50,9 @@ export interface RequestTimings {
         * @property {string[]} [errorMessages] - Mảng các thông báo lỗi tóm tắt cho yêu cầu này.
         * Được điền nếu request `status` là `Failed` hoặc `CompletedWithErrors`.
         */
-    errorMessages: string[]; // <<< THÊM TRƯỜNG MỚI NÀY >>>
+    errorMessages: string[];
+    description?: string; // <<< THÊM TRƯỜNG MỚI NÀY >>>
+
 }
 
 

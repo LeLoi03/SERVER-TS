@@ -20,25 +20,48 @@ export type CrawlModelType = 'non-tuned' | 'tuned';
  */
 export interface ApiModels {
     /**
-     * @property {CrawlModelType} determineLinks - Loại mô hình sẽ được sử dụng cho giai đoạn API 'determineLinks'.
+     * @property {CrawlModelType | null} determineLinks - Loại mô hình sẽ được sử dụng cho giai đoạn API 'determineLinks'.
+     * Nullable để cho phép FE gửi null nếu chưa chọn. BE sẽ dùng default.
      */
-    determineLinks: CrawlModelType;
+    determineLinks: CrawlModelType | null; // Giữ lại null vì FE có thể gửi null
     /**
-     * @property {CrawlModelType} extractInfo - Loại mô hình sẽ được sử dụng cho giai đoạn API 'extractInfo'.
+     * @property {CrawlModelType | null} extractInfo - Loại mô hình sẽ được sử dụng cho giai đoạn API 'extractInfo'.
      */
-    extractInfo: CrawlModelType;
+    extractInfo: CrawlModelType | null;
     /**
-     * @property {CrawlModelType} extractCfp - Loại mô hình sẽ được sử dụng cho giai đoạn API 'extractCfp'.
+     * @property {CrawlModelType | null} extractCfp - Loại mô hình sẽ được sử dụng cho giai đoạn API 'extractCfp'.
      */
-    extractCfp: CrawlModelType;
+    extractCfp: CrawlModelType | null;
 }
 
+
 // --------------------- INITIAL INPUT DATA TYPES ---------------------
+
+/**
+ * @interface CrawlRequestPayload
+ * @description Đại diện cho toàn bộ payload của request thu thập dữ liệu hội nghị.
+ */
+export interface CrawlRequestPayload {
+    /**
+     * @property {string} [description] - Mô tả tùy chọn cho yêu cầu thu thập dữ liệu.
+     */
+    description?: string;
+    /**
+     * @property {ConferenceData[]} items - Danh sách các hội nghị cần thu thập dữ liệu.
+     */
+    items: ConferenceData[];
+    /**
+     * @property {ApiModels} models - Các mô hình AI được chọn cho các bước thu thập dữ liệu.
+     */
+    models: ApiModels;
+}
+
 
 /**
  * @interface ConferenceData
  * @description Đại diện cho dữ liệu đầu vào ban đầu cho một hội nghị, thường từ tệp CSV
  * hoặc được cung cấp thông qua yêu cầu API để thu thập dữ liệu.
+ * Đây là cấu trúc của một item trong mảng `items` của `CrawlRequestPayload`.
  */
 export interface ConferenceData {
     /**
@@ -52,23 +75,24 @@ export interface ConferenceData {
     /**
      * @property {string | number} [id] - Tùy chọn: Một định danh duy nhất cho hội nghị từ nguồn của nó (ví dụ: ID hàng CSV, ID cơ sở dữ liệu).
      */
-    id?: string | number;
+    id?: string | number; // FE không gửi cái này, nhưng giữ lại nếu có use case khác
     /**
      * @property {string} [originalRequestId] - Tùy chọn: ID của yêu cầu gốc nếu đây là một lần thu thập lại hoặc một phần của lô lớn hơn.
      */
     originalRequestId?: string;
     /**
      * @property {string} [mainLink] - Tùy chọn: Liên kết chính (URL) của hội nghị.
+     * Dùng cho 'update' type. Sẽ là undefined/null cho 'crawl' type.
      */
-    mainLink?: string;
+    mainLink?: string | null; // FE gửi null nếu rỗng cho update
     /**
      * @property {string} [cfpLink] - Tùy chọn: URL cho Call for Papers (CFP).
      */
-    cfpLink?: string;
+    cfpLink?: string | null;
     /**
      * @property {string} [impLink] - Tùy chọn: URL cho các ngày quan trọng.
      */
-    impLink?: string;
+    impLink?: string | null;
 }
 
 /**
