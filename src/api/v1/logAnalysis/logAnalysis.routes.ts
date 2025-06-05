@@ -3,6 +3,7 @@ import { Router } from 'express';
 import {
     getLatestConferenceAnalysis,
     getLatestJournalAnalysis,
+    deleteLogAnalysisRequests, // Import the new controller function
 } from './logAnalysis.controller';
 
 const createLogAnalysisRouter = (): Router => {
@@ -13,6 +14,7 @@ const createLogAnalysisRouter = (): Router => {
 
     // --- Journal Log Analysis Routes ---
     router.get('/journal/latest', getLatestJournalAnalysis);
+
 
     return router;
 }

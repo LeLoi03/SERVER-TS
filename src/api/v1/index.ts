@@ -6,7 +6,7 @@ import { Router } from 'express';
 import createCrawlRouter from './crawl/crawl.routes';
 import createLogAnalysisRouter from './logAnalysis/logAnalysis.routes';
 import createChatRouter from './chatbot/chat.routes'; // <<< ADD THIS IMPORT
-
+import { deleteLogAnalysisRequests } from './logAnalysis/logAnalysis.controller';
 import { handleBatchConferenceSaveEvents } from './save/save.controller';
 /**
  * Creates and configures the main API router for version 1 (v1) of the API.
@@ -26,7 +26,11 @@ const createV1Router = (): Router => {
     router.use('/logs/analysis', createLogAnalysisRouter());
 
     // Route mới để ghi log save event
-    router.use('/log/conference-save-event', handleBatchConferenceSaveEvents);
+    router.use('/logs/conference-save-event', handleBatchConferenceSaveEvents);
+
+    // --- Route for deleting requests ---
+    router.use('/logs/requests', deleteLogAnalysisRequests); // Add the new DELETE route
+
 
     router.use('/chatbot', createChatRouter()); // <<< ADD THIS LINE (e.g. /api/v1/chatbot/upload-files)
 

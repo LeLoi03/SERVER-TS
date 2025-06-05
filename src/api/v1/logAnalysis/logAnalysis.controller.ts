@@ -2,6 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { container } from 'tsyringe';
 import { Logger } from 'pino';
+import { z } from 'zod'; // For input validation
 
 // Đổi tên import để rõ ràng hơn
 import { ConferenceLogAnalysisService } from '../../../services/conferenceLogAnalysis.service';
@@ -10,6 +11,7 @@ import { JournalLogAnalysisService } from '../../../services/journalLogAnalysis.
 import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logAnalysisJournal.types';
 import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
+import { LogDeletionService, RequestDeletionResult, CrawlerType } from '../../../services/logDeletion.service'; // New import
 
 const getControllerLogger = (req: Request, /* loggerType: LoggerType, */ routeName: string): Logger => {
     const loggingService = container.resolve(LoggingService);
@@ -107,6 +109,66 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
         const { message } = getErrorMessageAndStack(error);
         logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, `Unhandled error in getLatestJournalAnalysis.`);
         // Chuyển cho global error handler
+        next(error);
+    }
+};
+
+
+
+// Schema for delete request validation
+const deleteRequestsSchema = z.object({
+    requestIds: z.array(z.string().min(1, "Request ID cannot be empty"))
+                   .min(1, "At least one requestId must be provided"),
+    crawlerType: z.enum(['conference', 'journal']),
+});
+
+export const deleteLogAnalysisRequests = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const logger = getControllerLogger(req, 'deleteLogAnalysisRequests');
+    logger.info({ body: req.body }, "Request received to delete log analysis requests.");
+
+    try {
+        const validation = deleteRequestsSchema.safeParse(req.body);
+        if (!validation.success) {
+            logger.warn({ errors: validation.error.format() }, "Invalid request body for deleting requests.");
+            res.status(400).json({ message: "Invalid input", errors: validation.error.format() });
+            return;
+        }
+
+        const { requestIds, crawlerType } = validation.data;
+
+        const logDeletionService = container.resolve(LogDeletionService);
+        const results: RequestDeletionResult[] = [];
+
+        for (const requestId of requestIds) {
+            const result = await logDeletionService.deleteRequestData(requestId, crawlerType as CrawlerType);
+            results.push(result);
+        }
+
+        const allSucceeded = results.every(r => r.overallSuccess);
+        const someSucceeded = results.some(r => r.overallSuccess) && !allSucceeded;
+
+        logger.info({ results, allSucceeded, someSucceeded }, "Deletion processing complete.");
+
+        if (allSucceeded) {
+            res.status(200).json({ 
+                message: `Successfully deleted data for all ${results.length} request(s).`, 
+                results 
+            });
+        } else if (someSucceeded) {
+            res.status(207).json({ // Multi-Status
+                message: "Partial success: Some requests had issues during deletion. See results for details.",
+                results
+            });
+        } else {
+            res.status(500).json({ 
+                message: "Failed to delete data for any of the specified requests. See results for details.", 
+                results 
+            });
+        }
+
+    } catch (error: unknown) {
+        const { message, stack } = getErrorMessageAndStack(error);
+        logger.error({ err: error, errorMessage: message, stack }, "Unhandled error in deleteLogAnalysisRequests.");
         next(error);
     }
 };
