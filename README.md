@@ -292,103 +292,203 @@ sudo ufw reload
 
 #### **Bước 4.2: Tạo file Cấu hình Nginx**
 ```bash
-sudo nano /etc/nginx/sites-available/confhub.ddns.net
+sudo nano /etc/nginx/sites-available/default
 ```
 Dán toàn bộ nội dung sau vào file. Cấu hình này đã được chú thích chi tiết.
 
 ```nginx
-# /etc/nginx/sites-available/confhub.ddns.net
-
 # --- Cấu hình cho SERVER BACKEND, CLIENT và ADMIN ---
+# /etc/nginx/sites-available/default
+# Đây là đường dẫn và tên của file cấu hình Nginx.
+# File này thường được đặt trong thư mục 'sites-available' và sau đó được liên kết (symlink)
+# sang thư mục 'sites-enabled' để Nginx nhận diện và sử dụng.
+
+# --- Cấu hình cho Backend API (Proxy) và Frontend ---
+# Dòng chú thích này chỉ rõ rằng khối server tiếp theo sẽ cấu hình cả việc proxy cho API backend và các frontend.
+
 server {
-    # Lắng nghe trên cổng 443 cho kết nối HTTPS
+    # Khai báo một khối 'server' mới, đại diện cho một virtual host hoặc một ứng dụng web cụ thể.
+
+    # --- Phần HTTPS (Cổng 443) ---
+    # Dòng chú thích này chỉ rõ đây là phần cấu hình cho giao thức HTTPS.
     listen 443 ssl http2;
+    # Lắng nghe các kết nối đến trên cổng 443 (cổng mặc định cho HTTPS).
+    # 'ssl' bật tính năng SSL/TLS cho kết nối này.
+    # 'http2' kích hoạt giao thức HTTP/2, giúp cải thiện hiệu suất tải trang.
+
     listen [::]:443 ssl http2;
+    # Tương tự như trên, nhưng lắng nghe trên tất cả các địa chỉ IPv6 trên cổng 443.
 
-    # Tên miền của bạn
     server_name confhub.ddns.net;
+    # Xác định tên miền mà server block này sẽ phản hồi.
+    # Khi một yêu cầu HTTP/S đến với Host header là 'confhub.ddns.net', Nginx sẽ sử dụng cấu hình này.
 
-    # --- Cấu hình SSL (Sẽ được Certbot tự động điền) ---
-    # Các dòng này sẽ được thêm vào sau khi chạy Certbot
-    # ssl_certificate /etc/letsencrypt/live/confhub.ddns.net/fullchain.pem;
-    # ssl_certificate_key /etc/letsencrypt/live/confhub.ddns.net/privkey.pem;
-    # include /etc/letsencrypt/options-ssl-nginx.conf;
-    # ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    # --- Cấu hình SSL (Do Certbot quản lý) ---
+    # Dòng chú thích này cho biết các dòng tiếp theo là cấu hình SSL và thường được quản lý bởi Certbot.
+    ssl_certificate /etc/letsencrypt/live/confhub.ddns.net/fullchain.pem;
+    # Chỉ định đường dẫn đến file chứng chỉ SSL (public key) cho tên miền này.
+    # 'fullchain.pem' chứa chứng chỉ của bạn và các chứng chỉ trung gian cần thiết.
+    ssl_certificate_key /etc/letsencrypt/live/confhub.ddns.net/privkey.pem;
+    # Chỉ định đường dẫn đến file khóa riêng (private key) tương ứng với chứng chỉ.
+    # File này phải được bảo vệ chặt chẽ.
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    # Bao gồm một file cấu hình SSL tiêu chuẩn được tạo bởi Certbot.
+    # File này chứa các cài đặt bảo mật SSL được khuyến nghị (ví dụ: ciphers, protocols).
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    # Chỉ định đường dẫn đến file tham số Diffie-Hellman, được sử dụng để tăng cường bảo mật cho trao đổi khóa SSL.
+    # Thường được tạo thủ công hoặc bởi Certbot.
 
-    # === ĐIỀU HƯỚNG TRUY CẬP (QUAN TRỌNG THỨ TỰ) ===
-
-    # 1. Điều hướng cho SERVER BACKEND (API và Socket)
-    # Bất kỳ truy cập nào tới your_domain/api/... sẽ được chuyển đến server backend
+    # --- Proxy cho Backend API (Qua /api/) ---
+    # Dòng chú thích này chỉ rõ đây là phần cấu hình proxy cho API backend.
+    # Block này PHẢI đứng TRƯỚC các location frontend
+    # Nginx xử lý các 'location' theo thứ tự ưu tiên:
+    # 1. Các location khớp chính xác (exact match)
+    # 2. Các location tiền tố dài nhất (longest prefix match)
+    # 3. Các location sử dụng biểu thức chính quy (regex)
+    # Đặt '/api/' trước '/' đảm bảo rằng các yêu cầu đến '/api/' sẽ được xử lý bởi block này trước khi rơi vào block tổng quát '/'.
     location /api/ {
-        # Xóa tiền tố /api/ trước khi chuyển tiếp
-        rewrite ^/api/(.*)$ /$1 break;
-        
-        # Địa chỉ của server backend
-        proxy_pass http://localhost:3001;
+    # Bắt đầu một khối 'location' mà sẽ xử lý các yêu cầu có URL bắt đầu bằng '/api/'.
+    rewrite ^/api/(.*)$ /$1 break;
+    # Một quy tắc rewrite (viết lại URL).
+    # ^/api/(.*)$: khớp với bất kỳ URL nào bắt đầu bằng '/api/' và "bắt" phần còn lại của URL vào nhóm 1 (($1)).
+    # /$1: thay thế URL bằng phần đã "bắt" được (ví dụ: '/api/users' thành '/users').
+    # break: ngừng xử lý các quy tắc rewrite tiếp theo trong cùng khối 'location' và tiếp tục xử lý các directive khác.
+    # Mục đích là để backend API không cần biết về tiền tố '/api/'.
+    proxy_pass http://localhost:3001/;
+    # Chuyển tiếp (proxy) yêu cầu đến địa chỉ HTTP://localhost:3001/. Đây là địa chỉ của backend API.
+    # Dấu '/' ở cuối 'http://localhost:3001/' là quan trọng: nó sẽ thay thế phần khớp của URI (sau khi rewrite) bằng URI mới.
+    # Ví dụ: yêu cầu tới `/api/users` sẽ được rewrite thành `/users` và sau đó proxy tới `http://localhost:3001/users`.
+    proxy_set_header Host $host;
+    # Gửi Host header ban đầu của client đến backend. Điều này quan trọng cho các ứng dụng backend dựa trên Host.
+    proxy_set_header X-Real-IP $remote_addr;
+    # Gửi địa chỉ IP thực của client đến backend. Hữu ích cho việc ghi log và bảo mật.
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    # Gửi danh sách các địa chỉ IP đã qua proxy. Nginx thêm IP của nó vào danh sách.
+    proxy_set_header X-Forwarded-Proto $scheme;
+    # Gửi giao thức ban đầu của yêu cầu (http hoặc https) đến backend.
+    proxy_http_version 1.1;
+    # Sử dụng HTTP/1.1 cho kết nối từ Nginx đến backend. Cần thiết cho WebSocket.
+    proxy_set_header Upgrade $http_upgrade;
+    # Chuyển tiếp Upgrade header nếu có (cho WebSocket).
+    proxy_set_header Connection "upgrade";
+    # Chuyển tiếp Connection header với giá trị "upgrade" (cho WebSocket).
 
-        # Cấu hình cần thiết cho WebSocket (Socket.IO)
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
+    # Tăng thời gian chờ phản hồi từ backend
+    # Dòng chú thích này giải thích mục đích của các cài đặt timeout tiếp theo.
+    # Giá trị này nên đủ lớn để backend xử lý một batch
+    # Ví dụ: 10 phút (600 giây). Điều chỉnh nếu cần.
+    # Nếu một batch 50 items có thể mất nhiều hơn, hãy tăng thêm.
+    # Frontend của bạn đang đặt timeout axios là 2 giờ (7200000ms),
+    # nhưng không nên đặt Nginx timeout quá cao như vậy.
+    # Hãy ước lượng thời gian tối đa cho 1 batch.
+    proxy_connect_timeout 600s;
+    # Thời gian tối đa Nginx chờ thiết lập kết nối đến backend (600 giây = 10 phút).
+    proxy_send_timeout 600s;
+    # Thời gian tối đa Nginx chờ gửi dữ liệu (request body) đến backend (600 giây).
+    proxy_read_timeout 600s; # Quan trọng nhất
+    # Thời gian tối đa Nginx chờ đọc phản hồi từ backend (600 giây).
+    # Nếu backend không gửi bất kỳ dữ liệu nào trong khoảng thời gian này, Nginx sẽ đóng kết nối và trả về lỗi 504 Gateway Timeout.
 
-        # Các header quan trọng để backend biết thông tin gốc của request
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-
-        # Tăng thời gian chờ cho các tác vụ crawl nặng
-        proxy_connect_timeout 600s;
-        proxy_send_timeout 600s;
-        proxy_read_timeout 600s;
+    # Cân nhắc thêm nếu payload request lớn (dù không phải nguyên nhân 504)
+    # Dòng chú thích này gợi ý về việc cân nhắc cài đặt kích thước body request.
+    # client_max_body_size 50M; # Ví dụ: cho phép payload lên tới 50MB
+    # Directive này bị comment (không hoạt động). Nếu muốn giới hạn kích thước body của request từ client đến Nginx,
+    # có thể bỏ comment và đặt giá trị phù hợp (ví dụ: 50 megabytes).
+    # Điều này ngăn chặn các cuộc tấn công DoS hoặc xử lý các yêu cầu quá lớn.
     }
 
-    # 2. Điều hướng cho FRONTEND ADMIN
-    # Bất kỳ truy cập nào tới your_domain/admin/... sẽ được chuyển đến app admin
+    # --- Proxy cho Frontend ADMIN (Qua /admin/) ---
+    # Dòng chú thích này chỉ rõ đây là phần cấu hình proxy cho frontend admin.
+    # Block này sẽ xử lý các yêu cầu tới confhub.ddns.net/admin/
+    # Nó PHẢI đứng TRƯỚC 'location /' (cho client frontend)
+    # Giải thích tương tự như với '/api/', đảm bảo ưu tiên cho đường dẫn cụ thể.
     location /admin/ {
-        # Địa chỉ của frontend admin
-        proxy_pass http://localhost:1314;
+    # Bắt đầu một khối 'location' mà sẽ xử lý các yêu cầu có URL bắt đầu bằng '/admin/'.
 
+        # Địa chỉ frontend admin của bạn
+        proxy_pass http://localhost:1314;
+        # Chuyển tiếp (proxy) yêu cầu đến địa chỉ HTTP://localhost:1314/, nơi frontend admin đang chạy.
+
+        # Các header quan trọng
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        
-        # Hỗ trợ WebSocket nếu cần
+        # Các cài đặt header tương tự như với proxy backend API, đảm bảo thông tin client được chuyển tiếp chính xác.
+
+        # Hỗ trợ WebSocket
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
+        # Các cài đặt này cần thiết để hỗ trợ WebSocket, nếu frontend admin có sử dụng.
     }
     
-    # 3. Điều hướng cho FRONTEND CLIENT (Mặc định)
-    # Tất cả các truy cập còn lại sẽ được chuyển đến app client
+    # --- Proxy cho Frontend CLIENT (Next.js) ---
+    # Dòng chú thích này chỉ rõ đây là phần cấu hình proxy cho frontend client chính.
+    # Block này xử lý tất cả các yêu cầu còn lại không khớp với /api/ hoặc /admin/
+    # Vì đây là 'location /', nó sẽ là khối mặc định xử lý bất kỳ yêu cầu nào không khớp với các location cụ thể hơn trước đó.
     location / {
-        # Địa chỉ của frontend client
-        proxy_pass http://localhost:8386;
+    # Bắt đầu một khối 'location' xử lý tất cả các yêu cầu (mặc định) không khớp với các location cụ thể hơn.
 
+        # Địa chỉ frontend client của bạn
+        proxy_pass http://localhost:8386;
+        # Chuyển tiếp (proxy) yêu cầu đến địa chỉ HTTP://localhost:8386/, nơi frontend client (Next.js) đang chạy.
+
+        # Các header quan trọng
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
+        # Các cài đặt header tương tự như trên.
 
-        # Hỗ trợ WebSocket (cho chatbot)
+        # Hỗ trợ WebSocket
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
+        # Các cài đặt này cần thiết để hỗ trợ WebSocket, nếu frontend client có sử dụng.
     }
+
+    # Optional: Cấu hình thêm
+    # Dòng chú thích cho các cấu hình bổ sung tùy chọn.
+    # access_log /var/log/nginx/confhub.ddns.net.access.log;
+    # Bị comment. Nếu bỏ comment, Nginx sẽ ghi lại tất cả các yêu cầu truy cập vào file log này.
+    # error_log /var/log/nginx/confhub.ddns.net.error.log;
+    # Bị comment. Nếu bỏ comment, Nginx sẽ ghi lại các lỗi vào file log này.
+    client_max_body_size 50M;
+    # Đặt kích thước tối đa cho body của request từ client đến Nginx là 50 megabytes.
+    # Nếu một client gửi một request có body lớn hơn giới hạn này, Nginx sẽ trả về lỗi 413 Request Entity Too Large.
+    # Điều này áp dụng cho toàn bộ server block này.
 }
 
-# --- Cấu hình cho cổng 80 (HTTP) ---
-# Mục đích chính là để Certbot xác thực và chuyển hướng sang HTTPS
+# --- Phần HTTP (Cổng 80) ---
+# Dòng chú thích chỉ rõ đây là phần cấu hình cho giao thức HTTP.
+# Không cần thay đổi gì ở đây
+# Dòng này gợi ý rằng cấu hình này thường không cần chỉnh sửa vì mục đích chính của nó là chuyển hướng sang HTTPS và hỗ trợ Certbot.
 server {
+    # Khai báo một khối 'server' mới cho các kết nối HTTP.
     listen 80;
+    # Lắng nghe các kết nối đến trên cổng 80 (cổng mặc định cho HTTP).
     listen [::]:80;
+    # Tương tự như trên, nhưng lắng nghe trên tất cả các địa chỉ IPv6 trên cổng 80.
 
     server_name confhub.ddns.net;
+    # Xác định tên miền mà server block này sẽ phản hồi.
 
-    # Chuyển hướng tất cả truy cập HTTP sang HTTPS
+    location /.well-known/acme-challenge/ {
+    # Bắt đầu một khối 'location' đặc biệt dành cho các yêu cầu xác thực của Certbot (ACME challenge).
+        root /var/www/html;
+        # Chỉ định thư mục gốc mà Nginx sẽ tìm kiếm các file xác thực.
+        allow all;
+        # Cho phép tất cả các IP truy cập vào đường dẫn này (cần thiết cho Certbot để xác minh).
+    }
+
     location / {
+    # Bắt đầu một khối 'location' mặc định cho tất cả các yêu cầu còn lại trên cổng 80.
         return 301 https://$host$request_uri;
+        # Trả về một mã trạng thái 301 Moved Permanently.
+        # $host: tên miền được yêu cầu (ví dụ: confhub.ddns.net).
+        # $request_uri: đường dẫn đầy đủ của yêu cầu (ví dụ: /api/users?id=1).
+        # Kết quả là: tất cả các yêu cầu HTTP đến sẽ được tự động chuyển hướng vĩnh viễn sang phiên bản HTTPS tương ứng.
     }
 }
 ```
