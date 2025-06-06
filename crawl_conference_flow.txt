@@ -1,0 +1,185 @@
+Chắc chắn rồi. Với vai trò là người phát triển chính, em xin trình bày chi tiết và sâu sắc về Hệ thống Thu thập Dữ liệu Conference - trái tim của toàn bộ dự án. Đây là một quy trình phức tạp, được thiết kế với nhiều cơ chế nhỏ nhưng quan trọng để đảm bảo tốc độ, độ chính xác và khả năng phục hồi.
+
+Phân Tích Chi Tiết Luồng Xử Lý Crawl Dữ Liệu Conference
+
+Đây là module phức tạp và quan trọng nhất của hệ thống. Mục tiêu không chỉ là lấy dữ liệu, mà là biến đổi một lượng lớn thông tin phi cấu trúc, nhiễu loạn từ internet thành một bộ dữ liệu có cấu trúc, sạch và đáng tin cậy. Để làm được điều này, em đã thiết kế một pipeline xử lý đa tầng, thông minh và có khả năng tự phục hồi.
+
+1. Tổng quan Pipeline và Xử lý Song song
+
+Khi một yêu cầu crawl một lô (batch) gồm nhiều hội nghị được gửi đến, hệ thống không xử lý tuần tự. Thay vào đó, CrawlOrchestratorService sẽ điều phối toàn bộ quá trình:
+
+Tiếp nhận Lô: Nhận một mảng các đối tượng ConferenceData (gồm Title và Acronym).
+
+Tạo Hàng đợi Tác vụ: Với mỗi hội nghị, một "tác vụ" (task) xử lý độc lập được tạo ra.
+
+Điều phối Song song: Các tác vụ này được đưa vào TaskQueueService (sử dụng thư viện p-queue). Service này hoạt động như một диспетчер (dispatcher), cho phép một số lượng tác vụ nhất định (ví dụ: 5, cấu hình trong .env) chạy song song. Cơ chế này giúp:
+
+Tối ưu tốc độ: Tận dụng tối đa khả năng xử lý I/O bất đồng bộ của Node.js.
+
+Tránh quá tải: Ngăn việc mở hàng trăm kết nối mạng hoặc tiến trình Playwright cùng lúc, giúp hệ thống ổn định và tránh bị các trang web đích chặn.
+
+Cô lập lỗi: Lỗi xảy ra trong một tác vụ không làm ảnh hưởng đến các tác vụ đang chạy song song khác.
+
+Mỗi tác vụ sẽ đi theo một trong hai luồng xử lý chính: SAVE Flow hoặc UPDATE Flow.
+
+2. Phân luồng Logic: SAVE Flow và UPDATE Flow
+
+ConferenceProcessorService là nơi đưa ra quyết định xử lý cho mỗi hội nghị. Nó kiểm tra cấu trúc của đối tượng ConferenceData nhận được:
+
+Nếu đối tượng chứa các trường mainLink, cfpLink, impLink: Hệ thống hiểu rằng đây là yêu cầu UPDATE. Người dùng đã biết trước các link quan trọng và chỉ muốn hệ thống crawl lại nội dung từ các link này để cập nhật thông tin.
+
+Nếu đối tượng chỉ chứa Title và Acronym: Hệ thống sẽ kích hoạt luồng SAVE. Đây là luồng xử lý từ đầu, phải tự đi tìm kiếm, xác định link và trích xuất thông tin.
+
+Đây là một quyết định thiết kế quan trọng, giúp hệ thống linh hoạt và tiết kiệm tài nguyên. Luồng UPDATE bỏ qua các bước tìm kiếm và xác định tốn kém, đi thẳng vào việc trích xuất.
+
+3. Chi tiết "SAVE Flow" (Thu thập từ đầu)
+
+Đây là luồng phức tạp hơn, thể hiện rõ nhất sức mạnh của pipeline.
+
+graph TD
+    A[Bắt đầu Tác vụ Conference] --> B{Tìm kiếm Google};
+    B --> C[Lọc và Chọn link tiềm năng];
+    C --> D[Crawl song song các link tiềm năng & Lưu nội dung text vào file tạm];
+    D --> E[Tổng hợp nội dung từ các file tạm];
+    E --> F[API Call #1: Determine Links (Gemini)];
+    F --> G{Kết quả API #1 có khớp với link đã crawl không?};
+    
+    G -- "Có (Match)" --> H[Luồng Match];
+    G -- "Không (No Match)" --> I[Luồng No Match];
+    
+    H --> J[Crawl bổ sung CFP/IMP link từ API #1];
+    I --> K[Crawl lại trang Official mới từ API #1];
+    K --> L["(Tùy chọn) API Call #2: Re-Determine Links"];
+    L --> J;
+
+    J --> M[Tổng hợp toàn bộ nội dung text cuối cùng (Official, CFP, IMP)];
+    M --> N[Thực hiện song song 2 API Call];
+    N --> N1[API Call #3: Extract Information (Gemini)];
+    N --> N2[API Call #4: Extract CFP (Gemini)];
+    
+    N1 --> O[Lưu kết quả JSON từ API #3];
+    N2 --> P[Lưu kết quả JSON từ API #4];
+    
+    O & P --> Q[Tổng hợp, Chuẩn hóa & Ghi vào file final_output.jsonl];
+    Q --> R[Kết thúc Tác vụ];
+
+
+Bước S-1: Tìm kiếm và Lọc link thông minh
+
+Template Search: Hệ thống không tìm kiếm một cách ngẫu nhiên. Em đã tạo ra một searchQueryTemplate (cấu hình trong .env) ví dụ: ${Title} ${Acronym} ${Year2} conference. ConferenceProcessorService sẽ điền Title, Acronym và năm hiện tại vào mẫu này để tạo ra một câu truy vấn tìm kiếm cực kỳ chính xác.
+
+Google Search & Key Rotation: GoogleSearchService thực hiện tìm kiếm. Điểm đặc biệt là ApiKeyManager quản lý một pool các API key. Nếu một key bị hết hạn ngạch (quota exhausted), service sẽ tự động xoay vòng (rotate) sang key tiếp theo, đảm bảo quá trình tìm kiếm không bị gián đoạn.
+
+Lọc Kết quả: Đây là bước tiền xử lý cực kỳ quan trọng. Kết quả từ Google sẽ được lọc qua:
+
+unwantedDomains: Loại bỏ các link từ các trang tổng hợp như wikicfp.com, dblp.org, research.com... vì chúng ta muốn tìm trang chủ gốc của hội nghị.
+
+skipKeywords: Loại bỏ các link có tiêu đề chứa các từ khóa nhiễu như "proceedings", "publication", "visa information"...
+
+Mục đích của việc lọc là để giảm số lượng trang cần crawl, tiết kiệm thời gian và cung cấp cho AI đầu vào chất lượng hơn, tránh bị "nhiễu" bởi các trang không liên quan.
+
+Bước S-2: Crawl ban đầu và Tổng hợp nội dung cho AI
+
+BatchProcessingService nhận các link đã lọc. Với mỗi link, nó sử dụng Playwright để truy cập. PageContentExtractorService được gọi để "đọc" trang web. Service này không chỉ lấy body.innerText một cách thô thiển. Nó thực hiện:
+
+Loại bỏ thẻ không cần thiết: Xóa các thẻ <script>, <style>, <nav>, <footer>...
+
+Phân tích DOM: Đi sâu vào cây DOM để trích xuất văn bản từ các thẻ <p>, <h1>, <td>... một cách có cấu trúc.
+
+Nội dung text của mỗi trang được lưu vào một file tạm trong thư mục temp.
+
+Sau khi crawl xong tất cả các link tiềm năng, BatchProcessingService sẽ đọc nội dung từ tất cả các file tạm này và ghép chúng lại thành một chuỗi văn bản khổng lồ. Chuỗi này được định dạng rõ ràng, ví dụ: Source Link [1]: ... \n Content [1]: ... \n\n ---\n\n Source Link [2]: ....
+
+Bước S-3: API Call #1 - "Bộ não" Giai đoạn 1: Xác định Link (Determine Links)
+
+Chuỗi văn bản tổng hợp ở trên được gửi đến GeminiApiService.determineLinks().
+
+Prompting Technique: Em không chỉ gửi text thô. Em cung cấp cho mô hình Gemini một System Instruction (chỉ thị hệ thống) rất rõ ràng, ví dụ: "You are an expert assistant. Based on the provided content from multiple websites, identify the single official conference website, the direct link to the Call for Papers page, and the direct link to the Important Dates page. Respond in JSON format only with keys: 'Official Website', 'Call for papers link', 'Important dates link'."
+
+Few-Shot Examples (với Non-Tuned Model): Nếu sử dụng model non-tuned, em còn cung cấp thêm các ví dụ (few-shot examples) ngay trong prompt. Ví dụ: Input: [content A, B, C] \n Output: {"Official Website": "link_B", ...}. Điều này "dạy" cho model định dạng đầu ra chính xác tuyệt đối.
+
+Kết quả trả về là một JSON chứa 3 link quan trọng nhất. Đây là bước đột phá, giúp hệ thống "hiểu" và chọn lọc nguồn thông tin thay vì xử lý tất cả một cách mù quáng.
+
+Bước S-4: Rẽ nhánh xử lý - Match vs. No Match
+
+ConferenceDeterminationService so sánh link "Official Website" mà AI trả về với danh sách các link ban đầu đã crawl.
+
+Luồng S-4a (Match Found): Nếu link AI trả về trùng với một trong các link đã crawl, tuyệt vời! Điều này có nghĩa là nội dung text của trang chủ đã có sẵn trong file tạm. Hệ thống chỉ cần crawl bổ sung nội dung của cfpLink và impLink (nếu có và khác với trang chủ) mà AI đã cung cấp.
+
+Luồng S-4b (No Match): Nếu link AI trả về là một link hoàn toàn mới, đây là một kịch bản quan trọng. Nó có nghĩa là các kết quả tìm kiếm ban đầu không chứa trang chủ, nhưng AI đã thông minh tìm thấy nó qua một liên kết trong các trang con.
+
+Hệ thống sẽ ưu tiên kết quả của AI, truy cập vào trang "Official Website" mới này để crawl lại nội dung.
+
+API Call #2 (Tùy chọn): Sau khi có nội dung của trang chủ mới, đôi khi chúng ta vẫn cần tìm lại link CFP/IMP. Hệ thống có thể thực hiện một lệnh gọi determineLinks thứ hai, nhưng lần này chỉ với nội dung của trang chủ mới, để AI tìm các link con một cách chính xác hơn. Đây là cơ chế tự sửa lỗi và tinh chỉnh.
+
+Bước S-5: API Call #3 & #4 - "Bộ não" Giai đoạn 2: Trích xuất song song
+
+Sau khi đã có đầy đủ nội dung text chất lượng cao từ trang Official, CFP và IMP, chúng lại được tổng hợp lần cuối thành một prompt duy nhất.
+
+Để tối ưu tốc độ, hệ thống thực hiện 2 lệnh gọi API đến Gemini song song:
+
+extractInformation(): Sử dụng một model (thường là tuned) được huấn luyện để trích xuất các thông tin chung như conferenceDates, location, country, submissionDate...
+
+extractCfp(): Sử dụng một model khác (có thể là non-tuned để xử lý văn bản dài tốt hơn) để trích xuất summary và callForPapers.
+
+Việc gọi song song giúp giảm một nửa thời gian chờ đợi phản hồi từ AI.
+
+Bước S-6: Lưu trữ và Hoàn tất
+
+Kết quả JSON từ các lệnh gọi API được lưu vào các file tạm.
+
+Cuối cùng, một dòng JSON duy nhất chứa toàn bộ thông tin của hội nghị (link, đường dẫn file tạm, metadata từ AI...) được ghi vào file final_output_{batchRequestId}.jsonl. Việc ghi theo từng dòng (JSON Lines) giúp file không bị hỏng nếu tiến trình bị ngắt đột ngột.
+
+4. Chi tiết "UPDATE Flow" (Cập nhật từ link có sẵn)
+
+Luồng này đơn giản hơn nhiều nhưng vẫn kế thừa các cơ chế xử lý mạnh mẽ.
+
+Bỏ qua Tìm kiếm và Xác định: Hệ thống nhận trực tiếp mainLink, cfpLink, impLink.
+
+Crawl trực tiếp: BatchProcessingService dùng Playwright để crawl thẳng nội dung từ 3 link này.
+
+Tổng hợp nội dung: Nội dung text được tổng hợp lại.
+
+Gọi API Trích xuất song song: Tương tự Bước S-5 của luồng SAVE, hệ thống gọi song song extractInformation() và extractCfp().
+
+Lưu trữ: Kết quả được ghi vào file .jsonl như bình thường.
+
+Luồng này hiệu quả cho việc làm mới dữ liệu định kỳ mà không cần tốn chi phí và thời gian cho việc tìm kiếm lại.
+
+5. Các Cơ chế Hỗ trợ Quan trọng
+
+Các cơ chế này hoạt động xuyên suốt pipeline để đảm bảo sự mạnh mẽ và hiệu quả.
+
+Retry & Fallback Mechanism:
+
+Retry: Trong GeminiRetryHandlerService, nếu một cuộc gọi API gặp lỗi tạm thời (lỗi mạng, lỗi 5xx từ server Google), hệ thống sẽ không thất bại ngay. Nó sẽ tự động thử lại (retry) sau một khoảng thời gian chờ tăng dần (exponential backoff), ví dụ: chờ 30s, rồi 60s...
+
+Fallback: Em cấu hình cho mỗi tác vụ AI một model chính (ví dụ gemini-extract-tuned-model) và một model dự phòng (gemini-extract-non-tuned-model). Nếu model chính thất bại sau các lần thử lại, GeminiApiOrchestratorService sẽ tự động chuyển sang sử dụng model dự phòng (fallback). Điều này đảm bảo tỷ lệ thành công của các cuộc gọi API là cao nhất có thể.
+
+Gemini Caching:
+
+Đối với các model non-tuned, phần System Instruction và Few-Shot Examples thường không đổi. GeminiContextCacheService sẽ tạo một "context cache" trên server của Google cho những nội dung này.
+
+Trong các lần gọi tiếp theo với cùng một apiType và modelName, thay vì gửi lại toàn bộ prompt dài, hệ thống chỉ cần gửi prompt chính của người dùng và tham chiếu đến tên cache đã tạo. Điều này giúp giảm đáng kể lượng token gửi đi, tiết kiệm chi phí và tăng tốc độ phản hồi.
+
+Prompting Strategy (Tuned vs. Non-Tuned):
+
+Non-Tuned Models: Cần hướng dẫn chi tiết. Em sử dụng kết hợp System Instruction (để ra lệnh) và Few-Shot Examples (để minh họa định dạng).
+
+Tuned Models: Các model này đã được tinh chỉnh (fine-tuned) trên dữ liệu có định dạng tương tự. Chúng không cần "dạy" lại từ đầu. Vì vậy, em chỉ cần cung cấp một systemInstructionPrefix ngắn gọn ngay trước prompt chính để "gợi nhớ" cho model về tác vụ cần làm. Kỹ thuật này giúp prompt gọn hơn và tận dụng được sức mạnh của model đã được huấn luyện riêng.
+
+Xử lý và Chuẩn hóa Kết quả:
+
+API Response Cleaning: GeminiResponseHandlerService có nhiệm vụ "dọn dẹp" kết quả từ AI. Đôi khi AI trả về JSON trong một khối markdown (json ...). Service này sẽ tự động bóc tách để lấy chuỗi JSON thuần. Nó cũng xử lý các lỗi phổ biến như dấu phẩy thừa cuối object.
+
+Validation: ResultProcessingService sau khi đọc dữ liệu từ file .jsonl sẽ thực hiện một bước kiểm tra và chuẩn hóa cuối cùng. Ví dụ, kiểm tra xem trường continent có nằm trong danh sách hợp lệ không, type có phải là 'Hybrid', 'Online', 'Offline' không. Nếu dữ liệu không hợp lệ hoặc bị thiếu, nó sẽ được gán giá trị mặc định và ghi log lại. Điều này đảm bảo dữ liệu đầu ra luôn nhất quán và sạch sẽ.
+
+Quản lý File và Dữ liệu Tạm:
+
+Toàn bộ quá trình sử dụng rất nhiều file tạm. FileSystemService quản lý việc tạo các thư mục batches, temp, csv_outputs... và đảm bảo chúng được dọn dẹp hoặc tổ chức một cách hợp lý.
+
+Việc sử dụng file .jsonl thay vì một file JSON lớn duy nhất là một quyết định có chủ đích để tăng tính an toàn dữ liệu. Nếu chương trình bị lỗi giữa chừng, những dòng đã ghi vẫn được bảo toàn.
+
+Cuối cùng, ResultProcessingService sử dụng stream (readline, Json2CsvTransform) để đọc file .jsonl và ghi ra file .csv. Việc này cực kỳ hiệu quả về mặt bộ nhớ, cho phép xử lý các file output rất lớn mà không làm sập ứng dụng do tràn bộ nhớ.
+
+Bằng cách kết hợp tất cả các kỹ thuật và cơ chế trên, hệ thống không chỉ đơn thuần là một công cụ crawl dữ liệu, mà là một cỗ máy xử lý thông tin thông minh, có khả năng thích ứng và phục hồi cao, giải quyết hiệu quả bài toán phức tạp đã đặt ra.

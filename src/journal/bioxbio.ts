@@ -1,10 +1,10 @@
 // src/bioxbio.ts
 
 import { Page, Route } from 'playwright'; // Import Route for better typing
-import { logger as baseLogger, retryAsync, RetryOptions } from './utils'; // Import RetryOptions
+import { retryAsync, RetryOptions } from './utils'; // Import RetryOptions
 import NodeCache from 'node-cache';
 import { ConfigService } from '../config/config.service'; // Correct path if bioxbio.ts is in src/
-
+import { Logger } from 'pino';
 // bioxbioCache will be initialized in the function that receives ConfigService
 // let bioxbioCache: NodeCache | null = null; // Or initialize it globally if ConfigService is resolved globally
 
@@ -12,7 +12,7 @@ export const fetchBioxbioData = async (
     page: Page,
     bioxbioSearchUrl: string,
     journalName: string,
-    parentLogger: typeof baseLogger,
+    parentLogger: Logger,
     configService: ConfigService // <<<< ADD ConfigService
 ): Promise<any[] | null> => { // Return type explicitly any[] | null
     const logger = parentLogger.child({

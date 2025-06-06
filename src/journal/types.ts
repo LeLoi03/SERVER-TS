@@ -7,7 +7,7 @@ export type CSVRecord = {
     SJR?: string;
     'SJR Best Quartile'?: string;
     'H index'?: string;
-    'Total Docs. (2023)'?: string;
+    'Total Docs. (2024)'?: string;
     'Total Docs. (3years)'?: string;
     'Total Refs.'?: string;
     'Total Cites (3years)'?: string;

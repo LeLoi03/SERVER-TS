@@ -5,14 +5,14 @@ import { Page } from 'playwright';
 import { formatISSN, retryAsync, RetryOptions } from './utils'; // <<<< IMPORT RetryOptions
 import { fetchGoogleImage } from './googleSearch'; // Adjusted path assuming googleSearch.ts is in src/
 import { TableRowData, JournalDetails, ImageResult } from './types';
-import { logger as baseLogger } from './utils';
+// import { logger as baseLogger } from './utils';
 import { ConfigService } from '../config/config.service'; // <<<< IMPORT ConfigService
-
+import { Logger } from 'pino'; // <<<< IMPORT Logger từ Pino
 // --- processPage ---
 export const processPage = async (
     page: Page,
     url: string,
-    logger: typeof baseLogger,
+    logger: Logger,
     configService: ConfigService // <<<< ADD ConfigService
 ): Promise<TableRowData[]> => {
     const childLogger = logger.child({ function: 'processPage', url });
@@ -114,7 +114,7 @@ export const processPage = async (
 export const fetchDetails = async (
     page: Page,
     journalUrl: string | null,
-    logger: typeof baseLogger,
+    logger: Logger,
     configService: ConfigService // <<<< ADD ConfigService
 ): Promise<JournalDetails | null> => {
     const childLogger = logger.child({ function: 'fetchDetails', journalUrl });
@@ -292,7 +292,7 @@ export const getImageUrlAndDetails = async (
     row: TableRowData | any = null, // any for flexibility if CSVRow is also passed
     apiKey: string | null,
     // cseId: string | null, // CSE ID will come from configService via fetchGoogleImage
-    logger: typeof baseLogger,
+    logger: Logger,
     configService: ConfigService // <<<< ADD ConfigService
 ): Promise<ImageResult> => {
     const childLogger = logger.child({ function: 'getImageUrlAndDetails' });
@@ -362,7 +362,7 @@ export const getImageUrlAndDetails = async (
 export const getLastPageNumber = async (
     firstPage: Page,
     baseUrl: string,
-    logger: typeof baseLogger,
+    logger: Logger,
     configService: ConfigService // <<<< ADD ConfigService
 ): Promise<number> => {
     const childLogger = logger.child({ function: 'getLastPageNumber', baseUrl });

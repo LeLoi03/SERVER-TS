@@ -1,30 +1,20 @@
 // src/googleSearch.ts
 
 import axios, { AxiosError, AxiosResponse } from 'axios'; // Import AxiosResponse
-import { retryAsync, logger as baseLogger, RetryOptions } from './utils'; // <<<< IMPORT RetryOptions if defined in utils
+import { retryAsync, RetryOptions } from './utils'; // <<<< IMPORT RetryOptions if defined in utils
 import { ConfigService } from '../config/config.service';
+import { Logger } from 'pino';
 
 interface GoogleSearchResult {
     imageLink: string | null;
     contextLink: string | null;
 }
 
-// If RetryOptions is not exported from './utils', define it here based on what retryAsync expects
-// For example:
-// interface RetryOptions {
-//   retries: number;
-//   minTimeout: number;
-//   factor: number;
-//   // maxTimeout?: number;
-//   // randomize?: boolean;
-// }
-
-
 export const fetchGoogleImage = async (
     title: string | null,
     formattedISSN: string,
     apiKey: string | null,
-    logger: typeof baseLogger,
+    logger: Logger,
     configService: ConfigService
 ): Promise<GoogleSearchResult> => {
     const childLogger = logger.child({ function: 'fetchGoogleImage', issn: formattedISSN, title: title || 'N/A' });
