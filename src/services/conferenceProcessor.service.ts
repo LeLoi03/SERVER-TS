@@ -174,19 +174,20 @@ export class ConferenceProcessorService {
             taskSuccessfullyCompleted = false;
             specificTaskError = taskError instanceof Error ? taskError : new Error(errorMessage);
             taskLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'task_unhandled_exception' }, `An unhandled exception occurred during conference processing for "${confTitle}" (${confAcronym}).`);
-        } finally {
-            const finishContext: { event: string; success: boolean; error_details?: string } = {
-                event: 'task_finish',
-                success: taskSuccessfullyCompleted,
-            };
-            if (specificTaskError) {
-                if (!taskLogger.bindings().err) {
-                    finishContext.error_details = specificTaskError.message;
-                }
-            } else if (!taskSuccessfullyCompleted) {
-                finishContext.error_details = "Task did not complete successfully for an unspecified reason.";
-            }
-            taskLogger.info(finishContext, `Finished processing conference task for "${confTitle}" (${confAcronym}).`);
-        }
+        } 
+        // finally {
+        //     const finishContext: { event: string; success: boolean; error_details?: string } = {
+        //         event: 'task_finish',
+        //         success: taskSuccessfullyCompleted,
+        //     };
+        //     if (specificTaskError) {
+        //         if (!taskLogger.bindings().err) {
+        //             finishContext.error_details = specificTaskError.message;
+        //         }
+        //     } else if (!taskSuccessfullyCompleted) {
+        //         finishContext.error_details = "Task did not complete successfully for an unspecified reason.";
+        //     }
+        //     taskLogger.info(finishContext, `Finished processing conference task for "${confTitle}" (${confAcronym}).`);
+        // }
     }
 }

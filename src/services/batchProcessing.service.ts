@@ -534,10 +534,26 @@ export class BatchProcessingService {
             };
 
             await this.appendFinalRecord(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_update_record' }));
+
+
             logger.info({ event: 'batch_task_finish_success', flow: 'update' }); // Sửa event
+
+            // >>> VỊ TRÍ ĐẶT LOG TASK_FINISH KHI THÀNH CÔNG <<<
+            logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+
             return true;
         } catch (error: any) {
             logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'update' }); // Sửa event
+
+            // >>> VỊ TRÍ ĐẶT LOG TASK_FINISH KHI THẤT BẠI <<<
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logger.error({
+                err: error,
+                event: 'task_finish', // Sử dụng cùng event
+                success: false,
+                error_details: errorMessage
+            }, `Finished processing conference task  with failure.`); // for "${batchInput.conferenceAcronym}"
+
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
             this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_update_task_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
@@ -823,10 +839,24 @@ export class BatchProcessingService {
             await this.appendFinalRecord(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_save_record' }));
 
             logger.info({ event: 'batch_task_finish_success', flow: 'save' });
+
+            // >>> VỊ TRÍ ĐẶT LOG TASK_FINISH KHI THÀNH CÔNG <<<
+            logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+
             return true;
 
         } catch (error: any) {
             logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'save' });
+
+            // >>> VỊ TRÍ ĐẶT LOG TASK_FINISH KHI THẤT BẠI <<<
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logger.error({
+                err: error,
+                event: 'task_finish', // Sử dụng cùng event
+                success: false,
+                error_details: errorMessage
+            }, `Finished processing conference task with failure.`);
+
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForSave for ${primaryEntryForContext.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
             this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_save_task_main_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
