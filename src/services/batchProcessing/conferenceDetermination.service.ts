@@ -1,4 +1,4 @@
-// src/services/batchProcessingServiceChild/conferenceDetermination.service.ts
+// src/services/batchProcessing/conferenceDetermination.service.ts
 import { Page, BrowserContext } from 'playwright';
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';

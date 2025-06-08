@@ -1,4 +1,4 @@
-// src/services/batchProcessingServiceChild/conferenceDataAggregator.service.ts
+// src/services/batchProcessing/conferenceDataAggregator.service.ts
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
 import { singleton, inject } from 'tsyringe';

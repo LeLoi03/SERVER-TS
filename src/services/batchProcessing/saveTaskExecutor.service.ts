@@ -1,151 +1,27 @@
-// src/services/batchTaskExecutor.service.ts
+// src/services/batchProcessing/saveTaskExecutor.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import path from 'path';
-import { Page, BrowserContext } from 'playwright';
 import { Logger } from 'pino';
+import { BrowserContext } from 'playwright';
 
 // --- Types ---
-import {
-    BatchEntry, BatchUpdateEntry,
-    BatchEntryWithIds, BatchUpdateDataWithIds,
-    ApiModels
-} from '../../types/crawl/crawl.types'; // Adjust path
-// Assuming LogContext types are moved and imported
-// import { BatchProcessingLogContext } from '../types/batchProcessing.types'; // Adjust path
+import { BatchEntry, BatchEntryWithIds, ApiModels, GeminiApiParams, ApiResponse } from '../../types/crawl';
+import { ContentPaths } from '../batchProcessing/conferenceDataAggregator.service';
 
 // --- Service Imports ---
-import { ConfigService } from '../../config/config.service'; // Adjust path
-import { LoggingService } from '../logging.service'; // Adjust path
-import { GeminiApiService } from '../geminiApi.service'; // Adjust path
-import { FileSystemService } from '../fileSystem.service'; // Adjust path
-import { IConferenceDataAggregatorService, ContentPaths } from './conferenceDataAggregator.service'; // Adjust path
-import { IConferenceDeterminationService } from './conferenceDetermination.service'; // Adjust path
-import { IBatchTaskExecutorService } from '../interfaces/batchTaskExecutor.interface'; // Adjust path
-import { IBatchApiHandlerService } from '../interfaces/batchApiHandler.interface'; // Adjust path
-import { IBatchOutputPersistenceService } from '../interfaces/batchOutputPersistence.interface'; // Adjust path
-import { GeminiApiParams,ApiResponse } from '../../types/crawl';
-// --- Utils ---
-import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely'; // Adjust path
-import { normalizeAndJoinLink } from '../../utils/crawl/url.utils'; // Adjust path
+import { ConfigService } from '../../config/config.service';
+import { FileSystemService } from '../fileSystem.service';
+import { GeminiApiService } from '../geminiApi.service';
+import { IConferenceDataAggregatorService } from '../batchProcessing/conferenceDataAggregator.service';
+import { IConferenceDeterminationService } from '../batchProcessing/conferenceDetermination.service';
+import { IFinalExtractionApiService } from './finalExtractionApi.service';
+import { IFinalRecordAppenderService } from './finalRecordAppender.service';
+import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
+import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 
-
-@singleton()
-export class BatchTaskExecutorService implements IBatchTaskExecutorService {
-    private readonly serviceLogger: Logger;
-
-    constructor(
-        @inject(ConfigService) private configService: ConfigService,
-        @inject(LoggingService) loggingService: LoggingService,
-        @inject(GeminiApiService) private geminiApiService: GeminiApiService, // For determineLinks
-        @inject(FileSystemService) private fileSystemService: FileSystemService,
-        @inject('IConferenceDataAggregatorService') private conferenceDataAggregatorService: IConferenceDataAggregatorService,
-        @inject('IConferenceDeterminationService') private conferenceDeterminationService: IConferenceDeterminationService,
-        @inject('IBatchApiHandlerService') private batchApiHandlerService: IBatchApiHandlerService,
-        @inject('IBatchOutputPersistenceService') private batchOutputPersistenceService: IBatchOutputPersistenceService
-    ) {
-        this.serviceLogger = loggingService.getLogger('conference', { service: 'BatchTaskExecutorService' });
-        this.serviceLogger.info("BatchTaskExecutorService constructed.");
-    }
-
-    public async executeBatchTaskForUpdate(
-        batchInput: BatchUpdateEntry,
-        batchItemIndex: number,
-        batchRequestIdForTask: string,
-        apiModels: ApiModels,
-        globalProcessedAcronymsSet: Set<string>,
-        parentLogger: Logger
-    ): Promise<boolean> {
-        const originalAcronym = batchInput.conferenceAcronym;
-
-        // Original function name was '_executeBatchTaskForUpdate'
-        const logger = parentLogger.child({
-            // batchServiceFunction: '_executeBatchTaskForUpdate', // Original name
-            serviceScopedFunction: 'executeBatchTaskForUpdate', // New scope
-            // originalConferenceAcronym: originalAcronym, // Already in parentLogger
-            // conferenceTitle: batchInput.conferenceTitle, // Already in parentLogger
-        });
-        logger.info({ event: 'batch_task_start_execution', flow: 'update' });
-
-        try {
-            const internalProcessingAcronym = await addAcronymSafely(globalProcessedAcronymsSet, originalAcronym);
-            const safeInternalAcronymForFiles = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
-            logger.info({ internalProcessingAcronym, safeInternalAcronymForFiles, event: 'acronym_generated_for_update_files' });
-
-            const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
-            // Use BatchOutputPersistenceService for ensuring directories
-            await this.batchOutputPersistenceService.ensureDirectories(
-                [this.configService.batchesDir, path.dirname(jsonlPathForThisBatch)],
-                logger
-            );
-
-            const contentPaths: ContentPaths = {
-                conferenceTextPath: batchInput.conferenceTextPath,
-                cfpTextPath: batchInput.cfpTextPath,
-                impTextPath: batchInput.impTextPath,
-            };
-            const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
-            const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
-                batchInput.conferenceTitle, originalAcronym, aggregatedFileContent, logger
-            );
-
-            const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
-            const fileUpdateName = `${safeInternalAcronymForFiles}_update_item${batchItemIndex}.txt`;
-            const fileUpdatePath = path.join(this.configService.batchesDir, fileUpdateName); // Use configService for batchesDir
-            const fileUpdatePromise = this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
-                .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
-                .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
-
-            const apiResults = await this.batchApiHandlerService.executeFinalExtractionApis(
-                contentSendToAPI, batchItemIndex, batchInput.conferenceTitle,
-                originalAcronym,
-                safeInternalAcronymForFiles,
-                true,
-                apiModels.extractInfo,
-                apiModels.extractCfp,
-                logger // Pass current logger which has full context
-            );
-
-            await fileUpdatePromise;
-            logger.debug({ event: 'intermediate_update_file_write_settled' });
-
-            const finalRecord: BatchUpdateDataWithIds = {
-                conferenceTitle: batchInput.conferenceTitle,
-                conferenceAcronym: originalAcronym,
-                mainLink: batchInput.mainLink,
-                cfpLink: batchInput.cfpLink,
-                impLink: batchInput.impLink,
-                conferenceTextPath: batchInput.conferenceTextPath,
-                cfpTextPath: batchInput.cfpTextPath,
-                impTextPath: batchInput.impTextPath,
-                originalRequestId: batchInput.originalRequestId,
-                internalProcessingAcronym: internalProcessingAcronym,
-                batchRequestId: batchRequestIdForTask,
-                extractResponseTextPath: apiResults.extractResponseTextPath,
-                extractMetaData: apiResults.extractMetaData,
-                cfpResponseTextPath: apiResults.cfpResponseTextPath,
-                cfpMetaData: apiResults.cfpMetaData,
-            };
-
-            await this.batchOutputPersistenceService.appendFinalRecord(
-                finalRecord,
-                batchRequestIdForTask,
-                logger.child({ subOperation: 'append_final_update_record' })
-            );
-            logger.info({ event: 'batch_task_finish_success', flow: 'update' });
-            return true;
-        } catch (error: any) {
-            logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'update' });
-            await this.batchOutputPersistenceService.logBatchProcessingError(
-                { conferenceAcronym: batchInput.conferenceAcronym, batchItemIndex, batchRequestId: batchRequestIdForTask, flow: 'update' },
-                error,
-                logger // Pass current logger
-            );
-            return false;
-        }
-    }
-
-    public async executeBatchTaskForSave(
+export interface ISaveTaskExecutorService {
+    execute(
         initialBatchEntries: BatchEntry[],
         batchItemIndex: number,
         primaryOriginalAcronymForInitialFilesPrefix: string,
@@ -153,13 +29,38 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
         batchRequestIdForTask: string,
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
-        parentLogger: Logger
+        logger: Logger
+    ): Promise<boolean>;
+}
+
+@singleton()
+export class SaveTaskExecutorService implements ISaveTaskExecutorService {
+    private readonly batchesDir: string;
+    private readonly errorLogPath: string;
+
+    constructor(
+        @inject(ConfigService) private readonly configService: ConfigService,
+        @inject(FileSystemService) private readonly fileSystemService: FileSystemService,
+        @inject(GeminiApiService) private readonly geminiApiService: GeminiApiService,
+        @inject('IConferenceDataAggregatorService') private readonly conferenceDataAggregatorService: IConferenceDataAggregatorService,
+        @inject('IConferenceDeterminationService') private readonly conferenceDeterminationService: IConferenceDeterminationService,
+        @inject('IFinalExtractionApiService') private readonly finalExtractionApiService: IFinalExtractionApiService,
+        @inject('IFinalRecordAppenderService') private readonly finalRecordAppenderService: IFinalRecordAppenderService
+    ) {
+        this.batchesDir = this.configService.batchesDir;
+        this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
+    }
+
+    public async execute(
+        initialBatchEntries: BatchEntry[],
+        batchItemIndex: number,
+        primaryOriginalAcronymForInitialFilesPrefix: string,
+        browserContext: BrowserContext,
+        batchRequestIdForTask: string,
+        apiModels: ApiModels,
+        globalProcessedAcronymsSet: Set<string>,
+        logger: Logger
     ): Promise<boolean> {
-        // Original function name was '_executeBatchTaskForSave'
-        const logger = parentLogger.child({
-            // batchServiceFunction: '_executeBatchTaskForSave', // Original name
-            serviceScopedFunction: 'executeBatchTaskForSave', // New scope
-        });
         logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
 
         if (!initialBatchEntries || initialBatchEntries.length === 0 || !initialBatchEntries[0]?.conferenceAcronym || !initialBatchEntries[0]?.conferenceTitle) {
@@ -178,12 +79,9 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
         let impLinkFromApi1: string | null = null;
 
         try {
-            const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdForTask);
-            await this.batchOutputPersistenceService.ensureDirectories(
-                [this.configService.batchesDir, path.dirname(jsonlPathForThisBatch)],
-                logger.child({ subOperation: 'ensure_directories_save_task' })
-            );
 
+
+            
             logger.debug({ event: 'aggregate_content_for_determine_api_start_save_task' });
             let batchContentParts: string[] = [];
             const readPromises = initialBatchEntries.map(async (entry, i) => {
@@ -207,7 +105,7 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
             logger.debug({ charCount: batchContentForDetermine.length, event: 'aggregate_content_for_determine_api_end_save_task' });
 
             const fileFullLinksName = `${safePrimaryOriginalAcronymForInitialFiles}_item${batchItemIndex}_full_links.txt`;
-            const fileFullLinksPath = path.join(this.configService.batchesDir, fileFullLinksName);
+            const fileFullLinksPath = path.join(this.batchesDir, fileFullLinksName);
             const writeFileFullLinksLogger = logger.child({ fileOperation: 'write_intermediate_full_links_save', filePath: fileFullLinksPath });
             const writeFullLinksPromise = this.fileSystemService.writeFile(fileFullLinksPath, batchContentForDetermine, writeFileFullLinksLogger)
                 .then(() => writeFileFullLinksLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
@@ -220,6 +118,21 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
                 acronym: primaryEntryForContext.conferenceAcronym,
             };
 
+
+            // +++ SỬA LỖI: THÊM GUARD CLAUSE TẠI ĐÂY (CHO CẢ 3 MODELS) +++
+            if (!apiModels.determineLinks || !apiModels.extractInfo || !apiModels.extractCfp) {
+                 logger.error({
+                    event: 'batch_task_aborted_missing_models',
+                    flow: 'save',
+                    hasDetermineLinksModel: !!apiModels.determineLinks,
+                    hasExtractInfoModel: !!apiModels.extractInfo,
+                    hasCfpModel: !!apiModels.extractCfp,
+                }, 'Cannot execute save task without required API models.');
+                return false; // Dừng tác vụ một cách an toàn
+            }
+            // +++ KẾT THÚC SỬA LỖI +++
+
+            
             try {
                 determineLinksResponse = await this.geminiApiService.determineLinks(
                     determineApiParams,
@@ -254,15 +167,17 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
                         determineApiLogger.error({ err: parseError, event: 'api1_response_parse_failed_for_fallback_links' });
                     }
                 }
+
                 determineApiLogger.info({ responseLength: determineLinksResponse.responseText?.length, filePath: determineResponseTextPath, event: 'gemini_determine_api_call_end_save_task', success: !!determineResponseTextPath });
             } catch (determineLinksError: any) {
                 determineApiLogger.error({ err: determineLinksError, event: 'save_batch_determine_api_call_failed', apiCallNumber: 1 });
-                await writeFullLinksPromise; // Ensure this non-critical write is attempted
+                await writeFullLinksPromise;
                 throw new Error(`Critical: Determine links API failed for item ${batchItemIndex} (SAVE): ${determineLinksError.message}`);
             }
 
             const processDetermineLogger = logger.child({ subOperation: 'process_determine_api_response_save_task' });
             let processedMainEntries: BatchEntry[];
+
             try {
                 processedMainEntries = await this.conferenceDeterminationService.determineAndProcessOfficialSite(
                     determineLinksResponse.responseText || "",
@@ -284,30 +199,33 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
                     mainTextPathResult: processedMainEntries?.[0]?.conferenceTextPath,
                     event: 'save_batch_process_determine_failed_invalid'
                 });
-                await writeFullLinksPromise; // Ensure this non-critical write is attempted
-                // Log specific error before returning false
-                await this.batchOutputPersistenceService.logBatchProcessingError(
-                    { conferenceAcronym: primaryEntryForContext.conferenceAcronym, batchItemIndex, batchRequestId: batchRequestIdForTask, flow: 'save' },
-                    new Error('Main link/text path invalid after determine API processing.'),
-                    processDetermineLogger
-                );
+                await writeFullLinksPromise;
+                const timestamp = new Date().toISOString();
+                const logMessage = `[${timestamp}] Error in _executeBatchTaskForSave (Determine API processing) for ${primaryEntryForContext.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}): Main link/text path invalid.\n`;
+                this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_save_task_determine_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
                 return false;
             }
 
             const mainEntryAfterDetermination = processedMainEntries[0];
             const originalAcronymFromDetermination = mainEntryAfterDetermination.conferenceAcronym;
 
-            let finalCfpLink = mainEntryAfterDetermination.cfpLink; // These are already potentially from API1 if matched
+            let finalCfpLink = mainEntryAfterDetermination.cfpLink;
             let finalImpLink = mainEntryAfterDetermination.impLink;
             let finalCfpTextPath = mainEntryAfterDetermination.cfpTextPath;
             let finalImpTextPath = mainEntryAfterDetermination.impTextPath;
 
-            // Fallback logic was complex and seems to be handled by conferenceDeterminationService now.
-            // The key is that mainEntryAfterDetermination should have the correct links and paths.
-            // If a fallback to API1 links was intended if determination service didn't find better ones,
-            // that logic would need to be explicit here or within conferenceDeterminationService.
-            // The current code seems to imply conferenceDeterminationService handles this.
-            // For now, we trust mainEntryAfterDetermination.
+            const matchedEntryFromApi1Processing = initialBatchEntries.find(entry => {
+                const normalizedEntryLink = normalizeAndJoinLink(entry.mainLink, null, logger);
+                return normalizedEntryLink && officialWebsiteFromApi1 && normalizedEntryLink === officialWebsiteFromApi1;
+            });
+
+            if (matchedEntryFromApi1Processing) {
+                processDetermineLogger.info({
+                    event: 'api1_match_detected_for_fallback_context',
+                    api1_cfp: cfpLinkFromApi1, api1_imp: impLinkFromApi1,
+                    determined_cfp: mainEntryAfterDetermination.cfpLink, determined_imp: mainEntryAfterDetermination.impLink
+                });
+            }
 
             const internalProcessingAcronym = await addAcronymSafely(globalProcessedAcronymsSet, originalAcronymFromDetermination);
             const safeInternalAcronymOfDeterminedConference = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
@@ -318,11 +236,12 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
                 safeInternalAcronymForFiles: safeInternalAcronymOfDeterminedConference,
                 event: 'acronym_safely_adjusted_for_save'
             });
+
             processDetermineLogger.info({
                 finalMainLink: mainEntryAfterDetermination.mainLink,
                 mainTextPath: mainEntryAfterDetermination.conferenceTextPath,
-                cfpPath: finalCfpTextPath, // Use potentially updated finalCfpTextPath
-                impPath: finalImpTextPath, // Use potentially updated finalImpTextPath
+                cfpPath: mainEntryAfterDetermination.cfpTextPath,
+                impPath: mainEntryAfterDetermination.impTextPath,
                 originalAcronymAfterDetermination: originalAcronymFromDetermination,
                 internalProcessingAcronymForFiles: internalProcessingAcronym,
                 event: 'successfully_processed_determine_response_save_task'
@@ -344,20 +263,21 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
             );
 
             const fileMainLinkName = `${safeInternalAcronymOfDeterminedConference}_item${batchItemIndex}_main_link_content.txt`;
-            const fileMainLinkPath = path.join(this.configService.batchesDir, fileMainLinkName);
+            const fileMainLinkPath = path.join(this.batchesDir, fileMainLinkName);
             const writeFileMainLinkLogger = logger.child({ fileOperation: 'write_intermediate_main_link_content_save', filePath: fileMainLinkPath });
             const fileMainLinkPromise = this.fileSystemService.writeFile(fileMainLinkPath, contentSendToFinalApi, writeFileMainLinkLogger)
                 .then(() => writeFileMainLinkLogger.debug({ event: 'batch_processing_write_intermediate_success' }))
                 .catch(writeError => writeFileMainLinkLogger.error({ err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_main_link_content' }));
 
-            const finalApiResults = await this.batchApiHandlerService.executeFinalExtractionApis(
+            // DELEGATE to FinalExtractionApiService
+            const finalApiResults = await this.finalExtractionApiService.execute(
                 contentSendToFinalApi, batchItemIndex, mainEntryAfterDetermination.conferenceTitle,
                 originalAcronymFromDetermination,
                 safeInternalAcronymOfDeterminedConference,
                 false,
                 apiModels.extractInfo,
                 apiModels.extractCfp,
-                logger // Pass current logger
+                logger
             );
 
             await Promise.allSettled([writeFullLinksPromise, fileMainLinkPromise]);
@@ -383,22 +303,28 @@ export class BatchTaskExecutorService implements IBatchTaskExecutorService {
                 cfpResponseTextPath: finalApiResults.cfpResponseTextPath,
                 cfpMetaData: finalApiResults.cfpMetaData,
             };
-            await this.batchOutputPersistenceService.appendFinalRecord(
-                finalRecord,
-                batchRequestIdForTask,
-                logger.child({ subOperation: 'append_final_save_record' })
-            );
+
+            // DELEGATE to FinalRecordAppenderService
+            await this.finalRecordAppenderService.append(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_save_record' }));
 
             logger.info({ event: 'batch_task_finish_success', flow: 'save' });
+            logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+
             return true;
 
         } catch (error: any) {
             logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'save' });
-            await this.batchOutputPersistenceService.logBatchProcessingError(
-                { conferenceAcronym: primaryEntryForContext.conferenceAcronym, batchItemIndex, batchRequestId: batchRequestIdForTask, flow: 'save' },
-                error,
-                logger // Pass current logger
-            );
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            logger.error({
+                err: error,
+                event: 'task_finish',
+                success: false,
+                error_details: errorMessage
+            }, `Finished processing conference task with failure.`);
+
+            const timestamp = new Date().toISOString();
+            const logMessage = `[${timestamp}] Error in _executeBatchTaskForSave for ${primaryEntryForContext.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
+            this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_save_task_main_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
             return false;
         }
     }

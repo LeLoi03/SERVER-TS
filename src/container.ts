@@ -30,11 +30,16 @@ import { GeminiRetryHandlerService } from './services/gemini/geminiRetryHandler.
 // --- Batch Processing Feature Services ---
 // This section defines services involved in the multi-step batch processing workflow.
 // Includes child services for specific tasks and an orchestrator service.
-import { PageContentExtractorService, IPageContentExtractorService } from './services/batchProcessingServiceChild/pageContentExtractor.service';
-import { ConferenceLinkProcessorService, IConferenceLinkProcessorService } from './services/batchProcessingServiceChild/conferenceLinkProcessor.service';
-import { ConferenceDeterminationService, IConferenceDeterminationService } from './services/batchProcessingServiceChild/conferenceDetermination.service';
-import { ConferenceDataAggregatorService, IConferenceDataAggregatorService } from './services/batchProcessingServiceChild/conferenceDataAggregator.service';
-import { BatchProcessingService } from './services/batchProcessing.service'; // The orchestrating service for batch processing
+import { PageContentExtractorService, IPageContentExtractorService } from './services/batchProcessing/pageContentExtractor.service';
+import { ConferenceLinkProcessorService, IConferenceLinkProcessorService } from './services/batchProcessing/conferenceLinkProcessor.service';
+import { ConferenceDeterminationService, IConferenceDeterminationService } from './services/batchProcessing/conferenceDetermination.service';
+import { ConferenceDataAggregatorService, IConferenceDataAggregatorService } from './services/batchProcessing/conferenceDataAggregator.service';
+import { BatchProcessingOrchestratorService } from './services/batchProcessingOrchestrator.service'; // The orchestrating service for batch processing
+import { IFinalExtractionApiService, FinalExtractionApiService } from './services/batchProcessing/finalExtractionApi.service';
+import { IFinalRecordAppenderService, FinalRecordAppenderService } from './services/batchProcessing/finalRecordAppender.service';
+import { IUpdateTaskExecutorService, UpdateTaskExecutorService } from './services/batchProcessing/updateTaskExecutor.service';
+import { ISaveTaskExecutorService, SaveTaskExecutorService } from './services/batchProcessing/saveTaskExecutor.service';
+
 
 // --- Other General Application Services ---
 // A collection of other distinct services that handle various application concerns.
@@ -42,7 +47,7 @@ import { HtmlPersistenceService } from './services/htmlPersistence.service';
 import { ResultProcessingService } from './services/resultProcessing.service';
 import { ConferenceProcessorService } from './services/conferenceProcessor.service';
 import { CrawlOrchestratorService } from './services/crawlOrchestrator.service';
-import { DatabasePersistenceService } from './services/databasePersistence.service';
+// import { DatabasePersistenceService } from './services/databasePersistence.service';
 
 /**
  * Configure the Tsyringe IoC container by registering all application services.
@@ -65,6 +70,8 @@ container.registerSingleton(ApiKeyManager);
 container.registerSingleton(PlaywrightService);
 container.registerSingleton(FileSystemService);
 container.registerSingleton(TaskQueueService);
+// The main BatchProcessingService orchestrates the flow and depends on the above registered sub-services.
+container.registerSingleton(BatchProcessingOrchestratorService);
 
 // --- 2. Register Gemini API Service and its Dependencies ---
 // The sub-services of Gemini API are also registered as singletons, as they manage
@@ -90,9 +97,12 @@ container.registerSingleton<IPageContentExtractorService>('IPageContentExtractor
 container.registerSingleton<IConferenceLinkProcessorService>('IConferenceLinkProcessorService', ConferenceLinkProcessorService);
 container.registerSingleton<IConferenceDeterminationService>('IConferenceDeterminationService', ConferenceDeterminationService);
 container.registerSingleton<IConferenceDataAggregatorService>('IConferenceDataAggregatorService', ConferenceDataAggregatorService);
+// Đăng ký các service con mới
+container.register<IFinalExtractionApiService>('IFinalExtractionApiService', { useClass: FinalExtractionApiService });
+container.register<IFinalRecordAppenderService>('IFinalRecordAppenderService', { useClass: FinalRecordAppenderService });
+container.register<IUpdateTaskExecutorService>('IUpdateTaskExecutorService', { useClass: UpdateTaskExecutorService });
+container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useClass: SaveTaskExecutorService });
 
-// The main BatchProcessingService orchestrates the flow and depends on the above registered sub-services.
-container.registerSingleton(BatchProcessingService);
 
 // --- 4. Register Other General Application Services ---
 container.registerSingleton(HtmlPersistenceService);
@@ -106,7 +116,7 @@ container.registerSingleton(ResultProcessingService);
 container.register(ConferenceProcessorService, ConferenceProcessorService); // Registers as transient scope (new instance each time resolved)
 
 container.registerSingleton(CrawlOrchestratorService);
-container.registerSingleton(DatabasePersistenceService);
+// container.registerSingleton(DatabasePersistenceService);
 
 /**
  * Exports the configured Tsyringe container instance.

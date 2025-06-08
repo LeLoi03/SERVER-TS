@@ -10,7 +10,7 @@ import { PlaywrightService } from './playwright.service';
 import { FileSystemService } from './fileSystem.service';
 import { HtmlPersistenceService } from './htmlPersistence.service';
 import { ResultProcessingService } from './resultProcessing.service';
-import { BatchProcessingService } from './batchProcessing.service';
+import { BatchProcessingOrchestratorService } from './batchProcessingOrchestrator.service';
 import { TaskQueueService } from './taskQueue.service';
 import { ConferenceProcessorService } from './conferenceProcessor.service'; // Assuming this is used later
 import { Logger } from 'pino';
@@ -40,7 +40,7 @@ export class CrawlOrchestratorService {
      * @param {FileSystemService} fileSystemService - Manages file and directory operations.
      * @param {HtmlPersistenceService} htmlPersistenceService - Manages saving HTML content.
      * @param {ResultProcessingService} resultProcessingService - Processes raw API outputs into structured data.
-     * @param {BatchProcessingService} batchProcessingService - Manages batch processing of conferences.
+     * @param {BatchProcessingOrchestratorService} batchProcessingOrchestratorService - Manages batch processing of conferences.
      * @param {TaskQueueService} taskQueueService - Manages concurrent tasks.
      * @param {GeminiApiService} geminiApiService - Handles interactions with the Gemini API.
      */
@@ -52,7 +52,7 @@ export class CrawlOrchestratorService {
         @inject(FileSystemService) private fileSystemService: FileSystemService,
         @inject(HtmlPersistenceService) private htmlPersistenceService: HtmlPersistenceService,
         @inject(ResultProcessingService) private resultProcessingService: ResultProcessingService,
-        @inject(BatchProcessingService) private batchProcessingService: BatchProcessingService,
+        @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
         @inject(TaskQueueService) private taskQueueService: TaskQueueService,
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
     ) {
@@ -101,7 +101,7 @@ export class CrawlOrchestratorService {
 
         try {
             logger.info("Phase 0: Resetting service states for new batch...");
-            this.batchProcessingService.resetGlobalAcronyms(logger); // Clears global acronyms set
+            this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger); // Clears global acronyms set
             this.htmlPersistenceService.resetState(logger); // Clears temporary HTML file mappings
 
             logger.info("Phase 1: Preparing environment (filesystem, playwright, Gemini API)...");
@@ -148,7 +148,7 @@ export class CrawlOrchestratorService {
             logger.info("All conference processing tasks finished.");
 
             logger.info("Phase 3.5: Waiting for background batch save operations to complete...");
-            await this.batchProcessingService.awaitCompletion(logger); // Ensures all background JSONL writes are done
+            await this.batchProcessingOrchestratorService.awaitCompletion(logger); // Ensures all background JSONL writes are done
             logger.info("All background batch save operations finished.");
 
             logger.info("Phase 4: Processing final output (reading JSONL and writing CSV)...");

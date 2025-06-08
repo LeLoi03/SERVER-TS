@@ -11,7 +11,7 @@ import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.serv
 import { ConferenceData, ProcessedRowData, ApiModels, CrawlModelType, CrawlRequestPayload } from '../../../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import { crawlJournals } from '../../../journal/crawlJournals'; // Giữ lại nếu dùng
-import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service'; // Giữ lại nếu dùng
+// import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service'; // Giữ lại nếu dùng
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 // DEFAULT_API_MODELS sẽ được áp dụng nếu model tương ứng trong payload là null hoặc không hợp lệ
@@ -368,50 +368,50 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
 }
 
 
-export async function handleSaveConference(req: Request, res: Response): Promise<void> {
-    const loggingService = container.resolve(LoggingService);
-    const databasePersistenceService = container.resolve(DatabasePersistenceService);
-    const configService = container.resolve(ConfigService);
+// export async function handleSaveConference(req: Request, res: Response): Promise<void> {
+//     const loggingService = container.resolve(LoggingService);
+//     const databasePersistenceService = container.resolve(DatabasePersistenceService);
+//     const configService = container.resolve(ConfigService);
 
-    const baseRouteLogger = loggingService.getLogger('app');
-    const requestId = (req as any).id || `req-save-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-    const routeLogger = baseRouteLogger.child({ requestId, route: '/save-conference-evaluate' });
+//     const baseRouteLogger = loggingService.getLogger('app');
+//     const requestId = (req as any).id || `req-save-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+//     const routeLogger = baseRouteLogger.child({ requestId, route: '/save-conference-evaluate' });
 
-    routeLogger.info("Received request to manually save evaluated data to database.");
+//     routeLogger.info("Received request to manually save evaluated data to database.");
 
-    try {
-        const result: DatabaseSaveResult = await databasePersistenceService.saveEvaluatedData(routeLogger);
+//     try {
+//         const result: DatabaseSaveResult = await databasePersistenceService.saveEvaluatedData(routeLogger);
 
-        if (result.success) {
-            routeLogger.info({ event: 'manual_db_save_success', details: result }, "Manual save to database completed successfully.");
-            res.status(result.statusCode || 200).json({
-                message: result.message,
-                details: result.data
-            });
-        } else {
-            routeLogger.error({ event: 'manual_db_save_failed', details: result }, "Manual save to database failed based on service response.");
-            if (result.message.includes("CSV file not found")) {
-                res.status(404).json({
-                    message: result.message,
-                    error: result.error,
-                    csvPath: configService.getBaseEvaluateCsvPath()
-                });
-            } else {
-                res.status(result.statusCode || 500).json({
-                    message: result.message,
-                    error: result.error,
-                    details: result.data
-                });
-            }
-        }
-    } catch (error: unknown) {
-        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        routeLogger.fatal({ err: { message: errorMessage, stack: errorStack }, event: 'manual_db_save_controller_error' }, "Unexpected fatal error in handleSaveConference controller.");
-        if (!res.headersSent) {
-            res.status(500).json({
-                message: 'Unexpected internal server error while saving to database.',
-                error: errorMessage
-            });
-        }
-    }
-}
+//         if (result.success) {
+//             routeLogger.info({ event: 'manual_db_save_success', details: result }, "Manual save to database completed successfully.");
+//             res.status(result.statusCode || 200).json({
+//                 message: result.message,
+//                 details: result.data
+//             });
+//         } else {
+//             routeLogger.error({ event: 'manual_db_save_failed', details: result }, "Manual save to database failed based on service response.");
+//             if (result.message.includes("CSV file not found")) {
+//                 res.status(404).json({
+//                     message: result.message,
+//                     error: result.error,
+//                     csvPath: configService.getBaseEvaluateCsvPath()
+//                 });
+//             } else {
+//                 res.status(result.statusCode || 500).json({
+//                     message: result.message,
+//                     error: result.error,
+//                     details: result.data
+//                 });
+//             }
+//         }
+//     } catch (error: unknown) {
+//         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+//         routeLogger.fatal({ err: { message: errorMessage, stack: errorStack }, event: 'manual_db_save_controller_error' }, "Unexpected fatal error in handleSaveConference controller.");
+//         if (!res.headersSent) {
+//             res.status(500).json({
+//                 message: 'Unexpected internal server error while saving to database.',
+//                 error: errorMessage
+//             });
+//         }
+//     }
+// }

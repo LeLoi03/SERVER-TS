@@ -27,7 +27,9 @@ const conferenceItems = [
     {
         "Title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
         "Acronym": "PODS",
-        // Luồng CRAWL (không có mainLink, cfpLink, impLink)
+        "mainLink": "https://2025.sigmod.org/",
+        // "cfpLink": "",
+        // "impLink": ""
     },
     // {
     //     "Title": "International Conference on Machine Learning",
