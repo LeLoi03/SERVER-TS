@@ -3,3 +3,10 @@ fix lỗi det xong đã processed ok
 Fix thông báo lỗi khi link có sự chuyển hướng.
 
 fix request đang processing nhưng đã 100 nếu có 1 conf
+
+hiện conference date lên đầu
+Phân loại ngày
+CHỉnh lại Ui để hiển thị ngày đẹp hơn
+
+
+fix visualization sai dữ liệu

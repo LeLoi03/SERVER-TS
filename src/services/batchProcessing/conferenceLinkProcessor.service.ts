@@ -1,4 +1,4 @@
-// src/services/batchProcessingServiceChild/conferenceLinkProcessor.service.ts
+// src/services/batchProcessing/conferenceLinkProcessor.service.ts
 import { Page } from 'playwright';
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';

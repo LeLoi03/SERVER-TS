@@ -1,29 +1,42 @@
-// src/services/batchApiHandler.service.ts
+// src/services/bathcProcessing/finalExxtractionApi.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
 
-import { LoggingService } from '../logging.service'; // Adjust path
-import { GeminiApiService } from '../geminiApi.service'; // Adjust path
-import { FileSystemService } from '../fileSystem.service'; // Adjust path
-import { IBatchApiHandlerService } from '../interfaces/batchApiHandler.interface'; // Adjust path
-import { CrawlModelType } from '../../types/crawl';
-import { GeminiApiParams } from '../../types/crawl';
+// --- Types ---
+import { CrawlModelType, GeminiApiParams, ApiResponse } from '../../types/crawl';
+
+// --- Service Imports ---
+import { GeminiApiService } from '../geminiApi.service';
+import { FileSystemService } from '../fileSystem.service';
+
+export interface IFinalExtractionApiService {
+    execute(
+        contentSendToAPI: string,
+        batchItemIndex: number,
+        titleForApis: string,
+        originalAcronymForApis: string,
+        safeConferenceAcronymForFiles: string,
+        isUpdate: boolean,
+        extractModel: CrawlModelType,
+        cfpModel: CrawlModelType,
+        parentLogger: Logger
+    ): Promise<{
+        extractResponseTextPath?: string;
+        extractMetaData: any | null;
+        cfpResponseTextPath?: string;
+        cfpMetaData: any | null;
+    }>;
+}
 
 @singleton()
-export class BatchApiHandlerService implements IBatchApiHandlerService {
-    private readonly serviceLogger: Logger;
-
+export class FinalExtractionApiService implements IFinalExtractionApiService {
     constructor(
-        @inject(LoggingService) loggingService: LoggingService,
-        @inject(GeminiApiService) private geminiApiService: GeminiApiService,
-        @inject(FileSystemService) private fileSystemService: FileSystemService
-    ) {
-        this.serviceLogger = loggingService.getLogger('conference', { service: 'BatchApiHandlerService' });
-        this.serviceLogger.info("BatchApiHandlerService constructed.");
-    }
+        @inject(GeminiApiService) private readonly geminiApiService: GeminiApiService,
+        @inject(FileSystemService) private readonly fileSystemService: FileSystemService
+    ) {}
 
-    public async executeFinalExtractionApis(
+    public async execute(
         contentSendToAPI: string,
         batchItemIndex: number,
         titleForApis: string,
@@ -39,12 +52,8 @@ export class BatchApiHandlerService implements IBatchApiHandlerService {
         cfpResponseTextPath?: string;
         cfpMetaData: any | null;
     }> {
-        // Original function name was 'executeFinalExtractionApis'
-        // The parentLogger already contains the context from the calling function (e.g., _executeBatchTaskForUpdate)
-        // We create a child logger specific to this operation, maintaining the original function name if it's key for log analysis
         const logger = parentLogger.child({
-            // batchServiceFunction: 'executeFinalExtractionApis', // This was from original, keep if needed for log analysis
-            serviceScopedFunction: 'executeFinalExtractionApis', // New scope
+            batchServiceFunction: 'executeFinalExtractionApis', // Giữ nguyên tên function trong log
             isUpdateContext: isUpdate,
             extractModelUsed: extractModel,
             cfpModelUsed: cfpModel,

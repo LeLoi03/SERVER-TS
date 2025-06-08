@@ -4,14 +4,14 @@ import { singleton, inject } from 'tsyringe';
 import { BrowserContext } from 'playwright';
 import { PlaywrightService } from './playwright.service';
 import { LoggingService } from './logging.service';
-import { BatchProcessingService } from './batchProcessing.service';
+import { BatchProcessingOrchestratorService } from './batchProcessingOrchestrator.service';
 import { Logger } from 'pino';
 import { ConferenceData, ConferenceUpdateData, ApiModels } from '../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
 
 /**
  * Service responsible for managing HTML content persistence and delegating
- * to BatchProcessingService for further processing (crawling, AI extraction).
+ * to BatchProcessingOrchestratorService for further processing (crawling, AI extraction).
  * It acts as an intermediary, ensuring Playwright's BrowserContext is available
  * and handling the high-level logic for "update" and "save" flows.
  */
@@ -25,12 +25,12 @@ export class HtmlPersistenceService {
      * Dependencies are injected via tsyringe.
      * @param {PlaywrightService} playwrightService - Handles Playwright browser and context management.
      * @param {LoggingService} loggingService - Provides logging capabilities.
-     * @param {BatchProcessingService} batchProcessingService - Orchestrates background batch processing of conferences.
+     * @param {BatchProcessingOrchestratorService} batchProcessingOrchestratorService - Orchestrates background batch processing of conferences.
      */
     constructor(
         @inject(PlaywrightService) private playwrightService: PlaywrightService,
         @inject(LoggingService) private loggingService: LoggingService,
-        @inject(BatchProcessingService) private batchProcessingService: BatchProcessingService
+        @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'HtmlPersistenceServiceBase' });
         this.serviceBaseLogger.info({ event: 'html_persistence_init_success' }, "HtmlPersistenceService instance created.");
@@ -71,7 +71,7 @@ export class HtmlPersistenceService {
 
     /**
      * Processes the "UPDATE" flow for a conference. This involves taking pre-defined links
-     * and delegating to BatchProcessingService to crawl and extract information from them.
+     * and delegating to BatchProcessingOrchestratorService to crawl and extract information from them.
      *
      * @param {ConferenceUpdateData} conference - The conference data including pre-defined links.
      * @param {Logger} taskLogger - The logger instance specific to the current conference task.
@@ -91,25 +91,25 @@ export class HtmlPersistenceService {
         flowLogger.info({ event: 'process_update_start' }, `Initiating UPDATE flow for conference "${conference.Acronym}" using API models (${modelsDesc}).`);
 
         try {
-            // Delegate to BatchProcessingService for the actual update logic.
+            // Delegate to BatchProcessingOrchestratorService for the actual update logic.
             // It will manage the crawling, parsing, and AI extraction from the provided links.
-            const success = await this.batchProcessingService.processConferenceUpdate(
+            const success = await this.batchProcessingOrchestratorService.processConferenceUpdate(
                 this.getContext(flowLogger), // Ensure context is available
                 conference,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingService
+                apiModels // Pass ApiModels to BatchProcessingOrchestratorService
             );
 
             if (success) {
-                flowLogger.info({ event: 'process_update_delegation_completed', success: true }, 'BatchProcessingService.processConferenceUpdate completed successfully.');
+                flowLogger.info({ event: 'process_update_delegation_completed', success: true }, 'BatchProcessingOrchestratorService.processConferenceUpdate completed successfully.');
             } else {
-                flowLogger.warn({ event: 'process_update_delegation_failed', success: false }, 'BatchProcessingService.processConferenceUpdate reported failure for this conference.');
+                flowLogger.warn({ event: 'process_update_delegation_failed', success: false }, 'BatchProcessingOrchestratorService.processConferenceUpdate reported failure for this conference.');
             }
             return success;
 
         } catch (updateError: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(updateError);
-            flowLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'process_update_delegation_error' }, `Error occurred while delegating to BatchProcessingService.processConferenceUpdate: "${errorMessage}".`);
+            flowLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'process_update_delegation_error' }, `Error occurred while delegating to BatchProcessingOrchestratorService.processConferenceUpdate: "${errorMessage}".`);
             return false; // Indicate failure
         }
     }
@@ -144,26 +144,26 @@ export class HtmlPersistenceService {
         }
 
         try {
-            // Delegate to BatchProcessingService to process the conference by crawling the search result links.
-            // This method initiates an asynchronous operation managed by BatchProcessingService's internal queue.
-            const initiationSuccess = await this.batchProcessingService.processConferenceSave(
+            // Delegate to BatchProcessingOrchestratorService to process the conference by crawling the search result links.
+            // This method initiates an asynchronous operation managed by BatchProcessingOrchestratorService's internal queue.
+            const initiationSuccess = await this.batchProcessingOrchestratorService.processConferenceSave(
                 this.getContext(flowLogger), // Ensure context is available
                 conference,
                 searchResultLinks,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingService
+                apiModels // Pass ApiModels to BatchProcessingOrchestratorService
             );
 
             if (initiationSuccess === true) {
-                flowLogger.info({ event: 'process_save_delegation_initiated', success: true }, 'BatchProcessingService.processConferenceSave initiated successfully (batch save running asynchronously).');
+                flowLogger.info({ event: 'process_save_delegation_initiated', success: true }, 'BatchProcessingOrchestratorService.processConferenceSave initiated successfully (batch save running asynchronously).');
                 return true;
             } else {
-                flowLogger.warn({ event: 'process_save_delegation_initiation_failed', success: false }, 'BatchProcessingService.processConferenceSave reported failure during initiation. Check BatchProcessingService logs for details.');
+                flowLogger.warn({ event: 'process_save_delegation_initiation_failed', success: false }, 'BatchProcessingOrchestratorService.processConferenceSave reported failure during initiation. Check BatchProcessingOrchestratorService logs for details.');
                 return false;
             }
         } catch (saveError: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(saveError);
-            flowLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'process_save_delegation_error' }, `Error occurred while delegating to BatchProcessingService.processConferenceSave: "${errorMessage}".`);
+            flowLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'process_save_delegation_error' }, `Error occurred while delegating to BatchProcessingOrchestratorService.processConferenceSave: "${errorMessage}".`);
             return false; // Indicate failure
         }
     }
