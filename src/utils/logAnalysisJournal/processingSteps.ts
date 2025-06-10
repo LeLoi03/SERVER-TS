@@ -31,12 +31,12 @@ export const processJournalLogEntry = (
 
     // Try to get journal identifiers from common log fields
     const journalTitle = logEntry.journalTitle
-                        || logEntry.title
-                        || (logEntry.context && (logEntry.context.journalTitle || logEntry.context.title))
-                        || (logEntry.row && (logEntry.row.Title || logEntry.row.journalName));
+        || logEntry.title
+        || (logEntry.context && (logEntry.context.journalTitle || logEntry.context.title))
+        || (logEntry.row && (logEntry.row.Title || logEntry.row.journalName));
     const sourceId = logEntry.sourceId
-                     || (logEntry.context && logEntry.context.sourceId)
-                     || (logEntry.row && logEntry.row.Sourceid);
+        || (logEntry.context && logEntry.context.sourceId)
+        || (logEntry.row && logEntry.row.Sourceid);
 
     let journalDetail: JournalAnalysisDetail | null = null;
     let compositeKey: string | null = null;
@@ -47,7 +47,7 @@ export const processJournalLogEntry = (
             if (!results.journalAnalysis[compositeKey]) {
                 // Initialize with 'unknown' data source, specific handlers or context will update it
                 const dataSource = logEntry.dataSource || (logEntry.context && logEntry.context.dataSource) || 'unknown';
-                const originalInput = logEntry.url || (logEntry.row ? JSON.stringify(logEntry.row).substring(0,100) : undefined);
+                const originalInput = logEntry.url || (logEntry.row ? JSON.stringify(logEntry.row).substring(0, 100) : undefined);
                 results.journalAnalysis[compositeKey] = initializeJournalAnalysisDetail(
                     batchRequestId,
                     journalTitle,
@@ -230,8 +230,8 @@ export const calculateJournalFinalMetrics = (
         // }
 
         if (detail.steps.jsonl_write_success === false && detail.status !== 'failed') {
-             isCriticallyFailedInternally = true;
-             criticalFailureReason = "JSONL write failed";
+            isCriticallyFailedInternally = true;
+            criticalFailureReason = "JSONL write failed";
         }
 
 
@@ -268,8 +268,8 @@ export const calculateJournalFinalMetrics = (
 
         // Update overall counters based on final journal status
         if (detail.status === 'completed') {
-            if(detail.steps.bioxbio_success) results.overall.processedJournalsWithBioxbioSuccess++;
-            if(detail.steps.scimago_details_success) results.overall.processedJournalsWithScimagoDetailsSuccess++;
+            if (detail.steps.bioxbio_success) results.overall.processedJournalsWithBioxbioSuccess++;
+            if (detail.steps.scimago_details_success) results.overall.processedJournalsWithScimagoDetailsSuccess++;
             // image search success already counted by its handler
         }
     });
@@ -286,7 +286,7 @@ export const calculateJournalFinalMetrics = (
     Object.values(results.journalAnalysis).forEach(journal => {
         if (results.analyzedRequestIds.includes(journal.batchRequestId)) {
             const journalKey = createJournalKey(journal.batchRequestId, journal.journalTitle, journal.sourceId);
-            if(journalKey) uniqueJournalKeysInAnalysis.add(journalKey);
+            if (journalKey) uniqueJournalKeysInAnalysis.add(journalKey);
             // Status based counts are done per request below, then summed.
         }
     });
@@ -321,7 +321,7 @@ export const calculateJournalFinalMetrics = (
 
 
         if (journalsForThisRequest.length === 0 && reqSummary.totalJournalsInputForRequest === 0) {
-             // If summary log indicated 0 tasks, and we saw 0 tasks, it's completed (or NoData if no summary)
+            // If summary log indicated 0 tasks, and we saw 0 tasks, it's completed (or NoData if no summary)
             reqSummary.status = (reqSummary.totalJournalsInputForRequest === 0 && reqSummary.startTime && reqSummary.endTime) ? 'Completed' : 'NoData';
         } else if (numProcessing > 0) {
             reqSummary.status = 'Processing';
@@ -350,6 +350,64 @@ export const calculateJournalFinalMetrics = (
     else if (results.overall.totalJournalsInput === 0) results.overall.totalJournalsInput = uniqueJournalKeysInAnalysis.size;
 
 
+
+    // --- STAGE 3.5: TÍNH TOÁN LẠI THỜI GIAN REQUEST TỪ CÁC JOURNAL CON ---
+    // Bước này để khắc phục trường hợp request bị lỗi và không có log start/end,
+    // đảm bảo dữ liệu ở view tổng hợp và view chi tiết là nhất quán.
+    for (const reqId of results.analyzedRequestIds) {
+        const requestSummary = results.requests[reqId];
+        if (!requestSummary) continue;
+
+        // Chỉ tính toán lại nếu thông tin thời gian của request bị thiếu.
+        if (requestSummary.startTime === null || requestSummary.endTime === null) {
+            const journalsForThisRequest = Object.values(results.journalAnalysis)
+                .filter(jd => jd.batchRequestId === reqId);
+
+            if (journalsForThisRequest.length > 0) {
+                let minStartTime: number | null = null;
+                let maxEndTime: number | null = null;
+
+                journalsForThisRequest.forEach(journal => {
+                    if (journal.startTime) {
+                        const startMs = new Date(journal.startTime).getTime();
+                        if (!isNaN(startMs)) {
+                            minStartTime = Math.min(startMs, minStartTime ?? startMs);
+                        }
+                    }
+                    // Sử dụng endTime của journal, đã được tính toán chính xác ở các bước trước
+                    if (journal.endTime) {
+                        const endMs = new Date(journal.endTime).getTime();
+                        if (!isNaN(endMs)) {
+                            maxEndTime = Math.max(endMs, maxEndTime ?? endMs);
+                        }
+                    }
+                });
+
+                if (minStartTime !== null) {
+                    requestSummary.startTime = new Date(minStartTime).toISOString();
+                }
+                if (maxEndTime !== null) {
+                    requestSummary.endTime = new Date(maxEndTime).toISOString();
+                }
+
+                // Tính lại durationSeconds sau khi đã có startTime và endTime
+                if (requestSummary.startTime && requestSummary.endTime) {
+                    const start = new Date(requestSummary.startTime).getTime();
+                    const end = new Date(requestSummary.endTime).getTime();
+                    if (!isNaN(start) && !isNaN(end) && end >= start) {
+                        requestSummary.durationSeconds = Math.round((end - start) / 1000);
+                    } else {
+                        requestSummary.durationSeconds = 0;
+                    }
+                }
+            }
+        }
+    }
+    // --- KẾT THÚC STAGE 3.5 ---
+
+
+
+
     // STAGE 4: Determine final overall analysis status
     if (results.analyzedRequestIds.length > 0) {
         const requestStatuses = results.analyzedRequestIds.map(id => results.requests[id]?.status);
@@ -360,11 +418,11 @@ export const calculateJournalFinalMetrics = (
         } else if (requestStatuses.some(s => s === 'Failed' || s === 'CompletedWithErrors')) {
             results.status = 'CompletedWithErrors';
         } else if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'PartiallyCompleted' || s === 'NoData' || s === 'Unknown')) {
-             if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'NoData')) {
+            if (requestStatuses.every(s => s === 'Completed' || s === 'Skipped' || s === 'NoData')) {
                 results.status = 'Completed';
             } else if (requestStatuses.some(s => s === 'PartiallyCompleted')) {
                 results.status = 'PartiallyCompleted';
-            }  else {
+            } else {
                 results.status = 'Completed'; // Default to completed if a mix of good states
             }
         } else {
