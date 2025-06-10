@@ -105,7 +105,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
 
             // Navigate to the URL
             try {
-                await page.goto(url, { waitUntil: "domcontentloaded", timeout: 25000 });
+                await page.goto(url, { waitUntil: "networkidle", timeout: 25000 });
                 logger.debug({ ...currentLogContext, event: 'goto_success' }, "Successfully navigated to URL.");
             } catch (gotoError: unknown) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(gotoError);

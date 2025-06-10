@@ -93,7 +93,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             }
 
             // Navigate to the official website
-            const response = await page.goto(officialWebsiteUrl, { waitUntil: 'domcontentloaded', timeout: 25000 });
+            const response = await page.goto(officialWebsiteUrl, { waitUntil: 'load', timeout: 25000 });
             if (!response) {
                 const errorMsg = `Navigation to ${officialWebsiteUrl} returned a null response.`;
                 childLogger.error({ event: 'navigation_to_main_website_failed_null_response' }, errorMsg);

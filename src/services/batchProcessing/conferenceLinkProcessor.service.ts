@@ -304,7 +304,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             if (modifiedLinkAttempt) {
                 linkLogger.info({ urlToAccess: modifiedLinkAttempt, event: 'access_attempt_modified_link' }, `Attempting to access modified link: ${modifiedLinkAttempt}.`);
                 try {
-                    const response = await page.goto(modifiedLinkAttempt, { waitUntil: "domcontentloaded", timeout: 15000 });
+                    const response = await page.goto(modifiedLinkAttempt, { waitUntil: "networkidle", timeout: 15000 });
                     responseStatus = response?.status() ?? null;
                     if (response && response.ok()) {
                         finalLink = page.url(); // Get the final URL after redirects
@@ -326,7 +326,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 finalLink = link; // Revert to original link
                 linkLogger.info({ urlToAccess: link, event: 'access_attempt_original_link' }, `Attempting to access original link: ${link}.`);
                 try {
-                    const response = await page.goto(link, { waitUntil: "domcontentloaded", timeout: 15000 });
+                    const response = await page.goto(link, { waitUntil: "networkidle", timeout: 15000 });
                     responseStatus = response?.status() ?? null;
                     if (response && response.ok()) {
                         finalLink = page.url();
@@ -439,7 +439,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 logger.warn({ event: 'html_processing_failed', reason: 'Page already closed', linkType: 'main' }, "Playwright page is already closed. Cannot process main link for update.");
                 return { finalUrl: null, textPath: null };
             }
-            const response = await page.goto(conference.mainLink, { waitUntil: "domcontentloaded", timeout: 45000 });
+            const response = await page.goto(conference.mainLink, { waitUntil: "networkidle", timeout: 45000 });
             finalUrl = page.url(); // Update `finalUrl` after successful navigation
 
             logger.info({ finalUrlAfterGoto: finalUrl, status: response?.status(), event: 'conference_link_processor_navigation_success', linkType: 'main' }, `Successfully navigated to main link. Final URL: ${finalUrl}.`);
