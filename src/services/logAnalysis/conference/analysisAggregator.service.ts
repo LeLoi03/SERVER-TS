@@ -51,38 +51,59 @@ export class ConferenceAnalysisAggregatorService {
             // Sử dụng hàm fetcher được truyền vào để lấy kết quả phân tích
             const singleRequestAnalysis = await analysisFetcher(reqId);
 
-            // --- TOÀN BỘ LOGIC MERGE VÀ XỬ LÝ LỖI TỪ HÀM GỐC ĐƯỢC GIỮ NGUYÊN ---
-            if (singleRequestAnalysis.status === 'Failed' ||
-                singleRequestAnalysis.status === 'NoRequestsAnalyzed' ||
-                (singleRequestAnalysis.analyzedRequestIds.length === 0 && singleRequestAnalysis.filterRequestId === reqId)) {
-                logger.warn(`Skipping full aggregation for conference ${reqId} due to its status: ${singleRequestAnalysis.status} or no data found for it.`);
+            // // --- TOÀN BỘ LOGIC MERGE VÀ XỬ LÝ LỖI TỪ HÀM GỐC ĐƯỢC GIỮ NGUYÊN ---
+            // if (singleRequestAnalysis.status === 'Failed' ||
+            //     singleRequestAnalysis.status === 'NoRequestsAnalyzed' ||
+            //     (singleRequestAnalysis.analyzedRequestIds.length === 0 && singleRequestAnalysis.filterRequestId === reqId)) {
+            //     logger.warn(`Skipping full aggregation for conference ${reqId} due to its status: ${singleRequestAnalysis.status} or no data found for it.`);
+            //     if (!aggregatedResults.requests[reqId]) {
+            //         aggregatedResults.requests[reqId] = {
+            //             startTime: null, endTime: null, durationSeconds: 0,
+            //             totalConferencesInputForRequest: 0, processedConferencesCountForRequest: 0,
+            //             status: singleRequestAnalysis.status || 'NotFoundInAggregation',
+            //             errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
+            //         } as RequestTimings;
+            //     } else {
+            //         aggregatedResults.requests[reqId].status = singleRequestAnalysis.status || 'NotFoundInAggregation';
+            //         if (singleRequestAnalysis.errorMessage && !aggregatedResults.requests[reqId].errorMessages?.includes(singleRequestAnalysis.errorMessage!)) {
+            //             aggregatedResults.requests[reqId].errorMessages = [...(aggregatedResults.requests[reqId].errorMessages || []), singleRequestAnalysis.errorMessage!];
+            //         }
+            //     }
+            //     if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
+            //         aggregatedResults.analyzedRequestIds.push(reqId);
+            //     }
+            //     aggregatedResults.logProcessingErrors.push(...singleRequestAnalysis.logProcessingErrors);
+            //     if (singleRequestAnalysis.errorMessage && !aggregatedResults.logProcessingErrors.some(e_str => e_str.includes(singleRequestAnalysis.errorMessage!))) {
+            //         aggregatedResults.logProcessingErrors.push(`Error for ${reqId}: ${singleRequestAnalysis.errorMessage}`);
+            //     }
+            //     continue;
+            // }
+
+            // BÂY GIỜ, TẤT CẢ CÁC REQUEST, KỂ CẢ 'Failed', SẼ ĐI QUA LUỒNG NÀY
+
+            // Xử lý trường hợp không tìm thấy dữ liệu cho request
+            if (singleRequestAnalysis.status === 'NoRequestsAnalyzed' || singleRequestAnalysis.analyzedRequestIds.length === 0) {
+                logger.warn(`No data found for conference request ${reqId}. Marking as 'NotFoundInAggregation'.`);
                 if (!aggregatedResults.requests[reqId]) {
                     aggregatedResults.requests[reqId] = {
                         startTime: null, endTime: null, durationSeconds: 0,
                         totalConferencesInputForRequest: 0, processedConferencesCountForRequest: 0,
-                        status: singleRequestAnalysis.status || 'NotFoundInAggregation',
+                        status: 'NotFoundInAggregation',
                         errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
                     } as RequestTimings;
-                } else {
-                    aggregatedResults.requests[reqId].status = singleRequestAnalysis.status || 'NotFoundInAggregation';
-                    if (singleRequestAnalysis.errorMessage && !aggregatedResults.requests[reqId].errorMessages?.includes(singleRequestAnalysis.errorMessage!)) {
-                        aggregatedResults.requests[reqId].errorMessages = [...(aggregatedResults.requests[reqId].errorMessages || []), singleRequestAnalysis.errorMessage!];
-                    }
                 }
                 if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
                     aggregatedResults.analyzedRequestIds.push(reqId);
                 }
-                aggregatedResults.logProcessingErrors.push(...singleRequestAnalysis.logProcessingErrors);
-                if (singleRequestAnalysis.errorMessage && !aggregatedResults.logProcessingErrors.some(e_str => e_str.includes(singleRequestAnalysis.errorMessage!))) {
-                    aggregatedResults.logProcessingErrors.push(`Error for ${reqId}: ${singleRequestAnalysis.errorMessage}`);
-                }
-                continue;
+                continue; // Vẫn giữ continue cho trường hợp này vì thực sự không có gì để merge
             }
 
+            // Luồng merge chuẩn
             if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
                 aggregatedResults.analyzedRequestIds.push(reqId);
             }
 
+            // Lấy dữ liệu request đầy đủ, kể cả khi nó 'Failed'
             if (singleRequestAnalysis.requests[reqId]) {
                 aggregatedResults.requests[reqId] = singleRequestAnalysis.requests[reqId];
                 const reqStartTime = singleRequestAnalysis.requests[reqId].startTime;
@@ -128,6 +149,7 @@ export class ConferenceAnalysisAggregatorService {
                     aggregatedResults.logProcessingErrors.push(err_str);
                 }
             });
+            // Quan trọng: Merge cả conferenceAnalysis của request lỗi
             Object.assign(aggregatedResults.conferenceAnalysis, singleRequestAnalysis.conferenceAnalysis);
         }
 

@@ -95,14 +95,34 @@ export class ConferenceLogAnalysisService {
         if (this.configService.analysisCacheEnabled && !hasTimeFilter) {
             const cachedResult = await this.cacheService.readFromCache<ConferenceLogAnalysisResult>('conference', batchRequestId);
 
-            // SỬA ĐỔI Ở ĐÂY: Thêm `cachedResult.status &&`
+            // Kiểm tra tính toàn vẹn của cache
+            let isCacheValid = false;
             if (cachedResult && cachedResult.status && !['Processing', 'Unknown'].includes(cachedResult.status)) {
-                logger.info(`Valid cached result found for ${batchRequestId}. Decorating with latest save events.`);
-                // "Trang trí" kết quả cache với dữ liệu save events mới nhất
-                return this.decorateCachedResultWithSaveEvents(cachedResult, requestLogFilePath);
+                // Nếu status là Failed hoặc CompletedWithErrors, nó PHẢI có conferenceAnalysis.
+                if (['Failed', 'CompletedWithErrors'].includes(cachedResult.status)) {
+                    // Kiểm tra xem có ít nhất một conference con thuộc về request này không
+                    const hasConferenceData = Object.values(cachedResult.conferenceAnalysis || {}).some(
+                        conf => conf.batchRequestId === batchRequestId
+                    );
+                    if (hasConferenceData) {
+                        isCacheValid = true;
+                    } else {
+                        // Cache không hợp lệ vì nó báo lỗi nhưng không có chi tiết lỗi
+                        logger.warn(`Invalid cache for ${batchRequestId}: Status is '${cachedResult.status}' but no conferenceAnalysis data found. Forcing live analysis.`);
+                    }
+                } else {
+                    // Các trạng thái khác như Completed, Skipped có thể không có conferenceAnalysis (ví dụ request không có item nào)
+                    isCacheValid = true;
+                }
             }
-            // Dòng log này vẫn hoạt động đúng vì nó kiểm tra cachedResult trước
-            logger.info(cachedResult ? `Cached result for ${batchRequestId} is '${cachedResult.status ?? 'undefined'}'. Performing live analysis.` : `No cache found for ${batchRequestId}. Performing live analysis.`);
+
+
+            if (isCacheValid) {
+                logger.info(`Valid cached result found for ${batchRequestId}. Decorating with latest save events.`);
+                return this.decorateCachedResultWithSaveEvents(cachedResult!, requestLogFilePath);
+            }
+
+            logger.info(cachedResult ? `Cached result for ${batchRequestId} is invalid or stale. Performing live analysis.` : `No cache found for ${batchRequestId}. Performing live analysis.`);
         }
 
         // --- PHÂN TÍCH LIVE (ỦY THÁC CHO SERVICE PHỤ) ---

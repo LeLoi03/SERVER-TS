@@ -19,10 +19,6 @@ export class JournalAnalysisAggregatorService {
         this.serviceLogger = this.loggingService.getLogger('app', { service: 'JournalAnalysisAggregatorService' });
     }
 
-    /**
-     * Tổng hợp kết quả phân tích từ nhiều request journal.
-     * Đây là logic được chuyển từ `aggregateAllJournalAnalyses` cũ.
-     */
     async aggregate(
         requestIds: string[],
         analysisFetcher: AnalysisFetcher
@@ -48,44 +44,35 @@ export class JournalAnalysisAggregatorService {
         for (const reqId of requestIds) {
             const singleRequestAnalysis = await analysisFetcher(reqId);
 
-            // --- TOÀN BỘ LOGIC MERGE VÀ XỬ LÝ LỖI TỪ HÀM GỐC ĐƯỢC GIỮ NGUYÊN ---
-            if (singleRequestAnalysis.status === 'Failed' ||
-                singleRequestAnalysis.status === 'NoRequestsAnalyzed' ||
-                (singleRequestAnalysis.analyzedRequestIds.length === 0 && singleRequestAnalysis.filterRequestId === reqId)) {
-                logger.warn(`Skipping full aggregation for journal request ${reqId} due to its status: ${singleRequestAnalysis.status} or no data found for it.`);
+            // --- BẮT ĐẦU SỬA ĐỔI ---
+
+            // Xử lý trường hợp không tìm thấy dữ liệu cho request một cách riêng biệt
+            if (singleRequestAnalysis.status === 'NoRequestsAnalyzed' || singleRequestAnalysis.analyzedRequestIds.length === 0) {
+                logger.warn(`No data found for journal request ${reqId}. Marking as 'NotFoundInAggregation'.`);
                 if (!aggregatedResults.requests[reqId]) {
                     aggregatedResults.requests[reqId] = {
                         batchRequestId: reqId, startTime: null, endTime: null, durationSeconds: 0,
-                        totalJournalsInputForRequest: 0, processedJournalsCountForRequest: 0,
-                        status: singleRequestAnalysis.status || 'NotFoundInAggregation',
+                        status: 'NotFoundInAggregation',
                         dataSource: singleRequestAnalysis.requests[reqId]?.dataSource,
                         errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
                     } as JournalRequestSummary;
-                } else {
-                    aggregatedResults.requests[reqId].status = singleRequestAnalysis.status || 'NotFoundInAggregation';
-                    if (singleRequestAnalysis.errorMessage && !aggregatedResults.requests[reqId].errorMessages?.includes(singleRequestAnalysis.errorMessage!)) {
-                        aggregatedResults.requests[reqId].errorMessages = [...(aggregatedResults.requests[reqId].errorMessages || []), singleRequestAnalysis.errorMessage!];
-                    }
                 }
                 if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
                     aggregatedResults.analyzedRequestIds.push(reqId);
                 }
-                singleRequestAnalysis.logProcessingErrors.forEach(err_str => {
-                    if (!aggregatedResults.logProcessingErrors.includes(err_str)) {
-                        aggregatedResults.logProcessingErrors.push(err_str);
-                    }
-                });
-                if (singleRequestAnalysis.errorMessage && !aggregatedResults.logProcessingErrors.some(e_str => e_str.includes(singleRequestAnalysis.errorMessage!))) {
-                    aggregatedResults.logProcessingErrors.push(`Error for ${reqId}: ${singleRequestAnalysis.errorMessage}`);
-                }
-                continue;
+                continue; // Vẫn giữ continue cho trường hợp này vì thực sự không có gì để merge
             }
 
+            // --- KẾT THÚC SỬA ĐỔI ---
+
+
+            // Luồng merge chuẩn cho TẤT CẢ các request có dữ liệu (kể cả 'Failed')
             if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
                 aggregatedResults.analyzedRequestIds.push(reqId);
             }
 
             if (singleRequestAnalysis.requests[reqId]) {
+                // Gán toàn bộ object request chi tiết, không tạo object rỗng nữa
                 aggregatedResults.requests[reqId] = singleRequestAnalysis.requests[reqId];
                 const reqSummary = singleRequestAnalysis.requests[reqId];
 
@@ -103,6 +90,7 @@ export class JournalAnalysisAggregatorService {
                     totalAggregatedDurationSeconds += reqSummary.durationSeconds;
                 }
 
+                // Merge tất cả các phần dữ liệu chi tiết
                 JournalAnalysisMerger.mergeOverallJournalAnalysis(aggregatedResults.overall, singleRequestAnalysis.overall, reqSummary.dataSource);
                 JournalAnalysisMerger.mergePlaywrightJournalAnalysis(aggregatedResults.playwright, singleRequestAnalysis.playwright);
                 JournalAnalysisMerger.mergeApiKeyManagerJournalAnalysis(aggregatedResults.apiKeyManager, singleRequestAnalysis.apiKeyManager);
@@ -114,6 +102,7 @@ export class JournalAnalysisAggregatorService {
                 for (const errKey in singleRequestAnalysis.errorsAggregated) {
                     aggregatedResults.errorsAggregated[errKey] = (aggregatedResults.errorsAggregated[errKey] || 0) + singleRequestAnalysis.errorsAggregated[errKey];
                 }
+                // Quan trọng: Merge cả journalAnalysis của request lỗi
                 Object.assign(aggregatedResults.journalAnalysis, singleRequestAnalysis.journalAnalysis);
 
                 aggregatedResults.errorLogCount += singleRequestAnalysis.errorLogCount;
@@ -131,9 +120,6 @@ export class JournalAnalysisAggregatorService {
                         batchRequestId: reqId, startTime: null, endTime: null, durationSeconds: 0,
                         status: 'Unknown', dataSource: undefined, errorMessages: ['Data missing in aggregation step']
                     } as JournalRequestSummary;
-                }
-                if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
-                    aggregatedResults.analyzedRequestIds.push(reqId);
                 }
             }
         }
