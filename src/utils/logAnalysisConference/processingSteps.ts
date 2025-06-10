@@ -271,22 +271,37 @@ export const calculateFinalMetrics = (
         let criticalFailureEventKey = "";
 
         if (detail.steps) {
+            // Lỗi 1: Gemini extract thất bại (giữ nguyên, đây là lỗi nghiêm trọng)
             if (detail.steps.gemini_extract_attempted && detail.steps.gemini_extract_success === false) {
                 isCriticallyFailedInternally = true;
                 criticalFailureReason = "Gemini extract failed";
                 criticalFailureEventKey = "gemini_extract_failed";
             }
 
-            if (!isCriticallyFailedInternally &&
-                detail.steps.link_processing_attempted_count > 0 &&
-                detail.steps.link_processing_success_count === 0 &&
-                detail.status !== 'failed' && detail.status !== 'skipped') {
-                isCriticallyFailedInternally = true;
-                criticalFailureReason = "All link processing attempts failed";
-                criticalFailureEventKey = "all_links_failed";
+            // --- BẮT ĐẦU SỬA ĐỔI LOGIC LỖI LINK ---
+            if (!isCriticallyFailedInternally && detail.status !== 'failed' && detail.status !== 'skipped') {
+                const searchFilteredCount = detail.steps.search_filtered_count ?? 0;
+                const linkProcessingAttemptedCount = detail.steps.link_processing_attempted_count ?? 0;
+                const linkProcessingSuccessCount = detail.steps.link_processing_success_count ?? 0;
+
+                // Điều kiện để coi là lỗi link nghiêm trọng:
+                // 1. Có link đã được lọc để xử lý (searchFilteredCount > 0).
+                // 2. Đã cố gắng xử lý TẤT CẢ các link đã lọc (linkProcessingAttemptedCount >= searchFilteredCount).
+                //    Dùng '>=' để phòng trường hợp có logic thử lại hoặc logic phức tạp hơn.
+                // 3. Không có link nào thành công (linkProcessingSuccessCount === 0).
+                if (searchFilteredCount > 0 &&
+                    linkProcessingAttemptedCount >= searchFilteredCount &&
+                    linkProcessingSuccessCount === 0) {
+
+                    isCriticallyFailedInternally = true;
+                    criticalFailureReason = `All ${searchFilteredCount} filtered links failed to process.`;
+                    criticalFailureEventKey = "all_filtered_links_failed";
+                }
             }
+            // --- KẾT THÚC SỬA ĐỔI LOGIC LỖI LINK ---
         }
 
+        // Phần còn lại của STAGE 2 (ghi lỗi, xử lý CSV fail) giữ nguyên
         if (isCriticallyFailedInternally && detail.status !== 'failed' && detail.status !== 'skipped') {
             const oldStatus = detail.status;
             detail.status = 'failed';
