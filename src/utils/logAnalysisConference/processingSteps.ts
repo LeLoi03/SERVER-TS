@@ -476,7 +476,66 @@ export const calculateFinalMetrics = (
         results.geminiApi.cacheContextMisses = Math.max(0, (results.geminiApi.cacheContextAttempts || 0) - (results.geminiApi.cacheContextHits || 0));
     }
 
-     // --- STAGE 4: Determine final overall analysis status and error message ---
+    // --- STAGE 3.5: TÍNH TOÁN LẠI THỜI GIAN REQUEST TỪ CÁC CONFERENCE CON ---
+    // Bước này để khắc phục trường hợp request bị lỗi và không có log start/end,
+    // đảm bảo dữ liệu ở view tổng hợp và view chi tiết là nhất quán.
+    for (const reqId of results.analyzedRequestIds) {
+        const requestTimings = results.requests[reqId];
+        if (!requestTimings) continue;
+
+        // Chỉ tính toán lại nếu thông tin thời gian của request bị thiếu.
+        if (requestTimings.startTime === null || requestTimings.endTime === null) {
+            const conferencesForThisRequest = Object.values(results.conferenceAnalysis)
+                .filter(cd => cd.batchRequestId === reqId);
+
+            if (conferencesForThisRequest.length > 0) {
+                let minStartTime: number | null = null;
+                let maxEndTime: number | null = null;
+
+                conferencesForThisRequest.forEach(conf => {
+                    if (conf.startTime) {
+                        const startMs = new Date(conf.startTime).getTime();
+                        if (!isNaN(startMs)) {
+                            minStartTime = Math.min(startMs, minStartTime ?? startMs);
+                        }
+                    }
+                    // Sử dụng endTime của conference, đã được tính toán chính xác ở các bước trước
+                    if (conf.endTime) {
+                        const endMs = new Date(conf.endTime).getTime();
+                        if (!isNaN(endMs)) {
+                            maxEndTime = Math.max(endMs, maxEndTime ?? endMs);
+                        }
+                    }
+                });
+
+                if (minStartTime !== null) {
+                    requestTimings.startTime = new Date(minStartTime).toISOString();
+                }
+                if (maxEndTime !== null) {
+                    requestTimings.endTime = new Date(maxEndTime).toISOString();
+                }
+
+                // Tính lại durationSeconds sau khi đã có startTime và endTime
+                if (requestTimings.startTime && requestTimings.endTime) {
+                    const start = new Date(requestTimings.startTime).getTime();
+                    const end = new Date(requestTimings.endTime).getTime();
+                    if (!isNaN(start) && !isNaN(end) && end >= start) {
+                        requestTimings.durationSeconds = Math.round((end - start) / 1000);
+                    } else {
+                        requestTimings.durationSeconds = 0;
+                    }
+                }
+            }
+        }
+    }
+    // --- KẾT THÚC STAGE 3.5 ---
+
+
+
+
+
+
+    // --- STAGE 4: Determine final overall analysis status and error message ---
     if (results.analyzedRequestIds.length > 0) {
         const requestStatuses = results.analyzedRequestIds.map(id => results.requests[id]?.status);
         const requestErrorMessagesMap = new Map<string, string[]>();
@@ -504,9 +563,9 @@ export const calculateFinalMetrics = (
                 results.requests[id]?.status === 'Failed' || results.requests[id]?.status === 'CompletedWithErrors'
             );
             if (problematicRequestIds.length === 1) {
-                 const problemReqId = problematicRequestIds[0];
-                 const errorMsgs = requestErrorMessagesMap.get(problemReqId);
-                 results.errorMessage = errorMsgs?.join('; ') || `Request ${problemReqId} completed with errors or failed.`;
+                const problemReqId = problematicRequestIds[0];
+                const errorMsgs = requestErrorMessagesMap.get(problemReqId);
+                results.errorMessage = errorMsgs?.join('; ') || `Request ${problemReqId} completed with errors or failed.`;
             } else {
                 // Lấy một vài thông điệp lỗi đầu tiên từ các request có vấn đề
                 const collectedErrorMessages: string[] = [];
