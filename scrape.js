@@ -242,7 +242,7 @@ async function main() {
         console.log("Đã mở trang mới.");
 
         // 6. Truy cập vào URL mục tiêu
-        const url = 'https://rivf2024.duytan.edu.vn/';
+        const url = 'https://www.latintcs.org/';
         console.log(`Đang truy cập: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
         console.log("Tải trang thành công.");
