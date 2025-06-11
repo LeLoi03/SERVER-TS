@@ -333,7 +333,7 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
             event: 'processing_finished_successfully',
             context: {
                 totalInputConferences: conferenceList.length, // bắt buộc log kết quả , sẽ dùng để đọc log từ FE
-                processedResultsCount: processedResults,
+                processedResults: processedResults,
                 apiModelsUsed: parsedApiModels,
                 requestDescription: description,
             }
