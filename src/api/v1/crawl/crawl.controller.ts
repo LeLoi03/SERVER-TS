@@ -249,10 +249,9 @@ async function cleanupRequestResources(
 // }
 
 /**
- * Xử lý yêu cầu crawl conference theo kiến trúc non-blocking.
- * Controller sẽ nhận yêu cầu, khởi chạy một tiến trình xử lý nền,
- * và trả về ngay lập tức một response 202 Accepted cùng với ID của batch.
- * TÊN CÁC EVENT LOG ĐƯỢC GIỮ NGUYÊN SO VỚI PHIÊN BẢN GỐC.
+ * Xử lý yêu cầu crawl conference với hai chế độ:
+ * - `mode=sync` (blocking): Đợi xử lý xong và trả về dữ liệu. Dùng cho các tác vụ cập nhật nhỏ.
+ * - `mode=async` (non-blocking, mặc định): Trả về 202 Accepted ngay lập tức. Dùng cho crawl hàng loạt từ Admin UI.
  */
 export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestPayload>, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);
@@ -262,118 +261,166 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         entryPoint: 'handleCrawlConferences'
     });
 
+
     const { description, items: conferenceList, models: modelsFromPayload } = req.body;
-    
-    // Log nhận request ban đầu - GIỮ NGUYÊN
+    const executionMode = (req.query.mode as string) === 'sync' ? 'sync' : 'async'; // Mặc định là 'async'
+
     routeLogger.info({
         event: 'received_request',
+        query: req.query,
+        method: req.method,
         requestDescription: description,
         itemCount: conferenceList?.length,
-    }, "Received crawl request.");
+        modelsReceived: modelsFromPayload,
+        executionMode: executionMode, // Log chế độ thực thi
+    }, "Received request.");
 
-    // Trả về response ngay lập tức cho client
-    res.status(202).json({
-        message: `Crawl request accepted. Processing started in the background.`,
-        batchRequestId: currentBatchRequestId,
-        description: description
-    });
-    routeLogger.info({ statusCode: 202, batchRequestId: currentBatchRequestId }, "Sent 202 Accepted response to client.");
+    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
 
-    // Định nghĩa và thực thi tác vụ dài hạn trong một hàm async riêng biệt
-    const processInBackground = async () => {
-        const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
-        
-        try {
-            // Log bắt đầu xử lý - GIỮ NGUYÊN (không thêm "background" vào message)
-            routeLogger.info({ description }, "Beginning processing conference crawl.");
+    // Hàm xử lý logic crawl chính, có thể được gọi đồng bộ hoặc không đồng bộ
+    const performCrawl = async (): Promise<ProcessedRowData[] | void> => {
+        routeLogger.info({ description }, "Beginning processing conference crawl.");
 
-            const configService = container.resolve(ConfigService);
-            const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
+        const configService = container.resolve(ConfigService);
+        const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
 
-            // --- Phần xác thực và chuẩn bị dữ liệu (giữ nguyên) ---
-            const dataSource = (req.query.dataSource as string) || 'client';
-            if (dataSource !== 'client') {
-                routeLogger.warn({ dataSource }, "Unsupported 'dataSource'.");
-                return;
-            }
-
-            let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS };
-            if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
-                const validationErrors: string[] = [];
-                for (const key of EXPECTED_API_MODEL_KEYS) {
-                    const modelValue = modelsFromPayload[key];
-                    if (modelValue === 'tuned' || modelValue === 'non-tuned') {
-                        parsedApiModels[key] = modelValue;
-                    } else if (modelValue !== null && modelValue !== undefined) {
-                        validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'.`);
-                    }
-                }
-                if (validationErrors.length > 0) {
-                    routeLogger.warn({ errors: validationErrors, modelsReceived: modelsFromPayload }, "Some 'models' in payload were invalid. Using defaults for those invalid/missing entries.");
-                }
-            } else {
-                routeLogger.warn({ modelsReceived: modelsFromPayload }, "Invalid 'models' in payload: Expected an object but received non-object, or it was null/undefined. Using default models for all steps.");
-            }
-            routeLogger.info({ parsedApiModels, userProvidedDescription: description }, "Using API models for crawl.");
-
-            if (!Array.isArray(conferenceList) || conferenceList.length === 0) {
-                routeLogger.warn("Conference list ('items') is empty. No processing will be performed.");
-                return;
-            }
-            // --- Kết thúc phần xác thực ---
-
-            // Log trước khi gọi Orchestrator - GIỮ NGUYÊN
-            routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
-            
-            // Gọi hàm xử lý chính.
-            const processedResults = await crawlOrchestrator.run(
-                conferenceList,
-                routeLogger,
-                parsedApiModels,
-                currentBatchRequestId,
-            );
-
-            // Log khi hoàn thành thành công - TÊN EVENT GIỮ NGUYÊN
-            // Lấy các thông tin cần thiết để log giống hệt bản gốc
-            const operationEndTime = Date.now(); // Cần tính lại thời gian để log cho chính xác
-            const runTimeSeconds = "N/A"; // Không có startTime trong context này, nên không thể tính chính xác. Đặt là N/A hoặc bỏ đi.
-            const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
-
-            routeLogger.info({
-                event: 'processing_finished_successfully', // <<< TÊN EVENT GIỮ NGUYÊN
-                context: {
-                    runtimeSeconds: runTimeSeconds,
-                    totalInputConferences: conferenceList.length,
-                    processedResults: processedResults, // Biến này có thể không cần thiết nếu không dùng
-                    apiModelsUsed: parsedApiModels,
-                    // ... các trường khác nếu cần
-                }
-            }, `Conference processing completed successfully via controller using models (${modelsUsedDesc}). Description: "${description || 'N/A'}"`);
-
-        } catch (processingError: unknown) {
-            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(processingError);
-            // Log khi có lỗi - TÊN EVENT GIỮ NGUYÊN
-            routeLogger.error({
-                err: { message: errorMessage, stack: errorStack },
-                event: 'processing_failed_in_controller_scope', // <<< TÊN EVENT GIỮ NGUYÊN
-                requestDescription: description,
-            }, "Conference processing failed.");
-        } finally {
-            // Cleanup luôn được gọi
-            await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
+        // --- Phần xác thực và chuẩn bị dữ liệu (giữ nguyên) ---
+        const dataSource = (req.query.dataSource as string) || 'client';
+        if (dataSource !== 'client') {
+            routeLogger.warn({ dataSource }, "Unsupported 'dataSource'. Only 'client' is supported.");
+            throw new Error("Invalid 'dataSource'. Only 'client' is supported."); // Ném lỗi để bắt ở ngoài
         }
+
+        let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS };
+        if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
+            const validationErrors: string[] = [];
+            for (const key of EXPECTED_API_MODEL_KEYS) {
+                const modelValue = modelsFromPayload[key];
+                if (modelValue === 'tuned' || modelValue === 'non-tuned') {
+                    parsedApiModels[key] = modelValue;
+                } else if (modelValue !== null && modelValue !== undefined) {
+                    validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'.`);
+                }
+            }
+            if (validationErrors.length > 0) {
+                routeLogger.warn({ errors: validationErrors, modelsReceived: modelsFromPayload }, "Some 'models' in payload were invalid. Using defaults for those invalid/missing entries.");
+            }
+        } else {
+            routeLogger.warn({ modelsReceived: modelsFromPayload }, "Invalid 'models' in payload: Expected an object but received non-object, or it was null/undefined. Using default models for all steps.");
+        }
+        routeLogger.info({ parsedApiModels, userProvidedDescription: description }, "Using API models for crawl.");
+
+        if (!Array.isArray(conferenceList)) {
+            throw new Error("Invalid conference list in payload: 'items' field must be an array.");
+        }
+
+        if (conferenceList.length === 0) {
+            routeLogger.warn("Conference list ('items') is empty. No processing will be performed.");
+            return []; // Trả về mảng rỗng cho chế độ sync
+        }
+        // --- Kết thúc phần xác thực ---
+
+        routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
+        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
+            conferenceList,
+            routeLogger,
+            parsedApiModels,
+            currentBatchRequestId,
+        );
+
+        const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
+        routeLogger.info({
+            event: 'processing_finished_successfully',
+            context: {
+                totalInputConferences: conferenceList.length, // bắt buộc log kết quả , sẽ dùng để đọc log từ FE
+                processedResultsCount: processedResults,
+                apiModelsUsed: parsedApiModels,
+                requestDescription: description,
+            }
+        }, `Conference processing completed successfully via controller using models (${modelsUsedDesc}).`);
+
+        return processedResults;
     };
 
-    // Gọi hàm chạy nền
-    processInBackground().catch(err => {
-        const { message, stack } = getErrorMessageAndStack(err);
-        // Log khi có lỗi không mong muốn - TÊN EVENT GIỮ NGUYÊN
-        routeLogger.fatal({
-            err: { message, stack },
-            event: 'unexpected_controller_error', // <<< TÊN EVENT GIỮ NGUYÊN
-            batchRequestId: currentBatchRequestId
-        }, "An unhandled exception occurred in the background processing wrapper.");
-    });
+
+    // Phân luồng xử lý dựa trên executionMode
+    if (executionMode === 'sync') {
+        // ----- CHẾ ĐỘ SYNC (BLOCKING) -----
+        let requestProcessed = false;``
+        try {
+            requestProcessed = true;
+            const innerOperationStartTime = Date.now();
+            const processedResults = await performCrawl();
+
+            // Nếu performCrawl trả về void (do lỗi đã được xử lý), không gửi response ở đây
+            if (typeof processedResults === 'undefined') {
+                if (!res.headersSent) {
+                    res.status(400).json({ message: "Request could not be processed due to validation errors." });
+                }
+                return;
+            }
+
+            const operationEndTime = Date.now();
+            const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+
+            if (!res.headersSent) {
+                res.status(200).json({
+                    message: `Conference processing completed. Orchestrator returned ${processedResults.length} records.`,
+                    runtime: `${runTimeSeconds} s`,
+                    data: processedResults, // Trả về dữ liệu
+                    description: description,
+                    batchRequestId: currentBatchRequestId
+                });
+            }
+            routeLogger.info({ statusCode: res.statusCode }, "Sent successful synchronous response.");
+        } catch (error: unknown) {
+            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+            routeLogger.error({
+                err: { message: errorMessage, stack: errorStack },
+                event: 'processing_failed_in_controller_scope',
+                requestDescription: description,
+            }, "Conference processing failed in synchronous mode.");
+            if (!res.headersSent) {
+                res.status(500).json({ message: 'Conference processing failed.', error: errorMessage, description: description });
+            }
+        } finally {
+            if (requestProcessed) {
+                await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
+            }
+        }
+    } else {
+        // ----- CHẾ ĐỘ ASYNC (NON-BLOCKING) -----
+        // Trả về response 202 ngay lập tức
+        res.status(202).json({
+            message: `Crawl request accepted. Processing started in the background.`,
+            batchRequestId: currentBatchRequestId,
+            description: description
+        });
+        routeLogger.info({ statusCode: 202, batchRequestId: currentBatchRequestId }, "Sent 202 Accepted response to client for asynchronous processing.");
+
+        // Thực thi trong nền
+        (async () => {
+            try {
+                await performCrawl();
+            } catch (error) {
+                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+                routeLogger.error({
+                    err: { message: errorMessage, stack: errorStack },
+                    event: 'processing_failed_in_controller_scope',
+                    requestDescription: description,
+                }, "Conference processing failed in asynchronous background task.");
+            } finally {
+                await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
+            }
+        })().catch(err => {
+            const { message, stack } = getErrorMessageAndStack(err);
+            routeLogger.fatal({
+                err: { message, stack },
+                event: 'unexpected_controller_error',
+                batchRequestId: currentBatchRequestId
+            }, "An unhandled exception occurred in the background processing wrapper.");
+        });
+    }
 }
 
 // HÀM CONTROLLER MỚI
