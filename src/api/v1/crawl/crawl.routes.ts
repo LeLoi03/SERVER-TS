@@ -1,7 +1,7 @@
 // src/api/v1/crawl/crawl.routes.ts
 import { Router } from 'express';
 // Import the controller functions that handle the crawl-related requests.
-import { handleCrawlConferences, handleCrawlJournals } from './crawl.controller';
+import { handleCrawlConferences, handleCrawlJournals, handleStopCrawl } from './crawl.controller';
 
 /**
  * Creates and configures the API routes for crawl-related operations (v1).
@@ -18,6 +18,10 @@ const createCrawlRouter = (): Router => {
      */
     router.post('/crawl-conferences', handleCrawlConferences);
 
+
+     // Route MỚI để dừng crawl
+    router.post('/crawl-conferences/stop', handleStopCrawl);
+    
     /**
      * POST /crawl-journals
      * Placeholder route for journal crawling. Currently not implemented.

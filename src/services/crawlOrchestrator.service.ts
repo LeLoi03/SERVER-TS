@@ -18,6 +18,7 @@ import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl/craw
 import fs from 'fs';
 import { GeminiApiService } from './geminiApi.service';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
+import { CrawlProcessManagerService } from './crawlProcessManager.service'; // <<< IMPORT MỚI
 
 /**
  * Orchestrates the entire crawling and data processing workflow.
@@ -55,6 +56,8 @@ export class CrawlOrchestratorService {
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
         @inject(TaskQueueService) private taskQueueService: TaskQueueService,
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
+        @inject(CrawlProcessManagerService) private crawlProcessManager: CrawlProcessManagerService // <<< INJECT MỚI
+
     ) {
         this.baseLogger = this.loggingService.getLogger('conference', { service: 'CrawlOrchestratorServiceBase' });
         // Initialize configApp with rawConfig from ConfigService
@@ -119,33 +122,46 @@ export class CrawlOrchestratorService {
             logger.info("Environment prepared successfully.");
 
             logger.info("Phase 2: Scheduling conference processing tasks...");
-            const tasks = conferenceList.map((conference, itemIndex) => {
-                return async () => { // Make sure the task function is async
-                    // Resolve ConferenceProcessorService instance for each task to ensure it's stateless or has fresh state
+            // THAY ĐỔI CÁCH THÊM TASK
+            // Thay vì dùng .map() và add tất cả cùng lúc, chúng ta dùng vòng lặp
+            // để có thể kiểm tra cờ dừng giữa mỗi lần thêm.
+            for (const [itemIndex, conference] of conferenceList.entries()) {
+                // KIỂM TRA CỜ DỪNG TRƯỚC KHI THÊM TASK MỚI
+                if (this.crawlProcessManager.isStopRequested(batchRequestId)) {
+                    logger.warn({ event: 'task_scheduling_halted', batchRequestId }, `Stop signal detected. Halting scheduling of new tasks for batch ${batchRequestId}.`);
+                    break; // Thoát khỏi vòng lặp, không thêm task nào nữa
+                }
+
+                const task = async () => {
                     const processor = container.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
                         conferenceAcronym: conference.Acronym,
                         conferenceTitle: conference.Title,
                         batchItemIndex: itemIndex,
-                        originalRequestId: conference.originalRequestId, // Carry original request ID if available
+                        originalRequestId: conference.originalRequestId,
                     });
-                    // Call the processor's process method, passing the specific API models for this batch
                     return processor.process(
                         conference,
                         itemIndex,
                         itemLogger,
-                        apiModels, // Pass the ApiModels object to the processor
+                        apiModels,
                         batchRequestId
                     );
                 };
-            });
+                this.taskQueueService.add(task);
+            }
 
-            tasks.forEach(taskFunc => this.taskQueueService.add(taskFunc));
-            logger.info(`Scheduled ${tasks.length} conference processing tasks with concurrency ${this.taskQueueService.concurrency}.`);
+            const scheduledTaskCount = this.taskQueueService.size + this.taskQueueService.pending;
+            logger.info(`Scheduled ${scheduledTaskCount} conference processing tasks with concurrency ${this.taskQueueService.concurrency}.`);
 
-            logger.info("Phase 3: Waiting for all conference processing tasks to complete...");
-            await this.taskQueueService.onIdle(); // Waits until all scheduled tasks are finished
-            logger.info("All conference processing tasks finished.");
+            logger.info("Phase 3: Waiting for all scheduled tasks to complete...");
+            await this.taskQueueService.onIdle();
+
+            if (this.crawlProcessManager.isStopRequested(batchRequestId)) {
+                logger.warn({ event: 'crawl_stopped_gracefully', batchRequestId }, "All active tasks finished after stop request. Proceeding to final processing.");
+            } else {
+                logger.info("All conference processing tasks finished normally.");
+            }
 
             logger.info("Phase 3.5: Waiting for background batch save operations to complete...");
             await this.batchProcessingOrchestratorService.awaitCompletion(logger); // Ensures all background JSONL writes are done
@@ -194,11 +210,12 @@ export class CrawlOrchestratorService {
                 logger.error({ event: 'csv_generation_pipeline_failed', err: { message: errorMessage, stack: errorStack } }, "CSV generation pipeline failed at orchestrator level due to stream or final processing error.");
             }
         } finally {
-            logger.info("Phase 5: Performing final cleanup (closing browser, etc.)...");
-            await this.playwrightService.close(logger); // Ensures Playwright browser is closed
-            logger.info("Cleanup finished.");
+            logger.info("Phase 5: Performing final cleanup...");
+            await this.playwrightService.close(logger);
 
-            // Log a summary of the entire crawl operation
+            // Xóa cờ dừng để dọn dẹp
+            this.crawlProcessManager.clearStopFlag(batchRequestId, logger);
+
             await this.logSummary(
                 operationStartTime,
                 conferenceList.length,
@@ -207,8 +224,7 @@ export class CrawlOrchestratorService {
                 batchRequestId,
                 logger
             );
-
-            logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
+            logger.info({ event: 'crawl_orchestrator_end', batchRequestId }, `Crawl process finished for batch ${batchRequestId}.`);
         }
 
         // Re-throw the stored fatal error if one occurred

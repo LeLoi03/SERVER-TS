@@ -11,7 +11,7 @@ import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.serv
 import { ConferenceData, ProcessedRowData, ApiModels, CrawlModelType, CrawlRequestPayload } from '../../../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import { crawlJournals } from '../../../journal/crawlJournals'; // Giữ lại nếu dùng
-// import { DatabasePersistenceService, DatabaseSaveResult } from '../../../services/databasePersistence.service'; // Giữ lại nếu dùng
+import { CrawlProcessManagerService } from '../../../services/crawlProcessManager.service'; // <<< IMPORT MỚI
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 // DEFAULT_API_MODELS sẽ được áp dụng nếu model tương ứng trong payload là null hoặc không hợp lệ
@@ -65,6 +65,195 @@ async function cleanupRequestResources(
 
 
 // Cập nhật kiểu của req.body thành CrawlRequestPayload
+// export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestPayload>, res: Response): Promise<void> {
+//     const loggingService = container.resolve(LoggingService);
+//     const currentBatchRequestId = (req as any).id || `req-conf-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+//     const routeLogger = loggingService.getRequestSpecificLogger('conference', currentBatchRequestId, {
+//         route: '/crawl-conferences',
+//         entryPoint: 'handleCrawlConferences'
+//     });
+
+
+//     // Log body request (cẩn thận với dữ liệu lớn, có thể chỉ log một phần hoặc các trường metadata)
+//     const { description, items: conferenceList, models: modelsFromPayload } = req.body;
+//     routeLogger.info({
+//         event: 'received_request',
+//         query: req.query,
+//         method: req.method,
+//         requestDescription: description, // Log a description mới
+//         itemCount: conferenceList?.length,
+//         modelsReceived: modelsFromPayload,
+//         // bodySample: conferenceList?.slice(0,1) // Gỡ comment nếu muốn log sample item
+//     }, "Received request.");
+
+//     const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
+//     let requestProcessed = false;
+
+//     try {
+//         requestProcessed = true;
+//         routeLogger.info({ description }, "Beginning processing conference crawl."); // Thêm description vào log
+
+//         const configService = container.resolve(ConfigService);
+//         const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
+//         const finalOutputJsonlPathForBatch = configService.getFinalOutputJsonlPathForBatch(currentBatchRequestId);
+//         const evaluateCsvPathForBatch = configService.getEvaluateCsvPathForBatch(currentBatchRequestId);
+
+//         const dataSource = (req.query.dataSource as string) || 'client';
+//         if (dataSource !== 'client') {
+//             routeLogger.warn({ dataSource }, "Unsupported 'dataSource'. Only 'client' is supported.");
+//             if (!res.headersSent) {
+//                 res.status(400).json({ message: "Invalid 'dataSource'. Only 'client' is supported." });
+//             }
+//             requestProcessed = false; // Không xử lý, không cần cleanup đầy đủ
+//             // Ensure logger is closed if request is not processed further
+//             await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
+//             return;
+//         }
+
+//         // Xử lý models từ payload thay vì query params
+//         let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS }; // Bắt đầu với default
+
+
+
+//         if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
+//             const validationErrors: string[] = [];
+//             for (const key of EXPECTED_API_MODEL_KEYS) {
+//                 const modelValue = modelsFromPayload[key]; // Lấy từ modelsFromPayload
+//                 if (modelValue !== null && modelValue !== undefined) { // Kiểm tra cả null và undefined
+//                     if (modelValue === 'tuned' || modelValue === 'non-tuned') {
+//                         parsedApiModels[key] = modelValue as CrawlModelType;
+//                     } else {
+//                         validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'. Defaulting to '${DEFAULT_API_MODELS[key]}'.`);
+//                         // Giữ lại default đã được set ở parsedApiModels[key]
+//                     }
+//                 } else {
+//                     // Nếu modelValue là null hoặc undefined, parsedApiModels[key] sẽ giữ giá trị default đã được set
+//                     routeLogger.debug(`Model for '${key}' not provided or null in payload. Using default: '${DEFAULT_API_MODELS[key]}'.`);
+//                 }
+//             }
+//             if (validationErrors.length > 0) {
+//                 routeLogger.warn({ errors: validationErrors, modelsReceived: modelsFromPayload }, "Some 'models' in payload were invalid. Using defaults for those invalid/missing entries.");
+//             }
+//         } else {
+//             routeLogger.warn({ modelsReceived: modelsFromPayload }, "Invalid 'models' in payload: Expected an object but received non-object, or it was null/undefined. Using default models for all steps.");
+//             // parsedApiModels đã là DEFAULT_API_MODELS
+//         }
+
+//         routeLogger.info({ parsedApiModels, userProvidedDescription: description }, "Using API models for crawl.");
+
+//         const innerOperationStartTime = Date.now();
+//         try {
+//             // conferenceList đã được trích xuất từ req.body.items ở trên
+//             if (!Array.isArray(conferenceList)) {
+//                 routeLogger.warn({ bodyType: typeof conferenceList, payloadItemsType: typeof req.body.items }, "Invalid conference list in payload: 'items' field is not an array.");
+//                 if (!res.headersSent) {
+//                     res.status(400).json({ message: "Invalid conference list in payload: 'items' field must be an array." });
+//                 }
+//                 requestProcessed = false;
+//                 await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
+//                 return;
+//             }
+
+//             if (conferenceList.length === 0) {
+//                 routeLogger.warn("Conference list ('items') is empty. No processing will be performed.");
+//                 const operationEndTime = Date.now();
+//                 const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+//                 if (!res.headersSent) {
+//                     res.status(200).json({
+//                         message: 'Conference list provided was empty. No processing performed.',
+//                         runtime: `${runTimeSeconds} s`,
+//                         outputJsonlPath: finalOutputJsonlPathForBatch,
+//                         outputCsvPath: evaluateCsvPathForBatch,
+//                         description: description // Trả về description nếu có
+//                     });
+//                 }
+//                 return;
+//             }
+
+//             routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
+//             const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
+//                 conferenceList, // Truyền conferenceList (là req.body.items)
+//                 routeLogger,
+//                 parsedApiModels,
+//                 currentBatchRequestId,
+//             );
+
+//             const operationEndTime = Date.now();
+//             const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+//             const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
+
+//             routeLogger.info({
+//                 event: 'processing_finished_successfully',
+//                 context: {
+//                     runtimeSeconds: parseFloat(runTimeSeconds),
+//                     totalInputConferences: conferenceList.length,
+//                     processedResults: processedResults,
+//                     apiModelsUsed: parsedApiModels,
+//                     outputJsonlFilePath: finalOutputJsonlPathForBatch,
+//                     outputCsvFilePath: evaluateCsvPathForBatch,
+//                     operationStartTime: new Date(innerOperationStartTime).toISOString(),
+//                     operationEndTime: new Date(operationEndTime).toISOString(),
+//                     requestDescription: description,
+
+//                 }
+//             }, `Conference processing completed successfully via controller using models (${modelsUsedDesc}). Description: "${description || 'N/A'}"`);
+
+
+//             if (!res.headersSent) {
+//                 res.status(200).json({
+//                     message: `Conference processing completed. Orchestrator returned ${processedResults.length} records. Description: "${description || 'N/A'}"`,
+//                     runtime: `${runTimeSeconds} s`,
+//                     data: processedResults,
+//                     outputJsonlPath: finalOutputJsonlPathForBatch,
+//                     outputCsvPath: evaluateCsvPathForBatch,
+//                     description: description,
+//                     batchRequestId: currentBatchRequestId // <<< THÊM DÒNG NÀY
+
+//                 });
+//             }
+//             routeLogger.info({ statusCode: res.statusCode }, "Sent successful response.");
+
+//         } catch (processingError: unknown) {
+//             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(processingError);
+//             routeLogger.error({
+//                 err: { message: errorMessage, stack: errorStack },
+//                 event: 'processing_failed_in_controller_scope',
+//                 requestDescription: description,
+//             }, "Conference processing failed.");
+//             if (!res.headersSent) {
+//                 res.status(500).json({ message: 'Conference processing failed.', error: errorMessage, description: description });
+//             }
+//             routeLogger.warn({ statusCode: res.statusCode }, "Sent error response.");
+//         }
+//     } catch (error: unknown) {
+//         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
+//         routeLogger.error(
+//             { err: { message: errorMessage, stack: errorStack }, event: 'unexpected_controller_error', requestDescription: description },
+//             "Unexpected error in handleCrawlConferences."
+//         );
+//         if (!res.headersSent) {
+//             res.status(503).json({ message: "Server error during conference crawl request.", description: description });
+//         }
+//     } finally {
+//         if (requestProcessed) {
+//             await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
+//         } else {
+//             try {
+//                 await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
+//             } catch (e) {
+//                 const cleanupPhaseLogger = loggingService.getLogger('app', { service: 'CrawlControllerCleanupFinally' });
+//                 cleanupPhaseLogger.warn({ err: e, batchRequestId: currentBatchRequestId, type: 'conference' }, "Error closing logger in finally block for non-processed request.");
+//             }
+//         }
+//     }
+// }
+
+/**
+ * Xử lý yêu cầu crawl conference theo kiến trúc non-blocking.
+ * Controller sẽ nhận yêu cầu, khởi chạy một tiến trình xử lý nền,
+ * và trả về ngay lập tức một response 202 Accepted cùng với ID của batch.
+ * TÊN CÁC EVENT LOG ĐƯỢC GIỮ NGUYÊN SO VỚI PHIÊN BẢN GỐC.
+ */
 export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestPayload>, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);
     const currentBatchRequestId = (req as any).id || `req-conf-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
@@ -73,176 +262,145 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         entryPoint: 'handleCrawlConferences'
     });
 
-
-    // Log body request (cẩn thận với dữ liệu lớn, có thể chỉ log một phần hoặc các trường metadata)
     const { description, items: conferenceList, models: modelsFromPayload } = req.body;
+    
+    // Log nhận request ban đầu - GIỮ NGUYÊN
     routeLogger.info({
         event: 'received_request',
-        query: req.query,
-        method: req.method,
-        requestDescription: description, // Log a description mới
+        requestDescription: description,
         itemCount: conferenceList?.length,
-        modelsReceived: modelsFromPayload,
-        // bodySample: conferenceList?.slice(0,1) // Gỡ comment nếu muốn log sample item
-    }, "Received request.");
+    }, "Received crawl request.");
 
-    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
-    let requestProcessed = false;
+    // Trả về response ngay lập tức cho client
+    res.status(202).json({
+        message: `Crawl request accepted. Processing started in the background.`,
+        batchRequestId: currentBatchRequestId,
+        description: description
+    });
+    routeLogger.info({ statusCode: 202, batchRequestId: currentBatchRequestId }, "Sent 202 Accepted response to client.");
 
-    try {
-        requestProcessed = true;
-        routeLogger.info({ description }, "Beginning processing conference crawl."); // Thêm description vào log
-
-        const configService = container.resolve(ConfigService);
-        const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
-        const finalOutputJsonlPathForBatch = configService.getFinalOutputJsonlPathForBatch(currentBatchRequestId);
-        const evaluateCsvPathForBatch = configService.getEvaluateCsvPathForBatch(currentBatchRequestId);
-
-        const dataSource = (req.query.dataSource as string) || 'client';
-        if (dataSource !== 'client') {
-            routeLogger.warn({ dataSource }, "Unsupported 'dataSource'. Only 'client' is supported.");
-            if (!res.headersSent) {
-                res.status(400).json({ message: "Invalid 'dataSource'. Only 'client' is supported." });
-            }
-            requestProcessed = false; // Không xử lý, không cần cleanup đầy đủ
-            // Ensure logger is closed if request is not processed further
-            await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
-            return;
-        }
-
-        // Xử lý models từ payload thay vì query params
-        let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS }; // Bắt đầu với default
-
-
-
-        if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
-            const validationErrors: string[] = [];
-            for (const key of EXPECTED_API_MODEL_KEYS) {
-                const modelValue = modelsFromPayload[key]; // Lấy từ modelsFromPayload
-                if (modelValue !== null && modelValue !== undefined) { // Kiểm tra cả null và undefined
-                    if (modelValue === 'tuned' || modelValue === 'non-tuned') {
-                        parsedApiModels[key] = modelValue as CrawlModelType;
-                    } else {
-                        validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'. Must be 'tuned' or 'non-tuned'. Defaulting to '${DEFAULT_API_MODELS[key]}'.`);
-                        // Giữ lại default đã được set ở parsedApiModels[key]
-                    }
-                } else {
-                    // Nếu modelValue là null hoặc undefined, parsedApiModels[key] sẽ giữ giá trị default đã được set
-                    routeLogger.debug(`Model for '${key}' not provided or null in payload. Using default: '${DEFAULT_API_MODELS[key]}'.`);
-                }
-            }
-            if (validationErrors.length > 0) {
-                routeLogger.warn({ errors: validationErrors, modelsReceived: modelsFromPayload }, "Some 'models' in payload were invalid. Using defaults for those invalid/missing entries.");
-            }
-        } else {
-            routeLogger.warn({ modelsReceived: modelsFromPayload }, "Invalid 'models' in payload: Expected an object but received non-object, or it was null/undefined. Using default models for all steps.");
-            // parsedApiModels đã là DEFAULT_API_MODELS
-        }
-
-        routeLogger.info({ parsedApiModels, userProvidedDescription: description }, "Using API models for crawl.");
-
-        const innerOperationStartTime = Date.now();
+    // Định nghĩa và thực thi tác vụ dài hạn trong một hàm async riêng biệt
+    const processInBackground = async () => {
+        const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
+        
         try {
-            // conferenceList đã được trích xuất từ req.body.items ở trên
-            if (!Array.isArray(conferenceList)) {
-                routeLogger.warn({ bodyType: typeof conferenceList, payloadItemsType: typeof req.body.items }, "Invalid conference list in payload: 'items' field is not an array.");
-                if (!res.headersSent) {
-                    res.status(400).json({ message: "Invalid conference list in payload: 'items' field must be an array." });
-                }
-                requestProcessed = false;
-                await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
+            // Log bắt đầu xử lý - GIỮ NGUYÊN (không thêm "background" vào message)
+            routeLogger.info({ description }, "Beginning processing conference crawl.");
+
+            const configService = container.resolve(ConfigService);
+            const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
+
+            // --- Phần xác thực và chuẩn bị dữ liệu (giữ nguyên) ---
+            const dataSource = (req.query.dataSource as string) || 'client';
+            if (dataSource !== 'client') {
+                routeLogger.warn({ dataSource }, "Unsupported 'dataSource'.");
                 return;
             }
 
-            if (conferenceList.length === 0) {
+            let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS };
+            if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
+                const validationErrors: string[] = [];
+                for (const key of EXPECTED_API_MODEL_KEYS) {
+                    const modelValue = modelsFromPayload[key];
+                    if (modelValue === 'tuned' || modelValue === 'non-tuned') {
+                        parsedApiModels[key] = modelValue;
+                    } else if (modelValue !== null && modelValue !== undefined) {
+                        validationErrors.push(`Invalid model value '${modelValue}' for API step '${key}'.`);
+                    }
+                }
+                if (validationErrors.length > 0) {
+                    routeLogger.warn({ errors: validationErrors, modelsReceived: modelsFromPayload }, "Some 'models' in payload were invalid. Using defaults for those invalid/missing entries.");
+                }
+            } else {
+                routeLogger.warn({ modelsReceived: modelsFromPayload }, "Invalid 'models' in payload: Expected an object but received non-object, or it was null/undefined. Using default models for all steps.");
+            }
+            routeLogger.info({ parsedApiModels, userProvidedDescription: description }, "Using API models for crawl.");
+
+            if (!Array.isArray(conferenceList) || conferenceList.length === 0) {
                 routeLogger.warn("Conference list ('items') is empty. No processing will be performed.");
-                const operationEndTime = Date.now();
-                const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
-                if (!res.headersSent) {
-                    res.status(200).json({
-                        message: 'Conference list provided was empty. No processing performed.',
-                        runtime: `${runTimeSeconds} s`,
-                        outputJsonlPath: finalOutputJsonlPathForBatch,
-                        outputCsvPath: evaluateCsvPathForBatch,
-                        description: description // Trả về description nếu có
-                    });
-                }
                 return;
             }
+            // --- Kết thúc phần xác thực ---
 
+            // Log trước khi gọi Orchestrator - GIỮ NGUYÊN
             routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
-            const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
-                conferenceList, // Truyền conferenceList (là req.body.items)
+            
+            // Gọi hàm xử lý chính.
+            const processedResults = await crawlOrchestrator.run(
+                conferenceList,
                 routeLogger,
                 parsedApiModels,
                 currentBatchRequestId,
             );
 
-            const operationEndTime = Date.now();
-            const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+            // Log khi hoàn thành thành công - TÊN EVENT GIỮ NGUYÊN
+            // Lấy các thông tin cần thiết để log giống hệt bản gốc
+            const operationEndTime = Date.now(); // Cần tính lại thời gian để log cho chính xác
+            const runTimeSeconds = "N/A"; // Không có startTime trong context này, nên không thể tính chính xác. Đặt là N/A hoặc bỏ đi.
             const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
 
             routeLogger.info({
-                event: 'processing_finished_successfully',
+                event: 'processing_finished_successfully', // <<< TÊN EVENT GIỮ NGUYÊN
                 context: {
-                    runtimeSeconds: parseFloat(runTimeSeconds),
+                    runtimeSeconds: runTimeSeconds,
                     totalInputConferences: conferenceList.length,
-                    processedResults: processedResults,
+                    processedResults: processedResults, // Biến này có thể không cần thiết nếu không dùng
                     apiModelsUsed: parsedApiModels,
-                    outputJsonlFilePath: finalOutputJsonlPathForBatch,
-                    outputCsvFilePath: evaluateCsvPathForBatch,
-                    operationStartTime: new Date(innerOperationStartTime).toISOString(),
-                    operationEndTime: new Date(operationEndTime).toISOString(),
-                    requestDescription: description,
-
+                    // ... các trường khác nếu cần
                 }
             }, `Conference processing completed successfully via controller using models (${modelsUsedDesc}). Description: "${description || 'N/A'}"`);
 
-
-            if (!res.headersSent) {
-                res.status(200).json({
-                    message: `Conference processing completed. Orchestrator returned ${processedResults.length} records. Description: "${description || 'N/A'}"`,
-                    runtime: `${runTimeSeconds} s`,
-                    data: processedResults, // Cân nhắc việc trả về data lớn
-                    outputJsonlPath: finalOutputJsonlPathForBatch,
-                    outputCsvPath: evaluateCsvPathForBatch,
-                    description: description
-                });
-            }
-            routeLogger.info({ statusCode: res.statusCode }, "Sent successful response.");
-
         } catch (processingError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(processingError);
+            // Log khi có lỗi - TÊN EVENT GIỮ NGUYÊN
             routeLogger.error({
                 err: { message: errorMessage, stack: errorStack },
-                event: 'processing_failed_in_controller_scope',
+                event: 'processing_failed_in_controller_scope', // <<< TÊN EVENT GIỮ NGUYÊN
                 requestDescription: description,
             }, "Conference processing failed.");
-            if (!res.headersSent) {
-                res.status(500).json({ message: 'Conference processing failed.', error: errorMessage, description: description });
-            }
-            routeLogger.warn({ statusCode: res.statusCode }, "Sent error response.");
-        }
-    } catch (error: unknown) {
-        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        routeLogger.error(
-            { err: { message: errorMessage, stack: errorStack }, event: 'unexpected_controller_error', requestDescription: description },
-            "Unexpected error in handleCrawlConferences."
-        );
-        if (!res.headersSent) {
-            res.status(503).json({ message: "Server error during conference crawl request.", description: description });
-        }
-    } finally {
-        if (requestProcessed) {
+        } finally {
+            // Cleanup luôn được gọi
             await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
-        } else {
-            try {
-                await loggingService.closeRequestSpecificLogger('conference', currentBatchRequestId);
-            } catch (e) {
-                const cleanupPhaseLogger = loggingService.getLogger('app', { service: 'CrawlControllerCleanupFinally' });
-                cleanupPhaseLogger.warn({ err: e, batchRequestId: currentBatchRequestId, type: 'conference' }, "Error closing logger in finally block for non-processed request.");
-            }
         }
+    };
+
+    // Gọi hàm chạy nền
+    processInBackground().catch(err => {
+        const { message, stack } = getErrorMessageAndStack(err);
+        // Log khi có lỗi không mong muốn - TÊN EVENT GIỮ NGUYÊN
+        routeLogger.fatal({
+            err: { message, stack },
+            event: 'unexpected_controller_error', // <<< TÊN EVENT GIỮ NGUYÊN
+            batchRequestId: currentBatchRequestId
+        }, "An unhandled exception occurred in the background processing wrapper.");
+    });
+}
+
+// HÀM CONTROLLER MỚI
+export async function handleStopCrawl(req: Request<{}, any, { batchRequestId: string }>, res: Response): Promise<void> {
+    const { batchRequestId } = req.body;
+    const loggingService = container.resolve(LoggingService);
+    const appLogger = loggingService.getLogger('app', { service: 'StopCrawlController' });
+
+    if (!batchRequestId) {
+        appLogger.warn({ body: req.body }, "Stop request received without a batchRequestId.");
+        res.status(400).json({ message: "batchRequestId is required." });
+        return;
+    }
+
+    try {
+        const crawlProcessManager = container.resolve(CrawlProcessManagerService);
+        // Sử dụng appLogger hoặc một logger tạm thời cho hành động này
+        crawlProcessManager.requestStop(batchRequestId, appLogger);
+
+        res.status(200).json({
+            message: `Stop request received for batch ${batchRequestId}. The process will halt gracefully.`,
+            batchRequestId: batchRequestId
+        });
+    } catch (error: unknown) {
+        const { message } = getErrorMessageAndStack(error);
+        appLogger.error({ err: error, batchRequestId }, `Error processing stop request for batch ${batchRequestId}.`);
+        res.status(500).json({ message: "Failed to process stop request.", error: message });
     }
 }
 
