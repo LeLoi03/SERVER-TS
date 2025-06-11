@@ -242,14 +242,14 @@ async function main() {
         console.log("Đã mở trang mới.");
 
         // 6. Truy cập vào URL mục tiêu
-        const url = 'https://conference.cs.cityu.edu.hk/isnn/';
+        const url = 'https://rivf2024.duytan.edu.vn/';
         console.log(`Đang truy cập: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
         console.log("Tải trang thành công.");
 
         // 7. Lấy toàn bộ text từ thẻ <body> của trang
         // page.locator('body').innerText() sẽ lấy tất cả text mà người dùng có thể thấy
-        const pageText = await page.content();
+        const pageText = await page.locator('body').innerText();
 
         console.log("\n--- TOÀN BỘ TEXT CỦA TRANG ---");
         console.log(pageText);

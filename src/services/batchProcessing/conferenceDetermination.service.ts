@@ -85,63 +85,38 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         childLogger.info({ event: 'fetch_main_website_start' }, `Attempting to fetch and process main website: ${officialWebsiteUrl}.`);
 
         try {
-            // Ensure the page is not closed before navigation
-            if (page.isClosed()) {
-                const errorMsg = `Playwright page is closed before navigating to main official website: ${officialWebsiteUrl}.`;
-                childLogger.error({ event: 'page_closed_before_navigating_main_website' }, errorMsg);
-                throw new Error(errorMsg);
-            }
-
-            // Navigate to the official website
-            const response = await page.goto(officialWebsiteUrl, { waitUntil: 'load', timeout: 25000 });
-            if (!response) {
-                const errorMsg = `Navigation to ${officialWebsiteUrl} returned a null response.`;
-                childLogger.error({ event: 'navigation_to_main_website_failed_null_response' }, errorMsg);
-                throw new Error(errorMsg);
-            }
-            if (!response.ok()) {
-                const errorMsg = `Non-OK HTTP response status: ${response.status()} for ${officialWebsiteUrl}.`;
-                childLogger.error({ status: response.status(), event: 'navigation_to_main_website_failed_non_ok' }, errorMsg);
-                throw new Error(errorMsg);
-            }
-
-            const finalUrlAfterGoto = page.url();
-            const normalizedFinalUrl = normalizeAndJoinLink(finalUrlAfterGoto, null, childLogger);
-            if (!normalizedFinalUrl) {
-                const errorMsg = `Could not normalize final URL after navigation: ${finalUrlAfterGoto}.`;
-                childLogger.error({ finalUrlAttempted: finalUrlAfterGoto, event: 'could_not_normalize_final_url_main_website' }, errorMsg);
-                throw new Error(errorMsg);
-            }
-            childLogger.info({ finalUrl: normalizedFinalUrl, status: response.status(), event: 'navigated_to_main_website_successfully' }, `Successfully navigated to main website. Final URL: ${normalizedFinalUrl}.`);
-
             const safeAcronym = (acronym || 'unknown').replace(/[^a-zA-Z0-9_-]/g, '-');
             const fileBaseName = `${safeAcronym}_main_determine_${batchIndex}`;
 
-            // Use ConferenceLinkProcessorService to extract and save the content
-            // For main site determination, `useMainContentKeywords` is typically false
+            // === THAY ĐỔI CỐT LÕI ===
+            // Ủy thác hoàn toàn việc điều hướng, trích xuất và lưu file cho LinkProcessorService.
+            // LinkProcessorService sẽ tự xử lý page.goto.
             const textPath = await this.linkProcessorService.processAndSaveGeneralLink(
-                page,                   // Page is already at normalizedFinalUrl
-                normalizedFinalUrl,     // The URL to process
-                normalizedFinalUrl,     // Base link is itself for relative path calculation
-                null,                   // No other link for comparison
+                page,
+                officialWebsiteUrl,     // URL cần vào
+                officialWebsiteUrl,     // Base link là chính nó
+                null,                   // Không có link để so sánh
                 acronym,
-                'main',                 // Content type
-                false,                  // useMainContentKeywords = false for general main site content
+                'main',
+                false,                  // Không dùng keyword cho trang chính
                 fileBaseName,
                 childLogger
             );
 
             if (!textPath) {
-                childLogger.warn({ finalUrl: normalizedFinalUrl, event: 'main_website_content_extraction_or_save_failed' }, `Content extraction or saving failed for main website: ${normalizedFinalUrl}.`);
+                childLogger.warn({ finalUrl: officialWebsiteUrl, event: 'main_website_content_extraction_or_save_failed' }, `Content extraction or saving failed for main website: ${officialWebsiteUrl}.`);
                 return null;
             }
-            childLogger.info({ finalUrl: normalizedFinalUrl, textPath, event: 'main_website_processed_successfully' }, `Main website processed successfully. Content saved to: ${textPath}.`);
-            return { finalUrl: normalizedFinalUrl, textPath };
 
-        } catch (error: unknown) { // Catch as unknown
+            // Sau khi LinkProcessorService chạy xong, page.url() sẽ là URL cuối cùng.
+            const finalUrl = page.url();
+            childLogger.info({ finalUrl, textPath, event: 'main_website_processed_successfully' }, `Main website processed successfully. Content saved to: ${textPath}.`);
+            return { finalUrl, textPath };
+
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             childLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'fetch_main_website_unhandled_error' }, `Unhandled error while fetching and processing main website: "${errorMessage}".`);
-            return null; // Return null on any error to indicate failure
+            return null;
         }
     }
 
