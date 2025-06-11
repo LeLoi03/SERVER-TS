@@ -242,7 +242,7 @@ async function main() {
         console.log("Đã mở trang mới.");
 
         // 6. Truy cập vào URL mục tiêu
-        const url = 'https://www.k-cap.org/2025/';
+        const url = 'https://algo-conference.org/2025/atmos/';
         console.log(`Đang truy cập: ${url}`);
         await page.goto(url, { waitUntil: 'load', timeout: 60000 });
         console.log("Tải trang thành công.");

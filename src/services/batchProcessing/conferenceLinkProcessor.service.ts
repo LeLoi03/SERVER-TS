@@ -8,6 +8,9 @@ import { ConferenceData, ConferenceUpdateData, BatchEntry } from '../../types/cr
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
+import { accessUrl, AccessResult } from './utils';
+
+
 
 /**
  * Interface for the service responsible for processing and managing conference links.
@@ -226,12 +229,31 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             return null; // Cannot proceed without a valid page
         }
 
+
+        // === THÊM LOGIC ĐIỀU HƯỚNG VÀO ĐÂY ===
+        childLogger.info({ urlToAccess: normalizedLink, event: 'general_link_access_attempt' }, `Attempting to access general link: ${normalizedLink}`);
+        try {
+            // Có thể dùng lại hàm util accessUrl hoặc goto trực tiếp ở đây
+            const response = await page.goto(normalizedLink, { waitUntil: "load", timeout: 30000 });
+            if (!response || !response.ok()) {
+                throw new Error(`Failed to access link with status ${response?.status()}`);
+            }
+            childLogger.info({ finalUrl: page.url(), event: 'general_link_access_success' }, 'Successfully navigated to general link.');
+        } catch (error: unknown) {
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            childLogger.error({ err: { message: errorMessage }, event: 'general_link_access_failed' }, `Failed to navigate to general link: ${errorMessage}`);
+            return null; // Không thể tiếp tục nếu không vào được trang
+        }
+        // === KẾT THÚC PHẦN THÊM MỚI ===
+
+
         childLogger.trace({ normalizedLinkToProcess: normalizedLink, event: 'extract_text_from_general_link_start' }, `Attempting to extract text content from ${contentType} link: ${normalizedLink}.`);
 
+        // Bây giờ gọi hàm extractor đã được sửa (không còn goto)
         const textContent = await this.pageContentExtractorService.extractTextFromUrl(
-            page,
-            normalizedLink,
-            acronym, // Use the provided acronym
+            page, // page đã ở đúng URL
+            page.url(), // Luôn truyền URL cuối cùng sau khi điều hướng
+            acronym,
             useMainContentKeywords,
             this.year2,
             childLogger
@@ -292,9 +314,9 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             const yearOld1 = year - 1;
             const yearOld2 = year - 2;
             const yearStr = String(year);
+
             let modifiedLinkAttempt: string | null = null;
 
-            // Attempt to replace years in the link if older years are present
             if (link.includes(String(yearOld1))) {
                 modifiedLinkAttempt = link.replace(new RegExp(String(yearOld1), 'g'), yearStr);
             } else if (link.includes(String(yearOld2))) {
@@ -303,42 +325,47 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
             if (modifiedLinkAttempt) {
                 linkLogger.info({ urlToAccess: modifiedLinkAttempt, event: 'access_attempt_modified_link' }, `Attempting to access modified link: ${modifiedLinkAttempt}.`);
-                try {
-                    const response = await page.goto(modifiedLinkAttempt, { waitUntil: "networkidle", timeout: 15000 });
-                    responseStatus = response?.status() ?? null;
-                    if (response && response.ok()) {
-                        finalLink = page.url(); // Get the final URL after redirects
+
+                // SỬ DỤNG HÀM UTIL MỚI
+                const result: AccessResult = await accessUrl(page, modifiedLinkAttempt, linkLogger);
+
+                if (result.success && result.response) {
+                    responseStatus = result.response.status();
+                    if (result.response.ok()) {
+                        finalLink = result.finalUrl!; // result.finalUrl chắc chắn có nếu success
                         linkLogger.info({ accessedUrl: modifiedLinkAttempt, status: responseStatus, finalUrlAfterAccess: finalLink, event: 'access_modified_link_success' }, `Successfully accessed modified link. Final URL: ${finalLink}.`);
                         accessSuccess = true;
                     } else {
                         accessError = new Error(`HTTP ${responseStatus} accessing modified link: ${modifiedLinkAttempt}`);
                         linkLogger.warn({ accessedUrl: modifiedLinkAttempt, status: responseStatus, event: 'access_modified_link_failed_http_status' }, `Failed to access modified link with non-OK HTTP status ${responseStatus}.`);
                     }
-                } catch (error: unknown) {
-                    const { message: errorMessage } = getErrorMessageAndStack(error);
-                    accessError = error instanceof Error ? error : new Error(errorMessage);
+                } else { // Xử lý trường hợp exception từ accessUrl
+                    const { message: errorMessage } = getErrorMessageAndStack(result.error);
+                    accessError = result.error;
                     linkLogger.warn({ accessedUrl: modifiedLinkAttempt, err: { message: errorMessage }, event: 'access_modified_link_failed_exception' }, `Exception accessing modified link: "${errorMessage}".`);
                 }
             }
 
-            // If modified link failed or was not attempted, try original link
             if (!accessSuccess) {
                 finalLink = link; // Revert to original link
                 linkLogger.info({ urlToAccess: link, event: 'access_attempt_original_link' }, `Attempting to access original link: ${link}.`);
-                try {
-                    const response = await page.goto(link, { waitUntil: "networkidle", timeout: 15000 });
-                    responseStatus = response?.status() ?? null;
-                    if (response && response.ok()) {
-                        finalLink = page.url();
+
+                // SỬ DỤNG HÀM UTIL MỚI
+                const result: AccessResult = await accessUrl(page, link, linkLogger);
+
+                if (result.success && result.response) {
+                    responseStatus = result.response.status();
+                    if (result.response.ok()) {
+                        finalLink = result.finalUrl!;
                         linkLogger.info({ accessedUrl: link, status: responseStatus, finalUrlAfterAccess: finalLink, event: 'access_original_link_success' }, `Successfully accessed original link. Final URL: ${finalLink}.`);
                         accessSuccess = true;
                     } else {
                         accessError = new Error(`HTTP ${responseStatus} accessing original link: ${link}`);
                         linkLogger.error({ accessedUrl: link, status: responseStatus, event: 'access_original_link_failed_http_status' }, `Failed to access original link with non-OK HTTP status ${responseStatus}.`);
                     }
-                } catch (error: unknown) {
-                    const { message: errorMessage } = getErrorMessageAndStack(error);
-                    accessError = error instanceof Error ? error : new Error(errorMessage);
+                } else { // Xử lý trường hợp exception từ accessUrl
+                    const { message: errorMessage } = getErrorMessageAndStack(result.error);
+                    accessError = result.error;
                     linkLogger.error({ accessedUrl: link, err: { message: errorMessage }, event: 'access_original_link_failed_exception' }, `Exception accessing original link: "${errorMessage}".`);
                 }
             }
@@ -348,15 +375,15 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 return null;
             }
 
-            // At this point, `finalLink` is the URL of the successfully loaded page
+            // --- PHẦN CÒN LẠI CỦA HÀM GIỮ NGUYÊN HOÀN TOÀN ---
+
             linkLogger.info({ finalUrlAfterAllAccessAttempts: finalLink, event: 'link_access_final_success' }, `Link access successful. Final URL: ${finalLink}.`);
 
-            // Extract text content from the loaded page
             const fullText = await this.pageContentExtractorService.extractTextFromUrl(
-                page, // Page is already at `finalLink`
-                finalLink, // Pass `finalLink` for context and normalization
+                page,
+                finalLink,
                 conference.Acronym,
-                false, // For initial SAVE flow, typically don't use main content keywords
+                false,
                 year,
                 linkLogger.child({ operation: 'extract_initial_text' })
             );
@@ -366,7 +393,6 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 return null;
             }
 
-            // Sanitize acronym for filename
             const safeAcronym = (conference.Acronym || `conf-${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
             const textFileBaseName = `${safeAcronym}_item${batchItemIndexFromLogger}_link${linkIndex}_initialtext`;
             const textPath = await this.saveContentToFile(
@@ -383,7 +409,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
             const batchEntry: BatchEntry = {
                 conferenceTitle: conference.Title,
-                conferenceAcronym: conference.Acronym, // Use the original Acronym
+                conferenceAcronym: conference.Acronym,
                 mainLink: finalLink,
                 conferenceTextPath: textPath,
                 originalRequestId: conference.originalRequestId,
@@ -396,7 +422,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             }, `Successfully processed initial link and created BatchEntry for ${conference.Acronym}.`);
             return batchEntry;
 
-        } catch (error: unknown) { // Catch any unhandled errors in this public method
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             linkLogger.error({ originalUrl: link, err: { message: errorMessage, stack: errorStack }, event: 'single_link_processing_unhandled_error' }, `Unhandled error during initial link processing: "${errorMessage}".`);
             return null;
@@ -425,7 +451,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             batchItemIndex: batchItemIndexFromLogger,
         });
 
-        let finalUrl: string | null = conference.mainLink; // Initialize with the input link
+        let finalUrl: string | null = conference.mainLink; // Initialize with the input link for logging purposes
         let textPath: string | null = null;
 
         if (!conference.mainLink) {
@@ -439,13 +465,38 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 logger.warn({ event: 'html_processing_failed', reason: 'Page already closed', linkType: 'main' }, "Playwright page is already closed. Cannot process main link for update.");
                 return { finalUrl: null, textPath: null };
             }
-            const response = await page.goto(conference.mainLink, { waitUntil: "networkidle", timeout: 45000 });
-            finalUrl = page.url(); // Update `finalUrl` after successful navigation
 
-            logger.info({ finalUrlAfterGoto: finalUrl, status: response?.status(), event: 'conference_link_processor_navigation_success', linkType: 'main' }, `Successfully navigated to main link. Final URL: ${finalUrl}.`);
+            // SỬ DỤNG HÀM UTIL 'accessUrl' ĐỂ ĐIỀU HƯỚNG MẠNH MẼ HƠN
+            const accessResult: AccessResult = await accessUrl(page, conference.mainLink, logger);
 
+            // Kiểm tra kết quả từ việc điều hướng
+            if (!accessResult.success || !accessResult.response || !accessResult.response.ok()) {
+                const errorMessage = accessResult.error?.message ?? `HTTP status ${accessResult.response?.status()}`;
+                const errDetails = { name: accessResult.error?.name ?? 'NavigationError', message: errorMessage, stack: accessResult.error?.stack?.substring(0, 300) };
+
+                // Phân loại lỗi để log cho chính xác
+                if (errorMessage?.includes('timeout') || errorMessage?.includes('Target page, context or browser has been closed')) {
+                    logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'goto_failed', linkType: 'main' }, `Navigation failed for main link: "${errorMessage}".`);
+                } else {
+                    logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'main' }, `Error processing main link for update: "${errorMessage}".`);
+                }
+                // Trả về lỗi
+                return { finalUrl: null, textPath: null };
+            }
+
+            // Cập nhật finalUrl sau khi điều hướng thành công
+            finalUrl = accessResult.finalUrl!;
+
+            // Log thành công (giữ nguyên event log)
+            logger.info({ finalUrlAfterGoto: finalUrl, status: accessResult.response.status(), event: 'conference_link_processor_navigation_success', linkType: 'main' }, `Successfully navigated to main link. Final URL: ${finalUrl}.`);
+
+            // Gọi extractor (đã được sửa) để lấy text từ trang đã tải
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
-                page, finalUrl, conference.Acronym, false, this.year2,
+                page,
+                finalUrl, // Luôn truyền URL cuối cùng
+                conference.Acronym,
+                false,
+                this.year2,
                 logger.child({ operation: 'extract_update_text', linkType: 'main' })
             );
 
@@ -464,18 +515,14 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             } else {
                 logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'main' }, "No text content extracted for main link.");
             }
-        } catch (error: unknown) { // Catch as unknown
+        } catch (error: unknown) { // Catch các lỗi không mong muốn khác (ví dụ từ extractor hoặc save file)
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             const errDetails = { name: error instanceof Error ? error.name : 'UnknownError', message: errorMessage, stack: errorStack?.substring(0, 300) };
-            if (errorMessage?.includes('Navigation timeout') || errorMessage?.includes('Target page, context or browser has been closed')) {
-                logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'goto_failed', linkType: 'main' }, `Navigation failed for main link: "${errorMessage}".`);
-            } else {
-                logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'main' }, `Error processing main link for update: "${errorMessage}".`);
-            }
+            logger.error({ finalUrlAtError: finalUrl, err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'main' }, `Error processing main link for update: "${errorMessage}".`);
             textPath = null;
-            finalUrl = null; // Set finalUrl to null if a critical error occurs
+            finalUrl = null; // Đặt finalUrl về null khi có lỗi nghiêm trọng
         }
-        return { finalUrl: finalUrl ?? null, textPath }; // Ensure null is returned explicitly if finalUrl is null
+        return { finalUrl: finalUrl ?? null, textPath }; // Đảm bảo null được trả về một cách rõ ràng
     }
 
     /**
@@ -513,10 +560,32 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'cfp' }, `Starting CFP link update processing for ${conference.Acronym}.`);
 
         try {
+            // === BƯỚC 1: THÊM LOGIC ĐIỀU HƯỚNG TRƯỚC KHI TRÍCH XUẤT ===
+            const accessResult: AccessResult = await accessUrl(page, conference.cfpLink, logger);
+
+            // Kiểm tra kết quả điều hướng
+            if (!accessResult.success || !accessResult.response || !accessResult.response.ok()) {
+                const errorMessage = accessResult.error?.message ?? `HTTP status ${accessResult.response?.status()}`;
+                const errDetails = { name: accessResult.error?.name ?? 'NavigationError', message: errorMessage, stack: accessResult.error?.stack?.substring(0, 300) };
+                logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'cfp' }, `Navigation failed for CFP link: "${errorMessage}".`);
+                return null; // Trả về null nếu không vào được trang
+            }
+
+            // Điều hướng thành công, bây giờ có thể trích xuất
+            logger.debug({ finalUrl: accessResult.finalUrl, status: accessResult.response.status(), event: 'cfp_link_navigation_success' }, 'Successfully navigated to CFP link.');
+
+            // === BƯỚC 2: GỌI EXTRACTOR ĐÃ ĐƯỢC SỬA ===
+            // `page` đã ở đúng URL, `finalUrl` được lấy từ kết quả truy cập
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
-                page, conference.cfpLink, conference.Acronym, true, this.year2, // useMainContentKeywords = true for CFP
+                page,
+                accessResult.finalUrl!, // Luôn dùng URL cuối cùng sau khi có thể đã redirect
+                conference.Acronym,
+                true, // useMainContentKeywords = true for CFP
+                this.year2,
                 logger.child({ operation: 'extract_update_text', linkType: 'cfp' })
             );
+
+            // === BƯỚC 3: XỬ LÝ KẾT QUẢ (GIỮ NGUYÊN) ===
             if (textContent && textContent.trim().length > 0) {
                 const safeAcronym = (conference.Acronym || `unknown_item${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
                 const baseName = `${safeAcronym}_cfp_update_item${batchItemIndexFromLogger}`;
@@ -532,7 +601,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             } else {
                 logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'cfp' }, "No text content extracted for CFP link.");
             }
-        } catch (error: unknown) { // Catch as unknown
+        } catch (error: unknown) { // Catch các lỗi không mong muốn khác (ví dụ từ extractor hoặc save file)
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             const errDetails = { name: error instanceof Error ? error.name : 'UnknownError', message: errorMessage, stack: errorStack?.substring(0, 300) };
             logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'cfp' }, `Error processing CFP link for update: "${errorMessage}".`);
@@ -583,10 +652,31 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         logger.info({ event: 'conference_link_processor_update_link_start', linkType: 'imp' }, `Starting Important Dates link update processing for ${conference.Acronym}.`);
 
         try {
+            // === BƯỚC 1: THÊM LOGIC ĐIỀU HƯỚNG TRƯỚC KHI TRÍCH XUẤT ===
+            const accessResult: AccessResult = await accessUrl(page, conference.impLink, logger);
+
+            // Kiểm tra kết quả điều hướng
+            if (!accessResult.success || !accessResult.response || !accessResult.response.ok()) {
+                const errorMessage = accessResult.error?.message ?? `HTTP status ${accessResult.response?.status()}`;
+                const errDetails = { name: accessResult.error?.name ?? 'NavigationError', message: errorMessage, stack: accessResult.error?.stack?.substring(0, 300) };
+                logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'imp' }, `Navigation failed for Important Dates link: "${errorMessage}".`);
+                return null; // Trả về null nếu không vào được trang
+            }
+
+            // Điều hướng thành công, bây giờ có thể trích xuất
+            logger.debug({ finalUrl: accessResult.finalUrl, status: accessResult.response.status(), event: 'imp_link_navigation_success' }, 'Successfully navigated to Important Dates link.');
+
+            // === BƯỚC 2: GỌI EXTRACTOR ĐÃ ĐƯỢC SỬA ===
             const textContent = await this.pageContentExtractorService.extractTextFromUrl(
-                page, conference.impLink, conference.Acronym, false, this.year2, // useMainContentKeywords = false for IMP
+                page,
+                accessResult.finalUrl!, // Luôn dùng URL cuối cùng
+                conference.Acronym,
+                false, // useMainContentKeywords = false for IMP
+                this.year2,
                 logger.child({ operation: 'extract_update_text', linkType: 'imp' })
             );
+
+            // === BƯỚC 3: XỬ LÝ KẾT QUẢ (GIỮ NGUYÊN) ===
             if (textContent && textContent.trim().length > 0) {
                 const safeAcronym = (conference.Acronym || `unknown_item${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
                 const baseName = `${safeAcronym}_imp_update_item${batchItemIndexFromLogger}`;
@@ -602,7 +692,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             } else {
                 logger.warn({ event: 'conference_link_processor_content_empty', linkType: 'imp' }, "No text content extracted for Important Dates link.");
             }
-        } catch (error: unknown) { // Catch as unknown
+        } catch (error: unknown) { // Catch các lỗi không mong muốn khác
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             const errDetails = { name: error instanceof Error ? error.name : 'UnknownError', message: errorMessage, stack: errorStack?.substring(0, 300) };
             logger.error({ err: errDetails, event: 'conference_link_processor_update_link_failed', linkType: 'imp' }, `Error processing Important Dates link for update: "${errorMessage}".`);
