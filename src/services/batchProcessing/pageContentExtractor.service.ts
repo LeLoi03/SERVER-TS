@@ -1,5 +1,5 @@
 // src/services/batchProcessingServiceChild/pageContentExtractor.service.ts
-import { Page } from 'playwright';
+import { Page, Frame } from 'playwright'; // Thêm import Frame
 import { Logger } from 'pino';
 import { ConfigService } from '../../config/config.service';
 import { extractTextFromPDF } from '../../utils/crawl/pdf.utils'; // Utility for PDF extraction
@@ -83,7 +83,6 @@ export class PageContentExtractorService implements IPageContentExtractorService
         }
 
         try {
-            // Handle PDF files (Logic is unchanged)
             if (url.toLowerCase().endsWith(".pdf")) {
                 logger.info({ ...currentLogContext, type: 'pdf', event: 'pdf_extraction_start' }, "Attempting to extract text from PDF URL.");
                 const pdfText = await extractTextFromPDF(url, logger.child({ operation: 'pdf_extract' }));
@@ -96,37 +95,62 @@ export class PageContentExtractorService implements IPageContentExtractorService
                 }
             }
 
-            // Handle HTML pages
             if (!page || page.isClosed()) {
                 const errorMsg = `Playwright page is null or closed for HTML extraction from URL: ${url}.`;
                 logger.error({ ...currentLogContext, type: 'html', event: 'html_processing_failed', reason: 'Page is null or closed' }, errorMsg);
                 throw new Error(errorMsg);
             }
-            logger.info({ ...currentLogContext, type: 'html', event: 'html_processing_start' }, "Attempting to extract text from an already-loaded HTML page.");
+            logger.info({ ...currentLogContext, type: 'html', event: 'html_processing_start' }, "Attempting to extract text from an already-loaded HTML page, including iframes.");
 
-            // === KHỐI `page.goto` ĐÃ ĐƯỢC LOẠI BỎ HOÀN TOÀN ===
-            // Trách nhiệm điều hướng đã được chuyển cho hàm gọi.
-
-            // Get HTML content from the pre-navigated page
-            let htmlContent: string;
             try {
-                // Thêm một bước chờ ngắn để đảm bảo trang đã ổn định trước khi lấy nội dung
-                await page.waitForLoadState('domcontentloaded', { timeout: 10000 });
-                htmlContent = await page.content();
-                logger.debug({ ...currentLogContext, event: 'fetch_content_success' }, "Successfully fetched page HTML content.");
-            } catch (contentError: unknown) {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(contentError);
-                logger.error({ ...currentLogContext, type: 'html', err: { message: errorMessage, stack: errorStack }, event: 'fetch_content_failed' }, `Failed to fetch page content: "${errorMessage}".`);
-                return "";
+                logger.debug({ ...currentLogContext, event: 'wait_for_networkidle_start' }, "Waiting for network to be idle to ensure all dynamic content is loaded.");
+                await page.waitForLoadState('networkidle', { timeout: 20000 });
+                logger.debug({ ...currentLogContext, event: 'wait_for_networkidle_success' }, "Network is idle.");
+            } catch (waitError: unknown) {
+                const { message: errorMessage } = getErrorMessageAndStack(waitError);
+                logger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'wait_for_networkidle_timed_out' }, "Timed out waiting for network idle. Proceeding with available content.");
             }
 
-            let contentToProcess = htmlContent;
-            // Apply main content keyword filtering (Logic is unchanged)
+            let mainPageHtml = '';
+            try {
+                mainPageHtml = await page.content();
+                logger.debug({ ...currentLogContext, event: 'fetch_main_content_success', length: mainPageHtml.length }, "Successfully fetched main page HTML content.");
+            } catch (contentError: unknown) {
+                const { message: errorMessage } = getErrorMessageAndStack(contentError);
+                logger.error({ ...currentLogContext, type: 'html', err: { message: errorMessage }, event: 'fetch_main_content_failed' }, `Failed to fetch main page content: "${errorMessage}".`);
+            }
+
+            const allFrames = page.frames();
+            const iframeHtmls: string[] = [];
+            if (allFrames.length > 1) {
+                logger.info({ ...currentLogContext, frameCount: allFrames.length - 1, event: 'iframe_detection_start' }, `Found ${allFrames.length - 1} iframe(s). Attempting to extract their content.`);
+                for (let i = 1; i < allFrames.length; i++) {
+                    const frame = allFrames[i];
+                    if (frame.url() === 'about:blank' || frame.isDetached()) {
+                        logger.trace({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, event: 'skipped_iframe' }, 'Skipping blank or detached iframe.');
+                        continue;
+                    }
+                    try {
+                        await frame.waitForLoadState('domcontentloaded', { timeout: 10000 });
+                        const frameHtml = await frame.content();
+                        iframeHtmls.push(frameHtml);
+                        logger.debug({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, length: frameHtml.length, event: 'fetch_iframe_content_success' }, `Successfully fetched content from iframe #${i}.`);
+                    } catch (frameError: unknown) {
+                        const { message: errorMessage } = getErrorMessageAndStack(frameError);
+                        logger.warn({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, err: { message: errorMessage }, event: 'fetch_iframe_content_failed' }, `Failed to fetch content from iframe #${i}.`);
+                    }
+                }
+            }
+
+            const combinedHtml = [mainPageHtml, ...iframeHtmls].join('\n');
+            let contentToProcess = combinedHtml;
+
+            // Apply main content keyword filtering
             if (useMainContentKeywords && this.mainContentKeywords.length > 0) {
                 logger.trace({ ...currentLogContext, type: 'html', event: 'main_content_eval_start' }, "Attempting to extract main content using keywords.");
                 try {
                     if (page.isClosed()) {
-                         throw new Error('Playwright page closed during $$eval operation.');
+                        throw new Error('Playwright page closed during $$eval operation.');
                     }
                     const extractedContentRaw: string | string[] = await page.$$eval("body *", (elements, keywords) => {
                         const safeKeywords = Array.isArray(keywords) ? keywords.map(k => String(k).toLowerCase()) : [];
@@ -156,12 +180,15 @@ export class PageContentExtractorService implements IPageContentExtractorService
                 } catch (evalError: unknown) {
                     const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(evalError);
                     logger.warn({ ...currentLogContext, type: 'html', err: { message: errorMessage, stack: errorStack }, event: 'main_content_eval_failed' }, `Failed to evaluate main content using keywords: "${errorMessage}". Proceeding with full HTML.`);
-                    contentToProcess = htmlContent;
+
+                    // SỬA LỖI Ở ĐÂY:
+                    // Fallback về nội dung tổng hợp nếu lọc keyword thất bại.
+                    contentToProcess = combinedHtml;
                 }
             }
 
-            // Clean and traverse DOM for final text extraction (Logic is unchanged)
-            logger.trace({ ...currentLogContext, type: 'html', event: 'dom_processing_start' }, "Starting DOM cleaning and text traversal.");
+            // Clean and traverse DOM for final text extraction
+            logger.trace({ ...currentLogContext, type: 'html', event: 'dom_processing_start' }, "Starting DOM cleaning and text traversal on combined content.");
             const document = cleanDOM(contentToProcess);
             if (!document?.body) {
                 logger.warn({ ...currentLogContext, type: 'html', event: 'dom_processing_failed', reason: 'Cleaned DOM or body is null' }, "DOM processing failed: Cleaned document or body was null/undefined.");
@@ -169,10 +196,11 @@ export class PageContentExtractorService implements IPageContentExtractorService
             }
             let fullText = traverseNodes(document.body as HTMLElement, acronym, yearToConsider);
             fullText = removeExtraEmptyLines(fullText);
-            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: fullText.length, event: 'html_processing_finish' }, `HTML text extraction finished. Length: ${fullText.length}.`);
+
+            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: fullText.length, event: 'html_processing_finish' }, `HTML text extraction finished. Total Length: ${fullText.length}.`);
             return fullText;
 
-        } catch (error: unknown) { // Catch any unexpected errors in the overall method execution
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.error({ ...currentLogContext, err: { message: errorMessage, stack: errorStack }, event: 'unexpected_error' }, `An unexpected error occurred during content extraction: "${errorMessage}".`);
             return "";
