@@ -94,23 +94,15 @@ export function finalizeConference(
             criticalFailureEventKey = "gemini_extract_failed";
         }
 
-        // <<<< SỬA LOGIC KIỂM TRA LINK THẤT BẠI >>>>
         if (!isCriticallyFailedInternally && conference.status !== 'failed' && conference.status !== 'skipped') {
-            // Ưu tiên lấy số link sau khi đã limit. Nếu không có (log cũ), fallback về số link đã filter.
             const linksIntendedToProcess = conference.steps.search_limited_count ?? conference.steps.search_filtered_count ?? 0;
-            
             const linkProcessingAttemptedCount = conference.steps.link_processing_attempted_count ?? 0;
             const linkProcessingSuccessCount = conference.steps.link_processing_success_count ?? 0;
 
-            // Điều kiện đúng:
-            // 1. Có link dự định xử lý (linksIntendedToProcess > 0)
-            // 2. Đã thử xử lý hết số link dự định (linkProcessingAttemptedCount >= linksIntendedToProcess)
-            // 3. Không có link nào thành công (linkProcessingSuccessCount === 0)
             if (linksIntendedToProcess > 0 && linkProcessingAttemptedCount >= linksIntendedToProcess && linkProcessingSuccessCount === 0) {
                 isCriticallyFailedInternally = true;
-                // Cập nhật thông báo lỗi cho chính xác
                 criticalFailureReason = `All ${linksIntendedToProcess} relevant links failed to process.`;
-                criticalFailureEventKey = "all_intended_links_failed"; // Đổi key cho rõ ràng hơn
+                criticalFailureEventKey = "all_intended_links_failed";
             }
         }
     }
@@ -119,14 +111,26 @@ export function finalizeConference(
         const oldStatus = conference.status;
         conference.status = 'failed';
 
-        const failureTimestamp = conference.endTime || parentRequest.endTime || new Date().toISOString();
+        // ==================================================================
+        // <<<< SỬA LỖI TẠI ĐÂY >>>>
+        // ==================================================================
+        // Lấy timestamp của hoạt động cuối cùng của conference này làm thời gian thất bại.
+        // Đây là thời điểm chính xác nhất, thay vì lấy của parent request.
+        const lastActivityTimestamp = conferenceLastTimestamp ? new Date(conferenceLastTimestamp).toISOString() : null;
+
+        // Ưu tiên endTime đã có, sau đó là lastActivityTimestamp, cuối cùng mới fallback về parentRequest.endTime
+        const failureTimestamp = conference.endTime || lastActivityTimestamp || parentRequest.endTime || new Date().toISOString();
+        
         if (!conference.endTime || (conference.endTime && new Date(failureTimestamp).getTime() > new Date(conference.endTime).getTime())) {
             conference.endTime = failureTimestamp;
         }
+        // ==================================================================
+        // <<<< KẾT THÚC SỬA LỖI >>>>
+        // ==================================================================
 
         addConferenceError(
             conference,
-            failureTimestamp,
+            conference.endTime, // Sử dụng endTime vừa được gán chính xác
             `Task marked as failed in final metrics due to: ${criticalFailureReason}.`,
             {
                 defaultMessage: `Conference task status overridden to failed. Original status: ${oldStatus}.`,
@@ -168,6 +172,7 @@ export function finalizeConference(
     }
 
     // Logic 4: Calculate final duration (from original STAGE 2)
+    // Logic này sẽ tự động hoạt động chính xác sau khi conference.endTime đã được sửa ở trên.
     if (!conference.durationSeconds && conference.startTime && conference.endTime) {
         try {
             const startMillis = new Date(conference.startTime).getTime();
