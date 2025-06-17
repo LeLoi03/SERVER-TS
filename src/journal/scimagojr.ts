@@ -173,7 +173,7 @@ export const fetchDetails = async (
                     { keyName: 'Publication type', type: 'Publication type', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(5)' }, // Added Publication type
                     { keyName: 'ISSN', type: 'ISSN', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(6)' }, // Adjusted index
                     { keyName: 'Coverage', type: 'Coverage', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(7)' }, // Adjusted index
-                    { keyName: 'InformationHeading', type: 'DynamicLinks', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' },
+                    { keyName: 'Information', type: 'DynamicLinks', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' },
 
                     // { keyName: 'Scope', type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' }, // Adjusted index
                     // { keyName: 'Contact', type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(10)' }, // Adjusted index for contact
@@ -257,13 +257,13 @@ export const fetchDetails = async (
                             supplementaryData.push({ Category: cells[0]?.textContent?.trim() || '', Year: cells[1]?.textContent?.trim() || '', Quartile: cells[2]?.textContent?.trim() || '' });
                         }
                     });
-                    if (supplementaryData.length > 0) result['QuartilesByCategory'] = supplementaryData; // Renamed key
+                    if (supplementaryData.length > 0) result['SupplementaryTable'] = supplementaryData; // Renamed key
                 }
 
                 const embedCodeElement = document.querySelector('#embed_code');
                 if (embedCodeElement) {
                     const thumbnailText = embedCodeElement.getAttribute('value') ?? embedCodeElement.textContent;
-                    if (thumbnailText) result['SJRWidgetCode'] = thumbnailText.trim(); // Renamed key
+                    if (thumbnailText) result['Thumbnail'] = thumbnailText.trim(); // Renamed key
                 }
                 // console.log('[Evaluation fetchDetails] Data extraction finished.');
                 return result;

@@ -5,7 +5,7 @@ sudo apt install curl -y
 
 
 
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 
 sudo apt install -y nodejs
 
@@ -30,16 +30,39 @@ sudo nano /etc/systemd/system/admin.service
 Client
 
 [Unit]
-Description=My Web Application (Development)
+Description=Frontend Web Application (Production)
 After=network.target
 
 [Service]
 Type=simple
-User=admin_leloi
-WorkingDirectory=/home/admin_leloi/confhub2-fe-client-side
-ExecStart=/usr/bin/npm run dev -- -p 8386  # Thêm -- và -p
+User=root
+WorkingDirectory=/home/root/confhub2-fe-client-side
+# Sửa dòng này để gọi script mới
+ExecStart=/usr/bin/npm run start:prod 
 Restart=on-failure  
-# Environment=NODE_ENV=development
+# Nên thêm biến môi trường cho production
+Environment=NODE_ENV=production
+StandardOutput=journal  
+StandardError=journal  
+
+[Install]
+WantedBy=multi-user.target
+
+
+Admin
+
+[Unit]
+Description=Admin Web Application (Production)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/root/confhub2-fe-admin-side
+ExecStart=/usr/bin/npm run start:prod
+Restart=on-failure  
+# Nên thêm biến môi trường cho production
+Environment=NODE_ENV=production
 StandardOutput=journal  
 StandardError=journal  
 
@@ -48,36 +71,17 @@ WantedBy=multi-user.target
 
 
 
-Admin
+
+SEREVR Crawl/Chatbot
 
 [Unit]
-Description=Admin Application (Development)
+Description=SERVER Crawl/Chatbot
 After=network.target
 
 [Service]
 Type=simple
-User=admin_leloi
-WorkingDirectory=/home/admin_leloi/confhub2-fe-admin-side
-ExecStart=/usr/bin/npm run dev -- -p 1314  # Thêm -- và -p
-Restart=on-failure
-# Environment=NODE_ENV=development
-StandardOutput=journal
-StandardError=journal
-
-[Install]
-WantedBy=multi-user.target
-
-
-
-
-[Unit]
-Description=SERVER-TS
-After=network.target
-
-[Service]
-Type=simple
-User=admin_leloi
-WorkingDirectory=/home/admin_leloi/SERVER-TS
+User=root
+WorkingDirectory=/root/SERVER-TS
 ExecStart=/usr/bin/npm start
 Restart=on-failure  
 StandardOutput=journal  
@@ -85,6 +89,8 @@ StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
+
+
 
 
 
@@ -173,6 +179,9 @@ Dán nội dung sau vào file (thay `localhost:8386` nếu ứng dụng của b�
 # /etc/nginx/sites-available/confhub.ddns.net
 
 # --- Cấu hình cho Backend API (Proxy) và Frontend ---
+# /etc/nginx/sites-available/confhub.ddns.net
+
+# --- Cấu hình cho Backend API (Proxy) và Frontend ---
 server {
     # --- Phần HTTPS (Cổng 443) ---
     listen 443 ssl http2;
@@ -256,7 +265,7 @@ server {
     # Optional: Cấu hình thêm
     # access_log /var/log/nginx/confhub.ddns.net.access.log;
     # error_log /var/log/nginx/confhub.ddns.net.error.log;
-    # client_max_body_size 10M;
+    client_max_body_size 50M;
 }
 
 # --- Phần HTTP (Cổng 80) ---
@@ -331,3 +340,72 @@ Chúc mừng bạn đã thiết lập HTTPS thành công!
 
 
 brevo-code:bafd25fca8febe657dd731009f03f4c1
+
+
+
+
+
+git clone https://github.com/LeLoi03/SERVER-TS.git SERVER-TS
+git clone https://github.com/SieuJS/confhub2-fe-client-side.git confhub2-fe-client-side
+git clone https://github.com/NHThang2k3/confhub2-fe-admin-side.git confhub2-fe-admin-side
+
+
+
+
+# /etc/nginx/sites-available/confhub.ddns.net
+
+# Đây là khối server cho HTTP, được Certbot sử dụng để xác thực.
+# Certbot sẽ TỰ ĐỘNG THÊM khối HTTPS và chuyển hướng sau khi nó cấp chứng chỉ.
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name confhub.ddns.net;
+
+    # Cần thiết cho Certbot để xác thực tên miền
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+        allow all;
+    }
+
+    # Cấu hình proxy cho các ứng dụng của bạn (HTTP ban đầu)
+    # Sẽ được chuyển sang khối HTTPS sau khi Certbot cấu hình
+    location /api/ {
+        rewrite ^/api/(.*)$ /$1 break;
+        proxy_pass http://localhost:3001/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_connect_timeout 600s;
+        proxy_send_timeout 600s;
+        proxy_read_timeout 600s;
+        client_max_body_size 50M;
+    }
+
+    location /admin/ {
+        proxy_pass http://localhost:1314;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location / {
+        proxy_pass http://localhost:8386;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        client_max_body_size 50M;
+    }
+}
