@@ -283,12 +283,12 @@ export const envSchema = z.object({
      * Maximum number of concurrent requests to the Gemini API.
      * @default 2
      */
-    GEMINI_API_CONCURRENCY: z.coerce.number().int().positive().default(5),
+    GEMINI_API_CONCURRENCY: z.coerce.number().int().positive().default(2),
     /**
      * Rate limit points per duration for Gemini API.
      * @default 2 (e.g., 2 requests per 60 seconds)
      */
-    GEMINI_RATE_LIMIT_POINTS: z.coerce.number().int().positive().default(3),
+    GEMINI_RATE_LIMIT_POINTS: z.coerce.number().int().positive().default(2),
     /**
      * Duration in seconds for the Gemini API rate limit.
      * @default 60
