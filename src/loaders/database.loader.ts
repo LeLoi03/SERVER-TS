@@ -18,7 +18,7 @@ export const connectDB = async (): Promise<void> => {
 
     try {
         // Call the actual database connection function from `config/database.ts`.
-        // await connectMongo();
+        await connectMongo();
 
         logToFile(`${logContext} Database connection successful.`);
     } catch (error: any) {
