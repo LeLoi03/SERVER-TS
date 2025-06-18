@@ -15,7 +15,7 @@ import { CrawlProcessManagerService } from '../../../services/crawlProcessManage
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 // DEFAULT_API_MODELS sẽ được áp dụng nếu model tương ứng trong payload là null hoặc không hợp lệ
-const DEFAULT_API_MODELS: ApiModels = { determineLinks: 'tuned', extractInfo: 'tuned', extractCfp: 'non-tuned' };
+const DEFAULT_API_MODELS: ApiModels = { determineLinks: 'non-tuned', extractInfo: 'non-tuned', extractCfp: 'non-tuned' };
 
 
 // Helper function để dọn dẹp tài nguyên sau khi request kết thúc
