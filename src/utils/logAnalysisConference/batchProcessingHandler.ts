@@ -1,6 +1,6 @@
 // src/utils/logAnalysis/batchProcessingHandlers.ts
 import { LogEventHandler } from './index'; // Hoặc từ './index'
-import { normalizeErrorKey, addConferenceError } from './helpers'; // Import trực tiếp
+import { normalizeErrorKey, addConferenceError } from './utils'; // Import trực tiếp
 import { LogErrorContext } from '../../types/logAnalysis'; // Import LogErrorContext nếu chưa có
 
 export const handleBatchTaskCreate: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {

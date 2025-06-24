@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey, addConferenceError } from '../helpers';
+import { normalizeErrorKey, addConferenceError } from '../utils';
 
 export const handleSearchAttempt: LogEventHandler = (logEntry, results, confDetail) => {
     results.googleSearch.totalRequests++; // Total attempts

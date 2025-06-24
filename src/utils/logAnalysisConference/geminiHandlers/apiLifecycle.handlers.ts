@@ -6,7 +6,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey, addConferenceError } from '../helpers';
+import { normalizeErrorKey, addConferenceError } from '../utils';
 import { LogError } from '../../../types/logAnalysis';
 import { ensureGeminiApiAnalysis, ensureOverallAnalysis, updateModelUsageStats } from './helpers';
 

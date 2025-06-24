@@ -166,7 +166,7 @@ export class LogAnalysisCacheService {
                 return null;
             }
 
-            operationLogger.info({ cachePath }, `Successfully read analysis result from cache.`);
+            // operationLogger.info({ cachePath }, `Successfully read analysis result from cache.`);
             return cachedEntry.data;
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);

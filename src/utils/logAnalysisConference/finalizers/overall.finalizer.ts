@@ -7,7 +7,7 @@
  */
 
 import { ConferenceLogAnalysisResult, RequestTimings } from '../../../types/logAnalysis';
-import { createConferenceKey } from '../helpers';
+import { createConferenceKey } from '../utils';
 
 /**
  * Finalizes the overall analysis result based on all finalized requests and conferences.

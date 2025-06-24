@@ -15,8 +15,8 @@ const EXECUTION_MODE = 'sync'; // <-- THAY ĐỔI Ở ĐÂY
 const TEST_DESCRIPTION = `Test crawl in '${EXECUTION_MODE}' mode from test_api.js`;
 
 const API_MODELS_TO_USE = {
-    determineLinks: 'tuned',
-    extractInfo: 'tuned',
+    determineLinks: 'non-tuned',
+    extractInfo: 'non-tuned',
     extractCfp: 'non-tuned'
 };
 
@@ -25,12 +25,14 @@ const conferenceItems = [
         "Title": "ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems",
         "Acronym": "PODS",
         "mainLink": "https://2025.sigmod.org/",
+        "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
+        "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml"
     },
-    {
-        "Title": "International Conference on Machine Learning",
-        "Acronym": "ICML",
-        // Luồng CRAWL
-    },
+    // {
+    //     "Title": "International Conference on Machine Learning",
+    //     "Acronym": "ICML",
+    //     // Luồng CRAWL
+    // },
     // {
     //     "Title": "Conference on Neural Information Processing Systems",
     //     "Acronym": "NeurIPS",

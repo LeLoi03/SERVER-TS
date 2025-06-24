@@ -1,6 +1,6 @@
 // src/client/utils/eventHandlers/playwrightHandlers.ts
 import { LogEventHandler } from './index';
-import { normalizeErrorKey, addConferenceError } from './helpers';
+import { normalizeErrorKey, addConferenceError } from './utils';
 
 // --- Global Playwright Setup ---
 export const handlePlaywrightGlobalInitStart: LogEventHandler = (logEntry, results, confDetail, entryTimestampISO) => {

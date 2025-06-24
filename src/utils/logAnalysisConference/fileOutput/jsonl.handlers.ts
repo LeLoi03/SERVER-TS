@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey, addConferenceError } from '../helpers';
+import { normalizeErrorKey, addConferenceError } from '../utils';
 import { LogErrorContext } from '../../../types/logAnalysis';
 import { ensureFileOutputAnalysis, ensureOverallAnalysis } from './helpers';
 

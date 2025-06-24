@@ -1,6 +1,6 @@
 // src/utils/logAnalysis/overallProcessHandlers.ts
 import { LogEventHandler } from './index';
-import { createConferenceKey } from './helpers';
+import { createConferenceKey } from './utils';
 import { OverallAnalysis, getInitialOverallAnalysis, ConferenceLogAnalysisResult, RequestTimings } from '../../types/logAnalysis';
 
 // Khởi tạo overall analysis nếu chưa có

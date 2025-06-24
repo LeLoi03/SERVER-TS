@@ -6,7 +6,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey } from '../helpers';
+import { normalizeErrorKey } from '../utils';
 import { ensureGeminiApiAnalysis } from './helpers';
 
 export const handleGeminiCacheHit: LogEventHandler = (logEntry, results, confDetail) => {

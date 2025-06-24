@@ -141,6 +141,9 @@ export interface RequestLogData {
      * @property {number | null} endTime - Dấu thời gian Unix mới nhất (mili giây) được tìm thấy cho yêu cầu này.
      */
     endTime: number | null;
+    // Thêm các trường mới để lưu trữ thông tin được trích xuất sớm
+    description?: string;
+    originalRequestId?: string;
 }
 
 /**

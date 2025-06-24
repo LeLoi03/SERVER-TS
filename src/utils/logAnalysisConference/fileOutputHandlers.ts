@@ -1,7 +1,7 @@
 // src/utils/logAnalysis/fileOutputHandlers.ts
 import { LogEventHandler } from './index';
-import { normalizeErrorKey, addConferenceError } from './helpers';
-import { createConferenceKey } from './helpers';
+import { normalizeErrorKey, addConferenceError } from './utils';
+import { createConferenceKey } from './utils';
 import { OverallAnalysis, FileOutputAnalysis, getInitialFileOutputAnalysis, getInitialOverallAnalysis, ConferenceLogAnalysisResult, ConferenceAnalysisDetail, LogErrorContext } from '../../types/logAnalysis'; // Thêm ConferenceLogAnalysisResult, ConferenceAnalysisDetail
 
 const ensureFileOutputAnalysis = (results: ConferenceLogAnalysisResult): FileOutputAnalysis => { // Sửa any

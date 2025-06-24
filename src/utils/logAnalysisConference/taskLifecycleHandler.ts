@@ -1,7 +1,7 @@
 // src/utils/logAnalysis/taskLifecycleHandlers.ts
 
 import { LogEventHandler } from './index';
-import { normalizeErrorKey, addConferenceError } from './helpers';
+import { normalizeErrorKey, addConferenceError } from './utils';
 import { OverallAnalysis, getInitialOverallAnalysis, ConferenceLogAnalysisResult, ConferenceAnalysisDetail, LogError as AnalysisLogError, LogErrorContext } from '../../types/logAnalysis';
 
 const ensureOverallAnalysis = (results: ConferenceLogAnalysisResult): OverallAnalysis => {

@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey, createConferenceKey } from '../helpers';
+import { normalizeErrorKey, createConferenceKey } from '../utils';
 import { ensureFileOutputAnalysis, ensureOverallAnalysis } from './helpers';
 
 export const handleCsvWriteSuccess: LogEventHandler = (logEntry, results, _confDetailIgnored, entryTimestampISO) => {

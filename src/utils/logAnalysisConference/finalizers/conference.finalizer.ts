@@ -7,7 +7,7 @@
  */
 
 import { ConferenceAnalysisDetail, RequestTimings } from '../../../types/logAnalysis';
-import { addConferenceError, normalizeErrorKey } from '../helpers';
+import { addConferenceError, normalizeErrorKey } from '../utils';
 
 /**
  * Context required to finalize a conference.

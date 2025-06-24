@@ -1,7 +1,7 @@
 // src/utils/logAnalysis/processingSteps.ts
 
 import { ConferenceLogAnalysisResult, RequestLogData, ConferenceAnalysisDetail } from '../../types/logAnalysis';
-import { createConferenceKey, initializeConferenceDetail, addConferenceError } from './helpers';
+import { createConferenceKey, initializeConferenceDetail, addConferenceError } from './utils';
 import { eventHandlerMap } from './index';
 import { finalizeConference } from './finalizers/conference.finalizer';
 import { finalizeRequest } from './finalizers/request.finalizer';

@@ -1,11 +1,58 @@
-Fix visualization sai dữ liệu
-
 Fix filter log.
 
 fix link trong call for papers trả vè không full URL
 
-setting tắt floating
 
-Scope journal
+giao diện tối thì logo dùng nền trắng
 
-fix set cứng các chỉ số journal
+nền tối nên dùng màu đen xám
+
+hội nghị kém uy tín
+
+đang fetch toàn bộ conference detail khi load deasshboard
+
+fix warning khi build
+
+cache dữ liệu API , cache header
+
+
+chỉnh thanh subject hiển thị cố định và có nút trái phải
+
+cache topics
+tooltip rõ ràng cho các filter
+
+fix mấy cái no info trong visualization
+
+Fix lấy conv list khi không ở chatbot, trả về 1 số lượng conv
+
+thêm hiệu ứng loading cho các nút ở conference , journal
+
+fix param notifi
+
+fix topics gemini trả về
+
+đổi dùng api get source
+
+dùng notifi cho chatbot khi xóa
+
+
+
+hiện image context source tròn detail
+
+
+dijhc cột giao diện
+
+
+lệch loading dashboard
+
+
+điều chỉnh làm sao để re crawl có thiết lập có re crawl non main likn không
+
+thêm sytsem insttruction trả về link trang chủ nếu không còn lựa chọn nào khác
+
+INDIN UCC
+
+gửi lại cuốn 30/6 hoàn hảo
+sửa hết lỗi
+thêm ràng buộc trang conferences, nút xóa conference.
+sửa parse file admin

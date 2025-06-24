@@ -47,7 +47,7 @@ export class SingleConferenceRequestAnalyzerService {
     ): Promise<ConferenceLogAnalysisResult> {
         const logContext = { function: 'analyze', batchRequestId, requestLogFilePath };
         const logger = this.serviceLogger.child(logContext);
-        logger.info('Performing live log analysis for a specific conference request.');
+        // logger.info('Performing live log analysis for a specific conference request.');
 
         const results: ConferenceLogAnalysisResult = getInitialLogAnalysisResult(requestLogFilePath);
         results.filterRequestId = batchRequestId;
@@ -115,7 +115,7 @@ export class SingleConferenceRequestAnalyzerService {
 
             calculateFinalMetrics(results, conferenceLastTimestamp, actualAnalysisStartMillis, actualAnalysisEndMillis, filteredRequests);
 
-            logger.info(`Live conference analysis for ${batchRequestId} finished with status: ${results.status}`);
+            // logger.info(`Live conference analysis for ${batchRequestId} finished with status: ${results.status}`);
             return results;
 
         } catch (error: unknown) {

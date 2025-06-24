@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { createConferenceKey } from '../helpers';
+import { createConferenceKey } from '../utils';
 import { ensureOverallAnalysis } from './helpers';
 
 export const handleReceivedRequest: LogEventHandler = (logEntry, results, _confDetail, entryTimestampISO) => {

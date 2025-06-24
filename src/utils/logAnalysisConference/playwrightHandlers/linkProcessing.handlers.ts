@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey } from '../helpers';
+import { normalizeErrorKey } from '../utils';
 
 export const handleLinkProcessingAttempt: LogEventHandler = (logEntry, results, confDetail) => {
     results.playwright.linkProcessing.totalLinksAttempted++;

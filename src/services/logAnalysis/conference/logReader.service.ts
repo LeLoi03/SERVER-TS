@@ -9,7 +9,7 @@ import { Logger } from 'pino';
 import { ConfigService } from '../../../config/config.service';
 import { LoggingService } from '../../logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
-import { createConferenceKey } from '../../../utils/logAnalysisConference/helpers';
+import { createConferenceKey } from '../../../utils/logAnalysisConference/utils';
 
 // Type này được giữ nguyên từ service gốc
 interface SaveEventLogEntry {

@@ -174,7 +174,6 @@ export const fetchDetails = async (
                     { keyName: 'ISSN', type: 'ISSN', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(6)' }, // Adjusted index
                     { keyName: 'Coverage', type: 'Coverage', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(7)' }, // Adjusted index
                     { keyName: 'Information', type: 'DynamicLinks', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' },
-
                     // { keyName: 'Scope', type: 'Scope', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(8)' }, // Adjusted index
                     // { keyName: 'Contact', type: 'Contact', pattern: 'body > div:nth-child({index}) > div > div > div:nth-child(10)' }, // Adjusted index for contact
                 ];
@@ -238,7 +237,7 @@ export const fetchDetails = async (
                 const { element: fullwidthElement } = querySelectorWithIndices(fullwidthPattern, mainIndices);
                 if (fullwidthElement) {
                     const keyElement = fullwidthElement.firstElementChild;
-                    const key = keyElement?.textContent?.trim() || 'Journal Description'; // More specific default
+                    const key = 'Scope'; // More specific default
                     const value = Array.from(fullwidthElement.childNodes)
                         .filter(node => node !== keyElement && (node.nodeType === Node.TEXT_NODE || (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName.toLowerCase() !== 'a' && node.textContent?.trim())))
                         .map(node => node.textContent?.trim() || '')

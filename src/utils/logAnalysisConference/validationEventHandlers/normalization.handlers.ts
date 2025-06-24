@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { createConferenceKey } from '../helpers';
+import { createConferenceKey } from '../utils';
 import { DataQualityInsight } from '../../../types/logAnalysis';
 import { ensureValidationStats } from './helpers';
 

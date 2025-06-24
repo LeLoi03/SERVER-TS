@@ -5,7 +5,7 @@
  */
 
 import { LogEventHandler } from '../index';
-import { normalizeErrorKey } from '../helpers';
+import { normalizeErrorKey } from '../utils';
 
 export const handleSearchAttemptIssue: LogEventHandler = (logEntry, results) => {
     const event = logEntry.event;

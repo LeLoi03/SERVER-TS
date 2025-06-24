@@ -1,15 +1,10 @@
-// src/services/conferenceLogAnalysis/analysisAggregator.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
 import { LoggingService } from '../../logging.service';
-import { ConferenceLogAnalysisResult, RequestTimings } from '../../../types/logAnalysis';
+import { ConferenceLogAnalysisResult } from '../../../types/logAnalysis';
 import { getInitialLogAnalysisResult } from '../../../types/logAnalysis/initializers';
 import * as ConferenceAnalysisMerger from '../../../utils/logAnalysisConference/conferenceAnalysisMerger.utils';
-
-// Một kiểu hàm để lấy kết quả phân tích cho một ID.
-// Điều này giúp tách biệt Aggregator khỏi việc biết cách lấy dữ liệu (cache hay live).
-type AnalysisFetcher = (requestId: string) => Promise<ConferenceLogAnalysisResult>;
 
 @singleton()
 export class ConferenceAnalysisAggregatorService {
@@ -22,234 +17,134 @@ export class ConferenceAnalysisAggregatorService {
     }
 
     /**
-     * Tổng hợp kết quả phân tích từ nhiều request.
-     * Đây là logic được chuyển từ `aggregateAllConferenceAnalyses` cũ.
+     * Merges an array of individual analysis results into a single aggregated result.
+     * This service's sole responsibility is to merge pre-filtered data.
+     * @param allSingleAnalyses An array of analysis results to be merged.
      */
     async aggregate(
-        requestIds: string[],
-        analysisFetcher: AnalysisFetcher
+        allSingleAnalyses: ConferenceLogAnalysisResult[]
     ): Promise<ConferenceLogAnalysisResult> {
         const logger = this.serviceLogger.child({ function: 'aggregate' });
-        logger.info(`Aggregating analysis for ${requestIds.length} conference requests.`);
+        logger.info(`Merging ${allSingleAnalyses.length} individual analysis results into one.`);
 
         const aggregatedResults: ConferenceLogAnalysisResult = getInitialLogAnalysisResult(undefined);
-        aggregatedResults.status = 'Processing';
 
-        if (requestIds.length === 0) {
+        if (allSingleAnalyses.length === 0) {
             aggregatedResults.status = 'NoRequestsAnalyzed';
-            aggregatedResults.errorMessage = 'No conference requests found for aggregation.';
-            logger.warn(aggregatedResults.errorMessage);
-            aggregatedResults.analysisTimestamp = new Date().toISOString();
+            aggregatedResults.errorMessage = 'No analysis results provided for aggregation.';
+            this.finalizeAggregatedResult(aggregatedResults);
             return aggregatedResults;
+        }
+
+        for (const singleAnalysis of allSingleAnalyses) {
+            // The filterRequestId from a single analysis is its own ID
+            const reqId = singleAnalysis.filterRequestId;
+            if (!reqId) continue;
+
+            // Add request ID to the list of analyzed IDs
+            if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
+                aggregatedResults.analyzedRequestIds.push(reqId);
+            }
+
+            // Merge request-specific details (timings, status, etc.)
+            if (singleAnalysis.requests[reqId]) {
+                aggregatedResults.requests[reqId] = singleAnalysis.requests[reqId];
+            }
+
+            // Merge detailed analysis data for each conference
+            Object.assign(aggregatedResults.conferenceAnalysis, singleAnalysis.conferenceAnalysis);
+
+            // Merge all counters and statistical data using helper functions
+            ConferenceAnalysisMerger.mergeOverallAnalysisCounters(aggregatedResults.overall, singleAnalysis.overall);
+            ConferenceAnalysisMerger.mergeGoogleSearchAnalysis(aggregatedResults.googleSearch, singleAnalysis.googleSearch);
+            ConferenceAnalysisMerger.mergePlaywrightAnalysis(aggregatedResults.playwright, singleAnalysis.playwright);
+            ConferenceAnalysisMerger.mergeGeminiApiAnalysis(aggregatedResults.geminiApi, singleAnalysis.geminiApi);
+            ConferenceAnalysisMerger.mergeBatchProcessingAnalysis(aggregatedResults.batchProcessing, singleAnalysis.batchProcessing);
+            ConferenceAnalysisMerger.mergeFileOutputAnalysis(aggregatedResults.fileOutput, singleAnalysis.fileOutput);
+            ConferenceAnalysisMerger.mergeValidationStats(aggregatedResults.validationStats, singleAnalysis.validationStats);
+
+            // Merge error logs and counts
+            aggregatedResults.errorLogCount += singleAnalysis.errorLogCount;
+            aggregatedResults.fatalLogCount += singleAnalysis.fatalLogCount;
+            for (const key in singleAnalysis.errorsAggregated) {
+                aggregatedResults.errorsAggregated[key] = (aggregatedResults.errorsAggregated[key] || 0) + singleAnalysis.errorsAggregated[key];
+            }
+            singleAnalysis.logProcessingErrors.forEach(err_str => {
+                if (!aggregatedResults.logProcessingErrors.includes(err_str)) {
+                    aggregatedResults.logProcessingErrors.push(err_str);
+                }
+            });
+        }
+
+        // Calculate final overall metrics based on the merged data
+        this.finalizeAggregatedResult(aggregatedResults);
+        logger.info(`Merging finished. Final status: ${aggregatedResults.status}.`);
+        return aggregatedResults;
+    }
+
+    /**
+     * Helper function to calculate final metrics for an aggregated result.
+     * This includes overall timings, status, and error messages.
+     */
+    private finalizeAggregatedResult(results: ConferenceLogAnalysisResult): void {
+        if (results.analyzedRequestIds.length === 0) {
+            // Set a default status if not already set
+            if (!results.status) {
+                results.status = 'NoRequestsAnalyzed';
+                results.errorMessage = "No requests were found matching the filter criteria.";
+            }
+            results.analysisTimestamp = new Date().toISOString();
+            return;
         }
 
         let overallMinStartTimeMs: number | null = null;
         let overallMaxEndTimeMs: number | null = null;
         let totalAggregatedDurationSeconds = 0;
+        let failedOrErrorCount = 0;
+        let processingCount = 0;
 
-        for (const reqId of requestIds) {
-            // Sử dụng hàm fetcher được truyền vào để lấy kết quả phân tích
-            const singleRequestAnalysis = await analysisFetcher(reqId);
-
-            // // --- TOÀN BỘ LOGIC MERGE VÀ XỬ LÝ LỖI TỪ HÀM GỐC ĐƯỢC GIỮ NGUYÊN ---
-            // if (singleRequestAnalysis.status === 'Failed' ||
-            //     singleRequestAnalysis.status === 'NoRequestsAnalyzed' ||
-            //     (singleRequestAnalysis.analyzedRequestIds.length === 0 && singleRequestAnalysis.filterRequestId === reqId)) {
-            //     logger.warn(`Skipping full aggregation for conference ${reqId} due to its status: ${singleRequestAnalysis.status} or no data found for it.`);
-            //     if (!aggregatedResults.requests[reqId]) {
-            //         aggregatedResults.requests[reqId] = {
-            //             startTime: null, endTime: null, durationSeconds: 0,
-            //             totalConferencesInputForRequest: 0, processedConferencesCountForRequest: 0,
-            //             status: singleRequestAnalysis.status || 'NotFoundInAggregation',
-            //             errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
-            //         } as RequestTimings;
-            //     } else {
-            //         aggregatedResults.requests[reqId].status = singleRequestAnalysis.status || 'NotFoundInAggregation';
-            //         if (singleRequestAnalysis.errorMessage && !aggregatedResults.requests[reqId].errorMessages?.includes(singleRequestAnalysis.errorMessage!)) {
-            //             aggregatedResults.requests[reqId].errorMessages = [...(aggregatedResults.requests[reqId].errorMessages || []), singleRequestAnalysis.errorMessage!];
-            //         }
-            //     }
-            //     if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
-            //         aggregatedResults.analyzedRequestIds.push(reqId);
-            //     }
-            //     aggregatedResults.logProcessingErrors.push(...singleRequestAnalysis.logProcessingErrors);
-            //     if (singleRequestAnalysis.errorMessage && !aggregatedResults.logProcessingErrors.some(e_str => e_str.includes(singleRequestAnalysis.errorMessage!))) {
-            //         aggregatedResults.logProcessingErrors.push(`Error for ${reqId}: ${singleRequestAnalysis.errorMessage}`);
-            //     }
-            //     continue;
-            // }
-
-            // BÂY GIỜ, TẤT CẢ CÁC REQUEST, KỂ CẢ 'Failed', SẼ ĐI QUA LUỒNG NÀY
-
-            // Xử lý trường hợp không tìm thấy dữ liệu cho request
-            if (singleRequestAnalysis.status === 'NoRequestsAnalyzed' || singleRequestAnalysis.analyzedRequestIds.length === 0) {
-                logger.warn(`No data found for conference request ${reqId}. Marking as 'NotFoundInAggregation'.`);
-                if (!aggregatedResults.requests[reqId]) {
-                    aggregatedResults.requests[reqId] = {
-                        startTime: null, endTime: null, durationSeconds: 0,
-                        totalConferencesInputForRequest: 0, processedConferencesCountForRequest: 0,
-                        status: 'NotFoundInAggregation',
-                        errorMessages: singleRequestAnalysis.errorMessage ? [singleRequestAnalysis.errorMessage] : [],
-                    } as RequestTimings;
+        for (const reqId of results.analyzedRequestIds) {
+            const reqDetails = results.requests[reqId];
+            if (reqDetails) {
+                if (reqDetails.startTime) {
+                    const reqStartMs = new Date(reqDetails.startTime).getTime();
+                    overallMinStartTimeMs = Math.min(reqStartMs, overallMinStartTimeMs ?? Infinity);
                 }
-                if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
-                    aggregatedResults.analyzedRequestIds.push(reqId);
+                if (reqDetails.endTime) {
+                    const reqEndMs = new Date(reqDetails.endTime).getTime();
+                    overallMaxEndTimeMs = Math.max(reqEndMs, overallMaxEndTimeMs ?? -Infinity);
                 }
-                continue; // Vẫn giữ continue cho trường hợp này vì thực sự không có gì để merge
-            }
-
-            // Luồng merge chuẩn
-            if (!aggregatedResults.analyzedRequestIds.includes(reqId)) {
-                aggregatedResults.analyzedRequestIds.push(reqId);
-            }
-
-            // Lấy dữ liệu request đầy đủ, kể cả khi nó 'Failed'
-            if (singleRequestAnalysis.requests[reqId]) {
-                aggregatedResults.requests[reqId] = singleRequestAnalysis.requests[reqId];
-                const reqStartTime = singleRequestAnalysis.requests[reqId].startTime;
-                const reqEndTime = singleRequestAnalysis.requests[reqId].endTime;
-                if (reqStartTime) {
-                    const reqStartMs = new Date(reqStartTime).getTime();
-                    if (overallMinStartTimeMs === null || reqStartMs < overallMinStartTimeMs) overallMinStartTimeMs = reqStartMs;
+                if (typeof reqDetails.durationSeconds === 'number') {
+                    totalAggregatedDurationSeconds += reqDetails.durationSeconds;
                 }
-                if (reqEndTime) {
-                    const reqEndMs = new Date(reqEndTime).getTime();
-                    if (overallMaxEndTimeMs === null || reqEndMs > overallMaxEndTimeMs) overallMaxEndTimeMs = reqEndMs;
+                if (reqDetails.status === 'Failed' || reqDetails.status === 'CompletedWithErrors') {
+                    failedOrErrorCount++;
                 }
-                if (typeof singleRequestAnalysis.requests[reqId].durationSeconds === 'number') {
-                    totalAggregatedDurationSeconds += singleRequestAnalysis.requests[reqId].durationSeconds as number;
-                }
-            } else {
-                logger.warn(`No request timing data found in single analysis for conference ${reqId}, though it was expected.`);
-                if (!aggregatedResults.requests[reqId]) {
-                    aggregatedResults.requests[reqId] = {
-                        startTime: null, endTime: null, durationSeconds: 0,
-                        totalConferencesInputForRequest: 0, processedConferencesCountForRequest: 0,
-                        status: 'Unknown', errorMessages: []
-                    } as RequestTimings;
+                if (reqDetails.status === 'Processing') {
+                    processingCount++;
                 }
             }
-
-            aggregatedResults.errorLogCount += singleRequestAnalysis.errorLogCount;
-            aggregatedResults.fatalLogCount += singleRequestAnalysis.fatalLogCount;
-
-            ConferenceAnalysisMerger.mergeOverallAnalysisCounters(aggregatedResults.overall, singleRequestAnalysis.overall);
-            ConferenceAnalysisMerger.mergeGoogleSearchAnalysis(aggregatedResults.googleSearch, singleRequestAnalysis.googleSearch);
-            ConferenceAnalysisMerger.mergePlaywrightAnalysis(aggregatedResults.playwright, singleRequestAnalysis.playwright);
-            ConferenceAnalysisMerger.mergeGeminiApiAnalysis(aggregatedResults.geminiApi, singleRequestAnalysis.geminiApi);
-            ConferenceAnalysisMerger.mergeBatchProcessingAnalysis(aggregatedResults.batchProcessing, singleRequestAnalysis.batchProcessing);
-            ConferenceAnalysisMerger.mergeFileOutputAnalysis(aggregatedResults.fileOutput, singleRequestAnalysis.fileOutput);
-            ConferenceAnalysisMerger.mergeValidationStats(aggregatedResults.validationStats, singleRequestAnalysis.validationStats);
-
-            for (const key in singleRequestAnalysis.errorsAggregated) {
-                aggregatedResults.errorsAggregated[key] = (aggregatedResults.errorsAggregated[key] || 0) + singleRequestAnalysis.errorsAggregated[key];
-            }
-            singleRequestAnalysis.logProcessingErrors.forEach(err_str => {
-                if (!aggregatedResults.logProcessingErrors.includes(err_str)) {
-                    aggregatedResults.logProcessingErrors.push(err_str);
-                }
-            });
-            // Quan trọng: Merge cả conferenceAnalysis của request lỗi
-            Object.assign(aggregatedResults.conferenceAnalysis, singleRequestAnalysis.conferenceAnalysis);
         }
 
-        aggregatedResults.overall.processedConferencesCount = Object.keys(aggregatedResults.conferenceAnalysis).length;
-        if (overallMinStartTimeMs) aggregatedResults.overall.startTime = new Date(overallMinStartTimeMs).toISOString();
-        if (overallMaxEndTimeMs) aggregatedResults.overall.endTime = new Date(overallMaxEndTimeMs).toISOString();
-        aggregatedResults.overall.durationSeconds = totalAggregatedDurationSeconds;
+        // Set overall timing information
+        if (overallMinStartTimeMs) results.overall.startTime = new Date(overallMinStartTimeMs).toISOString();
+        if (overallMaxEndTimeMs) results.overall.endTime = new Date(overallMaxEndTimeMs).toISOString();
+        results.overall.durationSeconds = totalAggregatedDurationSeconds;
+        results.overall.processedConferencesCount = Object.keys(results.conferenceAnalysis).length;
 
-        // --- Logic xác định status và errorMessage tổng hợp (giữ nguyên) ---
-        if (aggregatedResults.analyzedRequestIds.length > 0) {
-            const requestStatuses = aggregatedResults.analyzedRequestIds.map(id => aggregatedResults.requests[id]?.status);
-            const requestErrorMessagesMap = new Map<string, string[]>();
-            aggregatedResults.analyzedRequestIds.forEach(id => {
-                if (aggregatedResults.requests[id]?.errorMessages?.length) {
-                    requestErrorMessagesMap.set(id, aggregatedResults.requests[id].errorMessages!);
-                }
-            });
-
-            if (requestStatuses.some(s => s === 'Processing')) {
-                aggregatedResults.status = 'Processing';
-                aggregatedResults.errorMessage = 'One or more aggregated requests are still processing.';
-            } else if (requestStatuses.every(s => s === 'Failed' || s === 'NotFoundInAggregation')) {
-                aggregatedResults.status = 'Failed';
-                aggregatedResults.errorMessage = 'All aggregated requests failed or were not found.';
-            } else if (requestStatuses.some(s => s === 'Failed' || s === 'CompletedWithErrors' || s === 'NotFoundInAggregation')) {
-                aggregatedResults.status = 'CompletedWithErrors';
-                const problematicRequestIds = aggregatedResults.analyzedRequestIds.filter(id =>
-                    ['Failed', 'CompletedWithErrors', 'NotFoundInAggregation'].includes(aggregatedResults.requests[id]?.status || '')
-                );
-                if (problematicRequestIds.length === 1) {
-                    const problemReqId = problematicRequestIds[0];
-                    const errorMsgs = requestErrorMessagesMap.get(problemReqId);
-                    aggregatedResults.errorMessage = errorMsgs?.join('; ') || `Request ${problemReqId} had issues.`;
-                } else {
-                    const collectedErrorMessages: string[] = [];
-                    let count = 0;
-                    for (const reqId of problematicRequestIds) {
-                        if (count >= 2) break;
-                        const errorMsgs = requestErrorMessagesMap.get(reqId);
-                        if (errorMsgs?.length) {
-                            collectedErrorMessages.push(`Req ${reqId.slice(-6)}: ${errorMsgs[0]}`);
-                            count++;
-                        }
-                    }
-                    if (collectedErrorMessages.length > 0) {
-                        aggregatedResults.errorMessage = `Multiple requests had issues. Examples: ${collectedErrorMessages.join('; ')}. Total problematic: ${problematicRequestIds.length}.`;
-                    } else {
-                        aggregatedResults.errorMessage = `${problematicRequestIds.length} requests completed with errors, failed, or were not found.`;
-                    }
-                }
-            } else if (requestStatuses.every(s => ['Completed', 'Skipped', 'PartiallyCompleted', 'NoData', 'Unknown', 'NoRequestsAnalyzed'].includes(s || ''))) {
-                if (requestStatuses.some(s => s === 'PartiallyCompleted')) {
-                    aggregatedResults.status = 'PartiallyCompleted';
-                    aggregatedResults.errorMessage = 'Some aggregated requests were only partially completed.';
-                } else if (requestStatuses.some(s => s === 'Unknown')) {
-                    aggregatedResults.status = 'Unknown';
-                    aggregatedResults.errorMessage = 'The status of some aggregated requests could not be determined.';
-                } else if (requestStatuses.every(s => ['Completed', 'Skipped', 'NoData', 'NoRequestsAnalyzed'].includes(s || ''))) {
-                    aggregatedResults.status = 'Completed';
-                    if (requestStatuses.some(s => s === 'Skipped' || s === 'NoData' || s === 'NoRequestsAnalyzed')) {
-                        aggregatedResults.errorMessage = 'All requests processed; some were skipped, had no data, or were not analyzed individually.';
-                    }
-                } else {
-                    aggregatedResults.status = 'Completed';
-                }
-            } else {
-                aggregatedResults.status = 'Unknown';
-                aggregatedResults.errorMessage = "The overall status of aggregated requests could not be determined due to an unexpected combination of request statuses.";
-            }
+        // Determine the final overall status
+        if (processingCount > 0) {
+            results.status = 'Processing';
+            results.errorMessage = 'One or more matching requests are still processing.';
+        } else if (failedOrErrorCount > 0) {
+            results.status = 'CompletedWithErrors';
+            results.errorMessage = `${failedOrErrorCount} request(s) completed with errors or failed.`;
         } else {
-            aggregatedResults.status = 'NoRequestsAnalyzed';
-            aggregatedResults.errorMessage = aggregatedResults.errorMessage || "No processable conference requests found after attempting aggregation.";
+            results.status = 'Completed';
+            results.errorMessage = undefined; // No error message if everything is completed successfully
         }
 
-        if ((aggregatedResults.status === 'Failed' || aggregatedResults.status === 'CompletedWithErrors') && !aggregatedResults.errorMessage) {
-            if (aggregatedResults.overall.failedOrCrashedTasks > 0) {
-                aggregatedResults.errorMessage = `Aggregation completed with ${aggregatedResults.overall.failedOrCrashedTasks} failed/crashed conference tasks.`;
-            } else {
-                aggregatedResults.errorMessage = `Aggregation finished with status ${aggregatedResults.status}, but no specific error message was generated.`;
-            }
-        }
-        if (aggregatedResults.status === 'Completed' && aggregatedResults.overall.failedOrCrashedTasks > 0) {
-            aggregatedResults.status = 'CompletedWithErrors';
-            if (!aggregatedResults.errorMessage) {
-                aggregatedResults.errorMessage = `Aggregation completed, but ${aggregatedResults.overall.failedOrCrashedTasks} conference tasks failed or crashed.`;
-            }
-        }
-        if (aggregatedResults.status === 'Completed' && aggregatedResults.overall.failedOrCrashedTasks === 0 && aggregatedResults.overall.processingTasks === 0) {
-            const hasRequestLevelErrors = aggregatedResults.analyzedRequestIds.some(id => aggregatedResults.requests[id]?.errorMessages?.length > 0);
-            if (!hasRequestLevelErrors) {
-                aggregatedResults.errorMessage = undefined;
-            } else if (!aggregatedResults.errorMessage) {
-                aggregatedResults.status = 'CompletedWithErrors';
-                aggregatedResults.errorMessage = "Some requests within the aggregation completed but had internal processing issues.";
-            }
-        }
-        // --- Kết thúc logic xác định status và errorMessage tổng hợp ---
-
-        aggregatedResults.analysisTimestamp = new Date().toISOString();
-        logger.info(`Conference aggregation finished with overall status: ${aggregatedResults.status}`);
-        return aggregatedResults;
+        results.logFilePath = undefined;
+        results.analysisTimestamp = new Date().toISOString();
     }
 }

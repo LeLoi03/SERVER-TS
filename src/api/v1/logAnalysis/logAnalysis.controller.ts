@@ -1,29 +1,23 @@
-// src/api/v1/logAnalysis/logAnalysis.controller.ts
 import { Request, Response, NextFunction } from 'express';
 import { container } from 'tsyringe';
 import { Logger } from 'pino';
-import { z } from 'zod'; // For input validation
+import { z } from 'zod';
 
-// Đổi tên import để rõ ràng hơn
 import { ConferenceLogAnalysisService } from '../../../services/conferenceLogAnalysis.service';
 import { ConferenceLogAnalysisResult } from '../../../types/logAnalysis';
 import { JournalLogAnalysisService } from '../../../services/journalLogAnalysis.service';
 import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logAnalysisJournal.types';
-import { LoggingService, LoggerType } from '../../../services/logging.service'; // Import LoggerType
+import { LoggingService } from '../../../services/logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
-import { LogDeletionService, RequestDeletionResult, CrawlerType } from '../../../services/logDeletion.service'; // New import
+import { LogDeletionService, RequestDeletionResult, CrawlerType } from '../../../services/logDeletion.service';
 
-const getControllerLogger = (req: Request, /* loggerType: LoggerType, */ routeName: string): Logger => {
+const getControllerLogger = (req: Request, routeName: string): Logger => {
     const loggingService = container.resolve(LoggingService);
     const pinoRequestId = (req as any).id || `req-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-
-    // Luôn sử dụng logger 'app' (hoặc một logger chung khác) cho controller này
-    // Context cụ thể của controller và route được thêm qua child()
-    return loggingService.getLogger('app').child({ // Giả sử 'app' là logger chung
+    return loggingService.getLogger('app').child({
         controller: 'LogAnalysisController',
         route: routeName,
         pinoRequestId: pinoRequestId,
-        // Nếu bạn vẫn muốn biết nó liên quan đến conference hay journal analysis:
         analysisType: routeName.includes('Conference') ? 'conference' : 'journal'
     });
 };
@@ -33,8 +27,6 @@ const handleAnalysisResponse = (
     results: ConferenceLogAnalysisResult | JournalLogAnalysisResult,
     logger: Logger
 ) => {
-    // Logic chung để xử lý response dựa trên results.status
-    // Luôn trả về 200 OK, FE sẽ dựa vào 'status' và 'errorMessage' trong payload để hiển thị
     logger.info({
         finalStatus: results.status,
         analyzedIdsCount: results.analyzedRequestIds?.length,
@@ -44,9 +36,8 @@ const handleAnalysisResponse = (
     res.status(200).json(results);
 };
 
-
 export const getLatestConferenceAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'getLatestConferenceAnalysis'); // Không cần truyền loggerType nữa nếu dùng cách trên
+    const logger = getControllerLogger(req, 'getLatestConferenceAnalysis');
     logger.info({ query: req.query }, "Request received for latest conference analysis.");
 
     const conferenceAnalysisService = container.resolve(ConferenceLogAnalysisService);
@@ -55,32 +46,34 @@ export const getLatestConferenceAnalysis = async (req: Request, res: Response, n
         const {
             filterStartTime: filterStartTimeStr,
             filterEndTime: filterEndTimeStr,
-            requestId: filterRequestIdQuery
+            // SỬA LỖI Ở ĐÂY: Đọc đúng tham số 'textFilter'
+            textFilter: textFilterQuery
         } = req.query;
 
         const filterStartTime = typeof filterStartTimeStr === 'string' && !isNaN(parseInt(filterStartTimeStr, 10))
             ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
             ? parseInt(filterEndTimeStr, 10) : undefined;
-        const requestIdParam = typeof filterRequestIdQuery === 'string' ? filterRequestIdQuery : undefined;
+        
+        // SỬA LỖI Ở ĐÂY: Gán giá trị từ textFilterQuery
+        const textFilterParam = typeof textFilterQuery === 'string' ? textFilterQuery : undefined;
 
-        logger.debug({ filterStartTime, filterEndTime, requestIdParam }, "Performing conference analysis.");
+        logger.debug({ filterStartTime, filterEndTime, textFilter: textFilterParam }, "Performing conference analysis.");
         const results: ConferenceLogAnalysisResult = await conferenceAnalysisService.performConferenceAnalysisAndUpdate(
-            filterStartTime, filterEndTime, requestIdParam
+            filterStartTime, filterEndTime, textFilterParam // Truyền đúng tham số
         );
 
         handleAnalysisResponse(res, results, logger);
 
-    } catch (error: unknown) { // Lỗi không mong muốn từ service hoặc logic controller
+    } catch (error: unknown) {
         const { message } = getErrorMessageAndStack(error);
         logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, "Unhandled error in getLatestConferenceAnalysis.");
-        // Chuyển cho global error handler
         next(error);
     }
 };
 
 export const getLatestJournalAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const logger = getControllerLogger(req, 'getLatestJournalAnalysis'); // Không cần truyền loggerType nữa nếu dùng cách trên
+    const logger = getControllerLogger(req, 'getLatestJournalAnalysis');
     logger.info({ query: req.query }, "Request received for latest journal analysis.");
 
     const journalLogAnalysisService = container.resolve(JournalLogAnalysisService);
@@ -89,31 +82,31 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
         const {
             filterStartTime: filterStartTimeStr,
             filterEndTime: filterEndTimeStr,
-            requestId: filterRequestIdQuery
+            // SỬA LỖI Ở ĐÂY: Đọc đúng tham số 'textFilter'
+            textFilter: textFilterQuery
         } = req.query;
 
         const filterStartTime = typeof filterStartTimeStr === 'string' && !isNaN(parseInt(filterStartTimeStr, 10))
             ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
             ? parseInt(filterEndTimeStr, 10) : undefined;
-        const requestIdParam = typeof filterRequestIdQuery === 'string' ? filterRequestIdQuery : undefined;
+            
+        // SỬA LỖI Ở ĐÂY: Gán giá trị từ textFilterQuery
+        const requestIdParam = typeof textFilterQuery === 'string' ? textFilterQuery : undefined;
 
-        logger.debug({ filterStartTime, filterEndTime, requestIdParam }, "Performing journal analysis.");
+        logger.debug({ filterStartTime, filterEndTime, textFilter: requestIdParam }, "Performing journal analysis.");
         const results: JournalLogAnalysisResult = await journalLogAnalysisService.performJournalAnalysisAndUpdate(
-            filterStartTime, filterEndTime, requestIdParam
+            filterStartTime, filterEndTime, requestIdParam // Truyền đúng tham số
         );
 
         handleAnalysisResponse(res, results, logger);
 
-    } catch (error: unknown) { // Lỗi không mong muốn từ service hoặc logic controller
+    } catch (error: unknown) {
         const { message } = getErrorMessageAndStack(error);
         logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, `Unhandled error in getLatestJournalAnalysis.`);
-        // Chuyển cho global error handler
         next(error);
     }
 };
-
-
 
 // Schema for delete request validation
 const deleteRequestsSchema = z.object({
@@ -155,7 +148,7 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
                 results 
             });
         } else if (someSucceeded) {
-            res.status(207).json({ // Multi-Status
+            res.status(207).json({
                 message: "Partial success: Some requests had issues during deletion. See results for details.",
                 results
             });
