@@ -27,8 +27,7 @@ export class ConferenceLogAnalysisService {
     }
 
     /**
-     * Main entry point for analysis. Orchestrates fetching, filtering, and response formatting.
-     * This is the definitive, optimized logic.
+     * Main entry point for analysis. Implements a 2-layer caching strategy.
      */
     async performConferenceAnalysisAndUpdate(
         filterStartTimeInput?: Date | number,
@@ -39,21 +38,57 @@ export class ConferenceLogAnalysisService {
         const logger = this.serviceLogger.child(logContext);
         logger.info(`Orchestrating analysis. Text filter: '${textFilter || 'none'}'`);
 
-        // Step 1: Discover all possible request IDs
+        const hasFilters = filterStartTimeInput !== undefined || filterEndTimeInput !== undefined || !!textFilter;
+
+        if (!hasFilters) {
+            logger.info("No filters applied. Attempting to use overall aggregated cache.");
+
+            // SỬ DỤNG FINGERPRINT MỚI DỰA TRÊN THƯ MỤC LOG
+            const currentFingerprint = await this.cacheService.generateLogStateFingerprint('conference');
+
+            const overallCache = await this.cacheService.readOverallCache<ConferenceLogAnalysisResult>('conference');
+
+            if (overallCache && overallCache.fingerprint === currentFingerprint) {
+                logger.info("Overall cache HIT. Returning cached aggregated data instantly.");
+                return this.decorateResult(overallCache.data, 'Aggregated from cache');
+            }
+
+            logger.info("Overall cache MISS or stale. Performing full aggregation to rebuild cache.");
+            const aggregatedResult = await this.performFullAggregation();
+            // Lưu lại cache tổng hợp với fingerprint mới
+            await this.cacheService.writeOverallCache('conference', currentFingerprint, aggregatedResult);
+            return aggregatedResult;
+        }
+
+        logger.info("Filters are applied. Bypassing overall cache and performing live filtering.");
+        return this.performFullAggregation(filterStartTimeInput, filterEndTimeInput, textFilter);
+    }
+
+
+    /**
+     * This function handles the logic of fetching all individual results, filtering them,
+     * and deciding whether to return a single detail view or an aggregated list view.
+     */
+    private async performFullAggregation(
+        filterStartTimeInput?: Date | number,
+        filterEndTimeInput?: Date | number,
+        textFilter?: string
+    ): Promise<ConferenceLogAnalysisResult> {
+        const logger = this.serviceLogger.child({ function: 'performFullAggregation', textFilter });
+
         const allUniqueRequestIds = await this.discoverAllRequestIds();
-        logger.info(`Found ${allUniqueRequestIds.length} total unique request IDs.`);
+        logger.info(`Found ${allUniqueRequestIds.length} total unique request IDs for aggregation/filtering.`);
 
         if (allUniqueRequestIds.length === 0) {
             return this.aggregator.aggregate([]);
         }
 
-        // Step 2: Fetch individual analysis for all requests, prioritizing cache.
-        // This is efficient because our cache now contains all necessary fields for filtering.
+        // Fetch all individual analyses, prioritizing cache.
         const allSingleAnalyses = await Promise.all(
             allUniqueRequestIds.map(id => this.analyzeSingleRequest(id, filterStartTimeInput, filterEndTimeInput))
         );
 
-        // Step 3: Filter the complete set of results based on the textFilter
+        // Filter the complete set of results based on the textFilter.
         let filteredAnalyses = allSingleAnalyses;
         if (textFilter && textFilter.trim()) {
             const lowerCaseFilter = textFilter.trim().toLowerCase();
@@ -72,9 +107,7 @@ export class ConferenceLogAnalysisService {
         }
         logger.info(`Filtered down to ${filteredAnalyses.length} matching analysis results.`);
 
-        // Step 4: Decide what to return based on the number of filtered results
-        
-        // Case 1: Exactly one match. Return its detailed result directly.
+        // Decide what to return based on the number of filtered results.
         if (filteredAnalyses.length === 1) {
             logger.info(`Exactly one match found. Returning its detailed analysis.`);
             const finalResult = filteredAnalyses[0];
@@ -82,7 +115,6 @@ export class ConferenceLogAnalysisService {
             return finalResult;
         }
 
-        // Case 2: Multiple matches or no matches. Return an aggregated result.
         logger.info(`Multiple or no matches found. Returning an aggregated result.`);
         return this.aggregator.aggregate(filteredAnalyses);
     }
@@ -98,7 +130,6 @@ export class ConferenceLogAnalysisService {
 
     /**
      * Analyzes a single request, using cache if possible.
-     * This is the core data fetching unit.
      */
     private async analyzeSingleRequest(
         batchRequestId: string,
@@ -109,17 +140,13 @@ export class ConferenceLogAnalysisService {
         const hasTimeFilter = filterStartTimeInput !== undefined || filterEndTimeInput !== undefined;
         const requestLogFilePath = this.configService.getRequestSpecificLogFilePath('conference', batchRequestId);
 
-        // Always try to read from cache first if no time filter is applied.
         if (this.configService.analysisCacheEnabled && !hasTimeFilter) {
             const cachedResult = await this.cacheService.readFromCache<ConferenceLogAnalysisResult>('conference', batchRequestId);
-            // A valid cache must have a final status.
             if (cachedResult && cachedResult.status && !['Processing', 'Unknown'].includes(cachedResult.status)) {
-                // logger.info(`Valid cached result found for ${batchRequestId}.`);
                 return this.decorateResult(cachedResult, requestLogFilePath);
             }
         }
 
-        // If no valid cache, perform live analysis.
         logger.info(`No valid cache for ${batchRequestId}. Performing live analysis.`);
         const saveEventsMap = await this.logReader.readConferenceSaveEvents();
         const analysisResult = await this.singleAnalyzer.analyze(
@@ -130,7 +157,6 @@ export class ConferenceLogAnalysisService {
             filterEndTimeInput
         );
 
-        // Cache the new result if it's final and no time filter was used.
         if (this.configService.analysisCacheEnabled && !hasTimeFilter && analysisResult.status && !['Processing', 'Unknown'].includes(analysisResult.status)) {
             await this.cacheService.writeToCache('conference', batchRequestId, analysisResult);
         }
@@ -139,7 +165,7 @@ export class ConferenceLogAnalysisService {
     }
 
     /**
-     * Decorates a result object with additional, non-cached information like log file path.
+     * Decorates a result object with additional, non-cached information.
      */
     private async decorateResult(
         result: ConferenceLogAnalysisResult,
@@ -147,9 +173,6 @@ export class ConferenceLogAnalysisService {
     ): Promise<ConferenceLogAnalysisResult> {
         result.logFilePath = logFilePath;
         result.analysisTimestamp = new Date().toISOString();
-        // The save events decoration can be added here if needed, but it's better
-        // to have it in the live analysis to ensure it's cached correctly.
-        // For simplicity, we assume the cached data is sufficient.
         return result;
     }
 }

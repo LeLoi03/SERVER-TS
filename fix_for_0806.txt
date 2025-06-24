@@ -1,11 +1,7 @@
-Fix filter log.
 
 fix link trong call for papers trả vè không full URL
 
 
-giao diện tối thì logo dùng nền trắng
-
-nền tối nên dùng màu đen xám
 
 hội nghị kém uy tín
 
@@ -13,12 +9,10 @@ hội nghị kém uy tín
 
 fix warning khi build
 
-cache dữ liệu API , cache header
-
-
 chỉnh thanh subject hiển thị cố định và có nút trái phải
 
 cache topics
+
 tooltip rõ ràng cho các filter
 
 fix mấy cái no info trong visualization
@@ -56,3 +50,6 @@ gửi lại cuốn 30/6 hoàn hảo
 sửa hết lỗi
 thêm ràng buộc trang conferences, nút xóa conference.
 sửa parse file admin
+
+
+thêm trả về conference non link

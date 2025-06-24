@@ -10,11 +10,18 @@ import { ConferenceLogAnalysisResult } from '../types/logAnalysis';
 import { JournalLogAnalysisResult } from '../types/logAnalysisJournal/logAnalysisJournal.types';
 import { Logger } from 'pino';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
+import { createHash } from 'crypto'; // Sử dụng crypto để tạo hash cho fingerprint
 
 interface CacheEntry<T> {
     data: T;
     createdAt: number;
     expiryTimestamp?: number;
+}
+// Thêm kiểu dữ liệu cho cache tổng hợp
+interface OverallCacheEntry<T> {
+    fingerprint: string; // Dấu vân tay của trạng thái cache
+    data: T;
+    createdAt: number;
 }
 
 @singleton()
@@ -172,7 +179,7 @@ export class LogAnalysisCacheService {
             const { message, stack } = getErrorMessageAndStack(error);
             operationLogger.error({ err: { message, stack }, cachePath }, `Failed to read or parse analysis result from cache.`);
             if (fs.existsSync(cachePath)) {
-                 fsPromises.unlink(cachePath).catch(unlinkErr => {
+                fsPromises.unlink(cachePath).catch(unlinkErr => {
                     const { message: errMsg, stack: errStack } = getErrorMessageAndStack(unlinkErr);
                     operationLogger.warn({ err: { message: errMsg, stack: errStack }, cachePath }, `Failed to delete potentially corrupted cache file after read error.`);
                 });
@@ -323,5 +330,102 @@ export class LogAnalysisCacheService {
             }
         }
         operationLogger.info({ clearedCount }, `Expired cache cleanup finished.`);
+    }
+
+
+    // --- CÁC PHƯƠNG THỨC MỚI CHO CACHE TỔNG HỢP ---
+
+    /**
+       * TẠO LẠI "DẤU VÂN TAY" DỰA TRÊN THƯ MỤC LOG
+       * Dấu vân tay này thay đổi nếu có bất kỳ file log nào được thêm, xóa, hoặc cập nhật.
+       */
+    public async generateLogStateFingerprint(type: 'conference' | 'journal'): Promise<string> {
+        const operationLogger = this.serviceLogger.child({ operation: 'generateLogStateFingerprint', cacheType: type });
+
+        // Lấy đường dẫn đến thư mục chứa các file log của từng request
+        const logDir = type === 'conference'
+            ? this.configService.appConfiguration.conferenceRequestLogDirectory
+            : this.configService.appConfiguration.journalRequestLogDirectory; // Giả sử có config này
+
+        try {
+            if (!fs.existsSync(logDir)) return 'no-log-dir';
+
+            const files = await fsPromises.readdir(logDir);
+            if (files.length === 0) return 'no-log-files';
+
+            // Chỉ lấy các file log, có thể lọc thêm nếu cần
+            const logFiles = files.filter(f => f.endsWith('.log'));
+            logFiles.sort(); // Đảm bảo thứ tự file luôn nhất quán
+
+            const fileStatsPromises = logFiles.map(async (file) => {
+                const filePath = path.join(logDir, file);
+                const stats = await fsPromises.stat(filePath);
+                // Kết hợp tên file và thời gian sửa đổi cuối cùng
+                return `${file}:${stats.mtime.getTime()}`;
+            });
+
+            const fileStats = await Promise.all(fileStatsPromises);
+            const combinedString = fileStats.join('|');
+
+            // Sử dụng hash để giữ cho fingerprint có độ dài cố định
+            return createHash('sha256').update(combinedString).digest('hex');
+
+        } catch (error) {
+            operationLogger.error({ err: error }, "Failed to generate log state fingerprint.");
+            return `error-${Date.now()}`;
+        }
+    }
+
+    /**
+     * Ghi kết quả phân tích tổng hợp vào file cache đặc biệt.
+     */
+    public async writeOverallCache(
+        type: 'conference' | 'journal',
+        fingerprint: string,
+        analysisResultData: ConferenceLogAnalysisResult | JournalLogAnalysisResult
+    ): Promise<void> {
+        const operationLogger = this.serviceLogger.child({ operation: 'writeOverallCache', cacheType: type });
+        const cachePath = path.join(
+            type === 'conference' ? this.configService.conferenceAnalysisCacheDirectory : this.configService.journalAnalysisCacheDirectory,
+            '_overall_analysis.json'
+        );
+
+        operationLogger.info({ cachePath }, "Writing overall aggregated analysis result to cache.");
+        try {
+            const cacheEntry: OverallCacheEntry<typeof analysisResultData> = {
+                fingerprint,
+                data: analysisResultData,
+                createdAt: Date.now(),
+            };
+            const resultJson = JSON.stringify(cacheEntry, null, 2);
+            await fsPromises.writeFile(cachePath, resultJson);
+        } catch (error) {
+            operationLogger.error({ err: error, cachePath }, "Failed to write overall cache.");
+        }
+    }
+
+    /**
+     * Đọc kết quả phân tích tổng hợp từ cache.
+     */
+    public async readOverallCache<T extends ConferenceLogAnalysisResult | JournalLogAnalysisResult>(
+        type: 'conference' | 'journal'
+    ): Promise<OverallCacheEntry<T> | null> {
+        const operationLogger = this.serviceLogger.child({ operation: 'readOverallCache', cacheType: type });
+        const cachePath = path.join(
+            type === 'conference' ? this.configService.conferenceAnalysisCacheDirectory : this.configService.journalAnalysisCacheDirectory,
+            '_overall_analysis.json'
+        );
+
+        try {
+            if (!fs.existsSync(cachePath)) {
+                operationLogger.info("Overall analysis cache file not found.");
+                return null;
+            }
+            const fileContent = await fsPromises.readFile(cachePath, 'utf-8');
+            return JSON.parse(fileContent) as OverallCacheEntry<T>;
+        } catch (error) {
+            operationLogger.error({ err: error, cachePath }, "Failed to read or parse overall cache.");
+            return null;
+        }
     }
 }
