@@ -177,18 +177,18 @@ export class FileSystemService {
     }
 
     async cleanupTempFiles(parentLogger?: Logger): Promise<void> {
-        const logger = this.getMethodLogger(parentLogger, 'cleanupTempFiles');
-        logger.info("Performing temporary file cleanup...");
+        // const logger = this.getMethodLogger(parentLogger, 'cleanupTempFiles');
+        // logger.info("Performing temporary file cleanup...");
         const tempDirPath = this.configService.tempDir;
         if (fs.existsSync(tempDirPath)) {
             try {
                 await fs.promises.rm(tempDirPath, { recursive: true, force: true });
-                logger.info({ path: tempDirPath }, "Removed temporary directory.");
+                // logger.info({ path: tempDirPath }, "Removed temporary directory.");
             } catch (rmError) {
-                logger.error({ err: rmError, path: tempDirPath }, "Failed to remove temporary directory.")
+                // logger.error({ err: rmError, path: tempDirPath }, "Failed to remove temporary directory.")
             }
         } else {
-            logger.info({ path: tempDirPath }, "Temporary directory does not exist, no cleanup needed.")
+            // logger.info({ path: tempDirPath }, "Temporary directory does not exist, no cleanup needed.")
         }
     }
 }

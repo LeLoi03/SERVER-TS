@@ -196,6 +196,7 @@ export class CrawlOrchestratorService {
         } finally {
             logger.info("Phase 5: Performing final cleanup (closing browser, etc.)...");
             await this.playwrightService.close(logger); // Ensures Playwright browser is closed
+            await this.fileSystemService.cleanupTempFiles(); // Dọn dẹp file tạm (nếu có)
             logger.info("Cleanup finished.");
 
             // Log a summary of the entire crawl operation
