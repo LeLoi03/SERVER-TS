@@ -1,19 +1,7 @@
 
 fix link trong call for papers trả vè không full URL
 
-
-
-hội nghị kém uy tín
-
-đang fetch toàn bộ conference detail khi load deasshboard
-
 fix warning khi build
-
-chỉnh thanh subject hiển thị cố định và có nút trái phải
-
-cache topics
-
-tooltip rõ ràng cho các filter
 
 fix mấy cái no info trong visualization
 
@@ -34,7 +22,6 @@ dùng notifi cho chatbot khi xóa
 hiện image context source tròn detail
 
 
-dijhc cột giao diện
 
 
 lệch loading dashboard
@@ -53,3 +40,10 @@ sửa parse file admin
 
 
 thêm trả về conference non link
+
+
+loading khi chuyern analysis conference journal
+
+làm few shot mới , sai link sai extract 
+
+bỏ journal khỏi chatbot

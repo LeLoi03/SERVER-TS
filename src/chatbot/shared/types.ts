@@ -90,13 +90,13 @@ export interface ItemDateRange {
  */
 export interface ItemLocation {
     /** The specific address of the location. */
-    address?: string;
+    address: string;
     /** The city, state, or province. */
-    cityStateProvince?: string;
+    cityStateProvince: string;
     /** The country. */
-    country?: string;
+    country: string;
     /** The continent. */
-    continent?: string;
+    continent: string;
 }
 
 /**
@@ -116,9 +116,9 @@ export interface FollowItem {
     /** Optional status of the item. */
     status?: string;
     /** Optional date range associated with the item. */
-    dates?: ItemDateRange;
+    dates: ItemDateRange[];
     /** Optional location details for the item. */
-    location?: ItemLocation;
+    location: ItemLocation;
     /** The type of the item. */
     itemType?: "conference" | "journal";
     // Additional fields can be added here as needed for specific item types.
@@ -144,9 +144,9 @@ export interface BlacklistItem {
     /** Optional status of the item. */
     status?: string;
     /** Optional date range associated with the item. */
-    dates?: ItemDateRange;
+    dates: ItemDateRange[];
     /** Optional location details for the item. */
-    location?: ItemLocation;
+    location: ItemLocation;
 }
 
 
@@ -172,7 +172,7 @@ export interface CalendarItem {
     /** The status of the item (e.g., "CRAWLED"). */
     status: string;
     /** Optional date range associated with the item. */
-    dates: ItemDateRange;
+    dates: ItemDateRange[]; // Đúng: định nghĩa là một MẢNG các đối tượng ItemDateRange
     /** Optional location details for the item. */
     location: {
         address: string;

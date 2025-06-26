@@ -144,7 +144,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 const displayItemsForModelResponse = listResult.items.map((item: CalendarItem) => {
                     // Cập nhật: Sử dụng item.title và item.id
                     let details = `${item.title} (${item.acronym})`;
-                    if (item.dates && item.dates.length > 0) { // Đảm bảo dates là mảng
+                    if (Array.isArray(item.dates) && item.dates.length > 0 && item.dates[0].fromDate) {
                         const firstDate = item.dates[0];
                         details += ` | Dates: ${new Date(firstDate.fromDate).toLocaleDateString()}`;
                         if (firstDate.toDate && firstDate.fromDate !== firstDate.toDate) {
@@ -262,7 +262,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                             followedAt: itemDetailsForFrontend.followedAt || new Date().toISOString(), // Cung cấp giá trị mặc định nếu cần
                             updatedAt: itemDetailsForFrontend.updatedAt || new Date().toISOString(), // Cung cấp giá trị mặc định nếu cần
                             status: itemDetailsForFrontend.status || 'CRAWLED', // Cung cấp giá trị mặc định nếu cần
-                            dates: itemDetailsFromFind.dates,
+                            dates: itemDetailsFromFind.dates || [],
                             location: itemDetailsForFrontend.location || { address: '', cityStateProvince: '', country: '', continent: '' }, // Cung cấp giá trị mặc định nếu cần
                         };
 

@@ -164,10 +164,10 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                 const displayItemsForModelResponse = listResult.items.map((item: FollowItem) => {
                     let details = `${item.title} (${item.acronym})`;
-                    if (item.dates?.fromDate) {
-                        details += ` | Dates: ${new Date(item.dates.fromDate).toLocaleDateString()}`;
-                        if (item.dates.toDate && item.dates.fromDate !== item.dates.toDate) {
-                            details += ` - ${new Date(item.dates.toDate).toLocaleDateString()}`;
+                    if (Array.isArray(item.dates) && item.dates.length > 0 && item.dates[0].fromDate) {
+                        details += ` | Dates: ${new Date(item.dates[0].fromDate).toLocaleDateString()}`;
+                        if (item.dates[0].toDate && item.dates[0].fromDate !== item.dates[0].toDate) {
+                            details += ` - ${new Date(item.dates[0].toDate).toLocaleDateString()}`;
                         }
                     }
                     if (item.location?.cityStateProvince && item.location?.country) {
@@ -267,17 +267,18 @@ export class ManageFollowHandler implements IFunctionHandler {
                         finalMessage = `Successfully ${validAction === 'follow' ? 'followed' : 'unfollowed'} the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
                         logToFile(`${logPrefix} ManageFollow: API call for ${validAction} successful for ${validItemType} ${itemId}.`);
                         reportStep('follow_update_success', `Successfully ${validAction}ed ${validItemType} "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
-
+                        
                         const itemDetailsFromFind: Partial<FollowItem> = idResult.details || {};
                         const itemDataForFrontend: FollowItem = {
                             id: itemId,
                             title: itemDetailsFromFind.title || itemNameForMessage,
                             acronym: itemDetailsFromFind.acronym || '',
-                            dates: itemDetailsFromFind.dates,
-                            location: itemDetailsFromFind.location,
+                            // Provide default empty array if dates is undefined
+                            dates: itemDetailsFromFind.dates || [],
+                            // Provide default empty object if location is undefined
+                            location: itemDetailsFromFind.location || { address: '', cityStateProvince: '', country: '', continent: '' },
                             itemType: validItemType,
                         };
-
                         finalFrontendAction = {
                             type: 'itemFollowStatusUpdated',
                             payload: {

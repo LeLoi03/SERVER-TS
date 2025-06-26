@@ -169,14 +169,17 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                     return { modelResponseContent: message, frontendAction: undefined, thoughts: localThoughts };
                 }
 
-                const displayItemsForModelResponse = listResult.items.map((item: BlacklistItem) => {
+                 const displayItemsForModelResponse = listResult.items.map((item: BlacklistItem) => {
                     let details = `${item.title} (${item.acronym})`;
-                    if (item.dates?.fromDate) {
-                        details += ` | Dates: ${new Date(item.dates.fromDate).toLocaleDateString()}`;
-                        if (item.dates.toDate && item.dates.fromDate !== item.dates.toDate) {
-                            details += ` - ${new Date(item.dates.toDate).toLocaleDateString()}`;
+
+                    // Safely check if dates is an array and has at least one element
+                    if (Array.isArray(item.dates) && item.dates.length > 0 && item.dates[0].fromDate) {
+                        details += ` | Dates: ${new Date(item.dates[0].fromDate).toLocaleDateString()}`;
+                        if (item.dates[0].toDate && item.dates[0].fromDate !== item.dates[0].toDate) {
+                            details += ` - ${new Date(item.dates[0].toDate).toLocaleDateString()}`;
                         }
                     }
+                    // Safely check location properties
                     if (item.location?.cityStateProvince && item.location?.country) {
                         details += ` | Location: ${item.location.cityStateProvince}, ${item.location.country}`;
                     } else if (item.location?.country) {
@@ -308,8 +311,10 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                             conferenceId: itemId,
                             title: itemDetailsFromFind.title || itemNameForMessage,
                             acronym: itemDetailsFromFind.acronym || '',
-                            dates: itemDetailsFromFind.dates,
-                            location: itemDetailsFromFind.location,
+                            // Provide default empty array if dates is undefined
+                            dates: itemDetailsFromFind.dates || [{ fromDate: '', toDate: '' }],
+                            // Provide default empty object if location is undefined
+                            location: itemDetailsFromFind.location || { address: '', cityStateProvince: '', country: '', continent: '' }
                         };
 
                         finalFrontendAction = {
