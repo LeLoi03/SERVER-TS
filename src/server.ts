@@ -1,270 +1,227 @@
-// server.ts
-import 'reflect-metadata'; // IMPORTANT: Must be the first import to enable decorator metadata reflection
-import './container'; // Initialize the IoC container
+import 'reflect-metadata'; // QUAN TRỌNG: Phải là import đầu tiên
+import './container'; // Khởi tạo IoC container
 import { container } from 'tsyringe';
-import { initLoaders } from './loaders'; // Contains database, express, socket.io, and job initializers
+import { initLoaders } from './loaders';
 import { LoggingService } from './services/logging.service';
-import { Logger } from 'pino'; // Explicitly import Logger type
+import { Logger } from 'pino';
 import { ConfigService } from './config/config.service';
-import http from 'http'; // Node.js built-in HTTP module
-import mongoose from 'mongoose'; // MongoDB ORM
+import http from 'http';
+import mongoose from 'mongoose';
 
 /**
- * Global variable to store the main application logger instance.
- * Initialized after `LoggingService` is resolved.
+ * Logger toàn cục của ứng dụng.
+ * Được khởi tạo sau khi LoggingService sẵn sàng.
  */
 let logger: Logger;
 
 /**
- * Global variable to store the `LoggingService` instance.
- * Provides access to logging functionalities and flush operations.
+ * Instance của LoggingService.
+ * Cung cấp quyền truy cập vào các chức năng logging và đóng stream.
  */
 let loggingService: LoggingService;
 
 /**
- * Global variable to store the `ConfigService` instance.
- * Provides access to all application configurations.
+ * Instance của ConfigService.
+ * Cung cấp quyền truy cập vào tất cả cấu hình ứng dụng.
  */
 let configService: ConfigService;
 
 /**
- * Global variable to store the HTTP server instance.
- * Allows graceful shutdown of the server.
+ * Instance của HTTP server.
+ * Cho phép tắt server một cách an toàn.
  */
 let httpServer: http.Server;
 
 /**
- * Global flag to prevent multiple shutdown sequences from being initiated.
- * Ensures the graceful shutdown logic runs only once.
+ * Cờ để ngăn chặn việc gọi shutdown nhiều lần.
  */
 let isShuttingDown = false;
 
 /**
- * The main asynchronous function to start the application server.
- * It orchestrates the initialization of core services, loaders, and server listening.
+ * Hàm chính để khởi động server ứng dụng.
  */
 async function startServer(): Promise<void> {
     try {
-        // --- 1. Initialize Core Services (Config and Logging must be first) ---
-        // Resolve ConfigService first as other services might depend on its configurations.
+        // --- 1. Khởi tạo các Service Cốt lõi (Config và Logging phải đi trước) ---
         configService = container.resolve(ConfigService);
-        const loggingService = container.resolve(LoggingService);
+        loggingService = container.resolve(LoggingService); // Gán vào biến toàn cục
+
         try {
-            await loggingService.initialize(); // QUAN TRỌNG: Khởi tạo logger
+            await loggingService.initialize();
+            logger = loggingService.getLogger('app'); // Gán logger toàn cục ngay sau khi init
         } catch (error) {
-            console.error("FATAL: Failed to initialize logging service. Exiting.", error);
+            console.error("FATAL: Không thể khởi tạo logging service. Đang thoát.", error);
             process.exit(1);
         }
-        // logger.info('[Server Start] Core services (Config, Logging) resolved successfully.');
+        logger.info('[Server Start] Các service cốt lõi (Config, Logging) đã được khởi tạo thành công.');
 
-        // --- 2. Initialize API Examples from ConfigService ---
-        // This step is crucial for LLM-dependent features that use few-shot examples.
-        // logger.info('[Server Start] Initiating API examples loading...');
+        // --- 2. Khởi tạo các ví dụ API từ ConfigService ---
+        logger.info('[Server Start] Đang tải các ví dụ API...');
         try {
-            await configService.initializeExamples(); // Call the async function to load examples
-            // logger.info('[Server Start] API examples initialized successfully.');
+            await configService.initializeExamples();
+            logger.info('[Server Start] Các ví dụ API đã được khởi tạo thành công.');
         } catch (exampleError: any) {
-            // If example loading fails, decide whether to halt or continue with a warning.
-            // Current decision: Log error and re-throw to halt if examples are considered critical.
             const errorMessage = exampleError instanceof Error ? exampleError.message : String(exampleError);
             const errorStack = exampleError instanceof Error ? exampleError.stack : undefined;
-            // logger.error(`[Server Start] FAILED to initialize API examples: ${errorMessage}`, { stack: errorStack });
-            throw new Error(`Critical: Failed to load necessary API examples. Server cannot proceed.`);
-            // Alternative: If examples are optional, use logger.warn and continue:
-            // logger.warn(`[Server Start] Continuing without all API examples due to loading error: ${errorMessage}`);
+            logger.error(`[Server Start] THẤT BẠI khi khởi tạo ví dụ API: ${errorMessage}`, { stack: errorStack });
+            throw new Error(`Lỗi nghiêm trọng: Không thể tải các ví dụ API cần thiết. Server không thể tiếp tục.`);
         }
 
-        // --- 3. Initialize Loaders (Database, Express App, Socket.IO, Cron Jobs, etc.) ---
-        // Loaders can now safely access `configService` and `loggingService` (which holds `logger`).
-        // logger.info('[Server Start] Initializing application loaders...');
+        // --- 3. Khởi tạo các Loaders (Database, Express, Socket.IO, Cron Jobs, etc.) ---
+        logger.info('[Server Start] Đang khởi tạo các application loaders...');
         const loaderResult = await initLoaders();
-        // The HTTP server instance is returned by `initLoaders`.
         httpServer = loaderResult.httpServer;
-        // logger.info('[Server Start] All loaders initialized successfully.');
+        logger.info('[Server Start] Tất cả loaders đã được khởi tạo thành công.');
 
-        // --- 4. Start the HTTP Server ---
+        // --- 4. Bắt đầu lắng nghe trên HTTP Server ---
         const port = configService.port;
         httpServer.listen(port, () => {
-            const serverUrl = `http://localhost:${port}`; // Or `https://your-domain.com:${port}` in production
-            // logger.info(`🚀 Server (HTTP & Socket.IO) is now listening on port ${port}`);
-            // logger.info(`🔗 Application accessible at: ${serverUrl}`);
+            const serverUrl = `http://localhost:${port}`;
+            logger.info(`🚀 Server (HTTP & Socket.IO) đang lắng nghe trên cổng ${port}`);
+            logger.info(`🔗 Ứng dụng có thể truy cập tại: ${serverUrl}`);
             const allowedOrigins = configService.corsAllowedOrigins.join(', ');
-            // logger.info(`🌐 Configured CORS allowed origins: ${allowedOrigins}`);
-            // A basic console log for quick visibility during development
-            console.log(`🚀 Server ready at ${serverUrl}`);
+            logger.info(`🌐 Các CORS origin được phép: ${allowedOrigins}`);
+            console.log(`🚀 Server sẵn sàng tại ${serverUrl}`);
         });
 
     } catch (error: any) {
-        // This catch block handles errors during the initial server startup sequence.
-        // It's important to use the logger if available, otherwise fall back to `console`.
-        // const currentLogger = logger || console;
+        // Bắt các lỗi trong quá trình khởi động ban đầu.
+        const currentLogger = logger || console;
         const errorMessage = error instanceof Error ? error.message : String(error);
         const errorStack = error instanceof Error ? error.stack : undefined;
 
-        // currentLogger.fatal(`[Server Start] FATAL ERROR during application initialization: ${errorMessage}`, { stack: errorStack });
+        currentLogger.fatal(`[Server Start] LỖI NGHIÊM TRỌNG trong quá trình khởi tạo ứng dụng: ${errorMessage}`, { stack: errorStack });
 
-        // Attempt a graceful shutdown if not already in the process of shutting down.
         if (!isShuttingDown) {
             await gracefulShutdown('Initialization Error', error);
         } else {
-            // If already shutting down and another error occurs, force exit to prevent hang.
             process.exit(1);
         }
     }
 }
 
 /**
- * Initiates a graceful shutdown of the application.
- * This function attempts to close all open resources (HTTP server, database connections, etc.)
- * in a controlled manner to prevent data loss or resource leaks.
- * @param {string} signal - The signal that triggered the shutdown (e.g., 'SIGINT', 'SIGTERM').
- * @param {Error | unknown} [error] - Optional error object if shutdown is triggered by an error.
+ * Bắt đầu quá trình tắt ứng dụng một cách an toàn.
+ * @param {string} signal - Tín hiệu gây ra việc tắt (ví dụ: 'SIGINT', 'uncaughtException').
+ * @param {Error | unknown} [error] - Lỗi (nếu có) gây ra việc tắt.
  */
 async function gracefulShutdown(signal: string, error?: Error | unknown): Promise<void> {
-    // Construct a reason string for logging.
-    const reason = error ? `error (${error instanceof Error ? error.message : String(error)})` : `signal (${signal})`;
+    const reason = error ? `lỗi (${error instanceof Error ? error.message : String(error)})` : `tín hiệu (${signal})`;
 
-    // Prevent multiple shutdown sequences from running simultaneously.
     if (isShuttingDown) {
-        // logger?.warn(`[Shutdown] Already in shutdown process (triggered by ${reason}). Ignoring subsequent trigger (${signal}).`);
+        logger?.warn(`[Shutdown] Đã ở trong quá trình tắt (gây ra bởi ${reason}). Bỏ qua trigger tiếp theo (${signal}).`);
         return;
     }
-    isShuttingDown = true; // Set the global shutdown flag.
+    isShuttingDown = true;
 
-    // Determine the exit code: 1 for error, 0 for clean shutdown.
     let exitCode = error ? 1 : 0;
+    const currentLogger = logger || console;
+    currentLogger.info(`[Shutdown] Nhận được ${reason}. Bắt đầu quá trình tắt an toàn...`);
 
-    // Use the main logger if available, otherwise fall back to console for critical early errors.
-    // const currentLogger = logger || console;
-    // currentLogger.info(`[Shutdown] Received ${reason}. Initiating graceful shutdown...`);
-
-    // Set a timeout for the graceful shutdown process. If exceeded, force exit.
-    const shutdownTimeoutMs = 15000; // You might want to get this from `configService.config.SHUTDOWN_TIMEOUT_MS`
+    const shutdownTimeoutMs = 15000;
     const shutdownTimeout = setTimeout(() => {
-        // currentLogger.error(`[Shutdown] Graceful shutdown timeout of ${shutdownTimeoutMs}ms exceeded. Forcing application exit.`);
-        // Attempt a final log flush if `loggingService` is available.
-        // loggingService?.flushLogsAndClose();
-        process.exit(1); // Force exit with error code 1.
+        currentLogger.error(`[Shutdown] Quá trình tắt an toàn vượt quá ${shutdownTimeoutMs}ms. Buộc thoát ứng dụng.`);
+        loggingService?.flushLogsAndClose(); // Cố gắng flush lần cuối
+        process.exit(1);
     }, shutdownTimeoutMs);
 
     try {
-        // --- Cleanup Step 1: Close HTTP Server ---
+        // --- Bước 1: Đóng HTTP Server ---
         if (httpServer && httpServer.listening) {
-            // currentLogger.info('[Shutdown] Attempting to close HTTP server...');
+            currentLogger.info('[Shutdown] Đang đóng HTTP server...');
             await new Promise<void>((resolve) => {
                 httpServer.close((err) => {
                     if (err) {
-                        // currentLogger.error('[Shutdown] Error while closing HTTP server:', err);
-                        // Do not reject here; allow other cleanup steps to proceed even if HTTP server closing fails.
+                        currentLogger.error('[Shutdown] Lỗi khi đóng HTTP server:', err);
                     } else {
-                        // currentLogger.info('[Shutdown] HTTP server closed successfully.');
+                        currentLogger.info('[Shutdown] HTTP server đã đóng thành công.');
                     }
-                    resolve(); // Always resolve the promise.
+                    resolve();
                 });
             });
         } else {
-            // currentLogger.info('[Shutdown] HTTP server not listening or not initialized. Skipping HTTP server close.');
+            currentLogger.info('[Shutdown] HTTP server không hoạt động. Bỏ qua việc đóng.');
         }
 
-        // --- Cleanup Step 2: Close Database Connection (MongoDB) ---
+        // --- Bước 2: Đóng kết nối Database (MongoDB) ---
         try {
-            // Check if Mongoose connection is active (readyState === 1 means connected).
             if (mongoose.connection && mongoose.connection.readyState === 1) {
-                // currentLogger.info('[Shutdown] Attempting to close MongoDB connection...');
+                currentLogger.info('[Shutdown] Đang đóng kết nối MongoDB...');
                 await mongoose.connection.close();
-                // currentLogger.info('[Shutdown] MongoDB connection closed successfully.');
+                currentLogger.info('[Shutdown] Kết nối MongoDB đã đóng thành công.');
             } else {
-                // currentLogger.info('[Shutdown] MongoDB connection not active or not initialized. Skipping MongoDB close.');
+                currentLogger.info('[Shutdown] Kết nối MongoDB không hoạt động. Bỏ qua việc đóng.');
             }
         } catch (dbErr: any) {
-            // currentLogger.error('[Shutdown] Error during MongoDB connection close:', dbErr);
-            exitCode = 1; // Mark exit as failure if DB close fails.
+            currentLogger.error('[Shutdown] Lỗi khi đóng kết nối MongoDB:', dbErr);
+            exitCode = 1;
         }
 
-        // --- Cleanup Step 3: Add any other application-specific cleanup tasks here ---
-        // Examples: Close Redis connections, stop job queues, release file handles.
-        // currentLogger.info('[Shutdown] Executing additional cleanup tasks...');
-        // await someOtherCleanupFunction(); // Placeholder for other cleanup
-        // currentLogger.info('[Shutdown] Additional cleanup tasks completed.');
+        // --- Bước 3: Thêm các tác vụ dọn dẹp khác tại đây ---
+        currentLogger.info('[Shutdown] Đang thực thi các tác vụ dọn dẹp bổ sung...');
+        // await someOtherCleanupFunction();
+        currentLogger.info('[Shutdown] Các tác vụ dọn dẹp bổ sung đã hoàn tất.');
 
     } catch (cleanupError: any) {
-        // Catch any errors that occur during the cleanup phase.
-        // currentLogger.error('[Shutdown] An unexpected error occurred during cleanup tasks:', cleanupError);
-        exitCode = 1; // Mark exit as failure.
+        currentLogger.error('[Shutdown] Lỗi không mong muốn trong quá trình dọn dẹp:', cleanupError);
+        exitCode = 1;
     } finally {
-        // --- Final Cleanup Step: Flush Logs and Exit Process ---
-        // currentLogger.info('[Shutdown] Performing final log flush...');
-        // if (loggingService) {
-        //     // Assuming `flushLogsAndClose` is asynchronous and handles graceful closing of log transports.
-        //     await loggingService.flushLogsAndClose();
-        //     // currentLogger.info('[Shutdown] Logs flushed and transports closed.');
-        // } else {
-        //     // Fallback for extremely early errors where loggingService might not be available.
-        //     console.error("[Shutdown] Logging service not available for final flush. Logs might be incomplete.");
-        // }
+        // --- Bước cuối: Flush logs và thoát tiến trình ---
+        currentLogger.info('[Shutdown] Đang thực hiện flush log lần cuối...');
+        if (loggingService) {
+            await loggingService.flushLogsAndClose();
+            // Không log sau dòng này vì stream đã đóng
+            console.log('[Shutdown] Logs đã được flush và các transport đã đóng.');
+        } else {
+            console.error("[Shutdown] Logging service không khả dụng để flush lần cuối. Logs có thể không đầy đủ.");
+        }
 
-        // Clear the shutdown timeout as graceful shutdown is completing.
         clearTimeout(shutdownTimeout);
-        // currentLogger.info(`[Shutdown] Graceful shutdown process finalized. Exiting application with code ${exitCode}.`);
+        console.log(`[Shutdown] Quá trình tắt an toàn đã hoàn tất. Thoát ứng dụng với mã ${exitCode}.`);
 
-        // A small delay to ensure all async log writes complete before process exits.
-        await new Promise(resolve => setTimeout(resolve, 100));
-
-        // Exit the Node.js process.
+        // Thoát tiến trình Node.js.
         process.exit(exitCode);
     }
 }
 
-// --- Register Process Event Listeners for Graceful Shutdown ---
-/**
- * Array of POSIX signals that trigger a graceful shutdown.
- */
+// --- Đăng ký các trình lắng nghe sự kiện để tắt an toàn ---
 const shutdownSignals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
 
 shutdownSignals.forEach((signal) => {
     process.on(signal, () => {
-        // Log the received signal for debugging purposes.
-        // logger?.info(`[Process Event] Received signal: ${signal}`);
+        logger?.info(`[Process Event] Nhận được tín hiệu: ${signal}`);
         gracefulShutdown(signal);
     });
 });
 
 /**
- * Handles uncaught exceptions, which are errors that occur synchronously
- * and are not caught by any `try...catch` block.
- * Logs the error and attempts a graceful shutdown.
+ * Xử lý các exception không được bắt.
  */
 process.on('uncaughtException', (err: Error, origin: string) => {
-    // const currentLogger = logger || console; // Use logger if available
-    // currentLogger.fatal({ err: { message: err.message, stack: err.stack, name: err.name }, origin }, 'Uncaught Exception detected. Initiating emergency shutdown.');
-    // Only trigger shutdown if not already in the process of shutting down.
+    const currentLogger = logger || console;
+    currentLogger.fatal({ err: { message: err.message, stack: err.stack, name: err.name }, origin }, 'Phát hiện Uncaught Exception. Bắt đầu tắt khẩn cấp.');
     if (!isShuttingDown) {
         gracefulShutdown('uncaughtException', err);
     } else {
-        // currentLogger.warn('[Shutdown] Uncaught exception occurred during an ongoing shutdown. Forcing immediate exit.');
-        process.exit(1); // Force exit to prevent a hung process.
+        currentLogger.warn('[Shutdown] Uncaught exception xảy ra trong quá trình đang tắt. Buộc thoát ngay lập tức.');
+        process.exit(1);
     }
 });
 
 /**
- * Handles unhandled promise rejections, which occur when a Promise is rejected
- * but there is no `.catch()` handler to deal with the rejection.
- * Logs the rejection reason and attempts a graceful shutdown.
+ * Xử lý các promise rejection không được xử lý.
  */
 process.on('unhandledRejection', (reason: unknown, promise: Promise<any>) => {
-    // const currentLogger = logger || console; // Use logger if available
-    // Attempt to convert reason to an Error object for consistent logging.
-    const error = reason instanceof Error ? reason : new Error(String(reason ?? 'Unknown unhandled rejection reason'));
-    // currentLogger.fatal({ err: { message: error.message, stack: error.stack, name: error.name }, reason }, 'Unhandled Promise Rejection detected. Initiating emergency shutdown.');
-    // Only trigger shutdown if not already in the process of shutting down.
+    const currentLogger = logger || console;
+    const error = reason instanceof Error ? reason : new Error(String(reason ?? 'Lý do unhandled rejection không xác định'));
+    currentLogger.fatal({ err: { message: error.message, stack: error.stack, name: error.name }, reason }, 'Phát hiện Unhandled Promise Rejection. Bắt đầu tắt khẩn cấp.');
     if (!isShuttingDown) {
         gracefulShutdown('unhandledRejection', error);
     } else {
-        // currentLogger.warn('[Shutdown] Unhandled rejection occurred during an ongoing shutdown. Forcing immediate exit.');
-        process.exit(1); // Force exit to prevent a hung process.
+        currentLogger.warn('[Shutdown] Unhandled rejection xảy ra trong quá trình đang tắt. Buộc thoát ngay lập tức.');
+        process.exit(1);
     }
 });
 
-// --- Start the Application ---
-// Call the main server startup function to begin the application lifecycle.
+// --- Bắt đầu ứng dụng ---
 startServer();

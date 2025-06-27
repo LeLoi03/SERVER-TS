@@ -47,7 +47,7 @@ import { HtmlPersistenceService } from './services/htmlPersistence.service';
 import { ResultProcessingService } from './services/resultProcessing.service';
 import { ConferenceProcessorService } from './services/conferenceProcessor.service';
 import { CrawlOrchestratorService } from './services/crawlOrchestrator.service';
-// import { DatabasePersistenceService } from './services/databasePersistence.service';
+import { JournalImportService } from './services/journalImport.service';
 
 /**
  * Configure the Tsyringe IoC container by registering all application services.
@@ -107,6 +107,10 @@ container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useCl
 // --- 4. Register Other General Application Services ---
 container.registerSingleton(HtmlPersistenceService);
 container.registerSingleton(ResultProcessingService);
+
+
+// ĐĂNG KÝ SERVICE MỚI Ở ĐÂY
+container.registerSingleton(JournalImportService);
 
 // ConferenceProcessorService:
 // If this service manages state specific to a single conference processing task or

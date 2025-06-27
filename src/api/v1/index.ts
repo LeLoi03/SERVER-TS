@@ -7,7 +7,9 @@ import createCrawlRouter from './crawl/crawl.routes';
 import createLogAnalysisRouter from './logAnalysis/logAnalysis.routes';
 import createChatRouter from './chatbot/chat.routes'; // <<< ADD THIS IMPORT
 import { deleteLogAnalysisRequests } from './logAnalysis/logAnalysis.controller';
-import { handleBatchConferenceSaveEvents } from './save/save.controller';
+// Đổi tên import cho rõ ràng, hoặc giữ nguyên cũng được
+import { handleConferenceSaveEvents, importJournalsFromLog as handleJournalImportFromLog } from './save/save.controller';
+
 /**
  * Creates and configures the main API router for version 1 (v1) of the API.
  * This router aggregates all feature-specific routers under the /api/v1 path.
@@ -26,7 +28,11 @@ const createV1Router = (): Router => {
     router.use('/logs/analysis', createLogAnalysisRouter());
 
     // Route mới để ghi log save event
-    router.use('/logs/conference-save-event', handleBatchConferenceSaveEvents);
+    // Route để ghi log save event cho conference (giữ nguyên)
+    router.post('/logs/conference-save-event', handleConferenceSaveEvents);
+
+    // Route MỚI và ĐÚNG để trigger quá trình import journal từ file log
+    router.post('/journals/import-from-log', handleJournalImportFromLog);
 
     // --- Route for deleting requests ---
     router.use('/logs/requests', deleteLogAnalysisRequests); // Add the new DELETE route

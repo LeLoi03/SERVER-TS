@@ -1,5 +1,4 @@
 
-fix link trong call for papers trả vè không full URL
 
 fix warning khi build
 
@@ -13,12 +12,6 @@ fix param notifi
 
 fix topics gemini trả về
 
-đổi dùng api get source
-
-dùng notifi cho chatbot khi xóa
-
-
-
 hiện image context source tròn detail
 
 
@@ -29,7 +22,8 @@ lệch loading dashboard
 
 điều chỉnh làm sao để re crawl có thiết lập có re crawl non main likn không
 
-thêm sytsem insttruction trả về link trang chủ nếu không còn lựa chọn nào khác
+thêm sytsem insttruction trả về link trang chủ nếu không còn lựa chọn nào khác, thêm yêu cầu để sửa lỗi link trong call for papers trả vè không full URL
+
 
 INDIN UCC
 
@@ -47,3 +41,5 @@ loading khi chuyern analysis conference journal
 làm few shot mới , sai link sai extract 
 
 bỏ journal khỏi chatbot
+
+hiện số lượng request sau khi filter

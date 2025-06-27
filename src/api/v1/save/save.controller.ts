@@ -32,7 +32,7 @@ interface BatchItemResult {
  * Expects an array of ConferenceSaveEventLogPayload in req.body.
  * Returns an overall status and itemized results.
  */
-export async function handleBatchConferenceSaveEvents(req: Request, res: Response): Promise<void> {
+export async function handleConferenceSaveEvents(req: Request, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);
     const saveEventLogger = loggingService.getLogger('saveConferenceEvent');
     // Use request-specific logger if available (e.g., from pino-http middleware), otherwise fallback
@@ -140,3 +140,59 @@ export async function handleBatchConferenceSaveEvents(req: Request, res: Respons
     }
 }
 
+
+
+//// ----- JOURNAL ------
+
+import { JournalImportService } from '../../../services/journalImport.service';
+
+/**
+ * Xử lý yêu cầu import journals từ một file log (.jsonl).
+ */
+export async function importJournalsFromLog(req: Request, res: Response): Promise<void> {
+    // Lấy một logger ổn định ngay từ đầu.
+    // Logger này không phụ thuộc vào vòng đời của request.
+    const loggingService = container.resolve(LoggingService);
+    const stableLogger = loggingService.getLogger('app', { controller: 'importJournalsFromLog' });
+
+    const { batchRequestId } = req.body;
+
+    if (!batchRequestId) {
+        stableLogger.warn({ body: req.body }, 'Import request failed: Missing batchRequestId');
+        res.status(400).json({ success: false, message: 'batchRequestId is required.' });
+        return;
+    }
+
+    // Thêm context vào logger để dễ theo dõi
+    const loggerWithContext = stableLogger.child({ batchRequestId });
+
+    try {
+        loggerWithContext.info('Starting import process from log file...');
+        
+        const journalImportService = container.resolve(JournalImportService);
+        const result = await journalImportService.importJournalsFromLogFile(batchRequestId);
+
+        // SỬ DỤNG LOGGER ỔN ĐỊNH ĐỂ GHI LOG THÀNH CÔNG
+        loggerWithContext.info({ ...result }, `Successfully processed import for batch.`);
+        
+        // Chỉ gửi response nếu nó chưa được gửi đi
+        if (!res.headersSent) {
+            // API đã trả về status 201 (Created), nên chúng ta cũng nên trả về 200 hoặc 201
+            // Kết quả từ DB API đã có, chỉ cần trả về cho client
+            res.status(200).json(result);
+        }
+
+    } catch (error) {
+        const err = error as Error;
+        
+        // SỬ DỤNG LOGGER ỔN ĐỊNH ĐỂ GHI LOG LỖI
+        loggerWithContext.error({ 
+            err: { message: err.message, stack: err.stack }
+        }, `Error processing import for batch.`);
+        
+        // Chỉ gửi response nếu nó chưa được gửi đi
+        if (!res.headersSent) {
+            res.status(500).json({ success: false, message: err.message || 'An internal server error occurred.' });
+        }
+    }
+}
