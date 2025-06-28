@@ -123,14 +123,16 @@ export const getInitialJournalAnalysisDetailSteps = (): JournalAnalysisDetailSte
 export const initializeJournalAnalysisDetail = (
     batchRequestId: string,
     journalTitle: string,
+    issn: string,
     dataSource: 'scimago' | 'client' | 'unknown',
     sourceId?: string,
-    originalInput?: string
+    originalInput?: string,
 ): JournalAnalysisDetail => ({
     batchRequestId,
     journalTitle,
     sourceId,
     dataSource,
+    issn,
     originalInput,
     status: 'unknown',
     startTime: null,

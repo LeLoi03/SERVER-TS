@@ -34,6 +34,7 @@ export interface TableRowData {
     csvRow: string;
     journalLink: string | null;
     journalName: string | null;
+    issn : string | null;
     country: string;
 }
 

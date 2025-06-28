@@ -47,10 +47,12 @@ export const processJournalLogEntry = (
             if (!results.journalAnalysis[compositeKey]) {
                 // Initialize with 'unknown' data source, specific handlers or context will update it
                 const dataSource = logEntry.dataSource || (logEntry.context && logEntry.context.dataSource) || 'unknown';
+                const issn = logEntry.issn || (logEntry.row && logEntry.row.Issn) || 'Unknown ISSN'; // Default to 'Unknown ISSN' if not found
                 const originalInput = logEntry.url || (logEntry.row ? JSON.stringify(logEntry.row).substring(0, 100) : undefined);
                 results.journalAnalysis[compositeKey] = initializeJournalAnalysisDetail(
                     batchRequestId,
                     journalTitle,
+                    issn,
                     dataSource,
                     sourceId,
                     originalInput

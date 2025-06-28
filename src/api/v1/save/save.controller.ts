@@ -155,7 +155,7 @@ export async function importJournalsFromLog(req: Request, res: Response): Promis
     const loggingService = container.resolve(LoggingService);
     const stableLogger = loggingService.getLogger('app', { controller: 'importJournalsFromLog' });
 
-    const { batchRequestId } = req.body;
+    const { batchRequestId, imports } = req.body;
 
     if (!batchRequestId) {
         stableLogger.warn({ body: req.body }, 'Import request failed: Missing batchRequestId');
@@ -170,7 +170,7 @@ export async function importJournalsFromLog(req: Request, res: Response): Promis
         loggerWithContext.info('Starting import process from log file...');
         
         const journalImportService = container.resolve(JournalImportService);
-        const result = await journalImportService.importJournalsFromLogFile(batchRequestId);
+        const result = await journalImportService.importJournalsFromLogFile(batchRequestId, imports);
 
         // SỬ DỤNG LOGGER ỔN ĐỊNH ĐỂ GHI LOG THÀNH CÔNG
         loggerWithContext.info({ ...result }, `Successfully processed import for batch.`);

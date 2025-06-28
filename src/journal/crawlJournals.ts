@@ -223,8 +223,10 @@ export const crawlJournals = async (
       details: JournalDetails | null,
       row: TableRowData | CSVRow,
       journalData: JournalDetails // journalData đã có title
+  
     ): Promise<void> => {
       const journalTitle = journalData.title || 'Unknown Journal'; // Lấy title từ journalData
+      const issn = journalData.issn || 'Unknown ISSN'; // Lấy ISSN từ journalData
       // taskLogger đã có context journalTitle từ nơi gọi nó (processTabScimago/processTabCSV)
       // Không cần tạo child logger mới ở đây trừ khi muốn thêm context rất cụ thể cho image search
       const imageSearchLogger = taskLogger.child({ imageSearchContext: true }); // Ví dụ thêm context
@@ -298,6 +300,7 @@ export const crawlJournals = async (
         const journalTaskLogger = tabLogger.child({
             journalProcessingStep: 'processScimagoJournalRow',
             journalTitle: row.journalName, // Thêm title vào context
+            issn : row.issn || 'Unknown ISSN', // Thêm ISSN vào context
             scimagoLink: row.journalLink
         });
         journalTaskLogger.info({ event: 'task_start' }, `Processing journal row`);
@@ -344,6 +347,7 @@ export const crawlJournals = async (
           processingUnit: 'csvRow',
           journalProcessingStep: 'processClientJournalRow',
           journalTitle: journalName, // Thêm title vào context
+          issn : row.Issn || 'Unknown ISSN', // Thêm ISSN vào context
           csvRowIndex: rowIndex,
           tabIndexUsed: tabIndex
       });

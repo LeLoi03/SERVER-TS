@@ -47,6 +47,7 @@ export interface JournalAnalysisDetail {
     batchRequestId: string;
     journalTitle: string; // Primary identifier
     sourceId?: string; // Secondary identifier, if available
+    issn: string; // ISSN if available
     dataSource: 'scimago' | 'client' | 'unknown';
     originalInput?: string; // URL for scimago, or part of CSV row for client
 

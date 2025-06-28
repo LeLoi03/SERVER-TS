@@ -73,11 +73,11 @@ export class JournalImportService {
      * Đọc file jsonl, gọi API database để import, và ghi log kết quả.
      * @param batchRequestId ID của batch để xử lý.
      */
-    public async importJournalsFromLogFile(batchRequestId: string): Promise<DbImportResponse> {
+    public async importJournalsFromLogFile(batchRequestId: string, imports : any): Promise<DbImportResponse> {
         const jsonlPath = this.configService.getJournalOutputJsonlPathForBatch(batchRequestId);
-
         // 1. Đọc và parse file .jsonl
-        const journalsToImport = await this.parseJsonlFile(jsonlPath);
+        const journalsToImport = (await this.parseJsonlFile(jsonlPath))
+        .filter(journal => imports.some((importItem: any) => importItem.title === journal.Title && importItem.issn === journal.Issn));
 
         if (journalsToImport.length === 0) {
             return {
@@ -207,6 +207,7 @@ export class JournalImportService {
                     batchRequestId: batchRequestId,
                     sourceId: journalResult.data!.id, // Sử dụng non-null assertion `!` vì đã filter
                     journalTitle: journalResult.data!.title,
+                    issn : journalResult.data!.issn,
                     status: 'SAVED_TO_DATABASE',
                     clientTimestamp: new Date().toISOString(),
                     serverTimestamp: new Date().toISOString(),
