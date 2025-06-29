@@ -66,7 +66,7 @@ export const processPage = async (
 
                     rows.forEach((row) => {
                         const cells = row.querySelectorAll('td');
-                        let rowData: TableRowData = { csvRow: '', journalLink: null, journalName: null, country: 'N/A' };
+                        let rowData: TableRowData = { csvRow: '', journalLink: null, journalName: null, country: 'N/A', issn: '' };
 
                         cells.forEach((cell, index) => {
                             if (index === 0) return; // Skip rank

@@ -212,32 +212,42 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             return null;
         }
 
+
+         // === THAY ĐỔI CỐT LÕI NẰM Ở ĐÂY ===
         if (contentType !== 'main') {
-            if (normalizedLink === baseLink) {
+            // 1. LOẠI BỎ khối kiểm tra so sánh với baseLink
+            // Khối code này đã bị xóa:
+            /*
+            if (normalizedLink === baseLink) { // Hoặc một phép so sánh tương đương gây ra lỗi
                 childLogger.trace({ reason: `Link matches base website (${baseLink})`, event: 'skipped_processing_general_link' });
                 return null;
             }
+            */
+
+            // 2. GIỮ LẠI khối kiểm tra so sánh với link còn lại (ví dụ: IMP vs CFP)
+            // Logic này vẫn hữu ích để tránh xử lý 2 link giống hệt nhau
             if (normalizedOtherLink && normalizedLink === normalizedOtherLink) {
                 childLogger.trace({ reason: `Link matches other link (${normalizedOtherLink})`, event: 'skipped_processing_general_link' });
                 return null;
             }
         }
+        // === KẾT THÚC THAY ĐỔI ===
 
         if (!page || page.isClosed()) {
             childLogger.warn({ event: 'page_not_available_for_general_link_processing' });
             return null;
         }
 
-        // === BƯỚC 1: ĐIỀU HƯỚNG (Sử dụng accessUrl) ===
+        // Sử dụng hàm accessUrl đã được chuẩn hóa
         const accessResult: AccessResult = await accessUrl(page, normalizedLink, childLogger);
-        if (!accessResult.success || !accessResult.response?.ok()) {
+        if (!accessResult.success) { // Chỉ cần kiểm tra success là đủ
             const errorMessage = accessResult.error?.message ?? `HTTP status ${accessResult.response?.status()}`;
             childLogger.error({ err: { message: errorMessage }, event: 'general_link_access_failed' }, `Failed to navigate to general link: ${errorMessage}`);
             return null;
         }
         childLogger.info({ finalUrl: accessResult.finalUrl, event: 'general_link_access_success' });
 
-        // === BƯỚC 2: TRÍCH XUẤT (Gọi PageContentExtractorService đã sửa) ===
+         // Gọi PageContentExtractorService (phiên bản hybrid đã sửa)
         const textContent = await this.pageContentExtractorService.extractTextFromUrl(
             page,
             accessResult.finalUrl!,

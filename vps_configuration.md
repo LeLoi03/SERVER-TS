@@ -343,12 +343,17 @@ brevo-code:bafd25fca8febe657dd731009f03f4c1
 
 
 
+# Clone mã nguồn của frontend client
+git clone <URL_REPO_FRONTEND_CLIENT> <THƯ_MỤC_CHỨA>
 
+# Clone mã nguồn của frontend admin
+git clone <URL_REPO_FRONTEND_ADMIN> <THƯ_MỤC_CHỨA>
 
-git clone https://github.com/LeLoi03/SERVER-TS.git SERVER-TS
-git clone https://github.com/SieuJS/confhub2-fe-client-side.git confhub2-fe-client-side
-git clone https://github.com/NHThang2k3/confhub2-fe-admin-side.git confhub2-fe-admin-side
+# Clone mã nguồn của server crawl-chatbot
+git clone <URL_REPO_SERVER_CRAWL_CHATBOT> <THƯ_MỤC_CHỨA>
 
+# Clone mã nguồn của server database
+git clone <URL_REPO_SERVER_DATABASE> <THƯ_MỤC_CHỨA>
 
 
 
