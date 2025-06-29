@@ -121,20 +121,20 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
     }
 
     /**
-     * Handles the scenario where the official website from API 1 matches an entry in the original batch.
-     * It updates the matching entry with CFP/IMP links from API 1 and processes their content.
-     *
-     * @param {Page} page - The Playwright Page object.
-     * @param {BatchEntry} matchingEntry - The `BatchEntry` from the original batch that matched the official website.
-     * @param {string} officialWebsiteNormalized - The normalized official website URL from API 1.
-     * @param {string | undefined} cfpLinkFromApi1 - Normalized CFP link from API 1.
-     * @param {string | undefined} impLinkFromApi1 - Normalized Important Dates link from API 1.
-     * @param {number} batchIndex - The batch index for logging/filenames.
-     * @param {Logger} logger - The parent logger instance.
-     * @returns {Promise<BatchEntry>} A Promise that resolves with the updated `BatchEntry`.
-     */
+    * Handles the scenario where the official website from API 1 matches an entry in the original batch.
+    * It creates separate pages to process CFP and IMP links to avoid DOM state contamination.
+    *
+    * @param {BrowserContext} browserContext - The Playwright browser context to create new pages.
+    * @param {BatchEntry} matchingEntry - The `BatchEntry` from the original batch that matched the official website.
+    * @param {string} officialWebsiteNormalized - The normalized official website URL from API 1.
+    * @param {string | undefined} cfpLinkFromApi1 - Normalized CFP link from API 1.
+    * @param {string | undefined} impLinkFromApi1 - Normalized Important Dates link from API 1.
+    * @param {number} batchIndex - The batch index for logging/filenames.
+    * @param {Logger} logger - The parent logger instance.
+    * @returns {Promise<BatchEntry>} A Promise that resolves with the updated `BatchEntry`.
+    */
     private async handleDetermineMatchInternal(
-        page: Page,
+        browserContext: BrowserContext, // <--- THAY ĐỔI: Nhận vào context thay vì page
         matchingEntry: BatchEntry,
         officialWebsiteNormalized: string,
         cfpLinkFromApi1: string | undefined,
@@ -149,9 +149,8 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             acronym: matchingEntry.conferenceAcronym,
             batchIndex,
         });
-        childLogger.info({ event: 'start_match_handling' }, `Handling determination match for: ${matchingEntry.mainLink}.`);
+        childLogger.info({ event: 'start_match_handling_isolated_pages' }, `Handling determination match for: ${matchingEntry.mainLink} using isolated pages.`);
 
-        // Update entry with links from API1 (already normalized relative to officialWebsiteNormalized)
         matchingEntry.cfpLink = cfpLinkFromApi1;
         matchingEntry.impLink = impLinkFromApi1;
 
@@ -159,24 +158,26 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         let cfpSaveError = false;
         let impSaveError = false;
 
-        // Process and save CFP content
+        // Process and save CFP content in its own isolated page
+        let cfpPage: Page | null = null;
         try {
+            cfpPage = await browserContext.newPage();
+            childLogger.debug({ event: 'cfp_page_created' });
             const cfpFileBase = `${safeAcronym}_cfp_determine_match_${batchIndex}`;
             matchingEntry.cfpTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
-                page,
+                cfpPage, // Dùng trang mới
                 cfpLinkFromApi1,
-                officialWebsiteNormalized, // Base link for normalization/comparison
-                impLinkFromApi1,           // Other link for comparison
+                officialWebsiteNormalized,
+                null, // Không cần so sánh với IMP ở đây vì chúng chạy độc lập
                 matchingEntry.conferenceAcronym,
                 'cfp',
-                true, // useMainContentKeywords = true for CFP (to find content like "Call for Papers")
+                true,
                 cfpFileBase,
                 childLogger.child({ contentType: 'cfp' })
             );
-            // Log warning if CFP link was provided but content could not be saved
-            if (cfpLinkFromApi1 && !matchingEntry.cfpTextPath && cfpLinkFromApi1 !== officialWebsiteNormalized) {
+            if (cfpLinkFromApi1 && !matchingEntry.cfpTextPath) {
                 cfpSaveError = true;
-                childLogger.warn({ cfpLinkFromApi1, event: 'cfp_content_save_failed_no_path' }, "CFP link provided but content could not be processed or saved. Path is null.");
+                childLogger.warn({ cfpLinkFromApi1, event: 'cfp_content_save_failed_no_path' }, "CFP link provided but content could not be processed or saved.");
             } else if (matchingEntry.cfpTextPath) {
                 childLogger.debug({ cfpTextPath: matchingEntry.cfpTextPath, event: 'cfp_content_saved_success' }, "CFP content saved successfully.");
             }
@@ -184,26 +185,30 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             childLogger.error({ contentType: 'cfp', err: { message: errorMessage, stack: errorStack }, event: 'save_cfp_error' }, `Error processing and saving CFP content: "${errorMessage}".`);
             cfpSaveError = true;
+        } finally {
+            if (cfpPage && !cfpPage.isClosed()) await cfpPage.close();
         }
 
-        // Process and save Important Dates content
+        // Process and save Important Dates content in its own isolated page
+        let impPage: Page | null = null;
         try {
+            impPage = await browserContext.newPage();
+            childLogger.debug({ event: 'imp_page_created' });
             const impFileBase = `${safeAcronym}_imp_determine_match_${batchIndex}`;
             matchingEntry.impTextPath = await this.linkProcessorService.processAndSaveGeneralLink(
-                page,
+                impPage, // Dùng trang mới
                 impLinkFromApi1,
-                officialWebsiteNormalized, // Base link
-                cfpLinkFromApi1,           // Other link
+                officialWebsiteNormalized,
+                cfpLinkFromApi1, // Vẫn có thể giữ lại để skip nếu link giống hệt
                 matchingEntry.conferenceAcronym,
                 'imp',
-                false, // useMainContentKeywords = false for IMP
+                false,
                 impFileBase,
                 childLogger.child({ contentType: 'imp' })
             );
-            // Log warning if IMP link was provided but content could not be saved
-            if (impLinkFromApi1 && !matchingEntry.impTextPath && impLinkFromApi1 !== officialWebsiteNormalized && impLinkFromApi1 !== cfpLinkFromApi1) {
+            if (impLinkFromApi1 && !matchingEntry.impTextPath && impLinkFromApi1 !== cfpLinkFromApi1) {
                 impSaveError = true;
-                childLogger.warn({ impLinkFromApi1, event: 'imp_content_save_failed_no_path' }, "Important Dates link provided but content could not be processed or saved. Path is null.");
+                childLogger.warn({ impLinkFromApi1, event: 'imp_content_save_failed_no_path' }, "Important Dates link provided but content could not be processed or saved.");
             } else if (matchingEntry.impTextPath) {
                 childLogger.debug({ impTextPath: matchingEntry.impTextPath, event: 'imp_content_saved_success' }, "Important Dates content saved successfully.");
             }
@@ -211,6 +216,8 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             childLogger.error({ contentType: 'imp', err: { message: errorMessage, stack: errorStack }, event: 'save_imp_error' }, `Error processing and saving Important Dates content: "${errorMessage}".`);
             impSaveError = true;
+        } finally {
+            if (impPage && !impPage.isClosed()) await impPage.close();
         }
 
         childLogger.info({ success: !cfpSaveError && !impSaveError, cfpSaveError, impSaveError, event: 'finish_match_handling' }, `Finished handling determination match. CFP save error: ${cfpSaveError}, IMP save error: ${impSaveError}.`);
@@ -377,45 +384,32 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
     }
 
     /**
-     * Orchestrates the determination and processing of official conference sites.
-     * This public method integrates parsing API responses, fetching web content,
-     * and potentially making secondary API calls to refine link extraction.
-     *
-     * @param {string} api1ResponseText - The JSON response text from the first determine_links API call.
-     * @param {BatchEntry[]} originalBatch - The initial batch of entries provided by the `BatchProcessingService`.
-     * @param {number} batchIndexForApi - The current batch index.
-     * @param {BrowserContext} browserContext - The Playwright browser context to create a new page.
-     * @param {CrawlModelType} determineModel - The model type to use for Gemini API calls in this determination process.
-     * @param {Logger} parentLogger - The logger passed from the parent `BatchProcessingService`.
-     * @returns {Promise<BatchEntry[]>} A Promise resolving to an array containing the updated `BatchEntry`
-     *                                   which includes the determined official site and associated content paths.
-     */
+    * Orchestrates the determination and processing of official conference sites.
+    * This public method integrates parsing API responses, fetching web content,
+    * and potentially making secondary API calls to refine link extraction.
+    */
     public async determineAndProcessOfficialSite(
         api1ResponseText: string,
         originalBatch: BatchEntry[],
         batchIndexForApi: number,
         browserContext: BrowserContext,
-        determineModel: CrawlModelType, // Received model type
+        determineModel: CrawlModelType,
         parentLogger: Logger
     ): Promise<BatchEntry[]> {
         const logger = parentLogger.child({
             function: 'determineAndProcessOfficialSite',
-            determineModelUsed: determineModel, // Log the model type used for this determination flow
+            determineModelUsed: determineModel,
             batchIndex: batchIndexForApi
         });
         logger.info({ responseTextLength: api1ResponseText?.length ?? 0, inputBatchSize: originalBatch.length, event: 'start_processing_determine_api_response' }, `Starting determination process for batch ${batchIndexForApi}.`);
 
         if (!originalBatch?.[0]) {
             logger.error({ batchIndexForApi, event: 'invalid_or_empty_batch_input' }, "Input batch is invalid or empty. Cannot proceed with determination.");
-            return []; // Return empty array as per original logic if batch is invalid
+            return [];
         }
-        const primaryEntryForContext = { ...originalBatch[0] }; // Clone to avoid direct modification before return decisions
+        const primaryEntryForContext = { ...originalBatch[0] };
 
-        let page: Page | null = null;
         try {
-            page = await browserContext.newPage();
-            logger.info({ event: 'playwright_page_created_for_determination' }, "Playwright page created for conference determination.");
-
             // 1. Parse API 1 response
             let linksDataFromApi1: any;
             try {
@@ -429,15 +423,14 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                     throw new Error("Parsed API 1 response is not a valid object.");
                 }
                 logger.debug({ event: 'api1_json_parse_success' }, "Successfully parsed API 1 response JSON.");
-            } catch (parseError: unknown) { // Catch as unknown
+            } catch (parseError: unknown) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
                 logger.error({ err: { message: errorMessage, stack: errorStack }, responseTextPreview: String(api1ResponseText).substring(0, 200), event: 'save_batch_api_response_parse_failed', apiType: this.geminiApiService.API_TYPE_DETERMINE, apiCallNumber: 1 }, `Failed to parse API 1 response JSON: "${errorMessage}".`);
-                primaryEntryForContext.mainLink = "None"; // Mark as failed
+                primaryEntryForContext.mainLink = "None";
                 return [primaryEntryForContext];
             }
 
             const officialWebsiteRaw = linksDataFromApi1?.["Official Website"] ?? null;
-            // Validate official website from API 1
             if (!officialWebsiteRaw || typeof officialWebsiteRaw !== 'string' || officialWebsiteRaw.trim().toLowerCase() === "none" || officialWebsiteRaw.trim() === '') {
                 logger.warn({ officialWebsiteRawFromApi: officialWebsiteRaw, event: 'no_official_website_in_api1_response' }, "API 1 response did not contain a valid 'Official Website' link. Marking entry as 'None'.");
                 primaryEntryForContext.mainLink = "None";
@@ -451,7 +444,6 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             }
             logger.info({ officialWebsiteNormalizedFromApi1, event: 'official_website_from_api1_normalized' }, `Official website normalized from API 1: ${officialWebsiteNormalizedFromApi1}.`);
 
-            // Normalize CFP and Important Dates links from API 1 relative to the official website
             const cfpLinkRawApi1 = String(linksDataFromApi1?.["Call for papers link"] ?? '').trim();
             const impLinkRawApi1 = String(linksDataFromApi1?.["Important dates link"] ?? '').trim();
             const cfpLinkNormalizedApi1 = normalizeAndJoinLink(officialWebsiteNormalizedFromApi1, cfpLinkRawApi1, logger);
@@ -467,9 +459,10 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             let processedEntry: BatchEntry | null = null;
             if (matchingEntryFromBatch) {
                 logger.info({ matchedLinkInBatch: matchingEntryFromBatch.mainLink, event: 'entry_match_found_in_batch' }, `Official website "${officialWebsiteNormalizedFromApi1}" matched an entry in the original batch.`);
+                // <--- THAY ĐỔI: Gọi hàm đã sửa đổi ---
                 processedEntry = await this.handleDetermineMatchInternal(
-                    page,
-                    matchingEntryFromBatch, // Pass the actual matching entry
+                    browserContext, // Truyền context
+                    matchingEntryFromBatch,
                     officialWebsiteNormalizedFromApi1,
                     cfpLinkNormalizedApi1,
                     impLinkNormalizedApi1,
@@ -478,14 +471,20 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 );
             } else {
                 logger.info({ officialWebsiteFromApi1: officialWebsiteNormalizedFromApi1, event: 'entry_match_not_found_in_batch_proceed_with_api1_link' }, `Official website "${officialWebsiteNormalizedFromApi1}" not found in original batch. Proceeding to process it directly.`);
-                processedEntry = await this.handleDetermineNoMatchInternal(
-                    page,
-                    officialWebsiteNormalizedFromApi1,
-                    primaryEntryForContext, // Use the primary entry for updating
-                    batchIndexForApi,
-                    determineModel, // Pass the model type for the potential second API call
-                    logger
-                );
+                let page: Page | null = null;
+                try {
+                    page = await browserContext.newPage();
+                    processedEntry = await this.handleDetermineNoMatchInternal(
+                        page,
+                        officialWebsiteNormalizedFromApi1,
+                        primaryEntryForContext,
+                        batchIndexForApi,
+                        determineModel,
+                        logger
+                    );
+                } finally {
+                    if (page && !page.isClosed()) await page.close();
+                }
             }
 
             // 3. Finalize and return the processed entry
@@ -499,19 +498,12 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
                 return [primaryEntryForContext];
             }
 
-        } catch (error: unknown) { // Catch any unhandled errors in this public method
+        } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.error({ err: { message: errorMessage, stack: errorStack }, event: 'conference_determination_service_unhandled_error' }, `Unhandled error in conference determination service: "${errorMessage}".`);
-            primaryEntryForContext.mainLink = "None"; // Ensure entry is marked as failed on critical error
-            return [primaryEntryForContext]; // Return the primary entry with failure status
-        } finally {
-            // Ensure the Playwright page is closed
-            if (page && !page.isClosed()) {
-                await page.close().catch(e => {
-                    const { message: closeErrMsg, stack: closeErrStack } = getErrorMessageAndStack(e);
-                    logger.error({ err: { message: closeErrMsg, stack: closeErrStack }, event: 'page_close_failed_determination' }, `Error closing Playwright page after determination: "${closeErrMsg}".`);
-                });
-            }
+            primaryEntryForContext.mainLink = "None";
+            return [primaryEntryForContext];
         }
+        // Không cần khối finally ở đây nữa vì page được quản lý trong các phạm vi hẹp hơn
     }
 }
