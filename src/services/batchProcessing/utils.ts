@@ -1,4 +1,3 @@
-// /src/utils/playwright.utils.ts
 import { Page, Response } from 'playwright';
 import { Logger } from 'pino';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
@@ -16,6 +15,7 @@ export interface AccessResult {
 /**
  * Hàm tiện ích để truy cập một URL duy nhất bằng Playwright với khả năng xử lý lỗi mạnh mẽ.
  * Gói gọn logic try-catch, xử lý chuyển hướng, và trả về một đối tượng kết quả có cấu trúc.
+ * Được tối ưu để xử lý cả trang HTML tiêu chuẩn và các trang Single-Page Application (SPA) hiện đại.
  *
  * @param page - Đối tượng Page của Playwright.
  * @param url - URL cần truy cập.
@@ -27,30 +27,37 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
     logger.trace({ ...logContext, event: 'access_url_start' }, `Attempting to access URL: ${url}`);
 
     try {
-        // Sử dụng 'domcontentloaded' để goto nhanh hơn, vì nó chỉ chờ cây DOM được xây dựng.
+        // Bước 1: Điều hướng nhanh chóng.
+        // 'commit' là lựa chọn tốt cho các trang SPA, nó trả về ngay khi điều hướng được máy chủ xác nhận,
+        // không cần chờ toàn bộ tài nguyên.
         const response = await page.goto(url, {
-            waitUntil: 'domcontentloaded',
-            timeout: 45000, // Timeout cho việc điều hướng ban đầu
+            waitUntil: 'commit',
+            timeout: 45000,
         });
 
-        // === THAY ĐỔI CỐT LÕI NẰM Ở ĐÂY ===
+        // Bước 2: Chờ đợi thông minh sau khi điều hướng.
+        // Điều này rất quan trọng để cho các framework JavaScript (React, Vue, Next.js)
+        // có thời gian để fetch dữ liệu và render nội dung lên trang.
         try {
-            // Cố gắng chờ đến khi mạng yên tĩnh, nhưng không coi timeout là lỗi nghiêm trọng.
-            // 'networkidle' thường tốt hơn 'load' cho các trang hiện đại.
-            await page.waitForLoadState('networkidle', { timeout: 20000 });
-            logger.trace({ ...logContext, event: 'wait_for_networkidle_success' }, "Network reached 'networkidle' state successfully.");
-        } catch (waitTimeoutError: unknown) {
-            // Nếu bị timeout, ghi một cảnh báo và tiếp tục.
-            const { message: errorMessage } = getErrorMessageAndStack(waitTimeoutError);
+            // Chúng ta chờ một trong hai điều kiện xảy ra trước:
+            // 1. Mạng trở nên yên tĩnh ('networkidle'). Đây là trạng thái lý tưởng.
+            // 2. Một khoảng thời gian chờ ngắn (ví dụ: 2 giây) trôi qua. Đây là phương án dự phòng
+            //    để đảm bảo chúng ta không bị kẹt nếu trang có các script chạy nền vô tận.
+            await Promise.race([
+                page.waitForLoadState('networkidle', { timeout: 20000 }),
+                page.waitForTimeout(2000)
+            ]);
+            logger.trace({ ...logContext, event: 'intelligent_wait_completed' }, "Intelligent wait after navigation completed.");
+        } catch (waitError: unknown) {
+            // Lỗi ở đây (thường là timeout từ networkidle) không phải là lỗi nghiêm trọng.
+            // Chúng ta ghi lại cảnh báo và tiếp tục, vì nội dung chính có thể đã được tải.
+            const { message: errorMessage } = getErrorMessageAndStack(waitError);
             logger.warn({ ...logContext, originalError: errorMessage, event: 'wait_for_networkidle_timed_out_but_proceeding' },
                 `Timed out waiting for 'networkidle' state, but proceeding anyway. Error: "${errorMessage}"`);
-            // KHÔNG ném lỗi ra ngoài, chúng ta chấp nhận trạng thái hiện tại của trang.
         }
-        // === KẾT THÚC THAY ĐỔI ===
 
         const finalUrl = page.url();
 
-        // Kiểm tra response cuối cùng (có thể là null nếu có lỗi nghiêm trọng)
         if (!response) {
             const error = new Error(`Navigation to ${url} resulted in a null response.`);
             logger.error({ ...logContext, finalUrl, event: 'access_url_null_response' }, error.message);
@@ -60,12 +67,10 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         if (!response.ok()) {
             const error = new Error(`Final response was not OK. Status: ${response.status()} for URL: ${finalUrl}`);
             logger.warn({ ...logContext, finalUrl, status: response.status(), event: 'access_url_not_ok_status' }, error.message);
-            // Coi các lỗi client/server (4xx, 5xx) là thất bại.
             return { success: false, finalUrl, response, error };
         }
 
         logger.info({ ...logContext, finalUrl, status: response.status(), event: 'access_url_success' }, `Successfully accessed URL. Final URL: ${finalUrl}`);
-        // Coi như thành công vì chúng ta đã có response.ok() và đã cố gắng chờ.
         return { success: true, finalUrl, response, error: null };
 
     } catch (error: unknown) {
@@ -80,7 +85,7 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
             return { success: true, finalUrl: finalUrlAfterError, response: null, error: null };
         }
 
-        // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED) vẫn là lỗi nghiêm trọng.
+        // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED, ERR_CONNECTION_REFUSED) vẫn là lỗi nghiêm trọng.
         logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'access_url_unhandled_error' }, `Unhandled error during URL access: ${accessError.message}`);
         return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
     }

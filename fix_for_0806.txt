@@ -43,3 +43,16 @@ làm few shot mới , sai link sai extract
 bỏ journal khỏi chatbot
 
 hiện số lượng request sau khi filter
+
+
+fix trạng thái lưu
+
+STATUS CÁC PHẦN TRÊN TABLE CHƯA ĐÚNG , TOÀN LÀ BẮT ĐẦU ĐÃ SUCCES
+
+Task marked as failed in final metrics due to: Gemini extract failed.
+
+chưa completed vẫn bấm save được
+
+THÊM PỂ PAGE JOURNAL , LOG
+
+fix treo tab playwright

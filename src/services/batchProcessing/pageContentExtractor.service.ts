@@ -1,30 +1,60 @@
-// src/services/batchProcessingServiceChild/pageContentExtractor.service.ts
-import { Page, Frame } from 'playwright'; // Thêm import Frame
+import { Page, Frame } from 'playwright';
 import { Logger } from 'pino';
 import { ConfigService } from '../../config/config.service';
-import { extractTextFromPDF } from '../../utils/crawl/pdf.utils'; // Utility for PDF extraction
-import { cleanDOM, traverseNodes, removeExtraEmptyLines } from '../../utils/crawl/domProcessing'; // Utilities for DOM processing
+import { extractTextFromPDF } from '../../utils/crawl/pdf.utils';
 import { singleton, inject } from 'tsyringe';
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
+import { getErrorMessageAndStack } from '../../utils/errorUtils';
+
+// --- Helper Function for Conditional Scrolling ---
+/**
+ * Scrolls the page to the bottom to trigger lazy-loaded content.
+ * Includes a total timeout and a max attempts limit to prevent infinite loops.
+ * @param page The Playwright Page object.
+ * @param logger The logger instance.
+ */
+async function autoScroll(page: Page, logger: Logger) {
+    logger.trace({ event: 'auto_scroll_start' });
+    try {
+        // Add an overall timeout for the entire scrolling operation.
+        await page.evaluate(async (timeoutMs) => {
+            await Promise.race([
+                new Promise<void>((resolve) => {
+                    let totalHeight = 0;
+                    const distance = 100;
+                    let scrollAttempts = 0;
+                    const maxScrollAttempts = 100; // Limit to 100 scrolls (e.g., 10000px)
+
+                    const timer = setInterval(() => {
+                        const scrollHeight = document.body.scrollHeight;
+                        window.scrollBy(0, distance);
+                        totalHeight += distance;
+                        scrollAttempts++;
+
+                        if (totalHeight >= scrollHeight || scrollAttempts >= maxScrollAttempts) {
+                            clearInterval(timer);
+                            resolve();
+                        }
+                    }, 100); // Scroll every 100ms
+                }),
+                // A separate promise that rejects after a timeout
+                new Promise<void>((_, reject) => 
+                    setTimeout(() => reject(new Error(`Auto-scrolling timed out after ${timeoutMs}ms`)), timeoutMs)
+                )
+            ]);
+        }, 15000); // Set a 15-second timeout for the entire scroll operation
+
+        // Wait a moment for animations to complete after scrolling
+        await page.waitForTimeout(2000);
+        logger.trace({ event: 'auto_scroll_success' });
+    } catch (error) {
+        logger.warn({ err: error, event: 'auto_scroll_failed_or_timed_out' }, "Auto-scrolling failed or timed out, content might be incomplete.");
+    }
+}
 
 /**
  * Interface for the service responsible for extracting text content from web pages and PDFs.
  */
 export interface IPageContentExtractorService {
-    /**
-     * Extracts readable text content from a given URL.
-     * This method assumes the Playwright Page object is already at the correct URL for HTML pages.
-     * It handles both HTML pages and PDF files.
-     * Content can be focused using main content keywords if specified.
-     *
-     * @param {Page | null} page - The Playwright Page object. It must be pre-navigated to the target URL for HTML extraction.
-     * @param {string} url - The URL from which to extract content. Used for PDF detection and logging context.
-     * @param {string | undefined} acronym - The conference acronym, used for logging context.
-     * @param {boolean} useMainContentKeywords - If `true`, the extractor will attempt to focus on main content areas based on configured keywords.
-     * @param {number} yearToConsider - The target year for content processing (e.g., to filter out older dates).
-     * @param {Logger} logger - The logger instance for contextual logging.
-     * @returns {Promise<string>} A Promise that resolves to the extracted text content, or an empty string if extraction fails.
-     */
     extractTextFromUrl(
         page: Page | null,
         url: string,
@@ -35,22 +65,15 @@ export interface IPageContentExtractorService {
     ): Promise<string>;
 }
 
-/**
- * Service to extract clean text content from web pages (HTML) or PDF documents.
- * It assumes the page is already navigated for HTML and uses a separate utility for PDF extraction.
- * It can also filter content based on configured main content keywords.
- */
 @singleton()
 export class PageContentExtractorService implements IPageContentExtractorService {
-    private readonly mainContentKeywords: string[]; // Keywords used for focusing on main content areas
     private readonly excludeTexts: string[];
     private readonly cfpTabKeywords: string[];
     private readonly importantDatesTabs: string[];
     private readonly exactKeywords: string[];
+    private readonly MIN_CONTENT_LENGTH_FOR_RETRY = 1000;
 
     constructor(@inject(ConfigService) private configService: ConfigService) {
-        this.mainContentKeywords = this.configService.mainContentKeywords ?? [];
-        // Lấy các config cần thiết cho việc xử lý link
         this.excludeTexts = this.configService.excludeTexts ?? [];
         this.cfpTabKeywords = this.configService.cfpTabKeywords ?? [];
         this.importantDatesTabs = this.configService.importantDatesTabs ?? [];
@@ -58,19 +81,133 @@ export class PageContentExtractorService implements IPageContentExtractorService
     }
 
     /**
-     * Extracts readable text content from a given URL.
-     * It intelligently handles PDF files by delegating to a PDF utility.
-     * For HTML pages, it assumes the page is already at the target URL, extracts the DOM, cleans it, and traverses for text.
-     * It can also prioritize content based on `mainContentKeywords` if `useMainContentKeywords` is true.
-     *
-     * @param {Page | null} page - The Playwright Page object. Required and must be pre-navigated for HTML extraction.
-     * @param {string} url - The URL to extract content from. Used for PDF detection and logging.
-     * @param {string | undefined} acronym - The conference acronym (for logging context).
-     * @param {boolean} useMainContentKeywords - Whether to use configured keywords to focus content extraction.
-     * @param {number} yearToConsider - The target year for filtering/processing content (e.g., in `traverseNodes`).
-     * @param {Logger} logger - The logger instance for contextual logging.
-     * @returns {Promise<string>} The extracted clean text content, or an empty string if extraction fails or content is not found.
+     * Core extraction logic. This function is designed to be called multiple times
+     * (e.g., before and after scrolling).
+     * @private
      */
+    private async _extractCore(page: Page, acronym: string | undefined, yearToConsider: number, logger: Logger): Promise<string> {
+        const currentLogContext = { function: '_extractCore', service: 'PageContentExtractorService' };
+        let fullText = "";
+        const frames = page.frames();
+        logger.debug({ ...currentLogContext, frameCount: frames.length, event: 'core_extraction_start' }, `Starting core extraction for ${frames.length} frame(s).`);
+
+        const argsForEvaluate = {
+            acronym: (acronym || "").toLowerCase().trim(),
+            year: String(yearToConsider),
+            excludeTexts: this.excludeTexts,
+            cfpTabKeywords: this.cfpTabKeywords,
+            importantDatesTabs: this.importantDatesTabs,
+            exactKeywords: this.exactKeywords,
+        };
+
+        for (const frame of frames) {
+            if (frame.isDetached()) {
+                logger.trace({ ...currentLogContext, frameUrl: frame.url(), event: 'skipped_detached_frame' });
+                continue;
+            }
+
+            const frameLogger = logger.child({ frameUrl: frame.url() });
+
+            try {
+                await frame.evaluate((args) => {
+                    document.querySelectorAll('script, style').forEach(el => el.remove());
+
+                    document.querySelectorAll('*').forEach(el => {
+                        const style = window.getComputedStyle(el);
+                        if (style.display === 'none') {
+                            (el as HTMLElement).style.display = 'block';
+                        }
+                        if (style.visibility === 'hidden') {
+                            (el as HTMLElement).style.visibility = 'visible';
+                        }
+                    });
+
+                    const { acronym, year, excludeTexts, cfpTabKeywords, importantDatesTabs, exactKeywords } = args;
+                    const isRelevant = (text: string | null, valueOrHref: string | null): boolean => {
+                        const lowerText = (text || "").toLowerCase().trim();
+                        const lowerValue = (valueOrHref || "").toLowerCase();
+                        if (excludeTexts.some(keyword => lowerText.includes(keyword))) return false;
+                        if (exactKeywords.includes(lowerText) || exactKeywords.includes(lowerValue)) return true;
+                        if (acronym && (lowerText.includes(acronym) || lowerValue.includes(acronym))) return true;
+                        if (year && (lowerText.includes(year) || lowerValue.includes(year))) return true;
+                        if (cfpTabKeywords.some(k => lowerText.includes(k) || lowerValue.includes(k))) return true;
+                        if (importantDatesTabs.some(k => lowerText.includes(k) || lowerValue.includes(k))) return true;
+                        return false;
+                    };
+
+                    document.querySelectorAll('del, s').forEach(el => {
+                        const text = el.textContent;
+                        if (text && text.trim()) {
+                            const replacementSpan = document.createElement('span');
+                            replacementSpan.textContent = ` [GẠCH BỎ: ${text.trim()}] `;
+                            el.parentNode?.replaceChild(replacementSpan, el);
+                        }
+                    });
+
+                    document.querySelectorAll('a').forEach(anchor => {
+                        const href = anchor.getAttribute('href');
+                        const text = anchor.textContent;
+                        if (isRelevant(text, href)) {
+                            const replacementSpan = document.createElement('span');
+                            replacementSpan.textContent = ` href="${href || ''}" - ${text?.trim()} `;
+                            anchor.parentNode?.replaceChild(replacementSpan, anchor);
+                        }
+                    });
+
+                    document.querySelectorAll('select').forEach(selectElement => {
+                        const optionsToExtract: HTMLElement[] = [];
+                        selectElement.querySelectorAll('option').forEach(option => {
+                            const value = option.getAttribute('value');
+                            const text = option.textContent;
+                            if (isRelevant(text, value)) {
+                                const replacementDiv = document.createElement('div');
+                                replacementDiv.textContent = ` value="${value || ''}" - ${text?.trim()} `;
+                                optionsToExtract.push(replacementDiv);
+                            }
+                        });
+
+                        if (optionsToExtract.length > 0) {
+                            for (let i = optionsToExtract.length - 1; i >= 0; i--) {
+                                selectElement.parentNode?.insertBefore(optionsToExtract[i], selectElement.nextSibling);
+                            }
+                        }
+                    });
+                }, argsForEvaluate);
+                frameLogger.trace({ ...currentLogContext, event: 'dom_preprocessing_complete' });
+
+                let frameText = "";
+                const specialContentSelector = '.main-content, #app';
+                try {
+                    const elementHandle = await frame.waitForSelector(specialContentSelector, { timeout: 5000, state: 'attached' });
+                    frameLogger.trace({ ...currentLogContext, selector: specialContentSelector, event: 'special_content_container_found' });
+                    const specialContentText = await elementHandle.innerText();
+                    if (specialContentText && specialContentText.trim()) {
+                        frameText = specialContentText;
+                        frameLogger.debug({ ...currentLogContext, textLength: frameText.length, event: 'frame_text_extracted_from_special_container' });
+                    }
+                } catch (e) {
+                    frameLogger.trace({ ...currentLogContext, selector: specialContentSelector, event: 'special_content_container_not_found' }, "No special content container found, will fallback to body.");
+                }
+
+                if (!frameText.trim()) {
+                    frameLogger.trace({ ...currentLogContext, event: 'executing_fallback_to_body' }, "Executing fallback: extracting text from the entire body.");
+                    frameText = await frame.locator('body').innerText({ timeout: 20000 });
+                    if (frameText && frameText.trim()) {
+                        frameLogger.debug({ ...currentLogContext, textLength: frameText.length, event: 'frame_text_extracted_from_body' });
+                    }
+                }
+                
+                if (frameText && frameText.trim()) {
+                    fullText += frameText.trim() + '\n\n';
+                }
+            } catch (e: unknown) {
+                const { message: errorMessage } = getErrorMessageAndStack(e);
+                frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'frame_processing_failed' }, `Could not process frame: ${errorMessage}`);
+            }
+        }
+        return fullText.replace(/(\n\s*){3,}/g, '\n\n').trim();
+    }
+
     public async extractTextFromUrl(
         page: Page | null,
         url: string,
@@ -83,7 +220,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
         logger.trace({ ...currentLogContext, event: 'extraction_start' }, `Starting content extraction for URL: ${url}.`);
 
         if (!url || !/^(https?:\/\/|file:\/\/)/i.test(url)) {
-            logger.warn({ ...currentLogContext, event: 'skipped_invalid_url_structure' }, "Skipped extraction due to invalid URL structure.");
+            logger.warn({ ...currentLogContext, event: 'skipped_invalid_url_structure' });
             return "";
         }
 
@@ -107,183 +244,26 @@ export class PageContentExtractorService implements IPageContentExtractorService
             }
             logger.info({ ...currentLogContext, type: 'html', event: 'html_processing_start' }, "Attempting to extract text from an already-loaded HTML page, including iframes.");
 
-            try {
-                logger.debug({ ...currentLogContext, event: 'wait_for_networkidle_start' }, "Waiting for network to be idle to ensure all dynamic content is loaded.");
-                await page.waitForLoadState('networkidle', { timeout: 20000 });
-                logger.debug({ ...currentLogContext, event: 'wait_for_networkidle_success' }, "Network is idle.");
-            } catch (waitError: unknown) {
-                const { message: errorMessage } = getErrorMessageAndStack(waitError);
-                logger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'wait_for_networkidle_timed_out' }, "Timed out waiting for network idle. Proceeding with available content.");
+            // Attempt 1: Extract without scrolling (optimistic case)
+            logger.debug({ ...currentLogContext, attempt: 1, event: 'extraction_attempt_without_scroll' });
+            let extractedText = await this._extractCore(page, acronym, yearToConsider, logger);
+
+            // Attempt 2: If content is too short, retry with scrolling
+            if (extractedText.length < this.MIN_CONTENT_LENGTH_FOR_RETRY) {
+                logger.warn({
+                    ...currentLogContext,
+                    attempt: 2,
+                    textLength: extractedText.length,
+                    threshold: this.MIN_CONTENT_LENGTH_FOR_RETRY,
+                    event: 'content_too_short_retrying_with_scroll'
+                }, "Initial content is very short. Retrying with auto-scroll to trigger lazy-loaded elements.");
+
+                await autoScroll(page, logger);
+                extractedText = await this._extractCore(page, acronym, yearToConsider, logger);
             }
 
-            // let mainPageHtml = '';
-            // try {
-            //     mainPageHtml = await page.content();
-            //     logger.debug({ ...currentLogContext, event: 'fetch_main_content_success', length: mainPageHtml.length }, "Successfully fetched main page HTML content.");
-            // } catch (contentError: unknown) {
-            //     const { message: errorMessage } = getErrorMessageAndStack(contentError);
-            //     logger.error({ ...currentLogContext, type: 'html', err: { message: errorMessage }, event: 'fetch_main_content_failed' }, `Failed to fetch main page content: "${errorMessage}".`);
-            // }
-
-            // const allFrames = page.frames();
-            // const iframeHtmls: string[] = [];
-            // if (allFrames.length > 1) {
-            //     logger.info({ ...currentLogContext, frameCount: allFrames.length - 1, event: 'iframe_detection_start' }, `Found ${allFrames.length - 1} iframe(s). Attempting to extract their content.`);
-            //     for (let i = 1; i < allFrames.length; i++) {
-            //         const frame = allFrames[i];
-            //         if (frame.url() === 'about:blank' || frame.isDetached()) {
-            //             logger.trace({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, event: 'skipped_iframe' }, 'Skipping blank or detached iframe.');
-            //             continue;
-            //         }
-            //         try {
-            //             await frame.waitForLoadState('domcontentloaded', { timeout: 10000 });
-            //             const frameHtml = await frame.content();
-            //             iframeHtmls.push(frameHtml);
-            //             logger.debug({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, length: frameHtml.length, event: 'fetch_iframe_content_success' }, `Successfully fetched content from iframe #${i}.`);
-            //         } catch (frameError: unknown) {
-            //             const { message: errorMessage } = getErrorMessageAndStack(frameError);
-            //             logger.warn({ ...currentLogContext, frameUrl: frame.url(), frameIndex: i, err: { message: errorMessage }, event: 'fetch_iframe_content_failed' }, `Failed to fetch content from iframe #${i}.`);
-            //         }
-            //     }
-            // }
-
-            // const combinedHtml = [mainPageHtml, ...iframeHtmls].join('\n');
-            // let contentToProcess = combinedHtml;
-
-            // // Apply main content keyword filtering
-            // if (useMainContentKeywords && this.mainContentKeywords.length > 0) {
-            //     logger.trace({ ...currentLogContext, type: 'html', event: 'main_content_eval_start' }, "Attempting to extract main content using keywords.");
-            //     try {
-            //         if (page.isClosed()) {
-            //             throw new Error('Playwright page closed during $$eval operation.');
-            //         }
-            //         const extractedContentRaw: string | string[] = await page.$$eval("body *", (elements, keywords) => {
-            //             const safeKeywords = Array.isArray(keywords) ? keywords.map(k => String(k).toLowerCase()) : [];
-            //             if (safeKeywords.length === 0) {
-            //                 return document ? (document.body?.outerHTML || "") : "";
-            //             }
-            //             const relevantElements = elements.filter((el: Element) => {
-            //                 return el.hasAttributes() &&
-            //                     Array.from(el.attributes).some((attr: Attr) =>
-            //                         safeKeywords.some((keyword: string) =>
-            //                             attr.name.toLowerCase().includes(keyword) ||
-            //                             attr.value.toLowerCase().includes(keyword)
-            //                         )
-            //                     );
-            //             });
-            //             return relevantElements.map((el: Element) => el.outerHTML).join("\n\n");
-            //         }, this.mainContentKeywords);
-
-            //         const extractedContent = Array.isArray(extractedContentRaw) ? extractedContentRaw.join('\n\n') : extractedContentRaw;
-
-            //         if (extractedContent && extractedContent.trim().length > 50) {
-            //             contentToProcess = extractedContent;
-            //             logger.trace({ ...currentLogContext, type: 'html', extractedLength: contentToProcess.length, event: 'main_content_eval_success' }, `Main content extraction successful. Length: ${contentToProcess.length}.`);
-            //         } else {
-            //             logger.debug({ ...currentLogContext, type: 'html', event: 'main_content_eval_skipped', reason: 'No significant content found' }, "Main content extraction by keywords found no significant content. Using full HTML.");
-            //         }
-            //     } catch (evalError: unknown) {
-            //         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(evalError);
-            //         logger.warn({ ...currentLogContext, type: 'html', err: { message: errorMessage, stack: errorStack }, event: 'main_content_eval_failed' }, `Failed to evaluate main content using keywords: "${errorMessage}". Proceeding with full HTML.`);
-
-            //         // SỬA LỖI Ở ĐÂY:
-            //         // Fallback về nội dung tổng hợp nếu lọc keyword thất bại.
-            //         contentToProcess = combinedHtml;
-            //     }
-            // }
-
-            // // Clean and traverse DOM for final text extraction
-            // logger.trace({ ...currentLogContext, type: 'html', event: 'dom_processing_start' }, "Starting DOM cleaning and text traversal on combined content.");
-            // const document = cleanDOM(contentToProcess);
-            // if (!document?.body) {
-            //     logger.warn({ ...currentLogContext, type: 'html', event: 'dom_processing_failed', reason: 'Cleaned DOM or body is null' }, "DOM processing failed: Cleaned document or body was null/undefined.");
-            //     return "";
-            // }
-            // let fullText = traverseNodes(document.body as HTMLElement, acronym, yearToConsider);
-            // fullText = removeExtraEmptyLines(fullText);
-
-            // logger.info({ ...currentLogContext, type: 'html', success: true, textLength: fullText.length, event: 'html_processing_finish' }, `HTML text extraction finished. Total Length: ${fullText.length}.`);
-            // return fullText;
-
-
-            // === BƯỚC 1: TIÊM SCRIPT ĐỂ BIẾN ĐỔI CÁC THẺ <a> VÀ <option> ===
-            const argsForEvaluate = {
-                acronym: (acronym || "").toLowerCase().trim(),
-                year: String(yearToConsider),
-                excludeTexts: this.excludeTexts,
-                cfpTabKeywords: this.cfpTabKeywords,
-                importantDatesTabs: this.importantDatesTabs,
-                exactKeywords: this.exactKeywords,
-            };
-
-            await page.evaluate((args) => {
-                // Hàm này chạy trong môi trường của trình duyệt
-                const { acronym, year, excludeTexts, cfpTabKeywords, importantDatesTabs, exactKeywords } = args;
-
-                // Hàm trợ giúp để kiểm tra một link/option có phù hợp không
-                const isRelevant = (text, valueOrHref) => {
-                    const lowerText = (text || "").toLowerCase().trim();
-                    const lowerValue = (valueOrHref || "").toLowerCase();
-
-                    if (excludeTexts.some(keyword => lowerText.includes(keyword))) return false;
-                    if (exactKeywords.includes(lowerText) || exactKeywords.includes(lowerValue)) return true;
-                    if (lowerText.includes(acronym) || lowerValue.includes(acronym)) return true;
-                    if (lowerText.includes(year) || lowerValue.includes(year)) return true;
-                    if (cfpTabKeywords.some(k => lowerText.includes(k) || lowerValue.includes(k))) return true;
-                    if (importantDatesTabs.some(k => lowerText.includes(k) || lowerValue.includes(k))) return true;
-
-                    return false;
-                };
-
-                // Xử lý các thẻ <a>
-                document.querySelectorAll('a').forEach(anchor => {
-                    const href = anchor.getAttribute('href');
-                    const text = anchor.textContent;
-                    if (isRelevant(text, href)) {
-                        // Thay thế thẻ a bằng một thẻ span chứa text đã được định dạng
-                        const replacementSpan = document.createElement('span');
-                        replacementSpan.textContent = ` href="${href || ''}" - ${text.trim()} `;
-                        anchor.parentNode?.replaceChild(replacementSpan, anchor);
-                    }
-                });
-
-                // Xử lý các thẻ <option>
-                document.querySelectorAll('option').forEach(option => {
-                    const value = option.getAttribute('value');
-                    const text = option.textContent;
-                    if (isRelevant(text, value)) {
-                        // Thay thế thẻ option bằng một thẻ span
-                        const replacementSpan = document.createElement('span');
-                        replacementSpan.textContent = ` value="${value || ''}" - ${text.trim()} `;
-                        option.parentNode?.replaceChild(replacementSpan, option);
-                    }
-                });
-
-            }, argsForEvaluate);
-
-            logger.debug({ ...currentLogContext, event: 'dom_preprocessing_complete' }, "DOM preprocessing to format links and options is complete.");
-
-            // === BƯỚC 2: TRÍCH XUẤT TEXT BẰNG innerText SAU KHI ĐÃ BIẾN ĐỔI ===
-            // Chúng ta sẽ lấy text từ body, bao gồm cả các iframe
-            let fullText = "";
-            const frames = page.frames();
-            for (const frame of frames) {
-                if (frame.isDetached()) continue;
-                try {
-                    // Lấy innerText từ body của mỗi frame
-                    const frameText = await frame.locator('body').innerText({ timeout: 15000 });
-                    fullText += frameText + '\n\n';
-                } catch (e) {
-                    logger.warn({ ...currentLogContext, frameUrl: frame.url(), event: 'frame_innerText_extraction_failed' }, `Could not extract innerText from frame: ${frame.url()}`);
-                }
-            }
-
-            // Dọn dẹp các dòng trống thừa
-            fullText = fullText.replace(/(\n\s*){3,}/g, '\n\n').trim();
-
-
-            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: fullText.length, event: 'html_processing_finish_hybrid' }, `HYBRID HTML text extraction finished. Total Length: ${fullText.length}.`);
-            return fullText;
+            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: extractedText.length, event: 'html_processing_finish_hybrid' }, `HYBRID HTML text extraction finished. Total Length: ${extractedText.length}.`);
+            return extractedText;
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
