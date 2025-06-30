@@ -27,16 +27,26 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
     logger.trace({ ...logContext, event: 'access_url_start' }, `Attempting to access URL: ${url}`);
 
     try {
-        // Sử dụng 'load' hoặc 'domcontentloaded' để cân bằng giữa tốc độ và sự hoàn chỉnh.
-        // 'load' chờ cả các tài nguyên phụ như ảnh, trong khi 'domcontentloaded' nhanh hơn.
+        // Sử dụng 'domcontentloaded' để goto nhanh hơn, vì nó chỉ chờ cây DOM được xây dựng.
         const response = await page.goto(url, {
             waitUntil: 'domcontentloaded',
-            timeout: 45000,
+            timeout: 45000, // Timeout cho việc điều hướng ban đầu
         });
 
-        // Sau khi goto, Playwright đã tự động theo các redirect.
-        // Chờ thêm một chút để các script cuối cùng có thể chạy.
-        await page.waitForLoadState('load', { timeout: 20000 });
+        // === THAY ĐỔI CỐT LÕI NẰM Ở ĐÂY ===
+        try {
+            // Cố gắng chờ đến khi mạng yên tĩnh, nhưng không coi timeout là lỗi nghiêm trọng.
+            // 'networkidle' thường tốt hơn 'load' cho các trang hiện đại.
+            await page.waitForLoadState('networkidle', { timeout: 20000 });
+            logger.trace({ ...logContext, event: 'wait_for_networkidle_success' }, "Network reached 'networkidle' state successfully.");
+        } catch (waitTimeoutError: unknown) {
+            // Nếu bị timeout, ghi một cảnh báo và tiếp tục.
+            const { message: errorMessage } = getErrorMessageAndStack(waitTimeoutError);
+            logger.warn({ ...logContext, originalError: errorMessage, event: 'wait_for_networkidle_timed_out_but_proceeding' },
+                `Timed out waiting for 'networkidle' state, but proceeding anyway. Error: "${errorMessage}"`);
+            // KHÔNG ném lỗi ra ngoài, chúng ta chấp nhận trạng thái hiện tại của trang.
+        }
+        // === KẾT THÚC THAY ĐỔI ===
 
         const finalUrl = page.url();
 
@@ -55,6 +65,7 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         }
 
         logger.info({ ...logContext, finalUrl, status: response.status(), event: 'access_url_success' }, `Successfully accessed URL. Final URL: ${finalUrl}`);
+        // Coi như thành công vì chúng ta đã có response.ok() và đã cố gắng chờ.
         return { success: true, finalUrl, response, error: null };
 
     } catch (error: unknown) {
@@ -62,21 +73,14 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         const accessError = error instanceof Error ? error : new Error(errorMessage);
         const finalUrlAfterError = page.url();
 
-        // === XỬ LÝ LỖI ĐẶC BIỆT: NAVIGATION INTERRUPTED ===
-        // Lỗi này thường có nghĩa là một redirect đã xảy ra và Playwright đã theo nó.
-        // Chúng ta sẽ coi đây là một trường hợp "thành công có điều kiện" và để cho các bước sau xác thực.
+        // Xử lý lỗi 'Navigation is interrupted' vẫn như cũ
         if (errorMessage.includes('Navigation is interrupted') || errorMessage.includes('interrupted by another navigation')) {
             logger.warn({ ...logContext, finalUrl: finalUrlAfterError, originalError: errorMessage, event: 'navigation_interrupted_handled_as_success' },
                 `Navigation was interrupted but handled as a successful redirect. Final URL: ${finalUrlAfterError}`);
-            
-            // Vì chúng ta không có đối tượng `response` đáng tin cậy ở đây,
-            // chúng ta trả về `success: true` nhưng `response: null`.
-            // Hàm gọi sẽ cần kiểm tra `response.ok()` nếu nó muốn chắc chắn.
-            // Trong kiến trúc hiện tại, việc trích xuất nội dung ở bước sau sẽ là phép thử cuối cùng.
             return { success: true, finalUrl: finalUrlAfterError, response: null, error: null };
         }
 
-        // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED, ERR_CONNECTION_REFUSED, timeout)
+        // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED) vẫn là lỗi nghiêm trọng.
         logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'access_url_unhandled_error' }, `Unhandled error during URL access: ${accessError.message}`);
         return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
     }

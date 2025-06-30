@@ -213,21 +213,21 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         }
 
 
-         // === THAY ĐỔI CỐT LÕI NẰM Ở ĐÂY ===
+        // === LOGIC SKIP ĐÃ ĐƯỢC HOÀN THIỆN ===
         if (contentType !== 'main') {
-            // 1. LOẠI BỎ khối kiểm tra so sánh với baseLink
-            // Khối code này đã bị xóa:
-            /*
-            if (normalizedLink === baseLink) { // Hoặc một phép so sánh tương đương gây ra lỗi
-                childLogger.trace({ reason: `Link matches base website (${baseLink})`, event: 'skipped_processing_general_link' });
+            // 1. PHỤC HỒI LOGIC KIỂM TRA TRÙNG VỚI LINK CHÍNH
+            // So sánh chuỗi một cách chính xác. Nếu impLink giống hệt official website, bỏ qua.
+            // Vì `normalizeAndJoinLink` đã trả về URL đầy đủ, phép so sánh này sẽ đúng cho cả
+            // trường hợp "AJCAI" (trả về true) và "ANT" (trả về false).
+            if (normalizedLink === baseLink) {
+                childLogger.trace({ reason: `Link (${normalizedLink}) matches base website EXACTLY. Skipping.`, event: 'skipped_processing_general_link_as_base' });
                 return null;
             }
-            */
 
-            // 2. GIỮ LẠI khối kiểm tra so sánh với link còn lại (ví dụ: IMP vs CFP)
-            // Logic này vẫn hữu ích để tránh xử lý 2 link giống hệt nhau
+            // 2. GIỮ LẠI LOGIC KIỂM TRA TRÙNG VỚI LINK PHỤ CÒN LẠI
+            // Ví dụ: IMP vs CFP
             if (normalizedOtherLink && normalizedLink === normalizedOtherLink) {
-                childLogger.trace({ reason: `Link matches other link (${normalizedOtherLink})`, event: 'skipped_processing_general_link' });
+                childLogger.trace({ reason: `Link (${normalizedLink}) matches other link EXACTLY (${normalizedOtherLink}). Skipping.`, event: 'skipped_processing_general_link_as_other' });
                 return null;
             }
         }
@@ -247,7 +247,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         }
         childLogger.info({ finalUrl: accessResult.finalUrl, event: 'general_link_access_success' });
 
-         // Gọi PageContentExtractorService (phiên bản hybrid đã sửa)
+        // Gọi PageContentExtractorService (phiên bản hybrid đã sửa)
         const textContent = await this.pageContentExtractorService.extractTextFromUrl(
             page,
             accessResult.finalUrl!,

@@ -229,7 +229,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             batchServiceMethod: 'processConferenceSave',
             originalConferenceAcronym: conference.Acronym,
             conferenceTitle: conference.Title,
-            service: 'BatchProcessingServiceOrchestrator'
+            service: 'BatchProcessingOrchestratorService',
+            // === THÊM DÒNG NÀY ===
+            batchItemIndex: batchItemIndexFromParent,
         });
 
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
