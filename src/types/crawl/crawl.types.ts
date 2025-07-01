@@ -54,6 +54,11 @@ export interface CrawlRequestPayload {
      * @property {ApiModels} models - Các mô hình AI được chọn cho các bước thu thập dữ liệu.
      */
     models: ApiModels;
+    /**
+     * Optional. If true, the system will write final JSONL and CSV output files.
+     * @default false
+     */
+    recordFile?: boolean; // <<< THÊM THAM SỐ MỚI
 }
 
 
@@ -109,9 +114,9 @@ export interface ConferenceUpdateData {
      * @property {string} Acronym - Từ viết tắt hoặc tên viết tắt của hội nghị.
      */
     Acronym: string;
-     /**
-     * @property {string | null | undefined} mainLink - URL chính của hội nghị.
-     */
+    /**
+    * @property {string | null | undefined} mainLink - URL chính của hội nghị.
+    */
     mainLink: string | null | undefined;
     /**
      * @property {string | null | undefined} cfpLink - URL cho Call for Papers (CFP).
@@ -131,15 +136,15 @@ export interface ConferenceUpdateData {
 
 // 1. Tạo một interface cơ sở cho các kết quả API
 export interface ApiResponseData {
-    determineResponseTextPath?: string | null;
+    determineResponseTextPath?: any;
     determineResponseContent?: Record<string, any> | null;
     determineMetaData?: any;
 
-    extractResponseTextPath?: string | null;
+    extractResponseTextPath?: any;
     extractResponseContent?: Record<string, any> | null;
     extractMetaData?: any;
 
-    cfpResponseTextPath?: string | null;
+    cfpResponseTextPath?: any;
     cfpResponseContent?: Record<string, any> | null;
     cfpMetaData?: any;
 }
@@ -215,9 +220,9 @@ export interface BatchUpdateEntry {
      * @property {string} conferenceAcronym - Từ viết tắt của hội nghị.
      */
     conferenceAcronym: string;
-     /**
-     * @property {string | null | undefined} mainLink - URL chính của hội nghị.
-     */
+    /**
+    * @property {string | null | undefined} mainLink - URL chính của hội nghị.
+    */
     mainLink: string | null | undefined;
     /**
      * @property {string | null | undefined} cfpLink - URL cho Call for Papers (CFP).

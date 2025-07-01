@@ -126,6 +126,135 @@ export class ResultProcessingService {
         return result;
     }
 
+
+
+    /**
+     * [MỚI & CỐT LÕI] Chuyển đổi một bản ghi thô (InputRowData) thành một bản ghi đã xử lý (ProcessedRowData).
+     * Đây là nơi tập trung toàn bộ logic xử lý, chuẩn hóa và xác thực cho một record.
+     * @param inputRow Dữ liệu đầu vào thô.
+     * @param parentLogger Logger để ghi lại quá trình.
+     * @returns Một Promise phân giải ra ProcessedRowData nếu thành công, hoặc null nếu có lỗi/bỏ qua.
+     */
+    private async _transformSingleRecord(inputRow: InputRowData, parentLogger: Logger): Promise<ProcessedRowData | null> {
+        const acronym = inputRow.conferenceAcronym;
+        const title = inputRow.conferenceTitle;
+        const rowContextLogger = parentLogger.child({
+            acronym,
+            title,
+            batchRequestId: inputRow.batchRequestId,
+            transformFunction: '_transformSingleRecord'
+        });
+
+        if (!inputRow || !inputRow.batchRequestId || !acronym || !title) {
+            rowContextLogger.warn({
+                event: 'transform_missing_core_data',
+                hasInputRow: !!inputRow,
+                hasAcronym: !!acronym,
+                hasTitle: !!title,
+                hasBatchRequestId: !!inputRow?.batchRequestId,
+            }, "Bản ghi đầu vào thiếu dữ liệu cốt lõi, bỏ qua chuyển đổi.");
+            return null;
+        }
+
+        try {
+            let parsedDetermineInfo: Record<string, any> = {};
+            let parsedExtractInfo: Record<string, any> = {};
+            let parsedCfpInfo: Record<string, any> = {};
+
+            // Hàm helper nội bộ để đọc và parse JSON từ file hoặc content
+            const readAndParse = async (content: any, path: string | undefined, type: string): Promise<Record<string, any>> => {
+                if (content && typeof content === 'object') {
+                    rowContextLogger.trace({ type, source: 'memory' }, `Sử dụng dữ liệu ${type} từ content trong bộ nhớ.`);
+                    return content;
+                }
+                if (path) {
+                    rowContextLogger.trace({ type, source: 'file', path }, `Đọc dữ liệu ${type} từ file (fallback/dev mode).`);
+                    try {
+                        const fileContent = await this.fileSystemService.readFileContent(path);
+                        const cleaned = fileContent.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
+                        const parsed = cleaned ? JSON.parse(cleaned) : {};
+                        return (typeof parsed === 'object' && parsed !== null) ? parsed : {};
+                    } catch (e: any) {
+                        rowContextLogger.warn({ err: e, path, type, event: 'file_read_parse_warn' }, `Lỗi khi đọc hoặc parse file ${type}.`);
+                        return {};
+                    }
+                }
+                return {};
+            };
+
+            parsedDetermineInfo = await readAndParse(inputRow.determineResponseContent, inputRow.determineResponseTextPath, 'determine');
+            parsedExtractInfo = await readAndParse(inputRow.extractResponseContent, inputRow.extractResponseTextPath, 'extract');
+            parsedCfpInfo = await readAndParse(inputRow.cfpResponseContent, inputRow.cfpResponseTextPath, 'cfp');
+
+            // Xử lý API response và tạo finalRow
+            const processedExtractResponse = this._processApiResponse(parsedExtractInfo, rowContextLogger);
+            const finalRow: ProcessedRowData = {
+                title: title,
+                acronym: acronym.replace(/_\d+$/, ''),
+                mainLink: inputRow.mainLink || "",
+                cfpLink: inputRow.cfpLink || "",
+                impLink: inputRow.impLink || "",
+                determineLinks: parsedDetermineInfo,
+                ...processedExtractResponse,
+                summary: String(parsedCfpInfo?.summary ?? parsedCfpInfo?.Summary ?? ''),
+                callForPapers: String(parsedCfpInfo?.callForPapers ?? parsedCfpInfo?.['Call for Papers'] ?? parsedCfpInfo?.['Call For Papers'] ?? parsedCfpInfo?.cfp ?? ''),
+                requestId: inputRow.batchRequestId,
+                originalRequestId: inputRow.originalRequestId,
+            };
+
+            // --- Validation & Normalization (Logic được chuyển từ _processJsonlStream cũ vào đây) ---
+            const originalContinent = finalRow.continent?.trim();
+            if (!originalContinent || !this.VALID_CONTINENTS.has(originalContinent)) {
+                if (originalContinent) { // Chỉ log nếu có giá trị không hợp lệ
+                    rowContextLogger.info({ event: 'validation_warning', field: 'continent', invalidValue: originalContinent, action: 'normalized', normalizedTo: 'No continent' }, `Invalid continent. Normalizing.`);
+                }
+                finalRow.continent = "No continent";
+            }
+
+            const originalType = finalRow.type?.trim();
+            if (!originalType || !this.VALID_TYPES.has(originalType)) {
+                if (originalType) { // Chỉ log nếu có giá trị không hợp lệ
+                    rowContextLogger.info({ event: 'validation_warning', field: 'type', invalidValue: originalType, action: 'normalized', normalizedTo: 'Offline' }, `Invalid type. Normalizing.`);
+                }
+                finalRow.type = "Offline";
+            }
+
+            const fieldsToNormalizeIfEmpty: { field: keyof ProcessedRowData, defaultValue: string }[] = [
+                { field: 'location', defaultValue: "No location" },
+                { field: 'cityStateProvince', defaultValue: "No city/state/province" },
+                { field: 'country', defaultValue: "No country" },
+                { field: 'publisher', defaultValue: "No publisher" },
+                { field: 'topics', defaultValue: "No topics" },
+                { field: 'summary', defaultValue: "No summary available" },
+                { field: 'callForPapers', defaultValue: "No call for papers available" }
+            ];
+
+            for (const item of fieldsToNormalizeIfEmpty) {
+                const currentValue = String(finalRow[item.field] ?? '').trim();
+                if (!currentValue) {
+                    (finalRow as any)[item.field] = item.defaultValue;
+                    rowContextLogger.trace({ event: 'normalization_applied', field: item.field, normalizedValue: item.defaultValue }, `${item.field} was empty, normalized.`);
+                }
+            }
+
+            const originalYear = finalRow.year?.trim();
+            if (originalYear && !this.YEAR_REGEX.test(originalYear)) {
+                rowContextLogger.info({ event: 'validation_warning', field: 'year', invalidValue: originalYear, action: 'logged_only' }, `Invalid year format. Value kept as is.`);
+            }
+
+            rowContextLogger.trace({ event: 'row_transformed_successfully' }, "Bản ghi đã được chuyển đổi thành công.");
+            return finalRow;
+
+        } catch (rowProcessingError: any) {
+            rowContextLogger.error({ err: rowProcessingError, event: 'row_transform_error' }, "Lỗi nghiêm trọng khi chuyển đổi bản ghi, bỏ qua.");
+            return null;
+        }
+    }
+
+    /**
+     * [ĐIỀU CHỈNH] Xử lý một file JSONL, đọc từng dòng, và gọi _transformSingleRecord để xử lý.
+     * Phương thức này giờ đây là một "driver" mỏng, chỉ chịu trách nhiệm đọc file.
+     */
     private async *_processJsonlStream(jsonlFilePath: string, parentProcLogger: Logger): AsyncGenerator<ProcessedRowData | null> {
         const fileStream = fs.createReadStream(jsonlFilePath);
         const rl = readline.createInterface({ input: fileStream, crlfDelay: Infinity });
@@ -136,219 +265,55 @@ export class ResultProcessingService {
             lineNumber++;
             const lineLogger = streamLogger.child({ lineNumber });
             if (!line.trim()) {
-                lineLogger.trace("Skipping empty line.");
+                lineLogger.trace("Bỏ qua dòng trống.");
                 continue;
             }
 
             let inputRow: InputRowData | null = null;
-            try { // Try cho việc parse dòng JSONL
+            try {
                 inputRow = JSON.parse(line) as InputRowData;
-                if (!inputRow || !inputRow.batchRequestId || !inputRow.conferenceAcronym || !inputRow.conferenceTitle) {
-                    lineLogger.warn({
-                        event: 'jsonl_missing_core_or_batchid_data',
-                        hasInputRow: !!inputRow,
-                        hasAcronym: !!inputRow?.conferenceAcronym,
-                        hasTitle: !!inputRow?.conferenceTitle,
-                        hasBatchRequestId: !!inputRow?.batchRequestId,
-                        lineContentSubstring: line.substring(0, 100)
-                    }, "Parsed line missing essential data (acronym, title, or batchRequestId), skipping row.");
-                    yield null;
-                    continue;
-                }
             } catch (parseError: any) {
-                lineLogger.error({ err: parseError, lineContentSubstring: line.substring(0, 100), event: 'jsonl_parse_error' }, "Failed to parse line in JSONL file, skipping row.");
+                lineLogger.error({ err: parseError, lineContentSubstring: line.substring(0, 100), event: 'jsonl_parse_error' }, "Lỗi parse dòng JSONL, bỏ qua dòng.");
                 yield null;
                 continue;
             }
 
-            // inputRow đã được parse thành công ở đây
-            const acronym = inputRow.conferenceAcronym!; // Thêm ! vì đã kiểm tra ở trên
-            const title = inputRow.conferenceTitle!;   // Thêm ! vì đã kiểm tra ở trên
-            const rowContextLogger = lineLogger.child({ acronym, title, batchRequestId: inputRow.batchRequestId });
+            // Gọi phương thức chuyển đổi tập trung
+            const processedRow = await this._transformSingleRecord(inputRow, lineLogger);
+            yield processedRow;
+        }
 
-            // Gộp logic đọc file và xử lý finalRow vào một khối try...catch
-            try {
-                let parsedDetermineInfo: Record<string, any> = {};
-                let parsedExtractInfo: Record<string, any> = {};
-                let parsedCfpInfo: Record<string, any> = {};
+        streamLogger.info({ totalLinesProcessed: lineNumber, event: 'jsonl_processing_finished' }, 'Hoàn thành xử lý stream file JSONL.');
+    }
 
+    /**
+     * [MỚI] Xử lý một mảng dữ liệu thô từ bộ nhớ.
+     * Phương thức này lặp qua mảng và gọi _transformSingleRecord cho mỗi phần tử.
+     * @param records Mảng các bản ghi InputRowData.
+     * @param parentLogger Logger để ghi lại quá trình.
+     * @returns Một Promise phân giải ra mảng các ProcessedRowData đã được xử lý.
+     */
+    public async processInMemoryData(records: InputRowData[], parentLogger: Logger): Promise<ProcessedRowData[]> {
+        const logger = this.getMethodLogger(parentLogger, 'processInMemoryData');
+        logger.info({ recordCount: records.length, event: 'in_memory_processing_start' }, 'Bắt đầu xử lý dữ liệu từ bộ nhớ.');
 
-                // +++ START OF MODIFICATION +++
-
-                // --- Process Determine Info ---
-                if (inputRow.determineResponseContent) {
-                    parsedDetermineInfo = inputRow.determineResponseContent;
-                    rowContextLogger.trace({ type: 'determine', source: 'memory' }, "Used determine info from JSONL content.");
-                } else if (inputRow.determineResponseTextPath) {
-                    rowContextLogger.trace({ type: 'determine', source: 'file' }, "Reading determine info from file (dev mode).");
-                    try {
-                        const content = await this.fileSystemService.readFileContent(inputRow.determineResponseTextPath);
-                        const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                        parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
-                        if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
-                    } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' });
-                    }
-                }
-
-                // --- Process Extract Info ---
-                if (inputRow.extractResponseContent) {
-                    parsedExtractInfo = inputRow.extractResponseContent;
-                    rowContextLogger.trace({ type: 'extract', source: 'memory' }, "Used extract info from JSONL content.");
-                } else if (inputRow.extractResponseTextPath) {
-                    rowContextLogger.trace({ type: 'extract', source: 'file' }, "Reading extract info from file (dev mode).");
-                    try {
-                        const content = await this.fileSystemService.readFileContent(inputRow.extractResponseTextPath);
-                        const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                        parsedExtractInfo = cleaned ? JSON.parse(cleaned) : {};
-                        if (typeof parsedExtractInfo !== 'object' || parsedExtractInfo === null) parsedExtractInfo = {};
-                    } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' });
-                    }
-                }
-
-                // --- Process CFP Info ---
-                if (inputRow.cfpResponseContent) {
-                    parsedCfpInfo = inputRow.cfpResponseContent;
-                    rowContextLogger.trace({ type: 'cfp', source: 'memory' }, "Used CFP info from JSONL content.");
-                } else if (inputRow.cfpResponseTextPath) {
-                    rowContextLogger.trace({ type: 'cfp', source: 'file' }, "Reading CFP info from file (dev mode).");
-                    try {
-                        const content = await this.fileSystemService.readFileContent(inputRow.cfpResponseTextPath);
-                        const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
-                        parsedCfpInfo = cleaned ? JSON.parse(cleaned) : {};
-                        if (typeof parsedCfpInfo !== 'object' || parsedCfpInfo === null) parsedCfpInfo = {};
-                    } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.cfpResponseTextPath, type: 'cfp', event: 'file_read_parse_warn' });
-                    }
-                }
-
-                // +++ END OF MODIFICATION +++
-
-
-                // Xử lý API response và tạo finalRow
-                const processedExtractResponse = this._processApiResponse(parsedExtractInfo, rowContextLogger);
-                const finalRow: ProcessedRowData = {
-                    title: title,
-                    acronym: acronym.replace(/_\d+$/, ''),
-                    mainLink: inputRow.mainLink || "",
-                    cfpLink: inputRow.cfpLink || "",
-                    impLink: inputRow.impLink || "",
-                    determineLinks: parsedDetermineInfo,
-                    ...processedExtractResponse,
-                    summary: String(parsedCfpInfo?.summary ?? parsedCfpInfo?.Summary ?? ''),
-                    callForPapers: String(parsedCfpInfo?.callForPapers ?? parsedCfpInfo?.['Call for Papers'] ?? parsedCfpInfo?.['Call For Papers'] ?? parsedCfpInfo?.cfp ?? ''),
-                    requestId: inputRow.batchRequestId,
-                    originalRequestId: inputRow.originalRequestId,
-                };
-
-                // --- Validation & Normalization ---
-                const originalContinent = finalRow.continent?.trim();
-                if (!originalContinent) {
-                    // NORMALIZE: Gán giá trị mặc định khi rỗng
-                    finalRow.continent = "No continent";
-                    // LOG NORMALIZATION (nếu muốn)
-                    rowContextLogger.info({
-                        event: 'normalization_applied', // EVENT
-                        field: 'continent',
-                        originalValue: originalContinent, // Là undefined hoặc ""
-                        normalizedValue: "No continent",
-                        reason: 'empty_value',
-                        conferenceAcronym: acronym, // Đảm bảo context có trong log entry
-                        conferenceTitle: title
-                    }, `Continent was empty, normalized to "No continent".`);
-                } else if (!this.VALID_CONTINENTS.has(originalContinent)) {
-                    // VALIDATION WARNING và NORMALIZE
-                    rowContextLogger.info({ // Giữ info vì nó cũng là 1 dạng "cảnh báo" về dữ liệu đầu vào
-                        event: 'validation_warning', // EVENT
-                        field: 'continent',
-                        invalidValue: originalContinent,
-                        action: 'normalized', // Hành động là normalize
-                        normalizedTo: 'No continent', // Giá trị sau khi normalize
-                        conferenceAcronym: acronym,
-                        conferenceTitle: title
-                    }, `Invalid continent "${originalContinent}". Normalizing to "No continent".`);
-                    finalRow.continent = "No continent";
-                }
-
-                const originalType = finalRow.type?.trim();
-                if (!originalType) {
-                    // NORMALIZE
-                    finalRow.type = "Offline";
-                    // LOG NORMALIZATION (nếu muốn)
-                    rowContextLogger.info({
-                        event: 'normalization_applied', // EVENT
-                        field: 'type',
-                        originalValue: originalType,
-                        normalizedValue: "Offline",
-                        reason: 'empty_value',
-                        conferenceAcronym: acronym,
-                        conferenceTitle: title
-                    }, `Type was empty, normalized to "Offline".`);
-                } else if (!this.VALID_TYPES.has(originalType)) {
-                    // VALIDATION WARNING và NORMALIZE
-                    rowContextLogger.info({
-                        event: 'validation_warning', // EVENT
-                        field: 'type',
-                        invalidValue: originalType,
-                        action: 'normalized',
-                        normalizedTo: 'Offline',
-                        conferenceAcronym: acronym,
-                        conferenceTitle: title
-                    }, `Invalid type "${originalType}". Normalizing to "Offline".`);
-                    finalRow.type = "Offline";
-                }
-
-                // Normalization cho các trường text rỗng
-                const fieldsToNormalizeIfEmpty: { field: keyof ProcessedRowData, defaultValue: string }[] = [
-                    { field: 'location', defaultValue: "No location" },
-                    { field: 'cityStateProvince', defaultValue: "No city/state/province" },
-                    { field: 'country', defaultValue: "No country" },
-                    { field: 'publisher', defaultValue: "No publisher" },
-                    { field: 'topics', defaultValue: "No topics" },
-                    { field: 'summary', defaultValue: "No summary available" },
-                    { field: 'callForPapers', defaultValue: "No call for papers available" }
-                ];
-
-                for (const item of fieldsToNormalizeIfEmpty) {
-                    const currentValue = String(finalRow[item.field] ?? '').trim(); // Ép kiểu về string trước khi trim
-                    if (!currentValue) {
-                        (finalRow as any)[item.field] = item.defaultValue; // Gán giá trị mặc định
-                        // LOG NORMALIZATION
-                        rowContextLogger.info({
-                            event: 'normalization_applied', // EVENT
-                            field: item.field,
-                            originalValue: currentValue, // Là ""
-                            normalizedValue: item.defaultValue,
-                            reason: 'empty_value',
-                            conferenceAcronym: acronym,
-                            conferenceTitle: title
-                        }, `${item.field} was empty, normalized to "${item.defaultValue}".`);
-                    }
-                }
-
-                const originalYear = finalRow.year?.trim();
-                if (originalYear && !this.YEAR_REGEX.test(originalYear)) {
-                    // VALIDATION WARNING (chỉ log, không normalize ở đây)
-                    rowContextLogger.info({ // Giữ info vì nó cũng là 1 dạng "cảnh báo" về dữ liệu đầu vào
-                        event: 'validation_warning', // EVENT
-                        field: 'year',
-                        invalidValue: originalYear,
-                        action: 'logged_only', // Hành động chỉ là log
-                        conferenceAcronym: acronym,
-                        conferenceTitle: title
-                    }, `Invalid year format "${originalYear}". Value kept as is.`);
-                }
-                rowContextLogger.trace({ event: 'row_processed_successfully' }, "Row processed for yielding.");
-                yield finalRow;
-
-            } catch (rowProcessingError: any) { // Catch cho toàn bộ quá trình đọc file và xử lý row
-                rowContextLogger.error({ err: rowProcessingError, event: 'row_data_or_content_processing_error' }, "Error processing row data or its content files, skipping row.");
-                yield null;
+        const processedResults: ProcessedRowData[] = [];
+        for (const record of records) {
+            // Gọi phương thức chuyển đổi tập trung
+            const transformed = await this._transformSingleRecord(record, logger);
+            if (transformed) {
+                processedResults.push(transformed);
             }
-        } // Kết thúc for await
+        }
 
-        streamLogger.info({ totalLinesProcessed: lineNumber, event: 'jsonl_processing_finished' }, 'Finished processing JSONL file stream');
+        logger.info({
+            inputCount: records.length,
+            processedCount: processedResults.length,
+            skippedCount: records.length - processedResults.length,
+            event: 'in_memory_processing_finish'
+        }, 'Hoàn thành xử lý dữ liệu từ bộ nhớ.');
+
+        return processedResults;
     }
 
     // ++ MODIFIED: Nhận đường dẫn JSONL và CSV cụ thể của batch

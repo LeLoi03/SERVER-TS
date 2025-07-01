@@ -8,11 +8,16 @@ const API_CONFERENCE_ENDPOINT = 'http://localhost:3001/api/v1/crawl-conferences'
 // **********************************
 
 // CHỌN CHẾ ĐỘ THỰC THI: 'sync' hoặc 'async'
-// 'sync': Đợi cho đến khi crawl xong và nhận lại dữ liệu (giống code gốc).
-// 'async': Nhận response 202 ngay lập tức và tiến trình chạy nền (cho Admin UI).
+// 'sync': Đợi cho đến khi crawl xong và nhận lại dữ liệu.
+// 'async': Nhận response 202 ngay lập tức và tiến trình chạy nền.
 const EXECUTION_MODE = 'sync'; // <-- THAY ĐỔI Ở ĐÂY
 
-const TEST_DESCRIPTION = `Test crawl in '${EXECUTION_MODE}' mode from test_api.js`;
+// CHỌN CÓ GHI FILE KẾT QUẢ KHÔNG: true hoặc false
+// true: Sẽ tạo ra file JSONL và CSV trong thư mục output.
+// false: Sẽ không tạo file, chỉ xử lý trong bộ nhớ và trả về kết quả.
+const RECORD_FILES = false; // <-- THAM SỐ MỚI, THAY ĐỔI Ở ĐÂY
+
+const TEST_DESCRIPTION = `Test crawl in '${EXECUTION_MODE}' mode, recordFile=${RECORD_FILES}, from test_api.js`;
 
 const API_MODELS_TO_USE = {
     determineLinks: 'non-tuned',
@@ -28,25 +33,26 @@ const conferenceItems = [
         "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
         "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml"
     },
-    // {
-    //     "Title": "International Conference on Machine Learning",
-    //     "Acronym": "ICML",
-    //     // Luồng CRAWL
-    // },
-    // {
-    //     "Title": "Conference on Neural Information Processing Systems",
-    //     "Acronym": "NeurIPS",
-    //     "mainLink": "https://nips.cc/",
-    //     "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
-    // },
+    {
+        "Title": "International Conference on Machine Learning",
+        "Acronym": "ICML",
+        // Luồng CRAWL
+    },
+    {
+        "Title": "Conference on Neural Information Processing Systems",
+        "Acronym": "NeurIPS",
+        "mainLink": "https://nips.cc/",
+        "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
+    },
 ];
 
 async function crawlConferences() {
-    console.log(`--- Starting Conference Test (Mode: ${EXECUTION_MODE}) ---`);
+    console.log(`--- Starting Conference Test (Mode: ${EXECUTION_MODE}, Record Files: ${RECORD_FILES}) ---`);
     try {
         const requestPayload = {
             items: conferenceItems,
             models: API_MODELS_TO_USE,
+            recordFile: RECORD_FILES, // <<< THÊM THAM SỐ MỚI VÀO PAYLOAD
         };
 
         if (typeof TEST_DESCRIPTION !== 'undefined') {
@@ -85,12 +91,14 @@ async function crawlConferences() {
         } else if (response.status === 200) { // Chế độ SYNC
             console.log('\n--- Synchronous Mode Detected ---');
             console.log('Runtime:', response.data.runtime);
-            if (response.data.outputJsonlPath) {
-                console.log('Output JSONL Path:', response.data.outputJsonlPath);
-            }
-            if (response.data.outputCsvPath) {
-                console.log('Output CSV Path:', response.data.outputCsvPath);
-            }
+            // Các đường dẫn này chỉ có thể tồn tại nếu recordFile=true, nhưng chúng ta không nhận lại chúng từ server nữa.
+            // Có thể xóa các dòng log này hoặc giữ lại để kiểm tra nếu bạn quyết định trả về chúng trong tương lai.
+            // if (response.data.outputJsonlPath) {
+            //     console.log('Output JSONL Path:', response.data.outputJsonlPath);
+            // }
+            // if (response.data.outputCsvPath) {
+            //     console.log('Output CSV Path:', response.data.outputCsvPath);
+            // }
 
             if (response.data.data) {
                 if (Array.isArray(response.data.data) && response.data.data.length > 0) {

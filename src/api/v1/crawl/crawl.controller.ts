@@ -12,6 +12,7 @@ import { ConferenceData, ProcessedRowData, ApiModels, CrawlModelType, CrawlReque
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import { crawlJournals } from '../../../journal/crawlJournals'; // Giữ lại nếu dùng
 import { CrawlProcessManagerService } from '../../../services/crawlProcessManager.service'; // <<< IMPORT MỚI
+import { RequestStateService } from '../../../services/requestState.service'; // <<< IMPORT MỚI
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 // DEFAULT_API_MODELS sẽ được áp dụng nếu model tương ứng trong payload là null hoặc không hợp lệ
@@ -78,8 +79,10 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
     });
 
 
-    const { description, items: conferenceList, models: modelsFromPayload } = req.body;
-    const executionMode = (req.query.mode as string) === 'sync' ? 'sync' : 'async'; // Mặc định là 'async'
+    // <<< THÊM LOGIC XỬ LÝ recordFile >>>
+    const { description, items: conferenceList, models: modelsFromPayload, recordFile } = req.body;
+    const executionMode = (req.query.mode as string) === 'sync' ? 'sync' : 'async';
+
 
     routeLogger.info({
         event: 'received_request',
@@ -88,8 +91,16 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         requestDescription: description,
         itemCount: conferenceList?.length,
         modelsReceived: modelsFromPayload,
+        recordFile: recordFile === true, // Log giá trị của cờ
         executionMode: executionMode, // Log chế độ thực thi
     }, "Received request.");
+
+    // <<< KHỞI TẠO REQUEST STATE SERVICE >>>
+    // Lấy một instance của RequestStateService cho request này
+    const requestStateService = container.resolve(RequestStateService);
+    // Khởi tạo trạng thái với giá trị từ payload
+    requestStateService.init(recordFile);
+
 
     const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
 
@@ -97,7 +108,6 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
     const performCrawl = async (): Promise<ProcessedRowData[] | void> => {
         routeLogger.info({ description }, "Beginning processing conference crawl.");
 
-        const configService = container.resolve(ConfigService);
         const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
 
         // --- Phần xác thực và chuẩn bị dữ liệu (giữ nguyên) ---
@@ -136,7 +146,8 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         }
         // --- Kết thúc phần xác thực ---
 
-        routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
+          routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
+        // KHÔNG cần truyền recordFile vào `run` nữa
         const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
             conferenceList,
             routeLogger,
@@ -162,7 +173,7 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
     // Phân luồng xử lý dựa trên executionMode
     if (executionMode === 'sync') {
         // ----- CHẾ ĐỘ SYNC (BLOCKING) -----
-        let requestProcessed = false;``
+        let requestProcessed = false; ``
         try {
             requestProcessed = true;
             const innerOperationStartTime = Date.now();

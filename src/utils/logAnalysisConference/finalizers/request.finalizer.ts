@@ -49,6 +49,7 @@ export function finalizeRequest(
         request.status = (requestLogData && Array.isArray(requestLogData.logs) && requestLogData.logs.length > 0) ? 'Completed' : 'NoData';
     } else {
         const totalTasks = childConferences.length;
+
         if (numProcessing > 0 || numProcessedOk > 0) {
             request.status = 'Processing';
         } else if (numFailed === totalTasks) {
