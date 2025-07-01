@@ -100,13 +100,13 @@ export class CrawlOrchestratorService {
         let crawlError: Error | null = null; // Store any fatal error to re-throw later
 
         try {
-            logger.info("Phase 0: Resetting service states for new batch...");
+            // logger.info("Phase 0: Resetting service states for new batch...");
             this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger); // Clears global acronyms set
             this.htmlPersistenceService.resetState(logger); // Clears temporary HTML file mappings
 
-            logger.info("Phase 1: Preparing environment (filesystem, playwright, Gemini API)...");
+            // logger.info("Phase 1: Preparing environment (filesystem, playwright, Gemini API)...");
             await this.fileSystemService.prepareOutputArea(logger); // Ensures output directories exist and are clean
-            await this.fileSystemService.writeConferenceInputList(conferenceList, logger); // Writes the input list to a file for record-keeping
+            // await this.fileSystemService.writeConferenceInputList(conferenceList, logger); // Writes the input list to a file for record-keeping
 
             await this.playwrightService.initialize(logger); // Initializes Playwright browser context
             // Note: GeminiApiService.init() might not need `apiModels` directly,
@@ -116,9 +116,9 @@ export class CrawlOrchestratorService {
 
             this.htmlPersistenceService.setBrowserContext(logger); // Sets Playwright browser context for HTML saving
 
-            logger.info("Environment prepared successfully.");
+            // logger.info("Environment prepared successfully.");
 
-            logger.info("Phase 2: Scheduling conference processing tasks...");
+            // logger.info("Phase 2: Scheduling conference processing tasks...");
             const tasks = conferenceList.map((conference, itemIndex) => {
                 return async () => { // Make sure the task function is async
                     // Resolve ConferenceProcessorService instance for each task to ensure it's stateless or has fresh state
@@ -141,20 +141,20 @@ export class CrawlOrchestratorService {
             });
 
             tasks.forEach(taskFunc => this.taskQueueService.add(taskFunc));
-            logger.info(`Scheduled ${tasks.length} conference processing tasks with concurrency ${this.taskQueueService.concurrency}.`);
+            // logger.info(`Scheduled ${tasks.length} conference processing tasks with concurrency ${this.taskQueueService.concurrency}.`);
 
-            logger.info("Phase 3: Waiting for all conference processing tasks to complete...");
+            // logger.info("Phase 3: Waiting for all conference processing tasks to complete...");
             await this.taskQueueService.onIdle(); // Waits until all scheduled tasks are finished
-            logger.info("All conference processing tasks finished.");
+            // logger.info("All conference processing tasks finished.");
 
-            logger.info("Phase 3.5: Waiting for background batch save operations to complete...");
+            // logger.info("Phase 3.5: Waiting for background batch save operations to complete...");
             await this.batchProcessingOrchestratorService.awaitCompletion(logger); // Ensures all background JSONL writes are done
-            logger.info("All background batch save operations finished.");
+            // logger.info("All background batch save operations finished.");
 
-            logger.info("Phase 4: Processing final output (reading JSONL and writing CSV)...");
+            // logger.info("Phase 4: Processing final output (reading JSONL and writing CSV)...");
             // This step converts the raw JSONL outputs into the final CSV-ready format
             allProcessedData = await this.resultProcessingService.processOutput(logger, batchRequestId);
-            logger.info(`ResultProcessingService finished for batch ${batchRequestId}. Collected ${allProcessedData.length} CSV-ready records.`);
+            // logger.info(`ResultProcessingService finished for batch ${batchRequestId}. Collected ${allProcessedData.length} CSV-ready records.`);
 
             const csvPathForThisBatch = this.configService.getEvaluateCsvPathForBatch(batchRequestId);
 
@@ -194,22 +194,25 @@ export class CrawlOrchestratorService {
                 logger.error({ event: 'csv_generation_pipeline_failed', err: { message: errorMessage, stack: errorStack } }, "CSV generation pipeline failed at orchestrator level due to stream or final processing error.");
             }
         } finally {
-            logger.info("Phase 5: Performing final cleanup (closing browser, etc.)...");
+            // logger.info("Phase 5: Performing final cleanup (closing browser, etc.)...");
             await this.playwrightService.close(logger); // Ensures Playwright browser is closed
-            // await this.fileSystemService.cleanupTempFiles(); // Dọn dẹp file tạm (nếu có)
-            logger.info("Cleanup finished.");
 
-            // Log a summary of the entire crawl operation
-            await this.logSummary(
-                operationStartTime,
-                conferenceList.length,
-                allProcessedData.length,
-                apiModels,
-                batchRequestId,
-                logger
-            );
+            if (!this.configService.isProduction) {
+                await this.fileSystemService.cleanupTempFiles(); // Dọn dẹp file tạm (nếu có)
+                logger.info("Cleanup finished.");
+            }
 
-            logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
+            // // Log a summary of the entire crawl operation
+            // await this.logSummary(
+            //     operationStartTime,
+            //     conferenceList.length,
+            //     allProcessedData.length,
+            //     apiModels,
+            //     batchRequestId,
+            //     logger
+            // );
+
+            // logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
         }
 
         // Re-throw the stored fatal error if one occurred

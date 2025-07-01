@@ -21,9 +21,9 @@ import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import erro
 /**
  * Valid item types supported by the follow feature.
  */
-type ValidItemType = 'conference' | 'journal';
+type ValidItemType = 'conference';
 /**
- * Valid identifier types for finding a conference or journal item.
+ * Valid identifier types for finding a conference item.
  */
 type ValidIdentifierType = 'acronym' | 'title' | 'id';
 /**
@@ -33,7 +33,7 @@ type ValidAction = 'follow' | 'unfollow' | 'list';
 
 /**
  * Handles the 'manageFollow' function call from the LLM.
- * This handler allows users to follow, unfollow, or list conferences and journals.
+ * This handler allows users to follow, unfollow, or list conferences.
  * It includes validation, authentication checks, item lookup, and cross-checks with
  * blacklisted conferences to prevent conflicts.
  */
@@ -111,8 +111,8 @@ export class ManageFollowHandler implements IFunctionHandler {
             }
 
             let validationError: string | null = null;
-            if (!(['conference', 'journal'] as string[]).includes(itemType)) {
-                validationError = `Invalid item type "${itemType}". Must be 'conference' or 'journal'.`;
+            if (!(['conference'] as string[]).includes(itemType)) {
+                validationError = `Invalid item type "${itemType}". Must be 'conference'.`;
             } else if (!(['follow', 'unfollow', 'list'] as string[]).includes(action)) {
                 validationError = `Invalid action "${action}". Must be 'follow', 'unfollow', or 'list'.`;
             }

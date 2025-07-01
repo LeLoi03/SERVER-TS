@@ -4,7 +4,7 @@ import { singleton, inject } from 'tsyringe';
 import path from 'path';
 import { promises as fsPromises, existsSync } from 'fs';
 // Thay GenerateContentResult bằng GenerateContentResponse
-import { type GenerateContentResponse } from "@google/genai"; 
+import { type GenerateContentResponse } from "@google/genai";
 import { ConfigService } from '../../config/config.service';
 import { Logger } from 'pino';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
@@ -46,7 +46,7 @@ export class GeminiResponseHandlerService {
             return extractedJson;
         }
         logger.trace({ event: 'strip_markdown_no_wrapper_found' }, "No markdown wrapper found in text.");
-        return text; 
+        return text;
     }
 
     public processResponse(
@@ -100,7 +100,7 @@ export class GeminiResponseHandlerService {
                 // rawResponseText remains ""
             }
         }
-        
+
         // Ensure rawResponseText is a string after extraction attempts
         if (typeof rawResponseText !== 'string') {
             rawResponseText = "";
@@ -111,9 +111,9 @@ export class GeminiResponseHandlerService {
 
         // 4. Fix Trailing Commas (on potentially unwrapped text)
         const originalTextForCommaCheck = processedText;
-        if (processedText.trim().length > 0) { 
-            processedText = processedText.replace(/,(\s*})/g, '$1'); 
-            processedText = processedText.replace(/,(\s*])/g, '$1'); 
+        if (processedText.trim().length > 0) {
+            processedText = processedText.replace(/,(\s*})/g, '$1');
+            processedText = processedText.replace(/,(\s*])/g, '$1');
 
             if (processedText !== originalTextForCommaCheck) {
                 logger.info({
@@ -128,22 +128,22 @@ export class GeminiResponseHandlerService {
         try {
             if (processedText.trim() === "") {
                 logger.error({
-                    originalRawResponseSnippet: rawResponseText.substring(0, 200), 
+                    originalRawResponseSnippet: rawResponseText.substring(0, 200),
                     event: 'gemini_api_response_empty_after_processing'
                 }, "Response text became empty after processing (e.g., stripping markdown or initial empty response). This will be treated as an API error.");
                 throw new Error("Response text is empty after processing (e.g., stripping markdown or initial empty response).");
             }
-            JSON.parse(processedText); 
-            logger.debug({ event: 'gemini_api_response_valid_json', responseTextLength: processedText.length, responseTextSnippet: processedText.substring(0,100) }, "Gemini response text successfully validated as JSON.");
+            JSON.parse(processedText);
+            logger.debug({ event: 'gemini_api_response_valid_json', responseTextLength: processedText.length, responseTextSnippet: processedText.substring(0, 100) }, "Gemini response text successfully validated as JSON.");
         } catch (jsonParseError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(jsonParseError);
             logger.error({
                 err: { message: errorMessage, stack: errorStack },
-                originalRawResponseSnippet: rawResponseText.substring(0, 500), 
-                processedTextSnippet: processedText.substring(0, 500),       
+                originalRawResponseSnippet: rawResponseText.substring(0, 500),
+                processedTextSnippet: processedText.substring(0, 500),
                 event: 'gemini_api_response_invalid_json'
             }, "Gemini response text is not valid JSON (after markdown stripping and comma fixing attempts). This will be treated as an API error and should trigger a retry.");
-            throw new Error(`Gemini response is not valid JSON: ${errorMessage}. Processed text snippet (that failed): ${processedText.substring(0,100)}`);
+            throw new Error(`Gemini response is not valid JSON: ${errorMessage}. Processed text snippet (that failed): ${processedText.substring(0, 100)}`);
         }
 
         const metaData = sdkResult.usageMetadata ?? null; // UPDATED: Directly access from sdkResult
@@ -158,9 +158,11 @@ export class GeminiResponseHandlerService {
         batchIndex: number,
         parentLogger: Logger
     ): Promise<void> {
+        if (this.configService.isProduction) return;
+
         const safeAcronym = (acronym || 'noacronym').replace(/[^a-zA-Z0-9_.-]/g, '-');
         const responseOutputPath = path.join(this.responseOutputDir, `result_${apiType}_${safeAcronym}_${batchIndex}.txt`);
-        
+
         const fileWriteLogger = parentLogger.child({ sub_operation: 'response_file_write_async', filePath: responseOutputPath });
         const fileLogContext = { ...parentLogger.bindings(), filePath: responseOutputPath, event_group: 'response_file_write' };
 
@@ -169,9 +171,9 @@ export class GeminiResponseHandlerService {
                 await fsPromises.mkdir(this.responseOutputDir, { recursive: true });
                 fileWriteLogger.info({ directory: this.responseOutputDir, event: 'response_dir_created' }, "Created response output directory.");
             }
-            fileWriteLogger.debug({ ...fileLogContext, event: 'response_file_write_start' }, "Attempting to write response to file.");
-            await fsPromises.writeFile(responseOutputPath, responseText || "", "utf8"); 
-            fileWriteLogger.debug({ ...fileLogContext, event: 'response_file_write_success' }, "Successfully wrote response to file.");
+            fileWriteLogger.info({ ...fileLogContext, event: 'response_file_write_start' }, "Attempting to write response to file.");
+            await fsPromises.writeFile(responseOutputPath, responseText || "", "utf8");
+            fileWriteLogger.info({ ...fileLogContext, event: 'response_file_write_success' }, "Successfully wrote response to file.");
         } catch (fileWriteError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(fileWriteError);
             fileWriteLogger.error({ ...fileLogContext, err: { message: errorMessage, stack: errorStack }, event: 'response_file_write_failed' }, `Error writing response to file: "${errorMessage}".`);
@@ -179,7 +181,7 @@ export class GeminiResponseHandlerService {
     }
 
     public cleanJsonResponse(
-        responseText: string, 
+        responseText: string,
         loggerForCleaning: Logger
     ): string {
         if (!responseText || responseText.trim() === "") {
@@ -188,7 +190,7 @@ export class GeminiResponseHandlerService {
         }
         loggerForCleaning.trace({ rawResponseSnippet: responseText.substring(0, 500) }, "Attempting to clean JSON response (final pass, or if called directly).");
 
-        const textToClean = this.stripMarkdownJsonWrapper(responseText, loggerForCleaning.child({sub_op: 'stripMarkdownInCleanJson'}));
+        const textToClean = this.stripMarkdownJsonWrapper(responseText, loggerForCleaning.child({ sub_op: 'stripMarkdownInCleanJson' }));
 
         if (textToClean.trim() === "") {
             loggerForCleaning.debug({ event: 'json_clean_empty_after_markdown_strip_fallback' }, "Text became empty after markdown stripping in cleanJsonResponse. Returning empty string.");
@@ -203,13 +205,13 @@ export class GeminiResponseHandlerService {
             const potentialJson = textToClean.substring(firstCurly, lastCurly + 1);
             try {
                 JSON.parse(potentialJson);
-                cleanedResponseText = potentialJson.trim(); 
+                cleanedResponseText = potentialJson.trim();
                 loggerForCleaning.debug({ event: 'json_clean_structure_validated_in_cleaner' }, "Validated JSON structure within cleanJsonResponse after potential final stripping.");
             } catch (parseError: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(parseError);
                 loggerForCleaning.warn({
                     textSnippet: textToClean.substring(0, 200),
-                    potentialJsonSnippet: potentialJson.substring(0,200),
+                    potentialJsonSnippet: potentialJson.substring(0, 200),
                     err: { message: errorMessage },
                     event: 'json_clean_substring_parse_failed_in_cleaner'
                 }, `Extracted potential JSON substring failed to parse within cleanJsonResponse: "${errorMessage}". Returning empty string.`);

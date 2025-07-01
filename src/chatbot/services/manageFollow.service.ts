@@ -5,7 +5,6 @@ import { ApiCallResult, FollowItem } from '../shared/types'; // Ensure FollowIte
 import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 import { executeGetConferences } from './getConferences.service';
-import { executeGetJournals } from './getJournals.service';
 import { ConfigService } from '../../config/config.service';
 
 const LOG_PREFIX = "[FollowService]";
@@ -25,7 +24,7 @@ if (!DATABASE_URL) {
 }
 
 // Defines the types of items that can be followed/unfollowed.
-type ServiceItemType = 'conference' | 'journal';
+type ServiceItemType = 'conference';
 // Defines the API actions for following/unfollowing.
 type ServiceApiActionType = 'follow' | 'unfollow';
 // Defines the types of identifiers used to find an item.
@@ -39,7 +38,7 @@ const HEADERS = {
 /**
  * Constructs the appropriate API URL for follow/unfollow operations based on item type and operation.
  *
- * @param {ServiceItemType} itemType - The type of item (e.g., 'conference', 'journal').
+ * @param {ServiceItemType} itemType - The type of item (e.g., 'conference').
  * @param {'followedList' | 'add' | 'remove'} operation - The specific follow/unfollow operation.
  * @returns {string} The full URL for the API endpoint.
  * @throws {Error} If an invalid operation type is provided.
@@ -48,10 +47,10 @@ function getApiUrl(
     itemType: ServiceItemType,
     operation: 'followedList' | 'add' | 'remove'
 ): string {
-    const base = itemType === 'conference' ? 'follow-conference' : 'follow-journal';
+    const base = 'follow-conference';
     switch (operation) {
         case 'followedList':
-            // Assumes an endpoint like /follow-conference/followed or /follow-journal/followed
+            // Assumes an endpoint like /follow-conference/followed
             return `${DATABASE_URL}/${base}/followed`;
         case 'add':
             return `${DATABASE_URL}/${base}/add`;
@@ -65,10 +64,10 @@ function getApiUrl(
 }
 
 /**
- * Fetches the list of items (conferences or journals) currently followed by the user.
+ * Fetches the list of items (conferences) currently followed by the user.
  * Requires an authentication token.
  *
- * @param {ServiceItemType} itemType - The type of item to fetch the followed list for ('conference' or 'journal').
+ * @param {ServiceItemType} itemType - The type of item to fetch the followed list for ('conference').
  * @param {string | null} token - The user's authentication token (Bearer token).
  * @returns {Promise<{ success: boolean; itemIds: string[]; items?: FollowItem[]; errorMessage?: string }>}
  *          A Promise resolving to an object indicating success, a list of followed item IDs,
@@ -115,10 +114,10 @@ export async function executeGetUserFollowed(
 }
 
 /**
- * Executes an API call to follow or unfollow a specific item (conference or journal).
+ * Executes an API call to follow or unfollow a specific item (conference).
  *
  * @param {string} itemId - The unique ID of the item to follow or unfollow.
- * @param {ServiceItemType} itemType - The type of item ('conference' or 'journal').
+ * @param {ServiceItemType} itemType - The type of item ('conference').
  * @param {ServiceApiActionType} action - The action to perform: 'follow' or 'unfollow'.
  * @param {string | null} token - The user's authentication token (Bearer token).
  * @returns {Promise<{ success: boolean; errorMessage?: string }>}
@@ -144,9 +143,7 @@ export async function executeFollowUnfollowApi(
     const operation = action === 'follow' ? 'add' : 'remove';
     const url = getApiUrl(itemType, operation);
     // Payload depends on itemType
-    const bodyPayload = itemType === 'conference'
-        ? { conferenceId: itemId }
-        : { journalId: itemId };
+    const bodyPayload = { conferenceId: itemId }
 
     logToFile(`${logContext} Executing action: POST ${url} with payload: ${JSON.stringify(bodyPayload)}`);
 
@@ -188,12 +185,12 @@ export async function executeFollowUnfollowApi(
 
 
 /**
- * Finds the ID of a conference or journal using a given identifier (e.g., acronym, title, or ID).
- * This function utilizes `executeGetConferences` or `executeGetJournals` to perform the search.
+ * Finds the ID of a conference using a given identifier (e.g., acronym, title, or ID).
+ * This function utilizes `executeGetConferences` to perform the search.
  *
  * @param {string} identifier - The value used for searching (e.g., "ICCV", "Nature", "12345").
  * @param {ServiceIdentifierType} identifierType - The type of the identifier provided ('id', 'acronym', or 'title').
- * @param {ServiceItemType} itemType - The type of item to search for ('conference' or 'journal').
+ * @param {ServiceItemType} itemType - The type of item to search for ('conference').
  * @returns {Promise<{ success: boolean; itemId?: string; details?: Partial<FollowItem>; errorMessage?: string }>}
  *          A Promise resolving to an object indicating success, the found item's ID,
  *          partial `FollowItem` details, and an error message if not found or an error occurs.
@@ -231,10 +228,8 @@ export async function findItemId(
     const searchQuery = searchParams.toString();
     logToFile(`${logContext} Constructed search query: ${searchQuery}`);
 
-    // Call the appropriate service (getConferences or getJournals) based on itemType
-    const apiResult: ApiCallResult = itemType === 'conference'
-        ? await executeGetConferences(searchQuery)
-        : await executeGetJournals(searchQuery);
+    // Call the appropriate service (getConferences) based on itemType
+    const apiResult: ApiCallResult = await executeGetConferences(searchQuery)
 
     if (!apiResult.success || !apiResult.rawData) {
         const errorDetail = apiResult.errorMessage ? `: ${apiResult.errorMessage}` : '.';

@@ -76,7 +76,7 @@ export interface ApiCallResult {
 }
 
 /**
- * Defines the date range for an item, typically for conferences or journals.
+ * Defines the date range for an item, typically for conferences.
  */
 export interface ItemDateRange {
     /** The start date of the item, in ISO Date string format. */
@@ -100,7 +100,7 @@ export interface ItemLocation {
 }
 
 /**
- * Represents a generic item (e.g., conference, journal) that can be followed by a user.
+ * Represents a generic item (e.g., conference) that can be followed by a user.
  */
 export interface FollowItem {
     /** The unique identifier of the item. */
@@ -120,9 +120,9 @@ export interface FollowItem {
     /** Optional location details for the item. */
     location: ItemLocation;
     /** The type of the item. */
-    itemType?: "conference" | "journal";
+    itemType?: "conference";
     // Additional fields can be added here as needed for specific item types.
-    // E.g., `websiteUrl?: string;` for conferences, `publisher?: string;` for journals.
+    // E.g., `websiteUrl?: string;` for conferences, `publisher?: string;`.
 }
 
 
@@ -193,8 +193,8 @@ export interface CalendarItem {
 export interface ItemFollowStatusUpdatePayload {
     /** The item whose follow status was updated. */
     item: FollowItem;
-    /** The type of the item (e.g., 'conference', 'journal'). */
-    itemType: 'conference' | 'journal';
+    /** The type of the item (e.g., 'conference'). */
+    itemType: 'conference';
     /** True if the item is now followed (after a 'follow' action), false if unfollowed. */
     followed: boolean;
 }
@@ -255,8 +255,8 @@ export interface DisplayListPayload {
     // Using `any[]` for broad compatibility, but consider a specific union type if possible:
     // `(FollowItem[] | CalendarItem[])`
     items: any[];
-    /** The type of items in the list (e.g., 'conference', 'journal'). */
-    itemType: 'conference' | 'journal';
+    /** The type of items in the list (e.g., 'conference'). */
+    itemType: 'conference';
     /** Describes the nature of the list (e.g., 'followed', 'calendar', 'searchResults'). */
     listType: 'followed' | 'calendar' | string;
     /** Optional title to display above the list. */
@@ -384,7 +384,7 @@ export interface ThoughtStep {
 /**
  * Defines possible identifiers for different AI agents or modules within the system.
  */
-export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'JournalAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent' | string; // Allows for dynamic or unlisted agents
+export type AgentId = 'HostAgent' | 'ConferenceAgent' | 'AdminContactAgent' | 'NavigationAgent' | 'WebsiteInfoAgent' | string; // Allows for dynamic or unlisted agents
 
 /**
  * Represents a status update message sent from the backend to the frontend during processing.

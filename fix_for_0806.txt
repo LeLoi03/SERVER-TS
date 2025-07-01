@@ -1,49 +1,18 @@
-
-
-fix warning khi build
-
 fix mấy cái no info trong visualization
-
-Fix lấy conv list khi không ở chatbot, trả về 1 số lượng conv
-
-thêm hiệu ứng loading cho các nút ở conference , journal
-
-fix param notifi
 
 fix topics gemini trả về
 
 hiện image context source tròn detail
 
-
-
-
-lệch loading dashboard
-
-
 điều chỉnh làm sao để re crawl có thiết lập có re crawl non main likn không
 
 thêm sytsem insttruction trả về link trang chủ nếu không còn lựa chọn nào khác, thêm yêu cầu để sửa lỗi link trong call for papers trả vè không full URL
 
-
 INDIN UCC
 
-gửi lại cuốn 30/6 hoàn hảo
-sửa hết lỗi
 thêm ràng buộc trang conferences, nút xóa conference.
-sửa parse file admin
-
 
 thêm trả về conference non link
-
-
-loading khi chuyern analysis conference journal
-
-làm few shot mới , sai link sai extract 
-
-bỏ journal khỏi chatbot
-
-hiện số lượng request sau khi filter
-
 
 fix trạng thái lưu
 
@@ -56,3 +25,9 @@ chưa completed vẫn bấm save được
 THÊM PỂ PAGE JOURNAL , LOG
 
 fix treo tab playwright
+
+
+
+fix lỗi apply update
+
+fixx side bả admin nổi mbile

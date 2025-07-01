@@ -95,104 +95,6 @@ export const englishGetConferencesDeclaration: FunctionDeclaration = {
     }
 };
 
-export const englishGetJournalsDeclaration: FunctionDeclaration = {
-    name: "getJournals",
-    description: "Retrieves information about journals based on filtering criteria.",
-    parameters: {
-        type: Type.OBJECT,
-        properties: {
-            "Rank": {
-                "type": Type.ARRAY,
-                "description": "List of journal ranks to filter by.",
-                "items": {
-                    "type": Type.NUMBER
-                }
-            },
-            "Title": {
-                "type": Type.ARRAY,
-                "description": "List of journal titles to filter by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Issn": {
-                "type": Type.ARRAY,
-                "description": "List of journal ISSNs to filter by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "SJR": {
-                "type": Type.ARRAY,
-                "description": "List of journal SJR values to filter by.",
-                "items": {
-                    "type": Type.NUMBER
-                }
-            },
-            "SJRBestQuartile": {
-                "type": Type.ARRAY,
-                "description": "List of journal SJR Best Quartile values to filter by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "HIndex": {
-                "type": Type.INTEGER,
-                "description": "Journal H index to filter by."
-            },
-            "Country": {
-                "type": Type.ARRAY,
-                "description": "List of countries to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Region": {
-                "type": Type.ARRAY,
-                "description": "List of regions to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Publisher": {
-                "type": Type.ARRAY,
-                "description": "List of publishers to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Areas": {
-                "type": Type.ARRAY,
-                "description": "List of areas to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Categories": {
-                "type": Type.ARRAY,
-                "description": "List of categories to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            },
-            "Overton": {
-                "type": Type.ARRAY,
-                "description": "List of Overton values to filter journals by.",
-                "items": {
-                    "type": Type.NUMBER
-                }
-            },
-            "SDG": {
-                "type": Type.ARRAY,
-                "description": "List of SDGs to filter journals by.",
-                "items": {
-                    "type": Type.STRING
-                }
-            }
-        }
-    },
-};
-
 export const englishGetWebsiteInfoDeclaration: FunctionDeclaration = {
     name: "getWebsiteInfo",
     description: "Retrieves information about websites. This function don't need parameters, just call it"
@@ -239,16 +141,16 @@ const internalPaths = [
 
 export const englishNavigationDeclaration: FunctionDeclaration = {
     name: "navigation",
-    description: `Navigates the user to a specified page within this website or to an external conference/journal website by opening a new browser tab.
+    description: `Navigates the user to a specified page within this website or to an external conference website by opening a new browser tab.
     - For INTERNAL navigation: Provide the relative path starting with '/'. The system will automatically add the base URL and locale. Allowed internal paths are: ${internalPaths.join(', ')}.
     - Specifically for the '/dashboard' path, you can navigate to specific tabs by appending '?tab=' followed by the tab name. Allowed dashboard tabs are: 'profile', 'myconferences', 'followed', 'note' (calendar page), 'notifications', 'blacklisted', 'setting'. Example for navigating to the profile tab: {"url": "/dashboard?tab=profile"}.
-    - For EXTERNAL conference/journal sites: Provide the full, valid URL starting with 'http://' or 'https://'.`,
+    - For EXTERNAL conference sites: Provide the full, valid URL starting with 'http://' or 'https://'.`,
     parameters: {
         type: Type.OBJECT,
         properties: {
             url: {
                 type: Type.STRING,
-                description: `The internal path (starting with '/', e.g., '/dashboard?tab=profile') or the full external URL (starting with 'http://' or 'https://', e.g., 'https://some-journal.com/article') to navigate to.`
+                description: `The internal path (starting with '/', e.g., '/dashboard?tab=profile') or the full external URL (starting with 'http://' or 'https://', e.g., 'https://some-conference.com/article') to navigate to.`
             }
         },
         required: ["url"]
@@ -275,14 +177,14 @@ export const englishOpenGoogleMapDeclaration: FunctionDeclaration = {
 // Định nghĩa hàm manageFollow (giữ nguyên)
 export const englishManageFollowDeclaration: FunctionDeclaration = {
     name: "manageFollow",
-    description: "Follows, unfollows, or lists followed conferences or journals for the user.",
+    description: "Follows, unfollows, or lists followed conferences for the user.",
     parameters: {
         type: Type.OBJECT,
         properties: {
             itemType: {
                 type: Type.STRING,
                 description: "The type of item.",
-                enum: ["conference", "journal"]
+                enum: ["conference"]
             },
             action: {
                 type: Type.STRING,

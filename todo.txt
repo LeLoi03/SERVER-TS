@@ -1,0 +1,26 @@
+khong nên nói thầy cô đưa ra ý
+dẫn dắt vấn đề
+maintain bổ sung những cái nhóm cũ
+góp ý gì thêm không 
+kịp thì nhóm sẽ bổ sung
+đính kèm mọi thứ rồi mới gửi mail
+cần có local chạy, cần có dự phòng, video mở sẵn
+
+
+khảo sát giao diện 
+test case
+trải nghiệm
+đo tải thời gian mọi thứ, search trên client, crawl, trình duyệt
+độ chính xác của LLM
+đánh giá chatbot, độ hài lòng chatbot, hồi đáp mỗi câu bao nhiêu điểm, kêu bạn bè làm
+
+
+bảng độ chính xác từng thành phần
+bỏ tự đánh giá và bài học
+thêm bảng so sánh với các công trình năm trước và khác
+đánh giá 1 lần crawl tốn bao nhiêu token, cách tính 
+đánh gái chạy bao nhiêu test case
+thêm journal không đánh giá ở kết luận
+sửa lỗi toàn bộ
+so sánh lấy được nhiều thông tin hơn
+

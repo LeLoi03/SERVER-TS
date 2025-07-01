@@ -15,6 +15,7 @@ import { IConferenceDataAggregatorService } from '../batchProcessing/conferenceD
 import { IFinalExtractionApiService } from './finalExtractionApi.service';
 import { IFinalRecordAppenderService } from './finalRecordAppender.service';
 import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
+import { withOperationTimeout } from './utils'; // <-- IMPORT HELPER
 
 export interface IUpdateTaskExecutorService {
     execute(
@@ -77,22 +78,43 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
             const safeInternalAcronymForFiles = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
             logger.info({ internalProcessingAcronym, safeInternalAcronymForFiles, event: 'acronym_generated_for_update_files' });
 
+            // +++ START OF MODIFICATION +++
+            // The `batchInput` now contains `...Content` fields.
+            // We need to pass them to the aggregator.
             const contentPaths: ContentPaths = {
                 conferenceTextPath: batchInput.conferenceTextPath,
+                conferenceTextContent: batchInput.conferenceTextContent, // USE THIS
                 cfpTextPath: batchInput.cfpTextPath,
+                cfpTextContent: batchInput.cfpTextContent,             // USE THIS
                 impTextPath: batchInput.impTextPath,
+                impTextContent: batchInput.impTextContent,             // USE THIS
             };
+
+            // This call will now work correctly in production because it will find the `...Content` fields.
             const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
+
+            // This check ensures that even if something goes wrong, we don't send empty data to the API.
+            if (!aggregatedFileContent.mainText) {
+                logger.error({ event: 'aggregation_failed_no_main_text', flow: 'update' });
+                return false;
+            }
+
             const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
                 batchInput.conferenceTitle, originalAcronym, aggregatedFileContent, logger
             );
+            // +++ END OF MODIFICATION +++
 
-            const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
-            const fileUpdateName = `${safeInternalAcronymForFiles}_update_item${batchItemIndex}.txt`;
-            const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
-            const fileUpdatePromise = this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
-                .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
-                .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
+            // +++ MAKE DEBUG FILE WRITE CONDITIONAL +++
+            if (!this.configService.isProduction) {
+                const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
+                const fileUpdateName = `${safeInternalAcronymForFiles}_update_item${batchItemIndex}.txt`;
+                const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
+                // We don't need to wait for this debug file to be written
+                this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
+                    .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
+                    .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
+            }
+
 
             // DELEGATE to FinalExtractionApiService
             const apiResults = await this.finalExtractionApiService.execute(
@@ -105,24 +127,32 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 logger
             );
 
-            await fileUpdatePromise;
+            // await fileUpdatePromise;
             logger.debug({ event: 'intermediate_update_file_write_settled' });
 
+            // +++ UPDATE FINAL RECORD CREATION +++
             const finalRecord: BatchUpdateDataWithIds = {
                 conferenceTitle: batchInput.conferenceTitle,
                 conferenceAcronym: originalAcronym,
                 mainLink: batchInput.mainLink,
                 cfpLink: batchInput.cfpLink,
                 impLink: batchInput.impLink,
+                // Pass through the original paths/content for completeness in the final JSONL
                 conferenceTextPath: batchInput.conferenceTextPath,
+                conferenceTextContent: batchInput.conferenceTextContent,
                 cfpTextPath: batchInput.cfpTextPath,
+                cfpTextContent: batchInput.cfpTextContent,
                 impTextPath: batchInput.impTextPath,
+                impTextContent: batchInput.impTextContent,
                 originalRequestId: batchInput.originalRequestId,
                 internalProcessingAcronym: internalProcessingAcronym,
                 batchRequestId: batchRequestIdForTask,
+                // Add the new response content fields
                 extractResponseTextPath: apiResults.extractResponseTextPath,
+                extractResponseContent: apiResults.extractResponseContent, // ADD THIS
                 extractMetaData: apiResults.extractMetaData,
                 cfpResponseTextPath: apiResults.cfpResponseTextPath,
+                cfpResponseContent: apiResults.cfpResponseContent,       // ADD THIS
                 cfpMetaData: apiResults.cfpMetaData,
             };
 

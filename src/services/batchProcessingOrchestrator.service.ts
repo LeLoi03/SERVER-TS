@@ -15,10 +15,11 @@ import {
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { FileSystemService } from './fileSystem.service';
-import { IConferenceLinkProcessorService } from './batchProcessing/conferenceLinkProcessor.service';
+import { IConferenceLinkProcessorService, ProcessedContentResult } from './batchProcessing/conferenceLinkProcessor.service';
 // --- NEW SERVICE IMPORTS ---
 import { IUpdateTaskExecutorService } from './batchProcessing/updateTaskExecutor.service';
 import { ISaveTaskExecutorService } from './batchProcessing/saveTaskExecutor.service';
+import { withOperationTimeout } from './batchProcessing/utils';
 
 @singleton()
 export class BatchProcessingOrchestratorService { // <<< RENAMED
@@ -137,40 +138,84 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
 
             methodLogger.info({ event: 'parallel_link_fetch_start_update_flow' });
 
-            const mainPromise = mainPage ? this.conferenceLinkProcessorService.processMainLinkForUpdate(mainPage, conference, methodLogger.child({ linkType: 'main_update' })) : Promise.resolve({ finalUrl: null, textPath: null });
-            const cfpPromise = this.conferenceLinkProcessorService.processCfpLinkForUpdate(cfpPage, conference, methodLogger.child({ linkType: 'cfp_update' }));
 
-            let impPromiseVal: Promise<string | null>;
+            // --- ĐỊNH NGHĨA TIMEOUT CHO TỪNG NHIỆM VỤ ---
+            const OPERATION_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
+
+            // +++ DEFINE THE CORRECT PROMISE TYPES +++
+            type MainLinkResult = { finalUrl: string | null; textPath: string | null; textContent: string | null };
+            type SubLinkResult = { path: string | null; content: string | null }; // This is our ProcessedContentResult
+
+            // +++ BỌC CÁC PROMISE BẰNG withOperationTimeout +++
+            const mainPromise = mainPage
+                ? withOperationTimeout(
+                    this.conferenceLinkProcessorService.processMainLinkForUpdate(mainPage, conference, methodLogger.child({ linkType: 'main_update' })),
+                    OPERATION_TIMEOUT_MS,
+                    `Process Main Link for ${conference.Acronym}`
+                )
+                : Promise.resolve({ finalUrl: null, textPath: null, textContent: null });
+
+
+            const cfpPromise = withOperationTimeout(
+                this.conferenceLinkProcessorService.processCfpLinkForUpdate(cfpPage, conference, methodLogger.child({ linkType: 'cfp_update' })),
+                OPERATION_TIMEOUT_MS,
+                `Process CFP Link for ${conference.Acronym}`
+            );
+
+            let impPromiseVal: Promise<SubLinkResult>;
             if (isImpSameAsNavigableCfp) {
-                impPromiseVal = cfpPromise.then(cfpPath => {
-                    methodLogger.info({ event: 'imp_link_resolved_as_same_as_cfp_update', cfpPath });
-                    return cfpPath ? "" : null;
+                // If IMP is same as CFP, we wait for CFP to finish.
+                // The result of cfpPromise is a SubLinkResult. We just pass it along.
+                impPromiseVal = cfpPromise.then(cfpResult => {
+                    methodLogger.info({ event: 'imp_link_resolved_as_same_as_cfp_update', cfpResult });
+                    // Return an empty but valid result to indicate it was handled.
+                    return { path: "", content: "" };
                 });
             } else {
-                impPromiseVal = cfpPromise.then(cfpPath =>
-                    this.conferenceLinkProcessorService.processImpLinkForUpdate(impPage, conference, cfpPath, methodLogger.child({ linkType: 'imp_update' }))
+                // Bọc cả promise lồng nhau
+                impPromiseVal = cfpPromise.then(cfpResult =>
+                    withOperationTimeout(
+                        this.conferenceLinkProcessorService.processImpLinkForUpdate(impPage, conference, cfpResult.path, methodLogger.child({ linkType: 'imp_update' })),
+                        OPERATION_TIMEOUT_MS,
+                        `Process IMP Link for ${conference.Acronym}`
+                    )
                 );
             }
 
+            // Promise.allSettled sẽ nhận được lỗi reject từ timeout và tiếp tục
             const results = await Promise.allSettled([mainPromise, cfpPromise, impPromiseVal]);
             methodLogger.info({ event: 'parallel_link_fetch_settled_update_flow' });
 
-            let mainResult = { finalUrl: null, textPath: null };
-            if (results[0].status === 'fulfilled') mainResult = (results[0] as PromiseFulfilledResult<any>).value;
-            else methodLogger.error({ event: 'main_link_processing_failed_update', err: (results[0] as PromiseRejectedResult).reason });
+            // +++ PROCESS THE NEW RESULT TYPES +++
+            let mainResult: MainLinkResult = { finalUrl: null, textPath: null, textContent: null };
+            if (results[0].status === 'fulfilled') {
+                mainResult = (results[0] as PromiseFulfilledResult<MainLinkResult>).value;
+            } else {
+                methodLogger.error({ event: 'main_link_processing_failed_update', err: (results[0] as PromiseRejectedResult).reason });
+            }
 
-            let cfpTextPath: string | null = null;
-            if (results[1].status === 'fulfilled') cfpTextPath = (results[1] as PromiseFulfilledResult<string | null>).value;
-            else methodLogger.error({ event: 'cfp_link_processing_failed_update', err: (results[1] as PromiseRejectedResult).reason });
+            let cfpResult: SubLinkResult = { path: null, content: null };
+            if (results[1].status === 'fulfilled') {
+                cfpResult = (results[1] as PromiseFulfilledResult<SubLinkResult>).value;
+            } else {
+                methodLogger.error({ event: 'cfp_link_processing_failed_update', err: (results[1] as PromiseRejectedResult).reason });
+            }
 
-            let impTextPath: string | null = null;
-            if (results[2].status === 'fulfilled') impTextPath = (results[2] as PromiseFulfilledResult<string | null>).value;
-            else methodLogger.error({ event: 'imp_link_processing_failed_update', err: (results[2] as PromiseRejectedResult).reason });
+            let impResult: SubLinkResult = { path: null, content: null };
+            if (results[2].status === 'fulfilled') {
+                impResult = (results[2] as PromiseFulfilledResult<SubLinkResult>).value;
+            } else {
+                methodLogger.error({ event: 'imp_link_processing_failed_update', err: (results[2] as PromiseRejectedResult).reason });
+            }
 
-            if (!mainResult.textPath) {
-                methodLogger.error({ event: 'batch_processing_abort_no_main_text', flow: 'update', reason: 'Main text path missing' });
+            // +++ UPDATE THE ABORT CONDITION +++
+            // We check for content in production, and path in development.
+            // A simple check for either is sufficient and safer.
+            if (!mainResult.textContent && !mainResult.textPath) {
+                methodLogger.error({ event: 'batch_processing_abort_no_main_text', flow: 'update', reason: 'Main text content/path missing' });
                 return false;
             }
+
 
             const batchDataForExecute: BatchUpdateEntry = {
                 conferenceTitle: conference.Title,
@@ -178,9 +223,12 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 mainLink: conference.mainLink,
                 impLink: conference.impLink,
                 cfpLink: conference.cfpLink,
-                conferenceTextPath: mainResult.textPath,
-                cfpTextPath: cfpTextPath,
-                impTextPath: impTextPath,
+                conferenceTextPath: mainResult.textPath, // Will be null in prod
+                conferenceTextContent: mainResult.textContent, // Will have data in prod
+                cfpTextPath: cfpResult.path,
+                cfpTextContent: cfpResult.content,
+                impTextPath: impResult.path,
+                impTextContent: impResult.content,
                 originalRequestId: conference.originalRequestId,
             };
 
@@ -193,7 +241,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 batchItemIndexFromParent,
                 batchRequestIdFromParent,
                 apiModels,
-                this.globalProcessedAcronymsSet, // Pass the global set
+                this.globalProcessedAcronymsSet,
                 methodLogger
             );
             // -----------------------------
@@ -204,6 +252,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             methodLogger.error({ err: error, event: 'batch_process_update_unhandled_error', flow: 'update_initiation_error' });
             return false;
         } finally {
+            // Block này GIỜ ĐÂY sẽ luôn được gọi, ngay cả khi một trong các promise ở trên bị timeout
             await this._closePages(pages, methodLogger);
             methodLogger.debug("Finished cleanup in processConferenceUpdate.");
         }
@@ -250,23 +299,41 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             page = await browserContext.newPage();
             methodLogger.info({ event: 'page_created_for_save_flow' });
 
+            // --- ĐỊNH NGHĨA TIMEOUT CHO MỖI LINK ---
+            const LINK_PROCESSING_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
+
+
             for (let i = 0; i < links.length; i++) {
                 const link = links[i];
                 const singleLinkLogger = methodLogger.child({ linkProcessingIndex: i, originalLinkForProcessing: link });
 
                 try {
-                    const batchEntry = await this.conferenceLinkProcessorService.processInitialLinkForSave(
-                        page, link, i, conference, year, singleLinkLogger
+                    // +++ BỌC LỜI GỌI SERVICE BẰNG TIMEOUT +++
+                    const operationPromise = this.conferenceLinkProcessorService.processInitialLinkForSave(
+                        page, link, i, conference, this.configService.year2, singleLinkLogger
                     );
+
+                    const batchEntry = await withOperationTimeout(
+                        operationPromise,
+                        LINK_PROCESSING_TIMEOUT_MS,
+                        `Process Initial Link [${i}]: ${link}`
+                    );
+                    // +++ KẾT THÚC PHẦN BỌC +++
+
                     if (batchEntry) {
                         batchForDetermineApi.push(batchEntry);
                         linkProcessingSuccessCount++;
-                    } else { linkProcessingFailedCount++; }
+                    } else {
+                        // Trường hợp service trả về null (không tìm thấy content) chứ không phải lỗi
+                        linkProcessingFailedCount++;
+                    }
                 } catch (linkError: any) {
+                    // Bắt lỗi từ withOperationTimeout hoặc từ chính service
                     linkProcessingFailedCount++;
-                    singleLinkLogger.error({ err: linkError, event: 'link_processing_loop_unhandled_error_save_flow' });
+                    singleLinkLogger.error({ err: linkError, event: 'link_processing_loop_unhandled_error_or_timeout' });
                 }
             }
+
             methodLogger.info({
                 linksProcessed: links.length, successfulLinks: linkProcessingSuccessCount,
                 failedLinks: linkProcessingFailedCount, batchEntriesCreated: batchForDetermineApi.length,
@@ -313,13 +380,11 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             methodLogger.error({ err: error, event: 'batch_process_save_unhandled_error', flow: 'save_initiation_error' });
             return false;
         } finally {
+            // Block này giờ đây sẽ luôn được gọi, đóng page dùng cho việc lặp qua các link
             if (page && !page.isClosed()) await this._closePages([page], methodLogger);
             methodLogger.debug("Finished cleanup in processConferenceSave.");
         }
     }
-
-    // <<< METHOD _executeBatchTaskForUpdate REMOVED (moved to UpdateTaskExecutorService) >>>
-    // <<< METHOD _executeBatchTaskForSave REMOVED (moved to SaveTaskExecutorService) >>>
 
     public async awaitCompletion(parentLogger?: Logger): Promise<void> {
         const logger = (parentLogger || this.serviceBaseLogger).child({
@@ -356,27 +421,33 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             batchServiceFunction: '_closePages',
             service: 'BatchProcessingServiceOrchestrator'
         });
-        const pageCount = pages.filter(p => p && !p.isClosed()).length;
-        if (pageCount === 0) {
+        const pagesToClose = pages.filter(p => p && !p.isClosed());
+        if (pagesToClose.length === 0) {
             logger.debug({ initialPageCount: pages.length, openPageCount: 0, event: 'no_pages_to_close_or_already_closed' });
             return;
         }
 
-        logger.debug({ initialPageCount: pages.length, openPageCount: pageCount, event: 'closing_pages_start' });
-        let closedCount = 0;
-        let failedCount = 0;
+        logger.debug({ initialPageCount: pages.length, openPageCount: pagesToClose.length, event: 'closing_pages_start' });
 
-        for (const p of pages) {
-            if (p && !p.isClosed()) {
+        const closePromises = pagesToClose.map(p => {
+            const closePromise = (async () => {
                 try {
-                    await p.close();
-                    closedCount++;
+                    // Đặt timeout cho việc đóng page, ví dụ 5 giây
+                    await Promise.race([
+                        p.close(),
+                        new Promise((_, reject) => setTimeout(() => reject(new Error('Page close timed out after 5s')), 5000))
+                    ]);
+                    logger.trace({ pageId: (p as any)._guid, event: 'page_close_success' });
                 } catch (err: any) {
-                    failedCount++;
                     logger.error({ pageId: (p as any)._guid, err: err, event: 'page_close_failed_in_loop' });
                 }
-            }
-        }
-        logger.debug({ closedCount, failedCount, totalAttemptedToClose: pageCount, event: 'closing_pages_finish' });
+            })();
+            return closePromise;
+        });
+
+        // Chờ tất cả các thao tác đóng hoàn tất
+        await Promise.all(closePromises);
+
+        logger.debug({ attemptedToClose: pagesToClose.length, event: 'closing_pages_finish' });
     }
 }

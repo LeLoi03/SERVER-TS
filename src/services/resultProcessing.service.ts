@@ -172,37 +172,59 @@ export class ResultProcessingService {
                 let parsedExtractInfo: Record<string, any> = {};
                 let parsedCfpInfo: Record<string, any> = {};
 
-                // Đọc content từ các path (vẫn giữ các try...catch con cho từng file để không dừng toàn bộ nếu 1 file lỗi)
-                if (inputRow.determineResponseTextPath) {
+
+                // +++ START OF MODIFICATION +++
+
+                // --- Process Determine Info ---
+                if (inputRow.determineResponseContent) {
+                    parsedDetermineInfo = inputRow.determineResponseContent;
+                    rowContextLogger.trace({ type: 'determine', source: 'memory' }, "Used determine info from JSONL content.");
+                } else if (inputRow.determineResponseTextPath) {
+                    rowContextLogger.trace({ type: 'determine', source: 'file' }, "Reading determine info from file (dev mode).");
                     try {
                         const content = await this.fileSystemService.readFileContent(inputRow.determineResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedDetermineInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedDetermineInfo !== 'object' || parsedDetermineInfo === null) parsedDetermineInfo = {};
                     } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' }, `Warning reading/parsing determine file, using empty object.`);
+                        rowContextLogger.warn({ err: e, path: inputRow.determineResponseTextPath, type: 'determine', event: 'file_read_parse_warn' });
                     }
                 }
-                if (inputRow.extractResponseTextPath) {
+
+                // --- Process Extract Info ---
+                if (inputRow.extractResponseContent) {
+                    parsedExtractInfo = inputRow.extractResponseContent;
+                    rowContextLogger.trace({ type: 'extract', source: 'memory' }, "Used extract info from JSONL content.");
+                } else if (inputRow.extractResponseTextPath) {
+                    rowContextLogger.trace({ type: 'extract', source: 'file' }, "Reading extract info from file (dev mode).");
                     try {
                         const content = await this.fileSystemService.readFileContent(inputRow.extractResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedExtractInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedExtractInfo !== 'object' || parsedExtractInfo === null) parsedExtractInfo = {};
                     } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' }, `Warning reading/parsing extract file, using empty object.`);
+                        rowContextLogger.warn({ err: e, path: inputRow.extractResponseTextPath, type: 'extract', event: 'file_read_parse_warn' });
                     }
                 }
-                if (inputRow.cfpResponseTextPath) {
+
+                // --- Process CFP Info ---
+                if (inputRow.cfpResponseContent) {
+                    parsedCfpInfo = inputRow.cfpResponseContent;
+                    rowContextLogger.trace({ type: 'cfp', source: 'memory' }, "Used CFP info from JSONL content.");
+                } else if (inputRow.cfpResponseTextPath) {
+                    rowContextLogger.trace({ type: 'cfp', source: 'file' }, "Reading CFP info from file (dev mode).");
                     try {
                         const content = await this.fileSystemService.readFileContent(inputRow.cfpResponseTextPath);
                         const cleaned = content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '').trim();
                         parsedCfpInfo = cleaned ? JSON.parse(cleaned) : {};
                         if (typeof parsedCfpInfo !== 'object' || parsedCfpInfo === null) parsedCfpInfo = {};
                     } catch (e: any) {
-                        rowContextLogger.warn({ err: e, path: inputRow.cfpResponseTextPath, type: 'cfp', event: 'file_read_parse_warn' }, `Warning reading/parsing CFP file, using empty object.`);
+                        rowContextLogger.warn({ err: e, path: inputRow.cfpResponseTextPath, type: 'cfp', event: 'file_read_parse_warn' });
                     }
                 }
+
+                // +++ END OF MODIFICATION +++
+
 
                 // Xử lý API response và tạo finalRow
                 const processedExtractResponse = this._processApiResponse(parsedExtractInfo, rowContextLogger);

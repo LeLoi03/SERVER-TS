@@ -20,10 +20,6 @@ const commonEnglishFunctionDeclarations: Record<AgentId, FunctionDeclaration[]> 
         LangData.englishManageCalendarDeclaration,
         LangData.englishManageBlacklistDeclaration
     ],
-    'JournalAgent': [
-        LangData.englishGetJournalsDeclaration,
-        LangData.englishManageFollowDeclaration,
-    ],
     'AdminContactAgent': [
         LangData.englishSendEmailToAdminDeclaration,
     ],

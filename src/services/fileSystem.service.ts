@@ -28,6 +28,12 @@ export class FileSystemService {
         this.tempDir = this.configService.tempDir;
 
         this.serviceBaseLogger.info("FileSystemService initialized.");
+        // +++ ADD THIS LOG +++
+        if (this.configService.isProduction) {
+            this.serviceBaseLogger.warn("Running in PRODUCTION mode. Temporary file writes will be skipped.");
+        } else {
+            this.serviceBaseLogger.info("Running in DEVELOPMENT mode. Temporary files will be written for debugging.");
+        }
     }
 
     // Helper để tạo logger cho phương thức với context từ parentLogger
@@ -36,7 +42,6 @@ export class FileSystemService {
         return base.child({ serviceMethod: `FileSystemService.${methodName}` });
     }
 
-    // parentLogger có thể là optional, nếu không truyền, dùng serviceBaseLogger
     async prepareOutputArea(parentLogger?: Logger): Promise<void> {
         const logger = this.getMethodLogger(parentLogger, 'prepareOutputArea');
         logger.info("Preparing output area...");
@@ -46,9 +51,12 @@ export class FileSystemService {
                 await fs.promises.mkdir(this.baseOutputDir, { recursive: true });
             }
 
-            // await this.deleteFileIfExists(this.finalJsonlPath, 'final output JSONL', logger);
-            // await this.deleteFileIfExists(this.evaluateCsvPath, 'evaluation CSV', logger);
-            await this.ensureDirExists(this.customSearchDir, logger);
+            // Chỉ tạo customSearchDir nếu không phải production (nếu nó chỉ dùng cho dev/debug)
+            if (!this.configService.isProduction) {
+                await this.ensureDirExists(this.customSearchDir, logger);
+            } else {
+                logger.debug({ path: this.customSearchDir }, "Skipping creation of custom search directory in production mode.");
+            }
 
             logger.info("Output area prepared.");
         } catch (error) {
@@ -59,6 +67,12 @@ export class FileSystemService {
 
     async writeConferenceInputList(conferenceList: ConferenceData[], parentLogger?: Logger): Promise<void> {
         const logger = this.getMethodLogger(parentLogger, 'writeConferenceInputList');
+        // Quyết định: File này có cần thiết trong Production không?
+        // Nếu không, thêm kiểm tra:
+        if (this.configService.isProduction) {
+            logger.debug("Skipping writing conference input list in production mode.");
+            return;
+        }
         logger.debug({ path: this.conferenceListPath, count: conferenceList.length }, 'Writing initial conference list');
         try {
             await this.ensureDirExists(path.dirname(this.conferenceListPath), logger);
@@ -70,6 +84,10 @@ export class FileSystemService {
 
     async writeCustomSearchResults(acronym: string, links: string[], parentLogger?: Logger): Promise<void> {
         const logger = this.getMethodLogger(parentLogger, 'writeCustomSearchResults');
+        if (this.configService.isProduction) {
+            logger.debug("Skipping writing custom search list in production mode.");
+            return;
+        }
         const safeAcronym = acronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
         const outputPath = path.join(this.customSearchDir, `${safeAcronym}_links.json`);
         logger.debug({ path: outputPath, count: links.length }, 'Writing search result links');
@@ -95,10 +113,19 @@ export class FileSystemService {
         }
     }
 
-    async saveTemporaryFile(content: string, baseName: string, parentLogger?: Logger): Promise<string> {
+    // +++ MODIFY THIS METHOD +++
+    async saveTemporaryFile(content: string, baseName: string, parentLogger?: Logger): Promise<string | null> {
         const logger = this.getMethodLogger(parentLogger, 'saveTemporaryFile');
         const logContext = { baseName, tempDir: this.tempDir };
-        logger.trace({ ...logContext, event: 'saveTemporaryFile_start' });
+
+        // If in production, do not write the file and return null.
+        if (this.configService.isProduction) {
+            logger.trace({ ...logContext, event: 'saveTemporaryFile_skipped_production' });
+            return null;
+        }
+
+        // In development, write the file as before.
+        logger.trace({ ...logContext, event: 'saveTemporaryFile_start_development' });
         try {
             if (!content) throw new Error("Content cannot be empty.");
             if (!baseName) throw new Error("Base name cannot be empty.");
@@ -132,18 +159,18 @@ export class FileSystemService {
         }
     }
 
-    private async deleteFileIfExists(filePath: string, description: string, logger: Logger): Promise<void> {
-        // logger này được truyền từ phương thức gọi nó (đã có context đúng)
-        try {
-            if (fs.existsSync(filePath)) {
-                logger.warn({ path: filePath }, `Deleting existing ${description} file.`);
-                await fs.promises.unlink(filePath);
-            }
-        } catch (unlinkError: any) {
-            logger.error({ err: unlinkError, path: filePath }, `Could not delete existing ${description} file.`);
-            throw unlinkError;
-        }
-    }
+    // private async deleteFileIfExists(filePath: string, description: string, logger: Logger): Promise<void> {
+    //     // logger này được truyền từ phương thức gọi nó (đã có context đúng)
+    //     try {
+    //         if (fs.existsSync(filePath)) {
+    //             logger.warn({ path: filePath }, `Deleting existing ${description} file.`);
+    //             await fs.promises.unlink(filePath);
+    //         }
+    //     } catch (unlinkError: any) {
+    //         logger.error({ err: unlinkError, path: filePath }, `Could not delete existing ${description} file.`);
+    //         throw unlinkError;
+    //     }
+    // }
 
     async writeFile(filePath: string, content: string, parentLogger?: Logger, encoding: BufferEncoding = 'utf8'): Promise<void> {
         const logger = this.getMethodLogger(parentLogger, 'writeFile');
@@ -176,19 +203,26 @@ export class FileSystemService {
         }
     }
 
+    // +++ MODIFY THIS METHOD +++
     async cleanupTempFiles(parentLogger?: Logger): Promise<void> {
-        // const logger = this.getMethodLogger(parentLogger, 'cleanupTempFiles');
-        // logger.info("Performing temporary file cleanup...");
+        const logger = this.getMethodLogger(parentLogger, 'cleanupTempFiles');
+        // No need to cleanup in production as files were not created.
+        if (this.configService.isProduction) {
+            logger.info("Skipping temporary file cleanup in production mode.");
+            return;
+        }
+
+        logger.info("Performing temporary file cleanup (dev mode)...");
         const tempDirPath = this.configService.tempDir;
         if (fs.existsSync(tempDirPath)) {
             try {
                 await fs.promises.rm(tempDirPath, { recursive: true, force: true });
-                // logger.info({ path: tempDirPath }, "Removed temporary directory.");
+                logger.info({ path: tempDirPath }, "Removed temporary directory.");
             } catch (rmError) {
-                // logger.error({ err: rmError, path: tempDirPath }, "Failed to remove temporary directory.")
+                logger.error({ err: rmError, path: tempDirPath }, "Failed to remove temporary directory.")
             }
         } else {
-            // logger.info({ path: tempDirPath }, "Temporary directory does not exist, no cleanup needed.")
+            logger.info({ path: tempDirPath }, "Temporary directory does not exist, no cleanup needed.")
         }
     }
 }

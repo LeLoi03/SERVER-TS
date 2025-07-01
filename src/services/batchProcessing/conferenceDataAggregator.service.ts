@@ -7,13 +7,14 @@ import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the 
 /**
  * Defines the paths to the content files related to a conference.
  */
+// +++ UPDATE THIS TYPE DEFINITION (as mentioned in Step 1) +++
 export type ContentPaths = {
-    /** Path to the main conference website content file. */
     conferenceTextPath?: string | null;
-    /** Path to the Call for Papers (CFP) content file. */
+    conferenceTextContent?: string | null; // ADD THIS
     cfpTextPath?: string | null;
-    /** Path to the Important Dates (IMP) content file. */
+    cfpTextContent?: string | null; // ADD THIS
     impTextPath?: string | null;
+    impTextContent?: string | null; // ADD THIS
 };
 
 /**
@@ -84,101 +85,60 @@ export class ConferenceDataAggregatorService implements IConferenceDataAggregato
      * @returns {Promise<AggregatedContent>} A Promise that resolves to an `AggregatedContent` object.
      * @throws {Error} If `conferenceTextPath` is missing or if reading `mainText` fails critically.
      */
+    // +++ REWRITE THIS METHOD +++
     public async readContentFiles(
         paths: ContentPaths,
         logger: Logger
     ): Promise<AggregatedContent> {
         const logContext = { function: 'readContentFiles', service: 'ConferenceDataAggregatorService' };
         const content: AggregatedContent = { mainText: '', cfpText: '', impText: '' };
-        const readPromises: Promise<void>[] = [];
 
-        // Main text file is mandatory
-        if (paths.conferenceTextPath) {
-            readPromises.push(
-                this.fileSystemService.readFileContent(paths.conferenceTextPath, logger)
-                    .then(text => { content.mainText = text; })
-                    .catch(error => { // Catch error from readFileContent
-                        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-                        // Log event name from original, with improved context
-                        logger.error({
-                            ...logContext,
-                            err: { message: errorMessage, stack: errorStack },
-                            filePath: paths.conferenceTextPath,
-                            contentType: 'main',
-                            event: 'save_batch_read_content_failed', // Original event name
-                            isCritical: true
-                        }, `Critical: Failed to read main conference text file: "${errorMessage}".`);
-                        throw error; // Re-throw critical error
-                    })
-            );
+        // --- Main Text ---
+        if (paths.conferenceTextContent) {
+            content.mainText = paths.conferenceTextContent;
+            logger.trace({ ...logContext, source: 'memory', contentType: 'main' }, "Read main content from memory.");
+        } else if (paths.conferenceTextPath) {
+            logger.trace({ ...logContext, source: 'file', contentType: 'main' }, "Reading main content from file (dev mode).");
+            try {
+                content.mainText = await this.fileSystemService.readFileContent(paths.conferenceTextPath, logger);
+            } catch (error) {
+                // Handle error as before, but now it's a dev-only issue
+                logger.error({ ...logContext, err: error, filePath: paths.conferenceTextPath, contentType: 'main' }, "Critical: Failed to read main conference text file.");
+                throw error;
+            }
         } else {
-            const errorMsg = "Missing main text path for content aggregation. Cannot proceed.";
-            // Log event name from original, with improved context
-            logger.error({
-                ...logContext,
-                contentType: 'main',
-                event: 'save_batch_read_content_failed_missing_path', // Original event name
-                isCritical: true
-            }, errorMsg);
+            const errorMsg = "Missing both main text content and path. Cannot proceed.";
+            logger.error({ ...logContext, contentType: 'main' }, errorMsg);
             throw new Error(errorMsg);
         }
 
-        // CFP text file is optional
-        if (paths.cfpTextPath) {
-            readPromises.push(
-                this.fileSystemService.readFileContent(paths.cfpTextPath, logger)
-                    .then(text => { content.cfpText = text; })
-                    .catch(error => { // Catch error from readFileContent
-                        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-                        // Log event name from original, with improved context
-                        logger.warn({
-                            ...logContext,
-                            err: { message: errorMessage, stack: errorStack },
-                            filePath: paths.cfpTextPath,
-                            contentType: 'cfp',
-                            event: 'save_batch_read_content_warn_non_critical', // Original event name
-                            isCritical: false
-                        }, `Non-critical: Failed to read CFP text file: "${errorMessage}".`);
-                        // Do not re-throw, continue processing with empty CFP content
-                    })
-            );
-        } else {
-            logger.debug({ ...logContext, contentType: 'cfp', event: 'conference_data_aggregator_cfp_path_missing' }, "CFP text path not provided. CFP content will be empty.");
+        // --- CFP Text ---
+        if (paths.cfpTextContent) {
+            content.cfpText = paths.cfpTextContent;
+            logger.trace({ ...logContext, source: 'memory', contentType: 'cfp' }, "Read CFP content from memory.");
+        } else if (paths.cfpTextPath) {
+            logger.trace({ ...logContext, source: 'file', contentType: 'cfp' }, "Reading CFP content from file (dev mode).");
+            try {
+                content.cfpText = await this.fileSystemService.readFileContent(paths.cfpTextPath, logger);
+            } catch (error) {
+                logger.warn({ ...logContext, err: error, filePath: paths.cfpTextPath, contentType: 'cfp' }, "Non-critical: Failed to read CFP text file.");
+            }
         }
 
-        // Important Dates text file is optional
-        if (paths.impTextPath) {
-            readPromises.push(
-                this.fileSystemService.readFileContent(paths.impTextPath, logger)
-                    .then(text => { content.impText = text; })
-                    .catch(error => { // Catch error from readFileContent
-                        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-                        // Log event name from original, with improved context
-                        logger.warn({
-                            ...logContext,
-                            err: { message: errorMessage, stack: errorStack },
-                            filePath: paths.impTextPath,
-                            contentType: 'imp',
-                            event: 'save_batch_read_content_warn_non_critical', // Original event name
-                            isCritical: false
-                        }, `Non-critical: Failed to read Important Dates text file: "${errorMessage}".`);
-                        // Do not re-throw, continue processing with empty Important Dates content
-                    })
-            );
-        } else {
-            logger.debug({ ...logContext, contentType: 'imp', event: 'conference_data_aggregator_imp_path_missing' }, "Important Dates text path not provided. Important Dates content will be empty.");
+        // --- IMP Text ---
+        if (paths.impTextContent) {
+            content.impText = paths.impTextContent;
+            logger.trace({ ...logContext, source: 'memory', contentType: 'imp' }, "Read IMP content from memory.");
+        } else if (paths.impTextPath) {
+            logger.trace({ ...logContext, source: 'file', contentType: 'imp' }, "Reading IMP content from file (dev mode).");
+            try {
+                content.impText = await this.fileSystemService.readFileContent(paths.impTextPath, logger);
+            } catch (error) {
+                logger.warn({ ...logContext, err: error, filePath: paths.impTextPath, contentType: 'imp' }, "Non-critical: Failed to read IMP text file.");
+            }
         }
 
-        await Promise.all(readPromises); // Wait for all file reading operations to complete
-        logger.debug({
-            ...logContext,
-            event: 'conference_data_aggregator_read_content_complete', // Original event name
-            hasMain: !!content.mainText,
-            hasCfp: !!content.cfpText,
-            hasImp: !!content.impText,
-            mainTextLength: content.mainText.length
-        }, "Conference content files read and aggregated.");
-
+        logger.debug({ ...logContext, event: 'conference_data_aggregator_read_content_complete' }, "Conference content aggregated.");
         return content;
     }
 

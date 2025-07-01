@@ -178,6 +178,17 @@ export class ConfigService {
 
     // --- Delegated Getters and Properties from AppConfiguration ---
     get nodeEnv() { return this.appConfiguration.nodeEnv; }
+
+    // +++ ADD THIS GETTER +++
+    /**
+     * Checks if the current environment is 'production'.
+     * @returns {boolean} True if NODE_ENV is 'production', false otherwise.
+     */
+    public get isProduction(): boolean {
+        return this.appConfiguration.nodeEnv === 'production';
+    }
+    // +++ END OF ADDITION +++
+
     get port() { return this.appConfiguration.port; }
     get jwtSecret() { return this.appConfiguration.jwtSecret; }
     get mongodbUri() { return this.appConfiguration.mongodbUri; }
@@ -191,7 +202,7 @@ export class ConfigService {
     // Log paths
     get logsDirectory(): string { return this.appConfiguration.logsDirectoryPath; } // Thư mục logs chính
 
-     // Đường dẫn ghi cho các file log chung (app, saveEvents)
+    // Đường dẫn ghi cho các file log chung (app, saveEvents)
     get appLogFilePathForWriting(): string { return this.appConfiguration.appLogFilePathForWriting; }
     // Không còn conference/journal log file chung để ghi
 
@@ -205,7 +216,7 @@ export class ConfigService {
     }
 
 
-     // Các getter chung chung (ví dụ: conferenceLogFilePath) sẽ bị loại bỏ hoặc thay đổi ý nghĩa
+    // Các getter chung chung (ví dụ: conferenceLogFilePath) sẽ bị loại bỏ hoặc thay đổi ý nghĩa
     public get appLogFilePath(): string { return this.appConfiguration.appLogFilePath; } // Vẫn dùng cho app log
     // public get conferenceLogFilePath(): string {
     //     throw new Error("General conference log file path is deprecated. Use request-specific paths.");

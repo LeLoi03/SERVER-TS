@@ -51,7 +51,6 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
     // IMPORTANT: The `transformConferenceData` function MUST be implemented in `../utils/transformData`
     // to match the `DataTransformer` signature (i.e., `(parsedData: any, queryString: string) => string | null`).
     'conference': transformConferenceData,
-    // 'journal': transformJournalData, // Add when implemented
     // Add other endpoints and their transformers here
 };
 
@@ -59,7 +58,7 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
  * Executes a GET request to a specified backend API endpoint.
  * It handles network calls, HTTP status checks, JSON parsing, and optional data transformation.
  *
- * @param {string} endpoint - The specific API endpoint (e.g., 'conference', 'journal').
+ * @param {string} endpoint - The specific API endpoint (e.g., 'conference').
  * @param {string} queryString - The value for the search query (e.g., "name=foo", "category=bar").
  *                               This string is directly appended to the URL as is.
  * @returns {Promise<ApiCallResult>} A Promise that resolves with an `ApiCallResult` object,

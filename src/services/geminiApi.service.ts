@@ -1,9 +1,6 @@
 // src/services/geminiApi.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
-import { type UsageMetadata } from "@google/generative-ai";
-// Import AppConfig from the new types file
-import { AppConfig } from '../config/types'; // Changed path
 import { ConfigService } from '../config'; // Assuming index.ts in config folder
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
@@ -23,7 +20,6 @@ import { API_TYPE_EXTRACT, API_TYPE_DETERMINE, API_TYPE_CFP } from '../config/co
 @singleton()
 export class GeminiApiService {
     private readonly serviceBaseLogger: Logger;
-    // Remove: private readonly appConfig: AppConfig; // No longer needed as a direct member
 
     // Use constants imported from constants.ts
     public readonly API_TYPE_EXTRACT = API_TYPE_EXTRACT;
@@ -47,7 +43,6 @@ export class GeminiApiService {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiService' });
         this.serviceBaseLogger.info("Constructing GeminiApiService...");
 
-        // Remove: this.appConfig = this.configService.config;
 
         // Use the specific getter for baseOutputDir
         const baseOutputDir = this.configService.baseOutputDir; // Corrected

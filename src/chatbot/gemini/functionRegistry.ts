@@ -16,7 +16,6 @@ import logToFile from '../../utils/logger'; // Kept logToFile as per requirement
 // --- Import Handlers ---
 // Assuming these handlers are already properly implemented and follow IFunctionHandler
 import { GetConferencesHandler } from '../handlers/getConferences.handler';
-import { GetJournalsHandler } from '../handlers/getJournals.handler';
 import { GetWebsiteInfoHandler } from '../handlers/getWebsiteInfo.handler';
 import { NavigationHandler } from '../handlers/navigation.handler';
 import { OpenGoogleMapHandler } from '../handlers/openGoogleMap.handler';
@@ -32,7 +31,6 @@ import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
  */
 const functionRegistry: Record<string, IFunctionHandler> = {
     getConferences: new GetConferencesHandler(),
-    getJournals: new GetJournalsHandler(),
     getWebsiteInfo: new GetWebsiteInfoHandler(),
     navigation: new NavigationHandler(),
     openGoogleMap: new OpenGoogleMapHandler(),

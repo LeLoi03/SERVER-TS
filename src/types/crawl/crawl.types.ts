@@ -109,18 +109,18 @@ export interface ConferenceUpdateData {
      * @property {string} Acronym - Từ viết tắt hoặc tên viết tắt của hội nghị.
      */
     Acronym: string;
-    /**
-     * @property {any} mainLink - URL chính của hội nghị. (Sử dụng `any` nếu kiểu cụ thể chưa xác định, nên làm rõ `string` nếu luôn là URL)
+     /**
+     * @property {string | null | undefined} mainLink - URL chính của hội nghị.
      */
-    mainLink: any;
+    mainLink: string | null | undefined;
     /**
-     * @property {any} cfpLink - URL cho Call for Papers (CFP). (Sử dụng `any` nếu kiểu cụ thể chưa xác định, nên làm rõ `string` nếu luôn là URL)
+     * @property {string | null | undefined} cfpLink - URL cho Call for Papers (CFP).
      */
-    cfpLink: any;
+    cfpLink: string | null | undefined;
     /**
-     * @property {any} impLink - URL cho các ngày quan trọng. (Sử dụng `any` nếu kiểu cụ thể chưa xác định, nên làm rõ `string` nếu luôn là URL)
+     * @property {string | null | undefined} impLink - URL cho các ngày quan trọng.
      */
-    impLink: any;
+    impLink: string | null | undefined;
     /**
      * @property {string} [originalRequestId] - Tùy chọn: ID của yêu cầu gốc nếu đây là một lần thu thập lại.
      */
@@ -128,6 +128,22 @@ export interface ConferenceUpdateData {
 }
 
 // --------------------- INTERMEDIATE BATCH PROCESSING DATA TYPES ---------------------
+
+// 1. Tạo một interface cơ sở cho các kết quả API
+export interface ApiResponseData {
+    determineResponseTextPath?: string | null;
+    determineResponseContent?: Record<string, any> | null;
+    determineMetaData?: any;
+
+    extractResponseTextPath?: string | null;
+    extractResponseContent?: Record<string, any> | null;
+    extractMetaData?: any;
+
+    cfpResponseTextPath?: string | null;
+    cfpResponseContent?: Record<string, any> | null;
+    cfpMetaData?: any;
+}
+
 
 /**
  * @interface BatchEntry
@@ -150,7 +166,7 @@ export interface BatchEntry {
     /**
      * @property {string | null} conferenceTextPath - Đường dẫn tệp đến nội dung văn bản đã trích xuất của liên kết hội nghị chính. Null nếu quá trình trích xuất văn bản thất bại.
      */
-    conferenceTextPath: string | null;
+    conferenceTextPath?: string | null;
     /**
      * @property {string} [originalRequestId] - Tùy chọn: ID của yêu cầu gốc, được chuyển tiếp từ `ConferenceData` ban đầu.
      */
@@ -175,6 +191,14 @@ export interface BatchEntry {
      * @property {string | null} [impTextPath] - Tùy chọn: Đường dẫn tệp đến nội dung văn bản đã trích xuất của liên kết IMP. Null nếu quá trình trích xuất thất bại.
      */
     impTextPath?: string | null;
+
+    conferenceTextContent?: string | null; // ADD THIS
+
+    cfpTextContent?: string | null; // ADD THIS
+
+    impTextContent?: string | null; // ADD THIS
+
+
 }
 
 /**
@@ -191,22 +215,22 @@ export interface BatchUpdateEntry {
      * @property {string} conferenceAcronym - Từ viết tắt của hội nghị.
      */
     conferenceAcronym: string;
-    /**
-     * @property {string} mainLink - Liên kết chính của hội nghị.
+     /**
+     * @property {string | null | undefined} mainLink - URL chính của hội nghị.
      */
-    mainLink: string;
+    mainLink: string | null | undefined;
     /**
-     * @property {string} cfpLink - Liên kết CFP của hội nghị.
+     * @property {string | null | undefined} cfpLink - URL cho Call for Papers (CFP).
      */
-    cfpLink: string;
+    cfpLink: string | null | undefined;
     /**
-     * @property {string} impLink - Liên kết IMP của hội nghị.
+     * @property {string | null | undefined} impLink - URL cho các ngày quan trọng.
      */
-    impLink: string;
+    impLink: string | null | undefined;
     /**
      * @property {string} conferenceTextPath - Đường dẫn tệp đến nội dung văn bản của trang hội nghị chính.
      */
-    conferenceTextPath: string;
+    conferenceTextPath: string | null;
     /**
      * @property {string | null} cfpTextPath - Đường dẫn tệp đến nội dung văn bản của trang CFP. Null nếu liên kết CFP không khả dụng hoặc quá trình trích xuất văn bản thất bại.
      */
@@ -219,168 +243,41 @@ export interface BatchUpdateEntry {
      * @property {string} [originalRequestId] - Tùy chọn: ID của yêu cầu gốc, được chuyển tiếp từ `ConferenceUpdateData` ban đầu.
      */
     originalRequestId?: string;
+
+    conferenceTextContent?: string | null; // ADD THIS
+    cfpTextContent?: string | null; // ADD THIS
+    impTextContent?: string | null; // ADD THIS
+
 }
 
 // --------------------- JSONL FILE OUTPUT DATA TYPES (AFTER BATCH PROCESSING) ---------------------
 
-/**
- * @interface BatchEntryWithIds
- * @extends BatchEntry
- * @description Đại diện cho cấu trúc dữ liệu hoàn chỉnh của một mục duy nhất sau luồng thu thập dữ liệu LƯU,
- * sẵn sàng được ghi vào tệp JSONL. Bao gồm các ID lô duy nhất và tất cả siêu dữ liệu từ các cuộc gọi API AI.
- */
-export interface BatchEntryWithIds extends BatchEntry {
-    /**
-     * @property {string} internalProcessingAcronym - Từ viết tắt sau khi áp dụng `addAcronymSafely`, để đảm bảo tính duy nhất của tệp nội bộ.
-     */
+// 2. Cập nhật BatchEntryWithIds và BatchUpdateDataWithIds
+export interface BatchEntryWithIds extends BatchEntry, ApiResponseData {
     internalProcessingAcronym: string;
-    /**
-     * @property {string} batchRequestId - Định danh duy nhất cho cuộc gọi API lô đã xử lý mục này.
-     */
     batchRequestId: string;
-    /**
-     * @property {string} [determineResponseTextPath] - Tùy chọn: Đường dẫn tệp đến văn bản phản hồi thô từ API 'determine_links'.
-     */
-    determineResponseTextPath?: string;
-    /**
-     * @property {any} [determineMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'determine_links'.
-     * (Cân nhắc một kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    determineMetaData?: any;
-    /**
-     * @property {string} [extractResponseTextPath] - Tùy chọn: Đường dẫn tệp đến văn bản phản hồi thô từ API 'extract_information'.
-     */
-    extractResponseTextPath?: string;
-    /**
-     * @property {any} [extractMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_information'.
-     * (Cân nhắc một kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    extractMetaData?: any;
-    /**
-     * @property {string} [cfpResponseTextPath] - Tùy chọn: Đường dẫn tệp đến văn bản phản hồi thô từ API 'extract_cfp'.
-     */
-    cfpResponseTextPath?: string;
-    /**
-     * @property {any} [cfpMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_cfp'.
-     * (Cân nhắc một kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    cfpMetaData?: any;
 }
 
-/**
- * @interface BatchUpdateDataWithIds
- * @extends BatchUpdateEntry
- * @description Đại diện cho cấu trúc dữ liệu hoàn chỉnh của một mục duy nhất sau luồng thu thập dữ liệu CẬP NHẬT,
- * sẵn sàng được ghi vào tệp JSONL.
- */
-export interface BatchUpdateDataWithIds extends BatchUpdateEntry {
-    /**
-     * @property {string} internalProcessingAcronym - Từ viết tắt sau khi áp dụng `addAcronymSafely`, để đảm bảo tính duy nhất của tệp nội bộ.
-     */
+export interface BatchUpdateDataWithIds extends BatchUpdateEntry, ApiResponseData {
     internalProcessingAcronym: string;
-    /**
-     * @property {string} batchRequestId - Định danh duy nhất cho cuộc gọi API lô đã xử lý mục này.
-     */
     batchRequestId: string;
-    /**
-     * @property {string} [extractResponseTextPath] - Tùy chọn: Đường dẫn tệp đến văn bản phản hồi thô từ API 'extract_information'.
-     */
-    extractResponseTextPath?: string;
-    /**
-     * @property {any} [extractMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_information'.
-     * (Cân nhắc một kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    extractMetaData?: any;
-    /**
-     * @property {string} [cfpResponseTextPath] - Tùy chọn: Đường dẫn tệp đến văn bản phản hồi thô từ API 'extract_cfp'.
-     */
-    cfpResponseTextPath?: string;
-    /**
-     * @property {any} [cfpMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_cfp'.
-     * (Cân nhắc một kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    cfpMetaData?: any;
+    // Không cần định nghĩa lại các trường ...Response... ở đây
+    // Lưu ý: luồng update không có determine, nhưng kế thừa vẫn ổn vì các trường là optional.
 }
+
 
 // --------------------- RESULT PROCESSING DATA TYPES (READING JSONL, WRITING CSV) ---------------------
 
+// 3. Đơn giản hóa InputRowData
 /**
  * @interface InputRowData
- * @description Đại diện cho một hàng dữ liệu duy nhất được đọc từ tệp JSONL bởi `ResultProcessingService`.
- * Cấu trúc này phải đủ linh hoạt để chứa cả `BatchEntryWithIds` và `BatchUpdateDataWithIds` vì chúng được ghi vào đầu ra JSONL.
+ * @description Đại diện cho một hàng dữ liệu duy nhất được đọc từ tệp JSONL.
+ * Đây là sự kết hợp của các trường từ BatchEntry/BatchUpdateEntry và ApiResponseData.
  */
-export interface InputRowData {
-    /**
-     * @property {string} conferenceTitle - Tiêu đề của hội nghị.
-     */
-    conferenceTitle: string;
-    /**
-     * @property {string} conferenceAcronym - Từ viết tắt của hội nghị.
-     */
-    conferenceAcronym: string;
-    /**
-     * @property {string} [mainLink] - Tùy chọn: Liên kết chính đã được phân giải của hội nghị.
-     */
-    mainLink?: string;
-    /**
-     * @property {string | null} [conferenceTextPath] - Tùy chọn: Đường dẫn đến nội dung văn bản của liên kết hội nghị chính.
-     */
-    conferenceTextPath?: string | null;
-    /**
-     * @property {string} [cfpLink] - Tùy chọn: Liên kết Call for Papers (CFP) đã xác định.
-     */
-    cfpLink?: string;
-    /**
-     * @property {string} [impLink] - Tùy chọn: Liên kết Important Dates (IMP) đã xác định.
-     */
-    impLink?: string;
-    /**
-     * @property {string | null} [cfpTextPath] - Tùy chọn: Đường dẫn đến nội dung văn bản của liên kết CFP.
-     */
-    cfpTextPath?: string | null;
-    /**
-     * @property {string | null} [impTextPath] - Tùy chọn: Đường dẫn đến nội dung văn bản của liên kết IMP.
-     */
-    impTextPath?: string | null;
-
-    /**
-     * @property {string} [determineResponseTextPath] - Tùy chọn: Đường dẫn đến văn bản phản hồi thô từ API 'determine_links'.
-     */
-    determineResponseTextPath?: string;
-    /**
-     * @property {string} [extractResponseTextPath] - Tùy chọn: Đường dẫn đến văn bản phản hồi thô từ API 'extract_information'.
-     */
-    extractResponseTextPath?: string;
-    /**
-     * @property {string} [cfpResponseTextPath] - Tùy chọn: Đường dẫn đến văn bản phản hồi thô từ API 'extract_cfp'.
-     */
-    cfpResponseTextPath?: string;
-
-    /**
-     * @property {any} [determineMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'determine_links'.
-     * (Cân nhắc kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    determineMetaData?: any;
-    /**
-     * @property {any} [extractMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_information'.
-     * (Cân nhắc kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    extractMetaData?: any;
-    /**
-     * @property {any} [cfpMetaData] - Tùy chọn: Siêu dữ liệu thô hoặc phản hồi có cấu trúc từ API 'extract_cfp'.
-     * (Cân nhắc kiểu cụ thể hơn nếu lược đồ được biết)
-     */
-    cfpMetaData?: any;
-
-    /**
-     * @property {string} batchRequestId - ID duy nhất của yêu cầu lô đã tạo ra dữ liệu này. Bắt buộc.
-     */
+export type InputRowData = (BatchEntry | BatchUpdateEntry) & ApiResponseData & {
     batchRequestId: string;
-    /**
-     * @property {string} [originalRequestId] - Tùy chọn: ID của yêu cầu gốc, nếu áp dụng.
-     */
     originalRequestId?: string;
-}
+};
 
 /**
  * @interface DateDetails

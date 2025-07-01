@@ -10,12 +10,11 @@ import {
     ContentListUnion as SDKContentListUnion
 } from "@google/genai";
 import { GeminiResponseHandlerService } from './geminiResponseHandler.service';
-import { GeminiRequestPayloadFileLoggerService } from './geminiRequestPayloadFileLogger.service';
+// import { GeminiRequestPayloadFileLoggerService } from './geminiRequestPayloadFileLogger.service';
 import { LoggingService } from '../logging.service';
 import {
     SdkExecutorParams,
     ProcessedGeminiResponse,
-    ModelPreparationResult // Đã được cập nhật
 } from '../../types/crawl';
 
 
@@ -27,7 +26,7 @@ export class GeminiSdkExecutorService {
     constructor(
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(GeminiResponseHandlerService) private responseHandler: GeminiResponseHandlerService,
-        @inject(GeminiRequestPayloadFileLoggerService) private payloadFileLogger: GeminiRequestPayloadFileLoggerService,
+        // @inject(GeminiRequestPayloadFileLoggerService) private payloadFileLogger: GeminiRequestPayloadFileLoggerService,
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiSdkExecutorService' });
         this.serviceBaseLogger.info("Constructing GeminiSdkExecutorService.");
@@ -43,11 +42,8 @@ export class GeminiSdkExecutorService {
         });
 
         const {
-            limiterInstance, currentModelPrep, apiType, batchIndex, acronym, title,
-            crawlModel, // crawlModel từ SdkExecutorParams, có thể so sánh với currentModelPrep.crawlModelUsed
-            systemInstructionTextToUse, // Sẽ được thêm vào config ở đây
-            // fewShotPartsToUse từ SdkExecutorParams đã được Orchestrator đưa vào currentModelPrep.contentRequest
-            requestLogDir
+            limiterInstance, currentModelPrep, apiType, batchIndex, acronym,
+            systemInstructionTextToUse
         } = params;
 
         // currentModelPrep.model là service Models

@@ -17,5 +17,3 @@ export * from './instructions/persian';
 
 // --- Export Functions ---
 export * from './functions/english';
-export * from './functions/vietnamese';
-export * from './functions/chinese';

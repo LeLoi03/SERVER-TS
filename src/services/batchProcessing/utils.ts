@@ -90,3 +90,39 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
     }
 }
+
+
+// src/utils/promiseUtils.ts
+
+/**
+ * Wraps a promise with an overall operation timeout.
+ * If the operation promise does not settle (resolve or reject) within the timeout period,
+ * this function will reject with a timeout error.
+ *
+ * @param operationPromise The promise representing the long-running operation.
+ * @param timeoutMs The timeout in milliseconds.
+ * @param operationName A descriptive name for the operation, used in the error message.
+ * @returns A new promise that settles with the result of the original promise or rejects on timeout.
+ */
+export function withOperationTimeout<T>(
+    operationPromise: Promise<T>,
+    timeoutMs: number,
+    operationName: string = 'Unnamed operation'
+): Promise<T> {
+    let timeoutHandle: NodeJS.Timeout;
+
+    const timeoutPromise = new Promise<T>((_, reject) => {
+        timeoutHandle = setTimeout(() => {
+            reject(new Error(`Operation timed out: "${operationName}" did not complete within ${timeoutMs}ms.`));
+        }, timeoutMs);
+    });
+
+    return Promise.race([
+        operationPromise,
+        timeoutPromise
+    ]).finally(() => {
+        // Important: Clear the timeout handle to prevent it from running
+        // if the original promise settles first.
+        clearTimeout(timeoutHandle);
+    });
+}
