@@ -2,7 +2,6 @@ fix mấy cái no info trong visualization
 
 fix topics gemini trả về
 
-hiện image context source tròn detail
 
 điều chỉnh làm sao để re crawl có thiết lập có re crawl non main likn không
 
@@ -24,8 +23,6 @@ chưa completed vẫn bấm save được
 
 THÊM PỂ PAGE JOURNAL , LOG
 
-fix treo tab playwright
-
 
 
 fix lỗi apply update
@@ -33,3 +30,11 @@ fix lỗi apply update
 fixx side bả admin nổi mbile
 
 fix link error nhưng không hiện
+
+check JSSPP
+
+
+check ADMA
+
+bổ sung system instruction kêu phân loại ngày chính xác 
+
