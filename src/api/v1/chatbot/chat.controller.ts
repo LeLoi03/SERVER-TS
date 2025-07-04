@@ -13,23 +13,20 @@ import { LoggingService } from '../../../services/logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import multer from 'multer';
 import { File as NodeFile } from 'node:buffer';
+// <<< NEW IMPORTS
+import path from 'path';
+import fs from 'fs/promises';
+import { createObjectCsvWriter } from 'csv-writer';
 
 // Điều chỉnh giới hạn file size lên 50MB
 const MAX_FILE_SIZE_MB = 50;
 const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
-
-// const storage = multer.memoryStorage(); // Not needed here if using filesUploadMiddleware
-// const upload = multer({ // Not needed here if using filesUploadMiddleware
-//     storage: storage,
-//     limits: { fileSize: MAX_FILE_SIZE_BYTES }
-// });
 
 interface UploadedFileResponse {
     name: string;           // Tên file gốc từ client (file.originalname)
     uri: string | undefined;            // URI từ Google File API (quan trọng nhất)
     mimeType: string;       // MimeType (ưu tiên từ Google, fallback từ client)
     size: number;           // Kích thước file gốc từ client (file.size)
-    // Các trường tùy chọn từ Google nếu muốn theo dõi/debug:
     googleFileDisplayName?: string;
     googleFileName?: string; // Tên resource trên Google (vd: files/xxxx)
     googleFileState?: FileState;
@@ -49,6 +46,8 @@ export class ChatController {
     private readonly logger: Logger;
     private readonly configService: ConfigService;
     private genAI: GoogleGenAI;
+    // <<< NEW: Path for feedback file
+    private readonly feedbackCsvPath: string;
 
     constructor() {
         this.configService = container.resolve(ConfigService);
@@ -62,7 +61,10 @@ export class ChatController {
             throw new Error('GEMINI_API_KEY is not configured.');
         }
         // The GoogleGenAI constructor expects an object with an apiKey property
-        this.genAI = new GoogleGenAI({apiKey});
+        this.genAI = new GoogleGenAI({ apiKey });
+        // <<< NEW: Initialize feedback file path
+        // Lưu file trong thư mục `data` ở gốc dự án để tránh bị xóa khi build lại
+        this.feedbackCsvPath = path.join(process.cwd(), 'data', 'feedback', 'chatbot_feedback.csv');
     }
 
     public async handleFileUpload(req: Request, res: Response): Promise<void> {
@@ -195,7 +197,69 @@ export class ChatController {
             };
         }
     }
+
+    // <<< NEW: Method to handle feedback submission >>>
+    public async handleFeedbackSubmission(req: Request, res: Response): Promise<void> {
+        const reqLogger = (req as any).log || this.logger;
+        reqLogger.info('Feedback submission request received.');
+
+        const { feedback, conversationContext } = req.body;
+
+        // --- Basic Validation ---
+        if (!feedback || !conversationContext) {
+            reqLogger.warn('Invalid feedback payload. Missing `feedback` or `conversationContext`.');
+            res.status(400).json({ message: 'Invalid payload. `feedback` and `conversationContext` are required.' });
+            return;
+        }
+        if (typeof feedback.rating !== 'number' || !feedback.type) {
+            reqLogger.warn('Invalid feedback object. Missing `rating` or `type`.');
+            res.status(400).json({ message: 'Invalid feedback object. `rating` and `type` are required.' });
+            return;
+        }
+
+        try {
+            const feedbackDir = path.dirname(this.feedbackCsvPath);
+            // Ensure the directory exists
+            await fs.mkdir(feedbackDir, { recursive: true });
+
+            const fileExists = await fs.access(this.feedbackCsvPath).then(() => true).catch(() => false);
+
+            const csvWriter = createObjectCsvWriter({
+                path: this.feedbackCsvPath,
+                header: [
+                    { id: 'timestamp', title: 'TIMESTAMP' },
+                    { id: 'feedback_type', title: 'FEEDBACK_TYPE' }, // 'like' or 'dislike'
+                    { id: 'rating', title: 'RATING' }, // 1-5
+                    { id: 'title', title: 'TITLE' },
+                    { id: 'details', title: 'DETAILS' },
+                    { id: 'conversation_context', title: 'CONVERSATION_CONTEXT_JSON' },
+                ],
+                append: fileExists, // Append if file exists, otherwise create new with header
+            });
+
+            const record = {
+                timestamp: new Date().toISOString(),
+                feedback_type: feedback.type,
+                rating: feedback.rating,
+                title: feedback.title || '',
+                details: feedback.details || '',
+                // Stringify the context to store it in a single CSV cell
+                conversation_context: JSON.stringify(conversationContext),
+            };
+
+            await csvWriter.writeRecords([record]);
+
+            reqLogger.info({ feedbackType: feedback.type, rating: feedback.rating }, 'Successfully saved feedback to CSV.');
+            res.status(201).json({ message: 'Feedback received successfully.' });
+
+        } catch (error) {
+            const { message, stack } = getErrorMessageAndStack(error);
+            reqLogger.error({ err: { message, stack } }, 'Error saving feedback to CSV.');
+            res.status(500).json({ message: 'An error occurred while processing your feedback.', error: message });
+        }
+    }
 }
+
 
 export const filesUploadMiddleware = multer({
     storage: multer.memoryStorage(),
