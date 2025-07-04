@@ -15,7 +15,8 @@ import { IConferenceDataAggregatorService } from '../batchProcessing/conferenceD
 import { IFinalExtractionApiService } from './finalExtractionApi.service';
 import { IFinalRecordAppenderService } from './finalRecordAppender.service';
 import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
-import { withOperationTimeout } from './utils'; // <-- IMPORT HELPER
+import { RequestStateService } from '../requestState.service';
+
 
 export interface IUpdateTaskExecutorService {
     execute(
@@ -24,7 +25,8 @@ export interface IUpdateTaskExecutorService {
         batchRequestIdForTask: string,
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
-        parentLogger: Logger
+        parentLogger: Logger,
+        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
     ): Promise<boolean>;
 }
 
@@ -38,7 +40,7 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
         @inject(FileSystemService) private readonly fileSystemService: FileSystemService,
         @inject('IConferenceDataAggregatorService') private readonly conferenceDataAggregatorService: IConferenceDataAggregatorService,
         @inject('IFinalExtractionApiService') private readonly finalExtractionApiService: IFinalExtractionApiService,
-        @inject('IFinalRecordAppenderService') private readonly finalRecordAppenderService: IFinalRecordAppenderService
+        @inject('IFinalRecordAppenderService') private readonly finalRecordAppenderService: IFinalRecordAppenderService,
     ) {
         this.batchesDir = this.configService.batchesDir;
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
@@ -50,7 +52,9 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
         batchRequestIdForTask: string,
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
-        parentLogger: Logger
+        parentLogger: Logger,
+        requestStateService: RequestStateService // <<< NHẬN THAM SỐ MỚI
+
     ): Promise<boolean> {
         const originalAcronym = batchInput.conferenceAcronym;
 
@@ -156,9 +160,13 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 cfpMetaData: apiResults.cfpMetaData,
             };
 
-            // DELEGATE to FinalRecordAppenderService
-            await this.finalRecordAppenderService.append(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_update_record' }));
-
+             // DELEGATE to FinalRecordAppenderService
+            await this.finalRecordAppenderService.append(
+                finalRecord,
+                batchRequestIdForTask,
+                logger.child({ subOperation: 'append_final_update_record' }),
+                requestStateService // <<< TRUYỀN THAM SỐ NHẬN ĐƯỢC
+            );
             logger.info({ event: 'batch_task_finish_success', flow: 'update' });
             logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
 

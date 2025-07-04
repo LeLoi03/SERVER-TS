@@ -26,21 +26,24 @@ export class GeminiClientManagerService {
     private readonly genAIInstances: Map<string, GoogleGenAI> = new Map();
     private readonly geminiApiKeys: string[];
 
-    // --- START: THAY ĐỔI CHO CHIẾN LƯỢC MỚI ---
+      // --- START: CẬP NHẬT CHIẾN LƯỢC VÒNG 2 ---
 
-    // 1. Định nghĩa các pool và key tương ứng
+    // 1. Định nghĩa lại các pool
     private readonly keyPools: Record<string, KeyPool> = {
-        interactive: { keyIndices: [0, 1] },
-        extraction:  { keyIndices: [2] },
-        default:     { keyIndices: [3] },
+        interactive: { keyIndices: [0, 1, 2] },      
+        extraction:  { keyIndices: [3, 4, 5] }, 
+        // default:     { keyIndices: [3] },      // Giữ nguyên key dự phòng
     };
 
-    // 2. Map từ apiType sang tên pool
+    // 2. Map từ apiType sang tên pool (không đổi nhưng để đây cho rõ)
     private readonly apiTypeToPoolMap: Record<string, string> = {
         determine: 'interactive',
         cfp:       'interactive',
         extract:   'extraction',
     };
+
+    // --- END: CẬP NHẬT CHIẾN LƯỢC VÒNG 2 ---
+
 
     // 3. Bộ đếm cho từng pool để thực hiện Round-Robin
     private readonly poolCounters: Map<string, number> = new Map();

@@ -82,9 +82,8 @@ container.register<IUpdateTaskExecutorService>('IUpdateTaskExecutorService', { u
 container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useClass: SaveTaskExecutorService });
 
 // --- 4. Register Request-Scoped Services ---
-// These services have a lifecycle tied to a specific request or resolution.
-// The @scoped decorator on the class handles the lifecycle, but explicit registration here is good practice.
-// <<< ĐĂNG KÝ MỚI >>>
+// Decorator @scoped(Lifecycle.ResolutionScoped) trên class đã đủ.
+// Chỉ cần đăng ký để Tsyringe biết về nó.
 container.register(RequestStateService, RequestStateService);
 container.registerSingleton(InMemoryResultCollectorService); // <<< ĐĂNG KÝ MỚI
 

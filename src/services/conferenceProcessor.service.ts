@@ -10,6 +10,7 @@ import { Logger } from 'pino';
 import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, ApiModels } from '../types/crawl/crawl.types';
 import { filterSearchResults } from '../utils/crawl/linkFiltering';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
+import { RequestStateService } from './requestState.service';
 
 @injectable()
 export class ConferenceProcessorService {
@@ -46,7 +47,9 @@ export class ConferenceProcessorService {
         taskIndex: number,
         parentLogger: Logger,
         apiModels: ApiModels,
-        batchRequestId: string
+        batchRequestId: string,
+        requestStateService: RequestStateService
+
     ): Promise<void> {
         const confAcronym = conference?.Acronym || `UnknownAcronym-${taskIndex}`;
         const confTitle = conference?.Title || `UnknownTitle-${taskIndex}`;
@@ -55,8 +58,8 @@ export class ConferenceProcessorService {
         // Kiểm tra xem các thuộc tính có tồn tại trong đối tượng 'conference' hay không.
         // Bất kể giá trị của chúng là gì (string, null, rỗng, v.v.), chỉ cần chúng có mặt.
         const hasAllRequiredLinksProvided = 'mainLink' in conference &&
-                                            'cfpLink' in conference &&
-                                            'impLink' in conference;
+            'cfpLink' in conference &&
+            'impLink' in conference;
 
         const crawlType = hasAllRequiredLinksProvided ? "update" : "crawl";
         // *******************************************************
@@ -86,7 +89,7 @@ export class ConferenceProcessorService {
         try {
             // *************** SỬ DỤNG BIẾN ĐIỀU CHỈNH ***************
             if (hasAllRequiredLinksProvided) {
-            // *******************************************************
+                // *******************************************************
                 taskLogger.info({ event: 'update_flow_start' }, `Conference item has pre-defined links. Initiating UPDATE flow.`);
                 const conferenceUpdateData: ConferenceUpdateData = {
                     Acronym: conference.Acronym,
@@ -101,7 +104,9 @@ export class ConferenceProcessorService {
                 const updateSuccess = await this.htmlPersistenceService.processUpdateFlow(
                     conferenceUpdateData,
                     taskLogger,
-                    apiModels
+                    apiModels,
+                    requestStateService // <<< Truyền xuống
+
                 );
 
                 if (!updateSuccess) {
@@ -152,7 +157,9 @@ export class ConferenceProcessorService {
                         conference,
                         searchResultsLinks,
                         taskLogger,
-                        apiModels
+                        apiModels,
+                        requestStateService // <<< Truyền xuống
+
                     );
                     if (saveSuccess === false) {
                         taskSuccessfullyCompleted = false;
@@ -174,6 +181,6 @@ export class ConferenceProcessorService {
             taskSuccessfullyCompleted = false;
             specificTaskError = taskError instanceof Error ? taskError : new Error(errorMessage);
             taskLogger.error({ err: { message: errorMessage, stack: errorStack }, event: 'task_unhandled_exception' }, `An unhandled exception occurred during conference processing for "${confTitle}" (${confAcronym}).`);
-        } 
+        }
     }
 }

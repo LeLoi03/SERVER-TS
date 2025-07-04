@@ -8,6 +8,7 @@ import { BatchProcessingOrchestratorService } from './batchProcessingOrchestrato
 import { Logger } from 'pino';
 import { ConferenceData, ConferenceUpdateData, ApiModels } from '../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
+import { RequestStateService } from './requestState.service';
 
 /**
  * Service responsible for managing HTML content persistence and delegating
@@ -81,7 +82,9 @@ export class HtmlPersistenceService {
     async processUpdateFlow(
         conference: ConferenceUpdateData,
         taskLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
             persistenceFlow: 'update',
@@ -97,7 +100,9 @@ export class HtmlPersistenceService {
                 this.getContext(flowLogger), // Ensure context is available
                 conference,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingOrchestratorService
+                apiModels, // Pass ApiModels to BatchProcessingOrchestratorService
+                requestStateService // <<< Truyền xuống
+
             );
 
             if (success) {
@@ -129,7 +134,9 @@ export class HtmlPersistenceService {
         conference: ConferenceData,
         searchResultLinks: string[],
         taskLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
             persistenceFlow: 'save',
@@ -151,7 +158,9 @@ export class HtmlPersistenceService {
                 conference,
                 searchResultLinks,
                 flowLogger,
-                apiModels // Pass ApiModels to BatchProcessingOrchestratorService
+                apiModels,
+                requestStateService // <<< Truyền xuống
+
             );
 
             if (initiationSuccess === true) {
@@ -174,7 +183,7 @@ export class HtmlPersistenceService {
      * @param {Logger} [parentLogger] - An optional parent logger for contextual logging.
      * @returns {void}
      */
-     public resetState(parentLogger?: Logger): void {
+    public resetState(parentLogger?: Logger): void {
         const logger = parentLogger ? parentLogger.child({ serviceMethod: 'HtmlPersistenceService.resetState' }) : this.serviceBaseLogger;
         // The browserContext is managed by PlaywrightService lifecycle, so we don't explicitly reset it here.
         // It becomes null on PlaywrightService.close().

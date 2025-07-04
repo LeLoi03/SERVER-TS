@@ -20,6 +20,7 @@ import { IFinalRecordAppenderService } from './finalRecordAppender.service';
 import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { withOperationTimeout } from './utils'; // <-- IMPORT HELPER
+import { RequestStateService } from '../requestState.service';
 
 export interface ISaveTaskExecutorService {
     execute(
@@ -30,7 +31,8 @@ export interface ISaveTaskExecutorService {
         batchRequestIdForTask: string,
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
-        logger: Logger
+        logger: Logger,
+        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
     ): Promise<boolean>;
 }
 
@@ -46,7 +48,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
         @inject('IConferenceDataAggregatorService') private readonly conferenceDataAggregatorService: IConferenceDataAggregatorService,
         @inject('IConferenceDeterminationService') private readonly conferenceDeterminationService: IConferenceDeterminationService,
         @inject('IFinalExtractionApiService') private readonly finalExtractionApiService: IFinalExtractionApiService,
-        @inject('IFinalRecordAppenderService') private readonly finalRecordAppenderService: IFinalRecordAppenderService
+        @inject('IFinalRecordAppenderService') private readonly finalRecordAppenderService: IFinalRecordAppenderService,
     ) {
         this.batchesDir = this.configService.batchesDir;
         this.errorLogPath = path.join(this.configService.baseOutputDir, 'batch_processing_errors.log');
@@ -60,7 +62,8 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
         batchRequestIdForTask: string,
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
-        logger: Logger
+        logger: Logger,
+        requestStateService: RequestStateService
     ): Promise<boolean> {
         logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
 
@@ -170,7 +173,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
 
             try {
                 // +++ BỌC LỜI GỌI SERVICE BẰNG TIMEOUT +++
-                const DETERMINATION_TIMEOUT_MS = 180000; // 3 phút cho việc xử lý trang chính thức
+                const DETERMINATION_TIMEOUT_MS = 300000; // 3 phút cho việc xử lý trang chính thức
 
                 const determinationPromise = this.conferenceDeterminationService.determineAndProcessOfficialSite(
                     determineLinksResponse.responseText || "",
@@ -282,7 +285,14 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
             };
 
             // DELEGATE to FinalRecordAppenderService
-            await this.finalRecordAppenderService.append(finalRecord, batchRequestIdForTask, logger.child({ subOperation: 'append_final_save_record' }));
+            // DELEGATE to FinalRecordAppenderService
+            // <<< TRUYỀN THAM SỐ MỚI >>>
+            await this.finalRecordAppenderService.append(
+                finalRecord,
+                batchRequestIdForTask,
+                logger.child({ subOperation: 'append_final_save_record' }),
+                requestStateService // <<< Truyền nó xuống
+            );
 
             logger.info({ event: 'batch_task_finish_success', flow: 'save' });
             logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);

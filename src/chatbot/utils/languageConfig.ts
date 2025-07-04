@@ -56,7 +56,14 @@ const agentBaseSystemInstructionsWithPageContext: Record<AgentId, Partial<Record
     'HostAgent': {
         'en': LangData.enHostAgentSystemInstructionsWithPageContext, // <<< TẠO TEMPLATE NÀY
         'vi': LangData.viHostAgentSystemInstructionsWithPageContext, // <<< TẠO TEMPLATE NÀY
-        // ... các ngôn ngữ khác
+        'zh': LangData.zhHostAgentSystemInstructionsWithPageContext,
+        'de': LangData.deHostAgentSystemInstructionsWithPageContext,
+        'fr': LangData.frHostAgentSystemInstructionsWithPageContext,
+        'es': LangData.esHostAgentSystemInstructionsWithPageContext,
+        'ru': LangData.ruHostAgentSystemInstructionsWithPageContext,
+        'ja': LangData.jaHostAgentSystemInstructionsWithPageContext,
+        'ko': LangData.koHostAgentSystemInstructionsWithPageContext,
+        'ar': LangData.arHostAgentSystemInstructionsWithPageContext,
     },
 };
 
@@ -64,8 +71,16 @@ const agentBaseSystemInstructionsWithPageContext: Record<AgentId, Partial<Record
 // You might expand this for other languages or agents if needed.
 const personalizedAgentBaseSystemInstructions: Record<AgentId, Partial<Record<Language, string>>> = {
     'HostAgent': {
-        'en': LangData.enPersonalizedHostAgentSystemInstructions, // The new personalized one
-        'vi': LangData.viPersonalizedHostAgentSystemInstructions,
+        'en': LangData.enPersonalizedHostAgentSystemInstructions, // <<< TẠO TEMPLATE NÀY
+        'vi': LangData.viPersonalizedHostAgentSystemInstructions, // <<< TẠO TEMPLATE NÀY
+        'zh': LangData.zhPersonalizedHostAgentSystemInstructions,
+        'de': LangData.dePersonalizedHostAgentSystemInstructions,
+        'fr': LangData.frPersonalizedHostAgentSystemInstructions,
+        'es': LangData.esPersonalizedHostAgentSystemInstructions,
+        'ru': LangData.ruPersonalizedHostAgentSystemInstructions,
+        'ja': LangData.jaPersonalizedHostAgentSystemInstructions,
+        'ko': LangData.koPersonalizedHostAgentSystemInstructions,
+        'ar': LangData.arPersonalizedHostAgentSystemInstructions,
     }
 };
 
@@ -74,7 +89,14 @@ const personalizedAgentBaseSystemInstructionsWithPageContext: Record<AgentId, Pa
     'HostAgent': {
         'en': LangData.enPersonalizedHostAgentSystemInstructionsWithPageContext, // <<< TẠO TEMPLATE NÀY
         'vi': LangData.viPersonalizedHostAgentSystemInstructionsWithPageContext, // <<< TẠO TEMPLATE NÀY
-        // ... các ngôn ngữ khác
+        'zh': LangData.zhPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'de': LangData.dePersonalizedHostAgentSystemInstructionsWithPageContext,
+        'fr': LangData.frPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'es': LangData.esPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'ru': LangData.ruPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'ja': LangData.jaPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'ko': LangData.koPersonalizedHostAgentSystemInstructionsWithPageContext,
+        'ar': LangData.arPersonalizedHostAgentSystemInstructionsWithPageContext,
     }
 };
 
@@ -111,7 +133,7 @@ export function getAgentLanguageConfig(
         }
         // Nếu không tìm thấy, sẽ rơi xuống các block sau
     }
-    
+
     if (!usingPageContextInstructions && pageContextText && agentId === 'HostAgent') {
         const contextInstructionsForLang = agentBaseSystemInstructionsWithPageContext.HostAgent?.[targetLang];
         const contextInstructionsForEn = agentBaseSystemInstructionsWithPageContext.HostAgent?.['en'];
@@ -161,7 +183,7 @@ export function getAgentLanguageConfig(
                 }
             }
             logToFile(`[Language Config] Using DEFAULT base instructions for HostAgent, Lang: ${targetLang}`);
-        } else { 
+        } else {
             const englishInstructionsKey = `english${agentId}SystemInstructions` as keyof typeof LangData;
             const englishInstructions = LangData[englishInstructionsKey];
             if (typeof englishInstructions === 'string') {
@@ -172,7 +194,7 @@ export function getAgentLanguageConfig(
             }
         }
     }
-    
+
     if (baseSystemInstructionsText === "") {
         logToFile(`[Language Config] CRITICAL ERROR: baseSystemInstructionsText is empty for Agent: ${agentId}, Lang: ${targetLang}. This indicates a serious configuration issue.`);
         baseSystemInstructionsText = "You are a helpful assistant. Please respond to the user's query.";
@@ -182,7 +204,7 @@ export function getAgentLanguageConfig(
 
     if (useEffectivePersonalizedInstructions && personalizationData) {
         // Chỉ inject nếu template có placeholder (dấu hiệu của template personalized)
-        if (finalSystemInstructions.includes("[User's First Name]")) { 
+        if (finalSystemInstructions.includes("[User's First Name]")) {
             finalSystemInstructions = finalSystemInstructions.replace(/\[User's First Name\]/g, personalizationData.firstName || 'User');
             finalSystemInstructions = finalSystemInstructions.replace(/\[User's Last Name\]/g, personalizationData.lastName || '');
             finalSystemInstructions = finalSystemInstructions.replace(/\[User's About Me section\]/g, personalizationData.aboutMe || 'Not specified');
@@ -192,7 +214,7 @@ export function getAgentLanguageConfig(
             finalSystemInstructions = finalSystemInstructions.replace(/\[List of User's Interested Topics\]/g, topics);
             logToFile(`[Language Config] Injected personalization data into HostAgent instructions.`);
         } else if (useEffectivePersonalizedInstructions) { // Log warning nếu cờ bật nhưng template không khớp
-             logToFile(`[Language Config] WARN: useEffectivePersonalizedInstructions was true, but the loaded baseSystemInstructionsText did not seem to be a personalized template (missing placeholders). Personalization data not injected.`);
+            logToFile(`[Language Config] WARN: useEffectivePersonalizedInstructions was true, but the loaded baseSystemInstructionsText did not seem to be a personalized template (missing placeholders). Personalization data not injected.`);
         }
     }
 

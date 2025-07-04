@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { singleton, inject, container } from 'tsyringe';
+import { singleton, inject, container, DependencyContainer } from 'tsyringe';
 import fs from 'fs';
 import { Logger } from 'pino';
 
@@ -44,7 +44,6 @@ export class CrawlOrchestratorService {
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
         @inject(TaskQueueService) private taskQueueService: TaskQueueService,
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
-        @inject(RequestStateService) private readonly requestStateService: RequestStateService,
         @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService, // <<< INJECT MỚI
 
     ) {
@@ -63,11 +62,14 @@ export class CrawlOrchestratorService {
      * @param batchRequestId A unique identifier for the current batch processing request.
      * @returns A Promise that resolves with an array of processed conference data.
      */
+    // <<< THÊM THAM SỐ MỚI VÀO `run` >>>
     async run(
         conferenceList: ConferenceData[],
         parentLogger: Logger,
         apiModels: ApiModels,
-        batchRequestId: string
+        batchRequestId: string,
+        requestStateService: RequestStateService,
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
     ): Promise<ProcessedRowData[]> {
         const logger = parentLogger.child({
             service: 'CrawlOrchestratorRun',
@@ -76,7 +78,8 @@ export class CrawlOrchestratorService {
         });
 
         const operationStartTime = Date.now();
-        const shouldRecordFiles = this.requestStateService.shouldRecordFiles(); // Lấy trạng thái một lần
+        // <<< DÙNG TRỰC TIẾP TỪ THAM SỐ >>>
+        const shouldRecordFiles = requestStateService.shouldRecordFiles();
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
 
         logger.info({
@@ -102,24 +105,26 @@ export class CrawlOrchestratorService {
             await this.geminiApiService.init(logger);
             this.htmlPersistenceService.setBrowserContext(logger);
 
-            // Phase 2: Scheduling tasks (Không thay đổi)
-            // Logic bên trong các task sẽ tự động xử lý việc ghi file hay lưu vào bộ nhớ
-            // nhờ vào FinalRecordAppenderService đã được cập nhật.
+            // Phase 2: Scheduling tasks
             const tasks = conferenceList.map((conference, itemIndex) => {
+                // <<< GÓI requestStateService VÀO HÀM TASK >>>
                 return async () => {
-                    const processor = container.resolve(ConferenceProcessorService);
+                    // <<< SỬA LẠI ĐỂ DÙNG requestContainer >>>
+                    const processor = requestContainer.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
                         conferenceAcronym: conference.Acronym,
                         conferenceTitle: conference.Title,
                         batchItemIndex: itemIndex,
                         originalRequestId: conference.originalRequestId,
                     });
+                    // Truyền requestStateService vào hàm process
                     return processor.process(
                         conference,
                         itemIndex,
                         itemLogger,
                         apiModels,
-                        batchRequestId
+                        batchRequestId,
+                        requestStateService // <<< TRUYỀN VÀO ĐÂY
                     );
                 };
             });

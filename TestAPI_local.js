@@ -15,7 +15,7 @@ const EXECUTION_MODE = 'sync'; // <-- THAY ĐỔI Ở ĐÂY
 // CHỌN CÓ GHI FILE KẾT QUẢ KHÔNG: true hoặc false
 // true: Sẽ tạo ra file JSONL và CSV trong thư mục output.
 // false: Sẽ không tạo file, chỉ xử lý trong bộ nhớ và trả về kết quả.
-const RECORD_FILES = false; // <-- THAM SỐ MỚI, THAY ĐỔI Ở ĐÂY
+const RECORD_FILES = true; // <-- THAM SỐ MỚI, THAY ĐỔI Ở ĐÂY
 
 const TEST_DESCRIPTION = `Test crawl in '${EXECUTION_MODE}' mode, recordFile=${RECORD_FILES}, from test_api.js`;
 
@@ -33,17 +33,17 @@ const conferenceItems = [
         "cfpLink": "https://2025.sigmod.org/calls_papers_pods_research.shtml",
         "impLink": "https://2025.sigmod.org/calls_papers_important_dates.shtml"
     },
-    {
-        "Title": "International Conference on Machine Learning",
-        "Acronym": "ICML",
-        // Luồng CRAWL
-    },
-    {
-        "Title": "Conference on Neural Information Processing Systems",
-        "Acronym": "NeurIPS",
-        "mainLink": "https://nips.cc/",
-        "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
-    },
+    // {
+    //     "Title": "International Conference on Machine Learning",
+    //     "Acronym": "ICML",
+    //     // Luồng CRAWL
+    // },
+    // {
+    //     "Title": "Conference on Neural Information Processing Systems",
+    //     "Acronym": "NeurIPS",
+    //     "mainLink": "https://nips.cc/",
+    //     "cfpLink": "https://nips.cc/Conferences/2024/CallForPapers",
+    // },
 ];
 
 async function crawlConferences() {

@@ -4,9 +4,8 @@ import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import path from 'path';
 import { Logger } from 'pino';
-import { RequestStateService } from '../requestState.service'; // <<< IMPORT MỚI
 import { InMemoryResultCollectorService } from '../inMemoryResultCollector.service'; // <<< THAY ĐỔI IMPORT
-
+import { RequestStateService } from '../requestState.service';
 // --- Types ---
 import { BatchEntryWithIds, BatchUpdateDataWithIds, InputRowData } from '../../types/crawl';
 
@@ -17,7 +16,7 @@ import { FileSystemService } from '../fileSystem.service';
 type FinalRecord = BatchEntryWithIds | BatchUpdateDataWithIds;
 
 export interface IFinalRecordAppenderService {
-    append(record: FinalRecord, batchRequestId: string, logger: Logger): Promise<void>;
+    append(record: FinalRecord, batchRequestId: string, logger: Logger, requestStateService: RequestStateService): Promise<void>;
 }
 
 @singleton()
@@ -25,13 +24,17 @@ export class FinalRecordAppenderService implements IFinalRecordAppenderService {
     constructor(
         @inject(ConfigService) private readonly configService: ConfigService,
         @inject(FileSystemService) private readonly fileSystemService: FileSystemService,
-        @inject(RequestStateService) private readonly requestStateService: RequestStateService, // <<< INJECT MỚI
         @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService
     ) { }
 
-    public async append(record: FinalRecord, batchRequestId: string, logger: Logger): Promise<void> {
-        // <<< LOGIC ĐIỀU KIỆN >>>
-        if (this.requestStateService.shouldRecordFiles()) {
+     // <<< THÊM THAM SỐ MỚI VÀO `append` >>>
+    public async append(
+        record: FinalRecord,
+        batchRequestId: string,
+        logger: Logger,
+        requestStateService: RequestStateService // <<< THAM SỐ MỚI
+    ): Promise<void> {
+        if (requestStateService.shouldRecordFiles()) {
             // --- Luồng cũ: Ghi vào file JSONL ---
             const finalJsonlPath = this.configService.getFinalOutputJsonlPathForBatch(batchRequestId);
             const jsonLine = JSON.stringify(record);

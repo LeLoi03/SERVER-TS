@@ -11,7 +11,6 @@ export * from './instructions/russian';
 export * from './instructions/japanese';
 export * from './instructions/korean';
 export * from './instructions/arabic';
-export * from './instructions/persian';
 
 
 

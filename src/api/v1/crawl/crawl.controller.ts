@@ -1,6 +1,6 @@
 // src/api/v1/crawl/crawl.controller.ts
 import { Request, Response } from 'express';
-import { container } from 'tsyringe';
+import { container as rootContainer } from 'tsyringe'; // <<< Đổi tên container gốc
 import { Logger } from 'pino';
 
 import { CrawlOrchestratorService } from '../../../services/crawlOrchestrator.service';
@@ -71,7 +71,11 @@ async function cleanupRequestResources(
  * - `mode=async` (non-blocking, mặc định): Trả về 202 Accepted ngay lập tức. Dùng cho crawl hàng loạt từ Admin UI.
  */
 export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestPayload>, res: Response): Promise<void> {
-    const loggingService = container.resolve(LoggingService);
+    // <<< TẠO CONTAINER CON CHO REQUEST NÀY >>>
+    const requestContainer = rootContainer.createChildContainer();
+
+    // Lấy các service cần thiết từ container con
+    const loggingService = requestContainer.resolve(LoggingService);
     const currentBatchRequestId = (req as any).id || `req-conf-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const routeLogger = loggingService.getRequestSpecificLogger('conference', currentBatchRequestId, {
         route: '/crawl-conferences',
@@ -95,20 +99,21 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         executionMode: executionMode, // Log chế độ thực thi
     }, "Received request.");
 
-    // <<< KHỞI TẠO REQUEST STATE SERVICE >>>
-    // Lấy một instance của RequestStateService cho request này
-    const requestStateService = container.resolve(RequestStateService);
-    // Khởi tạo trạng thái với giá trị từ payload
+    // <<< KHỞI TẠO STATE SERVICE TỪ CONTAINER CON >>>
+    const requestStateService = requestContainer.resolve(RequestStateService);
     requestStateService.init(recordFile);
 
+    const crawlOrchestrator = requestContainer.resolve(CrawlOrchestratorService);
 
-    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
+    // <<< RESOLVE CÁC SERVICE CHÍNH SỚM HƠN >>>
+    const logAnalysisCacheService = requestContainer.resolve(LogAnalysisCacheService);
 
-    // Hàm xử lý logic crawl chính, có thể được gọi đồng bộ hoặc không đồng bộ
-    const performCrawl = async (): Promise<ProcessedRowData[] | void> => {
+
+    // Hàm xử lý logic crawl chính, bây giờ nhận các service đã được resolve
+    const performCrawl = async (
+        orchestrator: CrawlOrchestratorService // <<< Nhận orchestrator
+    ): Promise<ProcessedRowData[] | void> => {
         routeLogger.info({ description }, "Beginning processing conference crawl.");
-
-        const crawlOrchestrator = container.resolve(CrawlOrchestratorService);
 
         // --- Phần xác thực và chuẩn bị dữ liệu (giữ nguyên) ---
         const dataSource = (req.query.dataSource as string) || 'client';
@@ -146,13 +151,17 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         }
         // --- Kết thúc phần xác thực ---
 
-          routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
+        routeLogger.info({ conferenceCount: conferenceList.length, description }, "Calling CrawlOrchestratorService...");
         // KHÔNG cần truyền recordFile vào `run` nữa
-        const processedResults: ProcessedRowData[] = await crawlOrchestrator.run(
+        // <<< TRUYỀN STATE SERVICE VÀO HÀM RUN >>>
+        const processedResults: ProcessedRowData[] = await orchestrator.run(
             conferenceList,
             routeLogger,
             parsedApiModels,
             currentBatchRequestId,
+            requestStateService, // <<< TRUYỀN VÀO ĐÂY
+            requestContainer // <<< TRUYỀN VÀO ĐÂY
+
         );
 
         const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
@@ -177,7 +186,8 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         try {
             requestProcessed = true;
             const innerOperationStartTime = Date.now();
-            const processedResults = await performCrawl();
+            // Truyền crawlOrchestrator đã được resolve vào
+            const processedResults = await performCrawl(crawlOrchestrator);
 
             // Nếu performCrawl trả về void (do lỗi đã được xử lý), không gửi response ở đây
             if (typeof processedResults === 'undefined') {
@@ -217,7 +227,6 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         }
     } else {
         // ----- CHẾ ĐỘ ASYNC (NON-BLOCKING) -----
-        // Trả về response 202 ngay lập tức
         res.status(202).json({
             message: `Crawl request accepted. Processing started in the background.`,
             batchRequestId: currentBatchRequestId,
@@ -228,7 +237,8 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         // Thực thi trong nền
         (async () => {
             try {
-                await performCrawl();
+                // Truyền crawlOrchestrator đã được resolve vào
+                await performCrawl(crawlOrchestrator);
             } catch (error) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
                 routeLogger.error({
@@ -237,6 +247,7 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
                     requestDescription: description,
                 }, "Conference processing failed in asynchronous background task.");
             } finally {
+                // Truyền loggingService và logAnalysisCacheService đã được resolve vào
                 await cleanupRequestResources(loggingService, logAnalysisCacheService, 'conference', currentBatchRequestId, routeLogger);
             }
         })().catch(err => {
@@ -253,7 +264,11 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
 // HÀM CONTROLLER MỚI
 export async function handleStopCrawl(req: Request<{}, any, { batchRequestId: string }>, res: Response): Promise<void> {
     const { batchRequestId } = req.body;
-    const loggingService = container.resolve(LoggingService);
+
+    // <<< TẠO CONTAINER CON CHO REQUEST NÀY >>>
+    const requestContainer = rootContainer.createChildContainer();
+
+    const loggingService = requestContainer.resolve(LoggingService);
     const appLogger = loggingService.getLogger('app', { service: 'StopCrawlController' });
 
     if (!batchRequestId) {
@@ -263,7 +278,7 @@ export async function handleStopCrawl(req: Request<{}, any, { batchRequestId: st
     }
 
     try {
-        const crawlProcessManager = container.resolve(CrawlProcessManagerService);
+        const crawlProcessManager = requestContainer.resolve(CrawlProcessManagerService);
         // Sử dụng appLogger hoặc một logger tạm thời cho hành động này
         crawlProcessManager.requestStop(batchRequestId, appLogger);
 
@@ -280,7 +295,8 @@ export async function handleStopCrawl(req: Request<{}, any, { batchRequestId: st
 
 
 export async function handleCrawlJournals(req: Request, res: Response): Promise<void> {
-    const loggingService = container.resolve(LoggingService);
+    const requestContainer = rootContainer.createChildContainer();
+    const loggingService = requestContainer.resolve(LoggingService);
     const batchRequestId = (req as any).id || `req-journal-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const routeLogger = loggingService.getRequestSpecificLogger('journal', batchRequestId, {
         route: '/crawl-journals',
@@ -290,8 +306,8 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
     routeLogger.info({ method: req.method, query: req.query, bodySample: typeof req.body === 'string' ? req.body.slice(0, 100) + '...' : typeof req.body }, "Received request.");
 
 
-    const logAnalysisCacheService = container.resolve(LogAnalysisCacheService);
-    const configService = container.resolve(ConfigService);
+    const logAnalysisCacheService = requestContainer.resolve(LogAnalysisCacheService);
+    const configService = requestContainer.resolve(ConfigService);
     let requestProcessed = false;
     let isClientDataMissingError = false; // Keep this flag for specific error handling
 

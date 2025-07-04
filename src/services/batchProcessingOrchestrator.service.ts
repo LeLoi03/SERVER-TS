@@ -20,6 +20,7 @@ import { IConferenceLinkProcessorService, ProcessedContentResult } from './batch
 import { IUpdateTaskExecutorService } from './batchProcessing/updateTaskExecutor.service';
 import { ISaveTaskExecutorService } from './batchProcessing/saveTaskExecutor.service';
 import { withOperationTimeout } from './batchProcessing/utils';
+import { RequestStateService } from './requestState.service';
 
 @singleton()
 export class BatchProcessingOrchestratorService { // <<< RENAMED
@@ -88,7 +89,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         browserContext: BrowserContext,
         conference: ConferenceUpdateData,
         parentLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        requestStateService: RequestStateService
+
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
         const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number;
@@ -242,7 +245,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 batchRequestIdFromParent,
                 apiModels,
                 this.globalProcessedAcronymsSet,
-                methodLogger
+                methodLogger,
+                requestStateService // <<< Truyền xuống
+
             );
             // -----------------------------
 
@@ -263,7 +268,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         conference: ConferenceData,
         links: string[],
         parentLogger: Logger,
-        apiModels: ApiModels
+        apiModels: ApiModels,
+        requestStateService: RequestStateService
+
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
         const batchItemIndexFromParent = parentLogger.bindings().batchItemIndex as number;
@@ -364,7 +371,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                     batchRequestIdFromParent,
                     apiModels,
                     this.globalProcessedAcronymsSet, // Pass the global set
-                    batchTaskLogger
+                    batchTaskLogger,
+                    requestStateService // <<< Truyền xuống
+
                 );
                 // -----------------------------
 
