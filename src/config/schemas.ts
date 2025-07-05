@@ -272,6 +272,9 @@ export const envSchema = z.object({
      */
     EXACT_KEYWORDS: z.string().optional().transform(parseCommaSeparatedStringLowerCase('EXACT_KEYWORDS')),
 
+    IMAGE_KEYWORDS: z.string().optional().transform(parseCommaSeparatedStringLowerCase('IMAGE_KEYWORDS')),
+
+
     // --- Gemini API General Configuration ---
     /**
      * Gemini API Key (primary).

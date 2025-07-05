@@ -9,7 +9,6 @@ import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
 import { GeminiApiParams } from '../../types/crawl';
-import { ProcessedContentResult } from './conferenceLinkProcessor.service'; // +++ ADD IMPORT
 import { ConfigService } from '../../config/config.service'; // +++ ADD IMPORT
 
 /**
@@ -49,7 +48,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         title: string | undefined,
         batchIndex: number,
         logger: Logger
-    ): Promise<{ finalUrl: string; textPath: string | null; textContent: string | null } | null> { // <--- CHANGE RETURN TYPE
+    ): Promise<{ finalUrl: string; textPath: string | null; textContent: string | null; imageUrls: string[] } | null> { // <<< CẬP NHẬT
         const childLogger = logger.child({
             service: 'ConferenceDeterminationService',
             function: 'fetchAndProcessOfficialSiteInternal',
@@ -62,9 +61,8 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             const safeAcronym = (acronym || 'unknown').replace(/[^a-zA-Z0-9_-]/g, '-');
             const fileBaseName = `${safeAcronym}_main_determine_${batchIndex}`;
 
-            // === THAY ĐỔI CỐT LÕI ===
-            // processAndSaveGeneralLink now returns { path, content }
-            const { path: textPath, content: textContent } = await this.linkProcessorService.processAndSaveGeneralLink(
+            // +++ NHẬN KẾT QUẢ OBJECT +++
+            const { path: textPath, content: textContent, imageUrls } = await this.linkProcessorService.processAndSaveGeneralLink(
                 page, officialWebsiteUrl, officialWebsiteUrl, null, acronym, 'main', false, fileBaseName, childLogger
             );
 
@@ -75,8 +73,7 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             }
 
             const finalUrl = page.url();
-            childLogger.info({ finalUrl, textPath, hasContent: !!textContent, event: 'main_website_processed_successfully' });
-            return { finalUrl, textPath, textContent }; // <--- RETURN NEW OBJECT
+            return { finalUrl, textPath, textContent, imageUrls }; // <<< CẬP NHẬT
 
 
         } catch (error: unknown) {
@@ -191,10 +188,11 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
             return primaryEntryToUpdate;
         }
 
-        const { finalUrl: actualFinalUrl, textPath: mainTextPath, textContent: mainTextContent } = websiteInfo;
+        const { finalUrl: actualFinalUrl, textPath: mainTextPath, textContent: mainTextContent, imageUrls: mainImageUrls } = websiteInfo; // <<< LẤY URL ẢNH
         primaryEntryToUpdate.mainLink = actualFinalUrl;
         primaryEntryToUpdate.conferenceTextPath = mainTextPath;
         primaryEntryToUpdate.conferenceTextContent = mainTextContent;
+        primaryEntryToUpdate.imageUrls = mainImageUrls; // <<< GÁN VÀO ENTRY
 
         // 2. Use fetched content for the second API call
         let fullTextForApi2 = mainTextContent;

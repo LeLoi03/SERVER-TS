@@ -203,6 +203,7 @@ export interface BatchEntry {
 
     impTextContent?: string | null; // ADD THIS
 
+    imageUrls?: string[]; // <--- THÊM MỚI
 
 }
 
@@ -252,6 +253,8 @@ export interface BatchUpdateEntry {
     conferenceTextContent?: string | null; // ADD THIS
     cfpTextContent?: string | null; // ADD THIS
     impTextContent?: string | null; // ADD THIS
+    imageUrls?: string[]; // <--- THÊM MỚI
+
 
 }
 

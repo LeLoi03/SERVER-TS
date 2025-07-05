@@ -1,5 +1,5 @@
 CTW
- ACE
+ACE
 ADCS
 DLS
 ICCI
@@ -16,7 +16,6 @@ FLINS
 ICDCIT
 ICFHR
 ICSSP
-ICPADS
 IES
 IJCRS
 INDIN
@@ -26,15 +25,23 @@ MISSI
 MPC
 IVBI
 LATA
+PPSN
+PSIVT
+SDH
+Tridentcom
+SRDS
+ICCAM cloudfare 
+VEE
+WADS
+WISTP
+Wowmom
+WSC cloudfare
 
-
-DM, ETFA , iemss, IPDPS, ISS, LPNMR, PACLIC, MSWIM, IWSEC , IWANN,  đã đúng
+DM, ETFA , iemss, IPDPS, ISS, LPNMR, PACLIC, MSWIM, IWSEC , IWANN, JADT , SCN đã đúng
 FLOPS, FQSA, ISPA ,ISoLA, ISMIS, MCU ,  PADS có link 
 
-JADT 2024
-
-ICCAM cloudfare 
-
+TASE
+SSPR
 ISSDQ
 
 check lại luồng no match 
@@ -44,4 +51,4 @@ ISOLA hay
 
 DEPCos, EuMAs, ICECCS, ICFCA Timeout
 
-Check GI, ICICSE, IM
+Check GI, ICICSE, IM , TRB

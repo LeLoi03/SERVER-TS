@@ -4,7 +4,7 @@ import { singleton, inject } from 'tsyringe';
 import {
     type CachedContent,
     type Part,
-    type Content, // Giữ lại Content để tạo cấu trúc few-shot và system instruction
+    type Content,
     GenerateContentConfig as SDKGenerateContentConfig,
     ContentListUnion as SDKContentListUnion
 } from "@google/genai";
@@ -25,13 +25,15 @@ export class GeminiModelOrchestratorService {
         @inject(GeminiContextCacheService) private contextCacheService: GeminiContextCacheService,
     ) { }
 
+    // +++ HÀM NÀY ĐƯỢC CẬP NHẬT ĐỂ NHẬN `userContent` +++
     public async prepareModel(
         apiType: string,
-        modelName: string, // Tên model sẽ được sử dụng, ví dụ "gemini-1.5-flash-latest"
-        systemInstructionTextToUse: string, // Sẽ được Executor thêm vào config
+        modelName: string,
+        systemInstructionTextToUse: string,
         fewShotPartsToUse: Part[],
-        generationConfig: SDKGenerateContentConfig, // Config cơ bản từ caller
-        currentPrompt: string,
+        generationConfig: SDKGenerateContentConfig,
+        // Thay thế `currentPrompt: string` bằng `userContent: ContentListUnion`
+        userContent: SDKContentListUnion,
         shouldUseCache: boolean,
         crawlModel: CrawlModelType,
         logger: Logger
@@ -54,25 +56,26 @@ export class GeminiModelOrchestratorService {
         let contentRequest: SDKContentListUnion | undefined = undefined;
         let usingCacheActual = false;
         let currentCache: CachedContent | null = null;
-        const cacheIdentifier = `${apiType}-${modelName}`; // Giữ nguyên cacheIdentifier
-
-        // Tạo một bản sao của generationConfig để có thể sửa đổi cục bộ nếu cần
-        // (ví dụ: thêm cachedContent name sau này bởi Executor)
-        // Tuy nhiên, ở bước này, chúng ta chỉ truyền config gốc.
+        const cacheIdentifier = `${apiType}-${modelName}`;
         const preparedGenerationConfig: SDKGenerateContentConfig = { ...generationConfig };
 
-        // 1. Xử lý Cache
-        if (shouldUseCache) {
+        // +++ LOGIC MỚI: KIỂM TRA XEM YÊU CẦU CÓ PHẢI LÀ MULTIMODAL KHÔNG +++
+        // Yêu cầu là multimodal nếu `userContent` là một mảng và chứa ít nhất một part không phải là text.
+        // Hoặc đơn giản hơn, nếu là mảng thì coi như có khả năng là multimodal.
+        const isMultimodalRequest = Array.isArray(userContent);
+        const canUseCache = shouldUseCache && !isMultimodalRequest; // Chỉ dùng cache nếu được phép VÀ không phải multimodal
+
+
+        // 1. Xử lý Cache (chỉ khi có thể)
+        if (canUseCache) {
             const cacheSetupContext = logger.child({ cacheIdentifier, event_group: 'cache_setup_orchestrator' });
-            cacheSetupContext.debug({ event: 'cache_context_attempt_for_call' }, "Attempting to get or create cache.");
+            cacheSetupContext.debug({ event: 'cache_context_attempt_for_call' }, "Attempting to get or create cache for text-only request.");
             try {
+                // `userContent` lúc này chắc chắn là string
+                const currentPrompt = userContent as string;
                 currentCache = await this.contextCacheService.getOrCreateContext(
-                    apiType,
-                    modelName, // modelName cho cache (ví dụ: 'gemini-1.5-flash')
-                    systemInstructionTextToUse, // systemInstruction cho cache
-                    fewShotPartsToUse,          // fewShotParts cho cache
-                    preparedGenerationConfig,   // generationConfig cho cache (ít quan trọng hơn system/fewshot)
-                    cacheSetupContext
+                    apiType, modelName, systemInstructionTextToUse, fewShotPartsToUse,
+                    preparedGenerationConfig, cacheSetupContext
                 );
             } catch (cacheSetupError: unknown) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(cacheSetupError);
@@ -81,29 +84,26 @@ export class GeminiModelOrchestratorService {
             }
 
             if (currentCache?.name) {
-                cacheSetupContext.info({ cacheName: currentCache.name, apiType, modelName, event: 'cache_will_be_used_orchestrator' }, "Valid cache found/created. It will be used by the executor.");
+                cacheSetupContext.info({ cacheName: currentCache.name, event: 'cache_will_be_used_orchestrator' }, "Valid cache found/created.");
                 usingCacheActual = true;
-                // Nội dung request khi có cache chỉ là prompt hiện tại.
-                // Cache name sẽ được thêm vào generationConfig bởi Executor.
+                // Khi có cache, nội dung request chỉ là prompt hiện tại (dạng text)
+                const currentPrompt = userContent as string;
                 contentRequest = [{ role: "user", parts: [{ text: currentPrompt }] }];
             } else {
                 cacheSetupContext.info({ event: 'no_valid_cache_available_orchestrator' }, "No valid cache, proceeding without cache.");
                 usingCacheActual = false;
             }
         } else {
-            logger.debug({ event: 'cache_disabled_orchestrator' }, "Caching explicitly disabled.");
+            logger.debug({ event: 'cache_disabled_or_multimodal_orchestrator', canUseCache, isMultimodalRequest, shouldUseCacheConfig: shouldUseCache }, "Caching disabled or request is multimodal.");
             usingCacheActual = false;
         }
 
-        // 2. Chuẩn bị contentRequest nếu không dùng cache (hoặc cache thất bại)
+        // 2. Chuẩn bị contentRequest nếu không dùng cache
         if (!usingCacheActual) {
             const nonCachedSetupContext = logger.child({ event_group: 'non_cached_content_setup' });
-            nonCachedSetupContext.debug({ event: 'preparing_non_cached_content' }, "Preparing content for non-cached request.");
+
 
             const history: Content[] = [];
-
-            // System instruction sẽ được Executor thêm vào generationConfig.
-            // Ở đây, chúng ta chỉ tập trung vào việc xây dựng `contents` (few-shot + prompt).
 
             if (fewShotPartsToUse.length > 0) {
                 for (let i = 0; i < fewShotPartsToUse.length; i += 2) {
@@ -113,22 +113,31 @@ export class GeminiModelOrchestratorService {
                 nonCachedSetupContext.debug({ numFewShotTurns: history.length / 2, event: 'few_shot_history_prepared' }, "Few-shot examples added to history.");
             }
 
-            history.push({ role: "user", parts: [{ text: currentPrompt }] });
-            contentRequest = history; // SDKContentListUnion có thể là Content[]
+            // +++ LOGIC MỚI: XỬ LÝ `userContent` ĐỂ THÊM VÀO HISTORY +++
+            if (isMultimodalRequest) {
+                // Nếu là mảng Part (multimodal), bọc nó trong một Content object
+                history.push({ role: "user", parts: userContent as Part[] });
+            } else {
+                // Nếu là string (text-only), bọc nó trong một Part rồi trong một Content object
+                history.push({ role: "user", parts: [{ text: userContent as string }] });
+            }
+
+
+            contentRequest = history;
 
             nonCachedSetupContext.info({
                 historyLength: history.length,
+                isMultimodal: isMultimodalRequest,
                 event: 'non_cached_content_request_prepared'
             }, "Prepared content request (history + current prompt) for non-cached call.");
         }
 
-        // contentRequest phải được đảm bảo đã được gán giá trị
         if (contentRequest === undefined) {
             const finalErrorMsg = "Critical: Content request could not be prepared (internal state error in orchestrator).";
             logger.fatal({ ...logger.bindings(), event: 'model_orchestration_content_request_undefined' }, finalErrorMsg);
             throw new Error(finalErrorMsg);
         }
-
+        
         logger.info({
             event: 'model_preparation_complete',
             modelNameUsed: modelName,
@@ -139,13 +148,13 @@ export class GeminiModelOrchestratorService {
         }, `Model preparation completed for "${modelName}". Cache used: ${usingCacheActual}.`);
 
         return {
-            model: modelsService, // Trả về service Models
-            contentRequest,       // Trả về SDKContentListUnion (prompt + few-shot nếu có)
-            finalGenerationConfig: preparedGenerationConfig, // Trả về config cơ bản
+            model: modelsService,
+            contentRequest,
+            finalGenerationConfig: preparedGenerationConfig,
             usingCacheActual,
             currentCache,
             crawlModelUsed: crawlModel,
-            modelNameUsed: modelName, // Tên model để Executor sử dụng
+            modelNameUsed: modelName,
         };
     }
 }

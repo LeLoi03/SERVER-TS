@@ -2,10 +2,10 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
-import { type Part, GenerateContentConfig as SDKGenerateContentConfig } from "@google/genai";
+import { type Part, GenerateContentConfig as SDKGenerateContentConfig, ContentListUnion } from "@google/genai";
 import { type GeminiApiConfig as GeneralApiTypeConfig } from '../../config/types'; // <<<< THIS LINE IS CHANGED
 import { LoggingService } from '../logging.service';
-import { ConfigService } from '../../config'; 
+import { ConfigService } from '../../config';
 
 import { GeminiModelOrchestratorService } from './geminiModelOrchestrator.service';
 import { GeminiRateLimiterService } from './geminiRateLimiter.service';
@@ -78,11 +78,13 @@ export class GeminiApiOrchestratorService {
         return fewShotParts;
     }
 
+    // +++ HÀM NÀY ĐƯỢC CẬP NHẬT ĐÁNG KỂ +++
     private async prepareForApiCall(
         modelNameToUse: string,
         apiType: string,
-        originalBatchPrompt: string, // The very original prompt before any prefixing
-        effectiveCrawlModelType: CrawlModelType, // How this specific model call should be treated
+        // Thay vì string, nhận vào ContentListUnion
+        initialUserContent: ContentListUnion,
+        effectiveCrawlModelType: CrawlModelType,
         parentLogger: Logger
     ): Promise<ModelExecutionConfig | null> {
         const prepConfigLogger = parentLogger.child({ sub_op: 'prepareForApiCall', modelForPrep: modelNameToUse, effectiveCrawlModelType });
@@ -99,7 +101,37 @@ export class GeminiApiOrchestratorService {
             let fewShotParts: Part[] = [];
             let shouldUseCache = false;
             let finalGenerationConfig: SDKGenerateContentConfig = { ...generalSettings.generationConfig };
-            let finalBatchPromptForThisCall = originalBatchPrompt; // Start with the original prompt
+
+            // Bắt đầu với nội dung ban đầu
+            let finalUserContent: ContentListUnion = initialUserContent;
+
+            // +++ SỬA LỖI Ở ĐÂY: Đảm bảo originalBatchPrompt luôn là string +++
+            let originalBatchPrompt: string;
+            if (typeof initialUserContent === 'string') {
+                // Trường hợp 1: Là string
+                originalBatchPrompt = initialUserContent;
+            } else if (Array.isArray(initialUserContent)) {
+                // Trường hợp 2: Là mảng (Part[] hoặc Content[])
+                const firstTextPart = initialUserContent.find(p =>
+                    typeof p === 'object' && p !== null && 'text' in p
+                ) as Part | undefined;
+                originalBatchPrompt = firstTextPart?.text || '[multimodal content]';
+            } else if (
+                // Trường hợp 3: Là một Content object đơn lẻ
+                typeof initialUserContent === 'object' &&
+                initialUserContent !== null &&
+                'parts' in initialUserContent &&
+                // +++ THÊM KIỂM TRA NÀY +++
+                Array.isArray(initialUserContent.parts)
+            ) {
+                const firstTextPart = initialUserContent.parts.find(p =>
+                    typeof p === 'object' && p !== null && 'text' in p
+                ) as Part | undefined;
+                originalBatchPrompt = firstTextPart?.text || '[multimodal content]';
+            } else {
+                // Trường hợp không xác định hoặc không có text
+                originalBatchPrompt = '[unknown content type]';
+            }
 
             const isEffectivelyTunedCall = effectiveCrawlModelType === 'tuned';
             const configApplyLogger = prepConfigLogger.child({ sub_op: 'configApplication', isEffectivelyTunedCall });
@@ -110,9 +142,32 @@ export class GeminiApiOrchestratorService {
                 if (finalGenerationConfig.responseSchema) delete finalGenerationConfig.responseSchema;
                 systemInstructionText = ""; fewShotParts = []; shouldUseCache = false;
 
-                const prefixForTuned = generalSettings.systemInstructionPrefixForNonTunedModel; // This prefix is for tuned models
+                const prefixForTuned = generalSettings.systemInstructionPrefixForNonTunedModel;
                 if (prefixForTuned?.trim()) {
-                    finalBatchPromptForThisCall = `${prefixForTuned.trim()}\n\n${originalBatchPrompt}`;
+                    // +++ SỬA LỖI LOGIC THÊM PREFIX +++
+                    const prefixPart: Part = { text: `${prefixForTuned.trim()}\n\n` };
+
+                    // Chúng ta cần xử lý các trường hợp của ContentListUnion một cách cẩn thận
+                    if (typeof finalUserContent === 'string') {
+                        // 1. Nếu là string, nối chuỗi như cũ.
+                        finalUserContent = `${prefixForTuned.trim()}\n\n${finalUserContent}`;
+                    } else if (Array.isArray(finalUserContent)) {
+                        // 2. Nếu là mảng, chúng ta cần kiểm tra xem nó là Part[] hay Content[]
+                        // Giả định rằng đầu vào từ các service cấp trên (FinalExtractionApi)
+                        // sẽ là `Part[]` cho multimodal hoặc `string` cho text-only.
+                        // Chúng ta sẽ không nhận được `Content[]` ở đây.
+                        // Do đó, chúng ta có thể ép kiểu một cách an toàn (với type assertion).
+
+                        // Lấy mảng các Part hiện tại.
+                        // Dùng as Part[] để báo cho TypeScript rằng chúng ta biết đây là mảng các Part.
+                        const currentParts = finalUserContent as Part[];
+
+                        // Chèn prefixPart vào đầu mảng. Kết quả sẽ là một Part[].
+                        finalUserContent = [prefixPart, ...currentParts];
+                    }
+                    // Trường hợp `finalUserContent` là một `Content` object đơn lẻ không được xử lý,
+                    // vì nó không phải là một định dạng đầu vào dự kiến từ các service của chúng ta.
+
                     configApplyLogger.info({ event: 'gemini_tuned_model_prompt_prefixed_for_call', prefixLength: prefixForTuned.trim().length });
                 } else {
                     configApplyLogger.info({ event: 'gemini_tuned_model_prompt_prefix_not_found_for_call' });
@@ -130,19 +185,23 @@ export class GeminiApiOrchestratorService {
                     fewShotParts = this.prepareFewShotParts(apiType, generalSettings, configApplyLogger);
                 }
                 if (generalSettings.allowCacheForNonTuned) shouldUseCache = true;
-                // finalBatchPromptForThisCall remains originalBatchPrompt (no prefix for non-tuned)
             }
 
+
+            // +++ TRUYỀN `finalUserContent` XUỐNG MODEL ORCHESTRATOR +++
             const modelPrepResult = await this.modelOrchestrator.prepareModel(
                 apiType, modelNameToUse, systemInstructionText, fewShotParts,
-                finalGenerationConfig, finalBatchPromptForThisCall, shouldUseCache,
-                effectiveCrawlModelType, // Pass the effective type for this call
+                finalGenerationConfig,
+                finalUserContent, // <<< Truyền `finalUserContent` đã được xử lý
+                shouldUseCache,
+                effectiveCrawlModelType,
                 prepConfigLogger.child({ sub_op: 'modelPreparation' })
             );
 
             return {
                 systemInstructionText, fewShotParts, shouldUseCache, finalGenerationConfig,
-                finalBatchPrompt: finalBatchPromptForThisCall, // Return the potentially prefixed prompt
+                // `finalBatchPrompt` giờ chỉ dùng để log, không phải là payload chính
+                finalBatchPrompt: originalBatchPrompt,
                 modelRateLimiter, modelPrepResult
             };
 
@@ -153,11 +212,13 @@ export class GeminiApiOrchestratorService {
         }
     }
 
+    // +++ HÀM NÀY CŨNG ĐƯỢC CẬP NHẬT +++
     public async orchestrateApiCall(
         params: InternalCallGeminiApiParams,
         parentServiceMethodLogger: Logger
-    ): Promise<OrchestrationResult> { // Thay đổi kiểu trả về
-        const { batchPrompt: originalBatchPrompt, batchIndex, title, acronym, apiType, requestLogDir } = params;
+    ): Promise<OrchestrationResult> {
+        // Destructure `userContent` thay vì `batchPrompt`
+        const { userContent, batchIndex, title, acronym, apiType, requestLogDir } = params;
         const primaryModelName = params.modelName;
         const fallbackModelNameFromParams = params.fallbackModelName;
         const initialCrawlModelType = params.crawlModel;
@@ -203,10 +264,11 @@ export class GeminiApiOrchestratorService {
             }, "No primary model name provided. Skipping primary attempt.");
             // primaryModelResult vẫn là null, primaryModelSucceeded là false
         } else {
+            // +++ TRUYỀN `userContent` VÀO `prepareForApiCall` +++
             const primaryPrepConfig = await this.prepareForApiCall(
                 primaryModelName,
                 apiType,
-                originalBatchPrompt,
+                userContent, // <<< THAY ĐỔI Ở ĐÂY
                 initialCrawlModelType,
                 callOperationLoggerBase.child({ phase: 'primary_prep', modelForPrep: primaryModelName, effectiveCrawlModelType: initialCrawlModelType })
             );
@@ -326,13 +388,15 @@ export class GeminiApiOrchestratorService {
                 initialCrawlModelTypeForPrimary: initialCrawlModelType,
             }, "Primary model failed or was not specified. Attempting API call with fallback model (with full retries).");
 
+            // +++ TRUYỀN `userContent` VÀO `prepareForApiCall` CHO FALLBACK +++
             const fallbackPrepConfig = await this.prepareForApiCall(
                 fallbackModelNameFromParams,
                 apiType,
-                originalBatchPrompt,
+                userContent, // <<< THAY ĐỔI Ở ĐÂY
                 fallbackEffectiveCrawlModelType,
                 callOperationLoggerBase.child({ phase: 'fallback_prep', modelForPrep: fallbackModelNameFromParams, effectiveCrawlModelType: fallbackEffectiveCrawlModelType })
             );
+
 
             if (!fallbackPrepConfig) {
                 callOperationLoggerBase.error({

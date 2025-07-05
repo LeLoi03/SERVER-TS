@@ -275,6 +275,7 @@ export class ConfigService {
     get importantDatesTabs() { return this.crawlConfiguration.importantDatesTabs; }
     get excludeTexts() { return this.crawlConfiguration.excludeTexts; }
     get exactKeywords() { return this.crawlConfiguration.exactKeywords; }
+    get imageKeywords() { return this.crawlConfiguration.imageKeywords; }
 
     get googleSearchConfig(): GoogleSearchConfigStruct { return this.googleSearchConfiguration.config; }
 

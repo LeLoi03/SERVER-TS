@@ -35,17 +35,24 @@ export interface ApiResponse {
     metaData: SDKUsageMetadata | null | undefined;
 }
 
+
 /**
  * @interface InternalCallGeminiApiParams
  * @description Các tham số nội bộ được sử dụng để gọi API Gemini.
  */
 export interface InternalCallGeminiApiParams {
-    batchPrompt: string;
+    /**
+     * @property {SDKContentListUnion} userContent - Nội dung do người dùng cung cấp,
+     * có thể là một chuỗi văn bản hoặc một mảng các Part (text, image, etc.).
+     * Đây là phần prompt chính sẽ được gửi đến mô hình.
+     */
+    userContent: SDKContentListUnion; // <<< THAY ĐỔI TỪ batchPrompt: string
+
     batchIndex: number;
     title: string | undefined;
     acronym: string | undefined;
     apiType: string;
-    modelName: string; // This will be used in GenerateContentParameters
+    modelName: string; 
     fallbackModelName?: string;
     crawlModel: CrawlModelType;
     requestLogDir: string;
@@ -180,13 +187,39 @@ export interface SdkExecutorParams {
     requestLogDir: string;
 }
 
+
 /**
  * @interface GeminiApiParams
  * @description Các tham số chung cho việc gọi API Gemini.
+ *              Được thiết kế để hỗ trợ cả yêu cầu chỉ có văn bản (text-only) và đa phương thức (multimodal).
  */
 export interface GeminiApiParams {
-    batch: string; // This likely forms part of the 'contents'
+    /**
+     * @property {string} [batch] - Nội dung văn bản cho các yêu cầu chỉ có văn bản.
+     * Sẽ bị bỏ qua nếu `contents` được cung cấp.
+     */
+    batch?: string; 
+    
+    /**
+     * @property {Part[]} [contents] - Một mảng các 'Part' cho các yêu cầu đa phương thức.
+     * Mỗi Part có thể là text hoặc dữ liệu inline (ảnh).
+     * Ví dụ: `[{ text: "..." }, { inlineData: { mimeType: 'image/jpeg', data: '...' } }]`
+     * Nếu được cung cấp, nó sẽ được ưu tiên hơn `batch`.
+     */
+    contents?: Part[];
+
+    /**
+     * @property {number} batchIndex - Chỉ số của batch đang được xử lý.
+     */
     batchIndex: number;
+
+    /**
+     * @property {string | undefined} title - Tiêu đề của hội nghị.
+     */
     title: string | undefined;
+
+    /**
+     * @property {string | undefined} acronym - Tên viết tắt của hội nghị.
+     */
     acronym: string | undefined;
 }

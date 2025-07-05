@@ -1,10 +1,13 @@
 // src/services/geminiApi.service.ts
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
-import { ConfigService } from '../config'; // Assuming index.ts in config folder
+import { ConfigService } from '../config';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
 import path from 'path';
+
+// +++ THÊM IMPORT NÀY +++
+import { ContentListUnion } from "@google/genai";
 
 import { GeminiCachePersistenceService } from './gemini/geminiCachePersistence.service';
 import { GeminiResponseHandlerService } from './gemini/geminiResponseHandler.service';
@@ -13,7 +16,6 @@ import { GeminiApiOrchestratorService } from './gemini/geminiApiOrchestrator.ser
 import { CrawlModelType } from '../types/crawl/crawl.types';
 import { ApiResponse, GeminiApiParams, OrchestrationResult } from '../types/crawl';
 
-// Import constants for API types
 import { API_TYPE_EXTRACT, API_TYPE_DETERMINE, API_TYPE_CFP } from '../config/constants';
 
 
@@ -21,7 +23,6 @@ import { API_TYPE_EXTRACT, API_TYPE_DETERMINE, API_TYPE_CFP } from '../config/co
 export class GeminiApiService {
     private readonly serviceBaseLogger: Logger;
 
-    // Use constants imported from constants.ts
     public readonly API_TYPE_EXTRACT = API_TYPE_EXTRACT;
     public readonly API_TYPE_DETERMINE = API_TYPE_DETERMINE;
     public readonly API_TYPE_CFP = API_TYPE_CFP;
@@ -43,9 +44,7 @@ export class GeminiApiService {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'GeminiApiService' });
         this.serviceBaseLogger.info("Constructing GeminiApiService...");
 
-
-        // Use the specific getter for baseOutputDir
-        const baseOutputDir = this.configService.baseOutputDir; // Corrected
+        const baseOutputDir = this.configService.baseOutputDir;
         this.requestLogDir = path.join(baseOutputDir, 'gemini_api_requests_log');
         this.serviceBaseLogger.info({ requestLogDir: this.requestLogDir }, "Gemini API request logging directory initialized.");
 
@@ -86,22 +85,23 @@ export class GeminiApiService {
         }
     }
 
+    // +++ THAY ĐỔI CHÍNH NẰM Ở ĐÂY +++
     private async executeApiCallLogic(
         params: GeminiApiParams,
-        apiType: string, // Sử dụng string để khớp với key của modelIndices
-        initialCrawlModelType: CrawlModelType, // Đổi tên cho rõ ràng
+        apiType: string,
+        initialCrawlModelType: CrawlModelType,
         parentLogger?: Logger
     ): Promise<ApiResponse> {
-        const { batch, batchIndex, title, acronym } = params;
+        // Destructure cả `contents` và `batch` từ params
+        const { contents, batch, batchIndex, title, acronym } = params;
         const methodLogger = this.getMethodLogger(parentLogger, apiType, { batchIndex, title, acronym, apiType, crawlModel: initialCrawlModelType });
 
         this.ensureInitialized(methodLogger);
         const defaultApiResponse: ApiResponse = { responseText: "", metaData: null };
 
+        // --- Logic chọn model giữ nguyên ---
         let modelList: string[];
         let fallbackModelName: string | undefined;
-
-
         const geminiApiTypeConfig = this.configService.geminiApiTypeConfiguration;
 
 
@@ -142,25 +142,45 @@ export class GeminiApiService {
                 event: 'gemini_model_list_empty_or_missing',
                 apiType,
                 crawlModel: initialCrawlModelType,
-                sourceService: 'GeminiApiService',
             }, `Model list for ${apiType}/${initialCrawlModelType} is empty.`);
             return defaultApiResponse;
         }
-
         const currentIndex = this.modelIndices[apiType];
         const selectedModelName = modelList[currentIndex];
-        this.modelIndices[apiType] = (currentIndex + 1) % modelList.length; // Cập nhật index cho lần gọi sau
+        this.modelIndices[apiType] = (currentIndex + 1) % modelList.length;
 
-        methodLogger.debug({ selectedModel: selectedModelName, fallbackModelName: fallbackModelName || 'N/A', nextIndex: this.modelIndices[apiType], listUsedLength: modelList.length }, "Model selected (round-robin)");
+
+        // +++ LOGIC MỚI: XÁC ĐỊNH NỘI DUNG GỬI ĐI (userContent) +++
+        let userContent: ContentListUnion;
+        if (contents && contents.length > 0) {
+            // Ưu tiên `contents` nếu nó tồn tại (trường hợp multimodal)
+            userContent = contents;
+            methodLogger.info({ contentType: 'multimodal', partCount: contents.length }, "Executing API call with multimodal content.");
+        } else if (batch) {
+            // Dùng `batch` nếu không có `contents` (trường hợp text-only)
+            userContent = batch;
+            methodLogger.info({ contentType: 'text-only', contentLength: batch.length }, "Executing API call with text-only content.");
+        } else {
+            // Trường hợp không có nội dung nào được cung cấp
+            methodLogger.error({ event: 'gemini_api_call_no_content' }, "API call attempted without 'contents' or 'batch'. Aborting.");
+            return defaultApiResponse;
+        }
 
         try {
+            // +++ TRUYỀN `userContent` XUỐNG ORCHESTRATOR +++
             const orchestrationResult: OrchestrationResult = await this.apiOrchestrator.orchestrateApiCall({
-                batchPrompt: batch, batchIndex, title, acronym,
-                apiType, modelName: selectedModelName, fallbackModelName,
-                crawlModel: initialCrawlModelType, // Truyền initialCrawlModelType vào orchestrator
+                userContent, // <<< THAY THẾ `batchPrompt`
+                batchIndex,
+                title,
+                acronym,
+                apiType,
+                modelName: selectedModelName,
+                fallbackModelName,
+                crawlModel: initialCrawlModelType,
                 requestLogDir: this.requestLogDir,
             }, methodLogger);
 
+            // --- Toàn bộ logic xử lý response sau khi gọi orchestrator giữ nguyên ---
             if (orchestrationResult.success) {
                 const cleaningLogger = methodLogger.child({
                     modelUsed: orchestrationResult.modelActuallyUsed,
@@ -220,7 +240,6 @@ export class GeminiApiService {
                     initialCrawlModel: initialCrawlModelType,
                     finalErrorType: orchestrationResult.finalErrorType,
                     finalErrorDetails: orchestrationResult.finalErrorDetails,
-                    sourceService: 'GeminiApiService.OrchestrationFailed',
                 }, `Orchestration failed for ${apiType}. Final error: ${orchestrationResult.finalErrorType}`);
                 return defaultApiResponse;
             }
@@ -232,11 +251,11 @@ export class GeminiApiService {
                 selectedModel: selectedModelName,
                 crawlModel: initialCrawlModelType,
                 err: errorDetails,
-                sourceService: 'GeminiApiService.InternalError',
             }, `Unhandled error in ${apiType} public method.`);
             return defaultApiResponse;
         }
     }
+
 
     public async extractInformation(params: GeminiApiParams, crawlModel: CrawlModelType, parentLogger?: Logger): Promise<ApiResponse> {
         return this.executeApiCallLogic(params, this.API_TYPE_EXTRACT, crawlModel, parentLogger);

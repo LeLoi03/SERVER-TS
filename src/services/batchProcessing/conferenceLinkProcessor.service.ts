@@ -10,12 +10,12 @@ import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
 import { accessUrl, AccessResult } from './utils';
 
-// +++ DEFINE A NEW RETURN TYPE FOR OUR HELPERS +++
+// +++ CẬP NHẬT KIỂU DỮ LIỆU TRẢ VỀ +++
 export type ProcessedContentResult = {
     path: string | null;
     content: string | null;
+    imageUrls: string[]; // <<< THÊM MỚI
 };
-
 
 /**
  * Interface for the service responsible for processing and managing conference links.
@@ -90,28 +90,29 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         this.year2 = this.configService.year2;
     }
 
-    // +++ MODIFY THIS HELPER +++
+    // +++ CẬP NHẬT HELPER +++
     private async saveContentAndGetResult(
         content: string,
+        imageUrls: string[], // <<< THÊM THAM SỐ
         baseName: string,
         logger: Logger
     ): Promise<ProcessedContentResult> {
         const currentLogContext = { baseName, function: 'saveContentAndGetResult', service: 'ConferenceLinkProcessorService' };
         if (!content || content.trim().length === 0) {
             logger.trace({ ...currentLogContext, event: 'skipped_empty_content' });
-            return { path: null, content: null };
+            return { path: null, content: null, imageUrls: [] };
         }
         try {
             // FileSystemService will handle the production/development logic internally
             const filePath = await this.fileSystemService.saveTemporaryFile(content, baseName, logger);
             logger.trace({ ...currentLogContext, filePath, event: 'save_content_result' });
             // Return both the path (which will be null in prod) and the content
-            return { path: filePath, content: content };
+            return { path: filePath, content: content, imageUrls: imageUrls }; // <<< TRẢ VỀ CẢ URL ẢNH
         } catch (writeError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(writeError);
             logger.error({ ...currentLogContext, err: { message: errorMessage, stack: errorStack }, event: 'save_content_failed' });
             // Still return the content even if file write fails, so prod logic can continue
-            return { path: null, content: content };
+            return { path: null, content: content, imageUrls: imageUrls };
         }
     }
 
@@ -140,7 +141,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
         if (!normalizedLink) {
             childLogger.trace({ reason: 'Link is empty, None, or could not be normalized', event: 'skipped_processing_general_link' });
-            return { path: null, content: null }; // <--- RETURN NEW TYPE
+            return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
         }
 
 
@@ -152,21 +153,24 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             // trường hợp "AJCAI" (trả về true) và "ANT" (trả về false).
             if (normalizedLink === baseLink) {
                 childLogger.trace({ reason: `Link (${normalizedLink}) matches base website EXACTLY. Skipping.`, event: 'skipped_processing_general_link_as_base' });
-                return { path: null, content: null }; // <--- RETURN NEW TYPE
+                return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+
             }
 
             // 2. GIỮ LẠI LOGIC KIỂM TRA TRÙNG VỚI LINK PHỤ CÒN LẠI
             // Ví dụ: IMP vs CFP
             if (normalizedOtherLink && normalizedLink === normalizedOtherLink) {
                 childLogger.trace({ reason: `Link (${normalizedLink}) matches other link EXACTLY (${normalizedOtherLink}). Skipping.`, event: 'skipped_processing_general_link_as_other' });
-                return { path: null, content: null }; // <--- RETURN NEW TYPE
+                return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+
             }
         }
         // === KẾT THÚC THAY ĐỔI ===
 
         if (!page || page.isClosed()) {
             childLogger.warn({ event: 'page_not_available_for_general_link_processing' });
-            return { path: null, content: null }; // <--- RETURN NEW TYPE
+            return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+
         }
 
         // Sử dụng hàm accessUrl đã được chuẩn hóa
@@ -174,12 +178,13 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         if (!accessResult.success) { // Chỉ cần kiểm tra success là đủ
             const errorMessage = accessResult.error?.message ?? `HTTP status ${accessResult.response?.status()}`;
             childLogger.error({ err: { message: errorMessage }, event: 'general_link_access_failed' }, `Failed to navigate to general link: ${errorMessage}`);
-            return { path: null, content: null }; // <--- RETURN NEW TYPE
+            return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+
         }
         childLogger.info({ finalUrl: accessResult.finalUrl, event: 'general_link_access_success' });
 
-        // Gọi PageContentExtractorService (phiên bản hybrid đã sửa)
-        const textContent = await this.pageContentExtractorService.extractTextFromUrl(
+        // +++ GỌI HÀM MỚI VÀ NHẬN KẾT QUẢ LÀ OBJECT +++
+        const { text: textContent, imageUrls } = await this.pageContentExtractorService.extractContentFromUrl( // <<< ĐỔI TÊN HÀM
             page,
             accessResult.finalUrl!,
             acronym,
@@ -190,11 +195,12 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
         if (!textContent || textContent.trim().length === 0) {
             childLogger.warn({ normalizedLinkProcessed: normalizedLink, event: 'no_content_extracted_from_general_link' });
-            return { path: null, content: null }; // <--- RETURN NEW TYPE
+            return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+
         }
 
-        // Use the new helper to get both path and content
-        return await this.saveContentAndGetResult(textContent, fileBaseNamePrefix, childLogger);
+        // +++ TRUYỀN URL ẢNH VÀO HELPER +++
+        return await this.saveContentAndGetResult(textContent, imageUrls, fileBaseNamePrefix, childLogger);
     }
 
     public async processInitialLinkForSave(
@@ -236,8 +242,8 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                 const safeAcronym = (conference.Acronym || `conf-${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
                 const textFileBaseName = `${safeAcronym}_item${batchItemIndexFromLogger}_link${linkIndex}_initialtext`;
 
-                // processAndSaveGeneralLink now returns { path, content }
-                const { path: textPath, content: textContent } = await this.processAndSaveGeneralLink(
+                // +++ NHẬN KẾT QUẢ OBJECT TỪ processAndSaveGeneralLink +++
+                const { path: textPath, content: textContent, imageUrls } = await this.processAndSaveGeneralLink(
                     page, urlToTry, urlToTry, null, conference.Acronym, 'main', false, textFileBaseName, linkLogger
                 );
 
@@ -250,6 +256,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                         mainLink: finalLink,
                         conferenceTextPath: textPath, // Will be null in prod
                         conferenceTextContent: textContent, // Will contain data in prod
+                        imageUrls: imageUrls, // <<< THÊM VÀO BATCH ENTRY
                         originalRequestId: conference.originalRequestId,
                         linkOrderIndex: linkIndex,
                     };
@@ -271,7 +278,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         page: Page,
         conference: ConferenceUpdateData,
         parentLogger: Logger
-    ): Promise<{ finalUrl: string | null; textPath: string | null; textContent: string | null }> { // <--- ADD textContent
+    ): Promise<{ finalUrl: string | null; textPath: string | null; textContent: string | null; imageUrls: string[] }> { // <<< CẬP NHẬT KIỂU TRẢ VỀ
         const batchItemIndexFromLogger = parentLogger.bindings().batchItemIndex as number | string || 'itemX_update';
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
@@ -284,20 +291,22 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
         if (!conference.mainLink) {
             logger.error({ event: 'conference_link_processor_link_missing_for_update' });
-            return { finalUrl: null, textPath: null, textContent: null };
+            return { finalUrl: null, textPath: null, textContent: null, imageUrls: [] }; // <<< CẬP NHẬT
         }
 
         const safeAcronym = (conference.Acronym || `unknown_item${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
         const baseName = `${safeAcronym}_main_update_item${batchItemIndexFromLogger}`;
 
-        const { path: textPath, content: textContent } = await this.processAndSaveGeneralLink(
+        // Lấy cả 3 giá trị từ hàm helper
+        const { path: textPath, content: textContent, imageUrls } = await this.processAndSaveGeneralLink(
             page, conference.mainLink, conference.mainLink!, null, conference.Acronym, 'main', false, baseName, logger
         );
 
         if (textContent) {
-            return { finalUrl: page.url(), textPath, textContent };
+            // Trả về cả imageUrls
+            return { finalUrl: page.url(), textPath, textContent, imageUrls }; // <<< CẬP NHẬT
         } else {
-            return { finalUrl: null, textPath: null, textContent: null };
+            return { finalUrl: null, textPath: null, textContent: null, imageUrls: [] }; // <<< CẬP NHẬT
         }
     }
 
@@ -305,7 +314,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         page: Page | null,
         conference: ConferenceUpdateData,
         parentLogger: Logger
-    ): Promise<{ path: string | null; content: string | null }> { // <--- CHANGE RETURN TYPE
+    ): Promise<ProcessedContentResult> { // <<< SỬ DỤNG LẠI TYPE CHUNG
         const batchItemIndexFromLogger = parentLogger.bindings().batchItemIndex as number | string || 'itemX_update_cfp';
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
@@ -319,19 +328,23 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         const safeAcronym = (conference.Acronym || `unknown_item${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
         const baseName = `${safeAcronym}_cfp_update_item${batchItemIndexFromLogger}`;
 
-        const { path, content } = await this.processAndSaveGeneralLink(
+        // processAndSaveGeneralLink sẽ trả về imageUrls là mảng rỗng nếu không tìm thấy gì
+        const result = await this.processAndSaveGeneralLink(
             page, conference.cfpLink, conference.mainLink!, null, conference.Acronym, 'cfp', true, baseName, logger
         );
-        return { path, content };
+
+        // Đơn giản là trả về toàn bộ kết quả
+        return result;
     }
+
 
 
     public async processImpLinkForUpdate(
         page: Page | null,
         conference: ConferenceUpdateData,
-        cfpResultPath: string | null, // This argument is less useful now, but we keep it for link comparison
+        cfpResultPath: string | null, // Giữ lại để so sánh link
         parentLogger: Logger
-    ): Promise<{ path: string | null; content: string | null }> { // <--- CHANGE RETURN TYPE
+    ): Promise<ProcessedContentResult> { // <<< SỬ DỤNG LẠI TYPE CHUNG
         const batchItemIndexFromLogger = parentLogger.bindings().batchItemIndex as number | string || 'itemX_update_imp';
         const logger = parentLogger.child({
             service: 'ConferenceLinkProcessorService',
@@ -342,22 +355,20 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
             batchItemIndex: batchItemIndexFromLogger,
         });
 
-        // Logic kiểm tra trùng link vẫn cần thiết
-        if (conference.impLink === conference.cfpLink && cfpResultPath !== null) {
-            logger.info({ event: 'conference_link_processor_skipped_link_same_as_other' });
-            return { path: "", content: "" }; // Return empty but non-null values
+        // Logic kiểm tra trùng link vẫn cần thiết và hoạt động đúng
+        if (conference.impLink && conference.impLink === conference.cfpLink) {
+            logger.info({ event: 'conference_link_processor_skipped_link_same_as_other', link: conference.impLink });
+            // Trả về một kết quả "trống" nhưng hợp lệ
+            return { path: null, content: null, imageUrls: [] };
         }
 
         const safeAcronym = (conference.Acronym || `unknown_item${batchItemIndexFromLogger}`).replace(/[^a-zA-Z0-9_.-]/g, '-');
         const baseName = `${safeAcronym}_imp_update_item${batchItemIndexFromLogger}`;
 
-        const { path, content } = await this.processAndSaveGeneralLink(
+        const result = await this.processAndSaveGeneralLink(
             page, conference.impLink, conference.mainLink!, conference.cfpLink, conference.Acronym, 'imp', false, baseName, logger
         );
-        // Special case: if links were identical, we need a non-null content to avoid issues
-        if (conference.impLink === conference.cfpLink && cfpResultPath !== null) {
-            return { path: "", content: "" }; // Return empty but non-null values
-        }
-        return { path, content };
+
+        return result;
     }
 }

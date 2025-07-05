@@ -26,7 +26,7 @@ export interface IUpdateTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         parentLogger: Logger,
-        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+        requestStateService: RequestStateService
     ): Promise<boolean>;
 }
 
@@ -53,19 +53,17 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         parentLogger: Logger,
-        requestStateService: RequestStateService // <<< NHẬN THAM SỐ MỚI
+        requestStateService: RequestStateService
 
     ): Promise<boolean> {
         const originalAcronym = batchInput.conferenceAcronym;
 
         const logger = parentLogger.child({
-            batchServiceFunction: '_executeBatchTaskForUpdate', // Giữ nguyên tên function trong log
+            batchServiceFunction: '_executeBatchTaskForUpdate',
         });
         logger.info({ event: 'batch_task_start_execution', flow: 'update' });
 
         try {
-
-            // +++ SỬA LỖI: THÊM GUARD CLAUSE TẠI ĐÂY +++
             if (!apiModels.extractInfo || !apiModels.extractCfp) {
                 logger.error({
                     event: 'batch_task_aborted_missing_models',
@@ -73,31 +71,28 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                     hasExtractInfoModel: !!apiModels.extractInfo,
                     hasCfpModel: !!apiModels.extractCfp,
                 }, 'Cannot execute update task without required API models.');
-                return false; // Dừng tác vụ một cách an toàn
+                return false;
             }
-            // +++ KẾT THÚC SỬA LỖI +++
-
 
             const internalProcessingAcronym = await addAcronymSafely(globalProcessedAcronymsSet, originalAcronym);
             const safeInternalAcronymForFiles = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
             logger.info({ internalProcessingAcronym, safeInternalAcronymForFiles, event: 'acronym_generated_for_update_files' });
 
-            // +++ START OF MODIFICATION +++
-            // The `batchInput` now contains `...Content` fields.
-            // We need to pass them to the aggregator.
+            // +++ LẤY URL ẢNH TỪ ĐẦU VÀO +++
+            const imageUrlsForApi = batchInput.imageUrls;
+            logger.info({ imageUrlCount: imageUrlsForApi?.length || 0, event: 'image_urls_retrieved_for_update_task' });
+
             const contentPaths: ContentPaths = {
                 conferenceTextPath: batchInput.conferenceTextPath,
-                conferenceTextContent: batchInput.conferenceTextContent, // USE THIS
+                conferenceTextContent: batchInput.conferenceTextContent,
                 cfpTextPath: batchInput.cfpTextPath,
-                cfpTextContent: batchInput.cfpTextContent,             // USE THIS
+                cfpTextContent: batchInput.cfpTextContent,
                 impTextPath: batchInput.impTextPath,
-                impTextContent: batchInput.impTextContent,             // USE THIS
+                impTextContent: batchInput.impTextContent,
             };
 
-            // This call will now work correctly in production because it will find the `...Content` fields.
             const aggregatedFileContent = await this.conferenceDataAggregatorService.readContentFiles(contentPaths, logger);
 
-            // This check ensures that even if something goes wrong, we don't send empty data to the API.
             if (!aggregatedFileContent.mainText) {
                 logger.error({ event: 'aggregation_failed_no_main_text', flow: 'update' });
                 return false;
@@ -106,66 +101,64 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
             const contentSendToAPI = this.conferenceDataAggregatorService.aggregateContentForApi(
                 batchInput.conferenceTitle, originalAcronym, aggregatedFileContent, logger
             );
-            // +++ END OF MODIFICATION +++
 
-            // +++ MAKE DEBUG FILE WRITE CONDITIONAL +++
             if (!this.configService.isProduction) {
                 const fileUpdateLogger = logger.child({ asyncOperation: 'write_intermediate_update_file' });
                 const fileUpdateName = `${safeInternalAcronymForFiles}_update_item${batchItemIndex}.txt`;
                 const fileUpdatePath = path.join(this.batchesDir, fileUpdateName);
-                // We don't need to wait for this debug file to be written
                 this.fileSystemService.writeFile(fileUpdatePath, contentSendToAPI, fileUpdateLogger)
                     .then(() => fileUpdateLogger.debug({ filePath: fileUpdatePath, event: 'batch_processing_write_intermediate_success' }))
                     .catch(writeError => fileUpdateLogger.error({ filePath: fileUpdatePath, err: writeError, event: 'save_batch_write_file_failed', fileType: 'intermediate_update_content' }));
             }
 
-
-            // DELEGATE to FinalExtractionApiService
+            // +++ TRUYỀN URL ẢNH VÀO SERVICE API +++
             const apiResults = await this.finalExtractionApiService.execute(
-                contentSendToAPI, batchItemIndex, batchInput.conferenceTitle,
+                contentSendToAPI, 
+                batchItemIndex, 
+                batchInput.conferenceTitle,
                 originalAcronym,
                 safeInternalAcronymForFiles,
-                true,
+                true, // isUpdate
                 apiModels.extractInfo,
                 apiModels.extractCfp,
+                imageUrlsForApi, // <<< THAM SỐ MỚI
                 logger
             );
 
-            // await fileUpdatePromise;
             logger.debug({ event: 'intermediate_update_file_write_settled' });
 
-            // +++ UPDATE FINAL RECORD CREATION +++
+            // +++ CẬP NHẬT BẢN GHI CUỐI CÙNG VỚI URL ẢNH +++
             const finalRecord: BatchUpdateDataWithIds = {
                 conferenceTitle: batchInput.conferenceTitle,
                 conferenceAcronym: originalAcronym,
                 mainLink: batchInput.mainLink,
                 cfpLink: batchInput.cfpLink,
                 impLink: batchInput.impLink,
-                // Pass through the original paths/content for completeness in the final JSONL
+                // Pass through original data
                 conferenceTextPath: batchInput.conferenceTextPath,
                 conferenceTextContent: batchInput.conferenceTextContent,
                 cfpTextPath: batchInput.cfpTextPath,
                 cfpTextContent: batchInput.cfpTextContent,
                 impTextPath: batchInput.impTextPath,
                 impTextContent: batchInput.impTextContent,
+                imageUrls: imageUrlsForApi, // <<< THÊM VÀO BẢN GHI CUỐI CÙNG
                 originalRequestId: batchInput.originalRequestId,
                 internalProcessingAcronym: internalProcessingAcronym,
                 batchRequestId: batchRequestIdForTask,
-                // Add the new response content fields
+                // Add API response data
                 extractResponseTextPath: apiResults.extractResponseTextPath,
-                extractResponseContent: apiResults.extractResponseContent, // ADD THIS
+                extractResponseContent: apiResults.extractResponseContent,
                 extractMetaData: apiResults.extractMetaData,
                 cfpResponseTextPath: apiResults.cfpResponseTextPath,
-                cfpResponseContent: apiResults.cfpResponseContent,       // ADD THIS
+                cfpResponseContent: apiResults.cfpResponseContent,
                 cfpMetaData: apiResults.cfpMetaData,
             };
 
-             // DELEGATE to FinalRecordAppenderService
             await this.finalRecordAppenderService.append(
                 finalRecord,
                 batchRequestIdForTask,
                 logger.child({ subOperation: 'append_final_update_record' }),
-                requestStateService // <<< TRUYỀN THAM SỐ NHẬN ĐƯỢC
+                requestStateService
             );
             logger.info({ event: 'batch_task_finish_success', flow: 'update' });
             logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
@@ -179,7 +172,7 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 event: 'task_finish',
                 success: false,
                 error_details: errorMessage
-            }, `Finished processing conference task  with failure.`);
+            }, `Finished processing conference task with failure.`);
 
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;

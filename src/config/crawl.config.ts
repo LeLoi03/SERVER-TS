@@ -17,6 +17,7 @@ export class CrawlConfiguration {
     public readonly importantDatesTabs: string[];
     public readonly excludeTexts: string[];
     public readonly exactKeywords: string[];
+    public readonly imageKeywords: string[];
 
 
     constructor(private appConfig: AppConfig) {
@@ -33,5 +34,7 @@ export class CrawlConfiguration {
         this.importantDatesTabs = appConfig.IMPORTANT_DATES_TABS || [];
         this.excludeTexts = appConfig.EXCLUDE_TEXTS || [];
         this.exactKeywords = appConfig.EXACT_KEYWORDS || [];
+        this.imageKeywords = appConfig.IMAGE_KEYWORDS || [];
+
     }
 }

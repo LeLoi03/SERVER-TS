@@ -1,68 +1,28 @@
+// src/services/batchProcessing/pageContentExtractor.service.ts
 import { Page, Frame } from 'playwright';
 import { Logger } from 'pino';
 import { ConfigService } from '../../config/config.service';
 import { extractTextFromPDF } from '../../utils/crawl/pdf.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
+import { autoScroll } from './utils';
 
-// --- Helper Function for Conditional Scrolling ---
-/**
- * Scrolls the page to the bottom to trigger lazy-loaded content.
- * Includes a total timeout and a max attempts limit to prevent infinite loops.
- * @param page The Playwright Page object.
- * @param logger The logger instance.
- */
-async function autoScroll(page: Page, logger: Logger) {
-    logger.trace({ event: 'auto_scroll_start' });
-    try {
-        // Add an overall timeout for the entire scrolling operation.
-        await page.evaluate(async (timeoutMs) => {
-            await Promise.race([
-                new Promise<void>((resolve) => {
-                    let totalHeight = 0;
-                    const distance = 100;
-                    let scrollAttempts = 0;
-                    const maxScrollAttempts = 100; // Limit to 100 scrolls (e.g., 10000px)
+// +++ THAY ĐỔI KIỂU DỮ LIỆU TRẢ VỀ +++
+type ExtractedContent = {
+    text: string;
+    imageUrls: string[];
+};
 
-                    const timer = setInterval(() => {
-                        const scrollHeight = document.body.scrollHeight;
-                        window.scrollBy(0, distance);
-                        totalHeight += distance;
-                        scrollAttempts++;
 
-                        if (totalHeight >= scrollHeight || scrollAttempts >= maxScrollAttempts) {
-                            clearInterval(timer);
-                            resolve();
-                        }
-                    }, 100); // Scroll every 100ms
-                }),
-                // A separate promise that rejects after a timeout
-                new Promise<void>((_, reject) =>
-                    setTimeout(() => reject(new Error(`Auto-scrolling timed out after ${timeoutMs}ms`)), timeoutMs)
-                )
-            ]);
-        }, 15000); // Set a 15-second timeout for the entire scroll operation
-
-        // Wait a moment for animations to complete after scrolling
-        await page.waitForTimeout(2000);
-        logger.trace({ event: 'auto_scroll_success' });
-    } catch (error) {
-        logger.warn({ err: error, event: 'auto_scroll_failed_or_timed_out' }, "Auto-scrolling failed or timed out, content might be incomplete.");
-    }
-}
-
-/**
- * Interface for the service responsible for extracting text content from web pages and PDFs.
- */
 export interface IPageContentExtractorService {
-    extractTextFromUrl(
+    extractContentFromUrl( // <<< ĐỔI TÊN HÀM CHO RÕ NGHĨA HƠN
         page: Page | null,
         url: string,
         acronym: string | undefined,
         useMainContentKeywords: boolean,
         yearToConsider: number,
         logger: Logger
-    ): Promise<string>;
+    ): Promise<ExtractedContent>; // <<< THAY ĐỔI KIỂU TRẢ VỀ
 }
 
 @singleton()
@@ -71,6 +31,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
     private readonly cfpTabKeywords: string[];
     private readonly importantDatesTabs: string[];
     private readonly exactKeywords: string[];
+    private readonly imageKeywords: string[]; // <<< THÊM MỚI
     private readonly MIN_CONTENT_LENGTH_FOR_RETRY = 1000;
 
     constructor(@inject(ConfigService) private configService: ConfigService) {
@@ -78,6 +39,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
         this.cfpTabKeywords = this.configService.cfpTabKeywords ?? [];
         this.importantDatesTabs = this.configService.importantDatesTabs ?? [];
         this.exactKeywords = this.configService.exactKeywords ?? [];
+        this.imageKeywords = this.configService.imageKeywords ?? []; // <<< THÊM MỚI
     }
 
     /**
@@ -85,7 +47,8 @@ export class PageContentExtractorService implements IPageContentExtractorService
      * (e.g., before and after scrolling).
      * @private
      */
-    private async _extractCore(page: Page, acronym: string | undefined, yearToConsider: number, logger: Logger): Promise<string> {
+    // +++ THAY ĐỔI HÀM _extractCore ĐỂ TRẢ VỀ OBJECT +++
+    private async _extractCore(page: Page, acronym: string | undefined, yearToConsider: number, logger: Logger): Promise<ExtractedContent> {
         const currentLogContext = { function: '_extractCore', service: 'PageContentExtractorService' };
         let fullText = "";
         const frames = page.frames();
@@ -98,7 +61,11 @@ export class PageContentExtractorService implements IPageContentExtractorService
             cfpTabKeywords: this.cfpTabKeywords,
             importantDatesTabs: this.importantDatesTabs,
             exactKeywords: this.exactKeywords,
+            imageKeywords: this.imageKeywords, // <<< TRUYỀN TỪ KHÓA ẢNH
         };
+
+        // +++ THÊM LOGIC LẤY URL ẢNH +++
+        let allImageUrls: string[] = [];
 
         for (const frame of frames) {
             if (frame.isDetached()) {
@@ -194,28 +161,72 @@ export class PageContentExtractorService implements IPageContentExtractorService
                 }
 
 
+                // +++ LOGIC MỚI: LẤY URL ẢNH TỪ FRAME +++
+                const frameImageUrls = await frame.evaluate((args) => {
+                    const foundUrls = new Set<string>();
+                    const { imageKeywords } = args;
+
+                    document.querySelectorAll('img').forEach(img => {
+                        if (foundUrls.size >= 2) return; // Lấy tối đa 2 ảnh
+
+                        const src = img.getAttribute('src');
+                        if (!src) return;
+
+                        const alt = img.getAttribute('alt') || '';
+                        const className = img.className || '';
+                        const id = img.id || '';
+
+                        const combinedAttributes = `${src} ${alt} ${className} ${id}`.toLowerCase();
+
+                        const hasKeyword = imageKeywords.some(keyword => combinedAttributes.includes(keyword.toLowerCase()));
+
+                        if (hasKeyword) {
+                            try {
+                                // Chuyển đổi URL tương đối thành tuyệt đối
+                                const absoluteUrl = new URL(src, document.baseURI).href;
+                                foundUrls.add(absoluteUrl);
+                            } catch (e) {
+                                // Bỏ qua nếu URL không hợp lệ
+                            }
+                        }
+                    });
+                    return Array.from(foundUrls);
+                }, { imageKeywords: this.imageKeywords });
+
+                allImageUrls.push(...frameImageUrls);
+
+
             } catch (e: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(e);
                 frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'frame_processing_failed' }, `Could not process frame: ${errorMessage}`);
             }
         }
-        return fullText.replace(/(\n\s*){3,}/g, '\n\n').trim();
+        const uniqueImageUrls = [...new Set(allImageUrls)].slice(0, 2); // Đảm bảo duy nhất và chỉ lấy 2
+        logger.info({ foundImageCount: uniqueImageUrls.length, event: 'image_url_extraction_complete' });
+
+        return {
+            text: fullText.replace(/(\n\s*){3,}/g, '\n\n').trim(),
+            imageUrls: uniqueImageUrls,
+        };
     }
-    
-    public async extractTextFromUrl(
+
+
+    // +++ SỬA LỖI: ĐỔI TÊN HÀM NÀY ĐỂ KHỚP VỚI INTERFACE +++
+    public async extractContentFromUrl(
         page: Page | null,
         url: string,
         acronym: string | undefined,
         useMainContentKeywords: boolean,
         yearToConsider: number,
         logger: Logger
-    ): Promise<string> {
-        const currentLogContext = { url, acronym, useMainContentKeywords, yearToConsider, function: 'extractTextFromUrl', service: 'PageContentExtractorService' };
+    ): Promise<ExtractedContent> {
+        // Thay đổi tên ở đây từ extractTextFromUrl thành extractContentFromUrl
+        const currentLogContext = { url, acronym, useMainContentKeywords, yearToConsider, function: 'extractContentFromUrl', service: 'PageContentExtractorService' }; // Cập nhật tên hàm trong log context cho nhất quán
         logger.trace({ ...currentLogContext, event: 'extraction_start' }, `Starting content extraction for URL: ${url}.`);
 
         if (!url || !/^(https?:\/\/|file:\/\/)/i.test(url)) {
             logger.warn({ ...currentLogContext, event: 'skipped_invalid_url_structure' });
-            return "";
+            return { text: "", imageUrls: [] };
         }
 
         try {
@@ -224,10 +235,10 @@ export class PageContentExtractorService implements IPageContentExtractorService
                 const pdfText = await extractTextFromPDF(url, logger.child({ operation: 'pdf_extract' }));
                 if (pdfText) {
                     logger.info({ ...currentLogContext, type: 'pdf', textLength: pdfText.length, event: 'pdf_extraction_finish', success: true }, `PDF text extraction finished. Length: ${pdfText.length}.`);
-                    return pdfText;
+                    return { text: pdfText, imageUrls: [] }; // PDF không có ảnh
                 } else {
                     logger.warn({ ...currentLogContext, type: 'pdf', event: 'pdf_extraction_finish', success: false }, "PDF text extraction finished but no content was extracted.");
-                    return "";
+                    return { text: "", imageUrls: [] };
                 }
             }
 
@@ -238,31 +249,22 @@ export class PageContentExtractorService implements IPageContentExtractorService
             }
             logger.info({ ...currentLogContext, type: 'html', event: 'html_processing_start' }, "Attempting to extract text from an already-loaded HTML page, including iframes.");
 
-            // Attempt 1: Extract without scrolling (optimistic case)
-            logger.debug({ ...currentLogContext, attempt: 1, event: 'extraction_attempt_without_scroll' });
-            let extractedText = await this._extractCore(page, acronym, yearToConsider, logger);
+            // Attempt 1:
+            let extractedContent = await this._extractCore(page, acronym, yearToConsider, logger);
 
-            // Attempt 2: If content is too short, retry with scrolling
-            if (extractedText.length < this.MIN_CONTENT_LENGTH_FOR_RETRY) {
-                logger.warn({
-                    ...currentLogContext,
-                    attempt: 2,
-                    textLength: extractedText.length,
-                    threshold: this.MIN_CONTENT_LENGTH_FOR_RETRY,
-                    event: 'content_too_short_retrying_with_scroll'
-                }, "Initial content is very short. Retrying with auto-scroll to trigger lazy-loaded elements.");
-
+            // Attempt 2:
+            if (extractedContent.text.length < this.MIN_CONTENT_LENGTH_FOR_RETRY) {
                 await autoScroll(page, logger);
-                extractedText = await this._extractCore(page, acronym, yearToConsider, logger);
+                extractedContent = await this._extractCore(page, acronym, yearToConsider, logger);
             }
 
-            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: extractedText.length, event: 'html_processing_finish_hybrid' }, `HYBRID HTML text extraction finished. Total Length: ${extractedText.length}.`);
-            return extractedText;
+            logger.info({ ...currentLogContext, type: 'html', success: true, textLength: extractedContent.text.length, imageUrlCount: extractedContent.imageUrls.length, event: 'html_processing_finish_hybrid' });
+            return extractedContent;
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.error({ ...currentLogContext, err: { message: errorMessage, stack: errorStack }, event: 'unexpected_error' }, `An unexpected error occurred during content extraction: "${errorMessage}".`);
-            return "";
+            return { text: "", imageUrls: [] };
         }
     }
 }

@@ -23,71 +23,70 @@ export interface AccessResult {
  * @returns {Promise<AccessResult>} Một đối tượng chứa kết quả của việc truy cập.
  */
 export async function accessUrl(page: Page, url: string, logger: Logger): Promise<AccessResult> {
-    const logContext = { initialUrl: url, function: 'accessUrl' };
-    logger.trace({ ...logContext, event: 'access_url_start' }, `Attempting to access URL: ${url}`);
+    // --- SỬA LỖI TYPESCRIPT TẠI ĐÂY ---
+    // Khai báo logContext với một kiểu cho phép các thuộc tính bổ sung.
+    // [key: string]: any cho phép bạn thêm bất kỳ thuộc tính chuỗi nào.
+    const logContext: { initialUrl: string; function: string;[key: string]: any } = {
+        initialUrl: url,
+        function: 'accessUrl'
+    };
+    // --- KẾT THÚC SỬA LỖI ---
 
-    try {
-        // Sử dụng 'domcontentloaded' để nhận phản hồi nhanh hơn, sau đó tự chờ đợi.
-        // 'domcontentloaded' ít bị ảnh hưởng bởi các lỗi 'interrupted' do script hoặc tài nguyên phụ gây ra.
-        const response = await page.goto(url, {
-            waitUntil: 'domcontentloaded', // THAY ĐỔI 1: Chờ đến khi DOM chính được tải.
-            timeout: 45000,             // THAY ĐỔI 2: Tăng timeout tổng thể.
-        });
+    // --- THÊM LOGIC THỬ LẠI ---
+    const MAX_RETRIES = 3; // Thử tối đa 3 lần
+    const RETRY_DELAY_MS = 2000; // Chờ 2 giây giữa các lần thử
 
-        // Sau khi DOM đã tải, chúng ta chủ động chờ cho mạng lưới ổn định.
-        // Điều này tách biệt việc điều hướng ban đầu khỏi việc chờ tài nguyên phụ,
-        // làm cho nó mạnh mẽ hơn trước các lỗi 'interrupted'.
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        logContext['attempt'] = attempt; // Thêm số lần thử vào log
+        logger.trace({ ...logContext, event: 'access_url_attempt_start' }, `Attempting to access URL: ${url}`);
+
         try {
+            // Sử dụng lại chiến lược goto mạnh mẽ của bạn
+            const response = await page.goto(url, {
+                waitUntil: 'domcontentloaded',
+                timeout: 45000,
+            });
+
             await page.waitForLoadState('networkidle', { timeout: 25000 });
-            logger.trace({ ...logContext, event: 'networkidle_wait_completed' });
-        } catch (waitError) {
-            logger.warn({ ...logContext, err: waitError, event: 'networkidle_wait_timed_out_but_proceeding' },
-                'Timed out waiting for networkidle, but proceeding as the main content might be loaded.');
-        }
 
-        const finalUrl = page.url();
+            const finalUrl = page.url();
 
-        if (!response) {
-            const error = new Error(`Navigation to ${url} resulted in a null response.`);
-            logger.error({ ...logContext, finalUrl, event: 'access_url_null_response' }, error.message);
-            return { success: false, finalUrl, response, error };
-        }
-
-        if (!response.ok()) {
-            const error = new Error(`Final response was not OK. Status: ${response.status()} for URL: ${finalUrl}`);
-            logger.warn({ ...logContext, finalUrl, status: response.status(), event: 'access_url_not_ok_status' }, error.message);
-            return { success: false, finalUrl, response, error };
-        }
-
-        logger.info({ ...logContext, finalUrl, status: response.status(), event: 'access_url_success' }, `Successfully accessed URL. Final URL: ${finalUrl}`);
-        return { success: true, finalUrl, response, error: null };
-
-    } catch (error: unknown) {
-        const { message: errorMessage } = getErrorMessageAndStack(error);
-        const accessError = error instanceof Error ? error : new Error(errorMessage);
-        const finalUrlAfterError = page.url();
-
-        // --- THAY ĐỔI LOGIC TẠI ĐÂY ---
-        if (errorMessage.includes('Navigation is interrupted') || errorMessage.includes('interrupted by another navigation')) {
-            // KIỂM TRA THÊM: URL cuối cùng có phải là một trang web hợp lệ không?
-            if (/^https?:\/\//.test(finalUrlAfterError)) {
-                logger.warn({ ...logContext, finalUrl: finalUrlAfterError, originalError: errorMessage, event: 'navigation_interrupted_handled_as_success' },
-                    `Navigation was interrupted but resulted in a valid web URL. Handling as success. Final URL: ${finalUrlAfterError}`);
-                // Chỉ coi là thành công nếu URL cuối cùng là một trang web thực sự
-                return { success: true, finalUrl: finalUrlAfterError, response: null, error: null };
-            } else {
-                // Nếu URL cuối cùng là trang lỗi (chrome-error://, about:blank, etc.), coi đây là một lỗi thực sự
-                logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'navigation_interrupted_to_error_page' },
-                    `Navigation was interrupted and led to an invalid/error page. Handling as failure. Final URL: ${finalUrlAfterError}`);
-                return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
+            if (response && response.ok()) {
+                logger.info({ ...logContext, finalUrl, status: response.status(), event: 'access_url_success' }, `Successfully accessed URL on attempt ${attempt}.`);
+                return { success: true, finalUrl, response, error: null }; // THÀNH CÔNG -> Thoát khỏi vòng lặp
             }
-        }
-        // --- KẾT THÚC THAY ĐỔI ---
 
-        // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED, ERR_CONNECTION_REFUSED) vẫn là lỗi nghiêm trọng.
-        logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'access_url_unhandled_error' }, `Unhandled error during URL access: ${accessError.message}`);
-        return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
+            // Xử lý trường hợp response không ok
+            const error = new Error(`Final response was not OK. Status: ${response?.status()} for URL: ${finalUrl}`);
+            logger.warn({ ...logContext, finalUrl, status: response?.status(), event: 'access_url_not_ok_status' }, error.message);
+            // Không thử lại với lỗi HTTP, vì nó thường là lỗi cố định (404, 500)
+            return { success: false, finalUrl, response, error };
+
+        } catch (error: unknown) {
+            const { message: errorMessage } = getErrorMessageAndStack(error);
+            const accessError = error instanceof Error ? error : new Error(errorMessage);
+
+            // Chỉ thử lại với các lỗi có khả năng là tạm thời
+            const isRetryableError = errorMessage.includes('Navigation is interrupted') ||
+                errorMessage.includes('interrupted by another navigation') ||
+                errorMessage.includes('net::ERR_TIMED_OUT');
+
+            if (isRetryableError && attempt < MAX_RETRIES) {
+                logger.warn({ ...logContext, err: { message: errorMessage }, event: 'retryable_error_occurred' },
+                    `Attempt ${attempt} failed with a retryable error. Retrying in ${RETRY_DELAY_MS}ms...`);
+                await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS));
+                continue; // Chuyển sang lần thử tiếp theo
+            }
+
+            // Nếu là lỗi không thể thử lại (như ERR_NAME_NOT_RESOLVED) hoặc đã hết số lần thử
+            logger.error({ ...logContext, finalUrl: page.url(), err: { name: accessError.name, message: accessError.message }, event: 'access_url_unrecoverable_error' },
+                `Unrecoverable error on attempt ${attempt} or max retries reached: ${accessError.message}`);
+            return { success: false, finalUrl: page.url(), response: null, error: accessError };
+        }
     }
+
+    // Dòng này trên lý thuyết sẽ không bao giờ được chạy, nhưng để đảm bảo an toàn
+    return { success: false, finalUrl: page.url(), response: null, error: new Error('Exhausted all retries for accessUrl') };
 }
 
 
@@ -124,4 +123,54 @@ export function withOperationTimeout<T>(
         // if the original promise settles first.
         clearTimeout(timeoutHandle);
     });
+}
+
+
+
+
+
+// --- Helper Function for Conditional Scrolling ---
+/**
+ * Scrolls the page to the bottom to trigger lazy-loaded content.
+ * Includes a total timeout and a max attempts limit to prevent infinite loops.
+ * @param page The Playwright Page object.
+ * @param logger The logger instance.
+ */
+export async function autoScroll(page: Page, logger: Logger) {
+    logger.trace({ event: 'auto_scroll_start' });
+    try {
+        // Add an overall timeout for the entire scrolling operation.
+        await page.evaluate(async (timeoutMs) => {
+            await Promise.race([
+                new Promise<void>((resolve) => {
+                    let totalHeight = 0;
+                    const distance = 100;
+                    let scrollAttempts = 0;
+                    const maxScrollAttempts = 100; // Limit to 100 scrolls (e.g., 10000px)
+
+                    const timer = setInterval(() => {
+                        const scrollHeight = document.body.scrollHeight;
+                        window.scrollBy(0, distance);
+                        totalHeight += distance;
+                        scrollAttempts++;
+
+                        if (totalHeight >= scrollHeight || scrollAttempts >= maxScrollAttempts) {
+                            clearInterval(timer);
+                            resolve();
+                        }
+                    }, 100); // Scroll every 100ms
+                }),
+                // A separate promise that rejects after a timeout
+                new Promise<void>((_, reject) =>
+                    setTimeout(() => reject(new Error(`Auto-scrolling timed out after ${timeoutMs}ms`)), timeoutMs)
+                )
+            ]);
+        }, 15000); // Set a 15-second timeout for the entire scroll operation
+
+        // Wait a moment for animations to complete after scrolling
+        await page.waitForTimeout(2000);
+        logger.trace({ event: 'auto_scroll_success' });
+    } catch (error) {
+        logger.warn({ err: error, event: 'auto_scroll_failed_or_timed_out' }, "Auto-scrolling failed or timed out, content might be incomplete.");
+    }
 }

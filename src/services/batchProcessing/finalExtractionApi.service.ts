@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
+import fetch from 'node-fetch'; // <<< THÊM IMPORT NÀY
 
 // --- Types ---
 import { CrawlModelType, GeminiApiParams } from '../../types/crawl';
@@ -21,6 +22,7 @@ export interface IFinalExtractionApiService {
         isUpdate: boolean,
         extractModel: CrawlModelType,
         cfpModel: CrawlModelType,
+        imageUrls: string[] | undefined, // <<< THÊM THAM SỐ MỚI
         parentLogger: Logger
     ): Promise<{
         extractResponseTextPath: string | null; // Can be null
@@ -37,7 +39,39 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
     constructor(
         @inject(GeminiApiService) private readonly geminiApiService: GeminiApiService,
         @inject(FileSystemService) private readonly fileSystemService: FileSystemService
-    ) {}
+    ) { }
+
+
+    // +++ HELPER ĐỂ CHUYỂN URL SANG BASE64 +++
+    private async urlToGenerativePart(url: string, logger: Logger): Promise<{ inlineData: { mimeType: string; data: string; } } | null> {
+        try {
+            logger.info({ imageUrl: url }, "Fetching image to convert to Base64.");
+            const response = await fetch(url);
+            if (!response.ok) {
+                logger.error({ imageUrl: url, status: response.status }, "Failed to fetch image.");
+                return null;
+            }
+
+            // Xác định MimeType đơn giản từ URL
+            let mimeType = 'image/jpeg'; // Mặc định
+            if (url.endsWith('.png')) mimeType = 'image/png';
+            else if (url.endsWith('.webp')) mimeType = 'image/webp';
+            else if (url.endsWith('.jpg') || url.endsWith('.jpeg')) mimeType = 'image/jpeg';
+
+            const imageArrayBuffer = await response.arrayBuffer();
+            const base64ImageData = Buffer.from(imageArrayBuffer).toString('base64');
+
+            return {
+                inlineData: {
+                    mimeType,
+                    data: base64ImageData,
+                },
+            };
+        } catch (error) {
+            logger.error({ err: error, imageUrl: url }, "Error converting image URL to generative part.");
+            return null;
+        }
+    }
 
     public async execute(
         contentSendToAPI: string,
@@ -48,6 +82,7 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
         isUpdate: boolean,
         extractModel: CrawlModelType,
         cfpModel: CrawlModelType,
+        imageUrls: string[] | undefined, // <<< NHẬN THAM SỐ MỚI
         parentLogger: Logger
     ): Promise<{
         extractResponseTextPath: string | null;
@@ -78,17 +113,33 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
             acronym: originalAcronymForApis,
         };
 
-        // +++ REWRITE THE PROMISE LOGIC +++
+        // +++ LOGIC MỚI: XÂY DỰNG PAYLOAD MULTIMODAL +++
         const extractPromise = (async () => {
             const extractApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_EXTRACT });
-            extractApiLogger.info({ inputLength: contentSendToAPI.length, event: 'batch_processing_final_extract_api_call_start' });
             try {
+                const imageParts = [];
+                if (imageUrls && imageUrls.length > 0) {
+                    for (const url of imageUrls) {
+                        const part = await this.urlToGenerativePart(url, extractApiLogger);
+                        if (part) imageParts.push(part);
+                    }
+                }
+
+                // Xây dựng mảng `contents`
+                const contents = [
+                    ...imageParts, // Thêm các phần ảnh trước
+                    { text: contentSendToAPI } // Sau đó là phần text
+                ];
+
+                extractApiLogger.info({ inputLength: contentSendToAPI.length, imageCount: imageParts.length, event: 'batch_processing_final_extract_api_call_start' });
+
+                // Gọi API với `contents` thay vì `batch`
                 const response = await this.geminiApiService.extractInformation(
-                    { ...commonApiParams, batch: contentSendToAPI },
+                    { ...commonApiParams, contents: contents }, // <<< THAY ĐỔI PAYLOAD
                     extractModel,
                     extractApiLogger
                 );
-
+                
                 let parsedContent: Record<string, any> | null = null;
                 if (response.responseText) {
                     try {

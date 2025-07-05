@@ -214,6 +214,8 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
 
             const mainEntryAfterDetermination = processedMainEntries[0];
             const originalAcronymFromDetermination = mainEntryAfterDetermination.conferenceAcronym;
+            const imageUrlsForApi = mainEntryAfterDetermination.imageUrls; // <<< LẤY URL ẢNH
+
 
             // These will be null in prod, but that's okay. The content is in the entry object.
             let finalCfpTextPath = mainEntryAfterDetermination.cfpTextPath;
@@ -261,6 +263,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
                 false,
                 apiModels.extractInfo,
                 apiModels.extractCfp,
+                imageUrlsForApi, // <<< TRUYỀN THAM SỐ MỚI
                 logger
             );
 
