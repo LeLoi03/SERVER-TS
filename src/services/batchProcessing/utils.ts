@@ -27,33 +27,22 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
     logger.trace({ ...logContext, event: 'access_url_start' }, `Attempting to access URL: ${url}`);
 
     try {
-        // Bước 1: Điều hướng nhanh chóng.
-        // 'commit' là lựa chọn tốt cho các trang SPA, nó trả về ngay khi điều hướng được máy chủ xác nhận,
-        // không cần chờ toàn bộ tài nguyên.
+        // Sử dụng 'domcontentloaded' để nhận phản hồi nhanh hơn, sau đó tự chờ đợi.
+        // 'domcontentloaded' ít bị ảnh hưởng bởi các lỗi 'interrupted' do script hoặc tài nguyên phụ gây ra.
         const response = await page.goto(url, {
-            waitUntil: 'commit',
-            timeout: 45000,
+            waitUntil: 'domcontentloaded', // THAY ĐỔI 1: Chờ đến khi DOM chính được tải.
+            timeout: 45000,             // THAY ĐỔI 2: Tăng timeout tổng thể.
         });
 
-        // Bước 2: Chờ đợi thông minh sau khi điều hướng.
-        // Điều này rất quan trọng để cho các framework JavaScript (React, Vue, Next.js)
-        // có thời gian để fetch dữ liệu và render nội dung lên trang.
+        // Sau khi DOM đã tải, chúng ta chủ động chờ cho mạng lưới ổn định.
+        // Điều này tách biệt việc điều hướng ban đầu khỏi việc chờ tài nguyên phụ,
+        // làm cho nó mạnh mẽ hơn trước các lỗi 'interrupted'.
         try {
-            // Chúng ta chờ một trong hai điều kiện xảy ra trước:
-            // 1. Mạng trở nên yên tĩnh ('networkidle'). Đây là trạng thái lý tưởng.
-            // 2. Một khoảng thời gian chờ ngắn (ví dụ: 2 giây) trôi qua. Đây là phương án dự phòng
-            //    để đảm bảo chúng ta không bị kẹt nếu trang có các script chạy nền vô tận.
-            await Promise.race([
-                page.waitForLoadState('networkidle', { timeout: 20000 }),
-                page.waitForTimeout(2000)
-            ]);
-            logger.trace({ ...logContext, event: 'intelligent_wait_completed' }, "Intelligent wait after navigation completed.");
-        } catch (waitError: unknown) {
-            // Lỗi ở đây (thường là timeout từ networkidle) không phải là lỗi nghiêm trọng.
-            // Chúng ta ghi lại cảnh báo và tiếp tục, vì nội dung chính có thể đã được tải.
-            const { message: errorMessage } = getErrorMessageAndStack(waitError);
-            logger.warn({ ...logContext, originalError: errorMessage, event: 'wait_for_networkidle_timed_out_but_proceeding' },
-                `Timed out waiting for 'networkidle' state, but proceeding anyway. Error: "${errorMessage}"`);
+            await page.waitForLoadState('networkidle', { timeout: 25000 });
+            logger.trace({ ...logContext, event: 'networkidle_wait_completed' });
+        } catch (waitError) {
+            logger.warn({ ...logContext, err: waitError, event: 'networkidle_wait_timed_out_but_proceeding' },
+                'Timed out waiting for networkidle, but proceeding as the main content might be loaded.');
         }
 
         const finalUrl = page.url();
@@ -78,12 +67,22 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         const accessError = error instanceof Error ? error : new Error(errorMessage);
         const finalUrlAfterError = page.url();
 
-        // Xử lý lỗi 'Navigation is interrupted' vẫn như cũ
+        // --- THAY ĐỔI LOGIC TẠI ĐÂY ---
         if (errorMessage.includes('Navigation is interrupted') || errorMessage.includes('interrupted by another navigation')) {
-            logger.warn({ ...logContext, finalUrl: finalUrlAfterError, originalError: errorMessage, event: 'navigation_interrupted_handled_as_success' },
-                `Navigation was interrupted but handled as a successful redirect. Final URL: ${finalUrlAfterError}`);
-            return { success: true, finalUrl: finalUrlAfterError, response: null, error: null };
+            // KIỂM TRA THÊM: URL cuối cùng có phải là một trang web hợp lệ không?
+            if (/^https?:\/\//.test(finalUrlAfterError)) {
+                logger.warn({ ...logContext, finalUrl: finalUrlAfterError, originalError: errorMessage, event: 'navigation_interrupted_handled_as_success' },
+                    `Navigation was interrupted but resulted in a valid web URL. Handling as success. Final URL: ${finalUrlAfterError}`);
+                // Chỉ coi là thành công nếu URL cuối cùng là một trang web thực sự
+                return { success: true, finalUrl: finalUrlAfterError, response: null, error: null };
+            } else {
+                // Nếu URL cuối cùng là trang lỗi (chrome-error://, about:blank, etc.), coi đây là một lỗi thực sự
+                logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'navigation_interrupted_to_error_page' },
+                    `Navigation was interrupted and led to an invalid/error page. Handling as failure. Final URL: ${finalUrlAfterError}`);
+                return { success: false, finalUrl: finalUrlAfterError, response: null, error: accessError };
+            }
         }
+        // --- KẾT THÚC THAY ĐỔI ---
 
         // Các lỗi khác (ví dụ: ERR_NAME_NOT_RESOLVED, ERR_CONNECTION_REFUSED) vẫn là lỗi nghiêm trọng.
         logger.error({ ...logContext, finalUrl: finalUrlAfterError, err: { name: accessError.name, message: accessError.message }, event: 'access_url_unhandled_error' }, `Unhandled error during URL access: ${accessError.message}`);

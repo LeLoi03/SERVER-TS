@@ -261,7 +261,7 @@ async function main() {
         console.log("Đã mở trang mới.");
 
         // 6. Truy cập vào URL mục tiêu
-        const url = 'https://spmconf2025.github.io/SPM2025/CfP.html';
+        const url = 'https://jadt-2024.sciencesconf.org/?lang=en';
         console.log(`Đang truy cập: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
         console.log("Tải trang thành công.");

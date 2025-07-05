@@ -37,7 +37,7 @@ async function autoScroll(page: Page, logger: Logger) {
                     }, 100); // Scroll every 100ms
                 }),
                 // A separate promise that rejects after a timeout
-                new Promise<void>((_, reject) => 
+                new Promise<void>((_, reject) =>
                     setTimeout(() => reject(new Error(`Auto-scrolling timed out after ${timeoutMs}ms`)), timeoutMs)
                 )
             ]);
@@ -109,6 +109,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
             const frameLogger = logger.child({ frameUrl: frame.url() });
 
             try {
+                // Bước 1: Tiền xử lý DOM vẫn giữ nguyên, nó rất quan trọng
                 await frame.evaluate((args) => {
                     document.querySelectorAll('script, style').forEach(el => el.remove());
 
@@ -139,7 +140,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
                         const text = el.textContent;
                         if (text && text.trim()) {
                             const replacementSpan = document.createElement('span');
-                            replacementSpan.textContent = ` [GẠCH BỎ: ${text.trim()}] `;
+                            replacementSpan.textContent = ` [Changed or passed: ${text.trim()}] `;
                             el.parentNode?.replaceChild(replacementSpan, el);
                         }
                     });
@@ -175,31 +176,24 @@ export class PageContentExtractorService implements IPageContentExtractorService
                 }, argsForEvaluate);
                 frameLogger.trace({ ...currentLogContext, event: 'dom_preprocessing_complete' });
 
+                // BƯỚC 2: THAY ĐỔI CỐT LÕI - LUÔN LẤY TỪ BODY
+                // Bỏ hoàn toàn logic try/catch với 'specialContentSelector'
                 let frameText = "";
-                const specialContentSelector = '.main-content, #app';
                 try {
-                    const elementHandle = await frame.waitForSelector(specialContentSelector, { timeout: 5000, state: 'attached' });
-                    frameLogger.trace({ ...currentLogContext, selector: specialContentSelector, event: 'special_content_container_found' });
-                    const specialContentText = await elementHandle.innerText();
-                    if (specialContentText && specialContentText.trim()) {
-                        frameText = specialContentText;
-                        frameLogger.debug({ ...currentLogContext, textLength: frameText.length, event: 'frame_text_extracted_from_special_container' });
-                    }
-                } catch (e) {
-                    frameLogger.trace({ ...currentLogContext, selector: specialContentSelector, event: 'special_content_container_not_found' }, "No special content container found, will fallback to body.");
-                }
-
-                if (!frameText.trim()) {
-                    frameLogger.trace({ ...currentLogContext, event: 'executing_fallback_to_body' }, "Executing fallback: extracting text from the entire body.");
+                    frameLogger.trace({ ...currentLogContext, event: 'extracting_text_from_body' }, "Extracting text from the entire body.");
+                    // Luôn lấy text từ toàn bộ body của frame
                     frameText = await frame.locator('body').innerText({ timeout: 20000 });
+
                     if (frameText && frameText.trim()) {
                         frameLogger.debug({ ...currentLogContext, textLength: frameText.length, event: 'frame_text_extracted_from_body' });
+                        fullText += frameText.trim() + '\n\n';
                     }
+                } catch (bodyError: unknown) {
+                    const { message: errorMessage } = getErrorMessageAndStack(bodyError);
+                    frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'body_extraction_failed' }, `Could not extract text from frame's body: ${errorMessage}`);
                 }
-                
-                if (frameText && frameText.trim()) {
-                    fullText += frameText.trim() + '\n\n';
-                }
+
+
             } catch (e: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(e);
                 frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'frame_processing_failed' }, `Could not process frame: ${errorMessage}`);
@@ -207,7 +201,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
         }
         return fullText.replace(/(\n\s*){3,}/g, '\n\n').trim();
     }
-
+    
     public async extractTextFromUrl(
         page: Page | null,
         url: string,
