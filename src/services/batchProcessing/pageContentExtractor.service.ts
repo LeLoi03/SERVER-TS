@@ -104,7 +104,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
                     };
 
                     // --- BẮT ĐẦU ĐOẠN CODE CẦN THAY THẾ ---
-                    document.querySelectorAll('del, s').forEach(el => {
+                    document.querySelectorAll('del, s, strike').forEach(el => {
                         const text = el.textContent;
                         if (text && text.trim()) {
                             const trimmedText = text.trim();

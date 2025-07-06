@@ -38,3 +38,6 @@ check ADMA
 
 bổ sung system instruction kêu phân loại ngày chính xác 
 
+
+
+fix request phải đợi nhau để ghi csv

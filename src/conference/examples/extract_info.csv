@@ -6722,3 +6722,180 @@ Note: All dates refer to AOE time, i.e. ""Anywhere on Earth""
     ""(Panels) Panel Proposal"": ""September 11, 2025""
   }
 }"
+"Conference Title: ACM Conference on Embedded Networked Sensor Systems
+Conference Acronym: SENSYS
+
+Main Website Content:
+
+href=""index.html"" - SenSys 2026
+Homepage
+href=""#"" - Calls
+href=""cfp.html"" - Call for Papers
+Committees
+Organization
+Technical Program Committee
+TPC self-nomination
+SenSys 2026
+ACM/IEEE Conference on
+Embedded Artificial Intelligence and Sensing Systems
+May 11-14, 2026 Saint-Malo, France
+Co-located with CPS-IoT Week 2026
+
+We are excited to announce the inaugural edition of the International Conference on Embedded Artificial Intelligence and Sensing Systems (SenSys).
+
+The goal of this new conference# is to offer a single, top-ranked, flagship event for the research communities formerly revolving around SenSys, IPSN, and IoTDI, as well as a focal point for other communities in related fields. The original three conferences, now merged into SenSys 2026, have driven innovation across multiple disciplines, including sensor networks, embedded systems, mobile computing, wireless communication, signal processing, data science, and AI-driven applications. Nevertheless, the continued and increasing relevance of intelligent sensing systems in academia and industry demands a unified, high-impact forum acting as a catalyzer for advancing research at the intersection of sensing systems and embedded artificial intelligence. The new conference, sponsored jointly by ACM and IEEE, addresses exactly this need. SenSys will provide a comprehensive platform where researchers and industry professionals from different areas can converge to present state-of-the-art research, exchange novel ideas, address key challenges, and ultimately shape the future of this continuously expanding and interdisciplinary field.
+
+# Pending final approval by ACM and IEEE.
+
+Important Dates
+2nd deadline Call for Papers
+Abstract Registration
+November 06, 2025
+Paper Submission
+November 13, 2025
+Notification
+January 29, 2026
+1st deadline Call for Papers
+Abstract Registration
+July 1, 2025, 23:59 AoE
+[Changed or passed: June 24, 2025, 23:59 AoE]
+Paper Submission
+July 1, 2025, 23:59 AoE
+Notification
+September 21, 2025
+TPC self-nomination
+Application deadline
+June 23, 2025, 23:59 AoE
+© SenSys 2026: ACM/IEEE Conference on Embedded Artificial Intelligence and Sensing Systems
+Template by Xiaoying Riley 
+
+Call for Papers information:
+href=""index.html"" - SenSys 2026
+Homepage
+href=""#"" - Calls
+href=""cfp.html"" - Call for Papers
+Committees
+Organization
+Technical Program Committee
+TPC self-nomination
+SenSys 2026: Call for Papers
+
+We are excited to announce the International Conference on Embedded Artificial Intelligence and Sensing Systems (SenSys 2026), co-located with the CPS-IoT Week.
+
+SenSys 2026 merges SenSys, IPSN, and IoTDI into a single, top-ranked, flagship event. The original three conferences have driven innovation across multiple disciplines, including sensor networks, embedded systems, mobile computing, machine learning, wireless communications, signal processing, embedded AI, cyber-physical systems, and AI-driven applications. SenSys 2026 unites these communities to foster a high-impact forum that advances research at the intersection of sensing systems and embedded artificial intelligence.
+
+SenSys 2026 is still pending the final approval of ACM and IEEE. Regular technical papers will be published in the ACM conference proceedings, while demos and posters will be published in the IEEE conference proceedings. All content will be cross-indexed.
+
+Topics of Interest
+
+SenSys 2026 welcomes groundbreaking research in areas traditionally covered by SenSys, IPSN, and IoTDI, as well as other emerging fields. Topics include, but are not limited to:
+
+Sensors and Networked Sensing Systems
+Novel sensor technologies and deployments
+Heterogeneous sensor networks and data fusion
+Edge computing, fog computing, and real-time IoT/CPS systems
+Localization, synchronization, RFID, and RF sensing
+VLC and visible light-based sensing
+Digital twins for real-world systems and applications
+Platforms, Networking, and Communication Protocols
+New communication paradigms for ubiquitous connectivity
+Systems for extreme environments (e.g., underwater, aerial, space)
+Low-power wireless protocols
+Novel IoT protocols and network abstractions, including for 5G/6G and other architectures
+Satellite systems and applications, including CubeSats
+Embedded AI, Information Processing, and Machine Learning
+Resource-efficient machine learning for embedded and mobile platforms
+Information processing in sensor networks and embedded systems
+Large foundational models and their distillation to edge platforms
+Large language models and multi-modal large models for embedded systems
+Federated learning, neural architecture search for edge devices
+Collaborative sensing with AI-driven inference models
+Algorithms, Data, and Theory
+Analytic foundations for embedded sensing systems
+Data science-related issues, such as methods, tools, and analysis
+Coding, compression, and information theory
+Theoretical foundations and fundamental bounds
+Applications and Real-world Deployments
+Smart cities, smart buildings, and industrial IoT (IIoT)
+AR/VR and metaverse-inspired challenges
+Autonomous vehicles, unmanned aerial vehicles (UAVs), and drones
+Applications in healthcare, fitness, and wellness
+Personal, wearable, and other human-centric embedded systems
+Experiences from real-world deployments and lessons learned
+Security and Privacy in Embedded Sensing Systems
+Secure and privacy-sensitive sensing systems
+IoT data marketplaces, compression, and semantic summarization
+Decentralization and blockchain for embedded sensing systems
+Secure communications for the IoT
+Fault-tolerance, dependability, and robustness in embedded platforms and applications
+Fairness, equity, and transparency issues in IoT and CPS
+Novel Paradigms and Architectures for Embedded Sensing Systems
+Energy-efficient, sustainable system designs
+Edge AI and its implications for system latency, power, and complexity
+Human-machine interaction, including gesture recognition and voice-based systems
+IoT and CPS for sustainability, such as smart grids and energy management
+Visions, Experiences, Tools, Datasets, and Benchmarks (optional short paper format)
+Visions, grand challenges, or new directions
+Experiences, insights, challenges, and lessons learned from real-world deployments
+Benchmarks for evaluating systems, models, algorithms, or tools
+Tools, toolkits, or frameworks that advance research in embedded AI and sensing systems
+Datasets that support research in embedded AI and sensing systems
+
+Authors submitting papers in the last category (Visions, Experiences, Tools, Datasets, and Benchmarks) may choose between a full paper (12 pages) or a short paper (6 pages). Short papers will be judged on originality, potential impact, and clarity, even without extensive evaluation. Both types of papers will be presented orally at the conference.
+
+Double deadline
+
+Thanks to the merging of several conferences, SenSys will transition to a new submission process with two deadlines.
+
+Papers rejected in one cycle can be resubmitted to the next, but only with a strong statement justifying in detail how the revised version addresses the reviewers’ concerns. Resubmissions lacking this justification will be desk-rejected.
+
+Submission Guidelines
+
+Submitted papers must be original, unpublished work, and must not be under review for any other publication at the time of submission. Submissions must be at most 12 pages (full papers) or 6 pages (short papers), and must include all figures and tables within the page limits. References may use as many pages as needed. Both formats should be prepared on single-spaced 8.5” x 11” pages, using a 9-point font size in a two-column layout. Submissions must follow either the LaTeX template (preferred) or Word style files provided here. LaTeX submissions should specifically use the acmart.cls template with the sigconf option.
+
+Authors are expected to make a good-faith effort to anonymize their manuscripts. The presence of non-anonymous preprints (such as those on arXiv or similar repositories) will not result in rejection. Reviewers will be instructed not to actively look for such preprints, but incidentally discovering such materials will not violate the double-blind policy. Submissions that do not comply with the specified size, formatting, or anonymization guidelines will not be reviewed. All papers must be submitted in Adobe Portable Document Format (PDF) through the designated conference submission system.
+
+For submissions that involve research with human participants, including those using anonymized data, authors must include a brief description of how ethical considerations were addressed and whether the work received approval from an ethics review board (e.g., IRB). All authors are expected to comply with the policies of their institutions regarding data collection and research involving human subjects.
+
+Submit your paper at href=""https://sensys26.hotcrp.com"" - https://sensys26.hotcrp.com .
+
+Camera-Ready Manuscript Details
+
+Accepted submissions will be available on the ACM digital library. Please note that ACM uses 9-pt fonts in all conference proceedings, and the templates in both LaTeX and Word implicitly define the font size to 9-pt. Please refer to the publication chair's earlier Note and the User Guide of the new class.
+
+Important Dates
+1st deadline
+Abstract Registration
+July 1, 2025, 23:59 AoE
+[Changed or passed: June 24, 2025, 23:59 AoE]
+Paper Submission
+July 1, 2025, 23:59 AoE
+Notification
+September 21, 2025
+2nd deadline
+Abstract Registration
+November 6, 2025
+Paper Submission
+November 13, 2025
+Notification
+January 29, 2026
+© SenSys 2026: ACM/IEEE Conference on Embedded Artificial Intelligence and Sensing Systems
+Template by Xiaoying Riley
+","{
+  ""Conference dates"": ""May 11-14, 2026"",
+  ""Year"": ""2026"",
+  ""Location"": ""Saint-Malo, France"",
+  ""Type"": ""Offline"",
+  ""Submission Date"": {
+    ""(1st deadline) Abstract Registration"": ""July 1, 2025"",
+    ""(1st deadline) Paper Submission"": ""July 1, 2025"",
+    ""(2st deadline) Abstract Registration"": ""November 6, 2025"",
+    ""(2st deadline) Paper Submission"": ""November 13, 2025"",
+  },
+  ""Notification Date"": {
+    ""(1st deadline) Notification"": ""September 21, 2025"",
+    ""(2st deadline) Notification"": ""January 29, 2026"",
+  },
+  ""Topics"": ""sensor networks, embedded systems, mobile computing, machine learning, wireless communications, signal processing, embedded AI, cyber-physical systems, and AI-driven applications""
+  ""Publisher"": ""ACM and IEEE""
+}"
