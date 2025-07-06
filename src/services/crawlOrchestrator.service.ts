@@ -22,6 +22,7 @@ import { GeminiApiService } from './geminiApi.service';
 import { RequestStateService } from './requestState.service'; // <<< IMPORT MỚI
 import { getErrorMessageAndStack } from '../utils/errorUtils';
 import { InMemoryResultCollectorService } from './inMemoryResultCollector.service'; // <<< IMPORT MỚI
+import { withOperationTimeout } from './batchProcessing/utils';
 
 /**
  * Orchestrates the entire crawling and data processing workflow.
@@ -32,6 +33,7 @@ import { InMemoryResultCollectorService } from './inMemoryResultCollector.servic
 export class CrawlOrchestratorService {
     private readonly configApp: AppConfig;
     private readonly baseLogger: Logger;
+    private readonly conferenceProcessingTimeoutMs: number; // <<< THÊM THUỘC TÍNH MỚI
 
     constructor(
         @inject(ConfigService) private configService: ConfigService,
@@ -49,20 +51,20 @@ export class CrawlOrchestratorService {
     ) {
         this.baseLogger = this.loggingService.getLogger('conference', { service: 'CrawlOrchestratorServiceBase' });
         this.configApp = this.configService.rawConfig;
+        this.conferenceProcessingTimeoutMs = 6 * 60 * 1000; // 6 phút = 360,000 ms // <<< KHỞI TẠO THUỘC TÍNH MỚ
     }
 
     /**
-     * Executes the main crawling and processing pipeline for a list of conferences.
-     * This method orchestrates all phases and dynamically chooses the result processing
-     * strategy based on the `recordFile` flag managed by RequestStateService.
-     *
-     * @param conferenceList An array of conference data to be processed.
-     * @param parentLogger The parent Pino logger instance for contextual logging.
-     * @param apiModels An object specifying which model type to use for each API stage.
-     * @param batchRequestId A unique identifier for the current batch processing request.
-     * @returns A Promise that resolves with an array of processed conference data.
-     */
-    // <<< THÊM THAM SỐ MỚI VÀO `run` >>>
+    * Executes the main crawling and processing pipeline for a list of conferences.
+    * This method orchestrates all phases and dynamically chooses the result processing
+    * strategy based on the `recordFile` flag managed by RequestStateService.
+    *
+    * @param conferenceList An array of conference data to be processed.
+    * @param parentLogger The parent Pino logger instance for contextual logging.
+    * @param apiModels An object specifying which model type to use for each API stage.
+    * @param batchRequestId A unique identifier for the current batch processing request.
+    * @returns A Promise that resolves with an array of processed conference data.
+    */
     async run(
         conferenceList: ConferenceData[],
         parentLogger: Logger,
@@ -88,7 +90,8 @@ export class CrawlOrchestratorService {
             concurrency: this.taskQueueService.concurrency,
             startTime: new Date(operationStartTime).toISOString(),
             modelsDescription: modelsDesc,
-            recordFile: shouldRecordFiles, // Log chế độ hoạt động
+            recordFile: shouldRecordFiles,
+            conferenceTimeoutMs: this.conferenceProcessingTimeoutMs, // <<< LOG THÊM THÔNG TIN TIMEOUT
         }, `Starting crawl process for batch ${batchRequestId}. Record files: ${shouldRecordFiles}.`);
 
         let allProcessedData: ProcessedRowData[] = [];
@@ -107,9 +110,7 @@ export class CrawlOrchestratorService {
 
             // Phase 2: Scheduling tasks
             const tasks = conferenceList.map((conference, itemIndex) => {
-                // <<< GÓI requestStateService VÀO HÀM TASK >>>
                 return async () => {
-                    // <<< SỬA LẠI ĐỂ DÙNG requestContainer >>>
                     const processor = requestContainer.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
                         conferenceAcronym: conference.Acronym,
@@ -117,18 +118,38 @@ export class CrawlOrchestratorService {
                         batchItemIndex: itemIndex,
                         originalRequestId: conference.originalRequestId,
                     });
-                    // Truyền requestStateService vào hàm process
-                    return processor.process(
-                        conference,
-                        itemIndex,
-                        itemLogger,
-                        apiModels,
-                        batchRequestId,
-                        requestStateService // <<< TRUYỀN VÀO ĐÂY
-                    );
+
+                    const operationName = `Conference Processing: ${conference.Acronym || conference.Title || `Item ${itemIndex}`}`;
+
+                    try {
+                        // *************** ĐIỀU CHỈNH CHÍNH Ở ĐÂY ***************
+                        await withOperationTimeout(
+                            processor.process(
+                                conference,
+                                itemIndex,
+                                itemLogger,
+                                apiModels,
+                                batchRequestId,
+                                requestStateService
+                            ),
+                            this.conferenceProcessingTimeoutMs,
+                            operationName
+                        );
+                        // *******************************************************
+                    } catch (timeoutError: unknown) {
+                        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(timeoutError);
+                        itemLogger.error({
+                            err: { message: errorMessage, stack: errorStack },
+                            event: 'conference_processing_timeout',
+                            operationName: operationName
+                        }, `Conference processing task timed out: ${errorMessage}`);
+                        // Ghi nhận lỗi timeout nhưng không re-throw để các task khác vẫn tiếp tục.
+
+                    }
                 };
             });
             tasks.forEach(taskFunc => this.taskQueueService.add(taskFunc));
+
 
             // Phase 3 & 3.5: Wait for completion (Không thay đổi)
             logger.info("Waiting for all conference processing tasks to complete...");

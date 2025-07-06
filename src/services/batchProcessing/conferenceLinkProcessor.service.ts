@@ -262,6 +262,39 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
                 if (textContent) { // We check for content, not path
                     const finalLink = page.url();
+
+                    // +++++++++++++++++++++ BEGIN: LOGIC ĐIỀU CHỈNH MỚI +++++++++++++++++++++
+                    // Chỉ áp dụng logic này cho các URL đã được thay thế, không phải URL gốc.
+                    if (urlToTry !== link) {
+                        let isInvalidRedirect = false;
+                        // Sử dụng regex để tìm tất cả các số có 4 chữ số trong URL cuối cùng
+                        const fourDigitNumbers = finalLink.match(/\b\d{4}\b/g);
+
+                        if (fourDigitNumbers) {
+                            for (const numStr of fourDigitNumbers) {
+                                const yearInUrl = parseInt(numStr, 10);
+                                // Kiểm tra nếu năm trong URL nhỏ hơn ngưỡng năm cũ thứ 2
+                                if (yearInUrl < yearOld2) {
+                                    linkLogger.warn({
+                                        attemptedUrl: urlToTry,
+                                        finalUrl: finalLink,
+                                        detectedYear: yearInUrl,
+                                        thresholdYear: yearOld2,
+                                        event: 'invalid_redirect_to_old_year'
+                                    }, `URL thay thế đã redirect tới một trang của năm cũ (${yearInUrl} < ${yearOld2}). Bỏ qua URL này.`);
+                                    isInvalidRedirect = true;
+                                    break; // Tìm thấy một năm không hợp lệ, không cần kiểm tra thêm
+                                }
+                            }
+                        }
+
+                        // Nếu URL bị đánh dấu là không hợp lệ, bỏ qua và thử URL tiếp theo
+                        if (isInvalidRedirect) {
+                            continue; // Bỏ qua lần lặp này và đi đến urlToTry tiếp theo
+                        }
+                    }
+                    // ++++++++++++++++++++++ END: LOGIC ĐIỀU CHỈNH MỚI +++++++++++++++++++++++
+
                     linkLogger.info({ finalUrlProcessed: finalLink, textPath, hasContent: !!textContent, event: 'single_link_processing_success' });
                     return {
                         conferenceTitle: conference.Title,
@@ -274,7 +307,7 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
                         linkOrderIndex: linkIndex,
                     };
                 }
-                // Nếu textPath là null, vòng lặp sẽ tự động thử URL tiếp theo.
+                // Nếu textContent là null, vòng lặp sẽ tự động thử URL tiếp theo.
                 linkLogger.warn({ urlAttempted: urlToTry, event: 'initial_link_attempt_failed_no_content' }, `Attempt to process ${urlToTry} resulted in no content, trying next URL if available.`);
 
             } catch (error: unknown) {
