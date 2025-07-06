@@ -226,14 +226,27 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
 
         const yearOld1 = year - 1;
         const yearOld2 = year - 2;
+
+        const nextYear = year + 1;
+
+
         const yearStr = String(year);
+        const nextYearStr = String(nextYear);
+
         const urlsToTry: string[] = [];
 
         if (link.includes(String(yearOld1))) {
             urlsToTry.push(link.replace(new RegExp(String(yearOld1), 'g'), yearStr));
+            urlsToTry.push(link.replace(new RegExp(String(yearOld1), 'g'), nextYearStr));
+
         } else if (link.includes(String(yearOld2))) {
             urlsToTry.push(link.replace(new RegExp(String(yearOld2), 'g'), yearStr));
+            urlsToTry.push(link.replace(new RegExp(String(yearOld2), 'g'), nextYearStr));
+
+        } else if (link.includes(String(yearStr))) {
+            urlsToTry.push(link.replace(new RegExp(String(yearStr), 'g'), nextYearStr));
         }
+
         urlsToTry.push(link);
         const uniqueUrlsToTry = [...new Set(urlsToTry)];
 
