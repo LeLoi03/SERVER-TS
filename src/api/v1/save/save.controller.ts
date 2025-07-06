@@ -2,7 +2,8 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { Logger } from 'pino';
-import { LoggingService } from '../../../services/logging.service'; // Điều chỉnh path
+import { LoggingService } from '../../../services/logging.service';
+import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.service'; // <<< THAY ĐỔI: Import service cache
 
 // Interface for a single item in the batch payload from the client
 export interface PersistSaveStatusPayload {
@@ -34,13 +35,14 @@ interface BatchItemResult {
  */
 export async function handleConferenceSaveEvents(req: Request, res: Response): Promise<void> {
     const loggingService = container.resolve(LoggingService);
+    // <<< THAY ĐỔI: Resolve LogAnalysisCacheService từ container
+    const cacheService = container.resolve(LogAnalysisCacheService); 
+    
     const saveEventLogger = loggingService.getLogger('saveConferenceEvent');
-    // Use request-specific logger if available (e.g., from pino-http middleware), otherwise fallback
     const baseReqLogger = (req as any).log as Logger || saveEventLogger;
 
     const payloads = req.body as ConferenceSaveEventLogPayload[];
 
-    // Validate if the payload is an array and not empty
     if (!Array.isArray(payloads)) {
         baseReqLogger.warn({ body: req.body, type: typeof req.body }, "Invalid payload: Expected an array for batch conference-save-event.");
         res.status(400).json({
@@ -67,7 +69,6 @@ export async function handleConferenceSaveEvents(req: Request, res: Response): P
     baseReqLogger.info(`Processing batch of ${payloads.length} conference save events.`);
 
     for (const payload of payloads) {
-        // Validate individual payload item
         if (!payload || !payload.batchRequestId || !payload.acronym || !payload.title || !payload.status || !payload.clientTimestamp) {
             const errorMessage = "Missing required fields in an item.";
             baseReqLogger.warn({ itemPayload: payload }, `Invalid item in batch: ${errorMessage}`);
@@ -78,37 +79,46 @@ export async function handleConferenceSaveEvents(req: Request, res: Response): P
                 message: errorMessage
             });
             allItemsSucceeded = false;
-            continue; // Move to the next item
+            continue;
         }
 
         try {
             const logData = {
-                event: "CONFERENCE_SAVE_EVENT_RECORDED", // Clear event name
+                event: "CONFERENCE_SAVE_EVENT_RECORDED",
                 details: {
                     batchRequestId: payload.batchRequestId,
                     acronym: payload.acronym,
                     title: payload.title,
-                    recordedStatus: payload.status, // Renamed to avoid confusion with log entry status
+                    recordedStatus: payload.status,
                     clientTimestamp: payload.clientTimestamp,
-                    // You might want to add serverTimestamp here as well
                     serverTimestamp: new Date().toISOString(),
                 },
-                // Other metadata fields if needed
             };
 
-            // Log the event using the specialized logger
+            // Log the event
             saveEventLogger.info(logData, `Conference save event recorded for: ${payload.acronym} - ${payload.title}`);
+
+            // <<< THAY ĐỔI: Vô hiệu hóa cache sau khi ghi log thành công
+            // Đây là bước quan trọng để đảm bảo lần phân tích tiếp theo sẽ đọc lại dữ liệu mới.
+            // Chúng ta không cần đợi (await) nó hoàn thành để tránh làm chậm response.
+            // Việc này có thể chạy ở chế độ "fire-and-forget".
+            cacheService.invalidateCacheForRequest('conference', payload.batchRequestId)
+                .then(() => {
+                    baseReqLogger.info({ batchRequestId: payload.batchRequestId }, "Successfully invalidated analysis cache.");
+                })
+                .catch(err => {
+                    baseReqLogger.error({ err, batchRequestId: payload.batchRequestId }, "Failed to invalidate analysis cache.");
+                });
 
             results.push({
                 acronym: payload.acronym,
                 title: payload.title,
                 success: true,
-                message: "Save event logged successfully."
+                message: "Save event logged and cache invalidated." // Cập nhật message cho rõ ràng
             });
 
         } catch (error) {
             const err = error as Error;
-            // Log the error with context of the specific item
             baseReqLogger.error({ err, itemPayload: payload }, `Error processing item in conference-save-event batch for: ${payload.acronym} - ${payload.title}`);
             results.push({
                 acronym: payload.acronym,
@@ -120,7 +130,6 @@ export async function handleConferenceSaveEvents(req: Request, res: Response): P
         }
     }
 
-    // Determine overall response
     if (allItemsSucceeded) {
         baseReqLogger.info("All conference save events in batch processed successfully.");
         res.status(200).json({
@@ -130,16 +139,13 @@ export async function handleConferenceSaveEvents(req: Request, res: Response): P
         });
     } else {
         baseReqLogger.warn("Some conference save events in batch failed to process.");
-        // HTTP 207 Multi-Status is appropriate when an operation has multiple parts,
-        // and the status of each part needs to be reported.
         res.status(207).json({
-            success: false, // Overall success is false if any item failed
+            success: false,
             message: "Some save events in the batch could not be logged. Check itemized results.",
             data: results
         });
     }
 }
-
 
 
 //// ----- JOURNAL ------

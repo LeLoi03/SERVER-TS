@@ -103,24 +103,59 @@ export class PageContentExtractorService implements IPageContentExtractorService
                         return false;
                     };
 
+                    // --- BẮT ĐẦU ĐOẠN CODE CẦN THAY THẾ ---
                     document.querySelectorAll('del, s').forEach(el => {
                         const text = el.textContent;
                         if (text && text.trim()) {
+                            const trimmedText = text.trim();
                             const replacementSpan = document.createElement('span');
-                            replacementSpan.textContent = ` [Changed or passed: ${text.trim()}] `;
+
+                            // Kiểm tra xem nội dung có chứa số hay không
+                            const containsNumber = /\d/.test(trimmedText);
+
+                            if (containsNumber) {
+                                // Nếu có số (thường là ngày tháng), thêm ghi chú
+                                replacementSpan.textContent = ` [Changed or passed: ${trimmedText}] `;
+                            } else {
+                                // Nếu không có số, chỉ giữ lại nội dung gốc
+                                replacementSpan.textContent = ` ${trimmedText} `; // Thêm khoảng trắng để không bị dính chữ
+                            }
+
+                            // Thay thế thẻ <del>/<s> bằng thẻ <span> đã được xử lý
                             el.parentNode?.replaceChild(replacementSpan, el);
                         }
                     });
+                    // --- KẾT THÚC ĐOẠN CODE CẦN THAY THẾ ---
 
+                    // --- BẮT ĐẦU ĐOẠN CODE CẦN THAY THẾ ---
                     document.querySelectorAll('a').forEach(anchor => {
-                        const href = anchor.getAttribute('href');
+                        let effectiveHref = anchor.getAttribute('href'); // Bắt đầu với href gốc
                         const text = anchor.textContent;
-                        if (isRelevant(text, href)) {
+
+                        // Nếu href là một placeholder (như '#', 'javascript:void(0);', etc.)
+                        // thì thử tìm URL thật trong thuộc tính 'onclick'.
+                        const hrefIsPlaceholder = !effectiveHref || effectiveHref.trim() === '#' || effectiveHref.trim().toLowerCase().startsWith('javascript:');
+
+                        if (hrefIsPlaceholder) {
+                            const onclickAttr = anchor.getAttribute('onclick');
+                            if (onclickAttr) {
+                                // Dùng regex để trích xuất URL từ các hàm như location.href='...', window.location='...'
+                                const match = onclickAttr.match(/(?:location\.href|window\.location)\s*=\s*['"]([^'"]+)['"]/);
+                                if (match && match[1]) {
+                                    effectiveHref = match[1]; // Tìm thấy URL thật, gán lại cho effectiveHref
+                                }
+                            }
+                        }
+
+                        // Bây giờ, sử dụng effectiveHref (có thể là href gốc hoặc link từ onclick) để kiểm tra và thay thế
+                        if (isRelevant(text, effectiveHref)) {
                             const replacementSpan = document.createElement('span');
-                            replacementSpan.textContent = ` href="${href || ''}" - ${text?.trim()} `;
+                            // Sử dụng `effectiveHref` đã được xử lý
+                            replacementSpan.textContent = ` href="${effectiveHref || ''}" - ${text?.trim()} `;
                             anchor.parentNode?.replaceChild(replacementSpan, anchor);
                         }
                     });
+                    // --- KẾT THÚC ĐOẠN CODE CẦN THAY THẾ ---
 
                     document.querySelectorAll('select').forEach(selectElement => {
                         const optionsToExtract: HTMLElement[] = [];
