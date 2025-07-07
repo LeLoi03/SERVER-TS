@@ -48,6 +48,8 @@ export class AppConfiguration {
     public readonly saveJournalStatusOutputSubdir: string;
 
     public readonly crawlConcurrency: number;
+    public readonly globalCrawlConcurrency: number;
+
     public readonly apiBaseUrl: string | undefined;
 
     constructor(private appConfig: AppConfig) {
@@ -68,7 +70,7 @@ export class AppConfiguration {
         this.appLogFileName = appConfig.APP_LOG_FILE_NAME || 'app.log';
         // Không cần conferenceLogFileName và journalLogFileName nếu không có file log chung nữa
 
-         this.logToConsole = appConfig.LOG_TO_CONSOLE;
+        this.logToConsole = appConfig.LOG_TO_CONSOLE;
         // this.logRotationFrequency = appConfig.LOG_ROTATION_FREQUENCY || 'daily';
         // this.logRotationSize = appConfig.LOG_ROTATION_SIZE || '50M';
         this.logArchiveSubdir = appConfig.LOG_ARCHIVE_SUBDIR || 'archive';
@@ -86,10 +88,12 @@ export class AppConfiguration {
         this.saveJournalStatusOutputSubdir = appConfig.SAVE_JOURNAL_STATUS_OUTPUT_SUBDIR;       // Sẽ nằm trong baseOutputDirPath
 
         this.crawlConcurrency = appConfig.CRAWL_CONCURRENCY;
+        this.globalCrawlConcurrency = appConfig.GLOBAL_CRAWL_CONCURRENCY;
+
         this.apiBaseUrl = appConfig.API_BASE_URL;
     }
 
-     // --- Thư mục con cho từng loại log chính (trong logsDirectoryPath) ---
+    // --- Thư mục con cho từng loại log chính (trong logsDirectoryPath) ---
     get appLogDirectory(): string {
         return path.join(this.logsDirectoryPath, 'app');
     }

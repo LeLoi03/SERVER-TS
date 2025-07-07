@@ -9,6 +9,7 @@ import { ApiKeyManager } from './services/apiKey.manager';
 import { PlaywrightService } from './services/playwright.service';
 import { FileSystemService } from './services/fileSystem.service';
 import { TaskQueueService } from './services/taskQueue.service';
+import { GlobalConcurrencyManagerService } from './services/globalConcurrencyManager.service';
 
 // --- Gemini API Service and its Specialized Sub-Services ---
 import { GeminiApiService } from './services/geminiApi.service';
@@ -55,8 +56,11 @@ container.registerSingleton(LoggingService);
 container.registerSingleton(ApiKeyManager);
 container.registerSingleton(PlaywrightService);
 container.registerSingleton(FileSystemService);
-container.registerSingleton(TaskQueueService);
+
+
 container.registerSingleton(BatchProcessingOrchestratorService);
+
+container.registerSingleton(GlobalConcurrencyManagerService); 
 
 // --- 2. Register Gemini API Service and its Dependencies (Singletons) ---
 container.registerSingleton(GeminiClientManagerService);
@@ -85,6 +89,8 @@ container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useCl
 // Decorator @scoped(Lifecycle.ResolutionScoped) trên class đã đủ.
 // Chỉ cần đăng ký để Tsyringe biết về nó.
 container.register(RequestStateService, RequestStateService);
+container.register(TaskQueueService, TaskQueueService);
+
 container.registerSingleton(InMemoryResultCollectorService); // <<< ĐĂNG KÝ MỚI
 
 // --- 5. Register Other General and Task-Specific Services ---

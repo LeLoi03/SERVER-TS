@@ -12,38 +12,8 @@ import {
 } from '../shared/types';
 import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
+import { extractConferenceSourceData } from '../utils/transformData'; // <<< Import hàm mới
 
-// Helper function để trích xuất và format ngày (tương tự như trong transformData)
-// Bạn có thể đặt nó ở một file utils chung nếu dùng ở nhiều nơi
-const formatDateRangeForSource = (fromDateStr?: string | null, toDateStr?: string | null): string | undefined => {
-    if (!fromDateStr) return undefined;
-    try {
-        const fromDate = new Date(fromDateStr);
-        const toDate = toDateStr ? new Date(toDateStr) : fromDate;
-        if (isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) return undefined;
-
-        const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
-        const yearOption: Intl.DateTimeFormatOptions = { year: 'numeric' };
-        const fromFormatted = fromDate.toLocaleDateString('en-US', options);
-        const toFormatted = toDate.toLocaleDateString('en-US', options);
-        const year = fromDate.toLocaleDateString('en-US', yearOption);
-
-        if (fromDate.toDateString() === toDate.toDateString()) {
-            return `${fromFormatted}, ${year}`;
-        } else {
-            if (fromDate.getFullYear() === toDate.getFullYear() && fromDate.getMonth() === toDate.getMonth()) {
-                const fromDay = fromDate.toLocaleDateString('en-US', { day: 'numeric' });
-                const toDay = toDate.toLocaleDateString('en-US', { day: 'numeric' });
-                const month = fromDate.toLocaleDateString('en-US', { month: 'short' });
-                return `${month} ${fromDay}-${toDay}, ${year}`;
-            } else {
-                return `${fromFormatted} - ${toFormatted}, ${year}`;
-            }
-        }
-    } catch (error) {
-        return undefined;
-    }
-};
 
 
 export class GetConferencesHandler implements IFunctionHandler {
@@ -108,47 +78,16 @@ export class GetConferencesHandler implements IFunctionHandler {
                     modelResponseContent = apiResult.formattedData;
                     reportStep('data_found', `Successfully retrieved and processed ${dataType} data.`, { success: true, query: searchQuery, resultPreview: modelResponseContent.substring(0, 100) + "..." });
 
-                    // <<< TẠO FRONTEND ACTION TẠI ĐÂY >>>
-                    // Kiểm tra xem apiResult.rawData có phải là object và có payload không
+                    // <<< TẠO FRONTEND ACTION TẠI ĐÂY (ĐÃ CẬP NHẬT) >>>
                     if (apiResult.rawData && typeof apiResult.rawData === 'string') {
                         try {
                             const parsedRawData = JSON.parse(apiResult.rawData);
                             if (parsedRawData && Array.isArray(parsedRawData.payload) && parsedRawData.payload.length > 0) {
-                                const conferencesForFrontend: DisplayConferenceSourcesPayload['conferences'] = parsedRawData.payload.map((conf: any) => {
-                                    // Trích xuất thông tin cần thiết từ mỗi conference object
-                                    // Giả sử cấu trúc của conf object dựa trên transformConferenceData
-                                    const latestOrg = Array.isArray(conf.organizations) && conf.organizations.length > 0
-                                        ? conf.organizations[conf.organizations.length - 1]
-                                        : conf; // Fallback to conf if organizations is not as expected
 
-                                    const rankInfo = Array.isArray(latestOrg.ranks) && latestOrg.ranks.length > 0
-                                        ? latestOrg.ranks[0] // Lấy rank đầu tiên làm đại diện
-                                        : { rank: 'N/A', source: 'N/A' };
-
-                                    const location = latestOrg.locations && latestOrg.locations.length > 0
-                                        ? latestOrg.locations[0]
-                                        : {};
-                                    
-                                    let formattedLocation = "N/A";
-                                    if (location.cityStateProvince && location.country) {
-                                        formattedLocation = `${location.cityStateProvince}, ${location.country}`;
-                                    } else if (location.country) {
-                                        formattedLocation = location.country;
-                                    } else if (location.address) { // Fallback to address if city/country not available
-                                        formattedLocation = location.address;
-                                    }
-
-
-                                    return {
-                                        id: conf.id || 'unknown-id',
-                                        title: latestOrg.title || conf.title || 'Untitled Conference',
-                                        acronym: latestOrg.acronym || conf.acronym,
-                                        rank: rankInfo.rank,
-                                        source: rankInfo.source,
-                                        conferenceDates: formatDateRangeForSource(latestOrg.dates?.find((d:any) => d.type === 'conferenceDates')?.fromDate, latestOrg.dates?.find((d:any) => d.type === 'conferenceDates')?.toDate),
-                                        location: formattedLocation,
-                                    };
-                                }).slice(0, 5); // Giới hạn số lượng hiển thị, ví dụ 5
+                                const conferencesForFrontend = parsedRawData.payload
+                                    .map((conf: any) => extractConferenceSourceData(conf)) // Sử dụng hàm tiện ích
+                                    .filter((data: any): data is NonNullable<typeof data> => data !== null) // Lọc ra các kết quả null
+                                    .slice(0, 5); // Giới hạn 5
 
                                 if (conferencesForFrontend.length > 0) {
                                     frontendAction = {
@@ -158,7 +97,7 @@ export class GetConferencesHandler implements IFunctionHandler {
                                             title: `Found Conferences (Sources):`
                                         }
                                     };
-                                    logToFile(`${logPrefix} Created 'displayConferenceSources' action with ${conferencesForFrontend.length} items.`);
+                                    logToFile(`${logPrefix} Created 'displayConferenceSources' action with ${conferencesForFrontend.length} items using unified logic.`);
                                 }
                             }
                         } catch (parseError) {
@@ -166,7 +105,7 @@ export class GetConferencesHandler implements IFunctionHandler {
                         }
                     }
                     // <<< KẾT THÚC TẠO FRONTEND ACTION >>>
-
+                    
                 } else { // formattedData là null nhưng API thành công (có thể rawData có)
                     modelResponseContent = apiResult.rawData ?? (apiResult.errorMessage || `Received raw ${dataType} data for "${searchQuery}", but formatting was unavailable.`);
                     const warningMsg = `Data formatting issue for ${dataType}. Displaying raw data or error message.`;

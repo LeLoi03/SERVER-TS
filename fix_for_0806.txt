@@ -1,43 +1,5 @@
-fix mấy cái no info trong visualization
-
-fix topics gemini trả về
-
-
-điều chỉnh làm sao để re crawl có thiết lập có re crawl non main likn không
-
-thêm sytsem insttruction trả về link trang chủ nếu không còn lựa chọn nào khác, thêm yêu cầu để sửa lỗi link trong call for papers trả vè không full URL
-
-INDIN UCC
-
-thêm ràng buộc trang conferences, nút xóa conference.
-
-thêm trả về conference non link
-
-fix trạng thái lưu
-
-STATUS CÁC PHẦN TRÊN TABLE CHƯA ĐÚNG , TOÀN LÀ BẮT ĐẦU ĐÃ SUCCES
-
-Task marked as failed in final metrics due to: Gemini extract failed.
-
-chưa completed vẫn bấm save được
-
 THÊM PỂ PAGE JOURNAL , LOG
 
-
-
-fix lỗi apply update
-
-fixx side bả admin nổi mbile
-
 fix link error nhưng không hiện
-
-check JSSPP
-
-
-check ADMA
-
-bổ sung system instruction kêu phân loại ngày chính xác 
-
-
 
 fix request phải đợi nhau để ghi csv

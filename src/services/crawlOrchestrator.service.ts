@@ -1,11 +1,10 @@
 import 'reflect-metadata';
-import { singleton, inject, container, DependencyContainer } from 'tsyringe';
-import fs from 'fs';
+import { singleton, inject, DependencyContainer } from 'tsyringe';
 import { Logger } from 'pino';
 
 // --- Types ---
 import { AppConfig } from '../config/types';
-import { ConferenceData, ProcessedRowData, ApiModels, InputRowData } from '../types/crawl/crawl.types';
+import { ConferenceData, ProcessedRowData, ApiModels } from '../types/crawl/crawl.types';
 
 // --- Service Imports ---
 import { ConfigService } from '../config';
@@ -19,21 +18,26 @@ import { BatchProcessingOrchestratorService } from './batchProcessingOrchestrato
 import { TaskQueueService } from './taskQueue.service';
 import { ConferenceProcessorService } from './conferenceProcessor.service';
 import { GeminiApiService } from './geminiApi.service';
-import { RequestStateService } from './requestState.service'; // <<< IMPORT MỚI
+import { RequestStateService } from './requestState.service';
+import { InMemoryResultCollectorService } from './inMemoryResultCollector.service';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
-import { InMemoryResultCollectorService } from './inMemoryResultCollector.service'; // <<< IMPORT MỚI
 import { withOperationTimeout } from './batchProcessing/utils';
+
+// <<< THAY ĐỔI 1: IMPORT GLOBAL CONCURRENCY MANAGER >>>
+import { GlobalConcurrencyManagerService } from './globalConcurrencyManager.service';
 
 /**
  * Orchestrates the entire crawling and data processing workflow.
  * This service coordinates various sub-services and decides the processing path
  * (file-based vs. in-memory) based on the request state.
+ * It uses a request-specific TaskQueueService for task isolation and a global
+ * GlobalConcurrencyManagerService to control the overall system load.
  */
 @singleton()
 export class CrawlOrchestratorService {
     private readonly configApp: AppConfig;
     private readonly baseLogger: Logger;
-    private readonly conferenceProcessingTimeoutMs: number; // <<< THÊM THUỘC TÍNH MỚI
+    private readonly conferenceProcessingTimeoutMs: number;
 
     constructor(
         @inject(ConfigService) private configService: ConfigService,
@@ -44,14 +48,15 @@ export class CrawlOrchestratorService {
         @inject(HtmlPersistenceService) private htmlPersistenceService: HtmlPersistenceService,
         @inject(ResultProcessingService) private resultProcessingService: ResultProcessingService,
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
-        @inject(TaskQueueService) private taskQueueService: TaskQueueService,
+        // TaskQueueService không còn được inject ở đây vì nó sẽ được resolve theo từng request
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
-        @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService, // <<< INJECT MỚI
-
+        @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService,
+        // <<< THAY ĐỔI 2: INJECT GLOBAL CONCURRENCY MANAGER (SINGLETON) >>>
+        @inject(GlobalConcurrencyManagerService) private globalConcurrencyManager: GlobalConcurrencyManagerService
     ) {
         this.baseLogger = this.loggingService.getLogger('conference', { service: 'CrawlOrchestratorServiceBase' });
         this.configApp = this.configService.rawConfig;
-        this.conferenceProcessingTimeoutMs = 6 * 60 * 1000; // 6 phút = 360,000 ms // <<< KHỞI TẠO THUỘC TÍNH MỚ
+        this.conferenceProcessingTimeoutMs = 6 * 60 * 1000; // 6 phút
     }
 
     /**
@@ -63,6 +68,8 @@ export class CrawlOrchestratorService {
     * @param parentLogger The parent Pino logger instance for contextual logging.
     * @param apiModels An object specifying which model type to use for each API stage.
     * @param batchRequestId A unique identifier for the current batch processing request.
+    * @param requestStateService The state service specific to this request.
+    * @param requestContainer The dependency container specific to this request.
     * @returns A Promise that resolves with an array of processed conference data.
     */
     async run(
@@ -71,7 +78,7 @@ export class CrawlOrchestratorService {
         apiModels: ApiModels,
         batchRequestId: string,
         requestStateService: RequestStateService,
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer
     ): Promise<ProcessedRowData[]> {
         const logger = parentLogger.child({
             service: 'CrawlOrchestratorRun',
@@ -79,28 +86,31 @@ export class CrawlOrchestratorService {
             batchRequestId: batchRequestId,
         });
 
+        // <<< THAY ĐỔI 3: RESOLVE TASK QUEUE SERVICE TỪ CONTAINER CỦA REQUEST >>>
+        // Điều này đảm bảo mỗi request có một hàng đợi riêng, cho phép `onIdle` hoạt động chính xác.
+        const requestTaskQueue = requestContainer.resolve(TaskQueueService);
+
         const operationStartTime = Date.now();
-        // <<< DÙNG TRỰC TIẾP TỪ THAM SỐ >>>
         const shouldRecordFiles = requestStateService.shouldRecordFiles();
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
 
         logger.info({
             event: 'crawl_orchestrator_start',
             totalConferences: conferenceList.length,
-            concurrency: this.taskQueueService.concurrency,
+            requestQueueConcurrency: requestTaskQueue.concurrency, // Log concurrency của queue request
+            globalQueueConcurrency: this.globalConcurrencyManager.size, // Log concurrency của queue toàn cục
             startTime: new Date(operationStartTime).toISOString(),
             modelsDescription: modelsDesc,
             recordFile: shouldRecordFiles,
-            conferenceTimeoutMs: this.conferenceProcessingTimeoutMs, // <<< LOG THÊM THÔNG TIN TIMEOUT
-        }, `Starting crawl process for batch ${batchRequestId}. Record files: ${shouldRecordFiles}.`);
+            conferenceTimeoutMs: this.conferenceProcessingTimeoutMs,
+        }, `Starting crawl process for batch ${batchRequestId}.`);
 
         let allProcessedData: ProcessedRowData[] = [];
         let crawlError: Error | null = null;
 
         try {
-            // Phase 0 & 1: Reset & Prepare Environment (Không thay đổi)
-            // <<< THAY ĐỔI NƠI XÓA DỮ LIỆU CŨ >>>
-            this.resultCollector.clear(); // Xóa bộ sưu tập khi bắt đầu một lần chạy mới
+            // Phase 0 & 1: Reset & Prepare Environment
+            this.resultCollector.clear();
             this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger);
             this.htmlPersistenceService.resetState(logger);
             await this.fileSystemService.prepareOutputArea(logger);
@@ -110,90 +120,107 @@ export class CrawlOrchestratorService {
 
             // Phase 2: Scheduling tasks
             const tasks = conferenceList.map((conference, itemIndex) => {
+                // <<< THAY ĐỔI: CHUẨN HÓA TITLE VÀ ACRONYM TẠI ĐÂY >>>
+                // Regex `/\s*\(.*?\)/g` tìm kiếm:
+                // \s*      : khoảng trắng (0 hoặc nhiều) đứng trước dấu (
+                // \(.*_?\)  : nội dung bất kỳ bên trong cặp ()
+                // g        : global, để thay thế tất cả các lần xuất hiện
+                // .trim()  : loại bỏ khoảng trắng thừa ở đầu/cuối chuỗi sau khi thay thế
+                const normalizedConference: ConferenceData = {
+                    ...conference,
+                    Title: conference.Title.replace(/\s*\(.*?\)/g, '').trim(),
+                    Acronym: conference.Acronym.replace(/\s*\(.*?\)/g, '').trim(),
+                };
+
+                // Hàm task này sẽ được thêm vào hàng đợi của request.
                 return async () => {
-                    const processor = requestContainer.resolve(ConferenceProcessorService);
                     const itemLogger = logger.child({
-                        conferenceAcronym: conference.Acronym,
-                        conferenceTitle: conference.Title,
+                        // <<< THAY ĐỔI: SỬ DỤNG DỮ LIỆU ĐÃ CHUẨN HÓA ĐỂ LOGGING >>>
+                        conferenceAcronym: normalizedConference.Acronym,
+                        conferenceTitle: normalizedConference.Title,
                         batchItemIndex: itemIndex,
-                        originalRequestId: conference.originalRequestId,
+                        originalRequestId: normalizedConference.originalRequestId,
                     });
+                    const operationName = `Conference Processing: ${normalizedConference.Acronym || normalizedConference.Title || `Item ${itemIndex}`}`;
 
-                    const operationName = `Conference Processing: ${conference.Acronym || conference.Title || `Item ${itemIndex}`}`;
-
-                    try {
-                        // *************** ĐIỀU CHỈNH CHÍNH Ở ĐÂY ***************
-                        await withOperationTimeout(
-                            processor.process(
-                                conference,
-                                itemIndex,
-                                itemLogger,
-                                apiModels,
-                                batchRequestId,
-                                requestStateService
-                            ),
-                            this.conferenceProcessingTimeoutMs,
-                            operationName
-                        );
-                        // *******************************************************
-                    } catch (timeoutError: unknown) {
-                        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(timeoutError);
-                        itemLogger.error({
-                            err: { message: errorMessage, stack: errorStack },
-                            event: 'conference_processing_timeout',
-                            operationName: operationName
-                        }, `Conference processing task timed out: ${errorMessage}`);
-                        // Ghi nhận lỗi timeout nhưng không re-throw để các task khác vẫn tiếp tục.
-
-                    }
+                    // <<< THAY ĐỔI 4: BỌC LOGIC XỬ LÝ THỰC TẾ VÀO GLOBAL MANAGER >>>
+                    // Lệnh `await` ở đây là mấu chốt. Nó đảm bảo rằng task trong hàng đợi của request
+                    // (requestTaskQueue) chỉ được coi là hoàn thành (resolved) khi tác vụ bên trong
+                    // hàng đợi toàn cục (globalConcurrencyManager) đã thực sự chạy xong.
+                    await this.globalConcurrencyManager.run(async () => {
+                        try {
+                            // Logic xử lý một conference, được resolve từ container của request
+                            const processor = requestContainer.resolve(ConferenceProcessorService);
+                            await withOperationTimeout(
+                                processor.process(
+                                    // <<< THAY ĐỔI: TRUYỀN DỮ LIỆU ĐÃ CHUẨN HÓA VÀO PROCESSOR >>>
+                                    normalizedConference,
+                                    itemIndex,
+                                    itemLogger,
+                                    apiModels,
+                                    batchRequestId,
+                                    requestStateService
+                                ),
+                                this.conferenceProcessingTimeoutMs,
+                                operationName
+                            );
+                        } catch (processingError: unknown) {
+                            // Bắt lỗi từ withOperationTimeout hoặc processor.process
+                            const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(processingError);
+                            itemLogger.error({
+                                err: { message: errorMessage, stack: errorStack },
+                                event: 'conference_processing_failed_within_gate',
+                                operationName: operationName
+                            }, `Conference processing task failed inside the global concurrency gate: ${errorMessage}`);
+                            // Không re-throw để các task khác trong batch vẫn tiếp tục
+                        }
+                    });
                 };
             });
-            tasks.forEach(taskFunc => this.taskQueueService.add(taskFunc));
 
 
-            // Phase 3 & 3.5: Wait for completion (Không thay đổi)
-            logger.info("Waiting for all conference processing tasks to complete...");
-            await this.taskQueueService.onIdle();
-            logger.info("All conference processing tasks finished.");
-            logger.info("Waiting for background batch save/append operations to complete...");
+            // Thêm tất cả các task đã được chuẩn bị vào hàng đợi CỦA REQUEST
+            tasks.forEach(taskFunc => requestTaskQueue.add(taskFunc));
+
+            // Phase 3 & 3.5: Wait for completion
+            logger.info("Waiting for all conference processing tasks in this request to complete...");
+            // `onIdle` bây giờ sẽ hoạt động chính xác, nó chờ cho đến khi tất cả các task
+            // trong `requestTaskQueue` hoàn thành. Vì mỗi task có `await` lời gọi đến
+            // global manager, nên `onIdle` sẽ chỉ resolve khi tất cả công việc thực tế đã xong.
+            await requestTaskQueue.onIdle();
+            logger.info("All conference processing tasks for this request have finished.");
+
+            logger.info("Waiting for any background batch save/append operations to complete...");
             await this.batchProcessingOrchestratorService.awaitCompletion(logger);
             logger.info("All background batch operations finished.");
 
-            // <<< PHASE 4: PROCESSING FINAL OUTPUT (LOGIC RẼ NHÁNH) >>>
+
+            // Phase 4: Processing Final Output
             logger.info("Phase 4: Processing final output...");
             if (shouldRecordFiles) {
-                // --- LUỒNG CŨ: Ghi file và xử lý từ file ---
                 logger.info({ event: 'processing_path_file', batchRequestId }, "Processing results via file I/O path (JSONL -> CSV).");
                 allProcessedData = await this.resultProcessingService.processOutput(logger, batchRequestId);
             } else {
                 logger.info({ event: 'processing_path_memory' }, "Processing results via in-memory path.");
-                // <<< THAY ĐỔI NƠI LẤY DỮ LIỆU >>>
                 const rawResults = this.resultCollector.get();
                 logger.info({ recordCount: rawResults.length }, "Retrieved raw results from in-memory collector.");
                 allProcessedData = await this.resultProcessingService.processInMemoryData(rawResults, logger);
             }
             logger.info(`Result processing finished. Collected ${allProcessedData.length} final records.`);
 
-            // Phần log kiểm tra CSV sau đó vẫn hoạt động. Nếu không ghi file, nó sẽ log là file không tồn tại, điều này là đúng.
-            if (allProcessedData.length > 0) {
-                logger.info({ event: 'data_collection_success', count: allProcessedData.length }, `Successfully collected ${allProcessedData.length} processed records for the response.`);
-            } else {
-                logger.warn({ event: 'data_collection_empty' }, "Final processed data collection is empty.");
-            }
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             logger.fatal({ err: { message: errorMessage, stack: errorStack }, event: 'crawl_fatal_error', batchRequestId }, `Fatal error during crawling process: "${errorMessage}"`);
             crawlError = error instanceof Error ? error : new Error(errorMessage);
         } finally {
-            // Phase 5: Cleanup (Không thay đổi)
+            // Phase 5: Cleanup
             logger.info("Phase 5: Performing final cleanup...");
             await this.playwrightService.close(logger);
             if (!this.configService.isProduction) {
                 await this.fileSystemService.cleanupTempFiles();
                 logger.info("Temp files cleanup finished.");
             }
-
             logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
         }
 
@@ -201,7 +228,6 @@ export class CrawlOrchestratorService {
             throw crawlError;
         }
 
-        // Luôn trả về dữ liệu đã xử lý, đảm bảo log trong controller có đủ thông tin.
         return allProcessedData;
     }
 }

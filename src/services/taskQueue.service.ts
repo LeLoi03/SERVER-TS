@@ -1,48 +1,40 @@
 // src/services/taskQueue.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
-import PQueue from 'p-queue'; // Import PQueue library
+// THAY ĐỔI: Bỏ singleton, dùng injectable
+import { injectable, inject } from 'tsyringe';
+import PQueue from 'p-queue';
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { Logger } from 'pino';
-import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
+import { getErrorMessageAndStack } from '../utils/errorUtils';
 
-/**
- * Service that manages a task queue using `p-queue` to control concurrency
- * for various asynchronous operations (e.g., conference processing tasks).
- * It logs queue status and errors.
- */
-@singleton()
+@injectable() // <<< THAY ĐỔI Ở ĐÂY
 export class TaskQueueService {
     private readonly logger: Logger;
-    private readonly queue: PQueue; // The underlying PQueue instance
-    public readonly concurrency: number; // Configured concurrency limit
+    private readonly queue: PQueue;
+    public readonly concurrency: number;
 
-    /**
-     * Constructs an instance of TaskQueueService.
-     * @param {ConfigService} configService - The injected configuration service to get `CRAWL_CONCURRENCY`.
-     * @param {LoggingService} loggingService - The injected logging service to obtain a logger instance.
-     */
     constructor(
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
     ) {
+        // Logger này giờ sẽ là một phần của request-specific container,
+        // nhưng để đơn giản, ta vẫn có thể tạo nó như cũ.
         this.logger = this.loggingService.getLogger('conference', { service: 'TaskQueueService' });
-        // Retrieve the concurrency limit from application configuration
+
+        // Đọc biến CRAWL_CONCURRENCY (giới hạn cho mỗi request)
         this.concurrency = this.configService.crawlConcurrency;
 
-        // Initialize the PQueue instance with the configured concurrency
+        // Khởi tạo PQueue cho request này
         this.queue = new PQueue({ concurrency: this.concurrency });
-        this.logger.info({ event: 'task_queue_init_success', concurrency: this.concurrency }, `Task queue initialized with concurrency: ${this.concurrency}.`);
+        this.logger.info({
+            event: 'request_queue_init',
+            concurrency: this.concurrency
+        }, `Request-specific task queue initialized with concurrency: ${this.concurrency}.`);
 
-        // --- Event Listeners for PQueue (names are kept consistent with p-queue events) ---
-        // 'active' event: Fired when a task starts running.
-        this.queue.on('active', () => {
-            this.logger.trace({ size: this.queue.size, pending: this.queue.pending, event: 'queue_task_active' }, 'Queue task active. Queue size: %d, pending: %d.', this.queue.size, this.queue.pending);
-        });
-        // 'idle' event: Fired when the queue becomes empty and all tasks have completed.
+        // Các event listener giữ nguyên, chúng sẽ log cho queue của request này
         this.queue.on('idle', () => {
-            this.logger.debug({ event: 'queue_idle' }, 'Task queue is now idle. All tasks completed.');
+            this.logger.debug({ event: 'request_queue_idle' }, 'Request-specific task queue is now idle.');
         });
         // 'error' event: Fired when a task function throws an uncaught error.
         this.queue.on('error', (error: unknown) => { // Catch as unknown for type safety

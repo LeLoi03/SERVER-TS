@@ -55,6 +55,56 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
 };
 
 /**
+ * Parses a query string into an object.
+ * Handles multiple values for the same key (e.g., topics=AI&topics=ML).
+ * @param queryString The URL-encoded query string.
+ * @returns An object representing the query parameters.
+ */
+function parseQueryString(queryString: string): Record<string, string | string[]> {
+    const params: Record<string, string | string[]> = {};
+    if (!queryString) return params;
+
+    queryString.split('&').forEach(pair => {
+        const parts = pair.split('=');
+        if (parts.length === 2) {
+            const key = decodeURIComponent(parts[0]);
+            const value = decodeURIComponent(parts[1]);
+            if (params.hasOwnProperty(key)) {
+                if (Array.isArray(params[key])) {
+                    (params[key] as string[]).push(value);
+                } else {
+                    params[key] = [params[key] as string, value];
+                }
+            } else {
+                params[key] = value;
+            }
+        }
+    });
+    return params;
+}
+
+/**
+ * Converts a parameter object back into a URL-encoded query string.
+ * @param params The object representing the query parameters.
+ * @returns A URL-encoded query string.
+ */
+function buildQueryString(params: Record<string, string | string[]>): string {
+    const parts: string[] = [];
+    for (const key in params) {
+        if (params.hasOwnProperty(key)) {
+            const value = params[key];
+            if (Array.isArray(value)) {
+                value.forEach(val => parts.push(`${key}=${val}`));
+            } else {
+                parts.push(`${key}=${value}`);
+            }
+        }
+    }
+    return parts.join('&');
+}
+
+
+/**
  * Executes a GET request to a specified backend API endpoint.
  * It handles network calls, HTTP status checks, JSON parsing, and optional data transformation.
  *
@@ -65,8 +115,76 @@ const dataTransformers: Record<string, DataTransformer | undefined> = {
  *                                  indicating success status, raw data, formatted data, and any error messages.
  */
 export async function executeApiCall(endpoint: string, queryString: string): Promise<ApiCallResult> {
-    const fullUrl = `${DATABASE_URL}/${endpoint}?${queryString}`;
+    // --- START OF MODIFICATION (Date Normalization) ---
+    let effectiveQueryString = queryString;
     const logContext = `${LOG_PREFIX} [${endpoint}]`; // Context for logging
+
+    // 1. Parse the initial query string into a mutable object
+    const queryParams = parseQueryString(queryString);
+
+    // Define date parameter prefixes
+    const datePrefixes = ['sub', 'cameraReady', 'notification', 'registration', '']; // '' for general 'from/toDate'
+
+    let modifiedForDates = false;
+
+    // Iterate through each date prefix to ensure 'FromDate' and 'ToDate' pairs are complete
+    datePrefixes.forEach(prefix => {
+        const fromKey = `${prefix}FromDate`;
+        const toKey = `${prefix}ToDate`;
+
+        const hasFrom = queryParams.hasOwnProperty(fromKey);
+        const hasTo = queryParams.hasOwnProperty(toKey);
+
+        if (hasFrom && !hasTo) {
+            // If 'FromDate' exists but 'ToDate' doesn't, set 'ToDate' to be the same as 'FromDate'
+            queryParams[toKey] = queryParams[fromKey];
+            logToFile(`${logContext} Normalized date: Added '${toKey}=${queryParams[fromKey]}' because '${fromKey}' was present without '${toKey}'.`);
+            modifiedForDates = true;
+        } else if (!hasFrom && hasTo) {
+            // If 'ToDate' exists but 'FromDate' doesn't, set 'FromDate' to be the same as 'ToDate'
+            queryParams[fromKey] = queryParams[toKey];
+            logToFile(`${logContext} Normalized date: Added '${fromKey}=${queryParams[toKey]}' because '${toKey}' was present without '${fromKey}'.`);
+            modifiedForDates = true;
+        }
+        // If both exist or neither exist, do nothing for this pair.
+    });
+
+    // Rebuild the query string after date normalization
+    if (modifiedForDates) {
+        effectiveQueryString = buildQueryString(queryParams);
+        logToFile(`${logContext} Query string after date normalization: ${effectiveQueryString}`);
+    }
+
+    // --- END OF MODIFICATION (Date Normalization) ---
+
+
+    // --- START OF MODIFICATION (Detail Mode Logic - moved after date normalization) ---
+    // Keywords that trigger the detailed view mode.
+    const detailModeKeywords = [
+        'subFromDate', 'subToDate',
+        'cameraReadyFromDate', 'cameraReadyToDate',
+        'notificationFromDate', 'notificationToDate',
+        'registrationFromDate', 'registrationToDate'
+    ];
+
+    // Check if the query contains any of the keywords.
+    const needsDetailMode = detailModeKeywords.some(keyword =>
+        effectiveQueryString.includes(keyword) // Use effectiveQueryString here
+    );
+
+    // If detail mode is needed and not already present, append it.
+    if (needsDetailMode && !effectiveQueryString.includes('mode=detail')) {
+        if (effectiveQueryString.length > 0 && !effectiveQueryString.endsWith('&')) {
+            effectiveQueryString += '&';
+        }
+        effectiveQueryString += 'mode=detail';
+        logToFile(`${logContext} Keyword detected in query. Automatically adding 'mode=detail'.`);
+    }
+    // --- END OF MODIFICATION (Detail Mode Logic) ---
+
+
+    // Use the potentially modified query string from here on.
+    const fullUrl = `${DATABASE_URL}/${endpoint}?${effectiveQueryString}`;
 
     logToFile(`${logContext} Executing API call: GET ${fullUrl}`);
 
@@ -140,10 +258,10 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         if (transformer) {
             logToFile(`${logContext} Applying transformation function: ${transformer.name || 'anonymous function'}.`);
             try {
-                // Call the transformer with the *parsed* data and the original query string
-                formattedData = transformer(parsedData, queryString);
+                // Call the transformer with the *parsed* data and the *effective* query string
+                formattedData = transformer(parsedData, effectiveQueryString);
                 if (formattedData !== null) {
-                    logToFile(`${logContext} Transformation successful. Transformed data preview: \n${formattedData.substring(0, Math.min(formattedData.length, 250))}...`);
+                    // logToFile(`${logContext} Transformation successful. Transformed data preview: \n${formattedData}...`);
                 } else {
                     logToFile(`${logContext} Transformation function returned null, indicating no meaningful data to format.`);
                 }

@@ -113,10 +113,10 @@ export async function handleStreaming(
                 if (eventName === 'chat_result' && finalFrontendActionStreaming) {
                     (dataToSend as ResultUpdate).action = finalFrontendActionStreaming;
                 }
-                 // Đảm bảo data.sources được truyền nếu có
-                    if ((data as ResultUpdate).sources) { // data ở đây là ResultUpdate
-                        dataToSend.sources = (data as ResultUpdate).sources;
-                    }
+                // Đảm bảo data.sources được truyền nếu có
+                if ((data as ResultUpdate).sources) { // data ở đây là ResultUpdate
+                    dataToSend.sources = (data as ResultUpdate).sources;
+                }
             }
             socket.emit(eventName, dataToSend);
             return true;
@@ -273,10 +273,33 @@ export async function handleStreaming(
                                 functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { content: JSON.stringify(subAgentResponse.resultData || "Sub agent task completed.") } }
                                 };
+                                
+                                // <<< SỬA ĐỔI: LOGIC GỘP FRONTEND ACTION >>>
                                 if (subAgentResponse.frontendAction) {
-                                    finalFrontendActionStreaming = subAgentResponse.frontendAction;
+                                    // Chỉ xử lý gộp cho 'displayConferenceSources'
+                                    if (subAgentResponse.frontendAction.type === 'displayConferenceSources') {
+                                        // Nếu finalFrontendActionStreaming đã tồn tại và cũng là 'displayConferenceSources'
+                                        if (finalFrontendActionStreaming && finalFrontendActionStreaming.type === 'displayConferenceSources') {
+                                            // Gộp mảng 'conferences' lại
+                                            finalFrontendActionStreaming.payload.conferences.push(
+                                                ...subAgentResponse.frontendAction.payload.conferences
+                                            );
+                                            logToFile(`${baseLogContext} Turn ${currentHostTurn} Merged 'displayConferenceSources' action. Total conferences: ${finalFrontendActionStreaming.payload.conferences.length}`);
+                                        } else {
+                                            // Nếu chưa có, hoặc type khác, thì gán mới (ghi đè hành vi cũ cho các action khác)
+                                            finalFrontendActionStreaming = subAgentResponse.frontendAction;
+                                            logToFile(`${baseLogContext} Turn ${currentHostTurn} Initialized 'displayConferenceSources' action.`);
+                                        }
+                                    } else {
+                                        // Đối với các loại action khác, vẫn giữ hành vi ghi đè
+                                        finalFrontendActionStreaming = subAgentResponse.frontendAction;
+                                        logToFile(`${baseLogContext} Turn ${currentHostTurn} Set frontend action of type: ${subAgentResponse.frontendAction.type}`);
+                                    }
+
+                                    // Gọi callback onActionGenerated với action đã được cập nhật/gộp
                                     onActionGenerated?.(finalFrontendActionStreaming);
                                 }
+                                // <<< KẾT THÚC SỬA ĐỔI >>>
                             } else {
                                 functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } }
@@ -311,12 +334,12 @@ export async function handleStreaming(
                 nextTurnInputForLlm = [functionResponseContentPart]; // Đây sẽ là input cho lượt LLM tiếp theo
                 currentHostTurn++;
                 continue; // Tiếp tục vòng lặp để LLM xử lý function response
-             } else if (hostAgentLLMResult.stream) {
+            } else if (hostAgentLLMResult.stream) {
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
                 if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
                     const finalModelParts = streamOutput.parts && streamOutput.parts.length > 0 ? streamOutput.parts : [{ text: streamOutput.fullText }];
-                    
+
                     const finalModelTurn: ChatHistoryItem = {
                         role: 'model',
                         parts: finalModelParts,
@@ -346,16 +369,16 @@ export async function handleStreaming(
                     // Bạn có thể thêm logic để LLM tự xác định sources khác ở đây nếu cần (ví dụ từ nội dung trả về của LLM)
 
                     completeHistoryToSave.push(finalModelTurn);
-                    
-                    const resultPayload: ResultUpdate = { 
-                        type: 'result', 
-                        message: streamOutput.fullText, 
-                        parts: finalModelParts, 
+
+                    const resultPayload: ResultUpdate = {
+                        type: 'result',
+                        message: streamOutput.fullText,
+                        parts: finalModelParts,
                         id: botMessageUuid,
                         sources: finalModelTurn.sources // <<< TRUYỀN SOURCES
                     };
                     safeEmitStreaming('chat_result', resultPayload);
-                    
+
                     logToFile(`${turnLogContext} Stream processed. Final model turn UUID: ${botMessageUuid} added. Sources: ${JSON.stringify(finalModelTurn.sources)}. completeHistoryToSave length: ${completeHistoryToSave.length}`);
                     return completeHistoryToSave; // Kết thúc và trả về lịch sử hoàn chỉnh
                 } else {

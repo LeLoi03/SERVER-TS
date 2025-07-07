@@ -158,12 +158,19 @@ export const envSchema = z.object({
      */
     BASE_OUTPUT_DIR: z.string().default('./data/crawl_output'),
 
-    // --- P-Queue / Concurrency Configuration ---
+    // --- Per Request P-Queue / Concurrency Configuration ---
     /**
-     * Maximum number of concurrent crawl operations.
+     * Maximum number of concurrent crawl operations per request. 
      * @default 5
      */
     CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(5),
+
+    // --- App P-Queue / Concurrency Configuration ---
+    /**
+     * Maximum number of concurrent crawl operations in global app.
+     * @default 5
+     */
+    GLOBAL_CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(5),
 
     // --- Playwright Configuration ---
     /**
@@ -320,10 +327,10 @@ export const envSchema = z.object({
 
     // --- Gemini API - Host Agent Specific Configuration ---
     /**
-     * Model name for the main Host Agent (e.g., 'gemini-2.0-flash').
-     * @default 'gemini-2.0-flash'
+     * Model name for the main Host Agent (e.g., 'gemini-2.5-flash').
+     * @default 'gemini-2.5-flash'
      */
-    GEMINI_HOST_AGENT_MODEL_NAME: z.string().optional().default("gemini-2.0-flash"),
+    GEMINI_HOST_AGENT_MODEL_NAME: z.string().optional().default("gemini-2.5-flash"),
     /**
      * Temperature for the Host Agent's generation.
      * @default 1.0 (more creative)
@@ -351,10 +358,10 @@ export const envSchema = z.object({
 
     // --- Gemini API - Sub Agent Specific Configuration ---
     /**
-     * Model name for general Sub Agents (e.g., 'gemini-1.5-flash-latest').
-     * @default 'gemini-1.5-flash-latest'
+     * Model name for general Sub Agents (e.g., 'gemini-2.5-flash-lite-preview-06-17').
+     * @default 'gemini-2.5-flash-lite-preview-06-17'
      */
-    GEMINI_SUB_AGENT_MODEL_NAME: z.string().optional().default("gemini-1.5-flash-latest"),
+    GEMINI_SUB_AGENT_MODEL_NAME: z.string().optional().default("gemini-2.5-flash-lite-preview-06-17"),
     /**
      * Temperature for Sub Agents' generation.
      * @default 0.7

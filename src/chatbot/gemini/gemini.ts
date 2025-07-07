@@ -333,8 +333,8 @@ export class Gemini {
         }
 
         logToFile(`${handlerIdForLog} Sending ${contentsToSend.length} Content items for stream. Model: ${this.modelId}`);
-        logToFile(`${handlerIdForLog} ContentsToSend (first 2 items): ${JSON.stringify(contentsToSend.slice(0, 2), null, 2)}`);
-        if (contentsToSend.length > 2) logToFile(`${handlerIdForLog} ContentsToSend (last 2 items): ${JSON.stringify(contentsToSend.slice(-2), null, 2)}`);
+        // logToFile(`${handlerIdForLog} ContentsToSend (first 2 items): ${JSON.stringify(contentsToSend.slice(0, 2), null, 2)}`);
+        // if (contentsToSend.length > 2) logToFile(`${handlerIdForLog} ContentsToSend (last 2 items): ${JSON.stringify(contentsToSend.slice(-2), null, 2)}`);
 
         try {
             const streamGenerator = await this.ai.models.generateContentStream({

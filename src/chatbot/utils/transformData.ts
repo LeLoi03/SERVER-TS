@@ -103,6 +103,98 @@ const formatDateTypeHeader = (dateType: string): string => {
 };
 
 
+export interface ConferenceSourceData {
+    id: string;
+    title: string;
+    acronym?: string;
+    rank: string;
+    source: string;
+    conferenceDates?: string;
+    location: string;
+}
+
+
+
+// Helper function để trích xuất và format ngày (tương tự như trong transformData)
+// Bạn có thể đặt nó ở một file utils chung nếu dùng ở nhiều nơi
+const formatDateRangeForSource = (fromDateStr?: string | null, toDateStr?: string | null): string | undefined => {
+    if (!fromDateStr) return undefined;
+    try {
+        const fromDate = new Date(fromDateStr);
+        const toDate = toDateStr ? new Date(toDateStr) : fromDate;
+        if (isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) return undefined;
+
+        const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
+        const yearOption: Intl.DateTimeFormatOptions = { year: 'numeric' };
+        const fromFormatted = fromDate.toLocaleDateString('en-US', options);
+        const toFormatted = toDate.toLocaleDateString('en-US', options);
+        const year = fromDate.toLocaleDateString('en-US', yearOption);
+
+        if (fromDate.toDateString() === toDate.toDateString()) {
+            return `${fromFormatted}, ${year}`;
+        } else {
+            if (fromDate.getFullYear() === toDate.getFullYear() && fromDate.getMonth() === toDate.getMonth()) {
+                const fromDay = fromDate.toLocaleDateString('en-US', { day: 'numeric' });
+                const toDay = toDate.toLocaleDateString('en-US', { day: 'numeric' });
+                const month = fromDate.toLocaleDateString('en-US', { month: 'short' });
+                return `${month} ${fromDay}-${toDay}, ${year}`;
+            } else {
+                return `${fromFormatted} - ${toFormatted}, ${year}`;
+            }
+        }
+    } catch (error) {
+        return undefined;
+    }
+};
+
+
+/**
+ * Extracts and normalizes data for a single conference object from the API payload
+ * to be used for frontend source display.
+ * This ensures consistent data extraction logic.
+ * @param conf The raw conference object from the API payload.
+ * @returns A structured object for the source display payload, or null if invalid.
+ */
+export const extractConferenceSourceData = (conf: any): ConferenceSourceData | null => {
+    if (!conf || !conf.id) {
+        return null;
+    }
+
+    // 1. Sử dụng logic chuẩn hóa từ transformData.ts
+    const organizations = conf.organizations || [];
+    const latestRawOrg = organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
+    const latestOrg = getNormalizedOrg(latestRawOrg) || conf; // Fallback to conf itself
+
+    // 2. Lấy rank (ưu tiên từ `conf.ranks`, sau đó mới đến `latestOrg.ranks`)
+    const allRanks = conf.ranks || latestOrg.ranks || [];
+    const primaryRank = allRanks.length > 0 ? allRanks[0] : { rank: 'N/A', source: 'N/A' };
+
+    // 3. Lấy location với logic fallback tốt nhất
+    const locationData = (latestOrg.locations && latestOrg.locations.length > 0) ? latestOrg.locations[0] : {};
+    let formattedLocation = "N/A";
+    if (locationData.cityStateProvince && locationData.country) {
+        formattedLocation = `${locationData.cityStateProvince}, ${locationData.country}`;
+    } else if (locationData.country) {
+        formattedLocation = locationData.country;
+    } else if (locationData.address) {
+        formattedLocation = locationData.address;
+    }
+
+    // 4. Lấy conference dates
+    const conferenceDateEntry = (latestOrg.dates || []).find((d: any) => d.type === 'conferenceDates');
+    const formattedDates = formatDateRangeForSource(conferenceDateEntry?.fromDate, conferenceDateEntry?.toDate);
+
+    return {
+        id: conf.id,
+        // Ưu tiên title/acronym từ dữ liệu của năm gần nhất, fallback về dữ liệu gốc
+        title: latestOrg.title || conf.title || 'Untitled Conference',
+        acronym: latestOrg.acronym || conf.acronym,
+        rank: primaryRank.rank,
+        source: primaryRank.source,
+        conferenceDates: formattedDates,
+        location: formattedLocation,
+    };
+};
 
 
 // --- Helper Functions ---
@@ -204,6 +296,15 @@ const formatChangeMarkdown = (currentValue: any, previousValue: any, formatter?:
 
 
 // --- Main Data Transformation Logic with Markdown ---
+// src/chatbot/utils/transformData.ts
+
+// ... (giữ nguyên các type definitions và các hàm helper ở trên:
+// Location, DateEntry, Rank, OrgData, Organization, ConferenceDetail,
+// ConferenceSummary, ConferenceData, formatDateTypeHeader, ConferenceSourceData,
+// formatDateRangeForSource, extractConferenceSourceData, safeGet,
+// getNormalizedOrg, formatDateRange, formatChangeMarkdown)
+
+// --- Main Data Transformation Logic with Markdown ---
 export function transformConferenceData(parsedData: ConferenceData, searchQuery: string): string {
     logToFile(`Transforming conference data with Markdown. Search query: ${searchQuery}`);
 
@@ -241,7 +342,7 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                     payloadString += `  - **Ranks:**\n`;
                     ranks.forEach((rank: Rank, rankIndex: number) => {
                         payloadString += `    ${rankIndex + 1}. \n`;
-                        payloadString += `       - **Rank:** **${safeGet(rank, 'rank', 'N/A')}**\n`;
+                        payloadString += `       - **Rank:** ${safeGet(rank, 'rank', 'N/A')}\n`;
                         payloadString += `       - **Source:** **${safeGet(rank, 'source', 'N/A')}**\n`;
                         payloadString += `       - **Research field:** ${safeGet(rank, 'researchField', 'N/A')}\n`;
                     });
@@ -249,26 +350,32 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                     payloadString += `  - **Ranks:** N/A\n`;
                 }
 
-                // Organizations - Use latest, compare with previous if exists
+                // --- ADJUSTED LOGIC FOR ORGANIZATIONS ---
                 const organizations = safeGet(conf, 'organizations', []);
-                const rawCurrentOrg = organizations && organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
-                const rawPreviousOrg = organizations && organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
+                
+                 // The latest organization data is at the end of the array.
+                const latestRawOrg = organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
 
-                // **FIX: Normalize the organization objects to handle inconsistent structure**
-                const currentOrg = getNormalizedOrg(rawCurrentOrg);
-                const previousOrg = getNormalizedOrg(rawPreviousOrg);
+                // The previous organization data is the one before the last (for comparison).
+                const previousRawOrg = organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
 
-                if (!currentOrg) {
+                // Normalize both to handle the 'org' key or lack thereof.
+                const latestOrg = getNormalizedOrg(latestRawOrg);
+                const previousOrg = getNormalizedOrg(previousRawOrg); // This will be undefined if only one org exists.
+
+                // The main display logic is now based on latestOrg.
+                if (!latestOrg) {
                     payloadString += `  - *No detailed organization data available.*\n`;
                 } else {
-                    const currentLocation = safeGet(currentOrg, 'locations.0', {});
+                    // Use latestOrg for current data, and previousOrg for comparison.
+                    const currentLocation = safeGet(latestOrg, 'locations.0', {});
                     const previousLocation = safeGet(previousOrg, 'locations.0', undefined);
-                    const currentDates = safeGet(currentOrg, 'dates', []);
+                    const currentDates = safeGet(latestOrg, 'dates', []);
                     const previousDates = safeGet(previousOrg, 'dates', []);
 
-                    payloadString += `  - **Year:** ${safeGet(currentOrg, 'year', 'N/A')}\n`;
+                    payloadString += `  - **Year:** ${safeGet(latestOrg, 'year', 'N/A')}\n`;
 
-                    const currentAccessType = safeGet(currentOrg, 'accessType', 'N/A');
+                    const currentAccessType = safeGet(latestOrg, 'accessType', 'N/A');
                     const previousAccessType = safeGet(previousOrg, 'accessType', undefined);
                     payloadString += `  - **Type:** ${currentAccessType}${formatChangeMarkdown(currentAccessType, previousAccessType)}\n`;
 
@@ -277,33 +384,31 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                     payloadString += `  - **Location:** ${currentAddress}${formatChangeMarkdown(currentAddress, previousAddress)}\n`;
                     payloadString += `  - **Continent:** ${safeGet(currentLocation, 'continent', 'N/A')}\n`;
 
-                    const currentLink = safeGet(currentOrg, 'link', 'N/A');
+                    const currentLink = safeGet(latestOrg, 'link', 'N/A');
                     const previousLink = safeGet(previousOrg, 'link', undefined);
                     payloadString += `  - **Website link:** ${currentLink}${formatChangeMarkdown(currentLink, previousLink)}\n`;
 
-                    const currentCfpLink = safeGet(currentOrg, 'cfpLink', 'N/A');
+                    const currentCfpLink = safeGet(latestOrg, 'cfpLink', 'N/A');
                     const previousCfpLink = safeGet(previousOrg, 'cfpLink', undefined);
                     payloadString += `  - **Call for papers link:** ${currentCfpLink}${formatChangeMarkdown(currentCfpLink, previousCfpLink)}\n`;
 
-                    const currentImpLink = safeGet(currentOrg, 'impLink', 'N/A');
+                    const currentImpLink = safeGet(latestOrg, 'impLink', 'N/A');
                     const previousImpLink = safeGet(previousOrg, 'impLink', undefined);
                     if (currentImpLink !== 'N/A' || previousImpLink) {
                         payloadString += `  - **Important dates link:** ${currentImpLink}${formatChangeMarkdown(currentImpLink, previousImpLink)}\n`;
                     }
 
-                    // **FIX: Corrected typo from 'publisher' to 'pulisher' to match JSON**
-                    const currentPublisher = safeGet(currentOrg, 'pulisher', 'N/A');
+                    const currentPublisher = safeGet(latestOrg, 'pulisher', 'N/A');
                     const previousPublisher = safeGet(previousOrg, 'pulisher', undefined);
                     if (currentPublisher !== 'N/A' || previousPublisher) {
                         payloadString += `  - **Publisher:** ${currentPublisher}${formatChangeMarkdown(currentPublisher, previousPublisher)}\n`;
                     }
 
-                    const topics = safeGet(currentOrg, 'topics', []);
+                    const topics = safeGet(latestOrg, 'topics', []);
                     payloadString += `  - **Topics:** ${Array.isArray(topics) && topics.length > 0 ? topics.join(', ') : 'N/A'}\n`;
 
                     // Dates (Conference Dates first, then others with change tracking)
                     let conferenceDateStr = "N/A";
-                    // **MODIFICATION: Use an object to group dates by type**
                     const groupedDates: { [key: string]: string[] } = {};
                     const processedPrevDateIndices = new Set<number>();
 
@@ -328,14 +433,13 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                             if (formattedCurrentDate !== formattedPrevDate) {
                                 changeIndicator = ` **(changed from "${formattedPrevDate}")**`;
                             }
-                        } else if (previousOrg) {
+                        } else if (previousOrg) { // Only show (new) if there was a previous version to compare to
                             changeIndicator = " **(new)**";
                         }
 
                         if (dateType === 'conferenceDates') {
                             conferenceDateStr = `${formattedCurrentDate}${changeIndicator}`;
                         } else {
-                            // **MODIFICATION: Add the formatted date string to its corresponding group**
                             if (!groupedDates[dateType]) {
                                 groupedDates[dateType] = [];
                             }
@@ -357,7 +461,6 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                                         conferenceDateStr = `${formattedPrevDate}${removedTag}`;
                                     }
                                 } else {
-                                    // **MODIFICATION: Add removed dates to their group**
                                     if (!groupedDates[dateType]) {
                                         groupedDates[dateType] = [];
                                     }
@@ -368,47 +471,39 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                         });
                     }
 
-                    // Add Conference Dates first
                     payloadString += `  - **Conference dates:** ${conferenceDateStr}\n`;
 
-                    // **MODIFICATION: Build the final string from the grouped dates object**
                     const importantDateTypes = Object.keys(groupedDates);
                     if (importantDateTypes.length > 0) {
                         payloadString += `  - **Important dates:**\n`;
-                        // Define a preferred order for date types
                         const typeOrder = ['submissionDate', 'notificationDate', 'cameraReadyDate', 'registrationDate', 'otherDate'];
-
-                        // Sort the types based on the preferred order
                         importantDateTypes.sort((a, b) => {
                             const indexA = typeOrder.indexOf(a);
                             const indexB = typeOrder.indexOf(b);
-                            // If a type is not in the order list, push it to the end
                             if (indexA === -1) return 1;
                             if (indexB === -1) return -1;
                             return indexA - indexB;
                         });
 
                         for (const dateType of importantDateTypes) {
-                            // Add a sub-header for the group
                             payloadString += `    - **${formatDateTypeHeader(dateType)}:**\n`;
-                            // Add each date within that group
                             groupedDates[dateType].forEach(dateLine => {
                                 payloadString += `      ${dateLine}\n`;
                             });
                         }
                     }
 
-                    payloadString += `  - **Summary:** ${safeGet(currentOrg, 'summary', 'N/A')}\n`;
-                    payloadString += `  - **Call for papers:** \n${safeGet(currentOrg, 'callForPaper', 'N/A')}\n`;
+                    payloadString += `  - **Summary:** ${safeGet(latestOrg, 'summary', 'N/A')}\n`;
+                    payloadString += `  - **Call for papers:** \n${safeGet(latestOrg, 'callForPaper', 'N/A')}\n`;
                 }
 
             } else {
-                // --- Summary Mode Transformation (Confirmed to be correct) ---
+                // --- Summary Mode Transformation (Logic remains correct) ---
                 payloadString += `  - **Title:** ${safeGet(conf, 'title', 'N/A')}\n`;
                 payloadString += `  - **Acronym:** ${safeGet(conf, 'acronym', 'N/A')}\n`;
                 payloadString += `  - **Location:** ${safeGet(conf, 'location.address', 'N/A')}\n`;
                 payloadString += `  - **Continent:** ${safeGet(conf, 'location.continent', 'N/A')}\n`;
-                payloadString += `  - **Rank:** **${safeGet(conf, 'rank', 'N/A')}**\n`;
+                payloadString += `  - **Rank:** ${safeGet(conf, 'rank', 'N/A')}\n`;
                 payloadString += `  - **Source:** **${safeGet(conf, 'source', 'N/A')}**\n`;
                 const researchFields = safeGet(conf, 'researchFields', []);
                 payloadString += `  - **Research field:** ${Array.isArray(researchFields) && researchFields.length > 0 ? researchFields.join(', ') : 'N/A'}\n`;

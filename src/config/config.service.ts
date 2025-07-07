@@ -253,6 +253,8 @@ export class ConfigService {
 
 
     get crawlConcurrency() { return this.appConfiguration.crawlConcurrency; }
+    get globalCrawlConcurrency() { return this.appConfiguration.globalCrawlConcurrency; }
+
     get apiBaseUrl() { return this.appConfiguration.apiBaseUrl; }
     get conferenceListPath(): string { return this.appConfiguration.conferenceListPath; }
     get customSearchDir(): string { return this.appConfiguration.customSearchDir; }
