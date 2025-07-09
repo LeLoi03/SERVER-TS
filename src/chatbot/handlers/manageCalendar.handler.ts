@@ -18,7 +18,6 @@ import {
     StatusUpdate,
     ItemCalendarStatusUpdatePayload // Import payload mới
 } from '../shared/types';
-import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
 type ValidItemTypeCalendar = 'conference';
@@ -38,7 +37,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:ManageCalendar Agent:${agentId}]`;
         const localThoughts: ThoughtStep[] = [];
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
+        
 
         const reportStep = (step: string, message: string, details?: object): void => {
             const timestamp = new Date().toISOString();
@@ -50,7 +49,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -63,7 +62,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -77,13 +76,13 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
             if (!itemType) {
                 const errorMsg = "Missing required item type for calendar action.";
-                logToFile(`${logPrefix} ManageCalendar: Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
             if (!action) {
                 const errorMsg = "Missing required action for calendar action.";
-                logToFile(`${logPrefix} ManageCalendar: Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -104,7 +103,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
             }
 
             if (validationError) {
-                logToFile(`${logPrefix} ManageCalendar: Validation Failed - ${validationError}`);
+                
                 reportStep('function_error', 'Invalid arguments provided.', { error: validationError, args });
                 return { modelResponseContent: `Error: ${validationError}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -117,7 +116,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
             reportStep('checking_authentication_calendar', 'Checking authentication status for calendar action...');
             if (!userToken) {
                 const errorMsg = "Authentication required.";
-                logToFile(`${logPrefix} ManageCalendar: User not authenticated.`);
+                
                 reportStep('function_error', 'User not authenticated.', { error: errorMsg });
                 return { modelResponseContent: "Error: You must be logged in to manage calendar items.", frontendAction: undefined, thoughts: localThoughts };
             }
@@ -129,14 +128,14 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                 if (!listResult.success || !listResult.items) {
                     const errorMsg = listResult.errorMessage || `Failed to retrieve conferences from your calendar.`;
-                    logToFile(`${logPrefix} ManageCalendar: Error listing items - ${errorMsg}`);
+                    
                     reportStep('function_error', `Failed to list calendar conferences.`, { error: errorMsg });
                     return { modelResponseContent: `Sorry, I couldn't retrieve conferences from your calendar: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
 
                 if (listResult.items.length === 0) {
                     const message = `You have no conferences in your calendar.`;
-                    logToFile(`${logPrefix} ManageCalendar: No conferences found in calendar.`);
+                    
                     reportStep('list_success_empty_calendar', message);
                     return { modelResponseContent: message, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -160,7 +159,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
                 });
 
                 const successMessage = `Here are the conferences in your calendar:`;
-                logToFile(`${logPrefix} ManageCalendar: Successfully listed ${listResult.items.length} calendar conference(s).`);
+                
                 reportStep('list_success_calendar', successMessage, { count: listResult.items.length });
 
                 return {
@@ -187,7 +186,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                 if (!idResult.success || !idResult.itemId) {
                     const errorMsg = idResult.errorMessage || `Could not find ${validItemType} "${currentIdentifier}".`;
-                    logToFile(`${logPrefix} ManageCalendar: Error finding ID - ${errorMsg}`);
+                    
                     reportStep('calendar_item_id_not_found', `Could not find ${validItemType} "${currentIdentifier}".`, { error: errorMsg, identifier: currentIdentifier, identifierType: currentIdentifierType, itemType: validItemType });
                     return { modelResponseContent: errorMsg, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -204,7 +203,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                 if (!calendarStatusResult.success) {
                     const errorMsg = calendarStatusResult.errorMessage || 'Failed to check calendar status.';
-                    logToFile(`${logPrefix} ManageCalendar: Error checking status - ${errorMsg}`);
+                    
                     reportStep('function_error', 'Failed to check calendar status.', { error: errorMsg, itemId });
                     return { modelResponseContent: `Sorry, I couldn't check your current calendar status: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -218,15 +217,15 @@ export class ManageCalendarHandler implements IFunctionHandler {
                     // Kiểm tra xem itemId (conference ID) có trong danh sách blacklist hay không
                     if (blacklistStatusResult.success && blacklistStatusResult.itemIds.includes(itemId)) {
                         const conflictMsg = `The conference "${itemNameForMessage}" is currently in your blacklist. You must remove it from blacklist before adding it to calendar.`;
-                        logToFile(`${logPrefix} ManageCalendar: Conflict - Item ${itemId} is blacklisted, cannot add to calendar.`);
+                        
                         reportStep('calendar_conflict_blacklisted', conflictMsg, { itemId, itemName: itemNameForMessage });
                         return { modelResponseContent: conflictMsg, frontendAction: undefined, thoughts: localThoughts };
                     }
                     if (!blacklistStatusResult.success) {
-                        logToFile(`${logPrefix} ManageCalendar: Warning - Could not verify blacklist status for ${itemId} ("${itemNameForMessage}") before adding to calendar: ${blacklistStatusResult.errorMessage}. Proceeding with calendar action.`);
+                        
                         reportStep('warning_blacklist_check_failed_before_calendar', `Could not verify if "${itemNameForMessage}" is blacklisted. Proceeding to add to calendar.`, { itemId, itemName: itemNameForMessage, error: blacklistStatusResult.errorMessage });
                     } else {
-                        logToFile(`${logPrefix} ManageCalendar: Conference ${itemId} ("${itemNameForMessage}") is not blacklisted. Safe to proceed with adding to calendar.`);
+                        
                         reportStep('blacklist_check_clear_for_calendar', `Conference "${itemNameForMessage}" is not blacklisted. Proceeding to add to calendar.`, { itemId, itemName: itemNameForMessage });
                     }
                 }
@@ -246,7 +245,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                     if (apiActionResult.success) {
                         finalMessage = `Successfully ${validAction === 'add' ? 'added' : 'removed'} the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}) ${validAction === 'add' ? 'to' : 'from'} your calendar.`;
-                        logToFile(`${logPrefix} ManageCalendar: API call for ${validAction} successful for conference ${itemId}.`);
+                        
                         reportStep('calendar_update_success', `Successfully updated calendar for conference "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
 
                         // Sử dụng details từ idResult hoặc apiActionResult.conferenceDetails
@@ -277,7 +276,7 @@ export class ManageCalendarHandler implements IFunctionHandler {
 
                     } else {
                         finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the ${validItemType} "${itemNameForMessage}" ${validAction === 'add' ? 'to' : 'from'} your calendar. Please try again later.`;
-                        logToFile(`${logPrefix} ManageCalendar: API call for ${validAction} failed for conference ${itemId} - ${apiActionResult.errorMessage}`);
+                        
                         reportStep('calendar_update_failed', `Failed to update calendar for "${itemNameForMessage}".`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     }
                 } else {
@@ -286,20 +285,20 @@ export class ManageCalendarHandler implements IFunctionHandler {
                     } else {
                         finalMessage = `The ${validItemType} "${itemNameForMessage}" (ID: ${itemId}) is not currently in your calendar.`;
                     }
-                    logToFile(`${logPrefix} ManageCalendar: No API call executed for action '${validAction}' on conference ${itemId}. Current status: ${isCurrentlyInCalendar ? 'In Calendar' : 'Not In Calendar'}`);
+                    
                     reportStep('calendar_no_action_needed', finalMessage, { itemId, itemName: itemNameForMessage, currentStatus: isCurrentlyInCalendar, requestedAction: validAction });
                 }
                 return { modelResponseContent: finalMessage, frontendAction: finalFrontendAction, thoughts: localThoughts };
             } else {
                 const errorMsg = `Unsupported action for calendar: ${validAction}`;
-                logToFile(`${logPrefix} ManageCalendar: Validation Error - ${errorMsg}`);
+                
                 reportStep('function_error', 'Unsupported action.', { error: errorMsg, action: validAction });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in ManageCalendarHandler: ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Critical error during calendar management processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred: ${errorMessage}`,

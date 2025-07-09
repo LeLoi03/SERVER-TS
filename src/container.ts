@@ -60,7 +60,7 @@ container.registerSingleton(FileSystemService);
 
 container.registerSingleton(BatchProcessingOrchestratorService);
 
-container.registerSingleton(GlobalConcurrencyManagerService); 
+container.registerSingleton(GlobalConcurrencyManagerService);
 
 // --- 2. Register Gemini API Service and its Dependencies (Singletons) ---
 container.registerSingleton(GeminiClientManagerService);
@@ -95,7 +95,9 @@ container.registerSingleton(InMemoryResultCollectorService); // <<< ĐĂNG KÝ M
 
 // --- 5. Register Other General and Task-Specific Services ---
 container.registerSingleton(HtmlPersistenceService);
-container.registerSingleton(ResultProcessingService);
+// THAY ĐỔI Ở ĐÂY: Bỏ singleton
+container.register(ResultProcessingService, { useClass: ResultProcessingService });
+
 container.registerSingleton(JournalImportService);
 
 // ConferenceProcessorService is registered as transient (new instance each time resolved)

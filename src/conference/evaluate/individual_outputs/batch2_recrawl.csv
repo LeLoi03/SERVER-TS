@@ -1,0 +1,2156 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note
+req-conf-1751537158192-i48ha,,Asia-Pacific Software Engineering Conference,APSEC,https://conf.researchr.org/home/apsec-2025,TRUE,https://conf.researchr.org/track/apsec-2025/apsec-2025-papers,https://conf.researchr.org/dates/apsec-2025,"Conference dates: December 2 - 5, 2025
+Year: 2025
+Location: Macao, China
+City-State-Province: Macao
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.(Workshops) Workshop Proposal Submission: July 5, 2025
+Submission Date.(Technical Track) Abstract Deadline: July 6, 2025
+Submission Date.(Technical Track) Paper Deadline: July 13, 2025
+Submission Date.(Early Research Achievements (ERA)) Submission Deadline: July 23, 2025
+Submission Date.(Software Engineering in Practices (SEIP)) Submission Deadline: August 7, 2025
+Submission Date.(Journal-First Track) Submission deadline: August 15, 2025
+Submission Date.(Tutorials) Submission deadline: August 23, 2025
+Submission Date.(Tool Demonstration) Abstract Deadline: September 14, 2025
+Submission Date.(Doctoral Symposium) Submission Deadline: September 17, 2025
+Submission Date.(Student Research Competition) Submission Deadline: September 21, 2025
+Notification Date.(Workshops) Notification: July 19, 2025
+Notification Date.(Technical Track) Author Notification: September 13, 2025
+Notification Date.(Early Research Achievements (ERA)) Author Notification: September 13, 2025
+Notification Date.(Journal-First Track) Author notification: September 13, 2025
+Notification Date.(Tutorials) Notification: September 25, 2025
+Notification Date.(Software Engineering in Practices (SEIP)) Author Notification: September 26, 2025
+Notification Date.(Doctoral Symposium) Acceptance Notification: September 28, 2025
+Notification Date.(Tool Demonstration) Acceptance Notification: October 17, 2025
+Notification Date.(Student Research Competition) Acceptance Notification: October 17, 2025
+Camera-ready Date.(Technical Track) Camera Ready Deadline: October 20, 2025
+Camera-ready Date.(Early Research Achievements (ERA)) Camera Ready Deadline: October 20, 2025
+Camera-ready Date.(Software Engineering in Practices (SEIP)) Camera Ready Deadline: October 23, 2025
+Camera-ready Date.(Tool Demonstration) Camera Ready: October 31, 2025
+Camera-ready Date.(Student Research Competition) Camera Ready: October 31, 2025
+Topics: Software Engineering
+Publisher: IEEE","December 2 - 5, 2025",TRUE,2025,"Macao, China",TRUE,Macao,China,Asia,Offline,TRUE,"{""(Workshops) Workshop Proposal Submission"":""July 5, 2025"",""(Technical Track) Abstract Deadline"":""July 6, 2025"",""(Technical Track) Paper Deadline"":""July 13, 2025"",""(Early Research Achievements (ERA)) Submission Deadline"":""July 23, 2025"",""(Software Engineering in Practices (SEIP)) Submission Deadline"":""August 7, 2025"",""(Journal-First Track) Submission deadline"":""August 15, 2025"",""(Tutorials) Submission deadline"":""August 23, 2025"",""(Tool Demonstration) Abstract Deadline"":""September 14, 2025"",""(Doctoral Symposium) Submission Deadline"":""September 17, 2025"",""(Student Research Competition) Submission Deadline"":""September 21, 2025""}",90.90909091,"{""(Workshops) Notification"":""July 19, 2025"",""(Technical Track) Author Notification"":""September 13, 2025"",""(Early Research Achievements (ERA)) Author Notification"":""September 13, 2025"",""(Journal-First Track) Author notification"":""September 13, 2025"",""(Tutorials) Notification"":""September 25, 2025"",""(Software Engineering in Practices (SEIP)) Author Notification"":""September 26, 2025"",""(Doctoral Symposium) Acceptance Notification"":""September 28, 2025"",""(Tool Demonstration) Acceptance Notification"":""October 17, 2025"",""(Student Research Competition) Acceptance Notification"":""October 17, 2025""}",100.0,"{""(Technical Track) Camera Ready Deadline"":""October 20, 2025"",""(Early Research Achievements (ERA)) Camera Ready Deadline"":""October 20, 2025"",""(Software Engineering in Practices (SEIP)) Camera Ready Deadline"":""October 23, 2025"",""(Tool Demonstration) Camera Ready"":""October 31, 2025"",""(Student Research Competition) Camera Ready"":""October 31, 2025""}
+",100.0,{},,{},,Software Engineering,IEEE,"The 32nd Asia-Pacific Software Engineering Conference (APSEC 2025) will be held from December 2-5, 2025, at Wynn Palace in Macao, China. APSEC is a leading regional conference that brings together researchers and practitioners to share knowledge and best practices in software engineering. The conference program includes keynote speakers, paper presentations, tool demonstrations, tutorials, and co-located workshops, with tracks such as the Technical Track, Early Research Achievements (ERA), and Software Engineering in Practices (SEIP).","# Call for Papers: Technical Track
+
+The APSEC 2025 technical research track invites high-quality contributions describing original results in the discipline of software engineering. This track features the most recent and significant innovations in the field.
+
+## Topics of Interest
+
+Solicited topics include, but are not limited to:
+
+### Tools and processes
+*   Agile processes
+*   DevOps and Container
+*   Configuration Management and Deployment
+*   Software Engineering Process and Standards
+
+### Requirements and Design
+*   Service-oriented Computing
+*   Component-based Software Engineering
+*   Cooperative, Distributed, and Global Software Engineering
+*   Software Architecture, Modeling and Design
+*   Middleware, Frameworks, and APIs
+*   Software Product-line Engineering
+
+### Testing and Analysis
+*   Testing, Verification, and Validation
+*   Program Analysis
+*   Program Synthesis
+*   Program Repairs
+
+### Formal Aspects of Software Engineering
+*   Formal Methods
+*   Model-driven and Domain-specific Engineering
+
+### Human Factors and Social Aspects of Software Engineering
+*   Software Comprehension, Visualization, and Traceability
+*   Software for Green and Sustainable Technologies
+
+### AI and Software Engineering
+*   AI for Software Engineering
+*   Software Engineering for AI
+*   Search-based Software Engineering
+
+### Dependability, Safety, and Reliability
+*   Reliability, availability, and safety
+*   Performance
+*   Vulnerability detection to enhance software security
+
+### Software Maintenance and Evolution
+*   Refactoring
+*   Reverse Engineering
+*   Software Reuse
+*   Software Project Management
+*   Debugging, Defect Prediction, and Fault Localization
+
+### Software Repository Mining and Data Analytics
+
+APSEC 2025 welcomes submissions addressing topics in a variety of application domains, including mobile, cloud, blockchains, embedded, and cyber-physical systems.
+
+## Submission Guidelines
+
+*   **Length:** Technical research papers must not exceed **12 pages** (including references).
+*   **Format:** Submissions must be in English and conform to the **IEEE Conference Proceedings Formatting Guidelines**. Use A4 paper size PDF format. LaTeX users must use `\documentclass[10pt,conference]{IEEEtran}`.
+*   **Submission System:** Papers must be submitted electronically in PDF format before the due date via HotCRP: [https://apsec25.hotcrp.com](https://apsec25.hotcrp.com)
+*   **Originality:** Submitted papers must have been neither previously accepted for publication nor concurrently submitted for review in another journal, book, conference, or workshop.
+*   **Evaluation Criteria:** Submissions will be evaluated by at least three program committee members focusing on novelty, originality, importance to the field, proper use of research methods, and presentation.
+
+## Double Blind Policy
+
+APSEC 2025 uses a double-blind reviewing process. Submissions must **not reveal authors' identities**.
+
+*   Omit authors’ names and institutions from the title page.
+*   References to authors’ own related work must be in the third person (e.g., ""We build on the work of..."").
+*   If a submission is a clear follow-up to previous work, references to that previous work can be anonymized (e.g., ""based on previous results [10] Anonymous Authors. Omitted for double blind reviewing.""). Ensure the submission is self-contained.
+*   Do not include acknowledgements that would reveal identity.
+*   Avoid accidental unblinding by using different project/work names for submissions if the original name is identifying.
+*   Avoid mentioning specific institution affiliations or organizations; use general terms like ""an introductory CS course"" or ""Org/Company"" where appropriate.
+
+## Important Dates
+
+*   **Abstract Deadline:** Sunday, July 6, 2025
+*   **Paper Deadline:** Sunday, July 13, 2025
+*   **Author Notification:** Saturday, September 13, 2025
+*   **Camera Ready Deadline:** Monday, October 20, 2025
+
+## Accepted Papers
+
+All accepted papers will be included in the IEEE Digital Library as the APSEC 2025 conference proceedings. Authors cannot change the list of authors or paper titles after acceptance without permission. The content of the camera-ready version should reflect reviewers' comments as much as possible.
+
+## Conference Attendance Expectation
+
+If a submission is accepted, at least one author must register for APSEC 2025 and present the paper at the conference. Papers not presented will be removed from the proceedings.
+
+## Contact
+
+Jacky Keung and Eunjong Choi
+APSEC 2025 Program Co-Chairs
+
+## Submission Link
+
+[https://apsec25.hotcrp.com](https://apsec25.hotcrp.com)",thiếu (Tool Demonstration) Submission Deadline
+req-conf-1751537158192-i48ha,,International Symposium on Artificial Life and Robotics,AROB,https://isarob.org/symposium/,TRUE,https://isarob.org/symposium/call_for_papers,,"Conference dates: January 21 - 23, 2026
+Year: 2026
+Location: B-Con PLAZA, Beppu, JAPAN
+City-State-Province: Beppu
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Full Paper Submission (Max. 12 pages) Deadline: August 31, 2025
+Submission Date.Deadline for Abstract Submission for review: October 14, 2025
+Submission Date.Deadline for OS Proposal: October 7, 2025
+Submission Date.Deadline for Final Camera-Ready Papers: December 15, 2025
+Notification Date.Notification of acceptance: October 30, 2025
+Camera-ready Date.Final Paper Submission Deadline: December 16, 2025
+Camera-ready Date.Deadline for Final Camera-Ready Papers: December 15, 2025
+Registration Date.Deadline for Early Registration: December 15, 2025
+Registration Date.Registration Deadline for Presenters: December 15, 2025
+Topics: Artificial Life, Robotics, Adaptation, Agent-based modelling, Artificial brain, Artificial intelligence, Artificial living, Artificial mind, Bio-inspired robotics, Bio-mimetics, Bio-robot, Biocomplexity, Bioinformatics, Biological evolution, Biomedical database, Biomedical imaging, Brain science, Chaos, Cognitive science, Complexity, Control techniques, Data mining, Decentralized control, Disease models and mechanisms, Distributed system, DNA computing, Ethology, Evolution of cooperation, Evolutionary computations (Genetic algorithm), Gene expression and regulation, Genome/Omics medicine, Human genome information, Human-machine interaction and collaboration, Identification and Estimation, In silico drug discovery, Intelligent control, Learning (Phenotypic plasticity), Machine Learning, Manipulator, Medical big data, Medical informatics, Mobile robots, Model estimation, Modular robotics, Molecular biology, Molecular evolution, Molecular network, Motion planning and navigation, Multi-agent systems, Multivariate statistics, Nano-biology, Nano-robot, Neural networks, Neurocomputing technologies and its application for hardware, Parallel and distributed computing, Phase polyphenism, Quantum computing, Quorum sensing, Regenerative medicine, Robot vision and image processing, Robotic Mechanism, Security, Self-organization, Sensor and multi-sensor data fusion, Social insects, Social physiology, Sociometry, Swarm intelligence, Swarm robot, Swarm robotics, Tele-operation, Walking robot
+Publisher: Springer","January 21 - 23, 2026",TRUE,2026,"B-Con PLAZA, Beppu, JAPAN",TRUE,Beppu,Japan,Asia,Offline,TRUE,"{""Full Paper Submission (Max. 12 pages) Deadline"":""August 31, 2025"",""Deadline for Abstract Submission for review"":""October 14, 2025"",""Deadline for OS Proposal"":""October 7, 2025"",""Deadline for Final Camera-Ready Papers"":""December 15, 2025""}",100.0,"{""Notification of acceptance"":""October 30, 2025""}",50.0,"{""Final Paper Submission Deadline"":""December 16, 2025"",""Deadline for Final Camera-Ready Papers"":""December 15, 2025""}",100.0,"{""Deadline for Early Registration"":""December 15, 2025"",""Registration Deadline for Presenters"":""December 15, 2025""}",100.0,{},,"Artificial Life, Robotics, Adaptation, Agent-based modelling, Artificial brain, Artificial intelligence, Artificial living, Artificial mind, Bio-inspired robotics, Bio-mimetics, Bio-robot, Biocomplexity, Bioinformatics, Biological evolution, Biomedical database, Biomedical imaging, Brain science, Chaos, Cognitive science, Complexity, Control techniques, Data mining, Decentralized control, Disease models and mechanisms, Distributed system, DNA computing, Ethology, Evolution of cooperation, Evolutionary computations (Genetic algorithm), Gene expression and regulation, Genome/Omics medicine, Human genome information, Human-machine interaction and collaboration, Identification and Estimation, In silico drug discovery, Intelligent control, Learning (Phenotypic plasticity), Machine Learning, Manipulator, Medical big data, Medical informatics, Mobile robots, Model estimation, Modular robotics, Molecular biology, Molecular evolution, Molecular network, Motion planning and navigation, Multi-agent systems, Multivariate statistics, Nano-biology, Nano-robot, Neural networks, Neurocomputing technologies and its application for hardware, Parallel and distributed computing, Phase polyphenism, Quantum computing, Quorum sensing, Regenerative medicine, Robot vision and image processing, Robotic Mechanism, Security, Self-organization, Sensor and multi-sensor data fusion, Social insects, Social physiology, Sociometry, Swarm intelligence, Swarm robot, Swarm robotics, Tele-operation, Walking robot",Springer,"The 31st International Symposium on Artificial Life and Robotics (AROB 31st 2026) and the 11th International Symposium on BioComplexity (ISBC 11th 2026) will be held from January 21-23, 2026, at B-Con PLAZA in Beppu, JAPAN. The symposium aims to foster the development of new technologies for artificial life and robotics and their applications.","# Call for Papers: AROB 31st 2026 & ISBC 11th 2026
+
+The **31st International Symposium on Artificial Life and Robotics (AROB 31st 2026)** and the **11th International Symposium on BioComplexity (ISBC 11th 2026)** will be held from **January 21 to January 23, 2026**, at **B-Con PLAZA, Beppu, JAPAN**. This symposium brings together researchers to discuss the development of new technologies concerning artificial life and robotics, based on computer simulations and hardware designs.
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   Adaptation
+*   Agent-based modelling
+*   Artificial brain
+*   Artificial intelligence
+*   Artificial life
+*   Artificial living
+*   Artificial mind
+*   Bio-inspired robotics
+*   Bio-mimetics
+*   Bio-robot
+*   Biocomplexity
+*   Bioinformatics
+*   Biological evolution
+*   Biomedical database
+*   Biomedical imaging
+*   Brain science
+*   Chaos
+*   Cognitive science
+*   Complexity
+*   Control techniques
+*   Data mining
+*   Decentralized control
+*   Disease models and mechanisms
+*   Distributed system
+*   DNA computing
+*   Ethology
+*   Evolution of cooperation
+*   Evolutionary computations (Genetic algorithm)
+*   Gene expression and regulation
+*   Genome/Omics medicine
+*   Human genome information
+*   Human-machine interaction and collaboration
+*   Identification and Estimation
+*   In silico drug discovery
+*   Intelligent control
+*   Learning (Phenotypic plasticity)
+*   Machine Learning
+*   Manipulator
+*   Medical big data
+*   Medical informatics
+*   Mobile robots
+*   Model estimation
+*   Modular robotics
+*   Molecular biology
+*   Molecular evolution
+*   Molecular network
+*   Motion planning and navigation
+*   Multi-agent systems
+*   Multivariate statistics
+*   Nano-biology
+*   Nano-robot
+*   Neural networks
+*   Neurocomputing technologies and its application for hardware
+*   Parallel and distributed computing
+*   Phase polyphenism
+*   Quantum computing
+*   Quorum sensing
+*   Regenerative medicine
+*   Robot vision and image processing
+*   Robotic Mechanism
+*   Security
+*   Self-organization
+*   Sensor and multi-sensor data fusion
+*   Social insects
+*   Social physiology
+*   Sociometry
+*   Swarm intelligence
+*   Swarm robot
+*   Swarm robotics
+*   Tele-operation
+*   Walking robot
+
+## Organized Sessions (OS)
+
+In addition to regular submissions, AROB-ISBC 2026 will feature Organized Sessions on focused research topics. Details will be announced on the conference page.
+
+*   **Deadline for OS Proposals:** October 7, 2025 at 24:00 UTC
+
+## Important Dates
+
+*   **Deadline for Abstract Submission for review:** October 14, 2025 at 24:00 UTC
+*   **Notification of acceptance:** October 30, 2025
+*   **Deadline for Final Camera-Ready Papers:** December 15, 2025 at 24:00 UTC
+*   **Deadline for Early Registration:** December 15, 2025 at 24:00 UTC
+*   **Registration Deadline for Presenters:** December 15, 2025 at 24:00 UTC
+
+## Journal Track Submissions
+
+Accepted papers for the General Sessions of AROB 31st 2026 can also be submitted for the Journal Track.
+
+*   **Overview:** Accepted papers will be published in the journal **Artificial Life and Robotics, Vol. 31, No. 1, 2026**.
+*   **In-person participation and presentation at the symposium are required** if the symposium paper is accepted.
+*   **Discount:** Authors of accepted Journal Track papers will receive a discount on the journal publication fee equal to the Regular Early Registration Fee at AROB-ISBC 2026.
+*   **Important Dates (Journal Track):**
+    *   Full Paper Submission (Max. 12 pages): **August 31, 2025**
+    *   Notification of acceptance: **November 29, 2025**
+    *   Final Paper Submission Deadline: **December 16, 2025**
+*   **Paper Submission Requirements (Journal Track):**
+    *   Length: Maximum of **12 pages**, including references and any appendices.
+    *   Peer Review: All submissions will undergo a peer-review process.
+    *   Templates:
+        *   [Word Template (.docx)](https://isarob.org/symposium/includes/files/AROB_WordTemplate.docx)
+        *   [LaTeX Template (.zip)](https://isarob.org/symposium/includes/files/AROB_TexTemplate.zip)
+*   **Important Notes (Journal Track):**
+    *   Initial versions of Journal Track papers will be included in the symposium proceedings if accepted by AROB 31st 2026.
+    *   If the final version of an accepted journal paper is not submitted in time, it will be published in a subsequent issue.
+    *   If a decision for a Journal Track paper is not made by December 16, 2025, it will still be treated as a Journal Track submission and published in a subsequent issue.
+
+## Publication
+
+Accepted papers will be published in the **Proceedings of the AROB**. Extended versions of selected papers will be published in the international journal: **Artificial Life and Robotics, Springer Japan**.
+
+## Submission Guidelines
+
+Please refer to the href=""submission_guidelines"" - Submission Guidelines page under the ""Submission Forms"" menu for detailed instructions.","thiếu một ngày Notification of acceptance ở CFP link, chưa có dấu ngoặc để phân định các ngày"
+req-conf-1751537158192-i48ha,,"ArtsIT, Interactivity & Game Creation",ArtsIT,https://artsit.eai-conferences.org/2025/,TRUE,https://artsit.eai-conferences.org/2025/#call,https://artsit.eai-conferences.org/2025/#deadlines,"Conference dates: November 7 - 9, 2025
+Year: 2025
+Location: Heriot-Watt University Dubai, UAE
+City-State-Province: Dubai
+Country: United Arab Emirates
+Continent: Asia
+Type: Hybrid
+Submission Date.(Main Track/ Late Track) Full Paper Submission deadline: August 1, 2025
+Submission Date.(Main Track) Full Paper Submission deadline: July 1, 2025
+Submission Date.(Special Tracks) Full Paper Submission deadline: July 1, 2025
+Submission Date.(Poster Track) Full Paper Submission deadline: August 31, 2025
+Notification Date.(Main Track/ Late Track) Notification deadline: September 10, 2025
+Notification Date.(Main Track) Notification deadline: August 15, 2025
+Notification Date.(Special Tracks) Notification deadline: August 15, 2025
+Notification Date.(Poster Track) Notification deadline: September 20, 2025
+Camera-ready Date.(Main Track/ Late Track) Camera-ready deadline: October 10, 2025
+Camera-ready Date.(Main Track) Camera-ready deadline: September 30, 2025
+Camera-ready Date.(Special Tracks) Camera-ready deadline: September 30, 2025
+Camera-ready Date.(Poster Track) Camera-ready deadline: October 10, 2025
+Other Date.(Doctoral Colloquium) Doctoral Colloquium Deadline: June 20, 2025
+Other Date.(Student Challenge) Idea Submission: June 15, 2025
+Other Date.(Student Challenge) Deliverables Due: September 26, 2025
+Other Date.(N2Women Young Researcher Fellowship) Deadline: July 20, 2025
+Topics: Art, Technology, Interactivity, Game Creation, Digital Artworks, Cultural Heritage, Audio Art, Games, Gamification, Immersive Technologies, Interactive Art Installations, Virtualization, Artificial Intelligence, Big Data, Virtual Reality, Metaverse","November 7 - 9, 2025",TRUE,2025,"Heriot-Watt University Dubai, UAE",TRUE,Dubai,United Arab Emirates,Asia,Hybrid,TRUE,"{""(Main Track/ Late Track) Full Paper Submission deadline"":""August 1, 2025"",""(Main Track) Full Paper Submission deadline"":""July 1, 2025"",""(Special Tracks) Full Paper Submission deadline"":""July 1, 2025"",""(Poster Track) Full Paper Submission deadline"":""August 31, 2025""}",100.0,"{""(Main Track/ Late Track) Notification deadline"":""September 10, 2025"",""(Main Track) Notification deadline"":""August 15, 2025"",""(Special Tracks) Notification deadline"":""August 15, 2025"",""(Poster Track) Notification deadline"":""September 20, 2025""}",100.0,"{""(Main Track/ Late Track) Camera-ready deadline"":""October 10, 2025"",""(Main Track) Camera-ready deadline"":""September 30, 2025"",""(Special Tracks) Camera-ready deadline"":""September 30, 2025"",""(Poster Track) Camera-ready deadline"":""October 10, 2025""}",100.0,{},,"{""(Doctoral Colloquium) Doctoral Colloquium Deadline"":""June 20, 2025"",""(Student Challenge) Idea Submission"":""June 15, 2025"",""(Student Challenge) Deliverables Due"":""September 26, 2025"",""(N2Women Young Researcher Fellowship) Deadline"":""July 20, 2025""}",0.0,"Art, Technology, Interactivity, Game Creation, Digital Artworks, Cultural Heritage, Audio Art, Games, Gamification, Immersive Technologies, Interactive Art Installations, Virtualization, Artificial Intelligence, Big Data, Virtual Reality, Metaverse",No publisher,"The 14th EAI International Conference on ArtsIT, Interactivity & Game Creation (ArtsIT 2025) will be held from November 7-9, 2025, at Heriot-Watt University Dubai, UAE. This hybrid conference brings together researchers, practitioners, artists, and academics to explore the dynamic relationship between art and information technology, covering topics like AI, VR, cultural heritage, and the metaverse. An update states the event is being relocated, with more details to follow.","# Call for Papers: ArtsIT 2025
+
+The 14th EAI International Conference on ArtsIT, Interactivity & Game Creation (ArtsIT 2025) is a **hybrid conference** taking place from **7-9 November, 2025**, at Heriot-Watt University Dubai, UAE. ArtsIT aims to explore the dynamic relationship between art and information technology, bringing together a diverse international community of researchers, practitioners, artists, and academics. The conference serves as a prominent scientific platform for sharing cutting-edge research at the convergence of art, science, culture, performing arts, media, and technology, focusing on how digital media influences our lives, culture, and society, and fostering discussions on sustainability, responsibility, and human dignity.
+
+The conference aims to bridge the gap between research in art and technology, encouraging collaboration to cultivate innovation and stimulate imaginative thought.
+
+*Event Update: This event is being relocated. More details coming soon.*
+
+## Deadlines
+
+All deadlines are at **11:59 PM UTC** unless otherwise specified.
+
+### Main Track
+*   Full Paper Submission deadline: **1 July 2025**
+*   Notification deadline: **15 August 2025**
+*   Camera-ready deadline: **30 September 2025**
+
+### Late Track
+*   Full Paper Submission deadline: **1 August 2025** (Submission open)
+*   Notification deadline: **10 September 2025**
+*   Camera-ready deadline: **10 October 2025**
+
+### Special Tracks
+*   Full Paper Submission deadline: **1 July 2025** (Submission open)
+*   Notification deadline: **15 August 2025**
+*   Camera-ready deadline: **30 September 2025**
+
+### Poster Track
+*   Full Paper Submission deadline: **31 August 2025** (Submission Open)
+*   Notification deadline: **20 September 2025**
+*   Camera-ready deadline: **10 October 2025**
+
+## Topics of Interest
+
+ArtsIT covers a wide range of topics at the intersection of art and technology. In addition to the main track, there are dedicated sessions on recent advancements such as virtualization, artificial intelligence and big data, virtual reality, and the metaverse. Specific areas include:
+
+*   Digital artworks and cultural heritage
+*   Audio art
+*   Games and gamification
+*   Immersive technologies and interactive art installations
+*   Virtualization, artificial intelligence and big data
+*   Virtual reality and the metaverse
+*   Sustainability, responsibility, and human dignity in digital media
+
+## Special Tracks
+
+The conference features nine exclusive special tracks, offering focused discussions and in-depth presentations:
+
+1.  **Accessible Digital Music**
+2.  **Advancing Game Accessibility**
+3.  **Art and Design in the AI Era: New Creative Practices, Data Curation, and Automation**
+4.  **Broadcasting in the AI Age – Innovations in Broadcasting: Evolving Practices, Technologies, and Audiences**
+5.  **Exploring the Intersection of Biofeedback and Art: Innovation, Expression, and Human-Computer Interaction**
+6.  **Exploring Digital Innovation: Transforming Arts, Education, and Therapy with Musical Interfaces and Emerging Technologies**
+7.  **Extended Reality (XR) Technologies for the Animation and Cinema Industry**
+8.  **Interactive Design in Intangible Heritage: Exploring Interdisciplinary Perspectives**
+9.  **Transcending Reality: Creating Immersive experiences to foster Mental Health and Wellbeing**
+
+## Submission Types
+
+The conference invites various contribution types:
+*   **Full Papers:** For Main Track, Late Track, and Special Tracks.
+*   **Posters:** For ongoing research projects, concrete realizations, or industrial applications.
+*   **Demos:** Presentation of tools, implementations, or systems.
+*   **Panel Proposals:** Discussions on controversial and challenging topics.
+*   **Workshop Proposals:** Covering specific related topics.
+
+## Publication
+
+All registered papers will be submitted for publishing by **Springer – LNICST series** and made available through the **SpringerLink Digital Library**. Proceedings will be submitted for inclusion in leading indexing services such as Web of Science, Compendex, Scopus, DBLP, EU Digital Library, Google Scholar, etc.
+
+Authors of selected papers are eligible to submit an extended version to **EAI Endorsed Transactions journals** (e.g., Creative Technologies, AI and Robotics, Internet of Things) with additional publication opportunities.
+
+## Keynote Speakers
+
+*   Michel van Dartel (Centre of Applied Research for Art, Design and Technology, Avans University of Applied Sciences, Netherlands)
+
+## Venue
+
+*   **Heriot-Watt University Dubai, UAE**
+    *   Knowledge Park, Al Sufouh, Dubai, United Arab Emirates.
+
+## Conference Highlights
+
+*   Ranked in CORE and Ranked by Oxford.
+*   Hybrid Conference with Onsite and Online Options.
+*   Extensive Special Tracks covering niche and current research areas.
+*   Opportunities for extended publications in indexed journals.
+*   Inspiring keynote speakers and panel discussions.
+*   Engaging social program, including a dinner cruise.
+
+## Contact
+
+For general inquiries, please contact: conferences@eai.eu
+
+For registration and camera-ready submission inquiries, refer to the FAQ.","hơi nhầm tên: Main Track/ Late Track => Late Track mới đúng
+
+Các otherDate dường như ko tồn tại?"
+req-conf-1751537158192-i48ha,,"Asia Conference on Information, Computer and Communications Security",AsiaCCS,https://asiaccs2025.hust.edu.vn/,TRUE,https://asiaccs2025.hust.edu.vn/call-for-papers/,https://asiaccs2025.hust.edu.vn/important-dates/,"Conference dates: August 25 - 29, 2025
+Year: 2025
+Location: Ha Noi, Vietnam
+City-State-Province: Ha Noi
+Country: Vietnam
+Continent: Asia
+Type: Offline
+Submission Date.(Cycle 1 Deadline) Paper Submission: September 20, 2024
+Submission Date.(Cycle 2 Deadline) Paper Submission: January 20, 2025
+Notification Date.(Cycle 1 Deadline) Early Rejection: October 25, 2024
+Notification Date.(Cycle 1 Deadline) Author Notification: December 13, 2024
+Notification Date.(Cycle 2 Deadline) Early Rejection: February 28, 2025
+Notification Date.(Cycle 2 Deadline) Author Notification: April 19, 2025
+Camera-ready Date.(Cycle 1 Deadline) Camera Ready: January 11, 2025
+Camera-ready Date.(Cycle 2 Deadline) Camera Ready: May 25, 2025
+Other Date.Early-bird registration deadline: June 30, 2025
+Topics: Computer and Communications Security
+Publisher: ACM","August 25 - 29, 2025",TRUE,2025,"Ha Noi, Vietnam",TRUE,Ha Noi,Vietnam,Asia,Offline,TRUE,"{""(Cycle 1 Deadline) Paper Submission"":""September 20, 2024"",""(Cycle 2 Deadline) Paper Submission"":""January 20, 2025""}",100.0,"{""(Cycle 1 Deadline) Early Rejection"":""October 25, 2024"",""(Cycle 1 Deadline) Author Notification"":""December 13, 2024"",""(Cycle 2 Deadline) Early Rejection"":""February 28, 2025"",""(Cycle 2 Deadline) Author Notification"":""April 19, 2025""}",100.0,"{""(Cycle 1 Deadline) Camera Ready"":""January 11, 2025"",""(Cycle 2 Deadline) Camera Ready"":""May 25, 2025""}",100.0,{},0.0,"{""Early-bird registration deadline"":""June 30, 2025""}",,Computer and Communications Security,ACM,"The 20th ACM Asia Conference on Computer and Communications Security (ACM ASIACCS 2025) will be held in Hanoi, Vietnam, from 25-29 August 2025. The conference focuses on real-world aspects of security and privacy, encouraging submissions with accessible and compelling results for general computer security researchers.","# Call for Papers
+
+The 20th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2025) seeks paper submissions presenting novel contributions related to all real-world aspects of security and privacy. We seek articles presenting accessible and compelling results to general computer security researchers. Purely theoretical submissions (e.g., cryptography-focused, with no security/application connections) are not encouraged, nor are submissions focusing primarily on blockchains or machine learning.
+
+Like in previous years, we will also be accepting “Systemisation of Knowledge” (SoK) papers. SoK submissions need to add the prefix **“SoK: ”** in the title. They will be accepted based on the value to the community. Survey papers without insights evaluating, systematizing, and contextualizing current knowledge will be rejected.
+
+## Program Chairs
+
+*   Michail Maniatakos (New York University Abu Dhabi, UAE)
+*   Yinqian Zhang (Southern University of Science and Technology, China)
+
+## Important Dates
+
+### Cycle 1 Deadline
+
+*   **Paper Submission Deadline:** 23:59, **20 September 2024** (AoE)
+*   **Early Rejection:** 25 October 2024
+*   **Author Notification:** 13 December 2024
+*   **Camera Ready:** 11 January 2025
+
+### Cycle 2 Deadline
+
+*   **Paper Submission Deadline:** 23:59, **20 January 2025** (AoE)
+*   **Early Rejection:** 28 February 2025
+*   **Author Notification:** 19 April 2025
+*   **Camera Ready:** 25 May 2025
+
+## Submission Instructions
+
+Please read the instructions below before submitting your paper. Please get in touch with the PC chairs at [asiaccs2025-pc-chairs@acm.org](mailto:asiaccs2025-pc-chairs@acm.org) for any questions regarding the submissions.
+
+[SUBMIT YOUR PAPER HERE](https://asiaccs2025b.hotcrp.com/)
+
+## Paper Formatting
+
+*   Technical papers submitted for ASIACCS must be written in English.
+*   Papers must be in PDF format and at most **12 pages** double-column. We will allow up to 10 additional pages for the bibliography and well-marked appendices, but note that reviewers are not expected to read the appendices.
+*   Authors should prepare the submissions using the latest [ACM Sigconf style conference template](https://www.acm.org/conference-conference-templates).
+*   All fonts, images, tables, and figures must comply with common standards and not generate problems for reviewers.
+*   Titles of SoK papers must begin with “SoK:”
+*   Submissions not meeting the formatting requirements risk rejection without consideration of their merits.
+
+## Conflicts of Interest (COI)
+
+When submitting the paper, authors must declare the conflict of interest (COI) with the Program Committee members, including the chairs. Those who are considered COI include:
+
+*   Anyone who shares an institutional affiliation with an author of the paper at the time of submission.
+*   Anyone who was the advisor or advisee of an author at any time in the past.
+*   Anyone the author has collaborated with or published within the prior two years.
+
+PC members, including chairs with a conflict of interest with a paper, will be entirely excluded from the evaluation of that paper. Failure to declare COI or declaring fake COI can lead to the paper being rejected. If a PC member with COI reviews a paper, it will be rejected.
+
+## Anonymous Submissions
+
+ASIACCS employs a double-blind reviewing process. All submissions should be appropriately anonymized. Author names and affiliations should not appear in the paper. The authors should avoid obvious self-references and should appropriately blind them if used. The list of authors cannot be changed (but the order can be) after the submission is made unless approved by the Program Chairs. Publishing the submission on a preprint repository, such as arXiv, is allowed, but authors should refrain from broadly advertising their results (e.g., social media, seminars, etc.) and may not contact TPC members regarding their submitted work.
+
+## Double and Concurrent Submissions
+
+Submissions to ASIACCS 2025 must not substantially overlap with papers that are published or simultaneously submitted to other venues with proceedings (including journals or conferences/workshops). Double submission will result in immediate rejection. We may report detected violations to other conference chairs and journal editors.
+
+## Ethical Considerations
+
+The authors should clarify any potential ethical and legal concerns to their results, highly critical vulnerabilities or exploits, etc. The authors should provide evidence (beyond approval of the experiment by their institution) elaborating how they have thoroughly considered such issues. The Program Committee reserves the right to reject a submission if the authors present insufficient evidence that the study appropriately addressed ethical or relevant legal concerns.
+
+## Early Rejection and Appeals
+
+There will be no conventional rebuttal process. Papers that receive substantially negative initial reviews will be rejected early. The authors of early-rejected papers, and only such papers, will receive a copy of their initial reviews. Authors who substantively disagree with the reviews can appeal to the PC chairs within 72 hours upon receipt of the notification email. Authors’ appeals must clearly and explicitly identify substantial disagreements with factual statements in the initial reviews that should be adjudicated by a particular arbitration reviewer who the PC chairs may recruit. Appealing a submission that was rejected early will keep it under consideration, and it cannot be withdrawn or resubmitted elsewhere until the final notification of acceptance or rejection.
+
+## Paper Revision and Resubmission
+
+Rejected papers in Cycle 1 cannot be resubmitted in Cycle 2. A small number of Cycle 1 submissions may receive a “Revise” decision, rather than “Accept” or “Reject,” and may be revised and resubmitted together with the response to reviewers’ comments into the same HOTCRP submission server. The revision may include running additional experiments, improving the paper’s presentation, or other improvements. Papers meeting the expectations will typically be accepted. We will request additional revisions only in exceptional circumstances.
+
+## Camera-Ready and Conference Presentation
+
+If a paper is accepted, the author list in the submission cannot be changed when preparing the camera-ready version. Authors of accepted papers must also guarantee that their papers will be presented at the conference. At least one author of the paper must be registered at the appropriate full conference rate.
+
+## Contact
+
+For any questions related to paper submissions, please contact the PC chairs at [asiaccs2025-pc-chairs@acm.org](mailto:asiaccs2025-pc-chairs@acm.org).",
+req-conf-1751537158192-i48ha,,Automated Software Engineering Conference,ASE,https://conf.researchr.org/home/ase-2025,TRUE,https://conf.researchr.org/track/ase-2025/ase-2025-papers,https://conf.researchr.org/dates/ase-2025,"Conference dates: November 16 - 20, 2025
+Year: 2025
+Location: Seoul, South Korea
+City-State-Province: Seoul
+Country: South Korea
+Continent: Asia
+Type: Offline
+Submission Date.(Research Papers) Paper Submission: May 30, 2025
+Submission Date.(Tutorials) Submission Deadline: June 13, 2025
+Submission Date.(NIER Track) Paper Submission: July 12, 2025
+Submission Date.(Tool Demonstration Track) Paper Submission Deadline: July 23, 2025
+Submission Date.(AIware Main Track) Paper Submission: July 25, 2025
+Submission Date.(SSBSE Research Papers) Submission Deadline: August 21, 2025
+Submission Date.(AIware ArXiv Track) Paper Submission: September 5, 2025
+Notification Date.(Tutorials) Proposal Notification: July 4, 2025
+Notification Date.(Tutorials) Final Notification: July 18, 2025
+Notification Date.(NIER Track) Author Notification: August 7, 2025
+Notification Date.(Research Papers) Initial Notification: August 14, 2025
+Notification Date.(Student Research Competition) Author notification: September 12, 2025
+Notification Date.(Industry Showcase) Author Notification: September 12, 2025
+Notification Date.(SSBSE Research Papers) Notification of Acceptance: September 25, 2025
+Notification Date.(Workshops) Workshop Paper Notification: September 26, 2025
+Notification Date.(Tool Demonstration Track) Author Notification: September 10, 2025
+Notification Date.(AIware ArXiv Track) Notification: September 12, 2025
+Notification Date.(AIware Main Track) Notification: September 23, 2025
+Camera-ready Date.(SSBSE Research Papers) Camera-Ready Deadline: October 3, 2025
+Camera-ready Date.(Tool Demonstration Track) Camera-ready Deadline: October 3, 2025
+Camera-ready Date.(Industry Showcase) Camera Ready Submission: October 3, 2025
+Camera-ready Date.(Research Papers) Camera Ready (all papers): October 3, 2025
+Camera-ready Date.(Doctoral Symposium) Camera Ready Deadline: October 3, 2025
+Camera-ready Date.(AIware Main Track) Camera Ready: October 15, 2025
+Camera-ready Date.(NIER Track) Camera Ready Submission: September 4, 2025
+Other Date.(AIware Main Track) Intent Registration (Optional): July 15, 2025
+Other Date.(Research Papers) Author Response: July 22 - 25, 2025
+Topics: Automated Software Engineering, Software Analysis, Software Design, Software Implementation, Software Testing, Software Maintenance
+Publisher: IEEE/ACM","November 16 - 20, 2025",TRUE,2025,"Seoul, South Korea",TRUE,Seoul,South Korea,Asia,Offline,TRUE,"{""(Research Papers) Paper Submission"":""May 30, 2025"",""(Tutorials) Submission Deadline"":""June 13, 2025"",""(NIER Track) Paper Submission"":""July 12, 2025"",""(Tool Demonstration Track) Paper Submission Deadline"":""July 23, 2025"",""(AIware Main Track) Paper Submission"":""July 25, 2025"",""(SSBSE Research Papers) Submission Deadline"":""August 21, 2025"",""(AIware ArXiv Track) Paper Submission"":""September 5, 2025""}",46.66666667,"{""(Tutorials) Proposal Notification"":""July 4, 2025"",""(Tutorials) Final Notification"":""July 18, 2025"",""(NIER Track) Author Notification"":""August 7, 2025"",""(Research Papers) Initial Notification"":""August 14, 2025"",""(Student Research Competition) Author notification"":""September 12, 2025"",""(Industry Showcase) Author Notification"":""September 12, 2025"",""(SSBSE Research Papers) Notification of Acceptance"":""September 25, 2025"",""(Workshops) Workshop Paper Notification"":""September 26, 2025"",""(Tool Demonstration Track) Author Notification"":""September 10, 2025"",""(AIware ArXiv Track) Notification"":""September 12, 2025"",""(AIware Main Track) Notification"":""September 23, 2025""}",46.66666667,"{""(SSBSE Research Papers) Camera-Ready Deadline"":""October 3, 2025"",""(Tool Demonstration Track) Camera-ready Deadline"":""October 3, 2025"",""(Industry Showcase) Camera Ready Submission"":""October 3, 2025"",""(Research Papers) Camera Ready (all papers)"":""October 3, 2025"",""(Doctoral Symposium) Camera Ready Deadline"":""October 3, 2025"",""(AIware Main Track) Camera Ready"":""October 15, 2025"",""(NIER Track) Camera Ready Submission"":""September 4, 2025""}",100.0,{},0.0,"{""(AIware Main Track) Intent Registration (Optional)"":""July 15, 2025"",""(Research Papers) Author Response"":""July 22 - 25, 2025""}",100.0,"Automated Software Engineering, Software Analysis, Software Design, Software Implementation, Software Testing, Software Maintenance",IEEE/ACM,"The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE 2025) will be held from November 16 to November 20, 2025, in Seoul, South Korea, at the Grand Walkerhill Seoul. ASE is the premier research forum for Automated Software Engineering, bringing together researchers and practitioners to discuss foundations, techniques, and tools for automating software development.","# Call for Papers: ASE 2025
+
+The IEEE/ACM Automated Software Engineering (ASE) Conference series is the premier research forum for automated software engineering. Each year, it brings together researchers and practitioners from academia and industry to discuss foundations, techniques, and tools for automating the analysis, design, implementation, testing, and maintenance of large software systems. ASE 2025 invites high-quality contributions describing significant, original, and unpublished results.
+
+## New This Year
+
+*   **PC Self-nomination:** We are inviting self-nominations to serve on our Program Committee. To contribute as a reviewer and help shape the technical program, please complete the PC self-nomination form: [https://forms.gle/uPZCVDeH4WzwvtmF6](https://forms.gle/uPZCVDeH4WzwvtmF6). We would greatly appreciate receiving your self-nomination by **January 10**.
+*   **Major Revisions:** Instead of rejecting papers outright, reviewers have the opportunity to request changes that may require up to four weeks to accommodate. If a paper receives a 'Revision' outcome, reviewers will specify concrete and actionable revision criteria, agreeing to accept the paper in principle if these criteria are met. Authors will be notified about the outcome for their revision after it is checked by the discussion lead.
+*   **Auto-bidding:** Leveraging the success at other conferences like ICSE 2025 and OOPSLA 2024, we will use the Toronto Paper Matching System (TPMS) to streamline and automate the paper bidding and assignment process, reducing reviewer workload and increasing expertise per paper.
+*   **Rapid Response Reviewers:** To handle unexpected unavailability of reviewers, we invite a small percentage of interested PC members to become Rapid Response Reviewers. They will initially review a smaller number of papers but commit to reviewing up to two additional papers within a shorter timeframe at the end of the reviewing period.
+
+## tl;dr
+
+*   **Submission link:** [https://ase25.hotcrp.com/](https://ase25.hotcrp.com/)
+*   **Template:** `\documentclass[10pt,conference]{IEEEtran}`
+*   **Page limit:** 10 pages (excluding references) + up to 2 additional pages containing ONLY references.
+*   **Artifact:** Provide a link to an anonymous artifact or an explanation why it's not possible.
+*   **Categories:** Choose a Research Area and a Paper Type (Technical/Experience).
+*   **Compliance:** Ensure compliance with double-blind review, plagiarism, and human studies policies.
+
+## Research Areas
+
+ASE welcomes submissions across the full spectrum of Automated Software Engineering, grouped into the following nine research areas. These topics are not exhaustive. Each submission must indicate one primary and optionally a secondary area.
+
+1.  **Requirements and Design:** Requirements elicitation and management, traceability analysis, software architecture and design, modeling and model-driven engineering, software product lines, component-based or service-oriented systems, object-oriented or aspect-oriented systems.
+2.  **Testing and Analysis:** Regression, mutation, and model-based testing; system, unit, and integration testing; black-, grey-, and white-box fuzzing; automated program repair and synthesis; static and dynamic analysis; empirical program analysis.
+3.  **Maintenance and Evolution:** Debugging and fault localization, refactoring and reengineering, reverse engineering, software reuse, API design and management.
+4.  **Human and Social Aspects:** Software engineering processes (e.g., agile, DevOps), green and sustainable technologies, software engineering ethics and values, software economics, systematic code review and inspection, program comprehension and visualization, crowd-based and collaborative software engineering, human-computer interface.
+5.  **AI and Software Engineering:** Autonomous and self-adapting systems, search-based software engineering, recommender systems, AI4SE, SE4AI.
+6.  **Software Analytics:** Mining software repositories, analysis of mobile apps and app stores, data-driven user experience understanding and improvement, data-driven decision making in software engineering, software metrics (and measurements).
+7.  **Formal Aspects of Software Engineering:** Formal methods and model checking, programming languages, domain-specific or specification languages, software validation and verification.
+8.  **Security and Other Non-Functional Properties:** Security and privacy, dependability and safety, reliability and availability, performance.
+9.  **Application Domains:** ASE welcomes submissions on topics across various application domains, including mobile, cloud, blockchains, embedded and cyber-physical systems, parallel/distributed/concurrent systems, probabilistic systems, and ubiquitous/pervasive software systems.
+
+## Submission Categories
+
+We solicit submissions in two categories:
+
+*   **Technical Research Papers:** These papers should describe innovative research in automating software development or supporting users in software development. They must clearly articulate the novelty, impact, and assumptions, and be supported by rigorous research methods.
+*   **Experience Papers:** These papers should describe significant experiences applying automated software engineering technology. They must clearly present a problem's context, the investigation methods, evidence for conclusions, and lessons learned for others.
+
+## Review Criteria
+
+*   **Technical Research Papers:** Evaluated on Significance, Novelty, and Soundness.
+*   **Experience Papers:** Evaluated on Importance and Scope, Insights and Evidence, and Perspective.
+*   **All Papers:** Evaluated on Verifiability (reproducibility) and Presentation quality.
+
+## Originality
+
+*   Papers must be original, unpublished, and not under review elsewhere. Authors must adhere to ACM and IEEE plagiarism policies.
+*   The chairs may share submission lists and use plagiarism detection software.
+
+## Double Anonymous Review Process
+
+*   Submissions must be anonymous; authors' identities and affiliations must be omitted.
+*   Prior work should be cited in the third person.
+*   Authors should avoid identifying their preprints during the review period.
+
+## Artifact Availability and Supplementary Material
+
+*   Authors are strongly encouraged to disclose anonymized and curated data to enhance reproducibility.
+*   Data can be uploaded via HotCRP or linked anonymously.
+*   Ensure all supplementary material also adheres to the double-anonymous policy.
+
+## ACM Policy on Research Involving Humans
+
+*   If research involves human subjects, compliance with the ACM Policy on Research Involving Humans must be affirmed during submission.
+*   Authors are responsible for adhering to local ethical standards and obtaining necessary approvals.
+
+## Formatting and Submission Guidelines
+
+*   Submissions must be made electronically via the ASE 2025 HotCRP submission site: [https://ase25.hotcrp.com/](https://ase25.hotcrp.com/).
+*   All submissions must be in English.
+*   **Format:** PDF.
+*   **Formatting:** Conforms to IEEE Conference Proceedings Formatting Guidelines (use `\documentclass[10pt,conference]{IEEEtran}` without `compsoc` or `compsocconf` options). Main text should not exceed 10 pages; up to 2 additional pages for references only.
+*   **Experience papers:** Must prominently include the phrase ""experience paper"" in the abstract.
+*   Use the HotCRP format checker, but note its limitations.
+
+## Accepted Papers
+
+*   Accepted papers will have a limit of 11 pages (plus 2 pages for references) to incorporate review feedback.
+*   Author lists and paper titles cannot be changed after acceptance without explicit permission.
+*   Authors are strongly encouraged to archive research artifacts (code, data) with a DOI.
+*   At least one author must register for ASE 2025 and present the paper.
+
+## Questions and Comments
+
+Please contact the PC chairs at [ase25.conf@gmail.com](mailto:ase25.conf@gmail.com).
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Tutorials Proposal Submission:** Fri 4 Apr 2025
+*   **Workshops Proposal Submission:** Fri 4 Apr 2025
+*   **Workshops Proposal Notification:** Fri 25 Apr 2025
+*   **Research Papers Paper Submission:** Fri 30 May 2025
+*   **Tutorials Proposal Deadline:** Fri 13 Jun 2025
+*   **Tutorials Proposal Notification:** Fri 4 Jul 2025
+*   **NIER Track Paper Submission:** Sat 12 Jul 2025
+*   **Tutorials Advertisement Material:** Fri 11 Jul 2025
+*   **AIware Main Track Intent Registration (Optional):** Tue 15 Jul 2025
+*   **Tool Demonstration Track Paper Submission Deadline:** Wed 23 Jul 2025
+*   **Research Papers Author Response:** Tue 22 - Fri 25 Jul 2025
+*   **AIware Main Track Paper Submission:** Fri 25 Jul 2025
+*   **Doctoral Symposium Deadline for submission:** Thu 31 Jul 2025
+*   **Industry Showcase Submission Deadline:** Fri 1 Aug 2025
+*   **NIER Track Author Notification:** Thu 7 Aug 2025
+*   **Student Research Competition Paper submission deadline:** Tue 12 Aug 2025
+*   **Doctoral Symposium Author Notification:** Wed 13 Aug 2025
+*   **Research Papers Initial Notification:** Thu 14 Aug 2025
+*   **SSBSE Research Papers Submission Deadline:** Thu 21 Aug 2025
+*   **Workshops Workshop Paper Submission:** Tue 26 Aug 2025
+*   **Journal-First Track Paper Submission:** Mon 1 Sep 2025
+*   **NIER Track Camera Ready Submission:** Thu 4 Sep 2025
+*   **AIware ArXiv Track Paper Submission:** Fri 5 Sep 2025
+*   **AIware ArXiv Track Notification:** Fri 12 Sep 2025
+*   **Student Research Competition Author notification:** Fri 12 Sep 2025
+*   **Industry Showcase Author Notification:** Fri 12 Sep 2025
+*   **Tool Demonstration Track Author Notification:** Wed 10 Sep 2025
+*   **Research Papers Revised Manuscript Submission (for major revisions only):** Thu 11 Sep 2025
+*   **AIware Main Track Author Response:** Fri 5 - Fri 12 Sep 2025
+*   **AIware Main Track Notification:** Tue 23 Sep 2025
+*   **SSBSE Research Papers Notification of Acceptance:** Thu 25 Sep 2025
+*   **Research Papers Notification for Major Revisions:** Thu 25 Sep 2025
+*   **Workshops Workshop Paper Notification:** Fri 26 Sep 2025
+*   **Journal-First Track Author Notification:** Mon 29 Sep 2025
+*   **Tool Demonstration Track Camera-ready Deadline:** Fri 3 Oct 2025
+*   **SSBSE Research Papers Camera-Ready Deadline:** Fri 3 Oct 2025
+*   **Research Papers Camera Ready (all papers):** Fri 3 Oct 2025
+*   **Industry Showcase Camera Ready Submission:** Fri 3 Oct 2025
+*   **Doctoral Symposium Camera Ready Deadline:** Fri 3 Oct 2025
+*   **Workshops Workshop Paper Camera Ready:** Sun 5 Oct 2025
+*   **AIware Main Track Camera Ready:** Wed 15 Oct 2025","thiếu rất nhiều Submission Date + Notification Date
+
+(AIware Main Track) Intent Registration (Optional) sai loại"
+req-conf-1751537158192-i48ha,,Asia and South Pacific Design Automation Conference,ASPDAC,https://www.aspdac.com/aspdac2026/,TRUE,https://www.aspdac.com/aspdac2026/Call%20for%20Papers,,"Conference dates: January 19-22, 2026
+Year: 2026
+Location: Hong Kong Disneyland Hotel, Hong Kong
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Topics: Electronic Design Automation (EDA) for VLSI and systems","January 19-22, 2026",TRUE,2026,"Hong Kong Disneyland Hotel, Hong Kong",TRUE,Hong Kong,China,Asia,Offline,TRUE,{},0.0,{},0.0,{},0.0,{},,{},,Electronic Design Automation (EDA) for VLSI and systems,No publisher,"The 31st Asia and South Pacific Design Automation Conference (ASP-DAC 2026) will be held from January 19-22, 2026, at the Hong Kong Disneyland Hotel. ASP-DAC is the largest conference in the Asia and South Pacific regions for Electronic Design Automation (EDA) in the VLSI and systems area, offering technical papers, tutorials, and a Designers' Forum.","# 31st Asia and South Pacific Design Automation Conference (ASP-DAC 2026): Call for Papers
+
+The 31st Asia and South Pacific Design Automation Conference (ASP-DAC 2026) will be held from **January 19-22, 2026**, at the **Hong Kong Disneyland Hotel**.
+
+ASP-DAC is the premier conference in the Asia and South Pacific regions for Electronic Design Automation (EDA) in the VLSI and systems area. ASP-DAC 2026 offers an ideal opportunity to learn about recent technologies and future directions in LSI design and design automation through technical papers and tutorials.
+
+The conference also features a Designers' Forum for presentations on the latest designs.
+
+## Key Information
+
+*   **Date:** Jan. 19-22, 2026
+*   **Place:** Hong Kong Disneyland Hotel
+*   **General Chair:** Tsung-Yi Ho (The Chinese University of Hong Kong)
+*   **Technical Program Chair:** Takashi Sato (Kyoto University)
+*   **Design Contest Chair:** Fengbin Tu (Hong Kong University of Science and Technology)
+
+## Contact
+
+*   Conference Secretariat E-mail: aspdac2026 [at] aspdac.com
+
+## Important Links
+
+*   [ASP-DAC Bylaws](https://www.aspdac.com/aspdac/bylaws/)
+*   [Author's Guide](Author's Guide)
+*   [Guide for Papers](Guide for Papers)
+*   [Paper submission](Paper submission)
+*   [Call for Papers](Call for Papers)
+*   [Committees](Committees)
+*   [ASP-DAC Award History](ASP-DAC Award History)
+*   [Contacts](Contacts)
+*   [Sponsors / Supporters](Sponsors / Supporters)",Sai CFP link => không lấy được impDate
+req-conf-1751537158192-i48ha,,International ACM SIGACCESS Conference on Computers and Accessibility,ASSETS,https://assets25.sigaccess.org/,TRUE,https://assets25.sigaccess.org/call_for_papers.html,https://assets25.sigaccess.org/call_for_papers.html,"Conference dates: October 26 - 29, 2025
+Year: 2025
+Location: Denver, Colorado
+City-State-Province: Denver, Colorado
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.(Technical Papers) submission deadline: April 16, 2025
+Submission Date.(Posters & Demos) Submission Deadline: June 25, 2025
+Submission Date.(Workshops) Submission deadline: June 11, 2025
+Submission Date.(Experience Reports) Experience Reports Submission Deadline: June 11, 2025
+Submission Date.(Doctoral Consortium) submission: June 29, 2025
+Submission Date.(Student Research Competition) submission deadline: June 25, 2025
+Notification Date.(Research Papers) initial reviews sent to authors, rebuttal phase opens: May 28, 2025
+Notification Date.(Research Papers) acceptance decisions sent to authors: June 18, 2025
+Notification Date.(Posters & Demos) Notification of Acceptance: July 30, 2025
+Notification Date.(Workshops) Notification of acceptance: July 9, 2025
+Notification Date.(Experience Reports) Notification of Acceptance: July 9, 2025
+Notification Date.(Doctoral Consortium) Notification of Acceptance: July 30, 2025
+Notification Date.(Student Research Competition) notification of acceptance: July 30, 2025
+Camera-ready Date.(Research Papers) camera-ready deadline: July 16, 2025
+Camera-ready Date.(Posters & Demos) Camera Ready Deadline: August 6, 2025
+Camera-ready Date.(Workshops) Camera-ready deadline: July 16, 2025
+Camera-ready Date.(Experience Reports) Final versions of Experience Reports due: July 16, 2025
+Camera-ready Date.(Doctoral Consortium) Video presentation deadline: August 20, 2025
+Camera-ready Date.(Student Research Competition) final version deadline: August 6, 2025
+Other Date.(Research Papers) rebuttal phase closes: June 4, 2025
+Other Date.(Research Papers) video presentation: July 23, 2025
+Other Date.(Workshops) Workshop websites online with a call for participation: July 16, 2025
+Other Date.(Workshops) Acceptances to workshop attendees sent out: August 15, 2025
+Other Date.(Workshops) the window of time when virtual workshops may be scheduled: October 20 - 26, 2025
+Other Date.(Student Challenge) video presentation submission deadline: August 20, 2025
+Other Date.(Mentoring) priority deadline to request a mentor: February 20, 2025
+Other Date.(Mentoring) late deadline to request a mentor: March 12, 2025
+Topics: Computing for people with disabilities and older adults, new enabling technologies, studies of how technologies are used by people with disabilities, explorations of barriers to access, and evaluations of accessibility education methods","October 26 - 29, 2025",TRUE,2025,"Denver, Colorado",TRUE,"Denver, Colorado",United States,North America,Offline,TRUE,"{""(Technical Papers) submission deadline"":""April 16, 2025"",""(Posters & Demos) Submission Deadline"":""June 25, 2025"",""(Workshops) Submission deadline"":""June 11, 2025"",""(Experience Reports) Experience Reports Submission Deadline"":""June 11, 2025"",""(Doctoral Consortium) submission"":""June 29, 2025"",""(Student Research Competition) submission deadline"":""June 25, 2025""}",75.0,"{""(Research Papers) initial reviews sent to authors, rebuttal phase opens"":""May 28, 2025"",""(Research Papers) acceptance decisions sent to authors"":""June 18, 2025"",""(Posters & Demos) Notification of Acceptance"":""July 30, 2025"",""(Workshops) Notification of acceptance"":""July 9, 2025"",""(Experience Reports) Notification of Acceptance"":""July 9, 2025"",""(Doctoral Consortium) Notification of Acceptance"":""July 30, 2025"",""(Student Research Competition) notification of acceptance"":""July 30, 2025""}",100.0,"{""(Research Papers) camera-ready deadline"":""July 16, 2025"",""(Posters & Demos) Camera Ready Deadline"":""August 6, 2025"",""(Workshops) Camera-ready deadline"":""July 16, 2025"",""(Experience Reports) Final versions of Experience Reports due"":""July 16, 2025"",""(Doctoral Consortium) Video presentation deadline"":""August 20, 2025"",""(Student Research Competition) final version deadline"":""August 6, 2025""}",100.0,{},,"{""(Research Papers) rebuttal phase closes"":""June 4, 2025"",""(Research Papers) video presentation"":""July 23, 2025"",""(Workshops) Workshop websites online with a call for participation"":""July 16, 2025"",""(Workshops) Acceptances to workshop attendees sent out"":""August 15, 2025"",""(Workshops) the window of time when virtual workshops may be scheduled"":""October 20 - 26, 2025"",""(Student Challenge) video presentation submission deadline"":""August 20, 2025"",""(Mentoring) priority deadline to request a mentor"":""February 20, 2025"",""(Mentoring) late deadline to request a mentor"":""March 12, 2025""}",77.77777778,"Computing for people with disabilities and older adults, new enabling technologies, studies of how technologies are used by people with disabilities, explorations of barriers to access, and evaluations of accessibility education methods",No publisher,"The 27th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS) will be held in Denver, Colorado, from October 26-29, 2025. ASSETS is the premier forum for research on the design, evaluation, use, and education related to computing for people with disabilities and older adults.","# ASSETS 2025: Call for Papers
+
+The ASSETS conference is the premier forum for presenting research on the **design, evaluation, use, and education** related to computing for people with disabilities and older adults. We invite high-quality original submissions on topics relevant to computing and **accessibility**.
+
+Submissions should present significant contributions to design, systems, tools, scientific understanding, methodology, or social issues. Relevant topics include (but are not limited to) new enabling technologies, studies of how technologies are used by people with disabilities, explorations of barriers to access, and evaluations of accessibility education methods. We recommend that papers with a technical contribution be validated through research activities with representative users when possible. However, we acknowledge that many accessibility-focused projects may begin with deep formative work with representative users, or may be based on prior research with representative users, and as such key contributions of a single paper may be primarily technical.
+
+## Submission Categories and Deadlines
+
+All accepted papers and abstracts will be archived in the ACM Digital Library. At least one author of accepted submissions must register as the presenter by the early registration deadline.
+
+### Mentoring
+
+*   **Request a mentor for your paper:**
+    *   **Priority Deadline:** Thursday, February 20, 2025
+    *   **Late Deadline:** Wednesday, March 12, 2025
+*   [Mentoring for Technical Papers](mentoring.html)
+
+### Technical Papers
+
+*   **Submission Deadline:** Wednesday, April 16, 2025
+*   **Initial Reviews Sent to Authors / Rebuttal Phase Opens:** Wednesday, May 28, 2025
+*   **Rebuttal Phase Closes:** Wednesday, June 4, 2025
+*   **Acceptance Decisions Sent to Authors:** Wednesday, June 18, 2025
+*   **Camera-Ready Deadline:** Wednesday, July 16, 2025
+*   **Video Presentation Submission Deadline:** Wednesday, July 23, 2025
+*   [Technical Papers](technical_papers.html)
+
+### Posters and Demonstrations
+
+*   **Submission Deadline:** Wednesday, June 25, 2025
+*   **Notification of Acceptance:** Wednesday, July 30, 2025
+*   **Camera-Ready Deadline:** Wednesday, August 6, 2025
+*   **Video Presentations Submission Deadline:** Wednesday, August 20, 2025
+
+### Workshops
+
+*   **Submission Deadline:** Wednesday, June 11, 2025
+*   **Notification of acceptance:** Wednesday, July 9, 2025
+*   **Workshop websites online with a call for participation:** Wednesday, July 16, 2025
+*   **Camera-ready deadline:** Wednesday, July 16, 2025
+*   **Acceptances to workshop attendees sent out:** Friday, August 15, 2025
+
+### Experience Reports
+
+*   **Submission Deadline:** Wednesday, June 11, 2025
+*   **Notification of Acceptance:** Wednesday, July 9, 2025
+*   **Final versions due:** Wednesday, July 16, 2025
+*   **Video Presentations Submission Deadline:** Wednesday, July 23, 2025
+
+### Doctoral Consortium
+
+*   **Student's Cover Letter, Research Project Summary, and CV Submission Deadline:** Sunday, June 29, 2025
+*   **Advisor’s Letter of Recommendation Due:** Wednesday, July 2, 2025 (sent directly to dc-chairs-assets25@acm.org)
+*   **Notification of Acceptance:** Wednesday, July 30, 2025
+*   **Video presentation deadline:** Wednesday, August 20, 2025
+
+### Student Research Competition
+
+*   **Submission Deadline:** Wednesday, June 25, 2025
+*   **Notification of acceptance:** Wednesday, July 30, 2025
+*   **Final version deadline:** Wednesday, August 6, 2025
+*   **Video presentation submission deadline:** Wednesday, August 20, 2025
+*   [Student Research Competition](student_research_competition.html)
+
+## Review Process
+
+All Technical Papers and Posters and Demonstrations submissions are peer-reviewed by an international Program Committee.
+
+## How to Submit
+
+Please visit the dedicated pages for each submission category for detailed instructions.
+
+*   [Call for Papers](call_for_papers.html)
+*   [Technical Papers](technical_papers.html)
+*   [Posters and Demonstrations](call_for_papers.html)
+*   [Workshops](call_for_papers.html)
+*   [Experience Reports](call_for_papers.html)
+*   [Mentoring](mentoring.html)
+*   [Doctoral Consortium](call_for_papers.html)
+*   [Student Research Competition](student_research_competition.html)","cả 2 ngày video presentation submission deadline sai loại
+
+thiếu một vài otherDate"
+req-conf-1751537158192-i48ha,,Automation of Software Test,AST,https://conf.researchr.org/home/ast-2025,TRUE,https://conf.researchr.org/home/ast-2025#Call-for-Papers,,"Conference dates: April 28 - 29, 2025
+Year: 2025
+Location: Ottawa, Ontario, Canada
+City-State-Province: Ottawa, Ontario
+Country: Canada
+Continent: North America
+Type: Offline
+Submission Date.Abstract deadline: November 8, 2024
+Submission Date.Paper deadline: November 15, 2024
+Notification Date.Notification: January 12, 2025
+Camera-ready Date.Camera ready deadline: January 31, 2025
+Topics: Software Testing, Software Quality, Software Testing Automation
+Publisher: IEEE","April 28 - 29, 2025",FALSE,2025,"Ottawa, Ontario, Canada",TRUE,"Ottawa, Ontario",Canada,North America,Offline,TRUE,"{""Abstract deadline"":""November 8, 2024"",""Paper deadline"":""November 15, 2024""}",0.0,"{""Notification"":""January 12, 2025""}",100.0,"{""Camera ready deadline"":""January 31, 2025""}",0.0,{},,{},,"Software Testing, Software Quality, Software Testing Automation",IEEE,"The 6th ACM/IEEE International Conference on Automation of Software Test (AST 2025) will be held from April 28-29, 2025, in Ottawa, Ontario, Canada, co-located with ICSE 2025. The conference focuses on methods and solutions for software test automation, with a special theme on adapting test automation to the AI era, including sustainability and emerging challenges.","# The 6th ACM/IEEE International Conference on Automation of Software Test (AST 2025) - Call for Papers
+
+## Scope
+
+Software pervasiveness in both industry and digital society, as well as the proliferation of Artificial Intelligence (AI) technologies, are continuously leading to emerging needs from both software producers and consumers. Infrastructures, software components, and applications aim to hide their increasing complexity to appear more human-centric. However, the potential risk from design errors, poor integrations, and time-consuming engineering phases can result in unreliable solutions that can barely meet their intended objectives. In this context, Software Engineering processes and methods keep demanding the investigation of novel and further refined approaches to Software Quality Assurance (SQA).
+
+Software testing automation is a discipline that has produced noteworthy research in the last decades. The search for solutions to automatically test any concept of software is critical, and it encompasses several areas: from the generation of test cases, test oracles, test stubs/mocks; through the definition of selection and prioritization criteria; up to the engineering of infrastructures governing the execution of testing sessions locally or remotely in the cloud.
+
+The Automation of Software Test (AST) conference continues with a long record of international scientific forums on methods and solutions to automate software testing. In 2025, AST is in its 6th edition, having been formerly organized as workshops since 2006. The conference promotes high-quality research contributions on methods for software test automation and original case studies reporting practices in this field. We invite contributions that focus on:
+
+i) lessons learned about experiments of automatic testing in practice;
+ii) experiences of the adoption of testing tools, methods and techniques;
+iii) best practices to follow in testing and their measurable consequences; and
+iv) theoretical approaches that are applicable to the industry in the context of AST.
+
+Our theme for this year is **“Adapting test automation to the AI era including sustainability and emerging challenges”** with special sessions on test automation for AI, sustainability, and AI testing education and training.
+
+## Topics of Interest
+
+Submissions on the AST 2025 theme are especially encouraged, but papers on other topics relevant to the automation of software tests are also welcome. Topics of interest include, but are not limited to the following:
+
+*   AI for Automated Software Testing
+*   Testing of AI-based systems
+*   Effective testing through explainable AI
+*   Education to software testing with the advent of AI-based technology
+*   Automated software testing for sustainability, resource efficiency, energy consumption
+*   Codeless and low code test automation
+*   Test Automation in Software Process and Evolution, DevOps, Agile, CI/CD flows
+*   Test-driven development
+*   Model-based testing
+*   Formal methods, model checking and theories for testing and test automation
+*   Test case generation based on formal, semi-formal and AI models
+*   Theoretical foundations and methods for test automation
+*   Standardization of test languages, processes and tools
+*   Security, performance, and robustness testing
+*   Functional, interoperability, and conformance testing
+*   Usability and user experience testing
+*   Software simulation and automated software testing
+*   Testing of embedded, reactive and object-oriented systems
+*   Test automation of large complex systems
+*   Testing cyber physical systems
+*   Testing cloud and web systems and services
+*   Product line testing
+*   Testing anomaly detectors
+*   Metrics for testing - test effectiveness, efficiency, test coverage
+*   Testing tools
+*   Testing in different industry domains including healthcare, energy, finance, etc.
+
+## Important Dates (AoE - Anywhere On Earth)
+
+*   **Submission deadline:** **9 November 2024**
+*   **Notification of acceptance:** **12 January 2025 (UPDATED)**
+*   **Final version deadline:** **31 January 2025**
+*   **Conference Dates:** **28-29 April 2025**
+
+## Organizers
+
+*   **General Chair:** Andy Zaidman, Delft University of Technology, The Netherlands
+*   **Program Co-Chairs:**
+    *   Francesca Lonetti, ISTI-CNR, Italy
+    *   Ina Schieferdecker, Technische Universität Berlin, Germany
+    *   Rajesh Subramanyan, Stealth Startup & University of Washington, USA
+
+## Submission Details
+
+Three types of submissions are invited for both research and industry:
+
+*   **Regular Papers:** (up to 10 pages plus 2 additional pages of references for references) - This includes Research Papers and Industrial Case Studies.
+*   **Short Papers:** (up to 4 pages plus 1 additional page of references) - This includes Research Papers, Industrial Case Studies, and Doctoral Student Research.
+*   **Industrial Abstracts:** (up to 2 pages for all materials).
+
+The submission website is: [https://ast2025.hotcrp.com/](https://ast2025.hotcrp.com/)
+
+### Formatting Requirements:
+
+*   The page limit is strict (10 pages + 2 pages of references for full papers; 4 pages + 1 page of references for short papers; 2 pages for industrial abstracts). No additional pages will be allowed.
+*   Submissions must strictly conform to the **IEEE conference proceedings template**. Please refer to the IEEE Conference Proceedings Formatting Guidelines: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html).
+*   For LaTeX users, use `\documentclass[10pt,conference]{IEEEtran}` without including `compsoc` or `compsocconf` options.
+
+### Review Process:
+
+AST 2025 will follow a **double-blind review process**.
+
+### Publication:
+
+Accepted regular and short papers, case studies, and industrial abstracts will be published in the ICSE 2025 Co-located Event Proceedings and included in the IEEE and ACM Digital Libraries.
+
+## Special Issue
+
+Authors of the **best papers** presented at AST 2025 will be invited to submit an extension of their work for possible inclusion in a special issue in **Software Testing, Verification, and Reliability (STVR) journal**.
+
+## Keynotes
+
+*   **Keynote: Andreas Zeller**
+    *   Title: Personalized Fuzzing
+    *   When: Mon 28 Apr 2025 09:00 - 10:30
+    *   Bio: Andreas Zeller is faculty at the CISPA Helmholtz Center for Information Security, and professor for Software Engineering at Saarland University. His research on automated debugging, mining software archives, specification mining, and security testing has been highly influential. Andreas is one of the few researchers to have received two ERC Advanced Grants, most recently for his S3 project. He is an ACM Fellow and holds an ACM SIGSOFT Outstanding Research Award.
+*   **Keynote: Tiziana Margaria**
+    *   Title: Learning-Based Testing: The Ease, the Impact, the Future
+    *   When: Tue 29 Apr 2025 09:00 - 10:30
+    *   Bio: Prof. Tiziana Margaria is Chair of Software Systems at the University of Limerick. She leads the digital manufacturing Platform within the Research Ireland funded I-Form Centre for advanced manufacturing and she is a co-director of the National Centre of Research Training in AI. She works on neurosymbolic approaches to create connected digital IT spaces (data, processes, machines, and their interoperability) and on explainable AI for case-by-case auditable high assurance systems. This combines various kinds of formal methods and deterministic reasoning with suitable AI and ML technologies.
+
+## Registration
+
+[https://conf.researchr.org/attending/icse-2025/registration](https://conf.researchr.org/attending/icse-2025/registration)
+
+## Previous Editions
+
+*   2024 - Lisbon, Portugal
+*   2023 - Melbourne, Australia
+*   2022 - Pittsburgh, USA
+*   2021 - Virtual (originally in Madrid, Spain)
+*   2020 - Seoul - South Korea
+*   2019 - Montreal - Canada
+*   2018 - Gothenburg - Sweden
+*   2017 - Buenos Aires - Argentina
+*   2016 - Austin - Texas
+*   2015 - Firenze - Italy
+*   2014 - Hyderabad - India
+*   2013 - San Jose California - USA
+*   2012 - Zurich - Switzerland
+*   2011 - Waikiki - Hawaii
+*   2010 - Cape Town - South Africa
+*   2009 - Vancouver - Canada
+*   2008 - Leipzig - Germany
+*   2007 - Minneapolis - USA
+*   2006 - Shanghai - China
+","lấy sai submissionDate (có thể là tự bịa)
+
+camera-ready date lấy date cũ
+
+mainConferenceDate tuy đúng tuy nhiên ở header của web có conferenceDate dài hơn"
+req-conf-1751537158192-i48ha,,Architectural Support for Programming Languages and Operating Systems,ASPLOS,https://www.asplos-conference.org/asplos2025/index.html,TRUE,https://www.asplos-conference.org/asplos2025/cfp.html,https://www.asplos-conference.org/asplos2025/cfp.html#important_dates,"Conference dates: March 30 - April 3, 2025
+Year: 2025
+Location: Rotterdam, The Netherlands
+City-State-Province: Rotterdam
+Country: Netherlands
+Continent: Europe
+Type: Offline
+Submission Date.(Spring Cycle) Abstract Deadline: February 23, 2024
+Submission Date.(Spring Cycle) Paper Deadline: March 1, 2024
+Submission Date.(Summer Cycle) Abstract Deadline: June 17, 2024
+Submission Date.(Summer Cycle) Paper Deadline: June 24, 2024
+Submission Date.(Fall Cycle) Paper Deadline: October 18, 2024
+Notification Date.(Spring Cycle) Notification Date: June 6, 2024
+Notification Date.(Summer Cycle) Notification Date: October 2, 2024
+Notification Date.(Fall Cycle) Notification Date: January 27, 2025
+Camera-ready Date.(Spring Cycle) Camera ready papers: April 26, 2025
+Other Date.(Spring Cycle) Author Response Period: May 15-20, 2024
+Other Date.(Summer Cycle) Author Response Period: September 9-13, 2024
+Other Date.(Fall Cycle) Author Response Period: January 13-15, 2025
+Topics: Computer Architecture, Programming Languages, Operating Systems, Networking, Storage
+Publisher: ACM","March 30 - April 3, 2025",TRUE,2025,"Rotterdam, The Netherlands",TRUE,Rotterdam,Netherlands,Europe,Offline,TRUE,"{""(Spring Cycle) Abstract Deadline"":""February 23, 2024"",""(Spring Cycle) Paper Deadline"":""March 1, 2024"",""(Summer Cycle) Abstract Deadline"":""June 17, 2024"",""(Summer Cycle) Paper Deadline"":""June 24, 2024"",""(Fall Cycle) Paper Deadline"":""October 18, 2024""}",100.0,"{""(Spring Cycle) Notification Date"":""June 6, 2024"",""(Summer Cycle) Notification Date"":""October 2, 2024"",""(Fall Cycle) Notification Date"":""January 27, 2025""}",100.0,"{""(Spring Cycle) Camera ready papers"":""April 26, 2025""}",0.0,{},,"{""(Spring Cycle) Author Response Period"":""May 15-20, 2024"",""(Summer Cycle) Author Response Period"":""September 9-13, 2024"",""(Fall Cycle) Author Response Period"":""January 13-15, 2025""}",100.0,"Computer Architecture, Programming Languages, Operating Systems, Networking, Storage",ACM,"ASPLOS 2025, the ACM International Conference on Architectural Support for Programming Languages and Operating Systems, will be held in Rotterdam, The Netherlands, from March 30 to April 3, 2025. Co-located with EuroSys 2025, the conference serves as a premier academic forum for multidisciplinary applied computer systems research, focusing on the interaction between hardware, software, computer architecture, programming languages, and operating systems.","# ASPLOS 2025: Call for Papers
+
+## Synopsis
+
+ASPLOS, the ACM International Conference on Architectural Support for Programming Languages and Operating Systems, is the premier academic forum for multidisciplinary applied computer systems research spanning hardware, software, and their interaction. It focuses on practical aspects of computer architecture, programming languages, operating systems, and associated areas such as networking and storage. ASPLOS 2025 will take place in March-April 2025 in Rotterdam, co-located with EuroSys 2025.
+
+ASPLOS 2025 has three submission deadlines – spring, summer and fall – which are meant to encourage authors to submit their papers when they are ready. As in recent years, ASPLOS 2025 will allow the authors of some submissions to choose to apply a major revision to their submission in order to fix a well-defined list of problems.
+
+## Important Dates
+
+ASPLOS 2025 offers three submission cycles:
+
+### Spring Cycle
+1.  **Abstract Deadline:** February 23, 2024
+2.  **Paper Deadline:** March 1, 2024
+3.  **Author Response Period:** May 15-20, 2024
+4.  **Notification Date:** June 6, 2024
+    *   Submission Site: [Spring submission site](https://asplos25spring.hotcrp.com/)
+
+### Summer Cycle
+1.  **Abstract Deadline:** June 17, 2024
+2.  **Paper Deadline:** June 24, 2024
+3.  **Author Response Period:** September 9-13, 2024
+4.  **Notification Date:** October 2, 2024
+    *   Submission Site: [Summer submission site](https://asplos25summer.hotcrp.com)
+
+### Fall Cycle
+1.  **Paper Deadline:** October 18, 2024 (No abstract deadline.)
+2.  **Author Response Period:** January 13-15, 2025
+3.  **Notification Date:** January 27, 2025
+    *   Submission Site: [Fall submission site](https://asplos25fall.hotcrp.com)
+
+*All deadlines are AoE (Anywhere on Earth).* 
+
+## Scope and Expectations
+
+The scope of ASPLOS 2025 covers all practical aspects related to computer architecture, programming languages, and operating systems, as well as closely-related associated areas. ASPLOS construes systems broadly, and areas of interest include operating systems, file and storage systems, distributed systems, cloud computing, mobile and edge systems, secure and reliable systems, systems aspects of big data and machine learning, embedded and real-time systems, and virtualization. We seek original, high-quality research submissions that improve and further the knowledge of applied computer systems, with emphasis on the intersection between the main ASPLOS disciplines. Research submissions may be applicable to computer systems of any scale. We embrace research that directly targets new problems in innovative ways, focusing on goals such as throughput, latency, energy, and security. Non-traditional topics are encouraged, and the review process will be sensitive to the challenges of multidisciplinary work in emerging areas. We welcome ""experience papers"" and submissions that further our understanding of existing systems. Submissions with clearly defined artifacts (traces, code, tools) are highly valued.
+
+## Areas of Interest
+
+Alphabetically sorted areas of interest related to practical aspects of computer architecture, programming languages, and operating systems include but are not limited to:
+
+*   Existing, emerging, and nontraditional compute platforms at all scales
+*   Heterogeneous architectures and accelerators
+*   Internet services, cloud computing, and datacenters
+*   Memory, storage, networking, and I/O
+*   Power, energy, and thermal management
+*   Profiling, debugging, and testing
+*   Security, reliability, and availability
+*   Systems for enabling parallelism and computation on big data
+*   Virtualization and virtualized systems
+
+## Resubmissions
+
+Authors of resubmitted work must describe changes since the previous submission(s) in a separate note. Papers rejected from ASPLOS must not be submitted to the next two subsequent review cycles. Papers withdrawn after reviews are made available are considered ""rejected"".
+
+## Major Revisions
+
+ASPLOS 2025 will offer some submissions a ""Major Revision"" decision, allowing authors to revise and resubmit their work within 6 weeks of notification. Revised submissions can use up to 13 pages.
+
+## Anonymization
+
+ASPLOS employs a double-blind review process. Authors must make a good faith attempt to anonymize their submissions by avoiding identifying information in submitted documents, references, acknowledgments, or online repositories. Supplemental material must also be anonymized.
+
+## Conflicts of Interest (COI) and Declaring Authors
+
+Authors must register all conflicts in their HotCRP submission page. Conflicts include affiliations within the past four years, advisors/advisees, family relations, collaborators, and funding relationships. Authors must declare all authors upfront.
+
+## Originality and Concurrent Submissions
+
+Manuscripts must not have been previously published or accepted for publication in a substantially similar form. Submissions under review elsewhere during the ASPLOS review cycle are not allowed. Adherence to the ACM Plagiarism Policy is required.
+
+## Ethical and Other Obligations
+
+Authors must not break anonymity, contact reviewers inappropriately, or advertise their work during specific periods. Adherence to the ACM ethics policy is mandatory. Violation of these policies may result in rejection.
+
+## Formatting and Editing
+
+*   **File Format:** Printable PDF.
+*   **Template:** ACM's sigplan proceedings template (acmart Latex class).
+*   **Page Limit:** Full submissions: 11 pages (excluding references). Accepted papers/major revisions: +2 pages (up to 13), with an option to purchase 1-2 additional pages.
+*   **Font Size:** Minimum 10pt for body text, 9pt for figures/tables.
+*   **References:** Do not count against page limit. List full author names, include clickable links (DOIs preferred).
+*   **Layout:** Single-spaced, two-column, US Letter size. Strict adherence to template is required; no squeezing of space.
+*   **Figures/Tables:** Readable, color-blind friendly, monochrome readable.
+
+## Author Response Period
+
+Authors will have an opportunity to respond to reviews, focusing on correcting factual errors and addressing reviewer questions. Rebuttals are optional but encouraged, with a suggested limit of 800 words.
+
+## Accepted Papers
+
+Accepted papers are conditionally accepted pending revision and approval by a committee member. Accepted papers receive +2 pages for the camera-ready version and may purchase more. One author is expected to physically attend. Papers will be made available online to registered attendees. Authors must obtain an ORCID ID.
+
+## Artifact Evaluation
+
+Artifact evaluation will continue. Refer to the [ASPLOS 2025 AEC web page](https://sites.google.com/view/asplos25aec/home) for details.
+
+## Poster and Lightning Sessions / Wild and Crazy Ideas Session / Debate Session
+
+Details for these sessions will be available later.
+
+## Best Paper Award
+
+A selection of papers will receive a Best Paper Award.
+
+## Confidentiality
+
+All submissions will be treated as confidential prior to publication.
+
+## Contact
+
+For questions, please direct any questions to the program co-chairs at [asplos2025pcchairs@gmail.com](mailto:asplos2025pcchairs@gmail.com).",
+req-conf-1751537158192-i48ha,,International Conference on Advanced Technologies For Signal & Image Processing,ATSIP,https://2025.ieeeicip.org/,FALSE,https://2025.ieeeicip.org/call-for-papers/,https://2025.ieeeicip.org/important-dates/,"Conference dates: September 14 - 17, 2025
+Year: 2025
+Location: Anchorage Alaska, USA
+City-State-Province: Anchorage
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Special Session Proposal Deadline: December 18, 2024
+Submission Date.Regular & Special Session Paper Submission Deadline (6 pages Inclusive): February 5, 2025
+Submission Date.Open Journal of Signal Processing Paper Submission Deadline (9 Pages): February 5, 2025
+Submission Date.Satellite Workshop Proposals Deadline: February 5, 2025
+Submission Date.Grand Challenge Session Proposal Deadline: March 19, 2025
+Submission Date.Author Rebuttal Deadline: April 30, 2025
+Submission Date.Industry Demo First Round Abstract Submission Deadline: May 28, 2025
+Submission Date.Journal Paper Presentation Request Deadline: May 28, 2025
+Submission Date.Final Regular Paper Submission Deadline: May 28, 2025
+Submission Date.Grand Challenge Paper Submission: June 11, 2025
+Submission Date.Industry Demo Second Round Video Submission Deadline: June 25, 2025
+Submission Date.Satellite Workshop Final Paper Submission Deadline: July 9, 2025
+Notification Date.Special Session Acceptance Notification: January 6, 2025
+Notification Date.Tutorial Acceptance Notification: February 26, 2025
+Notification Date.Grand Challenge Session Acceptance Notification: April 2, 2025
+Notification Date.Regular Paper Acceptance Notification (6 pages): May 20, 2025
+Notification Date.Journal Track Paper Acceptance Notification (9 pages): May 20, 2025
+Notification Date.Industry Demo First Round Abstract Notification of Acceptance/Rejection: June 11, 2025
+Notification Date.Journal Paper Presentation Request Notification: June 4, 2025
+Notification Date.Satellite Workshop Paper Acceptance Notification: July 2, 2025
+Notification Date.Final Industry Demo Notification of Acceptance/Rejection: July 3, 2025
+Camera-ready Date.Regular Paper and Journal Paper Author Registration Deadline: June 11, 2025
+Camera-ready Date.Grand Challenge, Satellite Workshop, and Demo Author Registration Deadline: July 16, 2025
+Other Date.Tutorial Proposal Deadline: January 8, 2025
+Other Date.Reviews Made Available to Authors Extended from 16 April to 23 April 2025: April 23, 2025
+Topics: Image & Video Processing, Computer Vision, Computer Vision, AI, GenAI","September 14 - 17, 2025",,2025,"Anchorage Alaska, USA",,Anchorage,United States,North America,Offline,,"{""Special Session Proposal Deadline"":""December 18, 2024"",""Regular & Special Session Paper Submission Deadline (6 pages Inclusive)"":""February 5, 2025"",""Open Journal of Signal Processing Paper Submission Deadline (9 Pages)"":""February 5, 2025"",""Satellite Workshop Proposals Deadline"":""February 5, 2025"",""Grand Challenge Session Proposal Deadline"":""March 19, 2025"",""Author Rebuttal Deadline"":""April 30, 2025"",""Industry Demo First Round Abstract Submission Deadline"":""May 28, 2025"",""Journal Paper Presentation Request Deadline"":""May 28, 2025"",""Final Regular Paper Submission Deadline"":""May 28, 2025"",""Grand Challenge Paper Submission"":""June 11, 2025"",""Industry Demo Second Round Video Submission Deadline"":""June 25, 2025"",""Satellite Workshop Final Paper Submission Deadline"":""July 9, 2025""}",,"{""Special Session Acceptance Notification"":""January 6, 2025"",""Tutorial Acceptance Notification"":""February 26, 2025"",""Grand Challenge Session Acceptance Notification"":""April 2, 2025"",""Regular Paper Acceptance Notification (6 pages)"":""May 20, 2025"",""Journal Track Paper Acceptance Notification (9 pages)"":""May 20, 2025"",""Industry Demo First Round Abstract Notification of Acceptance/Rejection"":""June 11, 2025"",""Journal Paper Presentation Request Notification"":""June 4, 2025"",""Satellite Workshop Paper Acceptance Notification"":""July 2, 2025"",""Final Industry Demo Notification of Acceptance/Rejection"":""July 3, 2025""}",,"{""Regular Paper and Journal Paper Author Registration Deadline"":""June 11, 2025"",""Grand Challenge, Satellite Workshop, and Demo Author Registration Deadline"":""July 16, 2025""}",,{},,"{""Tutorial Proposal Deadline"":""January 8, 2025"",""Reviews Made Available to Authors Extended from 16 April to 23 April 2025"":""April 23, 2025""}",,"Image & Video Processing, Computer Vision, Computer Vision, AI, GenAI",No publisher,"The IEEE International Conference on Image Processing (ICIP 2025) will be held in Anchorage, Alaska, USA, from September 14–17, 2025. With the theme “Imaging in the Age of GenAI,” ICIP 2025 is the Signal Processing Society’s largest conference dedicated to image & video processing and computer vision, featuring plenary speakers, tutorials, workshops, and an industry program.","# Call for Papers
+
+The IEEE International Conference on Image Processing (ICIP 2025) will be held in **Anchorage, Alaska, USA, from September 14 – 17, 2025**. The conference theme is **“Imaging in the Age of GenAI”**. ICIP 2025 is recognized as the Signal Processing Society’s (SPS) largest and most comprehensive conference dedicated to image & video processing and computer vision.
+
+## Types of Contributions Solicited
+
+We invite submissions for various tracks and formats, including:
+*   Regular Papers
+*   Special Sessions Papers
+*   Datasets and Benchmarks Track Papers
+*   Open Journal of Signal Processing (OJSP) Track Papers
+*   Journal Paper Presentations
+*   Industry Demonstrations
+*   Industry Expert Talks: Call for Presentations
+*   Satellite Workshops
+*   Tutorials
+*   Grand Challenge Sessions
+
+## Key Dates
+
+*   **Special Session Proposal Deadline:** 18 December 2024
+*   **Special Session Acceptance Notification:** 6 January 2025
+*   **Tutorial Proposal Deadline:** 8 January 2025
+*   **Regular & Special Session Paper Submission Deadline:** 5 February 2025
+*   **Open Journal of Signal Processing Paper Submission Deadline:** 5 February 2025
+*   **Satellite Workshop Proposals Deadline:** 5 February 2025
+*   **Satellite Workshop Acceptance Notification:** 12 February 2025
+*   **Tutorial Acceptance Notification:** 26 February 2025
+*   **Grand Challenge Session Proposal Deadline:** 19 March 2025
+*   **Reviews Made Available to Authors:** 23 April 2025
+*   **Grand Challenge Session Acceptance Notification:** 02 April 2025
+*   **Author Rebuttal Deadline:** 30 April 2025
+*   **Regular Paper Acceptance Notification:** 20 May 2025
+*   **Journal Track Paper Acceptance Notification:** 20 May 2025
+*   **Satellite Workshop Paper Submission Deadline:** 4 June 2025
+*   **Journal Paper Presentation Request Deadline:** 28 May 2025
+*   **Final Regular Paper Submission Deadline:** 28 May 2025
+*   **Grand Challenge Paper Submission:** 11 June 2025
+*   **Industry Demo First Round Abstract Submission Deadline:** 28 May 2025
+*   **Journal Paper Presentation Request Notification:** 4 June 2025
+*   **Industry Demo First Round Abstract Notification of Acceptance/Rejection:** 11 June 2025
+*   **Regular Paper and Journal Paper Author Registration Deadline:** 11 June 2025
+*   **Satellite Workshop Paper Acceptance Notification:** 2 July 2025
+*   **Grand Challenge Paper Acceptance Notification:** 25 June 2025
+*   **Industry Demo Second Round Video Submission Deadline:** 25 June 2025
+*   **Satellite Workshop Final Paper Submission Deadline:** 9 July 2025
+*   **Grand Challenge Final Paper Submission Deadline:** 2 July 2025
+*   **Final Industry Demo Notification of Acceptance/Rejection:** 3 July 2025
+*   **Grand Challenge, Satellite Workshop, and Demo Author Registration Deadline:** 16 July 2025
+
+## Submission Links & Resources
+
+*   **Submit a Regular Paper:** [https://cmsworkshops.com/ICIP2025/papers.php](https://cmsworkshops.com/ICIP2025/papers.php)
+*   **Submit a Paper to the Datasets and Benchmarks Track:** [https://cmsworkshops.com/ICIP2025/papers.php](https://cmsworkshops.com/ICIP2025/papers.php)
+*   **Submit a Paper to OJSP Track:** [https://2025.ieeeicip.org/ojsp-track/](https://2025.ieeeicip.org/ojsp-track/)
+*   **Paper Kit:** [https://cmsworkshops.com/ICIP2025/papers/paper_kit.php](https://cmsworkshops.com/ICIP2025/papers/paper_kit.php)
+*   **Editorial Policies:** [https://2025.ieeeicip.org/editorial-policies/](https://2025.ieeeicip.org/editorial-policies/)
+
+## Organizing Committee
+
+*   **General Chair:** Saif alZahir
+*   **Co-General Chairs:** Kenrick Mock and Fabrice Labeau",
+req-conf-1751537158192-i48ha,,IEEE Automatic Speech Recognition and Understanding Workshop,ASRU,https://2025.ieeeasru.org/,TRUE,https://2025.ieeeasru.org/calls/call-for-papers,https://2025.ieeeasru.org/,"Conference dates: December 6-10, 2025
+Year: 2025
+Location: Honolulu, Hawaii, USA
+City-State-Province: Honolulu, Hawaii
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Regular & special session papers due: May 28, 2025
+Submission Date.Challenge & Demo Paper Submission: June 25, 2025
+Submission Date.Tutorial Proposal Submission: July 25, 2025
+Submission Date.Workshop Proposal Submission: July 25, 2025
+Notification Date.Paper notification of acceptance: August 6, 2025
+Notification Date.Tutorial Notification of Acceptance: August 8, 2025
+Notification Date.Workshop Notification of Acceptance: August 8, 2025
+Camera-ready Date.Paper Camera-Ready Due: August 13, 2025
+Registration Date.Registration Opens: August 13, 2025
+Registration Date.Early Registration Due: August 27, 2025
+Registration Date.Author Registration Due: August 27, 2025
+Other Date.Paper submissions open: March 28, 2025
+Other Date.Author Rebuttal Period Begins: July 13, 2025
+Other Date.Author Rebuttal Period Ends: July 18, 2025
+Topics: Automatic speech recognition, Spoken language processing, Speech enhancement and separation, Speech analysis, Speaker and language recognition, Speaker diarization, Text-only language processing, Multi modal speech processing, Multilingual Processing, Emotion Recognition and Paralinguistics, Speech Synthesis and Spoken Language Generation, Resources (New Corpora, Toolkits, Evaluation Metrics, etc., Machine Learning for Speech Application, Large Language Models for Speech, Speech Foundation Models","December 6-10, 2025",TRUE,2025,"Honolulu, Hawaii, USA",TRUE,"Honolulu, Hawaii",United States,North America,Offline,TRUE,"{""Regular & special session papers due"":""May 28, 2025"",""Challenge & Demo Paper Submission"":""June 25, 2025"",""Tutorial Proposal Submission"":""July 25, 2025"",""Workshop Proposal Submission"":""July 25, 2025""}",100.0,"{""Paper notification of acceptance"":""August 6, 2025"",""Tutorial Notification of Acceptance"":""August 8, 2025"",""Workshop Notification of Acceptance"":""August 8, 2025""}",100.0,"{""Paper Camera-Ready Due"":""August 13, 2025""}",100.0,"{""Registration Opens"":""August 13, 2025"",""Early Registration Due"":""August 27, 2025"",""Author Registration Due"":""August 27, 2025""}",100.0,"{""Paper submissions open"":""March 28, 2025"",""Author Rebuttal Period Begins"":""July 13, 2025"",""Author Rebuttal Period Ends"":""July 18, 2025""}",75.0,"Automatic speech recognition, Spoken language processing, Speech enhancement and separation, Speech analysis, Speaker and language recognition, Speaker diarization, Text-only language processing, Multi modal speech processing, Multilingual Processing, Emotion Recognition and Paralinguistics, Speech Synthesis and Spoken Language Generation, Resources (New Corpora, Toolkits, Evaluation Metrics, etc., Machine Learning for Speech Application, Large Language Models for Speech, Speech Foundation Models",No publisher,"The IEEE Automatic Speech Recognition and Understanding Workshop (ASRU 2025) is scheduled to take place in Honolulu, Hawaii, USA, from December 6-10, 2025. This workshop aims to foster discussions between academia and industry on advancements in Automatic Speech Recognition and Understanding, covering areas such as speech recognition systems, spoken dialog systems, speech analysis, large language models for speech, and speech foundation models.","# Call for Papers
+
+A call for papers invites researchers to submit their work to ASRU 2025 for presentation or publication, outlining topics, and deadlines.
+
+The ASRU Workshop is a flagship event of IEEE Speech and Language Processing Technical Committee. It has a tradition of bringing together researchers from academia and industry to discuss problems in automatic speech recognition and understanding. The workshop will feature invited talks/keynotes, regular papers and special sessions. All papers will be presented as posters.
+
+If you have any questions, please contact the ASRU 2025 TPC Chairs at [tpc@ieeeasru.org](mailto:tpc@ieeeasru.org).
+
+[Download Call for Papers](https://confcats-siteplex.s3.us-east-1.amazonaws.com/asru25/asru25_cfp_web_04_c6abea5ce7.pdf)
+[Submit Paper](https://cmt3.research.microsoft.com/IEEEASRU2025)
+
+## Topics of Interest
+
+Topics of interest include, but not limited to:
+
+*   Automatic speech recognition
+*   Spoken language processing
+*   Speech enhancement and separation
+*   Speech analysis
+*   Speaker and language recognition
+*   Speaker diarization
+*   Text-only language processing
+*   Multimodal speech processing
+*   Multilingual speech processing
+*   Emotion recognition and paralinguistics
+*   Speech synthesis and spoken language generation
+*   Resources (new corpora, toolkits, evaluation metrics, etc.)
+*   Machine learning for speech application
+*   Large Language Models for Speech
+*   Speech Foundation Models
+
+## Important Dates
+
+1.  **Paper submissions open:** March 28, 2025
+2.  **Regular & special session papers due:** May 28, 2025
+3.  **Paper revision due:** June 4, 2025
+4.  **Paper notification of acceptance:** August 6, 2025
+5.  **Registration Opens:** August 13, 2025
+6.  **Paper Camera-Ready Due:** August 13, 2025
+7.  **Early Registration Due:** August 27, 2025
+8.  **Author Registration Due:** August 27, 2025",thiếu Paper revision due
+req-conf-1751537158192-i48ha,,Advanced Visual Interfaces,AVI,https://avi2024.dibris.unige.it/,TRUE,https://avi2024.dibris.unige.it/calls/paper-submission,https://avi2024.dibris.unige.it/calls,"Conference dates: June 3 - 7, 2024
+Year: 2024
+Location: Arenzano (Genoa), Italy
+City-State-Province: Genoa
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.(Long and short papers) Abstract submission: January 17, 2024
+Submission Date.(Long and short papers) Paper submission: January 24, 2024
+Submission Date.(Posters and Demo papers): February 29, 2024
+Submission Date.(Doctoral Consortium papers): March 15, 2024
+Submission Date.(Tutorial proposals): March 15, 2024
+Submission Date.(Workshop proposals): December 1, 2023
+Topics: Advanced Visual Interfaces, Human-Computer Interaction
+Publisher: ACM Press","June 3 - 7, 2024",TRUE,2024,"Arenzano (Genoa), Italy",TRUE,Genoa,Italy,Europe,Offline,TRUE,"{""(Long and short papers) Abstract submission"":""January 17, 2024"",""(Long and short papers) Paper submission"":""January 24, 2024"",""(Posters and Demo papers)"":""February 29, 2024"",""(Doctoral Consortium papers)"":""March 15, 2024"",""(Tutorial proposals)"":""March 15, 2024"",""(Workshop proposals)"":""December 1, 2023""}",100.0,{},0.0,{},,{},,{},,"Advanced Visual Interfaces, Human-Computer Interaction",ACM Press,"The 17th International Conference on Advanced Visual Interfaces (AVI 2024) was held in Arenzano (Genoa), Italy, from June 3rd to 7th, 2024. The conference focused on advanced visual interfaces and Human-Computer Interaction (HCI), providing a forum for researchers to present new technological results, paradigms, and visions. Accepted papers were published in the ACM International Conference Proceeding Series (ICPS) and made available in the ACM Digital Library.","# Call for Papers
+
+The 17th International Conference on Advanced Visual Interfaces (AVI 2024) was held in Arenzano (Genoa), Italy, from June 3rd to 7th, 2024. AVI has been a biennial appointment for a vast international community of experts since 1992, attracting leading researchers of Human-Computer Interaction (HCI) from all over the world. The conference provides a forum to present and disseminate new technological results, paradigms, and visions for HCI and user interfaces, with a primary focus on the conception, design, implementation, and evaluation of **novel visual interfaces**.
+
+## Submission Types
+
+AVI 2024 accepted the following types of contributions:
+
+### Long and Short Research Papers
+
+We solicit high-quality original research papers describing original, unpublished research in the area of advanced visual interfaces and Human-Computer Interaction in general. All submissions undergo peer-review by an international panel of experts.
+
+*   **Long Papers:** Maximum **8 pages** (with one additional page for references).
+*   **Short Papers:** Maximum **4 pages** (with one additional page for references).
+
+### Poster Papers
+
+The Poster Track allows researchers and practitioners to present their work in progress and obtain feedback from peers in an informal setting. Poster submissions must be up to **2 pages** (with one additional page for references) and are **not anonymized**.
+
+### Demo Papers
+
+The Demo Track showcases innovative implementations, systems, and technologies demonstrating new ideas about interactive visual interfaces. We seek implementations of novel and exciting concepts or systems related to AVI's main topics. Demo papers must be up to **2 pages** (with one additional page for references) and are **not anonymized**.
+
+### Workshops & Tutorials
+
+*   **Workshops:** Proposals are invited for half-day or one-day workshops that facilitate the exchange of new ideas in all areas related to advanced visual interfaces and HCI.
+*   **Tutorials:** Proposals are encouraged for specific topics related to AVI and general HCI approaches, methodologies, or technologies.
+
+### Doctoral Consortium
+
+The Doctoral Consortium aims to provide a setting for PhD students to present their work, receive feedback on their doctoral research plan and progress, articulate their problem statement, goals, methods, and results, and gain guidance from established researchers and peers.
+
+## Topics of Interest
+
+The conference focuses on the conception, design, implementation, and evaluation of **novel visual interfaces**, broadly covering **Human-Computer Interaction (HCI)**.
+
+## Important Dates (23:59, AoE)
+
+*   **Workshop proposals:** Friday, **December 1, 2023**
+*   **Abstract submission (Long and short papers):** Wednesday, **January 17, 2024**
+*   **Paper submission (Long and short papers):** Wednesday, **January 24, 2024**
+*   **Posters and Demo papers:** Friday, **March 8, 2024**
+*   **Doctoral Consortium papers:** Friday, **March 15, 2024**
+*   **Tutorial proposals:** Friday, **March 15, 2024**
+
+## Submission Guidelines
+
+### Formatting
+
+*   All submissions must be formatted according to the **ACM SIGCONF template**.
+*   Templates are available for LaTeX (including Overleaf) and Microsoft Word.
+*   The required format is **double-column**.
+
+### Anonymization
+
+*   **Long and short research papers must be anonymized**. This involves removing information (such as authorship, acknowledgments, or specific application/software names) that could identify the authors.
+*   Citations to authors' previous work should remain visible and be in the third person (e.g., ""As described by [10]"" and not ""As described in our previous work [10]"").
+
+### Submission Portal
+
+*   All papers must be submitted online via EasyChair: [https://easychair.org/conferences/?conf=avi2024](https://easychair.org/conferences/?conf=avi2024)
+
+### Abstract Submission
+
+*   Authors are required to submit a **250-word abstract** by the abstract deadline. This helps in speeding up the paper assignment to reviewers.
+
+## Proceedings
+
+Accepted full and short research papers, poster papers, demo papers, and workshop descriptions will be published in the Proceedings by **ACM Press** and made available in the **ACM Digital Library**.
+
+## Registration Requirement
+
+For each accepted paper, at least one author must **register for AVI 2024** by the author registration deadline and present the paper at the Conference.",thiếu notificationDate
+req-conf-1751537158192-i48ha,,International Conference in Business Process Management,BPM,https://www.bpm2025seville.org/,TRUE,https://www.bpm2025seville.org/calls/research-papers/,https://www.bpm2025seville.org/calls/dates/,"Conference dates: August 31 - September 5, 2025
+Year: 2025
+Location: Seville, Spain
+City-State-Province: Seville
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.(Research Track) Paper Abstract submission: May 5, 2025
+Submission Date.(Research Track) Paper submission: May 12, 2025
+Submission Date.(Workshops) Workshop proposal deadline: November 29, 2024
+Submission Date.(Industry & Society Forum) Abstract submission: May 22, 2025
+Submission Date.(Industry & Society Forum) Paper submission: May 29, 2025
+Submission Date.(Educators Forum) Paper submission: May 29, 2025
+Submission Date.(Responsible BPM Forum) Abstract submission: May 22, 2025
+Submission Date.(Responsible BPM Forum) Paper submission: June 5, 2025
+Submission Date.(Process Technology Forum) Abstract submission: May 15, 2025
+Submission Date.(Process Technology Forum) Paper submission: May 29, 2025
+Submission Date.(Tutorials) Submission of tutorial proposals: May 19, 2025
+Submission Date.(Demos and Resources) Demo submission: June 26, 2025
+Submission Date.(Doctoral Consortium) Paper Submission: June 5, 2025
+Submission Date.(Journal First Submissions) Abstract submission: May 22, 2025
+Submission Date.(Best BPM Dissertation Award) Deadline for submission of thesis: May 15, 2025
+Notification Date.(Research Track) Notification to authors: May 8, 2025
+Notification Date.(Workshops) Notification of proposal acceptance, rejection, or invitation to negotiation: December 16, 2024
+Notification Date.(Industry & Society Forum) Notification: June 30, 2025
+Notification Date.(Educators Forum) Notification: June 30, 2025
+Notification Date.(Responsible BPM Forum) Notification: June 30, 2025
+Notification Date.(Process Technology Forum) Notification: June 27, 2025
+Notification Date.(Tutorials) Notification of acceptance: June 9, 2025
+Notification Date.(Demos and Resources) Notification: July 14, 2025
+Notification Date.(Doctoral Consortium) Notification of acceptance: July 5, 2025
+Notification Date.(Journal First Submissions) Notification: May 27, 2025
+Notification Date.(Best BPM Dissertation Award) Notification whether thesis is short listed: June 6, 2025
+Camera-ready Date.(Research Track) Camera-ready submission: June 13, 2025
+Camera-ready Date.(Industry & Society Forum) Camera-ready: July 7, 2025
+Camera-ready Date.(Educators Forum) Camera-ready: June 30, 2025
+Camera-ready Date.(Responsible BPM Forum) Camera-ready: July 4, 2025
+Camera-ready Date.(Process Technology Forum) Camera-ready: July 4, 2025
+Camera-ready Date.(Demos and Resources) Camera-ready submission: July 21, 2025
+Camera-ready Date.(Doctoral Consortium) Camera-ready copy paper: July 14, 2025
+Other Date.(Responsible BPM Forum) Responsible BPM Forum: September 2nd – 5th, 2025
+Other Date.(Process Technology Forum) Process Technology Forum: September 2nd – 5th, 2025
+Other Date.(Doctoral Consortium) Consortium: August 31, 2025
+Other Date.(Best BPM Dissertation Award) Online session with short-listed candidates: In the week of June 23-27 (tentative)
+Topics: Business Process Management, Computer Science, Information Systems Engineering, Information Systems Management","August 31 - September 5, 2025",TRUE,2025,"Seville, Spain",TRUE,Seville,Spain,Europe,Offline,TRUE,"{""(Research Track) Paper Abstract submission"":""May 5, 2025"",""(Research Track) Paper submission"":""May 12, 2025"",""(Workshops) Workshop proposal deadline"":""November 29, 2024"",""(Industry & Society Forum) Abstract submission"":""May 22, 2025"",""(Industry & Society Forum) Paper submission"":""May 29, 2025"",""(Educators Forum) Paper submission"":""May 29, 2025"",""(Responsible BPM Forum) Abstract submission"":""May 22, 2025"",""(Responsible BPM Forum) Paper submission"":""June 5, 2025"",""(Process Technology Forum) Abstract submission"":""May 15, 2025"",""(Process Technology Forum) Paper submission"":""May 29, 2025"",""(Tutorials) Submission of tutorial proposals"":""May 19, 2025"",""(Demos and Resources) Demo submission"":""June 26, 2025"",""(Doctoral Consortium) Paper Submission"":""June 5, 2025"",""(Journal First Submissions) Abstract submission"":""May 22, 2025"",""(Best BPM Dissertation Award) Deadline for submission of thesis"":""May 15, 2025""}",86.66666667,"{""(Research Track) Notification to authors"":""May 8, 2025"",""(Workshops) Notification of proposal acceptance, rejection, or invitation to negotiation"":""December 16, 2024"",""(Industry & Society Forum) Notification"":""June 30, 2025"",""(Educators Forum) Notification"":""June 30, 2025"",""(Responsible BPM Forum) Notification"":""June 30, 2025"",""(Process Technology Forum) Notification"":""June 27, 2025"",""(Tutorials) Notification of acceptance"":""June 9, 2025"",""(Demos and Resources) Notification"":""July 14, 2025"",""(Doctoral Consortium) Notification of acceptance"":""July 5, 2025"",""(Journal First Submissions) Notification"":""May 27, 2025"",""(Best BPM Dissertation Award) Notification whether thesis is short listed"":""June 6, 2025""}",100.0,"{""(Research Track) Camera-ready submission"":""June 13, 2025"",""(Industry & Society Forum) Camera-ready"":""July 7, 2025"",""(Educators Forum) Camera-ready"":""June 30, 2025"",""(Responsible BPM Forum) Camera-ready"":""July 4, 2025"",""(Process Technology Forum) Camera-ready"":""July 4, 2025"",""(Demos and Resources) Camera-ready submission"":""July 21, 2025"",""(Doctoral Consortium) Camera-ready copy paper"":""July 14, 2025""}",100.0,{},,"{""(Responsible BPM Forum) Responsible BPM Forum"":""September 2nd – 5th, 2025"",""(Process Technology Forum) Process Technology Forum"":""September 2nd – 5th, 2025"",""(Doctoral Consortium) Consortium"":""August 31, 2025"",""(Best BPM Dissertation Award) Online session with short-listed candidates"":""In the week of June 23-27 (tentative)""}",100.0,"Business Process Management, Computer Science, Information Systems Engineering, Information Systems Management",No publisher,"The 23rd International Conference on Business Process Management (BPM 2025) will be held in Seville, Spain, from August 31 to September 5, 2025. BPM 2025 is the premier forum for researchers and practitioners in Business Process Management, fostering collaboration across Computer Science, Information Systems Engineering, and Management.","# Call for Research Papers
+
+The International Conference on Business Process Management (BPM) is the premium forum for researchers and practitioners in the field of BPM, embracing its interdisciplinary nature and seeking to bring together the finest research contributions from computer science, information systems engineering, and information systems management.
+
+BPM 2025 will be held in **Seville, Spain**, from **August 31 to September 5, 2025**.
+
+## Tracks
+
+The conference is structured into three tracks, each with specific evaluation criteria, track chair, and dedicated program committee:
+
+### Track I: Foundations
+
+*   **Focus:** Foundational nature (formal, mathematical, algorithmic, or conceptual). Investigating underlying principles, computational theories, formal methods, and algorithms for modeling, automating, analyzing, and optimizing business processes. Identifying novel problems, modeling languages, architectures, conceptual papers on frameworks, taxonomies, and patterns.
+*   **Evaluation:** Technical quality standards, convincing argumentation, and benefits of the contribution. Empirical evaluation is not mandatory.
+*   **Audience:** Engineers building solutions on formal methods and algorithms, or the broader BPM community concerning new types of contributions.
+
+### Track II: Engineering
+
+*   **Focus:** Engineering aspects of BPM research, focusing on the development and investigation of artifacts and systems to solve concrete problems. Covers tools and techniques for process modeling, enactment, monitoring, and analytics (including process mining), usage in particular domains, and interaction between processes and software infrastructure.
+*   **Evaluation:** Rigorous and reproducible empirical evaluations demonstrating the merits of the artifact. Self-critical discussion of limitations and threats to validity is expected. Adaptations of AI techniques for BPM must be justified.
+*   **Audience:** Engineers analyzing or further developing artifacts, or analysts applying them in practice.
+
+### Track III: Management
+
+*   **Focus:** Empirical, socio-technical, cognitive, psychological, managerial, and societal aspects of BPM. Techniques, tools, and methods for governing business processes, advancing understanding of process-oriented capabilities, and examining the impact of BPM affordances. Includes strategic alignment, governance, methods, IT, people, and culture related to BPM.
+*   **Evaluation:** Appropriate motivation and framing, rigorous research method, convincing argumentation, positioning against state-of-the-art, and demonstration of findings’ applicability and efficacy. Various research methodologies are welcome.
+*   **Audience:** Managers and decision-makers seeking lessons from organizational endeavors in BPM.
+
+## Diversity, Equity, and Inclusion (DEI)
+
+The BPM community is committed to promoting DEI in all professional activities. All participants are encouraged to consider DEI in their writing, reviews, presentations, and interactions.
+
+## Open Science Principles
+
+Authors are encouraged to follow principles of transparency, reproducibility, and replicability, including disclosures of anonymized and curated data. Links to repositories for research artifacts and datasets are encouraged. Papers with available research artifacts and datasets will receive an ""Artifacts Available"" badge.
+
+## Submission Guidelines
+
+*   **Submission:** Papers must be submitted to **exactly one track**.
+*   **Formatting:** According to **Springer’s LNCS formatting guidelines**.
+*   **Language:** English.
+*   **Length:** Maximum **16 pages** including references and appendices.
+*   **Content:** Title page with abstract, problem statement, goals, results, and relation to other work.
+*   **Submission Portal:** [BPM 2025 EasyChair submission site](https://easychair.org/conferences/?conf=bpm2025)
+*   **Originality:** Must be original contributions, not published or submitted elsewhere.
+*   **Presentation:** At least one author of each accepted paper must register for the conference and present the paper.
+*   **Extended Versions:** Authors of selected papers will be invited to submit an extended version to the journal **Process Science**.
+
+## Double-Blind Review
+
+*   Reviews are double blind: neither reviewers nor authors can identify each other.
+*   The first page should include the title, abstract, and keywords, but **no names or affiliations**. Acknowledgments of funding or assistance should be omitted.
+*   Ensure no information (including PDF meta-data) identifies the authors or affiliations.
+*   When referencing previous work, use the third person or blind references.
+*   Supplementary material and code must also be anonymized.
+*   Submissions with identifying information may be rejected.
+
+## Awards
+
+*   **Best Paper Award**
+*   **Best Student Paper Award** (Student papers must be clearly marked and presented by a student author).
+
+## BPM Forum
+
+Papers not fully meeting the main conference criteria but making significant contributions may be presented at the BPM Forum and published in a separate post-proceedings volume (LNBIP).
+
+## Important Dates
+
+Deadlines correspond to Anywhere on Earth (AoE or UTC-12):
+
+*   **Paper Abstract submission:** **March 4, 2025**
+*   **Paper submission:** **March 18, 2025**
+*   **Notification to authors:** **May 8, 2025**
+*   **Camera-ready submission:** **June 13, 2025**","(Research Track) Paper Abstract submission và (Research Track) Paper submission lấy ngày sai
+
+các otherDate trả ngày sai format date"
+req-conf-1751537158192-i48ha,,Association for Computer-Aided Architectural Design Research in Asia annual conference,CAADRIA,https://www.caadria2025.org/,TRUE,https://www.caadria2025.org/call-for-papers,https://www.caadria2025.org/timeline,"Conference dates: March 22 - 29, 2025
+Year: 2025
+Location: Tokyo, Japan
+City-State-Province: Tokyo
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Full paper submission: November 24, 2024
+Submission Date.Project Exhibition submission: January 15, 2025
+Submission Date.PGSC candidature submission: January 15, 2025
+Submission Date.Deadline for WS application for participants: January 20, 2025
+Notification Date.Abstract acceptance notification: October 1, 2024
+Notification Date.Full paper acceptance notification: Early January, 2025
+Notification Date.Project Exhibition notification of acceptance: January 31, 2025
+Camera-ready Date.Camera-ready Full paper submission deadline: January 20, 2025
+Other Date.Abstract submission deadline: August 27, 2024
+Other Date.Deadline of workshop proposals: November 7, 2024
+Other Date.WS application opening for participants: January 9, 2025
+Other Date.Conference Dinner: March 28, 2025
+Other Date.Post Conference Tour: March 29, 2025
+Topics: Architectural Informatics, Artificial intelligence, Building Information Modeling (BIM), City Information Modeling (CIM), Collective, collaborative & interdisciplinary design, Computational design research & education, Design cognition and human-computer interaction, Disrupted practices, resilience, and social sustainability, Environmental and ecological performance, Generative, algorithmic & evolutionary design, Digital Heritage, Interactive environments, Material systems, processes and assembly, Practice-based design research, Robotics, digital fabrication and construction, Simulation, visualisation and impact projection, Theory, philosophy & methodology of computational design research, Urban analytics, big data analysis and smart cities, AR / VR / XR","March 22 - 29, 2025",TRUE,2025,"Tokyo, Japan",TRUE,Tokyo,Japan,Asia,Offline,TRUE,"{""Full paper submission"":""November 24, 2024"",""Project Exhibition submission"":""January 15, 2025"",""PGSC candidature submission"":""January 15, 2025"",""Deadline for WS application for participants"":""January 20, 2025""}",66.66666667,"{""Abstract acceptance notification"":""October 1, 2024"",""Full paper acceptance notification"":""Early January, 2025"",""Project Exhibition notification of acceptance"":""January 31, 2025""}",100.0,"{""Camera-ready Full paper submission deadline"":""January 20, 2025""}",100.0,{},,"{""Abstract submission deadline"":""August 27, 2024"",""Deadline of workshop proposals"":""November 7, 2024"",""WS application opening for participants"":""January 9, 2025"",""Conference Dinner"":""March 28, 2025"",""Post Conference Tour"":""March 29, 2025""}",50.0,"Architectural Informatics, Artificial intelligence, Building Information Modeling (BIM), City Information Modeling (CIM), Collective, collaborative & interdisciplinary design, Computational design research & education, Design cognition and human-computer interaction, Disrupted practices, resilience, and social sustainability, Environmental and ecological performance, Generative, algorithmic & evolutionary design, Digital Heritage, Interactive environments, Material systems, processes and assembly, Practice-based design research, Robotics, digital fabrication and construction, Simulation, visualisation and impact projection, Theory, philosophy & methodology of computational design research, Urban analytics, big data analysis and smart cities, AR / VR / XR",No publisher,"The Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference, CAADRIA 2025, will be held in Tokyo from March 22-29, 2025. The conference theme is 'Architectural Informatics', aiming to reexamine the existence of architecture in the age of information technology.","# Call for Papers: CAADRIA 2025
+
+The Association for Computer-Aided Architectural Design Research in Asia (CAADRIA) annual conference, CAADRIA 2025, themed **Architectural Informatics**, will be held in **Tokyo** from **March 22-29, 2025**.
+
+The conference aims to reexamine the fundamental existence of architecture in the age of information technology by considering social activities and human organizations as information processing systems, and architecture and cities as constructed, accumulated, and acted-upon information systems.
+
+## Topics of Interest
+
+CAADRIA 2025 invites original high-quality papers presenting current computer-aided architectural design research, accommodating a broad spectrum of approaches. Topics include, but are not limited to:
+
+*   Artificial intelligence, neural networks and machine learning
+*   Building Information Modeling (BIM)
+*   City Information Modeling (CIM)
+*   Collective, collaborative & interdisciplinary design
+*   Computational design research & education
+*   Design cognition and human-computer interaction
+*   Disrupted practices, resilience, and social sustainability
+*   Environmental and ecological performance
+*   Generative, algorithmic & evolutionary design
+*   Digital Heritage
+*   Interactive environments
+*   Material systems, processes and assembly
+*   Practice-based design research
+*   Robotics, digital fabrication and construction
+*   Simulation, visualisation and impact projection
+*   Theory, philosophy & methodology of computational design research
+*   Urban analytics, big data analysis and smart cities
+*   AR / VR / XR
+*   Application of technology in the context of the Asia-Pacific Region
+
+## Submission Guidelines
+
+*   **Submission System:** Access OpenConf via [https://caadria.org/openconf25/openconf.php](https://caadria.org/openconf25/openconf.php).
+*   **Format:** Papers must be submitted as a single zip folder containing both the revised Word document and the PDF file. Non-adherence to the paper template will result in rejection.
+*   **Template:** [CAADRIA2025_TEMPLATE.docx](https://www.caadria2025.org/_files/ugd/027792_636b230dacc24533a511a76894b8cf4b.docx?dn=CAADRIA2025_TEMPLATE.docx).
+*   **General:** Pay attention to correct grammatical and syntax conventions, use CAADRIA word styles correctly, ensure figures are high quality, and double-check author and publication data.
+*   **Submission Limit:** Each paper must have a unique first author.
+
+> Please kindly note that multiple submissions are subject to multiple registrations.
+
+## Contribution Types and Deadlines
+
+*   **Full Papers:**
+    *   Submission Deadline: **November 24, 2024** (AoE)
+    *   Notifications of Acceptance: **Early January, 2025**
+    *   Camera-ready Submission Deadline: **January 20, 2025**
+*   **Posters for Project Exhibition:**
+    *   Submission Deadline: **January 15, 2025**
+    *   Notification of Acceptance: **January 31, 2025 (AoE)**
+*   **Postgraduate Student Consortium (PGSC):**
+    *   Candidature Submission Deadline: **January 15, 2025**
+*   **Workshops (WS):**
+    *   Workshop Proposals Deadline: **November 7, 2024**
+    *   WS Application Opening: **January 9, noon (JST)**
+    *   WS Application Deadline: **January 20, 2025**
+*   **Young CAADRIA Award:**
+    *   Open to registered students (undergraduate and postgraduate) with an accepted paper.
+    *   Awardees receive a waiver for their conference registration fee.
+
+## Important Dates
+
+*   **August 27, 2024:** Abstract submission deadline
+*   **October 1, 2024:** Abstract acceptance notification
+*   **November 7, 2024:** Deadline of workshop proposals
+*   **November 24, 2024:** Full paper submission deadline
+*   **Early January, 2025:** Full paper acceptance notification
+*   **January 15, 2025:** Project Exhibition submission deadline
+*   **January 15, 2025:** PGSC candidature submission
+*   **January 20, 2025:** Camera-ready Full paper submission deadline
+*   **January 20, 2025:** Deadline for WS application for participants
+*   **January 27:** Early-bird registration deadline
+*   **January 31, 2025 (AoE):** Project Exhibition notification of acceptance
+*   **March 20-21, 2025:** Student Review of Architectural Informatics Society (Joint Event)
+*   **March 22-25, 2025:** Workshop (Co-hosted by AIS)
+*   **March 26-28, 2025:** Keynote speeches and paper presentations
+*   **March 28, 2025:** Conference Dinner
+*   **March 29, 2025:** Post Conference Tour
+
+## Review Process
+
+Paper acceptance will be subject to a **two-stage reviewing process**: initial abstract review and a later **double-blind peer review** of full-length manuscripts.
+
+## Publication
+
+The inclusion of your paper in the conference proceedings is contingent upon review acceptance, compliance with submission deadlines and formatting guidelines, and payment of the conference registration fee.
+
+## Event Format
+
+*   CAADRIA 2025 is an **in-person-only event**.
+*   At least one author must register and present on-site, in person, for each accepted paper.
+*   There will be **no online presentations** possible.
+
+## Contact Information
+
+*   For questions regarding full-paper submission: [psc@caadria.org](mailto:psc@caadria.org)
+*   For general inquiries about the organization: [info@caadria2025.org](mailto:info@caadria2025.org)",
+req-conf-1751537158192-i48ha,,"Datenbanksysteme für Business, Technologie und Web",BTW,https://btw2025.gi.de/,TRUE,https://btw2025.gi.de/calls/papers,,"Conference dates: March 3 — 7, 2025
+Year: 2025
+Location: Bamberg, Germany
+City-State-Province: Bamberg
+Country: Germany
+Continent: Europe
+Type: Offline
+Topics: Database Systems, Information Systems, Data Science, Big Data Analytics, Machine Learning","March 3 — 7, 2025",TRUE,2025,"Bamberg, Germany",TRUE,Bamberg,Germany,Europe,Offline,TRUE,{},0.0,{},,{},,{},,{},,"Database Systems, Information Systems, Data Science, Big Data Analytics, Machine Learning",No publisher,"The 21st Conference on Database Systems for Business, Technology and Web (BTW 2025) will be held in Bamberg from March 3-7, 2025. It is the most important database conference in the German-speaking area, serving as a forum for scientists, practitioners, and users. The conference program includes scientific and industry tracks, system demonstrations, tutorials, workshops, and a program for young scientists, with a focus on data integration, data protection, big data analytics, hardware technologies, and machine learning applications.","# BTW 2025: Calls for Contributions
+
+The 21st Conference on Database Systems for Business, Technology and Web (BTW 2025) will be held in Bamberg from **March 3 — 7, 2025**.
+
+BTW 2025 is the most important database conference in the German-speaking area, serving as a central forum for the exchange of information between scientists, practitioners, and users on topics of database and information system technology.
+
+## Calls
+
+*   [Papers](/calls/papers)
+*   [Industry](/calls/industry)
+*   [Demonstrations](/calls/demonstrations)
+*   [Data Science Challenge](/calls/Data_Science_Challenge)
+*   [DaSCiT Symposium](/calls/DaSCiT_Symposium)
+*   [Workshops](/calls/workshops)
+*   [Student Program](/calls/student-program)
+*   [Dissertation Award](/calls/dissertation-award)
+*   [Reproducibility](/calls/reproducibility)
+
+## Focus Topics
+
+The conference focuses on topics such as:
+
+*   Data integration and extraction
+*   Provenance management
+*   Data protection
+*   Scalable big data analytics
+*   Hardware technologies (small scale up to cloud computing)
+*   New application areas and architectural approaches for the support of machine learning in the context of artificial intelligence
+
+## Program Overview
+
+The conference program includes:
+
+*   [Overview](https://www.conftool.net/btw2025/index.php?page=browseSessions&path=adminSessions&print=export)
+*   Keynotes
+*   Tutorials
+*   DaSCit Symposium
+*   Early Career Workshop
+*   Photos
+*   Movies
+*   Awards
+*   History
+
+## Workshops
+
+*   ACloudDM: [https://itu-dasyalab.github.io/btw2025workshop/](https://itu-dasyalab.github.io/btw2025workshop/)
+*   BigDS
+*   DE4DS
+*   ML4Sys-and-Sys4ML
+*   NoDMC: [https://sites.google.com/view/nodmcbtw2025](https://sites.google.com/view/nodmcbtw2025)
+
+## Contact
+
+info.btw25(at)uni-bamberg.de",ko lấy được impDate
+req-conf-1751537158192-i48ha,,International Conference on Cryptology and Network Security,CANS,https://cy2sec.comm.eng.osaka-u.ac.jp/miyaji-lab/event/cans2025/index.html,TRUE,https://cy2sec.comm.eng.osaka-u.ac.jp/miyaji-lab/event/cans2025/call-for-papers/,,"Conference dates: November 17 - 20, 2025
+Year: 2025
+Location: Osaka, Japan
+City-State-Province: Osaka
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Registration of new submissions permitted until: April 28, 2025
+Submission Date.Updates of existing submissions permitted until: May 1, 2025
+Notification Date.Notification: July 10
+Camera-ready Date.Camera-ready: August 14
+Topics: Cryptographic Primitives and Protocols, Cryptographic Foundations, Network and System Security, Privacy and Data Protection, Applications and Emerging Technologies
+Publisher: Springer LNCS","November 17 - 20, 2025",TRUE,2025,"Osaka, Japan",TRUE,Osaka,Japan,Asia,Offline,TRUE,"{""Registration of new submissions permitted until"":""April 28, 2025"",""Updates of existing submissions permitted until"":""May 1, 2025""}",100.0,"{""Notification"":""July 10""}",100.0,"{""Camera-ready"":""August 14""}",100.0,{},0.0,{},,"Cryptographic Primitives and Protocols, Cryptographic Foundations, Network and System Security, Privacy and Data Protection, Applications and Emerging Technologies",Springer LNCS,"The 24th International Conference on Cryptology and Network Security (CANS 2025) will be held in Osaka, Japan, from November 17-20, 2025, at the Osaka International Convention Center. CANS is a premier forum for research in cryptology and network security, accepting submissions on theoretical and practical aspects from academia, industry, and government.","# CANS 2025: Call for Papers
+
+The International Conference on Cryptology and Network Security (CANS) is a premier forum for presenting research in the field of cryptology and network security. The conference seeks academic, industry, and government submissions on all theoretical and practical aspects of cryptology and network security, and its extended domains in modern computing systems. This year marks the 24th iteration of the conference and will be held at **Osaka, Japan**.
+
+## About the conference
+
+Proceedings of this year’s conference will be published by **Springer LNCS**. Previous iterations of the conference can be found online.
+
+## Submission Guidelines
+
+*   High-quality papers on unpublished research and implementation experiences may be submitted. All papers must be original and not substantially duplicated work that has been published at, or is simultaneously submitted to, a journal or another conference or workshop.
+*   All submissions must be written in English and span no more than **20 pages** in Springer’s Lecture Notes in Computer Science (LNCS) format, including title, abstract, and bibliography.
+*   The introduction should summarize the contributions of the paper at a level understandable by a non-expert reader and explain the context to related work.
+*   Submitted papers may contain supplementary material in the form of well-marked appendices or a separate file archive (particularly for source code, data files, etc.). Note that supplementary material will not be included in the proceedings.
+*   Author names and affiliations should not appear in the paper. The authors should make a reasonable effort not to reveal their identities or institutional affiliations in the text, figures, photos, links, or other data that is contained in the paper.
+*   The conference will also consider **short papers of up to eight pages** in the LNCS format, excluding the bibliography (max 2 pages), for results that are not yet fully fleshed out or that simply require fewer pages to describe but still make a significant contribution.
+*   All submissions must be processed with LaTeX2e according to the instructions given by Springer. Submitted manuscripts must be typeset in plain Springer LNCS format, in particular without changing the font size, margins or line spacing. Submissions not meeting these guidelines may be rejected without consideration of their merits.
+*   Papers must be submitted via [EasyChair](https://easychair.org/my/conference?conf=cans2025).
+
+## Important Dates
+
+*   **Registration of new submissions permitted until:** April 28 AoE.
+*   **Updates of existing submissions permitted until:** May 1st AoE.
+*   **Notification:** July 10
+*   **Camera-ready:** August 14
+*   **Conference:** November 17–20
+
+## Presentation Requirements
+
+At least one author of every accepted paper must register and pay the full registration fee (non-student) for the conference by the early registration deadline indicated by the organizers. Papers without a registered author will be removed from the sessions. Authors must present their own paper(s).
+
+## Stipend
+
+The CANS 2025 conference will offer a student grant program to partially support travel and accommodation expenses for full-time students. Eligibility is limited to students whose papers have been accepted, who have paid the conference fee, and who will present their paper at the conference in CANS 2025.
+
+## CANS 2025 Best Paper Awards
+
+The Program Committee will consider giving a Best Paper Award to the submission with highest merits.
+
+## Topic Areas
+
+1.  **Cryptographic Primitives and Protocols**
+    *   Symmetric and asymmetric key cryptography
+    *   Public key encryption
+    *   Digital signatures
+    *   Key exchange
+    *   Hash functions
+2.  **Cryptographic Foundations**
+    *   Foundations of cryptography
+    *   Secure multi-party computation
+    *   Zero-knowledge proofs
+    *   Post-quantum cryptography
+    *   Lattice-based cryptography
+3.  **Network and System Security**
+    *   Network security
+    *   Malware analysis
+    *   Intrusion detection
+    *   Secure routing and naming
+    *   Wireless and mobile security
+4.  **Privacy and Data Protection**
+    *   Privacy-preserving data mining
+    *   Differential privacy
+    *   Anonymity and censorship resistance
+    *   Privacy in machine learning
+5.  **Applications and Emerging Technologies**
+    *   Blockchain and cryptocurrencies
+    *   Secure computation in the cloud
+    *   IoT security
+    *   AI and security","Registration of new submissions permitted: sai loại
+
+các date đều bị sai format ngày"
+req-conf-1751537158192-i48ha,,International Conference on Automated Deduction,CADE,https://www.dhbw-stuttgart.de/cade-30/,TRUE,https://cadeinc.org/conferences,https://www.dhbw-stuttgart.de/cade-30/calls/,"Conference dates: July 28 - 31, 2025
+Year: 2025
+Location: Stuttgart, Germany
+City-State-Province: Stuttgart
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Abstract deadline: February 17, 2025
+Submission Date.Submission deadline: February 24, 2025
+Notification Date.Rebuttal period: April 14-18, 2025
+Notification Date.Notification: April 28, 2025
+Camera-ready Date.Final version deadline: May 30, 2025
+Other Date.Main conference: July 28-31, 2025
+Other Date.Satellite events: August 1-2, 2025
+Other Date.Early registration deadline: June 23, 2025
+Topics: Automated Deduction","July 28 - 31, 2025",TRUE,2025,"Stuttgart, Germany",TRUE,Stuttgart,Germany,Europe,Offline,TRUE,"{""Abstract deadline"":""February 17, 2025"",""Submission deadline"":""February 24, 2025""}",100.0,"{""Rebuttal period"":""April 14-18, 2025"",""Notification"":""April 28, 2025""}",100.0,"{""Final version deadline"":""May 30, 2025""}",100.0,{},0.0,"{""Main conference"":""July 28-31, 2025"",""Satellite events"":""August 1-2, 2025"",""Early registration deadline"":""June 23, 2025""}",50.0,Automated Deduction,No publisher,"The 30th International Conference on Automated Deduction (CADE-30) will be held in Stuttgart, Germany, from July 28th to August 2nd, 2025. CADE is the major international forum for presenting research on all aspects of automated deduction, covering logical foundations, theory, applications, and implementations. The conference includes invited talks, paper presentations, workshops, tutorials, and system competitions.","# CADE-30: Call for Papers
+
+The 30th International Conference on Automated Deduction (CADE-30) will take place at **DHBW Stuttgart, Germany, from July 28th to August 2nd, 2025**.
+
+CADE is the major international forum for presenting research on all aspects of automated deduction. High-quality submissions on the general topic of automated deduction, including logical foundations, theory and principles, applications in and beyond computer science and mathematics, and implementations of automated reasoning systems are solicited. CADE-30 aims to present research that reflects the broad range of interesting and relevant topics in automated deduction.
+
+## Publication
+
+CADE-30 proceedings will be published in **Springer's Lecture Notes in Artificial Intelligence series** in Gold Open Access mode at a CADE special rate of **EUR 200 per paper**. Authors of accepted papers who cannot cover the fee can apply for funding.
+
+## Submission Instructions
+
+Submissions can be made in two categories:
+
+*   **Regular papers:** Up to **15 pages** in LNCS style, excluding references. Proofs of theoretical results that do not fit in the page limit may be provided in an appendix.
+*   **Short papers:** This includes system descriptions, user experiences, case studies and domain models. Up to **10 pages** in LNCS style, excluding references.
+
+Submissions must be unpublished and not submitted for publication elsewhere. They will be judged on relevance, significance, originality, correctness, and readability. Reviewers may consider material provided in appendices, but submissions must be self-contained within the page limit. If software or data is relevant to a paper, a link that provides access to the software/data must be provided to enable reproduction of results.
+
+The review process will include a feedback/rebuttal period, where authors will have the option to respond to reviewer comments. The Program Committee Chairs may solicit further reviews after the rebuttal period.
+
+Selected accepted papers will be considered by the Program Committee for the **CADE Best Paper Award** or **Best Student Paper Award** (provided that at least one author is a student).
+
+All submissions must be formatted in the **LNCS style** and must include the **ORCID id** of at least the corresponding author, and preferably of all authors.
+
+## Submission Platform
+
+Submissions must be made to [https://easychair.org/conferences/?conf=cade30](https://easychair.org/conferences/?conf=cade30) in the **Main Conference track**.
+
+## Important Dates
+
+*   **Abstract deadline:** February 17, 2025
+*   **Submission deadline:** February 24, 2025
+*   **Rebuttal period:** April 14-18, 2025
+*   **Notification:** April 28, 2025
+*   **Final version deadline:** May 30, 2025
+*   **Main conference:** July 28-31, 2025
+*   **Satellite events:** August 1-2, 2025
+
+## Organizers
+
+*   **Program Committee Chairs:** Clark Barrett, Uwe Waldmann
+*   **Conference Chair:** Stephan Schulz
+*   **Publicity Chair:** Geoff Sutcliffe
+
+## Contacts
+
+All questions about CADE-30 paper submissions should be emailed to the Chairs: **cade30 AT easychair.org**","Early registration deadline, Rebuttal period sai loại"
+req-conf-1751537158192-i48ha,,British Machine Vision Conference,BMVC,https://bmvc2025.bmva.org/,TRUE,https://bmvc2025.bmva.org/calls/call-for-papers/,https://bmvc2025.bmva.org/dates/,"Conference dates: November 24 - 27, 2025
+Year: 2025
+Location: Sheffield, UK
+City-State-Province: Sheffield
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.Paper registeration deadline: May 13, 2025
+Submission Date.Full paper submission deadline: May 16, 2025
+Submission Date.Doctoral Consortium Submission Close: July 30, 2025
+Submission Date.Fast Abstracts Submission Deadline: July 31, 2025
+Notification Date.Author Notifications: July 25, 2025
+Notification Date.Doctoral Consortium Acceptance Notification: September 5, 2025
+Camera-ready Date.Camera Ready for Papers: August 29, 2025
+Camera-ready Date.Camera Ready for Workshops: October 31, 2025
+Camera-ready Date.Poster Submissions: October 31, 2025
+Camera-ready Date.Video Submissions: October 31, 2025
+Other Date.Conference Starts: November 24, 2025
+Other Date.Conference Ends: November 27, 2025
+Topics: Machine Vision, Image Processing, Pattern Recognition
+Publisher: BMVA","November 24 - 27, 2025",TRUE,2025,"Sheffield, UK",TRUE,Sheffield,United Kingdom,Europe,Offline,TRUE,"{""Paper registeration deadline"":""May 13, 2025"",""Full paper submission deadline"":""May 16, 2025"",""Doctoral Consortium Submission Close"":""July 30, 2025"",""Fast Abstracts Submission Deadline"":""July 31, 2025""}",28.57142857,"{""Author Notifications"":""July 25, 2025"",""Doctoral Consortium Acceptance Notification"":""September 5, 2025""}",50.0,"{""Camera Ready for Papers"":""August 29, 2025"",""Camera Ready for Workshops"":""October 31, 2025"",""Poster Submissions"":""October 31, 2025"",""Video Submissions"":""October 31, 2025""}",100.0,{},,"{""Conference Starts"":""November 24, 2025"",""Conference Ends"":""November 27, 2025""}",22.22222222,"Machine Vision, Image Processing, Pattern Recognition",BMVA,"The 36th British Machine Vision Conference (BMVC 2025) will take place from November 24th to 27th, 2025, in Sheffield, UK. BMVC is a prominent international conference organized by the British Machine Vision Association (BMVA) focusing on machine vision, image processing, and pattern recognition. Top papers from the conference may be invited for extended submission to the International Journal of Computer Vision (IJCV).","# BMVC 2025: Call for Papers
+
+The 36th British Machine Vision Conference (BMVC 2025) will be held from **24th - 27th November 2025** in **Sheffield, UK**.
+
+BMVC is a leading international conference on machine vision, image processing, and pattern recognition, organized by the British Machine Vision Association (BMVA). It is a prestigious event in the computer vision calendar, featuring a single-track meeting with both oral and poster presentations.
+
+## Topics of Interest
+
+Submissions are invited for papers covering, but not limited to, the following areas:
+
+*   3D from X
+*   3D Shape modeling and processing
+*   Action and event understanding
+*   Adversarial attack and defense
+*   Architecture and Space Design
+*   Biometrics
+*   Brave new ideas (not beating SOA but a new approach, theory, niche)
+*   Computational Photography and Photogrammetry
+*   Computer vision theory
+*   Datasets and Evaluation
+*   Deep learning architectures and techniques
+*   Document analysis and understanding
+*   Embodied vision: Active agents; simulation
+*   Explainable AI
+*   Fairness, privacy, ethics, social-good, transparency, accountability in vision
+*   Generative models
+*   Humans: Face, Gestures, Pose and Body Movement
+*   Human-in-the-loop computer vision
+*   Image Retrieval
+*   Low-level and Physics-based Vision
+*   Machine learning (other than deep learning)
+*   Medical and Biological Image Analysis
+*   Motion estimation and tracking
+*   Multimodal learning
+*   Recognition for X
+*   Representation Learning
+*   RGBD sensors and analytics
+*   Scene Analysis and Understanding
+*   Segmentation, grouping and shape analysis
+*   Self-, semi-, meta-, unsupervised learning
+*   Transfer, low-shot, continual, long-tail learning
+*   Video analysis and Understanding
+*   Vision and audio
+*   Vision and graphics
+*   Vision and language
+*   Vision and robotics
+*   Vision applications and systems
+*   Visual reasoning and logical representation
+
+Papers submitted under the “Brave new ideas” subject area are expected to move away from incremental benchmark gains. Proposed ideas should radically differ from the current research strand or propose a novel problem.
+
+## Important Dates
+
+All deadlines are at **23:59 GMT**:
+
+1.  **Abstract Submission Deadline:** Tuesday, 13 May 2025
+2.  **Full Paper Submission Deadline:** Friday, 16 May 2025
+3.  **Supplementary Material Submission:** Friday, 16 May 2025
+4.  **Author Notifications:** Friday, 25 July 2025
+
+## Submission Guidelines
+
+*   Papers should not exceed **NINE pages** (references are excluded). Appendices should be submitted via the supplementary information.
+*   Submissions are made via the OpenReview portal: [https://openreview.net/group?id=bmva.org/BMVC/2025/Conference](https://openreview.net/group?id=bmva.org/BMVC/2025/Conference)
+*   Further information can be found in the [Author Guidelines](/authors/author-guidelines/) and [Submit your Paper](/authors/submit-your-paper/) pages.
+
+## Review Process
+
+*   Each paper will be reviewed by at least three reviewers.
+*   An Area Chair will provide a meta-review, summarizing reviewers' points and recommending decisions.
+*   **BMVC will not have a rebuttal period this year.**
+*   Authors are asked to be prepared to review papers. Failure to engage with the reviewing process might be grounds for rejection.
+*   More information about the reviewing process can be found at the [Reviewing policies](/authors/reviewing-guidelines/).
+
+## Publication
+
+Accepted papers will be included in the conference proceedings published and DOI-indexed by BMVA. Past proceedings are online at the [BMVA proceedings website](https://britishmachinevisionassociation.github.io/bmvc).
+
+Top papers from BMVC 2025 will be invited to submit extended versions to a special issue of the **International Journal of Computer Vision (IJCV)**.
+
+## Contact
+
+For any queries, please contact the Programme Chairs at [programmechairs.bmvc2025@bmva.org](mailto:programmechairs.bmvc2025@bmva.org).","Paper registeration deadline + Poster Submissions + Video Submissions sai loại
+
+thiếu nhiều otherDate"
+req-conf-1751537158192-i48ha,,"Computer Animation, Information Visualisation, and Digital Effects",CAivDE,https://iv.csites.fct.unl.pt/de/symposia/vis/caivde/,TRUE,https://iv.csites.fct.unl.pt/de/call-for-papers/important-dates/,https://iv.csites.fct.unl.pt/de/call-for-papers/important-dates/,"Conference dates: August 6 - 8, 2025
+Year: 2025
+Location: Espoo, Finland
+City-State-Province: Espoo
+Country: Finland
+Continent: Europe
+Type: Hybrid
+Submission Date.Symposium submission deadline: February 1, 2025
+Submission Date.Digital Art Gallery D-ART2024 deadline: March 1, 2025
+Submission Date.The closing date for paper submissions: June 8, 2025
+Submission Date.Submission of tutorials: June 15, 2025
+Submission Date.Submission of posters: June 15, 2025
+Submission Date.The closing date for submission of the Video / Poster display version: June 30, 2025
+Submission Date.The Doctoral Research Workshop- the closing date for abstract submission: June 30, 2025
+Submission Date.Researchers Link_- the closing date for research proposal submission: June 30, 2025
+Notification Date.Notification of Reviewing Result – acceptance or rejection: June 15, 2025
+Camera-ready Date.Submission of camera-ready: June 25, 2025
+Registration Date.Early registration closes: June 20, 2025
+Registration Date.Registration closing dates: July 20, 2025
+Registration Date.Pre-Registration date: July 20, 2025
+Registration Date.Registration Close: August 5, 2025
+Other Date.Tutorial Registration Cancellation & Refund date: June 30, 2025
+Other Date.Conference Programme: Available Soon
+Other Date.Tutorial Day and Doctoral Research Workshop: August 6, 2025
+Other Date.Researcher Links Workshop: August 6 - 8, 2025
+Other Date.Conference Days: August 6 - 8, 2025
+Topics: Computer Animation, Information Visualisation, Digital Effects, Motion Synthesis, Physics-based animation, Vision techniques in animation, Modelling in animation, Rendering and lighting techniques, Animation of deformable materials and characters, Modelling and animation of heads, faces, and hair, Animation of natural phenomena, Real-time simulation, Simulations for virtual reality, training, and online education, Forensic animation","August 6 - 8, 2025",TRUE,2025,"Espoo, Finland",FALSE,Espoo,Finland,Europe,Hybrid,TRUE,"{""Symposium submission deadline"":""February 1, 2025"",""Digital Art Gallery D-ART2024 deadline"":""March 1, 2025"",""The closing date for paper submissions"":""June 8, 2025"",""Submission of tutorials"":""June 15, 2025"",""Submission of posters"":""June 15, 2025"",""The closing date for submission of the Video / Poster display version"":""June 30, 2025"",""The Doctoral Research Workshop- the closing date for abstract submission"":""June 30, 2025"",""Researchers Link_- the closing date for research proposal submission"":""June 30, 2025""}",100.0,"{""Notification of Reviewing Result – acceptance or rejection"":""June 15, 2025""}",100.0,"{""Submission of camera-ready"":""June 25, 2025""}",100.0,"{""Early registration closes"":""June 20, 2025"",""Registration closing dates"":""July 20, 2025"",""Pre-Registration date"":""July 20, 2025"",""Registration Close"":""August 5, 2025""}",75.0,"{""Tutorial Registration Cancellation & Refund date"":""June 30, 2025"",""Conference Programme"":""Available Soon"",""Tutorial Day and Doctoral Research Workshop"":""August 6, 2025"",""Researcher Links Workshop"":""August 6 - 8, 2025"",""Conference Days"":""August 6 - 8, 2025""}",40.0,"Computer Animation, Information Visualisation, Digital Effects, Motion Synthesis, Physics-based animation, Vision techniques in animation, Modelling in animation, Rendering and lighting techniques, Animation of deformable materials and characters, Modelling and animation of heads, faces, and hair, Animation of natural phenomena, Real-time simulation, Simulations for virtual reality, training, and online education, Forensic animation",No publisher,"The CAivDE – Computer Animation, Information Visualisation, and Digital Effects symposium is seeking original paper projects for presentation. The symposium aims to provide a forum for researchers, educators, and practitioners to share opinions, discuss key research issues, review current developments, and outline future directions in computer animation. It is part of the IV Conference 2025 and will be held from August 6-8, 2025, with both onsite and online participation options.","# CAivDE – Computer Animation, Information Visualisation, and Digital Effects: Call for Papers
+
+CAivDE is a symposium designed to provide a forum for researchers, educators, and practitioners in the field of Computer Animation to share their opinions. The symposium aims to identify presentations on key research issues, review current state-of-the-art developments, and outline future directions within computer animation, computer graphics, and visualisation.
+
+## Submission Topics
+
+This symposium seeks original paper projects that are either completed, or still in the production stage, dealing with, but not limited to, the following topics:
+
+*   Motion Synthesis and motion capture
+*   Physics-based animation
+*   Vision techniques in animation
+*   Modelling in animation
+*   Rendering and lighting techniques
+*   Animation of deformable materials and characters
+*   Modelling and animation of heads, faces, and hair
+*   Animation of natural phenomena
+*   Real-time simulation used for visualisation
+*   Simulations for virtual reality, training, and online education
+*   Forensic animation and its applications
+*   Animation for Scientific and medical visualisation
+
+## Important Dates
+
+*   **Paper submissions open / Registration online:** 30 September 2024
+*   **Symposium submission deadline:** 01 February 2025
+*   **Submission of Computer Animation deadline:** 20 June 2025
+*   **Notification of Reviewing Result:** 15 June 2025 (Revised Date)
+*   **Submission of camera-ready:** 25 June 2025 (Revised Date)
+*   **Early registration closes:** 20 June 2025 (Revised Date)
+*   **Submission of Video / Poster display version:** 30 June 2025
+*   **Doctoral Research Workshop abstract submission deadline:** 30 June 2025
+*   **Researchers Link research proposal submission deadline:** 30 June 2025
+*   **Tutorial Registration Cancellation & Refund date:** 30 June 2025
+*   **Registration closing dates (Pre-Registration date):** 20 July 2025
+*   **Registration Close:** 20 July 2025
+
+## Conference Details
+
+*   **Conference Dates:** 06 – 08 August 2025
+*   **Venue:** Nice, France
+*   **Participation Options:** Hybrid (in-person & Online)
+
+## Submission and Registration
+
+*   **Submission & Registration:** [https://www.conftool.org/IV-cgiv-2025/](https://www.conftool.org/IV-cgiv-2025/)
+*   **Registration Form:** [https://www.graphicslink.co.uk/IV2025/IV25_RegisterForm.pdf](https://www.graphicslink.co.uk/IV2025/IV25_RegisterForm.pdf)
+
+## Publication
+
+*   Published by IARIA Press (operated by Xpert Publishing Services)
+*   Archived in the Open Access IARIA ThinkMind Digital Library
+*   Prints available at Curran Associates, Inc.
+*   Authors of selected papers will be invited to submit extended versions to a IARIA Journal.
+
+## Contact Information
+
+*   **General enquiries and submissions:** Conference Coordinator
+*   **Symposium-Specific enquiries:**
+    *   Prof. Mark W. McK. Bannatyne (mbannaty@iupui.edu)
+    *   Prof. Jian J Zhang (jzhang@bournemouth.ac.uk)
+*   **GraphicsLink Secretariat:**
+    *   P.O. BOX 29, HATFIELD, AL9 7ZL, United Kingdom
+    *   (Int. +44) 1707 - 652 224
+    *   iV_CGiV@graphicslink.co.uk","một số date lấy sai ngày
+
+thiếu The opening date for paper submissions  / Registration online"
+req-conf-1751537158192-i48ha,,International Conference on Computer Analysis of Images and Patterns,CAIP,https://sites.google.com/view/iciap25,FALSE,https://sites.google.com/view/iciap25/calls/call-for-papers,,"Conference dates: September 15 - 19, 2025
+Year: 2025
+Location: Rome, Italy
+City-State-Province: Rome
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.(First round) Submission: February 14, 2025
+Submission Date.(Second round) Submission: April 29, 2025
+Notification Date.(First round) Notification to Authors: March 31, 2025
+Notification Date.(Second round) Notification to Authors: June 15, 2025
+Camera-ready Date.Camera Ready papers submission: July 10, 2025
+Registration Date.Authors’ Registration deadline: June 30, 2025
+Other Date.Workshops and Tutorials: September 15 - 16, 2025
+Other Date.Main conference: September 17 - 19, 2025
+Topics: Computer Vision, Pattern Recognition, Image Processing, Video Analysis, Machine Learning, Deep Learning, Multiview Geometry, 3D Computer Vision, Image Analysis, Detection, Recognition, Multimedia, Biomedical Technology, Digital Forensics, Biometrics, Image Processing for Cultural Heritage, Robot Vision, Brave New Ideas, AI and science, X-Realities, Embedded Vision
+Publisher: Springer","September 15 - 19, 2025",,2025,"Rome, Italy",,Rome,Italy,Europe,Offline,,"{""(First round) Submission"":""February 14, 2025"",""(Second round) Submission"":""April 29, 2025""}",,"{""(First round) Notification to Authors"":""March 31, 2025"",""(Second round) Notification to Authors"":""June 15, 2025""}",,"{""Camera Ready papers submission"":""July 10, 2025""}",,"{""Authors’ Registration deadline"":""June 30, 2025""}",,"{""Workshops and Tutorials"":""September 15 - 16, 2025"",""Main conference"":""September 17 - 19, 2025""}",,"Computer Vision, Pattern Recognition, Image Processing, Video Analysis, Machine Learning, Deep Learning, Multiview Geometry, 3D Computer Vision, Image Analysis, Detection, Recognition, Multimedia, Biomedical Technology, Digital Forensics, Biometrics, Image Processing for Cultural Heritage, Robot Vision, Brave New Ideas, AI and science, X-Realities, Embedded Vision",Springer,"The 23rd International Conference on Image Analysis and Processing (ICIAP 2025) will be held from 15-19 September 2025 at Sapienza University of Rome, Italy. The conference focuses on computer vision, pattern recognition, and image processing, covering both theoretical and application aspects.","# Call for Papers - ICIAP 2025
+
+The 23rd International Conference on Image Analysis and Processing (ICIAP 2025) is organized biennially by CVPL, the Italian Member Society of the International Association for Pattern Recognition (IAPR).
+
+The conference will take place in **Rome, Italy**, from **15-19 September 2025**, at the **Sapienza University of Rome**.
+
+ICIAP 2025 aims to be a stimulating discussion forum for researchers to meet, present their work, and exchange ideas through oral and poster sessions, and invited keynote talks. The conference will also include satellite workshops and tutorials.
+
+## Topics of Interest
+
+The conference focus is on both traditional and emerging trends in computer vision, pattern recognition, and image processing, addressing both theoretical and practical aspects. Special emphasis will be placed on the following topics:
+
+*   Video Analysis and Understanding
+*   Pattern Recognition and Machine Learning
+*   Deep Learning
+*   Multiview Geometry and 3D Computer Vision
+*   Image Analysis, Detection, and Recognition
+*   Multimedia
+*   Biomedical and Assistive Technology
+*   Digital Forensics and Biometrics
+*   Image Processing for Cultural Heritage
+*   Robot and Vision
+*   Brave New Ideas
+*   AI and science
+*   X-Realities
+*   Embedded Vision
+
+## Submission Instructions
+
+All submissions will be handled electronically via the conference’s CMT Website: [https://cmt3.research.microsoft.com/ICIAPconf2025](https://cmt3.research.microsoft.com/ICIAPconf2025)
+
+*   **Template Download:** Authors can download the template, together with the instructions, from the following link.
+*   **Overleaf Template:** For authors who want to write their manuscripts on Overleaf.
+*   The maximum number of pages is **12 including references**.
+
+## Review Process
+
+*   Papers will be selected through a **double-blind review process**, taking into account originality, significance, clarity, soundness, relevance, and technical contents.
+*   Each submission will be managed by two Area Chairs and reviewed by at least three reviewers.
+
+## Publication
+
+Accepted papers will be included in the ICIAP 2025 Conference Proceedings, which will be published by **Springer** in the **Lecture Notes in Computer Science (LNCS)** series.
+
+## Additional Author Guidelines
+
+*   **Double blind review:** ICIAP25 reviewing is double blind. Authors must not provide information that may identify them in acknowledgments or any other part of the paper. Violation of these guidelines may lead to rejection without review.
+*   **Dual submissions:** Manuscripts must not be previously published or accepted for publication in a substantially similar form. No publication substantially similar in content (20% overlap) should be submitted to other venues during the review period. Violation will lead to rejection and reporting.
+*   **arXiv preprints:** arXiv preprints and university technical reports are not considered publications.
+
+## Important Dates
+
+*   **First round submission:** **14 February 2025**
+*   **First round notification:** **31 March 2025**
+*   **Second round submission:** **15 April 2025** extended to **29 April 2025** AoE
+*   **Second round notification:** **15 June 2025**
+*   **Workshop and Tutorials:** **15 - 16 September 2025**
+*   **Main Conference:** **17 - 19 September 2025**
+*   **Early Bird registration deadline:** **30 June 2025**
+*   **Authors’ Registration deadline:** **30 June 2025**
+*   **Camera Ready Submission:** **10 July 2025**
+*   **Regular registration deadline:** **4 September 2025**
+
+## Contact Information
+
+For more information, please contact us at: [info@iciap.org](mailto:info@iciap.org).",
+req-conf-1751537158192-i48ha,,International Symposium on Automated Technology for Verification and Analysis,ATVA,https://conf.researchr.org/home/atva-2025,TRUE,https://conf.researchr.org/track/atva-2025/atva-2025-research-papers,https://conf.researchr.org/dates/atva-2025,"Conference dates: October 27 - 31, 2025
+Year: 2025
+Location: Bengaluru, India
+City-State-Province: Bengaluru
+Country: India
+Continent: Asia
+Type: Offline
+Submission Date.(Research and Tool Papers) Abstract + Paper submission deadline: April 25, 2025
+Submission Date.(Artifacts) Tool paper artifact submission deadline: May 2, 2025
+Notification Date.(Research and Tool Papers) Paper notification: July 4, 2025
+Notification Date.(Research and Tool Papers) Author response period: June 17 - 20, 2025
+Notification Date.(Artifacts) Regular paper artifact submission deadline: July 8, 2025
+Camera-ready Date.(Research and Tool Papers) Camera-ready deadline: August 1, 2025
+Other Date.(Research and Tool Papers) Tutorials and Workshops: October 27, 2025
+Other Date.(Research and Tool Papers) Conference: October 28 - 30, 2025
+Topics: Automated Analysis, Verification, Synthesis, Hardware, Software Systems","October 27 - 31, 2025",TRUE,2025,"Bengaluru, India",TRUE,Bengaluru,India,Asia,Offline,TRUE,"{""(Research and Tool Papers) Abstract + Paper submission deadline"":""April 25, 2025"",""(Artifacts) Tool paper artifact submission deadline"":""May 2, 2025""}",50.0,"{""(Research and Tool Papers) Paper notification"":""July 4, 2025"",""(Research and Tool Papers) Author response period"":""June 17 - 20, 2025"",""(Artifacts) Regular paper artifact submission deadline"":""July 8, 2025""}",100.0,"{""(Research and Tool Papers) Camera-ready deadline"":""August 1, 2025""}",100.0,{},,"{""(Research and Tool Papers) Tutorials and Workshops"":""October 27, 2025"",""(Research and Tool Papers) Conference"":""October 28 - 30, 2025""}",66.66666667,"Automated Analysis, Verification, Synthesis, Hardware, Software Systems",No publisher,"The 23rd International Symposium on Automated Technology for Verification and Analysis (ATVA 2025) will be held from October 27 to October 31, 2025, in Bengaluru, India, at the International Institute of Information Technology, Bangalore. ATVA 2025 is dedicated to promoting research on theoretical and practical aspects of automated analysis, verification, and synthesis, and is co-located with the 23rd Asian Symposium on Programming Languages and Systems (APLAS 2025).","# ATVA 2025: Call for Papers
+
+Welcome to ATVA 2025, the 23rd edition of the International Symposium on Automated Technology for Verification and Analysis. The conference is dedicated to the promotion of research on theoretical and practical aspects of automated analysis, verification, and synthesis, by providing a forum for interaction between international research communities and industry in the field.
+
+ATVA 2025 will take place from **October 27 to October 31, 2025**, in **Bengaluru, India**, at the **International Institute of Information Technology, Bangalore**. This year’s conference is co-located with the [23rd Asian Symposium on Programming Languages and Systems (APLAS 2025)](https://conf.researchr.org/home/aplas-2025).
+
+## Topics of Interest
+
+ATVA solicits high quality submissions in the following suggestive list of topics:
+
+*   Formalisms for modeling hardware, software and embedded systems
+*   Specification and verification of finite-state, infinite-state and parameterized systems
+*   Program analysis and software verification
+*   Analysis and verification of hardware circuits, systems-on-chip and embedded systems
+*   Analysis of real-time, hybrid, priced, weighted and probabilistic systems
+*   Deductive, algorithmic, compositional, and abstraction/refinement techniques for analysis and verification
+*   Analytical techniques for safety, security, and dependability
+*   Testing and runtime analysis based on verification technology
+*   Analysis and verification of parallel and concurrent systems
+*   Verification in industrial practice
+*   Synthesis for hardware and software systems
+*   Applications and case studies of verification
+*   Automated tool support for verification
+*   Testing and verification of neural networks
+*   Testing and verification of autonomous systems
+
+## Submissions
+
+ATVA welcomes submissions in the following two categories:
+
+### Regular Research Papers
+
+*   **Length:** Up to **18 pages**, excluding references and appendices. Appendices can be provided but are read at the discretion of reviewers and omitted in the final version.
+*   **Anonymization:** Submissions must be anonymized, as ATVA 2025 will follow a **full double-blind review process**. Author names and affiliations must be omitted. References to prior work by authors should be in the third person. Failure to comply will result in rejection without review.
+*   **Artifact Evaluation:** Optional submission of a relevant artifact for evaluation by the artifact evaluation committee. The deadline for this will be shortly after paper acceptance notification.
+*   **Repository:** Authors are encouraged to include a URL to a repository (code, datasets, results) in their original submission, adhering to double-blind guidelines.
+
+### Tool Papers
+
+*   **Length:** Up to **10 pages**, excluding references.
+*   **Anonymization:** Not anonymized. ATVA follows a **single-blind review process** for tool papers.
+*   **Artifact Evaluation:** Mandatory submission of a separate artifact via EasyChair.
+*   **Enhancements:** Papers describing tools that have been previously presented will only be accepted if significant and clear enhancements are reported and implemented.
+
+## Submission Format
+
+*   Submissions must be in **Springer’s LNCS format**. Formatting style files and guidelines can be found at [https://www.springer.com/gp/computer-science/lncs](https://www.springer.com/gp/computer-science/lncs).
+*   Adding line numbers (LaTeX package `lineno`) is highly recommended.
+
+## Submission System
+
+*   Papers must be submitted through EasyChair: [https://easychair.org/conferences/?conf=atva2025](https://easychair.org/conferences/?conf=atva2025)
+
+## Publication
+
+*   Accepted papers in both categories will be published in **Springer’s Lecture Notes in Computer Science series**.
+
+## Important Dates (AoE - UTC-12h)
+
+1.  **Abstract + Paper submission deadline:** **April 25, 2025**
+2.  **Tool paper artifact submission deadline:** **May 2, 2025**
+3.  **Tool paper revised artifact submission deadline:** **May 11, 2025**
+4.  **Author response period:** **June 17 – 20, 2025**
+5.  **Paper notification:** **July 4, 2025**
+6.  **Regular paper artifact submission deadline:** **July 8, 2025**
+7.  **Camera-ready deadline:** **August 1, 2025**
+8.  **Tutorials and Workshops:** **October 27, 2025**
+9.  **Conference Dates:** **October 27 - 31, 2025**
+
+## Invited Talks
+
+Information about invited talks will be available.
+
+## Tracks
+
+*   Research and Tool Papers
+*   Artifacts
+*   Workshops
+*   Tutorials
+
+## Other Information
+
+*   A few outstanding papers will be selected for a distinguished paper award.
+*   At least one author of each accepted paper is expected to register and present the paper at the conference.","(Research and Tool Papers) Author response period và (Artifacts) Regular paper artifact submission deadline sai loại
+
+thiếu (Artifacts) Tool paper revised artifact submission deadline"

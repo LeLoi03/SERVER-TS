@@ -1,8 +1,7 @@
 // src/services/manageCalendar.service.ts
 import 'reflect-metadata';
 import { container } from 'tsyringe';
-import { ApiCallResult, CalendarItem, FollowItem } from '../shared/types'; // Import CalendarItem, FollowItem
-import logToFile from '../../utils/logger';
+import { CalendarItem } from '../shared/types'; // Import CalendarItem, FollowItem
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 import { ConfigService } from '../../config/config.service';
 
@@ -15,10 +14,10 @@ const DATABASE_URL: string | undefined = configService.databaseUrl;
 
 if (!DATABASE_URL) {
     const errorMsg = `${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`;
-    logToFile(errorMsg);
+    
     throw new Error(errorMsg);
 } else {
-    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // 
 }
 
 type ServiceApiActionTypeCalendar = 'add' | 'remove';
@@ -40,7 +39,7 @@ function getCalendarApiUrl(
         case 'remove':
             return `${DATABASE_URL}/${base}/remove`;
         default:
-            logToFile(`${LOG_PREFIX} Error: Invalid operation type for URL construction: ${operation}`);
+            
             throw new Error(`Invalid calendar operation: ${operation}`);
     }
 }
@@ -60,12 +59,12 @@ export async function executeGetUserCalendar(
     const logContext = `${LOG_PREFIX} [GetUserCalendarEvents]`;
 
     if (!token) {
-        logToFile(`${logContext} Error: Authentication token is missing.`);
+        
         return { success: false, itemIds: [], errorMessage: "Authentication token is required." };
     }
 
     const url = getCalendarApiUrl('calendarList');
-    logToFile(`${logContext} Fetching calendar events: GET ${url}`);
+    
 
     try {
         const response = await fetch(url, {
@@ -75,7 +74,7 @@ export async function executeGetUserCalendar(
 
         if (!response.ok) {
             const errorText = await response.text().catch(() => `Status ${response.status}`);
-            logToFile(`${logContext} API Error (${response.status}): ${errorText.substring(0, Math.min(errorText.length, 200))}`);
+            
             return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching calendar events.` };
         }
 
@@ -83,12 +82,12 @@ export async function executeGetUserCalendar(
         // Cập nhật: Sử dụng 'id' thay vì 'conferenceId' vì API trả về 'id'
         const itemIds = calendarEvents.map(event => event.id);
 
-        logToFile(`${logContext} Success. Found ${itemIds.length} event(s) in calendar.`);
+        
         return { success: true, itemIds, items: calendarEvents };
 
     } catch (error: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`${logContext} Network/Fetch Error: ${errorMessage}\nStack: ${errorStack}`);
+        
         return { success: false, itemIds: [], errorMessage: `Network error fetching calendar events. Details: ${errorMessage}` };
     }
 }
@@ -112,11 +111,11 @@ export async function executeManageCalendarApi(
     const logContext = `${LOG_PREFIX} [${action}CalendarEvent ID: ${conferenceId}]`;
 
     if (!token) {
-        logToFile(`${logContext} Error: Authentication token is missing.`);
+        
         return { success: false, errorMessage: "Authentication token is required." };
     }
     if (!conferenceId || typeof conferenceId !== 'string' || conferenceId.trim() === '') {
-        logToFile(`${logContext} Error: Conference ID is missing or invalid.`);
+        
         return { success: false, errorMessage: "Conference ID is required." };
     }
 
@@ -124,7 +123,7 @@ export async function executeManageCalendarApi(
     const method = 'POST'; // API yêu cầu POST cho cả add và remove
     const bodyPayload = { conferenceId: conferenceId }; // Payload gửi đi có trường conferenceId
 
-    logToFile(`${logContext} Executing action: ${method} ${url} with payload: ${JSON.stringify(bodyPayload)}`);
+    
 
     try {
         const response = await fetch(url, {
@@ -141,11 +140,11 @@ export async function executeManageCalendarApi(
             } catch {
                 errorDetails = `Status ${response.status} ${response.statusText}`;
             }
-            logToFile(`${logContext} API Error (${response.status}): ${errorDetails}`);
+            
             return { success: false, errorMessage: `API Error (${response.status}): Failed to ${action} conference ${action === 'add' ? 'to' : 'from'} calendar. ${errorDetails}` };
         }
 
-        logToFile(`${logContext} Action executed successfully.`);
+        
         let returnedDetails: Partial<CalendarItem> | undefined = undefined;
 
         // Nếu action là 'add' (hoặc 'remove' cũng có thể trả về item đã xóa nếu API thiết kế như vậy)
@@ -160,13 +159,13 @@ export async function executeManageCalendarApi(
                     returnedDetails = responseData.data as Partial<CalendarItem>;
                 }
                 if (returnedDetails) {
-                    logToFile(`${logContext} Details returned from '${action}' response: ${JSON.stringify(returnedDetails).substring(0, Math.min(JSON.stringify(returnedDetails).length, 100))}`);
+                    
                 } else {
-                    logToFile(`${logContext} No relevant details returned from '${action}' response for ID: ${conferenceId}, but action was successful. Response: ${JSON.stringify(responseData).substring(0, Math.min(JSON.stringify(responseData).length, 100))}`);
+                    
                 }
             } catch (e: unknown) {
                 const { message: parseMsg } = getErrorMessageAndStack(e);
-                logToFile(`${logContext} Warning: Could not parse details from '${action}' response, but action was successful. Error: ${parseMsg}`);
+                
                 returnedDetails = undefined;
             }
         }
@@ -174,7 +173,7 @@ export async function executeManageCalendarApi(
 
     } catch (error: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`${logContext} Network/Fetch Error: ${errorMessage}\nStack: ${errorStack}`);
+        
         return { success: false, errorMessage: `Network error attempting to ${action} conference ${action === 'add' ? 'to' : 'from'} calendar. Details: ${errorMessage}` };
     }
 }

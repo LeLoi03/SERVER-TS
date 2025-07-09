@@ -2,7 +2,6 @@
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe'; // Dependency Injection container
 import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
-import logToFile from '../../utils/logger'; // Import the custom logging utility
 
 // --- Import sub-handler registration functions ---
 import { registerConversationHandlers } from './conversation.handler';
@@ -12,13 +11,6 @@ import { registerConfirmationHandlers } from './confirmation.handler';
 // --- Import types ---
 import { HandlerDependencies } from './handler.types';
 import { ClientConversationMetadata, ErrorUpdate, Language, WarningUpdate } from '../../chatbot/shared/types';
-
-// --- Constants ---
-/**
- * A constant representing the name of the core Socket.IO handler orchestrator.
- * Used for consistent logging context.
- */
-const CORE_ORCHESTRATOR_NAME = 'CoreSocketOrchestrator';
 
 /**
  * Default limit for fetching conversation history when not specified.
@@ -51,14 +43,14 @@ export const registerCoreHandlers = (
         conversationHistoryService = container.resolve(ConversationHistoryService);
     } catch (error: any) {
         // Log a critical error if the service cannot be resolved, indicating a DI setup issue.
-        logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${userIdForInitialLog}] CRITICAL ERROR: Failed to resolve ConversationHistoryService: ${error.message}, Stack: ${error.stack}`);
+        
         // Emit a critical error to the client and then disconnect.
         socket.emit('critical_error', { message: "Server configuration error. Please try reconnecting later." });
         socket.disconnect(true); // Force disconnect
         return; // Prevent further execution if critical service is unavailable.
     }
 
-    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${userIdForInitialLog}] Initializing core Socket.IO handler registration.`);
+    
 
     // --- Common Utility Functions (to be passed to sub-handlers) ---
 
@@ -70,9 +62,9 @@ export const registerCoreHandlers = (
      * @param {Record<string, any>} [details] - Optional additional details to include in logs.
      */
     const sendChatError = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
-        const fullLogContext = `${logContext}[ChatError][${getUserId()}]`;
-        const logMessage = `[ERROR] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
-        logToFile(logMessage);
+        // const fullLogContext = `${logContext}[ChatError][${getUserId()}]`;
+        // const logMessage = `[ERROR] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        
         socket.emit('chat_error', { type: 'error', message, step } as ErrorUpdate);
     };
 
@@ -84,9 +76,9 @@ export const registerCoreHandlers = (
      * @param {Record<string, any>} [details] - Optional additional details to include in logs.
      */
     const sendChatWarning = (logContext: string, message: string, step: string, details?: Record<string, any>): void => {
-        const fullLogContext = `${logContext}[ChatWarning][${getUserId()}]`;
-        const logMessage = `[WARNING] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
-        logToFile(logMessage);
+        // const fullLogContext = `${logContext}[ChatWarning][${getUserId()}]`;
+        // const logMessage = `[WARNING] ${fullLogContext} Step: ${step}, Msg: "${message}"${details ? `, Details: ${JSON.stringify(details)}` : ''}`;
+        
         socket.emit('chat_warning', { type: 'warning', message, step } as WarningUpdate);
     };
 
@@ -104,15 +96,15 @@ export const registerCoreHandlers = (
         reason: string,
         language?: Language
     ): Promise<void> => {
-        const langForLog = language || 'N/A';
-        const fullLogContext = `${logContext}[EmitConversationList][${userIdToList}]`;
-        logToFile(`[DEBUG] ${fullLogContext} Attempting to emit updated conversation list. Reason: ${reason}, Lang: ${langForLog}.`);
+        // const langForLog = language || 'N/A';
+        // const fullLogContext = `${logContext}[EmitConversationList][${userIdToList}]`;
+        
         try {
             const updatedList: ConversationMetadata[] = await conversationHistoryService.getConversationListForUser(userIdToList, undefined, language);
             socket.emit('conversation_list', updatedList as ClientConversationMetadata[]);
-            logToFile(`[INFO] ${fullLogContext} Successfully emitted updated conversation list. Reason: ${reason}, Count: ${updatedList.length}, Lang: ${langForLog}.`);
+            
         } catch (error: any) {
-            logToFile(`[WARNING] ${fullLogContext} Failed to emit updated conversation list. Reason: ${reason}, Error: ${error.message}, Lang: ${langForLog}, Stack: ${error.stack}`);
+            
         }
     };
 
@@ -139,7 +131,6 @@ export const registerCoreHandlers = (
         io,
         socket,
         conversationHistoryService,
-        logToFile,
         get userId() { return socket.data.userId || 'Anonymous'; }, // Getter for dynamic userId
         socketId,
         sendChatError,
@@ -151,10 +142,10 @@ export const registerCoreHandlers = (
 
     // --- Register Sub-Handlers ---
     // Delegate to specialized functions to register event handlers for different categories.
-    logToFile(`[${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] Registering sub-handlers (Conversation, Message, Confirmation).`);
+    
     registerConversationHandlers(dependencies);
     registerMessageHandlers(dependencies);
     registerConfirmationHandlers(dependencies);
 
-    logToFile(`[INFO] [${CORE_ORCHESTRATOR_NAME}][${socketId}][${dependencies.userId}] All core event handlers successfully registered.`);
+    
 };

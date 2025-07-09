@@ -1,0 +1,1301 @@
+requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note
+req-conf-1751946807601-knm8o,,ACM International Conference on Recommender Systems,RecSys,https://recsys.acm.org/recsys25/,TRUE,https://recsys.acm.org/recsys25/call/,https://recsys.acm.org/recsys25/dates/,"Conference dates: September 22 - 26, 2025
+Year: 2025
+Location: Prague, Czech Republic
+City-State-Province: Prague
+Country: Czech Republic
+Continent: Europe
+Type: Offline
+Submission Date.(Full papers) Full paper abstracts due: April 1, 2025
+Submission Date.(Full papers) Full papers due: April 8, 2025
+Submission Date.(Short papers) Short paper abstracts due: April 22, 2025
+Submission Date.(Short papers) Short papers due: April 30, 2025
+Submission Date.(Reproducibility papers) Abstract: May 6, 2025
+Submission Date.(Reproducibility papers) Paper: May 13, 2025
+Submission Date.DS papers: June 3, 2025
+Submission Date.Industry papers: May 15, 2025
+Submission Date.Demo&LBR papers: July 9, 2025
+Submission Date.Workshop proposals: February 27, 2025
+Submission Date.Tutorial proposals: April 15, 2025
+Notification Date.(Full papers) Full paper notifications: July 3, 2025
+Notification Date.(Short papers) Short paper notifications: July 3, 2025
+Notification Date.(Reproducibility papers): July 3, 2025
+Notification Date.DS papers: July 3, 2025
+Notification Date.Industry papers: July 3, 2025
+Notification Date.Demo&LBR papers: August 4, 2025
+Notification Date.Workshop proposals: March 28, 2025
+Notification Date.Woman’s Journal paper of the Year: June 30, 2025
+Notification Date.Tutorial proposals: April 30, 2025
+Camera-ready Date.(Full papers) Camera-ready due: July 21, 2025
+Camera-ready Date.(Short papers) Camera-ready due: July 21, 2025
+Camera-ready Date.(Reproducibility papers): July 21, 2025
+Camera-ready Date.DS papers: July 21, 2025
+Camera-ready Date.Industry papers: July 21, 2025
+Camera-ready Date.Demo&LBR papers: August 11, 2025
+Camera-ready Date.Workshop proposals: July 14, 2025
+Camera-ready Date.Tutorial proposals: July 14, 2025
+Other Date.(Full papers) Author rebuttal period for Full papers: May 20-26, 2025
+Other Date.(Short papers) Author rebuttal period for Short papers: June 5-10, 2025
+Other Date.(Reproducibility papers) Author rebuttal period focused on the paper artifacts: June 5-10, 2025
+Topics: Recommender Systems
+Publisher: ACM","September 22 - 26, 2025",TRUE,2025,"Prague, Czech Republic",TRUE,Prague,Czech Republic,Europe,Offline,TRUE,"{""(Full papers) Full paper abstracts due"":""April 1, 2025"",""(Full papers) Full papers due"":""April 8, 2025"",""(Short papers) Short paper abstracts due"":""April 22, 2025"",""(Short papers) Short papers due"":""April 30, 2025"",""(Reproducibility papers) Abstract"":""May 6, 2025"",""(Reproducibility papers) Paper"":""May 13, 2025"",""DS papers"":""June 3, 2025"",""Industry papers"":""May 15, 2025"",""Demo&LBR papers"":""July 9, 2025"",""Workshop proposals"":""February 27, 2025"",""Tutorial proposals"":""April 15, 2025""}",91.66666667,"{""(Full papers) Full paper notifications"":""July 3, 2025"",""(Short papers) Short paper notifications"":""July 3, 2025"",""(Reproducibility papers)"":""July 3, 2025"",""DS papers"":""July 3, 2025"",""Industry papers"":""July 3, 2025"",""Demo&LBR papers"":""August 4, 2025"",""Workshop proposals"":""March 28, 2025"",""Woman’s Journal paper of the Year"":""June 30, 2025"",""Tutorial proposals"":""April 30, 2025""}",100,"{""(Full papers) Camera-ready due"":""July 21, 2025"",""(Short papers) Camera-ready due"":""July 21, 2025"",""(Reproducibility papers)"":""July 21, 2025"",""DS papers"":""July 21, 2025"",""Industry papers"":""July 21, 2025"",""Demo&LBR papers"":""August 11, 2025"",""Workshop proposals"":""July 14, 2025"",""Tutorial proposals"":""July 14, 2025""}",100,{},,"{""(Full papers) Author rebuttal period for Full papers"":""May 20-26, 2025"",""(Short papers) Author rebuttal period for Short papers"":""June 5-10, 2025"",""(Reproducibility papers) Author rebuttal period focused on the paper artifacts"":""June 5-10, 2025""}",100,Recommender Systems,ACM,"The 19th ACM International Conference on Recommender Systems (RecSys 2025) will be held in Prague, Czech Republic, from September 22nd to 26th, 2025. This conference is the premier international forum for presenting new research results, systems, and techniques in the field of recommender systems, bringing together leading international research groups and industry experts.","# RecSys 2025: Call for Contributions
+
+The 19th ACM Conference on Recommender Systems (RecSys 2025) will take place from **September 22nd to 26th, 2025, in Prague, Czech Republic**. RecSys is the premier international forum for research on the foundations and applications of recommendation technologies.
+
+## Full Papers
+
+We welcome high-impact original papers that contribute to all aspects of recommender systems. Papers must be self-contained, limited to **8 pages** (using the ACM 2-column template), with up to **2 pages for references**. Appendices also count towards the 8-page limit.
+
+*   **Abstract Due:** April 1, 2025
+*   **Full Paper Due:** April 8, 2025
+*   **Author Rebuttal Period:** May 20-26, 2025
+*   **Author Notification:** July 3, 2025
+*   **Camera-ready Due:** July 21, 2025
+
+## Short Papers
+
+Contributions that typically discuss exciting work that is not yet mature enough for the full paper track.
+
+*   **Abstract Due:** April 22, 2025
+*   **Paper Due:** April 30, 2025
+*   **Author Rebuttal Period:** June 5-10, 2025
+*   **Author Notification:** July 3, 2025
+*   **Camera-ready Due:** July 21, 2025
+
+## Reproducibility Papers
+
+Submissions that replicate or analyze prior works in similar or alternative settings or contribute to an increased level of reproducibility.
+
+*   **Abstract Due:** May 6, 2025
+*   **Paper Due:** May 13, 2025
+*   **Author Rebuttal Period:** June 5-10, 2025
+*   **Author Notification:** July 3, 2025
+*   **Camera-ready Due:** July 21, 2025
+
+## Doctoral Symposium
+
+An opportunity for doctoral students to explore and develop their research interests under the guidance of distinguished researchers.
+
+*   **Submission Deadline:** June 03, 2025
+*   **Submission Notification:** July 03, 2025
+*   **Camera-ready Due:** July 21, 2025
+
+## Industry Contributions
+
+Focuses on challenges and practical solutions to significant real-world issues faced by industry practitioners.
+
+*   **Submission Deadline:** May 15, 2025
+*   **Author Notification:** July 3, 2025
+*   **Camera-ready Due:** July 21, 2025
+
+## Tutorials
+
+Proposals for tutorials to provide in-depth coverage of established recommender systems subtopics or emerging application areas.
+
+*   **Proposals Due:** April 15, 2025
+*   **Notifications:** April 30, 2025
+*   **Camera-ready Due:** July 14, 2025
+
+## Workshops
+
+Proposals for workshops to provide additional venues for discussing novel ideas and recent results of research in progress.
+
+*   **Proposal Submission Deadline:** February 27, 2025
+*   **Proposal Notification:** March 28, 2025
+*   **Camera-ready Due:** July 14, 2025
+
+## Demos
+
+Showcase implementations of novel, interesting, and important recommender systems’ concepts or applications.
+
+*   **Submission Deadline:** July 9, 2025
+*   **Notifications:** August 4, 2025
+*   **Camera-ready Due:** August 11, 2025
+
+## Late-Breaking Results (LBR)
+
+Opportunity for presenting new, interesting, preliminary results and speculative or innovative work in progress.
+
+*   **Submission Deadline:** July 9, 2025
+*   **Notifications:** August 4, 2025
+*   **Camera-ready Due:** August 11, 2025
+
+## Submission Guidelines
+
+*   Submissions must be anonymous (except for Resource papers in the Reproducibility track) and in PDF format via EasyChair. Specific track links will be provided.
+*   **Formatting:** Use the ACM 2-column template. Detailed instructions for Word and LaTeX are available on the website.
+*   **In-Person Attendance:** RecSys 2025 is an in-person conference. All accepted contributions are expected to be presented in person.
+*   **Pre-print Policy:** Anonymous versions can be posted on arXiv. Non-anonymized versions with significant overlap must be disclosed. Non-anonymized papers cannot be posted on pre-print sites during the review period.
+*   **Use of AI Policy:** Authors must disclose the use of generative AI tools in an ""Acknowledgments"" section. Authors are responsible for any inaccuracies or violations.
+*   **Plagiarism Policy:** Plagiarism will be checked. Reuse of text must be cited. Violations may lead to rejection or referral to ACM Publications Ethics.
+*   **Ethical Review:** Compliance with ethical and regulatory guidelines for human-subjects research is expected.
+
+## Relevant Areas & Topics
+
+*   Human-centered recommendation approaches
+*   Societal recommender systems
+*   Sustainable Recommender Systems Development
+*   Computational innovations, evaluation, and real-world applications
+*   And many more, as detailed in the full CFP.
+
+## Program Chairs
+
+*   Marco de Gemmis, University of Bari Aldo Moro, Italy
+*   Sole Pera, TU Delft, The Netherlands
+*   Contact: program2025@recsys.acm.org
+
+## Reproducibility Chairs
+
+*   Maurizio Ferrari Dacrema, Politecnico di Milano, Italy
+*   Michal Kompan, Kempelen Institute of Intelligent Technologies, Slovakia
+*   Cataldo Musto, University of Bari Aldo Moro, Italy
+*   Marco Polignano, University of Bari Aldo Moro, Italy
+*   E-mail: reproducibility2025@recsys.acm.org
+
+## Doctoral Symposium Chairs
+
+*   Michael Ekstrand, Drexel University
+*   Özlem Özgöbek, Norwegian University of Science and Technology
+*   E-mail: doctoral2025@recsys.acm.org
+
+## Industry Chairs
+
+*   Rodrigo Alves, Czech Technical University in Prague & Recombee Research, Czech Republic
+*   Olivier Jeunen, Aampe, Belgium
+*   Vito Ostuni, Netflix Research, USA
+*   E-mail: industry2025@recsys.acm.org
+
+## Tutorial Chairs
+
+*   Bart Knijnenburg, Clemson University, USA
+*   Elisabeth Lex, Graz University of Technology, Austria
+*   Fedelucio Narducci, Polytechnic of Bari, Italy
+*   E-mail: tutorials2025@recsys.acm.org
+
+## Workshop Chairs
+
+*   Ludovico Boratto, University of Cagliari, Italy
+*   Martijn Willemsen, Eindhoven University of Technology and JADS, The Netherlands
+*   E-mail: workshops2025@recsys.acm.org
+
+## Demo Chairs
+
+*   Julia Neidhardt, TU Wien, Austria
+*   Marko Tkalčič, University of Primorska, Slovenia
+*   Adir Solomon, University of Haifa, Israel
+*   E-mail: demos_lbr2025@recsys.acm.org",thiếu Woman’s Journal paper of the Year (submission)
+req-conf-1751946807601-knm8o,,International Conference on Computational Molecular Biology,RECOMB,https://recomb.org/recomb2025/,TRUE,https://recomb.org/recomb2025/call_for_papers.html,https://recomb.org/recomb2025/keydates_and_deadlines.html,"Conference dates: April 26 - 29, 2025
+Year: 2025
+Location: Seoul, Korea
+City-State-Province: Seoul
+Country: Korea
+Continent: Asia
+Type: Offline
+Submission Date.Abstract/paper registration deadline: October 16, 2024
+Submission Date.Full paper submission deadline: October 25, 2024
+Submission Date.Submission deadline: January 27, 2025
+Submission Date.Late poster submission deadline (pending capacity): February 14, 2025
+Notification Date.Author notification: February 10, 2025
+Notification Date.Late poster author notification: February 21, 2025
+Camera-ready Date.Final proceedings version of accepted papers due: February 15, 2025
+Registration Date.Early Bird Registration deadline: March 21, 2025
+Registration Date.Late Online Registration Deadline: April 15, 2025
+Other Date.Application deadline: January 20, 2025
+Topics: algorithmic computational biology, computational, mathematical, statistical and biological sciences
+Publisher: Springer","April 26 - 29, 2025",TRUE,2025,"Seoul, Korea",TRUE,Seoul,Korea,Asia,Offline,TRUE,"{""Abstract/paper registration deadline"":""October 16, 2024"",""Full paper submission deadline"":""October 25, 2024"",""Submission deadline"":""January 27, 2025"",""Late poster submission deadline (pending capacity)"":""February 14, 2025""}",80,"{""Author notification"":""February 10, 2025"",""Late poster author notification"":""February 21, 2025""}",50,"{""Final proceedings version of accepted papers due"":""February 15, 2025""}",100,"{""Early Bird Registration deadline"":""March 21, 2025"",""Late Online Registration Deadline"":""April 15, 2025""}",100,"{""Application deadline"":""January 20, 2025""}",0,"algorithmic computational biology, computational, mathematical, statistical and biological sciences",Springer,"The 29th Annual International Conference on Research in Computational Molecular Biology (RECOMB 2025) will be held in Seoul, Korea, from April 26-29, 2025, with satellite meetings on April 24-25, 2025. The conference bridges computational, mathematical, statistical, and biological sciences, featuring keynote talks, peer-reviewed research presentations, and poster sessions. RECOMB 2025 is co-hosted by Yonsei University and Seoul National University and is affiliated with the International Society for Computational Biology.","# RECOMB 2025: Call for Papers
+
+The RECOMB conference series, founded in 1997, is dedicated to advancing computational biology and its applications in molecular biology and medicine. RECOMB 2025 aims to foster collaboration among researchers in computational, mathematical, statistical, and biological sciences, bringing together global experts for interaction and exchange of new developments.
+
+## Topics
+
+Original research (theoretical and applied) in all areas of computational molecular biology is welcome. Topics include, but are not limited to:
+
+*   Molecular sequence analysis
+*   Sequencing and genotyping technologies
+*   Gene regulation and epigenomics
+*   Transcriptomics
+*   Single-cell omics
+*   Metagenomics and microbiome analysis
+*   Population genetics and statistical genomics
+*   Evolution and comparative genomics
+*   Structure and function of non-coding RNAs
+*   Computational proteomics and proteogenomics
+*   Computational structural biology
+*   Computational metabolomics
+*   Protein structure and function
+*   Biological networks and network biology
+*   Computational systems biology
+*   Multimodal data integration in biological research
+*   Computational approaches to understanding human disease
+*   Data privacy and security in biomedical research
+*   Bioimaging and molecular and cellular imaging analysis
+
+## Submission Guidelines
+
+Submissions must represent original, previously unpublished work. Accepted papers will be published in the **Lecture Notes in Bioinformatics (LNBI)** series from Springer-Verlag.
+
+Authors who prefer not to publish their papers in the LNBI proceedings must submit a **four-page extended abstract** for inclusion in the proceedings, and the **full paper to preprint servers** (arxiv.org or bioRxiv.org) by the camera-ready deadline.
+
+## Submission Deadlines
+
+*   **Abstract/paper registration deadline:** October 16, 2024, 11:59 PM AoE
+*   **Full paper submission deadline:** October 25, 2024, 11:59 PM AoE (updates to registered abstracts only)
+
+## Paper Submission
+
+Please submit your papers through EasyChair: [https://easychair.org/conferences/?conf=recomb2025](https://easychair.org/conferences/?conf=recomb2025)
+
+## Abstract Registration
+
+A mandatory abstract submission deadline is on October 16, 2024, 11:59 PM AoE. This allows the Program Committee to begin planning review assignments. After this deadline, new submissions will not be accepted, but authors can update their full paper submission until the full paper deadline on October 25, 2024.
+
+## Formatting Instructions
+
+*   **Main paper format:** PDF format, maximum **10 Letter pages**, including figures/tables and captions. Minimum font size of 10pt and 1-inch margins. An additional title page is permitted. The bibliography does not count toward the page limit. Submissions violating formatting requirements or page limits may be rejected without review.
+*   **Recommended Template:** Springer Lecture Notes in Computer Science template.
+*   **Optional Appendix:** Can be submitted as Supplementary Material in a single PDF file. Reviewing the appendix is at the discretion of the reviewers.
+*   **Source code availability:** If new software or analysis methods are developed, the source code should be made publicly accessible via a GitHub repository and linked in the paper.
+
+## Journal Publication
+
+Selected accepted papers will be invited for submission to special issues in partnering journals: **Cell Systems, Genome Research, and the Journal of Computational Biology**. These submissions will require some expansion of the original RECOMB paper.
+
+*   Authors will be notified of potential journal consideration along with the RECOMB acceptance notification.
+*   Papers submitted to other journals in parallel must be withdrawn from the full publication in the proceedings, opting for the extended abstract option and preprint server submission.
+
+## Contact
+
+For questions related to submissions, please email Sriram Sankararaman, Program Committee Chair, at [sriram@cs.ucla.edu](mailto:sriram@cs.ucla.edu).
+
+For general inquiries, email organizers at [recomb2025@gmail.com](mailto:recomb2025@gmail.com).","thiếu dấu ngoặt phân ngày
+
+thiếu 1 Submission deadline + 2 Author notification + các otherDate"
+req-conf-1751946807601-knm8o,,International Workshop on Requirements Engineering: Foundation for Software Quality,REFSQ,https://2026.refsq.org/,TRUE,,,"Conference dates: March 23 - 26, 2026
+Year: 2026
+Location: Poznań, Poland
+City-State-Province: Poznań
+Country: Poland
+Continent: Europe
+Type: Offline
+Topics: Requirements Engineering, Software Quality","March 23 - 26, 2026",TRUE,2026,"Poznań, Poland",TRUE,Poznań,Poland,Europe,Offline,TRUE,{},,{},,{},,{},,{},,"Requirements Engineering, Software Quality",No publisher,"The Requirements Engineering: Foundation for Software Quality (REFSQ) 2026 conference will be held from Monday, March 23 to Thursday, March 26, 2026, at the Poznan University of Technology in Poznań, Poland. REFSQ is a leading European conference series on requirements engineering aimed at fostering a strong European RE community and features an interactive Industry Track, Workshops, Posters, Tool demos, and a Doctoral Symposium.","# REFSQ 2026: Call for Papers
+
+Welcome to the website of the Requirements Engineering: Foundation for Software Quality (REFSQ) 2026 conference. The website is currently being updated with all relevant information. Please check back soon for details.
+
+## About REFSQ
+
+The REFSQ working conference is the leading European conference series on requirements engineering. Its goal is to foster the creation of a strong European RE community across industry and academia. Since 1994, Requirements Engineering has been a dominant factor influencing the quality of software, systems, and services.
+
+REFSQ seeks contributions that report on novel ideas and techniques that enhance the quality of RE’s products and processes, as well as reflections on current research. Interaction is a traditional and distinctive feature of REFSQ, aiming to promote active and fruitful discussions among participants.
+
+In addition to the high-quality scientific program, REFSQ also features:
+
+*   A highly interactive Industry Track
+*   Workshops
+*   Posters and Tool demos
+*   A Doctoral Symposium
+
+## Event Details
+
+*   **Dates:** Monday 23 - Thursday 26 March 2026
+*   **Venue:** Poznan University of Technology, Lecture Center, Poznań, Poland
+*   **Event Format:** [Details available here](https://2026.refsq.org/attending/event-format)
+
+## Series History
+
+*   [REFSQ 2025](https://2025.refsq.org)
+*   [REFSQ 2024](https://2024.refsq.org)
+*   [REFSQ 2023](https://2023.refsq.org)
+*   [REFSQ 2022](https://2022.refsq.org)
+*   [REFSQ 2021](https://2021.refsq.org)
+*   [REFSQ 2020](https://refsq.org/2020)
+*   [REFSQ 2019](https://refsq.org/2019)
+*   [REFSQ 2018](https://refsq.org/2018)
+*   [REFSQ 2017](https://refsq.org/2017)
+*   [REFSQ 2016](https://refsq.org/2016)
+*   [REFSQ 2015](https://refsq.org/2015)
+*   [REFSQ 2014](https://refsq.org/2014)
+*   [REFSQ 2013](https://refsq.org/2013)
+*   [REFSQ 2012](https://refsq.org/2012)
+*   [REFSQ 2011](https://refsq.org/2011)
+*   [REFSQ 2010](https://refsq.org/2010)
+*   [REFSQ 2009](https://refsq.org/2009)
+*   [REFSQ 2008](https://refsq.org/2008)
+*   [REFSQ 2007](https://refsq.org/2007)
+*   [REFSQ 2006](https://refsq.org/2006)
+*   [REFSQ 2005](https://refsq.org/2005)
+*   [REFSQ 2004](https://refsq.org/2004)
+*   [REFSQ 2001](https://refsq.org/2001)
+*   [REFSQ 2000](https://refsq.org/2000)
+*   [REFSQ 1999](https://refsq.org/1999)
+*   [REFSQ 1998](https://refsq.org/1998)
+*   [REFSQ 1997](https://refsq.org/1997)
+
+## Important Dates
+
+*   **No calls have been published yet.** Please check back soon for submission deadlines and other important dates.
+
+## Contact
+
+For any inquiries, please use the [contact form](https://2026.refsq.org/contact).
+
+## Organization
+
+*   [REFSQ 2026 Committees](https://2026.refsq.org/committees)
+*   [Organizing Committee](https://2026.refsq.org/organization)
+*   [Contributors](https://2026.refsq.org/contributors)
+*   [People Index](https://2026.refsq.org/people-index)
+
+## Sign In/Sign Up
+
+*   [Sign in](https://conf.researchr.org/signin/refsq-2026/https%3A%5Es%5Es2026.refsq.org%5Es)
+*   [Sign up](https://2026.refsq.org/signup)",
+req-conf-1751946807601-knm8o,,Principles and Practice of Parallel Programming,PPoPP,https://ppopp25.sigplan.org/,TRUE,https://ppopp25.sigplan.org/track/PPoPP-2025-Main-Conference-1,,"Conference dates: March 1 - 5, 2025
+Year: 2025
+Location: Las Vegas, Nevada, United States
+City-State-Province: Las Vegas, Nevada
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Full paper submission: August 16, 2024
+Submission Date.Artifact submission to AE committee: November 18, 2024
+Notification Date.Author notification: November 11, 2024
+Notification Date.Artifact notification by AE committee: January 6, 2025
+Camera-ready Date.Final paper due: January 10, 2025
+Topics: theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience, concurrent and parallel systems, multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large-scale machines, and quantum computers
+Publisher: ACM SIGPLAN","March 1 - 5, 2025",TRUE,2025,"Las Vegas, Nevada, United States",TRUE,"Las Vegas, Nevada",United States,North America,Offline,TRUE,"{""Full paper submission"":""August 16, 2024"",""Artifact submission to AE committee"":""November 18, 2024""}",100,"{""Author notification"":""November 11, 2024"",""Artifact notification by AE committee"":""January 6, 2025""}",100,"{""Final paper due"":""January 10, 2025""}",100,{},,{},0,"theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience, concurrent and parallel systems, multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators such as ASICs, GPUs, FPGAs, data centers, clouds, large-scale machines, and quantum computers",ACM SIGPLAN,"The 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP 2025) will be held from March 1st to March 5th, 2025, in Las Vegas, Nevada, United States. PPoPP is a premier forum for research on all aspects of parallel programming, covering theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience.","# PPoPP 2025: Call for Papers
+
+The 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP 2025) will be held from **March 1st to March 5th, 2025**, in **Las Vegas, Nevada, USA**, co-located with CC, CGO, and HPCA.
+
+## Scope
+
+PPoPP is the premier forum for leading work on all aspects of parallel programming, including theoretical foundations, techniques, languages, compilers, runtime systems, tools, and practical experience. The symposium covers concurrent and parallel systems such as multicore, multi-threaded, heterogeneous, clustered, and distributed systems, grids, accelerators (ASICs, GPUs, FPGAs), data centers, clouds, large-scale machines, and quantum computers.
+
+PPoPP is interested in all aspects related to improving the productivity of parallel programming on modern architectures, as well as work addressing new parallel workloads and issues arising from large-scale scientific or enterprise workloads.
+
+## Topics of Interest
+
+Specific topics include, but are not limited to:
+
+*   Languages, compilers, and runtime systems for parallel programs
+*   Concurrent data structures
+*   Development, analysis, or management tools
+*   Fault tolerance for parallel systems
+*   Formal analysis and verification
+*   High-performance libraries
+*   Middleware for parallel systems
+*   Machine learning for parallel systems
+*   Parallel algorithms
+*   Parallel applications (scientific computing, enterprise workloads, cloud, machine learning)
+*   Parallel frameworks
+*   Parallel programming for deep memory hierarchies (including nonvolatile memory)
+*   Parallel programming theory and models
+*   Performance analysis, debugging, and optimization
+*   Productivity tools for parallel systems
+*   Software engineering for parallel programs
+*   Synchronization and concurrency control
+
+## Submission Guidelines
+
+*   **Submission URL:** [https://ppopp25.hotcrp.com](https://ppopp25.hotcrp.com)
+*   Submissions must be made electronically and include an abstract (100–400 words), author contact information, and the full list of authors and affiliations.
+*   **Format:** PDF format, printable on both A4 and US letter-size paper.
+*   **Template:** Use the ACM Conference Format (2-column acmart template).
+    *   Latex: `acmart-sigplanproc-template.tex`
+    *   Word: `interim-layout.docx` (ensure font is 10pt, not 9pt as in the default ACM template).
+*   **Page Limit:** Maximum of 10 pages of text (in a typeface no smaller than 10pt), excluding references. References must include all authors.
+*   **Appendices:** Not allowed; supplementary material (proofs, source code) can be submitted separately in PDF or ZIP format.
+*   **Review Process:** Double-blind. Authors must not reveal their identity in the submission and should refer to their own work in the third person.
+*   **Supplementary Material:** Encouraged for reproducibility and will be considered for artifact evaluation.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Full paper submission:** Friday, August 16, 2024
+*   **Author response period:** Wednesday, October 23 – Friday, October 25, 2024
+*   **Author notification:** Monday, November 11, 2024
+*   **Artifact submission to AE committee:** Monday, November 18, 2024
+*   **Artifact notification by AE committee:** Monday, January 6, 2025
+*   **Final paper due:** Friday, January 10, 2025
+
+## Artifact Evaluation (AE)
+
+Authors of accepted papers are encouraged to submit their artifacts for evaluation. Successful AE submissions will receive ACM reproducibility badges.
+
+## Publication
+
+Proceedings will be available in the ACM Digital Library. The official publication date is when the proceedings are made available in the ACM Digital Library, up to two weeks prior to the conference.
+
+## Accessibility and Policies
+
+*   Submissions will be evaluated based on technical merit and accessibility.
+*   Authors are subject to all ACM Publications Policies, including those on research involving human participants.
+*   ORCID IDs are required for authors.
+
+## Tracks
+
+*   **Keynotes**
+*   **Main Conference**
+*   **Workshops and Tutorials**
+*   **Artifact Evaluation**",thiếu Author response period
+req-conf-1751946807601-knm8o,,Pacific Symposium on Biocomputing,PSB,https://psb.stanford.edu/,TRUE,https://psb.stanford.edu/callfor/papers,https://psb.stanford.edu/keydates,"Conference dates: January 3-7, 2026
+Year: 2026
+Location: The Big Island of Hawaii
+Type: Offline
+Submission Date.Paper submissions due: August 1, 2025
+Submission Date.Abstract deadline: December 1, 2025
+Submission Date.Proposals due: March 17, 2025
+Notification Date.Notification of proposal acceptance: March 17, 2025
+Notification Date.Notification of paper acceptance: September 8, 2025
+Camera-ready Date.Camera-ready accepted paper deadline: October 1, 2025
+Other Date.Call for session proposals: February 18, 2025
+Other Date.Call for workshop proposals: February 18, 2025
+Other Date.Online registration opens: August 1, 2025
+Other Date.Early registration deadline: October 31, 2025
+Other Date.Travel award applications Available: August 1, 2025
+Other Date.Travel award applications Deadline: October 15, 2025
+Other Date.Travel award applications Decisions announced: late October 2025
+Other Date.Abstract/Poster submission Available: August 1, 2025
+Other Date.Abstract/Poster submission Absolute deadline: December 1, 2025
+Topics: computational biology, databases, algorithms, interfaces, visualization, modeling and other computational methods, as applied to biological problems, applications in data-rich areas of molecular biology, AI and Machine Learning in Clinical Medicine, Biological molecular function, Fairness and Bias in Biomedical AI/ML, Precision Medicine, Systems Biology and Network Analysis","January 3-7, 2026",TRUE,2026,The Big Island of Hawaii,TRUE,No city/state/province,No country,No continent,Offline,TRUE,"{""Paper submissions due"":""August 1, 2025"",""Abstract deadline"":""December 1, 2025"",""Proposals due"":""March 17, 2025""}",83.33333333,"{""Notification of proposal acceptance"":""March 17, 2025"",""Notification of paper acceptance"":""September 8, 2025""}",75,"{""Camera-ready accepted paper deadline"":""October 1, 2025""}",100,{},100,"{""Call for session proposals"":""February 18, 2025"",""Call for workshop proposals"":""February 18, 2025"",""Online registration opens"":""August 1, 2025"",""Early registration deadline"":""October 31, 2025"",""Travel award applications Available"":""August 1, 2025"",""Travel award applications Deadline"":""October 15, 2025"",""Travel award applications Decisions announced"":""late October 2025"",""Abstract/Poster submission Available"":""August 1, 2025"",""Abstract/Poster submission Absolute deadline"":""December 1, 2025""}",100,"computational biology, databases, algorithms, interfaces, visualization, modeling and other computational methods, as applied to biological problems, applications in data-rich areas of molecular biology, AI and Machine Learning in Clinical Medicine, Biological molecular function, Fairness and Bias in Biomedical AI/ML, Precision Medicine, Systems Biology and Network Analysis",No publisher,"The Pacific Symposium on Biocomputing (PSB) 2026 will be held from January 3-7, 2026, at the Fairmont Orchid on the Big Island of Hawaii. This symposium aims to bring together top researchers from around the world to exchange research results and discuss open issues in computational biology, with a focus on applications in data-rich areas of molecular biology. PSB organizes its discussions into specific sessions, each involving formal research presentations and open discussion groups.","# Pacific Symposium on Biocomputing (PSB) 2026: Call for Papers, Abstracts and Demonstrations
+
+The thirty-first Pacific Symposium on Biocomputing (PSB), will be held **January 3-7, 2026** at the **Fairmont Orchid on the Big Island of Hawaii**.
+
+PSB will bring together top researchers from North America, the Asian Pacific nations, Europe and around the world to exchange research results and address open issues in all aspects of computational biology. PSB will provide a forum for the presentation of work in databases, algorithms, interfaces, visualization, modeling and other computational methods, as applied to biological problems, with emphasis on applications in data-rich areas of molecular biology. PSB intends to attract a balanced combination of computer scientists and biologists to present significant original research, demonstrate computer systems, and facilitate formal and informal discussions on topics of importance to computational biology.
+
+## PSB 2026 Sessions:
+
+To provide focus for the very broad area of biological computing, PSB is organized into a series of specific sessions. Each session will involve both formal research presentations and open discussion groups.
+
+*   **AI and Machine Learning in Clinical Medicine: Bridging or Separating Model Intelligence and Human Expertise**
+    *   Session Chairs: Jonathan Chen, Roxana Daneshjou, Fateme Nateghi Haredasht, Carsten Görg, Joseph D. Romano, Dokyoon Kim, Alexander Ioannidis, Brett K Beaulieu-Jones, Geoffrey H. Tison
+    *   Contact: Carsten Goerg (carsten.goerg at cuanschutz.edu)
+*   **Biological molecular function: methods and benchmarks for finding function in biological dark matter**
+    *   Session Chairs: Jason McDermott, Yana Bromberg, Hannah Carter, Travis Wheeler
+    *   Contact: Jason McDermott (Jason.McDermott at pnnl.gov)
+*   **Fairness and Bias in Biomedical AI/ML: Defining Goals and Putting Them Into Practice**
+    *   Session Chairs: Nicole Martinez-Martin, Mildred Cho
+    *   Contact: Nicole Martinez-Martin (nicolemz at Stanford.edu)
+*   **Precision Medicine: Integrating large scale data and intermediate phenotypes for understanding health and treating disease**
+    *   Session Chairs: Nilah Ioannidis, Tayo Obafemi-Ajayi, Anne O’Donnell-Luria, Steven Brenner
+    *   Contact: Nilah Ioannidis (nilah at berkeley.edu)
+*   **Systems Biology and Network Analysis: From Multi-omics Integration to Biological Mechanisms**
+    *   Session Chairs: Gurkan Bebek, Onur Mutlu, Iman Hajirasouliha, Joshua Welch, Serguei Pakhomov
+    *   Contact: Gurkan Bebek (gurkan.bebek at case.edu)
+
+## Papers and Posters
+
+*   Papers must be submitted to the [PSB 2026 paper management system](http://psb.wufoo.com/forms/psb-paper-submission/).
+*   The core of the conference consists of rigorously peer-reviewed full-length papers reporting on original work. All accepted papers will be published electronically and indexed in PubMed, and the best of these will be presented orally to the entire conference.
+*   Per WSP, authors may [post their submitted manuscript (preprint)](http://www.worldscientific.com/page/authors/author-rights) at any time on their personal website, in their company or institutional repository, in not-for-profit subject-based preprint servers or repositories, and on scholarly collaboration networks (SCNs) which have signed up to the STM sharing principles. Please provide the following applicable acknowledgement along with a link to the article via its DOI if available.
+    *   Preprint of an article submitted for consideration in Pacific Symposium on Biocomputing © [Year] World Scientific Publishing Co., Singapore, http://psb.stanford.edu/ 
+    *   Preprint of an article published in Pacific Symposium on Biocomputing © [Year] World Scientific Publishing Co., Singapore, http://psb.stanford.edu/ (for accepted PSB papers only).
+*   Authors are encouraged to submit preprints (complete and unpublished manuscripts) to bioRxiv and/or medRxiv. If you choose to submit your preprint, please ensure that the deposit is made at the time of the paper submission deadline rather than upon acceptance to avoid clashing with bioRxiv and medRxiv policies.
+*   Researchers wishing to present their research at PSB without official publication are encouraged to submit a one page abstract by the abstract/poster submission deadline listed below to present their work in the poster sessions.
+
+## Important Dates
+
+*   **Paper submissions due (absolute deadline):** August 1, 2025 11:59PM PT
+*   **Notification of paper acceptance:** September 8, 2025
+*   **Final paper deadline:** October 1, 2025 11:59PM PT
+*   **Abstract deadline:** December 1, 2025 11:59PM PT
+*   **Meeting:** January 3-7, 2026
+
+## Paper Format
+
+*   Please reference the [PSB paper format template and instructions](/psb-online/psb-submit/).
+*   Papers must be submitted to the [PSB 2026 paper management system](http://psb.wufoo.com/forms/psb-paper-submission/).
+*   The accepted file format is PDF (Adobe Acrobat preferred). Files should be named with the last name of the first author (e.g. `altman.pdf`).
+*   Hardcopy submissions or unprocessed TEX or LATEX files or electronic submissions not submitted through the [paper management system](http://psb.wufoo.com/forms/psb-paper-submission/) will be rejected without review.
+*   Each paper must be accompanied by a cover letter, which should be the first page of your paper submission. The cover letter must state:
+    *   The email address of the corresponding author.
+    *   The specific PSB session that should review the paper.
+    *   The submitted paper contains original, unpublished results, and is not currently under consideration elsewhere.
+    *   All co-authors concur with the contents of the paper.
+*   Submitted papers are limited to **twelve (12) pages** (NOT including the cover letter, title page with author list, or references) in our publication format.
+*   If figures cannot be easily resized and placed precisely in the text, then it should be clear that with appropriate modifications, the total manuscript length would be within the page limit. Color images are accepted for publication at no additional charge. Supplemental material may be referenced by URL (PSB will not host supplemental material).
+*   Contact PSB (psb.hawaii @ gmail.com) for additional information about paper submission requirements.
+
+## Travel Support
+
+*   Partial travel support may be offered to attendees, but is not guaranteed.
+*   The online travel support application form will open in August.
+*   **Travel award applications deadline:** October 15, 2025 11:59PM PT.
+*   **Decisions announced:** Late October 2025.
+
+## Registration
+
+*   **Online registration opens:** August 1, 2025
+*   **Early registration deadline:** October 31, 2025
+
+## Abstract/Poster Submission
+
+*   Poster presenters will be provided with an easel and a poster board 32""x40"" (80x100cm; either portrait or landscape orientation is acceptable).
+*   One poster from each paid participant is accepted.
+*   **Available:** August 1, 2025
+*   **Absolute deadline. No Extensions:** December 1, 2025 11:59PM PT",
+req-conf-1751946807601-knm8o,,International Conference on Embedded and Real Time Computing Systems and Applications,RTCSA,https://rtcsa2025.github.io/,TRUE,https://rtcsa2025.github.io/?page=cfp.html,https://rtcsa2025.github.io/?page=cfp.html,"Conference dates: August 20-22, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.Abstract Submission Deadline: April 5, 2025
+Submission Date.Full Paper Submission Deadline: April 5, 2025
+Submission Date.Submission Deadline: June 19, 2025
+Notification Date.Acceptance Notification: July 4, 2025
+Camera-ready Date.Camera-Ready Deadline: July 11, 2025
+Topics: Real-Time Systems, IoT, CPS, and Emerging Applications, Embedded Systems
+Publisher: IEEE","August 20-22, 2025",TRUE,2025,Singapore,TRUE,Singapore,Singapore,Asia,Offline,TRUE,"{""Abstract Submission Deadline"":""April 5, 2025"",""Full Paper Submission Deadline"":""April 5, 2025"",""Submission Deadline"":""June 19, 2025""}",100,"{""Acceptance Notification"":""July 4, 2025""}",50,"{""Camera-Ready Deadline"":""July 11, 2025""}",50,{},,{},,"Real-Time Systems, IoT, CPS, and Emerging Applications, Embedded Systems",IEEE,"The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA 2025) will be held in Singapore from August 20-22, 2025. The conference will be co-located with NVMSA 2025, and accepted papers will be submitted for inclusion into IEEE Xplore.","# Call for Papers
+
+## The 31st IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA 2025)
+
+**Location:** Singapore
+**Date:** August 20-22, 2025
+
+### Important Dates
+
+*(All times are UTC-12, or ""anywhere on earth"", unless otherwise stated.)*
+
+*   **Main Conference:**
+    *   **Abstract Submission Deadline:** April 5, 2025 (Originally March 28, 2025)
+    *   **Full Paper Submission Deadline:** April 5, 2025 (Originally March 31, 2025)
+    *   **Acceptance Notification:** May 7, 2025
+    *   **Camera-Ready Deadline:** June 5, 2025
+    *   **Conference Date:** August 20-22, 2025
+*   **Posters and Demos Session:**
+    *   **Submission Deadline:** June 19, 2025 AoE
+    *   **Acceptance Notification:** July 4, 2025
+    *   **Camera-Ready Deadline:** July 11, 2025
+
+### About RTCSA 2025
+
+The RTCSA conference (now in its 31st edition) serves as a pivotal platform for experts from both academia and industry, fostering advancements in technology and theory for time-sensitive applications. The conference's scope encompasses all applications where temporal aspects need to be considered, including Cyber-physical Systems (CPS), Internet of Things (IoT), embedded systems, and fog/edge/cloud computing. RTCSA is particularly interested in new and emerging topics such as the application of machine learning in designing and analyzing embedded and real-time systems, strategies for achieving real-time machine learning, and resource management in autonomous systems.
+
+RTCSA welcomes both research and industrial papers that describe research or technical aspects in the area of embedded and real-time systems.
+
+### Publication
+
+Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements. Authors of selected papers will be invited to submit an extended version to the **Springer Real-Time Systems journal**.
+
+### Commitment to Present
+
+Submission of a paper should be regarded as a commitment that, should the paper be accepted, at least one of the authors will register and attend the conference to present the work in person. RTCSA 2025 reserves the right to exclude a paper from distribution after the conference (e.g., removal from the digital library and indexing services), if the paper is not presented at the conference.
+
+## Topics of Interest
+
+The 31st edition of RTCSA will bring together researchers and developers from academia and industry to promote cross-fertilization and discuss advances and trends in the technology of embedded and real-time systems and their emerging applications, including the Internet of Things and Cyber-Physical Systems. RTCSA 2025 seeks papers that describe original research in the following areas, but are not limited to:
+
+*** REAL-TIME SYSTEMS TRACK ***
+
+*   Real-Time scheduling
+*   Timing analysis
+*   Workload models for real-time systems
+*   Temperature/Energy-aware scheduling
+*   Scheduling and resource management in heterogeneous architectures
+*   Scheduling over distributed architectures
+*   Formal methods for temporal guarantees
+*   Programming languages and run-time systems
+*   Analyzing, understanding, and improving timing predictability of middlewares (ROS, Ray, Kubernete, …)
+*   Communication networks and protocols for real-time systems
+*   Time-sensitive media processing and transmissions
+*   Latency and throughput in real-time databases
+*   Real-time machine learning
+*   Learning-enabled real-time systems
+*   Learning-assisted real-time systems
+
+*** IoT, CPS, AND EMERGING APPLICATIONS TRACK ***
+
+*   Systems, technology and foundations of IoT and CPS
+*   Applications and case studies of IoT and CPS
+*   Smart and connected health
+*   Industrial internet and industry 4.0
+*   Smart city technology and applications
+*   Smart transportation and infrastructure
+*   Cyber-physical co-design
+*   Cloud, middleware and networks for IoT and CPS
+*   Wireless sensor-actuator networks for IoT and CPS
+*   Low-Power Wide-Area Network (LPWAN) for IoT
+*   Emerging IoT protocols and network abstractions including 5G/6G
+*   Medical CPS
+*   CPS software/system engineering
+
+*** EMBEDDED SYSTEMS TRACK ***
+
+*   Multi-core embedded systems
+*   Operating systems
+*   Compiler and embedded software
+*   Embedded system design tools and methodologies
+*   Non-volatile memory and storage
+*   Power/Thermal aware design
+*   Fault tolerance, reliability and security
+*   Sensor-based systems and applications
+*   Embedded Systems for Machine-Learning
+*   Reconfigurable computing architectures and software support
+*   Ubiquitous and distributed embedded systems and networks
+
+## New at RTCSA'25: Industry Session
+
+RTCSA 2025 introduces a dedicated **Industry Session**, providing a platform for contributions that focus on industrial applications and practices. Submissions to this session will follow the same single-blind review process as regular papers, with the following additional criteria:
+
+*   A paper is eligible for the Industry Session if:
+    *   It describes industrial applications and/or practices;
+    *   At least one co-author has an industrial affiliation.
+
+Submissions to the Industry Session will be evaluated primarily on their practical significance.
+
+## Submission Guidelines
+
+Both research and industry papers are solicited. The submitted manuscript must describe original work not previously published and not concurrently submitted elsewhere. Abstract submission is a prerequisite for full paper submission.
+
+High-quality papers are welcomed, adhering to the following formats:
+
+*   **Full Paper format:** Technical content must fit within **10 pages**; references and acknowledgments can be arranged in 2 additional pages.
+*   **Short Paper format:** Technical content must fit within **6 pages**; references and acknowledgements can be arranged in 2 additional pages.
+
+Both types of submission must be formatted according to the IEEE conference proceedings format (two-columns, single-space, 10pt). Submitted papers are subject to **single-blind reviews**.
+
+In some cases, the Program Committee may decide to accept a full paper submission as a short paper, in which case, the authors will be required to reduce its length for the final version.
+
+Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements.
+
+The submission site will be available soon. Please check the following web page later for detailed submission instructions: [submission](./?page=submissions.html)
+
+By submitting a paper, authors implicitly agree that at least one author will register at the full registration rate to the conference and present the paper in person.","thiếu dấu ngoặt phân ngày
+
+thiếu 1 Acceptance Notification + 1 Camera-Ready Deadline"
+req-conf-1751946807601-knm8o,,Real Time Systems Symposium,RTSS,http://2025.rtss.org/,TRUE,http://2025.rtss.org/call-for-papers/,,"Conference dates: December 2–5, 2025
+Year: 2025
+Location: Boston, MA, USA
+City-State-Province: Boston, Massachusetts
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Abstract Registration: November 06, 2025
+Submission Date.Paper Submission: November 13, 2025
+Topics: real-time systems, time-predictable computing, Cyber-Physical Systems, HW-SW integration and system-level design, Internet of Things (IoT), Artificial Intelligence (AI)
+Publisher: IEEE","December 2–5, 2025",TRUE,2025,"Boston, MA, USA",TRUE,"Boston, Massachusetts",United States,North America,Offline,TRUE,"{""Abstract Registration"":""November 06, 2025"",""Paper Submission"":""November 13, 2025""}",0,{},0,{},0,{},,{},0,"real-time systems, time-predictable computing, Cyber-Physical Systems, HW-SW integration and system-level design, Internet of Things (IoT), Artificial Intelligence (AI)",IEEE,"The 46th IEEE Real-Time Systems Symposium (RTSS 2025) is scheduled for December 2–5, 2025, in Boston, MA, USA. RTSS is the premier conference for real-time systems, showcasing innovations in theory, design, analysis, implementation, verification, evaluation, and experience.","# Call for Papers
+
+## Scope of the Conference
+
+The IEEE Real-Time Systems Symposium (RTSS) is the premier conference in the field of real-time systems. It serves as a platform for researchers and practitioners to showcase innovations covering all aspects of real-time systems, including theory, design, analysis, implementation, verification, evaluation, and experience. RTSS’25, the 46th edition, continues the tradition of embracing new and emerging areas of real-time systems research.
+
+## Tracks
+
+RTSS’25 welcomes submissions of high-quality, original research papers related to both real-time systems theory and practice. Manuscripts may be submitted to either of the following tracks:
+
+### Track 1: Real-Time Systems and Foundations
+
+This track focuses on the practical and theoretical foundations that enable predictable timing in computing systems.
+*   **Core topics:** Real-time operating systems components (kernels, hypervisors, middleware, runtime environments), schedulability analysis and scheduling algorithms, theoretical foundations, verification methods.
+*   **Timing analysis:** Worst-case execution time (WCET) analysis, measurement-based timing analysis (MBTA).
+*   **Other areas:** Real-time and time-sensitive networking, timing-predictable hardware architectures, modeling and analysis of stochastic real-time systems, statistical and empirical approaches to timing predictability.
+*   **Fault tolerance and security:** Real-time systems under adversarial conditions (e.g., timing-based side-channel attacks), secure communication in time-sensitive networks.
+*   **Cross-layer predictability:** Hardware, operating systems, and applications.
+*   **Enabling technologies:** Compiler techniques, system synthesis, model-driven engineering, applied formal methods (model checking, proof-based verification).
+*   **Experimental contributions:** System designs, case studies, and experience reports.
+*   **Artificial Intelligence for Real-Time Systems Foundations:** Use of machine learning and other AI techniques to advance real-time scheduling, timing analysis, resource management, and system optimization under timing constraints. (Focus is on AI *for* real-time systems foundations, not real-time systems *for* AI, which is Track 2).
+
+### Track 2: Design and Applications
+
+This track focuses on real-time systems in a broader systems context, emphasizing novel research on designs, implementations, and applications. It explores how tools and techniques are adapted and applied to specific application domains.
+
+*   **Cyber-Physical Systems (CPS):** Safety-critical, autonomous, and robotic systems interacting with the physical world. Includes theoretical foundations, design methodologies, simulation and emulation, tool chains, architectures, secure CPS, performance analysis, robustness, safety, certification, and hardware/software co-design.
+*   **Real-Time System Design for Artificial Intelligence:** Practical implementation of AI components (perception, planning, decision-making) in latency-sensitive and resource-constrained environments. Design of real-time systems to deploy AI under real-time constraints. Topics include system design, frameworks, resource management, hardware acceleration, and case studies. Also covers AI safety in CPS: verification/validation of learning-enabled components, runtime monitoring, safe exploration, explainability, and robustness.
+*   **HW-SW Integration and System-Level Design:** Methodologies and tools for hardware/software integration and co-design in modern embedded systems. Includes architecture description languages, hardware architectures, design space exploration, synthesis, optimization. Focus on SoC design for real-time workloads, custom memory hierarchies, multi-core architectures, communication infrastructure. Emerging trends like RISC-V, AI/ML hardware accelerators, and chiplet-based design are of strong interest.
+*   **Internet of Things (IoT):** Challenges such as resource constraints, scalability demands, and dynamic environments. Focus on enabling real-time capabilities in IoT applications (distributed sensing/control, reliable communication, low-latency processing). Edge computing, fog computing, and AI-at-the-edge for responsiveness. Application domains include smart cities, industrial IoT, smart healthcare. 5G/6G for real-time and ultra-reliable low-latency communication (URLLC) and in-network computing.
+
+## Timing Requirements
+
+To be in scope, **ALL submissions must explicitly address some form of real-time requirements / constraints**.
+
+Common examples include (but are not limited to) deadlines, response-time bounds, thresholds on acceptable tail latencies (as found in service level agreements - SLAs), as well as statistical and stochastic notions of timeliness.
+
+Other forms of real-time requirements may be considered if the submission provides a compelling justification that the problem requires a nontrivial resource allocation, programming, scheduling, or design approach to satisfy timing-predictability requirements.
+
+Improving average-case performance without regard to other criteria is **not** considered addressing a real-time requirement. However, improving average-case performance while ensuring worst-case latency or execution time variability is not worsened *is* considered addressing a real-time requirement.
+
+RTSS especially welcomes new and emerging topics that address novel aspects of real-time requirements, such as machine learning techniques for real-time systems, system design for real-time machine learning, resource management in autonomous systems, and system-level solutions for real-time applications exploiting domain-specific accelerators.
+
+When in doubt, please contact the track chairs for clarification.
+
+## Surveys and User Studies
+
+Empirical survey-based research focused on the real-time systems field is also welcome. This type of research uses surveys, questionnaires, interviews, use-cases, or other empirical techniques to obtain information about the past/current/future state of play in the research, design, development, verification, validation, and deployment of real-time systems.
+
+(Note that literature surveys that solely classify, review, and summarize existing research papers are not considered empirical research and are not in scope of the conference.)
+
+## Proceedings and Awards
+
+All accepted papers will appear in the main program and proceedings, provided they are presented at the conference.
+
+A selection of papers will receive recognition as outstanding papers and will be highlighted as such in the proceedings. **Best paper**, **best student paper**, and **best presentation** awards will be presented at the conference. Submissions are eligible for the best student paper award if the first author is a student as of the submission deadline.
+
+## Important Dates
+
+*   **Submission Deadline (firm):** May 22, 2025 (anywhere on Earth)
+*   **Author Response Period:** July 14-17, 2025
+*   **Author Notification:** July 25, 2025
+*   **Camera-Ready Deadline:** September 16, 2025 (tentative)
+*   **Conference:** December 2–5, 2025
+
+## Submission Guidelines
+
+*   Submissions are accepted through the conference site: [https://rtss25.hotcrp.com](https://rtss25.hotcrp.com).
+*   **Supplemental materials** such as source code, mechanized proofs, data sets, formal models, short demo videos, etc., can be uploaded alongside manuscripts (up to 600 MB, as a ZIP archive). Ideally, each submitted artifact should contain a README with a table of contents, an overview or guidance for reviewers, and reproduction instructions (if applicable).
+*   Authors should use the official option to provide supplemental materials rather than linking to external repositories.
+*   Refer to the [paper submission guidelines](https://2025.rtss.org/paper-submission/) for further details.
+
+## Policy on Remote Participation
+
+RTSS’25 is an in-person conference. However, exceptions can be made for authors on a case-by-case basis according to the following TCRTS guidance:
+
+> In-person presentations are expected. However, if an author has a valid reason why neither they nor their co-authors can attend the conference in person, then exceptions can potentially be made at the discretion of the Program Chair. Authors who know in advance that this will apply to them, for example because they cannot get a visa for the host country, should contact the Program Chair prior to paper submission.
+>
+> Following existing TCRTS policy, one author will be required to register for the conference at the “in-person” rate (either student or full) in any case.
+
+Please contact the track chairs by email via [rtss25-track-chairs@mpi-sws.org](mailto:rtss25-track-chairs@mpi-sws.org) if you would like to inquire about a possible exception or in case of any questions.",các impDate sai hết
+req-conf-1751946807601-knm8o,,IEEE International Requirements Engineering Conference,RE,https://conf.researchr.org/home/RE-2025,TRUE,https://conf.researchr.org/track/RE-2025/RE-2025-Research-Papers,https://conf.researchr.org/dates/RE-2025,"Conference dates: September 1 - 5, 2025
+Year: 2025
+Location: Valencia, Spain
+City-State-Province: Valencia
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.(Research Papers) Abstract submission: March 3, 2025
+Submission Date.(Research Papers) Full Paper Submission: March 10, 2025
+Submission Date.(Workshops) Workshop proposals: January 22, 2025
+Submission Date.(Industrial Innovation Track) Abstract Submission: March 24, 2025
+Submission Date.(RE@Next! Papers) Abstract Submission: March 24, 2025
+Submission Date.(Industrial Innovation Track) Paper Submission: April 7, 2025
+Submission Date.(RE@Next! Papers) Full Paper Submission: April 7, 2025
+Submission Date.(Journal-First) Submission: April 28, 2025
+Submission Date.(Tutorials) Proposal: April 28, 2025
+Submission Date.(Workshops) Workshop papers due: June 9, 2025
+Submission Date.(Posters and Tool Demos) Submission: June 12, 2025
+Submission Date.(Doctoral Symposium) Submission: June 12, 2025
+Submission Date.(Artifacts) Submission: June 16, 2025
+Notification Date.(Workshops) Workshop CfP ready: March 17, 2025
+Notification Date.(Workshops) Notification of workshop submitters: February 17, 2025
+Notification Date.(Research Papers) Notification: May 23, 2025
+Notification Date.(Journal-First) Notification: May 26, 2025
+Notification Date.(Industrial Innovation Track) Notification: June 2, 2025
+Notification Date.(RE@Next! Papers) Notification: June 2, 2025
+Notification Date.(Tutorials) Notification: May 12, 2025
+Notification Date.(Artifacts) Notification: July 7, 2025
+Notification Date.(Workshops) Workshop paper notification: July 7, 2025
+Notification Date.(Workshops) Workshop Papers info to workshop chairs & web chairs: July 10, 2025
+Camera-ready Date.(Research Papers) Camera Ready: June 23, 2025
+Camera-ready Date.(Industrial Innovation Track) Camera Ready: June 30, 2025
+Camera-ready Date.(RE@Next! Papers) Camera Ready: June 30, 2025
+Camera-ready Date.(Posters and Tool Demos) Camera Ready: July 7, 2025
+Camera-ready Date.(Doctoral Symposium) Camera Ready: July 7, 2025
+Camera-ready Date.(Workshops) Workshop paper camera-ready: July 17, 2025
+Camera-ready Date.(Workshops) Workshop preface / extended keynote abstract camera-ready: July 17, 2025
+Other Date.(Artifacts) Rebuttal period: June 30 - July 4, 2025
+Other Date.(Doctoral Symposium) Doctoral consortium: September 2, 2025
+Other Date.(Student Volunteers) Application Notification: May 30, 2025
+Other Date.(Student Volunteers) Application Submission: May 2, 2025
+Topics: Requirements Engineering
+Publisher: IEEE","September 1 - 5, 2025",TRUE,2025,"Valencia, Spain",TRUE,Valencia,Spain,Europe,Offline,TRUE,"{""(Research Papers) Abstract submission"":""March 3, 2025"",""(Research Papers) Full Paper Submission"":""March 10, 2025"",""(Workshops) Workshop proposals"":""January 22, 2025"",""(Industrial Innovation Track) Abstract Submission"":""March 24, 2025"",""(RE@Next! Papers) Abstract Submission"":""March 24, 2025"",""(Industrial Innovation Track) Paper Submission"":""April 7, 2025"",""(RE@Next! Papers) Full Paper Submission"":""April 7, 2025"",""(Journal-First) Submission"":""April 28, 2025"",""(Tutorials) Proposal"":""April 28, 2025"",""(Workshops) Workshop papers due"":""June 9, 2025"",""(Posters and Tool Demos) Submission"":""June 12, 2025"",""(Doctoral Symposium) Submission"":""June 12, 2025"",""(Artifacts) Submission"":""June 16, 2025""}",87.5,"{""(Workshops) Workshop CfP ready"":""March 17, 2025"",""(Workshops) Notification of workshop submitters"":""February 17, 2025"",""(Research Papers) Notification"":""May 23, 2025"",""(Journal-First) Notification"":""May 26, 2025"",""(Industrial Innovation Track) Notification"":""June 2, 2025"",""(RE@Next! Papers) Notification"":""June 2, 2025"",""(Tutorials) Notification"":""May 12, 2025"",""(Artifacts) Notification"":""July 7, 2025"",""(Workshops) Workshop paper notification"":""July 7, 2025"",""(Workshops) Workshop Papers info to workshop chairs & web chairs"":""July 10, 2025""}",75,"{""(Research Papers) Camera Ready"":""June 23, 2025"",""(Industrial Innovation Track) Camera Ready"":""June 30, 2025"",""(RE@Next! Papers) Camera Ready"":""June 30, 2025"",""(Posters and Tool Demos) Camera Ready"":""July 7, 2025"",""(Doctoral Symposium) Camera Ready"":""July 7, 2025"",""(Workshops) Workshop paper camera-ready"":""July 17, 2025"",""(Workshops) Workshop preface / extended keynote abstract camera-ready"":""July 17, 2025""}",100,{},,"{""(Artifacts) Rebuttal period"":""June 30 - July 4, 2025"",""(Doctoral Symposium) Doctoral consortium"":""September 2, 2025"",""(Student Volunteers) Application Notification"":""May 30, 2025"",""(Student Volunteers) Application Submission"":""May 2, 2025""}",60,Requirements Engineering,IEEE,"The 33rd IEEE International Requirements Engineering Conference (RE 2025) will be held in Valencia, Spain, from September 1-5, 2025. This premier conference brings together researchers, practitioners, students, and educators to discuss the latest innovations, trends, experiences, and issues in requirements engineering. Best papers from the Research Track will be invited to a Special Collection of the Requirements Engineering Journal.","# IEEE International Requirements Engineering Conference (RE) 2025: Call for Papers
+
+Welcome to the website of the **33rd IEEE International Requirements Engineering 2025 conference**. RE is the premier requirements engineering conference, where researchers, practitioners, students, and educators meet, present, and discuss the most recent innovations, trends, experiences, and issues in the field of requirements engineering.
+
+RE’25 will be hosted in **Valencia, Spain**, from **September 1-5, 2025**.
+
+## Introduction
+
+The IEEE International Requirements Engineering Conference (RE) is the premier conference dedicated to requirements engineering. RE'25 will feature a comprehensive program, including keynotes, research papers, industry innovation, workshops, tutorials, and more, providing a platform for sharing the latest advancements and fostering collaboration in the field.
+
+## Conference Tracks
+
+*   Keynotes
+*   Research Papers
+*   RE@Next! Papers
+*   Industrial Innovation Track
+*   Workshops
+*   Journal-First
+*   Artifacts
+*   Posters and Tool Demos
+*   Tutorials
+*   Doctoral Symposium
+*   New Faculty Symposium
+*   RE Cares
+*   RE Open Data Initiative
+*   Student Volunteers
+
+## Important Dates
+
+**Research Papers:**
+*   Abstract submission: **Mon, 3 Mar 2025**
+*   Full Paper Submission: **Mon, 10 Mar 2025**
+*   Notification: **Fri, 23 May 2025**
+*   Camera Ready: **Mon, 23 Jun 2025**
+
+**RE@Next! Papers:**
+*   Abstract Submission: **Mon, 24 Mar 2025**
+*   Full Paper Submission: **Mon, 7 Apr 2025**
+*   Notification: **Mon, 2 Jun 2025**
+*   Camera Ready: **Mon, 30 Jun 2025**
+
+**Industrial Innovation Track:**
+*   Abstract Submission: **Mon, 24 Mar 2025**
+*   Paper Submission: **Mon, 7 Apr 2025**
+*   Notification: **Mon, 2 Jun 2025**
+*   Camera Ready: **Mon, 30 Jun 2025**
+*   Presentation Only: **Mon, 30 Jun 2025**
+
+**Workshops:**
+*   Workshop proposals: **Wed, 22 Jan 2025**
+*   Notification of workshop submitters: **Mon, 17 Feb 2025**
+*   Workshop summary (for website) sent to Workshop Co-chairs: **Mon, 3 Mar 2025**
+*   Workshop CfP ready: **Mon, 17 Mar 2025**
+*   Workshop papers due: **Mon, 9 Jun 2025**
+*   Workshop paper abstracts due (optional): **Mon, 2 Jun 2025**
+*   Workshop paper notification: **Mon, 7 Jul 2025**
+*   Workshop paper camera-ready: **Thu, 17 Jul 2025**
+*   Workshop preface / extended keynote abstract camera-ready: **Thu, 17 Jul 2025**
+
+**Journal-First:**
+*   Submission: **Mon, 28 Apr 2025**
+*   Notification: **Mon, 26 May 2025**
+
+**Tutorials:**
+*   Proposal: **Mon, 28 Apr 2025**
+*   Notification: **Mon, 12 May 2025**
+
+**Artifacts:**
+*   Submission: **Mon, 16 Jun 2025**
+*   Rebuttal period: **Mon, 30 Jun - Fri, 4 Jul 2025**
+*   Notification: **Mon, 7 Jul 2025**
+
+**Posters and Tool Demos:**
+*   Submission: **Thu, 12 Jun 2025**
+*   Notification: **Mon, 30 Jun 2025**
+*   Camera Ready: **Mon, 7 Jul 2025**
+
+**Doctoral Symposium:**
+*   Submission: **Thu, 12 Jun 2025**
+*   Notification: **Tue, 24 Jun 2025**
+*   Camera Ready: **Mon, 7 Jul 2025**
+*   Doctoral consortium: **Tue, 2 Sep 2025**
+
+**Student Volunteers:**
+*   Application Submission: **Fri, 2 May 2025**
+*   Application Notification: **Fri, 30 May 2025**
+
+**RE Open Data Initiative:**
+*   Submission deadline: **Tue, 17 Dec 2024**
+*   Author notification: **Mon, 23 Dec 2024**
+
+## Submission Information
+
+Authors are invited to submit contributions to various tracks, including Research Papers, RE@Next! Papers, Industrial Innovation Track, Workshops, Journal-First, Artifacts, Posters and Tool Demos, Tutorials, Doctoral Symposium, and others.
+
+Specific submission deadlines for abstracts and full papers vary by track. Please refer to the detailed dates above.
+
+## Publication
+
+Selected papers from the Research Track will be invited to a Special Collection of the **Requirements Engineering Journal**.
+
+## Registration
+
+Registration is available for attending the conference. More details can be found at: [https://conf.researchr.org/attending/RE-2025/registration](https://conf.researchr.org/attending/RE-2025/registration)",thiếu (RE Open Data Initiative) Submission deadline + 3 notiDate + 2 otherDate
+req-conf-1751946807601-knm8o,,International Symposium 'Problems of Redundancy in Information and Control Systems',Redundancy,https://redundancy.pro/,TRUE,https://redundancy.pro/rules/,https://redundancy.pro/dates/,"Conference dates: November 5 - 7, 2025
+Year: 2025
+Location: MIEM HSE, Moscow
+Type: Hybrid
+Submission Date.Full paper submission: September 22, 2025
+Notification Date.Acceptance notification: October 7, 2025
+Camera-ready Date.Final paper submission: October 13, 2025
+Topics: Information and coding theory, Telecommunication technologies and networks, Internet of things systems, Data security, blockchain and control systems","November 5 - 7, 2025",TRUE,2025,"MIEM HSE, Moscow",TRUE,No city/state/province,No country,No continent,Hybrid,TRUE,"{""Full paper submission"":""September 22, 2025""}",100,"{""Acceptance notification"":""October 7, 2025""}",100,"{""Final paper submission"":""October 13, 2025""}",100,{},,{},,"Information and coding theory, Telecommunication technologies and networks, Internet of things systems, Data security, blockchain and control systems",No publisher,"The XIХ International Symposium on Problems of Redundancy in Information and Control Systems (REDUNDANCY 2025) is a hybrid event taking place from November 5-7, 2025, at MIEM HSE in Moscow. The symposium aims to foster cooperation and share the latest scientific and technological achievements in information and communication systems, covering topics such as information and coding theory, telecommunication technologies, Internet of Things systems, data security, blockchain, and control systems.","# REDUNDANCY 2025: Call for Papers
+
+The **XIХ International Symposium on Problems of Redundancy in Information and Control Systems (REDUNDANCY 2025)** is scheduled to take place from **05 to 07 November 2025** at **MIEM HSE, Moscow**, as a **Hybrid Event**.
+
+The symposium's primary goal is to strengthen cooperation among representatives of various scientific schools, provide participants with insights into the latest scientific and technological achievements, and facilitate experience-sharing among colleagues.
+
+## Topics
+
+The covered topics include, but are not limited to:
+*   Information and coding theory
+*   Telecommunication technologies and networks, Internet of Things systems
+*   Data security, blockchain and control systems
+
+## Submission Guidelines
+
+*   **Registration:** Prior to paper submission, authors must register on the official conference site. Submissions are made through the Author's Profile on the official conference site.
+*   **Language:** Papers must be submitted in **English**.
+*   **Scope:** Authors are invited to submit papers addressing one of the conference topics.
+*   **Authorship Limit:** A single person can be a co-author of no more than **3 papers**.
+
+## Paper Requirements and Checks
+
+*   **Template:** Papers must adhere to the **IEEE style guidelines**. Use the **IEEE paper template** for A4 paper size. For LaTeX users, ensure the `conference mode` is used.
+*   **Format:** Papers must be submitted **exclusively in PDF format**. Papers uploaded in other formats (e.g., Word) will not be accepted.
+*   **Abstract:** The abstract should provide an insight into the paper's content and must contain **150-250 words**.
+*   **Plagiarism:** Submitted papers must be new and original. The critical plagiarism level (including self-plagiarism) for automatic verification by CrossCheck Portal is **30%**, and it cannot be higher. Papers with a plagiarism level higher than 30% will not be accepted.
+*   **Excessive Self-Citations:** It is strongly recommended that references to own authors' works constitute no more than **50%** of the entire list of references (and no more than **3 references**). If this threshold is exceeded, links to relevant author works must be added as footnote links and not included in the reference list.
+*   **General Formatting:** Ensure the paper is formatted properly. Common template violations include using the wrong template (e.g., Journal instead of Conference), single column format, incorrect author information grouping, poor quality figures (less than 300 dpi), remnants of Russian text, and wrong citation style (e.g., GOST instead of IEEE standard). Papers that do not meet guidelines and template will not be accepted.
+
+## Reviewing Process
+
+*   All reviews are based on submissions following a **single-blind process**.
+*   Each paper will be reviewed by at least two reviewers.
+*   Papers will be rated considering: Relevance and Timeliness, Technical Content and Scientific Rigor, Novelty and Originality, and Quality of Presentation.
+*   Reviewers will provide comments on Strong and Weak aspects, and Recommended changes.
+*   Conflicting reviews may require an additional reviewer.
+*   The final status of a paper will be: **Declined**, **Accepted**, or **Accepted after Revision**.
+*   Papers status `Accepted after Revision` must be revised carefully according to reviewer comments; otherwise, they will not be accepted.
+*   For `Accepted` papers, minor corrections are recommended based on reviewer comments.
+
+## Camera Ready Final Version
+
+*   The final version of accepted papers must be submitted to **pdf-express** before the final submission deadline to validate the paper for inclusion in IEEE Xplore.
+*   **Conference ID:** `59964X`
+*   Papers that are not submitted to pdf-express and are not Approved will not be included in the proceedings.
+
+## Paper Presentation
+
+*   All accepted papers **must** be presented by **one of the co-authors** at the Conference Venue. Presentations by third persons should be strongly avoided.
+*   Presentation text (and/or poster) must be in **English**.
+*   Papers that will **not be presented** at the Conference will be excluded from the proceedings (in accordance with the IEEE Xplore ""No-Shows"" policy).
+
+## IEEE Electronic Copyright Form (eCF)
+
+*   After the conference, authors of presented papers will be invited to complete and digitally sign the IEEE Electronic Copyright Form (eCF).
+*   The corresponding author will receive an email with login details and instructions. Ensure your registered email address is active.
+*   Once submitted, the eCF cannot be changed. Ensure title, author list, etc., are correct before submitting. Papers without completed copyright forms will not appear in the proceedings or be enrolled in IEEE Xplore.
+
+## Publication
+
+*   Accepted and presented full papers will be submitted for inclusion into the **IEEE Xplore Digital Library**, subject to meeting IEEE Xplore’s scope and quality requirements.
+*   IEEE assures wide distribution of conference proceedings through abstracting and indexing services.
+
+## Important Dates
+
+*   **Full paper submission:** 22 Sep 2025
+*   **Acceptance notification:** 07 Oct 2025
+*   **Final paper submission:** 13 Oct 2025
+
+## Conference Fees
+
+*   **Regular Fee:** **15000₽**
+*   **IEEE Member:** **-20%**
+*   **Additional paper (same speaker):** **-30%**
+*   **Listener (Face-to-Faces):** **-50%**
+*   **Remote listener:** **Free**
+
+## Contact & Support
+
+*   **E-mail:** [redundancy@miem.hse.ru](mailto:redundancy@miem.hse.ru)
+*   **Phone:** All questions about submissions should be emailed.",location đúng nhưng các trường con lại báo ko có?
+req-conf-1751946807601-knm8o,,"IEEE International Conference on Software Analysis, Evolution and Reengineering",SANER,https://conf.researchr.org/home/saner-2026,TRUE,https://conf.researchr.org/track/saner-2026/saner-2026-papers,https://conf.researchr.org/dates/saner-2026,"Conference dates: March 17 - 20, 2026
+Year: 2026
+Location: Limassol, Cyprus
+City-State-Province: Limassol
+Country: Cyprus
+Continent: Europe
+Type: Offline
+Submission Date.(Research Track) Abstract submission (mandatory): October 9, 2025
+Submission Date.(Research Track) Paper submission deadline: October 16, 2025
+Submission Date.(Registered Report Track) RR Submission: November 7, 2025
+Submission Date.(Early Research Achievement (ERA) Track) Abstract Submission Deadline: November 10, 2025
+Submission Date.(Reproducibility Studies and Negative Results (RENE) Track) Abstract submission deadline: November 10, 2025
+Submission Date.(Short Papers and Posters Track) Abstract submission deadline: November 10, 2025
+Submission Date.(Industrial Track) Abstract submission: November 10, 2025
+Submission Date.(Tool Demo Track) Paper submission deadline: November 17, 2025
+Submission Date.(Early Research Achievement (ERA) Track) Paper Submission Deadline: November 17, 2025
+Submission Date.(Reproducibility Studies and Negative Results (RENE) Track) Paper submission deadline: November 17, 2025
+Submission Date.(Short Papers and Posters Track) Paper submission deadline: November 17, 2025
+Submission Date.(Industrial Track) Paper submission: November 17, 2025
+Submission Date.(Journal First Track) Paper submission deadline: December 8, 2025
+Submission Date.(Workshops & Tutorials) Workshop: Call for Proposals Submission: August 20, 2025
+Submission Date.(Workshops & Tutorials) Tutorial: Submission Date: January 12, 2026
+Notification Date.(Workshops & Tutorials) Workshop: Proposal Notification: August 27, 2025
+Notification Date.(Research Track) Notifications: December 9, 2025
+Notification Date.(Registered Report Track) First Notification (Authors receive reviews): December 5, 2025
+Notification Date.(Tool Demo Track) Notifications: December 19, 2025
+Notification Date.(Short Papers and Posters Track) Notifications: December 19, 2025
+Notification Date.(Early Research Achievement (ERA) Track) Notifications: December 19, 2025
+Notification Date.(Reproducibility Studies and Negative Results (RENE) Track) Notifications: December 19, 2025
+Notification Date.(Industrial Track) Notifications: December 19, 2025
+Notification Date.(Registered Report Track) Final Notification (Authors receive notification of Stage 1): December 22, 2025
+Notification Date.(Journal First Track) Notifications: December 22, 2025
+Notification Date.(Workshops & Tutorials) Tutorial: Author Notification: January 12, 2026
+Camera-ready Date.(Research Track) Camera Ready: January 9, 2026
+Camera-ready Date.(Reproducibility Studies and Negative Results (RENE) Track) Camera Ready: January 14, 2026
+Camera-ready Date.(Early Research Achievement (ERA) Track) Camera Ready: January 14, 2026
+Camera-ready Date.(Tool Demo Track) Camera Ready: January 14, 2026
+Camera-ready Date.(Short Papers and Posters Track) Camera Ready: January 14, 2026
+Camera-ready Date.(Industrial Track) Camera Ready: January 14, 2026
+Camera-ready Date.(Registered Report Track) Accepted RR Report to arXiv Submission: January 9, 2026
+Camera-ready Date.(Workshops & Tutorials) Tutorial: Camera-ready version: January 16, 2026
+Topics: Software Analysis, Software Evolution, Software Reengineering
+Publisher: IEEE","March 17 - 20, 2026",TRUE,2026,"Limassol, Cyprus",TRUE,Limassol,Cyprus,Europe,Offline,TRUE,"{""(Research Track) Abstract submission (mandatory)"":""October 9, 2025"",""(Research Track) Paper submission deadline"":""October 16, 2025"",""(Registered Report Track) RR Submission"":""November 7, 2025"",""(Early Research Achievement (ERA) Track) Abstract Submission Deadline"":""November 10, 2025"",""(Reproducibility Studies and Negative Results (RENE) Track) Abstract submission deadline"":""November 10, 2025"",""(Short Papers and Posters Track) Abstract submission deadline"":""November 10, 2025"",""(Industrial Track) Abstract submission"":""November 10, 2025"",""(Tool Demo Track) Paper submission deadline"":""November 17, 2025"",""(Early Research Achievement (ERA) Track) Paper Submission Deadline"":""November 17, 2025"",""(Reproducibility Studies and Negative Results (RENE) Track) Paper submission deadline"":""November 17, 2025"",""(Short Papers and Posters Track) Paper submission deadline"":""November 17, 2025"",""(Industrial Track) Paper submission"":""November 17, 2025"",""(Journal First Track) Paper submission deadline"":""December 8, 2025"",""(Workshops & Tutorials) Workshop: Call for Proposals Submission"":""August 20, 2025"",""(Workshops & Tutorials) Tutorial: Submission Date"":""January 12, 2026""}",94.11764706,"{""(Workshops & Tutorials) Workshop: Proposal Notification"":""August 27, 2025"",""(Research Track) Notifications"":""December 9, 2025"",""(Registered Report Track) First Notification (Authors receive reviews)"":""December 5, 2025"",""(Tool Demo Track) Notifications"":""December 19, 2025"",""(Short Papers and Posters Track) Notifications"":""December 19, 2025"",""(Early Research Achievement (ERA) Track) Notifications"":""December 19, 2025"",""(Reproducibility Studies and Negative Results (RENE) Track) Notifications"":""December 19, 2025"",""(Industrial Track) Notifications"":""December 19, 2025"",""(Registered Report Track) Final Notification (Authors receive notification of Stage 1)"":""December 22, 2025"",""(Journal First Track) Notifications"":""December 22, 2025"",""(Workshops & Tutorials) Tutorial: Author Notification"":""January 12, 2026""}",100,"{""(Research Track) Camera Ready"":""January 9, 2026"",""(Reproducibility Studies and Negative Results (RENE) Track) Camera Ready"":""January 14, 2026"",""(Early Research Achievement (ERA) Track) Camera Ready"":""January 14, 2026"",""(Tool Demo Track) Camera Ready"":""January 14, 2026"",""(Short Papers and Posters Track) Camera Ready"":""January 14, 2026"",""(Industrial Track) Camera Ready"":""January 14, 2026"",""(Registered Report Track) Accepted RR Report to arXiv Submission"":""January 9, 2026"",""(Workshops & Tutorials) Tutorial: Camera-ready version"":""January 16, 2026""}",100,{},,{},,"Software Analysis, Software Evolution, Software Reengineering",IEEE,"The 33rd IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2026) will be held in Limassol, Cyprus, from March 17-20, 2026. It is a premier event focusing on recovering information from existing software and systems, exploring innovative methods for analysis, evolution, and reengineering.","# Call for Papers: Research Track
+
+The **Research Track** of the **33rd IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER 2026)** invites high-quality submissions of original and unpublished research. We encourage submissions describing various types of research, e.g., empirical, theoretical, and tool-oriented work. The topics of the submissions should be of direct interest to the software analysis, evolution, and reengineering community.
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to:
+
+*   AI for Software Engineering and Software Engineering for AI
+*   Generative AI and LLM applied to analysis, evolution and reengineering of software
+*   Software Analysis, Parsing, and Fact Extraction
+*   Software Maintenance and Evolution, Evolution Analysis
+*   Software Reverse Engineering and Reengineering
+*   Program Comprehension
+*   Software Architecture Recovery and Reverse Architecting
+*   Program Transformation and Refactoring
+*   Mining Software Repositories and Software Analytics
+*   Software Visualization
+*   Software Reconstruction and Migration
+*   Program Repair
+*   Software Release Engineering, Continuous Integration and Delivery
+*   Software Tools for Software Evolution and Maintenance
+*   Human factors and legal aspects in the context of Software Analysis, Evolution and Reengineering
+*   Empirical studies on all the above topics
+*   Education related to all of the above topics
+
+*Note on AI papers:* Papers involving AI must either (a) concern a software system as a whole, or a subsystem, and not simply its AI or ML component, (b) consider software engineering artifacts, (c) target a novel context for a software engineering task, or (d) study human, social, socio-technical, and organizational aspects in the development of AI-intensive software systems.
+
+## Submission Types
+
+All papers must be **full papers**.
+
+## Special Issue
+
+We are planning to organize a Special Issue with a reputable journal for selected papers of SANER 2026. Details will be announced later.
+
+## Evaluation Criteria
+
+Research papers will be evaluated based on originality, importance, soundness, open science and verifiability, and presentation quality.
+
+## Submission Guidelines
+
+*   **Format:** Submitted papers must be in **PDF** format and conform to the IEEE Conference Proceedings Formatting Guidelines. LaTeX users must use `\documentclass[10pt,conference]{IEEEtran}`.
+*   **Length:** Submissions should not exceed **10 pages** (with 2 additional pages for references only). Papers that do not adhere to these limits or violate formatting guidelines will be desk-rejected.
+*   **Originality:** Submitted papers must have been neither previously accepted for publication nor concurrently submitted for review in another journal, book, conference, or workshop.
+*   **AI Usage:** Submissions must follow the latest IEEE and ACM policies regarding the use of generative AI tools and technologies.
+
+## Double-blind Review
+
+SANER 2026 follows a **full double-anonymous review process**. To ensure anonymity:
+
+*   Omit author names and affiliations.
+*   Reference authors' own related work in the third person (e.g., ""We build on the work of..."").
+*   Avoid acknowledgments that would reveal identity.
+*   Use generic naming conventions for projects or organizations if they could reveal identity.
+*   Avoid linking directly to identifiable code repositories or tool deployments; use anonymized links or state that they will be provided in the camera-ready version.
+*   Submissions that do not adhere to these guidelines will be desk-rejected.
+
+## Open Science
+
+SANER 2026 supports an Open Science policy. Authors are encouraged to disclose (anonymized and curated) data/artifacts to increase reproducibility. A ""Data Availability"" statement should be included after the Conclusions section.
+
+## Accepted Papers
+
+All accepted papers will be included in the IEEE Digital Library, provided at least one author registers for SANER 2026 and presents the paper at the conference. Papers not presented will be removed from the proceedings. The author list and paper title cannot be changed after acceptance without explicit approval.
+
+## Important Dates (AoE - UTC-12h)
+
+1.  **Abstract submission (mandatory):** Thu 9 Oct 2025
+2.  **Paper submission deadline:** Thu 16 Oct 2025
+3.  **Notifications:** Tue 9 Dec 2025
+4.  **Camera Ready:** Fri 9 Jan 2026
+
+## Submission Link
+
+Submit your papers via EasyChair: [https://easychair.org/my/conference?conf=saner2026](https://easychair.org/my/conference?conf=saner2026)
+
+## Program Committee Co-Chairs
+
+*   Eunjong Choi (Kyoto Institute of Technology, Japan)
+*   Matthias Galster (University of Canterbury, New Zealand)",thiếu (Registered Report Track) Second Round Submission (Authors submit rebuttal & revised report)
+req-conf-1751946807601-knm8o,,"International Conference on Computer Safety, Reliability and Security",SAFECOMP,https://safecomp2025.se/,TRUE,https://safecomp2025.se/call-for-papers/,https://safecomp2025.se/important-dates/,"Conference dates: September 9 - 12, 2025
+Year: 2025
+Location: Stockholm, hosted by KTH Royal Institute of Technology
+City-State-Province: Stockholm
+Country: Sweden
+Continent: Europe
+Type: Offline
+Submission Date.Full paper submission: May 5, 2025
+Submission Date.Position paper submission: July 9, 2025
+Notification Date.Author notification: July 11, 2025
+Notification Date.Notification of acceptance: May 19, 2025
+Camera-ready Date.Camera ready submission: June 1, 2025
+Registration Date.Registration early bird deadline: July 14, 2025
+Topics: safety, security and reliability of critical computer applications
+Publisher: Springer","September 9 - 12, 2025",TRUE,2025,"Stockholm, hosted by KTH Royal Institute of Technology",TRUE,Stockholm,Sweden,Europe,Offline,TRUE,"{""Full paper submission"":""May 5, 2025"",""Position paper submission"":""July 9, 2025""}",25,"{""Author notification"":""July 11, 2025"",""Notification of acceptance"":""May 19, 2025""}",66.66666667,"{""Camera ready submission"":""June 1, 2025""}",50,"{""Registration early bird deadline"":""July 14, 2025""}",100,{},,"safety, security and reliability of critical computer applications",Springer,"The 44th International Conference on Computer Safety, Reliability and Security (SafeComp 2025) will be held in Stockholm, Sweden, from September 9-12, 2025. The conference theme is ""Managing safety in an era of a software defined computing continuum"" and it provides a platform for discussing challenges and solutions for future safety-critical systems.","# SafeComp 2025: Call for Papers
+
+Welcome to SafeComp 2025, the 44th International Conference on Computer Safety, Reliability and Security, hosted by KTH Royal Institute of Technology in Stockholm, Sweden, from **September 9-12, 2025**.
+
+### Conference Theme
+
+**""Managing safety in an era of a software defined computing continuum""**
+
+Future societal and industrial systems will increasingly rely on a digitalized infrastructure, from embedded systems to cloud and edge computing. The theme for SafeComp 2025 highlights topics and challenges such as:
+
+*   Predictability and reliability of cloud, edge computing, and AI components.
+*   Architectures ensuring safety while enhancing performance.
+*   Co-design of applications and digital infrastructure for cost-efficient dependability.
+*   Trustworthy DevOps – reconciling software and safety practices.
+
+## Paper Submission Guidelines
+
+SafeComp invites academic research and industrial contributions. Two types of paper submissions are accepted (up to 14 pages including bibliography):
+
+*   **Research papers:** Address a research gap and illustrate how the contribution advances the state-of-the-art.
+*   **Practical experience reports / tool descriptions:** Provide new insights and support for practitioners.
+
+All papers will be reviewed by at least three members of the International Programme Committee and must not have been previously published or concurrently submitted elsewhere.
+
+**Paper Formatting:** Papers must be formatted according to the [LNCS templates](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) provided by Springer.
+
+**Submission Portal:** Abstracts and papers should be submitted in PDF format through [Easychair](https://easychair.org/cfp/safecomp2025).
+
+## Workshop Submission Guidelines
+
+Workshops will take place the day preceding the conference.
+
+*   **Full paper submission:** May 5, 2025
+*   **Notification of acceptance:** May 19, 2025
+*   **Camera-ready submission:** June 10, 2025
+*   **Workshop Dates:** September 9, 2025
+
+Accepted workshop contributions, fulfilling publisher requirements, will be included in the SAFECOMP Workshop Proceedings.
+
+## Position Paper Track
+
+*   **Deadline for position papers:** July 9, 2025
+*   **Author notification:** July 11, 2025
+
+## Important Dates
+
+*   **Regular Papers:**
+    *   Full paper Submission: February 24, 2025
+    *   Author notification: April 12, 2025
+    *   Camera ready submission: June 9, 2025
+*   **Workshop Papers:**
+    *   Full paper Submission: May 5, 2025
+    *   Notification of acceptance: May 19, 2025
+    *   Camera ready submission: June 16, 2025
+*   **Position paper track:**
+    *   Position paper submission: July 9, 2025
+    *   Author notification: July 11, 2025
+*   **Registration:**
+    *   Early bird deadline: July 14, 2025
+*   **Conference & Workshops:**
+    *   Workshops: September 9, 2025
+    *   Main Conference: September 10-12, 2025
+
+## Topics of Interest
+
+The conference covers all aspects related to the development, assessment, operation, and maintenance of safety-related and safety-critical computer systems. Major topics include, but are not limited to:
+
+*   Distributed and real-time monitoring and control
+*   Fault-tolerant and resilient hardware and software architectures
+*   Fault detection and recovery mechanisms
+*   Security and privacy protection mechanisms for safety applications
+*   Safety guidelines and standards
+*   Safety/security co-engineering and tradeoffs
+*   Safety and security qualification, quantification, assurance and certification
+*   Threats and vulnerability analysis
+*   Risk assessment in safe and secure systems
+*   Dependability analysis using simulation and experimental measurement
+*   Model-based analysis, design, and assessment
+*   Formal methods for verification, validation, and fault tolerance
+*   Testing, verification, and validation methodologies and tools
+*   Multi-concern dependability assurance and standardization
+
+## Domains of Application
+
+Domains include (but are not limited to):
+
+*   Railways, automotive, space, avionics & process industries
+*   Highly automated and autonomous systems
+*   Telecommunication and networks
+*   Safety-related applications of smart systems and IoT
+*   Critical infrastructures, smart grids, SCADA
+*   Medical devices and healthcare
+*   Surveillance, defense, emergency & rescue
+*   Logistics, industrial automation, off-shore technology
+*   Education & training
+
+## Publication
+
+All accepted research papers, practical experience reports, and tool descriptions will be published by Springer in the LNCS series (Lecture Notes on Computer Science) in the SafeComp and the SafeComp Workshop volumes.
+
+## Venue
+
+The conference will be held at **KTH Royal Institute of Technology** in Stockholm, Sweden.
+
+## Contact
+
+All questions about submissions should be emailed to [safecomp2025@easychair.org](mailto:safecomp2025@easychair.org).
+
+For secretariat inquiries, please contact Meetx:
+*   E-mail: [safecomp2025@meetx.se](mailto:safecomp2025@meetx.se)
+*   Tel: +46 31 708 86 90
+
+## Sponsors & Partners
+
+[See the sponsors & partners for SafeComp 2025](https://safecomp2025.se/confirmed-sponsors/)","thiếu dấu ngoặt phân biệt ngày
+
+thiếu 6 submissionDate + 1 notificationDate + 1 camera-ready date"
+req-conf-1751946807601-knm8o,,Robot Soccer World Cup,RoboCup,https://www.robocup.org/,TRUE,,,"Year: 2050
+Type: Offline
+Topics: Intelligent Robots
+Other Date.IEEE-RAS TC on RoboCup Call for Student Representatives: March 25, 2025
+Other Date.Call for Participation: RoboCup German Open 2025 - Major Leagues: January 7, 2025
+Other Date.RoboCup Federation teams up with Booster/Fourier/Unitree on Humanoid Robotics Research and Education: January 6, 2025
+Other Date.Call for Applications for Participation: RoboCup 2025 Standard Platform League: January 6, 2025",,TRUE,2050,No location,TRUE,No city/state/province,No country,No continent,Offline,,{},,{},,{},,{},,"{""IEEE-RAS TC on RoboCup Call for Student Representatives"":""March 25, 2025"",""Call for Participation: RoboCup German Open 2025 - Major Leagues"":""January 7, 2025"",""RoboCup Federation teams up with Booster/Fourier/Unitree on Humanoid Robotics Research and Education"":""January 6, 2025"",""Call for Applications for Participation: RoboCup 2025 Standard Platform League"":""January 6, 2025""}",100,Intelligent Robots,No publisher,"RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots, originally aiming to field a team of robots capable of winning against the human soccer World Cup champions by 2050. The organization oversees various leagues including RoboCupSoccer, RoboCupRescue, RoboCup@Home, RoboCupIndustrial, and RoboCupJunior, and hosts events such as the RoboCup Symposium. Recent news includes calls for student representatives and participation in the RoboCup German Open 2025.","# Call for Papers
+
+RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots. The organization is actively involved in various leagues and events, including calls for participation and student representatives.
+
+## Recent News & Calls for Participation:
+
+*   **IEEE-RAS TC on RoboCup Call for Student Representatives** (March 25, 2025)
+*   **Call for Participation: RoboCup German Open 2025 - Major Leagues** (January 7, 2025)
+*   **Call for Applications for Participation: RoboCup 2025 Standard Platform League** (January 6, 2025)
+
+## RoboCup Leagues:
+
+RoboCup has several domain leagues:
+
+*   **RoboCupSoccer**
+    *   Humanoid
+    *   Standard Platform
+    *   Middle Size
+    *   Small Size
+    *   Simulation
+*   **RoboCupRescue**
+    *   Robot
+    *   Simulation
+*   **RoboCup@Home**
+    *   Open Platform
+    *   Domestic Standard Platform
+    *   Social Standard Platform
+*   **RoboCupIndustrial**
+    *   RoboCup@Work
+    *   Logistics
+*   **RoboCupJunior**
+    *   Soccer
+    *   OnStage
+    *   Rescue
+
+## Research & Publications:
+
+*   **RoboCup Symposium**
+*   **RoboCup Research Papers**
+*   **RoboCup Symposium Best Paper Award**
+*   **Silvia Coradeschi RoboCup Award**
+*   **Gerhard K. Kraetzschmar RoboCup Award**
+*   **IROS RoboCup Best Paper Award**
+*   **RoboCup Data Sets**
+
+## Key Information:
+
+*   **Event Dates:** Upcoming events and past events are listed. The 2025 Standard Platform League is scheduled from July 15th to July 21st, 2025.
+*   **Partnerships:** The RoboCup Federation partners with companies like Booster/Fourier/Unitree for Humanoid Robotics Research and Education.
+*   **Media:** Resources include photos, videos, logo guidelines, and media FAQs.
+*   **Contact:** Information for joining RoboCup, media requests, and site proposals are available.",

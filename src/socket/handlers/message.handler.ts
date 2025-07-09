@@ -29,7 +29,6 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         io,
         socket,
         conversationHistoryService,
-        logToFile,
         socketId,
         sendChatError,
         sendChatWarning,
@@ -40,7 +39,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
     const baseLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}]`;
 
-    logToFile(`${baseLogContext}[${deps.userId}] Registering message event handlers.`);
+
 
     socket.on('send_message', async (data: unknown) => {
         const eventName = 'send_message';
@@ -62,8 +61,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
         const payload = data as SendMessageData;
         // Thêm log ở đây để kiểm tra payload nhận được từ client
-        console.log(`[${handlerLogContext}] Received send_message payload:`, JSON.stringify(payload, null, 2)); // Sử dụng console.log để dễ copy/paste
-        logToFile(`[${handlerLogContext}] Received send_message payload: ${JSON.stringify(payload)}`);
+
 
 
         let {
@@ -77,11 +75,6 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             pageContextUrl,
             model // <<< TRÍCH XUẤT MODEL
         } = payload;
-
-
-        logToFile(`[${handlerLogContext}] Extracted model from payload: ${model || 'Not provided (will use default)'}`);
-        console.log(`[${handlerLogContext}] Extracted pageContextUrl:`, pageContextUrl);
-
 
         socket.data.language = language;
 
@@ -113,11 +106,11 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     if (originalPartsFromClient.length > 1) {
                         userQueryParts.push(...originalPartsFromClient.slice(1));
                     }
-                    logToFile(`[INFO] ${handlerLogContext} Page context detected and extracted. Length: ${pageContextText.length}. User query parts count: ${userQueryParts.length}`);
+
                 } else {
                     // Marker bắt đầu có nhưng không có marker kết thúc -> coi toàn bộ là query của user
                     userQueryParts = [...originalPartsFromClient];
-                    logToFile(`[WARN] ${handlerLogContext} Page context start marker found, but no end marker. Treating all as user query.`);
+
                 }
             } else {
                 // Không có context marker
@@ -126,10 +119,10 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         }
         // Nếu userQueryParts rỗng và có pageContext, vẫn cho phép xử lý (ví dụ: user chỉ gửi @currentpage)
         if (userQueryParts.length === 0 && pageContextText) {
-            logToFile(`[INFO] ${handlerLogContext} No explicit user query parts, but page context is present. Proceeding with context.`);
+
         } else if (userQueryParts.length === 0 && !pageContextText) {
             // Không có query, không có context -> không làm gì
-            logToFile(`[WARN] ${handlerLogContext} No user query parts and no page context. Aborting send_message.`);
+
             return sendChatError(handlerLogContext, 'Cannot send an empty message without page context.', 'empty_message_no_context');
         }
         // --- KẾT THÚC XỬ LÝ PAGE CONTEXT ---
@@ -144,16 +137,16 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             if (socket.data.currentConversationId !== targetConversationId) {
                 socket.data.currentConversationId = targetConversationId;
             }
-            logToFile(`[INFO] ${currentConvLogContext} Using conversation ID provided in payload.`);
+
         } else {
-            logToFile(`[INFO] ${handlerLogContext} No conversation ID provided in payload. Client requesting a new conversation.`);
+
             try {
                 const newConvResult = await conversationHistoryService.createNewConversation(authenticatedUserId, language);
                 targetConversationId = newConvResult.conversationId;
                 currentConvLogContext = `${handlerLogContext}[Conv:${targetConversationId}]`;
                 socket.data.currentConversationId = targetConversationId;
 
-                logToFile(`[INFO] ${currentConvLogContext} Successfully created new conversation. Title: "${newConvResult.title}".`);
+
                 socket.emit('new_conversation_started', {
                     conversationId: targetConversationId,
                     title: newConvResult.title,
@@ -181,7 +174,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 return sendChatError(currentConvLogContext, 'Chat session not found or access denied for message sending.', 'history_not_found_send', { convId: targetConversationId });
             }
             currentHistory = fetchedHistory;
-            logToFile(`[INFO] ${currentConvLogContext} Fetched conversation history. Message Count: ${currentHistory.length}.`);
+
         } catch (error: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(error);
             return sendChatError(currentConvLogContext, `Could not load conversation history: ${errorMessage}.`, 'history_fetch_fail_send', { convId: targetConversationId, error: errorMessage });
@@ -240,7 +233,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     sendChatWarning(currentConvLogContext, 'Failed to save updated history after AI processing. Conversation might be out of sync.', 'history_save_fail_target', { convId: targetConversationId });
                 }
             } else {
-                logToFile(`[INFO] ${currentConvLogContext} AI handler did not return an updated history array. Database update skipped by this block.`);
+
             }
         } catch (handlerError: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(handlerError);
@@ -272,10 +265,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
         const isStreaming = socket.data.isStreamingEnabled ?? true;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}][Msg:${messageIdToEdit}]`;
-        logToFile(
-            `[INFO] ${convLogContext} 'edit_user_message' request received. New text: "${newText.substring(0, 30) + (newText.length > 30 ? '...' : '')}", Streaming: ${isStreaming}, Language: ${language}` +
-            (personalizationData ? `, Personalization: Enabled` : `, Personalization: Disabled`)
-        );
+
 
         try {
             const prepareResult = await conversationHistoryService.updateUserMessageAndPrepareHistory(
@@ -304,7 +294,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             const historyForAIHandler = historyForNewBotResponse.slice(0, -1); // Bỏ tin nhắn user đã sửa ra khỏi history cho AI
             const partsForAIHandler = editedUserMessage.parts; // Parts của tin nhắn user đã sửa làm input cho AI
 
-            logToFile(`[DEBUG] ${convLogContext} History for AI Handler (length ${historyForAIHandler.length}): ${historyForAIHandler.map(m => m.uuid).join(', ')}. Parts for AI: ${partsForAIHandler.find(p => p.text)?.text?.substring(0, 20)}...`);
+
 
 
             let finalHistoryFromAIHandler: ChatHistoryItem[] | void | undefined;
@@ -317,7 +307,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 }
             };
 
-             if (isStreaming) {
+            if (isStreaming) {
                 finalHistoryFromAIHandler = await handleStreaming(
                     partsForAIHandler, // Input là tin nhắn user đã sửa
                     historyForAIHandler, // Lịch sử KHÔNG bao gồm tin nhắn user đã sửa
@@ -351,13 +341,13 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 if (lastMessageFromAI.role === 'model') {
                     newBotMessageForClient = lastMessageFromAI;
                     historyToSaveInDB = [...historyForNewBotResponse, newBotMessageForClient];
-                    logToFile(`[INFO] ${convLogContext} AI responded. New bot message UUID: ${newBotMessageForClient.uuid}. History to save length: ${historyToSaveInDB.length}`);
+
                 } else {
-                    logToFile(`[WARN] ${convLogContext} AI handler finished, but last message was not 'model'. Last role: ${lastMessageFromAI.role}.`);
+
                     historyToSaveInDB = [...historyForNewBotResponse];
                 }
             } else {
-                logToFile(`[WARN] ${convLogContext} User message edited, but AI handler returned no history or inconclusive response.`);
+
                 historyToSaveInDB = [...historyForNewBotResponse];
             }
 
@@ -370,7 +360,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             if (!saveSuccess) {
                 sendChatError(convLogContext, 'Failed to save edited message and new AI response to database. Client data might be inconsistent.', 'edit_final_save_fail_db');
             } else {
-                logToFile(`[INFO] ${convLogContext} Successfully saved updated history to DB. Length: ${historyToSaveInDB.length}`);
+
             }
 
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
@@ -382,13 +372,7 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     conversationId: conversationId,
                 };
                 socket.emit('conversation_updated_after_edit', frontendPayload);
-                logToFile(`[INFO] ${convLogContext} Emitted 'conversation_updated_after_edit' event. BotMsg UUID: ${newBotMessageForClient.uuid}`);
-            } else {
-                logToFile(
-                    `[WARN] ${convLogContext} User message (ID: ${editedUserMessage.uuid}) was edited and saved, ` +
-                    `but no new bot message was generated by the AI. ` +
-                    `The 'conversation_updated_after_edit' event was NOT sent.`
-                );
+
             }
 
         } catch (error: unknown) {

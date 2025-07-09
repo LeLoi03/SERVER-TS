@@ -1,7 +1,6 @@
 // src/chatbot/handlers/navigation.handler.ts
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types'; // Added ThoughtStep, AgentId
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
 /**
@@ -31,7 +30,7 @@ export class NavigationHandler implements IFunctionHandler {
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:Navigation Agent:${agentId}]`; // Extended prefix
         const localThoughts: ThoughtStep[] = []; // Collection for thoughts
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
+        
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -49,7 +48,7 @@ export class NavigationHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -62,7 +61,7 @@ export class NavigationHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -77,7 +76,7 @@ export class NavigationHandler implements IFunctionHandler {
             // Using Guard Clause: Handle error cases and return early
             if (!isValidUrl) {
                 const errorMsg = "Invalid or missing 'url' argument. URL must start with '/' or 'http(s)://'.";
-                logToFile(`${logPrefix} Invalid or missing 'url': "${targetUrl || 'undefined'}"`);
+                
                 reportStep('function_error', 'Invalid navigation URL provided.', { error: errorMsg, url: targetUrl });
                 return {
                     modelResponseContent: `Error: ${errorMsg} Received: "${targetUrl || 'undefined'}"`,
@@ -87,7 +86,7 @@ export class NavigationHandler implements IFunctionHandler {
             }
 
             // --- If validation succeeds ---
-            logToFile(`${logPrefix} Valid target URL: ${targetUrl}`);
+            
 
             // 2. Prepare Action
             reportStep('navigation_action_prepared', 'Navigation action prepared.', { url: targetUrl });
@@ -101,7 +100,7 @@ export class NavigationHandler implements IFunctionHandler {
 
         } catch (error: unknown) { // Catch as unknown for safer error handling
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in NavigationHandler: ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Critical error during navigation processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred: ${errorMessage}`,

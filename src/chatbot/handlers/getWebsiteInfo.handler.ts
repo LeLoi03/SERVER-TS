@@ -2,7 +2,6 @@
 import { executeGetWebsiteInfo } from '../services/getWebsiteInfo.service';
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
 /**
@@ -31,7 +30,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:GetWebsiteInfo Agent:${agentId}]`;
         const localThoughts: ThoughtStep[] = []; // Collect thoughts specific to this handler
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
+        
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -49,7 +48,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -62,7 +61,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -77,7 +76,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
             // Assuming executeGetWebsiteInfo returns { success: boolean, data?: string, errorMessage?: string }
             // And it doesn't require specific arguments from 'args' based on original call
             const result = await executeGetWebsiteInfo();
-            logToFile(`${logPrefix} API result: Success=${result.success}`);
+            
 
             // --- 3. Process Result ---
             if (result.success && result.data) {
@@ -91,7 +90,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
             } else {
                 // Handle failure: API call failed OR succeeded but returned no data
                 const errorMsg = result.errorMessage || 'Failed to retrieve website information (no data or specific error returned).';
-                logToFile(`${logPrefix} Failed to retrieve website info: ${errorMsg}`);
+                
                 reportStep('api_call_failed', 'Failed to retrieve website information.', { error: errorMsg, success: result.success }); // Include success status from API if available
                 return {
                     modelResponseContent: `Error: ${errorMsg}`,
@@ -101,7 +100,7 @@ export class GetWebsiteInfoHandler implements IFunctionHandler {
             }
         } catch (error: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error: ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Critical error during website info retrieval: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred while trying to get website information: ${errorMessage}`,

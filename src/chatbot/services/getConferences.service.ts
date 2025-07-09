@@ -1,7 +1,6 @@
 // src/chatbot/service/getConferences.service.ts
 import { executeApiCall } from './backendService';
 import { ApiCallResult } from '../shared/types';
-import logToFile from '../../utils/logger'; // Import logger for internal service logging
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
 /**
@@ -14,19 +13,19 @@ import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import erro
  */
 export async function executeGetConferences(searchQuery: string): Promise<ApiCallResult> {
     const logPrefix = "[GetConferencesService]";
-    logToFile(`${logPrefix} Initiating API call for conferences with query: "${searchQuery}"`);
+    
     try {
         // The actual API call and processing logic is handled by backendService
         const result = await executeApiCall('conference', `${searchQuery}`);
         if (result.success) {
-            logToFile(`${logPrefix} API call for conferences successful.`);
+            
         } else {
-            logToFile(`${logPrefix} API call for conferences failed: ${result.errorMessage}`);
+            
         }
         return result;
     } catch (error: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`${logPrefix} CRITICAL Error during executeGetConferences: ${errorMessage}\nStack: ${errorStack}`);
+        
         return {
             success: false,
             rawData: null, // No raw data due to critical error

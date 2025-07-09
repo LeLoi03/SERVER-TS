@@ -1,0 +1,1464 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note
+req-conf-1751537887657-hhs1f,,International Conference on Computers and their Applications,CATA,https://www.nwmissouri.edu/csis/CATA2025/index.htm,TRUE,https://equinocs.springernature.com/service/cata2025,https://www.nwmissouri.edu/csis/CATA2025/index.htm,"Conference dates: March 17-18, 2025
+Year: 2025
+Location: Crowne Plaza Hotel, San Francisco Airport CA, US
+City-State-Province: San Francisco, CA
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Full paper submission: November 16, 2024
+Notification Date.Notification of acceptance: January 4, 2025
+Camera-ready Date.Word files, PDF's of final Camera-ready paper and License to publish due.: January 18, 2025
+Registration Date.Conference registration materials due: February 7, 2025
+Topics: Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics
+Publisher: Springer Nature","March 17-18, 2025",TRUE,2025,"Crowne Plaza Hotel, San Francisco Airport CA, US",TRUE,"San Francisco, CA",United States,North America,Offline,TRUE,"{""Full paper submission"":""November 16, 2024""}",100.0,"{""Notification of acceptance"":""January 4, 2025""}",100.0,"{""Word files, PDF's of final Camera-ready paper and License to publish due."":""January 18, 2025""}",100.0,"{""Conference registration materials due"":""February 7, 2025""}",100.0,{},,"Artificial Intelligence, Computer and Network Security, Computer Graphics, Computer Modeling, Computer Networks, Computer Vision, Computers and Education, Control Systems, Data Communications, Databases, Data Mining/Knowledge Discovery, Digital Signal Processing, Expert Systems, Human-Computer Interface, Human-Computer Visualization, Image Processing, Information Systems, Multimedia Applications, Neural Networks, Pattern Recognition, Programming Languages, Real-Time Computing, Robotics",Springer Nature,"The 40th International Conference on Computers and Their Applications (CATA 2025) will be held from March 17-18, 2025, at the Crowne Plaza Hotel, San Francisco Airport, CA, US. Sponsored by the International Society for Computers and Their Applications (ISCA), CATA 2025 provides an international forum for research on computers and their applications, featuring contributed and invited papers, and a best paper award.","# CATA 2025: Call for Papers
+
+The 40th International Conference on Computers and Their Applications (CATA) provides an international forum for the presentation and discussion of research on computers and their applications. CATA 2025 will feature contributed, as well as invited papers concerned with theory, practice, and applications. The conference also includes the **best paper award**, given for a paper presented at the conference.
+
+## Conference Details
+
+*   **Dates:** March 17-18, 2025
+*   **Location:** Crowne Plaza Hotel, San Francisco Airport CA, US
+*   **Sponsor:** International Society for Computers and Their Applications (ISCA)
+
+## Topics of Interest
+
+The topics will include, but are not limited to, the following areas:
+
+*   Artificial Intelligence
+*   Computer and Network Security
+*   Computer Graphics
+*   Computer Modeling
+*   Computer Networks
+*   Computer Vision
+*   Computers and Education
+*   Control Systems
+*   Data Communications
+*   Databases
+*   Data Mining/Knowledge Discovery
+*   Digital Signal Processing
+*   Expert Systems
+*   Human-Computer Interface
+*   Human-Computer Visualization
+*   Image Processing
+*   Information Systems
+*   Multimedia Applications
+*   Neural Networks
+*   Pattern Recognition
+*   Programming Languages
+*   Real-Time Computing
+*   Robotics
+
+## Organization
+
+*   **Conference Chair:** Dr. Ajay Bandi (AJAY@nwmissouri.edu) (Northwest Missouri State University, USA)
+*   **Program Chair:** Dr. Mohammad Hossain (hossaim@iu.edu) (Indiana University Indianapolis, USA)
+
+### Program Committee
+
+*   Sujan Ranjan Reddy Anreddy (Mississippi State University, USA)
+*   Gaurav Sharma (NVIDIA, USA)
+*   Maximilian Etschmaier (Florida State University, USA)
+*   Takeyuki Nagao (Chiba University of Commerce, Japan)
+*   Thomas Reichherzer (University of West Florida, USA)
+*   Mohammad Owrang Ojaboni (American University, USA)
+*   Abdullah Aydeger (Southern Illinois University, USA)
+*   Kiyofumi Tanaka (Japan Advanced Institute of Science and Technology (JAIST), Japan)
+*   Emdad Ahmed (Central State University, USA)
+*   Chung-Hong Lee (National Kaohsiung University of Science and Technology, Taiwan)
+*   Deok Nam (Wilberforce University, USA)
+*   Kiyoshi Nagata (Daito Bunka University, Tokyo, Japan)
+*   Antoine Bossard (Kanagawa University, Japan)
+*   Swathi Kaluvakuri (Enterprise Fleet Management)
+*   Hsine-Jen Tsai (Fu Jen University, Taiwan)
+*   Ahmed Kamel (Concordia College, USA)
+*   In Soo Lee (Kyungpook National University, South Korea)
+*   Hidetsugu Kohzaki (Kyoto University, Japan)
+*   Popin Bose Roy (Amazon, USA)
+*   Thitivatr Patanasakpinyo (Mahidol University, Thailand)
+*   Keiichi Kaneko (Tokyo University of Agriculture and Technology, Japan)
+*   Indranil Roy (South East Missouri State University, USA)
+*   Phu Phung (University of Dayton, USA)
+*   Takaaki Goto (Toyo University, Japan)
+*   Fariba Jafari (American University, USA)
+*   Sultan Alanazy (Southern Methodist University, USA)
+*   Abhilash Kancharla (The University of Tampa, USA)
+*   Roberto Rosas Romero (Universidad De Lasamericas - Puebla, Mexico)
+
+## Keynote Speaker
+
+*   **“Knowledge for Search and AI”**
+*   Bilal Clarance
+    *   Director of Engineering Graph Serving Team at Google
+
+## Important Dates
+
+*   **Full paper submission:** November 16, 2024
+*   **Notification of acceptance:** January 4, 2025
+*   **Word files, PDF's of final Camera-ready paper and License to publish due:** January 18, 2025
+*   **Conference registration materials due:** February 7, 2025
+*   **CATA 2025 Conference:** March 17-18, 2025
+
+## Submission Guidelines
+
+*   Papers will be accepted only by electronic submission (PDF only).
+*   A full paper, including title, author's name(s) and affiliation, mailing address, telephone, fax, and email of the principal author, should be submitted before **November 16, 2024**.
+*   **Submission System:** [Upload Submission](https://equinocs.springernature.com/service/cata2025)
+*   The submitted manuscript should closely reflect the final paper as it will appear in the proceedings published in Springer Nature.
+*   Accepted papers will be published by Springer Nature and submitted for indexing to major online indexes, such as Google Scholar and Scopus.
+*   A **single-blind peer review** system will be used to evaluate all submissions.
+*   After the conference, you may submit an extended version of your paper for possible publication in the ISCA Journal.
+*   If you encounter any difficulties during submission or if you require further information, please contact the Program Chairs.
+*   Accepted papers will be submitted for indexing to major online indexes such as Google Scholar and Scopus.
+*   The papers that are accepted and presented at the conference will be freely available online (Open Access).
+
+## Templates
+
+*   [Springer Conference Proceedings Guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)
+
+## Conference Registration
+
+*   Please complete the registration form and return by **February 7, 2025** for early registration rate.
+*   Registration is open.",
+req-conf-1751537887657-hhs1f,,Computer Algebra in Scientific Computing,CASC,http://www.casc-conference.org/,TRUE,,https://www.casc-conference.org/call.html,"Conference dates: November 24 - 28, 2025
+Year: 2025
+Location: Dubai, The United Arab Emirates
+City-State-Province: Dubai
+Country: United Arab Emirates
+Continent: Asia
+Type: Offline
+Submission Date.Paper submission deadline: May 30, 2025
+Notification Date.Notification to Authors: July 13, 2025
+Camera-ready Date.Submission of Final Version: August 10, 2025
+Topics: Symbolic Computation, Computer Algebra Systems, Scientific Computing, Exact Computation, Symbolic Algorithms, Automated Reasoning, Parallel Symbolic Computation, Differential Equations, Polynomial Equations, Big Data Analytics, Simulation, Modeling
+Publisher: Springer","November 24 - 28, 2025",TRUE,2025,"Dubai, The United Arab Emirates",TRUE,Dubai,United Arab Emirates,Asia,Offline,TRUE,"{""Paper submission deadline"":""May 30, 2025""}",100.0,"{""Notification to Authors"":""July 13, 2025""}",100.0,"{""Submission of Final Version"":""August 10, 2025""}",100.0,{},,{},100.0,"Symbolic Computation, Computer Algebra Systems, Scientific Computing, Exact Computation, Symbolic Algorithms, Automated Reasoning, Parallel Symbolic Computation, Differential Equations, Polynomial Equations, Big Data Analytics, Simulation, Modeling",Springer,"The Computer Algebra in Scientific Computing (CASC) 2025 conference will be held in Dubai, The United Arab Emirates, from November 24 to 28, 2025. The conference focuses on the interaction of Symbolic Computation and Scientific Computing, exploring their implementation and applications.","# CASC 2025: Call for Papers
+
+The Computer Algebra in Scientific Computing (CASC) 2025 conference will take place from **November 24 – 28, 2025**, in **Dubai, The United Arab Emirates**.
+
+## Conference Information
+
+The tools of Scientific Computing play an important role in the natural sciences and engineering. Computer Algebra Systems and the underlying algorithms for Symbolic Computation play an increasingly important role within Scientific Computation. The CASC workshop series has been running for over two decades to explore the interaction of these topics, their implementation, and their application.
+
+## Scope
+
+The topics addressed in the workshop cover:
+
+1.  **The theory of symbolic computation and its implementation in computer algebra systems.**
+    This includes, but is not limited to:
+    *   new methods on exact computation;
+    *   symbolic algorithms and their complexity;
+    *   automated reasoning in algebra and geometry;
+    *   parallel symbolic / symbolic-numeric computation;
+    *   symbolic / symbolic-numeric methods for differential, differential-algebraic and difference equations;
+    *   symbolic / symbolic-numeric methods for polynomial equations and inequalities;
+    *   the embedding of computer algebra technology within different software and hardware environments;
+
+2.  **All other areas of scientific computing in regards to their benefit from or use of computer algebra methods and software.**
+    This includes, but is not limited to:
+    *   the use of computer algebra in approximate computation;
+    *   computer algebra methods in big data analytics;
+    *   computer algebra methods for simulation and modeling;
+
+3.  **Applications of the above throughout the natural sciences and engineering.**
+
+We welcome papers on both fundamental research and implementation issues. We also accept survey papers but these MUST BE CLEARLY LABELLED as such in the title.
+
+## Conference Participation Options
+
+We encourage wide participation at the workshop. In light of this, and that the conference scope spans computer science and mathematics (with their different publication traditions), we offer a variety of participation options:
+
+1.  **Participation with an accompanying paper in LNCS:**
+    CASC has a long running relationship with the Springer book series Lecture Notes in Computer Science to publish conference proceedings. Work submitted here should contain an original research result. Submissions should be prepared in the LNCS style and not exceed **20 pages**. Survey papers may have up to **25 pages**.
+    [List of CASC proceedings published by Springer](https://link.springer.com/conference/casc)
+
+2.  **Participation with abstract only:**
+    Participants may opt to submit an extended abstract instead. These should have at least **2 and at most 4 pages** in the LNCS style. They must contain the main results of the talk (without proofs). They will be lightly reviewed and distributed locally at the conference. We see three main audiences for this option:
+    *   Those who wish to talk on previously published work (in which case that work should be clearly cited in the abstract).
+    *   Those whose work is not yet ready for publication, but wish to receive feedback.
+    *   Those who plan to submit a journal paper on the work shortly.
+
+## Accompanying Topical Collection of Mathematics in Computer Science
+
+CASC has formed a relationship with the Springer Birkhäuser journal Mathematics in Computer Science (MCS) for an ongoing series of topical collections on topics presented at CASC workshops. Work submitted here must be of journal quality and will be reviewed to the usual standards of MCS. Submission will be opened after the conference for authors of extended abstracts presented at that years conference. There is no a priori page limit, but the length must be justified by the contents of the paper. At notification authors may be asked to revise their paper for a secondary deadline.
+
+## Submission Link
+
+All submissions should be done via EasyChair:
+
+**SUBMIT:** [https://easychair.org/conferences/?conf=casc2025](https://easychair.org/conferences/?conf=casc2025)
+
+In the EasyChair title field please prefix the paper title in the EasyChair metadata with either **LNCS** or **EA** to indicate which of the participation options is being used.
+
+## Important Dates
+
+*   **Paper submission deadline:** May 18th, 2025 (Extended until **May 30th, 2025**)
+*   **Notification to Authors:** July 13th, 2025
+*   **Submission of Final Version:** August 10th, 2025
+*   **Conference:** November 24 – 28, 2025",
+req-conf-1751537887657-hhs1f,,International Conference on Computability and Complexity in Analysis,CCA,http://cca-net.de/cca2025/,TRUE,https://easychair.org/conferences/?conf=cca2025,http://cca-net.de/cca2025/,"Conference dates: September 24 - 26, 2025
+Year: 2025
+Location: Kyoto, Japan
+City-State-Province: Kyoto
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Submission deadline: June 9, 2025
+Notification Date.Notification of authors: July 28, 2025
+Camera-ready Date.Final version: August 25, 2025
+Topics: Computable analysis, Complexity on real numbers, Computable numbers, subsets and functions, Theory of representations, Computable differential equations, Randomness and computable measure theory, Algorithmic fractal dimension, Effective descriptive set theory, Weihrauch complexity, Reverse analysis, Constructive analysis, Domain theory and analysis, Realizability theory and analysis, Models of computability on real numbers, Real number algorithms, Exact real number arithmetic","September 24 - 26, 2025",TRUE,2025,"Kyoto, Japan",TRUE,Kyoto,Japan,Asia,Offline,TRUE,"{""Submission deadline"":""June 9, 2025""}",100.0,"{""Notification of authors"":""July 28, 2025""}",100.0,"{""Final version"":""August 25, 2025""}",100.0,{},,{},,"Computable analysis, Complexity on real numbers, Computable numbers, subsets and functions, Theory of representations, Computable differential equations, Randomness and computable measure theory, Algorithmic fractal dimension, Effective descriptive set theory, Weihrauch complexity, Reverse analysis, Constructive analysis, Domain theory and analysis, Realizability theory and analysis, Models of computability on real numbers, Real number algorithms, Exact real number arithmetic",No publisher,"The Twenty-Second International Conference on Computability and Complexity in Analysis (CCA 2025) will be held in Kyoto, Japan, from September 24-26, 2025. The conference focuses on the theory of computability and complexity over real-valued data, bringing together researchers from various fields like theoretical computer science, logic, constructive mathematics, and numerical mathematics.","# CCA 2025: Call for Papers
+
+The Twenty-Second International Conference on Computability and Complexity in Analysis (CCA 2025) will be held from **September 24-26, 2025**, in **Kyoto, Japan**.
+
+## Scope
+
+The conference is concerned with the theory of computability and complexity over real-valued data. It explores the limitations and abilities of computers, the cost of solving computational problems, and the need for computability and complexity theories over real numbers and continuous data structures.
+
+## Topics of Interest
+
+*   Computable analysis
+*   Complexity on real numbers
+*   Computable numbers, subsets and functions
+*   Theory of representations
+*   Computable differential equations
+*   Randomness and computable measure theory
+*   Algorithmic fractal dimension
+*   Effective descriptive set theory
+*   Weihrauch complexity
+*   Reverse analysis
+*   Constructive analysis
+*   Domain theory and analysis
+*   Realizability theory and analysis
+*   Models of computability on real numbers
+*   Real number algorithms
+*   Exact real number arithmetic
+
+## Invited Speakers
+
+*   Riccardo Gozzi (Karlsruhe, Germany)
+*   Takako Nemoto (Sendai, Japan)
+*   Selwyn Ng (NTU, Singapore)
+*   Yudai Suzuki (Oyama, Japan)
+*   Patrick Uftring (München, Germany)
+
+## Submissions
+
+Authors are invited to submit **1-2 pages abstracts in PDF format**, including references, via the EasyChair system.
+
+*   **Submission Link:** [https://easychair.org/conferences/?conf=cca2025](https://easychair.org/conferences/?conf=cca2025)
+*   If full versions of papers are available as a technical report or arXiv version, please add corresponding links to the reference list.
+
+## Dates
+
+*   **Submission deadline:** June 9, 2025
+*   **Notification of authors:** July 28, 2025
+*   **Final version:** August 25, 2025
+
+## Venue
+
+Room 111 of the [Research Institute for Mathematical Sciences](https://www.kurims.kyoto-u.ac.jp/en/), Kyoto University.
+
+## Further Information
+
+*   **Organization:** Holger Thies, thies.holger.5c@kyoto-u.ac.jp
+*   **Submissions:** Eike Neumann, e.f.neumann@swansea.ac.uk",
+req-conf-1751537887657-hhs1f,,IEEE International Conference on Cloud Computing in Emerging Markets,CCEM,https://2025.ieeeccem.org/,TRUE,https://2025.ieeeccem.org/Call-for-Papers.html,,"Conference dates: November 6 - 8, 2025
+Year: 2025
+Location: Amrita Vishwa Vidyapeetham, Mysuru
+City-State-Province: Mysuru
+Country: India
+Continent: Asia
+Type: Offline
+Submission Date.Last date for All Papers submission: September 8, 2025
+Notification Date.Notification of Acceptance Date: October 10, 2025
+Camera-ready Date.Camera Ready Submission Due Date: October 25, 2025
+Registration Date.Early bird Registration Deadline: October 15, 2025
+Topics: Cloud Computing in Emerging Markets
+Publisher: IEEE","November 6 - 8, 2025",TRUE,2025,"Amrita Vishwa Vidyapeetham, Mysuru",TRUE,Mysuru,India,Asia,Offline,TRUE,"{""Last date for All Papers submission"":""September 8, 2025""}",100.0,"{""Notification of Acceptance Date"":""October 10, 2025""}",100.0,"{""Camera Ready Submission Due Date"":""October 25, 2025""}",100.0,"{""Early bird Registration Deadline"":""October 15, 2025""}",100.0,{},,Cloud Computing in Emerging Markets,IEEE,"The Thirteenth IEEE International Conference on Cloud Computing in Emerging Markets (IEEE CCEM 2025) will be held from November 6th to 8th, 2025, at Amrita Vishwa Vidyapeetham, Mysuru. The conference focuses on cloud computing paradigms in information technology, covering a wide range of topics including AI's impact on content production, and offers peer-reviewed paper presentations, tutorials, technology showcases, and panel discussions.","# IEEE CCEM 2025: Call for Papers
+
+The Thirteenth IEEE International Conference on Cloud Computing in Emerging Markets (CCEM) is scheduled to take place on **November 6th, 7th, and 8th, 2025**, at **Amrita Vishwa Vidyapeetham, Mysuru**.
+
+## About the Conference
+
+The CCEM conference series, established in 2012, focuses on cloud computing as a dominating and revolutionary paradigm in information technology. It addresses its impact across various sectors and delves into research areas such as networking, storage, security, virtualization, efficient cloud architectures, enormous multi-tenancy, cloud application and service design, and cloud service administration. The conference also highlights the dynamic role of AI in content production tailored for specific audiences.
+
+## Submission Types and Guidelines
+
+IEEE CCEM 2025 invites submissions in the following categories:
+
+### Technical Research Papers
+*   **Format:** Max 8 pages (Full Paper) or Max 5 pages (Short Paper).
+*   **Review Process:** Double-blind.
+*   **Awards:** Potential to win Best Research Paper Winner & Runner-Up awards.
+
+### Student Project Showcase
+*   **Format:** Max 3 pages.
+*   **Additional Requirement:** 3-minute YouTube demo.
+*   **Awards:** Potential to win Best Student Project Showcase awards.
+
+### TechnoBiz Plan Proposals
+*   **Format:** Max 3 pages.
+*   **Additional Requirement:** 3-minute YouTube demo.
+*   **Awards:** Potential to win Best TechnoBiz Plan Proposal awards.
+
+#### Template Requirements
+
+A mandatory template is provided for IEEE CCEM 2025 Research Papers, TechnoBiz Plans & Proposals. It includes specific sections such as Title, Author Names with Email IDs & Company/College Name & URL, Abstract/Synopsis (100 words / Two Paragraphs), Introduction/Research Claims/What is in scope & what is not in scope, Related Work, Theoretical Framework, Architecture/Design & Modeling, Experimentations & Data Analysis with discussions, Conclusions & Validation of Claims, and References cited.
+
+#### Review Process
+
+All technical research papers will undergo a **double-blind review process**.
+
+#### Awards
+
+Awards for Best Research Paper Winner & Runner-Up, Best Student Project Showcase, and Best TechnoBiz Plan Proposal will be presented.
+
+## Important Dates & Deadlines
+
+*   **Paper Submission Deadline:** **8th September 2025** (Hard Deadline - No Extensions)
+*   **Notification of Acceptance:** **10th October 2025** (Decision emails sent by this date)
+*   **Early Bird Registration Deadline:** **15th October 2025** (Save 20% with early registration)
+*   **Camera Ready Submission Due Date:** **25th October 2025** (Required for inclusion in proceedings)
+*   **Main Conference:** **6th-8th November 2025**
+
+## Conference Format
+
+The conference will be a **Three-day event** featuring invited talks, peer-reviewed paper presentations, tutorials, a technology showcase, followed by a panel discussion.
+
+## Registration
+
+*   Visit the registration portal: [Register Now](https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FIEEECCEM2025%2FSubmission%2FIndex)
+*   Take advantage of **Early Bird Registration** by **15th October 2025** to receive discounted rates.
+
+## Publication and Indexing
+
+Accepted papers will be published in the proceedings and indexed. Authors of selected papers may be invited to submit extended versions to an IEEE Journal.
+
+## Sponsors
+
+*   IEEE
+*   IEEE Technical Committee on Services Computing (TCSVC)
+*   IEEE Bangalore
+*   Amrita
+*   Accenture
+*   Kyndryl
+*   IEEE Standards Association
+*   Hewlett Packard
+*   Openstream.ai
+
+## Contact Information
+
+*   **Email:** [info@ieeeccem2025.com](mailto:info@ieeeccem2025.com)
+*   **Phone:** +(0821) – 2548600
+*   **Visit Us:** #114, 7th Cross, Bogadi II Stage, Mysuru, Karnataka India
+
+## Submission Portal
+
+Submit your contributions through the following link: [REGISTER NOW](https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FIEEECCEM2025%2FSubmission%2FIndex)",
+req-conf-1751537887657-hhs1f,,IEEE Conference on Computational Complexity,CCC,https://computationalcomplexity.org/,TRUE,https://computationalcomplexity.org/Archive/2025/cfp.html,,"Conference dates: August 5 – 8, 2025
+Year: 2025
+Location: Toronto, Canada
+City-State-Province: Toronto
+Country: Canada
+Continent: North America
+Type: Offline
+Submission Date.Submission Deadline: February 7, 2025
+Notification Date.Notification of acceptance: May 2, 2025
+Camera-ready Date.Camera-ready papers: End of May, 2025
+Topics: Computational Complexity Theory, Complexity Classes, Reducibility and Completeness, Circuit Complexity, Communication Complexity, Algebraic Complexity, Proof Complexity, Complexity in other concrete computational models, Interactive and probabilistic proof systems, Logic and descriptive complexity, Pseudorandomness and derandomization, Average case complexity, Quantum computation, Parametrized complexity, Fine-grained complexity, coding theory, cryptography, optimization (including inapproximability, continuous optimization), property testing, streaming and sublinear computation, distributed computation, game theory, machine learning, privacy
+Publisher: Leibniz International Proceedings in Informatics (LIPIcs)","August 5 – 8, 2025",TRUE,2025,"Toronto, Canada",TRUE,Toronto,Canada,North America,Offline,TRUE,"{""Submission Deadline"":""February 7, 2025""}",100.0,"{""Notification of acceptance"":""May 2, 2025""}",100.0,"{""Camera-ready papers"":""End of May, 2025""}",100.0,{},,{},,"Computational Complexity Theory, Complexity Classes, Reducibility and Completeness, Circuit Complexity, Communication Complexity, Algebraic Complexity, Proof Complexity, Complexity in other concrete computational models, Interactive and probabilistic proof systems, Logic and descriptive complexity, Pseudorandomness and derandomization, Average case complexity, Quantum computation, Parametrized complexity, Fine-grained complexity, coding theory, cryptography, optimization (including inapproximability, continuous optimization), property testing, streaming and sublinear computation, distributed computation, game theory, machine learning, privacy",Leibniz International Proceedings in Informatics (LIPIcs),"The Computational Complexity Conference (CCC) is an annual conference organized by the Computational Complexity Foundation (CCF) that focuses on the inherent difficulty of computational problems. CCC 2025 will be held in Toronto, Canada, from August 5-8, 2025. Students and post-doctoral fellows can apply for travel allowances.","# CCC'25: Call for Papers
+
+The Computational Complexity Conference (CCC) is an annual conference focused on the inherent difficulty of computational problems under resource constraints. CCC 2025 will be held in **Toronto, Canada**, from **August 5–8, 2025**.
+
+## Scope
+
+The conference seeks original research papers in all areas of computational complexity theory. Contributions from all topics with connections to or motivated by questions in complexity theory are welcome, with a special encouragement for submissions addressing complexity-theoretic issues in adjacent areas such as coding theory, cryptography, game theory, learning, logic, and privacy.
+
+Possible topics include, but are not limited to:
+
+*   Complexity classes
+*   Reducibility and completeness
+*   Circuit complexity
+*   Communication complexity
+*   Algebraic complexity
+*   Proof complexity
+*   Complexity in other concrete computational models
+*   Interactive and probabilistic proof systems
+*   Logic and descriptive complexity
+*   Pseudorandomness and derandomization
+*   Average case complexity
+*   Quantum computation
+*   Parametrized complexity
+*   Fine-grained complexity
+*   Complexity-theoretic aspects of: coding theory, cryptography, optimization (including inapproximability, continuous optimization), property testing, streaming and sublinear computation, distributed computation, game theory, machine learning, privacy.
+
+## Submission
+
+### Deadlines
+
+*   **Submission Deadline:** Friday, February 7, 2025, 23:59 AoE
+*   **Notification of Acceptance:** Friday, May 2, 2025
+*   **Camera-Ready Due:** End of May, 2025
+
+### Submission Server
+
+Papers must be submitted electronically via the submission server: [https://ccc2025.hotcrp.com/](https://ccc2025.hotcrp.com/)
+
+### Format
+
+*   Submissions should start with a title page including the title and a 1-2 paragraph abstract.
+*   The first 10 pages should clearly present the paper's merits, including importance, prior work, and key technical ideas. Supplementary material beyond the first 10 pages, abstract, and references is optional and will be read at the committee's discretion.
+*   Submissions should include proofs of all central claims.
+*   The submission should be in single-column format, use at least 11-point font, at least 1-inch margins, and at least single-spacing between lines.
+
+## Review Process
+
+*   The conference will employ a **lightweight double-blind reviewing process**.
+*   Submissions should **not reveal the identity of the authors** in any way (names, affiliations, email addresses). This information will be uploaded separately on the submission site.
+*   Authors are encouraged to post their papers to arXiv/ECCC/IACR etc.
+
+## Additional Remarks
+
+Authors may optionally send an email to the program committee (PC) chair at [ccc2025chair@gmail.com](mailto:ccc2025chair@gmail.com) with any additional remarks for the PC.
+
+## Conflict of Interest
+
+PC members and reviewers are expected to recuse themselves from evaluating submissions where a conflict of interest exists (e.g., thesis advisor, close collaborator).
+
+## Simultaneous Submission Policy
+
+Material previously published or scheduled for publication prior to September 2025 will not be considered. Simultaneous submission of the same material to another conference with published proceedings is not allowed.
+
+## Confidentiality
+
+All submissions will be treated as confidential.
+
+## Publication
+
+*   **Online Posting:** Authors are encouraged to post full versions of their submissions in accessible online repositories like the [Electronic Colloquium on Computational Complexity](http://eccc.hpi-web.de/eccc) or arXiv.
+*   **Proceedings:** The conference proceedings will be published under a Creative Commons BY license in the Leibniz International Proceedings in Informatics (LIPIcs) series.
+
+## Presentation
+
+Authors of accepted papers are expected to present their work at the conference. Time allocations for presentations will be determined by the program committee (between 15 and 45 minutes).
+
+## Awards
+
+*   **EATCS Luca Trevisan award for the CCC best student paper:** For papers written solely by students.
+*   **Best paper award:** For the best paper submitted to the conference.
+
+## Conference Information
+
+*   **Dates and Location:** August 5–8, 2025, Toronto, Canada.
+*   **Travel Allowances:** Available for students and post-doctoral fellows.
+*   **Visas:** Information regarding visa requirements for Canada can be found on the Canadian government's visa website. Contact the local arrangements committee for visa support letters.
+*   **Code of Conduct:** CCC 2025 is committed to providing an environment free of discrimination and harassment, adhering to the SafeTOC initiative.",Camera-ready date chưa được chuẩn hóa về đúng format
+req-conf-1751537887657-hhs1f,,IEEE Congress on Evolutionary Computation,CEC,https://www.cec2025.org/,TRUE,https://www.cec2025.org//index/page.html?id=1307,,"Conference dates: June 8 - 12, 2025
+Year: 2025
+Location: Hangzhou, China
+City-State-Province: Hangzhou
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Special Session & Workshop Proposals Deadline: November 15, 2024
+Submission Date.Competition & Tutorial Proposals Deadline: December 15, 2024
+Submission Date.Paper Submission Deadline: January 31, 2025
+Notification Date.Paper Acceptance Notification: March 18, 2025
+Camera-ready Date.Final Paper Submission & Early Registration Deadline: May 1, 2025
+Topics: Algorithms, Machine Learning for Optimization and Evolutionary Learning, Optimization, Related Topics, Theory
+Publisher: IEEE","June 8 - 12, 2025",TRUE,2025,"Hangzhou, China",TRUE,Hangzhou,China,Asia,Offline,TRUE,"{""Special Session & Workshop Proposals Deadline"":""November 15, 2024"",""Competition & Tutorial Proposals Deadline"":""December 15, 2024"",""Paper Submission Deadline"":""January 31, 2025""}",100.0,"{""Paper Acceptance Notification"":""March 18, 2025""}",100.0,"{""Final Paper Submission & Early Registration Deadline"":""May 1, 2025""}",100.0,{},,{},,"Algorithms, Machine Learning for Optimization and Evolutionary Learning, Optimization, Related Topics, Theory",IEEE,"The IEEE Congress on Evolutionary Computation (CEC) is a world-class event in the field of Evolutionary Computation, providing a forum to bring together researchers and practitioners from all over the world to present and discuss their research findings. CEC 2025 will be held from June 8 to June 12, 2025, in Hangzhou, China.","# Call for Papers
+
+The annual IEEE Congress on Evolutionary Computation is one of the leading events in the field of evolutionary computation.
+
+The Conference Organizing Committee invites submissions of original, previously unpublished innovative research in any topic of evolutionary computation including, but not limited to:
+
+## Algorithms
+* Ant colony optimization and Swarm Intelligence
+* Artificial immune systems
+* Coevolutionary systems
+* Coevolution
+* Cultural algorithms
+* Differential evolution
+* Estimation of distribution algorithms
+* Evolutionary computation theory
+* Evolutionary developmental systems
+* Evolutionary programming
+* Evolution strategies
+* Genetic algorithms
+* Genetic programming
+* Heuristics
+* Interactive evolutionary computation
+* Learning classifier systems
+* Memetic algorithms
+* Multi-meme and hybrid algorithms
+* Molecular and quantum computing
+* Multi-objective evolutionary algorithms
+* Parallel and distributed algorithms
+* Particle swarm optimization
+* Representation and operators
+* Self-adaptation in evolutionary computation
+
+## Machine Learning for Optimization and Evolutionary Learning
+* Automated design of Metaheuristics
+* Evolutionary fuzzy systems
+* Evolutionary neural architecture search
+* Evolutionary reinforcement learning
+* Fairness-aware optimization
+* Federated and secure optimization
+* Large language models for optimization
+* Metaheuristics and hyper-heuristics
+* Multi-objective machine learning
+* Neural optimization
+* Surrogate-assisted data-driven optimization
+
+## Optimization
+* Combinatorial optimization
+* Constraint handling
+* Dynamic optimization
+* Large-scale optimization
+* Multi-modal optimization
+* Multi-objective optimization
+* Numerical optimization
+* Optimization in the presence of uncertainty
+* Robust optimization
+
+## Related Topics
+* Art and music
+* Artificial life and adaptive behavior
+* Autonomous mental and behavior development
+* Biometrics
+* Bioinformatics and computational biology
+* Classification
+* Clustering
+* Data mining
+* Defense and cybersecurity
+* Drug design
+* Embodied robotics
+* Engineering design
+* Evolutionary games and multi-agent systems
+* Evolvable hardware
+* Evolutionary software engineering
+* Evolutionary robotics
+* Finance and economics
+* Intelligent systems applications
+* Real-world applications
+
+## Theory
+* Causality and evolvability
+* Convergence
+* Fitness landscape analysis
+* Noisy fitness
+* Robustness and neutrality
+* Runtime analysis
+* Scalability and complexity analysis
+
+## Important Dates
+* **Special Session & Workshop Proposals Deadline:** November 15, 2024
+* **Competition & Tutorial Proposals Deadline:** December 15, 2024
+* **Paper Submission Deadline:** January 31, 2025
+* **Paper Acceptance Notification:** March 18, 2025
+* **Final Paper Submission & Early Registration Deadline:** May 1, 2025
+
+All submissions will be refereed by experts in the fields and ranked based on the criteria of originality, significance, quality and clarity.",
+req-conf-1751537887657-hhs1f,,Computer Graphics International,CGI,https://www.cgs-network.org/cgi25/,TRUE,https://www.cgs-network.org/cgi25/call-for-research-papers/,https://www.cgs-network.org/cgi25/,"Conference dates: July 14 - 18, 2025
+Year: 2025
+Location: The Hong Kong Polytechnic University, Kowloon, Hong Kong
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.(The Visual Computer Journal Submission) Submission Deadline: February 20, 2025
+Submission Date.(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Submission Deadline: May 4, 2025
+Notification Date.(The Visual Computer Journal Submission) Preliminary Notification to Authors: March 30, 2025
+Notification Date.(The Visual Computer Journal Submission) Final Notification of Revised Papers: May 15, 2025
+Notification Date.(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Notification of Acceptance: June 5, 2025
+Camera-ready Date.(The Visual Computer Journal Submission) Revised Paper Submission Deadline: April 20, 2025
+Camera-ready Date.(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Revised Final Paper: June 20, 2025
+Topics: Rendering Techniques, Geometric Computing, Metaverse (VR/MR/XR), Shape and Surface Modeling, Physically-Based Modeling, Computer Vision for Graphics, Scientific Visualization, Data Compression for Graphics, Medical Imaging, Computational Geometry, Image-Based Rendering, Computational Photography, Computer Animation, Visual Analytics, Shape Analysis and Image Retrieval, AI-Generated Content (AIGC), Volume Rendering, Digital Cultural Heritage, Computational Fabrication, Image Processing and Analysis, 3D Reconstruction, Global Illumination, Graphical Human-Computer Interaction, Digital Humans, Saliency Methods, Shape Matching, Sketch-Based Modeling, Robotics and Vision, Stylized Rendering, Textures, Machine Learning for Graphics, 3DGS/NeRF-Based Rendering","July 14 - 18, 2025",TRUE,2025,"The Hong Kong Polytechnic University, Kowloon, Hong Kong",TRUE,Hong Kong,China,Asia,Offline,TRUE,"{""(The Visual Computer Journal Submission) Submission Deadline"":""February 20, 2025"",""(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Submission Deadline"":""May 4, 2025""}",100.0,"{""(The Visual Computer Journal Submission) Preliminary Notification to Authors"":""March 30, 2025"",""(The Visual Computer Journal Submission) Final Notification of Revised Papers"":""May 15, 2025"",""(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Notification of Acceptance"":""June 5, 2025""}",100.0,"{""(The Visual Computer Journal Submission) Revised Paper Submission Deadline"":""April 20, 2025"",""(CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal) Revised Final Paper"":""June 20, 2025""}",100.0,{},,{},,"Rendering Techniques, Geometric Computing, Metaverse (VR/MR/XR), Shape and Surface Modeling, Physically-Based Modeling, Computer Vision for Graphics, Scientific Visualization, Data Compression for Graphics, Medical Imaging, Computational Geometry, Image-Based Rendering, Computational Photography, Computer Animation, Visual Analytics, Shape Analysis and Image Retrieval, AI-Generated Content (AIGC), Volume Rendering, Digital Cultural Heritage, Computational Fabrication, Image Processing and Analysis, 3D Reconstruction, Global Illumination, Graphical Human-Computer Interaction, Digital Humans, Saliency Methods, Shape Matching, Sketch-Based Modeling, Robotics and Vision, Stylized Rendering, Textures, Machine Learning for Graphics, 3DGS/NeRF-Based Rendering",No publisher,"Computer Graphics International (CGI) 2025 is one of the oldest annual international conferences on Computer Graphics, dedicated to making CGI a top conference on graphics and media. It will be held at The Hong Kong Polytechnic University, Kowloon, Hong Kong, from July 14-18, 2025. Researchers are invited to share their experiences and novel achievements in Computer Graphics, Media, and Virtual Reality. Accepted papers can be published in The Visual Computer journal, the CGI Conference Proceedings (LNCS-Springer), or the CAVW and VRIH journals.","# Call for Papers: CGI 2025
+
+## Conference Overview
+
+COMPUTER GRAPHICS INTERNATIONAL 2025 (CGI 2025) will be held at **The Hong Kong Polytechnic University, Kowloon, Hong Kong**, from **July 14-18, 2025**.
+
+CGI is one of the oldest annual international conferences on Computer Graphics in the world, dedicated to making it a top conference on graphics and media. Researchers are invited to share their experiences and novel achievements in various fields of Computer Graphics, Media, and Virtual Reality.
+
+## Topics
+
+The main topics of the CGI 2025 conference include, but are not limited to:
+
+*   Rendering Techniques
+*   Geometric Computing
+*   Metaverse (VR/MR/XR)
+*   Shape and Surface Modeling
+*   Physically-Based Modeling
+*   Computer Vision for Graphics
+*   Scientific Visualization
+*   Data Compression for Graphics
+*   Medical Imaging
+*   Computational Geometry
+*   Image-Based Rendering
+*   Computational Photography
+*   Computer Animation
+*   Visual Analytics
+*   Shape Analysis and Image Retrieval
+*   AI-Generated Content (AIGC)
+*   Volume Rendering
+*   Digital Cultural Heritage
+*   Computational Fabrication
+*   Image Processing and Analysis
+*   3D Reconstruction
+*   Global Illumination
+*   Graphical Human-Computer Interaction
+*   Digital Humans
+*   Saliency Methods
+*   Shape Matching
+*   Sketch-Based Modeling
+*   Robotics and Vision
+*   Stylized Rendering
+*   Textures
+*   Machine Learning for Graphics
+*   3DGS/NeRF-Based Rendering
+
+## Important Dates
+
+### The Visual Computer Journal Submission
+
+1.  **Submission Deadline:** February 20, 2025
+2.  **Preliminary Notification to Authors:** March 30, 2025
+3.  **Revised Paper Submission Deadline:** April 20, 2025
+4.  **Final Notification of Revised Papers:** May 15, 2025
+
+### CGI Proceedings (LNCS Book), CAVW Journal, VRIH Journal
+
+1.  **Submission Deadline:** May 4, 2025
+2.  **Notification of Acceptance:** June 5, 2025
+3.  **Revised Final Paper:** June 20, 2025
+
+## Submission Guidelines
+
+*   **Page Limit:** Please submit 8-12 pages.
+*   **Format:** Papers should be submitted in PDF format. The PDF paper should **NOT** contain any name or affiliation (blind paper).
+*   **Templates:** A template for the full paper submission is available in [Microsoft Word](http://www.cgs-network.org/cgi25/wp-content/uploads/2024/03/CGI2018_Word.zip) and [Latex](https://www.cgs-network.org/cgi18/wp-content/uploads/2018/01/CGI2018_latex.zip).
+*   **Videos:** You may include videos in MP4, WMV and AVI format. For multiple videos, please use a zip file. The maximum file size is 40 MB per submission.
+
+## Submission Tracks
+
+*   **For the first call (Visual Computer track):** Submission deadline is **February 20, 2025**.
+*   **For the second call:** Indicate your preferred publication track: either Proceedings Book, or VRIH journal, or CAVW journal. Submission deadline is **May 4, 2025**.
+
+*Please note:* For the second call, the program chairs will make the final decision on which paper goes into the book or journals at the final stage.
+
+## Submission Portal
+
+Submit your paper via EasyChair: [https://easychair.org/conferences/?conf=cgi2025](https://easychair.org/conferences/?conf=cgi2025)",
+req-conf-1751537887657-hhs1f,,Information Security Symposium,CERIAS,https://events.research.purdue.edu/cerias/,TRUE,,,"Conference dates: April 1 - 2, 2025
+Year: 2025
+Location: Purdue Memorial Union, Second floor, 101 S. Grant St., West Lafayette, IN
+City-State-Province: West Lafayette, IN
+Country: United States
+Continent: North America
+Type: Offline
+Topics: Cybersecurity","April 1 - 2, 2025",TRUE,2025,"Purdue Memorial Union, Second floor, 101 S. Grant St., West Lafayette, IN",TRUE,"West Lafayette, IN",United States,North America,Offline,TRUE,{},,{},,{},,{},,{},,Cybersecurity,No publisher,"The 26th Annual CERIAS Cybersecurity Symposium, themed 'Cyber Horizons: Bridging Academia, Industry, and Innovation for a Secure Future,' will take place from April 1-2, 2025, at the Purdue Memorial Union in West Lafayette, Indiana. This premier event will explore the interplay between academia and industry, discuss lessons learned from the cyber battle space, and examine AI's role in advancing cybersecurity.","# CERIAS Cybersecurity Symposium 2025: Call for Participation
+
+The 26th Annual CERIAS Cybersecurity Symposium, themed **""Cyber Horizons: Bridging Academia, Industry, and Innovation for a Secure Future""**, will be held from **Tuesday, April 1 – Wednesday, April 2, 2025**, at the **Purdue Memorial Union, Second floor, 101 S. Grant St., West Lafayette, IN**.
+
+This premier gathering of thought leaders, innovators, and practitioners is dedicated to shaping the future of cybersecurity. The event will explore the dynamic interplay between academia and industry, discuss lessons learned from the cyber battle space, and learn about the revolutionary framework for building the future of secure cyber-physical systems. It will also examine AI as a tool for advancing the field and spotlight innovations that define the cutting edge of security solutions.
+
+## Key Dates
+
+*   **Symposium Dates:** April 1 – April 2, 2025
+*   **Online Registration:** Closed
+
+## Agenda and Speakers
+
+*   [Agenda](https://events.research.purdue.edu/cerias/agenda)
+*   [Speakers](https://events.research.purdue.edu/cerias/speakers/)
+
+## Poster Session
+
+A poster session will be held at 6:30 PM in the PMU North Ballroom.
+
+*   [2025 Poster List](https://www.cerias.purdue.edu/symposium/index.php/posters/year/2025)
+*   [Information for Poster Presenters](https://www.cerias.purdue.edu/site/symposium2025/presenters/)
+*   [Poster Templates](https://www.cerias.purdue.edu/site/poster/templates)
+
+## Symposium Archive
+
+*   [2024](https://www.cerias.purdue.edu/site/symposium2024/)
+*   [2023](https://www.cerias.purdue.edu/site/symposium2023/)
+*   [2022](https://www.cerias.purdue.edu/site/symposium2022/)
+*   [More…](https://www.cerias.purdue.edu/site/symposium/#archive)
+
+## Continuing Professional Education (CPE)
+
+*   [CPE Credit Info (PDF)](https://www.cerias.purdue.edu/assets/symposium/cpe_info.pdf)
+
+## Contact Information
+
+*   **Registration & Summit Inquiries:** [info@cerias.purdue.edu](mailto:info@cerias.purdue.edu)
+*   **Information on CERIAS:** [cerias.purdue.edu](https://cerias.purdue.edu)
+
+## Social Media
+
+*   YouTube: [YouTube](https://www.youtube.com/user/ceriaspurdue)
+*   X: [@cerias](https://x.com/cerias/) | [#cerias](https://twitter.com/search?q=%23cerias)
+*   LinkedIn: [CERIAS Page](https://www.linkedin.com/company/cerias/)
+
+## Symposium Booklet
+
+*   [Symposium Booklet (PDF)](https://www.cerias.purdue.edu/assets/symposium/2025/2025_symposium_booklet.pdf)",
+req-conf-1751537887657-hhs1f,,Conference on Innovative Data Systems Research,CIDR,https://www.cidrdb.org/cidr2025/,TRUE,https://www.cidrdb.org/cidr2025/cfp.html,,"Conference dates: January 19-22, 2025
+Year: 2025
+Location: Amsterdam, The Netherlands
+City-State-Province: Amsterdam
+Country: Netherlands
+Continent: Europe
+Type: Offline
+Submission Date.submission deadline for all contributions: August 2nd, 2024
+Notification Date.author notification for all contributions: October 4th, 2024
+Topics: Data Management Systems, Cloud based systems for data processing, Data storage, Networking, Hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies
+Publisher: VLDB Endowment","January 19-22, 2025",TRUE,2025,"Amsterdam, The Netherlands",TRUE,Amsterdam,Netherlands,Europe,Offline,TRUE,"{""submission deadline for all contributions"":""August 2nd, 2024""}",100.0,"{""author notification for all contributions"":""October 4th, 2024""}",100.0,{},,{},,{},,"Data Management Systems, Cloud based systems for data processing, Data storage, Networking, Hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies",VLDB Endowment,"The Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference held annually, alternating between Amsterdam and the USA. CIDR 2025 will take place in Amsterdam from January 19-22, 2025. It emphasizes systems architecture, innovative ideas, and practical data systems work, featuring a single-track program with keynotes, papers, and demos.","# CIDR 2025: Call for Papers
+
+The Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference, complementary to mainstream database conferences, emphasizing the systems architecture perspective. CIDR 2025 will be held in **Amsterdam, The Netherlands, from January 19-22, 2025**.
+
+## Overview
+
+CIDR gathers researchers and practitioners from academia and industry to discuss innovative and visionary ideas in data management systems. It encourages contributions on novel approaches to data management systems, architecture, and usage, including cloud-based systems, data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, and ML/AI technologies for data processing. CIDR values innovation, experience-based insight, and vision.
+
+## Contribution Types
+
+CIDR 2025 invites two kinds of contributions:
+
+*   **Papers:** (at most 6 pages) Including regular research papers and more visionary papers that promote interesting ideas and ongoing work.
+*   **Demos:** (at most 6 pages) This can be a video or a description of the demo.
+
+To encourage authors to submit only their best work, each person can be an author or co-author of **at most one submission** of any kind.
+
+## Submission Guidelines
+
+*   **Format:** Papers should be submitted in PDF format.
+*   **Length:** Papers must not exceed 6 pages, including all references and appendix.
+*   **Template:** Submissions must be formatted using the double-column ACM sigconf style. LaTeX and Word templates are available.
+*   **Submission Portal:** Submit electronically via CMT: [https://cmt3.research.microsoft.com/CIDR2025](https://cmt3.research.microsoft.com/CIDR2025)
+*   **Presentation:** At least one author of an accepted paper or demo is expected to attend the conference in person to present.
+
+## Important Dates
+
+(All deadlines are 11:59pm Pacific Time)
+
+*   **Submission deadline:** August 2nd, 2024
+*   **Author notification:** October 4th, 2024
+*   **Conference Dates:** January 19-22, 2025
+
+## Camera-Ready Guidelines
+
+*   Follow the formatting instructions above.
+*   Include the following copyright notice at the bottom left of the first page:
+    > This paper is published under the Creative Commons Attribution 4.0 International (CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their personal and corporate Web sites with the appropriate attribution, provided that you attribute the original work to the authors and CIDR 2025. 15th Annual Conference on Innovative Data Systems Research (CIDR '25). January 19-22, 2025, Amsterdam, The Netherlands.
+*   Recommended LaTeX style file and Word template files include the copyright notice.
+
+## Diversity and Inclusion
+
+Authors are strongly urged to follow the D&I writing instructions when drafting paper submissions.",các date bị sai format ngày chuẩn
+req-conf-1751537887657-hhs1f,,IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology,CIBCB,https://smile.ee.ncku.edu.tw/cibcb2025/,TRUE,https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=326,,"Conference dates: August 20 - 22, 2025
+Year: 2025
+Location: National Cheng Kung University, Tainan, Taiwan
+City-State-Province: Tainan
+Country: Taiwan
+Continent: Asia
+Type: Offline
+Topics: Computational Intelligence, Bioinformatics, Computational Biology","August 20 - 22, 2025",TRUE,2025,"National Cheng Kung University, Tainan, Taiwan",TRUE,Tainan,Taiwan,Asia,Offline,TRUE,{},,{},,{},,{},,{},,"Computational Intelligence, Bioinformatics, Computational Biology",No publisher,"The 2025 IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB) will be held from August 20-22, 2025, at the National Cheng Kung University in Tainan, Taiwan. The conference's central theme is ""AI Drives Biomedical, Bioinformatics and Healthcare"".","# CIBCB 2025: Call for Papers
+
+The 2025 IEEE Symposium on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB) is scheduled to take place from **August 20-22, 2025**, at the **National Cheng Kung University in Tainan, Taiwan**. The conference's central theme is **""AI Drives Biomedical, Bioinformatics and Healthcare""**.
+
+We invite researchers and practitioners to submit their work related to computational intelligence in bioinformatics and computational biology.
+
+Further details regarding the call for papers, special sessions, tutorials, and submission guidelines are available through the following resources:
+
+*   **Call For Paper:** [https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=326](https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=326)
+*   **Download Call for Papers:** [CIBCB 2025_call for papers_new.pdf](https://smile.ee.ncku.edu.tw/cibcb2025/wp-content/uploads/2025/04/CIBCB-2025_call-for-papers_new.pdf)
+*   **Call for Special Sessions & Tutorials:** [https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=409](https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=409)
+*   **Submissions:** [https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=425](https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=425)
+*   **Final Paper Submission:** [https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=538](https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=538)
+*   **Registration:** [https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=109](https://smile.ee.ncku.edu.tw/cibcb2025/?page_id=109)
+
+Detailed information on specific topics, submission deadlines, and contribution formats can be found by following the links above.",các date nằm trong hình
+req-conf-1751537887657-hhs1f,,"International Conference on Complex, Intelligent and Software Intensive Systems",CISIS,http://voyager.ce.fit.ac.jp/conf/cisis/2025/,TRUE,http://voyager.ce.fit.ac.jp/conf/cisis/2025/public/CISIS-2025-CFPs-V5.pdf,,"Conference dates: July 2 - 4, 2025
+Year: 2025
+Location: Fukuoka Institute of Technology (FIT), Fukuoka, Japan
+City-State-Province: Fukuoka
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Submission Deadline: April 7, 2025
+Submission Date.Workshop proposal deadline: February 15, 2025
+Notification Date.Authors Notification: April 10, 2025
+Camera-ready Date.Final Manuscript: April 25, 2025
+Registration Date.Author Registration: April 25, 2025
+Topics: Monitoring and Control of Large Systems or Environments, Managing the Heterogeneity of Knowledge by Means of Ontologies, Service Oriented Architectures, Software Intensive Systems, Knowledge Management of Complex IT-Systems, Pervasive, Ubiquitous, Ad Hoc and Mobile Systems, Cloud, Fog and Edge Computing, Heterogeneous Networking, Socially Inspired Complex Systems, Blockchain Computing and Security
+Publisher: Springer","July 2 - 4, 2025",TRUE,2025,"Fukuoka Institute of Technology (FIT), Fukuoka, Japan",TRUE,Fukuoka,Japan,Asia,Offline,TRUE,"{""Submission Deadline"":""April 7, 2025"",""Workshop proposal deadline"":""February 15, 2025""}",100.0,"{""Authors Notification"":""April 10, 2025""}",100.0,"{""Final Manuscript"":""April 25, 2025""}",,"{""Author Registration"":""April 25, 2025""}",100.0,{},,"Monitoring and Control of Large Systems or Environments, Managing the Heterogeneity of Knowledge by Means of Ontologies, Service Oriented Architectures, Software Intensive Systems, Knowledge Management of Complex IT-Systems, Pervasive, Ubiquitous, Ad Hoc and Mobile Systems, Cloud, Fog and Edge Computing, Heterogeneous Networking, Socially Inspired Complex Systems, Blockchain Computing and Security",Springer,"The 19th International Conference on Complex, Intelligent, and Software Intensive Systems (CISIS-2025) will be held from July 2 to July 4, 2025, at the Fukuoka Institute of Technology (FIT), Fukuoka, Japan. The conference aims to provide a platform for scientific interaction between Software Intensive Systems, Complex Systems, and Intelligent Systems, and will be held in conjunction with IMIS-2025.","# The 19th International Conference on Complex, Intelligent, and Software Intensive Systems (CISIS-2025)
+
+## Conference Details
+
+*   **Dates:** July 2, 2025 – July 4, 2025
+*   **Location:** Fukuoka Institute of Technology (FIT), Fukuoka, Japan
+*   **In conjunction with:** IMIS-2025 ([https://voyager.ce.fit.ac.jp/conf/imis/2025/](https://voyager.ce.fit.ac.jp/conf/imis/2025/))
+*   **Paper Submission Link:** [https://edas.info/N32802](https://edas.info/N32802)
+*   **Call for Papers Download:** [./public/CISIS-2025-CFPs-V5.pdf](./public/CISIS-2025-CFPs-V5.pdf)
+
+## Aim & Scope
+
+The aim of the conference is to deliver a platform of scientific interaction between three interwoven challenging areas of research and development of future ICT-enabled applications: Software Intensive Systems, Complex Systems, and Intelligent Systems. CISIS-2025 aims to provide a forum for in-depth scientific discussions amongst these communities, leading to significant contributions.
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   Monitoring and Control of Large Systems or Environments
+*   Managing the Heterogeneity of Knowledge by Means of Ontologies
+*   Service Oriented Architectures for Complex Applications in Business and Industries
+*   Consideration of Software Intensive Systems as Complex Systems
+*   Knowledge Management of Complex IT-systems
+*   Pervasive, Ubiquitous, Ad Hoc and Mobile Systems
+*   Fog Computing
+*   Heterogeneous Networking
+*   Socially Inspired Complex Systems
+*   Blockchain computing
+*   Complex Systems and Dependability
+*   Usability of Complex Systems
+*   Database and Data Mining Applications
+*   Artificial Intelligence and Bio-Inspired Computing
+*   Multimedia Systems and Virtual Reality
+*   Next Generation Wireless Networks
+*   Semantic Web and Web Services
+*   Security and Trusted Computing
+*   HPC and Cloud Computing Services
+*   Parallel, Distributed and Multicore Computing
+*   Multi-agent Systems and Social Computing
+*   Internet of Everything and Machine Learning
+
+## Important Dates
+
+*   **Submission Deadline:** April 7, 2025 (Hard Deadline)
+*   **Authors Notification:** April 10, 2025
+*   **Author Registration:** April 25, 2025
+*   **Final Manuscript:** April 25, 2025
+*   **Conference Dates:** July 2 - July 4, 2025
+
+## Submission Guidelines
+
+*   Papers must be a maximum of **12 pages** in length, including all figures, tables, and references.
+*   Authors can add up to **2 extra pages** with the appropriate fee payment.
+*   Papers must be prepared using the **Lecture Notes Style of Springer Proceedings**.
+*   Papers must be formatted in **PDF** format.
+*   Submit electronically via the CISIS-2025 Web page.
+
+## Publication
+
+*   All accepted papers will be included in the conference proceedings of **Lecture Notes in Data Engineering and Communication Technologies (LNDECT) series published by Springer**.
+*   The LNDECT series are indexed by EI and SCOPUS.
+*   Authors of accepted papers will be invited to submit extended versions to Special Issues.
+
+## Workshops
+
+*   Workshop proposals should be submitted to the CISIS-2025 International Conference Organizers by **February 15, 2025**.
+*   Proceedings of CISIS-2025 workshops will be published together with CISIS-2025 by Springer.",
+req-conf-1751537887657-hhs1f,,International Conference on Network and Service Management,CNSM,https://www.cnsm-conf.org/2025/,TRUE,https://www.cnsm-conf.org/2025/cfp.html,,"Conference dates: October 27 - 31, 2025
+Year: 2025
+Location: Bologna, Italy
+City-State-Province: Bologna
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.Paper Submission: July 6, 2025
+Notification Date.Notification of Acceptance: August 27, 2025
+Camera-ready Date.Camera Ready Due: September 14, 2025
+Other Date.Rebuttal Period: August 20 - 22, 2025
+Topics: Network and Service Management, Communication Protocols, Middleware, Overlay Networks, Peer-to-Peer Networks, Technologies for Computing Continuum, 5G/6G Networks, Federated and Distributed Learning, Generative AI and Large Language Models, Green and Sustainable Networking, Information Visualization, Software-Defined Networking, Monitoring and Measurements, Multi-Access Edge Computing, Network Function Virtualization, Orchestration, Operations and Business Support Systems, Control and Data Plane Programmability, Distributed Ledger Technology, Digital Twins for Networks and Services, Reinforcement Learning, Secure and Dependable Networking, Multimedia Services, Content Delivery Services, Cloud/Edge Computing Services, Data Services, Internet Connectivity and Internet Access Services, Internet of Things Services, Security Services, Context-Aware Services, Information Technology Services, Service Assurance, Fault Management, Configuration Management, Accounting Management, Performance Management, Security Management, Centralized Management, Hierarchical Management, Distributed Management, Federated Management, Autonomic and Cognitive Management, Policy- and Intent-Based Management, Model-Driven Management, Pro-Active Management, Energy-Aware Management, QoE-Centric Management, Artificial Intelligence and Machine Learning, Mathematical Logic and Automated Reasoning, Optimization Theories, Control Theory, Probability Theory, Stochastic Processes, and Queuing Theory, Evolutionary Algorithms, Economic Theory and Game Theory, Data Mining and (Big) Data Analysis, Computer Simulation Experiments, Testbed Experimentation and Field Trials, Software Engineering Methodologies","October 27 - 31, 2025",TRUE,2025,"Bologna, Italy",TRUE,Bologna,Italy,Europe,Offline,TRUE,"{""Paper Submission"":""July 6, 2025""}",100.0,"{""Notification of Acceptance"":""August 27, 2025""}",100.0,"{""Camera Ready Due"":""September 14, 2025""}",100.0,{},,"{""Rebuttal Period"":""August 20 - 22, 2025""}",100.0,"Network and Service Management, Communication Protocols, Middleware, Overlay Networks, Peer-to-Peer Networks, Technologies for Computing Continuum, 5G/6G Networks, Federated and Distributed Learning, Generative AI and Large Language Models, Green and Sustainable Networking, Information Visualization, Software-Defined Networking, Monitoring and Measurements, Multi-Access Edge Computing, Network Function Virtualization, Orchestration, Operations and Business Support Systems, Control and Data Plane Programmability, Distributed Ledger Technology, Digital Twins for Networks and Services, Reinforcement Learning, Secure and Dependable Networking, Multimedia Services, Content Delivery Services, Cloud/Edge Computing Services, Data Services, Internet Connectivity and Internet Access Services, Internet of Things Services, Security Services, Context-Aware Services, Information Technology Services, Service Assurance, Fault Management, Configuration Management, Accounting Management, Performance Management, Security Management, Centralized Management, Hierarchical Management, Distributed Management, Federated Management, Autonomic and Cognitive Management, Policy- and Intent-Based Management, Model-Driven Management, Pro-Active Management, Energy-Aware Management, QoE-Centric Management, Artificial Intelligence and Machine Learning, Mathematical Logic and Automated Reasoning, Optimization Theories, Control Theory, Probability Theory, Stochastic Processes, and Queuing Theory, Evolutionary Algorithms, Economic Theory and Game Theory, Data Mining and (Big) Data Analysis, Computer Simulation Experiments, Testbed Experimentation and Field Trials, Software Engineering Methodologies",No publisher,"The 21st International Conference on Network and Service Management (CNSM) will be held in Bologna, Italy, from October 27-31, 2025. The conference focuses on AI and Sustainability in the Future of Network and Service Management and covers various aspects of network and service management in pervasive systems, enterprises, and cloud computing environments.","# CNSM 2025: Call for Papers
+
+The 21st International Conference on Network and Service Management (CNSM) will be held in **Bologna, Italy**, from **October 27 to October 31, 2025**. The conference theme is **AI and Sustainability in the Future of Network and Service Management**.
+
+CNSM is a selective single-track conference that covers all aspects of network and service management, pervasive systems, enterprises, and cloud computing environments.
+
+## Important Dates
+
+1.  **Paper Submission:** 6 July 2025 (extended, firm)
+2.  **Rebuttal Period:** 20 - 22 August 2025
+3.  **Notification of Acceptance:** 27 August 2025
+4.  **Camera Ready Due:** 14 September 2025
+5.  **Conference Dates:** 27 - 31 October 2025
+
+## Submission Link
+
+Submissions should be made electronically in PDF format through the EDAS system at: [https://edas.info/N33785](https://edas.info/N33785)
+
+## Topics of Interest
+
+*   **TECHNOLOGIES**
+    *   Communication Protocols
+    *   Middleware
+    *   Overlay Networks
+    *   Peer-to-Peer Networks
+    *   Technologies for Computing Continuum
+    *   5G/6G Networks
+    *   Federated and Distributed Learning
+    *   Generative AI and Large Language Models
+    *   Green and Sustainable Networking
+    *   Information Visualization
+    *   Software-Defined Networking
+    *   Monitoring and Measurements
+    *   Multi-Access Edge Computing
+    *   Network Function Virtualization
+    *   Orchestration
+    *   Operations and Business Support Systems
+    *   Control and Data Plane Programmability
+    *   Distributed Ledger Technology
+    *   Digital Twins for Networks and Services
+    *   Reinforcement Learning
+    *   Secure and Dependable Networking
+*   **SERVICE MANAGEMENT**
+    *   Multimedia Services
+    *   Content Delivery Services
+    *   Cloud/Edge Computing Services
+    *   Data Services
+    *   Internet Connectivity and Internet Access Services
+    *   Internet of Things Services
+    *   Security Services
+    *   Context-Aware Services
+    *   Information Technology Services
+    *   Service Assurance
+*   **FUNCTIONAL AREAS**
+    *   Fault Management
+    *   Configuration Management
+    *   Accounting Management
+    *   Performance Management
+    *   Security Management
+*   **MANAGEMENT PARADIGMS**
+    *   Centralized Management
+    *   Hierarchical Management
+    *   Distributed Management
+    *   Federated Management
+    *   Autonomic and Cognitive Management
+    *   Policy- and Intent-Based Management
+    *   Model-Driven Management
+    *   Pro-Active Management
+    *   Energy-Aware Management
+    *   QoE-Centric Management
+*   **METHODS**
+    *   Artificial Intelligence and Machine Learning
+    *   Mathematical Logic and Automated Reasoning
+    *   Optimization Theories
+    *   Control Theory
+    *   Probability Theory, Stochastic Processes, and Queuing Theory
+    *   Evolutionary Algorithms
+    *   Economic Theory and Game Theory
+    *   Data Mining and (Big) Data Analysis
+    *   Computer Simulation Experiments
+    *   Testbed Experimentation and Field Trials
+    *   Software Engineering Methodologies
+
+## Submission Guidelines
+
+*   Authors are invited to submit original contributions that have not been published or submitted for publication elsewhere.
+*   Papers should be prepared using the **IEEE 2-column conference style**.
+*   **Full papers** are limited to **9 pages** including references.
+*   **Short papers** are limited to **5 pages** including references.
+*   Papers exceeding page limits, multiple submissions, and self-plagiarized papers will be rejected without further review.
+*   All other papers will get a thorough **single-blind review process**, followed by a rebuttal phase.
+
+## Publication
+
+Papers accepted and presented at CNSM 2025 will be submitted for inclusion into **IEEE Xplore**, subject to meeting IEEE Xplore’s scope and quality requirements. Authors of selected papers accepted for publication in the CNSM 2025 proceedings will be invited to submit an extended version of their papers to the **IEEE Transactions on Network and Service Management journal**.
+
+## Committees
+
+### Technical Program Co-Chairs
+
+*   Davide Borsatti, University of Bologna, Italy
+*   Alberto Egon Schaeffer-Filho, Federal University of Rio Grande do Sul, Brazil
+*   Daphné Tuncer, Institut Polytechnique de Paris, France
+
+### General Co-Chairs
+
+*   Walter Cerroni, University of Bologna, Italy
+*   Mauro Tortonesi, University of Ferrara, Italy
+
+## Social Media
+
+You can find us on twitter: [https://twitter.com/cnsmconf](https://twitter.com/cnsmconf)
+
+## Technical Co-Sponsors
+
+[Information not detailed in the provided text]
+
+## Organisers
+
+[Information not detailed in the provided text]",
+req-conf-1751537887657-hhs1f,,International Conference on Computing and Combinatorics,COCOON,https://tcsuestc.com/cocoon2025/index.html,TRUE,https://tcsuestc.com/cocoon2025/pages/cfp.html,,"Conference dates: August 15 - 17, 2025
+Year: 2025
+Location: Chengdu, China
+City-State-Province: Chengdu
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Submission: March 5, 2025
+Notification Date.Notification: May 5, 2025
+Camera-ready Date.Camera-ready: May 20, 2024
+Topics: Algorithms, Theory of Computation, Computational Complexity, Combinatorics, Algorithmic Game Theory, Mechanism Design, Approximation Algorithms, Online Algorithms, Automata, Languages, Logic, and Computability, Combinatorics Related to Algorithms and Complexity, Complexity Theory, Computational Learning Theory, Knowledge Discovery, Cryptography, Reliability and Security, Database Theory, Computational Biology, Bioinformatics, Computational Algebra, Geometry, and Number Theory, Exact and Parameterized Algorithms, Graph Drawing and Information Visualization, Graph Theory, Communication Networks, and Optimization, Parallel and Distributed Computing
+Publisher: Springer-Verlag","August 15 - 17, 2025",TRUE,2025,"Chengdu, China",TRUE,Chengdu,China,Asia,Offline,TRUE,"{""Submission"":""March 5, 2025""}",100.0,"{""Notification"":""May 5, 2025""}",100.0,"{""Camera-ready"":""May 20, 2024""}",100.0,{},,{},,"Algorithms, Theory of Computation, Computational Complexity, Combinatorics, Algorithmic Game Theory, Mechanism Design, Approximation Algorithms, Online Algorithms, Automata, Languages, Logic, and Computability, Combinatorics Related to Algorithms and Complexity, Complexity Theory, Computational Learning Theory, Knowledge Discovery, Cryptography, Reliability and Security, Database Theory, Computational Biology, Bioinformatics, Computational Algebra, Geometry, and Number Theory, Exact and Parameterized Algorithms, Graph Drawing and Information Visualization, Graph Theory, Communication Networks, and Optimization, Parallel and Distributed Computing",Springer-Verlag,"The 31st International Computing and Combinatorics Conference (COCOON 2025) will be held in Chengdu, China, from August 15 to August 17, 2025. The conference solicits original research papers in algorithms, theory of computation, computational complexity, and combinatorics related to computing, including experimental and applied research with practical relevance.","# Call for Papers
+
+The 31st International Computing and Combinatorics Conference (COCOON 2025) will be held in **Chengdu, China** during **August 15-17, 2025**.
+
+Original research papers in the areas of algorithms, theory of computation, computational complexity, and combinatorics related to computing are solicited. In addition to theoretical results, submissions that report on experimental and applied research of general algorithmic interest are also welcomed. Special consideration will be given to research motivated by real-world problems. Experimental and applied papers are expected to convincingly demonstrate the usefulness and efficiency of the algorithms discussed in a practical setting.
+
+## Important Dates
+
+*   **Submission:** March 5, 2025, 23:59 AoE
+*   **Notification:** May 5, 2025 AoE
+*   **Camera-ready:** May 20, 2024 AoE
+*   **Conference:** August 15 – August 17, 2025
+
+*(AoE: Anywhere on Earth time, UTC -12 hours)*
+
+## Topics of Interest
+
+The topics of interest include (but are not limited to):
+
+*   Algorithms and Data Structures
+*   Algorithmic Game Theory and Mechanism Design
+*   Approximation Algorithms and Online Algorithms
+*   Automata, Languages, Logic, and Computability
+*   Combinatorics Related to Algorithms and Complexity
+*   Complexity Theory
+*   Computational Learning Theory and Knowledge Discovery
+*   Cryptography, Reliability and Security, and Database Theory
+*   Computational Biology and Bioinformatics
+*   Computational Algebra, Geometry, and Number Theory
+*   Exact and Parameterized Algorithms
+*   Graph Drawing and Information Visualization
+*   Graph Theory, Communication Networks, and Optimization
+*   Parallel and Distributed Computing
+
+## Paper Submission
+
+Submissions should contain a scholarly exposition of ideas, techniques, and results, including motivation and a clear comparison with related work. The length of the submission should not exceed **12 pages in LNCS style** (including references, but excluding the optional appendix).
+
+Springer’s proceedings LaTeX templates are available [here](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-templates).
+
+Appendices should be placed at the end of the main body (after references, in the same file). For code and data, authors can provide anonymous download links or refer to an anonymized GitHub repository. The Program Committee (PC) will review the content in the appendices and links at their discretion.
+
+The submitted papers will be reviewed in a **double-blind peer review manner**. Please delete the author information on your manuscript.
+
+All submissions must be submitted electronically through Easychair via this link: [https://easychair.org/my/conference?conf=cocoon2025](https://easychair.org/my/conference?conf=cocoon2025)
+
+## Publication
+
+The proceedings of the conference will be published by **Springer-Verlag in the Lecture Notes in Computer Science (LNCS) series**, and will be available for distribution at the conference. Selected high-quality papers will be invited for submission to some journals. Previous COCOON proceedings can be found [here](https://link.springer.com/conference/cocoon).
+
+## Awards
+
+Awards will be given to the **Best Paper** and the **Best Student Paper**. To be eligible for the best student paper award, all authors must be full-time students at the time of submission. Please indicate in the final line of the abstract that the paper is being considered for the best student paper award. The program committee reserves the right to withhold these awards or to split them between multiple recipients.",
+req-conf-1751537887657-hhs1f,,Computability in Europe: Logic and Theory of Algorithms,CiE,https://sites.google.com/view/cie2025-computabilityineurope/home,TRUE,,https://sites.google.com/view/cie2025-computabilityineurope/important-dates,"Conference dates: July 14 - 18, 2025
+Year: 2025
+Location: Lisbon
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.Abstract: January 26, 2025
+Submission Date.Full paper: February 2, 2025
+Submission Date.Deadline for informal presentations submission: April 22, 2025
+Notification Date.Notification of acceptance: April 6, 2025
+Camera-ready Date.Final versions due: April 13, 2025
+Registration Date.Early registration: before May 6, 2025
+Topics: Computability, Theoretical Computer Science, Logic, Quantum Computability, Cryptography, Information Theory, Computational Biology, Computational Linguistics, History and Philosophy of Computability","July 14 - 18, 2025",TRUE,2025,Lisbon,TRUE,Lisbon,Portugal,Europe,Offline,TRUE,"{""Abstract"":""January 26, 2025"",""Full paper"":""February 2, 2025"",""Deadline for informal presentations submission"":""April 22, 2025""}",100.0,"{""Notification of acceptance"":""April 6, 2025""}",100.0,"{""Final versions due"":""April 13, 2025""}",100.0,"{""Early registration"":""before May 6, 2025""}",100.0,{},,"Computability, Theoretical Computer Science, Logic, Quantum Computability, Cryptography, Information Theory, Computational Biology, Computational Linguistics, History and Philosophy of Computability",No publisher,"Computability in Europe (CiE) 2025 is an interdisciplinary conference series by the Association Computability in Europe (ACiE), focusing on research related to computability. The event will take place in Lisbon, Portugal, from July 14 to July 18, 2025, bringing together research from various fields including mathematics, theoretical computer science, logic, quantum computability, and computational biology.","# Computability in Europe 2025 (CiE 2025): Call for Papers
+
+Computability in Europe (CiE) is an interdisciplinary series of international conferences organized by the Association Computability in Europe (ACiE). CiE brings together both basic and application-oriented research in computability-related areas of science.
+
+The **CiE 2025** conference will be held in **Lisbon, Portugal, from July 14 to July 18, 2025**.
+
+## Topics of Interest
+
+The conference welcomes research contributions on computability-related fields of science, including:
+
+*   Mathematics
+*   Theoretical Computer Science
+*   Logic
+*   Quantum Computability
+*   Cryptography
+*   Information Theory
+*   Computational Biology
+*   Computational Linguistics
+*   History and Philosophy of Computability
+*   And many other related subjects.
+
+## Deadlines and Important Dates
+
+*   **Abstract Submission:** January 26, 2025 (AOE)
+*   **Full Paper Submission:** February 2, 2025 (AOE)
+*   **Notification of Acceptance:** April 6, 2025
+*   **Final Versions Due:** April 13, 2025
+*   **Informal Presentations Submission:** April 22, 2025
+*   **Early Registration:** Before May 6, 2025
+*   **Conference Dates:** July 14-18, 2025
+
+## Participant Support
+
+*   **Women in Computability:** As part of the program, support is offered for junior women researchers to join CiE 2025. See the details [here](https://sites.google.com/view/cie2025-computabilityineurope/registration).
+*   **Student Travel Support:** The Association for Symbolic Logic will support the travels of some students. More information can be found [here](/view/cie2025-computabilityineurope/registration).
+
+## Submission Information
+
+Information regarding the submission process can be found on the [conference home page](/view/cie2025-computabilityineurope/home).",Early registration: thừa chữ before
+req-conf-1751537887657-hhs1f,,Conference on Games,COG,https://cog2025.inesc-id.pt/,TRUE,https://cog2025.inesc-id.pt/call-for-papers/,,"Conference dates: August 26 - 29, 2025
+Year: 2025
+Location: Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(Call for Auxiliary Papers) Auxiliary Papers: May 30, 2025
+Submission Date.(Call for Papers) Full papers: March 15, 2025
+Submission Date.(Call for Competitions) Competitions: January 19, 2025
+Submission Date.(Call for Tutorials) Tutorials: January 19, 2025
+Submission Date.(Call for Workshops) Workshops: January 19, 2025
+Submission Date.(Doctoral Consortium) Doctoral Consortium: May 30, 2025
+Notification Date.(Call for Papers) Full papers acceptance notification: May 16, 2025
+Camera-ready Date.(Full papers) Camera ready: June 13, 2025
+Topics: Video Games, Board Games, Computational Creativity, Game Design, Technology, Education, Social Sciences, Artificial Intelligence, Computational Intelligence
+Publisher: IEEE","August 26 - 29, 2025",TRUE,2025,"Lisbon, Portugal",TRUE,Lisbon,Portugal,Europe,Offline,TRUE,"{""(Call for Auxiliary Papers) Auxiliary Papers"":""May 30, 2025"",""(Call for Papers) Full papers"":""March 15, 2025"",""(Call for Competitions) Competitions"":""January 19, 2025"",""(Call for Tutorials) Tutorials"":""January 19, 2025"",""(Call for Workshops) Workshops"":""January 19, 2025"",""(Doctoral Consortium) Doctoral Consortium"":""May 30, 2025""}",,"{""(Call for Papers) Full papers acceptance notification"":""May 16, 2025""}",100.0,"{""(Full papers) Camera ready"":""June 13, 2025""}",100.0,{},,{},,"Video Games, Board Games, Computational Creativity, Game Design, Technology, Education, Social Sciences, Artificial Intelligence, Computational Intelligence",IEEE,"The annual IEEE Conference on Games (IEEE CoG 2025) is a premier venue for technical, scientific, and engineering work on video games, board games, and other types of games. It will take place at Técnico Innovation Center, Instituto Superior Técnico in Lisbon, Portugal, from August 26th to 29th, 2025.","# IEEE CoG 2025: Call for Papers
+
+The annual IEEE Conference on Games (IEEE CoG 2025) is a leading scientific research venue for game researchers and practitioners. Games offer a fantastic domain for computational creativity, game design, technology, education, social sciences, and artificial and computational intelligence. IEEE CoG 2025 will be held at the Técnico Innovation Center, Instituto Superior Técnico in Lisbon, Portugal, from **August 26th to 29th, 2025**.
+
+## Submission Types
+
+We invite the submission of:
+
+*   **Full technical papers:** Should provide a technical or empirical contribution to scientific, technical, or engineering aspects of games. Limit: 8 pages (including references and appendices).
+*   **Full vision papers:** Should describe a vision for the future of the Games field or some part of it, be based on extensive research, and include a comprehensive bibliography. Please note that literature reviews and opinion papers with speculations not grounded in research are immediately rejected. Limit: 8 pages (including references and appendices).
+
+## Topics of Interest
+
+We invite contributions related to all aspects of games and game development, including, but not limited to:
+
+*   Accessibility and inclusivity in games (e.g., computer games, board games, LARPs)
+*   AI for game development (automated playtesting, adaptation/personalization in games, etc.)
+*   Esports and live-streaming
+*   Extended reality (virtual reality, mixed reality, and augmented reality)
+*   Game AI
+*   Game analytics, game data science, and data visualization
+*   Games as test-beds for algorithms
+*   Game design (frameworks, game mechanics, etc.)
+*   Game editors and authoring tools
+*   Game technology (game engines, graphics, audio, animation, physics, controls, etc.)
+*   Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.)
+*   Generative AI for games
+*   Procedural content generation
+*   Serious/applied games (for education, health, sustainability, etc.)
+*   User interfaces in games
+
+## Tracks
+
+Authors should select the track that best matches their research. Descriptions for each track are listed below:
+
+*   **1) AI and Game-playing:** Suitable for computational and artificial intelligence applications in digital and non-digital games, except for procedural content generation. Topics include general game-playing AI, mixed-initiative authoring tools, believable agents, and AI-assisted game design and testing.
+    *   Track chairs: Diego-Perez Liebana (diego.perez@qmul.ac.uk) and Kyung-Joong Kim (kjkim@gist.ac.kr)
+*   **2) Procedural Content Generation (PCG):** Focuses on advancing research on developing and evaluating algorithms that automatically create game design and content such as levels, maps, characters, stories, textures, and music. Theoretical papers are welcome.
+    *   Track chairs: Antonios Liapis (an.liapis@gmail.com) and Ahmed Khalifa (ahmed.khalifa@um.edu.mt)
+*   **3) Designing Games, Serious Games and Playful Experience:** Welcomes papers that make a designerly contribution to games, playful interaction, and other playable media. A broad range of submissions advancing practical or theoretical understanding of designing games, playful interactions, and player experience in various contexts are welcome.
+    *   Track chairs: Casper Harteveld (c.harteveld@northeastern.edu)
+*   **4) Game Technology:** Invites papers that improve the technical aspects of game design and development besides AI and robotics. Typical contributions include game engines, benchmarks, computer graphics techniques, animation, networking, and novel interaction technology (e.g., XR and alternative control). Papers about game competitions are also a good fit.
+    *   Track chairs: Christopher Salge (C.Salge@herts.ac.uk) and Johannes Pfau (j.pfau@uu.nl)
+*   **5) Game HCI, Player Experience, Game Analytics, e-sports:** Suitable for submissions that seek to understand people in the context of play. Example topics include player experience evaluation (player psychology, games user research, and game analytics), the study of player and developer communities, and understanding humans in the context of play.
+    *   Track chairs: Alessandro Canossa (acan@kglakademi.dk) and Erica Kleinman (e.kleinman@northeastern.edu)
+*   **6) Robots in Games:** (Implicitly covered under other tracks, or to be confirmed based on specific content not fully detailed here)
+
+*Note: CoG is not a conference about game theory unless it is applied to playable games (video or board games).* 
+
+## Important Dates
+
+All times **Anytime on Earth (AoE)**:
+
+*   **Call for Full Papers:** March 15, 2025 (Closed)
+*   **Full papers acceptance notification:** May 16, 2025 (Closed)
+*   **Full papers camera ready:** June 13, 2025
+*   **Call for Auxiliary Papers:** May 30, 2025 (Open)
+*   **Call for Doctoral Consortium:** May 30, 2025 (Open)
+*   Call for Competitions: January 19, 2025 (Closed)
+*   Call for Tutorials: January 19, 2025 (Closed)
+*   Call for Workshops: January 19, 2025 (Closed)
+
+## Submission Instructions
+
+*   Papers and Auxiliary papers must be submitted through the Easychair conference submission system: [https://easychair.org/conferences/?conf=cog2025](https://easychair.org/conferences/?conf=cog2025)
+*   All paper submissions should follow the recommended IEEE conference author guidelines. MS Word and LaTeX templates can be found at: [https://www.ieee.org/conferences_events/conferences/publishing/templates.html](https://www.ieee.org/conferences_events/conferences/publishing/templates.html)
+*   CoG will use a **double-blind review process**. Authors must omit their names and affiliations from their submissions and avoid obvious identifying statements. Submissions not abiding by anonymity requirements will be desk rejected.
+
+## Camera-Ready Submission
+
+Here are the steps to generate and submit your camera-ready paper:
+
+1.  Create an account at IEEE PDF eXpress: [https://ieee-pdf-express.org/account/Login](https://ieee-pdf-express.org/account/Login) using the Conference ID: **64752X**.
+2.  Upload your manuscript and generate your IEEE Xplore-Compatible PDF. Ensure it complies with IEEE guidelines: [https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress](https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress).
+3.  Log in to EasyChair using your account and go to your proceedings author page.
+4.  Upload your final IEEE Xplore-Compatible PDF.
+5.  Complete the IEEE Copyright Agreement, which will be provided via email.
+
+## Contact
+
+*   Email: [cog2025@inesc-id.pt](mailto:cog2025@inesc-id.pt)
+
+## Code of Conduct
+
+IEEE CoG 2025 adheres to IEEE’s nondiscrimination policy and Code of Ethics, committing to a harassment-free, accessible, and pleasant conference experience for all participants. Participants can contact any member of the Organization in confidence or use IEEE’s Ethics Reporting Line.",(Doctoral Consortium) Doctoral Consortium: ko có trên web
+req-conf-1751537887657-hhs1f,,"International Conference on Control, Decision and Information Technologies",CoDIT,https://codit2025.org/,TRUE,https://codit2025.org/index.php/call-for-papers,https://codit2025.org/index.php/key-dates,"Conference dates: July 15-18, 2025
+Year: 2025
+Location: Split, Croatia
+City-State-Province: Split
+Country: Croatia
+Continent: Europe
+Type: Hybrid
+Submission Date.Papers submission deadline: April 30, 2025
+Submission Date.Special session Proposal: January 17, 2025
+Notification Date.Acceptance notification: April 27, 2025
+Camera-ready Date.Final version due: May 27, 2025
+Registration Date.Registration deadline: May 27, 2025
+Topics: Control, Automation, Robotics, Optimization, Decision, Cybernetics, Computer Science, Information Technologies
+Publisher: IEEE Xplore","July 15-18, 2025",TRUE,2025,"Split, Croatia",TRUE,Split,Croatia,Europe,Hybrid,TRUE,"{""Papers submission deadline"":""April 30, 2025"",""Special session Proposal"":""January 17, 2025""}",100.0,"{""Acceptance notification"":""April 27, 2025""}",100.0,"{""Final version due"":""May 27, 2025""}",100.0,"{""Registration deadline"":""May 27, 2025""}",100.0,{},,"Control, Automation, Robotics, Optimization, Decision, Cybernetics, Computer Science, Information Technologies",IEEE Xplore,"The 11th International Conference on Control, Decision and Information Technologies (CoDIT 2025) will be held in Split, Croatia, from July 15-18, 2025. This hybrid conference serves as a forum for technical exchange among scientists interested in Control, Automation, Robotics, Optimization, Decision, Cybernetics, Computer Science, and Information Technologies, offering a platform for both academic and industrial communities. CoDIT 2025 is technically co-sponsored by IEEE Control Systems Society, IEEE Systems, Man, and Cybernetics Society, IEEE Robotics and Automation Society, and the International Federation of Automatic Control (IFAC).","# Call for Papers - CoDIT 2025
+
+The 11th International Conference on Control, Decision and Information Technologies (CoDIT 2025) will be held in a **hybrid format**, allowing both virtual and in-person participation, from **July 15-18, 2025**, at **Split, Croatia**.
+
+## Welcome
+
+CoDIT 2025 serves as a forum for technical exchange among scientists interested in Control, Automation, Robotics, Optimization, Decision, Cybernetics, Computer Science, and Information Technologies. It offers an exceptional platform for both academic and industrial communities to tackle new challenges, share solutions, and explore future research directions.
+
+## Call for Contributed Papers
+
+All papers must be written in English and should describe original work.
+
+All registered and presented papers (Regular and Short-WiP) will be submitted for inclusion into **IEEE Xplore** as well as other Abstracting and Indexing (A&I) databases.
+
+### Regular Papers
+
+*   The length of the paper is limited to a maximum of **6 pages** (in the standard IEEE conference double-column format).
+*   Registered and presented regular papers will be submitted for inclusion into IEEE Xplore as well as other Abstracting and Indexing (A&I) databases.
+*   Papers will be refereed through a **blind process** for technical merit and content.
+*   To be eligible for publication in the Conference proceedings, an accepted paper must be presented at the Conference by one of the authors.
+*   You can send your work as a regular paper or send it to one of the accepted special sessions.
+*   Papers should be submitted before **April 30, 2025**.
+
+### Short Papers (Work-in-Progress / WiP)
+
+*   The length of WiP paper is limited to a maximum of **4 pages**.
+*   At most **8 references** can be included.
+*   WiP (short papers) contributors are expected to give a **short presentation** of their work (10 mn).
+
+## Templates for Authors
+
+The submitted papers should follow the usual IEEE paper format for conferences (two-columns, 10 point, Times New Roman).
+
+Templates are available for:
+
+*   [LaTeX](https://www.overleaf.com/latex/learn/creating-a-latex-document) (Example, actual link would be provided by conference)
+*   [MS Word](https://www.overleaf.com/latex/learn/creating-a-latex-document) (Example, actual link would be provided by conference)
+
+## Call for Special Sessions
+
+*   The goal of special sessions (5-6 papers) and special tracks (at least two sessions) is to provide focused discussions on new topics or innovative applications.
+*   Each prospective session/track organizer must submit a proposal, including the title of the session, a short description, and the organizer's name.
+*   Proposals should be submitted before **January 17, 2025**.
+*   To submit your proposal, please fill in the form inside the following MS Word file, convert it as PDF, and upload the generated PDF to the PaperCept Conference Management System at: [https://controls.papercept.net/conferences/scripts/start.pl](https://controls.papercept.net/conferences/scripts/start.pl) (click on the CoDIT 2024 link “Submit a special session to CoDIT 2025” and follow the steps).
+
+## Key Dates
+
+*   **Submission site opening:** November 07, 2024
+*   **Special session Proposal:** January 17, 2025
+*   **Papers submission deadline:** April 30, 2025
+*   **Acceptance notification:** April 27, 2025 (for papers submitted by April 7) / May 10, 2025 (for papers submitted after April 7).
+*   **Final version due:** May 27, 2025
+*   **Registration deadline:** May 27, 2025
+
+## Publications & Special Issues
+
+Along with the publication of the proceedings in IEEE Xplore, the best-presented papers at CoDIT 2025 will have the opportunity to be extended and published in prestigious special issues:
+
+*   International Journal of Dynamics and Control (Impact Factor: 2.2)
+*   Transactions of the Institute of Measurement and Control (Impact Factor: 1.7)
+*   Computational Optimization and Applications (Impact Factor: 1.6)
+
+## Registration
+
+Registration for CoDIT 2025 should be made online by CREDIT CARD at: [Registration Link](https://controls-registration.paperhost.net/codit25/)","có tận 2 mốc Acceptance notification:
+
+Acceptance notification: April 27, 2025 (for papers submitted by April 7)
+
+                                        May 10, 2025 (for papers submitted after April 7)."
+req-conf-1751537887657-hhs1f,,IEEE International Conference on Cloud Computing Technology and Science,CloudCom,http://www.cloudcom2025.org/,TRUE,http://www.cloudcom2025.org/cfp,,"Conference dates: November 14-16, 2025
+Year: 2025
+Location: Shenzhen, China
+City-State-Province: Shenzhen
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Workshop Proposal Deadline: June 1, 2025
+Submission Date.Paper Submission Deadline: August 15, 2025
+Notification Date.Special Session/Workshop Proposal Notification: July 1, 2025
+Notification Date.Paper Acceptance Notification: October 4, 2025
+Camera-ready Date.Camera-Ready Deadline: October 30, 2025
+Registration Date.Author Registration Deadline: October 30, 2025
+Topics: Cloud Computing, Edge Computing, Virtualization, Security, Privacy, Big Data, Systems Architecture, Service-Oriented Architecture, High-Performance Computing, Cloud-IoT integration, Distributed cloud computing, IoT architecture and platforms, IoT data analytics, Edge computing architecture, fog computing, mobile cloud computing, cloud-edge collaboration, 5G and 6G networks, AI for Cloud Infrastructure Management, AI-enhanced Cloud Services, AI for Cloud Security, AI for Data Management and Storage, Cloud-native AI Model Deployment, Large model deployment in distributed clouds, Distributed cloud computing for large models, Generative AI for next-generation networks, Scalability and efficiency of large models in distributed cloud computing, System architectures for large model reasoning and training, Dynamic scalability model for cloud services, Autonomous computing for E-Health, Biomedical and biosensor computing for E-Health, Real-time health monitoring and remote diagnosis, Data integration and privacy protection for E-Health, Intelligent medical equipment and robots, Personalized medical care and health management
+Publisher: IEEE","November 14-16, 2025",TRUE,2025,"Shenzhen, China",TRUE,Shenzhen,China,Asia,Offline,TRUE,"{""Workshop Proposal Deadline"":""June 1, 2025"",""Paper Submission Deadline"":""August 15, 2025""}",100.0,"{""Special Session/Workshop Proposal Notification"":""July 1, 2025"",""Paper Acceptance Notification"":""October 4, 2025""}",100.0,"{""Camera-Ready Deadline"":""October 30, 2025""}",100.0,"{""Author Registration Deadline"":""October 30, 2025""}",100.0,{},,"Cloud Computing, Edge Computing, Virtualization, Security, Privacy, Big Data, Systems Architecture, Service-Oriented Architecture, High-Performance Computing, Cloud-IoT integration, Distributed cloud computing, IoT architecture and platforms, IoT data analytics, Edge computing architecture, fog computing, mobile cloud computing, cloud-edge collaboration, 5G and 6G networks, AI for Cloud Infrastructure Management, AI-enhanced Cloud Services, AI for Cloud Security, AI for Data Management and Storage, Cloud-native AI Model Deployment, Large model deployment in distributed clouds, Distributed cloud computing for large models, Generative AI for next-generation networks, Scalability and efficiency of large models in distributed cloud computing, System architectures for large model reasoning and training, Dynamic scalability model for cloud services, Autonomous computing for E-Health, Biomedical and biosensor computing for E-Health, Real-time health monitoring and remote diagnosis, Data integration and privacy protection for E-Health, Intelligent medical equipment and robots, Personalized medical care and health management",IEEE,"The 16th IEEE International Conference on Cloud Computing Technology and Science (CloudCom 2025) will be held in Shenzhen, China, from November 14-16, 2025. This premier event brings together researchers, practitioners, engineers, and students to discuss advancements in cloud computing, edge computing, virtualization, security, big data, and more, with a focus on impactful cloud computing platforms.","# CloudCom 2025: Call for Papers
+
+CloudCom is a premier international conference on Cloud Computing, bringing together researchers, practitioners, engineers, and students from both academia and industry. It has a long tradition of emphasizing how to build cloud computing platforms with impact. The conference is co-sponsored by the Institute of Electrical and Electronics Engineers (IEEE) and the Cloud Computing Association.
+
+The 16th edition of CloudCom will be held in **Shenzhen, China**, from **November 14 to 16, 2025**. It attracts world-class researchers to explore new challenges, present leading-edge innovations, and identify emerging technologies in cloud computing, edge computing, virtualization, security and privacy, big data, systems architecture, service-oriented architecture, and high-performance computing.
+
+## Submission Details
+
+Original and unpublished work must be submitted through the online submission system at: [https://easychair.org/conferences/?conf=cloudcom2025](https://easychair.org/conferences/?conf=cloudcom2025)
+
+*   **Page Limit:** Submissions should not exceed **8 pages**, including tables, figures, and references.
+*   **Format:** Papers must be in IEEE CS format. Template files for LATEX or WORD can be downloaded from the IEEE site [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html). Submissions must be in PDF format only with savable text and embedded fonts.
+*   **Review Process:** The review process will be **doubly blind**. Submissions should not include any information that may identify the authors.
+*   **Presentation Requirement:** For each accepted submission, at least one of the co-authors must have a full conference registration and present the work in person.
+
+## Special Sections
+
+CloudCom 2025 invites contributions for the following special sections:
+
+*   Semantic Communication
+*   Federated Learning
+*   Secure Distributed ML
+*   AIoT for Smart Cities
+*   Sustainable Blockchain
+
+## Conference Tracks
+
+Original technical submissions of regular research papers, workshop proposals, and special session proposals on the following tracks are invited:
+
+### Track 1: Architecture, Storage, and Virtualization
+*   Cloud architecture, virtualization technologies, containers and microservices, cloud storage systems, scalability and performance, etc.
+
+### Track 2: Cloud Services and Applications
+*   Software as a Service (SaaS), Platform as a Service (PaaS), Infrastructure as a Service (IaaS), serverless computing, etc.
+
+### Track 3: Security, Privacy, and Trust
+*   Cloud security and privacy, data protection, identity and access management, security compliance, risk assessment, etc.
+
+### Track 4: IoT and Distributed Cloud
+*   Cloud-IoT integration, distributed cloud computing, IoT architecture and platforms, IoT data analytics, etc.
+
+### Track 5: Cloud and Edge Computing with Mobile Communications
+*   Edge computing architecture, fog computing, mobile cloud computing, cloud-edge collaboration, 5G and 6G networks, etc.
+
+### Track 6: AI for Cloud Computing
+*   AI for Cloud Infrastructure Management, AI-enhanced Cloud Services, AI for Cloud Security, AI for Data Management and Storage, Cloud-native AI Model Deployment
+
+### Track 7: Integrating Large Models and Distributed Cloud Computing in Next-Generation Networks
+*   Large model deployment in distributed clouds, Distributed cloud computing for large models, Generative AI for next-generation networks, Scalability and efficiency of large models in distributed cloud computing, System architectures for large model reasoning and training, Dynamic scalability model for cloud services
+
+### Track 8: Cloud/Edge Computing for E-Health
+*   Autonomous computing for E-Health, Biomedical and biosensor computing for E-Health, Real-time health monitoring and remote diagnosis, Data integration and privacy protection for E-Health, Intelligent medical equipment and robots, Personalized medical care and health management
+
+## Publications
+
+Accepted papers will be published in the **IEEE CloudCom 2025 Conference Proceedings** and submitted to **IEEE Xplore** and **EI Compendex** for indexing.
+
+In addition, selected high-quality papers will be recommended for fast-track publication in the following journals after acceptable extensions:
+
+*   IEEE Transactions on Cloud Computing
+*   The Journal of Cloud Computing by Springer
+
+## Important Dates
+
+*   **Workshop Proposal Deadline:** June 1, 2025
+*   **Special Session/Workshop Proposal Notification:** July 1, 2025
+*   **Paper Submission Deadline:** August 15, 2025
+*   **Paper Acceptance Notification:** October 4, 2025
+*   **Author Notification:** October 4, 2025
+*   **Camera-Ready & Author Registration Deadline:** October 30, 2025
+*   **Conference Dates:** November 14-16, 2025
+
+*All deadlines are at 23:59 Anywhere on Earth (AOE).* 
+
+## Contact Us
+
+*   **Email:** [cloudcom2025@163.com](mailto:cloudcom2025@163.com)
+*   **Location:** Shenzhen, China",
+req-conf-1751537887657-hhs1f,,Conference on Information Sciences and Systems,CISS,https://ciss.jhu.edu/,TRUE,https://ciss.jhu.edu/?page_id=3541,,"Conference dates: March 24 - 26, 2025
+Year: 2025
+Location: Johns Hopkins University
+City-State-Province: 
+Country: 
+Continent: 
+Type: 
+Topics: Information Theory, Communications, and Coding, Energy Systems, Signal and Image Processing, Systems and Control, Deep Learning, Networked Systems, Optimization, Quantum Systems, Machine Learning, Security and Privacy, Statistical Inference, Big Data Analytics, Biological Systems, Computer Vision, Cyber Physical Systems, Reinforcement Learning","March 24 - 26, 2025",TRUE,2025,Johns Hopkins University,TRUE,No city/state/province,No country,No continent,Offline,TRUE,{},,{},,{},,{},,{},,"Information Theory, Communications, and Coding, Energy Systems, Signal and Image Processing, Systems and Control, Deep Learning, Networked Systems, Optimization, Quantum Systems, Machine Learning, Security and Privacy, Statistical Inference, Big Data Analytics, Biological Systems, Computer Vision, Cyber Physical Systems, Reinforcement Learning",No publisher,"The Conference on Information Sciences and Systems (CISS) is a forum for scientists, engineers, and academics to present their latest research results and developments across various fields including Information Theory, Communications, Coding, Energy Systems, Signal Processing, Control, Deep Learning, and more. The conference is hosted by Johns Hopkins University and technically co-sponsored by the IEEE Information Theory Society. CISS 2027 will take place from March 24th to March 26th.","# Call for Papers: Conference on Information Sciences and Systems (CISS)
+
+The Conference on Information Sciences and Systems (CISS) is a premier forum for scientists, engineers, and academics to present their latest research results and developments.
+
+## About CISS
+
+Hosted by the Department of Electrical and Computer Engineering, Johns Hopkins University, and with technical co-sponsorship by the IEEE Information Theory Society, CISS provides a platform for exchanging ideas and findings in multiple areas of Information Sciences and Systems.
+
+## Topics of Interest
+
+Authors are invited to present unpublished papers describing theoretical advances, applications, and ideas in the following fields:
+
+*   Information Theory, Communications, and Coding
+*   Energy Systems
+*   Signal and Image Processing
+*   Systems and Control
+*   Deep Learning
+*   Networked Systems
+*   Optimization
+*   Quantum Systems
+*   Machine Learning
+*   Security and Privacy
+*   Statistical Inference
+*   Big Data Analytics
+*   Biological Systems
+*   Computer Vision
+*   Cyber Physical Systems
+*   Reinforcement Learning
+
+## Important Dates
+
+*   **Conference Dates:** March 24th until March 26th, 2027
+
+## Submission Information
+
+*   **Paper Submission:** [https://ciss.jhu.edu/?page_id=3541](https://ciss.jhu.edu/?page_id=3541)
+*   **Author Information:** [https://ciss.jhu.edu/?page_id=3563](https://ciss.jhu.edu/?page_id=3563)
+*   **Final Paper Submission:** [https://ciss.jhu.edu/?page_id=6180](https://ciss.jhu.edu/?page_id=6180)
+
+## Registration Information
+
+*   **Conference Registration:** [https://ciss.jhu.edu/?page_id=67](https://ciss.jhu.edu/?page_id=67)
+*   **Registration Policy:** [https://ciss.jhu.edu/registration-policy/](https://ciss.jhu.edu/registration-policy/)
+
+## Technical Program
+
+*   **Plenary Speakers:** [https://ciss.jhu.edu/programme/plenary-speakers/](https://ciss.jhu.edu/programme/plenary-speakers/)
+*   **Invited Session Chairs:** [https://ciss.jhu.edu/?page_id=5973](https://ciss.jhu.edu/?page_id=5973)
+*   **Program-at-a-glance:** [https://ciss.jhu.edu/?page_id=376](https://ciss.jhu.edu/?page_id=376)
+*   **Detailed program and papers March 19th:** [https://ciss.jhu.edu/?page_id=5054](https://ciss.jhu.edu/?page_id=5054)
+*   **Detailed program and papers March 20th:** [https://ciss.jhu.edu/?page_id=6323](https://ciss.jhu.edu/?page_id=6323)
+*   **Detailed program and papers March 21st:** [https://ciss.jhu.edu/?page_id=6327](https://ciss.jhu.edu/?page_id=6327)
+
+## Logistics
+
+*   **Hotel Information:** [https://ciss.jhu.edu/?page_id=127](https://ciss.jhu.edu/?page_id=127)
+*   **Travel/Local Information:** [https://ciss.jhu.edu/travel-local-information/](https://ciss.jhu.edu/travel-local-information/)
+*   **Venue:** [https://ciss.jhu.edu/venue/](https://ciss.jhu.edu/venue/)
+*   **Visa letters:** [https://ciss.jhu.edu/visa-letter-ciss2023/](https://ciss.jhu.edu/visa-letter-ciss2023/)
+
+## Contact
+
+*   **Organizing Committee:** [https://ciss.jhu.edu/](https://ciss.jhu.edu/) (Specific contact details not provided in the snippet)
+
+## Other Information
+
+*   **What to Expect:** [https://ciss.jhu.edu/expect/](https://ciss.jhu.edu/expect/)
+*   **Conference Code of Ethics:** [https://ciss.jhu.edu/?page_id=3818](https://ciss.jhu.edu/?page_id=3818)
+*   **CISS 2024:** [https://ee-ciss.princeton.edu/](https://ee-ciss.princeton.edu/)
+
+Copyright © 2025 Johns Hopkins University",

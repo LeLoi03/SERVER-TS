@@ -1,6 +1,5 @@
 // src/utils/crawl/searchFilter.ts
 import { GoogleSearchResult } from "../../types/crawl/crawl.types"; // Using GoogleSearchResult as the type for search results.
-import logToFile from '../logger'; // Assuming logger is in ../logger or similar
 import { getErrorMessageAndStack } from '../errorUtils'; // Import the error utility
 
 /**
@@ -23,7 +22,7 @@ export function filterSearchResults(
 
     // 1. Validate and cast 'results' input
     if (!Array.isArray(results)) {
-        logToFile(`[ERROR] ${logContext} Input 'results' is not an array. Received type: ${typeof results}. Returning empty array.`);
+        
         return [];
     }
     // Cast 'results' to GoogleSearchResult[] after initial validation.
@@ -33,13 +32,13 @@ export function filterSearchResults(
     // 2. Validate and process 'unwantedDomains'
     let validUnwantedDomains: string[];
     if (!Array.isArray(unwantedDomains)) {
-        logToFile(`[WARNING] ${logContext} Input 'unwantedDomains' is not an array. Received type: ${typeof unwantedDomains}. Using empty list.`);
+        
         validUnwantedDomains = [];
     } else {
         // Filter out non-string elements, but log a warning if any are found.
         const nonStringDomains = unwantedDomains.filter(d => typeof d !== 'string');
         if (nonStringDomains.length > 0) {
-            logToFile(`[WARNING] ${logContext} ${nonStringDomains.length} non-string elements in 'unwantedDomains' were ignored. Examples: ${JSON.stringify(nonStringDomains.slice(0, 3))}.`);
+            
         }
         validUnwantedDomains = unwantedDomains.filter((d): d is string => typeof d === 'string');
     }
@@ -47,13 +46,13 @@ export function filterSearchResults(
     // 3. Validate and process 'skipKeywords'
     let validSkipKeywords: string[];
     if (!Array.isArray(skipKeywords)) {
-        logToFile(`[WARNING] ${logContext} Input 'skipKeywords' is not an array. Received type: ${typeof skipKeywords}. Using empty list.`);
+        
         validSkipKeywords = [];
     } else {
         // Filter out non-string elements, but log a warning if any are found.
         const nonStringKeywords = skipKeywords.filter(k => typeof k !== 'string');
         if (nonStringKeywords.length > 0) {
-            logToFile(`[WARNING] ${logContext} ${nonStringKeywords.length} non-string elements in 'skipKeywords' were ignored. Examples: ${JSON.stringify(nonStringKeywords.slice(0, 3))}.`);
+            
         }
         validSkipKeywords = skipKeywords.filter((k): k is string => typeof k === 'string');
     }
@@ -63,13 +62,13 @@ export function filterSearchResults(
         try {
             // Runtime validation for each individual result item
             if (!resultItem || typeof resultItem !== 'object' || resultItem === null) {
-                logToFile(`[WARNING] ${logContext} Skipping invalid search result item (not an object or null): ${JSON.stringify(resultItem)?.substring(0, 100)}...`);
+                
                 return false; // Exclude invalid objects
             }
 
             // Ensure 'link' property exists and is a non-empty string
             if (typeof resultItem.link !== 'string' || !resultItem.link.trim()) {
-                logToFile(`[WARNING] ${logContext} Skipping result with invalid or empty 'link' property: ${JSON.stringify(resultItem)?.substring(0, 100)}...`);
+                
                 return false; // Exclude if link is invalid
             }
 
@@ -84,13 +83,13 @@ export function filterSearchResults(
                     return link.includes(domain.toLowerCase());
                 } catch (domainCheckError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(domainCheckError);
-                    logToFile(`[ERROR] ${logContext} Error checking domain "${domain}" against link "${link}": ${errorMessage}. Not filtering this result based on this domain.`);
+                    
                     return false; // If error during check, treat as not having unwanted domain to be safe
                 }
             });
 
             if (hasUnwantedDomain) {
-                // logToFile(`[INFO] ${logContext} Filtered out result due to unwanted domain: "${link}"`); // Optional: for detailed logging
+                // 
                 return false; // Exclude if unwanted domain found
             }
 
@@ -101,7 +100,7 @@ export function filterSearchResults(
                     return new RegExp(keyword, "i").test(title);
                 } catch (regexCreationError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(regexCreationError);
-                    logToFile(`[ERROR] ${logContext} Error creating or testing regex with keyword "${keyword}" on title "${title}": ${errorMessage}. Not filtering this result based on this keyword.`);
+                    
                     return false; // If error, treat as not having skip keyword to be safe
                 }
             });
@@ -111,24 +110,24 @@ export function filterSearchResults(
 
         } catch (filterItemError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(filterItemError);
-            logToFile(`[ERROR] ${logContext} Unexpected error while filtering search result item: "${errorMessage}". Item (partial): ${JSON.stringify(resultItem)?.substring(0, 100)}... Stack: ${errorStack}. Excluding this item.`);
+            
             return false; // Exclude the result if any unexpected error occurs during its processing
         }
     });
 
     // 5. Handle cases where all results were filtered out
     if (filteredResults.length === 0 && validResults.length > 0) {
-        logToFile(`[WARNING] ${logContext} All valid search results were filtered out. Returning the first original result as a fallback.`);
+        
         const firstResult = validResults[0];
         // Ensure the first original result is minimally valid before returning it as fallback
         if (firstResult && typeof firstResult === 'object' && typeof firstResult.link === 'string' && firstResult.link.trim()) {
             return [firstResult]; // Return the first *original* valid result as fallback
         } else {
-            logToFile(`[WARNING] ${logContext} Fallback failed: The first original result was also invalid. Returning empty array.`);
+            
             return []; // Return empty if the first original wasn't valid either
         }
     }
 
-    logToFile(`[INFO] ${logContext} Filtered ${validResults.length} results down to ${filteredResults.length} results.`);
+    
     return filteredResults;
 }

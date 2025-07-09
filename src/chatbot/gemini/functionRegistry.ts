@@ -11,7 +11,6 @@ import {
     AgentId
 } from '../shared/types';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
-import logToFile from '../../utils/logger'; // Kept logToFile as per requirement
 
 // --- Import Handlers ---
 // Assuming these handlers are already properly implemented and follow IFunctionHandler
@@ -23,7 +22,6 @@ import { ManageFollowHandler } from '../handlers/manageFollow.handler';
 import { ManageCalendarHandler } from '../handlers/manageCalendar.handler';
 import { ManageBlacklistHandler } from '../handlers/manageBlacklist.handler';
 import { SendEmailToAdminHandler } from '../handlers/sendEmailToAdmin.handler';
-// ... import other handlers ...
 
 /**
  * Global registry for all available function handlers.
@@ -73,10 +71,8 @@ export async function executeFunction(
     const socketId = socket.id;
     const userToken = executionContext?.userToken ?? (socket.data.token as string | null);
 
-    // Using logToFile directly, no child logger from Pino
-    const logPrefix = `[${handlerProcessId} ${socketId} Agent:${callingAgentId} FuncRegistry Func:${functionName}]`;
 
-    logToFile(`${logPrefix} Received request to execute function: "${functionName}". Args preview: ${JSON.stringify(args).substring(0, 100)}...`);
+    
 
     // Helper to report a step FOR FUNCTION REGISTRY ITSELF
     // These steps are initiated by the callingAgentId.
@@ -97,7 +93,7 @@ export async function executeFunction(
     if (!reportRegistryStep('function_call_received', `Preparing to execute function: "${functionName}".`,
         { argsPreview: JSON.stringify(args).substring(0, 100) + '...' }
     )) {
-        logToFile(`${logPrefix} WARN: Aborting function execution: Client disconnected (onStatusUpdate for 'function_call_received' returned false).`);
+        
         return {
             modelResponseContent: "Error: Could not execute function because the client disconnected.",
             frontendAction: undefined
@@ -110,7 +106,7 @@ export async function executeFunction(
     // 3. Handle Unknown Function
     if (!handler) {
         const errorMsg = `Function "${functionName}" is not recognized or implemented in the registry.`;
-        logToFile(`${logPrefix} ERROR: ${errorMsg}`);
+        
         reportRegistryStep('unknown_function', `Error: ${errorMsg}`, { functionNameAttempted: functionName });
         return {
             modelResponseContent: `Error: ${errorMsg}`,
@@ -119,7 +115,7 @@ export async function executeFunction(
     }
 
     // 4. Execute Found Handler
-    logToFile(`${logPrefix} DEBUG: Executing handler for "${functionName}"...`);
+    
     try {
         const context: FunctionHandlerInput = {
             args: args,
@@ -139,7 +135,7 @@ export async function executeFunction(
         const resultFromHandler: FunctionHandlerOutput = await handler.execute(context);
 
         const isErrorResult = resultFromHandler.modelResponseContent.toLowerCase().startsWith('error:');
-        logToFile(`${logPrefix} INFO: Handler execution for "${functionName}" finished. Result indicates error: ${isErrorResult}.`);
+        
 
         reportRegistryStep('function_result_processed',
             `Function handler for "${functionName}" completed${isErrorResult ? ' with error' : ''}.`,
@@ -152,7 +148,7 @@ export async function executeFunction(
         // This catch block is for UNEXPECTED errors *during the execution of the handler itself*,
         // not for errors *returned by* the handler (which should be part of resultFromHandler.modelResponseContent).
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(executionError);
-        logToFile(`${logPrefix} FATAL: CRITICAL: Unexpected error during handler execution for "${functionName}": "${errorMessage}". Stack: ${errorStack}`);
+        
 
         reportRegistryStep('function_execution_critical_error',
             `System error during execution of function "${functionName}": ${errorMessage}`,

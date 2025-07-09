@@ -1,5 +1,4 @@
 // src/chatbot/utils/transformData.ts
-import logToFile from '../../utils/logger';
 
 // --- Type Definitions for better type safety and readability ---
 
@@ -271,7 +270,6 @@ const formatDateRange = (fromDateStr?: string | null, toDateStr?: string | null)
             }
         }
     } catch (error) {
-        logToFile(`Error formatting date range (${fromDateStr}, ${toDateStr}): ${error}`);
         return "N/A";
     }
 };
@@ -306,7 +304,6 @@ const formatChangeMarkdown = (currentValue: any, previousValue: any, formatter?:
 
 // --- Main Data Transformation Logic with Markdown ---
 export function transformConferenceData(parsedData: ConferenceData, searchQuery: string): string {
-    logToFile(`Transforming conference data with Markdown. Search query: ${searchQuery}`);
 
     const payload = safeGet(parsedData, 'payload', []);
     const meta = safeGet(parsedData, 'meta', {});

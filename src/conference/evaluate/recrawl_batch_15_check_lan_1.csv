@@ -1,0 +1,2199 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,recrawl
+req-conf-1751809170576-jzvmi,,"Symposium on Networked Systems, Design and Implementation",NSDI,https://www.usenix.org/conference/nsdi26,https://www.usenix.org/conference/nsdi26/call-for-papers,,"Conference dates: May 4–6, 2026
+Year: 2026
+Location: Renton, WA, USA
+City-State-Province: Renton, WA
+Country: USA
+Continent: North America
+Type: Offline
+Submission Date.(Spring deadline) Paper titles and abstracts due: April 18, 2025
+Submission Date.(Spring deadline) Full paper submissions due: April 25, 2025
+Submission Date.(Fall deadline) Paper titles and abstracts due: September 11, 2025
+Submission Date.(Fall deadline) Full paper submissions due: September 18, 2025
+Notification Date.(Spring deadline) Notification to authors: July 24, 2025
+Notification Date.(Fall deadline) Notification to authors: December 9, 2025
+Camera-ready Date.(Spring deadline) Final paper files due: October 21, 2025
+Camera-ready Date.(Fall deadline) Final paper files due: March 5, 2026
+Other Date.Nomination for the NSDI Test of Time Award: January 5, 2026
+Topics: networked systems, design principles, implementation, practical evaluation, highly available and reliable networked systems, security and privacy of networked systems, distributed storage, caching, and query processing systems, sustainable, low-energy, and low-carbon networked systems, cloud/multi-tenant systems, mobile and embedded/sensor applications and systems, systems aspects of networking hardware and physical layer communication technologies, network and workload measurement systems, self-organizing, autonomous, and federated networked systems, managing, debugging, and diagnosing problems in networked systems, virtualization and resource management for networked systems, experience with deployed networked systems, networked systems for big data, testing and/or verification applied to networked systems, networked systems for machine learning (ML) and ML for networked systems
+Publisher: USENIX","May 4–6, 2026",2026,"Renton, WA, USA","Renton, WA",USA,North America,Offline,"{""(Spring deadline) Paper titles and abstracts due"":""April 18, 2025"",""(Spring deadline) Full paper submissions due"":""April 25, 2025"",""(Fall deadline) Paper titles and abstracts due"":""September 11, 2025"",""(Fall deadline) Full paper submissions due"":""September 18, 2025""}","{""(Spring deadline) Notification to authors"":""July 24, 2025"",""(Fall deadline) Notification to authors"":""December 9, 2025""}","{""(Spring deadline) Final paper files due"":""October 21, 2025"",""(Fall deadline) Final paper files due"":""March 5, 2026""}",{},"{""Nomination for the NSDI Test of Time Award"":""January 5, 2026""}","networked systems, design principles, implementation, practical evaluation, highly available and reliable networked systems, security and privacy of networked systems, distributed storage, caching, and query processing systems, sustainable, low-energy, and low-carbon networked systems, cloud/multi-tenant systems, mobile and embedded/sensor applications and systems, systems aspects of networking hardware and physical layer communication technologies, network and workload measurement systems, self-organizing, autonomous, and federated networked systems, managing, debugging, and diagnosing problems in networked systems, virtualization and resource management for networked systems, experience with deployed networked systems, networked systems for big data, testing and/or verification applied to networked systems, networked systems for machine learning (ML) and ML for networked systems",USENIX,"The 23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI '26) will be held on May 4–6, 2026, in Renton, WA, USA. NSDI focuses on the design principles, implementation, and practical evaluation of networked and distributed systems, aiming to bring together researchers from across the networking and systems community to foster a broad approach to addressing overlapping research challenges.","# NSDI '26 Call for Papers
+
+The 23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI '26) will be held on **May 4–6, 2026**, in **Renton, WA, USA**.
+
+Sponsored by USENIX, the Advanced Computing Systems Association.
+
+## Important Dates
+
+**Spring deadline:**
+
+*   Paper titles and abstracts due: **Friday, April 18, 2025, 11:59 pm US PDT**
+*   Full paper submissions due: **Friday, April 25, 2025, 11:59 pm US PDT**
+*   Notification to authors: **Thursday, July 24, 2025**
+*   Final paper files due: **Tuesday, October 21, 2025**
+
+**Fall deadline:**
+
+*   Paper titles and abstracts due: **Thursday, September 11, 2025, 11:59 pm US PDT**
+*   Full paper submissions due: **Thursday, September 18, 2025, 11:59 pm US PDT**
+*   Notification to authors: **Tuesday, December 9, 2025**
+*   Final paper files due: **Thursday, March 5, 2026**
+
+## Overview
+
+NSDI focuses on the design principles, implementation, and practical evaluation of networked and distributed systems. Our goal is to bring together researchers from across the networking and systems community to foster a broad approach to addressing overlapping research challenges. NSDI provides a high-quality forum for presenting results and discussing ideas that further the knowledge and understanding of the networked systems community as a whole, continue a significant research dialog, or push the architectural boundaries of network services.
+
+## Topics
+
+NSDI invites any innovative solution for a significant problem involving networked systems, including topics from within the following list:
+
+*   Highly available and reliable networked systems
+*   Security and privacy of networked systems
+*   Distributed storage, caching, and query processing systems
+*   Sustainable, low-energy, and low-carbon networked systems
+*   Cloud/multi-tenant systems
+*   Mobile and embedded/sensor applications and systems
+*   Systems aspects of networking hardware and physical layer communication technologies
+*   Network and workload measurement systems
+*   Self-organizing, autonomous, and federated networked systems
+*   Managing, debugging, and diagnosing problems in networked systems
+*   Virtualization and resource management for networked systems
+*   Experience with deployed networked systems
+*   Networked systems for big data
+*   Testing and/or verification applied to networked systems
+*   Networked systems for machine learning (ML) and ML for networked systems
+
+Papers with no clear contributions to the design of systems or the networking stack will be considered out of scope.
+
+### Excluded Topics
+
+The NSDI Steering Committee has identified a list of topics that are explicitly excluded from upcoming NSDI symposia. Papers whose core contributions are on the following topics are likely to be rejected for reasons of scope:
+
+*   Physical layer contributions: beamforming, modulation techniques, communication through unconventional mediums (capacitative, inductive, acoustic)
+*   Sensing and localization contributions: gesture sensing, environment mapping, remote sensing
+*   Architecture contributions: voltage scaling, GPU resource scheduling, hardware level fault tolerance
+*   User interface contributions
+
+## Submission Process & One-Shot Revision
+
+*   **Two Deadlines**: NSDI '26 offers authors the choice of two submission deadlines (Spring and Fall).
+*   **One-Shot Revision**: Each paper may be accepted, rejected, or given the option of one-shot revision. Such a revision decision includes a summary of the paper's merits and a list of necessary changes. Authors may then submit a version addressing all revision instructions during the subsequent deadline. This revised paper will be reviewed primarily to judge if it addresses the requested changes. Papers revised and resubmitted following a one-shot-revision decision can only receive a decision of accept or reject, not revise.
+*   **Concurrent Submission**: Papers must not be submitted concurrently to other venues. USENIX prohibits simultaneous submission of the same work to multiple venues.
+*   **Resubmission Policy**: Papers rejected from one deadline cannot be submitted to the immediate next deadline.
+*   **Workshop Paper Extensions**: Work extending a previous workshop paper is welcome but must acknowledge prior publication anonymously and explain the differences.
+
+## Operational Systems Track
+
+NSDI '26 also solicits papers describing the design, implementation, analysis, and experience with large-scale, operational systems and networks. These papers need not present new ideas but should validate techniques at scale or in new environments.
+
+*   **Reviewing**: Papers in this track will be reviewed in a more limited double-blind process. Authors' names should be withheld, but company names, links, and real system names can be kept as appropriate.
+*   **Indication**: Authors should indicate on the title page and submission form that they are submitting to this track.
+
+## What to Submit
+
+*   **Double-blind review**: Authors must make a good faith effort to anonymize papers by removing authors' names and affiliations, acknowledgments of funding sources, and avoiding self-identifying references. Care should be taken with file names.
+*   **Page Limit**: Submissions must be no longer than **12 pages**, including footnotes, figures, and tables. Additional pages are allowed for references and supplementary material in appendices.
+*   **Format**: Two-column format, 10-point type on 12-point leading, text block 7"" wide x 9"" deep, .33"" inter-column space, formatted for 8.5"" x 11"" paper.
+*   **Submission Method**: All papers must be submitted via the submission form: [https://nsdi26spring.usenix.hotcrp.com/](https://nsdi26spring.usenix.hotcrp.com/)
+
+## On the Use of Generative AI
+
+Authors must not submit papers generated entirely by generative AI. A statement attesting that their paper is not completely created by generative AI must be submitted as part of the submission process.
+
+## Policies
+
+*   **Simultaneous Submissions**: Prohibited.
+*   **Extensions on Workshop Papers**: Acceptable if the NSDI submission includes substantial new material. Must acknowledge prior publication anonymously and explain differences.
+*   **Online Technical Reports**: Allowed if authors use a different title and system name than the technical report to avoid reviewer bias.
+
+## Conflicts
+
+At submission time, authors must provide information about conflicts with PC members based on Institution, Advisor, or Collaboration within the past two years.
+
+## Ethical Considerations
+
+Papers describing experiments with users or user data must follow ethical research principles (beneﬁcence, minimal risk, voluntary consent, respect for privacy, limited deception). Authors are encouraged to include a subsection on these issues and must attest that their work complies with all applicable ethical standards of their institution(s).
+
+## Processes for Accepted Papers
+
+*   **Visa Invitation Letters**: Contact [conference@usenix.org](mailto:conference@usenix.org) for assistance.
+*   **Shepherding**: Accepted papers will be shepherded through an editorial review process.
+*   **Registration Hardship**: Contact [conference@usenix.org](mailto:conference@usenix.org) if registration fees pose a hardship.
+*   **Paper Availability**: Papers will be available online to registered attendees before the conference and to everyone on the first day. Embargo requests can be sent to [production@usenix.org](mailto:production@usenix.org).
+
+## Awards
+
+*   **Best Paper Awards**: Given for the best paper(s).
+*   **Community Award**: For the best paper whose code and/or data set is made publicly available.",,
+req-conf-1751809170576-jzvmi,,SIAM Conference on Optimization,OP,https://www.siam.org/conferences-events/siam-conferences/op26/,,,"Conference dates: June 2 – 5, 2026
+Year: 2026
+Location: Edinburgh, United Kingdom
+City-State-Province: Edinburgh
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Topics: Optimization, Conic and linear optimization, Derivative-free optimization, Game theory and equilibrium problems, Geometric perspectives in optimization, Graphs and network optimization, Integer optimization, Nonlinear optimization, PDE-constrained optimization, Polynomial and global optimization, Stochastic and robust optimization, Variational inequalities and nonsmooth optimization, Optimization in data science, Optimization in health care, Optimization in energy, Optimization in control systems, Optimization in quantum computing, Optimization in science and engineering, Optimization in machine learning/AI
+Publisher: SIAM","June 2 – 5, 2026",2026,"Edinburgh, United Kingdom",Edinburgh,United Kingdom,Europe,Offline,{},{},{},{},{},"Optimization, Conic and linear optimization, Derivative-free optimization, Game theory and equilibrium problems, Geometric perspectives in optimization, Graphs and network optimization, Integer optimization, Nonlinear optimization, PDE-constrained optimization, Polynomial and global optimization, Stochastic and robust optimization, Variational inequalities and nonsmooth optimization, Optimization in data science, Optimization in health care, Optimization in energy, Optimization in control systems, Optimization in quantum computing, Optimization in science and engineering, Optimization in machine learning/AI",SIAM,"The SIAM Conference on Optimization (OP26) will be held from June 2-5, 2026, in Edinburgh, United Kingdom. This conference, organized by the SIAM Activity Group on Optimization, showcases the latest research in the theory, algorithms, software, and applications of optimization, bringing together mathematicians, operations researchers, computer scientists, engineers, software developers, and practitioners.","# Call for Participation
+
+The Call for Participation for the SIAM Conference on Optimization (OP26) is scheduled to be posted in **late August 2025**. Further details regarding submission guidelines, topics of interest, and important dates will be available at that time.",,
+req-conf-1751809170576-jzvmi,,Nordic Conference on Human-Computer Interaction,NordiCHI,https://sites.uwasa.fi/nordichi2026/,,,"Conference dates: October 3-7, 2026
+Year: 2026
+Location: Vaasa, Finland
+City-State-Province: Vaasa
+Country: Finland
+Continent: Europe
+Type: Offline
+Topics: Human-Computer Interaction (HCI)","October 3-7, 2026",2026,"Vaasa, Finland",Vaasa,Finland,Europe,Offline,{},{},{},{},{},Human-Computer Interaction (HCI),No publisher,"The Nordic Conference on Human-Computer Interaction (NordiCHI) 2026 will be held in Vaasa, Finland, from October 3-7, 2026. The conference, themed ""Pulse – exploring the energy that drives us"", aims to bring together the HCI community for discussions on state-of-the-art research and applications, featuring sessions on theoretical and practical insights, creative explorations, panels, workshops, tutorials, demonstrations, arts-based approaches, and industry sessions.",No call for papers available,,
+req-conf-1751809170576-jzvmi,,New Zealand Game Developers Conference,NZGDC,https://www.nzgdc.com/conf2025,,,"Conference dates: 2025
+Year: 2025
+Type: Offline
+Topics: game development",2025,2025,No location,No city/state/province,No country,No continent,Offline,{},{},{},{},{},game development,No publisher,"The New Zealand Game Developers Conference (NZGDC) is New Zealand's premier game developers conference, offering workshops, presentations from international and national speakers, social events, and learning opportunities for those in the game development industry. The 2025 conference will span three days and provide a platform to learn, create, discover, and connect.","# NZGDC 2025: Call for Papers
+
+The New Zealand Game Developers Conference (NZGDC) is New Zealand's premier game developers conference, offering workshops, curated presentations from international & national speakers, social events, and a smorgasbord of learning for people working in and alongside the game development industry.
+
+The conference provides opportunities to **learn, create, discover, and connect**.
+
+## Conference Schedule
+
+Over the course of **3 days**, NZGDC offers a comprehensive program designed to cater to the needs of game developers.
+
+## Key Information & Actions
+
+*   **Tickets:** Buy tickets at [https://registrations.nzgdc.com/Public](https://registrations.nzgdc.com/Public)
+*   **NZGDC Member Tickets:** Buy NZGDA member tickets separately.
+
+## Newsroom Highlights
+
+*   **Wellington Games Week 2025 - open!** (June 6, 2025)
+*   **Exciting updates as planning underway!** (May 23, 2025)
+*   **NZGDC Workshop Submissions OPEN** (May 23, 2025)
+*   **Kiwi Game Starter** (November 15, 2024)
+
+## Helpful Information
+
+*   ABOUT
+*   PHOTOGRAPHY POLICY
+*   CODE OF CONDUCT
+*   ABOUT US
+*   CONTACT
+*   SUPPORT
+*   CONFERENCE
+*   NEWSROOM",Main link: https://www.nzgdc.com/,Yes
+req-conf-1751809170576-jzvmi,,International Conference on Practical Applications of Computational Biology & Bioinformatics,PACBB,https://pacbb.net/,https://www.pacbb.net/submission,https://www.pacbb.net/submission,"Conference dates: June 25th-27th, 2025
+Year: 2025
+Location: University of Lille (France)
+City-State-Province: Lille
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.General deadlines: March 31, 2025
+Submission Date.Doctoral Consortium deadline: March 31, 2025
+Notification Date.Notification of acceptance: April 25, 2025
+Camera-ready Date.Camera-Ready papers: May 9, 2025
+Topics: Computational Biology, Bioinformatics, Molecular Biology, Molecular Medicine, Systems Biology, Data Analysis, Mathematical Modeling, Computer Simulation, Optimization, Computer Science, Artificial Intelligence, Chemoinformatics
+Publisher: Springer","June 25th-27th, 2025",2025,University of Lille (France),Lille,France,Europe,Offline,"{""General deadlines"":""March 31, 2025"",""Doctoral Consortium deadline"":""March 31, 2025""}","{""Notification of acceptance"":""April 25, 2025""}","{""Camera-Ready papers"":""May 9, 2025""}",{},{},"Computational Biology, Bioinformatics, Molecular Biology, Molecular Medicine, Systems Biology, Data Analysis, Mathematical Modeling, Computer Simulation, Optimization, Computer Science, Artificial Intelligence, Chemoinformatics",Springer,"The 19th International Conference on Practical Applications of Computational Biology & Bioinformatics (PACBB'25) will be held at the University of Lille, France, from June 25th to 27th, 2025. The conference aims to promote interaction among the scientific community to discuss applications of Computer Science/Artificial Intelligence with an interdisciplinary character, exploring interactions between CS/AI, Bioinformatics, Chemoinformatics, and Systems Biology.","# PACBB 2025: Call for Papers
+
+The 19th International Conference on Practical Applications of Computational Biology & Bioinformatics (PACBB'25) will be held at the **University of Lille (France)** from **June 25th to 27th, 2025**.
+
+## About the Conference
+
+The conference aims to promote the interaction among the scientific community to discuss applications of Computer Science/Artificial Intelligence (CS/AI) with an interdisciplinary character, exploring the interactions between sub-areas of CS/AI, Bioinformatics, Chemoinformatics, and Systems Biology.
+
+Brand new ideas in these fields are sought, as well as substantial and relevant revisions and actualizations of previously presented work, project summaries, and PhD theses.
+
+## Submission Format
+
+*   **Maximum Length:** 10 pages (6 pages for Doctoral Consortia), including figures and references.
+*   **Formatting:** All papers must be formatted according to the LNNS template (Microsoft Word or LaTeX format).
+    *   [Microsoft word format](https://www.pacbb.net/sites/default/files/LNNS_template_word.zip)
+    *   [LaTeX Format](https://www.pacbb.net/sites/default/files/LNNS_template_latex.zip)
+    *   [Overleaf template](https://www.pacbb.net/sites/default/files/LNNS_template_latex.zip)
+*   **Submission:** Papers must be prepared according to the LNNS template of Springer without page numbers.
+*   **Required Files for Submission:** A ZIP file including:
+    *   a signed Copyright Form (**PDF format**).
+    *   the final version of your paper (**MS-WORD or LaTeX format**).
+    *   a document stating the changes performed taking into account the reviews using the PACBB conference management system.
+*   **Consent to Publish:** Authors must fill out and sign the Consent to Publish.
+
+## Submission
+
+All proposed papers must be submitted in electronic form (PDF format) using the [PACBB conference management system](https://easychair.org/conferences/?conf=pacbb25).
+
+## Review Process
+
+All submitted papers will undergo a thorough review process. Each paper will be refereed by at least three experts in the field based on relevance, originality, significance, quality, and clarity. Papers must consist of original, relevant, and previously unpublished sound research results.
+
+## Publication
+
+Accepted papers will be included in PACBB Proceedings, published by **Lecture Notes in Networks and Systems series of Springer Verlag**.
+
+*   At least one author must register and attend the symposium to present the paper.
+*   **Indexing:** The books of this series are submitted to DBLP, INSPEC, Norwegian Register for Scientific Journals and Series, SCImago, SCOPUS, WTI Frankfurt eG, zbMATH, Google Scholar, Springerlink.
+
+## Special Issues
+
+Authors of selected papers will be invited to submit an extended and improved version to special issues in different journals, including:
+
+*   Journal of Integrative Bioinformatics
+*   International Journal of Interactive Multimedia and Artificial Intelligence
+*   Logic Journal of the IGPL
+*   ADCAIJ
+*   MDPI Future Internet Journal (“Deep Learning in Recommender Systems”)
+*   MDPI Sensors Journal (“Edge Computing in IoT Networks Based on Artificial Intelligence”)
+*   MDPI Systems Journal (“Advancements in Practical Applications of Agents, Multi-Agent Systems and Digital Twins”)
+
+## General Deadlines
+
+*   **Submission Deadline:** March 31, 2025
+*   **Doctoral Consortium Deadline:** March 31, 2025
+*   **Notification of Acceptance:** April 25, 2025
+*   **Camera-Ready Papers:** May 9, 2025
+*   **Conference Dates:** June 25th-27th, 2025
+
+## Accommodation Grants
+
+CRIStAL Lab offers 15 grants/awards to doctoral and young doctors. More information available at [/open-calls/call-for-grants-awards](/open-calls/call-for-grants-awards).
+
+## Contact
+
+[info@pacbb.net](mailto:info@pacbb.net?subject=[PACBB]%20Contact)",,
+req-conf-1751809170576-jzvmi,,Usenix Symposium on Operating Systems Design and Implementation,OSDI,https://www.usenix.org/conference/osdi25,https://www.usenix.org/conference/osdi25/call-for-papers,,"Conference dates: July 7–9, 2025
+Year: 2025
+Location: Boston, MA, USA
+City-State-Province: Boston, MA
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Abstract registrations due: December 3, 2024
+Submission Date.Complete paper submissions due: December 10, 2024
+Notification Date.Author Response Period: March 6 - 10, 2025
+Notification Date.Notification to authors: March 25, 2025
+Camera-ready Date.Final papers due: June 5, 2025
+Topics: Operating Systems Design and Implementation
+Publisher: USENIX","July 7–9, 2025",2025,"Boston, MA, USA","Boston, MA",United States,North America,Offline,"{""Abstract registrations due"":""December 3, 2024"",""Complete paper submissions due"":""December 10, 2024""}","{""Author Response Period"":""March 6 - 10, 2025"",""Notification to authors"":""March 25, 2025""}","{""Final papers due"":""June 5, 2025""}",{},{},Operating Systems Design and Implementation,USENIX,"The 19th USENIX Symposium on Operating Systems Design and Implementation (OSDI '25) will be held from July 7–9, 2025, in Boston, MA, USA, at the Sheraton Boston Hotel. Co-located with USENIX ATC '25, OSDI is a premier forum for discussing the design, implementation, and implications of systems software, emphasizing innovative research and insightful experiences.","# OSDI '25 Call for Papers
+
+Sponsored by USENIX in cooperation with ACM SIGOPS
+
+The 19th USENIX Symposium on Operating Systems Design and Implementation (OSDI '25) will be co-located with the [2025 USENIX Annual Technical Conference (USENIX ATC '25)](/conference/atc25) and take place on **July 7–9, 2025**, in **Boston, MA, USA**, at the Sheraton Boston Hotel.
+
+OSDI brings together professionals from academic and industrial backgrounds in a premier forum for discussing the design, implementation, and implications of systems software. The symposium emphasizes innovative research and quantified or insightful experiences in systems design and implementation. OSDI takes a broad view of the systems area and solicits contributions from many fields of systems practice, including operating systems, file and storage systems, distributed systems, cloud computing, mobile systems, secure and reliable systems, systems aspects of big data, embedded systems, virtualization, networking as it relates to operating systems, and management and troubleshooting of complex systems. We also welcome work that explores the interface to related areas such as computer architecture, networking, programming languages, analytics, and databases. We encourage contributions with highly original ideas, new approaches, and groundbreaking results.
+
+## Important Dates
+
+*   **Abstract registrations due:** Tuesday, December 3, 2024, 5:59 pm EST (10:59 pm UTC)
+*   **Complete paper submissions due:** Tuesday, December 10, 2024, 5:59 pm EST (10:59 pm UTC)
+*   **Author Response Period:** Reviews available: Thursday, March 6, 2025; Author responses due: Monday, March 10, 2025
+*   **Notification to authors:** Tuesday, March 25, 2025
+*   **Final papers due:** Thursday, June 5, 2025
+
+## Submission Guidelines
+
+### Submission Evaluation and Scope
+
+Submissions will be judged on novelty, significance, interest, clarity, relevance, and correctness. Accepted papers will be shepherded through an editorial review process. OSDI '25 will have a deliberate focus on selecting papers that offer significant contributions to computer systems research and align with community interests. Reviewers will evaluate submissions based on topic relevance to computer systems and their potential to impact future research and practices. Submissions must demonstrate relevance and offer unique insights to capture the interest of a substantial portion of OSDI attendees.
+
+### Confidentiality and Simultaneous Submission
+
+*   Papers will be treated as confidential prior to publication. Papers accompanied by nondisclosure agreement forms will not be considered.
+*   Simultaneous submission of the same work to multiple venues, submission of previously published work, or plagiarism constitutes dishonesty or fraud and is prohibited. See the [USENIX Conference Submissions Policy](https://www.usenix.org/conferences/submissions-policy).
+*   Submitting a paper that had been previously submitted to and not accepted by another conference is permitted as long as authors have substantially addressed the previous reviewers' comments. Information regarding the previous submission and revisions must be provided.
+*   Prior or concurrent workshop publication does not preclude publishing a related paper in OSDI. Authors must provide a copy of the workshop paper and explain new material.
+*   Prior or concurrent publication in non-peer-reviewed contexts (e.g., arXiv.org, technical reports) is permitted, but submissions must use an anonymized project or system name.
+
+### Paper Formatting and Length
+
+*   **Length:** Maximum 12 single-spaced 8.5"" x 11"" pages, including figures and tables. Additional pages are allowed for references only.
+*   **Typeface:** 10-point type on 12-point leading.
+*   **Layout:** Two-column format.
+*   **Margins:** Text block 7"" wide x 9"" deep.
+*   **Accepted Papers:** Allowed 14 pages in proceedings, plus references.
+*   **Requirements:** Papers not meeting these criteria will be rejected without review. Figures and tables should be legible in black and white. Short papers may not receive full consideration.
+
+### Supplementary Material
+
+Authors may upload supplementary material in separate files. PC members are not required to read supplementary material; the paper must stand alone without it.
+
+### Identity Blinding
+
+The paper review process is **double-blind**. Authors must make a good-faith effort to anonymize their submissions, refraining from identifying themselves or their institutions either explicitly or by implication (e.g., through references or acknowledgments). Submissions violating these rules will be rejected without review. Contact the program co-chairs well in advance for anonymization assistance.
+
+### Abstract Registration
+
+Abstract registration is an essential part of the paper-reviewing process. Abstracts must provide sufficient information to understand the topic and contribution. Insufficient abstracts will be rejected, precluding paper submission.
+
+### Conflicts
+
+Authors must provide information about conflicts with PC members (institution, advisor, collaboration, personal) when registering abstracts. Extraneous conflicts are not permitted. Chairs will review conflicts and may reject abstracts or papers based on conflict information.
+
+### Submission System
+
+All papers must be submitted via the [submission system](https://osdi25.usenix.hotcrp.com/).
+
+### Author Response Period
+
+Authors will have an opportunity to respond to reviews prior to the program committee meeting. Responses should be limited to correcting factual errors or directly addressing reviewer questions. New experiments or promises of future work are not allowed. Responses are optional, up to 2000 words.
+
+### Revise and Resubmit
+
+OSDI '25 will continue the option to revise and resubmit for some of the rejected papers.
+
+## Other Calls
+
+*   [Call for Artifacts](/conference/osdi25/call-for-artifacts)
+*   [Call for Posters](/conference/osdi25/call-for-posters)
+
+## Contact Information
+
+*   **General Submission Questions:**
+    *   Program Co-Chairs: [osdi25chairs@usenix.org](mailto:osdi25chairs@usenix.org)
+    *   USENIX Office: [submissionspolicy@usenix.org](mailto:submissionspolicy@usenix.org)
+*   **Registration:** [conference@usenix.org](mailto:conference@usenix.org)
+*   **Student Grants:** [students@usenix.org](mailto:students@usenix.org)
+
+## Symposium Organizers
+
+*   **Program Co-Chairs:**
+    *   Lidong Zhou, Microsoft
+    *   Yuanyuan Zhou, University of California, San Diego
+
+## Sponsorship
+
+Details on sponsorship opportunities are available on the [Sponsors](/conference/osdi25#sponsorship) page. USENIX is a 501(c)(3) non-profit organization that relies on sponsor support.",,
+req-conf-1751809170576-jzvmi,,Pacific-Asia Conference on Knowledge Discovery and Data Mining,PAKDD,https://www.pakdd2026.org/,,,"Conference dates: June 9-12, 2026
+Year: 2026
+Location: Hong Kong, China
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Topics: Knowledge Discovery, Data Mining, Data Science, Data Warehousing, Machine Learning, Artificial Intelligence, Databases, Statistics, Knowledge Engineering, Visualization, Decision-Making Systems, Emerging Applications","June 9-12, 2026",2026,"Hong Kong, China",Hong Kong,China,Asia,Offline,{},{},{},{},{},"Knowledge Discovery, Data Mining, Data Science, Data Warehousing, Machine Learning, Artificial Intelligence, Databases, Statistics, Knowledge Engineering, Visualization, Decision-Making Systems, Emerging Applications",No publisher,"The 30th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2026) will be held in Hong Kong, China, from June 9-12, 2026. PAKDD is a prestigious and highly selective conference that provides an international peer-reviewed forum for researchers and industry practitioners in all KDD-related areas.","# Call for Papers: PAKDD 2026
+
+The 30th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2026) will be held in **Hong Kong, China**, from **June 9-12, 2026**.
+
+PAKDD is a prestigious and highly selective conference that includes high-profile keynote and invited talks as well as refereed full research papers. It provides an international peer-reviewed forum for researchers and industry practitioners who are addressing the problems to share their new ideas, original research results, and practical development experiences from all KDD-related areas.
+
+## Areas of Interest
+
+KDD-related areas include, but are not limited to:
+
+*   Data Science
+*   Data Mining
+*   Data Warehousing
+*   Machine Learning
+*   Artificial Intelligence
+*   Databases
+*   Statistics
+*   Knowledge Engineering
+*   Visualization
+*   Decision-Making Systems
+*   Emerging Applications
+
+## About the Conference
+
+Everyone new to the field has many opportunities to learn about cutting-edge research by attending visionary keynote speeches, paper presentations, tutorials, and workshops.",,
+req-conf-1751809170576-jzvmi,,ACM Conference on Object Oriented Programming Systems Languages and Applications,OOPSLA,https://2025.splashcon.org/track/OOPSLA,https://2025.splashcon.org/track/OOPSLA#Call-for-Papers,https://2025.splashcon.org/dates,"Conference dates: October 12 - 18, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.(OOPSLA) Submission: October 15, 2024
+Submission Date.(OOPSLA) Submission of Revisions R2: July 29, 2025
+Submission Date.(ICFP Papers) Submission Deadline: February 27, 2025
+Submission Date.(Onward! Essays) Submission Deadline: April 24, 2025
+Submission Date.(Onward! Papers) Submission deadline: April 24, 2025
+Submission Date.(ISWC Notes and Briefs) Submission: May 25, 2025
+Submission Date.(Workshops) Proposal Submission: April 30, 2025
+Submission Date.(Posters & Demos) Submission: May 30, 2025
+Submission Date.(ISWC Design Exhibition) Submission: June 20, 2025
+Submission Date.(Doctoral Colloquium) Submission: June 20, 2025
+Submission Date.(Student Challenge) Idea Submission: June 15, 2025
+Submission Date.(IMWUT Videos) IMWUT Videos Due: August 3, 2025
+Submission Date.(Erlang) Submission Deadline: June 13, 2025
+Submission Date.(FARM Performance) FARM submission deadline: June 25, 2025
+Submission Date.(TyDe) Submission deadline: June 22, 2025
+Submission Date.(ML Family Workshop) Submission Deadline (extended!): July 3, 2025
+Submission Date.(WebAssembly Workshop) Submission deadline: July 31, 2025
+Submission Date.(ICFP/SPLASH Volunteers) Application Deadline: July 31, 2025
+Submission Date.(Doctoral Symposium) Submission deadline: July 31, 2025
+Submission Date.(SAS) Paper Submission: May 11, 2025
+Submission Date.(PROPL) Submission deadline: July 8, 2025
+Submission Date.(miniKanren and Relational Programming Workshop) Submission deadline: July 10, 2025
+Submission Date.(OCaml) Submission deadline: July 10, 2025
+Submission Date.(IWACO) Submission Deadline: July 21, 2025
+Submission Date.(VMIL) Submission Deadline (Research papers): July 21, 2025
+Submission Date.(FUNARCH) Submission Deadline: June 23, 2025
+Submission Date.(HATRA) Submission deadline: July 9, 2025
+Submission Date.(LMPL) Paper Submission: July 7, 2025
+Submission Date.(The Scala Workshop) Talk Proposal Submission: July 18, 2025
+Notification Date.(OOPSLA) Author Notification: December 18, 2024
+Notification Date.(OOPSLA) Author Notification of Revisions R2: August 12, 2025
+Notification Date.(ICFP Papers) Final Decision Notification: June 27, 2025
+Notification Date.(Onward! Essays) First-round Notification: June 6, 2025
+Notification Date.(Onward! Papers) First-round notification: June 6, 2025
+Notification Date.(ISWC Notes and Briefs) Author Notification: July 2, 2025
+Notification Date.(Workshops) Notification of accepted proposals: May 2, 2025
+Notification Date.(Posters & Demos) Author Notification: June 27, 2025
+Notification Date.(ISWC Design Exhibition) Author Notification: August 1, 2025
+Notification Date.(Doctoral Colloquium) Author Notification: July 5, 2025
+Notification Date.(Student Challenge) Author Notification: July 15, 2025
+Notification Date.(Erlang) Notification: July 4, 2025
+Notification Date.(FARM Performance) FARM author notification: July 10, 2025
+Notification Date.(TyDe) Notification of acceptance: July 23, 2025
+Notification Date.(ML Family Workshop) Final Author Notification (if needed): August 7, 2025
+Notification Date.(WebAssembly Workshop) Author notification: August 8, 2025
+Notification Date.(Doctoral Symposium) Author notification: August 8, 2025
+Notification Date.(SAS) Notification: July 11, 2025
+Notification Date.(PROPL) Notification: August 7, 2025
+Notification Date.(miniKanren and Relational Programming Workshop) Author notification: August 12, 2025
+Notification Date.(OCaml) Author/speaker notification: August 14, 2025
+Notification Date.(IWACO) Author Notification: August 15, 2025
+Notification Date.(VMIL) Author Notification (Research papers): August 4, 2025
+Notification Date.(FUNARCH) Author Notification: July 21, 2025
+Notification Date.(HATRA) Author notification (tentative): August 1, 2025
+Notification Date.(LMPL) Author Notification: August 8, 2025
+Notification Date.(The Scala Workshop) Author Notification: August 4, 2025
+Camera-ready Date.(OOPSLA) Camera Ready R2: August 22, 2025
+Camera-ready Date.(ICFP Papers) Camera-Ready Deadline: July 11, 2025
+Camera-ready Date.(ISWC Design Exhibition) Camera Ready: August 1, 2025
+Camera-ready Date.(SAS) Camera-Ready: August 22, 2025
+Camera-ready Date.(PROPL) Camera ready: August 22, 2025
+Camera-ready Date.(Erlang) Camera ready: August 25, 2025
+Camera-ready Date.(PAINT) Camera ready: August 25, 2025
+Camera-ready Date.(Scheme) Camera-ready deadline: August 25, 2025
+Camera-ready Date.(VMIL) Camera Ready (Research papers): August 25, 2025
+Camera-ready Date.(Onward! Essays) Camera-Ready Deadline: August 25, 2025
+Camera-ready Date.(Onward! Papers) Camera-ready deadline: August 25, 2025
+Camera-ready Date.(FUNARCH) Camera-ready Deadline: August 25, 2025
+Camera-ready Date.(miniKanren and Relational Programming Workshop) Camera-ready deadline: August 25, 2025
+Camera-ready Date.(The Scala Workshop) Camera-Ready Submission: August 25, 2025
+Camera-ready Date.(TyDe) Submission of camera-ready papers: August 6, 2025
+Other Date.(ICFP/SPLASH Tutorials) Tutorials Proposal Submission: May 8, 2025
+Other Date.(ICFP/SPLASH Volunteers) Volunteer Applications Open: July 2, 2025
+Other Date.(SAS Artifact) Artifact Submission: May 18, 2025
+Other Date.(SAS) Artifact Submission: May 18, 2025
+Other Date.(OOPSLA Artifacts) Submission Round 1: January 3, 2025
+Other Date.(OOPSLA Artifacts) Submission Round 2: June 27, 2025
+Other Date.(FARM Performance) FARM submission deadline: June 25, 2025
+Other Date.(TyDe) Workshop: October 12, 2025
+Other Date.(FUNARCH) Workshop: October 12, 2025
+Other Date.(Erlang) Workshop: October 12, 2025
+Other Date.(PROPL) Workshop: October 13, 2025
+Other Date.(HATRA) Workshop: October 14, 2025
+Other Date.(VMIL) Workshop: October 15, 2025
+Other Date.(ML Family Workshop) Workshop: October 16, 2025
+Other Date.(WebAssembly Workshop) Workshop: October 16, 2025
+Other Date.(Scheme) Workshop: October 16, 2025
+Other Date.(miniKanren and Relational Programming Workshop) Workshop: October 17, 2025
+Other Date.(OCaml) Workshop: October 17, 2025
+Other Date.(IWACO) Author Notification: August 15, 2025
+Other Date.(ICFP/SPLASH Volunteers) Notification of Acceptance: August 15, 2025
+Other Date.(Student Research Competition) Submission deadline: July 8, 2025
+Other Date.(Student Research Competition) Notification: August 12, 2025
+Other Date.(OOPSLA Artifacts) Kick-the-Tires Round 1: January 6 - 17, 2025
+Topics: programming systems, languages, and environments, software development, requirements, modeling, prototyping, design, implementation, generation, analysis, verification, testing, evaluation, maintenance, and reuse of software systems, Document Trust and Security, Machine Learning for Digital Documents, Digital Accessibility, Collections, Systems, and Management, Modelling and Representation, Document Content Analysis, Systems for Visual Document Analysis, Generation, Manipulation, and Presentation, Applications, User Experience","October 12 - 18, 2025",2025,Singapore,Singapore,Singapore,Asia,Offline,"{""(OOPSLA) Submission"":""October 15, 2024"",""(OOPSLA) Submission of Revisions R2"":""July 29, 2025"",""(ICFP Papers) Submission Deadline"":""February 27, 2025"",""(Onward! Essays) Submission Deadline"":""April 24, 2025"",""(Onward! Papers) Submission deadline"":""April 24, 2025"",""(ISWC Notes and Briefs) Submission"":""May 25, 2025"",""(Workshops) Proposal Submission"":""April 30, 2025"",""(Posters & Demos) Submission"":""May 30, 2025"",""(ISWC Design Exhibition) Submission"":""June 20, 2025"",""(Doctoral Colloquium) Submission"":""June 20, 2025"",""(Student Challenge) Idea Submission"":""June 15, 2025"",""(IMWUT Videos) IMWUT Videos Due"":""August 3, 2025"",""(Erlang) Submission Deadline"":""June 13, 2025"",""(FARM Performance) FARM submission deadline"":""June 25, 2025"",""(TyDe) Submission deadline"":""June 22, 2025"",""(ML Family Workshop) Submission Deadline (extended!)"":""July 3, 2025"",""(WebAssembly Workshop) Submission deadline"":""July 31, 2025"",""(ICFP/SPLASH Volunteers) Application Deadline"":""July 31, 2025"",""(Doctoral Symposium) Submission deadline"":""July 31, 2025"",""(SAS) Paper Submission"":""May 11, 2025"",""(PROPL) Submission deadline"":""July 8, 2025"",""(miniKanren and Relational Programming Workshop) Submission deadline"":""July 10, 2025"",""(OCaml) Submission deadline"":""July 10, 2025"",""(IWACO) Submission Deadline"":""July 21, 2025"",""(VMIL) Submission Deadline (Research papers)"":""July 21, 2025"",""(FUNARCH) Submission Deadline"":""June 23, 2025"",""(HATRA) Submission deadline"":""July 9, 2025"",""(LMPL) Paper Submission"":""July 7, 2025"",""(The Scala Workshop) Talk Proposal Submission"":""July 18, 2025""}","{""(OOPSLA) Author Notification"":""December 18, 2024"",""(OOPSLA) Author Notification of Revisions R2"":""August 12, 2025"",""(ICFP Papers) Final Decision Notification"":""June 27, 2025"",""(Onward! Essays) First-round Notification"":""June 6, 2025"",""(Onward! Papers) First-round notification"":""June 6, 2025"",""(ISWC Notes and Briefs) Author Notification"":""July 2, 2025"",""(Workshops) Notification of accepted proposals"":""May 2, 2025"",""(Posters & Demos) Author Notification"":""June 27, 2025"",""(ISWC Design Exhibition) Author Notification"":""August 1, 2025"",""(Doctoral Colloquium) Author Notification"":""July 5, 2025"",""(Student Challenge) Author Notification"":""July 15, 2025"",""(Erlang) Notification"":""July 4, 2025"",""(FARM Performance) FARM author notification"":""July 10, 2025"",""(TyDe) Notification of acceptance"":""July 23, 2025"",""(ML Family Workshop) Final Author Notification (if needed)"":""August 7, 2025"",""(WebAssembly Workshop) Author notification"":""August 8, 2025"",""(Doctoral Symposium) Author notification"":""August 8, 2025"",""(SAS) Notification"":""July 11, 2025"",""(PROPL) Notification"":""August 7, 2025"",""(miniKanren and Relational Programming Workshop) Author notification"":""August 12, 2025"",""(OCaml) Author/speaker notification"":""August 14, 2025"",""(IWACO) Author Notification"":""August 15, 2025"",""(VMIL) Author Notification (Research papers)"":""August 4, 2025"",""(FUNARCH) Author Notification"":""July 21, 2025"",""(HATRA) Author notification (tentative)"":""August 1, 2025"",""(LMPL) Author Notification"":""August 8, 2025"",""(The Scala Workshop) Author Notification"":""August 4, 2025""}","{""(OOPSLA) Camera Ready R2"":""August 22, 2025"",""(ICFP Papers) Camera-Ready Deadline"":""July 11, 2025"",""(ISWC Design Exhibition) Camera Ready"":""August 1, 2025"",""(SAS) Camera-Ready"":""August 22, 2025"",""(PROPL) Camera ready"":""August 22, 2025"",""(Erlang) Camera ready"":""August 25, 2025"",""(PAINT) Camera ready"":""August 25, 2025"",""(Scheme) Camera-ready deadline"":""August 25, 2025"",""(VMIL) Camera Ready (Research papers)"":""August 25, 2025"",""(Onward! Essays) Camera-Ready Deadline"":""August 25, 2025"",""(Onward! Papers) Camera-ready deadline"":""August 25, 2025"",""(FUNARCH) Camera-ready Deadline"":""August 25, 2025"",""(miniKanren and Relational Programming Workshop) Camera-ready deadline"":""August 25, 2025"",""(The Scala Workshop) Camera-Ready Submission"":""August 25, 2025"",""(TyDe) Submission of camera-ready papers"":""August 6, 2025""}",{},"{""(ICFP/SPLASH Tutorials) Tutorials Proposal Submission"":""May 8, 2025"",""(ICFP/SPLASH Volunteers) Volunteer Applications Open"":""July 2, 2025"",""(SAS Artifact) Artifact Submission"":""May 18, 2025"",""(SAS) Artifact Submission"":""May 18, 2025"",""(OOPSLA Artifacts) Submission Round 1"":""January 3, 2025"",""(OOPSLA Artifacts) Submission Round 2"":""June 27, 2025"",""(FARM Performance) FARM submission deadline"":""June 25, 2025"",""(TyDe) Workshop"":""October 12, 2025"",""(FUNARCH) Workshop"":""October 12, 2025"",""(Erlang) Workshop"":""October 12, 2025"",""(PROPL) Workshop"":""October 13, 2025"",""(HATRA) Workshop"":""October 14, 2025"",""(VMIL) Workshop"":""October 15, 2025"",""(ML Family Workshop) Workshop"":""October 16, 2025"",""(WebAssembly Workshop) Workshop"":""October 16, 2025"",""(Scheme) Workshop"":""October 16, 2025"",""(miniKanren and Relational Programming Workshop) Workshop"":""October 17, 2025"",""(OCaml) Workshop"":""October 17, 2025"",""(IWACO) Author Notification"":""August 15, 2025"",""(ICFP/SPLASH Volunteers) Notification of Acceptance"":""August 15, 2025"",""(Student Research Competition) Submission deadline"":""July 8, 2025"",""(Student Research Competition) Notification"":""August 12, 2025"",""(OOPSLA Artifacts) Kick-the-Tires Round 1"":""January 6 - 17, 2025""}","programming systems, languages, and environments, software development, requirements, modeling, prototyping, design, implementation, generation, analysis, verification, testing, evaluation, maintenance, and reuse of software systems, Document Trust and Security, Machine Learning for Digital Documents, Digital Accessibility, Collections, Systems, and Management, Modelling and Representation, Document Content Analysis, Systems for Visual Document Analysis, Generation, Manipulation, and Presentation, Applications, User Experience",No publisher,"The ACM Conference on Object Oriented Programming Systems Languages and Applications (OOPSLA) will be held from October 12-18, 2025, in Singapore, co-located with ICFP/SPLASH 2025. OOPSLA 2025 is part of the SPLASH conference and is dedicated to investigations of programming systems, languages, and environments.","# OOPSLA 2025: Call for Papers
+
+## Introduction
+
+The OOPSLA issue of the Proceedings of the ACM on Programming Languages (PACMPL) welcomes papers focusing on all practical and theoretical investigations of programming systems, languages, and environments. Papers may target any stage of software development, including requirements, modeling, prototyping, design, implementation, generation, analysis, verification, testing, evaluation, maintenance, and reuse of software systems. Contributions may include the development of new tools, techniques, principles, and evaluations.
+
+OOPSLA 2025 will have two rounds of reviewing, with the Round 1 submission deadline **October 15, 2024** and Round 2 submission deadline **March 25, 2025 (AoE)**. All deadlines are firm. New papers may be submitted to either round. Papers accepted in either round will be published in the 2025 volume of PACMPL(OOPSLA) and invited to present at the SPLASH conference in 2025.
+
+## What’s New
+
+There are two new things in this year’s Call that you should be sure to pay attention to:
+
+*   **Reserve Reviewer Policy**
+*   **Data-Availability Statement**
+
+## Contact
+
+You can reach the two RC Chairs (Shriram and Sukyoung) through this email: [oopsla-2025-rc-chairs@googlegroups.com](mailto:oopsla-2025-rc-chairs@googlegroups.com).
+
+Please use this address, not their personal email addresses, unless you think they are not getting your messages. Please allow 1–2 working days for a response before assuming they didn’t see your message, and longer right around deadlines.
+
+In your email, please mention the number of the paper you are writing about (if you have one). That makes it easier to track the context (and avoids ambiguity).
+
+## Review Process
+
+PACMPL(OOPSLA) has two rounds of reviewing. Each paper will typically receive three or more reviews. You will get an opportunity to respond to these reviews before decisions are finalized.
+
+At the end of each round, each paper will receive one of the following decisions:
+
+*   **Accept:** Your paper will appear in the upcoming volume of PACMPL(OOPSLA).
+*   **Reject:** Your paper will not appear in the upcoming volume of PACMPL(OOPSLA). In addition, a resubmission in less than a year from the original submission is not guaranteed a review. A paper is considered a resubmission if, in the judgment of the Chairs, it is substantially similar to the original submission.
+*   **Conditional Accept:** While the Review Committee likes the work, it would like to see some specific changes made. You will receive a list of specific required revisions.
+*   **Minor Revision:** While the Review Committee likes the direction of the work, it has several concerns that it would like to see revised. These concerns go beyond what can be enumerated in a list. Thus, you may receive some specific required revisions, but can also expect to receive broader comments.
+*   **Major Revision:** While the Review Committee thinks the direction of the work has promise, it has significant concerns that it would like to see revised. You may receive some specific required revisions, but will also receive broader comments that may take significantly longer to execute.
+
+If you receive one of the latter three decisions, please note:
+
+*   Unlike in some previous years, there is no restriction on when you can submit your revision. The decision does not imply a duration.
+*   If you choose to submit a revised paper, you must also submit both (a) a clear explanation of how your revision addresses these comments, and (b) unless impossible, a diff of the PDFs. Independent of the decision, you can submit at the next deadline (either the opening deadline of the next round or the revision deadline of the current round). To the extent possible, your submission will be reviewed by the same reviewers.
+*   Unless you explicitly withdraw your paper, it is considered under review. Therefore, it would violate policy to submit it elsewhere. If you choose to withdraw the paper (e.g., to submit elsewhere), the next time you submit it, it will be treated as a fresh paper: you may get entirely different reviewers, previous reviews and comments will not be available, etc.
+*   Until your paper is accepted or rejected, you should maintain the anonymity of your submission. If you believe you need to violate it to respond to the reviews, please first discuss this with the Chairs.
+*   If the Artifact Evaluation submission deadline occurs before the decision date, Conditionally Accepted papers will be invited to submit artifacts. However, acceptance of artifacts has no impact on the acceptance of the revised papers.
+*   Only Accepted and Conditionally Accepted papers can submit artifacts for evaluation. The reason for this is that often, Minor and Major revisions end up affecting the artifacts, sometimes substantially. It is not reasonable to ask the AEC to review the artifacts twice; nor does it make sense to review artifacts that are likely to change. For this reason, artifact evaluation will only happen once the paper reaches (near-)final form. Thus, for instance, a paper accepted after revisions in R1 can submit to the AEC for R2, and get its badges then.
+
+## Reserve Reviewer Policy
+
+To prepare for the possibility of a higher volume of submissions, we are implementing a new review policy: for each paper, at least one senior author must — unless exempt under the criteria below — register as a reserve reviewer. They must list their information on the submission form, and they must register themselves on TPMS.
+
+Instructions: Log into TPMS with the same email address as for your HotCRP account. The system will ask you to upload (or provide URLs for) 5-10 of your previous papers, to base your matching on. Uploading papers/URLs is pretty straightforward; here’s also a step-by-step video. You get to choose which papers you want to upload; these determine what papers you are most likely to be asked to review. So please go for both depth and breadth. In particular, please provide papers on topics for which you are a relatively rare expert.
+
+The goal of this policy is to uphold the high standard of reviews within the SIGPLAN community. To achieve this, we must ensure manageable review loads, prevent burnout, and encourage reviewers to stay engaged for future rounds. High-quality reviews are one of the community’s greatest assets, playing a crucial role in elevating the quality of research for everyone.
+
+Our hope is that these reserve reviewers won’t be needed at all! They will only be called upon as ad hoc reviewers if our projections fall significantly short. Even in that case, their review load will be far lighter than that of RC members, and we will do our best to assign papers that closely match expertise (hence the need for TPMS registration).
+
+We define “senior” authors as those who completed their PhD five or more years ago. A paper is exempt from the reserve reviewer policy if:
+
+*   The paper has no senior authors.
+*   At least one senior author is already in the RC for this conference.
+*   Every senior author of the paper satisfies one or more of these criteria:
+    *   is new to SIGPLAN (has never published in it before);
+    *   is chairing a SIGPLAN conference with 150 or more submissions last year, this year, or next year;
+    *   has some other exceptional circumstance that didn’t prevent writing the paper but prevents doing any reviewing. This must be cleared at least three days before submission with the RC Chairs.
+
+It is okay for one person to serve as the reserve reviewer for more than one paper. Please enter their information for each such paper (preferably identically).
+
+## Submissions
+
+### Template
+
+SPLASH’s PACMPL templates and instructions are on the [SIGPLAN author information page](https://www.sigplan.org/Resources/Author/). Please use:
+
+```latex
+\documentclass[acmsmall,screen,review]{acmart}
+```
+
+### Page Limit
+
+Initial submissions must be at most **23 pages** using the template. This page limit does not include required statements, references, or supplementary material (such as appendices). However, papers must be self-contained; reviewers are under no obligation to read the supplementary material.
+
+Revisions can correspondingly go up to a maximum of **25 pages**. This includes papers given a minor or major revision in 2024, as well as the final, camera-ready papers. For fairness, there will not be an option to purchase additional pages. For the final paper, we ask you to stick as closely as possible to the final version accepted by reviewers, and only add material that reviewers requested or that you promised.
+
+### Anonymity
+
+PACMPL uses **double-blind reviewing**. Authors’ identities are only revealed if a paper is accepted. Your papers must:
+
+*   omit author names and institutions,
+*   use the third person when referencing your work,
+*   anonymize supplementary material.
+
+Nothing should be done in the name of anonymity that weakens the submission. When in doubt, contact the Review Committee Chairs.
+
+### Novelty
+
+Papers must describe unpublished work that is not currently submitted for publication elsewhere as described by SIGPLAN’s Re-Publication Policy. Submitters should also be aware of ACM’s Policy and Procedures on Plagiarism. Submissions are expected to comply with the ACM Policies for Authorship.
+
+### Data-Availability Statement
+
+To help readers understand the state of the intended artifact, we ask you to add a section just before references titled **Data-Availability Statement** in the initial submission. This will not count towards the page limit, but please limit it to at most a few paragraphs (usually one paragraph suffices).
+
+In it, indicate whether an artifact exists, its nature and limitations, and whether it will be submitted for Artifact Evaluation. This section should ideally also include links to preliminary versions of (anonymized) artifacts, datasets, and so on that reviewers may find useful (but are not obliged to follow). The statement is not meant to be a detailed description of how to use the artifact; that should accompany the artifact itself.
+
+It is understood that some papers have no artifacts but, given the broad range of what constitutes an artifact, it would be helpful to readers to explain why the paper has none.
+
+Accepted papers that fail to provide an artifact after promising one will be asked to explain why they did not do so.
+
+Artifact Evaluation submission will closely follow paper notification, so make sure you check the Artifact Call as soon as you submit your paper.
+
+### Procedure
+
+Please submit using [HotCRP](https://oopsla2425.hotcrp.com/).
+
+### Publication
+
+PACMPL is a **Gold Open Access** journal. All papers will be freely available to the public. Authors can voluntarily cover the article processing charge (USD 400), but payment is not required.
+
+The official publication date is the date the journal is made available in the ACM Digital Library. The journal issue and associated papers accepted in Round 1 (OOPSLA1) will be published no earlier than April 1, 2025, while those accepted in Round 2 (OOPSLA2) will be published no earlier than October 1, 2025. The official publication date affects the deadline for any patent filings related to published work.
+
+## ACM Policies
+
+By submitting your article to an ACM Publication, you are acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new [Publications Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects).
+
+Please ensure that you and your co-authors obtain an ORCID iD, so you can complete the publishing process for your accepted paper. ACM has been involved in ORCID from the start and has made a [commitment to collecting ORCID iDs from all of our published authors](https://authors.acm.org/author-resources/orcid-faqs).
+
+The ACM Publications Board has recently updated the ACM Authorship Policy in several ways:
+
+*   Addressing the use of generative AI systems in the publications process
+*   Clarifying criteria for authorship and the responsibilities of authors
+*   Defining prohibited behaviour, such as gift, ghost, or purchased authorship
+*   Providing a linked FAQ explaining the rationale for the policy and providing additional details
+
+You can find the [updated policy here](https://www.acm.org/publications/policies/new-acm-policy-on-authorship).
+
+## FAQ
+
+### What are reviewers looking for?
+
+We consider the following criteria when evaluating papers:
+
+*   **Novelty:** The paper presents new ideas and results and places them appropriately within the context established by previous research.
+*   **Importance:** The paper contributes to the advancement of knowledge in the field. We welcome papers that diverge from the dominant trajectory of the field.
+*   **Evidence:** The paper presents sufficient evidence supporting its claims, such as proofs, implemented systems, experimental results, statistical analyses, user studies, case studies, and anecdotes.
+*   **Clarity:** The paper presents its contributions, methodology, and results clearly.
+
+### How are papers from previous years handled?
+
+We follow the same timeline as the other papers with the following two differences: (1) we try to assign the same reviewers you had in the previous year’s OOPSLA; (2) we strongly discourage reviewers from giving another “major revision” decision.
+
+### Are artifacts required?
+
+No! It is understood that some papers have no artifacts. However, if the nature of the paper’s content and claims suggest there ought to be an artifact, authors must explain why they will not be providing one. The absence of such an explanation can be cause for rejection.
+
+### Can a paper be accepted if the artifact is rejected?
+
+Yes. Sometimes artifacts are rejected for reasons having nothing to do with the research results (e.g., packaging issues).
+
+### What exactly do I have to do to anonymize my paper?
+
+Use common sense. Your job is not to make your identity completely undiscoverable (e.g., if a reviewer does a Web search for the text of your paper) but simply to make it possible for reviewers to evaluate your submission without knowing who you are. This includes omitting your names from your title page, and referring to your own work in the third person. For example, if your name is Smith and you have worked on amphibious type systems, instead of saying “We extend our earlier work on statically typed toads [Smith 2004]”, you might say “We extend Smith’s [2004] work on statically typed toads.” Also, be sure not to include any acknowledgements that would give away your identity. It is best to suppress acknowledgments entirely until camera-ready.
+
+### Should I change the name of my system?
+
+No. However, if it is not a new system and is likely to be known to others, you should refer to it as if it were created by a third party, rather than as your own creation.
+
+### My submission is based on code available in a public repository. How do I deal with this?
+
+Cite the code in your paper, but replace the URL with text like “link removed for double-blind review”. If you believe reviewer access to your code would help during author response, contact the Review Committee Chairs.
+
+### I am submitting an extension of my workshop paper. Should I anonymize reference to that work?
+
+Yes, you should treat it like any other anonymization. But you should also change the title of the paper to break a direct link between the two.
+
+### Am I allowed to post my paper on my web page or arXiv, send it to colleagues, give a talk about it, mention it on social media, …?
+
+We want to help you navigate the tension between the normal communication of scientific results and actions that essentially force potential reviewers to learn the identity of authors. Roughly speaking, you may discuss work under submission, but you should not broadly advertise your work through media that are likely to reach your reviewers. We acknowledge there are grey areas and trade-offs. When in doubt about any of these guidelines, please first check in with the Review Committee Chairs: better safe than sorry. (If the Chairs give you permission, they can then also address any subsequent complaints about those actions from reviewers.)
+
+Things you may do:
+
+*   Put your submission on your home page, arXiv, or other pre-publication sites.
+*   Discuss your work with anyone not on the review committees or reviewers with whom you already have a conflict.
+*   Present your work at professional meetings, job interviews, etc.
+*   Submit work previously discussed at an informal workshop, previously posted on a pre-publication site, previously submitted to a conference not using double-blind reviewing, etc.
+
+Things you should not do:
+
+*   Contact members of the review committee about your work, or deliberately present your work where you expect them to be.
+*   Publicize your work on social media in an identifiable way with broad settings. For example, a post with a broad privacy setting (public or all friends) saying, “Whew, OOPSLA paper in, time to sleep” is okay, but one describing the work or giving its title is not appropriate. Alternatively, a post with paper details to a group including only the colleagues at your institution is fine.
+*   Reviewers will not be asked to recuse themselves from reviewing your paper unless they feel you have gone out of your way to advertise your authorship information to them.
+
+## All Dates
+
+| Round | Submission                  | Author Response                 | Author Notification | Revision Submission | Author Notification | Camera Ready |
+| :---- | :-------------------------- | :------------------------------ | :------------------ | :------------------ | :------------------ | :----------- |
+| R1    | **Tue 15 October 2024**     | Tue 3 Dec - Fri 6 Dec           | Wed 18 Dec          | Tue 4 February 2025 | Tue 18 Feb          | Fri 28 Feb   |
+| R2    | **Tue 25 March 2025** (AoE) | Mon 26 May - Thu 29 May         | Wed 18 June         | Tue 29 July         | Tue 12 Aug          | Fri 22 Aug   |
+
+**Important Dates AoE (UTC-12h):**
+
+*   **Tue 29 Jul 2025:** Submission of Revisions R2
+*   **Tue 12 Aug 2025:** Author Notification of Revisions R2
+*   **Fri 22 Aug 2025:** Camera Ready R2
+*   **Wed 18 Jun 2025:** Author Notification R2
+*   **Mon 26 - Thu 29 May 2025:** Author Response R2
+*   **Tue 25 Mar 2025:** Submission R2",,
+req-conf-1751809170576-jzvmi,,Passive and Active Measurement Conference,PAM,https://udesa.edu.ar/pam25,https://udesa.edu.ar/pam25/call-papers,,"Conference dates: March 10-12, 2025
+Year: 2025
+Type: Online
+Location: Virtual
+Submission Date.Paper registration: October 1, 2024
+Submission Date.Paper submission: October 8, 2024
+Notification Date.Notification: November 14, 2024
+Camera-ready Date.Camera-ready due: December 10, 2024
+Topics: Applications (e.g., web, streaming, games), Data centers and cloud computing, Energy, IoT (e.g., smart home, SCADA, ICS, embedded systems), Measurement tools and software, Network security, User privacy, Overlays (e.g., P2P, CDNs), Physical Layer, Routing, Social networks, Topology, Transport/congestion control, User behavior and experience, QoE, Virtualization (e.g., SDN, NFV), Visualization, Wireless, cellular, and mobile
+Publisher: Springer","March 10-12, 2025",2025,Virtual,No city/state/province,No country,No continent,Online,"{""Paper registration"":""October 1, 2024"",""Paper submission"":""October 8, 2024""}","{""Notification"":""November 14, 2024""}","{""Camera-ready due"":""December 10, 2024""}",{},{},"Applications (e.g., web, streaming, games), Data centers and cloud computing, Energy, IoT (e.g., smart home, SCADA, ICS, embedded systems), Measurement tools and software, Network security, User privacy, Overlays (e.g., P2P, CDNs), Physical Layer, Routing, Social networks, Topology, Transport/congestion control, User behavior and experience, QoE, Virtualization (e.g., SDN, NFV), Visualization, Wireless, cellular, and mobile",Springer,"The Passive and Active Measurement (PAM) conference is a virtual event scheduled for March 10-12, 2025, bringing together researchers and operators to discuss novel work in network measurement and analysis, with a focus on systems-based research and real-world data.","# Call for Papers: Passive and Active Measurement Conference (PAM 2025)
+
+The Passive and Active Measurement (PAM) conference is organized as a **virtual meeting** and will be held from **March 10-12, 2025**.
+
+PAM brings together researchers and operators to discuss novel and emerging work in the area of network measurement and analysis. The conference is inclusive of all areas of network measurement, with a strong focus on systems-based research and real-world data. Work with operational impact or relevance to the broader network research community is especially welcomed, as are early and promising measurement techniques and replications or reproductions of existing studies.
+
+## Topics of Interest
+
+Original contributions that advance the state-of-the-art in the following areas are invited:
+
+*   Applications (e.g., web, streaming, games)
+*   Data centers and cloud computing
+*   Energy
+*   IoT (e.g., smart home, SCADA, ICS, embedded systems)
+*   Measurement tools and software
+*   Network security
+*   User privacy
+*   Overlays (e.g., P2P, CDNs)
+*   Physical Layer
+*   Routing
+*   Social networks
+*   Topology
+*   Transport/congestion control
+*   User behavior and experience, QoE
+*   Virtualization (e.g., SDN, NFV)
+*   Visualization
+*   Wireless, cellular, and mobile
+*   Replicability and reproducibility track
+
+## Replicability and Reproducibility Track
+
+PAM 2025 will feature a dedicated track for submissions that aim to reproduce or replicate results previously published at PAM, TMA, IMC, or the measurements track at SIGCOMM, CoNEXT, SIGMETRICS, or other networking conferences. Papers in this track must explicitly explain the paper being replicated/reproduced, the nature of the replication/reproduction, and its value to the PAM community. These papers will be held to the same technical standards and must conform to the same criteria and rules as full submissions on the main track.
+
+## Important Dates
+
+All times are Anywhere on Earth (AoE), unless specified.
+
+1.  **Paper registration:** October 1st, 2024 (October 2nd, 11:59:59 AM UTC)
+2.  **Paper submission:** October 8th, 2024 (October 9th, 11:59:59 AM UTC)
+3.  **Notification:** November 14th, 2024
+4.  **Camera-ready due:** December 10th, 2024
+5.  **Conference:** March 10-12, 2025
+
+## Submission Guidelines
+
+### Submission Types
+
+PAM welcomes both short and long submissions. This includes early-stage contributions with exciting promise, high-level visions, challenging future directions, validation of important results, or new ideas challenging existing assumptions.
+
+Submissions should describe original research that has not been published before and is not under submission to any other venue.
+
+### Formatting Requirements
+
+*   Submissions must follow **Springer LNCS format**.
+*   **Short papers:** Up to 11 pages for technical content (up to 5 pages for appendices and references).
+*   **Long papers:** Up to 24 pages for technical content (up to 5 pages for appendices and references).
+*   *Note: Reviewers are not required to read appendices. Everything essential must be within the first 11 pages for short papers and 24 pages for long papers.*.
+
+### Anonymization
+
+Reviewing will be **double-blind**.
+
+*   Do not include names or affiliations of authors in the submission.
+*   Refer to your prior work in the third person.
+*   Make a best effort to anonymize system names that would identify you.
+*   Contact the PC chairs if you have concerns about anonymizing your paper while maintaining its integrity.
+
+### Submission Portal
+
+Please submit your paper via HotCRP: [https://hotcrp.dacs.utwente.nl/pam2025/](https://hotcrp.dacs.utwente.nl/pam2025/)
+
+## Ethical Considerations
+
+Ethics will be considered during the review process. Each paper must include a statement detailing the ethical considerations of the work. If no ethical concerns are raised, this must be clearly stated.
+
+> Papers describing experiments with users or sensitive user data must follow basic precepts of ethical research and subscribe to community norms. These include: respect for privacy, secure storage of sensitive data, voluntary and informed consent if users are placed at risk, avoiding deceptive practices when not essential, beneficence, and risk mitigation.
+
+Authors may consult the [Menlo Report](https://www.acm.org/publications/icps/author-guidance) for further ethical information and the [Allman/Paxson IMC 2007 paper](https://conferences.sigcomm.org/imc/2007/papers/imc80.pdf) for guidance on ethical data sharing.
+
+Submitting research for approval by an institutional ethics review body is necessary but not sufficient. The PC will consider the ethical soundness and justification of any paper.
+
+If work has been submitted to an IRB or ethics committee, the ethical considerations section or appendix should clearly indicate this and include the reference number of the approval if available.
+
+## Awards
+
+*   **Best Paper Award:** Recognizes the paper with the highest merit.
+*   **Community Contribution Award:** Given to the best paper that makes relevant datasets, source code, or platforms available to the public by the camera-ready deadline, sufficiently documented for replication.
+
+## Publication
+
+*   **Publisher:** IARIA Press (operated by Xpert Publishing Services)
+*   **Archived:** Open Access IARIA ThinkMind Digital Library
+*   **Prints:** Available at Curran Associates, Inc.
+
+Authors of selected papers will be invited to submit extended versions to an IARIA Journal.",,
+req-conf-1751809170576-jzvmi,,"International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software",Onward,https://2025.splashcon.org/track/splash-2025-Onward-papers,https://2025.splashcon.org/track/splash-2025-Onward-papers#Call-for-Papers,https://2025.splashcon.org/track/splash-2025-Onward-papers#Important-Dates,"Conference dates: October 12 - 18, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.(Onward! Papers) Submission deadline: April 24, 2025
+Submission Date.(Onward! Essays) Submission deadline: April 24, 2025
+Notification Date.(Onward! Papers) First-round notification: June 6, 2025
+Notification Date.(Onward! Papers) Final notification: August 11, 2025
+Camera-ready Date.(Onward! Papers) Camera-ready deadline: August 25, 2025
+Topics: programming and software: processes, methods, languages, communities and applications","October 12 - 18, 2025",2025,Singapore,Singapore,Singapore,Asia,Offline,"{""(Onward! Papers) Submission deadline"":""April 24, 2025"",""(Onward! Essays) Submission deadline"":""April 24, 2025""}","{""(Onward! Papers) First-round notification"":""June 6, 2025"",""(Onward! Papers) Final notification"":""August 11, 2025""}","{""(Onward! Papers) Camera-ready deadline"":""August 25, 2025""}",{},{},"programming and software: processes, methods, languages, communities and applications",No publisher,"The Onward! conference, part of SPLASH 2025, will be held in Singapore from October 12-18, 2025, co-located with ICFP/SPLASH 2025. It focuses on new ideas, paradigms, and reflections on programming and software, welcoming radical and visionary concepts with a degree of validation.","# Onward! Papers: Call for Papers
+
+Onward! is a premier multidisciplinary conference focused on everything to do with programming and software, including processes, methods, languages, communities, and applications. Onward! is more radical, more visionary, and more open than other conferences to ideas that are well-argued but not yet proven. We welcome different ways of thinking about, approaching, and reporting on programming language and software engineering research.
+
+## The Character of Onward! Papers
+
+Onward! Papers seeks **grand visions and new paradigms** that could significantly impact future software development. Unlike conferences like OOPSLA, which require rigorous validation such as theorems or empirical experiments, Onward! accepts less rigorous methods of validation such as compelling arguments, exploratory implementations, and substantial examples. The use of worked-out examples to support new ideas is strongly encouraged.
+
+## Selection Process
+
+Onward! papers are peer-reviewed in a **double-blind manner**. Submissions will be judged on the potential impact of the ideas and the quality of the presentation. A two-phase review process is employed, allowing for revisions to promising papers.
+
+## Instructions for Authors
+
+*   Submissions must conform to the formatting instructions.
+*   Violations may lead to rejection without review.
+*   Authors of accepted papers are strongly encouraged to present their work in person, though remote participation options will be available.
+
+## Submission Site
+
+*   Submit via: [https://onward2025papers.hotcrp.com/](https://onward2025papers.hotcrp.com/)
+
+## Concurrent Submissions
+
+*   Papers must describe unpublished work not currently submitted elsewhere.
+*   Adhere to ACM’s Policy and Procedures on Plagiarism.
+
+### Policy on Double Blind Review
+
+*   Authors must remove identifying information from their submissions.
+*   Refer to own work in the third person where possible.
+*   Remove other potentially identifying information (e.g., acknowledgements).
+
+## Policy on Authorship Changes
+
+*   Any addition of authors after initial submission requires clearance from the PC chair.
+
+## Format
+
+*   Submissions should use the **ACM SIGPLAN Conference acmart Format, sigplan sub-format**.
+*   Use **10 point font**.
+*   All submissions should be in **PDF format**.
+*   Include page numbers in your submission.
+*   Ensure legibility when printed on a black and white printer.
+
+## Page Limit
+
+*   Main part of the paper (excluding bibliographic references): **up to 13 pages**.
+*   Bibliographic references and appendices have no page limit.
+*   Revised manuscripts and final submissions are limited to **17 pages**.
+
+## Publication
+
+*   The official publication date is when the proceedings are made available in the ACM Digital Library.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Submission deadline:** Thursday 24 April 2025
+*   **Revised submission deadline:** Monday 21 July 2025
+*   **First-round notification:** Friday 6 June 2025
+*   **Final notification:** Monday 11 August 2025
+*   **Camera-ready deadline:** Monday 25 August 2025
+
+## Contact Information
+
+For questions, please contact the Program Chair via [onward@splashcon.org](mailto:onward@splashcon.org).
+
+## Program Committee
+
+*   **Co-chairs:** Shigeru Chiba (University of Tokyo, Japan), Clemens Nylandsted Klokmose (Aarhus University, Denmark)
+*   *Members include:* Antranig Basman, Jacques Carette, Luke Church, Siobhán Clarke, Stéphane Ducasse, Elisa Gonzalez Boix, Philipp Haller, Reid Holmes, Joel Jakubovic, Jun Kato, Raffi Khatchadourian, Patrick Lam, Daan Leijen, Sorin Lerner, Magnus Madsen, Ole Lehrmann Madsen, Hidehiko Masuhara, Steve Oney, Roly Perera, Guillermo Polito, Alexander Repenning, Andrea Rosà, Giancarlo Succi, Emma Söderberg, Tijs van der Storm.
+
+## Steering Committee
+
+*   *Members include:* Shigeru Chiba, Wolfgang De Meuter, Jonathan Edwards, Colin Gordon, Robert Hirschfeld, Stephen Kell, Hidehiko Masuhara, Clemens Nylandsted Klokmose, Tomas Petricek, Manu Sridharan, Marcel Taeumel, Vasco T. Vasconcelos, Tijs van der Storm.",Revised submission deadline (Mon 21 Jul 2025),Yes
+req-conf-1751809170576-jzvmi,,Practical Aspects of Declarative Languages,PADL,https://popl25.sigplan.org/home/PADL-2025,https://popl25.sigplan.org/home/PADL-2025#Call-for-Papers,https://popl25.sigplan.org/home/PADL-2025#Important-Dates,"Conference dates: January 20 - 21, 2025
+Year: 2025
+Location: Curtis Hotel Denver, Denver, Colorado, United States
+City-State-Province: Denver, Colorado
+Country: United States
+Continent: North America
+Type: Offline
+Topics: Declarative languages, functional programming, logic programming, databases, constraint programming, theorem proving
+Submission Date.Paper submission: October 11, 2024
+Notification Date.Notification to authors: November 14, 2024
+Camera-ready Date.Final version: November 24, 2024
+Other Date.Abstract submission: October 18, 2024
+Other Date.Symposium: January 20 - 21, 2025","January 20 - 21, 2025",2025,"Curtis Hotel Denver, Denver, Colorado, United States","Denver, Colorado",United States,North America,Offline,"{""Paper submission"":""October 11, 2024""}","{""Notification to authors"":""November 14, 2024""}","{""Final version"":""November 24, 2024""}",{},"{""Abstract submission"":""October 18, 2024"",""Symposium"":""January 20 - 21, 2025""}","Declarative languages, functional programming, logic programming, databases, constraint programming, theorem proving",No publisher,"The 27th International Symposium on Practical Aspects of Declarative Languages (PADL 2025) will be held from January 20-21, 2025, in Denver, Colorado, United States, at the Curtis Hotel Denver. PADL is a forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming.","# PADL 2025: Call for Papers
+
+The 27th International Symposium on Practical Aspects of Declarative Languages (PADL 2025) will take place on **Mon 20 Jan 2025** and **Tue 21 Jan 2025** at the **Curtis Hotel Denver, Denver, Colorado, United States**.
+
+## Introduction
+
+Declarative languages, including functional, logic, and constraint programming, have sound theoretical bases and attractive frameworks for application development, with successful applications in various real-world situations. PADL is a well-established forum for researchers and practitioners to present original work emphasizing novel applications and implementation techniques for all forms of declarative programming.
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to:
+
+*   Innovative applications of declarative languages
+*   Declarative domain-specific languages and applications
+*   Practical applications of theoretical results
+*   New language developments and their impact on applications
+*   Declarative languages and software engineering
+*   Evaluation of implementation techniques on practical applications
+*   Practical experiences and industrial applications
+*   Novel uses of declarative languages in the classroom
+*   Practical extensions such as constraint-based, probabilistic, and reactive languages
+
+PADL 2025 especially welcomes new ideas and approaches related to applications, design, and implementation of declarative languages going beyond the scope of the past PADL symposia, for example, advanced database languages and contract languages, as well as verification and theorem-proving methods that rely on declarative languages.
+
+## Invited Talks
+
+*   **Solvers, unite! A simple unified semantics for reasoning with assurance and agreement** by Y. Annie Liu (Stony Brook University)
+*   **Bridging Safety and Performance** by Umut A. Acar (Carnegie Mellon University)
+
+## Submissions
+
+PADL 2025 welcomes the following submission types:
+
+*   **Regular papers:** (max. 15 pages, excluding references) for original research results on complex/real-world applications, tools/systems, or technical results. These will be published in the formal proceedings.
+*   **Short papers:** (max. 8 pages, excluding references) for original research results on complex/real-world applications, tools/systems, or technical results. These will be published in the formal proceedings.
+*   **Extended abstracts:** (max. 3 pages) for new ideas, new perspectives, or work-in-progress. These will be posted on the symposium website but not in the formal proceedings.
+
+All page limits exclude references.
+
+### Submission Guidelines
+
+*   Submissions must be written in English and formatted according to the standard **Springer LNCS style**. Guidelines can be found here: [https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)
+*   The review process is **double-anonymous**. Authors must omit names and institutions, refer to their prior work in the third person, and avoid acknowledgments that might identify them.
+*   Additional material for reviewers (e.g., proofs) may be placed in a clearly marked appendix, which is not included in the page limit. Reviewers are not obliged to read appendices.
+*   Page numbers (and line numbers if possible) should appear on the manuscript. For LaTeX, use:
+    ```latex
+    \pagestyle{plain}
+    \usepackage{lineno}
+    \linenumbers 
+    ```
+*   Papers should be submitted electronically via [EquinOCS](https://equinocs.springernature.com/service/padl2025). Registration is required if you do not have an account.
+
+## Distinguished Papers
+
+The authors of a small number of distinguished papers will be invited to submit a longer, substantially extended version (roughly 30%) for journal publication in **Theory and Practice of Logic Programming (TPLP)** or **Journal of Functional Programming (JFP)**.
+
+## Awards
+
+*   **Best Student Paper Award:**
+    *   Zachary Hansen, Yuliya Lierler: “SM-based Semantics for Answer Set Programs Containing Conditional Literals and Arithmetic”
+*   **Best Student Paper Honorable Mention:**
+    *   Kento Takyu, Kazunori Ueda: “Enhancing a Hierarchical Graph Rewriting Language based on MELL Cut Elimination”
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Abstract submission:** Fri 11 Oct 2024
+*   **Paper submission:** Fri 18 Oct 2024
+*   **Notification to authors:** Thu 14 Nov 2024
+*   **Final version:** Sun 24 Nov 2024
+*   **Symposium:** Mon 20 Jan - Tue 21 Jan 2025
+
+## Registration for PADL 2025
+
+Registration for PADL 2025 is handled separately from POPL. At least one author of each accepted paper must register for PADL.
+
+*   **Early registration deadline:** December 29, 2024
+
+### Registration Rates (British Pounds)
+
+*   **Student:**
+    *   *Early Rate:* **£310**
+    *   *Regular Rate:* **£335**
+*   **Regular:**
+    *   *Early Rate:* **£420**
+    *   *Regular Rate:* **£500**
+
+Registration includes venue, lunch, and coffee breaks.
+
+#### Steps for Registering
+
+1.  Wire a bank transfer to the following account:
+    *   Bank: Natwest (UK)
+    *   Bank address: 36 St Andrew Square, Edinburgh, EH2 2YB
+    *   Account name: THE ASSOCIATION FOR LOGIC PROGRAMMING Ltd
+    *   Account holders address: Care of Marina De Vos, Dept Computer Science, University of Bath, BA2 7AY
+    *   Sort Code: 60-02-05
+    *   Account Number: 66462738
+    *   BIC: NWBKGB2L
+    *   IBAN: GB74NWBK60020566462738
+    *   *(Note: Transfer charges are assumed by the payer. Transfers usually take a week.)*
+2.  Contact Marina De Vos for payment queries.
+3.  Once the transfer is made, send a copy of the receipt along with your first name, last name, affiliation, and country to [gvidal@dsic.upv.es](mailto:gvidal@dsic.upv.es) (Cc: [cssmdv@bath.ac.uk](mailto:cssmdv@bath.ac.uk)).
+
+## Student Grants
+
+PADL 2025 encourages student participation by providing grants to partially cover registration and travel costs. Apply by December 25 using this form: [https://forms.gle/Xr4HfxgNRxUAy7jv9](https://forms.gle/Xr4HfxgNRxUAy7jv9). Preference will be given to students presenting their papers. Students from underrepresented groups are strongly encouraged to apply.
+
+## Venue
+
+PADL 2025 will take place at the **Curtis Hotel Denver, 1405 Curtis Street, 80202 Denver, Colorado, United States**.
+
+## Co-located Events
+
+PADL 2025 is co-hosted with POPL 2025 and is part of the following:
+
+### Co-hosted Conferences
+
+*   [CPP 2025](https://popl25.sigplan.org/home/CPP-2025)
+*   [VMCAI 2025](https://conf.researchr.org/home/VMCAI-2025)
+
+### Workshops
+
+*   [CoqPL 2025](https://popl25.sigplan.org/home/CoqPL-2025)
+*   [Dafny 2025](https://popl25.sigplan.org/home/dafny-2025)
+*   [LAFI 2025](https://popl25.sigplan.org/home/lafi-2025)
+*   [PEPM 2025](https://popl25.sigplan.org/home/pepm-2025)
+*   [PLMW @ POPL 2025](https://popl25.sigplan.org/home/PLMW-POPL-2025)
+*   [PLanQC 2025](https://popl25.sigplan.org/home/planqc-2025)
+*   [PriSC 2025](https://popl25.sigplan.org/home/prisc-2025)
+*   [TPSA 2025](https://popl25.sigplan.org/home/tpsa-2025)
+*   [WAW 2025](https://popl25.sigplan.org/home/waw-2025)
+*   [WITS 2025](https://popl25.sigplan.org/home/wits-2025)
+
+## Contact
+
+Questions? Use the [PADL contact form](https://popl25.sigplan.org/contact2/PADL-2025-papers).",Abstract and paper submission date is swapped,Yes
+req-conf-1751809170576-jzvmi,,"International Conference on Parallel and Distributed Computing, Applications and Technologies",PDCAT,https://www.pd-cat.org/,https://www.pd-cat.org/call_for_paper.html,,"Conference dates: November 22 - 24, 2025
+Year: 2025
+Location: Gold Coast, Australia
+City-State-Province: Gold Coast
+Country: Australia
+Continent: Oceania
+Type: Offline
+Submission Date.Paper Submission Deadline: August 1, 2025
+Notification Date.Notification of Acceptance: September 15, 2025
+Camera-ready Date.Camera-Ready Submission Deadline: September 30, 2025
+Topics: Networking and Architectures, Parallel and distributed architectures, Interconnection networks, Heterogeneous and multimedia systems, Reliability, availability, and fault tolerance, Ubiquitous and pervasive computing systems, ATM and high-speed networks, Computer networks and optical networks, Communication and telecommunication systems, Wireless networks and mobile computing, Internet of Things (IoT), Cloud and grid computing systems, Edge and fog computing, Reconfigurable computing architectures, Algorithms and Applications, Artificial Intelligence algorithms, Database systems and data mining, Intelligent computing and neural networks, Parallel and distributed algorithms, Big data computing and analytics, Distributed data and knowledge-based systems, Image processing and computer graphics, High-performance scientific computing, Reconfigurable high-performance computing systems, Resource allocation and management, Network routing and communication algorithms, Bioinformatics and computational biology, Software Systems and Technologies, Task mapping and job scheduling, Formal methods and programming languages, Internet computing and applications, Quantum computing and algorithms, Image processing and computer vision, Agent-based technologies, Operating systems and system software, Software tools and development environments, Parallelizing compilers and optimization, Web services and distributed applications, Component-based software technologies, Simulation, modeling, and visualization, Security and Privacy, Distributed federated learning paradigms, Quantum-enabled federated learning frameworks, Privacy-preserving mechanisms for artificial intelligence, Security of artificial intelligence systems, Privacy-preserving crowd intelligence, Attack and defense algorithms in federated learning, Attack and defense strategies for edge computing, Quantum-based defense mechanisms in federated learning paradigms, Privacy-preserving computation techniques, Database security and cloud security, Access control, authorization, and biometric security, High-Performance Systems, Operating systems for parallel and distributed systems, High-performance computer arithmetic, Memory hierarchy and caching, Performance tuning, optimization, and profiling, Human-computer interaction in parallel and distributed systems, Photonic and quantum computing, Media computing in parallel and distributed systems, Software engineering for parallel and distributed systems, Big Data Management and Processing, Massive data stream processing in cloud environments, Graph analytics, social networks, and the semantic web, Data systems for knowledge discovery, data mining, and machine learning, Big data models and computational theory, Crowdsourced and collaborative data management, Distributed, decentralized, and parallel data management, including blockchain systems, Processing and analytics for graphs, social networks, and semantic web data, Security, privacy, and ethics in data and analytics, Multi-source data processing and integration, Deep learning models and applications","November 22 - 24, 2025",2025,"Gold Coast, Australia",Gold Coast,Australia,Oceania,Offline,"{""Paper Submission Deadline"":""August 1, 2025""}","{""Notification of Acceptance"":""September 15, 2025""}","{""Camera-Ready Submission Deadline"":""September 30, 2025""}",{},{},"Networking and Architectures, Parallel and distributed architectures, Interconnection networks, Heterogeneous and multimedia systems, Reliability, availability, and fault tolerance, Ubiquitous and pervasive computing systems, ATM and high-speed networks, Computer networks and optical networks, Communication and telecommunication systems, Wireless networks and mobile computing, Internet of Things (IoT), Cloud and grid computing systems, Edge and fog computing, Reconfigurable computing architectures, Algorithms and Applications, Artificial Intelligence algorithms, Database systems and data mining, Intelligent computing and neural networks, Parallel and distributed algorithms, Big data computing and analytics, Distributed data and knowledge-based systems, Image processing and computer graphics, High-performance scientific computing, Reconfigurable high-performance computing systems, Resource allocation and management, Network routing and communication algorithms, Bioinformatics and computational biology, Software Systems and Technologies, Task mapping and job scheduling, Formal methods and programming languages, Internet computing and applications, Quantum computing and algorithms, Image processing and computer vision, Agent-based technologies, Operating systems and system software, Software tools and development environments, Parallelizing compilers and optimization, Web services and distributed applications, Component-based software technologies, Simulation, modeling, and visualization, Security and Privacy, Distributed federated learning paradigms, Quantum-enabled federated learning frameworks, Privacy-preserving mechanisms for artificial intelligence, Security of artificial intelligence systems, Privacy-preserving crowd intelligence, Attack and defense algorithms in federated learning, Attack and defense strategies for edge computing, Quantum-based defense mechanisms in federated learning paradigms, Privacy-preserving computation techniques, Database security and cloud security, Access control, authorization, and biometric security, High-Performance Systems, Operating systems for parallel and distributed systems, High-performance computer arithmetic, Memory hierarchy and caching, Performance tuning, optimization, and profiling, Human-computer interaction in parallel and distributed systems, Photonic and quantum computing, Media computing in parallel and distributed systems, Software engineering for parallel and distributed systems, Big Data Management and Processing, Massive data stream processing in cloud environments, Graph analytics, social networks, and the semantic web, Data systems for knowledge discovery, data mining, and machine learning, Big data models and computational theory, Crowdsourced and collaborative data management, Distributed, decentralized, and parallel data management, including blockchain systems, Processing and analytics for graphs, social networks, and semantic web data, Security, privacy, and ethics in data and analytics, Multi-source data processing and integration, Deep learning models and applications",No publisher,"The 26th International Conference on Parallel and Distributed Computing, Applications and Technologies (PDCAT 2025) will be held in Gold Coast, Australia from November 22-24, 2025. The conference offers both in-person and virtual attendance options. Accepted and presented papers will be published in Springer's Lecture Notes in Computer Science (LNCS) series, with selected papers invited for extended publication in SCI-indexed journals.","# Call for Papers
+
+The 26th International Conference on Parallel and Distributed Computing, Applications and Technologies (**PDCAT 2025**) invites submissions of original and unpublished research. The conference will be held in **Gold Coast, Australia** from **November 22-24, 2025**.
+
+The conference format includes **in-person attendance** with support for **virtual attendance** via live online presentations.
+
+## Important Dates
+
+All deadlines are based on **Australian Eastern Standard Time (AEST)**, at midnight on the specified date.
+
+*   **Paper Submission Deadline:** 1 August 2025
+*   **Notification of Acceptance:** 15 September 2025
+*   **Camera-Ready Submission Deadline:** 30 September 2025
+*   **Conference Dates:** 22 – 24 November 2025
+
+## Scope and Topics
+
+We invite submissions of original and unpublished research on, but not limited to, the following topics:
+
+### Networking and Architectures
+*   Parallel and distributed architectures
+*   Interconnection networks
+*   Heterogeneous and multimedia systems
+*   Reliability, availability, and fault tolerance
+*   Ubiquitous and pervasive computing systems
+*   ATM and high-speed networks
+*   Computer networks and optical networks
+*   Communication and telecommunication systems
+*   Wireless networks and mobile computing
+*   Internet of Things (IoT)
+*   Cloud and grid computing systems
+*   Edge and fog computing
+*   Reconfigurable computing architectures
+
+### Algorithms and Applications
+*   Artificial Intelligence algorithms
+*   Database systems and data mining
+*   Intelligent computing and neural networks
+*   Parallel and distributed algorithms
+*   Big data computing and analytics
+*   Distributed data and knowledge-based systems
+*   Image processing and computer graphics
+*   High-performance scientific computing
+*   Reconfigurable high-performance computing systems
+*   Resource allocation and management
+*   Network routing and communication algorithms
+*   Bioinformatics and computational biology
+
+### Software Systems and Technologies
+*   Task mapping and job scheduling
+*   Formal methods and programming languages
+*   Internet computing and applications
+*   Quantum computing and algorithms
+*   Image processing and computer vision
+*   Agent-based technologies
+*   Operating systems and system software
+*   Software tools and development environments
+*   Parallelizing compilers and optimization
+*   Web services and distributed applications
+*   Component-based software technologies
+*   Simulation, modeling, and visualization
+
+### Security and Privacy
+*   Distributed federated learning paradigms
+*   Quantum-enabled federated learning frameworks
+*   Privacy-preserving mechanisms for artificial intelligence
+*   Security of artificial intelligence systems
+*   Privacy-preserving crowd intelligence
+*   Attack and defense algorithms in federated learning
+*   Attack and defense strategies for edge computing
+*   Quantum-based defense mechanisms in federated learning paradigms
+*   Privacy-preserving computation techniques
+*   Database security and cloud security
+*   Access control, authorization, and biometric security
+
+### High-Performance Systems
+*   Operating systems for parallel and distributed systems
+*   High-performance computer arithmetic
+*   Memory hierarchy and caching
+*   Performance tuning, optimization, and profiling
+*   Human-computer interaction in parallel and distributed systems
+*   Photonic and quantum computing
+*   Media computing in parallel and distributed systems
+*   Software engineering for parallel and distributed systems
+
+### Big Data Management and Processing
+*   Massive data stream processing in cloud environments
+*   Graph analytics, social networks, and the semantic web
+*   Data systems for knowledge discovery, data mining, and machine learning
+*   Big data models and computational theory
+*   Crowdsourced and collaborative data management
+*   Distributed, decentralized, and parallel data management, including blockchain systems
+*   Processing and analytics for graphs, social networks, and semantic web data
+*   Security, privacy, and ethics in data and analytics
+*   Multi-source data processing and integration
+*   Deep learning models and applications
+
+## Publication
+
+All accepted and presented papers will be published in the **Lecture Notes in Computer Science (LNCS) series by Springer**. Selected papers presented at the conference will be invited for extended publication in special issues of SCI-indexed journals, including:
+
+*   Tsinghua Science and Technology (Impact Factor: 5.2)
+*   Human-centric Computing and Information Sciences (Impact Factor: 3.9)
+*   Computers and Electrical Engineering (Impact Factor: 4.0)
+*   CCF Transactions on High Performance Computing (Impact Factor: 1.3)
+
+## Submission Information
+
+*   Submit your paper via: [Submission](submission.html)
+
+## Contact Us
+
+*   Email: [pdcatconf@gmail.com](mailto:pdcatconf@gmail.com)",,
+req-conf-1751809170576-jzvmi,,Practice and Theory of Automated Timetabling,PATAT,https://patatconference.org/patat2026/index.html,,,Information of PATAT: No information available,,,No location,No city/state/province,No country,No continent,Offline,{},{},{},{},{},No topics,No publisher,No summary available,No call for papers available,2026 page has nothing,
+req-conf-1751809170576-jzvmi,,"Euromicro International Conference on Parallel, Distributed and Network Based Processing",PDP,https://www.pdp2026.org/,https://www.pdp2026.org/submission/cfp/,https://www.pdp2026.org/important-dates/,"Conference dates: March 25-27, 2026
+Year: 2026
+Location: Cluj-Napoca, Romania
+City-State-Province: Cluj-Napoca
+Country: Romania
+Continent: Europe
+Type: Offline
+Submission Date.Special Session proposals: August 31, 2025
+Submission Date.Abstract submissions: October 19, 2025
+Submission Date.Paper submissions: October 26, 2025
+Notification Date.Author notification: December 7, 2025
+Camera-ready Date.Camera-ready: January 25, 2026
+Topics: Algorithms, Applications, Data-centric Processing, Distributed AI, Distributed Computing, Parallel Computing, Programming Models and Tools, HPC state of practice, Systems and Architectures
+Publisher: Conference Publishing Services","March 25-27, 2026",2026,"Cluj-Napoca, Romania",Cluj-Napoca,Romania,Europe,Offline,"{""Special Session proposals"":""August 31, 2025"",""Abstract submissions"":""October 19, 2025"",""Paper submissions"":""October 26, 2025""}","{""Author notification"":""December 7, 2025""}","{""Camera-ready"":""January 25, 2026""}",{},{},"Algorithms, Applications, Data-centric Processing, Distributed AI, Distributed Computing, Parallel Computing, Programming Models and Tools, HPC state of practice, Systems and Architectures",Conference Publishing Services,"The 34th Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP 2026) will be held in Cluj-Napoca, Romania, from March 25-27, 2026. PDP is a leading European and international conference covering all aspects of parallel and distributed processing, from theory to practical implementation, across various scales and applications, including Artificial Intelligence.","# PDP 2026: Call for Papers
+
+The 34th Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP 2026) will be held in **Cluj-Napoca, Romania, from 25-27 March 2026**.
+
+PDP stands as a premier European and international conference that comprehensively addresses all facets of parallel and distributed processing, encompassing a spectrum from foundational theory to practical implementation, across systems of all scales. It addresses fundamental computational challenges alongside robust applications and delves into architecture, compiler, language, interface design and deployment, tools, support infrastructures, and performance optimization.
+
+## Important Dates
+
+*   **Special Session proposals:** August 31st, 2025
+*   **Abstract submissions:** October 19th, 2025
+*   **Paper submissions:** October 26th, 2025
+*   **Author notification:** December 7th, 2025
+*   **Camera-ready:** January 25th, 2026
+
+## Topics
+
+We invite submissions of high-quality, novel, and original research results in areas of parallel and distributed computing, including but not limited to:
+
+*   **Algorithms:** resource-aware and power-efficient algorithms; real-time and fault-tolerant distributed/parallel algorithms; graph and network algorithms
+*   **Applications:** numerical and scientific applications with multi-level parallelism; applications with computations over irregular domains; models and methods to enhance functional/non-functional application characteristics
+*   **Data-centric Processing:** scientific workflows; large-scale data processing; large-scale data management; scalable and next-generation storage systems; I/O performance tuning, benchmarking, and middleware; FAIR/open data systems
+*   **Distributed AI:** Federated Learning; Distributed Learning; AI at scale; training of LLMs; benchmarking for AI workloads
+*   **Distributed Computing:** cluster, grid, fog/edge, mobile and cloud systems; Service-oriented processing; stochastic and approximate computing; cost, security, energy, and other non-functional requirements models and frameworks
+*   **Parallel Computing:** accelerator-based systems inc. GPU, FPGA, neuromorphic and post-CMOS devices; embedded parallel systems; dependability, survivability, and fault-tolerance; methodologies, benchmarking/metrics, performance analysis and tools
+*   **Programming Models and Tools:** programming languages, compilers, middleware and OS; libraries, runtime, and systems software; notations; performance prediction and analysis; simulation and modelling of parallel/distributed systems
+*   **HPC state of practice:** Managing systems and storage; managing facilities; HPC project management; moving, managing and sharing data HPC in the cloud; networking and cybersecurity; HPC training and education strategies; application workflows; system benchmarking
+*   **Systems and Architectures:** high data throughput and streaming architectures; memory organisation; service-oriented architectures; heterogeneous and hybrid systems; resource management; post-CMOS architectures inc. quantum, neuromorphic, and others
+
+## Submission Guidelines
+
+*   Submissions must be in **PDF format** and should not exceed **eight pages for long papers** and **four pages for short contributions**.
+*   All submissions must follow the **IEEE Conference proceedings format** (IEEEtran, double-column, 10pt) available at [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html).
+*   The review process is **double-blind** and all papers need to be “best-effort” anonymized.
+*   We strongly encourage making code and data available anonymously (e.g., in an anonymous GitHub repository via Anonymous GitHub or in a Dropbox folder).
+
+## Proceedings
+
+Proceedings of the conference will be published by Conference Publishing Services and submitted for indexing in Scopus.
+
+## Special Sessions
+
+Co-located Special Sessions are also planned as usual for PDP.
+
+## About Euromicro
+
+Founded in 1973 as a non-profit organization, Euromicro is an international scientific, engineering, and educational organization dedicated to advancing the arts, sciences, and applications of Information Technology and Microelectronics.",,
+req-conf-1751809170576-jzvmi,,ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation,PEPM,https://popl25.sigplan.org/home/pepm-2025,https://popl25.sigplan.org/home/pepm-2025#Call-for-Papers,https://popl25.sigplan.org/home/pepm-2025,"Conference dates: January 21, 2025
+Year: 2025
+Location: Denver, Colorado, United States
+City-State-Province: Denver, Colorado
+Country: United States
+Continent: North America
+Type: Hybrid
+Topics: Partial Evaluation, Program Manipulation, Semantics-based program manipulation, supercompilation, partial evaluation, fusion, on-the-fly program adaptation, active libraries, program inversion, slicing, symbolic execution, refactoring, decompilation, and obfuscation, metaprogramming, generative programming, embedded domain-specific languages, program synthesis by sketching and inductive programming, staged computation, and model-driven program generation and transformation, abstract interpretation, termination checking, binding-time analysis, constraint solving, type systems, automated testing and test case generation
+Submission Date.Submission deadline: October 14, 2024
+Submission Date.Abstract deadline: October 14, 2024
+Notification Date.Author notification: October 18, 2024
+Camera-ready Date: December 4, 2024",21-Jan-25,2025,"Denver, Colorado, United States","Denver, Colorado",United States,North America,Hybrid,"{""Submission deadline"":""October 14, 2024"",""Abstract deadline"":""October 14, 2024""}","{""Author notification"":""October 18, 2024""}",{},{},{},"Partial Evaluation, Program Manipulation, Semantics-based program manipulation, supercompilation, partial evaluation, fusion, on-the-fly program adaptation, active libraries, program inversion, slicing, symbolic execution, refactoring, decompilation, and obfuscation, metaprogramming, generative programming, embedded domain-specific languages, program synthesis by sketching and inductive programming, staged computation, and model-driven program generation and transformation, abstract interpretation, termination checking, binding-time analysis, constraint solving, type systems, automated testing and test case generation",No publisher,"The ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation (PEPM 2025) is co-located with POPL 2025 and will take place on January 21, 2025, in Denver, Colorado, United States. The workshop focuses on semantics-based program manipulation, covering traditional PEPM topics and new areas like AI-based program synthesis and transformation techniques for distributed systems.","# PEPM 2025: Call for Papers
+
+The ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation (PEPM) has a history going back to 1991 and has been held in conjunction with POPL every year since 2006. PEPM focuses on semantics-based program manipulation, covering automated techniques for evaluating programs with partial input, and broader areas of systematic program generation, analysis, and transformation while maintaining semantic properties.
+
+PEPM 2025 is co-located with POPL 2025 and will be held on **January 21, 2025**, in **Denver, Colorado, United States**.
+
+## Scope
+
+In addition to traditional PEPM topics, PEPM 2025 welcomes submissions in new domains, in particular:
+
+*   Semantics-based and machine-learning-based program synthesis and program optimization.
+*   Modeling, analysis, and transformation techniques for distributed and concurrent protocols and programs, such as session types, linear types, and contract specifications.
+
+More generally, topics of interest include, but are not limited to:
+
+*   **Program and model manipulation techniques:** supercompilation, partial evaluation, fusion, on-the-fly program adaptation, active libraries, program inversion, slicing, symbolic execution, refactoring, decompilation, and obfuscation.
+*   **Techniques treating programs/models as data objects:** metaprogramming, generative programming, embedded domain-specific languages (DSLs), program synthesis by sketching and inductive programming, staged computation, and model-driven program generation and transformation.
+*   **Program analysis techniques for manipulation:** abstract interpretation, termination checking, binding-time analysis, constraint solving, type systems, automated testing and test case generation.
+*   **Applications:** case studies of program manipulation in real-world projects, descriptions of robust tools, DSL implementations, visual languages, end-user programming, scientific computing, middleware, embedded and resource-limited computation, and security.
+
+Questions regarding the scope can be directed to the program co-chairs: Guillaume Allais (guillaume.allais@strath.ac.uk) and Annie Liu (liu@cs.stonybrook.edu).
+
+> **AUTHORS TAKE NOTE:** The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of the conference. The official publication date affects the deadline for any patent filings related to published work.
+
+## Submission Types
+
+Three kinds of submissions will be accepted:
+
+1.  **Regular Research Papers:**
+    *   Must not exceed **12 pages**.
+    *   Judged on originality, correctness, significance, and clarity.
+    *   Accepted papers will appear in formal proceedings published by ACM and be included in the ACM Digital Library.
+2.  **Short Papers:**
+    *   Must not exceed **6 pages**.
+    *   May include tool demonstrations and presentations of exciting, even if not fully polished, research or applications.
+    *   Accepted short papers do not constitute formal publications and will not appear in the proceedings.
+3.  **Talk Proposals:**
+    *   Must not exceed **2 pages**.
+    *   May propose lectures on topics of interest, existing relevant contributions, or promising work not yet mature enough for papers.
+
+*References and appendices are not included in page limits. Appendices may not necessarily be read by reviewers.*
+
+## Submission Guidelines
+
+*   **Formatting:** Submissions should be typeset using the two-column `sigplan` sub-format of the new `acmart` format. Template available at: [http://sigplan.org/Resources/Author/](http://sigplan.org/Resources/Author/)
+*   **Submission System:** Electronically via HotCRP: [https://pepm25.hotcrp.com](https://pepm25.hotcrp.com)
+*   **Reviewing:** Single-blind reviewing.
+*   **Presentation:** At least one author of each accepted contribution must attend the workshop (physically or virtually) to present the work. A live demonstration is expected for tool demonstration papers.
+
+## Important Dates (AoE - Anywhere on Earth)
+
+*   **Abstract deadline:** Mon 14 Oct 2024
+*   **Submission deadline:** Fri 18 Oct 2024
+*   **Author notification:** Mon 18 Nov 2024
+*   **Camera ready version:** Wed 4 Dec 2024
+*   **Workshop Date:** Tue 21 Jan 2025
+
+## Invited Speakers
+
+*   **William Bowman** – University of British Columbia
+*   **Brigitte Pientka** – McGill University
+*   **Satnam Singh** – Groq
+
+## General Chairs
+
+*   **Guillaume Allais**
+    University of Strathclyde, United Kingdom
+*   **Y. Annie Liu**
+    Stony Brook University, United States
+
+## Program Committee Members
+
+*   **Muhammad Abdullah** (MIT)
+*   **Hinano Akiyama** (Ochanomizu University)
+*   **Guillaume Allais** (University of Strathclyde, United Kingdom)
+*   **Nada Amin** (Harvard University, United States)
+*   **Zena M. Ariola** (University of Oregon, United States)
+*   **Kazuyuki Asada** (Tohoku University)
+*   **Kenichi Asai** (Ochanomizu University, Japan)
+*   **Robert Atkey** (University of Strathclyde)
+*   **Benjamin Bennetzen** (Department of Computer Science, Aalborg University)
+*   **William J. Bowman** (University of British Columbia, Canada)
+*   **Greg Brown** (University of Edinburgh)
+*   **Liang-Ting Chen** (Academia Sinica, Taiwan)
+*   **Adam Chlipala** (Massachusetts Institute of Technology, United States)
+*   **Youyou Cong** (Institute of Science Tokyo, Japan)
+*   **Sune Skaanning Engtorp** (Department of Computer Science, University of Copenhagen)
+*   **April Gonçalves** (University of Strathclyde)
+*   **Michael Hanus** (Kiel University, Germany)
+*   **Keishi HASHIBA** (The University of Osaka, Japan)
+*   **Fritz Henglein** (Department of Computer Science, University of Copenhagen (DIKU) and Deon Digital, Denmark)
+*   **Manuel Hermenegildo** (Technical University of Madrid (UPM) and IMDEA Software Institute, Spain)
+*   **Zhenjiang Hu** (Peking University, China)
+*   **Hans Hüttel** (Department of Computer Science, Aalborg University, Denmark)
+*   **Barry Jay**
+*   **Chantal Keller** (Université Paris Saclay, France)
+*   **Kentaro Kikuchi** (Tohoku University)
+*   **András Kovács** (University of Gothenburg and Chalmers University of Technology)
+*   **Sam Lindley** (The University of Edinburgh, United Kingdom)
+*   **Y. Annie Liu** (Stony Brook University, United States)
+*   **Torben Mogensen** (DIKU, University of Copenhagen, Denmark)
+*   **Andreas Tor Mortensen** (Department of Computer Science, Aalborg University)
+*   **Keisuke Nakano** (Tohoku University, Japan)
+*   **Jens Palsberg** (University of California, Los Angeles (UCLA), United States)
+*   **Brigitte Pientka** (McGill University, Canada)
+*   **Martin Rinard** (MIT)
+*   **Tiark Rompf** (Purdue University, United States)
+*   **Nikolaj Rossander Kristensen** (Department of Computer Science, Aalborg University)
+*   **João Saraiva**
+*   **Satnam Singh** (Groq, United States)
+*   **Peter Buus Steffensen** (Department of Computer Science, Aalborg University)
+*   **Mark van den Brand** (Eindhoven University of Technology, Netherlands)
+*   **Cameron Wong** (Harvard SEAS)
+*   **Mengjia Yan** (MIT)
+*   **Yuheng Yang** (MIT)
+
+Questions can be submitted via the [PEPM contact form](https://popl25.sigplan.org/contact2/pepm-2025-papers).","Submission deadline: October 18, 2024
+Author notification: November 18, 2024
+Camera ready version: December 4, 2024",Yes
+req-conf-1751809170576-jzvmi,,"IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation",PERFORMANCE,https://performance2025.sciencesconf.org/,https://performance2025.sciencesconf.org/page/call_for_papers?lang=en,,"Conference dates: November 11-14, 2025
+Year: 2025
+Location: Amsterdam, NL
+City-State-Province: Amsterdam
+Country: Netherlands
+Continent: Europe
+Type: Offline
+Submission Date.Abstract submission: June 8, 2025
+Submission Date.Full paper submission: June 15, 2025
+Submission Date.Tutorial proposals due: July 1, 2025
+Notification Date.Notification to authors: July 30, 2025
+Topics: algorithm design, mathematical analysis and modeling, simulation, and measurement techniques for computer systems and communication networks
+Publisher: IFIP","November 11-14, 2025",2025,"Amsterdam, NL",Amsterdam,Netherlands,Europe,Offline,"{""Abstract submission"":""June 8, 2025"",""Full paper submission"":""June 15, 2025"",""Tutorial proposals due"":""July 1, 2025""}","{""Notification to authors"":""July 30, 2025""}",{},{},{},"algorithm design, mathematical analysis and modeling, simulation, and measurement techniques for computer systems and communication networks",IFIP,"The IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation (PERFORMANCE 2025) will be held at the Centrum Wiskunde & Informatica (CWI) in Amsterdam, Netherlands, from November 11-14, 2025. The conference aims to bring together researchers interested in understanding and improving the performance of computing and communication systems through quantitative models and solution techniques.","# Call for Papers: IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation (PERFORMANCE 2025)
+
+The IFIP PERFORMANCE 2025 conference will be held at the Centrum Wiskunde & Informatica (CWI) in Amsterdam on **November 11-14, 2025**.
+
+## Overview
+
+This conference aims to bring together researchers interested in understanding and improving the performance of computing and communication systems through state-of-the-art quantitative models and solution techniques. We invite submissions of research papers focusing on algorithm design, mathematical analysis and modeling, simulation, and measurement techniques for computer systems and communication networks. Contributions that introduce novel performance evaluation methods or creatively apply existing techniques to predict or gain insights into key design trade-offs across a wide range of computing, networked, and cyber-physical systems are particularly welcome.
+
+## Submission Categories
+
+*   **Regular papers:** Up to **20 pages** (single-column format, excluding references).
+*   **Short papers:** **5 pages** in the new PER double-column format.
+
+## Important Dates
+
+*   Submission site opens: **May 1, 2025**
+*   Abstract submission: **June 8, 2025**
+*   Full paper submission: **June 15, 2025**
+*   Notification to authors: **July 30, 2025**
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to, the following:
+
+### Performance-oriented methodologies include:
+
+*   Analytical modeling techniques and model validation
+*   Anomaly detection, problem diagnosis, and troubleshooting
+*   Capacity planning, resource allocation, routing, scheduling, and quality of service
+*   Experimental design, statistical analysis, simulation
+*   Game theory, network economics, and platform design
+*   Machine learning, data mining, graph analysis, optimization
+*   Performance, scalability, power, and reliability analysis
+*   Stochastic modeling, statistical analysis, and simulation
+*   Sustainability analysis and power management
+*   Complex networks, sorting, and ranking
+*   System measurement, performance monitoring, and forecasting
+*   Workload characterization and benchmarking
+
+### Evaluation techniques and algorithms for:
+
+*   Artificial intelligence and machine learning platforms
+*   Blockchains and crypto-currency
+*   Computer architectures and operating systems
+*   Cyber-physical systems, the Internet of Things, and smart grids
+*   Data centers, content delivery, cloud computing, and virtualization
+*   High-performance computing
+*   Internet and web services
+*   Mobile and personal computing systems
+*   Network architectures, protocols, and congestion control
+*   Network economics and platform design
+*   Privacy and algorithmic fairness
+*   Security systems
+*   Storage systems and data centers
+*   Social networks, multimedia systems, and smart grid
+*   Virtualization, data centers, distributed and cloud computing, fog, and edge computing
+*   Quantum computing and quantum communication
+*   Wireless, ad-hoc, and cellular networks
+
+## Submission Process
+
+*   Submissions should be made through the [online hotCRP platform](https://performance2025.hotcrp.com/) in printable PDF form.
+*   All submissions will be reviewed using a **double-blind review process**. Authors should ensure their paper is anonymized.
+*   Authors must declare conflicts with TPC members truthfully on the submission page.
+*   Authors of papers previously submitted to Sigmetrics 2023 are required to declare this information during paper registration.
+
+## Format Guidelines
+
+*   **Regular papers:** Should not exceed 20 pages (single-column format) for technical content. Authors are recommended to use the [Elsevier article class elsarticle.cls](https://www.elsevier.com/journals/performance-evaluation/0166-5316/guide-for-authors).
+*   **Short papers:** Limited to 5 pages (in the new PER double-column format). Accepted short papers will be published in a special ACM Performance Evaluation Review (PER) issue.
+*   Appendices (of unrestricted length) are allowed for supplementary material only and will not be reviewed.
+
+## Special Issues
+
+Accepted regular papers will be published in a special Performance Evaluation (PEVA) issue. Authors may opt-out of publication in PEVA in favor of an expedited review process in journals related to Performance Evaluation and Operations Research, such as:
+
+*   [ACM Transactions on Modeling and Performance Evaluation of Computer Systems (ToMPECS)](https://tompecs.acm.org/)
+*   Queueing Systems: Theory and Application (QUESTA)
+*   Stochastic Models
+
+## Policies
+
+*   **Soft tracking** is used for submissions.
+*   **Anonymity guidelines** must be followed for double-blind reviewing.
+*   The list of authors is expected to remain the same from submission to camera-ready.
+*   Submissions must present original research. Previous publication of preliminary work as an extended abstract at a workshop is acceptable if it includes substantial new material.
+*   Simultaneous submissions are not allowed.
+*   Papers accompanied by nondisclosure agreement forms will not be considered.
+
+## Ethical Considerations
+
+Papers describing experiments with users or user data should follow basic principles of ethical research. Authors are encouraged to include a subsection describing these issues. Authors must attest that their work complies with all applicable ethical standards of their home institution(s).
+
+## Diversity & Inclusiveness
+
+Guidelines are provided to promote inclusiveness and accessibility in paper submissions and conference presentations.","Submission site opens: May 1, 2025
+Notification to proposers: July 31, 2025
+Tutorial day: November 13, 2025",Yes
+req-conf-1751809170576-jzvmi,,International Conference on Practice and Theory in Public Key Cryptography,PKC,https://pkc.iacr.org/2025/,https://pkc.iacr.org/2025/callforpapers.php,,"Conference dates: May 12-15, 2025
+Year: 2025
+Location: Røros, Norway
+Type: Offline
+Submission Date.Submission deadline: October 16, 2024
+Notification Date.First round notification: December 11, 2024
+Notification Date.Final notification: February 5, 2025
+Camera-ready Date.Final versions due: February 26, 2025
+Topics: public key schemes, cryptographic primitives and protocols, public-key techniques in MPC or other protocols
+Publisher: Springer","May 12-15, 2025",2025,"Røros, Norway",No city/state/province,No country,No continent,Offline,"{""Submission deadline"":""October 16, 2024""}","{""First round notification"":""December 11, 2024"",""Final notification"":""February 5, 2025""}","{""Final versions due"":""February 26, 2025""}",{},{},"public key schemes, cryptographic primitives and protocols, public-key techniques in MPC or other protocols",Springer,"The International Conference on Practice and Theory in Public Key Cryptography (PKC 2025) will be held in Røros, Norway, from May 12-15, 2025. Organized by the International Association for Cryptologic Research (IACR) and NTNU, the conference proceedings will be published by Springer in the LNCS series.","# PKC 2025: Call for Papers
+
+PKC 2025 will take place in **Røros, Norway** from **May 12-15, 2025**. The conference is organized by the **International Association for Cryptologic Research (IACR)** and **NTNU**.
+
+## General Information
+
+Original research papers on all aspects of public-key cryptography, covering theory, implementations and applications, and related fields, are solicited for submission to PKC 2025, the International Conference on Practice and Theory in Public Key Cryptography.
+
+Areas of interest include research on:
+
+*   Public key schemes, such as their design and analysis (including side channel attacks), from its math to actual systems.
+*   The design, proposal, and analysis of cryptographic primitives and protocols.
+*   Public-key techniques in MPC or other protocols.
+
+Purely information-theoretic and symmetric-key subjects, e.g., block cipher design and attacks, are not in scope.
+
+This year, we particularly welcome submissions on the theme of **“Real-world public-key cryptography.”** These submissions must still meet the acceptance criteria for PKC.
+
+## Submission Guidelines
+
+Author instructions for paper submission may be found on the submission page: [Submit a paper](papersubmission.php)
+
+## Important Dates
+
+*   **Submission deadline:** Oct 16, 2024 (11:59pm AoE)
+*   **First round notification:** Dec 11, 2024
+*   **Rebuttal deadline:** Dec 18, 2024
+*   **Final notification:** Feb 5, 2025
+*   **Final versions due:** Feb 26, 2025
+*   **Conference begins:** May 12, 2025
+
+## Schedule
+
+PKC 2025 will operate a two-round review system with a rebuttal phase. In the first round, the program committee selects submissions for the second round, and authors receive notification with review comments. Authors of selected submissions can submit a rebuttal letter. Submissions not selected in the first round may be submitted to other conferences after the first round notification.
+
+## Awards
+
+The Program Committee may choose a paper for an overall best paper award. Additionally, to promote early-career researchers, a prize for the best paper authored exclusively by early-career researchers may be awarded. To be eligible, all co-authors must be full/part-time students or have received their degree in 2019 or later. Awards will only be given if deserving papers are identified.
+
+## Stipends
+
+Students whose papers are accepted and who present their talks at the conference will have their registration waived. A limited number of stipends are available for those unable to obtain funding to attend. Students presenting their own accepted papers are encouraged to apply if assistance is needed. Requests for stipends should be sent to the general chair.
+
+## Program Committee
+
+*   Navid Alamati
+*   Nuttapong Attrapadung
+*   Benedikt Auerbach
+*   Shi Bai
+*   Mihir Bellare
+*   Olivier Blazy
+*   Wouter Castryck
+*   Sofía Celi
+*   Melissa Chase
+*   Rongmao Chen
+*   Yu Chen
+*   Liqun Chen
+*   Sherman Chow
+*   Daniel Collins
+*   Gareth T. Davies
+*   Hannah Davis
+*   Thomas Debris-Alazard
+*   Benjamin Dowling
+*   Rafael Dowsley
+*   Léo Ducas
+*   Nico Döttling
+*   Nils Fleischhacker
+*   Steven D. Galbraith
+*   Kristian Gjøsteen
+*   Aurore Guillevic
+*   Fuchun Guo
+*   Shuai Han
+*   Lucjan Hanzlik
+*   Hans Heum
+*   Kathrin Hövelmanns
+*   Miran Kim
+*   Lisa Kohl
+*   Veronika Kuchta
+*   Sabrina Kunzweiler
+*   Péter Kutas
+*   Russell W. F. Lai
+*   Tanja Lange
+*   Xiangyu Liu
+*   Eleftheria Makri
+*   Mark Manulis
+*   Varun Maram
+*   Alexander May
+*   Adam O'Neill
+*   Miyako Ohkubo
+*   Cristina Onete
+*   Claudio Orlandi
+*   Omkant Pandey
+*   Krzysztof Pietrzak
+*   Bertram Poettering
+*   Sebastian Ramacher
+*   Doreen Riepel
+*   Guilherme Rito
+*   Andy Rupp
+*   Paul Rösler
+*   Amin Sakzad
+*   Dominique Schröder
+*   Jacob C. N. Schuldt
+*   Rebecca Schwerdt
+*   Sven Schäge
+*   Yannick Seurin
+*   Daniel Slamanig
+*   Yongsoo Song
+*   Vanessa Teague
+*   Stefano Tessaro
+*   Daniele Venturi
+*   Benedikt Wagner
+*   Weiqiang Wen
+*   Thom Wiggers
+*   David Wu
+*   Keita Xagawa
+*   Yu Yu
+*   Runzhi Zeng
+
+## Program Co-chairs
+
+*   Tibor Jager
+*   Jiaxin Pan
+*   [pkc2025programchairs@iacr.org](mailto:pkc2025programchairs@iacr.org)
+
+## Area Chairs
+
+*   **Advanced PKE:** Stefano Tessaro
+*   **Mathematics of Public-Key Crypto:** Alexander May
+*   **MPC and Friends:** Claudio Orlandi
+*   **(Real-World) Primitives and Protocols:** Mihir Bellare
+*   **Advanced Signatures and Proof Systems:** Miyako Ohkubo
+
+## General Co-chairs
+
+*   Bor de Kock
+*   Tjerand Silde
+*   [pkc2025@iacr.org](mailto:pkc2025@iacr.org)","(otherDate) Dec 18, 2024: Rebuttal deadline",Yes
+req-conf-1751809170576-jzvmi,,International Conference on Parallel and Distributed Processing Techniques and Applications,PDPTA,https://www.american-cse.org/csce2025/conferences-PDPTA,https://american-cse.org/drafts/,https://www.american-cse.org/csce2025/conferences-PDPTA,"Conference dates: July 21-24, 2025
+Year: 2025
+Location: Las Vegas, USA
+Type: Offline
+Topics: Big Data and High-Performance Computing, Parallel/Distributed Applications, Parallel/Distributed Architectures, Networks and Interconnection Networks, Energy/power-aware Computing, Reliability and Fault-tolerance, Building Block Processors, Real-time and Embedded Systems, Parallel/Distributed Algorithms, Multimedia Communications, Systems, and Applications, Software Tools and Environments for Parallel and Distributed Platforms, High-performance Computing in Computational Science, Performance Evaluation and Management of Wireless Networks and Distributed Systems, FPGA-based Design, Performance Analysis, Evaluation, Prediction, Nanotechnology in HPC, High-performance Mobile Computation and Communication, Object Oriented Technology and Related Issues, Scheduling and Resource Management, Petri Nets, Web-based Simulation and Computing, Cloud Computing, Complex Systems
+Publisher: Springer Nature","July 21-24, 2025",2025,"Las Vegas, USA",No city/state/province,No country,No continent,Offline,{},{},{},{},{},"Big Data and High-Performance Computing, Parallel/Distributed Applications, Parallel/Distributed Architectures, Networks and Interconnection Networks, Energy/power-aware Computing, Reliability and Fault-tolerance, Building Block Processors, Real-time and Embedded Systems, Parallel/Distributed Algorithms, Multimedia Communications, Systems, and Applications, Software Tools and Environments for Parallel and Distributed Platforms, High-performance Computing in Computational Science, Performance Evaluation and Management of Wireless Networks and Distributed Systems, FPGA-based Design, Performance Analysis, Evaluation, Prediction, Nanotechnology in HPC, High-performance Mobile Computation and Communication, Object Oriented Technology and Related Issues, Scheduling and Resource Management, Petri Nets, Web-based Simulation and Computing, Cloud Computing, Complex Systems",Springer Nature,"The 31st International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA'25) is part of The 2025 World Congress in Computer Science, Computer Engineering, & Applied Computing (CSCE'25). The event will take place from July 21-24, 2025, in Las Vegas, USA. PDPTA serves researchers, scholars, professionals, and academicians, and is held jointly with 20 other conferences within CSCE'25. Accepted papers will be published by Springer Nature and indexed in major Science Citation Indexation databases.","# PDPTA'25: Call for Papers
+
+The 31st International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA'25) is being held jointly with The 2025 World Congress in Computer Science, Computer Engineering, and Applied Computing (CSCE'25).
+
+### Conference Details
+
+*   **Dates:** July 21-24, 2025
+*   **Location:** Las Vegas, USA
+*   **Participation:** In-person attendance is expected, with online presentation options available.
+
+PDPTA'25 aims to provide a platform for researchers, scholars, professionals, students, and academicians to share novel ideas and research results in the application of human cognition models in various practical computing applications.
+
+## Publication
+
+All accepted papers will be published by **Springer Nature** (https://www.springernature.com/) in the proceedings (Research Books) and indexed in major Science Citation Indexation databases, including Scopus, DBLP, EI Engineering Index, Web of Science, and others.
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   **Big Data and High-Performance Computing:** Novel computational methodologies, HPC and scalable algorithms for enhancing data quality, models and frameworks for Big Data, graph algorithms, computational science, computational intelligence, Scalable systems and architectures for Big Data, etc.
+*   **Parallel/Distributed Applications:** Numerical computations/methods, neural networks and fuzzy logic, medicine, remote sensing, computer vision, computer graphics and virtual reality, parallel/distributed databases, banking, financial markets, high-performance computational biology, etc.
+*   **Parallel/Distributed Architectures:** Clusters and parallel systems of various topologies, supercomputers, shared memory, distributed memory, general- and special-purpose architectures, instructional level parallelism, etc.
+*   **Networks and Interconnection Networks:** Scalable networks, reconfigurable networks, routing issues, general-purpose network performance for distributed applications, network protocols, internet technology, optical interconnections and computing, novel network topologies, etc.
+*   **Energy/power-aware Computing:** Energy-aware resource management, green computing, energy efficiency planning, energy-aware technologies, low power virtualization and software techniques, low power logic/circuit/process technology design, methods and tools for forecasting, estimating, and validating power use, etc.
+*   **Reliability and Fault-tolerance:** Software and hardware fault-tolerance (system- and application-level), fault diagnosis, fault-tolerance measurement.
+*   **Building Block Processors:** Applications of processors that can be used as basic building blocks for multicomputer systems.
+*   **Real-time and Embedded Systems:** Small-scale parallel systems for high-performance control, data acquisition, and analysis; configuration, routing, scheduling, performance guarantees, etc.
+*   **Parallel/Distributed Algorithms:** Algorithms exploiting clusters and general-purpose distributed and parallel systems, new vector/pipeline issues, shared memory, distributed memory, virtual memory, etc.
+*   **Multimedia Communications, Systems, and Applications:** High-speed networking, multimedia architectures and protocols, multimedia applications, quality of service support, operating system and networking support, internet tools and applications, audio/video delivery over the internet, etc.
+*   **Software Tools and Environments for Parallel and Distributed Platforms:** Operating systems, compilers, languages, debuggers, monitoring tools, software engineering on parallel/distributed systems, etc.
+*   **High-performance Computing in Computational Science:** Intra-disciplinary and multi-disciplinary research programs and applications.
+*   **Performance Evaluation and Management of Wireless Networks and Distributed Systems.**
+*   **FPGA-based Design.**
+*   **Performance Analysis, Evaluation, Prediction, ...**
+*   **Nanotechnology in HPC.**
+*   **High-performance Mobile Computation and Communication.**
+*   **Object Oriented Technology and Related Issues.**
+*   **Scheduling and Resource Management.**
+*   **Petri Nets: Theory, Analysis, Tools and Applications.**
+*   **Web-based Simulation and Computing.**
+*   **Cloud Computing.**
+*   **Complex Systems, Theory and Applications.**
+*   **Other Aspects and Applications relating to High-Performance Computations.**
+*   **Emerging Technologies.**
+
+## Submission Instructions
+
+*   **Submission Website:** https://american-cse.org/cgi-bin/submit/index.cgi?xprint_submit
+*   **Paper Formats:** PDF or MS WORD.
+*   **Formatting:** For draft submissions, all reasonable formatting is acceptable. Authors of accepted papers will receive specific typesetting instructions for the final version, which should use the standard Springer Nature typesetting format (guidelines available at: https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).
+*   **Content of First Page:** Title, Author(s) name(s), affiliation(s), City, Country, email address (identify Contact Author), Abstract (100-120 words), max 6 topical keywords, and submission type (e.g., ""Regular Research Paper"", ""Short Research Paper"", or ""Extended Abstract/Poster Research Paper"").
+*   **Originality:** Submissions must be original and not under consideration elsewhere.
+*   **Paper Categories and Page Limitations:** Refer to https://american-cse.org/csce2025/paper_categories
+
+## Important Dates
+
+*   **Submission Due Date:** Refer to https://american-cse.org/csce2025/deadlines
+
+## Contact
+
+*   **Email:** cs@american-cse.org","Correct link, can't get dates",Yes
+req-conf-1751809170576-jzvmi,,Workshop on Programming Languages and Operating Systems,PLOS,https://plos-workshop.org/2025/,https://plos-workshop.org/2025/cfp.php,,"Conference dates: October 13, 2025
+Year: 2025
+Location: Seoul, Republic of Korea
+City-State-Province: Seoul
+Country: Republic of Korea
+Continent: Asia
+Type: Offline
+Submission Date.Submission: July 25, 2025
+Notification Date.Notification: August 25, 2025
+Topics: Operating System, Programming Language",13-Oct-25,2025,"Seoul, Republic of Korea",Seoul,Republic of Korea,Asia,Offline,"{""Submission"":""July 25, 2025""}","{""Notification"":""August 25, 2025""}",{},{},{},"Operating System, Programming Language",No publisher,"The 13th Workshop on Programming Languages and Operating Systems (PLOS 2025) will be held on October 13, 2025, in Seoul, Republic of Korea, in conjunction with the 31st ACM Symposium on Operating Systems Principles (SOSP '25). The workshop aims to bring together researchers and developers from the programming language and operating system domains to discuss recent work at their intersection.","# PLOS 2025: Call for Papers
+
+The 13th Workshop on Programming Languages and Operating Systems (PLOS 2025) will be held on **October 13, 2025**, in **Seoul, Republic of Korea**.
+
+This workshop is held in conjunction with the [31st ACM Symposium on Operating Systems Principles (SOSP '25)](https://sigops.org/s/conferences/sosp/2025/).
+
+## Rationale and Overview
+
+Historically, operating system (OS) development and programming language (PL) development went hand-in-hand, with cross-fertilization being the norm. Today, modern PL ideas continue to spark innovations in OS design and construction, while the systems field provides challenging problems and practical results that should drive advances in PLs, software designs, and idioms.
+
+This workshop will bring together researchers and developers from the PL and OS domains to discuss recent work at the intersection of these fields. It will serve as a venue for discussing new visions, challenges, experiences, problems, and solutions arising from the application of advanced programming and software engineering concepts to OS construction, and vice versa.
+
+## Suggested Paper Topics
+
+Suggested paper topics include, but are not restricted to:
+
+*   Domain-specific and type-safe languages for the OS;
+*   The design of language-specific unikernels;
+*   Language-based approaches to crosscutting system concerns, such as security and run-time performance;
+*   PL support for system verification, testing, and debugging;
+*   Synthesis of OS code;
+*   Static/dynamic OS configuration and specialization;
+*   PL support for OS integration of modern hardware (NVM, HBM, FPGAs, accelerators, RDMA, etc.);
+*   The use of OS abstractions and techniques in language runtimes;
+*   Verification and static analysis of OS components;
+*   Critical evaluations of new programming language ideas in support of OS construction; and
+*   Experience reports on applying new language techniques in commercial OS settings.
+
+## Agenda
+
+The workshop will be a highly interactive event designed to promote focused and lively discussions, including paper presentations. PLOS welcomes research, experience, and position papers; papers describing industrial experience are particularly encouraged. Accepted papers will be made available to registered attendees in advance.
+
+## Submission Guidelines
+
+*   **Language:** All papers must be written in English.
+*   **Formatting:** Papers should be formatted in the two-column ACM article style using the options `sigplan,anonymous,10pt`. CCS Concepts, Keywords, and ACM Reference Format sections are not required in submissions.
+*   **Double-Blind Review:** Submissions must not include author names and affiliations.
+*   **Page Limit:** Submissions must not be more than **six (6) pages** in length, using 10-point font. The bibliography does not count towards the page limit. This limit will be strictly enforced.
+*   **Submission Website:** [http://plos25.hotcrp.com/](http://plos25.hotcrp.com/)
+*   **Review Criteria:** Papers will be evaluated based on technical quality, originality, relevance, and presentation.
+*   **Publication:** Accepted papers will be published electronically in the ACM Digital Library. Authors of accepted papers must sign ACM copyright release forms. Publication in the PLOS workshop proceedings is not intended to replace future conference publication.
+
+## Important Dates (tentative)
+
+*   **Paper submission deadline:** July 25, 2025 (Anywhere on Earth)
+*   **Notification of acceptance:** August 25, 2025
+*   **Final papers due:** September 19, 2025
+*   **Workshop:** October 13, 2025
+
+## Program Committee
+
+*   David Cock, ETH Zurich
+*   Balazs Gerofi, Intel
+*   Chris Hawblitzel, Microsoft Research
+*   Ralf Jung, ETH Zurich
+*   Michael Klemm, AMD
+*   Stefan Lankes, RWTH Aachen University (chair)
+*   Amit Levy, Princeton University
+*   Hui Lu, University of Texas at Arlington
+*   Mae Milano, Princeton University
+*   Linhai Song, Pennsylvania State University
+*   Christian Terboven, RWTH Aachen University
+*   Carsten Weinhold, Barkhausen Institute
+
+## Organizing Committee
+
+*   Antonio Barbalace, The University of Edinburgh
+*   Pierre Olivier, The University of Manchester
+*   Olaf Spinczyk, Osnabrück University",,
+req-conf-1751809170576-jzvmi,,IEEE International Symposium on Personal and Indoor Mobile Radio Conference,PIMRC,https://pimrc2025.ieee-pimrc.org/,https://pimrc2025.ieee-pimrc.org/authors/call-papers,,"Conference dates: September 1 - 4, 2025
+Year: 2025
+Location: Istanbul, Türkiye
+City-State-Province: Istanbul
+Country: Türkiye
+Continent: Asia
+Type: Offline
+Submission Date.Workshop Paper Submissions: June 27, 2025
+Notification Date.Acceptance Notification: June 5, 2025
+Camera-ready Date.Final Manuscript: July 15, 2025
+Topics: AI and ML in/for communications, Coding/modulation, information theory, Channel modeling and equalization, Cooperative communications, coded caching/computing, Integrated sensing and communications, Millimeter wave and Terahertz communications, Multi-user communications and interference mitigation, Optical wireless and visible light communications, Physical layer security, Propagation, antennas and beamforming, Quantum communications, Semantic communications and signal processing, Source coding and joint source-channel coding, Synchronization techniques, Ultra-wideband communications, Ultra/Tera multiple-input multiple-output (MIMO), Wireless information and power transfer, Adaptive and reconfigurable MAC, Age of information aware MAC design, Information-theoretic approaches to MAC design, Joint access and backhaul scheduler design, Joint MAC and networking layer design, MAC for low-power embedded networks, MAC for mobile and vehicular networks, ML for resource management, Next-generation multiple access, Radio resource management, allocation, and scheduling, Scheduler for cooperative and relay systems, Security issues in MAC design, Ad hoc networks and wireless sensor networks, Cognitive radio networks and self-organizing networks, Cooperative networking, Data-driven, large-scale network modelling and optimization, Digital twins and autonomous networks, Green and energy-efficient networks, Massive Internet of Things (IoT) and sensor networks, ML for networking, distributed ML, multi-agent systems, Mobile edge, cloud, and fog computing, Network security, O-RAN, Software-defined and open interface-based networks, Stochastic geometry, UAVs and non-terrestrial networks, 5G NR and 6G standardization, 802.11 and next-generation Wi-Fi, Connected vehicles and digital twin, Experiments, prototypes, and testbeds, Fluid antenna communications, Full-duplex communication networks, Holographic MIMO, Innovative implanted and wearable devices, Intelligent beamforming relays, Joint radar and communications, Networking support for virtual and augmented reality, Reconfigurable intelligent surfaces, Sensing and localization, Software defined radio and networks, Surface wave communications","September 1 - 4, 2025",2025,"Istanbul, Türkiye",Istanbul,Türkiye,Asia,Offline,"{""Workshop Paper Submissions"":""June 27, 2025""}","{""Acceptance Notification"":""June 5, 2025""}","{""Final Manuscript"":""July 15, 2025""}",{},{},"AI and ML in/for communications, Coding/modulation, information theory, Channel modeling and equalization, Cooperative communications, coded caching/computing, Integrated sensing and communications, Millimeter wave and Terahertz communications, Multi-user communications and interference mitigation, Optical wireless and visible light communications, Physical layer security, Propagation, antennas and beamforming, Quantum communications, Semantic communications and signal processing, Source coding and joint source-channel coding, Synchronization techniques, Ultra-wideband communications, Ultra/Tera multiple-input multiple-output (MIMO), Wireless information and power transfer, Adaptive and reconfigurable MAC, Age of information aware MAC design, Information-theoretic approaches to MAC design, Joint access and backhaul scheduler design, Joint MAC and networking layer design, MAC for low-power embedded networks, MAC for mobile and vehicular networks, ML for resource management, Next-generation multiple access, Radio resource management, allocation, and scheduling, Scheduler for cooperative and relay systems, Security issues in MAC design, Ad hoc networks and wireless sensor networks, Cognitive radio networks and self-organizing networks, Cooperative networking, Data-driven, large-scale network modelling and optimization, Digital twins and autonomous networks, Green and energy-efficient networks, Massive Internet of Things (IoT) and sensor networks, ML for networking, distributed ML, multi-agent systems, Mobile edge, cloud, and fog computing, Network security, O-RAN, Software-defined and open interface-based networks, Stochastic geometry, UAVs and non-terrestrial networks, 5G NR and 6G standardization, 802.11 and next-generation Wi-Fi, Connected vehicles and digital twin, Experiments, prototypes, and testbeds, Fluid antenna communications, Full-duplex communication networks, Holographic MIMO, Innovative implanted and wearable devices, Intelligent beamforming relays, Joint radar and communications, Networking support for virtual and augmented reality, Reconfigurable intelligent surfaces, Sensing and localization, Software defined radio and networks, Surface wave communications",No publisher,"The 36th edition of the IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC 2025) will be held in Istanbul, Türkiye, from September 1-4, 2025. PIMRC is a flagship conference of the IEEE Communications Society, focusing on cutting-edge wireless technology research and innovations, and it will feature keynotes, technical sessions, panels, workshops, and tutorials.","# IEEE PIMRC 2025: Call for Papers
+
+The 36th edition of the IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC) will be held in **Istanbul, Türkiye**, from **September 1–4, 2025**.
+
+PIMRC is one of the major conferences of the IEEE Communications Society (ComSoc), attracting technical communities globally and focusing on wireless communications and networking.
+
+Prospective authors are invited to submit original technical papers, as well as proposals for special sessions and workshops. The conference welcomes contributions reporting original research results in all areas of wireless technology, as well as in applications, services, and business.
+
+## Submission Types
+
+*   **Technical Papers:** Original technical contributions.
+*   **Proposals for Special Sessions:** [See Special Session Guidelines](/authors/special-session-guidelines)
+*   **Proposals for Workshops:** [See Call for Workshop Proposals](/authors/call-workshop-proposals)
+*   **Workshop Papers:** [See Call for Workshop Papers](/authors/call-workshop-papers)
+*   **Panel Proposals:** [See Call For Panels](/authors/call-panels)
+*   **Tutorial Proposals:** [See Call for Tutorial Proposals](/authors/call-tutorial-proposals)
+
+## Topics of Interest
+
+Submissions are invited in the following tracks:
+
+### Track 1: Fundamentals and PHY
+
+*   AI and ML in/for communications
+*   Coding/modulation, information theory
+*   Channel modeling and equalization
+*   Cooperative communications, coded caching/computing
+*   Integrated sensing and communications
+*   Millimeter wave and Terahertz communications
+*   Multi-user communications and interference mitigation
+*   Optical wireless and visible light communications
+*   Physical layer security
+*   Propagation, antennas and beamforming
+*   Quantum communications
+*   Semantic communications and signal processing
+*   Source coding and joint source-channel coding
+*   Synchronization techniques
+*   Ultra-wideband communications
+*   Ultra/Tera multiple-input multiple-output (MIMO)
+*   Wireless information and power transfer
+
+### Track 2: MAC and Cross Layer Design
+
+*   Adaptive and reconfigurable MAC
+*   Age of information aware MAC design
+*   Information-theoretic approaches to MAC design
+*   Joint access and backhaul scheduler design
+*   Joint MAC and networking layer design
+*   MAC for low-power embedded networks
+*   MAC for mobile and vehicular networks
+*   ML for resource management
+*   Next-generation multiple access
+*   Radio resource management, allocation, and scheduling
+*   Scheduler for cooperative and relay systems
+*   Security issues in MAC design
+
+### Track 3: Mobile and Wireless Networks
+
+*   Ad hoc networks and wireless sensor networks
+*   Cognitive radio networks and self-organizing networks
+*   Cooperative networking
+*   Data-driven, large-scale network modelling and optimization
+*   Digital twins and autonomous networks
+*   Green and energy-efficient networks
+*   Massive Internet of Things (IoT) and sensor networks
+*   ML for networking, distributed ML, multi-agent systems
+*   Mobile edge, cloud, and fog computing
+*   Network security
+*   O-RAN
+*   Software-defined and open interface-based networks
+*   Stochastic geometry
+*   UAVs and non-terrestrial networks
+
+### Track 4: Emerging Technologies, Applications and Platforms
+
+*   5G NR and 6G standardization
+*   802.11 and next-generation Wi-Fi
+*   Connected vehicles and digital twin
+*   Experiments, prototypes, and testbeds
+*   Fluid antenna communications
+*   Full-duplex communication networks
+*   Holographic MIMO
+*   Innovative implanted and wearable devices
+*   Intelligent beamforming relays
+*   Joint radar and communications
+*   Networking support for virtual and augmented reality
+*   Reconfigurable intelligent surfaces
+*   Sensing and localization
+*   Software defined radio and networks
+*   Surface wave communications
+
+## Important Dates
+
+*   **Workshop Proposals:** [Changed or passed: 16 February 2025]
+*   **Tutorial Proposals:** [Changed or passed: 16 March 2025]
+*   **Paper Submissions:** [Changed or passed: 13 April 2025 (FINAL)]
+*   **Panel Proposals:** [Changed or passed: 15 May 2025]
+*   **Acceptance Notification:** 5 June 2025 (EXTENDED)
+*   **Final Manuscript:** 07 July 2025
+
+## Submission and Author Information
+
+*   **Submit a Paper:** [Link to Submission Portal](/authors)
+*   **Final Submission Camera Ready Guidelines:** [Link](/authors/final-submission-camera-ready-guidelines)
+*   **Download Call for Papers:** [Link](https://pimrc2025.ieee-pimrc.org/sites/pimrc2025.ieee-pimrc.org/files/PIMRC%202025%20-%20Call%20for%20Papers%20-%20March%2031%20version.pdf)
+
+## Registration and Grants
+
+*   **Conference Registration:** COMING SOON!
+*   **Registration Policies:** [Link](/registration/registration-policies)
+*   **Student Travel Grants:** IEEE PIMRC 2025 will provide six student travel grants. [Details](/registration/student-travel-grants)
+
+## Contact
+
+*   [Contact Us](https://www.comsoc.org/conferences-contact-form?conference=PIMRC&conference_year=2025&_ga=2.205862740.617594255.1745843657-1783826641.1737724084)","Workshop Proposals – February 16, 2025
+Workshop Acceptance – March 13, 2025
+Tutorial Proposals – March 16, 2025
+Full Paper Submissions – April 13, 2025
+Panel Proposals – May 15, 2025",Yes
+req-conf-1751809170576-jzvmi,,ACM-SIGPLAN Conference on Programming Language Design and Implementation,PLDI,https://pldi26.sigplan.org/,,,"Conference dates: June 15 - 19, 2026
+Year: 2026
+Location: Limelight Boulder, Boulder, Colorado, USA
+City-State-Province: Boulder, Colorado
+Country: United States
+Continent: North America
+Type: Offline
+Topics: Programming languages, programming systems research, design, implementation, theory, applications, and performance","June 15 - 19, 2026",2026,"Limelight Boulder, Boulder, Colorado, USA","Boulder, Colorado",United States,North America,Offline,{},{},{},{},{},"Programming languages, programming systems research, design, implementation, theory, applications, and performance",No publisher,"The 47th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2026) will be held from June 15-19, 2026, in Boulder, Colorado, USA. PLDI is a premier forum for research in programming languages and programming systems.","# PLDI 2026: Call for Papers
+
+Welcome to the home page of the 47th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2026)!
+
+PLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.
+
+PLDI 2026 will be held in person at the Limelight Boulder in Boulder, Colorado, USA.
+
+The main PLDI conference will be held from **Wednesday, June 17, through Friday, June 19**. Workshops and tutorials will be held on **Monday, June 15, and Tuesday, June 16**.
+
+We are working hard to fill the website with all related information. Please check back soon!
+
+## Organization
+
+*   PLDI 2026 Committees
+*   Organizing Committee
+*   AV Committee
+*   Contributors
+*   [People Index](https://pldi26.sigplan.org/people-index)
+
+## Series
+
+*   [PLDI Series](https://pldi26.sigplan.org/series/pldi)
+*   [PLDI 2025](https://pldi25.sigplan.org)
+*   [PLDI 2024](https://pldi24.sigplan.org)
+*   [PLDI 2023](https://pldi23.sigplan.org)
+*   [PLDI 2022](https://pldi21.sigplan.org)
+*   [PLDI 2021](https://pldi21.sigplan.org)
+*   [PLDI 2020](https://pldi20.sigplan.org)
+*   [PLDI 2019](https://pldi19.sigplan.org)
+*   [PLDI 2018](https://pldi18.sigplan.org)
+*   [PLDI 2017](https://pldi17.sigplan.org)
+*   [PLDI 2016](https://pldi16.sigplan.org)
+*   [PLDI 2015](https://pldi15.sigplan.org)
+
+## Important Dates
+
+*   **Submission:** No calls yet
+*   **Notification:** No calls yet
+*   **Camera-ready:** No calls yet
+
+## Registration
+
+*   [Sign in](https://conf.researchr.org/signin/pldi-2026/https%3A%5Es%5Espldi26.sigplan.org%5Es)
+*   [Sign up](https://pldi26.sigplan.org/signup)
+
+## Venue
+
+*   [Limelight Boulder](https://pldi26.sigplan.org/venue/pldi-2026-venue), Boulder, Colorado, USA",,
+req-conf-1751809170576-jzvmi,,ACM-SIGACT Symposium on Principles of Programming Languages,POPL,https://popl26.sigplan.org/,https://conf.researchr.org/track/POPL-2026/POPL-2026-popl-research-papers#POPL-2026-Call-for-Papers,https://popl26.sigplan.org/dates,"Conference dates: January 11 - 17, 2026
+Year: 2026
+Location: Rennes, France
+Type: Offline
+Submission Date.(POPL) Paper submission deadline: July 10, 2025
+Submission Date.(Workshops and Co-located Events) Submission Deadline: July 25, 2025
+Notification Date.(Workshops and Co-located Events) Notification: August 1, 2025
+Notification Date.(POPL) Beginning of author response period: September 8, 2025
+Other Date.(POPL) End of author response period: September 11, 2025
+Other Date.(POPL) Conditional Accept Decisions Announced: October 2, 2025
+Topics: Programming Languages, Programming Systems
+Publisher: ACM SIGPLAN","January 11 - 17, 2026",2026,"Rennes, France",No city/state/province,No country,No continent,Offline,"{""(POPL) Paper submission deadline"":""July 10, 2025"",""(Workshops and Co-located Events) Submission Deadline"":""July 25, 2025""}","{""(Workshops and Co-located Events) Notification"":""August 1, 2025"",""(POPL) Beginning of author response period"":""September 8, 2025""}",{},{},"{""(POPL) End of author response period"":""September 11, 2025"",""(POPL) Conditional Accept Decisions Announced"":""October 2, 2025""}","Programming Languages, Programming Systems",ACM SIGPLAN,"The 53rd ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2026) will be held from January 11 to January 17, 2026, in Rennes, France, at Le Couvent des Jacobins. The symposium is a forum for discussing all aspects of programming languages and programming systems, welcoming both theoretical and experimental papers.","# POPL 2026: Call for Papers
+
+Welcome to the website of the 53rd ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2026).
+
+POPL 2026 will take place from **Sunday, January 11 to Saturday, January 17, 2026**, in **Rennes, France**, at **Le Couvent des Jacobins**.
+
+## About POPL
+
+The annual Symposium on Principles of Programming Languages is a forum for the discussion of all aspects of programming languages and programming systems. Both theoretical and experimental papers are welcome on topics ranging from formal frameworks to experience reports. We seek submissions that make principled, enduring contributions to the theory, design, understanding, implementation, or application of programming languages.
+
+The symposium is sponsored by ACM SIGPLAN, in cooperation with ACM SIGACT and ACM SIGLOG.
+
+## Tracks
+
+*   **POPL Research Papers**: For detailed information, see the [Call for Papers](https://conf.researchr.org/track/POPL-2026/POPL-2026-popl-research-papers#POPL-2026-Call-for-Papers).
+*   **Workshops and Co-located Events**
+
+## Important Dates
+
+**POPL 2026**
+
+*   **Paper submission deadline:** Thursday, July 10, 2025
+*   **Beginning of author response period:** Monday, September 8, 2025
+*   **End of author response period:** Thursday, September 11, 2025
+*   **Conditional Accept Decisions Announced:** Thursday, October 2, 2025
+
+**Workshops and Co-located Events**
+
+*   **Submission Deadline:** Friday, July 25, 2025
+*   **Notification:** Friday, August 1, 2025
+
+## Co-hosted Conferences
+
+*   [CPP 2026](https://popl26.sigplan.org/home/CPP-2026)
+*   [VMCAI 2026](https://conf.researchr.org/home/VMCAI-2026)
+
+## Live Streams
+
+Talk live streams will be available on the [YouTube SIGPLAN channel](https://www.youtube.com/user/sigplan).
+
+## Organization
+
+*   [POPL 2026 Committees](https://popl26.sigplan.org/committee/POPL-2026)
+*   [Contributors](https://popl26.sigplan.org/people-index)
+
+## Sign Up
+
+[Sign Up](https://popl26.sigplan.org/signup) to stay updated.",,
+req-conf-1751809170576-jzvmi,,Pattern Languages of Programs,PLOP,https://plopcon.org/plop2025/,https://plopcon.org/plop2025/submissions/,https://plopcon.org/plop2025/submissions/,"Conference dates: October 12-15, 2025
+Year: 2025
+Location: Skamania Lodge, Columbia River Gorge, Washington USA
+City-State-Province: Columbia River Gorge, Washington
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.DUE: Paper submissions: June 9, 2025
+Submission Date.DUE: Imagination Run Wild submissions: July 15, 2025
+Notification Date.Notification of acceptance for shepherding. Paper authors will be notified.: June 15, 2025
+Notification Date.Notification of acceptance sent for all submissions: July 30, 2025
+Other Date.DUE: Updated papers: July 15, 2025
+Other Date.Early registration ends (registration fee increases on August 11 and lodging is subject to availability): August 10, 2025
+Other Date.DUE: All paper authors and Imagination Run Wild facilitators must register by: August 10, 2025
+Other Date.DUE: Conference version of paper: September 23, 2025
+Other Date.DUE: Proceedings version of paper and Imagination Run Wild reports: January 15, 2026
+Topics: Pattern Languages, Software Development, Design, Social and Technical Systems, Architecture, Well-being, Learning, Psychology, Organizational Development and Change, Sociology, Anthropology","October 12-15, 2025",2025,"Skamania Lodge, Columbia River Gorge, Washington USA","Columbia River Gorge, Washington",United States,North America,Offline,"{""DUE: Paper submissions"":""June 9, 2025"",""DUE: Imagination Run Wild submissions"":""July 15, 2025""}","{""Notification of acceptance for shepherding. Paper authors will be notified."":""June 15, 2025"",""Notification of acceptance sent for all submissions"":""July 30, 2025""}",{},{},"{""DUE: Updated papers"":""July 15, 2025"",""Early registration ends (registration fee increases on August 11 and lodging is subject to availability)"":""August 10, 2025"",""DUE: All paper authors and Imagination Run Wild facilitators must register by"":""August 10, 2025"",""DUE: Conference version of paper"":""September 23, 2025"",""DUE: Proceedings version of paper and Imagination Run Wild reports"":""January 15, 2026""}","Pattern Languages, Software Development, Design, Social and Technical Systems, Architecture, Well-being, Learning, Psychology, Organizational Development and Change, Sociology, Anthropology",No publisher,"The 32nd Pattern Languages of Programs (PLoP) conference will be held from October 12-15, 2025, at Skamania Lodge in Washington, USA. PLoP is a premier event for pattern enthusiasts, covering software-related patterns and expanding to all aspects of the built world. The conference offers Writers’ Workshops for authors to improve their papers and “Imagination Run Wild” sessions for all attendees to engage with patterns and related topics.","# PLoP 2025: Call for Submissions
+
+The 32nd Pattern Languages of Programs (PLoP) conference will be held from **October 12-15, 2025**, at **Skamania Lodge, Columbia River Gorge, Washington USA**.
+
+PLoP is the premier event for pattern authors and enthusiasts to gather, discuss, and learn more about patterns, design, software development, and the built world in general. The conference welcomes both paper authors and nonauthors alike.
+
+## Submission Types
+
+There are two main types of submissions:
+
+### PAPERS
+
+*   **DUE:** **June 9** (Extended)
+*   **Description:** We welcome papers describing patterns and pattern languages, experience reports, essays, empirical evaluations, reflections, etc. After an initial screening, papers are assigned a shepherd for an iterative revision process. Accepted papers are discussed in Writers’ Workshops at the conference. Authors are expected to improve their papers based on feedback from the workshop and submit a final version for the proceedings.
+*   **Contact for Paper Submissions:** Hugo Ferreira (`ploppapers@hillside.net`)
+*   **Submission Link:** [https://submission.plopcon.org/plop/2025/submission/gate.cgi](https://submission.plopcon.org/plop/2025/submission/gate.cgi)
+
+### IMAGINATION RUN WILD
+
+*   **DUE:** **July 15**
+*   **Description:** These sessions offer everyone, including newcomers, an opportunity to learn about patterns and related topics. Proposals can include hour-long presentations, 5-minute lightning talks, workshops/focus groups, open spaces, fishbowls, or birds-of-a-feather sessions. Propose something new if it doesn't fit the standard formats by contacting Kiyoka Hayashi. Reports from these sessions may be included in the conference proceedings (subject to review).
+*   **Contact for Imagination Run Wild:** Kiyoka Hayashi (`plopirw@hillside.net`)
+*   **Submission Link:** [https://submission.plopcon.org/plop/2025/submission/gate.cgi](https://submission.plopcon.org/plop/2025/submission/gate.cgi)
+
+## Important Dates (All times AoE - Anytime on Earth)
+
+*   **June 9:** DUE: Paper submissions (Extended!)
+*   **June 15:** Notification of acceptance for shepherding. Paper authors will be notified.
+*   **July 15:** DUE: Updated papers
+*   **July 15:** DUE: Imagination Run Wild submissions
+*   **July 30:** Notification of acceptance sent for all submissions
+*   **August 10:** Early registration ends (registration fee increases on August 11 and lodging is subject to availability)
+*   **August 10:** DUE: All paper authors and Imagination Run Wild facilitators must register by this date.
+*   **September 23:** DUE: Conference version of paper
+*   **January 15, 2026:** DUE: Proceedings version of paper and Imagination Run Wild reports
+
+## Paper Submission & Review Process
+
+1.  **Initial Screening:** Submissions are assessed for suitability and quality by the program committee.
+2.  **Shepherding:** Each suitable paper is assigned a shepherd to help the author improve the paper through an iterative revision process.
+3.  **Final Assessment:** After shepherding, papers are re-assessed by program committee members and chairs. Acceptance considers the author's willingness to incorporate feedback.
+4.  **Writers’ Workshops:** At the conference, accepted papers are discussed in groups. Authors take comments into account for final improvements.
+5.  **Registration Requirement:** At least one author of an accepted paper must register for the conference; failure to do so will result in acceptance being withdrawn.
+
+## Costs
+
+The Hillside organization is a non-profit and does not provide funding for PLoP travel, registration, or lodging. All attendees are responsible for these costs.","DUE: Conference version of paper – September 23, 2025
+DUE: Proceedings version of paper and Imagination Run Wild reports – January 15, 2026",Yes
+req-conf-1751809170576-jzvmi,,ACM SIGMOD-SIGACT-SIGART Conference on Principles of Database Systems,PODS,https://2026.sigmod.org/,https://2026.sigmod.org/calls_papers_pods_research.shtml,https://2026.sigmod.org/calls_papers_important_dates.shtml,"Conference dates: May 31 - June 5, 2026
+Year: 2026
+Location: Bengaluru, India
+City-State-Province: Bengaluru
+Country: India
+Continent: Asia
+Type: Offline
+Submission Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Abstract deadline: June 3, 2025
+Submission Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Full paper submission deadline: June 10, 2025
+Submission Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Abstract deadline: December 3, 2025
+Submission Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Full paper submission deadline: December 10, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 1) January 10, 2025: January 10, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 1) January 17, 2025: January 17, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 2) April 10, 2025: April 10, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 2) April 17, 2025: April 17, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 3) July 10, 2025: July 10, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 3) July 17, 2025: July 17, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 4) October 10, 2025: October 10, 2025
+Submission Date.(SIGMOD Deadlines Research paper submission round 4) October 17, 2025: October 17, 2025
+Notification Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Initial notification: August 11, 2025
+Notification Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Initial notification: February 8, 2025
+Notification Date.(SIGMOD Deadlines Research paper submission round 1) April 4, 2025: April 4, 2025
+Notification Date.(SIGMOD Deadlines Research paper submission round 2) July 4, 2025: July 4, 2025
+Notification Date.(SIGMOD Deadlines Research paper submission round 3) October 4, 2025: October 4, 2025
+Notification Date.(SIGMOD Deadlines Research paper submission round 4) January 4, 2025: January 4, 2025
+Camera-ready Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Final notification: September 1, 2025
+Camera-ready Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Final notification: March 1, 2026
+Camera-ready Date.(SIGMOD Deadlines Research paper submission round 1) May 23, 2025: May 23, 2025
+Camera-ready Date.(SIGMOD Deadlines Research paper submission round 2) August 23, 2025: August 23, 2025
+Camera-ready Date.(SIGMOD Deadlines Research paper submission round 3) November 23, 2025: November 23, 2025
+Camera-ready Date.(SIGMOD Deadlines Research paper submission round 4) February 23, 2026: February 23, 2026
+Other Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Rebuttal: July 29 - August 1, 2025
+Other Date.(PODS Deadlines FIRST SUBMISSION CYCLE) Revision submission: August 25, 2025
+Other Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Rebuttal: January 26 - 29, 2025
+Other Date.(PODS Deadlines SECOND SUBMISSION CYCLE) Revision submission: February 22, 2026
+Other Date.(SIGMOD Deadlines Research paper submission round 1) March 1-8, 2025: March 1-8, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 1) March 9-15, 2025: March 9-15, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 1) May 4, 2025: May 4, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 2) June 1-8, 2025: June 1-8, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 2) June 9-15, 2025: June 9-15, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 2) August 4, 2025: August 4, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 3) September 1-8, 2025: September 1-8, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 3) September 9-15, 2025: September 9-15, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 3) November 4, 2025: November 4, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 4) December 1-8, 2025: December 1-8, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 4) December 9-15, 2025: December 9-15, 2025
+Other Date.(SIGMOD Deadlines Research paper submission round 4) February 4, 2026: February 4, 2026","May 31 - June 5, 2026",2026,"Bengaluru, India",Bengaluru,India,Asia,Offline,"{""(PODS Deadlines FIRST SUBMISSION CYCLE) Abstract deadline"":""June 3, 2025"",""(PODS Deadlines FIRST SUBMISSION CYCLE) Full paper submission deadline"":""June 10, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Abstract deadline"":""December 3, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Full paper submission deadline"":""December 10, 2025"",""(SIGMOD Deadlines Research paper submission round 1) January 10, 2025"":""January 10, 2025"",""(SIGMOD Deadlines Research paper submission round 1) January 17, 2025"":""January 17, 2025"",""(SIGMOD Deadlines Research paper submission round 2) April 10, 2025"":""April 10, 2025"",""(SIGMOD Deadlines Research paper submission round 2) April 17, 2025"":""April 17, 2025"",""(SIGMOD Deadlines Research paper submission round 3) July 10, 2025"":""July 10, 2025"",""(SIGMOD Deadlines Research paper submission round 3) July 17, 2025"":""July 17, 2025"",""(SIGMOD Deadlines Research paper submission round 4) October 10, 2025"":""October 10, 2025"",""(SIGMOD Deadlines Research paper submission round 4) October 17, 2025"":""October 17, 2025""}","{""(PODS Deadlines FIRST SUBMISSION CYCLE) Initial notification"":""August 11, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Initial notification"":""February 8, 2025"",""(SIGMOD Deadlines Research paper submission round 1) April 4, 2025"":""April 4, 2025"",""(SIGMOD Deadlines Research paper submission round 2) July 4, 2025"":""July 4, 2025"",""(SIGMOD Deadlines Research paper submission round 3) October 4, 2025"":""October 4, 2025"",""(SIGMOD Deadlines Research paper submission round 4) January 4, 2025"":""January 4, 2025""}","{""(PODS Deadlines FIRST SUBMISSION CYCLE) Final notification"":""September 1, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Final notification"":""March 1, 2026"",""(SIGMOD Deadlines Research paper submission round 1) May 23, 2025"":""May 23, 2025"",""(SIGMOD Deadlines Research paper submission round 2) August 23, 2025"":""August 23, 2025"",""(SIGMOD Deadlines Research paper submission round 3) November 23, 2025"":""November 23, 2025"",""(SIGMOD Deadlines Research paper submission round 4) February 23, 2026"":""February 23, 2026""}",{},"{""(PODS Deadlines FIRST SUBMISSION CYCLE) Rebuttal"":""July 29 - August 1, 2025"",""(PODS Deadlines FIRST SUBMISSION CYCLE) Revision submission"":""August 25, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Rebuttal"":""January 26 - 29, 2025"",""(PODS Deadlines SECOND SUBMISSION CYCLE) Revision submission"":""February 22, 2026"",""(SIGMOD Deadlines Research paper submission round 1) March 1-8, 2025"":""March 1-8, 2025"",""(SIGMOD Deadlines Research paper submission round 1) March 9-15, 2025"":""March 9-15, 2025"",""(SIGMOD Deadlines Research paper submission round 1) May 4, 2025"":""May 4, 2025"",""(SIGMOD Deadlines Research paper submission round 2) June 1-8, 2025"":""June 1-8, 2025"",""(SIGMOD Deadlines Research paper submission round 2) June 9-15, 2025"":""June 9-15, 2025"",""(SIGMOD Deadlines Research paper submission round 2) August 4, 2025"":""August 4, 2025"",""(SIGMOD Deadlines Research paper submission round 3) September 1-8, 2025"":""September 1-8, 2025"",""(SIGMOD Deadlines Research paper submission round 3) September 9-15, 2025"":""September 9-15, 2025"",""(SIGMOD Deadlines Research paper submission round 3) November 4, 2025"":""November 4, 2025"",""(SIGMOD Deadlines Research paper submission round 4) December 1-8, 2025"":""December 1-8, 2025"",""(SIGMOD Deadlines Research paper submission round 4) December 9-15, 2025"":""December 9-15, 2025"",""(SIGMOD Deadlines Research paper submission round 4) February 4, 2026"":""February 4, 2026""}",No topics,No publisher,"The 2026 ACM SIGMOD/PODS Conference will be held in Bengaluru, India, from May 31 to June 05, 2026. This leading international forum for database researchers, practitioners, developers, and users will feature a technical program including research and industrial talks, tutorials, demos, workshops, and a poster session.","# PODS 2026: Call for Research Papers
+
+The Principles of Database Systems (PODS) symposium series, held in conjunction with the SIGMOD conference series, provides a premier annual forum for the communication of new advances in the theoretical foundations of data management, traditional or nontraditional.
+
+The 2026 conference will be held in **Bengaluru, India, on May 31 - June 05, 2026**.
+
+## Mission
+
+The PODS community aims to provide a solid scientific basis for methods, techniques, and solutions for data management challenges in our data-driven society. It develops new ways of advancing data management to reflect the rich landscape of data requirements in applications nowadays, focusing on efficiency, scalability, usability, expressiveness, robustness, security, clarity, and privacy.
+
+## Scope
+
+PODS seeks scientific articles that present principled contributions to modeling, application and system building in the context of data management. This includes theoretical results, new concepts and frameworks, experimental work, and rigorous analysis of industry artifacts. PODS promotes an active exchange of tools and techniques with other data management communities, especially those papers that help integrate data management techniques within broader computer science.
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   **Database processing:** Query evaluation, query optimization, schema management, distributed data processing, approximate data processing
+*   **Database design:** Data models, query languages, schemas, constraints
+*   **Database access:** Data structures, access methods, concurrency, transactions
+*   **Data quality:** Data cleaning, data discovery, data exploration
+*   **Data analysis:** Data mining, machine learning, information extraction, data streams
+*   **Uncertainty:** Incompleteness, inconsistency, ontological query answering, semi-structured data
+*   **Interoperability:** Mappings and views, data integration, data exchange, ontology-based data access
+*   **Responsible data management:** Access control, privacy, security, verification, ethical aspects of data management
+*   **Human-database interaction:** data summarization, data visualization, explanation for database queries
+*   **Connections between database principles and other disciplines**
+
+## Submission Site
+
+Submissions should be made through the EasyChair portal: [https://www.easychair.org/my/conference?conf=pods2026](https://www.easychair.org/my/conference?conf=pods2026)
+
+## Submission Format
+
+*   LaTeX users must format their submission using the standard ACM ""acmsmall"" proceedings stylesheet: [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template)
+*   Use the following class declaration:
+    ```latex
+    \documentclass[acmsmall,review,anonymous]{acmart}
+    ```
+*   A submission can be up to **15 pages**, not including references. Unlimited space is allowed for references.
+*   Additional details may be included in a clearly marked appendix, of unlimited length, which should be incorporated at submission time. Appendices will be read at the discretion of the program committee.
+*   Papers that are longer than 15 pages or do not adhere to the required format risk rejection without consideration of their merits.
+*   Submitted results must be unpublished and not submitted elsewhere.
+
+## Double-Anonymous Reviewing
+
+PODS 2026 will use a lightweight double-anonymous reviewing process.
+
+*   Author names and institutions must be omitted.
+*   References to the authors’ own related work should be in the third person.
+*   Acknowledgements, grant numbers, and links to submitted papers in public repositories will not be allowed.
+
+## Important Dates
+
+All deadlines are **11:59 PM AoE**.
+
+### FIRST SUBMISSION CYCLE:
+
+*   **Abstract deadline:** June 3, 2025
+*   **Full paper submission deadline:** June 10, 2025
+*   **Rebuttal:** July 29 - August 1, 2025
+*   **Initial notification:** August 11, 2025
+*   **Revision submission:** August 25, 2025
+*   **Final notification:** September 1, 2025
+
+### SECOND SUBMISSION CYCLE:
+
+*   **Abstract deadline:** December 3, 2025
+*   **Full paper submission deadline:** December 10, 2025
+*   **Rebuttal:** January 26 - 29, 2025
+*   **Initial notification:** February 8, 2025
+*   **Revision submission:** February 22, 2026
+*   **Final notification:** March 1, 2026
+
+## Open Access Policy
+
+ACM will fully transition to Open Access effective January 1, 2026. All ACM publications will be 100% Open Access.
+
+*   **ACM Open institutional model:** The majority of ACM-sponsored conference papers will not require APCs.
+*   **Article Processing Charges (APCs):** Authors from institutions not participating in ACM Open may need to pay an APC, unless they qualify for a waiver.
+    *   List of participating institutions: [https://libraries.acm.org/acmopen/open-participants](https://libraries.acm.org/acmopen/open-participants)
+    *   APC Waivers and Discounts Policy: [https://www.acm.org/publications/policies/policy-on-open-access-apc-waivers-and-discounts](https://www.acm.org/publications/policies/policy-on-open-access-apc-waivers-and-discounts)
+
+### Temporary Subsidy for 2026:
+
+*   **ACM/SIG members:** $250 APC
+*   **Non-members:** $350 APC
+
+This represents a 65% discount, funded directly by ACM.
+
+## Anti-Harassment Policy
+
+SIGMOD 2026 adheres to the ACM Policy Against Harassment. Participants experiencing unacceptable behavior may contact any current member of the SIGMOD Executive Committee, the PODS Executive Committee, or DBCares.",,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,22/23,,,,22/22,,22/22,,,,22/22,17/22,18/22,19/22,,18/22,,,,,,

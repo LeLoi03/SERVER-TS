@@ -9,7 +9,6 @@ import {
     ThoughtStep, // Added for consistency
     AgentId // Added for consistency
 } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { v4 as uuidv4 } from 'uuid'; // For generating unique confirmation IDs
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
@@ -54,7 +53,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:SendEmailToAdmin Agent:${agentId}]`; // Extended prefix
         const localThoughts: ThoughtStep[] = []; // Collection for thoughts
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
+        
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -72,7 +71,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -85,7 +84,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -100,7 +99,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
             // a) Validate Subject
             if (!subject || typeof subject !== 'string' || subject.trim() === '') {
                 const errorMsg = "Missing or invalid 'subject' argument.";
-                logToFile(`${logPrefix} Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments for sending email.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -109,7 +108,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
             // b) Validate Request Type
             if (!requestType || !VALID_REQUEST_TYPES.includes(requestType as ValidRequestType)) {
                 const errorMsg = `Invalid or missing 'requestType'. Must be one of: ${VALID_REQUEST_TYPES.join(', ')}. Received: "${requestType}"`;
-                logToFile(`${logPrefix} Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments for sending email.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -119,7 +118,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
             // c) Validate Message
             if (!message || typeof message !== 'string' || message.trim() === '') {
                 const errorMsg = "Missing or invalid 'message' argument.";
-                logToFile(`${logPrefix} Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments for sending email.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -129,7 +128,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
 
             // --- 2. Prepare Confirmation Action ---
             const confirmationId = uuidv4();
-            logToFile(`${logPrefix} Preparing confirmation request ID: ${confirmationId}`);
+            
             reportStep('preparing_email_confirmation', 'Preparing email confirmation dialog...', { confirmationId, subject: trimmedSubject, requestType: validRequestType });
 
             // Build the payload for the frontend confirmation action
@@ -149,7 +148,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
 
             // --- 3. Backend Staging (Conceptual Log) ---
             // This log reminds us that the actual storage happens elsewhere
-            logToFile(`${logPrefix} Staging confirmation ${confirmationId}. Awaiting frontend response. (Requires external state management)`);
+            
             // NOTE: Implement the actual storage/timeout mechanism where executeFunctionCall resides or in a dedicated service.
 
             // --- 4. Return Response to Model & Trigger Frontend ---
@@ -162,7 +161,7 @@ export class SendEmailToAdminHandler implements IFunctionHandler {
 
         } catch (error: unknown) { // Catch as unknown for safer error handling
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in SendEmailToAdminHandler (Confirmation Step): ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Internal error preparing email confirmation: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             // Inform the model about the failure to even start the confirmation process
             return {

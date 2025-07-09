@@ -6,11 +6,8 @@ import {
     FunctionHandlerOutput,
     StatusUpdate,
     ThoughtStep,
-    AgentId,
     FrontendAction, // <<< Import FrontendAction
-    DisplayConferenceSourcesPayload // <<< Import payload mới
 } from '../shared/types';
-import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 import { extractConferenceSourceData } from '../utils/transformData'; // <<< Import hàm mới
 
@@ -31,7 +28,7 @@ export class GetConferencesHandler implements IFunctionHandler {
         const dataType = "conference";
         const localThoughts: ThoughtStep[] = [];
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
+        
 
         const reportStep = (step: string, message: string, details?: object): void => {
             const timestamp = new Date().toISOString();
@@ -39,14 +36,14 @@ export class GetConferencesHandler implements IFunctionHandler {
                 step, message, details, timestamp, agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
                     type: 'status', step, message, details, timestamp, agentId: agentId,
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -55,7 +52,7 @@ export class GetConferencesHandler implements IFunctionHandler {
 
             if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '') {
                 const errorMsg = "Missing or empty search query for conferences.";
-                logToFile(`${logPrefix} Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', `Invalid arguments: ${errorMsg}`, { error: errorMsg, args });
                 return {
                     modelResponseContent: `Error: ${errorMsg} Please provide a search query for conferences.`,
@@ -66,7 +63,7 @@ export class GetConferencesHandler implements IFunctionHandler {
 
             reportStep('retrieving_info', `Retrieving ${dataType} data for query: "${searchQuery}"...`, { dataType, searchQuery });
             const apiResult = await executeGetConferences(searchQuery); // executeGetConferences trả về ApiCallResult
-            logToFile(`${logPrefix} API Result: Success=${apiResult.success}, Query="${searchQuery}"`);
+            
 
             let modelResponseContent: string;
             let frontendAction: FrontendAction = undefined; // Khởi tạo frontendAction
@@ -97,11 +94,11 @@ export class GetConferencesHandler implements IFunctionHandler {
                                             title: `Found Conferences (Sources):`
                                         }
                                     };
-                                    logToFile(`${logPrefix} Created 'displayConferenceSources' action with ${conferencesForFrontend.length} items using unified logic.`);
+                                    
                                 }
                             }
                         } catch (parseError) {
-                            logToFile(`${logPrefix} Error parsing rawData for frontend action: ${getErrorMessageAndStack(parseError).message}`);
+                            
                         }
                     }
                     // <<< KẾT THÚC TẠO FRONTEND ACTION >>>
@@ -109,7 +106,7 @@ export class GetConferencesHandler implements IFunctionHandler {
                 } else { // formattedData là null nhưng API thành công (có thể rawData có)
                     modelResponseContent = apiResult.rawData ?? (apiResult.errorMessage || `Received raw ${dataType} data for "${searchQuery}", but formatting was unavailable.`);
                     const warningMsg = `Data formatting issue for ${dataType}. Displaying raw data or error message.`;
-                    logToFile(`${logPrefix} Warning: ${warningMsg}`);
+                    
                     reportStep('function_warning', warningMsg, {
                         rawDataPreview: typeof apiResult.rawData === 'string' ? apiResult.rawData.substring(0, 100) + '...' : '[object]',
                         errorMessage: apiResult.errorMessage,
@@ -119,7 +116,7 @@ export class GetConferencesHandler implements IFunctionHandler {
                 }
             } else { // API call thất bại
                 modelResponseContent = apiResult.errorMessage || `Failed to retrieve ${dataType} data for query: "${searchQuery}".`;
-                logToFile(`${logPrefix} API call failed: ${modelResponseContent}`);
+                
                 reportStep('api_call_failed', `API call failed for ${dataType}: ${modelResponseContent}`, { error: modelResponseContent, success: false, query: searchQuery });
             }
 
@@ -132,7 +129,7 @@ export class GetConferencesHandler implements IFunctionHandler {
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error: ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Critical error during ${dataType} retrieval: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred while trying to get conferences: ${errorMessage}`,

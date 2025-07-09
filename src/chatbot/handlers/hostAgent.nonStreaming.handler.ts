@@ -39,27 +39,20 @@ export async function handleNonStreaming(
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
     pageContextText?: string,
-        pageContextUrl?: string // <<< THÊM PARAMETER
+    pageContextUrl?: string // <<< THÊM PARAMETER
 
 ): Promise<NonStreamingHandlerResult | void> {
-    const { geminiServiceForHost, hostAgentGenerationConfig, logToFile, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
+    const { geminiServiceForHost, hostAgentGenerationConfig, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const socketId = socket.id;
     const conversationIdForSubAgent = handlerId;
     const inputTextSummary = userInputParts.find(p => p.text)?.text || (userInputParts.length > 0 ? `[${userInputParts.length} parts content]` : "[No user text query]");
     const baseLogContext = `[${handlerId} NonStreaming Socket ${socketId}]`;
 
-    logToFile(`--- ${baseLogContext} Handling inputParts: "${inputTextSummary.substring(0, 50)}...", Lang: ${language}` +
-        (personalizationData ? `, Personalization: Enabled` : ``) +
-        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.map(f => f.name).join(', ')}` : ``) +
-        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) + // Log page context
-        ` ---`);
-    if (personalizationData) logToFile(`[DEBUG ${baseLogContext}] Personalization Data: ${JSON.stringify(personalizationData)}`);
-
     const currentAgentId: AgentId = 'HostAgent';
     // <<< SỬA ĐỔI ĐỂ TRUYỀN PAGE CONTEXT VÀO LANGUAGE CONFIG >>>
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
-        language, 
-        currentAgentId, 
+        language,
+        currentAgentId,
         personalizationData,
         pageContextText // <<< TRUYỀN PAGE CONTEXT
     );
@@ -77,7 +70,7 @@ export async function handleNonStreaming(
             timestamp: new Date(Date.now() - 1000)
         };
         historyForApiCall.push(pageContextTurn);
-        logToFile(`${baseLogContext} Added page context as a pseudo user turn to API history. UUID: ${pageContextTurn.uuid}`);
+
     }
     historyForApiCall.push(...initialHistoryFromSocket);
     // <<< KẾT THÚC XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
@@ -110,25 +103,24 @@ export async function handleNonStreaming(
         }
     }
 
-    
+
     // Chỉ thêm currentUserTurnForHistory vào completeHistoryToSave nếu nó có nội dung
     // hoặc nếu không có parts nhưng có pageContext
     if (!isEditContextAndUnchanged && (currentUserTurnForHistory.parts.length > 0 || pageContextText)) {
         completeHistoryToSave.push(currentUserTurnForHistory);
-        logToFile(`${baseLogContext} User turn added to completeHistoryToSave. UUID: ${currentUserTurnForHistory.uuid}. ` +
-            `userFileInfo: ${currentUserTurnForHistory.userFileInfo ? currentUserTurnForHistory.userFileInfo.length + ' files' : 'none'}. ` +
-            `Total save history: ${completeHistoryToSave.length}`);
+
+
     } else if (!isEditContextAndUnchanged) {
-         logToFile(`${baseLogContext} User turn (UUID: ${currentUserTurnForHistory.uuid}) has no parts and no page context, not added to completeHistoryToSave.`);
+
     } else {
-        logToFile(`${baseLogContext} User turn (UUID: ${frontendMessageId}) likely an edit with no content change, not re-added to completeHistoryToSave.`);
+
     }
 
 
 
     const safeEmit = (eventName: 'status_update' | 'chat_result' | 'chat_error', data: StatusUpdate | ResultUpdate | ErrorUpdate): boolean => {
         if (!socket.connected) {
-            logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] SKIPPED: Client disconnected. Event: ${eventName}`);
+
             return false;
         }
         try {
@@ -148,10 +140,10 @@ export async function handleNonStreaming(
                 }
             }
             socket.emit(eventName, dataToSend);
-            logToFile(`[${handlerId} Socket Emit Sent - ${socketId}] Event: ${eventName}, Type: ${data.type}, Agent: ${dataToSend.agentId || 'N/A'}`);
+
             return true;
         } catch (error: any) {
-            logToFile(`[${handlerId} Socket Emit Attempt - ${socketId}] FAILED: Error during emit. Event: ${eventName}, Error: ${error.message}`);
+
             return false;
         }
     };
@@ -166,15 +158,12 @@ export async function handleNonStreaming(
         let nextTurnInputForHost: Part[] = userInputParts;
 
         while (currentTurn <= maxTurnsHostAgent) {
-            const turnLogContext = `${baseLogContext} Turn ${currentTurn}`;
             const currentApiHistoryForThisCall = [...historyForApiCall]; // Tạo bản sao
 
-            logToFile(`--- ${turnLogContext} Start --- Input type: Part[] length ${nextTurnInputForHost.length}, ` +
-                `API History size: ${currentApiHistoryForThisCall.length} ` +
-                `(${currentApiHistoryForThisCall.map(m => m.role + (m.userFileInfo ? `[${m.userFileInfo.length}f]` : '')).join(', ')}) ---`);
+
 
             if (!statusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentTurn > 1 ? `Thinking based on previous action (Turn ${currentTurn})...` : 'Thinking...' })) return { history: completeHistoryToSave, action: finalFrontendAction };
-            if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected before Model call.`); return { history: completeHistoryToSave, action: finalFrontendAction }; }
+
 
             const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | Content; tools?: Tool[] } = {
                 ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: tools
@@ -186,7 +175,7 @@ export async function handleNonStreaming(
                 combinedConfig
             );
 
-            if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected after Model call.`); return { history: completeHistoryToSave, action: finalFrontendAction }; }
+
 
             // Cập nhật historyForApiCall SAU KHI gọi API
             if (currentTurn === 1) {
@@ -200,10 +189,10 @@ export async function handleNonStreaming(
                 if (lastFunctionResponseTurnInComplete) {
                     historyForApiCall.push(lastFunctionResponseTurnInComplete);
                 } else {
-                    logToFile(`${turnLogContext} WARNING: Could not find exact function response turn in completeHistoryToSave to add to historyForApiCall (non-streaming).`);
+
                 }
             }
-            logToFile(`${turnLogContext} Updated historyForApiCall (after adding current input turn, length ${historyForApiCall.length}): ${historyForApiCall.map(m => m.role + ':' + (m.uuid || 'no-uuid') + (m.userFileInfo ? `[${m.userFileInfo.length}f]` : '')).join(', ')}`);
+
 
 
 
@@ -213,17 +202,17 @@ export async function handleNonStreaming(
                 const botMessageUuid = uuidv4();
                 const modelResponseParts = modelResult.parts || [{ text: finalModelResponseText }];
 
-                 const finalModelTurn: ChatHistoryItem = {
-                    role: 'model', 
-                    parts: modelResponseParts, 
-                    uuid: botMessageUuid, 
+                const finalModelTurn: ChatHistoryItem = {
+                    role: 'model',
+                    parts: modelResponseParts,
+                    uuid: botMessageUuid,
                     timestamp: new Date(),
                     sources: [] // Khởi tạo
                 };
 
                 // <<< THÊM PAGE CONTEXT URL VÀO SOURCES CỦA MODEL >>>
                 if (pageContextUrl && pageContextText) {
-                     try {
+                    try {
                         const urlObj = new URL(pageContextUrl);
                         finalModelTurn.sources?.push({
                             name: urlObj.hostname,
@@ -231,7 +220,7 @@ export async function handleNonStreaming(
                             type: 'page_context'
                         });
                     } catch (e) {
-                        logToFile(`[WARN] ${turnLogContext} Invalid pageContextUrl: ${pageContextUrl}. Cannot extract hostname.`);
+
                         finalModelTurn.sources?.push({
                             name: pageContextUrl,
                             url: pageContextUrl,
@@ -241,12 +230,12 @@ export async function handleNonStreaming(
                 }
 
                 completeHistoryToSave.push(finalModelTurn);
-                logToFile(`${turnLogContext} Final Text - Appended HostAgent response. Sources: ${JSON.stringify(finalModelTurn.sources)}. Save history: ${completeHistoryToSave.length}`);
-                
+
+
                 const resultPayload: ResultUpdate = { // Sử dụng ResultUpdate đã được cập nhật type
-                    type: 'result', 
-                    message: finalModelResponseText, 
-                    parts: modelResponseParts, 
+                    type: 'result',
+                    message: finalModelResponseText,
+                    parts: modelResponseParts,
                     id: botMessageUuid,
                     sources: finalModelTurn.sources // <<< TRUYỀN SOURCES
                 };
@@ -255,7 +244,7 @@ export async function handleNonStreaming(
 
             }
             else if (modelResult.status === "error") {
-                logToFile(`${turnLogContext} Error - HostAgent model error: ${modelResult.errorMessage}`);
+
                 safeEmit('chat_error', { type: 'error', message: modelResult.errorMessage || `Error processing your request (Turn ${currentTurn}).`, step: 'host_llm_error' });
                 return { history: completeHistoryToSave, action: finalFrontendAction };
 
@@ -270,7 +259,7 @@ export async function handleNonStreaming(
 
                 completeHistoryToSave.push(modelFunctionCallTurn);
                 historyForApiCall.push(modelFunctionCallTurn); // Cập nhật historyForApiCall cho lượt API tiếp theo
-                logToFile(`${turnLogContext} HostAgent requests function: ${functionCall.name}. Save history: ${completeHistoryToSave.length}, API history: ${historyForApiCall.length}`);
+
 
                 let functionResponseContentPart: Part; // This will be the single Part for the function's response
 
@@ -319,7 +308,7 @@ export async function handleNonStreaming(
                     };
                 }
 
-                if (!socket.connected) { logToFile(`${turnLogContext} Abort - Disconnected after function execution.`); return { history: completeHistoryToSave, action: finalFrontendAction }; }
+
 
                 const functionResponseUuid = uuidv4();
                 const functionResponseTurnForHistory: ChatHistoryItem = {
@@ -328,30 +317,30 @@ export async function handleNonStreaming(
                 completeHistoryToSave.push(functionResponseTurnForHistory);
                 // Lượt function response này sẽ được thêm vào historyForApiCall ở ĐẦU vòng lặp tiếp theo
                 // thông qua logic cập nhật historyForApiCall ở trên.
-                logToFile(`${turnLogContext} Appended function response for ${functionCall.name}. Save history: ${completeHistoryToSave.length}`);
+
 
                 nextTurnInputForHost = [functionResponseContentPart];
                 currentTurn++;
                 continue;
             }
             else { // Không nên xảy ra
-                logToFile(`${turnLogContext} Error - HostAgent model unexpected status: ${modelResult.status}`);
+
                 safeEmit('chat_error', { type: 'error', message: `An unexpected internal error occurred (Turn ${currentTurn}).`, step: 'unknown_model_status' });
                 return { history: completeHistoryToSave, action: finalFrontendAction };
             }
         } // Kết thúc vòng lặp while
 
         if (currentTurn > maxTurnsHostAgent) {
-            logToFile(`${baseLogContext} Error - Exceeded maximum HostAgent turns (${maxTurnsHostAgent}).`);
+
             safeEmit('chat_error', { type: 'error', message: 'Request processing took too long or got stuck in a loop.', step: 'max_turns_exceeded' });
         }
         return { history: completeHistoryToSave, action: finalFrontendAction };
     } catch (error: any) {
         const errorMsg = error instanceof Error ? error.message : "An unknown error occurred";
-        logToFile(`${baseLogContext} CRITICAL Error - Lang: ${language}] ${errorMsg}\nStack: ${error.stack}`);
+
         safeEmit('chat_error', { type: "error", message: errorMsg, step: 'unknown_handler_error' });
         return { history: completeHistoryToSave, action: finalFrontendAction };
     } finally {
-        logToFile(`--- ${baseLogContext} Lang: ${language}] NON-STREAMING Handler execution finished. (Socket connected: ${socket.connected}) ---`);
+
     }
 }

@@ -15,7 +15,7 @@ import {
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { FileSystemService } from './fileSystem.service';
-import { IConferenceLinkProcessorService, ProcessedContentResult } from './batchProcessing/conferenceLinkProcessor.service';
+import { IConferenceLinkProcessorService } from './batchProcessing/conferenceLinkProcessor.service';
 // --- NEW SERVICE IMPORTS ---
 import { IUpdateTaskExecutorService } from './batchProcessing/updateTaskExecutor.service';
 import { ISaveTaskExecutorService } from './batchProcessing/saveTaskExecutor.service';

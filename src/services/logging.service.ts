@@ -6,8 +6,6 @@ import fs from 'fs';
 import path from 'path';
 import { ConfigService } from '../config/config.service';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
-// pino-roll sẽ được require có điều kiện
-// import pinoRoll, { PinoRollOptions, PinoRollStream, Frequency as PinoRollFrequency } from 'pino-roll'; // Gỡ bỏ import trực tiếp
 import { Writable } from 'stream';
 import { LogDescriptor } from 'pino';
 
@@ -127,48 +125,6 @@ export class LoggingService {
             }
         }
 
-        // Chỉ dùng pino-roll nếu có cấu hình xoay vòng
-        // const useRotation = this.configService.logRotationFrequency && this.configService.logRotationSize;
-
-        // if (useRotation) {
-        //     try {
-        //         const pinoRoll = require('pino-roll'); // require pino-roll ở đây
-        //         const pinoRollFileOptions: any = { // Kiểu PinoRollOptions
-        //             file: logFilePath,
-        //             // frequency: this.configService.logRotationFrequency,
-        //             // size: this.configService.logRotationSize,
-        //             mkdir: true, // pino-roll tự tạo thư mục cha trực tiếp của file log
-        //             // symlink: true, // Tạo current.log
-        //         };
-        //         if (this.configService.logRotationDateFormat) pinoRollFileOptions.dateFormat = this.configService.logRotationDateFormat;
-        //         if (this.configService.logRotationLimitCount && this.configService.logRotationLimitCount > 0) {
-        //             pinoRollFileOptions.limit = { count: this.configService.logRotationLimitCount };
-        //         }
-
-        //         const rollStream = await pinoRoll(pinoRollFileOptions);
-        //         rollStream.on('error', (err: unknown) => {
-        //             const { message: errMsg } = getErrorMessageAndStack(err);
-        //             console.error(`[LoggingService:PinoRoll:${loggerType}] CRITICAL: Error in pino-roll stream for ${logFilePath}: "${errMsg}".`);
-        //         });
-        //         streams.push({ level: this.logLevel as Level, stream: rollStream });
-        //         this.sharedPinoRollStreams[loggerType] = rollStream;
-        //         console.log(`[LoggingService:CreateSharedLogger] File logging with pino-roll for ${loggerType}. File: ${logFilePath}.`);
-        //     } catch (err) {
-        //         const { message: errMsg, stack } = getErrorMessageAndStack(err);
-        //         console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Failed to create pino-roll stream for ${loggerType} at "${logFilePath}". Error: "${errMsg}". Stack: ${stack}. Falling back to simple file logging if possible.`, err);
-        //         // Fallback to simple file logging if pino-roll fails
-        //         try {
-        //             const fileStream = pino.destination({ dest: logFilePath, mkdir: true, sync: false });
-        //             streams.push({ level: this.logLevel as Level, stream: fileStream });
-        //             console.warn(`[LoggingService:CreateSharedLogger] Fallback: Simple file logging for ${loggerType}. File: ${logFilePath}.`);
-        //         } catch (fallbackErr) {
-        //             const { message: fallbackMsg } = getErrorMessageAndStack(fallbackErr);
-        //             console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Fallback simple file stream also failed for ${loggerType} at "${logFilePath}". Error: "${fallbackMsg}".`, fallbackErr);
-        //             // Nếu không có stream nào, pino sẽ log ra stdout theo mặc định nếu không có stream nào được cung cấp
-        //         }
-        //     }
-        // } else {
-        // Ghi file đơn giản nếu không có cấu hình xoay vòng
         try {
             const fileStream = pino.destination({ dest: logFilePath, mkdir: true, sync: false });
             streams.push({ level: this.logLevel as Level, stream: fileStream });
@@ -177,8 +133,6 @@ export class LoggingService {
             const { message: errMsg } = getErrorMessageAndStack(err);
             console.error(`[LoggingService:CreateSharedLogger] CRITICAL: Failed to create simple file stream for ${loggerType} at "${logFilePath}". Error: "${errMsg}".`, err);
         }
-        // }
-
         if (streams.length > 0) {
             return pino(basePinoOptions, pino.multistream(streams));
         } else {
@@ -255,9 +209,6 @@ export class LoggingService {
             streams.push({ level: this.logLevel as Level, stream: fileStream });
         } catch (fileStreamError) {
             console.error(`[LoggingService:GetRequestLogger] CRITICAL: Failed to create file stream for ${loggerKey} at "${logFilePath}". Error: "${getErrorMessageAndStack(fileStreamError).message}". Request-specific file logging will be disabled for this request.`);
-            // Nếu không tạo được file stream, logger sẽ chỉ log ra console (nếu được bật)
-            // Hoặc sẽ là một logger không làm gì nếu console cũng tắt.
-            // Cần đảm bảo `newLogger` vẫn được tạo.
             const emergencyLogger = pino({ level: 'info', name: `Emergency-${loggerKey}-NoFile` });
             return baseContext ? emergencyLogger.child(baseContext) : emergencyLogger;
         }

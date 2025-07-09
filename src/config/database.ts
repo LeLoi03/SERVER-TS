@@ -2,7 +2,6 @@
 import 'reflect-metadata'; // Essential for Tsyringe to work with decorators and reflection.
 import { container } from 'tsyringe'; // Import the Tsyringe IoC container for dependency resolution.
 import mongoose from 'mongoose'; // MongoDB Object-Document Mapper (ODM).
-import logToFile from '../utils/logger'; // Import the custom logging utility.
 import { ConfigService } from './index'; // Import the application's configuration service.
 
 /**
@@ -23,7 +22,7 @@ const MONGODB_URI = configService.mongodbUri;
 // Perform an immediate critical check for MONGODB_URI.
 // If it's missing, log a fatal error and throw to prevent application startup.
 if (!MONGODB_URI) {
-    logToFile(`${LOG_PREFIX} CRITICAL ERROR: MONGODB_URI is not configured in the environment variables.`);
+    
     // Throw an error to halt the application initialization process.
     throw new Error("MONGODB_URI environment variable is not configured. Please check your .env file.");
 }
@@ -40,12 +39,12 @@ if (!MONGODB_URI) {
  */
 export const connectDB = async (): Promise<void> => {
     try {
-        logToFile(`${LOG_PREFIX} Attempting to establish MongoDB connection...`);
+        
 
         // Attempt to connect to MongoDB using the URI obtained from ConfigService.
         await mongoose.connect(MONGODB_URI);
 
-        logToFile(`${LOG_PREFIX} MongoDB Connected Successfully.`);
+        
 
         // --- Register Mongoose Connection Event Listeners ---
 
@@ -54,7 +53,7 @@ export const connectDB = async (): Promise<void> => {
          * Logs the error message to the application log file.
          */
         mongoose.connection.on('error', (err: mongoose.Error) => {
-            logToFile(`${LOG_PREFIX} MongoDB runtime error: ${err.message}`);
+            
         });
 
         /**
@@ -62,12 +61,12 @@ export const connectDB = async (): Promise<void> => {
          * Logs a warning to the application log file.
          */
         mongoose.connection.on('disconnected', () => {
-            logToFile(`${LOG_PREFIX} MongoDB disconnected.`);
+            
         });
 
         // Optionally, you might add a 'connected' listener if you want to log every re-connection.
         // mongoose.connection.on('connected', () => {
-        //     logToFile(`${LOG_PREFIX} MongoDB re-connected.`);
+        //     
         // });
 
     } catch (error: any) {
@@ -75,7 +74,7 @@ export const connectDB = async (): Promise<void> => {
         const errorMessage = error instanceof Error ? error.message : String(error);
         const errorStack = error instanceof Error ? error.stack : 'No stack available.';
 
-        logToFile(`${LOG_PREFIX} MongoDB Initial Connection Error: "${errorMessage}". Stack: ${errorStack}`);
+        
 
         // Re-throw the error to `src/loaders/database.loader.ts` (and then `src/loaders/index.ts`)
         // to ensure that the application startup process is halted if the database cannot be reached.

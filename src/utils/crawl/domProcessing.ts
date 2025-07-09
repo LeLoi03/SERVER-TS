@@ -1,7 +1,6 @@
 // src/utils/dom_processing.ts
 import { container } from 'tsyringe';
 import { JSDOM } from 'jsdom';
-import logToFile from '../logger'; // Updated import path
 import { getErrorMessageAndStack } from '../errorUtils'; // Import the error utility
 import { ConfigService } from "../../config/config.service";
 
@@ -20,7 +19,7 @@ const EXACT_KEYWORDS = configService.exactKeywords;
 // These are NOT Gemini API keys, but keywords used in link filtering.
 if (!EXCLUDE_TEXTS || !CFP_TAB_KEYWORDS || !IMPORTANT_DATES_TABS || !EXACT_KEYWORDS) {
     const errorMessage = "Critical configuration missing for DOM processing: EXCLUDE_TEXTS, CFP_TAB_KEYWORDS, IMPORTANT_DATES_TABS, or EXACT_KEYWORDS are not set.";
-    logToFile(`[FATAL ERROR] [DOM Processing] ${errorMessage}`);
+    
     throw new Error(errorMessage);
 }
 
@@ -45,14 +44,14 @@ export const cleanDOM = (htmlContent: string): Document | null => {
                 element.remove();
             } catch (removeError: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(removeError);
-                logToFile(`[ERROR] [DOM Processing] Error removing script/style tag: ${errorMessage}.`);
+                
             }
         });
 
         return document;
     } catch (domError: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(domError);
-        logToFile(`[ERROR] [DOM Processing] Error creating or cleaning DOM: ${errorMessage}. Stack: ${errorStack}.`);
+        
         return null;
     }
 };
@@ -76,7 +75,7 @@ export const normalizeTextNode = (text: string): string => {
         return normalizedText.trim();
     } catch (normalizeError: unknown) {
         const { message: errorMessage } = getErrorMessageAndStack(normalizeError);
-        logToFile(`[ERROR] [DOM Processing] Error normalizing text: ${errorMessage}. Returning original text.`);
+        
         return text;
     }
 };
@@ -111,7 +110,7 @@ export const processTable = (tableElement: Element, acronym: string | null | und
                             }
                         } catch (cellTraverseError: unknown) {
                             const { message: errorMessage } = getErrorMessageAndStack(cellTraverseError);
-                            logToFile(`[ERROR] [DOM Processing] Error traversing cell within table: ${errorMessage}.`);
+                            
                         }
                     });
 
@@ -120,7 +119,7 @@ export const processTable = (tableElement: Element, acronym: string | null | und
                     }
                 } catch (rowProcessingError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(rowProcessingError);
-                    logToFile(`[ERROR] [DOM Processing] Error processing table row: ${errorMessage}.`);
+                    
                 }
             });
         }
@@ -128,7 +127,7 @@ export const processTable = (tableElement: Element, acronym: string | null | und
 
     } catch (tableError: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(tableError);
-        logToFile(`[ERROR] [DOM Processing] Error processing table: ${errorMessage}. Stack: ${errorStack}.`);
+        
     }
     return tableRows.join('\n'); // Join rows with a newline character
 };
@@ -162,7 +161,7 @@ export const processList = (listElement: Element, acronym: string | null | undef
                     }
                 } catch (liTraverseError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(liTraverseError);
-                    logToFile(`[ERROR] [DOM Processing] Error traversing list item (direct child): ${errorMessage}.`);
+                    
                 }
             });
         } else {
@@ -177,14 +176,14 @@ export const processList = (listElement: Element, acronym: string | null | undef
                     }
                 } catch (childTraverseError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(childTraverseError);
-                    logToFile(`[ERROR] [DOM Processing] Error traversing child node within list (no direct li): ${errorMessage}.`);
+                    
                 }
             });
         }
 
     } catch (listError: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(listError);
-        logToFile(`[ERROR] [DOM Processing] Error processing list: ${errorMessage}. Stack: ${errorStack}.`);
+        
     }
     return listItems.join('\n'); // Join list items with a newline
 };
@@ -330,7 +329,7 @@ export const traverseNodes = (node: Node, acronym: string | null | undefined, ye
         }
     } catch (nodeTraversalError: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(nodeTraversalError);
-        logToFile(`[ERROR] [DOM Processing] Error traversing node: ${errorMessage}. Stack: ${errorStack}.`);
+        
     }
 
     // Join all extracted text parts.
@@ -354,7 +353,7 @@ export const removeExtraEmptyLines = (text: string): string => {
         return text.replace(/(\n\s*){3,}/g, '\n\n').trim();
     } catch (replaceError: unknown) {
         const { message: errorMessage } = getErrorMessageAndStack(replaceError);
-        logToFile(`[ERROR] [DOM Processing] Error removing extra empty lines: ${errorMessage}. Returning original text.`);
+        
         return text;
     }
 };

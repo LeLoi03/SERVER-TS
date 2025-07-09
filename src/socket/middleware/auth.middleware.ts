@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken';
 import { container } from 'tsyringe';
 import { ConfigService } from '../../config/config.service';
 
-import logToFile from '../../utils/logger';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
 /**
@@ -40,10 +39,7 @@ export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError)
 
     const logContext = `[socketAuth][${socketId}]`;
 
-    logToFile(`${logContext} Attempting authentication. Token provided: ${!!token}.`);
-
     if (!token) {
-        logToFile(`${logContext} No authentication token provided. Allowing as anonymous connection.`);
         // Mark as anonymous, future handlers can check `socket.data.userId`
         // or handle anonymous logic.
         socket.data.userId = null;
@@ -56,7 +52,7 @@ export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError)
         const jwtSecret = configService.jwtSecret;
         if (!jwtSecret) {
             // This is a critical server configuration error.
-            logToFile(`[FATAL ERROR] ${logContext} JWT_SECRET is not configured in environment variables. Cannot authenticate.`);
+
             const error: ExtendedError = new Error(`Server configuration error: JWT secret is missing.`);
             error.data = { code: 'SERVER_CONFIG_ERROR', message: 'JWT_SECRET is not set.' };
             return next(error); // Reject connection due to critical server misconfiguration.
@@ -66,7 +62,6 @@ export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError)
         // This will throw an error if the token is invalid or expired.
         jwt.verify(token, jwtSecret);
 
-        logToFile(`${logContext} Token signature validated successfully. Storing token on socket data.`);
 
         // Store the original token on `socket.data` for later use (e.g., by `fetchUserInfo`).
         socket.data.token = token;
@@ -79,7 +74,6 @@ export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError)
 
     } catch (err: unknown) { // Catch unknown errors from `jwt.verify`
         const { message: errorMessage } = getErrorMessageAndStack(err); // Extract message safely
-        logToFile(`[WARNING] ${logContext} Token validation failed. Reason: "${errorMessage}".`);
 
         const error: ExtendedError = new Error(`Authentication error: Invalid or expired token.`);
         error.data = { code: 'AUTH_FAILED', message: errorMessage };

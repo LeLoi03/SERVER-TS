@@ -2,7 +2,6 @@
 import mongoose, { Types, Error as MongooseError } from 'mongoose';
 import ConversationModel, { IConversation } from '../models/conversation.model';
 import { ChatHistoryItem, RenameResult, NewConversationResult, Language } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility for robust error handling
 
 const LOG_PREFIX = "[HistoryService]";
@@ -61,7 +60,7 @@ export class ConversationHistoryService {
      */
     constructor() {
         this.model = ConversationModel;
-        logToFile(`${LOG_PREFIX} Initialized.`);
+        
     }
 
     /**
@@ -113,7 +112,7 @@ export class ConversationHistoryService {
         language?: string
     ): Promise<ConversationMetadata[]> {
         const logContext = `${LOG_PREFIX} [List User: ${userId}, Limit: ${limit}, Lang: ${language || 'N/A'}]`;
-        logToFile(`${logContext} Fetching conversation list.`);
+        
         try {
             const conversations = await this.model.find({ userId })
                 .sort({ isPinned: -1, lastActivity: -1 }) // Pinned conversations first, then by latest activity
@@ -127,11 +126,11 @@ export class ConversationHistoryService {
                 this.mapConversationToMetadata(conv as (Omit<IConversation, keyof Document> & { _id: Types.ObjectId }), language)
             );
 
-            logToFile(`${logContext} Found ${metadataList.length} conversations.`);
+            
             return metadataList;
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${LOG_PREFIX} Error fetching conversation list for user ${userId}: ${errorMessage}\nStack: ${errorStack}`);
+            
             return []; // Return empty array on error for robustness
         }
     }
@@ -150,14 +149,14 @@ export class ConversationHistoryService {
         language?: string
     ): Promise<NewConversationResult> {
         const logContext = `${LOG_PREFIX} [GetOrCreate User: ${userId}, Lang: ${language || 'N/A'}]`;
-        logToFile(`${logContext} Attempting to find latest or create new conversation.`);
+        
         try {
             const latestConversation = await this.model.findOne({ userId })
                 .sort({ lastActivity: -1 }) // Sort to get the most recent one
                 .exec();
 
             if (latestConversation) {
-                logToFile(`${logContext} Found latest conversation: ${latestConversation._id}. Updating lastActivity.`);
+                
                 latestConversation.lastActivity = new Date(); // Update timestamp
                 await latestConversation.save(); // Save changes
 
@@ -170,13 +169,13 @@ export class ConversationHistoryService {
                     isPinned: latestConversation.isPinned || false,
                 };
             } else {
-                logToFile(`${logContext} No existing conversation found. Creating new.`);
+                
                 // If no conversation found, create a brand new one
                 return this.createNewConversation(userId, language);
             }
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error: ${errorMessage}\nStack: ${errorStack}`);
+            
             throw new Error(`Database error getting/creating conversation: ${errorMessage}`);
         }
     }
@@ -198,7 +197,7 @@ export class ConversationHistoryService {
         const logContext = `${LOG_PREFIX} [GetHistory Conv: ${conversationId}, User: ${userId}, Limit: ${limit ?? 'None'}]`;
         // Validate conversationId format early to prevent Mongoose CastError for invalid IDs
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format provided.`);
+            
             return null; // Return null for invalid ID format
         }
         try {
@@ -214,15 +213,15 @@ export class ConversationHistoryService {
             if (conversation) {
                 return conversation.messages || []; // Return messages array, or empty array if null/undefined
             }
-            logToFile(`${logContext} Conversation not found or not authorized.`);
+            
             return null; // Return null if conversation not found or not owned by user
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error getting history: ${errorMessage}\nStack: ${errorStack}`);
+            
             // Treat Mongoose CastError specifically as "not found" or invalid ID
             if (error instanceof MongooseError.CastError) {
-                logToFile(`${logContext} CastError encountered during history retrieval, likely due to malformed ObjectId: ${errorMessage}.`);
+                
                 return null; // Consider CastError as "not found"
             }
             // Re-throw other database errors for higher-level handling
@@ -247,7 +246,7 @@ export class ConversationHistoryService {
         const logContext = `${LOG_PREFIX} [UpdateHistory Conv: ${conversationId}, User: ${userId}]`;
         // Validate conversationId format
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return false;
         }
 
@@ -256,7 +255,7 @@ export class ConversationHistoryService {
             ...item,
             timestamp: item.timestamp || new Date()
         }));
-        logToFile(`${logContext} Preparing to update with ${historyWithTimestamps.length} messages.`);
+        
 
         try {
             // `lastActivity` will be updated by a pre-save/update Mongoose hook.
@@ -266,19 +265,19 @@ export class ConversationHistoryService {
             ).exec();
 
             if (result.matchedCount > 0) {
-                logToFile(`${logContext} Conversation history updated. Matched: ${result.matchedCount}, Modified: ${result.modifiedCount}.`);
+                
                 return true; // Return true if at least one document was matched (and potentially modified)
             } else {
-                logToFile(`${logContext} Conversation not found or not authorized for update.`);
+                
                 return false;
             }
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error updating history: ${errorMessage}\nStack: ${errorStack}`);
+            
             // Handle CastError specifically as a non-fatal error (e.g., malformed ID)
             if (error instanceof MongooseError.CastError) {
-                logToFile(`${logContext} CastError during update: ${errorMessage}.`);
+                
                 return false;
             }
             // Re-throw other database errors
@@ -299,10 +298,10 @@ export class ConversationHistoryService {
         language?: string
     ): Promise<NewConversationResult> {
         const logContext = `${LOG_PREFIX} [CreateNew User: ${userId}, Lang: ${language || 'N/A'}]`;
-        logToFile(`${logContext} Creating new conversation.`);
+        
         try {
             const initialTitle = this.getLocalizedDefaultTitle(language);
-            logToFile(`${logContext} Initial title set to: "${initialTitle}" for language "${language || 'default'}".`);
+            
 
             const newConversationDoc = await this.model.create({
                 userId: userId,
@@ -316,10 +315,10 @@ export class ConversationHistoryService {
             const savedConversation = await this.model.findById(newConversationDoc._id).lean().exec();
             if (!savedConversation) {
                 const errorMsg = `CRITICAL: Failed to retrieve newly created conversation ${newConversationDoc._id}`;
-                logToFile(`${LOG_PREFIX} ${errorMsg}`);
+                
                 throw new Error(errorMsg);
             }
-            logToFile(`${logContext} New conversation ${savedConversation._id} created with title: "${savedConversation.customTitle}".`);
+            
 
             return {
                 conversationId: savedConversation._id.toString(),
@@ -330,7 +329,7 @@ export class ConversationHistoryService {
             };
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error creating new conversation: ${errorMessage}\nStack: ${errorStack}`);
+            
             throw new Error(`Database error creating new conversation: ${errorMessage}`);
         }
     }
@@ -345,21 +344,21 @@ export class ConversationHistoryService {
         const logContext = `${LOG_PREFIX} [Delete Conv: ${conversationId}, User: ${userId}]`;
         // Validate conversationId format
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return false;
         }
         try {
             const result = await this.model.deleteOne({ _id: conversationId, userId: userId }).exec();
             if (result.deletedCount === 1) {
-                logToFile(`${logContext} Conversation deleted successfully.`);
+                
                 return true;
             } else {
-                logToFile(`${logContext} Conversation not found or not authorized for deletion.`);
+                
                 return false;
             }
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error deleting conversation: ${errorMessage}\nStack: ${errorStack}`);
+            
             return false; // Return false on error for safety
         }
     }
@@ -375,7 +374,7 @@ export class ConversationHistoryService {
         const logContext = `${LOG_PREFIX} [ClearMessages Conv: ${conversationId}, User: ${userId}]`;
         // Validate conversationId format
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return false;
         }
         try {
@@ -386,19 +385,19 @@ export class ConversationHistoryService {
             ).exec();
 
             if (result.matchedCount > 0) {
-                logToFile(`${logContext} Messages cleared successfully. Matched: ${result.matchedCount}, Modified: ${result.modifiedCount}.`);
+                
                 return true;
             } else {
-                logToFile(`${logContext} Conversation not found or not authorized for clearing messages.`);
+                
                 return false;
             }
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error clearing messages: ${errorMessage}\nStack: ${errorStack}`);
+            
             // Handle CastError specifically
             if (error instanceof MongooseError.CastError) {
-                logToFile(`${logContext} CastError during clear messages: ${errorMessage}.`);
+                
                 return false;
             }
             return false; // Return false on other DB errors
@@ -420,10 +419,10 @@ export class ConversationHistoryService {
         newTitle: string
     ): Promise<RenameResult> {
         const logContext = `${LOG_PREFIX} [Rename Conv: ${conversationId}, User: ${userId}]`;
-        logToFile(`${logContext} Attempting to rename to "${newTitle.substring(0, Math.min(newTitle.length, 30))}..."`);
+        
 
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return { success: false, conversationId, errorMessage: "Invalid conversation ID format." };
         }
 
@@ -432,7 +431,7 @@ export class ConversationHistoryService {
         const finalTitle = trimmedTitle.substring(0, Math.min(trimmedTitle.length, MAX_CUSTOM_TITLE_LENGTH));
 
         if (finalTitle.length === 0) {
-            logToFile(`${logContext} New title is empty after trimming. No rename performed.`);
+            
             // You might choose to set customTitle to undefined/null here to revert to auto-generated title.
             // For now, returning false as per original logic for empty title.
             return { success: false, conversationId, errorMessage: "New title cannot be empty." };
@@ -446,18 +445,18 @@ export class ConversationHistoryService {
             ).exec();
 
             if (result.matchedCount === 0) {
-                logToFile(`${logContext} Rename failed: Conversation not found or not authorized.`);
+                
                 return { success: false, conversationId, errorMessage: "Conversation not found or not authorized." };
             }
 
             const wasModified = result.modifiedCount > 0;
-            logToFile(`${logContext} Conversation renamed. Matched: ${result.matchedCount}, Modified: ${wasModified}. New title: "${finalTitle}".`);
+            
 
             return { success: true, updatedTitle: finalTitle, conversationId };
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error renaming conversation: ${errorMessage}\nStack: ${errorStack}`);
+            
             return { success: false, conversationId, updatedTitle: newTitle, errorMessage: `Database error renaming conversation: ${errorMessage}` };
         }
     }
@@ -475,10 +474,10 @@ export class ConversationHistoryService {
         pinStatus: boolean
     ): Promise<boolean> {
         const logContext = `${LOG_PREFIX} [Pin Conv: ${conversationId}, User: ${userId}, Status: ${pinStatus}]`;
-        logToFile(`${logContext} Attempting to set pin status.`);
+        
 
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return false;
         }
 
@@ -490,14 +489,14 @@ export class ConversationHistoryService {
             ).exec();
 
             if (result.matchedCount === 0) {
-                logToFile(`${logContext} Pin/Unpin failed: Conversation not found or not authorized.`);
+                
                 return false;
             }
-            logToFile(`${logContext} Pin status updated. Matched: ${result.matchedCount}, Modified: ${result.modifiedCount}.`);
+            
             return true;
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error updating pin status: ${errorMessage}\nStack: ${errorStack}`);
+            
             return false;
         }
     }
@@ -521,10 +520,10 @@ export class ConversationHistoryService {
         newText: string
     ): Promise<UpdateUserMessageResult | null> {
         const logContext = `${LOG_PREFIX} [UpdateUserMsgPrepareHist User: ${userId}, Conv: ${conversationId}, MsgToEdit: ${messageIdToEdit}]`;
-        logToFile(`${logContext} Starting. New text preview: "${newText.substring(0, Math.min(newText.length, 30))}..."`);
+        
 
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
-            logToFile(`${logContext} Invalid conversationId format.`);
+            
             return {
                 originalConversationFound: false,
                 messageFoundAndIsLastUserMessage: false,
@@ -537,7 +536,7 @@ export class ConversationHistoryService {
             const conversation = await this.model.findOne({ _id: conversationId, userId: userId });
 
             if (!conversation) {
-                logToFile(`${logContext} Conversation not found or user not authorized.`);
+                
                 return {
                     originalConversationFound: false,
                     messageFoundAndIsLastUserMessage: false,
@@ -552,7 +551,7 @@ export class ConversationHistoryService {
             const messageToEditIndex = messages.findIndex(msg => (msg as any).uuid === messageIdToEdit && msg.role === 'user');
 
             if (messageToEditIndex === -1) {
-                logToFile(`${logContext} Target user message with UUID ${messageIdToEdit} not found in history or is not a user message.`);
+                
                 return {
                     originalConversationFound: true, // Conversation was found
                     messageFoundAndIsLastUserMessage: false, // But target message not found/invalid
@@ -571,7 +570,7 @@ export class ConversationHistoryService {
             }
 
             if (messageToEditIndex !== lastUserMessageActualIndex) {
-                logToFile(`${logContext} Consistency check failed: Message with UUID ${messageIdToEdit} (index ${messageToEditIndex}) is not the absolute last user message (index ${lastUserMessageActualIndex}). Aborting edit.`);
+                
                 return {
                     originalConversationFound: true,
                     messageFoundAndIsLastUserMessage: false, // Message found but not the last user one
@@ -588,14 +587,14 @@ export class ConversationHistoryService {
                 timestamp: new Date(), // Update timestamp to now for the edited message
                 uuid: (originalUserMessage as any).uuid, // Preserve the original UUID
             };
-            logToFile(`${logContext} Original user message at index ${messageToEditIndex} replaced with edited version.`);
+            
 
             // 2. Create the history array to send to the AI
             // This includes all messages *before* the message being edited, followed by the edited message itself.
             const historyForNewBotResponse = messages.slice(0, messageToEditIndex);
             historyForNewBotResponse.push(editedUserMessage);
 
-            logToFile(`${logContext} Successfully prepared history for new bot response. History length: ${historyForNewBotResponse.length}. Edited message UUID: ${editedUserMessage.uuid}`);
+            
 
             return {
                 editedUserMessage,
@@ -606,10 +605,10 @@ export class ConversationHistoryService {
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logContext} Error during message update and history preparation: ${errorMessage}. Stack: ${errorStack}`);
+            
             // Handle Mongoose CastError specifically (e.g., if conversationId seems valid but is malformed)
             if (error instanceof MongooseError.CastError) {
-                logToFile(`${logContext} CastError encountered during message update preparation: ${errorMessage}.`);
+                
                 return {
                     originalConversationFound: false, // Treat CastError as conversation not found for this context
                     messageFoundAndIsLastUserMessage: false,

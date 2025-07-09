@@ -46,7 +46,6 @@ export class CrawlOrchestratorService {
         @inject(PlaywrightService) private playwrightService: PlaywrightService,
         @inject(FileSystemService) private fileSystemService: FileSystemService,
         @inject(HtmlPersistenceService) private htmlPersistenceService: HtmlPersistenceService,
-        @inject(ResultProcessingService) private resultProcessingService: ResultProcessingService,
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
         // TaskQueueService không còn được inject ở đây vì nó sẽ được resolve theo từng request
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
@@ -195,16 +194,22 @@ export class CrawlOrchestratorService {
             logger.info("All background batch operations finished.");
 
 
+            // <<< THAY ĐỔI CHÍNH Ở ĐÂY >>>
+            // Resolve một instance MỚI của ResultProcessingService từ container của request
+            const resultProcessingService = requestContainer.resolve(ResultProcessingService);
+
             // Phase 4: Processing Final Output
             logger.info("Phase 4: Processing final output...");
             if (shouldRecordFiles) {
                 logger.info({ event: 'processing_path_file', batchRequestId }, "Processing results via file I/O path (JSONL -> CSV).");
-                allProcessedData = await this.resultProcessingService.processOutput(logger, batchRequestId);
+                // Sử dụng instance vừa resolve
+                allProcessedData = await resultProcessingService.processOutput(logger, batchRequestId);
             } else {
                 logger.info({ event: 'processing_path_memory' }, "Processing results via in-memory path.");
                 const rawResults = this.resultCollector.get();
                 logger.info({ recordCount: rawResults.length }, "Retrieved raw results from in-memory collector.");
-                allProcessedData = await this.resultProcessingService.processInMemoryData(rawResults, logger);
+                // Sử dụng instance vừa resolve
+                allProcessedData = await resultProcessingService.processInMemoryData(rawResults, logger);
             }
             logger.info(`Result processing finished. Collected ${allProcessedData.length} final records.`);
 

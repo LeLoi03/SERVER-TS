@@ -1,0 +1,902 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,recrawl
+req-conf-1751766474613-jtzem,,"GI International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment",DIMVA,https://www.dimva.org/dimva2025/,https://www.dimva.org/dimva2025/,https://www.dimva.org/dimva2025/,"Conference dates: July 9 - 11, 2025
+Year: 2025
+Location: Graz University of Technology, Austria
+City-State-Province: Graz
+Country: Austria
+Continent: Europe
+Type: Offline
+Registration Date.Registration will be open until: July 1, 2025
+Topics: Intrusion detection, malware analysis, vulnerability assessment, systems security
+Other Date.Cycle 1: Submission: December 10, 2024
+Other Date.Cycle 1: Notification (accept/reject): January 27, 2025
+Other Date.Cycle 2: Submission: February 19, 2024
+Other Date.Cycle 2: Notification (accept/reject): April 2, 2025
+Other Date.Camera ready deadline: April 30, 2025","July 9 - 11, 2025",2025,"Graz University of Technology, Austria",Graz,Austria,Europe,Offline,{},{},{},"{""Registration will be open until"":""July 1, 2025""}","{""Cycle 1: Submission"":""December 10, 2024"",""Cycle 1: Notification (accept/reject)"":""January 27, 2025"",""Cycle 2: Submission"":""February 19, 2024"",""Cycle 2: Notification (accept/reject)"":""April 2, 2025"",""Camera ready deadline"":""April 30, 2025""}","Intrusion detection, malware analysis, vulnerability assessment, systems security",No publisher,"The 22nd Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA '25) will be held from July 9 to 11, 2025, at Graz University of Technology, Austria. DIMVA serves as a premier forum for advancing the state of the art in intrusion detection, malware analysis, and vulnerability assessment, bringing together international experts from academia, industry, and government.","# DIMVA 2025: Call for Papers
+
+The 22nd Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA '25) will be held from **July 9 to July 11, 2025**, at **Graz University of Technology, Austria**.
+
+## General Information
+
+The annual DIMVA conference is a premier forum for advancing the state of the art in intrusion detection, malware analysis, and vulnerability assessment. It brings together international experts from academia, industry, and government. DIMVA is organized by the special interest group Security - Intrusion Detection and Response (SIDAR) of the German Informatics Society (GI). The conference proceedings will appear in the **Springer Lecture Notes in Computer Science (LNCS) series**.
+
+## Topics of Interest
+
+DIMVA solicits submissions of high-quality, original scientific papers presenting novel research on malware analysis, intrusion detection, vulnerability assessment, and related systems security topics. Topics of interest include, but are not limited to:
+
+### Intrusions
+
+*   Novel approaches and domains
+*   Insider detection
+*   Prevention and response
+*   Data leakage, exfiltration, and poisoning
+*   Result correlation and cooperation
+*   Evasion and other attacks
+*   Potentials and limitation
+*   Operational experiences
+*   Privacy, legal, and social aspects
+*   Targeted attacks
+*   Analysis or detection of cryptocurrency heists
+
+### Malware
+
+*   Automated analyses
+*   Behavioral models
+*   Prevention and containment
+*   Classification
+*   Lineage
+*   Forensics and recovery
+*   Underground economy
+*   Vulnerabilities in malware
+*   Financially targeted malware (e.g., ransomware, DeFi)
+
+### Vulnerabilities
+
+*   Vulnerability detection
+*   Vulnerability prevention
+*   Vulnerability analysis
+*   Exploitation and defenses
+*   Hardware vulnerabilities
+*   Situational awareness
+*   Active probing
+*   Vulnerabilities in decentralized systems
+
+Papers will be judged on novelty, significance, correctness, and clarity. Reproducibility of experimental results is expected. Papers that bridge research in different communities and experience papers are also welcome.
+
+## Types of Submissions Solicited
+
+*   **Full Papers:** Present novel and mature research results. Limited to **20 pages** in Springer LNCS format, including bibliography and appendices. Papers not following formatting guidelines may be rejected without review.
+*   **Posters:** For presenting original, ongoing work that has not yet reached maturity for a full paper. Poster submissions require a poster draft and an accompanying poster paper (4-6 pages, LNCS format). Poster papers will be published in the proceedings.
+
+## Submission Guidelines
+
+*   **Double-blind reviewing process:** All submissions must be appropriately anonymized. Author names and affiliations must be excluded, and self-references should be avoided or cited in the third person.
+*   **Originality:** Submissions must be original work and not under submission to another venue.
+*   **Presentation:** At least one author of each accepted paper must **physically present** the work at the conference for it to be included in the proceedings.
+*   **Code Submission:** Authors are encouraged to submit anonymized code, e.g., via [https://anonymous.4open.science/](https://anonymous.4open.science/).
+
+## Ethical Considerations
+
+*   **Human Subjects:** Disclose IRB approval and measures to minimize privacy risks if experiments involve human subjects.
+*   **Vulnerability Research:** Discuss steps taken to avoid negatively affecting third parties and plans for responsible disclosure before publication.
+
+## Important Dates (AoE)
+
+### Cycle 1:
+
+*   **Submission:** December 10, 2024
+*   **Notification (accept/reject):** January 27, 2025
+
+### Cycle 2:
+
+*   **Submission:** February 19, 2024
+*   **Notification (accept/reject):** April 2, 2025
+
+*   **Camera ready deadline:** April 30, 2025
+*   **Conference:** July 9 to 11, 2025
+
+## Submission Sites
+
+*   **Full Papers (Cycle 1):** [https://dimva25.hotcrp.com/](https://dimva25.hotcrp.com/)
+*   **Full Papers (Cycle 2):** [https://dimva25r2.hotcrp.com/](https://dimva25r2.hotcrp.com/)
+*   **Posters:** [https://dimva25posters.hotcrp.com/](https://dimva25posters.hotcrp.com/)
+
+## Registration
+
+*   Registration is open until **July 1st**. On-site registration is **not possible**.
+*   At least one Member or Regular fee must be paid for each accepted paper; otherwise, papers will be withdrawn.
+*   Registration fees include admission to all sessions, selected meals, welcome reception, dinner, and social event.
+*   **Cancellation/Refunds:** Must be received no later than **July 1, 2025**.
+*   **Fees:**
+    *   **Regular:** **340 EUR** (Normal) / **390 EUR** (Late, starting June 7th)
+    *   **GI members and other scientific organization members:** **260 EUR** (Normal) / **310 EUR** (Late)
+    *   **B.Sc./M.Sc. Student:** **270 EUR** (Normal) / **320 EUR** (Late)
+*   **Registration Link:** [https://pretix.eu/gi/DIMVA25/](https://pretix.eu/gi/DIMVA25/)
+*   **Contact for questions:** [dimva25.isec@tugraz.at](mailto:dimva25.isec@tugraz.at)
+
+**CAUTION:** Beware of phishing emails regarding hotel bookings. Only use official channels for conference matters.
+
+## Committee
+
+*   **Program Co-chairs:** Manuel Egele, Veelasha Moonsamy
+    *   Email: [pc-chairs@dimva.org](mailto:pc-chairs@dimva.org)
+*   **General Chair:** Daniel Gruss (Graz University of Technology)
+*   **Publication Chair:** Michele Carminati
+*   **Poster Co-chairs:** Tarini Saka, Flavio Toffalini
+*   **Program Committee:** A comprehensive list is available on the conference website.",,
+req-conf-1751766474613-jtzem,,Designing Interactive Systems,DIS,https://dis.acm.org/2025/,https://dis.acm.org/2025/call-for-papers/,https://dis.acm.org/2025/,"Conference dates: July 5 - 9, 2025
+Year: 2025
+Location: Funchal, Madeira
+City-State-Province: Funchal
+Country: Portugal
+Continent: Europe
+Type: Offline
+Topics: Designing Interactive Systems, Critical Computing and Design Theory, Design Methods and Processes, Artifacts and Systems, Research Through Design, AI and Design
+Submission Date.Abstract Paper/ Pictorials: January 13, 2025
+Submission Date.Full Paper/ Pictorials: January 20, 2025
+Submission Date.Workshops: February 20, 2025
+Submission Date.Art Track: March 20, 2025
+Submission Date.PWiP / Doctoral Consortium: March 21, 2025
+Submission Date.Demonstrations: April 11, 2025
+Notification Date.Paper and Pictorials: April 8, 2025
+Notification Date.Workshops: May 6, 2025
+Notification Date.Art Track: April 28, 2025
+Notification Date.PWiP: May 11, 2025
+Notification Date.Demonstrations: May 6, 2025
+Camera-ready Date.Paper and Pictorials: April 22, 2025
+Camera-ready Date.Workshops: May 16, 2025
+Camera-ready Date.Art Track: May 16, 2025
+Camera-ready Date.PWiP: May 16, 2025
+Camera-ready Date.Demonstrations: May 16, 2025","July 5 - 9, 2025",2025,"Funchal, Madeira",Funchal,Portugal,Europe,Offline,"{""Abstract Paper/ Pictorials"":""January 13, 2025"",""Full Paper/ Pictorials"":""January 20, 2025"",""Workshops"":""February 20, 2025"",""Art Track"":""March 20, 2025"",""PWiP / Doctoral Consortium"":""March 21, 2025"",""Demonstrations"":""April 11, 2025""}","{""Paper and Pictorials"":""April 8, 2025"",""Workshops"":""May 6, 2025"",""Art Track"":""April 28, 2025"",""PWiP"":""May 11, 2025"",""Demonstrations"":""May 6, 2025""}","{""Paper and Pictorials"":""April 22, 2025"",""Workshops"":""May 16, 2025"",""Art Track"":""May 16, 2025"",""PWiP"":""May 16, 2025"",""Demonstrations"":""May 16, 2025""}",{},{},"Designing Interactive Systems, Critical Computing and Design Theory, Design Methods and Processes, Artifacts and Systems, Research Through Design, AI and Design",No publisher,"The ACM Designing Interactive Systems Conference (DIS) 2025 will be held in Funchal, Madeira from July 5-9, 2025. The conference encourages submissions that address its five contribution areas: Critical Computing and Design Theory, Design Methods and Processes, Artifacts and Systems, Research Through Design, and AI and Design. Submissions related to the conference theme of “Designing for a Sustainable Ocean” are particularly welcome. DIS 2025 will be an in-person-only event, requiring authors to present their work in person.","# DIS 2025: Call for Papers
+
+We invite you to submit to ACM Designing Interactive Systems (DIS) 2025, taking place in **Funchal, Madeira from July 5-9, 2025**.
+
+## Conference Theme
+
+DIS 2025 focuses on **“Designing for a Sustainable Ocean”**, urging us to rethink our relationship with the planet and its environments and oceans. This theme invites a critical examination of how oceans can inspire design that transcends human-centered perspectives, emphasizing ecological systems and our interconnectedness with all forms of life.
+
+## Contribution Areas
+
+DIS 2025 welcomes submissions that address the design of interactive systems in the broadest possible sense, with a focus on the following five contribution areas:
+
+*   **Critical Computing and Design Theory:** Papers on critical computing, design theory, and their intersections, focusing on the political, ethical, and moral dimensions of computing.
+*   **Design Methods and Processes:** Papers documenting, innovating, and advancing methods, approaches, and processes in interaction design, UX design, and service design.
+*   **Artifacts and Systems:** Papers analyzing, evaluating, and reflecting on artifacts and interactive systems, particularly those supporting sustainable, equitable, and resilient outcomes.
+*   **Research Through Design (RtD):** Research contributions resulting from the exploration of design practices, materials, artifacts, technologies, and interfaces through iterative, hands-on engagement.
+*   **AI and Design:** Papers making a design contribution to artificial intelligence, including design for AI, design with AI, and design of AI agents and robots.
+
+## Submission Information
+
+*   **Submission Site:** [Precision Conference Submission Portal](https://new.precisionconference.com/)
+*   **Title and Abstract deadline:** [Changed or passed: 13 January 2025]
+*   **Paper and Pictorial Submission deadline:** [Changed or passed: 20 January 2025]
+*   **Notifications:** [Changed or passed: 8 April 2025]
+*   **Camera-Ready Completion Deadline:** [Changed or passed: 22 April 2025]
+
+*Note: Deadlines are specified as Anywhere on Earth (AoE) time.* 
+
+## Broader Impact
+
+All submissions will be assessed based on their broader impact on society and/or the environment. Authors are encouraged to discuss the significance of their work beyond a narrow intellectual contribution.
+
+## Paper Length and Format
+
+*   Papers do not have a page limit; authors are encouraged to submit a length proportional to the contribution.
+*   Typical submissions are expected to be approximately 7,000–8,000 words excluding references, figure/table captions, and appendices.
+*   Submissions above 12,000 words or below 4,000 words may be desk-rejected.
+*   Papers must be formatted correctly using the provided templates.
+    *   [Microsoft Word Template](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)
+    *   [LaTeX Template](https://www.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx) (Use sample-manuscript.tex for submissions)
+    *   [Overleaf (Latex)](https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/kpqvdsztxbcj) 
+
+## Anonymization Policy
+
+All submissions must be anonymized for review. Author and affiliation sections and credits must be left blank. Citations to previous work should be unanonymized and cited in the third person. A detailed anonymization policy can be found [here](https://chi2025.acm.org/chi-anonymization-policy/).
+
+## Policy on Use of Large Language Models (LLMs)
+
+Text generated from LLMs must be clearly marked. Please refer to the [April 2023 ACM Policy on Authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship) for guidance.
+
+## Policy on Research Involving Human Participants and Subjects
+
+All research involving human subjects must go through the appropriate ethics review requirements applicable to the authors' research environment. A short note to reviewers providing this context is required.
+
+## Review Process
+
+Each paper will receive detailed reviews from two external reviewers and a secondary Associate Chair (AC). The primary AC will write a meta-review summarizing the reviews and providing a recommendation. Final acceptance decisions will be made by the Program Committee.
+
+## Upon Acceptance
+
+*   Authors will be notified of conditional acceptance or rejection by **8th April 2025**.
+*   Accepted papers require a camera-ready submission by **22nd April 2025**.
+*   Presenting authors must attend the conference in person. Papers whose authors do not present may be withdrawn from the ACM Digital Library.
+*   Accepted submissions may be asked to prepare a short teaser video.
+*   A full conference registration fee is required for each presenting author.
+
+## Contact
+
+For questions, please contact the paper chairs at [tpc@dis2025.acm.org](mailto:tpc@dis2025.acm.org).",,
+req-conf-1751766474613-jtzem,,International Symposium on Distributed Computing,DISC,https://www.disc-conference.org/wp/disc2025/,https://www.disc-conference.org/wp/disc2025/call-for-papers/,,"Conference dates: October 28 - 30, 2025
+Year: 2025
+Location: Berlin, Germany
+City-State-Province: Berlin
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Paper registration: May 20, 2025
+Submission Date.Submission deadline: May 23, 2025
+Submission Date.Workshop/Tutorial proposal deadline: May 31, 2025
+Notification Date.Notification: August 7, 2025
+Other Date.Rebuttal phase: July 7 - 14, 2025
+Other Date.Workshops + Conference: October 27 - 31, 2025
+Topics: Distributed algorithms, distributed systems, networks
+Publisher: LIPIcs","October 28 - 30, 2025",2025,"Berlin, Germany",Berlin,Germany,Europe,Offline,"{""Paper registration"":""May 20, 2025"",""Submission deadline"":""May 23, 2025"",""Workshop/Tutorial proposal deadline"":""May 31, 2025""}","{""Notification"":""August 7, 2025""}",{},{},"{""Rebuttal phase"":""July 7 - 14, 2025"",""Workshops + Conference"":""October 27 - 31, 2025""}","Distributed algorithms, distributed systems, networks",LIPIcs,"The 39th International Symposium on Distributed Computing (DISC 2025) will be held in Berlin, Germany, from October 27 to October 31, 2025, at the Harnack House. DISC is an international forum for the theory, design, analysis, implementation, and application of distributed systems and networks, and is organized in cooperation with the European Association for Theoretical Computer Science (EATCS).","# DISC 2025: Call for Papers
+
+The 39th International Symposium on Distributed Computing (DISC 2025) will be held in **Berlin, Germany**, from **October 27th to October 31st, 2025**, at the **Harnack House**.
+
+DISC is an international forum on the theory, design, analysis, implementation and application of distributed systems and networks. It is organized in cooperation with the European Association for Theoretical Computer Science (EATCS). DISC 2025 will host the presentation of the 2025 Edsger W. Dijkstra Prize in Distributed Computing.
+
+## Scope
+
+Submissions are sought in all areas of distributed algorithms and distributed systems, including theory, design, implementation, modelling, analysis, and application of distributed systems and networks. Topics of interest include, but are not limited to:
+
+*   Biological and nature-inspired distributed algorithms
+*   Blockchain protocols
+*   Coding and reliable communication
+*   Communication networks: algorithms, protocols, and applications
+*   Complexity, lower bounds, and impossibility results
+*   Design and analysis of distributed algorithms
+*   Distributed and concurrent data structures
+*   Distributed algorithms for clouds and IoT
+*   Distributed graph algorithms
+*   Distributed machine learning and data science
+*   Distributed operating systems, middleware, database systems
+*   Distributed resource management
+*   Fault tolerance, reliability, self-organization, self-stabilization
+*   Formal methods for distributed computing: verification, synthesis and testing
+*   Game-theoretic and knowledge-based approaches to distributed computing
+*   Internet and web applications, social networks and recommendation systems
+*   Massively-parallel, high-performance, cloud and grid computing
+*   Mobile agents, autonomous distributed systems, swarm robotics
+*   Multiprocessor and multi-core architectures and algorithms
+*   Overlay networks and peer-to-peer networks
+*   Population protocols and chemical reaction networks
+*   Quantum distributed algorithms
+*   Replication, consensus, and consistency
+*   Security in distributed computing, cryptographic protocols
+*   Synchronization, persistence and transactional memory
+*   Wireless, mobile, sensor and ad-hoc networks
+
+## Submissions
+
+Submissions should be done via the following web page: [https://disc25.hotcrp.com](https://disc25.hotcrp.com)
+
+### Submission Types
+
+*   **Regular Papers:** Must report on original research that has not previously been published (and may not be concurrently submitted to other journals or conferences with proceedings). All ideas necessary for an expert to fully verify the central claims in a paper, including experimental results, should be included in the submission.
+*   **Brief Announcements:** May describe work in progress or work presented elsewhere. A brief announcement may also present a result that is short and elegant, but does not require a longer paper. It may also be used to announce a software distribution or an experimental result of interest that can be concisely described. The title of a brief announcement should start with the phrase ""Brief Announcement: "".
+
+*A paper that is not accepted as a regular paper may be invited as a brief announcement.* 
+
+## Submission Format
+
+*   Submissions must be in English in pdf format.
+*   They must be prepared using the LIPIcs LaTeX style template: `\documentclass[a4paper,anonymous,USenglish]{lipics-v2021}`.
+*   Submissions must be anonymous, without any author names, affiliations, or email addresses. The contact information of the authors will be entered separately in the submission metadata.
+*   **Regular papers:** No page limit. The initial 15 pages, excluding the title page and a table of contents, should contain a clear presentation of the merits of the paper, including a discussion of the paper’s importance within the context of prior work and a description of the key technical and conceptual ideas used to achieve its main claims. Material other than the first 15 pages will be read at the committee’s discretion.
+*   **Brief announcements:** Should comply with the above rules, replacing 15 pages with 5 pages.
+*   Submissions not conforming to the submission guidelines and papers outside of the scope of the conference will be rejected without consideration.
+
+## Use of Large Language Models (LLMs)
+
+The use of LLMs for submission preparation is permitted, although it is highly recommended that they only be used for cosmetic changes, e.g. proofreading of the text. The use of LLMs in technical parts should be treated in the same way as any other software or system, and thus carefully described and documented in the submission. Ultimately, the authors are responsible for the content of their submission, and mis-use of LLM may result in rejection. Any questions about the LLM use policy should be directed to the PC chair, Dariusz Kowalski (dkowalski@augusta.edu).
+
+## Anonymous Submissions
+
+We will use a relaxed implementation of double-blind peer review. Submissions must not reveal the identity of the authors in any way. In particular, authors’ names and affiliation should not appear in the document itself. Authors should ensure that any references to their own related work are in the third person (e.g., not “We build on our previous work …” but rather “We build on the work of …”).
+
+## Conflict of Interest
+
+The submission form provides an opportunity to specify conflicts of interest with any of the PC members and other member of research community. A conflict of interest is limited to the following:
+
+*   A family member or close friend;
+*   A Ph.D. advisor or advisee (no time limit), or postdoctoral or undergraduate mentor or mentee within the past five years;
+*   A person with the same affiliation;
+*   A person involved in an alleged incident of harassment;
+*   Frequent collaborators, or collaborators who have jointly published papers within the last two years.
+
+If you feel that you have a valid reason for a conflict of interest beyond listed above, or any other issues related to the fair treatment of your submission, contact the PC chair, Dariusz Kowalski (dkowalski@augusta.edu), or the SafeTOC representative for DISC, listed at [https://safetoc.org/index.php/toc-advisors/](https://safetoc.org/index.php/toc-advisors/).
+
+## Participation at DISC
+
+It is expected that accepted papers and brief announcements be presented in-person at the conference.
+
+## Publication
+
+The proceedings will be published by LIPIcs. The final version of the paper has to be formatted following the LIPIcs guidelines. Regular papers will have 15 pages in the final proceedings (excluding references), and brief announcements will have 5 pages in the proceedings (including everything). If more space is needed, the authors are encouraged to post the full version e.g. on arXiv and refer to it in their paper.
+
+Accepted papers and brief announcements must be presented by one of the authors, with a full registration and according to the final schedule.
+
+Extended and revised versions of selected papers will be considered for a special issue of the journal Distributed Computing.
+
+The best paper at DISC will be considered for publication in the Journal of the ACM.
+
+## Awards
+
+Awards will be given to the best paper and the best student paper. To be eligible for the best student paper award, at least one of the paper authors must be a full-time student at the time of submission, and the student(s) must have made a significant contribution to the paper.
+
+## Important Dates
+
+*   Paper registration: May 20, 2025
+*   Submission deadline: May 23, 2025
+*   Rebuttal phase: July 7–14, 2025
+*   Notification: August 7, 2025
+*   Workshop/Tutorial proposal deadline: May 31, 2025
+
+All deadlines are at 23:59 AoE.",,
+req-conf-1751766474613-jtzem,,Digital Games Research Conference,DIGRA,https://digraconference2025.org/,https://digraconference2025.org/calls-call-for-papers,https://digraconference2025.org/conference-important-dates,"Conference dates: June 30 - July 4, 2025
+Year: 2025
+Location: Malta
+Type: Hybrid
+Submission Date.Submission opens: September 1, 2024
+Camera-ready Date.Camera-ready submission and registration deadline: June 3, 2025
+Topics: digital games, gaming culture, game design, game development, game analysis","June 30 - July 4, 2025",2025,Malta,No city/state/province,No country,No continent,Hybrid,"{""Submission opens"":""September 1, 2024""}",{},"{""Camera-ready submission and registration deadline"":""June 3, 2025""}",{},{},"digital games, gaming culture, game design, game development, game analysis",No publisher,"The Digital Games Research Conference (DiGRA 2025), organized by the Institute of Digital Games at the University of Malta, will be held in Malta from June 30 to July 4, 2025. This international academic conference is dedicated to the study of digital games and related phenomena, serving as a platform for researchers, scholars, and practitioners.","# DiGRA 2025: Call for Papers
+
+The Digital Games Research Association (DiGRA) conference is an international academic conference dedicated to the study of digital games and related phenomena. DiGRA is a global organization that promotes academic research on digital games and gaming culture. The conference serves as a platform for researchers, scholars, and practitioners to present their latest findings, discuss theoretical frameworks, and explore various aspects of game design, development, and analysis.
+
+## Venue and Organizers
+
+The University of Malta, with its long and storied history, stands as one of the oldest higher education institutions in the Mediterranean. We invite you to experience its historic charm, providing a vibrant backdrop for this year's DiGRA conference.
+
+As the organisers of DiGRA 2025, the Institute of Digital Games, University of Malta is proud to bring together leading minds in game studies, design, and technology. Since its establishment in 2013, the Institute has been committed to remaining at the forefront of digital games research, bridging the gap between academia and industry. Our team comprises internationally recognized, award-winning scholars who have made significant contributions to game studies, AI in games, and game design. Over the years, the Institute has hosted numerous international conferences, workshops, and game jams, actively contributing to the global discourse on digital games. Our ongoing involvement in the DiGRA community underscores our leadership in the field.
+
+## Important Dates
+
+*   **Submission opens:** 1st September 2024
+*   **Full papers and abstracts submission deadline:** **29th November 2024** (Anywhere on Earth)
+*   **Full papers and abstracts submission EXTENDED deadline:** **16th December 2024** (Anywhere on Earth)
+*   **Early Career and Researchers in Precarious Positions Showcase deadline:** **19th January 2025**
+*   **Announcement of review results:** **10th February 2025** (estimated)
+*   **Workshop proposals submission deadline:** **17th February 2025**
+*   **Workshop acceptance notifications:** **24th February 2025**
+*   **Early bird registration & program deadlines:** **4th April 2025**
+*   **Camera-ready submission and registration deadline:** **3rd June 2025**
+*   **Conference dates:** **30th June - 4th July 2025**
+
+## Other Calls and Contributions
+
+The conference also includes opportunities for:
+
+*   Call for Papers
+*   Template information
+*   ECRpp Showcase
+*   Workshops
+
+## Contact Information
+
+*   Email: soha.naveed@um.edu.mt
+
+## Sponsors
+
+Details about sponsors will be updated.",,
+req-conf-1751766474613-jtzem,,DNA Computing and Molecular Programming,DNA,https://dna31.sciencesconf.org/,https://dna31.sciencesconf.org/page/submit?lang=en,https://dna31.sciencesconf.org/,"Conference dates: August 25 - 29, 2025
+Year: 2025
+Location: Lyon, France
+City-State-Province: Lyon
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Full paper (track A) and extended abstract (track B) submission: April 22, 2025
+Submission Date.Poster (track C) submission: June 15, 2025
+Notification Date.Notification of paper acceptance: June 9, 2025
+Notification Date.Notification of poster acceptance: June 30, 2025
+Camera-ready Date.Revised manuscripts due: June 23, 2025
+Registration Date.Early registration deadline: July 11, 2025
+Registration Date.Registration ends: August 14, 2025
+Topics: biomolecular computing, algorithms and models for computation on biomolecular systems, computational processes in vitro and in vivo, molecular switches, gates, devices, and circuits, molecular folding and self-assembly of nanostructures, analysis and theoretical models of laboratory techniques, molecular motors and molecular robotics, information storage, studies of fault-tolerance and error correction, software tools for analysis, simulation, and design, synthetic biology and in vitro evolution, applications in engineering, physics, chemistry, biology, and medicine","August 25 - 29, 2025",2025,"Lyon, France",Lyon,France,Europe,Offline,"{""Full paper (track A) and extended abstract (track B) submission"":""April 22, 2025"",""Poster (track C) submission"":""June 15, 2025""}","{""Notification of paper acceptance"":""June 9, 2025"",""Notification of poster acceptance"":""June 30, 2025""}","{""Revised manuscripts due"":""June 23, 2025""}","{""Early registration deadline"":""July 11, 2025"",""Registration ends"":""August 14, 2025""}",{},"biomolecular computing, algorithms and models for computation on biomolecular systems, computational processes in vitro and in vivo, molecular switches, gates, devices, and circuits, molecular folding and self-assembly of nanostructures, analysis and theoretical models of laboratory techniques, molecular motors and molecular robotics, information storage, studies of fault-tolerance and error correction, software tools for analysis, simulation, and design, synthetic biology and in vitro evolution, applications in engineering, physics, chemistry, biology, and medicine",No publisher,"The 31st International Conference on DNA Computing and Molecular Programming (DNA31) will be held from August 25-29, 2025, with a workshop on August 29, 2025. This conference serves as the premier forum for scientists from various disciplines to advance molecular-scale engineering and biology through the principles of computer science, physics, chemistry, and mathematics.","# DNA Computing and Molecular Programming (DNA31): Call for Papers
+
+The 31st International Conference on DNA Computing and Molecular Programming (DNA31) will be held from **August 25-29, 2025**, with a workshop on August 29, 2025. Research in DNA computing and molecular programming draws together mathematics, computer science, physics, chemistry, biology, and nanotechnology to address the analysis, design, and synthesis of information-based molecular systems.
+
+## Solicitation for Papers
+
+Papers and presentations are sought in all areas that relate to biomolecular computing, including:
+
+*   Algorithms and models for computation on biomolecular systems
+*   Computational processes in vitro and in vivo
+*   Molecular switches, gates, devices, and circuits
+*   Molecular folding and self-assembly of nanostructures
+*   Analysis and theoretical models of laboratory techniques
+*   Molecular motors and molecular robotics
+*   Information storage
+*   Studies of fault-tolerance and error correction
+*   Software tools for analysis, simulation, and design
+*   Synthetic biology and in vitro evolution
+*   Applications in engineering, physics, chemistry, biology, and medicine.
+
+## Submissions
+
+All papers and abstracts should be submitted electronically via EasyChair through this link: [https://easychair.org/conferences/?conf=dna31](https://easychair.org/conferences/?conf=dna31)
+
+Papers must be submitted in PDF format. Please refer to the [Submit a contribution](https://dna31.sciencesconf.org/page/submit?lang=en) page for details.
+
+## Submission Tracks
+
+### Track A – Full Paper
+
+*   **Deadline:** April 22, 2025 (11:59 PM AoE)
+*   For authors who want their full papers to be published in the Leibniz International Proceedings of Informatics (LIPIcs) conference proceedings.
+*   Submissions will be published in accordance with the Berlin Declaration of Open Access to Knowledge and conform to the Core Practices of the Committee on Publication Ethics (COPE).
+*   **Formatting:** Must use the LIPIcs-v2021 style. Papers not formatted using the LIPIcs style may be rejected without review.
+*   **Length:** Main text limited to 15 pages (excluding title page and bibliography). An optional technical appendix (5 pages or less) is permitted.
+*   **Requirements:** Must not be previously published or simultaneously submitted elsewhere.
+
+### Track B – One-page abstract with accompanied material
+
+*   **Deadline:** April 22, 2025 (11:59 PM AoE)
+*   Primarily for authors submitting experimental results who plan to submit to a journal rather than publish in the conference proceedings.
+*   Must contain at least 67% new content beyond previous DNA conference presentations, or be substantially expanded work previously presented as a poster.
+*   **Abstract Length:** Not to exceed 1 page (11 point type, single spaced, 1 inch margins).
+*   **Supporting Documentation:** Must submit documentation comparable in detail to a preliminary manuscript or thesis chapter.
+*   **Note:** Only the one-page abstract will appear in the supplementary proceedings. Papers lacking adequate documentation will be rejected without review.
+
+### Track C – Poster Submission
+
+*   **Deadline:** June 15, 2025 (11:59 PM AoE)
+*   For authors interested in presenting their work only in the poster session.
+*   **Abstract Length:** Not to exceed 1 page (11 point type, single spaced, 1 inch margins).
+*   **Supporting Documentation:** Optional but strongly encouraged.
+*   **Note:** A small number of high-quality posters may be selected for short (10 minute) presentations.
+
+## Key Dates
+
+*   **Full paper (Track A) and abstract (Track B) submission:** April 22, 2025
+*   **Notification of paper acceptance:** June 9, 2025
+*   **Revised manuscripts due:** June 23, 2025
+*   **Poster (Track C) submission:** June 15, 2025
+*   **Notification of poster acceptance:** June 30, 2025
+*   **Early registration deadline:** July 11, 2025
+*   **Registration ends:** August 14, 2025
+*   **Conference:** August 25-29, 2025
+
+**NOTE: ALL DEADLINES ARE FIRM, THERE WILL BE NO EXTENSIONS!**",,
+req-conf-1751766474613-jtzem,,International Workshop on Principles of Diagnosis,DX,https://conf.researchr.org/home/dx-2025,https://conf.researchr.org/home/dx-2025#Call-for-Papers,,"Conference dates: September 22 - 24, 2025
+Year: 2025
+Location: Nashville, Tennessee, United States
+City-State-Province: Nashville, Tennessee
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.DX competition submission deadline (extended): April 21, 2025
+Other Date.Author registration deadline: July 31, 2025
+Other Date.Camera-ready: August 15, 2025
+Other Date.Final registration deadline: August 31, 2025
+Other Date.Acceptance notification: June 25, 2025
+Other Date.Submissions Deadline: June 15, 2025
+Other Date.Submission open: April 8, 2025
+Topics: Principles of Diagnosis and Resilient Systems, Anomaly and fault detection, Fault and root cause isolation, Prognosis, Fault-tolerant, fault-adaptive, and resilient control, Reconfiguration, planning, and intelligent decision-making, Verification and debugging at design and run-time, Explanation, validation, and certification
+Publisher: OASIcs","September 22 - 24, 2025",2025,"Nashville, Tennessee, United States","Nashville, Tennessee",United States,North America,Offline,"{""DX competition submission deadline (extended)"":""April 21, 2025""}",{},{},{},"{""Author registration deadline"":""July 31, 2025"",""Camera-ready"":""August 15, 2025"",""Final registration deadline"":""August 31, 2025"",""Acceptance notification"":""June 25, 2025"",""Submissions Deadline"":""June 15, 2025"",""Submission open"":""April 8, 2025""}","Principles of Diagnosis and Resilient Systems, Anomaly and fault detection, Fault and root cause isolation, Prognosis, Fault-tolerant, fault-adaptive, and resilient control, Reconfiguration, planning, and intelligent decision-making, Verification and debugging at design and run-time, Explanation, validation, and certification",OASIcs,"The 36th International Conference on Principles of Diagnosis and Resilient Systems (DX'25) will be held in Nashville, Tennessee, United States, from September 22nd to 24th, 2025. The conference focuses on diagnosis, resilience, and related approaches, serving as a forum for state-of-the-art research and emerging ideas in these fields.","# Call for Papers: DX'25
+
+The 36th International Conference on Principles of Diagnosis and Resilient Systems (DX'25) will be held in **Nashville, TN from September 22–24, 2025**.
+
+DX'25 is a forum to present state-of-the-art research and experience reports, exchange and discuss emerging ideas, debate current issues, and envision future challenges. The conference focus includes diagnosis (identifying root causes for encountered issues and unexpected scenarios) and resilience (the intrinsic ability of a system to sustain its required operations when impacted by contingencies).
+
+## Topics of Interest
+
+Relevant research areas include topics that relate to diagnosis, resilient design, and operational resilience, including but not limited to:
+
+*   Anomaly and fault detection
+*   Fault and root cause isolation
+*   Prognosis
+*   Fault-tolerant, fault-adaptive, and resilient control
+*   Reconfiguration, planning, and intelligent decision-making
+*   Verification and debugging at design and run-time
+*   Explanation, validation, and certification
+
+DX'25 is particularly interested in model-driven and data-driven approaches (including deep learning and LLM-based algorithms) and submissions that combine and/or compare model- and data-driven approaches.
+
+We welcome evidence-driven position papers, theory papers, experience reports, and papers that span across multiple research and application domains that cover digital, logical, analog, mechanical, cyber-physical, biological, ecological, ethical, economical, and social systems and processes.
+
+## Submission Types
+
+*   **Full papers:** Limited to 20 pages (including references and appendices).
+*   **Short papers:** No longer than 14 pages.
+*   **Doctoral Consortium submissions:** No longer than 16 pages.
+*   **DXC’25 challenge solutions:** May be submitted as long or short papers (14-20 pages).
+*   **Encore Papers (Extended abstracts):** No longer than 6 pages.
+*   **Resubmissions:** Original accepted paper + 1-2 page extended abstract + DOI of original paper.
+*   **Industry papers:** Limited to 12 pages.
+
+## Submission Instructions
+
+*   All submissions must follow the Dagstuhl Open Access Series in Informatics format. Style files are available as [Zip file](https://submission.dagstuhl.de/styles/download-tag/oasics/v2021.1.3/authors/zip) or [Tar.gz file](https://submission. સાSubmission.dagstuhl.de/styles/download-tag/oasics/v2021.1.3/authors/tgz).
+*   Papers must be submitted electronically via EasyChair as PDF files: [https://easychair.org/conferences/?conf=dx25](https://easychair.org/conferences/?conf=dx25).
+*   Submissions will be peer-reviewed (single blind, authors can add their names).
+*   At least one author of each accepted paper must register for the conference and attend **in person**. Virtual attendance is not acceptable.
+*   PhD candidates must attend the conference and present their accepted Doctoral Consortium entries.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Submission open:** Tue 8 Apr 2025
+*   **DX competition submission deadline (extended):** Mon 21 Apr 2025
+*   **Submissions Deadline:** Sun 15 Jun 2025
+*   **Acceptance notification:** Wed 25 Jun 2025
+*   **Author registration deadline:** Thu 31 Jul 2025
+*   **Camera-ready:** Fri 15 Aug 2025
+*   **Final registration deadline:** Sun 31 Aug 2025
+
+## DX Competition (DXC’25)
+
+The DXC’25 will feature challenges related to solving diagnosis problems in three application domains:
+
+1.  **LiU-ICE benchmark:** Fault diagnosis of a combustion engine.
+2.  **SLIDe (Steam Line Intrusion Detection) benchmark:** Detection and isolation of process faults and cybernetic attacks in a steam line system.
+3.  **LUMEN (Liquid Upper stage demonstrator Engine) benchmark:** Diagnosis for the fuel turbopump subsystem of a rocket engine.
+
+For more information, refer to the [DXC’25 repository](https://vehsys.gitlab-pages.liu.se/dx25benchmarks/).
+
+## Doctoral Consortium
+
+PhD students are encouraged to submit a description of their research for a special mentoring session. Accepted entries will be included in the archival proceedings.",,
+req-conf-1751766474613-jtzem,,International Conference on Engineering Applications of Neural Networks,EANN,https://eannconf.org/2025/,https://eannconf.org/2025/call-for-papers/,https://eannconf.org/2025/important-dates/,"Conference dates: June 26 - 29, 2025
+Year: 2025
+Location: Cyprus University of Technology, Limassol, Cyprus
+City-State-Province: Limassol
+Country: Cyprus
+Continent: Europe
+Type: Hybrid
+Submission Date.Paper Submission Deadline: February 27, 2025
+Submission Date.Deadline for Workshops/Special Sessions Proposals: January 10, 2025
+Notification Date.Notification of Acceptance/Rejection: March 23, 2025
+Camera-ready Date.Camera Ready Submission/Registration: April 20, 2025
+Registration Date.Early / Author registration by: April 20, 2025
+Topics: Action Recognition, Adaptive Systems, Anomaly Detection, Artificial Neural Networks, Autoencoders, Autoregressive models, Bagging, Boosting, ChatBots, Civil Engineering Machine Learning, Classification, Clustering, Constrained Programming, Convolutional Neural Networks, Cyber Security using Deep Learning, Data Mining, Deep Learning, Deep Neural Networks, Dep Belief Neural Networks, Echo State Networks, Engineering Modeling, Ensembles, Environmental Machine Learning Modeling, Facial Recognition, Feature Selection, Fraud Detection, Fuzzy Logic Modeling, Generative Adversarial Networks, Graph Neural Networks, Hybrid Modeling, Image Processing, Industrial Machine Learning systems, Intrusion Detection, k Nearest Neighbors, Learning, Long Short Memory Networks, Machine Learning, Modular Neural Networks, Multi Agent Systems, MultilayerPerceptrons, Natural Language, Optimization Algorithms, Prunning, Radial Basis Functions Networks, Recommendation Systems, Recurrent Neural Networks, Regression, Reiforcement Learning, Residual Networks, Self Organizing Maps, Sentiment Analysis, Speech Recognition, Spiking Neural Networks, Support Vector Machines, Text Mining, Time Series Modeling, Transportation Machine Learning, Video Motion modeling
+Publisher: Springer","June 26 - 29, 2025",2025,"Cyprus University of Technology, Limassol, Cyprus",Limassol,Cyprus,Europe,Hybrid,"{""Paper Submission Deadline"":""February 27, 2025"",""Deadline for Workshops/Special Sessions Proposals"":""January 10, 2025""}","{""Notification of Acceptance/Rejection"":""March 23, 2025""}","{""Camera Ready Submission/Registration"":""April 20, 2025""}","{""Early / Author registration by"":""April 20, 2025""}",{},"Action Recognition, Adaptive Systems, Anomaly Detection, Artificial Neural Networks, Autoencoders, Autoregressive models, Bagging, Boosting, ChatBots, Civil Engineering Machine Learning, Classification, Clustering, Constrained Programming, Convolutional Neural Networks, Cyber Security using Deep Learning, Data Mining, Deep Learning, Deep Neural Networks, Dep Belief Neural Networks, Echo State Networks, Engineering Modeling, Ensembles, Environmental Machine Learning Modeling, Facial Recognition, Feature Selection, Fraud Detection, Fuzzy Logic Modeling, Generative Adversarial Networks, Graph Neural Networks, Hybrid Modeling, Image Processing, Industrial Machine Learning systems, Intrusion Detection, k Nearest Neighbors, Learning, Long Short Memory Networks, Machine Learning, Modular Neural Networks, Multi Agent Systems, MultilayerPerceptrons, Natural Language, Optimization Algorithms, Prunning, Radial Basis Functions Networks, Recommendation Systems, Recurrent Neural Networks, Regression, Reiforcement Learning, Residual Networks, Self Organizing Maps, Sentiment Analysis, Speech Recognition, Spiking Neural Networks, Support Vector Machines, Text Mining, Time Series Modeling, Transportation Machine Learning, Video Motion modeling",Springer,"The International Conference on Engineering Applications of Neural Networks (EANN) has been renamed to EAAAI (Engineering Applications and Advances of Artificial Intelligence). EAAAI (ex EANN) 2025, the 26th event in the series, will be held as a hybrid conference in Limassol, Cyprus, from June 26-29, 2025. The conference focuses on artificial intelligence research and applications, with paper submissions following the Springer Lecture Notes in Computer Science (LNCS) format.","# Call for Papers: EAAAI (ex EANN) 2025
+
+The **EAAAI (ex EANN) 2025**, the 26th Engineering Applications and Advances of Artificial Intelligence conference, will be held from **June 26-29, 2025**, at the **Cyprus University of Technology, Limassol, Cyprus**. This will be a **hybrid event**, with options for physical presence in Limassol and online participation via the web.
+
+## Submission Guidelines
+
+Authors are invited to electronically submit original, English-language research works.
+
+*   **Length:** The standard paper submission has been increased to **14 PAGES** (with references included). The minimum length of submitted papers must be **no less than 8 pages**. Manuscripts with less than 8 pages will be immediately rejected.
+*   **Format:** Papers must be formatted according to the **Springer Lecture Notes in Computer Science (LNCS) series format**.
+*   **Templates:** Downloadable templates are available:
+    *   [Download template (Word)](https://repository.eannconf.org/MsWord_2022.zip)
+    *   [Download template (LaTeX)](https://repository.eannconf.org/LaTeX_2022.zip)
+*   **Submission System:** Submissions should be made via the [Paper Submission page](https://eannconf.org/2025/paper-submission/) of the website.
+*   **Review Process:** All submitted papers will be evaluated by at least two independent reviewers for quality, correctness, originality, and relevance.
+*   **Publication:** Accepted papers will be included in the **Springer CCIS Series Proceedings** and will be available online. A number of selected papers will be invited for publication in a special issue of a scientific Journal with a high Impact Factor.
+*   **Presentation:** Authors of accepted papers have the opportunity to present their paper either **Physically (on-site)** or **Remotely (on-line)**.
+*   **Copyright:** Authors of each paper must sign the **CCIS copyright assignment form** and submit it with the final version of their accepted paper.
+*   **Important Note:** A paper may not be included in the proceedings if the requirements are not met, or if the registration fee is not received by the deadline for the submission of the camera-ready version.
+
+## Important Dates
+
+*   **Deadline for Workshops/Special Sessions Proposals:** [Changed or passed: 10th of January, 2025]
+*   **Paper Submission Deadline:** [Changed or passed: 15th of February, 2025] **New HARD Deadline: 27th of February, 2025**
+*   **Notification of Acceptance/Rejection:** [Changed or passed: 16th of March, 2025] **23rd of March, 2025**
+*   **Camera Ready Submission / Registration:** [Changed or passed: 13th of April, 2025] **20th of April, 2025 (HARD DEADLINE)**
+*   **Early / Author registration by:** [Changed or passed: 13th of April, 2025] **20th of April, 2025 (HARD DEADLINE)**
+*   **Conference Dates:** **26-29 June, 2025**
+
+## Topics of Interest
+
+Suggested topics include, but are not limited to:
+
+*   Action Recognition
+*   Adaptive Systems
+*   Anomaly Detection
+*   Artificial Neural Networks
+*   Autoencoders
+*   Autoregressive models
+*   Bagging
+*   Boosting
+*   ChatBots
+*   Civil Engineering Machine Learning
+*   Classification
+*   Clustering
+*   Constrained Programming
+*   Convolutional Neural Networks
+*   Cyber Security using Deep Learning
+*   Data Mining
+*   Deep Learning
+*   Deep Neural Networks
+*   Dep Belief Neural Networks
+*   Echo State Networks
+*   Engineering Modeling
+*   Ensembles
+*   Environmental Machine Learning Modeling
+*   Facial Recognition
+*   Feature Selection
+*   Fraud Detection
+*   Fuzzy Logic Modeling
+*   Generative Adversarial Networks
+*   Graph Neural Networks
+*   Hybrid Modeling
+*   Image Processing
+*   Industrial Machine Learning systems
+*   Intrusion Detection
+*   k Nearest Neighbors
+*   Learning
+*   Long Short Memory Networks
+*   Machine Learning
+*   Modular Neural Networks
+*   Multi Agent Systems
+*   Multilayer Perceptrons
+*   Natural Language
+*   Optimization Algorithms
+*   Pruning
+*   Radial Basis Functions Networks
+*   Recommendation Systems
+*   Recurrent Neural Networks
+*   Regression
+*   Reinforcement Learning
+*   Residual Networks
+*   Self Organizing Maps
+*   Sentiment Analysis
+*   Speech Recognition
+*   Spiking Neural Networks
+*   Support Vector Machines
+*   Text Mining
+*   Time Series Modeling
+*   Transportation Machine Learning
+*   Video Motion modeling
+
+## Contribution Types
+
+*   **Regular Papers:** (up to 14 pages, min 8 pages) (oral presentation)
+*   **Short papers (work in progress):** (up to 4 pages long) (oral presentation)
+*   **Ideas contributions:** (2 pages long) (oral presentation)
+*   **Extended abstracts:** (2 pages long) (oral presentation)
+*   **Posters (paper-based):** (2 pages long) (oral presentation)
+*   **Posters (slide-based, only):** (oral presentation)
+*   **Presentations (slide-based, only):** (oral presentation)
+*   **Demos:** (2 pages summary) [posted on www.iaria.org]
+*   **Tutorial proposals**
+*   **Panel proposals**
+
+## Contact Information
+
+*   **General Information:** [info@eannconf.org](mailto:info@eannconf.org)
+*   **Local Arrangements:** Keystone Conferences & Events, Tel. +357 2276 2683, Email: [keystone@keystone-conferences.com](mailto:keystone@keystone-conferences.com)
+*   **Acceptance Notifications:** Prof. Lazaros Iliadis, Email: [liliadis@civil.duth.gr](mailto:liliadis@civil.duth.gr) (If you didn’t receive notification, check spam or contact this email.)",,
+req-conf-1751766474613-jtzem,,Euromicro Conference on Real-Time Systems,ECRTS,https://www.ecrts.org/,https://www.ecrts.org/call-for-papers/,,"Conference dates: July 8 - 11, 2025
+Year: 2025
+Location: Brussels, Belgium
+City-State-Province: Brussels
+Country: Belgium
+Continent: Europe
+Type: Offline
+Submission Date.Submission deadline: February 28, 2025
+Notification Date.Notification: April 21, 2025
+Camera-ready Date.Camera-ready deadline: May 16, 2025
+Registration Date.Early registration deadline: June 13, 2025
+Topics: real-time scheduling, time-critical systems, real-time operating systems, hardware/software co-design, security in time-sensitive systems, real-time networking, AI and machine learning methods for real-time systems
+Publisher: LIPIcs","July 8 - 11, 2025",2025,"Brussels, Belgium",Brussels,Belgium,Europe,Offline,"{""Submission deadline"":""February 28, 2025""}","{""Notification"":""April 21, 2025""}","{""Camera-ready deadline"":""May 16, 2025""}","{""Early registration deadline"":""June 13, 2025""}",{},"real-time scheduling, time-critical systems, real-time operating systems, hardware/software co-design, security in time-sensitive systems, real-time networking, AI and machine learning methods for real-time systems",LIPIcs,"The 37th Euromicro Conference on Real-Time Systems (ECRTS 2025) will be held in Brussels, Belgium, from July 8-11, 2025. ECRTS is a premier European venue for research in real-time systems, ranking among the top three international conferences on the topic. The conference will be held physically with streaming possibilities and offers sessions on real-time pitches, work in progress, and workshops.","# Call for Papers: 37th Euromicro Conference on Real-Time Systems (ECRTS’25)
+
+ECRTS 2025 will be held in **Brussels, Belgium**, from **July 8–11, 2025**. The conference will be held physically with streaming possibilities for remote participation.
+
+## About ECRTS
+
+ECRTS is the premier European venue for presenting research into the broad area of real-time systems. Along with RTSS and RTAS, ECRTS ranks as one of the top three international conferences on this topic. It has been at the forefront of recent innovations such as artifact evaluation, open access proceedings, industry challenges, and real-time pitches.
+
+## Scope and Topics of Interest
+
+Papers on all aspects of timing requirements in computer systems are welcome. This includes hard real-time systems, time-sensitive systems (e.g., systems with soft requirements expressed in terms of tail latency, latency SLAs, QoS expectations), and typical applications in embedded and cyber-physical systems, cloud or edge computing, from domains such as automotive, avionics, telecommunications, healthcare, robotics, and space systems.
+
+ECRTS welcomes theoretical and practical contributions (including tools, benchmarks, and case studies) to the state of the art in the design, implementation, verification, and validation of time-sensitive systems. Papers on industrial case studies and the application of real-time technology to real systems are particularly encouraged.
+
+**Topics of interest include, but are not limited to:**
+
+*   **Time-sensitive SOFTWARE SYSTEMS:** operating systems, hypervisors, middleware, frameworks, programming languages, compilers, runtime environments, networks, communication protocols.
+*   **COMPUTER HARDWARE:** design and hardware/software integration for embedded systems, time-predictable hardware architecture, GPU and accelerators, FPGA prototyping, SoC design, novel memory architectures, hardware/software co-design.
+*   **REAL-TIME NETWORKS:** wired and wireless sensor and actuator networks, Time-Sensitive Networks (TSN), industrial IoT, Software Defined Network (SDN), 5G, end-to-end latency analysis.
+*   **REAL-TIME APPLICATIONS:** modeling, design, simulation, testing, debugging, and evaluation in automotive, avionics, control systems, industrial automation, robotics, space, railways, telecommunications, multimedia.
+*   **Foundational SCHEDULING and PREDICTABILITY:** schedulability analysis, algorithm design, synchronization protocols, computational complexity, temporal isolation, probabilistic guarantees, multi-core scheduling, resource co-scheduling.
+*   **RESOURCE DEMAND ESTIMATION:** stochastic and classic worst-case execution time (WCET) analysis, analyses to bound memory and bandwidth needs, methods for determining energy, power, or thermal footprint.
+*   **MACHINE LEARNING:** techniques in safety-critical systems, explainable AI, application of machine learning to real-time systems, methods for real-time AI computing.
+*   **FORMAL METHODS:** verification and validation of real-time systems, model checking, computer-assisted proofs, runtime monitoring systems.
+*   **SECURITY aspects:** techniques to strengthen security guarantees, concerns affecting safety-critical systems, privacy-enhancing techniques, protecting the temporal envelope against threats.
+*   **Timing predictability and other NON-FUNCTIONAL QUALITIES:** reliability, quality of control, energy/power consumption, environmental impact, testability, scalability.
+
+## Paper Submission
+
+*   Submitted manuscripts are limited to **20 pages of technical content**, excluding the bibliography.
+*   Every accepted paper must be presented by one of the authors at the conference.
+*   **Submission website:** [https://ecrts25.hotcrp.com/](https://ecrts25.hotcrp.com/)
+*   **Template:** LIPIcs template available at [https://submission.dagstuhl.de/series/details/5#author](https://submission.dagstuhl.de/series/details/5#author)
+*   Follow the [submission instructions](https://www.ecrts.org/submission-instructions/) and guidelines.
+
+## Double-Blind Peer Reviewing
+
+ECRTS will follow a double-blind peer reviewing process. Authors will submit blinded manuscripts, and reviewers will not be made aware of author identities. For more details, see the [double-blind submission policy](https://www.ecrts.org/double-blind-submission/).
+
+## Shadow Peer Review Process
+
+Authors can opt-in for a Shadow TPC option to train future reviewers. Reviews from the Shadow TPC will not impact the final decision. Learn more about the [Shadow TPC evaluation process](https://www.ecrts.org/shadow-tpc-evaluation-process/).
+
+## Artifact Evaluation
+
+Authors of accepted papers with a computational component are invited to submit their code and/or data for an optional [artifact evaluation process](https://www.ecrts.org/artifact-evaluation/) to improve reproducibility and encourage reuse.
+
+## Open Access
+
+All accepted papers will be published as open-access proceedings in collaboration with LIPIcs (Leibniz International Proceedings in Informatics) and will be accessible at [drops.dagstuhl.de/entities/conference/ECRTS](https://drops.dagstuhl.de/entities/conference/ECRTS).
+
+## Important Dates
+
+*   **Submission deadline:** February 28, 2025 (Firm)
+*   **Notification:** April 21, 2025
+*   **Camera-ready deadline:** May 16, 2025
+*   **Early registration deadline:** June 13, 2025
+*   **Conference:** July 8 - 11, 2025
+
+## Registration
+
+*   **Registration page:** [https://www.ecrts.org/registration/](https://www.ecrts.org/registration/)
+
+## Stay Informed
+
+*   Subscribe to the [ecrts-info mailing list](https://www.ecrts.org/cgi-bin/mailman/listinfo/ecrts-info).
+*   Follow ECRTS on LinkedIn or Instagram.",,
+req-conf-1751766474613-jtzem,,European Conference on Computational Biology,ECCB,https://eccb2026.org/,,https://eccb2026.org/programme,"Conference dates: August 31 - September 4, 2026
+Year: 2026
+Location: Geneva, Switzerland
+City-State-Province: Geneva
+Country: Switzerland
+Continent: Europe
+Type: Offline
+Other Date.Call for tutorials and workshops: November 2025 - January 2026
+Other Date.Call for proceedings and highlight papers: Mid January - March 2026
+Other Date.Call for posters: Mid January - Mid June 2026
+Other Date.Early bird: March - June 2026
+Other Date.Normal: June - August 2026
+Topics: Computational Biology, genomics, structural bioinformatics, systems biology, biodiversity","August 31 - September 4, 2026",2026,"Geneva, Switzerland",Geneva,Switzerland,Europe,Offline,{},{},{},{},"{""Call for tutorials and workshops"":""November 2025 - January 2026"",""Call for proceedings and highlight papers"":""Mid January - March 2026"",""Call for posters"":""Mid January - Mid June 2026"",""Early bird"":""March - June 2026"",""Normal"":""June - August 2026""}","Computational Biology, genomics, structural bioinformatics, systems biology, biodiversity",No publisher,"The European Conference on Computational Biology (ECCB 2026) will be held in Geneva, Switzerland, from August 31 to September 4, 2026. Organized by the SIB Swiss Institute of Bioinformatics, the conference theme is ""Biodiversity, AI & Health: computational biology to address the challenges of our time"". The event will feature keynotes, proceedings, highlight talks, poster sessions, and a community day.","# ECCB 2026: Call for Contributions
+
+The 25th European Conference on Computational Biology (ECCB 2026) will be held in **Geneva, Switzerland, from August 31 to September 4, 2026**. Organized by the SIB Swiss Institute of Bioinformatics, the conference theme is **""Biodiversity, AI & Health: computational biology to address the challenges of our time""**.
+
+## Conference Schedule Overview
+
+*   **Monday 31.08:** Tutorials & workshops, European ISCB Student Council Symposium (ESCS)
+*   **Tuesday 1.09:** Tutorials & workshops + Career Track (Morning), Conference opening at 13:30, Keynote lecture, Proceedings and highlight talks + Special Track, Welcome reception
+*   **Wednesday 2.09:** Keynote lecture, Proceedings and highlight talks + Special Track, Keynote lecture, Poster session 1, Conference dinner & party
+*   **Thursday 3.09:** Proceedings and highlight talks + Special Track, Poster session 2, Keynote lecture, Conference closing at 16:30, Public lecture (17:00 - 19:00)
+*   **Friday 4.09:** Community Day
+
+## Important Dates
+
+*   **Call for tutorials and workshops:** November 2025 - January 2026
+*   **Call for proceedings and highlight papers:** Mid January - March 2026
+*   **Call for posters:** Mid January - Mid June 2026
+*   **Registration:**
+    *   Early bird: March - June 2026
+    *   Normal: June - August 2026
+
+## Submission Information
+
+*   Authors of selected papers will be invited to submit extended versions to one of the IARIA Journals.
+*   Only .pdf or .doc files will be accepted for paper submission.
+*   Final author manuscripts will be 8.5"" x 11"", not exceeding 6 pages; max 4 extra pages allowed at additional cost.
+
+## Contribution Types
+
+*   **Regular Papers:** (up to 6-10 pages - 6 pages covered by regular registration; max 4 extra pages allowed at additional cost) (oral presentation)
+*   **Short papers (work in progress):** (up to 4 pages long) (oral presentation)
+*   **Ideas contributions:** (2 pages long) (oral presentation)
+*   **Extended abstracts:** (2 pages long) (oral presentation)
+*   **Posters (paper-based, two pages long):** (oral presentation)
+*   **Posters (slide-based, only):** (oral presentation)
+*   **Presentations (slide-based, only):** (oral presentation)
+*   **Demos (two pages):** [posted on www.iaria.org]
+
+## Keynote Speakers
+
+*   Aleksandra Walczak
+*   Anna-Sapfo Malaspinas
+
+## About the Host City: Geneva
+
+Geneva is a global hub for diplomacy and banking, with a vibrant biotech and pharmaceutical sector. It offers rich culture and natural beauty alongside cutting-edge research opportunities.
+
+## About the Organizer: SIB Swiss Institute of Bioinformatics
+
+SIB is an internationally recognized non-profit organization dedicated to biological and biomedical data science, providing essential databases, software platforms, and bioinformatics expertise to academic, clinical, and industry groups.
+
+## Contact Information
+
+*   **Email:** SIB Swiss Institute of Bioinformatics, Switzerland
+*   **Website:** [https://eccb2026.org](https://eccb2026.org)
+
+## Social Media
+
+*   LinkedIn: [https://www.linkedin.com/company/eccb-european-conference-on-computational-biology](https://www.linkedin.com/company/eccb-european-conference-on-computational-biology)
+*   Bluesky: [https://bsky.app/profile/eccb-europe.bsky.social](https://bsky.app/profile/eccb-europe.bsky.social)
+*   Mastodon
+*   YouTube",,
+req-conf-1751766474613-jtzem,,Extending Database Technology,EDBT,https://edbticdt2026.github.io/,https://edbticdt2026.github.io/?contents=other_calls.html,https://edbticdt2026.github.io/?contents=important_dates.html,"Conference dates: March 24 - 27, 2026
+Year: 2026
+Location: Tampere, Finland
+City-State-Province: Tampere
+Country: Finland
+Continent: Europe
+Type: Offline
+Submission Date.(EDBT Research Papers) Paper submission: October 8, 2025
+Submission Date.(EDBT Research Papers) Revised paper submission: January 5, 2025
+Submission Date.(ICDT Research Papers) Abstract submission: September 3, 2025
+Submission Date.(ICDT Research Papers) Paper submission: September 10, 2025
+Submission Date.(EDBT Industrial and Application Papers) Paper submission: November 28, 2025
+Notification Date.(EDBT Research Papers) Notification of accept/revise/reject: November 27, 2025
+Notification Date.(EDBT Research Papers) Notification of accept/reject for revised submission: February 3, 2026
+Notification Date.(ICDT Research Papers) Notification: December 1, 2025
+Notification Date.(EDBT Industrial and Application Papers) Notification to authors (Accept/Reject): January 30, 2026
+Camera-ready Date.(EDBT Research Papers) Camera-Ready copy: February 17, 2026
+Camera-ready Date.(EDBT Industrial and Application Papers) Camera-Ready copy: February 13, 2026
+Topics: Data Management, Database Theory, Data Engineering","March 24 - 27, 2026",2026,"Tampere, Finland",Tampere,Finland,Europe,Offline,"{""(EDBT Research Papers) Paper submission"":""October 8, 2025"",""(EDBT Research Papers) Revised paper submission"":""January 5, 2025"",""(ICDT Research Papers) Abstract submission"":""September 3, 2025"",""(ICDT Research Papers) Paper submission"":""September 10, 2025"",""(EDBT Industrial and Application Papers) Paper submission"":""November 28, 2025""}","{""(EDBT Research Papers) Notification of accept/revise/reject"":""November 27, 2025"",""(EDBT Research Papers) Notification of accept/reject for revised submission"":""February 3, 2026"",""(ICDT Research Papers) Notification"":""December 1, 2025"",""(EDBT Industrial and Application Papers) Notification to authors (Accept/Reject)"":""January 30, 2026""}","{""(EDBT Research Papers) Camera-Ready copy"":""February 17, 2026"",""(EDBT Industrial and Application Papers) Camera-Ready copy"":""February 13, 2026""}",{},{},"Data Management, Database Theory, Data Engineering",No publisher,"The EDBT/ICDT 2026 Joint Conference, the 29th International Conference on Extending Database Technology and the 29th International Conference on Database Theory, will be held in Tampere, Finland, from March 24 to March 27, 2026. EDBT is a prestigious forum for data management research, while ICDT focuses on the theory of data management.","# EDBT/ICDT 2026: Call for Papers
+
+Welcome to the home of the **2026 EDBT/ICDT Joint Conference**, to be held in **Tampere, Finland**, from **March 24 - March 27, 2026**.
+
+The EDBT series is a prestigious forum for the exchange of the latest research results in data management, while ICDT focuses on research in the foundations and theory of data management. Since 2009, ICDT is held annually and jointly with EDBT.
+
+## Calls for Papers
+
+The conference is seeking contributions across several tracks:
+
+### EDBT Research Papers
+
+The EDBT conference invites submissions for its research track. There are three submission rounds:
+
+**First Submission Round:**
+*   **Paper Submission:** February 5, 2025 (AoE)
+*   **Notification:** March 27, 2025 (AoE)
+*   **Revised Paper Submission:** April 29, 2025 (AoE)
+*   **Notification of Revised Paper:** May 25, 2025 (AoE)
+*   **Camera-Ready Copy:** June 9, 2025 (AoE)
+
+**Second Submission Round:**
+*   **Paper Submission:** June 4, 2025 (AoE)
+*   **Notification:** July 31, 2025 (AoE)
+*   **Revised Paper Submission:** September 2, 2025 (AoE)
+*   **Notification of Revised Paper:** October 1, 2025 (AoE)
+*   **Camera-Ready Copy:** October 15, 2025 (AoE)
+
+**Third Submission Round:**
+*   **Paper Submission:** October 8, 2025 (AoE)
+*   **Notification:** November 27, 2025 (AoE)
+*   **Revised Paper Submission:** January 5, 2026 (AoE)
+*   **Notification of Revised Paper:** February 3, 2026 (AoE)
+*   **Camera-Ready Copy:** February 17, 2026 (AoE)
+
+[Learn More about EDBT Research Papers](?contents=EDBT_CFP.html)
+
+### EDBT Industrial and Application Papers
+
+The EDBT conference also invites submissions for its Industrial and Application Track.
+
+*   **Paper Submission:** November 28, 2025 (AoE)
+*   **Notification to Authors:** January 30, 2026 (AoE)
+*   **Camera-Ready Copy:** February 13, 2026 (AoE)
+
+[Learn More about EDBT Industrial & Application Papers](?contents=call_for_IAP.html)
+
+### ICDT Research Papers
+
+The ICDT conference invites submissions for its research track. There are two submission rounds:
+
+**First Submission Round:**
+*   **Abstract Submission:** March 13, 2025 (AoE)
+*   **Paper Submission:** March 20, 2025 (AoE)
+*   **Notification:** June 1, 2025 (AoE)
+
+**Second Submission Round:**
+*   **Abstract Submission:** September 3, 2025 (AoE)
+*   **Paper Submission:** September 10, 2025 (AoE)
+*   **Notification:** December 1, 2025 (AoE)
+
+[Learn More about ICDT Call For Papers](?contents=ICDT_CFP.html)
+
+---
+**General Information:**
+*   **Conference Venue:** Tampere, Finland
+*   **Dates:** March 24 - March 27, 2026
+*   **Organization:** Joint conference of the 29th International Conference on Extending Database Technology (EDBT) and the 29th International Conference on Database Theory (ICDT).
+*   **Follow us on:** [LinkedIn](https://www.linkedin.com/company/edbt-icdt-conference/)",,

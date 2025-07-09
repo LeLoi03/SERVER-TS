@@ -1,7 +1,6 @@
 // src/chatbot/handlers/openGoogleMap.handler.ts
 import { IFunctionHandler } from '../interface/functionHandler.interface';
 import { FunctionHandlerInput, FunctionHandlerOutput, StatusUpdate, ThoughtStep, AgentId } from '../shared/types'; // Added ThoughtStep, AgentId
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
 /**
@@ -31,7 +30,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
         const logPrefix = `[${handlerProcessId} ${socketId} Handler:OpenGoogleMap Agent:${agentId}]`; // Extended prefix
         const localThoughts: ThoughtStep[] = []; // Collection for thoughts
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}`);
+    
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -49,7 +48,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+        
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -62,7 +61,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+            
             }
         };
 
@@ -74,7 +73,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
             const trimmedLocation = location?.trim();
             if (!trimmedLocation) { // Checks for null, undefined, '', or ' '
                 const errorMsg = "Invalid or missing 'location' argument.";
-                logToFile(`${logPrefix} Validation Failed - ${errorMsg} Received: "${location || 'not provided'}"`);
+            
                 reportStep('function_error', 'Invalid location provided for map.', { error: errorMsg, location });
                 return {
                     modelResponseContent: `Error: ${errorMsg} Please provide a valid location for the map. Received: "${location || 'not provided'}"`,
@@ -85,7 +84,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
             // --- Location is now confirmed to be a non-empty string ---
 
             // --- 2. Prepare Action (Success Case) ---
-            logToFile(`${logPrefix} Valid location string: ${trimmedLocation}`);
+        
             reportStep('map_action_prepared', 'Google Maps action prepared.', { location: trimmedLocation });
 
             return {
@@ -96,7 +95,7 @@ export class OpenGoogleMapHandler implements IFunctionHandler {
 
         } catch (error: unknown) { // Catch as unknown for safer error handling
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in OpenGoogleMapHandler: ${errorMessage}\nStack: ${errorStack}`);
+        
             reportStep('function_error', `Critical error during map processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred while preparing the map action: ${errorMessage}`,

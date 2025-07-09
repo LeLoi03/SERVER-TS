@@ -1,0 +1,1909 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,recrawl
+req-conf-1751699777343-i46tt,,International Symposium on Computational Geometry,SoCG,https://socg25.github.io/socg.html,https://socg25.github.io/socg.html,https://socg25.github.io/socg.html,"Conference dates: June 23–27, 2025
+Year: 2025
+Location: Kanazawa, Japan
+City-State-Province: Kanazawa
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Abstracts and paper registration due: November 26, 2024
+Submission Date.Papers due: December 3, 2024
+Notification Date.Notification of acceptance/rejection: February 6, 2025
+Camera-ready Date.Final versions of accepted papers due: April 11, 2025
+Topics: Design, analysis, and implementation of geometric algorithms and data structures, Computational complexity of geometric problems, Implementation and experimental evaluation of geometric algorithms and heuristics, Discrete and combinatorial geometry, Computational topology, topological data analysis, and topological combinatorics, Applications of computational geometry or topology in any field","June 23–27, 2025",2025,"Kanazawa, Japan",Kanazawa,Japan,Asia,Offline,"{""Abstracts and paper registration due"":""November 26, 2024"",""Papers due"":""December 3, 2024""}","{""Notification of acceptance/rejection"":""February 6, 2025""}","{""Final versions of accepted papers due"":""April 11, 2025""}",{},{},"Design, analysis, and implementation of geometric algorithms and data structures, Computational complexity of geometric problems, Implementation and experimental evaluation of geometric algorithms and heuristics, Discrete and combinatorial geometry, Computational topology, topological data analysis, and topological combinatorics, Applications of computational geometry or topology in any field",No publisher,"The 41st International Symposium on Computational Geometry (SoCG 2025) will be held in Kanazawa, Japan, from June 23-27, 2025, as part of CG Week 2025. The symposium invites high-quality submissions describing original research on computational problems in a geometric and/or topological setting. SoCG 2025 is organized as an event of the CG Society, and presenters must be members.","# SoCG 2025: Call for Papers
+
+The 41st International Symposium on Computational Geometry (SoCG 2025) is planned to be held in **Kanazawa, Japan, June 23–27, 2025**, as part of the Computational Geometry (CG) Week.
+
+We invite high quality submissions that describe original research on computational problems in a geometric and/or topological setting.
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to:
+
+*   Design, analysis, and implementation of geometric algorithms and data structures;
+*   Computational complexity of geometric problems;
+*   Implementation and experimental evaluation of geometric algorithms and heuristics, including mathematical, numerical, and algebraic aspects;
+*   Discrete and combinatorial geometry;
+*   Computational topology, topological data analysis, and topological combinatorics;
+*   Applications of computational geometry or topology in any field.
+
+## Important Dates
+
+*   **Abstracts and paper registration due:** November 26, 2024 (Tuesday)
+*   **Papers due:** December 3, 2024 (Tuesday)
+*   **Notification of acceptance/rejection:** February 6, 2025 (Thursday)
+*   **Final versions of accepted papers due:** April 11, 2025 (Friday) [Changed or passed: mid March 2025]
+*   **Symposium:** June 23–27, 2025
+
+## Submission Guidelines
+
+### Paper Types
+
+Submissions are evaluated based on their strengths, captured by four possible paper types:
+
+*   **Mathematical Foundations:** Focuses on theorems and proofs in discrete or combinatorial geometry, discrete differential geometry or topology, or topological combinatorics. Evaluated on technical depth, result importance, solution elegance, relevance to computational geometry and topology, and potential future impact on algorithm development.
+*   **Algorithmic Complexity:** Focuses on algorithms, data structures, theorems, proofs, or lower bound constructions for computational geometry problems. Evaluated on problem relevance and importance, technical depth, solution elegance, and potential future impact of results or methods.
+*   **Experiments and Implementation:** Focuses on contributions to the implementation and evaluation of geometric algorithms, such as exact, approximate, or algebraic computation, algorithms engineering, or experimental evaluation. Evaluated on completeness and impact of implementation, soundness of experiments, quality and quantity of testing, and gained knowledge.
+*   **Applications:** Describes modeling and algorithmic choices for computational geometry techniques applied to a specific area. Evaluated on soundness of modeling decisions, ingenuity of the solution, effectiveness of the method, and impact in the application area.
+
+### Double Blind and PC Submissions
+
+*   SoCG will employ a **lightweight double-blind reviewing process**.
+*   PC members (other than PC chairs) can submit to the conference.
+*   Submissions must **not reveal the identity of the authors**. Names, affiliations, funding, and emails should be omitted.
+*   References to the authors' own work should be in the third person.
+*   Accompanying software or data must be linked anonymously.
+*   Authors will declare conflicts of interest with PC members upon submission. Refer to the [SoCG 2025 Conflict of Interest Guidelines](https://docs.google.com/document/d/1QNR3JUe_DimGP79EbcmayUi7I3obiTdxAIzXMFxaCfI/pub) for details.
+*   The purpose of lightweight double-blind reviewing is to reduce bias; authors are encouraged to disseminate their work as usual.
+
+### Format
+
+*   Submissions must be formatted according to the [LIPIcs proceedings guidelines](https://submission.dagstuhl.de/series/details/5#author).
+*   Authors are required to use the LaTeX class file [socg-lipics-v2021.cls](https://computational-geometry.org/documents/socg-lipics-v2021.cls) with the option “anonymous”.
+*   Submissions must **not exceed 500 lines**, excluding front matter, references, and a clearly marked appendix.
+*   Authors should ensure they do not exceed the line limit, even with constructs that do not count lines automatically.
+
+### Contents of the Submission
+
+*   Papers should be submitted as an extended abstract.
+*   Begin with the title and a short abstract.
+*   The main body should include a precise problem statement, a summary of results (emphasizing significance, novelty, and impact), and a comparison with related work.
+*   Provide sufficient details for evaluation of validity, quality, and relevance.
+*   Clarity of presentation is important, written for both experts and non-experts.
+*   Avoid ""et al."" in citations; mention all authors' surnames or use ""The authors in [#] show"".
+
+### Appendix and Additional Data
+
+*   All details needed to verify results must be provided.
+*   Supporting materials (proofs, experimental details) exceeding the 500-line limit should be in an appendix.
+*   The paper should include specific pointers to the appendix.
+*   The appendix will not be published and is read at the discretion of PC members.
+*   Experimental and implementation results must be reproducible and verifiable. Accompanying software and data are encouraged to be placed in an accessible repository.
+
+### Previous or Simultaneous Submissions
+
+*   Results previously published or accepted for publication in other conferences with formal proceedings are not allowed.
+*   Simultaneous submissions to other conferences with formal proceedings are not allowed.
+*   Submissions to EuroCG are allowed (no formal proceedings). Submissions to CCCG are not allowed.
+*   Results accepted for journal publication at the time of submission are not allowed.
+
+### Strict Guidelines
+
+Submissions deviating from these guidelines risk rejection without consideration.
+
+## Accepted Papers Presentation
+
+*   An author of each accepted paper is expected to attend and present the paper (approx. 20 minutes).
+*   The presenting author(s) must be a member of the CG Society (membership is free).
+
+## Awards
+
+*   **Best paper award:** All papers are eligible.
+*   **Best student paper award:** Eligible if all authors are students at submission time (must be indicated).
+*   **Best student presentation award:** Based on audience feedback for a student presentation.
+
+## Invited Papers and Special Issues
+
+*   Authors of the best paper will be invited to submit to the Journal of the ACM.
+*   Authors of highly ranked papers may be invited to submit to TheoretiCS.
+*   Selected accepted papers will be invited for extended versions in Discrete & Computational Geometry and Journal of Computational Geometry.
+
+## Final Proceedings Format
+
+*   Must respect the same formatting constraints as submissions (LIPIcs proceedings format with socg-lipics-v2021; 500-line limit, excluding front matter and references).
+*   No appendix allowed in the final version.
+*   Supporting material not fitting the limit must be referenced and made available in a public repository (e.g., arXiv).
+*   Accompanying software/data should be publicly accessible with proper references.
+
+## Program Committee
+
+*   Mikkel Abrahamsen, University of Copenhagen
+*   Oswin Aichholzer, Graz University of Technology (co-chair)
+*   Hugo Akitaya, University of Massachusetts Lowell
+*   Mark de Berg, Eindhoven University of Technology
+*   Sujoy Bhore, Indian Institute of Technology Bombay
+*   Ahmad Biniaz, University of Windsor
+*   Håvard Bakke Bjerkevik, SUNY Albany
+*   Gerth Stølting Brodal, Aarhus University
+*   Hsien-Chih Chang, Dartmouth College
+*   Siu-Wing Cheng, Hong Kong University of Science and Technology
+*   Vida Dujmović, University of Ottawa
+*   David Eppstein, University of California, Irvine
+*   Emily Fox, University of Texas at Dallas
+*   Jie Gao, Rutgers University
+*   Dan Halperin, Tel Aviv University
+*   Tao Hou, University of Oregon
+*   Francis Lazarus, Université Grenoble Alpes
+*   Chih-Hung Liu, National Taiwan University
+*   Daniel Lokshtanov, University of California Santa Barbara
+*   Anna Lubiw, University of Waterloo
+*   Amir Nayyeri, Oregon State University
+*   Eunjin Oh, Pohang University of Science and Technology
+*   Tim Ophelders, Utrecht University and TU Eindhoven
+*   Irene Parada, UPC BarcelonaTech
+*   Rahul Saladi, Indian Institute of Science
+*   Patrick Schnider, University of Basel and ETH Zürich
+*   Raimund Seidel, Saarland University
+*   Don Sheehy, North Carolina State University
+*   Shakhar Smorodinsky, Ben-Gurion University
+*   Jonathan Spreer, University of Sydney
+*   Takeshi Tokuyama, Kwansei Gakuin University
+*   Torsten Ueckerdt, Karlsruhe Institute of Technology
+*   Pavel Valtr, Charles University
+*   Kasturi Varadarajan, University of Iowa
+*   Haitao Wang, University of Utah (co-chair)
+*   Jinhui Xu, University at Buffalo
+*   Jie Xue, New York University Shanghai
+
+## SoCG 2025 Submission Webpage
+
+[https://socg25.hotcrp.com/](https://socg25.hotcrp.com/)
+
+## Code of Conduct
+
+SoCG is dedicated to providing an environment that is free from harassment, bullying, discrimination, and retaliation for all participants. All members of the CG Society are bound by its Code of Conduct. Only members of the Society can give a presentation and hence at least one author of each accepted paper must become a member of the Society. Society membership is free.",,
+req-conf-1751699777343-i46tt,,"International Conference on Intelligent Software Methodologies, Tools, and Techniques",SoMeT,https://www.i-somet.org/somet2025/,https://www.i-somet.org/somet2025/cfp.html,,"Conference dates: September 23-26, 2025
+Year: 2025
+Location: Kitakyushu, Japan
+City-State-Province: Kitakyushu
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Paper Submission deadline: May 30, 2025
+Notification Date.Notification to authors: June 22, 2025
+Camera-ready Date.Camera-Ready papers: July 15, 2025
+Topics: Requirement engineering, Software methodologies, Software developments techniques, Automatic software generation versus reuse, Software quality and process assessment for business enterprise models, Intelligent software systems design, Agile Software and Lean Methods, Software optimization and formal methods for software design, Static, dynamic analysis on software performance model, Software maintenance, Software security tools and techniques, Formal techniques for software representation, Software testing and validation, Software reliability, Mobile code security tools and techniques, End-user programming environment, Ontology, cognitive models and philosophical aspects on software design, Medical Informatics, Artificial Intelligence Techniques on Software Engineering, Software design through interaction, Axiomatic based principles on software design, Model Driven Development, Medical Informatics and bioinformatics, Emergency Management Informatics
+Publisher: IOS Press","September 23-26, 2025",2025,"Kitakyushu, Japan",Kitakyushu,Japan,Asia,Offline,"{""Paper Submission deadline"":""May 30, 2025""}","{""Notification to authors"":""June 22, 2025""}","{""Camera-Ready papers"":""July 15, 2025""}",{},{},"Requirement engineering, Software methodologies, Software developments techniques, Automatic software generation versus reuse, Software quality and process assessment for business enterprise models, Intelligent software systems design, Agile Software and Lean Methods, Software optimization and formal methods for software design, Static, dynamic analysis on software performance model, Software maintenance, Software security tools and techniques, Formal techniques for software representation, Software testing and validation, Software reliability, Mobile code security tools and techniques, End-user programming environment, Ontology, cognitive models and philosophical aspects on software design, Medical Informatics, Artificial Intelligence Techniques on Software Engineering, Software design through interaction, Axiomatic based principles on software design, Model Driven Development, Medical Informatics and bioinformatics, Emergency Management Informatics",IOS Press,"The 24th International Conference on Intelligent Software Methodologies, Tools, and Techniques (SOMET 2025) will be held in Kitakyushu, Japan, from September 23-26, 2025. The conference aims to provide a forum for exchanging ideas and experiences to foster new directions in software development methodologies, tools, and techniques, focusing on innovations, controversies, and challenges in the Software Engineering community.","# SOMET 2025: Call for Papers
+
+The 24th International Conference on Intelligent Software Methodologies, Tools, and Techniques (SOMET 2025) will be held in **Kitakyushu, Japan**, from **September 23-26, 2025**.
+
+## About SOMET 2025
+
+The SOMET conference highlights and reflects the state-of-art and new trends on software methodologies, tools and techniques. It serves as a forum for exchanging ideas and experiences to foster new directions in software development methodologies and related tools and techniques. The conference focuses on exploring innovations, controversies, and challenges facing the Software Engineering community today, bringing together theory and experience to propose and evaluate solutions to Software Engineering problems.
+
+## Important Dates
+
+Note: all dates are **AoE (Anywhere on Earth)**.
+
+*   **Paper Submission deadline:** May 30, 2025
+*   **Notification to authors:** June 22, 2025
+*   **Camera-Ready papers:** July 15, 2025
+
+## Best Paper Awards
+
+SOMET 2025 will select some papers to receive a **Best Paper Award**. Each award will come with a certificate.
+
+## Conference Topics
+
+*   Requirement engineering, especially for high-assurance systems, and requirement elicitation
+*   Software methodologies, and tools for robust, reliable, non-fragile software design
+*   Software developments techniques and legacy systems
+*   Automatic software generation versus reuse, and legacy systems
+*   Software quality and process assessment for business enterprise models
+*   Intelligent software systems design, and software evolution techniques
+*   Agile Software and Lean Methods
+*   Software optimization and formal methods for software design
+*   Static, dynamic analysis on software performance model, software maintenance
+*   Software security tools and techniques, and related Software Engineering models
+*   Formal techniques for software representation, software testing and validation
+*   Software reliability, and software diagnosis systems
+*   Mobile code security tools and techniques
+*   End-user programming environment, User-centered Adoption-Centric Re-engineering techniques
+*   Ontology, cognitive models and philosophical aspects on software design
+*   Medical Informatics, Software methods and application for bio-medicine
+*   Artificial Intelligence Techniques on Software Engineering, and Requirement Engineering
+*   Software design through interaction, and precognitive software techniques for interactive software entertainment applications
+*   Creativity and art in software design principles
+*   Axiomatic based principles on software design
+*   Model Driven Development (DVD), code centric to model centric software engineering
+*   Medical Informatics and bioinformatics, Software methods and application for bio-medicine and bioinformatics
+*   Emergency Management Informatics, software methods and application for supporting Civil Protection, First Response and Disaster Recovery
+*   Other software Science disciplines (go to the conference home page for more details)
+
+## Author Instructions
+
+*   Submissions must be made through the Conference's EasyChair system: [SOMET 2025 Submission Link](https://cmt3.research.microsoft.com/SOMET2025).
+*   Papers would be submitted through CMT.
+*   In case of acceptance, the Camera-Ready copy should be up to **14 A4 pages for Regular paper**, and up to **10 pages for Short papers**.
+*   The final Camera-Ready copy should be in **IOS format** and will be included in the Book series: **Frontiers in Artificial Intelligence and Applications** and distributed at the conference. This series is indexed in SCOPUS and selected by the Elsevier databases coverage.
+*   You can find IOS Instructions for Frontiers in Artificial Intelligence and Applications [here](http://www.iospress.nl/service/authors/latex-and-word-tools-for-book-authors/).
+*   Submissions not meeting the submission guidelines risk rejection without consideration of their merits.",,
+req-conf-1751699777343-i46tt,,ACM/SIAM Symposium on Discrete Algorithms,SODA,https://www.siam.org/conferences-events/past-event-archive/soda25/,,https://www.siam.org/conferences-events/past-event-archive/soda25/dates,"Conference dates: January 12–15 , 2025
+Year: 2025
+Location: Astor Crowne Plaza - New Orleans French Quarter, New Orleans, Louisiana, U.S.
+City-State-Province: New Orleans, Louisiana
+Country: United States
+Continent: North America
+Type: Offline
+Topics: Discrete Mathematics, Algebraic combinatorics, Combinatorial algorithms, Combinatorial number theory, Design theory, Discrete analysis, Discrete geometry, Enumeration, Extremal combinatorics, Graph theory, Matroids, Probabilistic combinatorics, Ramsey theory, Topological methods in combinatorics, Combinatorial scientific computing, Computational biology, Computer science, Game theory, Graph and network layout and visualization, Graph and network models, Network theory, Optimization, Probability, Statistical physics
+Submission Date.Submissions Due: July 5, 2024
+Registration Date.Early Registration Deadline: December 9, 2024
+Other Date.Hotel Reservation Deadline Extended!: December 13, 2024","January 12–15 , 2025",2025,"Astor Crowne Plaza - New Orleans French Quarter, New Orleans, Louisiana, U.S.","New Orleans, Louisiana",United States,North America,Offline,"{""Submissions Due"":""July 5, 2024""}",{},{},"{""Early Registration Deadline"":""December 9, 2024""}","{""Hotel Reservation Deadline Extended!"":""December 13, 2024""}","Discrete Mathematics, Algebraic combinatorics, Combinatorial algorithms, Combinatorial number theory, Design theory, Discrete analysis, Discrete geometry, Enumeration, Extremal combinatorics, Graph theory, Matroids, Probabilistic combinatorics, Ramsey theory, Topological methods in combinatorics, Combinatorial scientific computing, Computational biology, Computer science, Game theory, Graph and network layout and visualization, Graph and network models, Network theory, Optimization, Probability, Statistical physics",No publisher,"The ACM-SIAM Symposium on Discrete Algorithms (SODA25), the 25th annual event, will be held in-person in New Orleans, Louisiana, from January 12–15, 2025. It focuses on research in efficient algorithms and data structures for discrete problems, including theoretical analysis, experimental validation, and mathematical aspects. SODA25 is sponsored by the SIAM Activity Group on Discrete Mathematics and the ACM Special Interest Group on Algorithms and Computation Theory, and is held jointly with the SIAM Symposium on Algorithm Engineering and Experiments (ALENEX) and the SIAM Symposium on Simplicity in Algorithms (SOSA).","# Call for Papers
+
+The ACM-SIAM Symposium on Discrete Algorithms (SODA25), the 25th in the series, will be held in-person from **January 12–15, 2025**, in **New Orleans, Louisiana, U.S.** at the Astor Crowne Plaza.
+
+SODA is sponsored by the SIAM Activity Group on Discrete Mathematics and the ACM Special Interest Group on Algorithms and Computation Theory. This symposium focuses on research topics related to the design and analysis of efficient algorithms and data structures for discrete problems. The scope includes theoretical analysis, as well as experimental validation, of discrete algorithms, and the mathematical problems related to their development or limitations. The scope also includes aspects of combinatorics and discrete mathematics related to discrete algorithms. Papers that raise important algorithmic problems that can benefit from theoretical investigation and analysis, are encouraged.
+
+SODA will be held jointly with:
+*   SIAM Symposium on Algorithm Engineering and Experiments (ALENEX)
+*   SIAM Symposium on Simplicity in Algorithms (SOSA)
+
+## Topics of Interest
+
+### Aspects of combinatorics and discrete mathematics:
+
+*   Combinatorial structures
+*   Discrete optimization
+*   Graph theory
+*   Random structures
+
+### Core topics in discrete algorithms:
+
+*   Algorithm analysis
+*   Data structures
+*   Experimental algorithmics
+*   Lower bounds
+*   Mathematical programming
+
+### Algorithmic aspects of other areas of computer science:
+
+*   Algorithmic fairness
+*   Combinatorial scientific computing
+*   Communication networks and the internet
+*   Computational geometry and topology
+*   Computer systems
+*   Cryptography, security and privacy
+*   Databases and information retrieval
+*   Distributed and parallel computing
+*   Game theory and mechanism design
+*   Machine learning
+*   Quantum computing
+*   Scheduling and resource allocation
+
+## Important Dates
+
+*   **Submissions Due:** July 5, 2024 (Deadline Passed)
+*   **Early Registration Deadline:** December 9, 2024
+*   **Hotel Reservation Deadline Extended!:** December 13, 2024
+
+## Submission Information
+
+Submissions are managed through the conference website: [/conferences-events/past-event-archive/soda25/submissions/](https://www.siam.org/conferences-events/past-event-archive/soda25/submissions/)
+
+Papers should focus on research topics related to the design and analysis of efficient algorithms and data structures for discrete problems. The scope includes theoretical analysis, experimental validation, and mathematical problems related to their development or limitations. Papers that raise important algorithmic problems that can benefit from theoretical investigation and analysis are encouraged.
+
+## Program Committee
+
+**Co-chairs:**
+*   Yossi Azar (Tel-Aviv University, Israel)
+*   Debmalya Panigrahi (Duke University, U.S.)
+
+**Program Committee:**
+*   Amir Abboud (Weizmann Institute of Science, Israel)
+*   Alexandr Andoni (Columbia University, U.S.)
+*   Soheil Behnezad (Northeastern University, U.S.)
+*   Sayan Bhattacharya (University of Warwick, United Kingdom)
+*   Arnab Bhattacharyya (National University of Singapore, Singapore)
+*   Luca Becchetti (University of Rome, Italy)
+*   Petra Berenbrink (University of Hamburg, Germany)
+*   Niv Buchbinder (Tel Aviv University, Israel)
+*   Harry Buhrman (Quantinuum (UK), QuSoft and University of Amsterdam, The Netherlands)
+*   Sergio Cabello (University of Ljubljana, Slovenia)
+*   Yang Cai (Yale University, U.S.)
+*   Parinya Chalermsook (Aalto University, Finland)
+*   Eshan Chattopadhyay (Cornell University, U.S.)
+*   Chandra Chekuri (University of Illinois, Urbana-Champaign, U.S.)
+*   Keerti Choudhary (IIT Delhi, India)
+*   Maria Chudnovsky (Princeton University, U.S.)
+*   Ilan Cohen (Bar-Ilan University, Israel)
+*   Vincent Cohen-Addad (Google Research, Switzerland)
+*   Andrea Coladangelo (University of Washington, Seattle, U.S.)
+*   Jose Correa (University of Chile, Chile)
+*   Rachel Cummings (Columbia University, U.S.)
+*   Jelena Diakonikolas (University of Wisconsin, Madison, U.S.)
+*   Shahar Dobzinski (Weizmann Institute of Science, Israel)
+*   Anne Driemel (University of Bonn, Germany)
+*   Esther Ezra (Bar-Ilan University, Israel)
+*   Emily Fox (University of Texas, Dallas, U.S.)
+*   Nick Gravin (Shanghai University of Finance and Economics, China)
+*   Kasper Green Larsen (Aarhus University, Denmark)
+*   Anupam Gupta (New York University, U.S.)
+*   Tom Gur (University of Cambridge, United Kingdom)
+*   Sungjin Im (University of California, Merced, U.S.)
+*   Michael Kapralov (EPFL, Switzerland)
+*   Telikepalli Kavitha (Tata Institute of Fundamental Research, India)
+*   Dominik Kempa (Stony Brook University, U.S.)
+*   Arindam Khan (Indian Institute of Science, India)
+*   Samir Khuller (Northwestern University, U.S.)
+*   Ravi Kumar (Google Research, U.S.)
+*   O-joung Kwon (Hanyang University, South Korea)
+*   Bundit Lakhenukit (Shanghai University of Finance and Economics, China)
+*   Hung Le (University of Massachusetts, Amherst, U.S.)
+*   Jian Li (Tsinghua University, China)
+*   Yang Liu (Institute for Advanced Studies, U.S.)
+*   William Kuszmaul (Harvard University, U.S.)
+*   Shachar Lovett (University of California, San Diego, U.S.)
+*   Sepideh Mahabadi (Microsoft Research, U.S.)
+*   Nicole Megow (University of Bremen, Germany)
+*   Raghu Meka (University of California, Los Angeles, U.S.)
+*   Divyarthi Mohan (Tel Aviv University, Israel)
+*   Ankur Moitra (Massachusetts Institute of Technology, U.S.)
+*   Shay Mozes (Reichman University, Israel)
+*   Bento Natura (Columbia University, U.S.)
+*   Neil Olver (London School of Economics, United Kingdom)
+*   Krzysztof Onak (Boston University, U.S.)
+*   Seth Pettie (University of Michigan, Ann Arbor, U.S.)
+*   Michał Pilipczuk (University of Warsaw, Poland)
+*   Max Probst Gutenberg (ETH Zurich, Switzerland)
+*   Rajmohan Rajaraman (Northeastern University, U.S.)
+*   Aviad Rubinstein (Aviad Rubinstein,)
+*   Barna Saha (University of California, San Diego, U.S.)
+*   Laura Sanita (Bocconi University, Italy)
+*   Piotr Sankowski (IDEAS NCBR and University of Warsaw, Poland)
+*   Aravind Srinivasan (University of Maryland, College Park, U.S.)
+*   Vera Traub (University of Bonn, Germany)
+*   Madhur Tulsiani (Toyota Technological Institute at Chicago, U.S.)
+*   Seeun William Umboh (The University of Melbourne, Australia)
+*   Sergei Vassilvitskii (Google Research, U.S.)
+*   Magnus Wahlstrom (Royal Holloway, University of London, United Kingdom)
+*   Kangning Wang (Stanford University, U.S.)
+*   Fan Wei (Duke University, U.S.)
+*   Nicole Wein (University of Michigan, Ann Arbor, U.S.)
+*   Mary Wootters (Stanford University, U.S.)
+
+## Sponsors
+
+Thank you to our sponsors, with special thanks to Microsoft Research for their support. The U.S. National Science Foundation also provided support.",,
+req-conf-1751699777343-i46tt,,Symposium On Usable Privacy and Security,SOUPS,https://www.usenix.org/conference/soups2025,https://www.usenix.org/conference/soups2025/call-for-papers,,"Conference dates: August 10–12, 2025
+Year: 2025
+Location: Seattle Convention Center, Seattle, WA, USA
+City-State-Province: Seattle, Washington
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Mandatory Paper Registration Deadline: February 6, 2025
+Submission Date.Paper Submission Deadline: February 13, 2025
+Notification Date.Early Rejection Notification: March 20, 2025
+Notification Date.Paper Notifications: May 12, 2025
+Other Date.Author Response Period: April 17 – April 24, 2025
+Other Date.Final Papers Files Due: June 9, 2025
+Other Date.Grant applications due: July 7, 2025
+Other Date.Sign up to participate in mentoring program: July 31, 2025
+Other Date.To ensure that we meet your needs, please make your request by: July 21, 2025
+Other Date.Hotel Discount Deadline: July 21, 2025
+Topics: Usable Privacy, Security, Human Computer Interaction
+Publisher: USENIX, the Advanced Computing Systems Association","August 10–12, 2025",2025,"Seattle Convention Center, Seattle, WA, USA","Seattle, Washington",United States,North America,Offline,"{""Mandatory Paper Registration Deadline"":""February 6, 2025"",""Paper Submission Deadline"":""February 13, 2025""}","{""Early Rejection Notification"":""March 20, 2025"",""Paper Notifications"":""May 12, 2025""}",{},{},"{""Author Response Period"":""April 17 – April 24, 2025"",""Final Papers Files Due"":""June 9, 2025"",""Grant applications due"":""July 7, 2025"",""Sign up to participate in mentoring program"":""July 31, 2025"",""To ensure that we meet your needs, please make your request by"":""July 21, 2025"",""Hotel Discount Deadline"":""July 21, 2025""}","Usable Privacy, Security, Human Computer Interaction","USENIX, the Advanced Computing Systems Association","The Twenty-First Symposium on Usable Privacy and Security (SOUPS 2025) will take place from August 10–12, 2025, at the Seattle Convention Center in Seattle, WA, USA. It brings together an interdisciplinary group of researchers and practitioners in human computer interaction, security, and privacy and is co-located with the 34th USENIX Security Symposium.","# SOUPS 2025: Call for Papers
+
+The Twenty-First Symposium on Usable Privacy and Security (SOUPS 2025) will take place from **August 10–12, 2025**, at the **Seattle Convention Center in Seattle, WA, USA**. SOUPS 2025 is co-located with the 34th USENIX Security Symposium.
+
+## Overview
+
+The symposium brings together an interdisciplinary group of researchers and practitioners in human computer interaction, security, and privacy. The program will feature technical papers, workshops, tutorials, a poster session, and lightning talks.
+
+## Important Dates
+
+All dates are at **23:59 AoE (Anywhere on Earth) time**. These are firm deadlines; no extensions will be granted.
+
+*   **Mandatory Paper Registration Deadline:** Thursday, February 6, 2025
+*   **Paper Submission Deadline:** Thursday, February 13, 2025
+*   **Early Rejection Notification:** Thursday, March 20, 2025
+*   **Author Response Period:** Thursday, April 17–Thursday, April 24, 2025
+*   **Paper Notifications:** Monday, May 12, 2025
+*   **Final Papers Files Due:** Monday, June 9, 2025
+
+## Technical Papers
+
+We invite authors to submit previously unpublished papers describing research or experience in all areas of usable privacy and security. We welcome a variety of research methods, including both qualitative and quantitative approaches.
+
+### Topics Include (but are not limited to):
+
+*   Innovative security or privacy functionality and design
+*   Field studies of security or privacy technology
+*   Usability evaluations of new or existing security or privacy features
+*   Security testing of new or existing usability features
+*   Longitudinal studies of deployed security or privacy features
+*   Studies of administrators or developers and support for security and privacy
+*   Organizational policy or procurement decisions and their impact on security and privacy
+*   Lessons learned from the deployment and use of usable privacy and security features
+*   Foundational principles of usable security or privacy
+*   Ethical, psychological, sociological, or anthropological aspects of usable security and privacy
+*   Usable security and privacy implications/solutions for specific domains (e.g., IoT, medical, vulnerable populations)
+*   Replicating or extending important previously published studies and experiments
+*   Systematization of knowledge papers that integrate and systematize existing knowledge to provide new insight into a previously studied area
+
+### Paper Registration and Submission
+
+*   **Paper Registration:** Mandatory for all papers by February 6, 2025. Registering a paper requires filling out all fields of the online form. Placeholder, incomplete, or inaccurate titles and abstracts may result in rejection without review.
+*   **Paper Submission:** Upload as PDFs by February 13, 2025. [Download Call for Papers PDF](https://www.usenix.org/sites/default/files/soups25_cfp_021925.pdf)
+*   **Submission System:** [https://soups2025.usenix.hotcrp.com/](https://soups2025.usenix.hotcrp.com/)
+
+### Format and Page Limits
+
+*   **Template:** Use the SOUPS formatting template (available for [MS Word](https://www.usenix.org/sites/default/files/conference-files/usenix2025_soups.doc) or [LaTeX](https://www.usenix.org/sites/default/files/conference-files/usenix2025_soups_latex-template.zip)).
+*   **Submission Format:** PDF.
+*   **Page Limit:** No more than **12 pages** for the main body (excluding acknowledgments, bibliography, and appendices). Brevity is appreciated.
+*   **Appendices:** Allowed for supplementary material, but reviewers are not required to read them. Accepted papers will be published online with their appendices.
+*   **Final Camera-Ready Limit:** 12 pages (excluding acknowledgments, bibliography, and appendices) and a total of 20 pages including references and appendices.
+
+### Paper Content Requirements
+
+*   Papers must describe the purpose and goals of the work.
+*   Cite related work.
+*   Show how the work effectively integrates usability or human factors with security or privacy.
+*   Clearly indicate innovative aspects, lessons learned, and contributions to the field.
+*   Abstracts should contain a sentence summarizing the contribution.
+*   All submissions must clearly relate to the human aspects of security or privacy. Papers on security or privacy without usability or human factors, or vice versa, will not be considered.
+
+### Special Paper Types
+
+*   **Systematization of Knowledge (SoK) Papers:** Prefix the title with ""SoK:"" and check the SoK checkbox on the submission form. These papers should integrate and systematize existing knowledge to provide new insight.
+*   **Replication Papers:** Prefix the title with ""Replication:"". These papers should aim to replicate important or influential findings, clearly stating the rationale, methodological differences, and comparing findings.
+
+### Anonymous Submission
+
+*   Reviewing is anonymous. Do not include names or affiliations on the title page or in the body of the paper. Remove acknowledgments and avoid revealing author identities in the text, PDF metadata, appendices, or figures (e.g., logos, contact info, identifying URLs).
+*   References to your own work should be in the third person.
+*   Submissions that violate anonymity requirements may be rejected without review.
+
+### Overlap with Previous Papers
+
+*   USENIX policy prohibits simultaneous submission of the same work to multiple venues, submission of previously published work, and plagiarism.
+*   SOUPS further prohibits the submission of substantially similar work to multiple venues. Document any overlap in an explanatory note sent to the chairs.
+*   Technical reports (e.g., arXiv) are exempt.
+*   Self-plagiarism (verbatim reuse of one's own published work without citation) is generally not acceptable. Rewriting is preferred.
+
+### Conflicts of Interest
+
+Authors must identify any potential conflicts of interest with program committee members according to the provided definition (e.g., shared affiliation, advisor/advisee, collaboration, close personal relationship).
+
+### Ethical Research
+
+*   User studies should adhere to ethical principles (beneficence, minimal risk, voluntary consent, respect for privacy, limited deception).
+*   Papers are expected to discuss ethical considerations. Institutional clearance for research with human subjects may be required.
+
+### Early Rejections and Appeals
+
+Papers with substantially negative initial reviews may be rejected early. Authors of such papers will receive initial reviews and have the option to appeal concrete disagreements with the reviews.
+
+### Response Period
+
+Authors will have a short period (April 17–24, 2025) to provide a response to reviews, which will be considered in subsequent discussions.
+
+### Presentation Requirements
+
+At least one author of an accepted paper must attend the conference and present the work. Remote presentations are permissible with permission from the PC Co-Chairs.
+
+## Contact Information
+
+*   **Program Chairs:** [soups25chairs@usenix.org](mailto:soups25chairs@usenix.org)
+
+## Grant Opportunities
+
+*   **Application Deadline:** Monday, July 7, 2025
+
+## Workshops
+
+See the [Call for Workshops Submissions](https://www.usenix.org/conference/soups2025/call-for-workshops-submissions) page for details on workshops held on Sunday, August 10:
+
+*   Workshop on Societal and User-Centered Privacy in AI (SUPA 2025)
+*   Workshop on Developing Research Transparency Guidelines in Human-Centered Privacy and Security
+*   2nd Gender, Online Safety, and Sexuality Workshop (GOSS 2025)
+*   4th Annual Workshop on Privacy Threat Modeling",,
+req-conf-1751699777343-i46tt,,Current Trends in Theory and Practice of Computer Science,SOFSEM,http://www.sofsem.sk/,,http://www.sofsem.sk/#deadlines,"Conference dates: January 20 - 23, 2025
+Year: 2025
+Location: Bratislava, Slovakia
+City-State-Province: Bratislava
+Country: Slovakia
+Continent: Europe
+Type: Offline
+Submission Date.Submission Deadline (abstract): September 15, 2024
+Submission Date.Submission Deadline (full papers): September 22, 2024
+Notification Date.Authors' notification: November 12, 2024
+Topics: AI-based algorithms and techniques, algorithms, automata, languages, machine models, rewriting systems, computability, decidability, classical and non-classical models of computation, computational complexity, computational geometry, computational learning, cryptographic techniques and security, data compression algorithms, data- and pattern mining methods, discrete combinatorial optimization, heuristics, local search, SAT solvers, simulation, efficient data structures, experimental algorithmics, applications, formal models of systems, graph structure and algorithms, intelligent algorithms, logics of computation, process models, program synthesis, machine learning theory, multi-agent algorithms and games, nature-inspired computing, network science, neural network theory, parallel and distributed computing, quantum computing, robotics, structural complexity, visualization algorithms
+Publisher: Springer","January 20 - 23, 2025",2025,"Bratislava, Slovakia",Bratislava,Slovakia,Europe,Offline,"{""Submission Deadline (abstract)"":""September 15, 2024"",""Submission Deadline (full papers)"":""September 22, 2024""}","{""Authors' notification"":""November 12, 2024""}",{},{},{},"AI-based algorithms and techniques, algorithms, automata, languages, machine models, rewriting systems, computability, decidability, classical and non-classical models of computation, computational complexity, computational geometry, computational learning, cryptographic techniques and security, data compression algorithms, data- and pattern mining methods, discrete combinatorial optimization, heuristics, local search, SAT solvers, simulation, efficient data structures, experimental algorithmics, applications, formal models of systems, graph structure and algorithms, intelligent algorithms, logics of computation, process models, program synthesis, machine learning theory, multi-agent algorithms and games, nature-inspired computing, network science, neural network theory, parallel and distributed computing, quantum computing, robotics, structural complexity, visualization algorithms",Springer,"SOFSEM 2025, the 50th International Conference on Current Trends in Theory and Practice of Computer Science, will be held in Bratislava, Slovakia from January 20-23, 2025. This conference focuses on the latest research in computer science and artificial intelligence, with proceedings published in Springer's LNCS series.","# SOFSEM 2025: Call for Papers
+
+The 50th International Conference on Current Trends in Theory and Practice of Computer Science (SOFSEM 2025) will be held from **January 20 - 23, 2025, in Bratislava, Slovakia**.
+
+SOFSEM is an annual winter conference devoted to the theory and practice of computer science, focusing on fundamental research in computer science (informatics) inspired by algorithmic challenges. The conference will be a physical event.
+
+## Topics
+
+The program committee encourages submission of original research papers in all areas of foundations of computer science and artificial intelligence, including:
+
+*   AI-based algorithms and techniques
+*   Algorithms (approximation, combinatorial, exact, online, parameterized, probabilistic, streaming, etc.)
+*   Automata (cellular, finite, networked, etc.), languages, machine models, rewriting systems
+*   Computability, decidability, classical and non-classical models of computation
+*   Computational complexity (including e.g. communication, descriptional, fine-grained, Kolmogorov, non-uniform, fixed-parameter and structural complexity)
+*   Computational geometry
+*   Computational learning
+*   Cryptographic techniques and security
+*   Data compression algorithms
+*   Data- and pattern mining methods (including e.g. models, theory, algorithms)
+*   Discrete combinatorial optimization, heuristics, local search, SAT solvers, simulation
+*   Efficient data structures (including e.g. dynamic, geometric, and spatial data structures)
+*   Experimental algorithmics, applications
+*   Formal models of systems (including e.g. concurrent, hybrid, reactive, mobile, net-based, and timed systems)
+*   Graph structure and algorithms
+*   Intelligent algorithms
+*   Logics of computation, process models, program synthesis
+*   Machine learning theory
+*   Multi-agent algorithms and games
+*   Nature-inspired computing
+*   Network science
+*   Neural network theory
+*   Parallel and distributed computing
+*   Quantum computing
+*   Robotics
+*   Structural complexity
+*   Visualization algorithms (including e.g. graph drawing, network layout)
+
+...and other relevant theory topics in computing and AI.
+
+## Submission Guidelines
+
+*   Papers should be submitted electronically through [EasyChair](https://easychair.org/my/conference?conf=sofsem2025).
+*   Submissions should be prepared in accordance with Springer’s Instructions for Authors of Proceedings, and use the LaTeX template provided on the [authors’ page](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).
+*   The length should not exceed **12 pages** (excluding references).
+*   No prior publication or simultaneous submission to other conferences or journals are allowed (except preprint repositories such as arXiv or workshops without formal published proceedings).
+*   There is no need to anonymize the submissions.
+
+## Important Dates
+
+*   **Submission Deadline:** September 15, 2024 (abstract)
+*   **Submission Deadline:** September 22, 2024 (full papers)
+*   **Authors' notification:** November 12, 2024
+*   **Conference:** January 20-23, 2025
+
+## Awards and Publications
+
+*   The conference will present a **Best Paper Award**.
+*   Authors of selected papers presented at the conference will be invited to submit extended versions to a special issue of the Journal of Computer and System Sciences.
+*   The proceedings will be published in the subseries ARCoSS (Advanced Research in Computing and Software Science) of the Lecture Notes in Computer Science (LNCS) of Springer.
+
+## Registration
+
+| Attendee             | Early (until December 20) | Late (from December 20) |
+| :------------------- | :------------------------ | :---------------------- |
+| Regular / Single room| **950€**                  | **1000€**               |
+| Regular / Double room| **795€**                  | **845€**                |
+| Student / Single room| **850€**                  | **900€**                |
+| Student / Double room| **695€**                  | **745€**                |
+
+> The registration fee includes access to lectures, a social dinner, accommodation (arrival on January 19, departure on January 24), and full board (starting with dinner on January 19 and ending with breakfast on January 24).
+
+Complete your registration online by filling out this form: [SOFSEM 2025 registration](https://forms.gle/Di1xf57gPqgNEh8Y8)
+
+## Contact
+
+For any questions, please contact the organizers at [sofsem2025@sofsem.sk](mailto:sofsem2025@sofsem.sk).",,
+req-conf-1751699777343-i46tt,,Software Product Lines Conference,SPLC,https://2025.splc.net/,https://2025.splc.net/call-for-papers/,,"Conference dates: September 1 - 5, 2025
+Year: 2025
+Location: Facultade de Informática, Universidade da Coruña, A Coruña, Spain
+City-State-Province: A Coruña
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.Research and Industry tracks abstract submission: April 17, 2025
+Submission Date.Research and Industry tracks paper submission: April 24, 2025
+Submission Date.Companion tracks submission: June 12, 2025
+Notification Date.Research and Industry tracks notification: May 29, 2025
+Notification Date.Companion tracks notification: July 3, 2025
+Camera-ready Date.Camara-ready paper: July 10, 2025
+Topics: Software and System Product Lines Engineering","September 1 - 5, 2025",2025,"Facultade de Informática, Universidade da Coruña, A Coruña, Spain",A Coruña,Spain,Europe,Offline,"{""Research and Industry tracks abstract submission"":""April 17, 2025"",""Research and Industry tracks paper submission"":""April 24, 2025"",""Companion tracks submission"":""June 12, 2025""}","{""Research and Industry tracks notification"":""May 29, 2025"",""Companion tracks notification"":""July 3, 2025""}","{""Camara-ready paper"":""July 10, 2025""}",{},{},Software and System Product Lines Engineering,No publisher,"The 29th ACM International Systems and Software Product Line Conference (SPLC 2025) will be held in A Coruña, Spain, from September 1st to 5th, 2025. This premier event serves as a forum for researchers, practitioners, and educators to discuss advancements, trends, and challenges in software and system product lines engineering, featuring research and industry papers, keynotes, workshops, and more.","# Call for Papers
+
+The 29th ACM International Systems and Software Product Line Conference (SPLC 2025) is a premier forum where researchers, practitioners, and educators can present and discuss the most recent ideas, trends, experiences, and challenges in the area of software and system product lines engineering. SPLC 2025 will be held at Facultade de Informática, Universidade da Coruña (A Coruña, Spain), from September 1st to 5th, 2025.
+
+## Important Dates
+
+All dates are anywhere on Earth.
+
+*   **Research and Industry tracks abstract submission:** **April 17, 2025**
+*   **Research and Industry tracks paper submission:** **April 24, 2025**
+*   **Research and Industry tracks notification:** **May 29, 2025**
+*   **Companion tracks submission:** **June 12, 2025**
+*   **Companion tracks notification:** **July 03, 2025**
+*   **Camara-ready paper:** **July 10, 2025**
+*   **Conference Date:** **September 1st to 5th, 2025**
+
+## Calls for Papers and Contributions
+
+We invite high quality papers, which describe original and unpublished research advancing the state of the art in software and system product line.
+
+*   ### Call for Research Papers
+    We invite original, theoretically or empirically validated submissions addressing all areas of software product lines research. [See the call for a list of topics](https://2025.splc.net/call-for-research-papers/).
+
+*   ### Call for Research Paper Artifacts
+    Authors of accepted and conditionally accepted research papers are invited to submit the artifacts associated with the paper for evaluation.
+
+*   ### Call for Industry Papers: Industrial Systems and Software Product Lines in Practice
+    We invite submission of papers presenting challenges, innovations and solutions to concrete industrial applications of software and product line engineering methodologies and tools.
+
+*   ### Call for Challenges and Solutions Papers
+    We highly encourage community members to provide concrete sets of case studies and problems that showcase SPL-related challenges. Both accepted case descriptions and solutions will be included in the conference proceedings.
+
+*   ### Call for Journal-First Track
+    Authors of journal-first papers are invited to submit their publications to present their work at SPLC. This is an opportunity to speak directly to the community and offer SPLC attendees a richer set of presentations.
+
+*   ### Call for Workshop Proposals
+    We invite the community to submit proposals for one or two-day workshops in the field, particularly on challenging, emerging areas related to conference topics.
+
+*   ### Call for Demonstrations and Tools
+    This track highlights live demonstrations of product-line tools and of practices tackling current industrial challenges.
+
+*   ### Call for Doctoral Symposium Papers
+    This track highlights doctoral proposals, both early and mid-phase, to be reviewed and commented on by a panel of experts.
+
+*   ### Call for Tutorial Proposals
+    Tutorials provide a valuable opportunity for participants to expand their knowledge and skills in product line engineering. Tutorials may focus on introductory product lines topics, or on advanced tools, approaches, methods, and best practices.
+
+## ACM Publications Policy
+
+By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all [ACM Publications Policies](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects), including ACM’s new Publications Policy on Research Involving Human Participants and Subjects. Alleged violations of this policy or any ACM Publications Policy will be investigated by ACM and may result in a full retraction of your paper, in addition to other potential penalties, as per ACM Publications Policy.
+
+## ORCID ID
+
+Please ensure that you and your co-authors obtain an ORCID ID, so you can complete the publishing process for your accepted paper. ACM is committed to improve author discoverability, ensure proper attribution and contribute to ongoing community efforts around name normalization; your ORCID ID will help in these efforts.",,
+req-conf-1751699777343-i46tt,,International Symposium on Search Based Software Engineering,SSBSE,https://conf.researchr.org/home/ssbse-2025,https://conf.researchr.org/track/ssbse-2025/ssbse-2025-papers,https://conf.researchr.org/dates/ssbse-2025,"Conference dates: November 16, 2025
+Year: 2025
+Location: Seoul, South Korea
+City-State-Province: Seoul
+Country: South Korea
+Continent: Asia
+Type: Offline
+Submission Date.Submission Deadline: August 21, 2025
+Notification Date.Notification of Acceptance: September 25, 2025
+Camera-ready Date.Camera-Ready Deadline: October 3, 2025
+Topics: Search-Based Software Engineering, SBSE, AI, machine learning, software engineering, automated optimization techniques
+Publisher: conf.researchr.org",16-Nov-25,2025,"Seoul, South Korea",Seoul,South Korea,Asia,Offline,"{""Submission Deadline"":""August 21, 2025""}","{""Notification of Acceptance"":""September 25, 2025""}","{""Camera-Ready Deadline"":""October 3, 2025""}",{},{},"Search-Based Software Engineering, SBSE, AI, machine learning, software engineering, automated optimization techniques",conf.researchr.org,"The 17th Symposium on Search Based Software Engineering (SSBSE 2025) will take place on November 16, 2025, in Seoul, South Korea, at the Grand Walkerhill Seoul, co-located with ASE 2025. The symposium focuses on the application of search and optimization techniques to software engineering problems.","# Call for Papers
+
+## Welcome to SSBSE 2025
+
+The 17th Symposium on Search-Based Software Engineering (SSBSE 2025) invites high-quality submissions that push the boundaries of research in Search-Based Software Engineering (SBSE). SSBSE 2025 will take place on **November 16, 2025**, in **Seoul, South Korea**, at the **Grand Walkerhill Seoul**, and is co-located with ASE 2025.
+
+## About SSBSE
+
+Search-based Software Engineering (SBSE) is a research area focused on the formulation of software engineering problems as search problems, and the subsequent use of complex heuristic techniques to attain optimal solutions to such problems. We invite the submission of high-quality papers describing novel and original work in all areas of SBSE.
+
+## Topics of Interest
+
+We aim to spotlight the transformative role of AI and optimization techniques in software engineering, while continuing to welcome innovative contributions across all areas of SBSE. We encourage submissions that:
+
+*   Apply SBSE techniques to novel and emerging problems, including those where SBSE has not been traditionally applied.
+*   Provide theoretical insights into search algorithms tailored for software engineering challenges.
+*   Offer rigorous empirical evaluations of SBSE methods, with reproducible experiments and datasets.
+*   Share industrial experiences, detailing real-world applications, challenges, and lessons learned from deploying SBSE techniques.
+
+SSBSE embraces a wide spectrum of search methods, from exact operational research techniques to nature-inspired algorithms (e.g., evolutionary algorithms, simulated annealing, and swarm intelligence). We particularly welcome papers that integrate SBSE with advancements in artificial intelligence, machine learning, and other cutting-edge technologies.
+
+## Submission Requirements
+
+*   **Paper Length:** Research papers must be up to **15 pages**, including all text, figures, references, and appendices.
+*   **Originality:** Submissions must be original and not under consideration elsewhere.
+*   **Format:** Submissions must follow **Springer’s LNCS format** (see https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).
+*   **Review Process:** All papers will undergo a rigorous **double-anonymous peer review process**.
+*   **Anonymity:** To ensure anonymity:
+    *   Omit author names and affiliations from the manuscript.
+    *   Write self-citations in the third person (e.g., “the work of XYZ” rather than “our previous work”).
+    *   Avoid URLs or references that reveal author identities.
+*   **Supplementary Materials:** Authors may submit supplementary materials (e.g., datasets or experimental results) as anonymized files. While supplementary materials are optional, they can enhance the reproducibility and impact of your work.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Submission Deadline:** **Thursday, August 21, 2025**
+*   **Notification of Acceptance:** **Thursday, September 25, 2025**
+*   **Camera-Ready Deadline:** **Friday, October 3, 2025**
+
+## Submission Portal
+
+Submissions can be made via [https://ssbse2025.hotcrp.com](https://ssbse2025.hotcrp.com).
+
+## Presentation Requirement
+
+If a paper is accepted, at least one author is expected to attend the symposium and present the paper.
+
+## Special Issue for Best Papers
+
+Authors of the best papers will be invited to submit extended versions of their papers for a special issue on Advances and Applications in Search-Based Software Engineering in the Automated Software Engineering journal. Further details are available at: [https://ause-journal.github.io/26ssbse.html](https://ause-journal.github.io/26ssbse.html).",,
+req-conf-1751699777343-i46tt,,International Conference on Scientific and Statistical Data Base Management,SSDBM,https://ssdbm.org/2025/,https://ssdbm.org/2025/callpaper,https://ssdbm.org/2025/,"Conference dates: June 23 - 25, 2025
+Year: 2025
+Location: Columbus, Ohio
+City-State-Province: Columbus, Ohio
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Paper submission deadline (Main Track): March 2, 2025
+Submission Date.Paper submission deadline (Short and Demo papers): March 21, 2025
+Submission Date.Poster submission deadline: April 21, 2025
+Notification Date.Notification for acceptance (Papers): April 4, 2025
+Notification Date.Notification for acceptance (Short and Demo papers): April 14, 2025
+Notification Date.Notification for acceptance (Posters): April 21, 2025
+Camera-ready Date.Camera-Ready Deadline: May 5, 2025
+Topics: Scientific Applications, Workflows and Reproducibility, Data Modeling, Management, and Integration, Big Data Processing and Performance Aspects, Machine Learning, Artificial Intelligence, and Visualization, Streaming and Real-Time Data Processing
+Publisher: ACM","June 23 - 25, 2025",2025,"Columbus, Ohio","Columbus, Ohio",United States,North America,Offline,"{""Paper submission deadline (Main Track)"":""March 2, 2025"",""Paper submission deadline (Short and Demo papers)"":""March 21, 2025"",""Poster submission deadline"":""April 21, 2025""}","{""Notification for acceptance (Papers)"":""April 4, 2025"",""Notification for acceptance (Short and Demo papers)"":""April 14, 2025"",""Notification for acceptance (Posters)"":""April 21, 2025""}","{""Camera-Ready Deadline"":""May 5, 2025""}",{},{},"Scientific Applications, Workflows and Reproducibility, Data Modeling, Management, and Integration, Big Data Processing and Performance Aspects, Machine Learning, Artificial Intelligence, and Visualization, Streaming and Real-Time Data Processing",ACM,"The 37th International Conference on Scalable Scientific Data Management (SSDBM 2025) will take place from June 23–25, 2025, in Columbus, Ohio, hosted by The Ohio State University. The conference serves as a forum for domain experts, data management researchers, practitioners, and developers to exchange the latest research on concepts, tools, and techniques for scalable and scientific data management, expanding its scope to cover all related fields.","# SSDBM 2025: Call for Papers
+
+The 37th International Conference on Scalable Scientific Data Management (SSDBM 2025) aims to bring together domain experts, data management researchers, practitioners, and developers to present and exchange the latest research findings on concepts, tools, and techniques for scalable scientific data management. The conference will be hosted by **The Ohio State University in Columbus, Ohio**, from **June 23 to June 25, 2025**.
+
+While previous editions of SSDBM primarily focused on scientific statistical databases, the 37th edition in 2025 will broaden its scope to encompass all areas of scalable and scientific data management. The program typically features a single-track format to foster active discussion and includes invited talks, panel sessions, and demonstrations of research prototypes and industrial systems.
+
+The Proceedings of SSDBM 2025 will be published by **Association of Computing Machinery (ACM) International Conference Proceeding Series (ICPS)** and will appear in the ACM Digital Library and many [indexing providers](https://authors.acm.org/journals/journals-indexing-list).
+
+## Topics of Interest
+
+Topics of particular interest include, but are not limited to, the following, as they relate to scientific data management:
+
+*   **Scientific Applications, Workflows and Reproducibility**
+    *   Design, implementation, optimization, and reproducibility of scientific workflows
+    *   Platforms and tools for reproducible data science and scientific collaboration
+    *   Application case studies (e.g., astrophysics, climate, energy, sustainability, biomedicine)
+    *   Open data standards and cross-platform compatibility for scientific data
+    *   Cloud computing issues in large-scale data management
+    *   System architectures for scientific data
+    *   HPC applications and scalability challenges in data-intensive scientific fields
+    *   Data ethics, bias in scientific data handling, and privacy in large-scale studies
+    *   Handling data errors, inconsistencies, and outliers in scientific datasets
+*   **Data Modeling, Management, and Integration**
+    *   FAIR data principles (Findable, Accessible, Interoperable, Reusable)
+    *   Data lifecycle and retention management, provenance data management
+    *   Data integration
+    *   Data storage and management architectures (e.g., distributed file systems, data lakes, high-performance storage)
+    *   Protocols and frameworks for cross-domain data sharing and exchange
+    *   Modeling of scientific data
+    *   Schema evolution
+    *   Information retrieval and text mining
+    *   Indexing and querying scientific data, including spatial, temporal, and streaming data
+*   **Big Data Processing and Performance Aspects**
+    *   Big data processing frameworks for scientific data
+    *   Scalable architectures and distributed systems for managing large-scale datasets
+    *   Optimization techniques for high-efficiency data storage and retrieval
+    *   Innovations in data compression and encoding for enhanced performance
+    *   Efficient computational techniques for statistical data analysis and modeling
+    *   Methods for ensuring data quality, integrity, and consistency in big data environments
+    *   Smart city applications and services leveraging high-performance data solutions
+*   **Machine Learning, Artificial Intelligence, and Visualization**
+    *   Database support of machine learning and AI
+    *   Data management for AI applications
+    *   Machine learning and AI for scientific data management
+    *   Visualization and exploration of large datasets
+    *   Security and privacy in scientific data management
+    *   Data storage and compression techniques for machine learning
+*   **Streaming and Real-Time Data Processing**
+    *   Stream data representation and management
+    *   Stream data analysis (e.g., summarization, statistical analysis, pattern matching, pattern discovery, learning, and prediction)
+    *   Dataflow and parallel processing for complex data workflows
+    *   Distributed systems and devices
+    *   Internet of Things (IoT) data analytics
+    *   Location-aware recommender systems
+
+## Submission Guidelines
+
+Authors are invited to submit original, unpublished manuscripts.
+
+*   All submissions should be formatted using the **ACM format** available at [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template) by selecting the generic `sigconf` sample. For submissions prepared in LaTeX, authors are recommended to use `\documentclass[sigconf,review]{acmart}` configuration.
+*   SSDBM 2025 employs a **single-blind review** process; authors must include their names and affiliations on the first page.
+*   All authors should respect **ACM Policy on Authorship and use of generative AI tools and technologies** (details on the policy are available at [https://www.acm.org/publications/policies/new-acm-policy-on-authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship)).
+*   Submission site: [https://easychair.org/conferences/?conf=ssdbm2025](https://easychair.org/conferences/?conf=ssdbm2025).
+
+## Submission Types
+
+*   **Regular Research Papers:** Up to **12 pages** (including references and appendices). These should be descriptions of complete technical work. Regular papers will be given a presentation slot in the conference and included in the conference proceedings.
+*   **Short and Demo Papers:** Up to **6 pages** (including references). The program committee may decide to accept some papers from the main track as short papers. Short papers will be given a short presentation slot and included in the conference proceedings.
+*   **Posters:** Submissions should include a **single-page abstract**. Posters will have an electronic poster presentation and will be published on the conference website, *without proceedings*.
+
+> **Note:** If your paper is selected, at least one author must register for the Technical Program in order to attend the conference and present the paper. Each author registration can be applied to only one accepted submission. For an accepted paper to be included in the proceedings, the author has to present the paper at the conference in person. Otherwise, the paper will be removed from the proceedings.
+
+## Important Dates
+
+All deadlines are Anywhere on Earth (AoE).
+
+*   **Paper submission deadline (Main Track):** March 2nd, 2025
+*   **Paper submission deadline (Short and Demo papers):** March 21st, 2025
+*   **Poster submission deadline:** April 21st, 2025 (extended)
+*   **Notification for acceptance (Papers):** April 4th, 2025
+*   **Notification for acceptance (Short and Demo papers):** April 14th, 2025
+*   **Notification for acceptance (Posters):** April 21st, 2025
+*   **Camera-Ready Deadline:** May 5th, 2025
+*   **Author Registration Deadline:** TBD, 2025
+
+## Registration
+
+The registration site is currently open. **Early bird registration ends on May 9th**.
+
+## Organization Committee (Key Roles)
+
+*   **General Chair:** Suren Byna, The Ohio State University
+*   **General Vice Chair:** Anthony Kougkas, Illinois Institute of Technology
+*   **Program Co-chairs:**
+    *   Venkat Vishwanath, Argonne National Laboratory
+    *   Sarah Neuwirth, Johannes Gutenberg University Mainz
+*   **Short and Demo Paper Co-chairs:**
+    *   Dong Dai, University of Delaware
+    *   Jalil Boukhobza, ENSTA-Bretagne
+    *   Alfredo Cuzzocrea, University of Calabria
+*   **Student Posters Competition Co-chairs:**
+    *   Jay Lofstead, Sandia National Laboratory
+    *   Karly Harrod, Oak Ridge National Laboratory
+*   **Proceedings Chair:** Jean Luca Bez, Lawrence Berkeley National Laboratory
+*   **Web Chair:** Houjun Tang, Lawrence Berkeley National Laboratory
+*   **Publicity Chair:** Chen Wang, Lawrence Livermore National Laboratory",,
+req-conf-1751699777343-i46tt,,International Symposium on Spatial and Temporal Databases,SSTD,https://sstd2025.github.io/index.html,https://sstd2025.github.io/calls.html,,"Conference dates: August 25 - 27, 2025
+Year: 2025
+Location: Osaka University, Nakanoshima center, Osaka, Japan
+City-State-Province: Osaka
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Abstract submission (Research / Demo / Industry tracks): May 11, 2025
+Submission Date.Paper submission deadline (Research / Demo / Industry tracks): May 18, 2025
+Submission Date.Thesis and Dissertation Workshop track submission deadline: June 7, 2025
+Notification Date.Notification date: July 1, 2025
+Camera-ready Date.Camera-ready: July 15, 2025
+Publisher: ACM","August 25 - 27, 2025",2025,"Osaka University, Nakanoshima center, Osaka, Japan",Osaka,Japan,Asia,Offline,"{""Abstract submission (Research / Demo / Industry tracks)"":""May 11, 2025"",""Paper submission deadline (Research / Demo / Industry tracks)"":""May 18, 2025"",""Thesis and Dissertation Workshop track submission deadline"":""June 7, 2025""}","{""Notification date"":""July 1, 2025""}","{""Camera-ready"":""July 15, 2025""}",{},{},No topics,ACM,"The 19th International Symposium on Spatial and Temporal Data (SSTD) will be held from August 25-27, 2025, at Osaka University, Nakanoshima center, Osaka, Japan. SSTD is a premier forum for researchers and practitioners in spatial and temporal data management, and all accepted papers will be published in the proceedings by ACM.","# SSTD 2025: Call for Papers and Tutorials
+
+The 19th International Symposium on Spatial and Temporal Data (SSTD 2025) will be held from **August 25-27, 2025**, at **Osaka University, Nakanoshima center, Osaka, Japan**.
+
+SSTD 2025 solicits submissions in the following tracks:
+
+*   **Call for Research / Demo / Industry Track Papers:** [href=""callResearchs.html""](callResearchs.html)
+*   **Call for Thesis and Dissertation Workshop Track Papers:** [href=""callThesis.html""](callThesis.html)
+*   **Call for Tutorial Proposals:** [href=""callTutorials.html""](callTutorials.html)
+
+## About SSTD
+
+The International Symposium on Spatial and Temporal Data (SSTD) has a long and distinguished history as a premier forum for researchers, practitioners, and industry leaders to present and discuss spatial and temporal data management innovations. Since its inception in 1989, SSTD has been at the forefront of advancing foundational theories, systems, and applications that address the challenges of handling spatial and temporal information. Over the years, the symposium has played a pivotal role in fostering research that has shaped the evolution of spatial databases, geospatial computing, and spatio-temporal analytics.
+
+## Publication
+
+All accepted papers will be published in the SSTD 2025 proceedings by ACM.
+
+## Important Dates
+
+Deadlines refer to 23:59 in the AoE (Anywhere on Earth) time zone.
+
+*   **Abstract submission (Research / Demo / Industry tracks):** May 11, 2025
+*   **Paper submission deadline (Research / Demo / Industry tracks):** May 18, 2025
+*   **Thesis and Dissertation Workshop track submission deadline:** June 7, 2025
+*   **Notification date:** July 1, 2025
+*   **Camera-ready:** July 15, 2025
+
+## Journal Submission
+
+Outstanding research papers will be selected for an extended journal submission to a special track of ""SSTD 2025 Best Papers"" in GeoInformatica (Springer).",,
+req-conf-1751699777343-i46tt,,ACM Symposium on Theory of Computing,STOC,https://acm-stoc.org/stoc2025/,https://acm-stoc.org/stoc2025/cfp-stoc2025.html,https://acm-stoc.org/stoc2025/,"Conference dates: June 23 - 27, 2025
+Year: 2025
+Location: Prague, Czech Republic
+City-State-Province: Prague
+Country: Czech Republic
+Continent: Europe
+Type: Offline
+Submission Date.STOC Paper Submission Deadline: November 4, 2024
+Submission Date.Workshop Proposals Due: March 9, 2025
+Notification Date.Submitted Papers Notification: February 1, 2025
+Camera-ready Date.Final STOC Papers Version Due: March 31, 2025
+Registration Date.Early Registration Deadline: May 9, 2025
+Other Date.Conference Hotel Block Reservation Deadline: May 23, 2025
+Topics: Algorithms and data structures, computational complexity, randomness in computing, algorithmic graph theory and combinatorics, analysis of Boolean functions, approximation algorithms, cryptography, computational learning theory, continuous and discrete optimization, economics and computation, parallel and distributed algorithms, quantum computing, algorithmic coding theory, computational geometry and topology, computational applications of logic, algebraic computation, and computational and foundational aspects of areas such as machine learning, fairness, privacy, networks, data management, databases and computational biology","June 23 - 27, 2025",2025,"Prague, Czech Republic",Prague,Czech Republic,Europe,Offline,"{""STOC Paper Submission Deadline"":""November 4, 2024"",""Workshop Proposals Due"":""March 9, 2025""}","{""Submitted Papers Notification"":""February 1, 2025""}","{""Final STOC Papers Version Due"":""March 31, 2025""}","{""Early Registration Deadline"":""May 9, 2025""}","{""Conference Hotel Block Reservation Deadline"":""May 23, 2025""}","Algorithms and data structures, computational complexity, randomness in computing, algorithmic graph theory and combinatorics, analysis of Boolean functions, approximation algorithms, cryptography, computational learning theory, continuous and discrete optimization, economics and computation, parallel and distributed algorithms, quantum computing, algorithmic coding theory, computational geometry and topology, computational applications of logic, algebraic computation, and computational and foundational aspects of areas such as machine learning, fairness, privacy, networks, data management, databases and computational biology",No publisher,"The 57th Annual ACM Symposium on Theory of Computing (STOC 2025) will be held in Prague, Czech Republic, from June 23-27, 2025. It is part of a 5-day TheoryFest featuring STOC papers, poster sessions, invited talks, workshops, tutorials, and social events. The conference is sponsored by the ACM Special Interest Group on Algorithms and Computation Theory (SIGACT).","# STOC 2025: Call for Papers
+
+The 57th ACM Symposium on Theory of Computing (STOC 2025) will be held in **Prague, Czech Republic** from **Monday, June 23 to Friday, June 27, 2025**. The symposium is sponsored by the ACM Special Interest Group on Algorithms and Computation Theory (SIGACT).
+
+STOC 2025 is part of a 5-day TheoryFest with an expanded program including STOC papers, poster sessions, invited talks, workshops, tutorials, and social events.
+
+## Topics of Interest
+
+Papers presenting new and original research on the theory of computation are sought. Typical but not exclusive topics include:
+
+*   Algorithms and data structures
+*   Computational complexity
+*   Randomness in computing
+*   Algorithmic graph theory and combinatorics
+*   Analysis of Boolean functions
+*   Approximation algorithms
+*   Cryptography
+*   Computational learning theory
+*   Continuous and discrete optimization
+*   Economics and computation
+*   Parallel and distributed algorithms
+*   Quantum computing
+*   Algorithmic coding theory
+*   Computational geometry and topology
+*   Computational applications of logic
+*   Algebraic computation
+*   Computational and foundational aspects of areas such as machine learning, fairness, privacy, networks, data management, databases, and computational biology.
+
+Papers that extend the reach of the theory of computing, or raise important problems that can benefit from theoretical investigation and analysis, are encouraged. The program committee will make every effort to consider a broad range of areas.
+
+## Submission Guidelines
+
+*   **Submission Format:** Submissions should start with a title page consisting of the title of the paper, no author information, and an abstract of a few paragraphs summarizing the paper's contributions. There is no page limit, and authors are encouraged to use the ""full version"" of their paper as the submission.
+*   **Content:** Each submission should contain within the initial ten pages following the title page a clear presentation of the merits of the paper, including a discussion of its importance within the context of prior work and a description of the key technical and conceptual ideas used to achieve its main claims. This part should be addressed to a broad spectrum of theoretical computer science researchers, not solely to experts in the subarea.
+*   **Proofs:** Proofs must be provided that can enable the main mathematical claims of the paper to be fully verified.
+*   **Length:** Although there is no bound on the length of a submission, material other than the abstract, table of contents, and the first ten pages will be read at the committee's discretion. Authors are encouraged to put the references at the very end of the submission.
+*   **Formatting:** The submission should be typeset using 11-point or larger fonts, in a single-column, single-space (between lines) format with ample spacing throughout and 1-inch margins all around, on letter-size (8 1/2 x 11 inch) paper. Submissions deviating significantly from these guidelines risk rejection without consideration of their merits.
+*   **Anonymity:** STOC 2025 will use **double-blind reviewing**. Submissions should not reveal the identity of the authors in any way. This includes authors' names, affiliations, and email addresses. Authors should not include obvious references that reveal their own identity and should ensure any references to their own related work are in the third person (e.g., not ""We build on our previous work…"" but rather ""We build on the work of…""). Important references should not be omitted or anonymized. Authors are free to disseminate their ideas or draft versions of their paper (e.g., post on the web, submit to arXiv, give talks).
+*   **Confidentiality:** All submissions will be treated as confidential and will only be disclosed to the committee and their chosen sub-referees.
+*   **PC Member Submissions:** Submissions authored or coauthored by PC members (other than the PC chair) are allowed.
+*   **References:** Authors are encouraged to include hyperlink cross-referencing for bibliographic entries, theorems, sections, etc. A table of contents may be added on a page immediately following the title page. Authors are asked to avoid ""et al."" in citations, favoring an equal mention of all authors' surnames. Bibliographic references should preferably be alphanumeric (e.g., the first letters of the authors' surnames, or at least the first three followed by +) followed by the year of publication.
+*   **Submission Server:** The submission server is scheduled to open on October 1, 2024. ([https://stoc25.hotcrp.com/](https://stoc25.hotcrp.com/))
+
+## Important Dates
+
+*   **STOC Paper Submission Deadline:** Monday, November 4, 2024 (7:59pm EST)
+*   **Submitted Papers Notification:** February 1, 2025
+*   **Final STOC Papers Version Due:** March 31, 2025
+
+## Publication and Presentation
+
+*   Authors of accepted papers will be expected to register and present their work at the conference.
+*   Authors will also be asked to upload a recording of their talk in advance of the conference.
+*   The full papers, with proofs, should be made publicly available on arXiv, ECCC, or a similar preprint service by the camera-ready deadline.
+*   Authors are encouraged to obtain an ORCID ID for the publishing process.
+
+## Awards
+
+*   **Best Paper Award:** Up to three papers may be designated as STOC Best Papers.
+*   **Danny Lewin Best Student Paper Award:** A prize of $500 will be given to the author(s) of the best student-authored paper (if all authors are full-time students at submission).
+
+## Travel Support
+
+SIGACT provides travel awards to students without available support and researchers from developing countries. More information will be posted later.
+
+## Contact Information
+
+*   **Program Committee Chair:** Nikhil Bansal (University of Michigan)
+*   **Local Arrangements Chair:** Michal Koucký (Charles University)",,
+req-conf-1751699777343-i46tt,,International Symposium on Theoretical Aspects of Computer Science,STACS,https://stacs2025.de/,https://stacs2025.de/cfp/,https://stacs2025.de/dates/,"Conference dates: March 04 - 07, 2025
+Year: 2025
+Location: Jena, Germany
+City-State-Province: Jena
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Submission deadline: September 26, 2024
+Notification Date.Feedback to authors: November 15, 2024
+Notification Date.Author Notification: December 16, 2024
+Camera-ready Date.Camera-ready version: January 2025
+Other Date.Rebuttal: November 21, 2024
+Other Date.Pre-conference workshop: March 03 - 04, 2025
+Topics: Algorithms, Data Structures and Complexity, Automata, Logic, Semantics, and Theory of Programming
+Publisher: Leibniz International Proceedings in Informatics (LIPIcs)","March 04 - 07, 2025",2025,"Jena, Germany",Jena,Germany,Europe,Offline,"{""Submission deadline"":""September 26, 2024""}","{""Feedback to authors"":""November 15, 2024"",""Author Notification"":""December 16, 2024""}","{""Camera-ready version"":""January 2025""}",{},"{""Rebuttal"":""November 21, 2024"",""Pre-conference workshop"":""March 03 - 04, 2025""}","Algorithms, Data Structures and Complexity, Automata, Logic, Semantics, and Theory of Programming",Leibniz International Proceedings in Informatics (LIPIcs),"The 42nd International Symposium on Theoretical Aspects of Computer Science (STACS 2025) will be held in Jena, Germany, from March 04-07, 2025, preceded by a workshop on March 03. The symposium features two tracks: Track A on algorithms, data structures, and complexity, and Track B on automata, logic, semantics, and theory of programming. The proceedings are now available.","# STACS 2025: Call for Papers
+
+The 42nd International Symposium on Theoretical Aspects of Computer Science (STACS 2025) is planned to take place from **March 4th to March 7th, 2025** in **Jena, Germany**.
+
+STACS 2025 will consist of two tracks:
+
+*   **Track A:** Focuses on algorithms, data structures, and complexity.
+*   **Track B:** Focuses on automata, logic, semantics, and theory of programming.
+
+## Submission Topics
+
+Authors are invited to submit papers presenting original and unpublished research on theoretical aspects of computer science. Topics include, but are not limited to:
+
+### Track A. Algorithms, Data Structures and Complexity
+
+*   Design of parallel algorithms
+*   Distributed algorithms
+*   Approximation algorithms
+*   Parameterized algorithms
+*   Randomized algorithms
+*   Analysis of algorithms
+*   Combinatorics of data structures
+*   Computational geometry
+*   Cryptography
+*   Algorithms for machine learning
+*   Algorithmic game theory
+*   Quantum algorithms
+*   Computational and structural complexity theory
+*   Parameterised complexity
+*   Randomness in computation
+
+### Track B. Automata, Logic, Semantics and Theory of Programming
+
+*   Automata theory
+*   Games and multi-agent systems
+*   Algebraic and categorical methods
+*   Models of computation
+*   Concurrency
+*   Timed systems
+*   Finite model theory
+*   Database theory
+*   Semantics
+*   Type systems
+*   Program analysis
+*   Specification and verification
+*   Rewriting and deduction
+*   Learning theory
+*   Logical aspects of computability and complexity
+
+## Important Dates
+
+All times are **Anywhere on Earth (AoE, UTC-12)**.
+
+*   **Submission deadline:** September 26, 2024
+*   **Feedback to authors:** November 15, 2024
+*   **Rebuttal:** November 21, 2024
+*   **Author Notification:** December 16, 2024
+*   **Camera-ready version:** mid-January 2025
+*   **Pre-conference workshop:** March 03-04, 2025
+*   **Conference:** March 04-07, 2025
+
+## Submissions
+
+### Format of Submissions
+
+*   Submissions should be made through EasyChair: [https://easychair.org/conferences/?conf=stacs2025](https://easychair.org/conferences/?conf=stacs2025)
+*   Authors are invited to submit an **extended abstract or a full paper** with at most **15 pages** (excluding title page, references, and appendix).
+*   The title page should contain the title and abstract only; no author information.
+*   The LIPIcs style file is mandatory; no changes to font size or page geometry are permitted. Refer to [LIPIcs author instructions](https://submission.dagstuhl.de/series/details/LIPIcs#author).
+*   Submissions after the deadline or not adhering to the format risk rejection.
+*   Submissions should be made to appropriate tracks; PCs reserve the right to reassign papers.
+*   Extended abstracts should include a succinct statement of issues, motivation, summary of main results, and significance explanation.
+*   Simultaneous submission to other conferences with published proceedings or journals is **not allowed**.
+
+### Double-blind Reviewing
+
+STACS 2025 employs a **lightweight double-blind reviewing process**: submissions should not reveal author identity. Essential references should not be omitted or anonymized. Authors may disseminate drafts of their papers (e.g., on the web, arXiv, talks).
+
+### Conflicts of Interest
+
+Authors will be invited to list persons with a Conflict of Interest (COI) based on specific categories (family, mentor/mentee, affiliation, etc.). Authors can contact PC chairs for clarification or unlisted conflicts.
+
+### Rebuttal
+
+There will be a rebuttal period for authors to respond to reviews.
+
+## Conference
+
+At least one author of each accepted paper is expected to register. Remote presentation options will be offered.
+
+## Proceedings
+
+Accepted papers will be published in the Leibniz International Proceedings in Informatics (LIPIcs) series, ensuring perennial, free electronic access. Authors retain rights. The final camera-ready version should follow LIPIcs guidelines, with a limit of 18 pages (excluding bibliography and front pages). Appendices from the initial submission should not be included unless suggested by reviewers. Proceedings papers can link to full versions published elsewhere.
+
+## Code of Conduct
+
+STACS is committed to a respectful forum, free from violence, discrimination, or harassment. Attendees must agree to the Code of Conduct. Reporting mechanisms are available through SafeToC advocates and conference chairs.",,
+req-conf-1751699777343-i46tt,,International Symposium on Symbolic and Numeric Algorithms for Scientific Computing,SYNASC,https://synasc.ro/2025/,https://easychair.org/cfp/SYNASC2025,https://synasc.ro/2025/important-dates/,"Conference dates: September 22 - 25, 2025
+Year: 2025
+Location: Timișoara, România
+City-State-Province: Timișoara
+Country: Romania
+Continent: Europe
+Type: Offline
+Submission Date.Paper submission for main tracks: July 6, 2025
+Submission Date.Paper submission for workshops and special sessions: July 6, 2025
+Notification Date.Notification of acceptance: July 28, 2025
+Registration Date.Registration: September 12, 2025
+Camera-ready Date.Revised papers according to the reviews: September 12, 2025
+Topics: Symbolic Computation, Numerical Computing, Logic and Programming, Artificial Intelligence, Distributed Computing, Theory of Computing
+Publisher: Conference Publishing Service (CPS)","September 22 - 25, 2025",2025,"Timișoara, România",Timișoara,Romania,Europe,Offline,"{""Paper submission for main tracks"":""July 6, 2025"",""Paper submission for workshops and special sessions"":""July 6, 2025""}","{""Notification of acceptance"":""July 28, 2025""}","{""Revised papers according to the reviews"":""September 12, 2025""}","{""Registration"":""September 12, 2025""}",{},"Symbolic Computation, Numerical Computing, Logic and Programming, Artificial Intelligence, Distributed Computing, Theory of Computing",Conference Publishing Service (CPS),"The 27th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing (SYNASC 2025) will take place from September 22-25, 2025, in Timișoara, România. The symposium aims to foster interaction among communities focused on defining, optimizing, and executing complex algorithms in scientific computing, covering areas from symbolic and numeric computation to formal methods, programming, artificial intelligence, distributed computing, and computing theory.","# SYNASC 2025: Call for Papers
+
+SYNASC aims to stimulate the interaction among multiple communities focusing on defining, optimizing, and executing complex algorithms in several application areas. The focus of the conference then ranges from symbolic and numeric computation to formal methods applied to programming, artificial intelligence, distributed computing, and computing theory. The interplay between these areas is essential in the current scenario where the economy and society demand for the development of complex, data-intensive, trustworthy, and high-performance computational systems.
+
+## Submission Types
+
+*   **Regular papers:** describing fully completed research results (up to 8 pages of text, excluding references, in the two-column paper style).
+*   **System descriptions and experimental papers:** describing software prototypes, results of simulations, or experimental data analysis, with a link to the reported results (up to 8 pages of text, excluding references, in the two-column paper style).
+*   **Short papers:** describing ongoing work, preliminary results and/or research challenges of PhD students (up to 4 pages of text, excluding references, in the two-columns paper style).
+
+## Topics
+
+SYNASC is organized into six tracks:
+
+### Symbolic Computation
+*   computer algebra
+*   symbolic analysis
+*   symbolic combinatorics
+*   symbolic techniques applied to numerics
+*   symbolic regression
+*   hybrid symbolic and numeric algorithms
+*   numerics and symbolics for geometry
+*   programming with constraints, narrowing
+*   applications of symbolic computation to artificial intelligence and vice-versa
+
+### Numerical Computing
+*   iterative approximation of fixed points
+*   solving systems of nonlinear equations
+*   numerical and symbolic algorithms for differential equations
+*   numerical and symbolic algorithms for optimization
+*   parallel algorithms for numerical computing
+*   scientific visualization and image processing
+
+### Logic and Programming
+*   automatic reasoning
+*   formal system verification
+*   formal verification and synthesis
+*   software quality assessment
+*   static analysis
+*   timing analysis
+*   automated testing
+
+### Distributed Computing
+*   modelling of parallel and distributed systems
+*   parallel and distributed algorithms
+*   architectures for parallel and distributed systems
+*   applications for parallel and distributed systems
+*   acceleration of AI or Big Data applications using distributed and parallel computing
+*   networked intelligence and Internet of Things
+
+### Artificial Intelligence
+*   knowledge discovery, representation, and management
+*   automated reasoning, uncertain reasoning, and constraint strategies
+*   recommender and expert systems
+*   intelligent systems, agents, and networks
+*   agent-based complex systems
+*   AI-based systems for scientific computing
+*   machine learning – including deep learning models and technologies
+*   explainable and trustworthy AI
+*   information retrieval, data mining, text mining, and web mining
+*   computational intelligence - including fuzzy, neural, and evolutionary computing
+*   AI applications: natural language processing, computer vision, signal processing, stock market, computational neuroscience, robotics, autonomous vehicles, medical diagnosis, cybersecurity, digital design, online education, algorithm invention and analysis
+
+### Theory of Computing
+*   data structures and algorithms
+*   combinatorial optimization
+*   formal languages and combinatorics on words
+*   graph-theoretic and combinatorial methods in computer science
+*   algorithmic paradigms, including distributed, online, approximation, probabilistic, game-theoretic algorithms
+*   computational complexity theory, including structural complexity, boolean complexity, communication complexity, average-case complexity, derandomization and property testing
+*   logical approaches to complexity, including finite model theory
+*   algorithmic and computational learning theory
+*   aspects of computability theory, including computability in analysis and algorithmic information theory
+*   proof complexity
+*   computational social choice and game theory
+*   new computational paradigms: CNN computing, quantum, holographic, and other non-standard approaches to computability
+*   randomized methods, random graphs, threshold phenomena, and typical-case complexity
+*   automata theory and other formal models, particularly in relation to formal verification methods such as model checking and runtime verification
+*   applications of theory, including wireless and sensor networks, computational biology, and computational economics
+*   experimental algorithmics
+
+## Important Dates
+
+*   **Paper submission for main tracks (final deadline):** July 6, 2025 (AoE)
+*   **Paper submission for workshops and special sessions (final deadline):** July 6, 2025 (AoE)
+*   **Notification of acceptance:** July 28, 2025
+*   **Registration:** September 12, 2025
+*   **Revised papers according to the reviews:** September 12, 2025
+*   **Symposium:** September 22-25, 2025
+
+## Submission
+
+*   **Submission Link:** [https://easychair.org/conferences/?conf=synasc2025](https://easychair.org/conferences/?conf=synasc2025)
+*   All submissions must contain original research results and should not have been submitted or published elsewhere.
+
+## Publication
+
+SYNASC 2025 post-proceedings will be published by the Conference Publishing Service (CPS) and sent for indexing in Web of Science, Scopus, DBLP.
+
+## Venue
+
+The conference will be held at the **West University of Timisoara, Romania, blvd. Vasile Pârvan, 4**.
+
+## Contact Information
+
+All questions about submissions should be emailed to [contact@synasc.ro](mailto:contact@synasc.ro).",,
+req-conf-1751699777343-i46tt,,Conference on Theory and Applications of Models of Computation,TAMC,http://www.maths.sdnu.edu.cn/TAMC2025.htm,http://www.maths.sdnu.edu.cn/TAMC2025.htm#Program,http://www.maths.sdnu.edu.cn/TAMC2025.htm#Program,"Conference dates: September 19-21, 2025
+Year: 2025
+Location: Jinan, China
+City-State-Province: Jinan
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Submission deadline: June 1, 2025
+Notification Date.Notification of acceptance: July 1, 2025
+Camera-ready Date.Camera-ready and registration: July 15, 2025
+Topics: Computational complexity and algorithms, Models of computation, Automata theory and formal languages, Quantum computing, Algorithmic game theory, Cryptography and data security, Computational biology and bioinformatics, Parallel and distributed computing, Formal verification and program analysis, Computational geometry and graph theory, Logic and proof theory, Computational social choice, Combinatorial optimization
+Publisher: Springer-Verlag","September 19-21, 2025",2025,"Jinan, China",Jinan,China,Asia,Offline,"{""Submission deadline"":""June 1, 2025""}","{""Notification of acceptance"":""July 1, 2025""}","{""Camera-ready and registration"":""July 15, 2025""}",{},{},"Computational complexity and algorithms, Models of computation, Automata theory and formal languages, Quantum computing, Algorithmic game theory, Cryptography and data security, Computational biology and bioinformatics, Parallel and distributed computing, Formal verification and program analysis, Computational geometry and graph theory, Logic and proof theory, Computational social choice, Combinatorial optimization",Springer-Verlag,"The 19th Annual Conference on Theory and Applications of Models of Computation (TAMC 2025) will be held in Jinan, China, from September 19-21, 2025. The conference aims to bring together researchers interested in computational theory, information theory, and their applications, with a focus on computability, complexity, algorithms, information theory, machine learning theory, and the foundations of artificial intelligence.","# TAMC 2025: Call for Papers
+
+The 19th Annual Conference on Theory and Applications of Models of Computation (TAMC 2025) will be held on **September 19-21, 2025, in Jinan, China**.
+
+TAMC 2025 aims to bring together a wide range of researchers with interests in computational theory, information theory, and applications. The main themes of the conference are computability, complexity, algorithms, information theory, and their extensions to machine learning theory and foundations of artificial intelligence.
+
+## Topics of Interest
+
+The topics of interest include (but are not limited to):
+
+*   Computational complexity and algorithms
+*   Models of computation
+*   Automata theory and formal languages
+*   Quantum computing
+*   Algorithmic game theory
+*   Cryptography and data security
+*   Computational biology and bioinformatics
+*   Parallel and distributed computing
+*   Formal verification and program analysis
+*   Computational geometry and graph theory
+*   Logic and proof theory
+*   Computational social choice
+*   Combinatorial optimization
+
+## Important Dates
+
+*   **Submission deadline:** May 25, 2025 / June 1, 2025
+*   **Notification of acceptance:** July 1, 2025
+*   **Camera-ready and registration:** July 15, 2025
+*   **Conference dates:** September 19-21, 2025
+
+## Paper Submission
+
+Submissions should contain a scholarly exposition of ideas, techniques, and results, including motivation and a clear comparison with related work. The length of the submission should not exceed **12 pages in LNCS style** (including references, but excluding the optional appendix).
+
+Appendices should be placed at the end of the main body (after references, in the same file). For code and data, authors can provide anonymous download links or refer to an anonymized GitHub repository.
+
+The submitted papers will be reviewed in a **double-blind peer review** manner. Please delete the author information on your manuscript.
+
+All submissions must be submitted electronically through Easychair: [https://easychair.org/conferences/?conf=tamc2025](https://easychair.org/conferences/?conf=tamc2025)
+
+## Publication
+
+The proceedings of the Conference will be published by **Springer-Verlag in the Lecture Notes in Computer Science (LNCS) series**. Selected high-quality papers will be invited to Theoretical Computer Science, and other journals.
+
+## Awards
+
+Awards will be given to the **best paper** and the **best student paper**. To be eligible for the best student paper award, all authors must be full-time students at the time of submission. Please indicate in the final line of the abstract that the paper is being considered for the best student paper award.
+
+## Contact
+
+*   Emails: [tamc2025@163.com](mailto:tamc2025@163.com)
+*   Emails: [tamc2025jn@gmail.com](mailto:tamc2025jn@gmail.com)",,
+req-conf-1751699777343-i46tt,,Theoretical Aspects of Rationality and Knowledge,TARK,https://ccc.cs.uni-duesseldorf.de/tark-2025/,https://easychair.org/cfp/tark2025,https://ccc.cs.uni-duesseldorf.de/tark-2025/important-dates/,"Conference dates: July 14 - 16, 2025
+Year: 2025
+Location: Heinrich-Heine-Universität Düsseldorf, Germany
+City-State-Province: Dusseldorf
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Deadline for abstract registrations: March 24, 2025
+Submission Date.Deadline for submissions: March 28, 2025
+Notification Date.Notification of acceptance: May 2, 2025
+Topics: semantic models for knowledge, belief, awareness and uncertainty, bounded rationality and resource-bounded reasoning, commonsense epistemic reasoning, epistemic logic, epistemic game theory, knowledge and action, applications of reasoning about knowledge and other mental states, belief revision, computational social choice, algorithmic game theory, and foundations of multi-agent systems","July 14 - 16, 2025",2025,"Heinrich-Heine-Universität Düsseldorf, Germany",Dusseldorf,Germany,Europe,Offline,"{""Deadline for abstract registrations"":""March 24, 2025"",""Deadline for submissions"":""March 28, 2025""}","{""Notification of acceptance"":""May 2, 2025""}",{},{},{},"semantic models for knowledge, belief, awareness and uncertainty, bounded rationality and resource-bounded reasoning, commonsense epistemic reasoning, epistemic logic, epistemic game theory, knowledge and action, applications of reasoning about knowledge and other mental states, belief revision, computational social choice, algorithmic game theory, and foundations of multi-agent systems",No publisher,"The Twentieth Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2025) will be held from July 14 to July 16, 2025, at the Heinrich-Heine-Universität Düsseldorf in Germany. The conference aims to bring together researchers from various fields to further understanding of interdisciplinary issues involving reasoning about rationality and knowledge.","# TARK 2025: Call for Papers
+
+The Twentieth Conference on Theoretical Aspects of Rationality and Knowledge (TARK 2025) will be held from **July 14 until July 16, 2025**, at the **Heinrich-Heine-Universität Düsseldorf in Germany**.
+
+## Scope and Mission
+
+The mission of the TARK conferences is to bring together researchers from a wide variety of fields, including Computer Science, Artificial Intelligence, Game Theory, Decision Theory, Philosophy, Logic, Linguistics, and Cognitive Science, in order to further our understanding of interdisciplinary issues involving reasoning about rationality and knowledge.
+
+## Topics of Interest
+
+These include, but are not limited to, semantic models for knowledge, belief, awareness and uncertainty, bounded rationality and resource-bounded reasoning, commonsense epistemic reasoning, epistemic logic, epistemic game theory, knowledge and action, applications of reasoning about knowledge and other mental states, belief revision, computational social choice, algorithmic game theory, and foundations of multi-agent systems.
+
+## Content Requirements
+
+Strong preference will be given to papers whose topic is of interest to an interdisciplinary audience, and papers should be accessible to such an audience. Papers will be held to the usual high standards of research publications. In particular, they should:
+
+1) Contain enough information to enable the program committee to identify the main contribution of the work;
+2) Explain the significance of the work—its novelty and its practical or theoretical implications; and
+3) Include comparisons with and references to relevant literature.
+
+## Submission Style and Format
+
+*   **Extended abstracts** should be no longer than **10 pages** (excluding references).
+*   Optional technical details such as proofs may be included in an appendix.
+*   One author of each accepted paper will be expected to present the paper at the conference.
+*   To format your paper, please use the [EPTCS LaTeX style](http://style.eptcs.org/).
+*   TARK reviewing is not double-anonymised, so author names can be included in the submission.
+
+## Submission Deadlines
+
+*   **Abstract registration deadline:** March 24, 2025
+*   **Submission deadline:** March 28, 2025
+*   **Notification of acceptance:** May 2, 2025
+
+## Proceedings
+
+There will be a proceedings for TARK 2025 at EPTCS (Electronic Proceedings in Theoretical Computer Science). The proceedings of TARK 2025 will also be open access and available online.
+
+## Invited Speakers
+
+*   Kaushik Basu (Carl Marks Professor of International Studies, Cornell University, Ithaca, NY, USA)
+*   Elizabeth Maggie Penn (Political Science and Quantitative Theory and Methods, Emory University, Atlanta, GA, USA)
+*   Marcus Pivato (Centre d'Économie de la Sorbonne, Université Paris 1 Panthéon-Sorbonne, Paris, France)
+*   Tuomas Sandholm (Angel Jordan University Professor of Computer Science, Carnegie Mellon University, Pittsburgh, PA, USA)
+
+## Chairs
+
+*   **Conference chair:** Joe Halpern, Cornell University
+*   **Program chair:** Adam Bjorndahl, Carnegie Mellon University
+*   **Local organizing chair:** Jörg Rothe, Heinrich-Heine-Universität Düsseldorf
+
+## Submission Link
+
+Submissions can be made at: [https://easychair.org/conferences/?conf=tark2025](https://easychair.org/conferences/?conf=tark2025)
+
+## Contact
+
+E-Mail: tark25@hhu.de",,
+req-conf-1751699777343-i46tt,,Richard Tapia Celebration of Diversity in Computing Conference,Tapia,https://tapiaconference.cmd-it.org/,https://tapiaconference.cmd-it.org/2025-call-for-participation/,https://tapiaconference.cmd-it.org/attend/schedule/,"Conference dates: September 10-12, 2025
+Year: 2025
+Location: Dallas, Texas
+City-State-Province: Dallas, Texas
+Country: United States
+Continent: North America
+Type: Offline
+Notification Date.Decision notifications for ALL submissions will be sent starting: April 15, 2025
+Topics: Generative AI, quantum computing, cybersecurity, robotics, virtual/augmented reality, human-centric computing, smart mobility, social computing, accessibility, culturally relevant computing, gender-inclusive design, unconscious bias, imposter syndrome, recruitment and retention best practices, outreach, entrepreneurship, effective communication, career paths, mentoring, networking, academic topics","September 10-12, 2025",2025,"Dallas, Texas","Dallas, Texas",United States,North America,Offline,{},"{""Decision notifications for ALL submissions will be sent starting"":""April 15, 2025""}",{},{},{},"Generative AI, quantum computing, cybersecurity, robotics, virtual/augmented reality, human-centric computing, smart mobility, social computing, accessibility, culturally relevant computing, gender-inclusive design, unconscious bias, imposter syndrome, recruitment and retention best practices, outreach, entrepreneurship, effective communication, career paths, mentoring, networking, academic topics",No publisher,"The Richard Tapia Celebration of Diversity in Computing Conference (Tapia) is the premier venue to acknowledge, promote, and celebrate diversity in computing. The 2025 conference will be held in Dallas, Texas, from September 10-12, 2025, with a focus on Generative AI and including a GenAI Hackathon.","# Tapia 2025: Call for Participation
+
+Submissions are closed for all program components. Decision notifications for ALL submissions will be sent starting **April 15, 2025**.
+
+View Submission Guidelines: [https://tapiaconference.cmd-it.org/2025-submission-guidelines/](https://tapiaconference.cmd-it.org/2025-submission-guidelines/)
+
+Given the transformative impact of generative AI, the Tapia 2025 program will have major components focused on generative AI, including tutorials, workshops, and a generative AI hackathon.
+
+## Technical Topics
+
+Covers technical topics in computing such as generative AI, quantum computing, cybersecurity, robotics, virtual/augmented reality, human-centric computing, smart mobility, social computing, and other related topics.
+
+## Professional Development
+
+Covers topics particular to professionals in industry or government agencies such as entrepreneurship, effective communication, career paths, mentoring, networking, and academic topics pertaining to undergraduate students, graduate students, faculty, or administrators, such as applying for graduate school/fellowships, academic careers, effective teaching, student retention, and other related topics.
+
+## Broadening Participation in Computing
+
+Covers topics promoting inclusivity in computing. Includes topics such as accessibility, culturally relevant computing, gender-inclusive design, unconscious bias, imposter syndrome, recruitment and retention best practices, outreach, and other related topics.
+
+### Program Components Open for Submission:
+
+*   **Panels and Workshops:** Sessions and interactive workshops on current technical topics such as generative AI, quantum computing, and cybersecurity, as well as topics related to broadening participation in computing and professional development for diverse communities.
+*   **Birds of a Feather (BoF):** Sessions that provide an informal, town-hall like forum for the discussion of technical or social issues among interested parties, providing a venue for communities (existing or dynamically organized) to network and collaborate.
+
+*NOTE: Recruiting or marketing related sessions will not be accepted.*
+
+### Additional Program Components Open for Submission:
+
+*   **Student Posters/ACM Student Research Competition (SRC):** Undergraduate and graduate students are encouraged to present their latest research results and methodologies.
+*   **Doctoral Consortium:** PhD candidates have the opportunity to present and discuss their research with a panel of established researchers.
+*   **Scholarships:** Students at institutions in the U.S. or U.S. Territories and faculty and postdocs at Minority Serving Institutions are welcome to apply.
+
+Questions regarding the Call for Participation can be sent to tapia-conference-committee@cmd-it.org.",,
+req-conf-1751699777343-i46tt,,Theory of Cryptography Conference,TCC,https://tcc.iacr.org/2025/,https://tcc.iacr.org/2025/callforpapers.php,,"Conference dates: December 1-5, 2025
+Year: 2025
+Location: Aarhus, Denmark
+City-State-Province: Aarhus
+Country: Denmark
+Continent: Europe
+Type: Offline
+Submission Date.Submission deadline: May 27, 2025
+Notification Date.Final notification: August 28, 2025
+Camera-ready Date.Final versions due: September 25, 2025
+Topics: paradigms, approaches, and techniques used to conceptualize natural cryptographic problems and provide algorithmic solutions to them
+Publisher: Springer","December 1-5, 2025",2025,"Aarhus, Denmark",Aarhus,Denmark,Europe,Offline,"{""Submission deadline"":""May 27, 2025""}","{""Final notification"":""August 28, 2025""}","{""Final versions due"":""September 25, 2025""}",{},{},"paradigms, approaches, and techniques used to conceptualize natural cryptographic problems and provide algorithmic solutions to them",Springer,"The Theory of Cryptography Conference (TCC) 2025, the 23rd in its series, will be held in Aarhus, Denmark, from December 1-5, 2025. Organized by the International Association for Cryptologic Research (IACR), the conference focuses on foundational and theoretical aspects of cryptography, with proceedings published by Springer in the LNCS series. It is planned as an in-person meeting.","# TCC 2025: Call for Papers
+
+## General Information
+
+TCC 2025 will take place in **Aarhus, Denmark** on **December 1-5, 2025**. TCC 2025 is organized by [the International Association for Cryptologic Research (IACR)](https://iacr.org/). The proceedings will be published by **Springer in the LNCS series**. Papers presenting original research on foundational and theoretical aspects of cryptography are sought.
+
+For more information about TCC, see [the TCC manifesto](https://www.iacr.org/workshops/tcc/manifesto.html).
+
+The conference is planned to be an **in-person meeting**. At least one author of each accepted paper is required to present the paper in person at the conference, unless there are extenuating circumstances approved by the chairs.
+
+## How to Submit
+
+Author instructions for paper submission may be found on the submission page.
+
+[Submit a paper](papersubmission.php)
+
+The Theory of Cryptography Conference deals with the paradigms, approaches, and techniques used to conceptualize natural cryptographic problems and provide algorithmic solutions to them. More specifically, the scope of the conference includes, but is not limited to the:
+
+*   study of known paradigms, approaches, and techniques, directed towards their better understanding and utilization
+*   discovery of new paradigms, approaches and techniques that overcome limitations of the existing ones
+*   formulation and treatment of new cryptographic problems
+*   study of notions of security and relations among them
+*   modeling and analysis of cryptographic algorithms
+*   study of the complexity assumptions used in cryptography
+
+## Important Dates
+
+*   **Submission deadline:** May 27, 2025, 23:59 anywhere on earth (AoE)
+*   **Final notification:** Aug 28, 2025
+*   **Final versions due:** Sep 25, 2025
+*   **Conference begins:** Dec 1, 2025
+
+Further details are available on the [paper submission page](papersubmission.php).
+
+## Proceedings
+
+Proceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series. The online version will be available to all conference attendees. Physical books will be available after the conference for a separate fee. Instructions for preparing the final proceedings version will be sent to the authors of accepted papers. The final copies of the accepted papers will be due on the final version deadline listed. This is a strict deadline, and authors should prepare accordingly.
+
+## Awards
+
+*   **Luca Trevisan Young Researcher Award:** This prize is for the best paper authored solely by young researchers, where a young researcher is a person that at the time of the paper's submission is at most two years past their graduation from a PhD program. Eligibility must be indicated at the time of submission, using a checkbox in the submission form. The program committee may decline to make the award, or may split it among several papers.
+*   **Outstanding Paper Award:** The program committee may choose one or more papers to receive an Outstanding Paper Award, recognizing outstanding contributions.
+
+## Program Committee
+
+*   Divesh Aggarwal (National University of Singapore)
+*   Prabhanjan Ananth (University of California Santa Barbara)
+*   Marshall Ball (New York University)
+*   James Bartusek (New York University)
+*   Andrej Bogdanov (University of Ottawa)
+*   Ran Canetti (Boston University)
+*   Kai-Min Chung (Academia Sinica)
+*   Ivan Damgård (Aarhus University)
+*   Nico Döttling (Cispa Helmholtz Center (i.G.))
+*   Cody Freitag (Northeastern University)
+*   Aarushi Goel (Purdue University)
+*   Shai Halevi (AWS)
+*   Aayush Jain (Carnegie Mellon University)
+*   Abhishek Jain (NTT Research & Johns Hopkins University)
+*   Zhengzhong Jin (Northeastern University)
+*   Daniel Jost (New York University)
+*   Wei-Kai Lin (University of Virginia)
+*   Ji Luo (Boston University)
+*   Hemanta K. Maji (Purdue University)
+*   Peihan Miao (Brown University)
+*   Tomoyuki Morimae (Kyoto University)
+*   Varun Narayanan (University of California Los Angeles)
+*   Ryo Nishimaki (NTT Social Informatics Labs)
+*   Eran Omri (Ariel University)
+*   Alexander Poremba (Massachusetts Institute of Technology)
+*   Leonid Reyzin (Boston University)
+*   João Ribeiro (University of Lisbon)
+*   Lior Rotem (Stanford University)
+*   Guy N. Rothblum (Apple)
+*   Luisa Siniscalchi (Technical University of Denmark)
+*   Yifan Song (Tsinghua University)
+*   Katerina Sotiraki (Yale University)
+*   Akshayaram Srinivasan (University of Toronto)
+*   Prashant N. Vasudevan (National University of Singapore)
+*   Brent Waters (NTT Research & University of Texas at Austin)
+*   Hoeteck Wee (NTT Research & École Normale Supérieure)
+*   Shota Yamada (AIST)
+*   Takashi Yamakawa (NTT Social Informatics Labs & Kyoto University)
+*   Vassilis Zikas (Georgia Institute of Technology)
+
+## Program Co-chairs
+
+*   Benny Applebaum (Tel-Aviv University)
+*   Rachel Lin (University of Washington)
+*   Contact: [TCC2025programchairs@iacr.org](mailto:TCC2025programchairs@iacr.org)
+
+## General Co-chairs
+
+*   Claudio Orlandi (Aarhus University)
+*   Sophia Yakoubov (Aarhus University)
+*   Peter Scholl (Aarhus University)
+*   Contact: [TCC2025@iacr.org](mailto:TCC2025@iacr.org)",,
+req-conf-1751699777343-i46tt,,"Symposium on Stabilization, Safety, and Security of Distributed Systems",SSS,https://sss2025.conf.lip6.fr/,https://sss2025.conf.lip6.fr/#cfp,https://sss2025.conf.lip6.fr/#dates,"Conference dates: October 9-11, 2025
+Year: 2025
+Location: Kathmandu, Nepal
+City-State-Province: Kathmandu
+Country: Nepal
+Continent: Asia
+Type: Offline
+Submission Date.Paper Submission Deadline (First Deadline): March 21, 2025
+Submission Date.Paper Submission Deadline (Second Deadline): May 15, 2025
+Submission Date.Paper Submission Deadline (Third Deadline): July 15, 2025
+Notification Date.Acceptance Notification (First Deadline): April 30, 2025
+Notification Date.Acceptance Notification (Second Deadline): June 30, 2025
+Notification Date.Acceptance Notification (Third Deadline): August 30, 2025
+Camera-ready Date.Camera-Ready Copy Due (First Deadline): May 30, 2025
+Camera-ready Date.Camera-Ready Copy Due (Second Deadline): July 15, 2025
+Camera-ready Date.Camera-Ready Copy Due (Third Deadline): September 10, 2025
+Topics: Stabilization and Locality in Distributed Computing, Time, Safety, and Security in Distributed Computing, Moving and Computing
+Publisher: Springer","October 9-11, 2025",2025,"Kathmandu, Nepal",Kathmandu,Nepal,Asia,Offline,"{""Paper Submission Deadline (First Deadline)"":""March 21, 2025"",""Paper Submission Deadline (Second Deadline)"":""May 15, 2025"",""Paper Submission Deadline (Third Deadline)"":""July 15, 2025""}","{""Acceptance Notification (First Deadline)"":""April 30, 2025"",""Acceptance Notification (Second Deadline)"":""June 30, 2025"",""Acceptance Notification (Third Deadline)"":""August 30, 2025""}","{""Camera-Ready Copy Due (First Deadline)"":""May 30, 2025"",""Camera-Ready Copy Due (Second Deadline)"":""July 15, 2025"",""Camera-Ready Copy Due (Third Deadline)"":""September 10, 2025""}",{},{},"Stabilization and Locality in Distributed Computing, Time, Safety, and Security in Distributed Computing, Moving and Computing",Springer,"The 27th International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS 2025) will be held in Kathmandu, Nepal, from October 9-11, 2025, at the Aloft Hotel Kathmandu. The symposium focuses on distributed systems that provide guarantees on structure, performance, and security in adverse environments.","# SSS 2025: Call for Papers
+
+The 27th International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS 2025) is an international forum for researchers and practitioners in the design and development of distributed systems. The focus is on systems that can provide guarantees on their structure, performance, and/or security in the face of an adverse operational environment.
+
+## Dates
+
+*   **October 9-11, 2025**
+
+## Venue
+
+*   **Kathmandu, Nepal**
+*   **Event Venue:** Aloft Hotel Kathmandu
+
+## About SSS 2025
+
+SSS 2025 aims to foster the exchange of original contributions on both fundamental research and practical applications concerning topics in the symposium tracks.
+
+## Symposium Tracks
+
+### Track A. Stabilization and Locality in Distributed Computing
+
+*   Stabilizing Systems
+*   Proof labelling schemes
+*   Graph Algorithms
+*   Graph-theoretic concepts for communication networks
+*   Social and Peer-to-Peer Networks
+*   LOCAL/CONGEST models
+*   Communication complexity
+*   Game-theory and economical aspects of distributed computing
+*   Dynamic networks, time-varying graphs, evolving graphs
+
+### Track B. Time, Safety, and Security in Distributed Computing
+
+*   Concurrent and fault-tolerant algorithms
+*   Synchronization protocols
+*   Shared and transactional memory
+*   Blockchain technologies and cryptocurrencies
+*   Formal methods, semantics and verification of distributed systems
+*   Secure multi-party computation and cryptographic distributed protocols
+*   Privacy-enhancing technologies and anonymity
+*   Post-quantum and information theoretic cryptography and security
+
+### Track C. Moving and Computing
+
+*   Mobile agents
+*   Autonomous mobile robots
+*   Mobile sensor networks
+*   Mobile ad-hoc networks
+*   Population protocols
+*   Nature-inspired computing
+*   Programmable particles, nanoscale robots, biological systems, and related new models
+
+## New Conference Model
+
+SSS 2025 adopts a new conference model with **THREE non-overlapping deadlines** and submission rounds. Papers rejected in earlier rounds may be reworked and resubmitted to later rounds. Reviews from previous rounds will be transmitted to reviewers for resubmissions.
+
+## Paper Submission
+
+*   Papers are to be submitted electronically through [EasyChair](https://easychair.org/conferences/?conf=sss2025).
+*   All submissions must conform to the formatting instructions of **Springer LNCS series**.
+*   Each submission must be an original work written in English, in **PDF format**.
+
+## Double-blind Review
+
+All submissions must be anonymous. While authors are free to disseminate their work (e.g., via arXiv) and present it, they must ensure that their name or affiliation is not mentioned in the submission, and that references do not inadvertently reveal their identity.
+
+## Submissions Types
+
+*   **Regular papers:** Must not exceed **15 pages** (excluding references, with an appendix allowed for necessary details).
+*   **Brief announcements:** Must not exceed **5 pages** (including everything).
+*   Submissions deviating from these guidelines will be rejected.
+*   For the third round only, rejected regular papers can be considered for brief announcements upon author request.
+
+## Publication
+
+*   Regular papers and brief announcements will be included in the conference proceedings published by **Springer in the LNCS conference series**.
+*   Extended and revised versions of selected papers will be considered for a special issue of **Theoretical Computer Science (Elsevier)**.
+
+## Paper Award
+
+Prizes will be awarded for the best regular paper and the best student regular paper.
+
+## Important Dates
+
+### First Deadline
+
+*   **Paper Submission Deadline:** March 21, 2025 (11:59 PM AoE)
+*   **Acceptance Notification:** April 30, 2025
+*   **Camera-Ready Copy Due:** May 30, 2025
+
+### Second Deadline
+
+*   **Paper Submission Deadline:** May 15, 2025 (11:59 PM AoE)
+*   **Acceptance Notification:** June 30, 2025
+*   **Camera-Ready Copy Due:** July 15, 2025
+
+### Third Deadline
+
+*   **Paper Submission Deadline:** July 15, 2025 (11:59 PM AoE)
+*   **Acceptance Notification:** August 30, 2025
+*   **Camera-Ready Copy Due:** September 10, 2025
+
+## Contact Us
+
+*   **Email:** Sebastien Tixeuil",,
+req-conf-1751699777343-i46tt,,IEEE Region 10 Conference,Tencon,https://ieeemy.org/tencon2025/,https://ieeemy.org/tencon2025/call-for-paper/,https://ieeemy.org/tencon2025/important-dates/,"Conference dates: October 27 - 30, 2025
+Year: 2025
+Location: Kota Kinabalu, Sabah, MALAYSIA
+City-State-Province: Kota Kinabalu, Sabah
+Country: Malaysia
+Continent: Asia
+Type: Offline
+Submission Date.Full Paper Submission Deadline: June 30, 2025
+Notification Date.Notification of Acceptance: July 31, 2025
+Camera-ready Date.Final Manuscript Submission: August 31, 2025
+Registration Date.Early Bird Registration Deadline: August 31, 2025
+Registration Date.Normal Registration Deadline: October 5, 2025
+Topics: Power, Energy & Electrical Systems, Electronics, Circuits & Devices, Communication Systems, Computing & Computational Intelligence, Control Systems & Robotics, Engineering Technologies & Society","October 27 - 30, 2025",2025,"Kota Kinabalu, Sabah, MALAYSIA","Kota Kinabalu, Sabah",Malaysia,Asia,Offline,"{""Full Paper Submission Deadline"":""June 30, 2025""}","{""Notification of Acceptance"":""July 31, 2025""}","{""Final Manuscript Submission"":""August 31, 2025""}","{""Early Bird Registration Deadline"":""August 31, 2025"",""Normal Registration Deadline"":""October 5, 2025""}",{},"Power, Energy & Electrical Systems, Electronics, Circuits & Devices, Communication Systems, Computing & Computational Intelligence, Control Systems & Robotics, Engineering Technologies & Society",No publisher,"The IEEE Region 10 Conference 2025 (TENCON 2025), themed ""Unleashing Innovation: Elevating Technologies to New Horizons,"" will be held in Kota Kinabalu, Sabah, Malaysia from October 27-30, 2025. As the flagship conference of IEEE Region 10, it aims to gather researchers, educators, students, practitioners, technologists, and policymakers to exchange ideas and promote advances in electrical engineering, electronics, computer engineering, and information technology. Accepted and presented papers will be published in the IEEE Xplore Digital Library.","# IEEE TENCON 2025: Call for Papers
+
+IEEE TENCON 2025 aims to gather a diverse group of participants, including researchers, educators, students, practitioners, technologists, and policymakers, from academia, government, industry, and non-governmental organizations. The conference will serve as a platform to exchange ideas, showcase achievements, and promote advances in electrical engineering, electronics, computer engineering, and information technology.
+
+The program will feature keynote speeches and invited talks by distinguished speakers, offering insights into emerging trends and cutting-edge innovations. The conference will also include technical sessions, panel discussions, and exhibits highlighting current research and applications.
+
+## Tracks
+
+The scope of the conference includes but is not limited to the following tracks:
+
+1.  **Power, Energy & Electrical Systems (PES)**
+    *   Power Generation, Transmission & Distribution
+    *   High Voltage Engineering & Power Transmission
+    *   Smart Grids & Energy Storage Integration
+    *   Renewable Energy Systems (Solar, Wind, etc.)
+    *   Energy Efficiency & Demand Response
+    *   Power Electronics and Control for Energy Systems
+    *   Electrical Energy Management & Optimization
+2.  **Electronics, Circuits & Devices (ECD)**
+    *   Analog & Digital Circuits
+    *   VLSI Design & System-on-Chip (SoC)
+    *   Embedded Systems & Hardware Design
+    *   Semiconductor Devices Fabrication/Manufacturing/Packaging
+    *   Nanoelectronics, Quantum Devices, & Photonics
+    *   Antenna & Microwave Engineering
+    *   Electromagnetic Compatibility & Signal Integrity
+    *   Medical Devices & Bioelectronics
+    *   Biomedical Signal Processing
+3.  **Communication Systems (CS)**
+    *   Wireless Communication (5G/6G, LTE, Wi-Fi)
+    *   Internet of Things (IoT) and Smart Networks
+    *   Communication Theory & Signal Processing
+    *   Network Security & Optimization
+    *   Satellite and RF Communication
+    *   Cognitive Radio & Dynamic Spectrum Access
+    *   Optical & Fiber Optic Communications
+4.  **Computing & Computational Intelligence (CCI)**
+    *   Artificial Intelligence & Machine Learning
+    *   Deep Learning & Neural Networks
+    *   Data Science & Big Data Analytics
+    *   High-Performance Computing & Cloud Systems
+    *   Computational Intelligence Techniques (Fuzzy Logic, Evolutionary Algorithms, etc.)
+    *   Algorithm Design & Optimization
+    *   Computational Models in Engineering
+5.  **Control Systems & Robotics (CSR)**
+    *   Control Systems Theory & Design
+    *   Industrial Automation & Systems Control
+    *   Robotics & Autonomous Systems
+    *   Mechatronics & Cyber-Physical Systems
+    *   Autonomous Vehicles & UAVs
+    *   Feedback Control & Process Automation
+    *   Human-Robot Interaction & Interfaces
+6.  **Engineering Technologies & Society (ETS)**
+    *   Humanitarian & Assistive Technologies
+    *   Engineering Education & Pedagogy
+    *   Technology for Sustainable Development
+    *   Social Implications of Technology & Ethics
+    *   Emerging & Interdisciplinary Technologies (Quantum, Bioelectronics)
+    *   Innovation & Entrepreneurship in Engineering
+    *   Sustainability & Environmental Impact of Technology
+    *   Biomedical Applications of Engineering
+
+## Submission Information
+
+Submit your paper now: [https://edas.info/N33529](https://edas.info/N33529)
+
+All accepted and presented papers at TENCON 2025 will be published in the [IEEE Xplore Digital Library](https://ieeemy.org/tencon2025/), subject to IEEE’s technical quality review. IEEE Xplore content is widely indexed in Scopus.
+
+Prospective authors are invited to submit full papers with IEEE double-column format with **3 - 5 pages** (additional pages allowed with extra charges).
+
+## Important Dates
+
+*   **Full Paper Submission Deadline:** 30th June 2025 (Final Extension)
+*   **Notification of Acceptance:** From 31st July 2025 onwards
+*   **Final Manuscript Submission:** 31st August 2025
+*   **Early Bird Registration Deadline:** 31st August 2025
+*   **Normal Registration Deadline:** 5th October 2025
+*   **Conference Dates:** 27-30th October 2025",,
+req-conf-1751699777343-i46tt,,Conference in Uncertainty in Artificial Intelligence,UAI,https://www.auai.org/uai2025/,https://www.auai.org/uai2025/call_for_papers,https://www.auai.org/uai2025/important_dates,"Conference dates: July 21 - 25, 2025
+Year: 2025
+Location: Rio Othon Palace, Rio de Janeiro, Brazil
+City-State-Province: Rio de Janeiro
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.Paper submission starts: January 5, 2025
+Submission Date.Paper submission deadline: February 10, 2025
+Notification Date.Reviews release: April 3, 2025
+Notification Date.Author notification: May 6, 2025
+Camera-ready Date.Camera-ready deadline: June 12, 2025
+Other Date.Tutorials: July 21, 2025
+Other Date.Main conference: July 22 - 24, 2025
+Other Date.Workshops: July 25, 2025
+Other Date.Author response/discussion period: April 3 - April 12, 2025
+Topics: knowledge representation, learning, and reasoning in the presence of uncertainty, artificial intelligence, machine learning and statistics
+Publisher: PMLR","July 21 - 25, 2025",2025,"Rio Othon Palace, Rio de Janeiro, Brazil",Rio de Janeiro,Brazil,South America,Offline,"{""Paper submission starts"":""January 5, 2025"",""Paper submission deadline"":""February 10, 2025""}","{""Reviews release"":""April 3, 2025"",""Author notification"":""May 6, 2025""}","{""Camera-ready deadline"":""June 12, 2025""}",{},"{""Tutorials"":""July 21, 2025"",""Main conference"":""July 22 - 24, 2025"",""Workshops"":""July 25, 2025"",""Author response/discussion period"":""April 3 - April 12, 2025""}","knowledge representation, learning, and reasoning in the presence of uncertainty, artificial intelligence, machine learning and statistics",PMLR,"The 41st Conference on Uncertainty in Artificial Intelligence (UAI 2025) will be held in Rio de Janeiro, Brazil, from July 21st to July 25th, 2025. This premier international conference focuses on research related to knowledge representation, learning, and reasoning in the presence of uncertainty, offering a hybrid format with both in-person and virtual participation options.","# Call for Papers: UAI 2025
+
+The Conference on Uncertainty in Artificial Intelligence (UAI) is one of the premier international conferences on research related to learning and reasoning in the presence of uncertainty. UAI 2025 will be an in-person conference with virtual elements taking place in **Rio de Janeiro, Brazil** from **July 21st to July 25th, 2025**.
+
+## Submission Topics
+
+We invite papers that describe novel theory, methodology, and applications related to artificial intelligence, machine learning, and statistics.
+
+## Review Process
+
+Papers will be assessed in a rigorous **double-blind peer-review process**, based on the criteria of technical correctness, novelty, whether claims are backed up convincingly, and clarity of writing. Authors are strongly encouraged to make code and data available.
+
+## Publication
+
+All accepted papers will be presented in poster sessions and spotlight presentations (physically or remotely). Selected papers will have longer presentations. All accepted papers will be published in a volume of [Proceedings of Machine Learning Research (PMLR)](http://proceedings.mlr.press/).
+
+## Important Dates for Authors
+
+*   **Paper submission starts:** January 5th, 2025
+*   **Suggested OpenReview account creation deadline:** January 27, 2025
+*   **Paper submission deadline:** February 10th, 2025 (23:59 AoE)
+*   **Reviews release:** April 3rd, 2025 (23:59 AoE)
+*   **Author response/discussion period:** April 3rd - April 12th, 2025 (23:59 AoE)
+*   **Author notification:** May 6th, 2025 (23:59 AoE)
+*   **Camera-ready deadline:** June 12th, 2025 (23:59 AoE)
+
+## Submission Instructions
+
+Papers should be submitted on the [UAI 2025 OpenReview submission site](https://openreview.net/group?id=auai.org/UAI/2025/Conference).
+Please see the [Submission Instructions](https://www.auai.org/uai2025/submission_instructions) for more details on how your manuscript should be formatted.
+
+**Note:** An OpenReview account is required for submission. It is strongly recommended to sign up with an institutional email address for immediate activation. If your institutional email address is not recognized, please contact OpenReview support via their Feedback form.
+
+## Conference Dates
+
+*   **Tutorials:** July 21st, 2025
+*   **Main conference:** July 22nd - July 24th, 2025
+*   **Workshops:** July 25th, 2025
+
+## Contact
+
+Sara Magliacane and Silvia Chiappa
+UAI 2025 Program Chairs
+[uai2025chairs+program@gmail.com](mailto:uai2025chairs+program@gmail.com)",,
+req-conf-1751699777343-i46tt,,ACM International Joint Conference on Pervasive and Ubiquitous Computing,UbiComp,https://www.ubicomp.org/ubicomp-iswc-2025/,https://www.ubicomp.org/ubicomp-iswc-2025/authors/,,"Conference dates: October 14-16, 2025
+Year: 2025
+Location: Aalto University, Espoo, Finland
+City-State-Province: Espoo
+Country: Finland
+Continent: Europe
+Type: Offline
+Submission Date.Workshop Proposal Submission: April 30, 2025
+Submission Date.Tutorials Proposal Submission: April 30, 2025
+Submission Date.ISWC Notes and Briefs Submission: May 25, 2025
+Submission Date.Posters & Demos Submission: May 30, 2025
+Submission Date.ISWC Design Exhibition Submission: June 20, 2025
+Submission Date.Doctoral Colloquium Submission: June 20, 2025
+Submission Date.Student Challenge Idea Submission: June 15, 2025
+Submission Date.IMWUT Videos Due: August 3, 2025
+Notification Date.Notification of accepted proposals: May 2, 2025
+Notification Date.ISWC Notes and Briefs Author Notification: July 2, 2025
+Notification Date.Posters & Demos Author Notification: June 27, 2025
+Notification Date.ISWC Design Exhibition Author Notification: July 20, 2025
+Notification Date.Doctoral Colloquium Author Notification: July 5, 2025
+Notification Date.Student Challenge Author Notification: July 15, 2025
+Camera-ready Date.ISWC Design Exhibition Camera Ready: August 1, 2025
+Topics: ubiquitous computing, pervasive computing, wearable computing
+Publisher: ACM","October 14-16, 2025",2025,"Aalto University, Espoo, Finland",Espoo,Finland,Europe,Offline,"{""Workshop Proposal Submission"":""April 30, 2025"",""Tutorials Proposal Submission"":""April 30, 2025"",""ISWC Notes and Briefs Submission"":""May 25, 2025"",""Posters & Demos Submission"":""May 30, 2025"",""ISWC Design Exhibition Submission"":""June 20, 2025"",""Doctoral Colloquium Submission"":""June 20, 2025"",""Student Challenge Idea Submission"":""June 15, 2025"",""IMWUT Videos Due"":""August 3, 2025""}","{""Notification of accepted proposals"":""May 2, 2025"",""ISWC Notes and Briefs Author Notification"":""July 2, 2025"",""Posters & Demos Author Notification"":""June 27, 2025"",""ISWC Design Exhibition Author Notification"":""July 20, 2025"",""Doctoral Colloquium Author Notification"":""July 5, 2025"",""Student Challenge Author Notification"":""July 15, 2025""}","{""ISWC Design Exhibition Camera Ready"":""August 1, 2025""}",{},{},"ubiquitous computing, pervasive computing, wearable computing",ACM,"The ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp) and the International Symposium on Wearable Computing (ISWC) 2025 will be held at Aalto University in Espoo, Finland, during October 2025. The main conference dates are October 14-16, 2025, with pre-conference events including workshops and tutorials on October 12-13, 2025. This event serves as a premier interdisciplinary venue for researchers, designers, developers, and practitioners in the field of ubiquitous, pervasive, and wearable computing.","# UbiComp / ISWC 2025: Call for Participation
+
+UbiComp / ISWC is a premier interdisciplinary venue for leading international researchers, designers, developers, and practitioners to present and discuss novel results in all aspects of ubiquitous, pervasive, and wearable computing. This includes the design, development, and deployment of these technologies, as well as the understanding of human experiences and social impacts.
+
+## Dates and Location
+
+*   **Conference Dates:** October 14-16, 2025
+*   **Pre-Conference (Workshops & Tutorials):** October 12-13, 2025
+*   **Venue:** Aalto University, Espoo, Finland
+
+## Submitting & Presenting
+
+### Main Technical Tracks
+
+Authors of papers published in **The Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)** and **ACM Transactions on Internet of Things (TIOT)** are invited to present their papers in the main technical tracks of the conference.
+
+### Other Submission Tracks and Opportunities
+
+UbiComp / ISWC also features several other tracks and opportunities for participation:
+
+*   [ISWC Notes & Briefs](/ubicomp-iswc-2025/iswc-notes-and-briefs/)
+*   [ISWC Design Exhibition](/ubicomp-iswc-2025/iswc-design-exhibition/)
+*   [Workshop Proposals](/ubicomp-iswc-2025/workshop-proposals/)
+*   [Tutorial Proposals](/ubicomp-iswc-2025/tutorial-proposals/)
+*   [Posters & Demos](/ubicomp-iswc-2025/posters-and-demos/)
+*   [Doctoral Colloquium](/ubicomp-iswc-2025/doctoral-colloquium/)
+*   [Student Challenge](/ubicomp-iswc-2025/student-challenge/)
+*   [Student Volunteers](/ubicomp-iswc-2025/student-volunteers/)
+*   [N2Women Young Researcher Fellowship](/ubicomp-iswc-2025/attending/n2women/)
+*   [Travel Grants](/ubicomp-iswc-2025/attending/travel-grants/)
+
+## Submission Process and Templates
+
+*   **Submission System:** All submissions are made through the [Precision Conference System (PCS 2.0)](https://www.ubicomp.org/ubicomp-iswc-2025/authors/formatting/).
+*   **Templates and Formatting:** All UbiComp/ISWC Publications (except IMWUT Papers) are required to use the [templates linked here](/ubicomp-iswc-2025/authors/formatting/) and follow the described formatting. IMWUT papers follow separate guidelines available on the [ACM DL dedicated page](https://dl.acm.org/journal/imwut/author-guidelines).
+
+## Publication Date
+
+The official publication date is when the proceedings are made available in the ACM Digital Library, which may be up to two weeks prior to the conference start date.
+
+## Key Deadlines by Track
+
+### Workshops
+
+*   Proposal Submission: **April 30, 2025**
+*   Notification of accepted proposals: **May 2, 2025**
+
+### Tutorials
+
+*   Proposal Submission: **April 30, 2025**
+
+### ISWC Notes and Briefs
+
+*   Submission: **May 25, 2025**
+*   Author Notification: **July 02, 2025**
+
+### Posters & Demos
+
+*   Submission: **May 30, 2025**
+*   Author Notification: **June 27, 2025**
+
+### ISWC Design Exhibition
+
+*   Submission: **June 20, 2025**
+*   Author Notification: **July 20, 2025**
+*   Camera Ready: **August 1, 2025**
+
+### Doctoral Colloquium
+
+*   Submission: **June 20, 2025**
+*   Author Notification: **July 5, 2025**
+
+### Student Challenge
+
+*   Idea Submission: **June 15, 2025**
+*   Author Notification: **July 15, 2025**
+*   Deliverables Due: **September 26, 2025**
+
+### Video Teasers
+
+*   IMWUT Videos Due: **August 03, 2025**
+*   Other Tracks Due: **TBA**
+
+## Special Opportunities
+
+*   [Call for Participation: Inclusion Event](/ubicomp-iswc-2025/attending/equity-and-access/)
+*   [Gaetano Borriello Student Award](/ubicomp-iswc-2025/student-challenge/)
+*   [N2Women Young Researcher Fellowship](/ubicomp-iswc-2025/attending/n2women/)
+*   [Travel Grants](/ubicomp-iswc-2025/attending/travel-grants/)
+
+## Sponsors
+
+We would like to thank our awesome sponsors for supporting the 2025 UbiComp/ISWC community.",,
+req-conf-1751699777343-i46tt,,International Symposium on Temporal Representation and Reasoning,TIME,https://time2025conf.github.io/,https://time2025conf.github.io/c4p/,https://time2025conf.github.io/dates/,"Conference dates: August 27 - 29, 2025
+Year: 2025
+Location: London, UK
+City-State-Province: London
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.Abstract submission deadline: May 20, 2025
+Submission Date.Paper submission deadline: May 26, 2025
+Notification Date.Paper acceptance/rejection notification date: June 25, 2025
+Camera-ready Date.Camera-ready submission deadline: August 1, 2025
+Registration Date.Registration deadline: August 18, 2025
+Topics: Temporal and spatio-temporal data, information and/or knowledge management, Artificial Intelligence, Databases and Data Mining, System Specification and Verification","August 27 - 29, 2025",2025,"London, UK",London,United Kingdom,Europe,Offline,"{""Abstract submission deadline"":""May 20, 2025"",""Paper submission deadline"":""May 26, 2025""}","{""Paper acceptance/rejection notification date"":""June 25, 2025""}","{""Camera-ready submission deadline"":""August 1, 2025""}","{""Registration deadline"":""August 18, 2025""}",{},"Temporal and spatio-temporal data, information and/or knowledge management, Artificial Intelligence, Databases and Data Mining, System Specification and Verification",No publisher,"The 32nd International Symposium on Temporal Representation and Reasoning (TIME 2025) will be held in London, UK, from August 27-29, 2025. TIME is a multidisciplinary international event dedicated to the topic of time in computer science, bringing together researchers from Artificial Intelligence, Databases and Data Mining, and System Specification and Verification.","# Call For Papers
+
+The 32nd International Symposium on Temporal Representation and Reasoning (TIME 2025) is seeking submissions.
+
+## Symposium Details
+
+*   **Dates:** August 27–29, 2025
+*   **Location:** London, UK
+*   **Website:** [https://time-symposium.org/](https://time-symposium.org/)
+
+## Focus
+
+TIME has been the only yearly multidisciplinary international event dedicated to the topic of time in computer science. The purpose of the symposium is to bring together active researchers in different scientific fields involving temporal and spatio-temporal data, information and/or knowledge management. This includes Artificial Intelligence (symbolic approaches and numerical data-based approaches), Databases and Data Mining, and System Specification and Verification.
+
+## Important Dates (AoE - Anywhere on Earth)
+
+*   **Abstract submission deadline:** May 20, 2025
+*   **Paper submission deadline:** May 26, 2025
+*   **Paper acceptance/rejection notification date:** June 25, 2025
+*   **Camera-ready submission deadline:** August 1st, 2025
+*   **Registration deadline:** August 18, 2025
+
+> Please note that we will be able to consider exceptional requests to extend the paper submission deadline, with supporting arguments (please let us know in advance) but the abstract deadline is absolutely strict and cannot be postponed.",,

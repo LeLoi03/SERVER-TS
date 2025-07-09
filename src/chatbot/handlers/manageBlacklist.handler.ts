@@ -17,7 +17,6 @@ import {
     ThoughtStep, // Added ThoughtStep for logging
     StatusUpdate
 } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 
 /**
@@ -60,10 +59,9 @@ export class ManageBlacklistHandler implements IFunctionHandler {
             agentId // Agent ID from the calling context
         } = context;
 
-        const logPrefix = `[${handlerProcessId} ${socketId} Handler:ManageBlacklist Agent:${agentId}]`;
         const localThoughts: ThoughtStep[] = []; // Collection for thoughts
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
+
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -81,7 +79,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+    
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -94,7 +92,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+        
             }
         };
 
@@ -108,13 +106,13 @@ export class ManageBlacklistHandler implements IFunctionHandler {
 
             if (itemType !== 'conference') {
                 const errorMsg = "Invalid item type for blacklist. Must be 'conference'.";
-                logToFile(`${logPrefix} ManageBlacklist: Validation Failed - ${errorMsg}`);
+        
                 reportStep('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
             if (!action) {
                 const errorMsg = "Missing required action for blacklist.";
-                logToFile(`${logPrefix} ManageBlacklist: Validation Failed - ${errorMsg}`);
+        
                 reportStep('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -133,7 +131,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
             }
 
             if (validationError) {
-                logToFile(`${logPrefix} ManageBlacklist: Validation Failed - ${validationError}`);
+        
                 reportStep('function_error', 'Invalid arguments provided.', { error: validationError, args });
                 return { modelResponseContent: `Error: ${validationError}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -146,7 +144,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
             reportStep('checking_authentication', 'Checking authentication status...');
             if (!userToken) {
                 const errorMsg = "Authentication required.";
-                logToFile(`${logPrefix} ManageBlacklist: User not authenticated.`);
+        
                 reportStep('function_error', 'User not authenticated.', { error: errorMsg });
                 return { modelResponseContent: `Error: You must be logged in to manage blacklisted items.`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -157,14 +155,14 @@ export class ManageBlacklistHandler implements IFunctionHandler {
 
                 if (!listResult.success || !listResult.items) {
                     const errorMsg = listResult.errorMessage || `Failed to retrieve blacklisted ${validItemType}s.`;
-                    logToFile(`${logPrefix} ManageBlacklist: Error listing items - ${errorMsg}`);
+            
                     reportStep('function_error', `Failed to list blacklisted ${validItemType}s.`, { error: errorMsg });
                     return { modelResponseContent: `Sorry, I couldn't retrieve your blacklisted ${validItemType}s: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
 
                 if (listResult.items.length === 0) {
                     const message = `You have no ${validItemType}s in your blacklist.`;
-                    logToFile(`${logPrefix} ManageBlacklist: No blacklisted ${validItemType}s found.`);
+            
                     reportStep('list_success_empty', message);
                     return { modelResponseContent: message, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -189,7 +187,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                 });
 
                 const successMessage = `Here are the ${validItemType}s in your blacklist:`;
-                logToFile(`${logPrefix} ManageBlacklist: Successfully listed ${listResult.items.length} blacklisted ${validItemType}(s).`);
+        
                 reportStep('list_success', successMessage, { count: listResult.items.length });
 
                 return {
@@ -215,7 +213,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
 
                 if (!idResult.success || !idResult.itemId) {
                     const errorMsg = idResult.errorMessage || `Could not find ${validItemType} "${currentIdentifier}".`;
-                    logToFile(`${logPrefix} ManageBlacklist: Error finding ID - ${errorMsg}`);
+            
                     reportStep('item_id_not_found', `Could not find ${validItemType} "${currentIdentifier}".`, { error: errorMsg, identifier: currentIdentifier, identifierType: currentIdentifierType, itemType: validItemType });
                     return { modelResponseContent: errorMsg, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -229,7 +227,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                 const blacklistStatusResult = await executeGetUserBlacklisted(userToken);
                 if (!blacklistStatusResult.success) {
                     const errorMsg = blacklistStatusResult.errorMessage || 'Failed to check blacklist status.';
-                    logToFile(`${logPrefix} ManageBlacklist: Error checking status - ${errorMsg}`);
+            
                     reportStep('function_error', 'Failed to check blacklist status.', { error: errorMsg, itemId });
                     return { modelResponseContent: `Sorry, I couldn't check your current blacklist status: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -247,9 +245,9 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                     if (followStatusResult.success && followStatusResult.itemIds.includes(itemId)) {
                         isFollowed = true;
                         conflictMsg += `The conference "${itemNameForMessage}" is currently in your followed list. You must unfollow it. `;
-                        logToFile(`${logPrefix} ManageBlacklist: Conflict - Item ${itemId} is followed.`);
+                
                     } else if (!followStatusResult.success) {
-                        logToFile(`${logPrefix} ManageBlacklist: Warning - Could not verify follow status for ${itemId}: ${followStatusResult.errorMessage}.`);
+                
                         reportStep('warning_follow_check_failed', `Could not verify follow status for ${itemNameForMessage}.`, { itemId, errorMessage: followStatusResult.errorMessage });
                     }
 
@@ -260,9 +258,9 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                     if (calendarStatusResult.success && calendarStatusResult.itemIds.includes(itemId)) {
                         isInCalendar = true;
                         conflictMsg += `The conference "${itemNameForMessage}" is currently in your calendar. You must remove it from calendar. `;
-                        logToFile(`${logPrefix} ManageBlacklist: Conflict - Item ${itemId} is in calendar.`);
+                
                     } else if (!calendarStatusResult.success) {
-                        logToFile(`${logPrefix} ManageBlacklist: Warning - Could not verify calendar status for ${itemId}: ${calendarStatusResult.errorMessage}.`);
+                
                         reportStep('warning_calendar_check_failed', `Could not verify calendar status for ${itemNameForMessage}.`, { itemId, errorMessage: calendarStatusResult.errorMessage });
                     }
 
@@ -276,14 +274,14 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                             conflictMsg = `The conference "${itemNameForMessage}" is currently in your calendar. You must remove it from calendar before adding it to the blacklist.`;
                         }
 
-                        logToFile(`${logPrefix} ManageBlacklist: Conflict - Cannot add to blacklist due to existing status.`);
+                
                         reportStep('blacklist_conflict_existing_status', conflictMsg, { itemId, itemName: itemNameForMessage, isFollowed, isInCalendar });
                         return { modelResponseContent: conflictMsg, frontendAction: undefined, thoughts: localThoughts };
                     }
 
                     // Log clear if both checks are successful and no conflict
                     if (followStatusResult.success && calendarStatusResult.success) {
-                        logToFile(`${logPrefix} ManageBlacklist: Conference ${itemId} ("${itemNameForMessage}") is not followed and not in calendar. Safe to proceed with blacklisting.`);
+                
                         reportStep('follow_calendar_check_clear_for_blacklist', `Conference "${itemNameForMessage}" is clear. Proceeding to blacklist.`, { itemId, itemName: itemNameForMessage });
                     }
                 }
@@ -303,7 +301,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
 
                     if (apiActionResult.success) {
                         finalMessage = `Successfully ${validAction === 'add' ? 'added' : 'removed'} the conference "${itemNameForMessage}" (ID: ${itemId}) ${validAction === 'add' ? 'to' : 'from'} your blacklist.`;
-                        logToFile(`${logPrefix} ManageBlacklist: API call for ${validAction} successful for conference ${itemId}.`);
+                
                         reportStep('blacklist_update_success', `Successfully updated blacklist for conference "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
 
                         const itemDetailsFromFind: Partial<BlacklistItem> = idResult.details || {};
@@ -327,7 +325,7 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                         };
                     } else {
                         finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the conference "${itemNameForMessage}" ${validAction === 'add' ? 'to' : 'from'} blacklist. Please try again later.`;
-                        logToFile(`${logPrefix} ManageBlacklist: API call for ${validAction} failed for conference ${itemId} - ${apiActionResult.errorMessage}`);
+                
                         reportStep('blacklist_update_failed', `Failed to update blacklist for "${itemNameForMessage}".`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     }
                 } else {
@@ -336,21 +334,21 @@ export class ManageBlacklistHandler implements IFunctionHandler {
                     } else { // action === 'remove', not blacklisted
                         finalMessage = `The conference "${itemNameForMessage}" (ID: ${itemId}) is not currently in your blacklist.`;
                     }
-                    logToFile(`${logPrefix} ManageBlacklist: No API call executed for action '${validAction}' on conference ${itemId}. Current status: ${isCurrentlyBlacklisted ? 'Blacklisted' : 'Not Blacklisted'}`);
+            
                     reportStep('blacklist_no_action_needed', finalMessage, { itemId, itemName: itemNameForMessage, currentStatus: isCurrentlyBlacklisted, requestedAction: validAction });
                 }
                 return { modelResponseContent: finalMessage, frontendAction: finalFrontendAction, thoughts: localThoughts };
             } else {
                 // This case should ideally not be reached due to prior validation
                 const errorMsg = `Unsupported action for blacklist: ${validAction}`;
-                logToFile(`${logPrefix} ManageBlacklist: Validation Error - ${errorMsg}`);
+        
                 reportStep('function_error', 'Unsupported action.', { error: errorMsg, action: validAction });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
 
         } catch (error: unknown) { // Catch as unknown for safer error handling
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in ManageBlacklistHandler: ${errorMessage}\nStack: ${errorStack}`);
+    
             reportStep('function_error', `Critical error during blacklist management processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return { modelResponseContent: `An unexpected error occurred: ${errorMessage}`, frontendAction: undefined, thoughts: localThoughts };
         }

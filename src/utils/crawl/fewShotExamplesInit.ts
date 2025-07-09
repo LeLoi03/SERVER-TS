@@ -2,7 +2,6 @@
 import csv from 'csv-parser';
 import { createReadStream, promises as fsPromises, ReadStream } from 'fs';
 import { InputsOutputs, CsvRowData } from '../../types/crawl/crawl.types';
-import logToFile from '../logger'; // Assuming logger is in ../logger or similar
 import { getErrorMessageAndStack } from '../errorUtils'; // Import the error utility
 
 // --- Functions ---
@@ -36,21 +35,17 @@ export async function read_csv(filePath: string): Promise<CsvRowData[]> {
                                         input: `input:\n${inputText}`,
                                         output: `output:\n${outputText}`
                                     });
-                                } else {
-                                    logToFile(`[WARNING] ${logContext} Skipping row due to missing 'input:' or 'output:' data. Row data (partial): ${JSON.stringify(row).substring(0, 200)}...`);
-                                }
+                                } 
                             } catch (rowProcessingError: unknown) {
-                                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(rowProcessingError);
-                                logToFile(`[ERROR] ${logContext} Error processing CSV row: "${errorMessage}". Row data (partial): ${JSON.stringify(row).substring(0, 200)}... Stack: ${errorStack}.`);
-                                // Continue processing other rows even if one fails
+                                
                             }
                         })
                         .on('end', () => {
                             if (results.length === 0) {
-                                logToFile(`[WARNING] ${logContext} No valid 'input:' and 'output:' data found in CSV file. Resolved with empty array.`);
+                                
                                 resolve([]);
                             } else {
-                                // logToFile(`[INFO] ${logContext} Successfully read ${results.length} valid rows from CSV.`);
+                                // 
                                 resolve(results);
                             }
                         })
@@ -104,17 +99,15 @@ export const createInputsOutputs = (data: CsvRowData[]): InputsOutputs => {
                 inputs[`input${i}`] = item?.input || '';
                 outputs[`output${i}`] = item?.output || '';
             } catch (itemError: unknown) {
-                const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(itemError);
-                logToFile(`[ERROR] ${logContext} Error processing individual CSV item for InputsOutputs structure: "${errorMessage}". Item (partial): ${JSON.stringify(item)?.substring(0, 200)}... Stack: ${errorStack}.`);
+                
                 // Continue to next item even if this one fails
             }
         });
     } catch (creationError: unknown) {
-        const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(creationError);
-        logToFile(`[ERROR] ${logContext} Critical error creating InputsOutputs structure: "${errorMessage}". Returning empty structure. Stack: ${errorStack}.`);
+        
         return { inputs: {}, outputs: {} }; // Return empty objects on major failure to avoid breaking
     }
 
-    logToFile(`[INFO] ${logContext} Successfully created InputsOutputs structure for ${data.length} items.`);
+    
     return { inputs, outputs };
 };

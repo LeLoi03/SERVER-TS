@@ -1,0 +1,547 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,recrawl
+req-conf-1751768239677-gv7fi,,International Conference on Computational Science,ICCS,https://www.iccs-meeting.org/iccs2025/,https://www.iccs-meeting.org/iccs2025/call-for-papers/,https://www.iccs-meeting.org/iccs2025/important-dates/,"Conference dates: July 7 - 9, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.Workshop proposals: January 3, 2025
+Submission Date.Paper submission: February 28, 2025
+Submission Date.Special extension for workshops only: March 14, 2025
+Notification Date.Notification to authors: April 7, 2025
+Camera-ready Date.Camera-ready papers: April 23, 2025
+Registration Date.Author registration: April 7 - 23, 2025
+Registration Date.Non-author registration (in-person only): April 7 – June 2, 2025
+Topics: Computational Science, Scientific Computing, Problem Solving Environments, Advanced Numerical Algorithms, Complex Systems: Modeling and Simulation, Hybrid Computational Methods, Web- and Grid-based Simulation and Computing, Parallel and Distributed Computing, Advanced Computing Architectures and New Programming Models, Visualization and Virtual Reality as Applied to Computational Science, Applications of Computation as a Scientific Paradigm, New Algorithmic Approaches to Computational Kernels and Applications, Computational Humanities, Education in Computational Science, Large Scale Scientific Instruments, Computational Sociology, Medical and Biomedical Computational Science, Computational Physics, Quantum Computing, Uncertainty Quantification, Artificial Intelligence in Scientific Computing, Complex Systems Simulations, System Dynamics Models, Complex Networks Models and High Performance simulations, Massive Agent Based models","July 7 - 9, 2025",2025,Singapore,Singapore,Singapore,Asia,Offline,"{""Workshop proposals"":""January 3, 2025"",""Paper submission"":""February 28, 2025"",""Special extension for workshops only"":""March 14, 2025""}","{""Notification to authors"":""April 7, 2025""}","{""Camera-ready papers"":""April 23, 2025""}","{""Author registration"":""April 7 - 23, 2025"",""Non-author registration (in-person only)"":""April 7 – June 2, 2025""}",{},"Computational Science, Scientific Computing, Problem Solving Environments, Advanced Numerical Algorithms, Complex Systems: Modeling and Simulation, Hybrid Computational Methods, Web- and Grid-based Simulation and Computing, Parallel and Distributed Computing, Advanced Computing Architectures and New Programming Models, Visualization and Virtual Reality as Applied to Computational Science, Applications of Computation as a Scientific Paradigm, New Algorithmic Approaches to Computational Kernels and Applications, Computational Humanities, Education in Computational Science, Large Scale Scientific Instruments, Computational Sociology, Medical and Biomedical Computational Science, Computational Physics, Quantum Computing, Uncertainty Quantification, Artificial Intelligence in Scientific Computing, Complex Systems Simulations, System Dynamics Models, Complex Networks Models and High Performance simulations, Massive Agent Based models",No publisher,"The 25th International Conference on Computational Science (ICCS 2025) will be held from July 7-9, 2025, in Singapore. The conference aims to bring together researchers and scientists from mathematics, computer science, and various application areas to discuss pioneering computational methods. Accepted papers will be published by Springer in the Lecture Notes in Computer Science (LNCS) series.","# Call for Papers: ICCS 2025
+
+## Scope and Topics
+
+Authors are invited to submit manuscripts reporting original, unpublished research and recent developments in Computational Sciences. All accepted papers will be included in the **Springer Lecture Notes in Computer Science (LNCS)** series and indexed by Scopus, EI Engineering Index, Thomson Reuters Conference Proceedings Citation Index (included in ISI Web of Science), and several other indexing services.
+
+ICCS 2025 invites original contributions on all topics related to Computational Science, including, but not limited to:
+
+*   Scientific Computing
+*   Problem Solving Environments
+*   Advanced Numerical Algorithms
+*   Complex Systems: Modeling and Simulation
+*   Hybrid Computational Methods
+*   Web- and Grid-based Simulation and Computing
+*   Parallel and Distributed Computing
+*   Advanced Computing Architectures and New Programming Models
+*   Visualization and Virtual Reality as Applied to Computational Science
+*   Applications of Computation as a Scientific Paradigm
+*   New Algorithmic Approaches to Computational Kernels and Applications
+*   Computational Humanities
+*   Education in Computational Science
+*   Large Scale Scientific Instruments
+*   Computational Sociology
+*   Medical and Biomedical Computational Science
+*   Computational Physics
+*   Quantum Computing
+*   Uncertainty Quantification
+*   Artificial Intelligence in Scientific Computing
+*   Complex Systems Simulations
+*   System Dynamics Models
+*   Complex Networks Models and High Performance simulations
+*   Massive Agent Based models
+
+As the conference theme this year is **“Making Complex Systems tractable through Computational Science”**, papers highlighting the role of Computational Science in tackling the complex problems of today and tomorrow are particularly welcome.
+
+## Paper Types and Publication
+
+| Submission Type | Published in LNCS | Pages |
+|---|---|---|
+| Full Paper | ✓ | 12-15 |
+| Short Paper | ✓ | 6-8 |
+| Abstract | — | 2 |
+
+ICCS is co-organised with the **Workshops on Computational Science**. Papers can be submitted to either the Main Conference or any of the Workshops via the same EasyChair link. Papers submitted to workshops will be published in separate LNCS proceedings.
+
+*   The best papers will be invited for a special issue of the **Journal of Computational Science** (Impact Factor: 3.1).
+*   The “Abstract Only” option allows presenters to include a short abstract in the conference program, but it will not be included in LNCS.
+
+## Instructions for Authors
+
+*   Manuscripts should be up to **15 pages**, written in English and formatted according to the **Springer LNCS templates**.
+*   Submissions must be made electronically via **EasyChair**: [https://easychair.org/conferences/?conf=iccs2025](https://easychair.org/conferences/?conf=iccs2025).
+*   Templates are available for download from [this link](https://www.iccs-meeting.org/iccs2025/templates-forms/).
+*   LaTeX2e Proceedings Templates are also available on the scientific authoring platform [Overleaf](https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science-lncs-template/hhtcffj4jgyb).
+*   Authors must follow Springer’s [authors’ guidelines](https://resource-cms.springernature.com/springer-cms/rest/v1/content/19242230/data/v12) and [Book Authors’ Code of Conduct](https://www.springernature.com/gp/authors/book-authors-code-of-conduct).
+*   Papers must be based on unpublished original work and submitted only to ICCS.
+*   Submission implies the willingness of at least one author to register and present the paper.
+*   ICCS places emphasis on the explicit relevance of submitted contributions to Computational Science.
+*   ICCS encourages data and code sharing to promote open science and reproducibility.
+
+## Deadlines
+
+*   **Workshop proposals:** January 3, 2025
+*   **Paper submission:** February 28, 2025 (final extension)
+*   **Notification to authors:** April 7, 2025
+*   **Camera-ready papers:** April 23, 2025
+*   **Author registration:** April 7 – April 23, 2025
+*   **Non-author registration (in-person only):** April 7 – June 2, 2025
+*   **Conference sessions:** July 7-9, 2025",,
+req-conf-1751768239677-gv7fi,,International Conference on Image and Graphics,ICIG,https://icig.csig.org.cn/2025/index.html,https://icig.csig.org.cn/2025/5795/list.html,https://icig.csig.org.cn/2025/5411/list.html,"Conference dates: October 31 - November 2, 2025
+Year: 2025
+Location: Xuzhou, China
+City-State-Province: Xuzhou
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Full Paper Submission: June 2, 2025
+Submission Date.Workshop Proposal: August 5, 2025
+Notification Date.Notification of Paper Acceptance: July 15, 2025
+Notification Date.Notification of Workshop Acceptance: August 20, 2025
+Camera-ready Date.Camera-ready Paper Upload: July 25, 2025
+Other Date.Final Workshop Information Submission: August 31, 2025
+Topics: Image, Video and Graphics Processing
+Sponsor: China Society of Image and Graphics (CSIG)","October 31 - November 2, 2025",2025,"Xuzhou, China",Xuzhou,China,Asia,Offline,"{""Full Paper Submission"":""June 2, 2025"",""Workshop Proposal"":""August 5, 2025""}","{""Notification of Paper Acceptance"":""July 15, 2025"",""Notification of Workshop Acceptance"":""August 20, 2025""}","{""Camera-ready Paper Upload"":""July 25, 2025""}",{},"{""Final Workshop Information Submission"":""August 31, 2025""}","Image, Video and Graphics Processing",No publisher,"The 13th International Conference on Image and Graphics (ICIG 2025) will be held in Xuzhou, China, from October 31 to November 2, 2025. Hosted by the China Society of Image and Graphics (CSIG) and organized by the China University of Mining and Technology, ICIG is a biennial conference focused on innovative technologies in image, video, and graphics processing, aiming to foster innovation, entrepreneurship, and networking. The conference will feature world-class plenary speakers and high-quality peer-reviewed presentations.","# Call for Papers - The 13th International Conference on Image and Graphics (ICIG 2025)
+
+## About ICIG 2025
+
+The 13th International Conference on Image and Graphics (ICIG) will be held in **Xuzhou, China**, on **October 31 – November 2, 2025**. The conference will be hosted by **China Society of Image and Graphics (CSIG)** and organized by **China University of Mining and Technology**. ICIG is a biennial conference that focuses on innovative technologies of image, video, and graphics processing, fostering innovation, entrepreneurship, and networking. It will feature world-class plenary speakers, exhibits, and high-quality peer-reviewed oral and poster presentations.
+
+## Topics of Interest
+
+*   Innovative technologies of image processing.
+*   Innovative technologies of video processing.
+*   Innovative technologies of graphics processing.
+*   Fostering innovation, entrepreneurship, and networking.
+
+## Keynote Speakers
+
+*   Yong Rui (Lenovo, China)
+*   Kun Zhou (Zhejiang University, China)
+*   Taku Komura (The University of Hong Kong, China)
+
+## Important Dates
+
+*   **Full Paper Submission:** May 10, 2025 – **June 2, 2025**
+*   **Workshop Proposal:** **August 5, 2025**
+*   **Notification of Paper Acceptance:** June 25, 2025 – **July 15, 2025**
+*   **Notification of Workshop Acceptance:** **August 20, 2025**
+*   **Camera-ready Paper Upload:** July 10, 2025 – **July 25, 2025**
+*   **Final Workshop Information Submission:** **August 31, 2025**
+
+*Time zone: UTC +08:00*
+
+## Submission Information
+
+*   The peer-reviewing process will utilize the Microsoft CMT service.
+*   Submission Link: [Submission](https://cmsfiles.zhongkefu.com.cn/meeecmsoss/upload/ueditor/20250518/1747536581612924.pdf)
+*   For detailed information, please refer to the [Call for Papers.pdf](https://cmsfiles.zhongkefu.com.cn/meeecmsoss/upload/ueditor/20250518/1747536581612924.pdf).
+
+## Publication
+
+High-quality peer-reviewed oral and poster presentations will be featured.
+
+## Contact Us
+
+*   Mrs. Luo
+*   Tel: 010-82544676
+*   Email: icig@csig.org.cn",,
+req-conf-1751768239677-gv7fi,,International Conference on Image and Signal Processing,ICISP,https://www.icispc.org/,https://www.icispc.org/cfp.html,https://www.icispc.org/cfp.html,"Conference dates: July 11-13, 2025
+Year: 2025
+Location: Osaka, Japan
+City-State-Province: Osaka
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Submission Deadline: May 30, 2025
+Notification Date.Notification Date: June 15, 2025
+Registration Date.Author's Registration: June 20, 2025
+Camera-ready Date.Final Paper Submission: June 20, 2025
+Topics: Cloud computing, Big data, Data security, RF/Milimeter-wave circuits and systems, Wireless communications and networks, Optical communications, Modulation and coding techniques, Neural networks, Fuzzy systems, Swarm and evolutionary computation, Machine learning, Computing architectures and systems, Low power RF circuitry design, RFIC circuitry, Low power circuitry for IOT application, Image processing, Video processing, Pattern recognition and object tracking audio and electro-acoustics, DSP implementation and embedded systems, Face recognition, Neural networks and genetic algorithms, Shape representation, Signal identification, Signal noise control, Signal reconstruction, Speech, audio and music processing, Statistical and optical signal processing, Video compression and streaming, Video surveillance and processing, Biometrics and pattern recognition, Cognitive and biologically-inspired vision, Filter design and structures, Aerospace imaging, Remote sensing, passive and active sensing, Ladars and lidars, Polarimetric imaging, Autonomous systems, Multi-spectral polarimetric imaging and lasers, Medical Imaging, Computer Tomography (CT), Single Photon Emission Tomography (SPECT), Positron Emission Tomography (PET), Magnetic Resonance Imaging (MRI), Molecular and metabolic imaging, Cancer detection and imaging of margins, Electric impedance tomography, Environmental monitoring, energy resources, Real-time imaging and video processing, Subsurface inspection, corrosion imaging, Airport security and cargo inspection, Electromagnetic imaging and inverse scattering, Image analysis and processing, Wavelets and fractals, Image enhancement and restoration, Image segmentation and edge detection, Image processing for multispectral images, Detector design principles and image formation, Imaging system design and instrumentation, Pre-processing and post-processing, Multi-functional and multi-fusion imaging, Emerging trends on imaging, CMOS image sensor, VLSI circuitry topology for imaging sensing, Antennas, propagation and computational EM, IOT technology","July 11-13, 2025",2025,"Osaka, Japan",Osaka,Japan,Asia,Offline,"{""Submission Deadline"":""May 30, 2025""}","{""Notification Date"":""June 15, 2025""}","{""Final Paper Submission"":""June 20, 2025""}","{""Author's Registration"":""June 20, 2025""}",{},"Cloud computing, Big data, Data security, RF/Milimeter-wave circuits and systems, Wireless communications and networks, Optical communications, Modulation and coding techniques, Neural networks, Fuzzy systems, Swarm and evolutionary computation, Machine learning, Computing architectures and systems, Low power RF circuitry design, RFIC circuitry, Low power circuitry for IOT application, Image processing, Video processing, Pattern recognition and object tracking audio and electro-acoustics, DSP implementation and embedded systems, Face recognition, Neural networks and genetic algorithms, Shape representation, Signal identification, Signal noise control, Signal reconstruction, Speech, audio and music processing, Statistical and optical signal processing, Video compression and streaming, Video surveillance and processing, Biometrics and pattern recognition, Cognitive and biologically-inspired vision, Filter design and structures, Aerospace imaging, Remote sensing, passive and active sensing, Ladars and lidars, Polarimetric imaging, Autonomous systems, Multi-spectral polarimetric imaging and lasers, Medical Imaging, Computer Tomography (CT), Single Photon Emission Tomography (SPECT), Positron Emission Tomography (PET), Magnetic Resonance Imaging (MRI), Molecular and metabolic imaging, Cancer detection and imaging of margins, Electric impedance tomography, Environmental monitoring, energy resources, Real-time imaging and video processing, Subsurface inspection, corrosion imaging, Airport security and cargo inspection, Electromagnetic imaging and inverse scattering, Image analysis and processing, Wavelets and fractals, Image enhancement and restoration, Image segmentation and edge detection, Image processing for multispectral images, Detector design principles and image formation, Imaging system design and instrumentation, Pre-processing and post-processing, Multi-functional and multi-fusion imaging, Emerging trends on imaging, CMOS image sensor, VLSI circuitry topology for imaging sensing, Antennas, propagation and computational EM, IOT technology",No publisher,"The Ninth International Conference on Imaging, Signal Processing and Communications (ICISPC 2025) will be held in Osaka, Japan, from July 11-13, 2025. This annual conference, sponsored by Ritsumeikan University, aims to bring together international academicians, scientists, and industrialists to share knowledge and present research outcomes in imaging, signal processing, and communications.","# Call for Papers - ICISPC 2025
+
+The Ninth International Conference on Imaging, Signal Processing and Communications (ICISPC 2025) will be held in **Osaka, Japan**, from **July 11-13, 2025**.
+
+ICISPC is an annual conference that focuses on ""Imaging, Signal Processing and Communications"". It is sponsored by **Ritsumeikan University** and supported by Sojo University, Universiti Sains Malaysia, Universiti Teknologi Malaysia, etc.
+
+## Scope and Subtopics
+
+ICISPC 2025 accepts papers on the following topics, but not limited to:
+
+*   **Cloud computing**
+*   **Big data**
+*   **Data security**
+*   **RF/Milimeter-wave circuits and systems**
+*   **Wireless communications and networks**
+*   **Optical communications**
+*   **Modulation and coding techniques**
+*   **Neural networks**
+*   **Fuzzy systems**
+*   **Swarm and evolutionary computation**
+*   **Machine learning**
+*   **Computing architectures and systems**
+*   **Low power RF circuitry design**
+*   **RFIC circuitry**
+*   **Low power circuitry for IOT application**
+
+### T3: Multimedia and Communication Systems
+
+*   Image processing
+*   Video processing
+*   Pattern recognition and object tracking audio and electro-acoustics
+*   DSP implementation and embedded systems
+*   Face and Gesture
+*   Face recognition
+*   Neural networks and genetic algorithms
+*   Shape representation
+*   Signal identification
+*   Signal noise control
+*   Signal reconstruction
+*   Speech, audio and music processing
+*   Statistical and optical signal processing
+*   Video compression and streaming
+*   Video surveillance and processing
+*   Biometrics and pattern recognition
+*   Cognitive and biologically-inspired vision
+*   Filter design and structures
+
+### T1: Imaging Sensing Technique and Processing Technology
+
+*   Aerospace imaging
+*   Remote sensing, passive and active sensing
+*   Ladars and lidars
+*   Polarimetric imaging
+*   Autonomous systems
+*   Multi-spectral polarimetric imaging and lasers
+*   Medical Imaging (CT, SPECT, PET, MRI, etc.)
+*   Cancer detection and imaging of margins
+*   Electric impedance tomography
+*   Environmental monitoring, energy resources
+*   Real-time imaging and video processing
+*   Subsurface inspection, corrosion imaging
+*   Airport security and cargo inspection
+*   Electromagnetic imaging and inverse scattering
+*   Image analysis and processing
+*   Wavelets and fractals
+*   Image enhancement and restoration
+*   Image segmentation and edge detection
+*   Image processing for multispectral images
+*   Detector design principles and image formation
+*   Imaging system design and instrumentation
+*   Pre-processing and post-processing
+*   Multi-functional and multi-fusion imaging
+*   Emerging trends on imaging
+*   CMOS image sensor
+*   VLSI circuitry topology for imaging sensing
+
+### T2: Communication Technology
+
+*   Antennas, propagation and computational EM
+*   IOT technology
+
+## Submission Options
+
+*   **Abstract/ Presentation:** Abstract submission required; oral presentation only; will not be published.
+*   **Full Paper/Publication:** Full paper submission required; presentation required; will be published.
+
+## Submission Guidelines
+
+*   The official language is **English**.
+*   Submitted papers should be **no less than 8 pages**.
+*   Prepare your paper according to the conference template (Word or Latex).
+*   Submission Link: [https://www.zmeeting.org/submission/icispc2025](https://www.zmeeting.org/submission/icispc2025)
+
+## Important Deadlines
+
+*   **Submission Deadline:** Before **May 30, 2025**
+*   **Notification Date:** on **June 15, 2025**
+*   **Author's Registration:** Before **June 20, 2025**
+*   **Final Paper Submission:** Before **June 20, 2025**
+*   **Conference Dates:** **July 11-13, 2025**
+
+## Publication
+
+All accepted papers after proper registration and presentation will be published into ICISPC 2025 conference proceedings as a volume of **Advances in Transdisciplinary Engineering by IOS Press**. The book series is now indexed by **EI Compendex, Scopus**, etc.
+
+## Multiple Submission Policy
+
+ICISPC will not accept any paper that is under reviewing, accepted for publication, or has already been published elsewhere. Authors are also expected not to submit their papers elsewhere during the reviewing period. Submitted papers must contain original work with adequate scholarly citations.
+
+## Call for Invited Speakers
+
+If you are interested in being an invited speaker, please email your CV to **icispc@bmail.org**.
+
+## Call for Reviewers
+
+Experts in the field are welcome to join as reviewers. Send your CV to: **icispc@bmail.org**.
+
+## Contact Us
+
+Conference coordinator: Ms. Lamira Zhang
+E-mail: **icispc@bmail.org**
+Tel: **+86-18081079313**",,
+req-conf-1751768239677-gv7fi,,"Conference on Innovation in Clouds, Internet and Networks",ICIN,https://www.icin-conference.org/2025/,https://www.icin-conference.org/2025/call-for-papers/,https://www.icin-conference.org/2025/,"Conference dates: March 11 - 14, 2025
+Year: 2025
+Location: Paris, France
+City-State-Province: Paris
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Paper Submission Due: November 17, 2024
+Submission Date.Demo Papers Deadline Paper Submission Due: January 19, 2025
+Submission Date.Workshops Papers Deadline Paper Submission Due: December 27, 2024
+Notification Date.Notification of Acceptance: December 20, 2024
+Notification Date.Demo Papers Deadline Notification of Acceptance: January 24, 2025
+Notification Date.Workshops Papers Deadline Notification of Acceptance: January 14, 2025
+Camera-ready Date.Camera-Ready Papers due: January 13, 2025
+Camera-ready Date.Demo Papers Deadline Camera-Ready Papers due: January 31, 2025
+Camera-ready Date.Workshops Papers Deadline Camera-Ready Papers due: January 21, 2025
+Topics: Intelligent network service management, IoT-edge-cloud continuum, intelligent softwarized networks, intelligent wireless and mobile networks, Network automation and orchestration architectures and protocols, Technologies for innovation in clouds, edge, networks and IoT
+Keynote Speakers: Azimeh Sefidcon, Y. Richard Yang, Stefan Schmid, Venkatesh “Venki” Ramaswamy","March 11 - 14, 2025",2025,"Paris, France",Paris,France,Europe,Offline,"{""Paper Submission Due"":""November 17, 2024"",""Demo Papers Deadline Paper Submission Due"":""January 19, 2025"",""Workshops Papers Deadline Paper Submission Due"":""December 27, 2024""}","{""Notification of Acceptance"":""December 20, 2024"",""Demo Papers Deadline Notification of Acceptance"":""January 24, 2025"",""Workshops Papers Deadline Notification of Acceptance"":""January 14, 2025""}","{""Camera-Ready Papers due"":""January 13, 2025"",""Demo Papers Deadline Camera-Ready Papers due"":""January 31, 2025"",""Workshops Papers Deadline Camera-Ready Papers due"":""January 21, 2025""}",{},{},"Intelligent network service management, IoT-edge-cloud continuum, intelligent softwarized networks, intelligent wireless and mobile networks, Network automation and orchestration architectures and protocols, Technologies for innovation in clouds, edge, networks and IoT",No publisher,"The 28th Conference on Innovation in Clouds, Internet and Networks (ICIN 2025) will be held in Paris, France, from March 11-14, 2025. The conference theme is 'Towards full life cycle automation in the IoT-edge-cloud continuum' and it aims to facilitate discussions on emerging trends, research challenges, and transformative technologies in cloud networking and the Internet.","# ICIN 2025: Call for Papers
+
+The 28th Conference on Innovation in Clouds, Internet and Networks (ICIN 2025) is soliciting original, unpublished work not currently under review by other conferences or journals. The conference will take place in **Paris, France, from March 11-14, 2025**.
+
+## Theme
+
+""Towards full life cycle automation in the IoT-edge-cloud continuum""
+
+## Submission Guidelines
+
+*   Papers will be assessed based on originality, technical soundness, clarity, and interest to a wide audience.
+*   All submissions must be written in English and use the standard IEEE two-column conference template: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html).
+*   Only PDF files will be accepted for the review process.
+*   All submissions must be done electronically through EDAS: [https://edas.info/N32464](https://edas.info/N32464).
+*   **Technical papers:** Up to 8 pages (Full papers) and 5 pages (Short papers), including tables, figures, and references.
+*   At least one author is required to register at the full rate to present the accepted paper. Accepted and presented papers will be submitted for publication in IEEE Xplore.
+*   Authors of selected papers will be invited to submit an extended version to IEEE Transactions on Network and Service Management (TNSM).
+
+## Areas of Interest and Topics
+
+*   **Intelligent network service management**
+    *   Intelligent end-to-end service configuration
+    *   Intelligent and cooperative management models across heterogeneous network segments from IoT to Cloud and back
+    *   Intelligent, resilient and robust schemes in the IoT-edge-cloud continuum service management
+    *   Enablers for cross-network intelligence and services trustworthiness
+    *   Intelligent and flexible networks and services for high adaptability
+    *   Support of intelligent network service management by digital twins
+    *   Distributed intelligence in B5G/6G networks
+
+*   **IoT-edge-cloud continuum and intelligent softwarized networks evolution and life cycle**
+    *   Intelligent edge for vertical industries
+    *   Digital twins challenges for the IoT-edge-cloud continuum life cycle automation
+    *   Vehicular cloud services
+    *   Industrial networks and services for an intelligent automation
+    *   Functional decomposition and orchestration, service chaining
+    *   Communication protocols for ultra-low latency and ultra-high reliability
+    *   Fog, edge and multi-access computing and networking
+    *   Security, trust and privacy
+
+*   **Enablers and services for intelligent wireless and mobile networks**
+    *   Network and service architecture, protocols, application-network layer interworking
+    *   Scalability and multi-tenancy in beyond wireless, cellular and emerging networks
+    *   Green networking and efficient resource usage and service delivery
+    *   Security, trust and privacy management in large systems and smart environments
+
+*   **Network automation and orchestration architectures and protocols**
+    *   Zero-touch network and service management and orchestration
+    *   Artificial intelligence for networks and networks for artificial intelligence
+    *   Orchestration of mobile and ephemeral resources, automated infrastructure discovery
+    *   Network data analytics, anomaly detection and feature extraction
+    *   Autonomic and cognitive networking
+    *   Automated data, control, and management planes
+    *   Intent-based network management
+    *   Self-driving networks
+    *   Network programmability
+    *   Automated QoS/QoE management
+    *   Orchestration of distributed cloud, edge and network resources
+    *   Security, societal, and legal aspects of network automation
+    *   Federated learning-based applications
+
+*   **Technologies for innovation in clouds, edge, networks and IoT**
+    *   SDN, NFV, service function chaining, function placement and network embedding
+    *   Serverless computing and FaaS
+    *   Application-aware networking
+    *   Blockchain and Distributed Ledger Technologies in networking and network services
+    *   Advanced multimedia and real-time communications
+    *   QoE/QoS Assurance
+    *   Lightweight virtualization technologies, software and hardware acceleration
+    *   Energy-efficient software-defined infrastructures
+    *   Measurement, monitoring and telemetry
+    *   Time-sensitive and deterministic networking
+    *   Open-source projects and open standards
+
+## Important Dates
+
+*   **Paper Submission Due:** November 17, 2024
+*   **Notification of Acceptance:** December 20, 2024
+*   **Camera-Ready Papers due:** January 13, 2025
+*   **Conference Date:** March 11 - 14, 2025
+
+## Other Submission Deadlines
+
+*   **Demo Papers Deadline:**
+    *   Paper Submission Due: January 19, 2025
+    *   Notification of Acceptance: January 24, 2025
+    *   Camera-Ready Papers due: January 31, 2025
+*   **Workshops Papers Deadline:**
+    *   Paper Submission Due: December 27, 2024
+    *   Notification of Acceptance: January 14, 2025
+    *   Camera-Ready Papers due: January 21, 2025",,
+req-conf-1751768239677-gv7fi,,International Conference on Information Security and Cryptology,ICISC,http://www.icisc.org/,http://www.icisc.org/sites/icisc2025/static/callforpapers,http://www.icisc.org/sites/icisc2025/static/importantdates,"Conference dates: November 19 - 21, 2025
+Year: 2025
+Location: Seoul, Korea
+City-State-Province: Seoul
+Country: Korea
+Continent: Asia
+Type: Offline
+Submission Date.Submission Deadline: September 5, 2025
+Notification Date.Acceptance notification: October 29, 2025
+Camera-ready Date.Camera-ready submission: November 5, 2025
+Registration Date.Author registration deadline: November 7, 2025
+Registration Date.Participant registration deadline: November 10, 2025","November 19 - 21, 2025",2025,"Seoul, Korea",Seoul,Korea,Asia,Offline,"{""Submission Deadline"":""September 5, 2025""}","{""Acceptance notification"":""October 29, 2025""}","{""Camera-ready submission"":""November 5, 2025""}","{""Author registration deadline"":""November 7, 2025"",""Participant registration deadline"":""November 10, 2025""}",{},No topics,No publisher,"The International Conference on Information Security and Cryptology (ICISC) will be held from November 19-21, 2025. The conference aims to cover advancements in Information Security and Cryptology.","# ICISC 2025: Call for Papers
+
+The International Conference on Information Security and Cryptology (ICISC) invites submissions for its 2025 edition.
+
+## Important Dates
+
+*   **Submission Deadline**: September 5, 2025, 18:00 KST (GMT + 9 hr)
+*   **Acceptance Notification**: October 29, 2025
+*   **Camera-ready Submission**: November 5, 2025
+*   **Author Registration Deadline**: November 7, 2025
+*   **Participant Registration Deadline**: November 10, 2025
+
+## Conference Dates
+
+*   **ICISC 2025 Conference**: November 19 ~ November 21, 2025
+
+## Paper Submission
+
+Submissions should be made through the conference website. Further details regarding specific submission guidelines, topics of interest, and formatting requirements can be found on the official conference pages.
+
+## Contact Information
+
+For inquiries, please contact:
+
+*   **Phone**: +82-2-564-9333 (ex.2), +82-2-564-9226
+*   **Email**: kiisc@kiisc.or.kr",,
+req-conf-1751768239677-gv7fi,,"International Conference on Informatics in Control, Automation and Robotics",ICINCO,https://icinco.scitevents.org/,https://icinco.scitevents.org/CallForPapers.aspx?y=2025,https://icinco.scitevents.org/ImportantDates.aspx?y=2025,"Conference dates: October 20 - 22, 2025
+Year: 2025
+Location: Marbella, Spain
+City-State-Province: Marbella
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Topics: Informatics, Control, Automation, Robotics, Intelligent Control Systems, Optimization, Robotics, Automation, Signal Processing, Sensors, Systems Modelling and Control, Industrial Informatics
+Submission Date.(Regular Papers) Paper Submission: June 6, 2025
+Submission Date.(Position Papers /Regular Papers) Paper Submission: July 3, 2025
+Submission Date.(Late-Breaking) Paper Submission: July 24, 2025
+Submission Date.(Special Sessions) Paper Submission: July 31, 2025
+Submission Date.(Abstracts Track) Abstract Submission: July 31, 2025
+Notification Date.(Regular Papers) Authors Notification: July 17, 2025
+Notification Date.(Position Papers /Regular Papers) Authors Notification: July 31, 2025
+Notification Date.(Late-Breaking) Authors Notification: September 3, 2025
+Notification Date.(Special Sessions) Authors Notification: September 8, 2025
+Notification Date.(Abstracts Track) Authors Notification: September 8, 2025
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: July 31, 2025
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: September 5, 2025
+Camera-ready Date.(Late-Breaking) Camera Ready and Registration: September 11, 2025
+Camera-ready Date.(Special Sessions) Camera Ready and Registration: September 17, 2025
+Camera-ready Date.(Abstracts Track) Camera Ready and Registration: September 17, 2025
+Other Date.(Workshops) Workshop Proposal: May 27, 2025
+Other Date.(Special Sessions) Special Session Proposal: May 27, 2025
+Other Date.(Tutorials) Tutorial Proposal: September 11, 2025
+Other Date.(Demos) Demo Proposal: September 11, 2025
+Other Date.(Panels) Panel Proposal: September 11, 2025","October 20 - 22, 2025",2025,"Marbella, Spain",Marbella,Spain,Europe,Hybrid,"{""(Regular Papers) Paper Submission"":""June 6, 2025"",""(Position Papers /Regular Papers) Paper Submission"":""July 3, 2025"",""(Late-Breaking) Paper Submission"":""July 24, 2025"",""(Special Sessions) Paper Submission"":""July 31, 2025"",""(Abstracts Track) Abstract Submission"":""July 31, 2025""}","{""(Regular Papers) Authors Notification"":""July 17, 2025"",""(Position Papers /Regular Papers) Authors Notification"":""July 31, 2025"",""(Late-Breaking) Authors Notification"":""September 3, 2025"",""(Special Sessions) Authors Notification"":""September 8, 2025"",""(Abstracts Track) Authors Notification"":""September 8, 2025""}","{""(Regular Papers) Camera Ready and Registration"":""July 31, 2025"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""September 5, 2025"",""(Late-Breaking) Camera Ready and Registration"":""September 11, 2025"",""(Special Sessions) Camera Ready and Registration"":""September 17, 2025"",""(Abstracts Track) Camera Ready and Registration"":""September 17, 2025""}",{},"{""(Workshops) Workshop Proposal"":""May 27, 2025"",""(Special Sessions) Special Session Proposal"":""May 27, 2025"",""(Tutorials) Tutorial Proposal"":""September 11, 2025"",""(Demos) Demo Proposal"":""September 11, 2025"",""(Panels) Panel Proposal"":""September 11, 2025""}","Informatics, Control, Automation, Robotics, Intelligent Control Systems, Optimization, Robotics, Automation, Signal Processing, Sensors, Systems Modelling and Control, Industrial Informatics",No publisher,"The International Conference on Informatics in Control, Automation and Robotics (ICINCO) is a conference that brings together researchers, engineers, and practitioners interested in the application of informatics to Control, Automation, and Robotics. The conference covers topics related to Intelligent Control Systems, Optimization, Robotics, Automation, Signal Processing, Sensors, Systems Modelling and Control, and Industrial Informatics. ICINCO 2025 will be held in Marbella, Spain from October 20-22, 2025, in conjunction with other related events.","# ICINCO 2025: Call for Papers
+
+The International Conference on Informatics in Control, Automation and Robotics (ICINCO) aims to bring together researchers, engineers, and practitioners interested in the application of informatics to Control, Automation, and Robotics.
+
+## Scope
+
+The conference will cover topics related to Intelligent Control Systems, Optimization, Robotics, Automation, Signal Processing, Sensors, Systems Modelling and Control, and Industrial Informatics. Authors are encouraged to highlight the benefits of Information Technology (IT) in these areas, submitting original work and ideas for solving problems using IT in R&D and industrial applications. Advanced prototypes, systems, tools, techniques, and survey papers indicating future directions are also welcome.
+
+## Conference Areas
+
+1.  **Intelligent Control Systems and Optimization**
+2.  **Robotics and Automation**
+3.  **Signal Processing, Sensors, Systems Modelling and Control**
+4.  **Industrial Informatics**
+
+## Keynote Speakers
+
+*   Robert Babuska, Delft University of Technology, Netherlands
+*   Uzay Kaymak, Eindhoven University of Technology, Netherlands
+*   Michael Berthold, University of Konstanz / KNIME AG, Germany
+
+## Special Sessions
+
+*   **Bridging the Gap in COllaborative roBOtics: from Theory to real Applications - COBOTA**
+    *   Chairs: Juan Corrales, Pedro Dinis Gaspar and Chedli Bouzgarrou
+    *   Submission: July 31, 2025
+*   **Trustworthy and Intelligent Smart Agriculture Systems: AI, Blockchain, and IoT Convergence - TISAS**
+    *   Chairs: Raoudha Ben Djemaa and Hajer Nabli
+    *   Submission: July 31, 2025
+
+## Tutorials
+
+*   Path Planning, and Optimization of Idustrial Robots within Gazebo, and ROS Environment
+    *   Instructor: Mojtaba Ahmadieh Khanesar
+
+## Paper Submission
+
+*   **Contribution Types:** Complete papers can be submitted as **Regular Papers** (completed and validated research) or **Position Papers** (work in progress or arguable opinion).
+*   **Abstracts:** Accepted abstracts are presented but not published in the proceedings.
+*   **Format:** Papers must be in English, carefully checked for grammar and spelling.
+*   **Anonymization:** Authors are requested to submit papers without any reference to authors' identity, including acknowledgments.
+*   **Originality:** Only original papers should be submitted. Submissions must not overlap with previously published or simultaneously submitted work. Plagiarized papers will be rejected.
+*   **Submission Platform:** All papers must be submitted through the online submission platform PRIMORIS ([http://www.insticc.org/primoris/DirectLink.aspx?idEvent=8qFFRNgeZlU=&roleName=C7zJAFslO/0=&type=382rcNLtAGk=](http://www.insticc.org/primoris/DirectLink.aspx?idEvent=8qFFRNgeZlU=&roleName=C7zJAFslO/0=&type=382rcNLtAGk=)).
+
+## Publications
+
+*   All accepted complete papers will be published in the conference proceedings with an ISBN, on paper and digital support.
+*   Papers will be available at the SCITEPRESS Digital Library and given a DOI (Digital Object Identifier).
+*   The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science/Conference Proceedings Citation Index.
+*   A short list of best papers will be invited for a post-conference special issue of the Springer Nature Computer Science Journal.
+*   A short list of presented papers will be selected for revised and extended versions to be published by Springer in a LNEE Series book.
+
+## Important Dates (AOE time - ""Anywhere on Earth"")
+
+*   **Regular Papers:**
+    *   Paper Submission: June 6, 2025 (expired)
+    *   Authors Notification: July 17, 2025
+    *   Camera Ready and Registration: July 31, 2025
+*   **Position Papers / Regular Papers:**
+    *   Paper Submission: July 3, 2025 (expired)
+    *   Authors Notification: July 31, 2025
+    *   Camera Ready and Registration: September 5, 2025
+*   **Late-Breaking:**
+    *   Paper Submission: July 24, 2025
+    *   Authors Notification: September 3, 2025
+    *   Camera Ready and Registration: September 11, 2025
+*   **Workshops:**
+    *   Workshop Proposal: May 27, 2025 (expired)
+*   **Special Sessions:**
+    *   Special Session Proposal: May 27, 2025 (expired)
+    *   Paper Submission: July 31, 2025
+    *   Authors Notification: September 8, 2025
+    *   Camera Ready and Registration: September 17, 2025
+*   **Tutorials:**
+    *   Tutorial Proposal: September 11, 2025
+*   **Demos:**
+    *   Demo Proposal: September 11, 2025
+*   **Panels:**
+    *   Panel Proposal: September 11, 2025
+*   **Abstracts Track:**
+    *   Abstract Submission: July 31, 2025
+    *   Authors Notification: September 8, 2025
+    *   Camera Ready and Registration: September 17, 2025
+
+## Venue
+
+The conference will take place at the Barceló Marbella hotel in Marbella, Spain.
+
+## Secretariat
+
+ICINCO Secretariat
+Address: Avenida de S. Francisco Xavier, Lote 7 Cv. C, 2900-616 Setúbal - Portugal
+Tel.: +351 265 520 185
+Fax: +351 265 520 186
+e-mail: [icinco.secretariat@insticc.org](mailto:icinco.secretariat@insticc.org)
+Web: [https://icinco.scitevents.org](https://icinco.scitevents.org)
+
+## Logistics
+
+ICINCO 2025 will be held in conjunction with WEBIST 2025, icSPORTS 2025, CHIRA 2025, IJCCI 2025, IC3K 2025, and CoopIS 2025. Registration to ICINCO allows free access to these other conferences (as a non-speaker). Although the conference is primarily in-person, speakers are allowed to present remotely if unable to travel to the venue (hybrid support).",,

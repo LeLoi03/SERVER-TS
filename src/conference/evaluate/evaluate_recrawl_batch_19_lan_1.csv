@@ -1,0 +1,1596 @@
+requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note
+req-conf-1751946934833-c7die,,Usable Security and Privacy,USEC,https://www.ndss-symposium.org/ndss2025/co-located-events/usec/,TRUE,https://www.ndss-symposium.org/ndss2025/submissions/cfp-usec/,,"Conference dates: February 24, 2025
+Year: 2025
+Location: San Diego, California
+City-State-Province: San Diego, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Submission Deadline: November 25, 2024
+Notification Date.Reviews Due: December 16, 2024
+Notification Date.Notification of Acceptance: December 20, 2024
+Camera-ready Date.Camera Ready Deadline: January 28, 2025
+Topics: human factors and usability in the context of security and privacy, Innovative security or privacy functionality and design, New applications of existing models or technology, Usability evaluations of new or existing security or privacy features and lessons learned, Security testing of new or existing usability features, Psychological, sociological, and economic aspects of security and privacy, Research and design methodologies for human-centric security and privacy research, Reports of replicating previously published studies and experiments, Reports of failed usable privacy/security studies or experiments, with the focus on the lessons learned from such experience, Systematization of Knowledge, Inclusive security and privacy, Ethics in human-centric security and privacy research, Workforce, labels, cyber-physical systems, Usability in smart manufacturing","February 24, 2025",TRUE,2025,"San Diego, California",TRUE,"San Diego, California",United States,North America,Offline,TRUE,"{""Submission Deadline"":""November 25, 2024""}",100,"{""Reviews Due"":""December 16, 2024"",""Notification of Acceptance"":""December 20, 2024""}",100,"{""Camera Ready Deadline"":""January 28, 2025""}",100,{},,{},0,"human factors and usability in the context of security and privacy, Innovative security or privacy functionality and design, New applications of existing models or technology, Usability evaluations of new or existing security or privacy features and lessons learned, Security testing of new or existing usability features, Psychological, sociological, and economic aspects of security and privacy, Research and design methodologies for human-centric security and privacy research, Reports of replicating previously published studies and experiments, Reports of failed usable privacy/security studies or experiments, with the focus on the lessons learned from such experience, Systematization of Knowledge, Inclusive security and privacy, Ethics in human-centric security and privacy research, Workforce, labels, cyber-physical systems, Usability in smart manufacturing",No publisher,"The Symposium on Usable Security and Privacy (USEC) 2025 is an international forum for research and discussion on human factors in security and privacy, co-located with the Network and Distributed System Security Symposium (NDSS) 2025 in San Diego, California. The event will take place on February 24, 2025.","# Call for Papers: Symposium on Usable Security and Privacy (USEC) 2025
+
+The call for papers is now closed.
+
+The Symposium on Usable Security and Privacy (USEC) invites submissions on all aspects of human factors and usability in the context of security and privacy. USEC '25 aims to bring together researchers already engaged in this interdisciplinary effort with other researchers in relevant areas, encouraging contributions from economics, HCI, AI, theoretical computer science, cryptography, psychology, and business studies. Collaborative research from authors in multiple fields is particularly encouraged.
+
+USEC '25 will also feature a Test of Time Award to honor significant contributions with lasting impact on the field.
+
+## Submission Tracks
+
+*   **Research Track:** For mature, completed work. Papers must not be more than **12 pages** (excluding bibliography and appendices).
+*   **Meta-Science Track:** For mature work reporting on research practices, replicability, and systematization of knowledge. Papers must not exceed **12 pages** (excluding bibliography and appendices).
+*   **Vision Track:** For work in progress or concrete ideas for future work. Papers must be up to **5 pages** (excluding bibliography and appendices).
+
+## Submission Guidelines
+
+*   All submissions must be original work and clearly document any overlap with previously published or simultaneously submitted papers.
+*   All papers should be written in English.
+*   Formatting: Use Times font, 10-point or larger, with 11-point or larger line spacing. Use the [templates for NDSS Symposium and co-located events](https://www.ndss-symposium.org/ndss2025/submissions/templates/).
+*   Authors have the option to attach supplementary appendices with study materials.
+*   Submission Portal: [https://usec25.hotcrp.com/](https://usec25.hotcrp.com/)
+
+## Review Process
+
+*   Reviewing will be **double-blind**.
+*   Author names and affiliations should not appear in the paper. Reasonable efforts must be made to not reveal identities or institutional affiliations.
+*   Prior work should preferably be referred to in the third person or blinded.
+*   Submissions that violate these requirements will be rejected without review.
+*   The list of authors cannot be changed after acceptance without Program Chairs' approval.
+
+## Areas of Interest
+
+Topics include, but are not limited to:
+
+*   Innovative security or privacy functionality and design
+*   New applications of existing models or technology
+*   Usability evaluations of new or existing security or privacy features and lessons learned
+*   Security testing of new or existing usability features
+*   Psychological, sociological, and economic aspects of security and privacy
+*   Research and design methodologies for human-centric security and privacy research
+*   Reports of replicating previously published studies and experiments
+*   Reports of failed usable privacy/security studies or experiments, with the focus on the lessons learned
+*   Systematization of Knowledge (SoK)
+*   Inclusive security and privacy
+*   Ethics in human-centric security and privacy research
+*   Workforce, labels, cyber-physical systems
+*   Usability in smart manufacturing
+
+All submissions must clearly relate to the **human aspects of security or privacy**. Papers without this focus will not be considered.
+
+## Important Dates
+
+*   **Submission Deadline:** 25 November 2024
+*   **Reviews Due:** 16 December 2024
+*   **Discussion Period:** 16-19 December 2024
+*   **Notification of Acceptance:** 20 December 2024
+*   **Camera Ready Deadline:** 28 January 2025
+*   **Workshop Date:** 24 February 2025
+
+## Conflicts of Interest
+
+Authors and Program Committee members must indicate any conflict of interest. Conflicts include advisors and advisees, institutional relationships, professional collaborations within the past 2 years, and close personal relationships. PC members with a conflict will be excluded from the evaluation of that paper.",thiếu Discussion Period
+req-conf-1751946934833-c7die,,Usenix Annual Technical Conference,USENIX,https://www.usenix.org/conference/atc25,TRUE,https://www.usenix.org/conference/atc25/call-for-papers,,"Conference dates: July 7–9, 2025
+Year: 2025
+Location: Sheraton Boston, Boston, MA, USA
+City-State-Province: Boston, Massachusetts
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Abstract registrations due: January 7, 2025
+Submission Date.Submissions due: January 14, 2025
+Notification Date.Notification to authors: April 25, 2025
+Camera-ready Date.Final papers due: June 3, 2025
+Topics: virtualization, system and network management and troubleshooting, cloud and edge computing, security, privacy, and trust, mobile and wireless
+Registration Date.Early Bird Registration Deadline: June 16, 2025","July 7–9, 2025",TRUE,2025,"Sheraton Boston, Boston, MA, USA",TRUE,"Boston, Massachusetts",United States,North America,Offline,TRUE,"{""Abstract registrations due"":""January 7, 2025"",""Submissions due"":""January 14, 2025""}",100,"{""Notification to authors"":""April 25, 2025""}",100,"{""Final papers due"":""June 3, 2025""}",100,"{""Early Bird Registration Deadline"":""June 16, 2025""}",100,{},0,"virtualization, system and network management and troubleshooting, cloud and edge computing, security, privacy, and trust, mobile and wireless",No publisher,"The 2025 USENIX Annual Technical Conference (USENIX ATC '25) will be held from July 7–9, 2025, at the Sheraton Boston in Boston, MA, USA. Co-located with OSDI '25, the conference brings together leading systems researchers to present cutting-edge systems research, focusing on topics like virtualization, system and network management, cloud computing, security, privacy, and mobile systems.","# USENIX ATC '25: Call for Papers
+
+The 2025 USENIX Annual Technical Conference (USENIX ATC '25) will take place on **July 7–9, 2025**, at the **Sheraton Boston in Boston, MA, USA**. The conference is co-located with the **19th USENIX Symposium on Operating Systems Design and Implementation (OSDI '25)**.
+
+## Overview
+
+USENIX ATC '25 seeks original, high-quality submissions that improve and further the knowledge of computing systems, with an emphasis on implementations and experimental results. We are interested in systems of all scales, from small embedded mobile devices to data centers and clouds.
+
+The scope of USENIX ATC covers all practical aspects related to computer systems, including but not limited to:
+
+*   Operating systems
+*   Runtime systems
+*   Parallel and distributed systems
+*   Storage
+*   Networking
+*   Security and privacy
+*   Virtualization
+*   Software-hardware interactions
+*   Performance evaluation and workload characterization
+*   Reliability, availability, and scalability
+*   Energy and power management
+*   Bug-finding, tracing, analyzing, and troubleshooting
+
+We value submissions more highly if they are accompanied by clearly defined artifacts not previously available, including traces, original data, source code, or tools developed as part of the submitted work. We particularly encourage new ideas and approaches.
+
+## Important Dates
+
+*   **Abstract registrations due:** Tuesday, January 7, 2025, 11:59 pm UTC
+*   **Submissions due:** Tuesday, January 14, 2025, 11:59 pm UTC
+*   **Authors' response period:** Monday, April 7–Wednesday, April 9, 2025, 11:59 pm UTC
+*   **Notification to authors:** Friday, April 25, 2025
+*   **Final papers due:** Tuesday, June 3, 2025
+
+## Submission Guidelines
+
+*   **Anonymity:** USENIX ATC '25 will employ **double-blind reviewing**. Papers that are not properly anonymized may be rejected without review.
+*   **Originality:** Submissions must contain original unpublished material that is not under review at any other forum, including journals, conferences, and workshops with proceedings.
+*   **Registration:** Papers need to be registered and their abstracts submitted by the abstract registration deadline. Papers with an empty abstract at the time of the abstract registration deadline will be rejected.
+*   **Artifact Evaluation:** There will be an optional artifact evaluation process for accepted papers. Visit the href=""/conference/atc25/call-for-artifacts"" - Call for Artifacts page for details.
+*   **Further Details:** For detailed submission instructions, please see the href=""/conference/atc25/submission-instructions"" - Submission Instructions page.
+
+## Submission Types
+
+USENIX ATC '25 accepts both **full and short submissions**.
+
+*   **Full submissions:** Must not exceed **12 pages**, excluding references and appendices.
+*   **Short submissions:** Must not exceed **6 pages**, excluding references and appendices.
+
+Both types are reviewed to the same standards and differ primarily in scope. A short paper presents a complete idea that is properly evaluated, just like in a full-length submission. Optionally, authors can include an appendix to provide material that may be of interest to some reviewers, such as algorithm details, proofs, and code snippets, but is not central to the contributions of the paper.
+
+## Deployed Systems Track
+
+USENIX ATC '25 solicits papers that describe the design, implementation, analysis, and experience with real-world deployment of systems and networks. Papers for the deployed systems track need not present new ideas or results to be accepted but should convey practical insights. Note that the rules regarding submission and anonymization are different for deployed systems track papers.
+
+## Generative AI Policy
+
+Authors must not submit papers containing sections generated entirely by generative AI. Authors must submit a statement attesting that their paper does not include sections completely created by generative AI as part of the submission process in HotCRP. For more detailed questions about the appropriate use of generative AI, please feel free to contact the ATC co-chairs.
+
+## Contact Information
+
+Please direct any questions to the program co-chairs at href=""mailto:atc25chairs@usenix.org?subject=Questions about USENIX ATC '25 CFP"" - atc25chairs@usenix.org or to the USENIX office at href=""mailto:submissionspolicy@usenix.org?subject=Questions about USENIX ATC '25 CFP"" - submissionspolicy@usenix.org .
+
+## Conference Organizers
+
+*   **Program Co-Chairs:** Deniz Altınbüken (Google), Ryan Stutsman (University of Utah and Stellar Development Foundation)
+*   **Steering Committee:** A list of committee members is available on the conference website.
+
+## Registration Information
+
+*   **Early Bird Registration Deadline:** Monday, June 16
+*   See the href=""https://www.usenix.org/conference/atc25/registration-information"" - Registration Information page for details, including fees and discount information.",thiếu Hotel Discount Deadline ở mainLink
+req-conf-1751946934833-c7die,,"Verification, Model Checking and Abstract Interpretation",VMCAI,https://conf.researchr.org/home/VMCAI-2026,TRUE,https://conf.researchr.org/home/VMCAI-2026,,"Conference dates: January 11 - 17, 2026
+Year: 2026
+Location: Rennes, France
+City-State-Province: Rennes
+Country: France
+Continent: Europe
+Type: Offline
+Topics: program verification, model checking, abstract interpretation, abstract domains, program synthesis, static analysis, type systems, deductive methods, program logics, first-order theories, decision procedures, interpolation, Horn clause solving, program certification, separation logic, probabilistic programming and analysis, error diagnosis, detection of bugs and security vulnerabilities, program transformations, hybrid and cyber-physical systems, concurrent and distributed systems, verification for quantum computation, analysis of numerical properties, analysis of smart contracts, analysis of neural networks, case studies on all of the above topics","January 11 - 17, 2026",TRUE,2026,"Rennes, France",TRUE,Rennes,France,Europe,Offline,TRUE,{},,{},,{},,{},,{},,"program verification, model checking, abstract interpretation, abstract domains, program synthesis, static analysis, type systems, deductive methods, program logics, first-order theories, decision procedures, interpolation, Horn clause solving, program certification, separation logic, probabilistic programming and analysis, error diagnosis, detection of bugs and security vulnerabilities, program transformations, hybrid and cyber-physical systems, concurrent and distributed systems, verification for quantum computation, analysis of numerical properties, analysis of smart contracts, analysis of neural networks, case studies on all of the above topics",No publisher,"The 27th International Conference on Verification, Model Checking, and Abstract Interpretation (VMCAI 2026) will be held in Rennes, France, from January 11-17, 2026. The conference will take place from January 12-13, 2026, as a physical (in-person) event, co-located with POPL 2026. VMCAI provides a forum for researchers in verification, model checking, and abstract interpretation to exchange ideas and advance hybrid methods.","# VMCAI 2026: Call for Papers
+
+VMCAI 2026 will be the 27th edition in the series, providing a forum for researchers from the communities of Verification, Model Checking, and Abstract Interpretation. The conference aims to facilitate interaction, cross-fertilization, and advancement of hybrid methods that combine these and related areas.
+
+## Conference Details
+
+*   **Dates:** January 11 - Saturday 17, 2026
+*   **VMCAI 2026 Specific Dates:** January 12-13, 2026
+*   **Venue:** Le Couvent des Jacobins, Rennes, France
+*   **Co-located with:** POPL 2026
+*   **Participation:** The event will be a physical (in-person) event.
+*   **Presentation Requirement:** For each accepted paper, at least one author is required to register for the conference and present the paper in person.
+
+## Topics of Interest
+
+Research contributions can report new results as well as experimental evaluations and comparisons of existing techniques. Topics include, but are not limited to:
+
+*   Program verification
+*   Model checking
+*   Abstract interpretation
+*   Abstract domains
+*   Program synthesis
+*   Static analysis
+*   Type systems
+*   Deductive methods
+*   Program logics
+*   First-order theories
+*   Decision procedures
+*   Interpolation
+*   Horn clause solving
+*   Program certification
+*   Separation logic
+*   Probabilistic programming and analysis
+*   Error diagnosis
+*   Detection of bugs and security vulnerabilities
+*   Program transformations
+*   Hybrid and cyber-physical systems
+*   Concurrent and distributed systems
+*   Verification for quantum computation
+*   Analysis of numerical properties
+*   Analysis of smart contracts
+*   Analysis of neural networks
+*   Case studies on all of the above topics
+
+## Submission Guidelines
+
+*   **Format:** Submissions are required to follow Springer’s LNCS format.
+*   **Review Process:** Submissions will undergo a single-blind review process.
+*   **Categories:** There will be three categories of papers:
+    *   **Regular papers:** Clearly identify and justify an advance to the field of verification, abstract interpretation, or model checking. Supported by experimental validation where applicable. **Page Limit: 20 pages** (excluding references).
+    *   **Tool papers:** Present a new tool, a new tool component, or novel extensions to an existing tool. Emphasize design and implementation concerns. **Page Limit: 12 pages** (excluding references).
+    *   **Case studies:** Describe the use of verification, model checking, and abstract interpretation techniques in new application domains or industrial settings. **Page Limit: 20 pages** (shorter papers are also welcome).
+*   **Submission Platform:** Submission will be via EasyChair.
+
+## Call for Artifacts
+
+VMCAI 2026 makes available the option to submit an artifact along with a paper. Artifacts are any additional material that substantiates the claims made in the paper, and ideally makes them fully replicable.
+
+## Committees
+
+*   **Organizing Committee**
+*   **Program Committee**
+*   **Artifact Evaluation Committee**
+
+## Sponsorship
+
+VMCAI is welcoming diamond, silver and bronze sponsors.",
+req-conf-1751946934833-c7die,,International Conference on Vehicle Technology and Intelligent Transport Systems,VEHITS,https://vehits.scitevents.org/,TRUE,https://vehits.scitevents.org/CallForPapers.aspx,https://vehits.scitevents.org/ImportantDates.aspx,"Conference Title: International Conference on Vehicle Technology and Intelligent Transport Systems
+Conference Acronym: VEHITS
+Year: 2026
+Location: Benidorm, Spain
+City-State-Province: Benidorm
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.(Regular Papers) Paper Submission: January 5, 2026
+Submission Date.(Position Papers /Regular Papers) Paper Submission: February 17, 2026
+Submission Date.(Workshops) Workshop Proposal: January 20, 2026
+Submission Date.(Special Sessions) Special Session Proposal: January 20, 2026
+Submission Date.(Tutorials) Tutorial Proposal: April 10, 2026
+Submission Date.(Demos) Demo Proposal: April 10, 2026
+Submission Date.(Panels) Panel Proposal: April 10, 2026
+Notification Date.(Regular Papers) Authors Notification: March 3, 2026
+Notification Date.(Position Papers /Regular Papers) Authors Notification: March 24, 2026
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: March 17, 2026
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: April 6, 2026
+Conference dates: May 18 - 20, 2026
+Topics: Connected Vehicles, Data Analytics, Intelligent Transport Systems and Infrastructure, Intelligent Vehicle Technologies, Smart Mobility and Sustainable Transport Services","May 18 - 20, 2026",TRUE,2026,"Benidorm, Spain",TRUE,Benidorm,Spain,Europe,Offline,FALSE,"{""(Regular Papers) Paper Submission"":""January 5, 2026"",""(Position Papers /Regular Papers) Paper Submission"":""February 17, 2026"",""(Workshops) Workshop Proposal"":""January 20, 2026"",""(Special Sessions) Special Session Proposal"":""January 20, 2026"",""(Tutorials) Tutorial Proposal"":""April 10, 2026"",""(Demos) Demo Proposal"":""April 10, 2026"",""(Panels) Panel Proposal"":""April 10, 2026""}",100,"{""(Regular Papers) Authors Notification"":""March 3, 2026"",""(Position Papers /Regular Papers) Authors Notification"":""March 24, 2026""}",100,"{""(Regular Papers) Camera Ready and Registration"":""March 17, 2026"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""April 6, 2026""}",100,{},,{},,"Connected Vehicles, Data Analytics, Intelligent Transport Systems and Infrastructure, Intelligent Vehicle Technologies, Smart Mobility and Sustainable Transport Services",No publisher,"The International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS) 2026 will be held in conjunction with multiple other conferences, offering hybrid support for remote presentations. It aims to bring together researchers and practitioners interested in vehicle technology and intelligent transport systems.","# Call for Papers: VEHITS 2026
+
+The International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS) 2026 aims to bring together engineers, researchers, and practitioners interested in the advances and applications in the field of Vehicle Technology and Intelligent Transport Systems.
+
+VEHITS 2026 will be held in conjunction with CSEDU 2026, ICT4AWE 2026, CLOSER 2026, SMARTGREENS 2026, and IMPROVE 2026. Registration to VEHITS allows free access to the co-located conferences as a non-speaker. Although the conference is returning to an in-person format, remote presentations are allowed if unable to travel to the venue.
+
+## Conference Areas
+
+Papers are invited in the following areas:
+
+1.  **Connected Vehicles**
+    *   Big Data and Vehicle Analytics
+    *   Communication Protocols
+    *   Connected Services
+    *   Cooperative Driving and Traffic Management
+    *   Security and Safety
+    *   V2V, V2I, V2X
+    *   Vehicular Networks
+2.  **Data Analytics**
+    *   Accident Analysis and Prevention
+    *   Analytics and Optimization
+    *   Analytics for Intelligent Transportation
+    *   Big Data & Vehicle Analytics
+    *   Decision Support Systems
+    *   Traffic Management Reporting Systems & Road and Rail Traffic Management
+    *   Vehicle Information Systems and Remote Monitoring & Diagnostics
+3.  **Intelligent Transport Systems and Infrastructure**
+    *   Big Data Analytics for Intelligent Transportation
+    *   Congestion Management and Avoidance
+    *   Information Systems and Technologies
+    *   Intelligent Infrastructure and Guidance Systems
+    *   Public Transportation Management
+    *   Real-Time Incident Detection
+    *   Road Safety and Transport Security
+    *   Traffic Theory, Modeling, and Simulation
+    *   Urban Mobility and Multimodal Transportation
+4.  **Intelligent Vehicle Technologies**
+    *   Automotive Control and Mechatronics
+    *   Autonomous Vehicles and Automated Driving Control
+    *   Autonomous Vehicles and Automated Driving Perception
+    *   Driver Behavior Analysis
+    *   Navigation Systems
+    *   Off the Road Vehicles
+    *   Pattern Recognition for Vehicles
+    *   Traffic and Vehicle Data Collection and Processing
+    *   Vehicle Environment Perception
+    *   Vision and Image Processing
+5.  **Smart Mobility and Sustainable Transport Services**
+    *   Automated Road Transport
+    *   City Mobility and Ecodriving
+    *   Electric Vehicles
+    *   Energy & Battery Management
+    *   Novel Regulatory and Compliance Frameworks Related to Intelligent Transport
+    *   Ride Hailing Services
+    *   Smart Grid and V2G
+    *   Systems Modeling and Simulation
+    *   Transport for People with Disabilities
+
+## Paper Submission
+
+Authors can submit their work as a **complete paper** or an **abstract**. Accepted abstracts are presented but not published in the proceedings.
+
+*   **Complete papers** can be submitted as a **Regular Paper** (completed and validated research) or a **Position Paper** (work in progress or an arguable opinion).
+*   Papers must be in English, carefully checked for grammar and spelling.
+*   Submissions should be made through the online submission platform PRIMORIS.
+*   **Double-blind paper evaluation method:** Authors are requested to produce and provide the paper WITHOUT any reference to any of the authors, including personal details, acknowledgments, or other identifying references.
+*   Only original papers should be submitted. Authors must adhere to INSTICC's ethical norms regarding plagiarism and self-plagiarism.
+
+## Publications
+
+All accepted complete papers will be published in the conference proceedings, available in print and digital format with an ISBN reference and DOI.
+
+*   Proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science/Conference Proceedings Citation Index.
+*   A short list of best papers will be invited for a post-conference special issue of the Springer Nature Computer Science Journal.
+*   It is planned to publish a short list of revised and extended versions of presented papers with Springer in a CCIS Series book (final approval pending).
+
+## Important Dates
+
+### Conference
+
+*   **Regular Papers:**
+    *   **Paper Submission:** January 5, 2026
+    *   **Authors Notification:** March 3, 2026
+    *   **Camera Ready and Registration:** March 17, 2026
+*   **Position Papers / Regular Papers:**
+    *   **Paper Submission:** February 17, 2026
+    *   **Authors Notification:** March 24, 2026
+    *   **Camera Ready and Registration:** April 6, 2026
+
+### Workshops
+
+*   **Workshop Proposal:** January 20, 2026
+
+### Special Sessions
+
+*   **Special Session Proposal:** January 20, 2026
+
+### Tutorials
+
+*   **Tutorial Proposal:** April 10, 2026
+
+### Demos
+
+*   **Demo Proposal:** April 10, 2026
+
+### Panels
+
+*   **Panel Proposal:** April 10, 2026
+
+> Note: All dates refer to AOE time, i.e. ""Anywhere on Earth"".",
+req-conf-1751946934833-c7die,,International Conference on Very Large Databases,VLDB,https://vldb.org/2026/,TRUE,https://vldb.org/2026/call-for-research-track.html,https://vldb.org/2026/important-dates.html,"Conference dates: August 31 - September 4, 2026
+Year: 2026
+Location: Boston, MA, USA
+City-State-Province: Boston, Massachusetts
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Research Track Submissions Deadline: 1st of every month until March 2026
+Notification Date.Research Track Notifications: 15th of the next month following the deadline
+Camera-ready Date.Research Track Camera-Ready Submissions: by the 5th of the next month following the acceptance notification
+Topics: Data Management, Scalable Data Science, Database Researchers, Vendors, Practitioners, Application Developers, Users, Data Mining and Analytics, Data Privacy and Security, Database Engines, Database Performance and Manageability, Distributed Database Systems, Graph and Network Data, Information Integration and Data Quality, Languages, Machine Learning, AI, Databases, Novel Database Architectures, Provenance and Workflows, Specialized and Domain-Specific Data Management, Text and Semi-Structured Data, User Interfaces","August 31 - September 4, 2026",TRUE,2026,"Boston, MA, USA",TRUE,"Boston, Massachusetts",United States,North America,Offline,TRUE,"{""Research Track Submissions Deadline"":""1st of every month until March 2026""}",100,"{""Research Track Notifications"":""15th of the next month following the deadline""}",100,"{""Research Track Camera-Ready Submissions"":""by the 5th of the next month following the acceptance notification""}",100,{},,{},0,"Data Management, Scalable Data Science, Database Researchers, Vendors, Practitioners, Application Developers, Users, Data Mining and Analytics, Data Privacy and Security, Database Engines, Database Performance and Manageability, Distributed Database Systems, Graph and Network Data, Information Integration and Data Quality, Languages, Machine Learning, AI, Databases, Novel Database Architectures, Provenance and Workflows, Specialized and Domain-Specific Data Management, Text and Semi-Structured Data, User Interfaces",No publisher,"The 52nd International Conference on Very Large Data Bases (VLDB 2026) will be held in Boston, MA, USA, from August 31st to September 4th, 2026. VLDB is a premier annual international forum for data management, scalable data science, and database researchers, covering a wide range of research topics and applications.","# VLDB 2026: Call for Contributions - Research Track
+
+The Proceedings of the VLDB (PVLDB) is a scholarly journal for short and timely research papers pursuing a strict quality assurance process, with a monthly submission process and rapid reviews. PVLDB issues are published regularly throughout the year, with papers appearing soon after acceptance, possibly in advance of the VLDB Conference.
+
+## Overview
+
+All papers accepted for Volume 19 by **June 15, 2026**, will form the Research Track of the VLDB 2026 Conference. Papers accepted to Volume 19 after June 15, 2026, will be rolled over to the VLDB 2027 Conference. At least one author of each accepted paper must attend the VLDB 2026 Conference.
+
+PVLDB is the only submission channel for research papers to appear in the VLDB 2026 Conference.
+
+## Submission Guidelines
+
+*   Please see the [Submission Guidelines](https://www.vldb.org/pvldb/volumes/19/submission) for paper submission instructions.
+*   The submission process for other VLDB 2026 tracks, such as Demonstrations or Tutorials, is different and is described in their respective calls for papers.
+
+For more details, please visit the PVLDB website: [www.vldb.org/pvldb/volumes/19/contributions](https://www.vldb.org/pvldb/volumes/19/contributions).
+
+## Important Dates (Research Track)
+
+All deadlines are 5 p.m. PT, unless otherwise noted.
+
+| Chairs                                                                                | Submissions Open      | Submissions Deadline | Notifications        | Camera-Ready Submissions                                                               |
+| :------------------------------------------------------------------------------------ | :-------------------- | :------------------- | :------------------- | :------------------------------------------------------------------------------------- |
+| Yanlei Diao (Ecole Polytechnique, Amazon Web Services) Xiaokui Xiao (National University of Singapore) | 23rd of every month starting March 2025 | 1st of every month until March 2026 | 15th of the next month following the deadline | Proceedings chairs will contact the authors with CR instructions by the 5th of the next month following the acceptance notification |
+
+## Key Areas of Interest
+
+*   data mining and analytics
+*   data privacy and security
+*   database engines
+*   database performance and manageability
+*   distributed database systems
+*   graph and network data
+*   information integration and data quality
+*   languages
+*   machine learning, ai, and databases
+*   novel database architectures
+*   provenance and workflows
+*   specialized and domain-specific data management
+*   text and semi-structured data
+*   user interfaces","các date chưa được quy đổi về ngày tương ứng
+
+thiếu Submissions Open"
+req-conf-1751946934833-c7die,,International Conference on VLSI Design,VLSID,https://vlsid.org/,TRUE,https://vlsid.org/call-for-papers/,,"Year: 2026
+Submission Date.Final date of submission: July 25, 2025
+Submission Date.Submission Opens at: July 2, 2025
+Notification Date.Notification for Acceptance: September 25, 2025
+Topics: Hardware for Machine Learning and Artificial Intelligence, Analog & Mixed Signal and, RF Circuits, Sensors interfacing circuits and systems, Test, Verification and Reliability, Embedded Systems, Internet of Things (IoT), and Cyber-Physical System Design, Low power Digital Systems, Electronic design automation, Hardware and Systems Security, Photonic Integrated Circuits & Optical Communication, Power & Energy Management, Emerging Technologies: in-memory/near-memory computing, neuromorphic computing, Post-CMOS Technologies, Quantum computing – hardware, algorithms and security, 3D IC and Advanced Packaging, Emerging Memory Technologies, Wireless systems 5G and beyond, Reconfigurable computing and processor design, VLSI circuits and systems for manufacturing, automotive and EVs",,TRUE,2026,No location,TRUE,No city/state/province,No country,No continent,Offline,TRUE,"{""Final date of submission"":""July 25, 2025"",""Submission Opens at"":""July 2, 2025""}",100,"{""Notification for Acceptance"":""September 25, 2025""}",100,{},,{},,{},100,"Hardware for Machine Learning and Artificial Intelligence, Analog & Mixed Signal and, RF Circuits, Sensors interfacing circuits and systems, Test, Verification and Reliability, Embedded Systems, Internet of Things (IoT), and Cyber-Physical System Design, Low power Digital Systems, Electronic design automation, Hardware and Systems Security, Photonic Integrated Circuits & Optical Communication, Power & Energy Management, Emerging Technologies: in-memory/near-memory computing, neuromorphic computing, Post-CMOS Technologies, Quantum computing – hardware, algorithms and security, 3D IC and Advanced Packaging, Emerging Memory Technologies, Wireless systems 5G and beyond, Reconfigurable computing and processor design, VLSI circuits and systems for manufacturing, automotive and EVs",No publisher,"The International Conference on VLSI Design (VLSID) is a premier global conference with a legacy of over three and a half decades, focusing on VLSI and Embedded AI for Next-Gen Electrified Mobility Powering Sustainable Future. VLSID 2026 is expected to host over 2000 attendees from engineering, academia, industry, and government.","# VLSID 2026: Call for Papers
+
+## Exploring the Frontiers of VLSI & Embedded Systems
+
+The International Conference on VLSI Design (VLSID) is a premier global conference with a legacy of over three and a half decades. VLSID 2026 focuses on **VLSI and Embedded AI for Next-Gen Electrified Mobility Powering Sustainable Future**. It serves as a platform for researchers and practitioners to explore disruptive advancements driven by VLSI and Embedded Systems.
+
+## Important Dates
+
+| Event                       | Date                 |
+| :-------------------------- | :------------------- |
+| Submission Opens            | **2nd July 2025**    |
+| Final Date of Submission    | **25th July 2025**   |
+| Notification for Acceptance | **25th September 2025** |
+
+## Paper Submission Guidelines
+
+*   Authors are invited to submit **full-length, original, unpublished papers** along with an abstract of at most 200 words.
+*   To enable double anonymous review, authors should not reveal their identity directly or indirectly (e.g., through references).
+*   Previously published papers or papers currently under review for other conferences/journals will NOT be considered.
+*   **Electronic submission in PDF format** is required.
+*   Author and contact information (name, affiliation, mailing address, telephone, fax, e-mail) must be entered during the submission process.
+*   **Paper Format:** Submissions should be in camera-ready IEEE two-column format, following the IEEE proceedings specifications.
+*   Maximum paper length is **6 pages**.
+
+## Topics of Interest
+
+The conference solicits original contributions on topics including, but not limited to:
+
+*   **Hardware for Machine Learning and Artificial Intelligence**
+*   **Analog & Mixed Signal and, RF Circuits**
+*   **Sensors interfacing circuits and systems**
+*   **Test, Verification and Reliability**
+*   **Embedded Systems, Internet of Things (IoT), and Cyber-Physical System Design**
+*   **Low power Digital Systems**
+*   **Electronic design automation**
+*   **Hardware and Systems Security**
+*   **Photonic Integrated Circuits & Optical Communication**
+*   **Power & Energy Management**
+*   **Emerging Technologies:** in-memory/near-memory computing, neuromorphic computing, Post-CMOS Technologies
+*   **Quantum computing** – hardware, algorithms and security
+*   **3D IC and Advanced Packaging**
+*   **Emerging Memory Technologies**
+*   **Wireless systems 5G and beyond**
+*   **Reconfigurable computing and processor design**
+*   **VLSI circuits and systems for manufacturing, automotive and EVs**
+
+## Publication and Presenter Registration
+
+*   Papers will be accepted for regular or poster presentations.
+*   Every accepted paper **MUST have at least one author registered** to the conference by the time the camera-ready paper is submitted.
+*   At least one of the authors is also expected to attend the conference and present the paper.
+
+## Submission Portal
+
+Submit your contributions via: [https://softconf.com/vlsi/vlsid2026/login/](https://softconf.com/vlsi/vlsid2026/login/)
+
+For more details on tracks, please refer to: [https://vlsid.org/track-details/](https://vlsid.org/track-details/)",
+req-conf-1751946934833-c7die,,International Conference on Ubiquitous Intelligence and Computing,UIC,https://www.ieee-smart-world.org/2025/uic/,FALSE,https://www.ieee-smart-world.org/2025/uic/cfp.php,https://www.ieee-smart-world.org/2025/uic/,"Conference dates: December 02-07, 2024
+Year: 2024
+Type: Hybrid
+Submission Date.Workshop/SS Proposal Due: June 15, 2024
+Submission Date.Regular Paper Due: August 15, 2024
+Submission Date.WiP/Workshop/SS Paper Due: August 20, 2024
+Submission Date.LBI Paper Due: August 31, 2024
+Notification Date.Author Notification: September 25, 2024
+Camera-ready Date.Camera-Ready Submission: October 25, 2024
+Topics: Pervasive & Ubiquitous Computing, Sensing, Communication & Networks, Human-Centred Design & Interaction, AI, Robotics & Brain Informatics
+Location: Denarau Island, Fiji","December 02-07, 2024",,2024,"Denarau Island, Fiji",,No city/state/province,No country,No continent,Hybrid,,"{""Workshop/SS Proposal Due"":""June 15, 2024"",""Regular Paper Due"":""August 15, 2024"",""WiP/Workshop/SS Paper Due"":""August 20, 2024"",""LBI Paper Due"":""August 31, 2024""}",,"{""Author Notification"":""September 25, 2024""}",,"{""Camera-Ready Submission"":""October 25, 2024""}",,{},,{},,"Pervasive & Ubiquitous Computing, Sensing, Communication & Networks, Human-Centred Design & Interaction, AI, Robotics & Brain Informatics",No publisher,"The 21st IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2024) will be held from December 02-07, 2024. This conference focuses on the advancements in ubiquitous intelligence and computing, aiming to foster an environment for high-quality papers on original research. UIC 2024 is part of the IEEE Smart World Congress and offers both in-person and virtual participation options.","# UIC 2024: Call for Papers
+
+The 21st IEEE International Conference on Ubiquitous Intelligence and Computing (UIC 2024) will include a highly selective program of technical papers, accompanied by workshops, demos, panel discussions, and keynote speeches. We welcome high-quality papers that describe original and unpublished research advancing the state-of-the-art in ubiquitous intelligence and computing.
+
+UIC 2024 will be held from **December 02-07, 2024**, and offers **Hybrid Conference Mode (In-Presence/Virtual)**.
+
+## Topics of Interest
+
+UIC 2024 covers a wide range of topics, organized into four main tracks:
+
+### Track 1: Pervasive & Ubiquitous Computing
+### Track 2: Sensing, Communication & Networks
+### Track 3: Human-Centred Design & Interaction
+### Track 4: AI, Robotics & Brain Informatics
+
+Detailed topics include, but are not limited to:
+
+*   **Track 1:** Mobile and Wearable Computing, Embedded Devices and Software, Cloud, Fog and Edge Computing, Social and Crowd Computing, Internet of Smart Things, Context-Aware Computing, Urban Computing, Cognitive Computing, Federated Computing, Affect/Personality/Mind Computing, Ubiquitous Data Management and Mining, Cyber-Physical-Social Systems.
+*   **Track 2:** Wireless Sensing and Localization, Smart and Connected Vehicles, Mobile Crowd Communication and Scouring, Parallel and Distributed Computing, On-Device Communication, Green Communication Systems, Ubiquitous Communication QoS, Reliability, Signal Processing for Ubiquitous Communications, Ubiquitous Networking, Security, Privacy, and Trust, Multi-Agent Network, Smart Sensor Network.
+*   **Track 3:** Human-Centred Design and Sensing, Human Mobility Modeling and Mining, Human-Computer/Robot Interaction, Human Interface and Management of Information, Human-Like Perception, Augmented Cognition, Learning and Collaboration Social Network, Personalization Recommendation Systems, Activity, Emotion, and Pattern Recognition, Human Augmentation and Portable Environments, Safety, Ethical and Legal Issues.
+*   **Track 4:** Machine learning and Big Data Intelligence, Knowledge Representation and Reasoning, Foundation Models for Ubiquitous Applications, Virtual Personal Assistants and Cognitive Experts, Virtual, Mixed and Augmented Reality, LLMs for Ubiquitous Intelligence, Hybrid Intelligence, Computer Vision and Multimedia, Personalized Search and Social Search, Nature-Inspired Intelligent Systems, Intelligent Robotics and Automation Systems, Novel Methodologies for Multi-Modal BMI, Machine Learning in BMI Signal Processing.
+
+## Contribution Types
+
+*   Regular Papers
+*   WiP/Workshop/SS Papers
+*   LBI Papers
+*   Workshop/SS Proposals
+*   Posters
+*   Presentations
+*   Demos
+
+## Important Dates
+
+*   **Workshop/SS Proposal Due:** June 15, 2024 (Extended)
+*   **Regular Paper Due:** August 15, 2024 (Extended)
+*   **WiP/Workshop/SS Paper Due:** August 20, 2024 (Extended)
+*   **LBI Paper Due:** August 31, 2024
+*   **Author Notification:** September 25, 2024 (Extended)
+*   **Camera-Ready Submission:** October 25, 2024
+*   **Conference Date:** December 02-07, 2024
+
+## Submission Guidelines
+
+*   Submissions should be made electronically via the Paper Submission portal: [https://www.ieee-smart-world.org/2024/uic/ps.php](https://www.ieee-smart-world.org/2024/uic/ps.php)
+*   Accepted file formats are `.pdf` or `.doc`.
+*   Final author manuscripts should not exceed 6 pages, with a maximum of 4 extra pages allowed at additional cost.
+*   LaTeX templates and formatting guidelines are available for authors.
+*   Authors are reminded that the use of artificial intelligence (AI)–generated text in an article shall be disclosed in the acknowledgements section, with cited AI systems.
+
+## Publication
+
+Authors of selected papers will be invited to submit extended versions to journals. Papers will be published in the IEEE Smart World Congress proceedings.
+
+## Sponsorships and Support
+
+UIC 2024 is sponsored and supported by IEEE and its affiliated societies, including the IEEE Computational Intelligence Society (CIS), which offers travel grants for members.
+
+## Contact
+
+For any questions, please contact:
+*   (1) swc2024.conf@gmail.com
+*   (2) WeChat group",link cũ của 2024 trong khi có link 2025 rồi
+req-conf-1751946934833-c7die,,IEEE International Working Conference on Software Visualisation,VISSOFT,https://vissoft.io/2025/,TRUE,https://vissoft.io/2025/submission.html,https://vissoft.io/2025/submission.html,"Conference Title: IEEE International Working Conference on Software Visualisation
+Conference Acronym: VISSOFT
+Year: 2025
+Location: Auckland, Aotearoa New Zealand
+City-State-Province: Auckland
+Country: New Zealand
+Continent: Oceania
+Type: Offline
+Submission Date.(Research, NIER, and Tools Track) Paper Abstract: May 16, 2025
+Submission Date.(Research, NIER, and Tools Track) Paper Submission: May 23, 2025
+Submission Date.(Journal-First, and Poster Track) Paper Submission: July 11, 2025
+Submission Date.(Visualization Challenge Track) Abstract Submission: June 13, 2025
+Submission Date.(Visualization Challenge Track) Short Paper Submission: July 11, 2025
+Notification Date.(Research, NIER, and Tools Track) Paper Notification: July 4, 2025
+Notification Date.(Journal-First, and Poster Track) Paper Notification: July 16, 2025
+Notification Date.(Visualization Challenge Track) Notification: June 17, 2025
+Notification Date.(Visualization Challenge Track) Feedback from PC Chairs: July 16, 2025
+Conference dates: September 7-8, 2025
+Topics: Software Visualization, Software Engineering, Information Visualization, Human-Computer Interaction, Computer Graphics, Data Science","September 7-8, 2025",TRUE,2025,"Auckland, Aotearoa New Zealand",TRUE,Auckland,New Zealand,Oceania,Offline,TRUE,"{""(Research, NIER, and Tools Track) Paper Abstract"":""May 16, 2025"",""(Research, NIER, and Tools Track) Paper Submission"":""May 23, 2025"",""(Journal-First, and Poster Track) Paper Submission"":""July 11, 2025"",""(Visualization Challenge Track) Abstract Submission"":""June 13, 2025"",""(Visualization Challenge Track) Short Paper Submission"":""July 11, 2025""}",100,"{""(Research, NIER, and Tools Track) Paper Notification"":""July 4, 2025"",""(Journal-First, and Poster Track) Paper Notification"":""July 16, 2025"",""(Visualization Challenge Track) Notification"":""June 17, 2025"",""(Visualization Challenge Track) Feedback from PC Chairs"":""July 16, 2025""}",100,{},,{},,{},100,"Software Visualization, Software Engineering, Information Visualization, Human-Computer Interaction, Computer Graphics, Data Science",No publisher,"The thirteenth IEEE Working Conference on Software Visualization (VISSOFT 2025) will be held on September 7-8, 2025, co-located with ICSME. The conference focuses on visually encoding and analyzing software systems, bringing together researchers from software engineering, information visualization, HCI, computer graphics, and data science. Various tracks are available for submissions, including Research, New Ideas and Emerging Results (NIER), Tools, Journal-First, Poster, and a new Visualization Challenge Track.","# VISSOFT 2025: Call for Papers
+
+Software visualization is a broad research area aiming to enhance and promote the theory, realization, and evaluation of approaches to visually encode and analyze software systems. VISSOFT 2025 brings together a community of researchers from software engineering, information visualization, human-computer interaction, computer graphics, and data science.
+
+VISSOFT 2025 will take place from **September 7-8, 2025**, and will be co-located with ICSME.
+
+## Topics of Interest
+
+VISSOFT encourages a variety of submissions that address challenges in software systems using visualization. Topics include, but are not limited to:
+
+*   Visualization of Software Engineering data (source code, dependencies, repositories, developer social networks, mobile app reviews, documentation, runtime logs, DevOps data)
+*   Visualization of Software development activities (design, requirements engineering, software maintenance, program comprehension, software performance, software testing, debugging)
+*   Software analytical approaches based on data science concepts
+*   Empirical evaluations of software visualizations (including eye-tracking studies)
+*   Tools, techniques, and frameworks including visual programming languages
+*   Interactive and immersive techniques and algorithms for software development
+*   Integration of tools with development environments
+*   Industrial experience with software visualization
+*   Techniques used in Software Engineering Education
+*   Application of trendy techniques such as Machine Learning and AI-assisted models (Large Language Models, Large Multi-Modal Models with Software)
+*   Application of techniques such as Augmented and Virtual Reality, and Sonification, to software engineering activities
+
+## Submission Types
+
+### Research Track
+
+*   Describes in-depth and mature research results.
+*   Maximum of **10 pages** (excluding bibliography, which is limited to two additional pages).
+*   Submissions may include technique, design study/application, system, evaluation, and model papers.
+*   User evaluation is highly encouraged.
+*   Submission of a video (up to 5 minutes) is highly encouraged.
+*   Artifacts for evaluation are encouraged.
+*   **Important Dates:**
+    *   Paper Abstract: **May 16, 2025**
+    *   Paper Submission: **May 23, 2025**
+    *   Notification: **July 4, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+### New Ideas and Emerging Results (NIER) Track
+
+*   Describes work-in-progress and preliminary, exciting ideas and results.
+*   Maximum of **5 pages** (including bibliography).
+*   Encouraged to include open questions and provocative hypotheses.
+*   Usually does not require an evaluation.
+*   **Important Dates:**
+    *   Paper Abstract: **May 16, 2025**
+    *   Paper Submission: **May 23, 2025**
+    *   Notification: **July 4, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+### Tools Track
+
+*   Describes implemented and functional tools.
+*   Short papers: **4 pages** (1 additional page for bibliography).
+*   Long papers: **10 pages** (2 additional pages for bibliography).
+*   Focus on tool architecture or use to gain new insights.
+*   Submission of a video (up to 5 minutes) is **mandatory**.
+*   Artifacts (tools, etc.) for evaluation are encouraged.
+*   **Important Dates:**
+    *   Paper Abstract: **May 16, 2025**
+    *   Paper Submission: **May 23, 2025**
+    *   Notification: **July 4, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+### Artifact Evaluation Track
+
+*   Encourages submission of artifacts (tools, data repositories, frameworks, videos) for evaluation.
+*   Papers with evaluated artifacts will receive badges noting contributions to open science.
+*   More information available at the [ICSME Artifact Evaluation Track](https://conf.researchr.org/track/icsme-2025/icsme-2025-artifact---rose).
+
+### Journal-First Track
+
+*   For papers accepted by a relevant journal between July 1, 2023, and July 11, 2025.
+*   The paper must report new research results or novel contributions not previously reported.
+*   Requires a one-page presentation proposal.
+*   Journal-first presentations will not be part of the conference proceedings.
+*   **Important Dates:**
+    *   Paper Submission: **July 11, 2025**
+    *   Notification: **July 16, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+### Poster Track
+
+*   Opportunity to present new and innovative preliminary work in an informal, interactive setting.
+*   Accepts two-page documents.
+*   Poster manuscripts will be part of the Conference proceedings.
+*   **Important Dates:**
+    *   Paper Submission: **July 11, 2025**
+    *   Notification: **July 16, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+### Visualization Challenge Track (NEW!)
+
+*   Contribute expertise focused on a single software system: the Linux kernel.
+*   Authors can use existing datasets or inform PC chairs about new ones.
+*   Submissions consist of a short abstract, a video (up to 5 minutes), and optionally a link to a tool demo.
+*   Abstracts evaluated on novelty and interest.
+*   Accepted papers must submit a 2-4 page description after notification.
+*   **Important Dates:**
+    *   Abstract Submission: **June 13, 2025**
+    *   Notification of invitation to submit: **June 17, 2025**
+    *   Short Paper Submission: **July 11, 2025**
+    *   Feedback from PC Chairs: **July 16, 2025**
+*   **Submission Link:** [https://easychair.org/conferences?conf=vissoft2025](https://easychair.org/conferences?conf=vissoft2025)
+
+## How to Submit
+
+*   Papers must strictly adhere to the two-column IEEE conference proceedings format. Use the available [IEEE Manuscript Templates](https://www.ieee.org/conferences/publishing/templates.html).
+*   At least one author of an accepted paper must register and present at the conference.
+*   Supplemental material (e.g., video, data, software) can be linked in the paper.
+*   Authors are encouraged to archive artifacts in an open access archive.
+*   **Review Process:** VISSOFT uses a single-blind review process.
+
+## Important Dates Summary
+
+| Track                                   | Paper Abstract   | Paper Submission | Paper Notification |
+| :-------------------------------------- | :--------------- | :--------------- | :----------------- |
+| Research, NIER, and Tools Track       | May 16, 2025     | May 23, 2025     | July 4, 2025       |
+| Journal-First, and Poster Track         | --               | July 11, 2025    | July 16, 2025      |
+
+| Visualization Challenge Track           | June 13, 2025    |                  |                    |
+| *Abstract Submission*                   |                  |                  |                    |
+| *Notification*                          |                  | June 17, 2025    |                    |
+| *Short Paper Submission*                |                  | July 11, 2025    |                    |
+| *Feedback from PC Chairs*             |                  |                  | July 16, 2025      |",
+req-conf-1751946934833-c7die,,ACM Virtual Reality Software and Technology,VRST,https://vrst.acm.org/vrst2025/,TRUE,https://vrst.acm.org/vrst2025/index.php/call-for-participation/,https://vrst.acm.org/vrst2025/index.php/call-for-participation/,"Conference dates: November 12 - 14, 2025
+Year: 2025
+Type: Offline
+Submission Date.Paper Abstracts Due: July 7, 2025
+Submission Date.Papers (all materials) Due: July 14, 2025
+Notification Date.Author Notification for Papers: September 1, 2025
+Notification Date.Final Author Notification for Papers: September 12, 2025
+Camera-ready Date.Camera-Ready Papers: September 15, 2025
+Topics: Display technology and interaction devices, Low-latency and high-performance software and applications, Multi-user and distributed XR, XR software environments and authoring systems, Interaction techniques, Tracking and sensing, Multimodal XR including haptics, smell, taste, and brain-computer interfaces, Audio & music processing, sound synthesis, and sonification, XR-related computer vision, computer graphics, and rendering techniques, Immersive analytics, Diversity and Inclusion in XR, XR-related modeling and simulation techniques, Avatars and virtual humans, virtual embodiment, and body-ownership illusions, Teleoperation and telepresence, Performance testing, user experience, and empirical studies, Locomotion and navigation, Perception, presence, and cognition, XR applications, e.g. training, medical, fabrication, Multi-disciplinary research projects involving innovative use of XR","November 12 - 14, 2025",TRUE,2025,No location,TRUE,No city/state/province,No country,No continent,Offline,TRUE,"{""Paper Abstracts Due"":""July 7, 2025"",""Papers (all materials) Due"":""July 14, 2025""}",66.66666667,"{""Author Notification for Papers"":""September 1, 2025"",""Final Author Notification for Papers"":""September 12, 2025""}",100,"{""Camera-Ready Papers"":""September 15, 2025""}",100,{},,{},,"Display technology and interaction devices, Low-latency and high-performance software and applications, Multi-user and distributed XR, XR software environments and authoring systems, Interaction techniques, Tracking and sensing, Multimodal XR including haptics, smell, taste, and brain-computer interfaces, Audio & music processing, sound synthesis, and sonification, XR-related computer vision, computer graphics, and rendering techniques, Immersive analytics, Diversity and Inclusion in XR, XR-related modeling and simulation techniques, Avatars and virtual humans, virtual embodiment, and body-ownership illusions, Teleoperation and telepresence, Performance testing, user experience, and empirical studies, Locomotion and navigation, Perception, presence, and cognition, XR applications, e.g. training, medical, fabrication, Multi-disciplinary research projects involving innovative use of XR",No publisher,"The ACM Virtual Reality Software and Technology (VRST) conference will be held from November 12-14, 2025. The specific location of the conference is not provided in the text.","# VRST 2025: Call for Participation
+
+## Important Dates
+
+* Paper Abstracts Due: **Monday 7 July 2025**
+* Papers (all materials) Due: **Monday 14 July 2025**
+* Author Notification for Papers: **Monday 1 September 2025**
+* Revised Papers: **Monday 8 September 2025**
+* Final Author Notification for Papers: **Friday 12 September 2025**
+* Camera-Ready Papers: **Monday 15 September 2025**
+* Conference: **Wednesday 12 – Friday 14 November 2025**
+
+> Each deadline is 23:59:59 AoE (Anywhere on Earth) == GMT/UTC-12:00 on the stated day, no matter where the submitter is located.
+
+## Topics
+
+VRST 2025 welcomes paper submissions relating (but not limited) to the following XR areas:
+
+* Display technology and interaction devices
+* Low-latency and high-performance software and applications
+* Multi-user and distributed XR
+* XR software environments and authoring systems
+* Interaction techniques
+* Tracking and sensing
+* Multimodal XR including haptics, smell, taste, and brain-computer interfaces
+* Audio & music processing, sound synthesis, and sonification
+* XR-related computer vision, computer graphics, and rendering techniques
+* Immersive analytics
+* Diversity and Inclusion in XR
+* XR-related modeling and simulation techniques
+* Avatars and virtual humans, virtual embodiment, and body-ownership illusions
+* Teleoperation and telepresence
+* Performance testing, user experience, and empirical studies
+* Locomotion and navigation
+* Perception, presence, and cognition
+* XR applications, e.g. training, medical, fabrication
+* Multi-disciplinary research projects involving innovative use of XR
+
+## PCS Submission Management System
+
+Please use the Precision Conferences System (PCS) to submit your work. After clicking the link below, please choose “SIGCHI” from the “Society” drop-down list, then “VRST 2025” from the “Conference/Journal” drop-down list.
+
+[https://new.precisionconference.com/vrst2025](https://new.precisionconference.com/vrst2025)
+
+## Submission Guidelines
+
+All accepted papers will be published in the ACM Digital Library in the VRST collection.
+
+### Format
+
+Paper submissions must be anonymous for a double-blind review process.
+
+*   All submissions should be prepared using the Word or LaTeX templates from the official ACM Master article template packages and TAPS.
+*   For LaTeX authors, submissions should be made using the double-column format using `\documentclass[sigconf,review,anonymous]{acmart}`.
+*   For Word submissions, please use the linked single-column template.
+*   Authors should prepare their materials using numbered citations and references.
+
+### Submission Lengths
+
+*   **LaTeX:** 4 to 9 pages, double column, excluding references.
+*   **Word:** Approximately 8,000 words, including space for figures, tables, etc.
+
+### Anonymity Guidelines
+
+*   Remove all author and institution information.
+*   Remove any clues that would directly identify any of the authors (e.g., institution names, acknowledgments).
+*   Anonymize all PDF files, including metadata.
+*   Citations of the authors’ own published work must be in the third person and not traceable to the authors' identity. Example: ""in [3], Mountain and River proposed..."" is acceptable, whereas ""in [3], we proposed..."" is not. Reference [3] should be listed explicitly as “Mountain, A. and River, A., Detecting Mountains and Rivers, In Proc. XYZ ’16, 721-741.”
+*   Authors extending their own previous publications should upload these works in a special field in PCS.
+
+Failure to comply with these requirements will result in automatic desk rejection.
+
+### Contribution Types
+
+We invite various research contributions, including interactive systems. Reviewers will judge the novelty of new functionality enabled by a system, even if it leverages existing techniques. Replication studies are also accepted.
+
+### Supplementary Materials
+
+*   Optional materials (images, videos, documents) can accompany submissions.
+*   Total file size should not exceed 50MB.
+*   Content should be in portable formats (e.g., PDF, HTML, PNG, JPEG, QuickTime, MPEG).
+*   Accepted papers should stand on their own, with supplementary material providing additional information. Video references in papers are appropriate.
+
+### Diversity, Equity, and Inclusion
+
+*   When designing and presenting user evaluations, consider using representative participant populations.
+*   If representative samples are not possible, discuss the limitations of the studied population in the paper and be cautious with claims.
+*   Report participant demographic information for user evaluations.
+
+### Accessibility
+
+*   Authors are asked to be inclusive.
+*   Provide alt-text for figures and tables.
+*   Make supplemental videos accessible with subtitles.
+*   Refer to SIGCHI Guidelines for an Accessible Submission and SIGCHI Technical Requirements and Guidelines for Videos.
+*   Contact VRST 2025 Accessibility Chairs at [accessibility@vrst2025.org](mailto:accessibility@vrst2025.org) if you have difficulties.
+
+## Policies
+
+*   At least one author of each accepted paper must register for the conference and present their work in person. There will be no remote presentation opportunities.
+*   All standing ACM policies apply, including:
+    *   [ACM Policy on Authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship) (includes statements regarding generative AI)
+    *   [ACM Policy on Prior Publication and Simultaneous Submissions](https://www.acm.org/publications/policies/simultaneous-submissions)
+*   Authors must obtain an ORCID ID for the publishing process.
+
+## Contact
+
+*   Email: [papers2025@vrst.acm.org](mailto:papers2025@vrst.acm.org)
+*   Contacts: Daniel Zielasko, Kangsoo Kim, Rick Skarbez",thiếu Revised Papers
+req-conf-1751946934833-c7die,,"IEEE International Conference on Wireless and Mobile Computing, Networking and Communications",WiMob,http://www.wimob.org/wimob2025/,TRUE,http://www.wimob.org/wimob2025/cfp.php,http://www.wimob.org/wimob2025/dates.php,"Conference dates: October 20 - 22, 2025
+Year: 2025
+Location: Marrakech, Morocco
+City-State-Province: Marrakech
+Country: Morocco
+Continent: Africa
+Type: Offline
+Submission Date.Submission Date: June 25, 2025
+Submission Date.Workshop proposal submission due: March 25, 2025
+Submission Date.Workshop paper submission due: July 15, 2025
+Submission Date.Submission due: July 1, 2025
+Notification Date.Notifications Date: July 30, 2025
+Notification Date.Notification of acceptance of workshop proposals: March 31, 2025
+Notification Date.Decision on accepting papers: August 15, 2025
+Notification Date.Notification of Acceptance: August 15, 2025
+Camera-ready Date.Camera ready Date: September 1, 2025
+Camera-ready Date.Camera ready & Author Registration: September 1, 2025
+Registration Date.Registrations for Authors: September 15, 2025
+Topics: Wireless Communications, Mobile Networking, Ubiquitous Computing, Services and Applications, Green and sustainable communications and network computing, Security on Wireless and mobile Networks, 5G, IoT, Cyber Security, Artificial Intelligence for mobile and wireless Networks","October 20 - 22, 2025",TRUE,2025,"Marrakech, Morocco",TRUE,Marrakech,Morocco,Africa,Offline,TRUE,"{""Submission Date"":""June 25, 2025"",""Workshop proposal submission due"":""March 25, 2025"",""Workshop paper submission due"":""July 15, 2025"",""Submission due"":""July 1, 2025""}",100,"{""Notifications Date"":""July 30, 2025"",""Notification of acceptance of workshop proposals"":""March 31, 2025"",""Decision on accepting papers"":""August 15, 2025"",""Notification of Acceptance"":""August 15, 2025""}",100,"{""Camera ready Date"":""September 1, 2025"",""Camera ready & Author Registration"":""September 1, 2025""}",66.66666667,"{""Registrations for Authors"":""September 15, 2025""}",,{},100,"Wireless Communications, Mobile Networking, Ubiquitous Computing, Services and Applications, Green and sustainable communications and network computing, Security on Wireless and mobile Networks, 5G, IoT, Cyber Security, Artificial Intelligence for mobile and wireless Networks",No publisher,"The 21st International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2025) will be held in Marrakech, Morocco, from October 20 to 22, 2025. The conference serves as an international forum for researchers and practitioners in wireless and mobile technology, with a focus this year on 5G, IoT, Cyber Security, and the use of Artificial Intelligence in mobile and wireless networks.","# WiMob 2025: Call for Papers
+
+The 21st International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2025) will take place in **Marrakech, Morocco, from October 20 - 22, 2025**.
+
+WiMob is an international forum for the exchange of knowledge and experience among researchers, developers, and practitioners of wireless and mobile technology. This year, the conference will focus on **5G, IoT, Cyber Security, and the use of Artificial Intelligence for mobile and wireless Networks**.
+
+## Topics of Interest
+
+WiMob 2025 will host FIVE parallel symposia, covering topics including, but not limited to:
+
+### Wireless Communications (WC)
+*   Broadband Wireless Communication Systems
+*   Multimedia Communications over Wireless
+*   Advances in Satellite Communication
+*   Modulation and Coding
+*   Multiple Access Techniques
+*   Channel Measurement and Characterization
+*   Location Estimation and Tracking
+*   MIMO Channels
+*   Multirate and Multicarrier Communications
+*   Cognitive and Cooperative MAC
+*   Heterogeneous Cellular Networks
+*   Energy Harvesting Communication Systems
+*   Large Scale Massive MIMO Systems
+*   Reconfigurable Intelligent Surface
+
+### Next Generation Mobile Networking (NGMN)
+*   Next Generation Mobile Networking
+*   5G Wireless and Mobile Networks
+*   6G Wireless and Mobile Networks
+*   Cellular Systems, PCS Modeling and Configuration
+*   Wireless Sensor Networks
+*   Cross-layer Design and Optimization
+*   Congestion and Admission Control
+*   Mobility patterns, Location and Handoff Management
+*   Design and Analysis of Wireless LAN/WAN
+*   Wireless multicasting, broadcasting and geocasting
+*   Wireless Sensors and Actuators/Robots Networks
+*   Energy-efficient Protocols for Wireless Networks
+*   Opportunistic Networks
+*   Vehicular Wireless Networks
+*   Wireless Mesh Networks
+*   Delay Tolerant Networks
+*   Integration of Ad hoc Networks with Wireless Access Networks
+*   QoS Support for Mobile Networks
+*   RFID Networks and Protocols
+*   WPAN, LOWPAN
+*   Optimization Models and Algorithms
+*   Portable Devices and Wearable Computers
+*   Virtualization in Wireless Networks
+*   Software defined Wireless Networks
+*   Swarms of Unmanned Vehicles
+*   Space Networks
+*   Green Data Storage, Data Centers and Cloud Computing, Content Distribution Networks
+
+### Artificial Intelligence based Communications & Networking (AICN)
+*   Artificial Intelligence for Mobile and wearable computing
+*   Artificial Intelligence for Mobile enterprises and eCommerce
+*   Artificial Intelligence and Ubiquitous collaborative & social services
+*   Artificial Intelligence for Internet-of-things and edge computing
+*   Artificial Intelligence and Cyber-physical integration
+*   Artificial Intelligence and Big data analytics for mobility-enabled services
+*   Artificial Intelligence for Mobile Health and Services
+*   Large Language Model for Wireless and Mobile Networks
+
+### Blockchain and Cryptocurrency in Mobile Networks (BCMN)
+*   Distributed Trust
+*   Decentralised Internet Infrastructure
+*   Decentralised Financial Services
+*   Blockchain for Internet of Things/Cyber Physical Services
+*   Blockchain and Machine Learning/Artificial Intelligence
+*   Blockchain for Metaverse and Digital Twins
+*   Distributed Consensus and Fault Tolerance Algorithms
+*   Blockchain Platforms & Offchain Technologies
+*   Decentralized Finance and payments
+
+### Trust, Security and Privacy in Wireless and Mobile Networks (SWMN)
+*   Computer and Network Forensics
+*   Cross-layer Design Security
+*   Cryptographic Algorithms and Applications
+*   Identity Management, Key distribution and management
+*   Information System Security
+*   Intrusion Detection and Prevention
+*   Mobile and Wireless Network Security
+*   Network Security Protocol Design
+*   Other Topics on Security on Wireless and Mobile Networks
+*   Physical Layer Security
+*   Privacy and Security in Clouds and Contents Distribution Networks
+*   Resource Allocation, Incentives, and Game-Theoretic Models
+*   Security and Privacy in Crowd Sensing and Crowd Sourcing
+*   Security and Privacy of Big Data
+*   Security and Privacy of Cloud Services
+*   Security and Privacy of D2D
+*   Security and Privacy of Location-based services
+*   Security and Privacy of Social Networks
+*   Security in Cognitive Radio Networks and Cooperative Communication Systems
+*   Security of Cyber Physical Systems
+*   Security of Femtocells and Macrocells
+*   Security of Mobile Multimedia and Cloud Media
+*   Security, Privacy and Anonymity in Mesh, Vehicular and Mobile Networks
+*   Security, Trust and Privacy of Internet of Things
+*   Smart Grids Security
+*   Smart Phone Security and Privacy
+*   Threat and Vulnerability Analysis for Mobile Communication
+*   Trust Models, Security Modeling and Protocol Design
+*   Trust, Privacy and Security: Application, Network and MAC layers.
+
+## Submission Instructions
+
+*   Authors are required to submit fully formatted, original papers (PDF), with graphs, images, and other special areas arranged as intended for the final publication.
+*   Papers should be written in English conforming to the IEEE standard conference format (two-column, 10 pt font, etc., including figures, tables, and references).
+*   Review submissions are limited to **six pages**, with two additional pages for final papers (additional charges may apply for additional pages).
+*   Conference content will be submitted for inclusion into IEEE Xplore as well as other Abstracting and Indexing (A&I) databases.
+*   Each accepted paper must be presented at the conference by one of the co-authors or a third party, otherwise it will not be indexed and archived through IEEE Xplore.
+*   Only timely submissions through EDAS ([https://edas.info/](https://edas.info/)) will be accepted.
+
+## Important Dates
+
+**For the main conference:**
+
+*   **Submission Date:** June 25, 2025
+*   **Notifications Date:** July 30, 2025
+*   **Camera ready Date:** September 1, 2025
+*   **Registrations for Authors:** September 1, 2025
+
+**For the Workshop proposals:**
+
+*   **Workshop proposal submission due:** March 25, 2025
+*   **Notification of acceptance of workshop proposals:** March 31, 2025
+
+**For the Workshops:**
+
+*   **Workshop paper submission due:** July 15, 2025
+*   **Decision on accepting papers:** August 15, 2025
+*   **Camera ready & Author Registration:** September 1, 2025
+
+**For Short Papers, Posters & Demos:**
+
+*   **Submission due:** July 1, 2025
+*   **Notification of Acceptance:** August 15, 2025
+*   **Camera ready & Author Registration:** September 1, 2025
+
+## Publication
+
+Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements.","thiếu dấu ngoặt phân biệt ngày
+
+thiếu 1 Camera ready & Author Registration"
+req-conf-1751946934833-c7die,,IEEE Vehicular Technology Conference,VTC,https://events.vtsociety.org/vtc2026-spring/,TRUE,https://events.vtsociety.org/vtc2026-spring/authors/call-for-papers-2/,,"Conference dates: Spring 2026
+Year: 2026
+Location: Nice, France
+City-State-Province: Nice
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Submit Regular Papers Deadline: December 10, 2025
+Notification Date.Notification of Acceptance for Regular Papers: February 28, 2026
+Topics: 5G, 6G, and Beyond, Connected Vehicles, IoV, and V2X, IoT, M2M, Sensor Networks, and Ad-Hoc Networking, Space, Non-Terrestrial, Airborne, and Maritime Mobile Systems and Services, Spectrum Management, Radio Access Technology, Services and Security, Open, Virtual, and Interoperable Networks and Services, Vehicle Cooperation and Control, Assisted, and Autonomous Driving, Electric Vehicles, Vehicular Electronics, and Intelligent Transportation, AI/Machine Learning for Communications, Multiple Antennas, MIMO, and Cooperative Communication, Antenna Systems, Propagation, and RF Design, Integrated Sensing, Communications, Positioning and Navigation, Signal Processing for Wireless Communications, Vehicular and Wireless Testbeds and Proof-of-Concepts",Spring 2026,TRUE,2026,"Nice, France",TRUE,Nice,France,Europe,Offline,TRUE,"{""Submit Regular Papers Deadline"":""December 10, 2025""}",100,"{""Notification of Acceptance for Regular Papers"":""February 28, 2026""}",50,{},100,{},,{},,"5G, 6G, and Beyond, Connected Vehicles, IoV, and V2X, IoT, M2M, Sensor Networks, and Ad-Hoc Networking, Space, Non-Terrestrial, Airborne, and Maritime Mobile Systems and Services, Spectrum Management, Radio Access Technology, Services and Security, Open, Virtual, and Interoperable Networks and Services, Vehicle Cooperation and Control, Assisted, and Autonomous Driving, Electric Vehicles, Vehicular Electronics, and Intelligent Transportation, AI/Machine Learning for Communications, Multiple Antennas, MIMO, and Cooperative Communication, Antenna Systems, Propagation, and RF Design, Integrated Sensing, Communications, Positioning and Navigation, Signal Processing for Wireless Communications, Vehicular and Wireless Testbeds and Proof-of-Concepts",No publisher,"The 2026 IEEE 103rd Vehicular Technology Conference: VTC2026-Spring will be held in Nice, France, in Spring 2026. This flagship conference of the IEEE Vehicular Technology Society aims to convene professionals from academia, government, and industry to discuss advancements in wireless, mobile, and vehicular technology, featuring keynote speakers, tutorials, technical and application sessions, and an Industry Track.","# Call for Papers - VTC2026-Spring Nice
+
+Prospective authors are invited to submit 5-page, original, and unpublished full papers for the technical sessions, workshops, and tutorials at VTC2026-Spring. Papers can be up to 7 pages in length, with additional page charges applicable for papers exceeding 5 pages. Submissions longer than 8 pages are discouraged as they are unlikely to be edited down to the maximum allowed length.
+
+## Technical Tracks
+
+1.  **5G, 6G, and Beyond**
+2.  **Connected Vehicles, IoV, and V2X**
+3.  **IoT, M2M, Sensor Networks, and Ad-Hoc Networking**
+4.  **Space, Non-Terrestrial, Airborne, and Maritime Mobile Systems and Services**
+5.  **Spectrum Management, Radio Access Technology, Services and Security**
+6.  **Open, Virtual, and Interoperable Networks and Services**
+7.  **Vehicle Cooperation and Control, Assisted, and Autonomous Driving**
+8.  **Electric Vehicles, Vehicular Electronics, and Intelligent Transportation**
+9.  **AI/Machine Learning for Communications**
+10. **Multiple Antennas, MIMO, and Cooperative Communication**
+11. **Antenna Systems, Propagation, and RF Design**
+12. **Integrated Sensing, Communications, Positioning and Navigation**
+13. **Signal Processing for Wireless Communications**
+14. **Vehicular and Wireless Testbeds and Proof-of-Concepts**
+
+## Important Dates
+
+*   **Paper submission deadline:** 10 December 2025
+*   **Notification of Acceptance:** 28 February 2026
+*   **Final Regular Paper Submission:** TBD
+*   **Regular Paper Author Registration Due:** TBD
+*   **Early Bird Registration Ends:** TBD
+*   **Regular Registration Due:** TBD
+
+## Submission Requirements
+
+*   **Paper Length:** 5 pages (without overlength charge).
+*   **Additional Pages:** Up to 2 additional pages are allowed with the purchase of additional page charges at the amount of **$100 USD per additional page**. This payment is required at the time of registration and final paper submission.
+
+Paper submission is now open.
+
+## Contact Us
+
+For any inquiries, please visit the [Contact Us](https://events.vtsociety.org/vtc2026-spring/contact-us/) page.",thiếu Acceptance notification: 29 February 2026 trong CFP
+req-conf-1751946934833-c7die,,International Workshop on the Algorithmic Foundations of Robotics,WAFR,https://www.algorithmic-robotics.org/,TRUE,https://www.algorithmic-robotics.org/cfp.php,,"Conference dates: October 7-9, 2024
+Year: 2024
+Location: Chicago, USA
+Type: Offline
+Submission Date.Paper submission deadline: June 13, 2024
+Notification Date.Acceptance notification: August 17, 2024
+Camera-ready Date.Camera-ready manuscript for SPAR book: December 9, 2024
+Other Date.Final manuscript for website: September 18, 2024
+Other Date.Early Registration: September 23, 2024
+Other Date.Travel Grants Applications: September 23, 2024
+Topics: robot algorithms, control theory, computational and differential geometry, computer science, human-robot interaction, computational geometry and topology, control theory and optimization, distributed and parallel methods, decision theory and game theory, geometrical and physical modeling, machine learning, planning and reasoning under uncertainty, probabilistic and sampling-based algorithms, sensing and perception, task and motion planning, theoretical computer science, assistive and service robotics, brain-controlled robots, computational biology, computer animation, graphics and animation, VR/AR, legged locomotion, manufacturing and automation, multi-agent systems, sensor networks and IoT devices, surgical robots, intelligent prosthetics, rehabilitation robots, transportation networks and systems
+Publisher: Springer","October 7-9, 2024",TRUE,2024,"Chicago, USA",TRUE,No city/state/province,No country,No continent,Offline,TRUE,"{""Paper submission deadline"":""June 13, 2024""}",100,"{""Acceptance notification"":""August 17, 2024""}",100,"{""Camera-ready manuscript for SPAR book"":""December 9, 2024""}",100,{},100,"{""Final manuscript for website"":""September 18, 2024"",""Early Registration"":""September 23, 2024"",""Travel Grants Applications"":""September 23, 2024""}",100,"robot algorithms, control theory, computational and differential geometry, computer science, human-robot interaction, computational geometry and topology, control theory and optimization, distributed and parallel methods, decision theory and game theory, geometrical and physical modeling, machine learning, planning and reasoning under uncertainty, probabilistic and sampling-based algorithms, sensing and perception, task and motion planning, theoretical computer science, assistive and service robotics, brain-controlled robots, computational biology, computer animation, graphics and animation, VR/AR, legged locomotion, manufacturing and automation, multi-agent systems, sensor networks and IoT devices, surgical robots, intelligent prosthetics, rehabilitation robots, transportation networks and systems",Springer,"The 16th International Workshop on the Algorithmic Foundations of Robotics (WAFR 2024) will be held in Chicago, USA, from October 7-9, 2024. This workshop is a biannual, multi-disciplinary, single-track meeting focusing on the latest advances in algorithmic problems in robotics, covering both theoretical and practical aspects.","# WAFR 2024: Call for Papers
+
+The 16th International Workshop on the Algorithmic Foundations of Robotics (WAFR) will be held in **Chicago, USA, from October 7-9, 2024**.
+
+WAFR is a biannual, multi-disciplinary, single-track meeting for international researchers presenting the latest advances on algorithmic problems in robotics. Established in 1994, WAFR has become a premier venue for presenting algorithmic work related to robotics, celebrating its 30th anniversary in 2024.
+
+## Focus
+
+The workshop emphasizes the design and analysis of robot algorithms from both theoretical and practical perspectives. These algorithms handle inputs from noisy sensors, build geometric and physical models, plan actions, and execute them with actuators. WAFR addresses questions from various fields including control theory, computational geometry, and computer science.
+
+## Topics of Interest
+
+*   **Core Robotics Algorithms:**
+    *   Algorithmic approaches to human-robot interaction
+    *   Computational geometry and topology
+    *   Control theory and optimization
+    *   Distributed and parallel methods
+    *   Decision theory and game theory
+    *   Geometrical and physical modeling
+    *   Machine learning (supervised, unsupervised, reinforcement, representation, imitation)
+    *   Planning and reasoning under uncertainty
+    *   Probabilistic and sampling-based algorithms
+    *   Sensing and perception
+    *   Task and motion planning
+    *   Theoretical computer science
+*   **Applications of Robot Algorithms:**
+    *   Assistive and service robotics
+    *   Brain-controlled robots
+    *   Computational biology
+    *   Computer animation, graphics, VR/AR
+    *   Legged locomotion
+    *   Manufacturing and automation
+    *   Multi-agent systems
+    *   Sensor networks and IoT devices
+    *   Surgical robots, intelligent prosthetics, rehabilitation robots
+    *   Transportation networks and systems
+
+## Important Dates
+
+*   **Paper submission deadline:** June 13, 2024
+*   **Acceptance notification:** August 17, 2024
+*   **Final manuscript for website:** September 16, 2024
+*   **Early Registration:** September 23, 2024
+*   **Travel Grants Applications (preference):** September 23, 2024
+*   **WAFR 2024 Conference:** October 7-9, 2024
+*   **Camera-ready manuscript for SPAR book:** December 9, 2024
+
+## Submission Guidelines
+
+*   Information on manuscript preparation and the submission process is available at [Information for Authors](authors.php).
+*   **AI Tools Policy for Authors:** Generative AI tools may not be listed as authors. The use of AI-generated content (text, figures, images, code) must be disclosed in the acknowledgments section, identifying the AI system used and how it was employed. AI for editing and grammar enhancement is common practice and disclosure is recommended.
+*   **AI Tools Policy for Reviewers:** Information or content contained in or about a manuscript under review shall not be processed through an AI system, as this is considered a breach of confidentiality.
+*   Accepted file formats for submission are .pdf or .doc.
+
+## Publication
+
+The workshop proceedings will be published in the **Springer Proceedings in Advanced Robotics (SPAR) series**. Selected papers will be invited for publication in special issues of relevant journals.
+
+## Committee
+
+*   **Co-Chairs:** Nancy Amato, Katie Driggs-Campbell, Chinwe Ekenna, Marco Morales, Jason O'Kane
+
+## Contact
+
+*   Email: [wafr2024@gmail.com](mailto:wafr2024@gmail.com)
+
+## Sponsors
+
+*   UIUC Center for Autonomy
+*   Siebel School of Computing and Data Science
+*   Parasol Lab",location đúng mà các trường con báo ko có?
+req-conf-1751946934833-c7die,,International Workshop on Information Security Applications,WISA,https://wisa.or.kr/,TRUE,https://wisa.or.kr/society/kiisc/conference/wisa2025/c4pOriginal,https://wisa.or.kr/society/kiisc/conference/wisa2025,"Conference dates: August 20- August 22, 2025
+Year: 2025
+Location: MAISON GLAD, Jeju Island, Korea
+City-State-Province: Jeju Island
+Country: Korea
+Continent: Asia
+Type: Offline
+Submission Date.Paper submission deadline: June 13, 2025
+Submission Date.Poster submission deadline: July 25, 2025
+Notification Date.Paper acceptance notification: July 18, 2025
+Notification Date.Poster acceptance notification: August 1, 2025
+Camera-ready Date.Pre-proceeding file submission deadline: August 8, 2025
+Registration Date.Author registration deadline: August 8, 2025
+Registration Date.Participant registration deadline: August 11, 2025
+Topics: cyber security, artificial intelligence (AI) and blockchain-driven security, hardware cryptography, and all other technical and practical aspects of security applications","August 20- August 22, 2025",TRUE,2025,"MAISON GLAD, Jeju Island, Korea",TRUE,Jeju Island,Korea,Asia,Offline,TRUE,"{""Paper submission deadline"":""June 13, 2025"",""Poster submission deadline"":""July 25, 2025""}",100,"{""Paper acceptance notification"":""July 18, 2025"",""Poster acceptance notification"":""August 1, 2025""}",100,"{""Pre-proceeding file submission deadline"":""August 8, 2025""}",100,"{""Author registration deadline"":""August 8, 2025"",""Participant registration deadline"":""August 11, 2025""}",100,{},,"cyber security, artificial intelligence (AI) and blockchain-driven security, hardware cryptography, and all other technical and practical aspects of security applications",No publisher,"The 26th World Conference on Information Security Applications (WISA 2025) will be held from August 20-22, 2025, at MAISON GLAD, Jeju Island, Korea. This premier security research venue, co-hosted by KIISC and ETRI, will explore innovative possibilities in cyber security, including AI and blockchain-driven security, hardware cryptography, and other technical and practical aspects of security applications. WISA invites researchers and practitioners to discuss advancements and challenges in information security.","# Call for Papers
+
+The 26th World Conference on Information Security Applications (WISA 2025) is the premier security research venue, co-hosted by the Korea Institute of Information Security and Cryptology (KIISC) and the Electronics & Telecommunications Research Institute (ETRI), and co-sponsored by several national organizations.
+
+WISA 2025 will be held from **August 20-22, 2025**, at **MAISON GLAD, Jeju Island, Korea**. The conference will explore innovative possibilities in cyber security, including artificial intelligence (AI) and blockchain-driven security, hardware cryptography, and all other technical and practical aspects of security applications.
+
+We invite participants from a diverse group of researchers and practitioners who are passionate about advancing the state of the art, as well as addressing fundamental security challenges.
+
+## Topics of Interest
+
+*   AI and blockchain-driven security
+*   Hardware cryptography
+*   All other technical and practical aspects of security applications
+
+## Submission Types
+
+Submissions are invited for:
+
+*   **Papers**
+*   **Posters**
+*   **Research**
+
+## Important Dates
+
+*   **Paper submission deadline:** June 13, 2025 (23:59 GMT+9)
+*   **Poster submission deadline:** July 25, 2025
+*   **Paper acceptance notification:** July 18, 2025
+*   **Poster acceptance notification:** August 1, 2025
+*   **Pre-proceeding file submission deadline:** August 8, 2025
+*   **Author registration deadline:** August 8, 2025
+*   **Participant registration deadline:** August 11, 2025
+*   **WISA 2025 Conference:** August 20- August 22, 2025
+
+## Paper Submission
+
+Submissions can be made through the conference website: [/society/kiisc/conference/wisa2025/submission](/society/kiisc/conference/wisa2025/submission)
+
+## Registration
+
+Registration is now open. Please visit the registration page for more details: [/society/kiisc/conference/wisa2025/reg](/society/kiisc/conference/wisa2025/reg)",confDate chưa đúng format
+req-conf-1751946934833-c7die,,International Workshop on Graph-Theoretic Concepts in Computer Science,WG,https://algo.uni-trier.de/wg2025/,TRUE,https://algo.uni-trier.de/wg2025/cfp/,https://algo.uni-trier.de/wg2025/,"Conference dates: June 11-13, 2025
+Year: 2025
+Location: Europäische Akademie Otzenhausen, Germany
+Type: Offline
+Submission Date.Abstract submission deadline: February 14, 2025
+Submission Date.Paper submission deadline: February 20, 2025
+Notification Date.Notification of paper acceptance: April 15, 2025
+Camera-ready Date.Final versions due: July 1, 2025
+Topics: design and analysis of sequential, parallel, randomized, parameterized algorithms, distributed graph and network algorithms, structural graph theory with algorithmic or complexity applications, computational complexity of graph and network problems, graph grammars, graph rewriting systems and graph modeling, graph drawing and layouts, computational geometry, computational biology, graph mining, random graphs and models of the web and scale-free networks, support of the above concepts by suitable implementations and applications.","June 11-13, 2025",TRUE,2025,"Europäische Akademie Otzenhausen, Germany",TRUE,No city/state/province,No country,No continent,Offline,TRUE,"{""Abstract submission deadline"":""February 14, 2025"",""Paper submission deadline"":""February 20, 2025""}",100,"{""Notification of paper acceptance"":""April 15, 2025""}",100,"{""Final versions due"":""July 1, 2025""}",100,{},,{},,"design and analysis of sequential, parallel, randomized, parameterized algorithms, distributed graph and network algorithms, structural graph theory with algorithmic or complexity applications, computational complexity of graph and network problems, graph grammars, graph rewriting systems and graph modeling, graph drawing and layouts, computational geometry, computational biology, graph mining, random graphs and models of the web and scale-free networks, support of the above concepts by suitable implementations and applications.",No publisher,"The 51st International Workshop on Graph-Theoretic Concepts in Computer Science (WG 2025) will be held from June 11-13, 2025, with a reception on June 10, 2025, at the Europäische Akademie Otzenhausen in Germany. The workshop aims to connect theory and applications by demonstrating how graph-theoretic concepts can be applied in various areas of computer science, presenting recent results, and identifying future research directions. The event is dedicated to the memory of Hartmut Noltemeier, a co-founder of WG.","# Call for Papers: WG 2025
+
+We invite authors to submit papers describing original research of theoretical or practical significance to the **51st International Workshop on Graph-Theoretic Concepts in Computer Science (WG2025)**. The conference will take place from **June 11 to 13, 2025**, with a reception on the evening of **June 10** at the **Europäische Akademie Otzenhausen, Germany**.
+
+## Aims and Scope
+
+WG is mainly concerned with efficient algorithms of various types (e.g., sequential, parallel, distributed, randomized, parameterized) for problems on graphs and networks. The goal is to present recent results and to identify and explore directions for future research. Submitted papers should describe original results in any aspects of graph theory related to computer science, including but not restricted to:
+
+*   Design and analysis of sequential, parallel, randomized, parameterized algorithms
+*   Distributed graph and network algorithms
+*   Structural graph theory with algorithmic or complexity applications
+*   Computational complexity of graph and network problems
+*   Graph grammars, graph rewriting systems and graph modeling
+*   Graph drawing and layouts
+*   Computational geometry
+*   Computational biology
+*   Graph mining
+*   Random graphs and models of the web and scale-free networks
+*   Support of the above concepts by suitable implementations and applications.
+
+## Important Dates (All times Anywhere on Earth - AoE)
+
+*   ~~Abstract submission deadline: February 14, 2025~~ (Passed)
+*   ~~Paper submission deadline: February 20, 2025~~ (Passed)
+*   ~~Notification of paper acceptance: April 15, 2025~~ (Passed)
+*   Symposium: June 11-13, 2025
+*   Final versions due: July 1, 2025
+
+## Submissions and Proceedings
+
+Contributors are invited to submit an extended abstract of at most **12 pages** in **Springer LNCS format** (www.springer.com/lncs) including title and abstract, but excluding references. Proofs omitted due to space restrictions must be placed in an appendix, to be read by program committee members at their discretion.
+
+All papers must be original and not simultaneously submitted to another journal or conference. At least one author of each accepted paper will be expected to register and present the paper in person at the conference.
+
+Accepted contributions will be published in the conference post-proceedings in the **Lecture Notes in Computer Science (LNCS) series of Springer-Verlag**.
+
+The submission server is: [https://easychair.org/conferences/?conf=wg2025](https://easychair.org/conferences/?conf=wg2025)
+
+## Awards
+
+WG 2025 will offer awards for the **best paper** and the **best student paper**. The awards will be decided by the program committee. Papers eligible for the best student paper can have non-student co-authors, but the main work must be done by students at the time of submission. It must be indicated at the time of submission whether a paper is a candidate for this award.
+
+## Invited Speakers
+
+*   Therese Biedl (University of Waterloo)
+*   Mamadou Kanté (Université Clermont Auvergne)
+*   Derek G. Corneil (University of Toronto)
+*   Stephan Olariu (Old Dominion University)
+*   Lorna Stewart (University of Alberta)
+
+## Sponsors
+
+We thank our generous sponsors, **DFG** and **Springer**, for their financial support.",location đúng mà các trường con báo ko có?
+req-conf-1751946934833-c7die,,World Conference on Information Systems and Technologies,WorldCIST,https://worldcist.org/,TRUE,https://worldcist.org/index.php/call-for-papers,https://worldcist.org/index.php/call-for-papers,"Conference dates: April 15 - 17, 2025
+Year: 2025
+Location: Florianópolis, Brazil
+City-State-Province: Florianópolis, Santa Catarina
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.Submission: December 5, 2024
+Notification Date.Notification: January 5, 2025
+Registration Date.Registration: January 15, 2025
+Topics: Information and Knowledge Management, Organizational Models and Information Systems, Software and Systems Modeling, Software Systems, Architectures, Applications and Tools, Multimedia Systems and Applications, Computer Networks, Mobility and Pervasive Systems, Intelligent and Decision Support Systems, Big Data Analytics and Applications, Human-Computer Interaction, Ethics, Computers & Security, Health Informatics, Information Technologies in Education, Information Technologies in Radiocommunications, Technologies for Biomedical Applications
+Publisher: Springer","April 15 - 17, 2025",TRUE,2025,"Florianópolis, Brazil",TRUE,"Florianópolis, Santa Catarina",Brazil,South America,Offline,TRUE,"{""Submission"":""December 5, 2024""}",100,"{""Notification"":""January 5, 2025""}",100,{},0,"{""Registration"":""January 15, 2025""}",100,{},,"Information and Knowledge Management, Organizational Models and Information Systems, Software and Systems Modeling, Software Systems, Architectures, Applications and Tools, Multimedia Systems and Applications, Computer Networks, Mobility and Pervasive Systems, Intelligent and Decision Support Systems, Big Data Analytics and Applications, Human-Computer Interaction, Ethics, Computers & Security, Health Informatics, Information Technologies in Education, Information Technologies in Radiocommunications, Technologies for Biomedical Applications",Springer,"The 13th World Conference on Information Systems and Technologies (WorldCIST'25) will be held in Florianópolis, Brazil, from April 15-17, 2025. The conference aims to be a global forum for researchers and practitioners to discuss innovations and trends in Information Systems and Technologies. Accepted full and short papers will be published by Springer in the Lecture Notes in Networks and Systems series and submitted for indexing.","# WorldCIST'25: Call for Papers
+
+The **13th World Conference on Information Systems and Technologies (WorldCIST'25)** will be held in **Florianópolis, Brazil**, at the Majestic Palace Hotel, from **April 15 - 17, 2025**.
+
+## Scope
+
+WorldCIST'25 is a global forum for researchers and practitioners to present and discuss the most recent innovations, trends, results, experiences, and concerns in various aspects of Information Systems and Technologies.
+
+## Themes
+
+Submitted papers should be related to one or more of the main themes proposed for the Conference:
+
+*   **A) Information and Knowledge Management (IKM)**
+*   **B) Organizational Models and Information Systems (OMIS)**
+*   **C) Software and Systems Modeling (SSM)**
+*   **D) Software Systems, Architectures, Applications and Tools (SSAAT)**
+*   **E) Multimedia Systems and Applications (MSA)**
+*   **F) Computer Networks, Mobility and Pervasive Systems (CNMPS)**
+*   **G) Intelligent and Decision Support Systems (IDSS)**
+*   **H) Big Data Analytics and Applications (BDAA)**
+*   **I) Human-Computer Interaction (HCI)**
+*   **J) Ethics, Computers and Security (ECS)**
+*   **K) Health Informatics (HIS)**
+*   **L) Information Technologies in Education (ITE)**
+*   **M) Technologies for Biomedical Applications (TBA)**
+*   **N) Information Technologies in Radiocommunications (ITR)**
+
+## Types of Submissions and Decisions
+
+Four types of original papers can be submitted:
+
+*   **Full paper:** (12-page limit) For finished or consolidated R&D works.
+*   **Short paper:** (8-page limit) For ongoing works with relevant preliminary results, open to discussion.
+*   **Poster paper:** (4-page limit) For initial work with relevant ideas, open to discussion.
+*   **Company paper:** (8-page limit) For companies' papers showing practical experience, R&D, tools, etc.
+
+## Submission Requirements
+
+*   Submitted papers must comply with the format of the Lecture Notes in Networks and Systems series (see [Instructions for Authors at Springer Website](https://www.springer.com/us/authors-editors/conference-proceedings/conference-proceedings-guidelines)).
+*   Papers must be written in English.
+*   Papers must not have been published before, nor be under review for any other conference or publication.
+*   The version for evaluation by the Program Committee must be anonymized (authors’ names, affiliations, and bibliographic references should not be included).
+*   The camera-ready version must include author information, be saved in Word or Latex format, and accompanied by the filled Consent to Publish form in a ZIP file, uploaded at the conference management system.
+*   All papers will be subjected to a “double-blind review” by at least two members of the Program Committee.
+*   Full papers can be accepted as short papers or poster papers only. Short papers can be accepted as poster papers only.
+*   Poster papers and Company papers are not published in the Conference Proceedings; they are only presented and discussed.
+
+## Presentation
+
+*   Authors of accepted Full papers: 15 minutes presentation + 5 minutes discussion.
+*   Authors of accepted Short papers and Company papers: 11 minutes presentation + 4 minutes discussion.
+*   Poster authors must build and print a poster (A1 or A2 vertical format) for exhibition and discussion (7 minute limit per poster).
+
+## Publication and Indexing
+
+*   Full and Short papers will be published by Springer in the Lecture Notes in Networks and Systems series.
+*   Poster and company papers will not be published, only presented.
+*   Published Full and Short papers will be submitted for indexation by WoS, SCOPUS, DBLP, and Google Scholar, among others, and will be available in the SpringerLink Digital Library.
+*   Authors of the best selected papers will be invited to extend them for publication in international journals.
+*   At least one author must be fully registered by **January 15, 2025**, for inclusion in the proceedings and presentation.
+*   No more than one paper per registration will be published. An extra fee applies for additional papers (max one per registration).
+
+## Important Dates
+
+*   **Paper Submission:** December 5, 2024
+*   **Notification of Acceptance:** January 5, 2025
+*   **Payment of Registration:** January 15, 2025
+*   **Camera-ready Submission:** January 15, 2025
+
+WorldCist is a CORE conference with a Google Scholar H5-Index = 25.",ko có Camera-ready Submission trong CFP
+req-conf-1751946934833-c7die,,International Conference on Web Information Systems and Technologies,WEBIST,https://webist.scitevents.org/,TRUE,https://webist.scitevents.org/CallForPapers.aspx,https://webist.scitevents.org/ImportantDates.aspx,"Conference dates: October 21 - 23, 2025
+Year: 2025
+Location: Marbella, Spain
+City-State-Province: Marbella
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Topics: Web Information Systems, Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, HCI in Mobile Systems and Web Interfaces
+Submission Date.(Regular Papers) Paper Submission: June 6, 2025
+Submission Date.(Position Papers /Regular Papers) Paper Submission: July 3, 2025
+Submission Date.(Late-Breaking) Paper Submission: July 24, 2025
+Submission Date.(Abstracts Track) Abstract Submission: July 31, 2025
+Notification Date.(Regular Papers) Authors Notification: July 17, 2025
+Notification Date.(Position Papers /Regular Papers) Authors Notification: July 31, 2025
+Notification Date.(Late-Breaking) Authors Notification: September 3, 2025
+Notification Date.(Abstracts Track) Authors Notification: September 8, 2025
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: July 31, 2025
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: September 5, 2025
+Camera-ready Date.(Late-Breaking) Camera Ready and Registration: September 11, 2025
+Camera-ready Date.(Abstracts Track) Camera Ready and Registration: September 17, 2025
+Other Date.(Workshops) Workshop Proposal: May 27, 2025
+Other Date.(Special Sessions) Special Session Proposal: May 27, 2025
+Other Date.(Tutorials) Tutorial Proposal: September 11, 2025
+Other Date.(Demos) Demo Proposal: September 11, 2025
+Other Date.(Panels) Panel Proposal: September 11, 2025","October 21 - 23, 2025",TRUE,2025,"Marbella, Spain",TRUE,Marbella,Spain,Europe,Hybrid,TRUE,"{""(Regular Papers) Paper Submission"":""June 6, 2025"",""(Position Papers /Regular Papers) Paper Submission"":""July 3, 2025"",""(Late-Breaking) Paper Submission"":""July 24, 2025"",""(Abstracts Track) Abstract Submission"":""July 31, 2025""}",100,"{""(Regular Papers) Authors Notification"":""July 17, 2025"",""(Position Papers /Regular Papers) Authors Notification"":""July 31, 2025"",""(Late-Breaking) Authors Notification"":""September 3, 2025"",""(Abstracts Track) Authors Notification"":""September 8, 2025""}",100,"{""(Regular Papers) Camera Ready and Registration"":""July 31, 2025"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""September 5, 2025"",""(Late-Breaking) Camera Ready and Registration"":""September 11, 2025"",""(Abstracts Track) Camera Ready and Registration"":""September 17, 2025""}",100,{},,"{""(Workshops) Workshop Proposal"":""May 27, 2025"",""(Special Sessions) Special Session Proposal"":""May 27, 2025"",""(Tutorials) Tutorial Proposal"":""September 11, 2025"",""(Demos) Demo Proposal"":""September 11, 2025"",""(Panels) Panel Proposal"":""September 11, 2025""}",,"Web Information Systems, Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, HCI in Mobile Systems and Web Interfaces",No publisher,"The International Conference on Web Information Systems and Technologies (WEBIST 2025) aims to bring together researchers, engineers, and practitioners interested in the technological advances and business applications of web-based information systems. The conference will be held from October 21-23, 2025, and will feature topics such as Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, and HCI in Mobile Systems and Web Interfaces. WEBIST 2025 is co-located with several other conferences and offers both in-person and remote participation options.","# Call for Papers: WEBIST 2025
+
+The International Conference on Web Information Systems and Technologies (WEBIST) is dedicated to bringing together researchers, engineers, and practitioners interested in the technological advances and business applications of web-based information systems. WEBIST focuses on real-world applications and encourages discussions on solving business problems using web-based information systems and technologies.
+
+## Scope
+
+WEBIST covers different aspects of Web Information Systems, namely Internet Technology, Web Intelligence and Semantic Web, Social Network Analytics, and HCI in Mobile Systems and Web Interfaces. The conference is open to academic, research, and industrial contributions, including technical papers, position papers, survey papers, short papers on work in progress, and panel proposals.
+
+## Conference Areas
+
+1.  **Internet Technology**
+2.  **Web Intelligence and Semantic Web**
+3.  **Social Network Analytics**
+4.  **HCI in Mobile Systems and Web Interfaces**
+
+## Keynote Speaker
+
+*   Pietro Ducange, University of Pisa, Italy
+
+## Paper Submission
+
+Authors can submit their work as a **complete paper** (Regular Paper or Position Paper) or an **abstract**. Accepted abstracts are presented but not published in the proceedings.
+
+*   **Regular Paper:** Represents completed and validated research.
+*   **Position Paper:** A short report of work in progress or an arguable opinion about an issue.
+
+All submissions must be in English, carefully checked for grammar and spelling, and address one or several of the conference areas.
+
+**Double-Blind Submission:** Papers must be submitted WITHOUT any reference to authors, including personal details, acknowledgments, or any other identifying information.
+
+**Originality:** Only original papers should be submitted. Plagiarism and self-plagiarism are strictly prohibited. Avoid an excessive number of self-citations.
+
+**Submission Platform:** All papers must be submitted through the online submission platform PRIMORIS.
+
+## Publications
+
+*   All accepted complete papers will be published in the conference proceedings with an ISBN reference, in paper and digital format.
+*   Each paper will be given a DOI (Digital Object Identifier) via CrossRef.
+*   Proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI, and Web of Science / Conference Proceedings Citation Index.
+*   A short list of best papers will be invited for a post-conference special issue of the Springer Nature Computer Science Journal.
+*   Revised and extended versions of presented papers are planned for publication with Springer in a LNBIP Series book.
+
+## Important Dates (All dates refer to AOE time, i.e., ""Anywhere on Earth"")
+
+*   **Conference Date:** October 21 - 23, 2025
+
+### Regular Papers
+
+*   Paper Submission: ~~June 6, 2025~~
+*   Authors Notification: July 17, 2025
+*   Camera Ready and Registration: July 31, 2025
+
+### Position Papers / Regular Papers
+
+*   Paper Submission: ~~July 3, 2025~~
+*   Authors Notification: July 31, 2025
+*   Camera Ready and Registration: September 5, 2025
+
+### Late-Breaking
+
+*   Paper Submission: July 24, 2025
+*   Authors Notification: September 3, 2025
+*   Camera Ready and Registration: September 11, 2025
+
+### Workshops
+
+*   Workshop Proposal: ~~May 27, 2025~~
+
+### Special Sessions
+
+*   Special Session Proposal: ~~May 27, 2025~~
+
+### Tutorials
+
+*   Tutorial Proposal: September 11, 2025
+
+### Demos
+
+*   Demo Proposal: September 11, 2025
+
+### Panels
+
+*   Panel Proposal: September 11, 2025
+
+### Abstracts Track
+
+*   Abstract Submission: July 31, 2025
+*   Authors Notification: September 8, 2025
+*   Camera Ready and Registration: September 17, 2025
+
+## Secretariat
+
+WEBIST Secretariat
+Address: Avenida de S. Francisco Xavier, Lote 7 Cv. C, 2900-616 Setúbal - Portugal
+Tel.: +351 265 520 184
+Fax: +351 265 520 186
+e-mail: [webist.secretariat@insticc.org](mailto:webist.secretariat@insticc.org)
+Web: [https://webist.scitevents.org](https://webist.scitevents.org)
+
+## Venue
+
+The conference will take place at the Barceló Marbella hotel, located in the heart of the Costa del Sol, Spain.
+
+## Chairs
+
+*   **Conference Chair:** Massimo Marchiori, University of Padua, Italy
+*   **Program Co-Chairs:** Karl Aberer, EPFL, Switzerland; Josep Domingo-Ferrer, Rovira i Virgili University, Spain",
+req-conf-1751946934833-c7die,,Workshop on Computational Optimization,WCO,https://2025.fedcsis.org/thematic/co,TRUE,https://2025.fedcsis.org/cfp,https://2025.fedcsis.org/important_dates,"Conference dates: September 14 - 17, 2025
+Year: 2025
+Location: Kraków, Poland
+City-State-Province: Kraków
+Country: Poland
+Continent: Europe
+Type: Offline
+Submission Date.Paper submission (no extensions): May 25, 2025
+Submission Date.Position paper submission: June 10, 2025
+Submission Date.Thematic Session proposal submission: November 26, 2025
+Notification Date.Author notification: July 8, 2025
+Camera-ready Date.Final paper submission, registration: July 15, 2025
+Other Date.Early registration discount: August 6, 2025
+Topics: Computational Optimization, combinatorial and continuous global optimization, unconstrained and constrained optimization, multiobjective and robust optimization, optimization in dynamic and/or noisy environments, optimization on graphs, large-scale optimization, in parallel and distributed computational environments, meta-heuristics for optimization, nature-inspired approaches and any other derivative-free methods, exact/heuristic hybrid methods, involving natural computing techniques and other global and local optimization methods, numerical and heuristic methods for modeling
+Publisher: Springer","September 14 - 17, 2025",TRUE,2025,"Kraków, Poland",TRUE,Kraków,Poland,Europe,Offline,TRUE,"{""Paper submission (no extensions)"":""May 25, 2025"",""Position paper submission"":""June 10, 2025"",""Thematic Session proposal submission"":""November 26, 2025""}",100,"{""Author notification"":""July 8, 2025""}",100,"{""Final paper submission, registration"":""July 15, 2025""}",100,{},100,"{""Early registration discount"":""August 6, 2025""}",,"Computational Optimization, combinatorial and continuous global optimization, unconstrained and constrained optimization, multiobjective and robust optimization, optimization in dynamic and/or noisy environments, optimization on graphs, large-scale optimization, in parallel and distributed computational environments, meta-heuristics for optimization, nature-inspired approaches and any other derivative-free methods, exact/heuristic hybrid methods, involving natural computing techniques and other global and local optimization methods, numerical and heuristic methods for modeling",Springer,"The Workshop on Computational Optimization (WCO), a thematic session of FedCSIS 2025, will be held in Kraków, Poland, from September 14-17, 2025. It aims to foster communication between researchers and practitioners on computational optimization, covering theoretical and practical aspects of various optimization methods and their applications.","# Call for Papers: Computational Optimization (CO)
+
+The **Computational Optimization (CO)** Thematic Session, part of FedCSIS 2025, invites original contributions related to both theoretical and practical aspects of optimization methods. The session aims to stimulate communication between researchers working on different fields of optimization and practitioners who need reliable and efficient computational optimization methods. The conference will be held in **Kraków, Poland, from September 14-17, 2025**.
+
+## Topics of Interest
+
+The list of topics includes, but is not limited to:
+
+*   Combinatorial and continuous global optimization
+*   Unconstrained and constrained optimization
+*   Multiobjective and robust optimization
+*   Optimization in dynamic and/or noisy environments
+*   Optimization on graphs
+*   Large-scale optimization, in parallel and distributed computational environments
+*   Meta-heuristics for optimization, nature-inspired approaches and any other derivative-free methods
+*   Exact/heuristic hybrid methods, involving natural computing techniques and other global and local optimization methods
+*   Numerical and heuristic methods for modeling
+
+## Applications of Interest
+
+The applications of interest are included in the list below, but are not limited to:
+
+*   Classical operational research problems (knapsack, traveling salesman, etc.)
+*   Computational biology and distance geometry
+*   Data mining and knowledge discovery
+*   Human motion simulations; crowd simulations
+*   Industrial applications
+*   Optimization in statistics, econometrics, finance, physics, chemistry, biology, medicine, and engineering
+*   Environment modeling and optimization
+
+## Important Dates
+
+*   Thematic Session proposal submission: 26.11.2025 [Changed or passed]
+*   Paper submission (no extensions): 25.05.2025 [Changed or passed]
+*   Position paper submission: 10.06.2025 [Changed or passed]
+*   **Author notification:** 08.07.2025
+*   **Final paper submission, registration:** 15.07.2025
+*   **Early registration discount:** 06.08.2025
+*   **Conference date:** September 14-17, 2025
+
+## Submission Rules
+
+*   Authors should submit their papers as **Postscript, PDF or MSWord files**.
+*   The total length of a paper should not exceed **12 pages IEEE style** (including tables, figures and references). More pages can be added, for an additional fee.
+*   IEEE style templates are available [here](https://2025.fedcsis.org/for_authors/instructions).
+*   Papers will be refereed and accepted on the basis of their scientific merit and relevance to the Topical Area.
+*   Preprints containing accepted papers will be published online.
+*   Only papers presented at the conference will be published in Conference Proceedings and submitted for inclusion in the IEEE Xplore® database.
+*   Conference proceedings will be published in a volume with ISBN, ISSN and DOI numbers and posted at the conference WWW site.
+*   Conference proceedings will be submitted for indexation according to information [here](https://2025.fedcsis.org/for_authors/indexation).
+*   Organizers reserve the right to move accepted papers between FedCSIS Sessions.
+
+## Publication in Journals and Series
+
+Extended versions of selected papers presented during the conference will be published as a volume in the **Studies in Computational Intelligence Springer series**.
+
+## Contact
+
+For inquiries, please contact: [wco@fedcsis.org](mailto:wco@fedcsis.org)
+
+## Thematic Session Organizers
+
+*   Fidanova, Stefka (Institute of Information and Communication Technologies at Bulgarian Academy of Sciences (IICT-BAS), Bulgaria)
+*   Mucherino, Antonio (IRISA, University of Rennes, France)
+*   Zaharie, Daniela (West University of Timisoara, Romania)
+
+## Submission Platform
+
+Submissions are accepted through the EasyChair system: [https://easychair.org/cfp/fedcsis2025](https://easychair.org/cfp/fedcsis2025)",
+req-conf-1751946934833-c7die,,"World Congress in Computer Science, Computer Engineering, and Applied Computing",WORLDCOMP,https://american-cse.org/index.html/,TRUE,https://american-cse.org/drafts/,https://american-cse.org/csce2025/,"Conference dates: July 21-24, 2025
+Year: 2025
+Location: Las Vegas, USA
+Type: Hybrid
+Topics: computer science, computer engineering, data science, artificial intelligence, STEM, and applied computing
+Publisher: Springer Nature","July 21-24, 2025",TRUE,2025,"Las Vegas, USA",TRUE,No city/state/province,No country,No continent,Hybrid,TRUE,{},,{},,{},0,{},,{},,"computer science, computer engineering, data science, artificial intelligence, STEM, and applied computing",Springer Nature,"The 2025 World Congress in Computer Science, Computer Engineering, and Applied Computing (CSCE) is scheduled to take place from July 21-24, 2025, in Las Vegas, USA. This significant event comprises 21 major tracks, featuring 112 technical, research, and panel sessions, and is recognized as one of the top five largest annual gatherings for researchers in computer science, computer engineering, data science, artificial intelligence, STEM, and applied computing. The congress offers both in-person and online presentation options.","# CSCE 2025: Call for Papers
+
+The 2025 World Congress in Computer Science, Computer Engineering, and Applied Computing (CSCE'25) is a major event, including 21 major tracks with 112 technical, research, and panel sessions. It is scheduled to be held simultaneously from **July 21-24, 2025**, in **Las Vegas, USA**.
+
+This year's Congress will be held **in person (face-to-face)**; however, **online presentation options** will also be available for authors and speakers who are unable to attend physically.
+
+## Publication
+
+All accepted papers will be published by **Springer Nature** (https://www.springernature.com/) in the proceedings (Research Books) and indexed in major Science Citation Indexation databases, including Scopus, DBLP, EI Engineering Index (Compendex, Inspec databases), Springer Link, Google Scholar, CPCI (part of Clarivate Analytics' Web of Science), ACM Digital Library, IO-Port, MathSciNet, and Zentralblatt MATH.
+
+## Joint Conferences
+
+The Congress is composed of a number of tracks (joint-conferences) held simultaneously:
+
+*   ACC'25: 9th International Conference on Applied Cognitive Computing
+*   BIOCOMP'25: 26th International Conference on Bioinformatics & Computational Biology
+*   BIOENG'25: 11th International Conference on Biomedical Engineering & Sciences
+*   CSC'25: 23rd International Conference on Scientific Computing
+*   EEE'25: 24th International Conference on e-Learning, e-Business, Enterprise Information Systems, & e-Government
+*   ESCS'25: 23rd International Conference on Embedded Systems, Cyber-physical Systems, & Applications
+*   FCS'25: 21st International Conference on Foundations of Computer Science
+*   FECS'25: 21st International Conference on Frontiers in Education: Computer Science & Computer Engineering
+*   GCC'25: 21st International Conference on Grid, Cloud, & Cluster Computing
+*   HIMS'25: 11th International Conference on Health Informatics & Medical Systems
+*   ICAI'25: 27th International Conference on Artificial Intelligence
+*   ICDATA'25: 21st International Conference on Data Science
+*   ICEQT'25: 4th International Conference on Emergent Quantum Technologies
+*   ICOMP'25: 26th International Conference on Internet Computing & IoT
+*   ICWN'25: 24th International Conference on Wireless Networks
+*   IKE'25: 24th International Conference on Information & Knowledge Engineering
+*   IPCV'25: 29th International Conference on Image Processing, Computer Vision, & Pattern Recognition
+*   MSV'25: 22nd International Conference on Modeling, Simulation & Visualization Methods
+*   PDPTA'25: 31st International Conference on Parallel & Distributed Processing Techniques & Applications
+*   SAM'25: 24th International Conference on Security & Management
+*   SERP'25: 23rd International Conference on Software Engineering Research & Practice
+
+## Submission Instructions
+
+*   **Submission Portal:** Papers are submitted via the evaluation website: [https://american-cse.org/cgi-bin/submit/index.cgi?xprint_submit](https://american-cse.org/cgi-bin/submit/index.cgi?xprint_submit)
+*   **Paper Categories and Page Limitations:** Refer to: [https://american-cse.org/csce2025/paper_categories](https://american-cse.org/csce2025/paper_categories)
+*   **Formatting:** For draft submissions, all reasonable formatting/typesetting is acceptable. Authors of accepted papers will receive specific instructions to prepare final versions using the standard Springer Nature typesetting format (available at https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines). MS WORD and LaTeX templates are available.
+*   **Submission Format:** Submissions must be in either PDF or MS WORD formats.
+*   **First Page Requirements:** The first page must include:
+    *   Title of the paper
+    *   Name, affiliation, City, Country, and email address of each author (identify the Contact Author).
+    *   Abstract (between 100 and 120 words).
+    *   A maximum of 6 topical keywords.
+    *   The type of submission (e.g., ""Regular Research Paper"", ""Short Research Paper"", or ""Extended Abstract/Poster Research Paper"").
+
+## Important Dates
+
+*   **Conference Dates:** July 21-24, 2025
+*   Submission deadlines are available via: [https://american-cse.org/csce2025/deadlines](https://american-cse.org/csce2025/deadlines)
+
+## Contact
+
+Questions and inquiries should be sent to: CSCE'25 Conference Secretariat: cs@american-cse.org",ko lấy được impLink(link đúng: https://american-cse.org/csce2025/deadlines) => ko lấy được impDate
+req-conf-1751946934833-c7die,,ACM Symposium on User Interface Software and Technology,UIST,https://uist.acm.org/2025/,TRUE,https://uist.acm.org/2025/cfp/,https://uist.acm.org/2025/cfp/,"Conference dates: September 2 - 5, 2025
+Year: 2025
+Location: Paradise Hotel, Busan
+City-State-Province: Busan
+Country: Korea
+Continent: Asia
+Type: Offline
+Submission Date.Papers (Abstract): April 2, 2025
+Submission Date.Papers (PDF): April 9, 2025
+Submission Date.Posters: July 11, 2025
+Submission Date.Demos: July 11, 2025
+Submission Date.Doctoral Symposium: July 11, 2025
+Submission Date.Workshops: July 11, 2025
+Submission Date.Visions: July 11, 2025
+Submission Date.Lasting Impact: June 17, 2025
+Submission Date.Student Innovation Contest: July 18, 2025
+Topics: graphical & web user interfaces, tangible & ubiquitous computing, virtual & augmented reality, multimedia, new input & output devices, Human-Centered AI, and CSCW","September 2 - 5, 2025",FALSE,2025,"Paradise Hotel, Busan",TRUE,Busan,Korea,Asia,Offline,TRUE,"{""Papers (Abstract)"":""April 2, 2025"",""Papers (PDF)"":""April 9, 2025"",""Posters"":""July 11, 2025"",""Demos"":""July 11, 2025"",""Doctoral Symposium"":""July 11, 2025"",""Workshops"":""July 11, 2025"",""Visions"":""July 11, 2025"",""Lasting Impact"":""June 17, 2025"",""Student Innovation Contest"":""July 18, 2025""}",90,{},0,{},0,{},,{},0,"graphical & web user interfaces, tangible & ubiquitous computing, virtual & augmented reality, multimedia, new input & output devices, Human-Centered AI, and CSCW",No publisher,No summary available,No call for papers available,"tuy confDate là từ 28/9 - 4/10 nhưng confDate đầy đủ chỉ có trong hình
+
+thiếu Papers (materials) +
+CFP còn rất nhiều impDate nhưng ko trả về thêm gì"

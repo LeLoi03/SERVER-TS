@@ -1,7 +1,6 @@
 // src/chatbot/services/getWebsiteInfo.service.ts
 import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
 import { container } from 'tsyringe'; // Import container for resolving singletons
-import logToFile from "../../utils/logger"; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 import { ConfigService } from '../../config/config.service';
 
@@ -27,12 +26,12 @@ const WEBSITE_DESCRIPTION: string | undefined = configService.websiteDescription
 // Critical check for WEBSITE_DESCRIPTION at module load time
 if (!WEBSITE_DESCRIPTION) {
     const errorMsg = `${LOG_PREFIX} CRITICAL ERROR: WEBSITE_DESCRIPTION is not configured.`;
-    logToFile(errorMsg);
+    
     // Throwing an error here will prevent the module from loading
     // and thus prevent the application from starting in an unconfigured state.
     throw new Error(errorMsg);
 } else {
-    logToFile(`${LOG_PREFIX} WEBSITE_DESCRIPTION configured.`);
+    
 }
 
 /**
@@ -54,14 +53,14 @@ export async function executeGetWebsiteInfo(): Promise<WebsiteInfoResult> {
         if (!description) {
             // This path should ideally not be hit if the module-level check works.
             const errorMsg = "Configuration error: WEBSITE_DESCRIPTION environment variable is not set.";
-            logToFile(`[${LOG_PREFIX} ${functionName}] Warning: ${errorMsg}`);
+            
             return {
                 success: false,
                 errorMessage: "Website information configuration is missing. Please contact support." // User-friendly error
             };
         }
 
-        logToFile(`[${LOG_PREFIX} ${functionName}] Successfully retrieved website description.`);
+        
         return {
             success: true,
             data: description
@@ -69,7 +68,7 @@ export async function executeGetWebsiteInfo(): Promise<WebsiteInfoResult> {
 
     } catch (error: unknown) { // Catch as unknown for safer handling
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`[${LOG_PREFIX} ${functionName}] Unexpected error retrieving website information: ${errorMessage}\nStack: ${errorStack}`);
+        
         return {
             success: false,
             // Provide a generic error to the model/user for security/simplicity,

@@ -16,7 +16,6 @@ dotenv.config();
  *
  * @param {string} prefix - The prefix for environment variables (e.g., 'DETERMINE', 'EXTRACT_INFO', 'EXTRACT_CFP').
  *                          Expected environment variables: `${prefix}_TEMPERATURE`, `${prefix}_TOP_P`, etc.
- * @param {import('pino').Logger} [logger] - Optional logger instance for logging loaded configuration.
  * @returns {GenerateContentConfig} An object containing the loaded model configuration.
  */
 export function loadModelConfig(prefix: string, logger?: import('pino').Logger): GenerateContentConfig {
@@ -29,11 +28,5 @@ export function loadModelConfig(prefix: string, logger?: import('pino').Logger):
         // Other fields from GenerateContentConfig can be added here if needed,
         // e.g., stopSequences, candidateCount, etc., with their defaults or env vars.
     };
-
-    if (logger) {
-        logger.info({ event: 'model_config_loaded', prefix, config }, `Loaded model configuration for prefix "${prefix}".`);
-    } else {
-        console.log(`[ConfigLoader] Loaded model config for ${prefix}: ${JSON.stringify(config)}`);
-    }
     return config;
 }

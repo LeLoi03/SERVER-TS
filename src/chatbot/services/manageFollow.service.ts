@@ -2,7 +2,6 @@
 import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
 import { container } from 'tsyringe';
 import { ApiCallResult, FollowItem } from '../shared/types'; // Ensure FollowItem is imported
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
 import { executeGetConferences } from './getConferences.service';
 import { ConfigService } from '../../config/config.service';
@@ -16,11 +15,11 @@ const DATABASE_URL: string | undefined = configService.databaseUrl;
 // Critical check for DATABASE_URL at module load time
 if (!DATABASE_URL) {
     const errorMsg = `${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`;
-    logToFile(errorMsg);
+    
     // Throwing an error here prevents the module from loading
     throw new Error(errorMsg);
 } else {
-    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // 
 }
 
 // Defines the types of items that can be followed/unfollowed.
@@ -58,7 +57,7 @@ function getApiUrl(
             return `${DATABASE_URL}/${base}/remove`;
         default:
             // This case should ideally not be reached if types are used correctly, but provides a fallback.
-            logToFile(`${LOG_PREFIX} Error: Invalid operation type for URL construction: ${operation}`);
+            
             throw new Error(`Invalid follow/unfollow operation: ${operation}`);
     }
 }
@@ -80,12 +79,12 @@ export async function executeGetUserFollowed(
     const logContext = `${LOG_PREFIX} [GetFollowed ${itemType}]`;
 
     if (!token) {
-        logToFile(`${logContext} Error: Authentication token is missing.`);
+        
         return { success: false, itemIds: [], errorMessage: "Authentication token is required." };
     }
 
     const url = getApiUrl(itemType, 'followedList');
-    logToFile(`${logContext} Fetching followed items: GET ${url}`);
+    
 
     try {
         const response = await fetch(url, {
@@ -95,7 +94,7 @@ export async function executeGetUserFollowed(
 
         if (!response.ok) {
             const errorText = await response.text().catch(() => `Status ${response.status}`);
-            logToFile(`${logContext} API Error (${response.status}): ${errorText.substring(0, Math.min(errorText.length, 200))}`);
+            
             return { success: false, itemIds: [], errorMessage: `API Error (${response.status}) fetching followed ${itemType} list.` };
         }
 
@@ -103,12 +102,12 @@ export async function executeGetUserFollowed(
         const followedItems: FollowItem[] = await response.json();
         const itemIds = followedItems.map(item => item.id);
 
-        logToFile(`${logContext} Success. Found ${itemIds.length} followed item(s).`);
+        
         return { success: true, itemIds, items: followedItems };
 
     } catch (error: unknown) { // Catch as unknown for safer error handling
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`${logContext} Network/Fetch Error: ${errorMessage}\nStack: ${errorStack}`);
+        
         return { success: false, itemIds: [], errorMessage: `Network error fetching followed ${itemType} list. Details: ${errorMessage}` };
     }
 }
@@ -132,11 +131,11 @@ export async function executeFollowUnfollowApi(
     const logContext = `${LOG_PREFIX} [${action} ${itemType} ID: ${itemId}]`;
 
     if (!token) {
-        logToFile(`${logContext} Error: Authentication token is missing.`);
+        
         return { success: false, errorMessage: "Authentication token is required." };
     }
     if (!itemId || typeof itemId !== 'string' || itemId.trim() === '') {
-        logToFile(`${logContext} Error: Item ID is missing or invalid.`);
+        
         return { success: false, errorMessage: "Item ID is required." };
     }
 
@@ -145,7 +144,7 @@ export async function executeFollowUnfollowApi(
     // Payload depends on itemType
     const bodyPayload = { conferenceId: itemId }
 
-    logToFile(`${logContext} Executing action: POST ${url} with payload: ${JSON.stringify(bodyPayload)}`);
+    
 
     try {
         const response = await fetch(url, {
@@ -169,16 +168,16 @@ export async function executeFollowUnfollowApi(
                     errorDetails = textError.substring(0, Math.min(textError.length, 100)) || `Status ${response.status} ${response.statusText}`;
                 } catch { /* Ignore text read error as well, use generic status */ }
             }
-            logToFile(`${logContext} API Error (${response.status}): ${errorDetails}`);
+            
             return { success: false, errorMessage: `API Error (${response.status}): Failed to ${action} ${itemType}. ${errorDetails}` };
         }
 
-        logToFile(`${logContext} Action executed successfully.`);
+        
         return { success: true };
 
     } catch (error: unknown) { // Catch as unknown
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-        logToFile(`${logContext} Network/Fetch Error: ${errorMessage}\nStack: ${errorStack}`);
+        
         return { success: false, errorMessage: `Network error attempting to ${action} ${itemType}. Details: ${errorMessage}` };
     }
 }
@@ -201,16 +200,16 @@ export async function findItemId(
     itemType: ServiceItemType
 ): Promise<{ success: boolean; itemId?: string; details?: Partial<FollowItem>; errorMessage?: string }> {
     const logContext = `${LOG_PREFIX} [FindID ${itemType} Ident:"${identifier}" Type:${identifierType}]`;
-    logToFile(`${logContext} Attempting to find item ID.`);
+    
 
     if (!identifier || typeof identifier !== 'string' || identifier.trim() === '') {
-        logToFile(`${logContext} Error: Identifier is missing.`);
+        
         return { success: false, errorMessage: "Identifier is required to find the item ID." };
     }
 
     // If identifierType is 'id', assume the provided identifier is already the ID.
     if (identifierType === 'id') {
-        logToFile(`${logContext} Identifier type is ID. Returning ID directly: ${identifier}`);
+        
         // If you have a specific 'getById' API, you could call it here to fetch full details.
         // For now, we return only the ID and a partial FollowItem with just the ID.
         return { success: true, itemId: identifier, details: { id: identifier } };
@@ -226,14 +225,14 @@ export async function findItemId(
     searchParams.append('perPage', '1'); // Limit to one result as we only need one ID
     searchParams.append('page', '1');
     const searchQuery = searchParams.toString();
-    logToFile(`${logContext} Constructed search query: ${searchQuery}`);
+    
 
     // Call the appropriate service (getConferences) based on itemType
     const apiResult: ApiCallResult = await executeGetConferences(searchQuery)
 
     if (!apiResult.success || !apiResult.rawData) {
         const errorDetail = apiResult.errorMessage ? `: ${apiResult.errorMessage}` : '.';
-        logToFile(`${logContext} Search failed or returned no raw data${errorDetail}`);
+        
         return { success: false, errorMessage: `Could not find ${itemType} using identifier "${identifier}"${errorDetail}` };
     }
 
@@ -253,7 +252,7 @@ export async function findItemId(
         }
 
         if (itemData && itemData.id && typeof itemData.id === 'string') {
-            logToFile(`${logContext} Successfully found ID: ${itemData.id}. Details preview: ${JSON.stringify(itemData).substring(0, Math.min(JSON.stringify(itemData).length, 100))}`);
+            
             // Return relevant details from itemData, conforming to Partial<FollowItem>
             const detailsToReturn: Partial<FollowItem> = {
                 id: itemData.id,
@@ -264,12 +263,12 @@ export async function findItemId(
             };
             return { success: true, itemId: itemData.id, details: detailsToReturn };
         } else {
-            logToFile(`${logContext} Error: Could not extract valid ID or details from API response. Data preview: ${JSON.stringify(itemData || parsedData).substring(0, Math.min(JSON.stringify(itemData || parsedData).length, 100))}...`);
+            
             return { success: false, errorMessage: `Found ${itemType} data for "${identifier}", but could not extract its ID or details.` };
         }
     } catch (parseError: unknown) { // Catch as unknown
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
-        logToFile(`${logContext} JSON Parsing Error during search result processing: ${errorMessage}. Raw data preview: ${apiResult.rawData.substring(0, Math.min(apiResult.rawData.length, 200))}...\nStack: ${errorStack}`);
+        
         return { success: false, errorMessage: `Error processing search results for ${itemType} "${identifier}". Details: ${errorMessage}` };
     }
 }

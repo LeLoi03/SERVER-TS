@@ -82,7 +82,7 @@ export class JournalLogAnalysisService {
         // --- LOGIC ĐỌC CACHE (GIỮ NGUYÊN) ---
         if (this.configService.analysisCacheEnabled && !hasTimeFilter) {
             const cachedResult = await this.cacheService.readFromCache<JournalLogAnalysisResult>('journal', batchRequestId);
-            console.log(`Cached result for ${batchRequestId}:`, cachedResult);
+            // console.log(`Cached result for ${batchRequestId}:`, cachedResult);
             // Áp dụng sửa lỗi TypeScript
             if (cachedResult && cachedResult.status && !['Processing', 'Unknown'].includes(cachedResult.status)) {
                 // logger.info(`Returning valid cached journal result for request ID: ${batchRequestId} with status: ${cachedResult.status}`);

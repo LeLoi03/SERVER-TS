@@ -1,10 +1,7 @@
 // src/utils/historyUtils.ts
 import fs from 'fs/promises';
 import { ChatHistoryItem } from '../shared/types'; // This is your internal type
-// No direct import of SDK 'Part' is needed here if ChatHistoryItem.parts are already typed correctly
-// and we only access 'text'. If ChatHistoryItem.parts was 'any[]', then importing Part for casting
-// might be considered, but the current access pattern is safe.
-import logToFile from '../../utils/logger';
+
 
 /**
  * Formats a single chat history entry into a human-readable string.
@@ -26,10 +23,10 @@ async function saveHistoryToFile(history: ChatHistoryItem[], filePath: string): 
     try {
         const formattedHistory = history.map(formatHistoryEntry).join('\n---\n');
         await fs.writeFile(filePath, formattedHistory, 'utf-8');
-        logToFile(`[HistoryUtils] Chat history successfully saved to file: ${filePath}`);
+        
     } catch (error: unknown) {
         const errorMessage = error instanceof Error ? error.message : String(error);
-        logToFile(`[HistoryUtils] Error saving chat history to ${filePath}: ${errorMessage}`);
+        
     }
 }
 

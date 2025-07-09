@@ -1,0 +1,1200 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,recrawl
+req-conf-1751766474613-jtzem,,ACM Symposium on Document Engineering,DocEng,https://doceng.org/doceng2025,https://doceng.org/doceng2025/cfp,,"Conference dates: September 2 - 5, 2025
+Year: 2025
+Location: University of Nottingham, Nottingham, UK
+City-State-Province: Nottingham
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.(Short Papers & Demonstrations) manuscripts due: June 17, 2025
+Notification Date.(Short Papers & Demonstrations) acceptance notice: July 15, 2025
+Topics: Document Engineering, Document Trust and Security, Documents and privacy, Document authentication, Document encryption, Secure document workflows, policy, and access, security for mobile and printing devices, Security printing, including document identification, tagging and meta-data, Machine Learning for Digital Documents, Applications of Large Language Models in Document Processing and Creation, AI in document processing and management, AI in document content analysis, Generative Systems, Digital Accessibility, Models for representing Accessibility in Documents, Interfaces for accessing document structures, Alternative User Experiences for document consumption, Document Repurposing for accessibility, Collections, Systems, and Management, Storage, indexing, retrieval, deduplication, cleansing, Enterprise content management: models and standards, scale and performance, Digital libraries: and archives preservation systems, Massive collections of documents, Systems and algorithms for safe and efficient document processing, Scalable distributed document processing, Modelling and Representation, Document models and structures: multimedia objects, graphs, trees, streams, adaptive and responsive documents, probabilistic documents, Document representation and standards: interchange standards, markup languages, style sheets, Document type representation, metadata, Linked data and semantics enrichment, linking techniques and standards, Collaborative documents and sharing economy, Document internationalisation, multilingual representations, Versioning, Document Content Analysis, Structure and visual representation analysis, Linguistic and semantic (content) analysis, categorization, classification, clustering, Automated tagging, named entity disambiguation, semantic linking, automatic image captioning, OCR Error correction, Systems for Visual Document Analysis, Historical document processing, Handwritten character recognition, Recognition of images, equations, drawings, music scores and other content in document images and layout description languages, Recovery and assessing document quality from distortions and defects such as tears or blemishes, Generation, Manipulation, and Presentation, Document authoring tools and systems, Document presentation: algorithms and systems for typography, formatting and layout generation, Automatically generated documents, content customization, variable printing, Mobile platforms and documents, Document transformation, Applications, Digital humanities, Digital preservation/archiving, Open Science, Education, eBooks and digital publishing, Web applications and systems, Mobile applications, Cyber-physical document workflows, especially electronic/print options, including 3D printing workflows, User Experience, Navigation, search, Usability, accessibility, readability, and aesthetics, Collaborative authoring and editing, curation and annotation, Workflows, integration, and interaction between human and automated processes, Culture-dependent layouts","September 2 - 5, 2025",2025,"University of Nottingham, Nottingham, UK",Nottingham,United Kingdom,Europe,Offline,"{""(Short Papers & Demonstrations) manuscripts due"":""June 17, 2025""}","{""(Short Papers & Demonstrations) acceptance notice"":""July 15, 2025""}",{},{},{},"Document Engineering, Document Trust and Security, Documents and privacy, Document authentication, Document encryption, Secure document workflows, policy, and access, security for mobile and printing devices, Security printing, including document identification, tagging and meta-data, Machine Learning for Digital Documents, Applications of Large Language Models in Document Processing and Creation, AI in document processing and management, AI in document content analysis, Generative Systems, Digital Accessibility, Models for representing Accessibility in Documents, Interfaces for accessing document structures, Alternative User Experiences for document consumption, Document Repurposing for accessibility, Collections, Systems, and Management, Storage, indexing, retrieval, deduplication, cleansing, Enterprise content management: models and standards, scale and performance, Digital libraries: and archives preservation systems, Massive collections of documents, Systems and algorithms for safe and efficient document processing, Scalable distributed document processing, Modelling and Representation, Document models and structures: multimedia objects, graphs, trees, streams, adaptive and responsive documents, probabilistic documents, Document representation and standards: interchange standards, markup languages, style sheets, Document type representation, metadata, Linked data and semantics enrichment, linking techniques and standards, Collaborative documents and sharing economy, Document internationalisation, multilingual representations, Versioning, Document Content Analysis, Structure and visual representation analysis, Linguistic and semantic (content) analysis, categorization, classification, clustering, Automated tagging, named entity disambiguation, semantic linking, automatic image captioning, OCR Error correction, Systems for Visual Document Analysis, Historical document processing, Handwritten character recognition, Recognition of images, equations, drawings, music scores and other content in document images and layout description languages, Recovery and assessing document quality from distortions and defects such as tears or blemishes, Generation, Manipulation, and Presentation, Document authoring tools and systems, Document presentation: algorithms and systems for typography, formatting and layout generation, Automatically generated documents, content customization, variable printing, Mobile platforms and documents, Document transformation, Applications, Digital humanities, Digital preservation/archiving, Open Science, Education, eBooks and digital publishing, Web applications and systems, Mobile applications, Cyber-physical document workflows, especially electronic/print options, including 3D printing workflows, User Experience, Navigation, search, Usability, accessibility, readability, and aesthetics, Collaborative authoring and editing, curation and annotation, Workflows, integration, and interaction between human and automated processes, Culture-dependent layouts",No publisher,"The 25th ACM Symposium on Document Engineering (DocEng'25) will be held from September 2 to September 5, 2025, at the University of Nottingham, Nottingham, UK. This international forum focuses on the design, implementation, development, management, use, and evaluation of advanced systems where documents play a key role, with a particular emphasis on the theme of Document Trust and Security. Attendees have interests spanning all aspects of document engineering and applications.","# DocEng 2025: Call for Papers
+
+The 25th ACM Symposium on Document Engineering (DocEng'25) invites submissions for original research papers focusing on the design, implementation, development, management, use, and evaluation of advanced systems where documents play a key role. The symposium will be held in-person at the **University of Nottingham, Nottingham, UK**, from **September 2, 2025, to September 5, 2025**.
+
+DocEng emphasizes innovative approaches to document engineering technology, real-world applications of documents and document collections, and novel principles, tools, and processes that improve document creation, management, maintenance, sharing, and productive use. A particular focus for DocEng'25 is the theme of **Document Trust and Security**.
+
+## Submission Types
+
+*   **Full Papers:** Describing complete works of research (up to 10 pages).
+*   **Short Papers:** Describing smaller complete works of research, novel challenges, or visions (up to 4 pages).
+*   **Demonstrations:** Highlighting use cases of systems or tools (up to 2-page abstract).
+
+## Topics of Interest
+
+We seek original contributions that are mainly focused on, but not necessarily limited to, the following topics:
+
+**Document Trust and Security**
+*   Documents and privacy
+*   Document authentication
+*   Document encryption
+*   Secure document workflows, policy, and access, security for mobile and printing devices
+*   Security printing, including document identification, tagging and meta-data
+
+**Machine Learning for Digital Documents**
+*   Applications of Large Language Models in Document Processing and Creation
+*   AI in document processing and management
+*   AI in document content analysis
+*   Generative Systems
+
+**Digital Accessibility**
+*   Models for representing Accessibility in Documents
+*   Interfaces for accessing document structures
+*   Alternative User Experiences for document consumption
+*   Document Repurposing for accessibility
+
+**Collections, Systems, and Management**
+*   Storage, indexing, retrieval, deduplication, cleansing
+*   Enterprise content management: models and standards, scale and performance
+*   Digital libraries: and archives preservation systems
+*   Massive collections of documents
+*   Systems and algorithms for safe and efficient document processing
+*   Scalable distributed document processing
+
+**Modelling and Representation**
+*   Document models and structures: multimedia objects, graphs, trees, streams, adaptive and responsive documents, probabilistic documents
+*   Document representation and standards: interchange standards, markup languages, style sheets
+*   Document type representation, metadata
+*   Linked data and semantics enrichment, linking techniques and standards
+*   Collaborative documents and sharing economy
+*   Document internationalisation, multilingual representations
+*   Versioning
+
+**Document Content Analysis**
+*   Structure and visual representation analysis
+*   Linguistic and semantic (content) analysis, categorization, classification, clustering
+*   Automated tagging, named entity disambiguation, semantic linking, automatic image captioning
+*   OCR Error correction
+
+**Systems for Visual Document Analysis**
+*   Historical document processing
+*   Handwritten character recognition
+*   Recognition of images, equations, drawings, music scores and other content in document images and layout description languages
+*   Recovery and assessing document quality from distortions and defects such as tears or blemishes
+
+**Generation, Manipulation, and Presentation**
+*   Document authoring tools and systems
+*   Document presentation: algorithms and systems for typography, formatting and layout generation
+*   Automatically generated documents, content customization, variable printing
+*   Mobile platforms and documents
+*   Document transformation
+
+**Applications**
+*   Digital humanities
+*   Digital preservation/archiving
+*   Open Science
+*   Education
+*   eBooks and digital publishing
+*   Web applications and systems
+*   Mobile applications
+*   Cyber-physical document workflows, especially electronic/print options, including 3D printing workflows
+
+**User Experience**
+*   Navigation, search
+*   Usability, accessibility, readability, and aesthetics
+*   Collaborative authoring and editing, curation and annotation
+*   Workflows, integration, and interaction between human and automated processes
+*   Culture-dependent layouts
+
+## Important Dates
+
+*   **Full Papers:**
+    *   Abstracts due: (Date not specified in input)
+    *   Manuscripts due: **April 29, 2025**
+    *   Acceptance notice: **June 3, 2025**
+*   **Short Papers & Demonstrations:**
+    *   Abstracts due: **April 22, 2025**
+    *   Manuscripts due: **June 17, 2025**
+    *   Acceptance notice: **July 15, 2025**
+
+## Proceedings and Post-Proceedings
+
+Accepted articles will be published in the DocEng 2025 proceedings in the **ACM Digital Library**. Papers will be judged on significance, originality, and clarity, and must be easily understood by an audience with varied expertise.
+
+## Submission Guidelines
+
+*   Submissions should be prepared using the ACM format. Guidelines are available at [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template).
+*   Word users should use the interim template. DocEng does not use TAPS.
+*   Accepted papers will be presented as a talk or poster. Demonstrators will give 10-minute presentations in a demonstration session.
+*   Papers can be submitted online at: [https://easychair.org/conferences/?conf=doceng25](https://easychair.org/conferences/?conf=doceng25).
+
+## Symposium Format
+
+DocEng is a single-track conference attended by a community of academic and industrial researchers. The first conference day consists of workshops and tutorials.
+
+## Fair Access and Student Support
+
+SIGWEB is committed to providing fair access and student support through travel grants. Details on how to apply can be found on the dedicated [Fair Access and Student Support page](https://doceng.org/doceng2025/fair).
+
+## Registration
+
+Registration details can be found at [https://doceng.org/doceng2025/registration](https://doceng.org/doceng2025/registration).
+
+## Contact Information
+
+Please contact the organizers via [docengsymposium@gmail.com](mailto:docengsymposium@gmail.com).
+
+## Policies
+
+Refer to the [DocEng anti-harassment policy and information on other applicable policies](https://doceng.org/policies).","(Full Papers) 
+- Abstract due: April 22, 2025  
+- Manuscript due: April 29, 2025  
+- Acceptance notice: June 3, 2025  
+(Short Papers & Demonstrations)  
+- Abstract due: June 10, 2025  
+- Manuscript due: June 17, 2025  
+- Acceptance notice: July 15, 2025 ",Yes
+req-conf-1751766474613-jtzem,,Discovery Science,DS,http://ds2025.ijs.si/,http://ds2025.ijs.si/calls/,http://ds2025.ijs.si/calls/,"Conference dates: September 22 - 26, 2025
+Year: 2025
+Location: Ljubljana, Slovenia
+City-State-Province: Ljubljana
+Country: Slovenia
+Continent: Europe
+Type: Offline
+Submission Date.Abstract submission deadline: May 24, 2025
+Submission Date.Full paper submission deadline: May 31, 2025
+Notification Date.Deadline for review submission: June 24, 2025
+Notification Date.Notification of acceptance: July 7, 2025
+Camera-ready Date.Camera-ready version, author registration: July 18, 2025
+Topics: Artificial Intelligence, Data Science, Machine Learning, Data Mining, Intelligent Data Analysis, Big Data Analytics, Physical sciences, Life sciences, Environmental sciences, Natural and social sciences, Explainable AI for Science, Symbolic Regression for Science, Semantic Technologies for Science, Foundation Models for Science, Physics-informed Methods for Science
+Publisher: Springer","September 22 - 26, 2025",2025,"Ljubljana, Slovenia",Ljubljana,Slovenia,Europe,Offline,"{""Abstract submission deadline"":""May 24, 2025"",""Full paper submission deadline"":""May 31, 2025""}","{""Deadline for review submission"":""June 24, 2025"",""Notification of acceptance"":""July 7, 2025""}","{""Camera-ready version, author registration"":""July 18, 2025""}",{},{},"Artificial Intelligence, Data Science, Machine Learning, Data Mining, Intelligent Data Analysis, Big Data Analytics, Physical sciences, Life sciences, Environmental sciences, Natural and social sciences, Explainable AI for Science, Symbolic Regression for Science, Semantic Technologies for Science, Foundation Models for Science, Physics-informed Methods for Science",Springer,"Discovery Science 2025 is the 28th International Conference on Discovery Science, part of the AI for Science Conference, and will be held from September 22-26, 2025, in Ljubljana, Slovenia. The conference focuses on the use of Artificial Intelligence methods in science, including machine learning, data mining, and big data analytics, and their application across various scientific domains.","# Discovery Science 2025: Call for Papers
+
+We invite submissions to the 28th International Conference on Discovery Science (DS 2025), welcoming paper submissions from all areas relevant to artificial intelligence and data science.
+
+## Conference Overview
+
+Discovery Science 2025 provides an open forum for intensive discussions and exchange of new ideas among researchers working in different areas of Artificial Intelligence and the data sciences, focusing on discovering and advancing scientific knowledge. Its scope includes developing and analyzing methods for discovering scientific knowledge, coming from machine learning, data mining, intelligent data analysis, and big data analytics, as well as their application in various domains of physical, life, environmental, natural and social sciences.
+
+## Aims & Scope
+
+The conference’s relevant topics include, but are not limited to:
+
+*   **Machine Learning:** supervised learning, unsupervised learning, semi-supervised learning, self-supervised learning, Active learning, online learning, transfer learning, continual learning, Reinforcement learning, AutoML, Meta-Learning, Planning to Learn, Representation learning for vision, text, audio, language, and other data modalities.
+*   **Knowledge Discovery and Data Mining:** Anomaly and Outlier Detection, Learning from Complex Data, Data Streams, Evolving Data, Change Detection & Concept drift, Time-Series Analysis, Spatial, Temporal and Spatio-temporal Data Analysis, Unstructured Data Analysis (textual and web data), Learning on graphs and other topologies, Complex Network Analysis.
+*   **Causal Modeling and Reasoning**
+*   **Neuro-symbolic learning & hybrid AI systems** (logic & formal reasoning, etc.)
+*   **Physics-informed machine learning**
+*   **Computational equation discovery and Symbolic Regression**
+*   **Data and Knowledge Visualization**
+*   **Explainable AI and Interpretable Machine Learning**
+*   **Human-Machine Interaction for Knowledge Discovery and Management**
+*   **AI and High-performance Computing, Grid and Cloud Computing**
+*   **Optimisation**
+*   **AI Creativity**
+*   **Process Discovery and Analysis**
+*   **Evaluation of Models and Predictions in Discovery Setting**
+*   **Applications** of the above techniques in scientific domains, such as Physical sciences (e.g., materials sciences, particle physics), Life sciences (e.g., biology, medicine, neuroscience etc.), Environmental sciences, Natural and social sciences.
+
+## Special Sessions
+
+This year’s edition of Discovery Science particularly welcomes works that focus on the following themes, which will be the subject of special sessions within the conference:
+
+*   Explainable AI for Science
+*   Symbolic Regression for Science
+*   Semantic Technologies for Science
+*   Foundation Models for Science
+*   Physics-informed Methods for Science
+
+## One-Day Events (Workshops)
+
+DS2025 will include several satellite events dedicated to specific applications of AI to different scientific disciplines. Please check [ai4science.si](https://ai4science.si/) for more details.
+
+## Important Dates
+
+All dates are specified as 23:59:59 SST (Standard Samoa Time / Anywhere on Earth)
+
+*   **Submission starts:** April 1, 2025
+*   **Abstract submission deadline:** May 24, 2025
+*   **Full paper submission deadline:** May 31, 2025
+*   **Deadline for review submission:** June 24, 2025
+*   **Notification of acceptance:** July 7, 2025
+*   **Camera-ready version, author registration:** July 18, 2025
+
+## Submission Procedure
+
+### Main Conference
+
+*   Contributions, written in English, must be formatted according to the guidelines of the **Lecture Notes of Computer Science (LNCS) series by Springer-Verlag**.
+*   Templates are available [here](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).
+*   DS 2025 will use The Microsoft CMT service to manage the peer-reviewing process.
+*   Please submit your contributions at [https://cmt3.research.microsoft.com/DS2025/](https://cmt3.research.microsoft.com/DS2025/).
+*   The page limit for contributions submitted to the main conference, including special sessions, is **15 pages** in the LNCS format.
+*   Submissions will be reviewed following a **single-blind procedure**. Authors should include their names and affiliations in the paper.
+*   Accepted papers will be published in the Discovery Science Springer LNCS series.
+
+### One-day event (Workshops)
+
+*   For the parallel one-day events, the page limit for contributions is **2 pages** in LNCS format.
+*   Submissions to the parallel one-day events are non-archival and will not be included in the conference proceedings.
+*   Please check [ai4science.si](https://ai4science.si/) for more details.
+
+## Contact
+
+You may also contact the organizers via their institutional email addresses.","Submission starts: April 1, 2025",Yes
+req-conf-1751766474613-jtzem,,IEEE International Conference on Data Science and Advanced Analytics,DSAA,https://dsaa.ieee.org/2025/,https://dsaa.ieee.org/2025/calls/,,"Conference dates: October 9 - 13, 2025
+Year: 2025
+Location: Birmingham, UK
+City-State-Province: Birmingham
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Topics: Data Science, Advanced Analytics","October 9 - 13, 2025",2025,"Birmingham, UK",Birmingham,United Kingdom,Europe,Offline,{},{},{},{},{},"Data Science, Advanced Analytics",No publisher,"The 12th IEEE International Conference on Data Science and Advanced Analytics (DSAA) will be held in Birmingham, UK, from October 9-13, 2025. DSAA'2025 aims to provide a premier forum for researchers, industry, and government practitioners to exchange theoretical developments and best practices in data science and analytics.","# Call for Papers
+
+The 12th IEEE International Conference on Data Science and Advanced Analytics (DSAA) invites submissions of papers describing innovative research on all aspects of data science and advanced analytics, as well as application-oriented papers that make significant, original, and reproducible contributions to improving the practice of data science and analytics in real-world scenarios.
+
+DSAA’2025 provides a premier forum that brings together researchers, industry and government practitioners, as well as developers and users of big data solutions for the exchange of the latest theoretical developments in Data Science and the best practice for a wide range of applications.
+
+## Tracks
+
+The conference features the following tracks:
+
+*   **Research Track**
+*   **Applications Track**
+*   **Industry Track**
+*   **Special Sessions**
+*   **Tutorials**
+*   **Journal and Special Track Papers**
+
+## Submission Information
+
+*   **General Enquiries:** For general enquiries, please contact academic.conferences@contacts.bham.ac.uk.
+*   **For Authors:** Detailed information for authors can be found on the [For Authors](https://dsaa.ieee.org/2025/for-authors/) page.
+
+*Note: Specific deadlines and detailed submission guidelines are not provided in this excerpt. Please refer to the official conference website for complete details.*",Can't get dates,Yes
+req-conf-1751766474613-jtzem,,IEEE/IFIP International Conference on Dependable Systems and Networks,DSN,https://dsn2025.github.io/,https://dsn2025.github.io/cfpapers.html,https://dsn2025.github.io/dates.html,"Conference dates: June 23 - 26, 2025
+Year: 2025
+Location: Naples, Italy
+City-State-Province: Naples
+Country: Italy
+Continent: Europe
+Type: Offline
+Topics: Dependable Systems, Networks, Computing Systems, Mobile/edge devices, Networks, Personal computers, Large-scale systems, Critical infrastructures, Hardware, Software, Networked systems, Clouds, Autonomous systems, Cyber-physical systems, Distributed ledgers/Blockchain, AI/Machine Learning for resilient systems
+Submission Date.(Research Track) Abstract Submission Deadline: November 27, 2024
+Submission Date.(Research Track) Paper Submission Deadline: December 4, 2024
+Submission Date.(Industry Track) Abstract Submission Deadline: March 17, 2025
+Submission Date.(Industry Track) Paper Submission Deadline: March 24, 2025
+Submission Date.(Poster Track) First Submission Deadline: January 31, 2025
+Submission Date.(Poster Track) Second Submission Deadline: March 31, 2025
+Submission Date.(Doctoral Forum) Submission Deadline: March 17, 2025
+Submission Date.(Artifacts) Artifact Registration Deadline: March 25, 2025
+Submission Date.(Artifacts) Artifact Submission Deadline: March 24, 2025
+Submission Date.(Tutorials) Tutorial Proposals Submission: March 8, 2025
+Submission Date.(Disrupt (extended)) Abstract Submission Deadline: January 27, 2025
+Submission Date.(Disrupt (extended)) Paper Submission Deadline: February 3, 2025
+Notification Date.(Research Track) Early Reject Notification: January 27, 2025
+Notification Date.(Research Track) Notification to Authors: March 19, 2025
+Notification Date.(Industry Track) Notification: April 21, 2025
+Notification Date.(Poster Track) Notification: April 19, 2025
+Notification Date.(Doctoral Forum) Notification: April 21, 2025
+Notification Date.(Artifacts) Notification to Authors (paper): March 19, 2025
+Notification Date.(Artifacts) Artifact Notification to Authors: April 27, 2025
+Notification Date.(Tutorials) Notification: March 22, 2025
+Notification Date.(Disrupt (extended)) Notification to Authors: April 4, 2025
+Camera-ready Date.(Research Track) Camera Ready Materials: April 28, 2025
+Camera-ready Date.(Industry Track) Camera-ready Materials: April 28, 2025
+Camera-ready Date.(Poster Track) Camera Ready Materials: April 30, 2025
+Camera-ready Date.(Doctoral Forum) Camera-ready Materials: April 28, 2025
+Camera-ready Date.(Tutorials) Camera-ready Materials: April 28, 2025
+Camera-ready Date.(Disrupt (extended)) Camera-ready Materials: April 28, 2025
+Other Date.(Research Track) Author Rebuttal Period: February 13 - 27, 2025
+Other Date.(Disrupt (extended)) Author Rebuttal Period: March 17 - 20, 2025","June 23 - 26, 2025",2025,"Naples, Italy",Naples,Italy,Europe,Offline,"{""(Research Track) Abstract Submission Deadline"":""November 27, 2024"",""(Research Track) Paper Submission Deadline"":""December 4, 2024"",""(Industry Track) Abstract Submission Deadline"":""March 17, 2025"",""(Industry Track) Paper Submission Deadline"":""March 24, 2025"",""(Poster Track) First Submission Deadline"":""January 31, 2025"",""(Poster Track) Second Submission Deadline"":""March 31, 2025"",""(Doctoral Forum) Submission Deadline"":""March 17, 2025"",""(Artifacts) Artifact Registration Deadline"":""March 25, 2025"",""(Artifacts) Artifact Submission Deadline"":""March 24, 2025"",""(Tutorials) Tutorial Proposals Submission"":""March 8, 2025"",""(Disrupt (extended)) Abstract Submission Deadline"":""January 27, 2025"",""(Disrupt (extended)) Paper Submission Deadline"":""February 3, 2025""}","{""(Research Track) Early Reject Notification"":""January 27, 2025"",""(Research Track) Notification to Authors"":""March 19, 2025"",""(Industry Track) Notification"":""April 21, 2025"",""(Poster Track) Notification"":""April 19, 2025"",""(Doctoral Forum) Notification"":""April 21, 2025"",""(Artifacts) Notification to Authors (paper)"":""March 19, 2025"",""(Artifacts) Artifact Notification to Authors"":""April 27, 2025"",""(Tutorials) Notification"":""March 22, 2025"",""(Disrupt (extended)) Notification to Authors"":""April 4, 2025""}","{""(Research Track) Camera Ready Materials"":""April 28, 2025"",""(Industry Track) Camera-ready Materials"":""April 28, 2025"",""(Poster Track) Camera Ready Materials"":""April 30, 2025"",""(Doctoral Forum) Camera-ready Materials"":""April 28, 2025"",""(Tutorials) Camera-ready Materials"":""April 28, 2025"",""(Disrupt (extended)) Camera-ready Materials"":""April 28, 2025""}",{},"{""(Research Track) Author Rebuttal Period"":""February 13 - 27, 2025"",""(Disrupt (extended)) Author Rebuttal Period"":""March 17 - 20, 2025""}","Dependable Systems, Networks, Computing Systems, Mobile/edge devices, Networks, Personal computers, Large-scale systems, Critical infrastructures, Hardware, Software, Networked systems, Clouds, Autonomous systems, Cyber-physical systems, Distributed ledgers/Blockchain, AI/Machine Learning for resilient systems",No publisher,"The 55th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2025) will be held in Naples, Italy, from June 23-26, 2025. DSN is the premier conference focused on ensuring the robustness and resilience of computing systems and networks, covering both accidental faults and malicious attacks.","# DSN 2025: Research Track Call For Contributions
+
+## Welcome
+
+The 55th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN 2025) is devoted to the mission of ensuring that computing systems and networks are dependable and secure. DSN is the premier conference for presenting research that pushes the boundaries in the robustness and resilience of a wide spectrum of computing systems and networks.
+
+## Scope
+
+All aspects of research and practice of computer system robustness (dependability and security) are within the scope of DSN. Topics include innovative systems, architectures, protocols, and algorithms for preventing, detecting, diagnosing, eliminating, or recovering from accidental and malicious threats, as well as practical experimentation with and assessment of robustness.
+
+## Topical Areas
+
+Example topical areas include but are not limited to:
+
+*   **Hardware:** microprocessors, memory systems, TEEs, edge/mobile devices, data center infrastructure, emerging technologies (processing in memory, quantum computing).
+*   **Software:** applications, middleware, distributed algorithms, operating systems, software security, dependable software design.
+*   **Networked systems and clouds:** wireless networks, mobility, SDN, edge computing, cloud computing/storage, networks on chip, network security.
+*   **Autonomous systems:** self-driving vehicles, assured autonomy, explainable decision-making.
+*   **Cyber-physical systems:** embedded systems, IoT, smart grid, automotive, aerospace, medical systems.
+*   **Distributed ledgers/Blockchain:** BFT/consensus algorithms, cryptocurrencies, zero-knowledge proofs.
+*   **AI/Machine Learning for resilient systems:** robust, resilient, secure, and explainable AI/ML techniques.
+*   **Models and methodologies:** performance and dependability evaluation, simulation, experimentation, benchmarking, verification.
+*   **Emerging technologies and computing paradigms:** quantum computing, processing in memory/sensors/storage/network.
+
+## Paper Categories
+
+*   **Regular papers:** (11 pages) - Full paper describing research contribution, including experimental work. Focus on novel scientific contribution and significant advancement.
+*   **Practical experience reports:** (7 pages) - Shorter paper describing practitioner experiences or lessons learned. Highly encouraged from industry.
+*   **Tool descriptions/demonstrations:** (7 pages) - Descriptions of architecture, implementation, and usage of substantive tools. Encourages public availability of tools.
+
+*Note: Page limits include everything except references.*
+
+## Important Dates (Research Track)
+
+*   **Abstract Submission Deadline:** Nov 27, 2024
+*   **Paper Submission Deadline:** Dec 4, 2024
+*   **Early Reject Notification:** Jan 27, 2025
+*   **Author Rebuttal & Revision Period:** Feb 13 - 27, 2025
+*   **Notification to Authors:** Mar 19, 2025
+*   **Camera Ready Materials:** Apr 28, 2025
+
+*All dates refer to AoE time (Anywhere on Earth).* 
+
+## Submission Guidelines
+
+*   **Anonymization Rules:** Authors must make a good-faith effort to anonymize their papers. Refer to own work in the third person, avoid identifying names and affiliations, and use care in file naming. Concurrent submissions should be referenced anonymously.
+*   **Formatting:** Submissions must adhere to the IEEE Computer Society camera-ready 8.5″x11″ two-column format. Use the provided LaTeX or Word templates. Submit as a single Portable Document Format (PDF) file with embedded fonts.
+*   **Reproducibility:** Authors are encouraged to make code and datasets publicly available.
+*   **Submission Platform:** Papers are submitted via [https://dsn25.hotcrp.com](https://dsn25.hotcrp.com).
+*   **Review Process:** Double-blind review.
+*   **Presentation:** At least one author of every accepted paper must register and present the work in person.
+
+## Awards
+
+DSN gives Best Paper Awards, a Distinguished Best Paper Award, William C. Carter Ph.D. Dissertation Award, Rising Star Award, Test-of-Time Award, Jean-Claude Laprie Award, and Distinguished Artifact Award.
+
+## Review Process and Author Response
+
+DSN follows a Paper Revision Process. Authors of non-early reject papers can submit a revised paper and a rebuttal. Revised papers are allowed one extra page.
+
+## Open Science Policy
+
+Authors are encouraged to make all research results accessible and ensure reproducibility. Sharing research data is not mandatory. Accepted papers can participate in the artifact evaluation process.
+
+## Ethical Considerations
+
+Submissions must discuss ethical and potential legal concerns, especially regarding human subjects, data privacy, and vulnerabilities. The PC may examine the ethical soundness of the paper.
+
+## Contact
+
+For further information, please contact the program co-chairs at [dsn25pcchairs@gmail.com](mailto:dsn25pcchairs@gmail.com) or [research_track@dsn.org](mailto:research_track@dsn.org).","Almost correct. (Poster Track) Notification (1st round): Feb 28, 2025; Notification (2nd round): Apr 19, 2025. Currently only includes second round.",Yes
+req-conf-1751766474613-jtzem,,Workshop on Domain Specific Modelling,DSM,https://2025.splashcon.org/,,https://2025.splashcon.org/dates,"Conference dates: October 12 - 18, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.LMPL Paper Submission: July 7, 2025
+Submission Date.Student Research Competition Submission deadline: July 8, 2025
+Submission Date.PROPL Submission deadline: July 8, 2025
+Submission Date.PAINT Submission deadline: July 9, 2025
+Submission Date.HATRA Submission deadline: July 9, 2025
+Submission Date.miniKanren and Relational Programming Workshop Submission deadline: July 10, 2025
+Submission Date.VMIL Abstract Submission (Research papers): July 14, 2025
+Submission Date.Scheme Submission deadline: July 17, 2025
+Submission Date.IWACO Submission Deadline: July 21, 2025
+Submission Date.VMIL Submission Deadline (Research papers): July 21, 2025
+Submission Date.Onward! Papers Revised submission deadline: July 21, 2025
+Submission Date.Erlang Lightning Talk Submission Deadlinenew: August 29, 2025
+Submission Date.SPLASH-E Non-archival Extended Abstract Submission: September 23, 2025
+Notification Date.FARM Performance FARM author notification: July 10, 2025
+Notification Date.Haskell Author Notification: July 17, 2025
+Notification Date.SAS Artifact Notification: July 18, 2025
+Notification Date.ICFP Artifacts Final decision: July 18, 2025
+Notification Date.FUNARCH Author Notification: July 21, 2025
+Notification Date.TyDe Notification of acceptance: July 23, 2025
+Notification Date.MPLR Author Notification: July 28, 2025
+Notification Date.PAINT Authors notification: July 28, 2025
+Notification Date.HATRA Author notification (tentative): August 1, 2025
+Notification Date.SPLASH-E Author Notification: August 1, 2025
+Notification Date.VMIL Author Notification (Research papers): August 4, 2025
+Notification Date.The Scala Workshop Author Notification: August 4, 2025
+Notification Date.PROPL Notification: August 7, 2025
+Notification Date.LMPL Author Notification: August 8, 2025
+Notification Date.WebAssembly Workshop Author notification: August 8, 2025
+Notification Date.Doctoral Symposium Author notification: August 8, 2025
+Notification Date.Scheme Author notification: August 11, 2025
+Notification Date.PAINT Notifications for revisions: August 11, 2025
+Notification Date.Student Research Competition Notification: August 12, 2025
+Notification Date.miniKanren and Relational Programming Workshop Author notification: August 12, 2025
+Notification Date.OOPSLA Author Notification of Revisions R2: August 12, 2025
+Notification Date.IWACO Author Notification: August 15, 2025
+Notification Date.OOPSLA Artifacts Notification Round 2: August 15, 2025
+Camera-ready Date.ICFP Papers Camera-Ready Deadline: July 11, 2025
+Camera-ready Date.FARM Performance FARM camera-ready deadline: July 20, 2025
+Camera-ready Date.Onward! Essays Camera-Ready Deadline: August 25, 2025
+Camera-ready Date.Erlang Camera ready: August 25, 2025
+Camera-ready Date.PAINT Camera ready: August 25, 2025
+Camera-ready Date.Scheme Camera-ready deadline: August 25, 2025
+Camera-ready Date.VMIL Camera Ready (Research papers): August 25, 2025
+Camera-ready Date.Onward! Papers Camera-ready deadline: August 25, 2025
+Camera-ready Date.FUNARCH Camera-ready Deadline: August 25, 2025
+Camera-ready Date.miniKanren and Relational Programming Workshop Camera-ready deadline: August 25, 2025
+Camera-ready Date.The Scala Workshop Camera-Ready Submission: August 25, 2025
+Other Date.OOPSLA Artifacts Kick-the-Tires Round 2: June 30 - July 11, 2025
+Other Date.SAS Author Response: June 23 - 27, 2025
+Other Date.OOPSLA Author Response R2: May 26 - 29, 2025
+Other Date.ICFP Artifacts Artifact submission: June 13, 2025
+Other Date.ICFP Papers Deadline for Submitting Revisions: June 12, 2025
+Other Date.Haskell Paper submission deadline: June 9, 2025
+Other Date.Onward! Papers First-round notification: June 6, 2025
+Other Date.Erlang Abstract registration: June 6, 2025
+Other Date.Onward! Essays First-round Notification: June 6, 2025
+Other Date.ICFP Papers Author Response: April 28 - May 1, 2025
+Other Date.OOPSLA Submission R2: March 25, 2025
+Other Date.ICFP Papers Submission Deadline: February 27, 2025
+Other Date.OOPSLA Artifacts Notification Round 1: February 21, 2025
+Other Date.OOPSLA Artifacts Kick-the-Tires Round 1: January 6 - 17, 2025
+Other Date.OOPSLA Artifacts Submission Round 1: January 3, 2025
+Other Date.TyDe Workshop: October 12, 2025
+Other Date.FUNARCH Workshop: October 12, 2025
+Other Date.Erlang Workshop: October 12, 2025
+Other Date.Doctoral Symposium Symposium: October 13, 2025
+Other Date.PROPL Workshop: October 13, 2025
+Other Date.MPLR Conference: October 14, 2025
+Other Date.HATRA Workshop: October 14, 2025
+Other Date.SAS Conference Date: October 13 - 15, 2025
+Other Date.OlivierFest OlivierFestnew: October 14 - 15, 2025
+Other Date.VMIL Workshop: October 15, 2025
+Other Date.ML Family Workshop Workshop: October 16, 2025
+Other Date.WebAssembly Workshop Workshop: October 16, 2025
+Other Date.Scheme Workshop: October 16, 2025
+Other Date.Haskell Symposium: October 16 - 17, 2025
+Other Date.OCaml Workshop: October 17, 2025
+Other Date.miniKanren and Relational Programming Workshop Workshop: October 17, 2025
+Topics: Systems, Programming, Languages and Applications, Software for Humanity, programming languages and software engineering","October 12 - 18, 2025",2025,Singapore,Singapore,Singapore,Asia,Offline,"{""LMPL Paper Submission"":""July 7, 2025"",""Student Research Competition Submission deadline"":""July 8, 2025"",""PROPL Submission deadline"":""July 8, 2025"",""PAINT Submission deadline"":""July 9, 2025"",""HATRA Submission deadline"":""July 9, 2025"",""miniKanren and Relational Programming Workshop Submission deadline"":""July 10, 2025"",""VMIL Abstract Submission (Research papers)"":""July 14, 2025"",""Scheme Submission deadline"":""July 17, 2025"",""IWACO Submission Deadline"":""July 21, 2025"",""VMIL Submission Deadline (Research papers)"":""July 21, 2025"",""Onward! Papers Revised submission deadline"":""July 21, 2025"",""Erlang Lightning Talk Submission Deadlinenew"":""August 29, 2025"",""SPLASH-E Non-archival Extended Abstract Submission"":""September 23, 2025""}","{""FARM Performance FARM author notification"":""July 10, 2025"",""Haskell Author Notification"":""July 17, 2025"",""SAS Artifact Notification"":""July 18, 2025"",""ICFP Artifacts Final decision"":""July 18, 2025"",""FUNARCH Author Notification"":""July 21, 2025"",""TyDe Notification of acceptance"":""July 23, 2025"",""MPLR Author Notification"":""July 28, 2025"",""PAINT Authors notification"":""July 28, 2025"",""HATRA Author notification (tentative)"":""August 1, 2025"",""SPLASH-E Author Notification"":""August 1, 2025"",""VMIL Author Notification (Research papers)"":""August 4, 2025"",""The Scala Workshop Author Notification"":""August 4, 2025"",""PROPL Notification"":""August 7, 2025"",""LMPL Author Notification"":""August 8, 2025"",""WebAssembly Workshop Author notification"":""August 8, 2025"",""Doctoral Symposium Author notification"":""August 8, 2025"",""Scheme Author notification"":""August 11, 2025"",""PAINT Notifications for revisions"":""August 11, 2025"",""Student Research Competition Notification"":""August 12, 2025"",""miniKanren and Relational Programming Workshop Author notification"":""August 12, 2025"",""OOPSLA Author Notification of Revisions R2"":""August 12, 2025"",""IWACO Author Notification"":""August 15, 2025"",""OOPSLA Artifacts Notification Round 2"":""August 15, 2025""}","{""ICFP Papers Camera-Ready Deadline"":""July 11, 2025"",""FARM Performance FARM camera-ready deadline"":""July 20, 2025"",""Onward! Essays Camera-Ready Deadline"":""August 25, 2025"",""Erlang Camera ready"":""August 25, 2025"",""PAINT Camera ready"":""August 25, 2025"",""Scheme Camera-ready deadline"":""August 25, 2025"",""VMIL Camera Ready (Research papers)"":""August 25, 2025"",""Onward! Papers Camera-ready deadline"":""August 25, 2025"",""FUNARCH Camera-ready Deadline"":""August 25, 2025"",""miniKanren and Relational Programming Workshop Camera-ready deadline"":""August 25, 2025"",""The Scala Workshop Camera-Ready Submission"":""August 25, 2025""}",{},"{""OOPSLA Artifacts Kick-the-Tires Round 2"":""June 30 - July 11, 2025"",""SAS Author Response"":""June 23 - 27, 2025"",""OOPSLA Author Response R2"":""May 26 - 29, 2025"",""ICFP Artifacts Artifact submission"":""June 13, 2025"",""ICFP Papers Deadline for Submitting Revisions"":""June 12, 2025"",""Haskell Paper submission deadline"":""June 9, 2025"",""Onward! Papers First-round notification"":""June 6, 2025"",""Erlang Abstract registration"":""June 6, 2025"",""Onward! Essays First-round Notification"":""June 6, 2025"",""ICFP Papers Author Response"":""April 28 - May 1, 2025"",""OOPSLA Submission R2"":""March 25, 2025"",""ICFP Papers Submission Deadline"":""February 27, 2025"",""OOPSLA Artifacts Notification Round 1"":""February 21, 2025"",""OOPSLA Artifacts Kick-the-Tires Round 1"":""January 6 - 17, 2025"",""OOPSLA Artifacts Submission Round 1"":""January 3, 2025"",""TyDe Workshop"":""October 12, 2025"",""FUNARCH Workshop"":""October 12, 2025"",""Erlang Workshop"":""October 12, 2025"",""Doctoral Symposium Symposium"":""October 13, 2025"",""PROPL Workshop"":""October 13, 2025"",""MPLR Conference"":""October 14, 2025"",""HATRA Workshop"":""October 14, 2025"",""SAS Conference Date"":""October 13 - 15, 2025"",""OlivierFest OlivierFestnew"":""October 14 - 15, 2025"",""VMIL Workshop"":""October 15, 2025"",""ML Family Workshop Workshop"":""October 16, 2025"",""WebAssembly Workshop Workshop"":""October 16, 2025"",""Scheme Workshop"":""October 16, 2025"",""Haskell Symposium"":""October 16 - 17, 2025"",""OCaml Workshop"":""October 17, 2025"",""miniKanren and Relational Programming Workshop Workshop"":""October 17, 2025""}","Systems, Programming, Languages and Applications, Software for Humanity, programming languages and software engineering",No publisher,"The Workshop on Domain Specific Modelling (DSM) is co-located with SPLASH 2025 and ICFP/SPLASH 2025, taking place from Sunday, October 12 to Saturday, October 18, 2025, in Singapore. The workshop venue is the NUS School of Computing, while the main conference is held at the Marina Bay Sands Convention Centre.",No call for papers available,Old conference,
+req-conf-1751766474613-jtzem,,International Conference on Evaluation and Assessment in Software Engineering,EASE,https://conf.researchr.org/home/ease-2025,https://conf.researchr.org/track/ease-2025/ease-2025-research-papers,,"Conference dates: June 17 - 20, 2025
+Year: 2025
+Location: Istanbul Technical University, Istanbul, Turkey
+City-State-Province: Istanbul
+Country: Turkey
+Continent: Asia
+Type: Offline
+Topics: Empirical software engineering, Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps and Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models and Methods, Software Engineering Process (agile, hybrid), Software Quality, AI-Based Software Development, Human factors and behavioral aspects of Software Engineering, Software development practices and process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies intersecting software engineering, Artificial Intelligence for Software Engineering, Ethics in Software Engineering","June 17 - 20, 2025",2025,"Istanbul Technical University, Istanbul, Turkey",Istanbul,Turkey,Asia,Offline,{},{},{},{},{},"Empirical software engineering, Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps and Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models and Methods, Software Engineering Process (agile, hybrid), Software Quality, AI-Based Software Development, Human factors and behavioral aspects of Software Engineering, Software development practices and process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies intersecting software engineering, Artificial Intelligence for Software Engineering, Ethics in Software Engineering",No publisher,"The 29th International Conference on Evaluation and Assessment in Software Engineering (EASE 2025) will be held from June 17-20, 2025, at Istanbul Technical University in Istanbul, Turkey. EASE is a leading venue for research on evidence-based software engineering and is ranked as an A conference in CORE.","# EASE 2025: Call for Papers
+
+Welcome to the International Conference on Evaluation and Assessment in Software Engineering (EASE) 2025. EASE is one of the premier conferences for research related to empirical software engineering, serving as a leading venue for academics and practitioners to present and discuss their research on evidence-based software engineering and its implications for software practice. EASE is ranked as an A conference in CORE.
+
+EASE 2025 will take place from **Tuesday, June 17 to Friday, June 20, 2025**, in **Istanbul, Turkey**, hosted at Istanbul Technical University.
+
+## Tracks
+
+EASE 2025 welcomes high-quality submissions describing original and unpublished research for the following tracks:
+
+*   **Plenary**
+*   **Research Papers**
+*   **Short Papers, Emerging Results**
+*   **Industry Papers**
+*   **Posters and Vision**
+*   **Journal-first**
+*   **Doctoral Symposium**
+*   **Learnings/Reflections of Evaluation and Assessment projects in Software Engineering**
+*   **AI Models / Data**
+*   **Workshops**
+*   **Tutorials**
+*   **Student Volunteers**
+
+## Topics of Interest
+
+EASE welcomes papers addressing topics related to evaluating and assessing software products, processes, practices, tools & techniques, including but not limited to:
+
+*   **Meta-science**: research methods and methodological issues.
+*   **Infrastructure and techniques**: for conducting empirical studies on software engineering.
+*   **Theory development**: operationalization, testing, and application.
+*   **Applications of evaluation and assessment** in specific contexts such as:
+    *   Software Requirements
+    *   Software Architecture
+    *   Data-Driven Software Engineering
+    *   Global Software Engineering
+    *   Software Design
+    *   Software Construction
+    *   Software Testing
+    *   Software Operations
+    *   DevOps and Continuous Delivery
+    *   Software Maintenance
+    *   Software Configuration Management
+    *   Software Engineering Management
+    *   Software Engineering Models and Methods
+    *   Software Engineering Process (e.g., agile, hybrid)
+    *   Software Quality
+    *   AI-Based Software Development
+    *   Human factors and behavioral aspects of Software Engineering
+    *   Software development practices and process improvement
+    *   Sustainability in Software Engineering
+    *   Inter- or multi-disciplinary studies intersecting software engineering
+    *   Artificial Intelligence for Software Engineering
+    *   Ethics in Software Engineering
+
+EASE also welcomes studies with negative findings or non-significant results.
+
+## Submission Guidelines
+
+*   **Format:** All papers must be submitted in PDF format.
+*   **Length:** Submissions must not exceed **10 pages** for the main text, including all figures, tables, appendices, etc. Up to **two additional pages** containing ONLY references are permitted.
+*   **Template:** All submissions should use the official ACM Primary Article Template. LaTeX users should use the following options:
+    ```latex
+    \documentclass[sigconf,review,anonymous]{acmart}
+    \acmConference[EASE 2025]{The 29th International Conference on Evaluation and Assessment in Software Engineering}{17–20 June, 2025}{Istanbul, Türkiye}
+    ```
+*   **Submission System:** All papers must be submitted through the web-based submission system href=""https://easychair.org/conferences/?conf=ease2025"" - EasyChair for EASE 2025 .
+*   **Review Process:** EASE 2025 will employ a **double-anonymous review process**. Authors must **not include author names or affiliations** in submissions. All references to the author’s prior work should be in the third person. Any online supplements or replication packages referred to in the work should also be anonymized.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Abstract Submission Deadline:** Friday, January 24, 2025
+*   **Submission Deadline:** Friday, January 31, 2025
+*   **Notification Deadline:** Friday, March 21, 2025
+*   **Camera Ready Deadline:** Sunday, April 27, 2025
+*   **Early Registration Deadline:** Sunday, April 27, 2025
+*   **Early Registration Deadline for Authors:** Sunday, April 27, 2025
+
+## Review Criteria
+
+Submissions will be evaluated against the following criteria:
+
+*   **Soundness**: Rigor of research methods and support for research questions.
+*   **Significance**: Impact on the field of software engineering.
+*   **Novelty**: Originality with respect to the state-of-the-art.
+*   **Verifiability and Transparency**: Clarity and completeness of information for understanding and replication.
+*   **Presentation**: Quality of writing, clarity, and adherence to formatting instructions.
+
+## Publication
+
+Accepted papers will be published in the ACM Digital Library.",Can't get dates,Yes
+req-conf-1751766474613-jtzem,,European Chapter on Combinatorial Optimization,ECCO,https://ecco2025.sciencesconf.org/,https://ecco2025.sciencesconf.org/page/customizable_page_11?lang=en,,"Conference dates: TBA
+Year: 2025
+Type: Offline
+Submission Date.Abstract Extended Submission deadline: March 15, 2025
+Notification Date.Notification of acceptance: March 22, 2025
+Other Date.Deadline for Proposals of invited sessions: January 24, 2025
+Topics: Combinatorial Optimization",TBA,2025,No location,No city/state/province,No country,No continent,Offline,"{""Abstract Extended Submission deadline"":""March 15, 2025""}","{""Notification of acceptance"":""March 22, 2025""}",{},{},"{""Deadline for Proposals of invited sessions"":""January 24, 2025""}",Combinatorial Optimization,No publisher,"The European Chapter on Combinatorial Optimization (ECCO) aims to bring together researchers in Combinatorial Optimization to present their work, share experiences, and discuss recent advances in theory and applications. Selected papers will be considered for a special issue of the Journal of Combinatorial Optimization.","# Call for Papers
+
+## ECCO'2025
+
+We accept submissions of **one-page abstracts**.
+
+A special issue of the *Journal of Combinatorial Optimization* will be devoted to work presented at the conference. All articles will be refereed according to the high standards of the journal. Details of the process will be given during the conference.
+
+### Important Dates
+
+1.  **Abstract Extended Submission deadline**: March 15, 2025 (this deadline will not be extended)
+2.  **Notification of acceptance**: March 22, 2025
+
+### Invited Sessions
+
+Proposals for invited sessions are due by **January 24, 2025**. Please contact [ecco2025@sciencesconf.org](mailto:ecco2025@sciencesconf.org) for proposals.
+
+### Submit your abstract
+
+Submit your one-page abstract through the link: [https://www.euro-online.org/conf/ecco2025/](https://www.euro-online.org/conf/ecco2025/)","May 8-10, 2025, Marrakech, Morocco",Yes
+req-conf-1751766474613-jtzem,,European Conference on Modelling Foundations and Applications,ECMFA,https://conf.researchr.org/home/staf-2025/ecmfa-2025,https://conf.researchr.org/home/staf-2025/ecmfa-2025#Call-for-Papers,https://conf.researchr.org/home/staf-2025/ecmfa-2025#Call-for-Papers,"Conference dates: June 10 - 11, 2025
+Year: 2025
+Location: Koblenz, Germany
+City-State-Province: Koblenz
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Round 1 - Abstract (Optional): November 22, 2024
+Submission Date.Round 1 - Paper Submission: November 29, 2024
+Submission Date.Round 2 - Abstract (Optional): January 31, 2025
+Submission Date.Round 2 - Paper Submission: February 9, 2025
+Submission Date.Round 2 - Submission of Revisions: March 28, 2025
+Notification Date.Round 1 - Author Notification: January 17, 2025
+Notification Date.Round 2 - Author Notification: March 23, 2025
+Notification Date.Final Notification to Authors: May 2, 2025
+Camera-ready Date.Camera Ready Version: May 12, 2025
+Topics: Model-Based Engineering, Metamodeling, Model Transformations, Model Validation, Verification, Testing, Model Engineering Methods, Tools
+Publisher: JOT","June 10 - 11, 2025",2025,"Koblenz, Germany",Koblenz,Germany,Europe,Offline,"{""Round 1 - Abstract (Optional)"":""November 22, 2024"",""Round 1 - Paper Submission"":""November 29, 2024"",""Round 2 - Abstract (Optional)"":""January 31, 2025"",""Round 2 - Paper Submission"":""February 9, 2025"",""Round 2 - Submission of Revisions"":""March 28, 2025""}","{""Round 1 - Author Notification"":""January 17, 2025"",""Round 2 - Author Notification"":""March 23, 2025"",""Final Notification to Authors"":""May 2, 2025""}","{""Camera Ready Version"":""May 12, 2025""}",{},{},"Model-Based Engineering, Metamodeling, Model Transformations, Model Validation, Verification, Testing, Model Engineering Methods, Tools",JOT,"The 21st European Conference on Modelling Foundations and Applications (ECMFA) will be held in Koblenz, Germany, on June 10-11, 2025, as part of STAF 2025 (Software Technologies: Applications and Foundations). ECMFA is a forum dedicated to advancing knowledge and fostering the application of all aspects of Model-Based Engineering (MBE) and related approaches.","# Call for Papers: ECMFA 2025
+
+The 21st European Conference on Modelling Foundations and Applications (ECMFA) will be held in **Koblenz, Germany**, on **June 10-11, 2025**, as part of STAF 2025.
+
+## Aims and Scope
+
+ECMFA is a premier European forum dedicated to advancing the state of knowledge and fostering the application of all aspects of Model-Based Engineering (MBE) and related approaches. The conference aims to engage key figures in research and industry to promote the practical application of MBE, leading to more reliable software based on state-of-the-art research results.
+
+## Submission Types
+
+We invite high-quality submissions of original and unpublished results related to MBE. Two types of submissions are possible:
+
+*   **Foundation Papers:** These papers deal with modeling foundations, such as metamodeling, model transformations, model validation, verification and testing, model engineering methods and tools, and related aspects.
+*   **Application Papers:** These papers deal with the application of modeling techniques, including experience reports on the use of MBE methods and tools, industrial case studies, or successful applications of MBE practices in industry or public administration, with significant modeling lessons learned. All applications must have been done in real contexts, and at least one author must be from the company or administration where the application took place.
+
+## Submission Process
+
+*   Submissions must conform to the JOT LaTeX template ([https://www.jot.fm/templates/jot.zip](https://www.jot.fm/templates/jot.zip)).
+*   Papers must not exceed **14 pages** (including figures, references, and appendices). Secondary studies may use 2 additional pages for references only.
+*   Failure to conform to these guidelines may result in disqualification.
+*   No simultaneous submission to other publication outlets is allowed.
+*   All submissions will be peer-reviewed by at least three members of the Program Committee.
+*   Papers must be submitted electronically in PDF format through **Easychair** ([https://easychair.org/my/conference?conf=staf2025](https://easychair.org/my/conference?conf=staf2025)).
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   Foundations of MBE, including model transformations, domain-specific languages, verification and validation approaches, etc.
+*   Novel paradigms, formalisms, applications, approaches, frameworks, or processes for model-based engineering (e.g., low-code/no-code development, digital twins).
+*   Interplay between MBE with and for AI-based systems.
+*   Application of MBE methods, tools, and techniques to specific domains (e.g., automotive, aerospace, cyber-physical systems, robotics, Artificial Intelligence, IoT).
+*   Successful use of MBE in connection with other disciplines and approaches (e.g., Artificial Intelligence, DevOps, Open Source, Safety Assurance).
+*   Educational aspects of MBE.
+*   Tools and initiatives for the successful adoption of MBE in industry.
+
+## Review Criteria and Process
+
+The program committee will assess papers based on novelty, significance, technical quality, rigor, and suitability for the conference. Papers may be accepted as-is, with minor revisions, require major revisions, or be rejected. Accepted papers with revisions will be given a period to resubmit. Papers are published in the JOT journal upon acceptance and author registration.
+
+## Artifacts
+
+Artifacts are recommended but not required for initial submission. Reviewers may consider artifacts positively, and they may be required for publication.
+
+## Publication
+
+All accepted papers will be published as platinum open-access journal publications in JOT. At least one author for each accepted paper must register before the early registration deadline and present the paper during the conference.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Round 1 - Paper Submission:** Friday, November 22, 2024
+*   **Round 1 - Abstract (Optional):** Friday, November 15, 2024 (Adjusted based on common practices if not explicitly stated for Round 1, common to have abstract deadlines before paper deadlines)
+*   **Round 1 - Author Notification:** Friday, November 29, 2024
+*   **Round 1 - Submissions of Revision:** Sunday, February 9, 2025
+*   **Round 2 - Paper Submission:** Friday, February 21, 2025
+*   **Round 2 - Abstract (Optional):** Friday, February 14, 2025 (Adjusted as above)
+*   **Round 2 - Author Notification:** Friday, March 28, 2025
+*   **Round 2 - Submission of Revisions:** Sunday, April 13, 2025
+*   **Final Notification to Authors:** Friday, May 2, 2025
+*   **Camera Ready Version:** Monday, May 12, 2025
+
+## Contact
+
+Chairs can be contacted at: [ecmfa2025@easychair.org](mailto:ecmfa2025@easychair.org)
+
+For questions, please use the [ECMFA contact form](https://conf.researchr.org/contact2/staf-2025/ecmfa-2025-papers).","(Round 2 - Submission of Revisions)  April 13, 2025
+(Round 2 - Author Notification) March 28, 2025
+(Round 1 - Submissions of Revision) February 23, 2025",Yes
+req-conf-1751766474613-jtzem,,Dynamic Languages Symposium,DLS,https://2022.splashcon.org/track/dls-2022-papers,,,"Conference dates: December 7, 2022
+Year: 2022
+Location: Auckland, New Zealand
+City-State-Province: Auckland
+Country: New Zealand
+Continent: Oceania
+Type: Offline
+Topics: Dynamic Languages
+Submission Date.Paper Submission: July 1, 2022
+Notification Date.Notification: August 19, 2022
+Notification Date.Final notification: September 16, 2022
+Camera-ready Date.Camera ready deadline: October 21, 2022
+Other Date.Revisions due: September 9, 2022",7-Dec-22,2022,"Auckland, New Zealand",Auckland,New Zealand,Oceania,Offline,"{""Paper Submission"":""July 1, 2022""}","{""Notification"":""August 19, 2022"",""Final notification"":""September 16, 2022""}","{""Camera ready deadline"":""October 21, 2022""}",{},"{""Revisions due"":""September 9, 2022""}",Dynamic Languages,No publisher,"The 18th Dynamic Languages Symposium (DLS) at SPLASH 2022, held in Auckland, New Zealand from December 5-10, 2022, is a premier forum for research and experience sharing on all aspects of dynamic languages. The symposium invites high-quality papers reporting original research and experience related to the design, implementation, and applications of dynamic languages.","# DLS 2022: Call for Contributions
+
+The 18th Dynamic Languages Symposium (DLS) at SPLASH 2022 is the premier forum for researchers and practitioners to share research and experience on all aspects of dynamic languages. DLS 2022 invites high-quality papers reporting original research and experience related to the design, implementation, and applications of dynamic languages.
+
+## Areas of Interest
+
+Areas of interest include, but are not limited to:
+
+*   innovative language features
+*   innovative implementation techniques
+*   innovative applications
+*   development environments and tools
+*   experience reports and case studies
+*   domain-oriented programming
+*   late binding, dynamic composition, and run-time adaptation
+*   reflection and metaprogramming
+*   software evolution
+*   language symbiosis and multi-paradigm languages
+*   dynamic optimization
+*   interpretation
+*   just-in-time and ahead-of-time compilation
+*   soft/optional/gradual typing
+*   hardware support
+*   educational approaches and perspectives
+*   semantics of dynamic languages
+*   frameworks and languages for the Cloud and the IoT
+
+## Submission Details
+
+*   Submissions must neither be previously published nor under review at other events.
+*   DLS 2022 uses a **lightweight double-blind, two-phase reviewing process**.
+*   Papers must be submitted electronically in PDF format.
+*   Submissions must be in the ACM SIGPLAN conference **acmart format**, **10 point font**, and should not exceed **12 pages** (including bibliographic references and appendices). For the second phase, the page limit is 14 pages.
+*   Please see full details in the [Instructions for Authors](https://2022.splashcon.org/track/splash-2022-dls#Instructions-for-Authors).
+*   The submission site is: [https://dls22.hotcrp.com/](https://dls22.hotcrp.com/)
+
+## Paper Categories
+
+*   **Research Papers:** describe work that advances the current state of the art.
+*   **Experience Papers:** describe insights gained from substantive practical applications that should be of a broad interest.
+*   **Dynamic Pearls:** describe a known idea in an appealing way to remind the community and capture a reader’s interest.
+
+The program committee will evaluate each paper based on its relevance, significance, clarity, and originality. The paper category needs to be indicated during submission, and papers are judged accordingly.
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Symposium:** Wednesday, December 7, 2022
+*   **Camera ready deadline:** Friday, October 21, 2022
+*   **Final notification:** Friday, September 16, 2022
+*   **Revisions due:** Friday, September 9, 2022
+*   **Notification:** Friday, August 19, 2022
+*   **Paper Submission:** Friday, July 1, 2022
+
+## Program Committee
+
+*   Engineer Bainomugisha (Makerere University, Uganda)
+*   Nicolás Cardozo (Universidad de los Andes, Colombia)
+*   Sheng Chen (University of Louisiana at Lafayette)
+*   Wolfgang De Meuter (PC Co-Chair, Vrije Universiteit Brussel, Belgium)
+*   Marc Feeley (Université de Montréal, Canada)
+*   Michael Greenberg (Stevens Institute of Technology, United States)
+*   Ben Greenman (Brown University, United States)
+*   Arjun Guha (PC Co-Chair, Northeastern University and Roblox Research, United States)
+*   Robert Hirschfeld (University of Potsdam; Hasso Plattner Institute, Germany)
+*   Daniel Patterson (Northeastern University, United States)
+*   Joe Gibbs Politz (University of California at San Diego, United States)
+*   Laurence Tratt (King's College London, United Kingdom)
+
+## Publication
+
+Accepted papers will be published in the ACM Digital Library and will be freely available for one month, starting two weeks before the event.",Old conference,
+req-conf-1751766474613-jtzem,,European Conference on Digital Government,ECDG,https://www.iaria.org/conferences2025/ICDS25.html,https://www.iaria.org/conferences2025/CfPICDS25.html,,"Conference dates: May 18 - 22, 2025
+Year: 2025
+Location: Nice, France
+Type: Hybrid
+Topics: Digital Society, eGovernments
+Submission Date.Submission: February 21, 2025
+Notification Date.Notification: March 24, 2025
+Registration Date.Registration: April 5, 2025
+Camera-ready Date.Camera ready: April 13, 2025","May 18 - 22, 2025",2025,"Nice, France",No city/state/province,No country,No continent,Hybrid,"{""Submission"":""February 21, 2025""}","{""Notification"":""March 24, 2025""}","{""Camera ready"":""April 13, 2025""}","{""Registration"":""April 5, 2025""}",{},"Digital Society, eGovernments",No publisher,"The Nineteenth International Conference on Digital Society (ICDS 2025) will be held in Nice, France, from May 18 to May 22, 2025. This conference continues a series of international events covering a large spectrum of topics related to advanced networking, applications, and systems technologies in a digital society and eGovernments. ICDS 2025 offers both onsite and online participation options and is colocated with several other events as part of the DigitalWorld 2025 Congress.","# ICDS 2025: Call for Papers
+
+The Nineteenth International Conference on Digital Society (ICDS 2025) will be held from **May 18, 2025 to May 22, 2025 in Nice, France**.
+
+### Onsite and Online Options
+
+In order to accommodate various situations, the conference offers the option for either physical presence or virtual participation (pdf slides or pre-recorded videos).
+
+### About the Conference
+
+ICDS 2025 continues a series of international events covering a large spectrum of topics related to advanced networking, applications, and systems technologies in a digital society and eGovernments. The conference focuses on the unprecedented evolution of theories and technologies shaping our society, user education, and business model optimization towards a digital society.
+
+## ICDS 2025 Conference Tracks
+
+*   **Trends in government-related actions**
+*   **Trends in IT related governmental/public services**
+*   **Digital society and robots**
+*   **eGovernment services in the context of digital society**
+*   **Digital accessibility**
+*   **Citizen-centric disruptive and enabling technologies**
+*   **Internet and Web services**
+*   **eCommerce and eBusiness**
+*   **Citizen-oriented digital evidence**
+*   **Consumer-oriented devices and services**
+*   **Intelligent computation**
+*   **Networking and telecommunications**
+*   **eDefense for security and protection**
+*   **Intrusion Prevention and Detection Systems**
+*   **Enforced citizen-centric paradigms**
+*   **Web accessibility**
+*   **Computational advertising**
+*   **Management and control**
+*   **Digital analysis and processing**
+*   **Mobile devices and biotechnologies**
+*   **Software and system robustness for digital society**
+*   **Consumer-oriented digital design**
+*   **Social networking**
+*   **ICT support and applications for eCollaboration**
+*   **Cyberlaws**
+
+## Solicitation
+
+We solicit both academic, research, and industrial contributions. We welcome technical papers presenting research and practical results, position papers addressing the pros and cons of specific proposals, survey papers, short papers on work in progress, and panel proposals. Industrial presentations are also welcome. Tutorials and panels on challenging areas are encouraged.
+
+## Contribution Types
+
+*   **Regular Papers:** (up to 6-10 pages, 6 pages covered by registration; max 4 extra pages allowed at additional cost) (oral presentation)
+*   **Short papers (work in progress):** (up to 4 pages long) (oral presentation)
+*   **Ideas contributions:** (2 pages long) (oral presentation)
+*   **Extended abstracts:** (2 pages long) (oral presentation)
+*   **Posters (paper-based):** (2 pages long) (oral presentation)
+*   **Posters (slide-based, only):** (oral presentation)
+*   **Presentations (slide-based, only):** (oral presentation)
+*   **Demos:** (2 pages) [posted on www.iaria.org]
+
+## Important Dates
+
+*   **Submission:** Feb 21, 2025
+*   **Notification:** Mar 24, 2025
+*   **Registration:** Apr 05, 2025
+*   **Camera ready:** Apr 13, 2025
+
+*Deadlines differ for special tracks. Please consult the conference home page for special tracks Call for Papers (if any).*
+
+## Submission Guidelines
+
+*   Only .pdf or .doc files will be accepted for paper submission.
+*   Final author manuscripts will be 8.5"" x 11"", not exceeding 6 pages; max 4 extra pages allowed at additional cost.
+*   Helpful information for paper formatting for MS Word can be found [here](https://www.acm.org/publications/icps/author-guidance).
+*   LaTeX templates are available via the CTAN package iaria (with full IARIA formatting rules) or iaria-lite. An Overleaf template is also provided.
+
+## Publication
+
+*   Published by IARIA Press (operated by Xpert Publishing Services)
+*   Archived in the Open Access IARIA ThinkMind Digital Library
+*   Prints available at Curran Associates, Inc.
+*   Authors of selected papers will be invited to submit extended versions to an IARIA Journal.
+
+## Steering Committee
+
+*   Lasse Berntzen, University of South-Eastern Norway, Norway
+*   Claus-Peter Rückemann, Universität Münster / DIMF / Leibniz Universität Hannover, Germany
+*   Theo Lynn, Irish Institute of Digital Business, Dublin City University, Ireland
+*   Olga Levina, Technische Hochschule Brandenburg, Germany
+*   Claudia Heß, IU Internationale Hochschule, Germany",Can't find correct main link,Yes
+req-conf-1751766474613-jtzem,,European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Database,ECML PKDD,https://ecmlpkdd.org/2025/,https://ecmlpkdd.org/2025/,,"Conference dates: September 15 - 19, 2025
+Year: 2025
+Location: Porto, Portugal
+City-State-Province: Porto
+Country: Portugal
+Continent: Europe
+Type: Offline
+Topics: Machine Learning, Data Mining","September 15 - 19, 2025",2025,"Porto, Portugal",Porto,Portugal,Europe,Offline,{},{},{},{},{},"Machine Learning, Data Mining",No publisher,"The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD) 2025 will be held in Porto, Portugal, from September 15 to 19. ECML PKDD is the flagship European machine learning and data mining conference, attracting a worldwide audience. The conference program features peer-reviewed research presentations, invited talks, workshops, tutorials, poster sessions, a discovery challenge, a demo track, an applied data science track, an industry track, and a PhD forum.",The detailed content for the Call for Papers is not available in the provided text.,Can't get dates,Yes
+req-conf-1751766474613-jtzem,,European Conference on Information Retrieval,ECIR,https://ecir2025.eu/,https://ecir2025.eu/#,https://ecir2025.eu/key-dates/,"Conference dates: April 06 - 10, 2025
+Year: 2025
+Location: Lucca, Italy
+City-State-Province: Lucca
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.(Full Paper) Abstract Submission: October 9, 2024
+Submission Date.(Full Paper) Full Paper Submission: October 16, 2024
+Submission Date.(Short Paper) Abstract Submission: October 23, 2024
+Submission Date.(Short Paper) Short Paper Submission: November 3, 2024
+Submission Date.(Workshop) Proposals Submission: September 20, 2024
+Submission Date.(Demo) Demo Submission: November 3, 2024
+Submission Date.(Reproducibility) Abstract Submission: October 23, 2024
+Submission Date.(Reproducibility) Reproducibility Paper Submission: November 3, 2024
+Submission Date.(IR for Good) Abstract Submission: November 3, 2024
+Submission Date.(IR for Good) “IR for Good” Paper Submission: November 10, 2024
+Submission Date.(Tutorial) Tutorial Submission: November 8, 2024
+Submission Date.(Doctoral Consortium) Abstract Submission: November 10, 2024
+Submission Date.(Doctoral Consortium) Doctoral Consortium Paper Submission: November 17, 2024
+Submission Date.(Industry Day) Proposals Submission: November 13, 2024
+Notification Date.Acceptance/Rejection Notifications for Full Papers: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Short Papers: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Workshop Proposals: October 18, 2024
+Notification Date.Acceptance/Rejection Notifications for Demos: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Reproducibility Papers: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for “IR for Good” Papers: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Tutorials: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Doctoral Consortium: December 16, 2024
+Notification Date.Acceptance/Rejection Notifications for Industry Day Proposals: December 16, 2024
+Topics: Information Retrieval","April 06 - 10, 2025",2025,"Lucca, Italy",Lucca,Italy,Europe,Offline,"{""(Full Paper) Abstract Submission"":""October 9, 2024"",""(Full Paper) Full Paper Submission"":""October 16, 2024"",""(Short Paper) Abstract Submission"":""October 23, 2024"",""(Short Paper) Short Paper Submission"":""November 3, 2024"",""(Workshop) Proposals Submission"":""September 20, 2024"",""(Demo) Demo Submission"":""November 3, 2024"",""(Reproducibility) Abstract Submission"":""October 23, 2024"",""(Reproducibility) Reproducibility Paper Submission"":""November 3, 2024"",""(IR for Good) Abstract Submission"":""November 3, 2024"",""(IR for Good) “IR for Good” Paper Submission"":""November 10, 2024"",""(Tutorial) Tutorial Submission"":""November 8, 2024"",""(Doctoral Consortium) Abstract Submission"":""November 10, 2024"",""(Doctoral Consortium) Doctoral Consortium Paper Submission"":""November 17, 2024"",""(Industry Day) Proposals Submission"":""November 13, 2024""}","{""Acceptance/Rejection Notifications for Full Papers"":""December 16, 2024"",""Acceptance/Rejection Notifications for Short Papers"":""December 16, 2024"",""Acceptance/Rejection Notifications for Workshop Proposals"":""October 18, 2024"",""Acceptance/Rejection Notifications for Demos"":""December 16, 2024"",""Acceptance/Rejection Notifications for Reproducibility Papers"":""December 16, 2024"",""Acceptance/Rejection Notifications for “IR for Good” Papers"":""December 16, 2024"",""Acceptance/Rejection Notifications for Tutorials"":""December 16, 2024"",""Acceptance/Rejection Notifications for Doctoral Consortium"":""December 16, 2024"",""Acceptance/Rejection Notifications for Industry Day Proposals"":""December 16, 2024""}",{},{},{},Information Retrieval,No publisher,"The 47th European Conference on Information Retrieval (ECIR 2025) will be held in Lucca, Tuscany, Italy, from April 06 to April 10, 2025. ECIR serves as the premier European forum for presenting new research results in Information Retrieval and welcomes contributions from both young and established researchers, with a strong focus on students.","# Call for Papers: ECIR 2025
+
+The 47th European Conference on Information Retrieval (ECIR) is the annual premier European forum for the presentation of new research results in the broadly conceived area of Information Retrieval. ECIR provides an opportunity for both young and established researchers to present research papers reporting new, unpublished, and innovative research results. ECIR has traditionally had a strong student focus, and papers whose sole or primary author is a postgraduate student or postdoctoral researcher are especially welcome.
+
+## Submission Types
+
+We invite submissions for various tracks:
+
+*   **Full Papers:** [Call for Full Papers](https://ecir2025.eu/call-for-full-papers/)
+*   **Short Papers:** [Call for Short Papers](https://ecir2025.eu/call-for-short-papers/)
+*   **Demo Papers:** [Call for Demo Papers](https://ecir2025.eu/call-for-demo-papers/)
+*   **Reproducibility Papers:** [Call for Reproducibility Papers](https://ecir2025.eu/call-for-reproducibility-papers/)
+*   **IR for Good Papers:** [Call for IR for Good Papers](https://ecir2025.eu/call-for-ir-for-good-papers/)
+*   **Workshops:** [Call for Workshops](https://ecir2025.eu/call-for-workshops/)
+*   **Tutorials:** [Call for Tutorials](https://ecir2025.eu/call-for-tutorials/)
+*   **Doctoral Consortium Papers:** [Call for Doctoral Consortium Papers](https://ecir2025.eu/call-for-doctoral-consortium-papers/)
+*   **Industry Day Presentations:** [Call for Industry Day Presentations](https://ecir2025.eu/call-for-industry-day-presentations/)
+
+## Key Dates
+
+**Conference Dates:** April 06-10, 2025
+
+**Full Papers:**
+*   Abstract Submission: **October 9, 2024**
+*   Full Paper Submission: **October 16, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Short Papers:**
+*   Abstract Submission: **October 23, 2024**
+*   Short Paper Submission: **November 3, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Workshops:**
+*   Proposals Submission: **September 20, 2024**
+*   Acceptance/Rejection Notifications: **October 18, 2024**
+
+**Demo Papers:**
+*   Demo Submission: **November 3, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Reproducibility Papers:**
+*   Abstract Submission: **October 23, 2024**
+*   Reproducibility Paper Submission: **November 3, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**“IR for Good” Papers:**
+*   Abstract Submission: **November 3, 2024**
+*   “IR for Good” Paper Submission: **November 10, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Tutorials:**
+*   Tutorial Submission: **November 8, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Doctoral Consortium:**
+*   Abstract Submission: **November 10, 2024**
+*   Doctoral Consortium Paper Submission: **November 17, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**
+
+**Industry Day:**
+*   Proposals Submission: **November 13, 2024**
+*   Acceptance/Rejection Notifications: **December 16, 2024**",2026 link: https://ecir2026.eu/,Yes
+req-conf-1751766474613-jtzem,,European Conference on Computer Supported Cooperative Work,ECSCW,https://ecscw.eusset.eu/2025/,https://ecscw.eusset.eu/2025/index.php/journal-papers/,,"Conference dates: June 30 - July 4, 2025
+Year: 2025
+Location: Newcastle upon Tyne, UK
+City-State-Province: Newcastle upon Tyne
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.Paper submission deadline: February 28, 2025
+Notification Date.Paper acceptance cut-off date for inclusion in ECSCW 2025 Program: April 1, 2025
+Topics: practice-centred computing, design of cooperation technologies, communication, collaboration, social technologies, practices, use, system design, hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, toolkits, methodologies, tools, human practices, ethnography, innovative research approaches, critical design, design fictions, critical analysis, theory, domain-specific social and collaborative applications, digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, ethics, policy implications, socio-technical systems, values, algorithms, human-AI relationships, interactions across disciplines, distances, languages, generations, cultures","June 30 - July 4, 2025",2025,"Newcastle upon Tyne, UK",Newcastle upon Tyne,United Kingdom,Europe,Offline,"{""Paper submission deadline"":""February 28, 2025""}","{""Paper acceptance cut-off date for inclusion in ECSCW 2025 Program"":""April 1, 2025""}",{},{},{},"practice-centred computing, design of cooperation technologies, communication, collaboration, social technologies, practices, use, system design, hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, toolkits, methodologies, tools, human practices, ethnography, innovative research approaches, critical design, design fictions, critical analysis, theory, domain-specific social and collaborative applications, digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, ethics, policy implications, socio-technical systems, values, algorithms, human-AI relationships, interactions across disciplines, distances, languages, generations, cultures",No publisher,"The European Conference on Computer Supported Cooperative Work (ECSCW) 2025 is an international venue focused on practice-centred computing and the design of cooperation technologies. The 23rd edition will take place in Newcastle upon Tyne, UK, from June 30th to July 4th, 2025. ECSCW is a single-track conference supported by EUSSET, fostering interdisciplinary and global community discussions.","# ECSCW 2025: Call for Journal Papers
+
+The European Conference on Computer Supported Cooperative Work (ECSCW) 2025 will be held in **Newcastle upon Tyne, UK, from June 30th to July 4th, 2025**. ECSCW is an international venue dedicated to practice-centred computing and the design of cooperation technologies, serving as a single-track conference that fosters an interdisciplinary and global community.
+
+## Journal Papers
+
+Submissions to the journal-track of the ECSCW conference undergo a fully integrated, continuous review process, allowing authors to develop and refine stronger papers over a longer period.
+
+### Description
+
+We invite journal papers documenting original, rich, and in-depth contributions to CSCW. Authors are encouraged to submit papers that improve and extend the CSCW field.
+
+### Relevant Themes
+
+Relevant themes include, but are not limited to:
+
+*   Empirical investigations of collaborative practices.
+*   System design focusing on solutions to support cooperative work in increasingly complex, networked, and data-driven settings.
+*   Hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, and/or toolkits that enable the building of new social and collaborative systems and experiences.
+*   Methodologies and tools for investigating human practices, e.g., the nature of ethnography and the role of other innovative research approaches in building systems or studying their use, the application of critical design or design fictions to investigate future possibilities.
+*   Critical analysis or theory with clear relevance to study, design, or use of collaborative settings and systems.
+*   Domain-specific social and collaborative applications, including applications to digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, or other domains.
+*   Analysis of the ethics and policy implications of socio-technical systems, the values that inform them, and the algorithms that shape them.
+*   The changing nature of collaboration and teaming in relation to intelligent machine agents, e.g., human-AI relationships in collaborative practices.
+*   Studies, prototypes, or other investigations that explore interactions across disciplines, distances, languages, generations, and cultures, to help understand how to design in relation to social, temporal, and/or spatial boundaries.
+*   Discussions and extrapolations of work-practices and technologies, which contribute to the core topics of ECSCW.
+
+### Important Dates
+
+*   Paper submission deadline: **28 February 2025**
+*   On a rolling basis: End of paper review, revise & resubmit processes (for further information please read here: [https://www.eusset.eu/the-ecscw-journal-publication-model/](https://www.eusset.eu/the-ecscw-journal-publication-model/))
+*   Paper acceptance cut-off date for inclusion in ECSCW 2025 Program: **April 1, 2025**
+*   ECSCW 2025 Conference Dates: **July 2 – 4, 2025**
+
+### Submission Format & Process
+
+*   **Format:** Paper submissions must follow the CSCW Journal Instructions for Authors available at: [https://www.springer.com/journal/10606/submission-guidelines](https://www.springer.com/journal/10606/submission-guidelines).
+*   **Length:** Papers are suggested to be between 10,000 and 15,000 words (including tables and appendices, excluding references).
+*   **Submission System:** Manuscripts must be submitted via [https://submission.nature.com/new-submission/10606/3](https://submission.nature.com/new-submission/10606/3).
+    *   Note: The submission system (SNAPP) treats ECSCW contributions as a “collection”. Authors must select ""research"", then ""start submission"", and then click ""details"" to select the ECSCW collection.
+
+### Paper Review, Revision & Resubmission Process
+
+*   The review process is **single-blind**.
+*   Submissions are assigned to ECSCW 2025 Journal Papers Chairs, who manage the review process with three reviewers.
+*   Authors are encouraged to submit early to allow for multiple Revise & Resubmit cycles and earlier publication.
+*   Review turnaround time is approximately three months for the first cycle and two months for subsequent cycles.
+*   Papers typically undergo at least two review rounds.
+*   Papers must be accepted by **April 1, 2025**, to be included in the ECSCW 2025 Program. Papers accepted after this date will be considered for ECSCW 2026.
+*   If a paper is not accepted by **April 1, 2025**, it will automatically be transferred to the next ECSCW conference unless withdrawn, and authors may be invited to present their work at ECSCW 2025 if accepted later.
+
+### Publication and Copyright Information
+
+*   Accepted articles are published in *Computer Supported Cooperative Work (CSCW): The Journal of Collaborative Computing and Work Practices* ([https://www.springer.com/journal/10606/](https://www.springer.com/journal/10606/)).
+*   Authors will be asked to transfer copyright to the Publisher upon acceptance.
+*   Accepted manuscripts are published on Springer Online First after production and proof corrections.
+*   Authors have the option to make their versions of accepted papers available with open access in the EUSSET digital library ([http://www.eusset.eu/digital-library](http://www.eusset.eu/digital-library)) as an edited collection.
+
+## Journal Paper Chairs
+
+*   Alexander Boden (Hochschule Bonn-Rhein-Sieg, University of Applied Sciences, Germany)
+*   Jina Huh-Yoo (Drexel College of Computing & Informatics (CCI), Philadelphia, PA, USA)
+*   Stuart Reeves (University of Nottingham, UK)
+
+## Other Submission Types
+
+Information is also available for:
+
+*   Conference Papers
+*   Exploratory Papers
+*   Posters & Demos
+*   Panels
+*   Masterclasses
+*   Workshops
+*   Doctoral Colloquium",2026 link: https://ecscw.eusset.eu/2026/,Yes
+req-conf-1751766474613-jtzem,,European Conference on Software Architecture,ECSA,https://conf.researchr.org/home/ecsa-2025,https://conf.researchr.org/track/ecsa-2025/ecsa-2025-call-for-research-papers,https://conf.researchr.org/dates/ecsa-2025,"Conference dates: September 15 - 19, 2025
+Year: 2025
+Location: Limassol, Cyprus
+City-State-Province: Limassol
+Country: Cyprus
+Continent: Europe
+Type: Offline
+Submission Date.(Research Papers) Abstract submission: March 21, 2025
+Submission Date.(Research Papers) Paper Submission: March 28, 2025
+Submission Date.(Tools & Demos) Abstract Submission: May 16, 2025
+Submission Date.(Tools & Demos) Paper Submission: May 23, 2025
+Submission Date.(Workshops) Workshop proposal: February 24, 2025
+Submission Date.(Tutorials) Tutorial proposals due: May 30, 2025
+Submission Date.(Journal First) Paper submission: May 23, 2025
+Submission Date.(Open Science) Submission Deadline: May 19, 2025
+Submission Date.(Workshops) Workshop papers abstracts: May 12, 2025
+Submission Date.(Workshops) Workshop papers submission: June 2, 2025
+Submission Date.(ICTSS General Track) Submission of Papers: June 16, 2025
+Notification Date.(Research Papers) Notification of Acceptance: May 9, 2025
+Notification Date.(Tools & Demos) Notification: June 20, 2025
+Notification Date.(Workshops) Workshop proposal notification: March 7, 2025
+Notification Date.(Industry Program) Notification of Acceptance: May 9, 2025
+Notification Date.(Journal First) Acceptance notifications: June 20, 2025
+Notification Date.(Doctoral Symposium) Notification of Acceptance: June 20, 2025
+Notification Date.(Tutorials) Notification of Tutorial proposals: June 20, 2025
+Notification Date.(ICTSS General Track) Notification of Acceptance: July 14, 2025
+Notification Date.(Workshops) Workshop papers notification: June 20, 2025
+Camera-ready Date.(Research Papers) Camera Ready Paper: June 13, 2025
+Camera-ready Date.(Tools & Demos) Camera-ready: June 27, 2025
+Camera-ready Date.(Industry Program) Camera-ready paper: June 13, 2025
+Camera-ready Date.(Doctoral Symposium) Camera Ready Paper: April 24, 2025
+Camera-ready Date.(ICTSS General Track) Camera-ready and author registration: July 28, 2025
+Camera-ready Date.(Workshops) Workshop papers camera ready: June 27, 2025
+Registration Date.(Workshops) Early/Author registration: June 27, 2025
+Topics: Software Architecture
+Publisher: Springer","September 15 - 19, 2025",2025,"Limassol, Cyprus",Limassol,Cyprus,Europe,Offline,"{""(Research Papers) Abstract submission"":""March 21, 2025"",""(Research Papers) Paper Submission"":""March 28, 2025"",""(Tools & Demos) Abstract Submission"":""May 16, 2025"",""(Tools & Demos) Paper Submission"":""May 23, 2025"",""(Workshops) Workshop proposal"":""February 24, 2025"",""(Tutorials) Tutorial proposals due"":""May 30, 2025"",""(Journal First) Paper submission"":""May 23, 2025"",""(Open Science) Submission Deadline"":""May 19, 2025"",""(Workshops) Workshop papers abstracts"":""May 12, 2025"",""(Workshops) Workshop papers submission"":""June 2, 2025"",""(ICTSS General Track) Submission of Papers"":""June 16, 2025""}","{""(Research Papers) Notification of Acceptance"":""May 9, 2025"",""(Tools & Demos) Notification"":""June 20, 2025"",""(Workshops) Workshop proposal notification"":""March 7, 2025"",""(Industry Program) Notification of Acceptance"":""May 9, 2025"",""(Journal First) Acceptance notifications"":""June 20, 2025"",""(Doctoral Symposium) Notification of Acceptance"":""June 20, 2025"",""(Tutorials) Notification of Tutorial proposals"":""June 20, 2025"",""(ICTSS General Track) Notification of Acceptance"":""July 14, 2025"",""(Workshops) Workshop papers notification"":""June 20, 2025""}","{""(Research Papers) Camera Ready Paper"":""June 13, 2025"",""(Tools & Demos) Camera-ready"":""June 27, 2025"",""(Industry Program) Camera-ready paper"":""June 13, 2025"",""(Doctoral Symposium) Camera Ready Paper"":""April 24, 2025"",""(ICTSS General Track) Camera-ready and author registration"":""July 28, 2025"",""(Workshops) Workshop papers camera ready"":""June 27, 2025""}","{""(Workshops) Early/Author registration"":""June 27, 2025""}",{},Software Architecture,Springer,"The 19th European Conference on Software Architecture (ECSA 2025) will be held from September 15-19, 2025, in Limassol, Cyprus, at The St. Raphael Resort. This in-person conference focuses on ""impactful software architecture"" and serves as a platform for researchers, practitioners, and educators to share findings and experiences. ECSA 2025 will feature a research track, industry program, tools & demos, workshops, tutorials, and a Doctoral Symposium.","# ECSA 2025: Call for Research Papers
+
+The European Conference on Software Architecture (ECSA) is the premier European software architecture conference, providing researchers, practitioners, and educators with a platform to present and discuss the most recent, innovative, and significant findings and experiences in the field of software architecture research and practice.
+
+The 19th European Conference on Software Architecture (ECSA 2025) will be held from **Monday, September 15 to Friday, September 19, 2025**. ECSA 2025 is planned as an **in-person/physical conference** taking place in **Limassol, Cyprus**, at **The St. Raphael Resort**.
+
+## Conference Theme and Scope
+
+The theme for ECSA 2025 is “**impactful software architecture**”. The conference is interested in learning about software architecture principles and practices, emergence trends, and case studies highlighting strategic architectural choices that can lead to enhanced performance, improved collaboration, and long-term sustainability. The overarching question is how these architectural principles and practices are making an impact in real-world systems, and how that impact is being felt across various domains, from enterprise systems to novel areas like AI-driven or autonomous applications.
+
+## Topics of Interest
+
+ECSA 2025 seeks submissions on topics related to software architecture, including but not limited to:
+
+*   Foundational principles of software architecture
+*   Relationship of requirements engineering and software architecture
+*   Quality attributes and software architectures
+*   Architecture practices for secure, explainable, and trustworthy software
+*   Architecture design and analysis
+*   Architecture description languages and meta-models
+*   Architecture verification and validation
+*   Management of architectural knowledge, decisions, and rationale
+*   Architecture patterns, styles, and tactics; reference architectures
+*   Architecture viewpoints and views
+*   Architecture conformance
+*   Software architecture virtualization and visualization
+*   Architecture-centric process models and frameworks
+*   Software architecture and agile, incremental, iterative, and continuous development
+*   Component-based models and deployment; middleware
+*   Software architecture and system architecture
+*   Software tools and environments for architecture-centric software engineering
+*   Ethics, cultural, economic, business, social, human, and managerial aspects of software architecture
+*   Architecture and technical debt
+*   Architecting for sustainable and environment friendly systems
+*   Applying AI and LLMs in software architecture and architecting for AI and LLM intensive systems.
+*   Software architecture education
+*   Cross-disciplinary approaches to software architecture
+*   Architectures for reconfigurable and self-adaptive systems
+*   Architectural concerns of autonomic systems
+*   Software architecture applied to new and emerging areas (e.g., cloud/edge, big data, blockchain, cyber-physical systems, IoT, autonomous systems, systems-of-systems, energy-aware software, quantum computing, AI-enabled systems)
+*   Empirical studies, systematic literature reviews, and mapping studies in software architecture
+*   Diversity, equity, and inclusion in activities related to software architecture
+
+## Paper Submission Types
+
+ECSA 2025 seeks the following types of papers for the research track:
+
+*   **Research papers:** (max. 16 pages in LNCS style) describing novel contributions to software architecture research, which have a sound scientific/technological basis and have been validated.
+*   **Education and training papers:** (max. 16 pages in LNCS style) addressing methodologies, experiences, and best practices for teaching and training software architecture.
+*   **Experience reports:** (max. 16 pages in LNCS style) covering innovative implementations, novel applications, insightful performance results, and experiences in applying software architecture research advances to practical situations and systems.
+*   **Short papers:** (max. 8 pages in LNCS style) presenting novel and preliminary work-in-progress or challenges in software architecture research, education, and training. Submissions must have a sound basis, but not necessarily be validated in full.
+
+## Review Process and Policies
+
+*   All submitted papers will undergo a rigorous **double-blind peer review** process.
+*   Papers will be selected based on originality, quality, soundness, and relevance.
+*   All contributions must be original, not published, accepted, or submitted for publication elsewhere. Concurrent submission is considered a serious breach of ethics.
+*   **Plagiarism checking** will be conducted; papers reporting more than a 20% match with published work will be desk-rejected.
+*   **Open Science Policy:** ECSA 2025 supports an Open Science policy. Authors are encouraged to disclose (anonymized and curated) data/artifacts to increase reproducibility. A **""Data Availability"" statement** must be included in the paper. Artifacts can be shared via the ECSA Zenodo community ([https://zenodo.org/communities/ecsa](https://zenodo.org/communities/ecsa)). Sharing artifacts is required for eligibility for the best Open Artifact award.
+
+## Formatting and Submission
+
+*   All contributions must be formatted according to the **Springer LNCS style** ([http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0](http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0)). Page limits include figures and references.
+*   Contributions need to be submitted in **PDF format** via EasyChair to the ECSA 2025 Research Track: [https://easychair.org/conferences/?conf=ecsa2025](https://easychair.org/conferences/?conf=ecsa2025).
+*   Please select the “**Research Track**” in EasyChair for your submission.
+
+## Publication
+
+The proceedings will be published by **Springer as part of the LNCS series**. Authors of selected papers will be invited to submit an extended version of their research to a special issue of the **Journal of Systems and Software**.
+
+## Important Dates (Main Conference)
+
+*   **Abstract submission:** March 21, 2025
+*   **Paper submission:** March 28, 2025
+*   **Notification of Acceptance:** May 9, 2025
+*   **Camera-ready paper:** June 13, 2025
+
+All dates are 23:59h AoE (Anywhere on Earth).","(Industry Program) Abstract submission – March 21, 2025
+(Industry Program) Paper submission – March 28, 2025
+(Doctoral Symposium) Abstract Submission – May 16, 2025
+(Doctoral Symposium) Paper Submission – May 30, 2025
+(Doctoral Symposium) Camera Ready Paper — June 27, 2025",Yes
+req-conf-1751766474613-jtzem,,"World Conference on Educational Multimedia, Hypermedia and Telecommunications",ED-MEDIA,https://aace.org/conf/edmedia/,https://aace.org/conf/edmedia/call/,https://aace.org/conf/edmedia/deadlines/,"Conference dates: May 25 - 29, 2025
+Year: 2025
+Location: Edinburgh, Scotland
+City-State-Province: Edinburgh
+Country: Scotland
+Continent: Europe
+Type: Offline
+Submission Date.First Call for Proposals: December 20, 2024
+Submission Date.Final Call for Proposals: April 11, 2025
+Notification Date.First Call Authors Notified: January 6, 2025
+Camera-ready Date.Proceedings Files & PPTs/Videos Due: May 12, 2025
+Registration Date.Early Registration & Author Confirmations: May 7, 2025
+Topics: Information Technology in Education, E-Learning
+Publisher: AACE","May 25 - 29, 2025",2025,"Edinburgh, Scotland",Edinburgh,Scotland,Europe,Offline,"{""First Call for Proposals"":""December 20, 2024"",""Final Call for Proposals"":""April 11, 2025""}","{""First Call Authors Notified"":""January 6, 2025""}","{""Proceedings Files & PPTs/Videos Due"":""May 12, 2025""}","{""Early Registration & Author Confirmations"":""May 7, 2025""}",{},"Information Technology in Education, E-Learning",AACE,"The World Conference on Educational Multimedia, Hypermedia and Telecommunications (ED-MEDIA) will be held from May 19-23, 2025, in Edinburgh, Scotland. Organized by The Association for the Advancement of Computing in Education (AACE), the conference focuses on research, development, and practical applications of Information Technology in Education and E-Learning.","# ED-MEDIA 2025: Call for Proposals
+
+The World Conference on Educational Multimedia, Hypermedia and Telecommunications (ED-MEDIA), organized by The Association for the Advancement of Computing in Education (AACE), is a premier event for researchers and professionals in the field of Information Technology in Education and E-Learning.
+
+### Conference Details
+
+*   **Dates:** May 19-23, 2025
+*   **Location:** Edinburgh, Scotland
+
+### Call for Proposals
+
+We invite proposals for a wide range of contributions, including research papers, invited talks, workshops, SIGs, presentations in the Emerging Scholar Stream, and exhibits in the Innovators Playground / Corporate Exhibits.
+
+### Topics
+
+For a comprehensive list of topics of interest, please visit the conference website: [https://aace.org/conf/edmedia/about/#topics](https://aace.org/conf/edmedia/about/#topics)
+
+### Presentation Types
+
+*   Keynote & Invited Speakers
+*   Workshops
+*   SIGs (Special Interest Groups)
+*   Emerging Scholar Stream presentations
+*   Innovators Playground / Corporate Exhibits
+*   Best Papers by Country Sessions
+
+### Deadlines
+
+*   **First Call for Proposals:** December 20, 2024
+*   **Reviews Due:** January 6, 2025
+*   **First Call Authors Notified:** January 6, 2025
+*   **Final Call for Proposals:** April 11, 2025
+*   **Early Registration & Author Confirmations:** May 7, 2025
+*   **Proceedings Files & PPTs/Videos Due:** May 12, 2025
+
+### Submission Guide
+
+Detailed guidelines for submitting proposals can be found here: [https://aace.org/conf/edmedia/submission/](https://aace.org/conf/edmedia/submission/)
+
+### Registration
+
+Register early to take advantage of a 30% discount. For registration details, please visit: [https://aace.org/conf/edmedia/registration/](https://aace.org/conf/edmedia/registration/)
+
+### Publication
+
+The conference proceedings will be published and accessible through AACE's leading-edge Digital Library. Selected papers may also be invited for extended submission to an AACE Journal.","Information is a mess between 2026 and 2025, cfp from page is of 2025",Yes

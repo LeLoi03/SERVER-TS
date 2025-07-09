@@ -2,7 +2,6 @@
 import 'reflect-metadata';
 import { container } from 'tsyringe';
 import { Socket } from 'socket.io';
-import logToFile from '../../utils/logger';
 import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo } from '../shared/types';
 import { Gemini } from '../gemini/gemini';
 import { ConfigService } from "../../config/config.service";
@@ -36,7 +35,7 @@ try {
     const key = configService.primaryGeminiApiKey;
     if (!key) {
         const errorMsg = "CRITICAL: GEMINI_API_KEY is not configured.";
-        logToFile(errorMsg);
+    
         throw new Error(errorMsg);
     }
     geminiApiKey = key;
@@ -46,17 +45,16 @@ try {
     subAgentGenerationConfig = configService.subAgentGenerationConfig; // Giữ nguyên cho sub-agent
 
     if (!defaultHostAgentModelName) {
-        logToFile(`[Orchestrator] Warning: GEMINI_HOST_AGENT_MODEL_NAME not set. Host agent intent handling might fail.`);
+    
     }
     if (!subAgentModelName) {
-        logToFile(`[Orchestrator] Warning: GEMINI_SUB_AGENT_MODEL_NAME not set. Sub-agents will use host default ('${defaultHostAgentModelName}') as fallback.`);
+    
     }
 
     GEMINI_SERVICE_FOR_SUB_AGENT = new Gemini(geminiApiKey, subAgentModelName || defaultHostAgentModelName);
 
     baseDependencies = {
         configService,
-        logToFile,
         allowedSubAgents: ALLOWED_SUB_AGENTS,
         maxTurnsHostAgent: MAX_TURNS_HOST_AGENT,
     };
@@ -68,7 +66,7 @@ try {
 
 } catch (err: unknown) {
     const { message, stack } = getErrorMessageAndStack(err);
-    logToFile(`CRITICAL ERROR during Orchestrator static initialization: ${message}\nStack: ${stack}`);
+
     throw err;
 }
 
@@ -76,10 +74,10 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
     const modelForHost = userSelectedModel || defaultHostAgentModelName;
     if (!modelForHost) {
         const errorMsg = "CRITICAL: No model specified for Host Agent (neither user-selected nor default in config).";
-        logToFile(errorMsg);
+    
         throw new Error(errorMsg);
     }
-    logToFile(`[Orchestrator] Initializing Gemini service for Host Agent with model: ${modelForHost}`);
+
     const geminiServiceForHost = new Gemini(geminiApiKey, modelForHost);
 
     // Lấy generation config gốc từ configService
@@ -87,19 +85,19 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
 
     // Kiểm tra nếu model được chọn là Mercury và thêm/ghi đè thinkingConfig
     if (modelForHost === MERCURY_MODEL_VALUE) {
-        logToFile(`[Orchestrator] Model ${MERCURY_MODEL_VALUE} (Mercury) selected. Applying specific thinkingConfig.`);
+    
         currentHostAgentGenerationConfig = {
             ...currentHostAgentGenerationConfig,
             thinkingConfig: { // Thêm hoặc ghi đè thinkingConfig
                 thinkingBudget: 8000,
             },
         };
-        logToFile(`[Orchestrator] Applied thinkingConfig: ${JSON.stringify((currentHostAgentGenerationConfig as any).thinkingConfig)}`);
+    
     } else {
-         logToFile(`[Orchestrator] Model ${modelForHost} selected. Using default hostAgentGenerationConfig.`);
+        
     }
     // Log toàn bộ config sẽ được sử dụng (cẩn thận nếu có thông tin nhạy cảm)
-    // logToFile(`[Orchestrator] Final hostAgentGenerationConfig for model ${modelForHost}: ${JSON.stringify(currentHostAgentGenerationConfig)}`);
+    //
 
 
     const boundCallSubAgentHandler = (
@@ -136,14 +134,9 @@ export async function handleNonStreaming(
     const hostAgentDeps = getHostAgentDependencies(userSelectedModel);
     if (!hostAgentDeps) {
         const errorMsg = "[Orchestrator] ERROR: handleNonStreaming - hostAgentDependencies could not be initialized.";
-        logToFile(errorMsg);
+    
         throw new Error(errorMsg);
     }
-    logToFile(`[Orchestrator] Calling handleNonStreamingActual for handlerId: ${handlerId}, userId: ${socket.id}, Model: ${userSelectedModel || 'default'}` +
-        (personalizationData ? `, Personalization: Enabled` : ``) +
-        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
-        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) +
-        (pageContextUrl ? `, PageContextURL: ${pageContextUrl}` : ``));
 
     return handleNonStreamingActual(
         inputParts,
@@ -177,15 +170,9 @@ export async function handleStreaming(
     const hostAgentDeps = getHostAgentDependencies(userSelectedModel);
     if (!hostAgentDeps) {
         const errorMsg = "[Orchestrator] ERROR: handleStreaming - hostAgentDependencies could not be initialized.";
-        logToFile(errorMsg);
         throw new Error(errorMsg);
     }
-    logToFile(`[Orchestrator] Calling handleStreamingActual for handlerId: ${handlerId}, userId: ${socket.id}, Model: ${userSelectedModel || 'default'}` +
-        (personalizationData ? `, Personalization: Enabled` : ``) +
-        (originalUserFiles && originalUserFiles.length > 0 ? `, Files: ${originalUserFiles.length}` : ``) +
-        (pageContextText ? `, PageContext: Present (len ${pageContextText.length})` : ``) +
-        (pageContextUrl ? `, PageContextURL: ${pageContextUrl}` : ``));
-
+    
     return handleStreamingActual(
         inputParts,
         currentHistoryFromSocket,

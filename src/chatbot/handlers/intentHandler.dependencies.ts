@@ -14,7 +14,6 @@ import {
     AgentCardResponse,
     ChatUpdate
 } from '../shared/types';
-import type logToFileType from '../../utils/logger'; // Import type for logToFile
 import { GenerationConfig as SDKGenerationConfig } from '@google/genai'; // Renamed to avoid conflicts
 
 /**
@@ -24,7 +23,6 @@ export interface BaseIntentHandlerDeps {
     /** An instance of the configuration service to access application settings. */
     configService: ConfigService;
     /** The logging utility function for writing logs to a file. */
-    logToFile: typeof logToFileType;
     /** A list of allowed sub-agent IDs that the Host Agent can delegate to. */
     allowedSubAgents: AgentId[];
     /** The maximum number of turns the Host Agent can take before potentially escalating or stopping. */
@@ -76,7 +74,6 @@ export interface HostAgentHandlerCustomDeps extends BaseIntentHandlerDeps {
  * @param {StatusUpdate | ResultUpdate | ErrorUpdate | ChatUpdate} data - The data payload for the event.
  * @param {Socket} socket - The Socket.IO client socket.
  * @param {string} handlerId - A unique ID for the current handler process.
- * @param {typeof logToFileType} logToFile - The logging utility function.
  * @param {ThoughtStep[]} [thoughtsRef] - Optional reference to an array for collecting thought steps.
  * @param {FrontendAction} [finalActionRef] - Optional reference to a final frontend action.
  * @returns {boolean} True if the emit was successful, false otherwise (e.g., if client disconnected).
@@ -86,7 +83,6 @@ export type SafeEmitFn = (
     data: StatusUpdate | ResultUpdate | ErrorUpdate | ChatUpdate,
     socket: Socket,
     handlerId: string,
-    logToFile: typeof logToFileType,
     thoughtsRef?: ThoughtStep[],
     finalActionRef?: FrontendAction
 ) => boolean;

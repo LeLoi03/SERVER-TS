@@ -1,0 +1,1559 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,note,correctPercentage
+req-conf-1751635625861-npa9x,,International Workshop on MultiAgent Based Simulation,MABS,https://mabsworkshop.github.io/,https://mabsworkshop.github.io/cfp/,https://mabsworkshop.github.io/cfp/,"Conference dates: May 19 - 20, 2025
+Year: 2025
+Location: Detroit, Michigan, USA
+City-State-Province: Detroit, Michigan
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Submission deadline: February 11, 2025
+Notification Date.Acceptance/rejection notifications: March 23, 2025
+Camera-ready Date.Deadline for revised submissions: March 30, 2025
+Other Date.Review deadline: March 3, 2025
+Other Date.Submission of workshop notes: March 30, 2025
+Other Date.Preliminary program and online article availability: April 8, 2025
+Other Date.Preparation of Post-Proceedings for Springer LNAI: August-December, 2025
+Topics: Multi-Agent Systems, Agent-Based Simulation, Social Sciences, Simulation Methodology, Simulation Tools, Simulation of Social and Intelligent Behaviour, Simulation Analytics
+Publisher: Springer","May 19 - 20, 2025",2025,"Detroit, Michigan, USA","Detroit, Michigan",United States,North America,Offline,"{""Submission deadline"":""February 11, 2025""}","{""Acceptance/rejection notifications"":""March 23, 2025""}","{""Deadline for revised submissions"":""March 30, 2025""}",{},"{""Review deadline"":""March 3, 2025"",""Submission of workshop notes"":""March 30, 2025"",""Preliminary program and online article availability"":""April 8, 2025"",""Preparation of Post-Proceedings for Springer LNAI"":""August-December, 2025""}","Multi-Agent Systems, Agent-Based Simulation, Social Sciences, Simulation Methodology, Simulation Tools, Simulation of Social and Intelligent Behaviour, Simulation Analytics",Springer,"The 26th International Workshop on Multi-Agent-Based Simulation (MABS 2025) is the latest in a series that began in 1998, focusing on the intersection of social sciences and multi-agent systems. It emphasizes exploratory agent-based simulation for scientific research in social sciences and using social theories for multi-agent system development. MABS 2025 will be hosted by AAMAS 2025 in Detroit, Michigan, USA, from May 19th to 23rd, 2025, with the workshop itself taking place on May 19th and 20th. Proceedings are published in Springerâ€™s Lecture Notes, and the workshop encourages submissions on simulation methodology, tools, social/intelligent behavior simulation, applications, and analytics.","# MABS 2025: Call for Papers
+
+The 2025 Multi-Agent-Based Simulation (MABS) workshop, the 26th in the series, is hosted by **AAMAS 2025** and will take place in **Detroit, Michigan, USA**, from **May 19th to 23rd, 2025**. The workshop itself is scheduled for **May 19th and 20th, 2025**.
+
+MABS focuses on the confluence of social sciences and multi-agent systems, emphasizing exploratory agent-based simulation as a scientific research method in social sciences and utilizing social theories to inspire multi-agent systems development.
+
+## Topics of Interest
+
+The workshop encourages submissions in areas such as:
+
+*   Simulation methodology and tools
+*   Simulation of social and intelligent behaviour
+*   Diverse applications
+*   Simulation analytics
+
+For detailed topics, please refer to the official Call for Papers: [Call for Papers](/cfp/)
+
+## Important Dates (2025)
+
+*   **Submission deadline (extended):** February 11, 2025
+*   **Review deadline:** March 3, 2025
+*   **Acceptance/rejection notifications:** March 23, 2025
+*   **Deadline for revised submissions:** March 30, 2025
+*   **Submission of workshop notes:** March 30, 2025
+*   **Preliminary program and online article availability:** April 8, 2025
+*   **Workshop event:** May 19/20, 2025
+*   **Preparation of Post-Proceedings for Springer LNAI:** August-December 2025
+
+## Submission
+
+Submissions should be made through the designated link, likely within the AAMAS 2025 portal or a specific workshop submission system. Please consult the official CFP for precise instructions.
+
+## Publication
+
+Proceedings have been regularly published in Springerâ€™s Lecture Notes series.
+
+## Program Chairs
+
+*   Samarth Swarup (University of Virginia)
+*   Alicia Vidler (University of New South Wales)
+
+## Contact
+
+*   Email: [mabs2025workshop@gmail.com](mailto:mabs2025workshop@gmail.com)",,100.00
+req-conf-1751635625861-npa9x,,International Symposium on Logic-based Program Synthesis and Transformation,LOPSTR,https://lopstr.github.io/2025/,https://lopstr.github.io/2025/#call_for_papers,https://lopstr.github.io/2025/#dates,"Conference dates: September 9-10, 2025
+Year: 2025
+Location: Castello di Rende University of Calabria, Rende, Italy
+City-State-Province: Rende
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.Abstract submission: May 23, 2025
+Submission Date.Paper submission: May 30, 2025
+Notification Date.Author notification: July 10, 2025
+Camera-ready Date.Camera-ready: July 17, 2025
+Topics: Logic-based program development, synthesis, transformation, specialization, inversion, composition, optimization, specification, analysis and verification, testing and certification, program and model manipulation, AI methods for program development, verification and testing of AI-based systems, transformational techniques in software engineering, logic-based methods for security, logic-based methods for cyber-physical and distributed systems
+Publisher: Springer","September 9-10, 2025",2025,"Castello di Rende University of Calabria, Rende, Italy",Rende,Italy,Europe,Offline,"{""Abstract submission"":""May 23, 2025"",""Paper submission"":""May 30, 2025""}","{""Author notification"":""July 10, 2025""}","{""Camera-ready"":""July 17, 2025""}",{},{},"Logic-based program development, synthesis, transformation, specialization, inversion, composition, optimization, specification, analysis and verification, testing and certification, program and model manipulation, AI methods for program development, verification and testing of AI-based systems, transformational techniques in software engineering, logic-based methods for security, logic-based methods for cyber-physical and distributed systems",Springer,"The 35th International Symposium on Logic-Based Program Synthesis and Transformation (LOPSTR 2025) will be held at the University of Calabria in Rende, Italy, from September 9-10, 2025. It will be co-located with PPDP 2025 and ICLP 2025. The conference aims to stimulate international research and collaboration on logic-based program development and is open to contributions in any programming language paradigm.","# LOPSTR 2025: Call for Papers
+
+The aim of the LOPSTR series is to stimulate and promote international research and collaboration on logic-based program development. LOPSTR is open to contributions to logic-based program development in any programming language paradigm. LOPSTR has a reputation for being a lively, friendly forum for presenting and discussing work in progress.
+
+LOPSTR 2025 will be held at the **University of Calabria, Rende, Italy**, from **September 9-10, 2025**. It will be co-located with [PPDP 2025](https://ppdp25.github.io/site/) and [ICLP 2025](https://iclp25.demacs.unical.it/). At least one of the authors of an accepted paper is expected to attend the conference and present the paper. Information about venue and travel will be available on the [ICLP 2025](https://iclp25.demacs.unical.it/) website.
+
+## Invited Speakers
+
+*   **Robbert Krebbers**, Radboud University Nijmegen, The Netherlands
+*   **JosÃ© Meseguer**, University of Illinois Urbana-Champaign, IL, US
+
+## Topics of Interest
+
+Topics of interest include all aspects of logic-based program development, all stages of the software life cycle, and issues of both programming-in-the-small and programming-in-the-large, including, but not limited to:
+
+*   Synthesis
+*   Transformation
+*   Specialization
+*   Inversion
+*   Composition
+*   Optimization
+*   Specification
+*   Analysis and verification
+*   Testing and certification
+*   Program and model manipulation
+*   AI methods for program development
+*   Verification and testing of AI-based systems
+*   Transformational techniques in software engineering
+*   Logic-based methods for security
+*   Logic-based methods for cyber-physical and distributed systems
+*   Applications, tools, and industrial practice
+
+Survey papers that present some aspects of the above topics from a new perspective and papers that describe experience with industrial applications and case studies are also welcome.
+
+## Paper Submission Categories
+
+*   **Regular Papers:** (up to 15 pages max.) Submissions must describe original work. Work that already appeared in unpublished or informally published workshop proceedings may be submitted (please contact the PC Chairs in case of questions).
+*   **Short Papers:** (up to 8 pages max.) Submissions may include presentations of exciting if not fully polished research or tool demonstrations that are of academic and industrial interest. Tool demonstrations should describe the relevant system, usability, and implementation aspects of a tool.
+
+References will NOT count towards the page limit. Additional pages may be used for appendices not intended for publication. Reviewers are not required to read the appendices, and thus papers should be intelligible without them.
+
+## Submission Guidelines
+
+*   All submissions must be written in English.
+*   Submissions must not substantially overlap with papers/tools that have been published or that are simultaneously submitted to a journal, conference, or workshop with refereed proceedings.
+*   Papers should be submitted in PDF format, formatted in the Lecture Notes in Computer Science (LNCS) style.
+*   Authors should consult Springer's author instructions and use their proceedings templates, either for [LaTeX](https://www.latextemplates.com/template/springer-lecture-notes-in-computer-science) (available also in [Overleaf](https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kthzwkprvtzm)) or for [Word](https://www.springer.com/gp/authors-editors/conference-proceedings/editors/word-template/19338734).
+*   Springer encourages authors to include their ORCID identifiers in their papers.
+*   Each submission must include on its first page the paper title; authors and their affiliations; contact author's email; abstract; and three to four keywords.
+*   Page numbers (and, if possible, line numbers) should appear on the manuscript to help reviewers. For LaTeX, use `\pagestyle{plain}` and `\usepackage{lineno}\linenumbers`.
+*   After acceptance, the corresponding author must complete and sign a Consent-to-Publish form.
+*   Submissions must be made via EasyChair: [https://easychair.org/conferences/?conf=lopstr2025](https://easychair.org/conferences/?conf=lopstr2025)
+
+## Publication
+
+*   All accepted papers will be included in the conference proceedings and published by Springer as a Lecture Notes in Computer Science (LNCS) volume.
+*   A selection of the best papers will be invited for submission to the Journal of Theory and Practice of Logic Programming (TPLP) for rapid publication after revision.
+
+## Important Dates (All deadlines are AoE)
+
+1.  **Abstract submission:** May 9 / May 23, 2025
+2.  **Paper submission:** May 16 / May 30, 2025
+3.  **Author notification:** June 27 / July 10, 2025
+4.  **Camera-ready:** July 17, 2025
+5.  **Symposium:** September 9-10, 2025
+
+## Program Chairs
+
+*   **Laura Titolo**, Code Metal, Inc.
+*   **Santiago Escobar**, Universitat PolitÃ¨cnica de ValÃ¨ncia, Spain
+
+## Contact
+
+*   **Email:** [lopstr2025@easychair.org](mailto:lopstr2025@easychair.org)",,100.00
+req-conf-1751635625861-npa9x,,International Conference on Modelling Decisions for Artificial Intelligence,MDAI,http://www.mdai.cat/mdai2025/,http://www.mdai.cat/mdai2025/mdai_2025.pdf,http://www.mdai.cat/mdai2025/dates.php,"Conference dates: September 15-18, 2025
+Year: 2025
+Location: ValÃ¨ncia, Spain
+City-State-Province: ValÃ¨ncia
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.LNAI Submission EXTENDED deadline: April 12, 2025
+Submission Date.USB-only Submission deadline: May 20, 2025
+Notification Date.LNAI Acceptance notification: May 15, 2025
+Notification Date.USB Acceptance notification: June 15, 2025
+Camera-ready Date.Final version of LNAI accepted papers: June 5, 2025
+Registration Date.Early registration: June 20, 2025
+Topics: Decision Processes, Model Building, Data Aggregation, Information Fusion, Decision Making, Data Science, Machine Learning, Data Visualization, Data Privacy, Transparency-Aware Methods, Data Processing, Statistical Algorithms, Machine Learning Algorithms, Data Visualization Tools, Data Privacy Algorithms
+Publisher: Springer-Verlag","September 15-18, 2025",2025,"ValÃ¨ncia, Spain",ValÃ¨ncia,Spain,Europe,Offline,"{""LNAI Submission EXTENDED deadline"":""April 12, 2025"",""USB-only Submission deadline"":""May 20, 2025""}","{""LNAI Acceptance notification"":""May 15, 2025"",""USB Acceptance notification"":""June 15, 2025""}","{""Final version of LNAI accepted papers"":""June 5, 2025""}","{""Early registration"":""June 20, 2025""}",{},"Decision Processes, Model Building, Data Aggregation, Information Fusion, Decision Making, Data Science, Machine Learning, Data Visualization, Data Privacy, Transparency-Aware Methods, Data Processing, Statistical Algorithms, Machine Learning Algorithms, Data Visualization Tools, Data Privacy Algorithms",Springer-Verlag,"The 22nd International Conference on Modeling Decisions for Artificial Intelligence (MDAI 2025) will be held in ValÃ¨ncia, Spain, from September 15-18, 2025. The conference focuses on decision processes, data science, AI, data privacy, aggregation functions, human decision making, graphs, social networks, and information security, with proceedings published in Springer's LNAI/LNCS series.","# The 22nd International Conference on Modeling Decisions for Artificial Intelligence (MDAI 2025)
+
+The MDAI 2025 conference will take place in **ValÃ¨ncia, Spain**, from **September 15-18, 2025**.
+
+## CFP and Submission Information
+
+*   A printable version of the CFP is available [here](mdai_2025.pdf).
+*   Authors are required to consider Springer's [Book Authors' Code of Conduct](https://www.springernature.com/gp/authors/book-authors-code-of-conduct) for submission to MDAI.
+
+## Aims and Goals
+
+MDAI is particularly interested in the different facets of decision processes in a broad sense. This includes:
+
+*   Model building and all kinds of mathematical tools for data aggregation, information fusion, and decision making.
+*   Tools to help decision in data science problems (including e.g., statistical and machine learning algorithms as well as data visualization tools).
+*   Algorithms for data privacy and transparency-aware methods so that data processing processes and decisions made from them are fair, transparent, explainable, and avoid unnecessary disclosure of sensitive information.
+
+## Tracks
+
+The MDAI conference includes tracks on the following topics:
+
+*   (i) Data science and machine learning
+*   (ii) Data privacy
+*   (iii) Aggregation functions
+*   (iv) Human decision making
+*   (v) Graphs and (social) networks
+*   (vi) Information security
+
+## Publication
+
+*   Proceedings with accepted papers are to be published in the **LNAI/LNCS series (Springer-Verlag)** and distributed at the conference.
+*   Papers that are not suitable for LNAI but have merits will be published in a **USB/ISBN proceedings** and scheduled in the MDAI program. Direct submission for the USB/ISBN proceedings is also possible.
+
+## Important Dates
+
+*   **Submission deadline (LNCS):** **April 12th, 2025** (Extended)
+*   **LNAI Submission EXTENDED deadline:** **April 12th, 2025**
+*   **LNAI Acceptance notification:** **May 15th, 2025**
+*   **USB-only Submission deadline:** **May 20th, 2025**
+*   **Final version of LNAI accepted papers:** **June 5th, 2025**
+*   **USB Acceptance notification:** **June 15th, 2025**
+*   **Early registration:** **June 20th, 2025**
+*   **Conference:** **September 15-18, 2025**
+
+For more information, please visit the conference website: [http://www.mdai.cat/mdai2025/](http://www.mdai.cat/mdai2025/)",,100.00
+req-conf-1751635625861-npa9x,,International Conference on Mobile Data Management,MDM,https://mdm2025.github.io/,https://mdm2025.github.io/callsResearch.html#main,https://mdm2025.github.io/calls.html#main,"Conference dates: June 2 - June 5, 2025
+Year: 2025
+Location: Irvine, USA
+City-State-Province: Irvine
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Paper Submission Deadline (Research Track Papers): February 12, 2025
+Submission Date.Paper Submission Deadline (Industry and Application Track Papers): March 20, 2025
+Submission Date.Proposal Submission Deadline (Call for Workshop Proposals): January 17, 2025
+Submission Date.Paper Submission Deadline (Demo and Poster Track): March 20, 2025
+Submission Date.Deadline for Submissions (Doctoral Forum Papers): April 7, 2025
+Submission Date.Submission Deadline (PhD Dissertation Showcase): March 28, 2025
+Submission Date.Submission Deadline (Advanced Seminar Proposals): February 1, 2025
+Notification Date.Notification of Paper Acceptance (Research Track Papers): March 10, 2025
+Notification Date.Notification of Paper Acceptance (Industry and Application Track Papers): April 10, 2025
+Notification Date.Notification of Acceptance (Call for Workshop Proposals): January 20, 2025
+Notification Date.Authors Notification (Demo and Poster Track): April 17, 2025
+Notification Date.Paper Author notification (Doctoral Forum Papers): April 12, 2025
+Notification Date.Notification of Acceptance (PhD Dissertation Showcase): April 10, 2025
+Notification Date.Notification of Acceptance (Advanced Seminar Proposals): February 15, 2025
+Camera-ready Date.Camera-Ready Deadline (Research Track Papers): April 25, 2025
+Camera-ready Date.Camera-Ready Deadline (Industry and Application Track Papers): April 25, 2025
+Camera-ready Date.Camera-ready Deadline (Demo and Poster Track): April 25, 2025
+Camera-ready Date.Camera-ready copy paper (Doctoral Symposium Papers): April 25, 2025
+Camera-ready Date.Camera-Ready Deadline (PhD Dissertation Showcase): April 25, 2025
+Topics: Mobile Data Management, Mobile Computing, Machine Learning and Analytics for Mobile Data, Applications and Emerging Technologies
+Publisher: IEEE","June 2 - June 5, 2025",2025,"Irvine, USA",Irvine,United States,North America,Offline,"{""Paper Submission Deadline (Research Track Papers)"":""February 12, 2025"",""Paper Submission Deadline (Industry and Application Track Papers)"":""March 20, 2025"",""Proposal Submission Deadline (Call for Workshop Proposals)"":""January 17, 2025"",""Paper Submission Deadline (Demo and Poster Track)"":""March 20, 2025"",""Deadline for Submissions (Doctoral Forum Papers)"":""April 7, 2025"",""Submission Deadline (PhD Dissertation Showcase)"":""March 28, 2025"",""Submission Deadline (Advanced Seminar Proposals)"":""February 1, 2025""}","{""Notification of Paper Acceptance (Research Track Papers)"":""March 10, 2025"",""Notification of Paper Acceptance (Industry and Application Track Papers)"":""April 10, 2025"",""Notification of Acceptance (Call for Workshop Proposals)"":""January 20, 2025"",""Authors Notification (Demo and Poster Track)"":""April 17, 2025"",""Paper Author notification (Doctoral Forum Papers)"":""April 12, 2025"",""Notification of Acceptance (PhD Dissertation Showcase)"":""April 10, 2025"",""Notification of Acceptance (Advanced Seminar Proposals)"":""February 15, 2025""}","{""Camera-Ready Deadline (Research Track Papers)"":""April 25, 2025"",""Camera-Ready Deadline (Industry and Application Track Papers)"":""April 25, 2025"",""Camera-ready Deadline (Demo and Poster Track)"":""April 25, 2025"",""Camera-ready copy paper (Doctoral Symposium Papers)"":""April 25, 2025"",""Camera-Ready Deadline (PhD Dissertation Showcase)"":""April 25, 2025""}",{},{},"Mobile Data Management, Mobile Computing, Machine Learning and Analytics for Mobile Data, Applications and Emerging Technologies",IEEE,"The 26th IEEE International Conference on Mobile Data Management (MDM 2025) will be held from June 2nd to June 5th in Irvine, USA. This conference serves as a forum for exchanging innovative research in mobile data management, bringing together researchers, engineers, and practitioners. It includes research and industry tracks, technical demonstrations, advanced seminars, panel discussions, and forums for PhD students and industrial developers.","# MDM 2025: Call for Research Track Papers
+
+The Mobile Data Management (MDM) series of conferences, since its debut in 1999, has established itself as a prestigious forum for the exchange of innovative and significant research results in mobile data management. The conference provides unique opportunities to bring researchers, engineers, and practitioners together to explore new ideas, techniques, and tools, and exchange experiences.
+
+Continuing its history, MDM 2025 seeks submissions of original research contributions in the intersection of mobile computing and data management.
+
+## Topics of Interest
+
+We welcome papers on topics including, but not limited to:
+
+*   **Mobile Data Management**
+    *   Mobile Crowd-Sourcing and Crowd-Sensing
+    *   Mobility Simulation
+    *   Indexing, Optimization and Query Processing for Moving Objects/Users
+    *   Data Management for Internet of Things (IoT) and Sensor Systems
+    *   Data Quality: Methodologies, Metrics, Algorithms
+    *   Security and Privacy
+*   **Mobile Computing and Systems**
+    *   Theoretical Foundations of Data-intensive Mobile Computing
+    *   Middleware and Tools for Mobile and Pervasive Computing
+    *   Stream Processing in Mobile/Sensor Networks
+    *   Mobile Cloud Computing and Data Management in the Mobile Cloud
+    *   Context-Aware Computing for Intelligent Mobile Services
+    *   Edge Computing for Mobility Data
+    *   Mobile Recommender Systems and Location-Based Social Networks
+*   **Machine Learning and Analytics for Mobile Data**
+    *   Spatio-Temporal Analysis
+    *   Mobility-as-a-Service (MaaS) Analytics
+    *   Behavioral/Activity Sensing and Analytics
+    *   Mobile Data Knowledge Representation
+    *   Learned Indexing, Learned Query Optimisation for Mobile Data
+    *   Visual Analytics
+    *   Responsible AI for Mobile Data: Explainability (XAI), Privacy-Preserving AI, Ethical Use of AI, Fairness, Interpretability, Safety
+    *   Federated Learning over Mobile Edge Data Sources
+*   **Applications and Emerging Technologies**
+    *   Connected Cars, Intelligent Transportation Systems, Smart Spaces
+    *   Routing, Personalized Routing, Eco-Routing, Routing for Electrical Vehicles
+    *   Transportation-As-A-Service, Mobility-As-A-Service
+    *   Augmented Reality Systems
+    *   Data Economy, Incentive Mechanisms, Reputation Systems, and Game-theoretic Approaches
+    *   Connections to other Technologies (e.g., Blockchain) and Domains (e.g., Social Sciences).
+    *   Digital Twins and Industrial Metaverses
+
+## Submission Guidelines
+
+*   Please use the following URL for paper submissions: [https://cmt3.research.microsoft.com/MDM2025](https://cmt3.research.microsoft.com/MDM2025)
+*   All submissions need to follow IEEE Computer Society Proceedings Manuscript Formatting Guidelines. See templates here: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html).
+*   **Page Limits:**
+    *   Regular Papers: **10 pages**, including all figures, tables and appendix.
+    *   Short Papers: **6 pages**, including all figures, tables and appendix.
+*   **Notes:**
+    *   References do not count towards the page limit.
+    *   Paper exceeding the page limit in the respective category may be rejected without review. If there are any appendices, they are counted within the page limit.
+    *   Submission of a meaningful abstract by the abstract deadline is a precondition for paper submission.
+    *   The Review Process will be **single-blind** (i.e., the reviewers are not identified, while author names are listed in the submission).
+
+## Important Dates
+
+All deadlines are at 23:59 AoE (Anywhere on Earth) Time Zone.
+
+*   **Paper Submission Deadline:** February 12, 2025
+*   **Notification of Paper Acceptance:** March 10, 2025
+*   **Camera-ready Submission:** April 25, 2025
+
+## Proceedings
+
+The proceedings of MDM 2025 will be published by IEEE via CPS and will be included in the IEEE XploreÂ® Digital Library.
+
+Selected best papers from MDM 2025 will be invited to submit a high ranked Journal (Journal details will be published shortly).",,100.00
+req-conf-1751635625861-npa9x,,Language Resources and Evaluation Conference,LREC,https://www.elra.info/lrec2026/,,,"Conference dates: May 11 - 16, 2026
+Year: 2026
+Location: Palau de Congressos de Palma, Palma de Mallorca, Spain
+City-State-Province: Palma de Mallorca
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Other Date.Three-day main conference: May 13 - 15, 2026
+Other Date.Workshops and tutorials: May 11 - 12, 2026 and May 16, 2026
+Topics: natural language processing, computational linguistics, speech and multimodality, evaluation and the development of resources
+Publisher: ELRA","May 11 - 16, 2026",2026,"Palau de Congressos de Palma, Palma de Mallorca, Spain",Palma de Mallorca,Spain,Europe,Hybrid,{},{},{},{},"{""Three-day main conference"":""May 13 - 15, 2026"",""Workshops and tutorials"":""May 11 - 12, 2026 and May 16, 2026""}","natural language processing, computational linguistics, speech and multimodality, evaluation and the development of resources",ELRA,"The 15th edition of the Language Resources and Evaluation Conference (LREC 2026) will be held in Palma de Mallorca, Spain, from May 11-16, 2026. The main conference will run from May 13-15, 2026, with workshops and tutorials on May 11-12 and May 16, 2026. This hybrid conference brings together researchers and practitioners in natural language processing, computational linguistics, speech, and multimodality, with a focus on evaluation and resource development.","# LREC 2026: Call for Papers
+
+The 15th edition of the Language Resources and Evaluation Conference (LREC 2026) will be held at the Palau de Congressos de Palma, Palma de Mallorca, Spain.
+
+*   **Conference Dates:** May 18, 2025 to May 22, 2025
+*   **Main Conference:** May 13-15, 2026
+*   **Workshops and Tutorials:** May 11-12, 2026 and May 16, 2026
+
+LREC 2026 is a hybrid conference that brings together researchers and practitioners in natural language processing, computational linguistics, speech, and multimodality. It places special attention on evaluation and the development of resources that support these areas.
+
+The conference will feature grand challenges and provide opportunities for participants to exchange information and ideas through oral presentations, extensive poster sessions, and an exciting social program.",,100.00
+req-conf-1751635625861-npa9x,,Symposium Model Analysis and Simulation of Computer and Telecommunications Systems,MASCOTS,https://mascots25.iitis.pl/,https://mascots25.iitis.pl/index.php/call-for-papers/,https://mascots25.iitis.pl/index.php/dates/,"Conference dates: October 21 - 23, 2025
+Year: 2025
+Location: Paris, France
+City-State-Province: Paris
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Paper submission deadline: June 1, 2025
+Notification Date.Notifications: August 8, 2025
+Camera-ready Date.Camera-ready: September 12, 2025
+Registration Date.Author registration deadline: September 5, 2025
+Topics: Performance Evaluation of Computer Systems and Networks, Big data, Machine learning, Cloud/edge/fog technologies, Computer architectures, Computer networks, Databases, Internet-of-Things, Mobile systems, Multimedia systems, Operating systems, Security, Smart grids, Wireless, mobile, ad-hoc, and sensor networks
+Publisher: IEEE Computer Society","October 21 - 23, 2025",2025,"Paris, France",Paris,France,Europe,Offline,"{""Paper submission deadline"":""June 1, 2025""}","{""Notifications"":""August 8, 2025""}","{""Camera-ready"":""September 12, 2025""}","{""Author registration deadline"":""September 5, 2025""}",{},"Performance Evaluation of Computer Systems and Networks, Big data, Machine learning, Cloud/edge/fog technologies, Computer architectures, Computer networks, Databases, Internet-of-Things, Mobile systems, Multimedia systems, Operating systems, Security, Smart grids, Wireless, mobile, ad-hoc, and sensor networks",IEEE Computer Society,"The 33rd International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2025) will take place from October 21-23, 2025, at the AmphithÃ©Ã¢tre Roussy, Sorbonne University in Paris, France. This conference serves as a forum for state-of-the-art research on the measurement, modeling, and performance analysis of computer systems and networks.","# Call for Papers: MASCOTS 2025
+
+## Introduction
+The 33rd International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2025) is a well-established forum for state-of-the-art research on the measurement, modeling, and performance analysis of computer systems and networks. The conference will take place on **October 21-23, 2025**, at the **AmphithÃ©Ã¢tre Roussy, Sorbonne University in Paris, France**. The conference will bring together academia and industry to present and discuss their latest research results. The technical program for the 3-day conference will include keynote talks and refereed paper presentations, including workshops.
+
+## Topics of Interest
+
+We encourage original submissions describing state-of-the-art research in the areas of the performance evaluation of computer systems and networks as well as in related areas. Papers describing results of theoretical and/or practical significance are welcome. Experimental, modeling, and simulation studies are all in the scope of the conference. Papers focusing on novel performance evaluation methods or providing insights on design and runtime management tradeoffs are particularly encouraged.
+
+Topics of interest include (but are not limited to):
+
+*   Big data and advanced machine learning techniques for system design, optimization, and cybersecurity
+*   Cloud/edge/fog technologies
+*   Combining quality of service and cybersecurity in system performance
+*   Computer architectures, multi-core processors, accelerators (e.g., GPUs), and memory systems
+*   Computer networks, protocols, and algorithms
+*   Databases and big data systems and technologies
+*   Internet-of-Things
+*   Mobile systems
+*   Multimedia systems
+*   Operating systems and virtualization technologies
+*   Security in computer and communication systems
+*   Smart grids and cyber-physical systems
+*   Social networks
+*   Storage and file systems
+*   Sustainable (or energy-efficient) computing
+*   Web systems, enterprise applications, and web services
+*   Wireless, mobile, ad-hoc, and sensor networks
+
+## Submission Instructions
+
+*   **Submission Portal:** Papers should be submitted through EasyChair: [https://easychair.org/conferences/?conf=mascots2025](https://easychair.org/conferences/?conf=mascots2025)
+*   **Paper Length:** All submissions may be up to **8 pages** in length, including tables, figures, appendices, and references.
+*   **Formatting:** Papers must be formatted in IEEE style using two-columns. Guidelines regarding paper formatting are available at the IEEE Manuscript Templates for Conference Proceedings. If using LaTeX, we suggest using the following: \documentclass[10pt,conference,letterpaper]{IEEEtran}.
+*   **Review Process:** A **single blind review process** will be used; the authorsâ€™ names may be present within the pdf files submitted for review.
+*   **Originality:** Papers must be unpublished and must not be submitted or under review for publication elsewhere.
+*   **Presentation:** Accepted papers will only be included in the program if there is one distinct registered author per paper who presents it.
+
+## Important Dates
+
+*   **Paper submission deadline:** **June 1st, 2025** (Extended)
+*   **Notifications:** **August 8th, 2025**
+*   **Author registration deadline:** **September 5th, 2025**
+*   **Camera-ready:** **September 12th, 2025**
+
+## Publication and Awards
+
+*   Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xploreâ€™s scope and quality requirements.
+*   A selection of accepted papers will be invited to submit an extended version to the prestigious **Performance Evaluation (PEVA) journal**.
+*   Some of the best submitted papers that fall below the acceptance threshold for the main conference program will be invited to the MASCOTSâ€™25 Workshop. If they are orally live presented at the workshop by one registered author, they will then be published in the MASCOTSâ€™25 proceedings as **4-page short papers**.
+
+## Contact
+
+All questions about submissions should be emailed to mascots2025 at easychair dot org.
+
+## Technical Co-Sponsors
+
+*   IEEE Computer Society
+*   IEEE France Section",,100.00
+req-conf-1751635625861-npa9x,,International Symposium on Microarchitecture,MICRO,https://microarch.org/micro58/,https://microarch.org/micro58/submit/papers.php,https://microarch.org/micro58/,"Conference dates: October 18 - 22, 2025
+Year: 2025
+Location: Seoul, Korea
+City-State-Province: Seoul
+Country: Korea
+Continent: Asia
+Type: Offline
+Submission Date.Abstract Deadline: April 4, 2025
+Submission Date.Full Paper Deadline: April 11, 2025
+Notification Date.Author Notification: July 14, 2025
+Other Date.Workshop/Tutorial Proposal Deadline: May 31, 2025
+Other Date.Rebuttal/Revision: June 9-21, 2025
+Topics: Microarchitecture, Compilers, Hardware/Software Interfaces, Advanced Computing, Communication Systems","October 18 - 22, 2025",2025,"Seoul, Korea",Seoul,Korea,Asia,Offline,"{""Abstract Deadline"":""April 4, 2025"",""Full Paper Deadline"":""April 11, 2025""}","{""Author Notification"":""July 14, 2025""}",{},{},"{""Workshop/Tutorial Proposal Deadline"":""May 31, 2025"",""Rebuttal/Revision"":""June 9-21, 2025""}","Microarchitecture, Compilers, Hardware/Software Interfaces, Advanced Computing, Communication Systems",No publisher,"The 58th IEEE/ACM International Symposium on Microarchitecture (MICRO 2025) is the premier forum for presenting and discussing innovative microarchitecture ideas for advanced computing and communication systems. The symposium will be held from October 18 to October 22, 2025, in Seoul, Korea, fostering technical exchange between academic researchers and industrial designers.","# Call for Papers
+
+The International Symposium on MicroarchitectureÂ® (MICRO) is the premier forum for the presentation and discussion of new ideas in microarchitecture, compilers, hardware/software interfaces, and the design of advanced computing and communication systems.
+
+MICRO 2025 aims to bring together researchers in the fields of microarchitecture, compilers, and systems for technical exchange. The conference fosters close interaction between academic researchers and industrial designers.
+
+## Important Dates
+
+*   **Abstract Deadline:** April 4, 2025 at 11:59 PM EDT
+*   **Full Paper Deadline:** April 11, 2025 at 11:59 PM EDT
+*   **Workshop/Tutorial Proposal Deadline:** May 31, 2025
+*   **Rebuttal/Revision:** June 9-21, 2025
+*   **Author Notification:** July 14, 2025
+
+## Topics of Interest
+
+We invite original paper submissions related to (but not limited to) the following topics:
+
+*   Microarchitectural, architectural, compiler, and hybrid techniques for improving system performance, power, energy-efficiency, security, cost, complexity, programmer productivity, predictability, quality of service, reliability, dependability, scalability, sustainability
+*   Processor, memory, and storage architectures
+*   Multicore and multiprocessor systems
+*   Instruction-, thread-, and data-level parallelism
+*   Prediction and Speculation
+*   Memory Hierarchy
+*   Cloud and datacenter-scale computing
+*   IoT, mobile, and embedded architecture
+*   Interconnection network, router, and network interface architecture
+*   Accelerator-based, application-specific, and reconfigurable architectures
+*   Architectural support for programming languages, compilation, software development, security and privacy, virtualization
+*   Architectures for emerging technologies and applications
+*   Architectural support for non-volatile/persistent memory
+*   Quantum computing
+*   In-/near-memory or in-/near-storage processing
+*   Approximate computing and architectural support for approximation
+*   Effects of circuits and technology on architecture
+*   Architecture modeling and simulation methodologies
+*   Evaluation and measurement of real computing systems
+
+## Submission Guidelines
+
+### Paper Submission
+
+*   Submissions should follow the guidelines and formatting rules specified on the conference website.
+*   Papers that violate these guidelines and rules may be returned to author(s) without review.
+*   **Abstract Deadline:** April 4, 2025 at 11:59 PM EDT
+*   **Full Paper Deadline:** April 11, 2025 at 11:59 PM EDT
+*   All submissions must be uploaded on HotCRP: [https://micro2025.hotcrp.com/](https://micro2025.hotcrp.com/)
+
+### Review Process
+
+*   Papers will go through a rigorous peer-review process.
+*   All accepted papers will be presented at the conference.
+*   The review process is double-blind, allowing Program Committee members and the Organizing Committee to submit papers subject to conflict-of-interest declarations.
+
+## Other Submissions
+
+*   **Workshops & Tutorials:** [View the Call for Workshops & Tutorials](submit/workshops.php)
+*   **Student Research Competition:** [View the Student Research Competition Guidelines](submit/src.php)
+*   **Artifact Evaluation (AE) Committee:** [Nominate to join the AE Committee](https://lnkd.in/gQHCTmgt)",,100.00
+req-conf-1751635625861-npa9x,,ACM/IFIP/USENIX International Middleware Conference,Middleware,https://middleware-conf.github.io/2025/,https://middleware-conf.github.io/2025/calls/call-for-research-papers,https://middleware-conf.github.io/2025/important-dates/,"Conference dates: December 15 - 19, 2025
+Year: 2025
+Location: Nashville, TN, USA
+City-State-Province: Nashville, Tennessee
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Full Paper Submission: December 13, 2024
+Submission Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Full Paper Submission: June 06, 2025
+Notification Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Early rejection notification: January 20, 2025
+Notification Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Author Notification: March 7, 2025
+Notification Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Author Notification: September 5, 2025
+Notification Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Notifications of Decisions of Shepherded Papers: April 11, 2025
+Notification Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Notifications of Decisions of Shepherded Papers: October 10, 2025
+Camera-ready Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Camera Ready Due: April 25, 2025
+Camera-ready Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Camera Ready Due: October 24, 2025
+Other Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Rebuttal: February 26-28, 2025
+Other Date.(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Shepherded Submissions Due: March 28, 2025
+Other Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Rebuttal: August 18-22, 2025
+Other Date.(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Shepherded Submissions Due: September 26, 2025
+Topics: Middleware Systems, Distributed Systems, Cloud Computing, Edge Computing, Mobile Systems, Pervasive Systems, Cyber-Physical Systems, Real-Time Systems, Security, Privacy, AI, Machine Learning, Data Science, Blockchains, Networking, Software-Defined Networking
+Publisher: ACM/IFIP","December 15 - 19, 2025",2025,"Nashville, TN, USA","Nashville, Tennessee",United States,North America,Offline,"{""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Full Paper Submission"":""December 13, 2024"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Full Paper Submission"":""June 06, 2025""}","{""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Early rejection notification"":""January 20, 2025"",""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Author Notification"":""March 7, 2025"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Author Notification"":""September 5, 2025"",""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Notifications of Decisions of Shepherded Papers"":""April 11, 2025"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Notifications of Decisions of Shepherded Papers"":""October 10, 2025""}","{""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Camera Ready Due"":""April 25, 2025"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Camera Ready Due"":""October 24, 2025""}",{},"{""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Rebuttal"":""February 26-28, 2025"",""(FIRST RESEARCH TRACK CYCLE (FALL/WINTER)) Shepherded Submissions Due"":""March 28, 2025"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Rebuttal"":""August 18-22, 2025"",""(SECOND RESEARCH TRACK CYCLE (SPRING/SUMMER)) Shepherded Submissions Due"":""September 26, 2025""}","Middleware Systems, Distributed Systems, Cloud Computing, Edge Computing, Mobile Systems, Pervasive Systems, Cyber-Physical Systems, Real-Time Systems, Security, Privacy, AI, Machine Learning, Data Science, Blockchains, Networking, Software-Defined Networking",ACM/IFIP,"The 26th ACM/IFIP International Middleware Conference (Middleware 2025) will be held from December 15-19, 2025, at Vanderbilt University in Nashville, TN, USA. This physical conference focuses on innovations and recent scientific advances in middleware systems, covering design, implementation, deployment, and evaluation of distributed systems, platforms, and architectures. It includes a single-track technical program, industry track, panels, posters, demos, a doctoral symposium, tutorials, and workshops.","# Middleware 2025: Call for Research Papers
+
+The 26th ACM/IFIP International Middleware Conference (Middleware 2025) will be a **physical conference** held from **December 15â€“ 19, 2025**, at **Vanderbilt University in Nashville, TN, USA**. All presentations are expected to be in person.
+
+Middleware 2025 is a major forum for discussing innovations and recent scientific advances in middleware systems, focusing on the design, implementation, deployment, and evaluation of distributed systems, platforms, and architectures.
+
+## Topics of Interest
+
+The conference seeks original submissions of research papers on a diverse range of topics, particularly those identifying new research directions, including but not limited to:
+
+*   **Middleware Applications:**
+    *   Middleware for cyber-physical and real-time systems
+    *   Middleware support for security and privacy
+    *   Middleware for AI and machine learning systems
+    *   Middleware for data science pipelines
+    *   Middleware techniques for internet-of-things and smart cities
+    *   Middleware for multimedia systems
+*   **Middleware Systems:**
+    *   Fault tolerance and consistency
+    *   Distributed and parallel systems
+    *   Distributed ledgers and blockchains
+    *   Event-based, publish/subscribe, streaming, and peer-to-peer systems
+    *   Serverless and Function-as-a-Service computing
+    *   Data-intensive systems (big data)
+    *   Cloud, fog, edge computing, and data centers
+    *   Networking, network function virtualization, and software-defined networking
+    *   Mobile and pervasive systems and services
+    *   Emerging hardware technologies
+*   **Middleware Design Principles and Programming Models:**
+    *   Programming abstractions and paradigms for middleware
+    *   Reconfigurable, adaptable, and reflective middleware
+    *   Critical reviews of middleware paradigms (e.g., object models, aspect orientation)
+    *   Methodologies and tools for middleware systems design, implementation, verification, and evaluation
+    *   Monitoring, resource management, and analysis
+    *   Virtualization, auto-scaling, provisioning, and scheduling
+    *   Energy and power-aware techniques
+
+## Types of Papers
+
+The conference seeks original papers of five types:
+
+1.  **Research Papers:** Report original research on the above topics, evaluated on problem significance, solution novelty, advancement beyond prior work, supporting evidence, and clarity.
+2.  **Experimentation and Deployment Papers:** Describe complete systems, platforms, or comprehensive experimental evaluations. Emphasis is on demonstrated usefulness, impact, extensive experimentation, and quality of lessons learned.
+3.  **Big Ideas Papers:** Papers with the potential to open up new research directions. Motivation for new research is more important than full experimental evaluation, though some preliminary evidence is required. Senior researchers are expected to present these papers.
+4.  **Short Papers:** Adhere to the same standards as full research papers but presented in a more compact format.
+
+## Important Dates and Deadlines
+
+All times are Anywhere on Earth (AoE).
+
+### First Research Track Cycle (Fall/Winter)
+
+*   **Full Paper Submission:** December 13, 2024
+*   **Early rejection notification:** January 20, 2025
+*   **Rebuttal:** February 26-28, 2025
+*   **Author Notification:** March 7, 2025
+*   **Shepherded Submissions Due:** March 28, 2025
+*   **Notifications of Decisions of Shepherded Papers:** April 11, 2025
+*   **Camera Ready Due:** April 25, 2025
+
+### Second Research Track Cycle (Spring/Summer)
+
+*   **Full Paper Submission:** June 06, 2025 -- 23:59
+*   **Rebuttal:** August 18-22, 2025
+*   **Author Notification:** September 5, 2025
+*   **Shepherded Submissions Due:** September 26, 2025
+*   **Notifications of Decisions of Shepherded Papers:** October 10, 2025
+*   **Camera Ready Due:** October 24, 2025
+
+## Resubmission/Revision Guidelines
+
+Papers may receive decisions such as accept, conditional accept (shepherding), minor revision (one-shot revision), major revision (resubmission to next cycle), or reject.
+
+*   Research (including short) and experimentation/deployment tracks are eligible for minor revision.
+*   Research and experimentation/deployment tracks are eligible for major revision.
+*   Big ideas papers are not eligible for revision but may be shepherded.
+
+Rejected papers cannot be resubmitted until a full year has passed.
+
+## Submission Guidelines
+
+*   Submissions must be made by the specified due dates.
+*   **Regular papers:** at most 12 pages of technical content (excluding bibliography).
+*   **Short and WIP papers:** at most 6 pages of technical content (excluding bibliography).
+*   Submissions must be **doubly anonymous** (authors' names and affiliations must not appear on the title page or elsewhere; avoid self-references that reveal identity).
+*   Papers must adhere to the **ACM SIGCONF style**, with a font size set to 9pt.
+*   Submit papers to:
+    *   Round 1: [https://middleware2025r1.hotcrp.com/](https://middleware2025r1.hotcrp.com/)
+    *   Round 2: [https://middleware2025r2.hotcrp.com/](https://middleware2025r2.hotcrp.com/)
+*   Submitted papers must not be under review for any other conference or journal and must be substantially different from any previously published work.
+*   All accepted papers will appear in the proceedings. ACM reserves the right to exclude papers from distribution if no author attends to present them.
+
+## Anonymity Requirements for Double-Blind Reviewing
+
+*   Authors' names and affiliations must not appear on the title page or elsewhere.
+*   Funding sources must not be acknowledged.
+*   Non-anonymized links to authors' online content must be removed.
+*   Research group members or other colleagues must not be acknowledged.
+*   The paper's file name must not identify the authors.
+*   Reference past work in the third person.
+*   Limit self-references to the essential, and do not reference extended versions of the submitted paper.
+
+Papers that do not follow these guidelines may be subject to immediate rejection.
+
+## Software and Data Artifact Availability
+
+Authors of accepted papers are invited to submit supporting materials for evaluation to be made publicly available in the ACM Digital Library. This is voluntary but encouraged and will not influence paper decisions. Successfully evaluated artifacts will receive a badge.
+
+## Presentation Requirements
+
+Presentations should be engaging and speakers should connect with the audience. Reading off scripts is discouraged.
+
+*   All student authors are required to attend a session on effective presentation techniques.
+*   Senior researchers must present Big Ideas papers.
+*   ACM reserves the right to exclude a paper from proceedings if none of the authors attend to present it.",,100.00
+req-conf-1751635625861-npa9x,,Medical Image Computing and Computer-Assisted Intervention,MICCAI,https://conferences.miccai.org/2025/en/,https://conferences.miccai.org/2025/en/CALL-FOR-PAPERS.html,https://conferences.miccai.org/2025/en/IMPORTANT-DATES.html,"Conference dates: September 23 - 27, 2025
+Year: 2025
+Location: Daejeon Convention Center, Daejeon, Republic of Korea
+City-State-Province: Daejeon
+Country: Republic of Korea
+Continent: Asia
+Type: Offline
+Submission Date.Paper Abstract Registration (Intention to Submit): February 13, 2025
+Submission Date.Main Conference Paper Submission (including Supplementary Materials): February 27, 2025
+Submission Date.Abstract Submission Deadline: April 15, 2025
+Submission Date.Workshop/Challenge/Tutorial Proposals: January 9, 2025
+Notification Date.Early Acceptance Notification; Reviews released to Authors: May 12, 2025
+Notification Date.Acceptance Notification: May 31, 2025
+Notification Date.Notification of Paper Decisions: June 17, 2025
+Other Date.Rebuttal Period: May 13 - 19, 2025
+Other Date.Clinical Day (CLINICCAI): September 25, 2025
+Other Date.Satellite Events Dates: September 23 & 27, 2025
+Topics: Medical Image Computing, Computer Assisted Intervention
+Publisher: MICCAI","September 23 - 27, 2025",2025,"Daejeon Convention Center, Daejeon, Republic of Korea",Daejeon,Republic of Korea,Asia,Offline,"{""Paper Abstract Registration (Intention to Submit)"":""February 13, 2025"",""Main Conference Paper Submission (including Supplementary Materials)"":""February 27, 2025"",""Abstract Submission Deadline"":""April 15, 2025"",""Workshop/Challenge/Tutorial Proposals"":""January 9, 2025""}","{""Early Acceptance Notification; Reviews released to Authors"":""May 12, 2025"",""Acceptance Notification"":""May 31, 2025"",""Notification of Paper Decisions"":""June 17, 2025""}",{},{},"{""Rebuttal Period"":""May 13 - 19, 2025"",""Clinical Day (CLINICCAI)"":""September 25, 2025"",""Satellite Events Dates"":""September 23 & 27, 2025""}","Medical Image Computing, Computer Assisted Intervention",MICCAI,"The 28th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2025) will be held from September 23-27, 2025, at the Daejeon Convention Center in Daejeon, Republic of Korea. This premier event brings together leading biomedical scientists, engineers, and clinicians, featuring scientific content, satellite events like workshops and tutorials, and industrial exchanges.","# MICCAI 2025: Call for Papers
+
+## Welcome and Overview
+
+The **28th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2025)** will be held from **September 23rd to September 27th, 2025**, at the **Daejeon Convention Center, Daejeon, Republic of Korea**. This marks the first time MICCAI will be hosted in Korea.
+
+MICCAI is a premier international conference attracting leading biomedical scientists, engineers, and clinicians. The main conference features three days of scientific content, including oral presentations and poster sessions. This is complemented by satellite events such as workshops, tutorials, and challenges held on the days preceding and succeeding the main conference. The event also includes industrial sessions, exhibitions, and social programs organized by the Student Board and Women in MICCAI Board.
+
+## Main Conference Submission Deadlines
+
+*   **Paper Abstract Registration (Intention to Submit):** **February 13, 2025**
+*   **Main Conference Paper Submission (including Supplementary Materials):** **February 27, 2025**
+*   **Early Acceptance Notification; Reviews released to Authors:** **May 12, 2025**
+*   **Rebuttal Period:** **May 13 to May 19, 2025**
+*   **Notification of Paper Decisions:** **June 17, 2025**
+*   **Camera-Ready Submission Deadline:** (Details available via [CAMERA-READY-SUBMISSION-GUIDELINES.html](CAMERA-READY-SUBMISSION-GUIDELINES.html))
+
+## Paper Submission Process
+
+*   **Submission Site:** [https://cmt3.research.microsoft.com/MICCAI2025/Submission/Index](https://cmt3.research.microsoft.com/MICCAI2025/Submission/Index)
+*   **Submission Guidelines:** Refer to [PAPER-SUBMISSION-GUIDELINES.html](PAPER-SUBMISSION-GUIDELINES.html) for detailed formatting and content requirements.
+*   **Submission FAQ:** Consult [PAPER-SUBMISSION-FAQ.html](PAPER-SUBMISSION-FAQ.html) for common questions.
+*   **Rebuttal Guidelines:** Detailed instructions available at [REBUTTAL GUIDELINES](REBUTTAL GUIDELINES).
+*   **Camera-Ready Submission FAQ:** [CAMERA-READY-SUBMISSION-FAQ.html](CAMERA-READY-SUBMISSION-FAQ.html)
+
+## Other Calls for Participation
+
+MICCAI 2025 welcomes contributions across various formats:
+
+*   **General Calls:**
+    *   [CALL FOR PAPERS](CALL-FOR-PAPERS.html)
+    *   [CALL FOR WORKSHOPS](CALL-FOR-WORKSHOPS.html)
+    *   [CALL FOR TUTORIALS](CALL-FOR-TUTORIALS.html)
+    *   [CALL FOR CHALLENGES](CALL-FOR-CHALLENGES.html)
+    *   [CALL FOR AREA CHAIRS](CALL-FOR-AREA-CHAIRS.html)
+    *   [CALL FOR REVIEWERS](CALL-FOR-REVIEWERS.html)
+*   **Specialized Calls:**
+    *   [CALL FOR CLINICCAI ABSTRACT](https://conferences.miccai.org/2025/en/CLINICAL-DAY.html#cfa)
+    *   [CALL FOR OPEN DATA PAPERS](OPEN-DATA.html)
+    *   [CALL FOR MICCAI 2025 STARTUP VILLAGE](CALL-FOR-MICCAI-2025-STARTUP-VILLAGE.html)
+    *   [CALL FOR DOCTORAL CONSORTIUM](CALL-FOR-DOCTORAL-CONSORTIUM.html)
+
+## Satellite Events
+
+*   **Proposal Deadline:** **January 9, 2025**
+*   **Event Dates:** **September 23 & September 27, 2025**
+
+## Review Process Information
+
+Detailed guidelines and information regarding the review process are available:
+
+*   [THE MICCAI REVIEW PROCESS](THE-MICCAI-REVIEW-PROCESS.html)
+*   [MILESTONE & IMPORTANT DATES FOR THE REVIEW PROCESS](MILESTONE---IMPORTANT-DATES-FOR-THE-REVIEW-PROCESS.html)
+*   Area Chair Guidelines & Responsibilities
+*   Reviewer Guidelines
+*   Instructions to Area Chairs
+*   Instructions to Reviewers
+*   Main Conference Presentation Instructions",,100.00
+req-conf-1751635625861-npa9x,,International Conference on Multimedia Modelling,MMM,https://mmm2025.net/,https://mmm2025.net/calls/,https://mmm2025.net/calls/,"Conference dates: January 8 - 10, 2025
+Year: 2025
+Location: Nara, Japan
+City-State-Province: Nara
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Special Session Proposal: March 27, 2024
+Submission Date.Regular and Special Session Paper: August 19, 2024
+Submission Date.Demo Paper: September 12, 2024
+Submission Date.Video Browser Showdown: September 27, 2024
+Notification Date.Special Session Acceptance: April 5, 2024
+Notification Date.Regular Paper, Special Session Paper Acceptance: October 9, 2024
+Notification Date.Demo Paper, Video Browser Showdown Acceptance: October 16, 2024
+Camera-ready Date.Camera Ready Submission: October 23, 2024
+Registration Date.Registration Site Open: November 8, 2024
+Registration Date.Early-bird Registration Deadline: November 15, 2024
+Registration Date.Late Registration Deadline: January 10, 2025
+Other Date.Video Browser Showdown (Preparation: Authorized Personnel Only): January 7, 2025
+Other Date.Video Browser Showdown: January 8, 2025
+Other Date.Main Conference: January 8-10, 2025
+Topics: Multimedia Modeling
+Publisher: Not specified","January 8 - 10, 2025",2025,"Nara, Japan",Nara,Japan,Asia,Offline,"{""Special Session Proposal"":""March 27, 2024"",""Regular and Special Session Paper"":""August 19, 2024"",""Demo Paper"":""September 12, 2024"",""Video Browser Showdown"":""September 27, 2024""}","{""Special Session Acceptance"":""April 5, 2024"",""Regular Paper, Special Session Paper Acceptance"":""October 9, 2024"",""Demo Paper, Video Browser Showdown Acceptance"":""October 16, 2024""}","{""Camera Ready Submission"":""October 23, 2024""}","{""Registration Site Open"":""November 8, 2024"",""Early-bird Registration Deadline"":""November 15, 2024"",""Late Registration Deadline"":""January 10, 2025""}","{""Video Browser Showdown (Preparation: Authorized Personnel Only)"":""January 7, 2025"",""Video Browser Showdown"":""January 8, 2025"",""Main Conference"":""January 8-10, 2025""}",Multimedia Modeling,Not specified,"The 31st International Conference on Multimedia Modelling (MMM 2025) will be held in Nara, Japan, from January 8-10, 2025. It is a leading conference for researchers and practitioners in multimedia modeling, featuring research papers, demonstrations, special sessions, keynote lectures, the Video Browser Showdown, and the MediaEval workshop.","# MMM 2025: Call for Papers
+
+Welcome to Multimedia Modelling 2025, the premier conference for researchers and practitioners in the field of multimedia modeling. The conference will be held in **Nara, Japan** from **January 8 - 10, 2025**.
+
+MMM is a leading international conference for sharing new ideas, original research results, and practical development experiences from all MMM related areas.
+
+## Submission Types
+
+*   **Research Papers:** Reporting original investigation results.
+*   **Demonstrations:** Reporting novel and compelling applications.
+*   **Special Sessions:** Proposals for focused sessions on emerging topics.
+*   **Brave New Ideas Session:** For early-stage research and novel concepts.
+*   **Keynote Lectures:** Insights from leading experts.
+*   **Video Browser Showdown:** A competition showcasing multimedia retrieval systems.
+*   **MediaEval Workshop:** Focused on multimedia content analysis and retrieval evaluation.
+
+## Important Dates
+
+All deadlines refer to 23:59 of the day in the Anywhere on Inhabited Earth (AOE).
+
+*   **Special Session Proposal Submission:** March 27, 2024
+*   **Special Session Acceptance Notification:** April 5, 2024
+*   **Regular and Special Session Paper Submission:** July 22, 2024 (Extended to August 19, 2024)
+*   **Demo Paper Submission:** August 19, 2024 (Extended to September 2, 2024)
+*   **Video Browser Showdown Submission:** September 6, 2024 (Extended to September 27, 2024)
+*   **Regular Paper, Special Session Paper Acceptance Notification:** September 24, 2024 (Extended to October 9, 2024)
+*   **Demo Paper, Video Browser Showdown Acceptance Notification:** September 24, 2024 (Extended to October 16, 2024)
+*   **Camera Ready Submission:** October 23, 2024
+*   **Registration Site Open:** November 8, 2024
+*   **Early-bird Registration Deadline:** November 15, 2024
+*   **Late Registration Deadline:** January 10, 2025
+*   **Video Browser Showdown Preparation:** January 7, 2025
+*   **Video Browser Showdown:** January 8, 2025
+*   **Main Conference:** January 8-10, 2025
+
+## Venue
+
+Nara Kasugano International Forum ç” IRAKA
+101 Kasugano-cho, Nara, 630-8212, Japan
+
+## Publication
+
+*   Published by IARIA Press (operated by Xpert Publishing Services).
+*   Archived in the Open Access IARIA ThinkMind Digital Library.
+*   Prints available at Curran Associates, Inc.
+*   Authors of selected papers will be invited to submit extended versions to an IARIA Journal.
+
+## CFP Flyer
+
+[Download PDF Version](/pdf/MMM2025CFP.pdf)
+
+## Sponsors
+
+Details to be announced.
+
+## Subsidies
+
+Supported by International Exchange Program of National Institute of Information and Communications Technology (NICT).
+
+## Contact
+
+Information can be found on the conference website.",,100.00
+req-conf-1751635625861-npa9x,,International Conference on Model Driven Engineering Languages and Systems,MODELS,https://2025.models-conf.com/,https://2025.models-conf.com/track/models-2025-research-papers,https://2025.models-conf.com/dates,"Conference dates: October 5 - 10, 2025
+Year: 2025
+Location: Grand Rapids, Michigan, United States
+City-State-Province: Grand Rapids, Michigan
+Country: United States
+Continent: North America
+Type: Hybrid
+Submission Date.(Research Papers) Abstract submission: March 27, 2025
+Submission Date.(Research Papers) Paper submission: April 3, 2025
+Submission Date.(Posters) Submission deadline (stand-alone submissions): July 4, 2025
+Submission Date.(EDTconf Technical Track) Abstract submission deadline: July 4, 2025
+Submission Date.(New Ideas and Emerging Results (NIER)) Paper submission: July 8, 2025
+Submission Date.(EDTconf Technical Track) Paper submission deadline: July 9, 2025
+Submission Date.(Tools and Demonstrations) Submission deadline: July 10, 2025
+Submission Date.(Tutorials) Submission deadline: July 11, 2025
+Submission Date.(Journal-First) Submission deadline: July 11, 2025
+Submission Date.(ACM SRC) Submission deadline: July 18, 2025
+Submission Date.(Artifact Evaluation) Submission deadline: July 3, 2025
+Submission Date.(Workshops) Submissions Deadline: July 3, 2025
+Notification Date.(Research Papers) Author notification: June 24, 2025
+Notification Date.(EDTconf Technical Track) Notification of acceptance: August 5, 2025
+Notification Date.(Posters) Notification to authors (stand-alone submissions): August 6, 2025
+Notification Date.(Tutorials) Author notification: August 14, 2025
+Notification Date.(New Ideas and Emerging Results (NIER)) Author notification: August 19, 2025
+Notification Date.(Educators Symposium) Author notification: August 19, 2025
+Notification Date.(Artifact Evaluation) Notification to authors: August 2, 2025
+Notification Date.(Tools and Demonstrations) Notification of authors: July 31, 2025
+Notification Date.(Workshops) Notification of Authors: July 31, 2025
+Camera-ready Date.(Research Papers) Camera Ready: August 7, 2025
+Camera-ready Date.(Tools and Demonstrations) Camera-ready: August 7, 2025
+Camera-ready Date.(Workshops) Camera-ready Deadline: August 7, 2025
+Camera-ready Date.(Posters) Camera-ready deadline (stand-alone submissions): August 15, 2025
+Camera-ready Date.(EDTconf Technical Track) Camera-ready submission: August 20, 2025
+Camera-ready Date.(Educators Symposium) Camera ready due: September 2, 2025
+Camera-ready Date.(New Ideas and Emerging Results (NIER)) Camera Ready Due: September 2, 2025
+Topics: Model-Driven Engineering, Languages and Systems, Software Engineering, Systems Engineering, Modeling Languages, Model Transformation Languages, Model-Based Engineering, Cyber-Physical Systems, Embedded Systems, Socio-Technical Systems, Cloud Computing, Big Data, Machine Learning, Security, Open Source, Sustainability
+Publisher: ACM SIGSOFT and IEEE TCSE","October 5 - 10, 2025",2025,"Grand Rapids, Michigan, United States","Grand Rapids, Michigan",United States,North America,Hybrid,"{""(Research Papers) Abstract submission"":""March 27, 2025"",""(Research Papers) Paper submission"":""April 3, 2025"",""(Posters) Submission deadline (stand-alone submissions)"":""July 4, 2025"",""(EDTconf Technical Track) Abstract submission deadline"":""July 4, 2025"",""(New Ideas and Emerging Results (NIER)) Paper submission"":""July 8, 2025"",""(EDTconf Technical Track) Paper submission deadline"":""July 9, 2025"",""(Tools and Demonstrations) Submission deadline"":""July 10, 2025"",""(Tutorials) Submission deadline"":""July 11, 2025"",""(Journal-First) Submission deadline"":""July 11, 2025"",""(ACM SRC) Submission deadline"":""July 18, 2025"",""(Artifact Evaluation) Submission deadline"":""July 3, 2025"",""(Workshops) Submissions Deadline"":""July 3, 2025""}","{""(Research Papers) Author notification"":""June 24, 2025"",""(EDTconf Technical Track) Notification of acceptance"":""August 5, 2025"",""(Posters) Notification to authors (stand-alone submissions)"":""August 6, 2025"",""(Tutorials) Author notification"":""August 14, 2025"",""(New Ideas and Emerging Results (NIER)) Author notification"":""August 19, 2025"",""(Educators Symposium) Author notification"":""August 19, 2025"",""(Artifact Evaluation) Notification to authors"":""August 2, 2025"",""(Tools and Demonstrations) Notification of authors"":""July 31, 2025"",""(Workshops) Notification of Authors"":""July 31, 2025""}","{""(Research Papers) Camera Ready"":""August 7, 2025"",""(Tools and Demonstrations) Camera-ready"":""August 7, 2025"",""(Workshops) Camera-ready Deadline"":""August 7, 2025"",""(Posters) Camera-ready deadline (stand-alone submissions)"":""August 15, 2025"",""(EDTconf Technical Track) Camera-ready submission"":""August 20, 2025"",""(Educators Symposium) Camera ready due"":""September 2, 2025"",""(New Ideas and Emerging Results (NIER)) Camera Ready Due"":""September 2, 2025""}",{},{},"Model-Driven Engineering, Languages and Systems, Software Engineering, Systems Engineering, Modeling Languages, Model Transformation Languages, Model-Based Engineering, Cyber-Physical Systems, Embedded Systems, Socio-Technical Systems, Cloud Computing, Big Data, Machine Learning, Security, Open Source, Sustainability",ACM SIGSOFT and IEEE TCSE,"The International Conference on Model Driven Engineering Languages and Systems (MODELS) 2025 will be held from Sunday, October 5 to Friday, October 10, 2025, at Grand Valley State University in Grand Rapids, Michigan, United States. MODELS is the premier conference series for model-driven software and systems engineering, covering languages, methods, tools, and applications. The 2025 edition will be a hybrid event, offering both in-person and virtual participation options.","# Call for Papers - MODELS 2025
+
+MODELS 2025, the ACM/IEEE International Conference on Model-Driven Engineering Languages and Systems, is the premier conference series for model-driven software and systems engineering. It is organized with support from ACM SIGSOFT and IEEE TCSE.
+
+Since 1998, MODELS has covered all aspects of modeling, from languages and methods to tools and applications. Attendees come from diverse backgrounds, including researchers, academics, engineers, and industrial professionals. MODELS 2025 serves as a forum for participants to exchange cutting-edge research results and innovative practical experiences around modeling and model-driven software and systems engineering.
+
+This yearâ€™s edition provides an opportunity for the modeling community to further advance the foundations of modeling and to explore innovative applications of modeling in emerging areas such as cyber-physical systems, embedded systems, socio-technical systems, cloud computing, big data, machine learning, security, open source, and sustainability.
+
+## Hybrid Event
+
+MODELS 2025 will be organized as a **hybrid event** with in-person and virtual participation. Presenters of accepted papers may present their work virtually, and a lower registration rate will be offered for remote participants.
+
+## Tracks
+
+MODELS 2025 solicits submissions across various tracks:
+
+*   [ACM Student Research Competition](https://2025.models-conf.com/track/models-2025-acm-student-research-competition)
+*   [Artifact Evaluation](https://2025.models-conf.com/track/models-2025-artifact-evaluation)
+*   [Doctoral Symposium](https://2025.models-conf.com/track/models-2025-doctoral-symposium)
+*   [Educators Symposium](https://2025.models-conf.com/track/models-2025-educators-symposium)
+*   [Industry Days](https://2025.models-conf.com/track/models-2025-industry-day)
+*   [Journal-First](https://2025.models-conf.com/track/models-2025-journal-first)
+*   [New Ideas and Emerging Results (NIER)](https://2025.models-conf.com/track/models-2025-nier)
+*   [Posters](https://2025.models-conf.com/track/models-2025-posters)
+*   [Research Papers](https://2025.models-conf.com/track/models-2025-research-papers)
+*   [SAM Conference](https://2025.models-conf.com/track/models-2025-sam-conference)
+*   [Student Volunteers](https://2025.models-conf.com/track/models-2025-student-volunteers)
+*   [Tools and Demonstrations](https://2025.models-conf.com/track/models-2025-tools-and-demonstrations)
+*   [Tutorials](https://2025.models-conf.com/track/models-2025-tutorials)
+*   [Workshops](https://2025.models-conf.com/track/models-2025-workshops)
+
+## Co-hosted Conferences
+
+*   [EDTconf 2025](https://conf.researchr.org/home/edtconf-2025)
+*   [System and Analysis Modeling (SAM) conference 2025](https://sdl-forum.org/Events/SAM2025)
+
+## Topics of Interest
+
+MODELS 2025 solicits submissions on a variety of topics related to modeling for software and systems engineering including, but not limited to:
+
+*   Fundamentals of model-based engineering, including the definition of syntax and semantics of modeling languages and model transformation languages.
+*   New paradigms, formalisms, applications, approaches, frameworks, or processes for model-based engineering such as low-code/no-code development, digital twins, etc.
+*   Definition, use, and analysis of model-based generative and re-engineering approaches.
+*   Model-based monitoring, analysis, and adaptation heading towards intelligent systems.
+*   Development of model-based systems engineering approaches and modeling-in-the-large, including interdisciplinary engineering and coordination.
+*   Applications of AI to model-related engineering problems, e.g., approaches based on search, machine learning, large language models (AI for modeling).
+*   Model-based engineering foundations for AI-based systems (modeling for AI).
+*   Human and organizational factors in model-based engineering.
+*   Tools, meta-tools, and language workbenches for model-based engineering, including model management and scalable model repositories.
+*   Hybrid multi-modeling approaches, i.e., integration of various modeling languages and their tools.
+*   Evaluation and comparison of modeling languages, techniques, and tools.
+*   Quality assurance (analysis, testing, verification, fidelity assessment) for functional and non-functional properties of models and model transformations.
+*   Collaborative modeling to address team management issues, e.g., browser-based and cloud-enabled collaboration.
+*   Evolution of modeling languages and related standards.
+*   Modeling education, e.g., delivery methods and curriculum design.
+*   Modeling in software engineering, e.g., applications of models to address common software engineering challenges.
+*   Modeling for specific challenges such as collaboration, scalability, security, interoperability, adaptability, flexibility, maintainability, dependability, reuse, energy efficiency, sustainability, and uncertainty.
+*   Modeling with, and for, novel systems and paradigms in fields such as security, cyber-physical systems (CPSs), the Internet of Things, cloud computing, DevOps, blockchain technology, data analytics, data science, machine learning, Big Data, systems engineering, socio-technical systems, critical infrastructures and services, robotics, mobile applications, conversational agents, and open-source software.
+*   Empirical studies on the application of model-based engineering in areas such as smart manufacturing, smart cities, smart enterprises, smart mobility, smart society, etc.
+
+## Submission Tracks and Guidelines
+
+MODELS 2025 offers two main tracks for technical papers: the Foundations Track and the Practice Track.
+
+### Foundations Track
+
+*   **Review Process:** Double-anonymous.
+*   **Page Limit:** Maximum 10 pages for the main text (including figures, tables, appendices); 2 additional pages for references only.
+*   **Format:** PDF.
+*   **Submission:** Via [MODELS 2025 EasyChair web page](https://easychair.org/my/conference?conf=models2025).
+*   **Key Requirements:** Contributions must clearly describe novelty, validated by formal proofs, rigorous demonstrations, or empirical evaluations. Authors are strongly encouraged to make artifacts publicly available.
+
+### Practice Track
+
+*   **Review Process:** Single-anonymous.
+*   **Page Limit:** Maximum 10 pages for the main text (including figures, tables, appendices); 2 additional pages for references only.
+*   **Format:** PDF.
+*   **Submission:** Via [MODELS 2025 EasyChair web page](https://easychair.org/my/conference?conf=models2025).
+*   **Key Requirements:** Report on industry applications, public sector, or open-source environments. Focus on impact, context, practical importance, lessons learned, or insights gained. Authors are encouraged to make artifacts publicly available.
+
+## Important Dates
+
+*   **Abstract Submission (Research Papers):** **March 27, 2025**
+*   **Paper Submission (Research Papers):** **April 3, 2025**
+*   **Author responses:** **June 3â€“5, 2025**
+*   **Author notification (Research Papers):** **June 24, 2025**
+*   **Camera Ready Due (Research Papers):** **August 7, 2025**
+
+*Note: Submission deadlines are hard and will not be extended. Dates for other tracks may vary. Please refer to individual track pages for specific deadlines.* 
+
+## Artifact Evaluation
+
+Authors of accepted papers are invited to submit artifacts (software, datasets, proofs) to the Artifact Evaluation track. Participation is optional, and successful submissions will receive a seal of approval.
+
+## Best Papers
+
+Selected papers may be invited for revision and extension for publication in the *International Journal on Software and Systems Modeling (SoSyM)*. Best Paper awards will also be presented.
+
+## Organization
+
+*   **General Chairs:** (Information not explicitly detailed for Call for Papers, but available in Organization section)
+*   **Research Papers Chairs:** Shaukat Ali, Houari Sahraoui
+*   **Research Papers Program Board:** Silvia AbrahÃ£o, Daniel Amyot, Jean-Michel Bruel, Jordi Cabot, Marsha Chechik, Betty H.C. Cheng, Benoit Combemale, Esther Guerra, Dimitris Kolovos, Thomas Kuehne, Mehrdad Sabetzadeh, Steffen Zschaler, Manuel Wimmer, Daniel Varro
+
+## Submission Information
+
+*   Submissions must conform to [IEEE formatting instructions](https://www.ieee.org/publications/rights/author-rights-responsibilities.html).
+*   Use of ORCID is required. LaTeX users should use the `orcidlink` package.",,100.00
+req-conf-1751635625861-npa9x,,Mobile and Ubiquitous Multimedia,MUM,https://mum-conf.org/2025/,https://mum-conf.org/2025/index.php?web=papers,,"Conference dates: December 1 - 4, 2025
+Year: 2025
+Location: Enna, Italy
+City-State-Province: Enna
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.Short and full papersSubmission Deadline: August 21, 2025
+Submission Date.Workshops and TutorialsSubmission Deadline: August 21, 2025
+Submission Date.PostersSubmission Deadline: October 9, 2025
+Submission Date.DemosSubmission Deadline: October 9, 2025
+Submission Date.Doctoral ConsortiumSubmission Deadline: October 9, 2025
+Notification Date.Workshops and TutorialsDecision Notification: September 1, 2025
+Notification Date.Short and full papersDecision Notification: October 6, 2025
+Notification Date.PostersDecision Notification: October 23, 2025
+Notification Date.DemosDecision Notification: October 23, 2025
+Notification Date.Doctoral ConsortiumDecision Notification: October 23, 2025
+Camera-ready Date.Workshops and TutorialsCamera Ready: September 20, 2025
+Camera-ready Date.Short and full papersCamera Ready: October 20, 2025
+Camera-ready Date.PostersCamera Ready: November 3, 2025
+Camera-ready Date.DemosCamera Ready: November 3, 2025
+Camera-ready Date.Doctoral ConsortiumCamera Ready: November 3, 2025
+Topics: Mobile and Ubiquitous Multimedia
+Publisher: ACM SIGCHI","December 1 - 4, 2025",2025,"Enna, Italy",Enna,Italy,Europe,Offline,"{""Short and full papersSubmission Deadline"":""August 21, 2025"",""Workshops and TutorialsSubmission Deadline"":""August 21, 2025"",""PostersSubmission Deadline"":""October 9, 2025"",""DemosSubmission Deadline"":""October 9, 2025"",""Doctoral ConsortiumSubmission Deadline"":""October 9, 2025""}","{""Workshops and TutorialsDecision Notification"":""September 1, 2025"",""Short and full papersDecision Notification"":""October 6, 2025"",""PostersDecision Notification"":""October 23, 2025"",""DemosDecision Notification"":""October 23, 2025"",""Doctoral ConsortiumDecision Notification"":""October 23, 2025""}","{""Workshops and TutorialsCamera Ready"":""September 20, 2025"",""Short and full papersCamera Ready"":""October 20, 2025"",""PostersCamera Ready"":""November 3, 2025"",""DemosCamera Ready"":""November 3, 2025"",""Doctoral ConsortiumCamera Ready"":""November 3, 2025""}",{},{},Mobile and Ubiquitous Multimedia,ACM SIGCHI,"The 24th International Conference on Mobile and Ubiquitous Multimedia (MUM 2025) will be held in Enna, Italy, from December 1st to December 4th, 2025. MUM is a premier annual international conference that serves as a forum for presenting the latest research in mobile and ubiquitous multimedia, bringing together academics and industry experts. The conference is planned as an in-person event, with continuous monitoring for potential virtual or hybrid options.","# MUM 2025: Call for Papers
+
+## Welcome to MUM 2025
+
+The International Conference on Mobile and Ubiquitous Multimedia (MUM) is a leading annual international conference, which provides a forum for presenting the latest research results on mobile and ubiquitous multimedia. The conference brings together experts from both academia and industry for a fruitful exchange of ideas and discussion on future challenges, in a comfortable and effective single-track conference format.
+
+The 24th International Conference on Mobile and Ubiquitous Multimedia (MUM 2025) will be held in **Enna, Italy, December 1 - 4, 2025**. MUM 2025 is held in cooperation with ACM SIGCHI. The conference is currently being planned as an **in-person event only**. Still, the organization is continuously monitoring travel and health restrictions and may reassess the possibility for virtual or hybrid options.
+
+In addition to the peer-reviewed accepted papers, the conference program will also include keynote presentations, posters, and demos, among other tracks. The conference will also have a co-located doctoral school. The technical program will be complemented by several social events to facilitate informal discussions and networking among the conference attendees and invited guests.
+
+## Topics of Interest
+
+We welcome submissions of high-quality papers that offer original and unpublished contributions relevant to mobile and ubiquitous multimedia. Paper topics include, but are not limited to, the following:
+
+*   Prototypes and systems tackling relevant technical challenges
+*   Novel applications for mobile and ubiquitous gaming, learning, entertainment, social networking, and advertising
+*   Augmented, mixed, and virtual reality systems and applications
+*   Case studies, field trials, or user experience evaluations of new applications and services
+*   Context-aware and location-based mobile and ubiquitous services
+*   Metrics and measures for evaluating and testing mobile and ubiquitous systems
+*   Privacy and security-related challenges to multimedia systems
+*   Social implications of mobile and ubiquitous multimedia systems
+*   Interaction and collaboration with human-centered AI systems
+*   Tools and development environments for building mobile, wearable, and ubiquitous multimedia systems
+*   User interfaces, interaction design, and interaction techniques for mobile and ubiquitous systems
+*   Interaction design for automotive and other modes of transportation
+*   Fabrication and device prototyping
+
+## Submission Types and Contribution Length
+
+*   **Full Papers:** Typically represent significant empirical, theoretical, or methodological advances in the field. Maximum length is **16 pages** (excluding references) using the single-column format.
+*   **Short Papers:** Offer more focused contributions with a smaller scope; they are not intended to be work-in-progress reports. They should offer complete, rigorously developed work with a solid contribution to the field. Maximum length is **7 pages** (excluding references) using the single-column format.
+*   **Posters**
+*   **Workshops and Tutorials**
+*   **Demos**
+*   **Doctoral Consortium**
+
+## Preparing the Submission
+
+### Novelty
+
+The submission must be original work. It cannot have been published elsewhere nor be under concurrent review for publication by another conference or journal. Papers should be grounded in existing literature and knowledge and written for an interdisciplinary audience.
+
+### Formatting
+
+*   **Templates:** [LaTeX template](https://authors.acm.org/proceedings/production-information/preparing-your-article-with-latex), [Word template](https://authors.acm.org/binaries/content/assets/publications/taps/acm_submission_template.docx)
+*   Submissions must be in **PDF format**. Papers must be in **English**.
+*   All references must be complete, accurate, accessible, and conform to the ACM Publication Format.
+*   Authors are required to use the **single-column ACM Manuscript template**.
+*   For LaTeX, use `\documentclass[manuscript, screen, review, anonymous]{acmart}` style.
+
+### Anonymity
+
+All submissions need to be **fully anonymised**. This includes any appendices or supplemental material as well as a potential acknowledgements section. Citations to the authorsâ€™ own previous work are NOT allowed to be anonymised. However, authors should refer to their own prior work in the third person. Papers that violate the anonymization policy, including within the supplemental materials or external links, will be desk rejected.
+
+### Supplementary Material
+
+All videos and supplementary material must be anonymized. Authors are encouraged to submit an optional video of a maximum of 6 minutes. Videos should use H.264 encoding and MP4 file format. The paper submission must stand independently without the supplementary material.
+
+### Accessibility
+
+Authors are required to follow [SIGCHIâ€™s Guide to an Accessible Submission](https://sigchi.org/conferences/author-resources/accessibility-guide/). For questions, contact `accessibilitydiversity2025@mum-conf.org`.
+
+### Use of Generative AI
+
+Authors must adhere to the [ACM Policy on Authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship) regarding the use of generative AI. Authors are responsible for all content produced and must disclose its use.
+
+### ACM Publications Policy
+
+Authors are subject to all ACM Publications Policies, including those on Research Involving Human Participants and Subjects. All authors are required to have an ORCID.
+
+## Submission Platform
+
+Submissions are facilitated via the **Easychair platform**. For any difficulties or questions, please contact the Paper chairs via `papers2025@mum-conf.org`.
+
+## Metadata Integrity
+
+Changes in author names are **not allowed** after the submission deadline. Changes to the order of authors are allowed only before the camera-ready deadline.
+
+## Selection Process
+
+Submitted papers will undergo a rigorous **double-blind review process**. Each paper will be reviewed by at least three reviewers. There will be a single round of reviews with potential outcomes: desk rejects, rejection, and conditional acceptance. No rebuttal phase is planned.
+
+## Upon Acceptance
+
+*   **Publication:** Accepted papers will appear in the ACM Digital Library. Authors must complete the ACM copyright form and follow ACM TAPS workflow instructions.
+*   **Presentation Format:** Accepted papers **must be presented** at the conference. Authors will be informed about presentation details closer to the conference.
+*   **Conference Registration:** For each accepted paper, **full registration for MUM 2025 is required** by the early bird registration deadline.
+
+## Important Dates (All deadlines are AoE)
+
+*   **Short and full papers Submission Deadline:** **August 21st, 2025**
+*   **Workshops and Tutorials Submission Deadline:** **August 21st, 2025**
+*   **Workshops and Tutorials Decision Notification:** **September 1st, 2025**
+*   **Workshops and Tutorials Camera Ready:** **September 20th, 2025**
+*   **Short and full papers Decision Notification:** **October 6th, 2025**
+*   **Posters Submission Deadline:** **October 9th, 2025**
+*   **Demos Submission Deadline:** **October 9th, 2025**
+*   **Doctoral Consortium Submission Deadline:** **October 9th, 2025**
+*   **Short and full papers Camera Ready:** **October 20th, 2025**
+*   **Posters Decision Notification:** **October 23rd, 2025**
+*   **Demos Decision Notification:** **October 23rd, 2025**
+*   **Doctoral Consortium Decision Notification:** **October 23rd, 2025**
+*   **Posters Camera Ready:** **November 3rd, 2025**
+*   **Demos Camera Ready:** **November 3rd, 2025**
+*   **Doctoral Consortium Camera Ready:** **November 3rd, 2025**
+
+## Contact Us
+
+*   **Paper Chairs:** `papers2025@mum-conf.org`
+    *   Mohamed Khamis, University of Glasgow, UK
+    *   Passant Elagroudy, DFKI, Germany",,100.00
+req-conf-1751635625861-npa9x,,Machine Translation Summit,MT SUMMIT,https://mtsummit2025.unige.ch/,https://mtsummit2025.unige.ch/calls.html#callForPapers,,"Conference dates: June 23 - 27, 2025
+Year: 2025
+Location: Geneva, Switzerland
+City-State-Province: Geneva
+Country: Switzerland
+Continent: Europe
+Type: Offline
+Submission Date.(Research - Technical, Research - Translators and Users) Submission deadline: February 10, 2025
+Submission Date.(Implementations and Case Studies) Submission deadline: February 10, 2025
+Submission Date.(Products and Projects) Submission deadline: February 10, 2025
+Notification Date.(Research - Technical, Research - Translators and Users) 1st Notification to authors: March 19, 2025
+Notification Date.(Implementations and Case Studies) 1st Notification to authors: March 19, 2025
+Notification Date.(Products and Projects) 1st Notification to authors: March 19, 2025
+Camera-ready Date.(Research - Technical, Research - Translators and Users) Camera ready deadlines: April 17, 2025
+Camera-ready Date.(Implementations and Case Studies) Camera ready deadlines: April 17, 2025
+Camera-ready Date.(Products and Projects) Camera ready deadlines: April 17, 2025
+Other Date.(Research - Technical, Research - Translators and Users) Rebuttal period: March 19 - 24, 2025
+Other Date.(Research - Technical, Research - Translators and Users) Final Notification to authors: March 31, 2025
+Other Date.(Implementations and Case Studies) Final Notification to authors: March 31, 2025
+Other Date.(Products and Projects) Final Notification to authors: March 31, 2025
+Other Date.(Research - Technical, Research - Translators and Users) Author registration: April 30, 2025
+Other Date.(Implementations and Case Studies) Author registration: April 30, 2025
+Other Date.(Products and Projects) Author registration: April 30, 2025
+Topics: Machine Translation, Translation Technologies, Machine Translation and Translation-related technologies, Model distillation, compression and on-device MT, Efficiency improvement and MT with low computational resources, Few-shots adaptation and pre-trained MT systems, MT for low-resource languages and varieties (including historical languages), LLMs for translation, transcreation, and other cross-lingual use cases, Augmenting MT with ML, NLP or generative AI, Comparative evaluation of MT systems, Interactive and real-time adaptive MT systems, Detecting and preventing catastrophic errors in output, Measuring fairness, bias, and transparency in output, Advanced MT fine-tuning and enhancement, Technologies for MT deployment, MT for multiple modalities (speech, sign language, video, etc.), MT for real-time communication (chats, social networks, etc.), MT in production scenarios, robustness and deployment issues, Linguistic resources for MT, MT quality estimation and evaluation techniques, Related multilingual technologies, Source text improvement, The impact of MT and post-editing, Emerging areas for MT & post-editing, Ethics, policy, and regulatory trends concerning the use of MT or generative AI for cross-lingual use cases, The evaluation and reception of different modalities of translation, MT and interpreting, Post-editing and human-in-the-loop methods, Interaction of language professionals (translators and interpreters) with MT and generative AI tools and output, MT and LLM integration in CAT environments and translation workflow, MT for gisting and the impact of MT on users, MT and usability, MT and education/language learning, MT in the translation/interpreting classroom, Integrating or optimizing MT and computer-assisted translation in translation production workflows, Managing change when implementing and using MT, Implementing open-source MT, Evaluating MT in a real-world setting, Ethical and confidentiality issues when using MT, Using MT in social networking or real-time communication, Implementing MT to process multilingual content for assimilation purposes, MT in literary, audiovisual, game localization and creative texts, Impact of MT and post-editing on translation practices and the profession, Psycho-social aspects of MT adoption, Error analysis and post-editing strategies, The use of translatorsâ€™ metadata and user activity data in MT development, Freelance translatorsâ€™ independent use of MT, Tools for MT, computer-aided translation, and other translation technologies, Research projects, funded through grants related to machine translation","June 23 - 27, 2025",2025,"Geneva, Switzerland",Geneva,Switzerland,Europe,Offline,"{""(Research - Technical, Research - Translators and Users) Submission deadline"":""February 10, 2025"",""(Implementations and Case Studies) Submission deadline"":""February 10, 2025"",""(Products and Projects) Submission deadline"":""February 10, 2025""}","{""(Research - Technical, Research - Translators and Users) 1st Notification to authors"":""March 19, 2025"",""(Implementations and Case Studies) 1st Notification to authors"":""March 19, 2025"",""(Products and Projects) 1st Notification to authors"":""March 19, 2025""}","{""(Research - Technical, Research - Translators and Users) Camera ready deadlines"":""April 17, 2025"",""(Implementations and Case Studies) Camera ready deadlines"":""April 17, 2025"",""(Products and Projects) Camera ready deadlines"":""April 17, 2025""}",{},"{""(Research - Technical, Research - Translators and Users) Rebuttal period"":""March 19 - 24, 2025"",""(Research - Technical, Research - Translators and Users) Final Notification to authors"":""March 31, 2025"",""(Implementations and Case Studies) Final Notification to authors"":""March 31, 2025"",""(Products and Projects) Final Notification to authors"":""March 31, 2025"",""(Research - Technical, Research - Translators and Users) Author registration"":""April 30, 2025"",""(Implementations and Case Studies) Author registration"":""April 30, 2025"",""(Products and Projects) Author registration"":""April 30, 2025""}","Machine Translation, Translation Technologies, Machine Translation and Translation-related technologies, Model distillation, compression and on-device MT, Efficiency improvement and MT with low computational resources, Few-shots adaptation and pre-trained MT systems, MT for low-resource languages and varieties (including historical languages), LLMs for translation, transcreation, and other cross-lingual use cases, Augmenting MT with ML, NLP or generative AI, Comparative evaluation of MT systems, Interactive and real-time adaptive MT systems, Detecting and preventing catastrophic errors in output, Measuring fairness, bias, and transparency in output, Advanced MT fine-tuning and enhancement, Technologies for MT deployment, MT for multiple modalities (speech, sign language, video, etc.), MT for real-time communication (chats, social networks, etc.), MT in production scenarios, robustness and deployment issues, Linguistic resources for MT, MT quality estimation and evaluation techniques, Related multilingual technologies, Source text improvement, The impact of MT and post-editing, Emerging areas for MT & post-editing, Ethics, policy, and regulatory trends concerning the use of MT or generative AI for cross-lingual use cases, The evaluation and reception of different modalities of translation, MT and interpreting, Post-editing and human-in-the-loop methods, Interaction of language professionals (translators and interpreters) with MT and generative AI tools and output, MT and LLM integration in CAT environments and translation workflow, MT for gisting and the impact of MT on users, MT and usability, MT and education/language learning, MT in the translation/interpreting classroom, Integrating or optimizing MT and computer-assisted translation in translation production workflows, Managing change when implementing and using MT, Implementing open-source MT, Evaluating MT in a real-world setting, Ethical and confidentiality issues when using MT, Using MT in social networking or real-time communication, Implementing MT to process multilingual content for assimilation purposes, MT in literary, audiovisual, game localization and creative texts, Impact of MT and post-editing on translation practices and the profession, Psycho-social aspects of MT adoption, Error analysis and post-editing strategies, The use of translatorsâ€™ metadata and user activity data in MT development, Freelance translatorsâ€™ independent use of MT, Tools for MT, computer-aided translation, and other translation technologies, Research projects, funded through grants related to machine translation",No publisher,"The 20th Machine Translation Summit (MT Summit 2025) will be held in Geneva, Switzerland, from June 23-27, 2025. The conference brings together developers, researchers, users, and translation professionals interested in machine translation and translation-related tools and resources.","# Machine Translation Summit 2025: Call for Papers
+
+The European Association for Machine Translation (EAMT) invites submissions to the MT Summit 2025, focusing on machine translation and translation-related tools and resources. The conference aims to showcase cutting-edge research, professional MT implementation insights, and the experiences of translation studies scholars and practitioners.
+
+## Final Call for Papers
+
+## Important Dates
+
+All deadlines are at **23:59 AoE (Anywhere on Earth)**.
+
+1.  **Submission deadline:** 10 February 2025
+2.  **1st Notification to authors:** 19 March 2025
+3.  **Rebuttal period:** 19 to 24 March 2025
+4.  **Final Notification to authors:** 31 March 2025
+5.  **Author registration:** 30 April 2025
+6.  **Camera ready deadlines:** 17 April 2025
+
+*Note: Papers that have been archived in arXiv can be accepted for submission provided that they have not already been published elsewhere.*
+
+## Submission Categories
+
+### Research - Technical
+
+*   **Page Limit:** Up to 10 pages, plus unlimited pages for references, appendices, and sustainability statement.
+*   **Topics:** Reports of significant research results in any aspect of machine translation and related areas, including latest advances, model distillation, efficiency improvements, few-shot adaptation, MT for low-resource languages, LLMs for translation, augmenting MT with AI, comparative evaluations, interactive MT, error detection, fairness and bias, advanced MT fine-tuning, MT deployment technologies, MT for multiple modalities, MT in production scenarios, linguistic resources, MT quality estimation, and related multilingual technologies.
+*   **Requirements:** Papers should describe original work, emphasize completed work, include substantial evaluation components or strong theoretical/methodological contributions. Papers must be written in English, **anonymized**, and prepared according to specified templates.
+*   **Submission:** Via [EasyChair MT Summit 2025](https://easychair.org/conferences/?conf=mtsummit2025) (submission type: MT Summit 2025 Research Technical).
+*   **Track chairs:** Catarina Farinha (Unbabel) and Marco Gaido (Fondazione Bruno Kessler, Italy).
+
+### Research - Translators and Users
+
+*   **Page Limit:** Up to 10 pages, plus unlimited pages for references, appendices, and sustainability statement.
+*   **Topics:** Academic research on how professional translators and other MT users interact with, are affected by, or conceptualize machine translation. Topics include the impact of MT and post-editing, emerging areas for MT & post-editing, ethics and policy, evaluation of translation modalities, MT and interpreting, post-editing methods, interaction with MT and generative AI tools, MT and LLM integration, MT for gisting, MT and usability, MT and education/language learning.
+*   **Requirements:** Papers should report significant research results with a strong theoretical and/or methodological contribution. Papers should be written in English, **anonymized**, and prepared according to specified templates.
+*   **Submission:** Via [EasyChair MT Summit 2025](https://easychair.org/conferences/?conf=mtsummit2025) (submission type: MT Summit 2025 Research Translators and Users).
+*   **Track chairs:** Joke Daems (Ghent University, Belgium) and Dorothy Kenny (Dublin City University, Ireland).
+
+### Implementations and Case Studies
+
+*   **Page Limit:** 4â€“6 pages, with a maximum of 10 pages including references.
+*   **Topics:** Reports on case studies and implementation experience with MT in organizations. Topics include integrating MT in workflows, managing change, implementing open-source MT, evaluating MT in real-world settings, ethical and confidentiality issues, using MT in social networking, MT and usability, implementing MT for assimilation purposes, MT in literary/audiovisual/game localization, impact of MT on translation practices, psycho-social aspects of MT adoption, error analysis and post-editing strategies, using translator metadata, freelance translators' use of MT, MT and interpreting, and Generative AI/LLM integration.
+*   **Requirements:** Papers should highlight real-world use scenarios, solutions, and problems, with suggestions for MT researchers and developers. Co-authorship with organizations is required for academic papers. **Anonymization is not required**.
+*   **Submission:** Via [EasyChair MT Summit 2025](https://easychair.org/conferences/?conf=mtsummit2025) (submission type: MT Summit 2025 Implementations and Case studies).
+*   **Track chairs:** Samuel LÃ¤ubli (Textshuttle/Supertext, Switzerland) and Martin Volk (University of Zurich, Switzerland).
+
+### Products and Projects
+
+*   **Page Limit:** 2 pages, including references.
+*   **Subtracks:**
+    *   **Products:** Tools for MT, computer-aided translation, and other translation technologies (commercial and open-source). Descriptions should include availability, licensing, cost, functionality, technologies used, and readiness for demos or posters.
+    *   **Projects:** Research projects funded through grants. Descriptions should include title, acronym, funding agency, reference, duration, partners, objectives, and results. Authors should be ready to present projects as posters.
+*   **Requirements:** Papers should be written in English and formatted according to specified templates. **Anonymization is not required**.
+*   **Submission:** Via [EasyChair MT Summit 2025](https://easychair.org/conferences/?conf=mtsummit2025) (submission type: MT Summit 2025 Products and Projects).
+*   **Track chairs:** Miquel EsplÃ -Gomis (University of Alicante, Spain) and Vincent Vandeghinste (KU Leuven, Belgium).
+
+## Sustainability Statement
+
+Authors are strongly encouraged to comply with ""Green AI"" principles and focus on reducing the environmental cost of MT. Computational experiments should report average runtime, estimate energy cost, and include a carbon impact statement following provided guidelines. Tools for estimating carbon emissions are listed for reference.
+
+## Templates
+
+Templates are specified for paper formatting. Authors should adhere to these templates for their submissions.",,100.00
+req-conf-1751635625861-npa9x,,International Congress on Modelling and Simulation,MODSIM,https://www.mssanz.org.au/modsim2025/,https://conlog.eventsair.com/modsim2025/abstracts,https://www.mssanz.org.au/modsim2025/important-dates/,"Conference dates: November 30 - December 4, 2025
+Year: 2025
+Location: Adelaide Convention Centre, Adelaide, Australia
+City-State-Province: Adelaide
+Country: Australia
+Continent: Oceania
+Type: Offline
+Submission Date.Abstract submissions for MODSIM2025: Late March 2025
+Submission Date.Submission of full papers for peer review closes: August 15, 2025
+Submission Date.Submission of abstracts closes: August 27, 2025
+Registration Date.Registration for MODSIM2025 is now open. Early-bird registration closes: July 31, 2025
+Topics: Modelling, Simulation, Water, Environment, Society, River Basins, Climate, Agriculture, Biodiversity, Industry, Communities, Decision-Making, Uncertainty, Hydrometeorological Forecasting, Water Resources Management, Machine Learning Technology, Water Demand and Supply, Anthropogenic Climate Change, Hydrological Modelling, Remote Sensing Applications in Hydrology, Innovatives in Hydrology, Unsolved Problems in Hydrology, Predictions in Ungauged Basins, Deep Learning in Hydrology, Stochastic Modelling in Hydrology, Hydrology, Plants, Soils, Atmosphere, Ecosystem Response, Modelling complexity, Large river basins, Murray-Darling Basin, Prediction verification, Post-processing, Machine learning, Statistics, Vegetation Responses, CO2 Rise, Drought, Water Use Efficiency, Soil Moisture, Global Drought Patterns, Extreme Climatic Events, Food Security Under Drought, Climate change, Models, Projections, Modelling, failure, Lessons learned, Biomechanics, Agent-based modelling, Movement, Crowd, Evacuation, Traffic Flow, Ergonomics, Sports, Rehabilitation, System dynamics, Participatory systems modelling, Artificial intelligence, Stakeholder engagement, Agent-based models, Data science, Public information environment, Social influence, Recommender systems, Social networks, Social media, Information warfare, Education, AI, Training, Capacity-building, Future workforce, Indigenous Researchers, Indigenous Issues, Participatory Decision-Making, Ethical Collaboration, Data Sovereignty, Community-Engaged Scholarship, State shifts, Hydrological systems, Long-term change, Disturbances, Water resources, River System Modelling, Hydrological Modelling, Model Integration, Water Resources Management, Uncertainty in modelling, Climate Risk, Data collection, Monitoring, Predictive modelling, Data limited, Urban water modelling, Integrated water resources management, Urban water cycle, Urban water management, Numerical analysis, accelerated computing, parallelisation, numerical schemes, differential equations, Probabilistic Modelling, Game Theory, Queuing theory, Probability in Machine Learning and Data Science, Financial Markets, Corporate Finance, Innovation, Textual Analysis, Investments, Climate Finance, FinTech, Policy, evaluation, intervention, Risk Management Modelling, Climate Finance and Sustainability, Environmental, Social, and Governance (ESG) Strategies, Food Security, Agriculture, and Public Policy, Tourism Economics and Hospitality Management, Carbon Markets, Emissions Trading, and Climate Policy, Algorithmic Trading, Computational Finance, Machine Learning, Econometrics, Risk Prediction, Vegetation, Model, Microgrids, Resilience, Sustainability, Renewable Energy","November 30 - December 4, 2025",2025,"Adelaide Convention Centre, Adelaide, Australia",Adelaide,Australia,Oceania,Offline,"{""Abstract submissions for MODSIM2025"":""Late March 2025"",""Submission of full papers for peer review closes"":""August 15, 2025"",""Submission of abstracts closes"":""August 27, 2025""}",{},{},"{""Registration for MODSIM2025 is now open. Early-bird registration closes"":""July 31, 2025""}",{},"Modelling, Simulation, Water, Environment, Society, River Basins, Climate, Agriculture, Biodiversity, Industry, Communities, Decision-Making, Uncertainty, Hydrometeorological Forecasting, Water Resources Management, Machine Learning Technology, Water Demand and Supply, Anthropogenic Climate Change, Hydrological Modelling, Remote Sensing Applications in Hydrology, Innovatives in Hydrology, Unsolved Problems in Hydrology, Predictions in Ungauged Basins, Deep Learning in Hydrology, Stochastic Modelling in Hydrology, Hydrology, Plants, Soils, Atmosphere, Ecosystem Response, Modelling complexity, Large river basins, Murray-Darling Basin, Prediction verification, Post-processing, Machine learning, Statistics, Vegetation Responses, CO2 Rise, Drought, Water Use Efficiency, Soil Moisture, Global Drought Patterns, Extreme Climatic Events, Food Security Under Drought, Climate change, Models, Projections, Modelling, failure, Lessons learned, Biomechanics, Agent-based modelling, Movement, Crowd, Evacuation, Traffic Flow, Ergonomics, Sports, Rehabilitation, System dynamics, Participatory systems modelling, Artificial intelligence, Stakeholder engagement, Agent-based models, Data science, Public information environment, Social influence, Recommender systems, Social networks, Social media, Information warfare, Education, AI, Training, Capacity-building, Future workforce, Indigenous Researchers, Indigenous Issues, Participatory Decision-Making, Ethical Collaboration, Data Sovereignty, Community-Engaged Scholarship, State shifts, Hydrological systems, Long-term change, Disturbances, Water resources, River System Modelling, Hydrological Modelling, Model Integration, Water Resources Management, Uncertainty in modelling, Climate Risk, Data collection, Monitoring, Predictive modelling, Data limited, Urban water modelling, Integrated water resources management, Urban water cycle, Urban water management, Numerical analysis, accelerated computing, parallelisation, numerical schemes, differential equations, Probabilistic Modelling, Game Theory, Queuing theory, Probability in Machine Learning and Data Science, Financial Markets, Corporate Finance, Innovation, Textual Analysis, Investments, Climate Finance, FinTech, Policy, evaluation, intervention, Risk Management Modelling, Climate Finance and Sustainability, Environmental, Social, and Governance (ESG) Strategies, Food Security, Agriculture, and Public Policy, Tourism Economics and Hospitality Management, Carbon Markets, Emissions Trading, and Climate Policy, Algorithmic Trading, Computational Finance, Machine Learning, Econometrics, Risk Prediction, Vegetation, Model, Microgrids, Resilience, Sustainability, Renewable Energy",No publisher,"The 26th International Congress on Modelling and Simulation (MODSIM2025) will be held at the Adelaide Convention Centre from Sunday 30 November to Thursday 4 December 2025. The conference theme is ""Modelling for positive change: Bridging science and society."" Registrations and call for abstracts are currently open.","# MODSIM2025: Call for Papers
+
+The International Congress on Modelling and Simulation (MODSIM) is a premier event for modelling and simulation professionals. MODSIM2025 will be held at the **Adelaide Convention Centre** from **Sunday 30 November to Thursday 4 December 2025**.
+
+The conference theme is **""Modelling for positive change: Bridging science and society.""**
+
+## Submission Information
+
+*   **Abstract/Paper Submission Portal:** [Abstract submissions for MODSIM2025](https://conlog.eventsair.com/modsim2025/abstracts)
+*   **Contribution Types:** You can submit either **1-2 page abstracts** or **7-page full papers**.
+*   **Submission Format:** Please ensure you use the correct templates provided on the MODSIM2025 website. Abstracts submitted without the correct template will not be accepted.
+*   **Author Limits:** A maximum of **two submissions per author** is allowed, with the condition that one is a poster and one is an oral submission.
+*   **Review Process:** Full papers will be reviewed by two independent reviewers, and abstracts will be reviewed by the session organiser. Revisions may be required for both.
+
+## Important Dates
+
+*   Call for Session Proposals closed on **28 February 2025**.
+*   Submissions for acceptance to enable Early bird registration closes **30 June 2025**.
+*   Call for abstracts or full papers opens **late March 2025**.
+*   Submission of full papers for peer review closes **15 August 2025**.
+*   Submission of abstracts closes **27 August 2025**.
+*   Conference program available from **1 November 2025**.
+
+## Registration Information
+
+*   **Registration Portal:** [Registration for MODSIM2025](https://conlog.eventsair.com/modsim2025/rego/Site/Register)
+*   **Early-bird registration closes:** **31 July 2025**.
+
+## Contact Information
+
+*   For general MODSIM 2025 enquiries, please contact: [modsim2025@mssanz.org.au](mailto:modsim2025@mssanz.org.au)
+*   For technical issues related to registration or abstract/full paper submission, please contact Conlog on **+61 2 6281 6624** or via [modsim@conlog.com.au](mailto:modsim@conlog.com.au).
+
+## Instructions for Authors
+
+Please familiarise yourself with the detailed instructions for authors, including templates, available on the [MODSIM2025 website](https://www.mssanz.org.au/modsim2025/instructions-for-authors/).
+
+## Stay Updated
+
+To be kept up to date on news related to MODSIM2025, please complete this [expression of interest form](https://conlog.eventsair.com/modsim2025/eoi/Site/Register).",,100.00
+req-conf-1751635625861-npa9x,,IEEE International Symposium on Network Computing and Applications,NCA,https://www.nca-ieee.org/2025/index.html,https://www.nca-ieee.org/2025/cfp.html,https://www.nca-ieee.org/2025/index.html#important-dates,"Conference dates: November 5 - 7, 2025
+Year: 2025
+Location: Instituto Superior TÃ©cnico, Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.Manuscript Due: August 15, 2025
+Notification Date.Acceptance Notification: October 7, 2025
+Topics: Network Computing, Cloud Computing, Theory of Network Computing, Autonomic Network Computing, Content Delivery Network (CDN), High Speed Networks/Protocols and Middleware, Routing Mechanisms, Overlay Networks/Peer-to-Peer Systems, System Area Networks (SAN)/Clusters, Performance Modeling/Quality of Services (QoS) Issues, Web Caching and Switching, Dependable Wide, Local, and System Area Networks, Network Security, Intrusion-Tolerant Networked Systems, Scalable and Dependable Servers and Data Centers, Middleware for Dependable Network Computing, Self* (Configuring, Healing, Optimizing, Protecting, Organizing, Aware) Platforms for Network Computing, Network Protocols: Verification and Validation, Autonomic Network Computing for Achieving Self* Properties and Applications Availability, Seamless and Virtual Capabilities for Implementing Self* Properties, Software Defined Networking (SDN): Principles and Implementation, Designing Highly-Available and Secure SDN, Network Functions Virtualization (NFV): Design and Optimization, Network Cloud Computing, Machine Learning Techniques for Networks and Cloud Resources Management, Big Data in Clouds for IoT, Future Internet and Communicating Objects, Mobile Ad-Hoc Networks (MANET), New services and applications for network sensor systems, Fog/Edge Computing (including Compute Continuum), Energy-Efficient Computation and Communication, Applications to Real and/or Complex Problems, Practical Experiences and Prototypes, Algorithms, Framework, and Programming Environments for Distributed Systems, Blockchain, Byzantine Fault Tolerance, Web and Mobile Security, Social Networks, Systems, Architecture, and Network for Cyber-Physical Systems, Distributed Quantum Computing and Quantum Network Protocol, Federated Learning
+Publisher: IEEE Computer Society","November 5 - 7, 2025",2025,"Instituto Superior TÃ©cnico, Lisbon, Portugal",Lisbon,Portugal,Europe,Offline,"{""Manuscript Due"":""August 15, 2025""}","{""Acceptance Notification"":""October 7, 2025""}",{},{},{},"Network Computing, Cloud Computing, Theory of Network Computing, Autonomic Network Computing, Content Delivery Network (CDN), High Speed Networks/Protocols and Middleware, Routing Mechanisms, Overlay Networks/Peer-to-Peer Systems, System Area Networks (SAN)/Clusters, Performance Modeling/Quality of Services (QoS) Issues, Web Caching and Switching, Dependable Wide, Local, and System Area Networks, Network Security, Intrusion-Tolerant Networked Systems, Scalable and Dependable Servers and Data Centers, Middleware for Dependable Network Computing, Self* (Configuring, Healing, Optimizing, Protecting, Organizing, Aware) Platforms for Network Computing, Network Protocols: Verification and Validation, Autonomic Network Computing for Achieving Self* Properties and Applications Availability, Seamless and Virtual Capabilities for Implementing Self* Properties, Software Defined Networking (SDN): Principles and Implementation, Designing Highly-Available and Secure SDN, Network Functions Virtualization (NFV): Design and Optimization, Network Cloud Computing, Machine Learning Techniques for Networks and Cloud Resources Management, Big Data in Clouds for IoT, Future Internet and Communicating Objects, Mobile Ad-Hoc Networks (MANET), New services and applications for network sensor systems, Fog/Edge Computing (including Compute Continuum), Energy-Efficient Computation and Communication, Applications to Real and/or Complex Problems, Practical Experiences and Prototypes, Algorithms, Framework, and Programming Environments for Distributed Systems, Blockchain, Byzantine Fault Tolerance, Web and Mobile Security, Social Networks, Systems, Architecture, and Network for Cyber-Physical Systems, Distributed Quantum Computing and Quantum Network Protocol, Federated Learning",IEEE Computer Society,"The 23rd IEEE International Symposium on Network Computing and Applications (NCA 2025) will be held from November 5-7, 2025, at Instituto Superior TÃ©cnico in Lisbon, Portugal. NCA serves as a forum for presenting research and technological developments in Network and Cloud Computing, with papers submitted to IEEE Xplore for publication and indexing.","# Call For Contributions
+
+We are happy to invite you to participate in NCA 2025 - **5-7 November, 2025** at **Instituto Superior TÃ©cnico, Lisbon, Portugal**.
+
+NCA 2025 serves as a large international forum for presenting and sharing recent research results and technological developments in the fields of Network and Distributed Computing. NCA, sponsored by IEEE Computer Society, reaches out to both researchers and practitioners, and to both academia and industry. All papers presented at the main conference will be submitted to IEEE Xplore for publication and indexing.
+
+## Topics of Interest
+
+The International Symposium on Network Computing and Applications (NCA) is seeking articles concerning fundamental research and practical experience reports. The topics of interest include, but are not limited to:
+
+*   Theory of Network Computing
+*   Autonomic Network Computing
+*   Content Delivery Network (CDN)
+*   High Speed Networks/Protocols and Middleware
+*   Routing Mechanisms
+*   Overlay Networks/Peer-to-Peer Systems
+*   System Area Networks (SAN)/Clusters
+*   Performance Modeling/Quality of Services (QoS) Issues
+*   Web Caching and Switching
+*   Dependable Wide, Local, and System Area Networks
+*   Network Security
+*   Intrusion-Tolerant Networked Systems
+*   Scalable and Dependable Servers and Data Centers
+*   Middleware for Dependable Network Computing
+*   Self* (Configuring, Healing, Optimizing, Protecting, Organizing, Aware)
+*   Platforms for Network Computing
+*   Network Protocols: Verification and Validation
+*   Autonomic Network Computing for Achieving Self* Properties and Applications Availability
+*   Seamless and Virtual Capabilities for Implementing Self* Properties
+*   Software Defined Networking (SDN): Principles and Implementation
+*   Designing Highly-Available and Secure SDN
+*   Network Functions Virtualization (NFV): Design and Optimization
+*   Network Cloud Computing
+*   Machine Learning Techniques for Networks and Cloud Resources Management
+*   Big Data in Clouds for IoT
+*   Future Internet and Communicating Objects
+*   Mobile Ad-Hoc Networks (MANET)
+*   New services and applications for network sensor systems
+*   Fog/Edge Computing (including Compute Continuum)
+*   Energy-Efficient Computation and Communication
+*   Applications to Real and/or Complex Problems, Practical Experiences and Prototypes
+*   Algorithms, Framework, and Programming Environments for Distributed Systems
+*   Blockchain
+*   Byzantine Fault Tolerance
+*   Web and Mobile Security
+*   Social Networks
+*   Systems, Architecture, and Network for Cyber-Physical Systems
+*   Distributed Quantum Computing and Quantum Network Protocol
+*   Federated Learning
+
+## Best Paper Awards
+
+The NCA2025 Program Committee will select **Best Paper** and **Best Student Paper**. The first author of the Best Student Paper must be a BSc/MSc/PhD student.
+
+## Important Dates
+
+1.  **Manuscript Due:** August 15th, 2025 (AoE)
+2.  **Acceptance Notification:** October 7th, 2025
+
+## Manuscript Submission
+
+*   **Submission Platform:** Paper submissions are managed through EasyChair. The submission link will be available soon.
+*   **Manuscript Page Limit:**
+    *   **Regular Papers:** 8 pages, including all figures, tables, and references.
+    *   **Short Papers:** 4 pages, including all figures, tables, and references.
+*   **Purchasing Extra Pages:**
+    *   Regular Papers: Up to 2 extra pages may be purchased at â‚¬100 (EUR) per extra page.
+    *   Short Papers: Up to 1 extra page may be purchased at â‚¬100 (EUR).
+*   Authors can submit full papers longer than 8 pages (up to 10 pages) before the reviewing process. These longer papers, if accepted as full papers, cannot be shrunk when preparing camera-ready versions.
+
+## Accepted Papers and Publication Policies
+
+*   Every regular paper accepted must have attached to it at least one registration at the full rate. For manuscripts where all authors are students, one student author must register at the full registration rate.
+*   **No-show papers** are defined as papers submitted by authors who did not present the paper at the technical meeting. All presentations will be given in person.
+*   No-show papers that were not withdrawn and were published in the Proceedings must be identified as ""No-Show"" in the files submitted to the Conference Publishing Services (CPS) and will not be available on IEEE Xplore.
+*   IEEE CPS discourages changes and withdrawals of papers once submitted and included in the program. Requests to withdraw or change a paper must come directly from the author, and the author will be held liable for all incurred costs.
+
+## Authors' Kit and Templates
+
+*   The author kit is provided on the conference website.
+*   **LaTeX Template:** Be sure to use the template's `conference` mode. Check that the bibliography is properly formatted according to IEEE specifications.
+*   While other systems like MS-Word can be used, it is discouraged.
+
+## Contact Us
+
+*   **Address:** Instituto Superior TÃ©cnico, Avenida Rovisco Pais, NÂº1 - 1049-001 Lisbon, Portugal
+*   **Phone:** (+351) 213 100 335
+*   **Email:** joao.barreto@tecnico.ulisboa.pt",,100.00
+req-conf-1751635625861-npa9x,,Mensch & Computer,MuC,https://muc2025.mensch-und-computer.de/en/,https://muc2025.mensch-und-computer.de/en/call-for-papers/,,"Conference dates: August 31 - September 3, 2025
+Year: 2025
+Location: Chemnitz University of Technology, Chemnitz, Germany
+City-State-Province: Chemnitz
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.(HCI - Full Papers) Submission: April 10, 2025
+Submission Date.(HCI - Short Papers) Submission: June 10, 2025
+Submission Date.(HCI - Workshops) Workshop Proposals: March 14, 2025
+Submission Date.(HCI - Tutorials) Tutorials: June 11, 2025
+Submission Date.(HCI - Demos) Demos: July 10, 2025
+Submission Date.(HCI - Doctoral Consortium) Doctoral Consortium: July 11, 2025
+Submission Date.(HCI - Student Research Competition) Student Research Competition: July 10, 2025
+Submission Date.(UP - Practitioner Track) Workshop/Tutorial: June 30, 2025
+Submission Date.(UP - Practitioner Track) Presentation: June 30, 2025
+Submission Date.(UP - Practitioner Track) Working Groups: June 30, 2025
+Submission Date.(Student Volunteers) Student Volunteers: June 24, 2025
+Notification Date.(HCI - Full Papers) Acceptance Notice: May 27, 2025
+Notification Date.(HCI - Short Papers) Acceptance Notice: July 8, 2025
+Notification Date.(HCI - Workshops) Workshop Proposals: March 19, 2025
+Notification Date.(HCI - Tutorials) Tutorials: July 9, 2025
+Notification Date.(HCI - Demos) Demos: July 17, 2025
+Notification Date.(HCI - Doctoral Consortium) Doctoral Consortium: July 18, 2025
+Notification Date.(HCI - Student Research Competition) Student Research Competition: July 17, 2025
+Notification Date.(UP - Practitioner Track) Workshop/Tutorial: July 14, 2025
+Notification Date.(UP - Practitioner Track) Presentation: July 14, 2025
+Notification Date.(UP - Practitioner Track) Working Groups: July 14, 2025
+Notification Date.(Student Volunteers) Student Volunteers: July 8, 2025
+Camera-ready Date.(HCI - Full Papers) Camera-Ready Instructions: June 10, 2025
+Camera-ready Date.(HCI - Short Papers) Camera-Ready Instructions: July 30, 2025
+Camera-ready Date.(HCI - Workshops) Camera-Ready Instructions: July 30, 2025
+Camera-ready Date.(HCI - Tutorials) Camera-Ready Instructions: July 30, 2025
+Camera-ready Date.(HCI - Demos) Camera-Ready Instructions: July 30, 2025
+Camera-ready Date.(HCI - Doctoral Consortium) Camera-Ready Instructions: July 23, 2025
+Camera-ready Date.(HCI - Student Research Competition) Camera-Ready Instructions: July 30, 2025
+Camera-ready Date.(UP - Practitioner Track) Workshop/Tutorial: August 18, 2025
+Camera-ready Date.(UP - Practitioner Track) Presentation: August 18, 2025
+Camera-ready Date.(UP - Practitioner Track) Working Groups: October 15, 2025
+Topics: Human-Computer Interaction, Digital Technology, Human-centered development methods, Interactive Applications
+Publisher: ACM","August 31 - September 3, 2025",2025,"Chemnitz University of Technology, Chemnitz, Germany",Chemnitz,Germany,Europe,Offline,"{""(HCI - Full Papers) Submission"":""April 10, 2025"",""(HCI - Short Papers) Submission"":""June 10, 2025"",""(HCI - Workshops) Workshop Proposals"":""March 14, 2025"",""(HCI - Tutorials) Tutorials"":""June 11, 2025"",""(HCI - Demos) Demos"":""July 10, 2025"",""(HCI - Doctoral Consortium) Doctoral Consortium"":""July 11, 2025"",""(HCI - Student Research Competition) Student Research Competition"":""July 10, 2025"",""(UP - Practitioner Track) Workshop/Tutorial"":""June 30, 2025"",""(UP - Practitioner Track) Presentation"":""June 30, 2025"",""(UP - Practitioner Track) Working Groups"":""June 30, 2025"",""(Student Volunteers) Student Volunteers"":""June 24, 2025""}","{""(HCI - Full Papers) Acceptance Notice"":""May 27, 2025"",""(HCI - Short Papers) Acceptance Notice"":""July 8, 2025"",""(HCI - Workshops) Workshop Proposals"":""March 19, 2025"",""(HCI - Tutorials) Tutorials"":""July 9, 2025"",""(HCI - Demos) Demos"":""July 17, 2025"",""(HCI - Doctoral Consortium) Doctoral Consortium"":""July 18, 2025"",""(HCI - Student Research Competition) Student Research Competition"":""July 17, 2025"",""(UP - Practitioner Track) Workshop/Tutorial"":""July 14, 2025"",""(UP - Practitioner Track) Presentation"":""July 14, 2025"",""(UP - Practitioner Track) Working Groups"":""July 14, 2025"",""(Student Volunteers) Student Volunteers"":""July 8, 2025""}","{""(HCI - Full Papers) Camera-Ready Instructions"":""June 10, 2025"",""(HCI - Short Papers) Camera-Ready Instructions"":""July 30, 2025"",""(HCI - Workshops) Camera-Ready Instructions"":""July 30, 2025"",""(HCI - Tutorials) Camera-Ready Instructions"":""July 30, 2025"",""(HCI - Demos) Camera-Ready Instructions"":""July 30, 2025"",""(HCI - Doctoral Consortium) Camera-Ready Instructions"":""July 23, 2025"",""(HCI - Student Research Competition) Camera-Ready Instructions"":""July 30, 2025"",""(UP - Practitioner Track) Workshop/Tutorial"":""August 18, 2025"",""(UP - Practitioner Track) Presentation"":""August 18, 2025"",""(UP - Practitioner Track) Working Groups"":""October 15, 2025""}",{},{},"Human-Computer Interaction, Digital Technology, Human-centered development methods, Interactive Applications",ACM,"The Mensch und Computer (MuC) conference 2025 is the largest conference series on human-computer interaction in Europe, focusing on innovative forms of interaction between people and digital technology, human-centered development methods, and interactive applications. It will be held from August 31 to September 3, 2025, at the Chemnitz University of Technology in Chemnitz, Germany, with the theme ""Digital Diversity"".","# Call for Papers
+
+The Mensch und Computer (MuC) conference 2025 invites submissions for its various tracks, focusing on human-computer interaction and digital technology.
+
+## HCI â€“ Scientific Track
+
+### Contribution Types:
+
+*   **Full Papers**: Research contributions.
+*   **Short Papers**: Shorter research contributions or work-in-progress.
+*   **Workshop Proposals**: Proposals for workshops.
+*   **Tutorials**: Proposals for tutorials.
+*   **Demos**: Demonstrations of interactive systems.
+*   **Doctoral Consortium**: For doctoral students to present their work.
+*   **Student Research Competition**: For students to present their research.
+
+### Deadlines (AoE):
+
+| Track / Contribution Type         | Submission Deadline   | Acceptance Notice | Publication-Ready Deadline |
+| :-------------------------------- | :-------------------- | :---------------- | :------------------------- |
+| **Full Papers**                   | **April 10th, 2025**  | May 27th, 2025    | June 10th, 2025            |
+| **Short Papers**                  | **June 10th, 2025**   | July 8th, 2025    | July 30th, 2025            |
+| **Workshop Proposals**            | **March 14th, 2025**  | March 19th, 2025  | July 30th, 2025            |
+| **Tutorials**                     | **June 11th, 2025**   | July 9th, 2025    | July 30th, 2025            |
+| **Demos**                         | **July 10th, 2025**   | July 17th, 2025   | July 30th, 2025            |
+| **Doctoral Consortium**           | **July 11th, 2025**   | July 18th, 2025   | July 23rd, 2025            |
+| **Student Research Competition**  | **July 10th, 2025**   | July 17th, 2025   | July 30th, 2025            |
+
+*Note: For 2025, there will be no extended deadlines for submissions in the HCI track.*
+
+## UP â€“ Practitioner Track
+
+### Contribution Types:
+
+*   **Workshop/Tutorial**: Proposals for practical workshops or tutorials.
+*   **Presentation**: Presentations of practitioner work or insights.
+*   **Working Groups**: Focused group discussions on specific topics.
+*   **Barcamp**: Unconference sessions.
+
+### Deadlines (AoE):
+
+| Track / Contribution Type | Abstract Submission | Acceptance Notification | Deadline Paper      |
+| :------------------------ | :------------------ | :---------------------- | :------------------ |
+| **Workshop/Tutorial**     | **June 30th, 2025** | July 14th, 2025         | **August 18th, 2025** |
+| **Presentation**          | **June 30th, 2025** | July 14th, 2025         | **August 18th, 2025** |
+| **Working Groups**        | **June 30th, 2025** | July 14th, 2025         | **October 15th, 2025**|
+| **Barcamp**               | â€“                   | â€“                       | **October 15th, 2025**|
+
+*Note: For 2025, there will be no extended deadlines for submissions in the UP track.*
+
+## Call for Student Volunteers
+
+*   **Submission Deadline:** **June 24th, 2025** (AoE)
+*   **Acceptance Notice:** **July 08th, 2025** (AoE)
+
+## General Information
+
+*   **Submission Platform**: Contributions should be submitted via [Conftool](https://www.conftool.pro/muc2025/index.php?page=participate).
+*   **Publication**: Details on author instructions and publication can be found [here](https://muc2025.mensch-und-computer.de/en/publication-ready-author-instructions/).
+*   **Conference Theme**: Digital Diversity
+*   **Location**: Chemnitz University of Technology, Chemnitz, Germany
+*   **Dates**: August 31 - September 3, 2025",,100.00
+req-conf-1751635625861-npa9x,,Machine Vision Applications,MVA,https://mva-org.jp/mva2025/,https://mva-org.jp/mva2025/cfp,https://mva-org.jp/mva2025/,"Conference dates: July 26â€“28, 2025
+Year: 2025
+Location: Kyoto, Japan
+City-State-Province: Kyoto
+Country: Japan
+Continent: Asia
+Type: Offline
+Submission Date.Paper Submission: April 14, 2025
+Notification Date.Notification: June 13, 2025
+Camera-ready Date.Camera ready due: June 30, 2025
+Topics: Machine Vision Applications
+Publisher: MVA Organizing Committee","July 26â€“28, 2025",2025,"Kyoto, Japan",Kyoto,Japan,Asia,Offline,"{""Paper Submission"":""April 14, 2025""}","{""Notification"":""June 13, 2025""}","{""Camera ready due"":""June 30, 2025""}",{},{},Machine Vision Applications,MVA Organizing Committee,"The 19th International Conference on Machine Vision Applications (MVA2025) will be held from July 26-28, 2025, in Kyoto, Japan. The conference will be co-located with MIRU2025, with some joint events planned. MVA2025 aims to bring together researchers and practitioners in the field of machine vision applications.","# MVA 2025: Call for Papers
+
+The 19th International Conference on Machine Vision Applications (MVA2025) will be held from **July 26â€“28, 2025**, in **Kyoto, Japan**.
+
+## General Information and Dates
+
+*   **Paper Submission Deadline:** March 31, 2025
+*   **Paper Submission Extended Deadline:** April 14, 2025, 23:59 AOE (final extension)
+*   **Notification of Acceptance:** June 13, 2025
+*   **Camera-ready Due:** June 30, 2025
+*   **Main Conference Dates:** July 26â€“28, 2025
+
+## Venue
+
+Kyoto International Conference Center
+
+MVA2025 will be co-located with MIRU2025 (July 29th - August 1st, 2025), with some joint events planned.
+
+## Submission Details
+
+*   **Submission Site:** [Paper Submission](https://mva-org.jp/mva2025/paper-submission)
+*   **Contribution Types:** The conference invites submissions for research papers. Specific details on accepted paper formats and lengths are available on the submission page.
+*   **Reviewers:** Authors must also serve as reviewers. Information regarding simultaneous submission to IEICE Transactions on Information and Systems is also available.
+
+## Keynote Speakers (IAPR Invited Talks)
+
+*   Ming-Yu Liu (NVIDIA)
+*   Katerina Fragkiadaki (CMU)
+*   Yasuyuki Matsushita (MSRA Tokyo)
+
+## Tutorials
+
+*   Bo Wu (MIT-IBM Watson AI Lab)
+*   Cathal Gurrin (Dublin City University)
+
+## Challenge
+
+*   **SMOT4SB Challenge 2025**
+    *   Code Submission: 2025-05-10
+    *   Paper Submission: 2025-06-14
+
+## Contact
+
+*   **Email:** [mva2025-sec@mva-org.jp](mailto:mva2025-sec@mva-org.jp)
+*   **Social Media:** [Twitter](https://twitter.com/MVA_ORG), [Facebook](https://www.facebook.com/Mva-org/)
+
+## Website Navigation
+
+*   About
+*   General Info
+*   People
+*   Partners
+*   Submit (Camera ready, Accepted papers, Submission, SMOT4SB Challenge, Call for Papers)
+*   Program (Timetable, IAPR Invited Talks, Tutorials, Presentation Guide)
+*   Attend (Registration)",,100.00
+req-conf-1751635625861-npa9x,,North American Association for Computational Linguistics,NAACL,https://2025.naacl.org/,https://2025.naacl.org/calls/papers/,,"Conference dates: April 29 â€“ May 4, 2025
+Year: 2025
+Location: Albuquerque, New Mexico
+City-State-Province: Albuquerque, New Mexico
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Submission deadline for ARR 2024 October: October 15, 2024
+Notification Date.Notification of desk rejection for submissions to ARR 2024 October that violate policy: November 11, 2024
+Notification Date.Reviews and meta-reviews released for ARR 2024 October: December 12, 2024
+Notification Date.Commitment deadline for NAACL 2025: December 16, 2024
+Notification Date.Notification of acceptance for NAACL 2025: January 22, 2025
+Camera-ready Date.Deadline for accepted papers to upload of final version for NAACL 2025 or Findings of NAACL 2025: February 8, 2025
+Other Date.Author response period for ARR 2024 October: November 22 - 26, 2024
+Other Date.Welcome Reception: April 29, 2025
+Other Date.Main Conference: April 30 â€“ May 2, 2025
+Other Date.Tutorials and Workshops: May 3 â€“ 4, 2025
+Other Date.Deadline for accepted papers to withdraw from NAACL 2025 or Findings of NAACL 2025: February 8, 2025
+Topics: Computational Linguistics, Natural Language Processing, Computational Social Science and Cultural Analytics, Dialogue and Interactive Systems, Discourse and Pragmatics, Efficient/Low-resource Methods for NLP, Ethics, Bias, and Fairness, Generation, Human-centered NLP, Information Extraction, Information Retrieval and Text Mining, Interpretability and Analysis of Models for NLP, Language Modeling, Linguistic theories, Cognitive Modeling and Psycholinguistics, Machine Learning for NLP, Machine Translation, Multilinguality and Language Diversity, Multimodality and Language Grounding to Vision, Robotics and Beyond, Phonology, Morphology and Word Segmentation, Question Answering, Resources and Evaluation, Semantics: Lexical, Sentence-level, Textual Inference and Other areas, Sentiment Analysis, Stylistic Analysis, and Argument Mining, Speech recognition, text-to-speech and spoken language understanding, Summarization, Syntax: Tagging, Chunking and Parsing / ML, NLP Applications","April 29 â€“ May 4, 2025",2025,"Albuquerque, New Mexico","Albuquerque, New Mexico",United States,North America,Offline,"{""Submission deadline for ARR 2024 October"":""October 15, 2024""}","{""Notification of desk rejection for submissions to ARR 2024 October that violate policy"":""November 11, 2024"",""Reviews and meta-reviews released for ARR 2024 October"":""December 12, 2024"",""Commitment deadline for NAACL 2025"":""December 16, 2024"",""Notification of acceptance for NAACL 2025"":""January 22, 2025""}","{""Deadline for accepted papers to upload of final version for NAACL 2025 or Findings of NAACL 2025"":""February 8, 2025""}",{},"{""Author response period for ARR 2024 October"":""November 22 - 26, 2024"",""Welcome Reception"":""April 29, 2025"",""Main Conference"":""April 30 â€“ May 2, 2025"",""Tutorials and Workshops"":""May 3 â€“ 4, 2025"",""Deadline for accepted papers to withdraw from NAACL 2025 or Findings of NAACL 2025"":""February 8, 2025""}","Computational Linguistics, Natural Language Processing, Computational Social Science and Cultural Analytics, Dialogue and Interactive Systems, Discourse and Pragmatics, Efficient/Low-resource Methods for NLP, Ethics, Bias, and Fairness, Generation, Human-centered NLP, Information Extraction, Information Retrieval and Text Mining, Interpretability and Analysis of Models for NLP, Language Modeling, Linguistic theories, Cognitive Modeling and Psycholinguistics, Machine Learning for NLP, Machine Translation, Multilinguality and Language Diversity, Multimodality and Language Grounding to Vision, Robotics and Beyond, Phonology, Morphology and Word Segmentation, Question Answering, Resources and Evaluation, Semantics: Lexical, Sentence-level, Textual Inference and Other areas, Sentiment Analysis, Stylistic Analysis, and Argument Mining, Speech recognition, text-to-speech and spoken language understanding, Summarization, Syntax: Tagging, Chunking and Parsing / ML, NLP Applications",No publisher,"The 2025 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2025) will be held in Albuquerque, New Mexico, from April 29 to May 4, 2025. The conference invites submissions for long and short papers, industry track papers, system demonstrations, and tutorials, among other calls. NAACL 2025 utilizes the ACL Rolling Review (ARR) system for paper submissions and reviewing, with a commitment deadline for NAACL 2025.","# NAACL 2025: Call for Main Conference Papers
+
+NAACL 2025 invites the submission of **long and short papers** featuring substantial, original, and unpublished research in all aspects of Computational Linguistics and Natural Language Processing.
+
+The conference aims for a diverse technical program, welcoming contributions such as traditional research results, negative findings, surveys, new resource announcements, position arguments, novel linguistic insights, and reproductions.
+
+## Submission Process
+
+NAACL 2025 will use **ACL Rolling Review (ARR)** for paper submissions and reviewing. The process is two-stage:
+
+1.  **Submission to ARR:** Authors submit articles to ARR via [OpenReview](https://openreview.net/group?id=aclweb.org/ACL/ARR/2024/October).
+2.  **Commitment to NAACL:** Reviewed articles can be committed to NAACL 2025 via [OpenReview](https://openreview.net/group?id=aclweb.org/NAACL/2025/Conference).
+
+## Reviewing Workload
+
+Authors are required to specify which co-authors are committing to cover reviewing during the ARR submission process. Please refer to the [ARR policy](https://aclrollingreview.org/cfp#paper-submission-information) for details.
+
+## Submission Topics
+
+Relevant topics include, but are not limited to:
+
+*   Computational Social Science and Cultural Analytics
+*   Dialogue and Interactive Systems
+*   Discourse and Pragmatics
+*   Efficient/Low-resource Methods for NLP
+*   Ethics, Bias, and Fairness
+*   Generation
+*   Human-centered NLP
+*   Information Extraction
+*   Information Retrieval and Text Mining
+*   Interpretability and Analysis of Models for NLP
+*   Language Modeling
+*   Linguistic theories, Cognitive Modeling and Psycholinguistics
+*   Machine Learning for NLP
+*   Machine Translation
+*   Multilinguality and Language Diversity
+*   Multimodality and Language Grounding to Vision, Robotics and Beyond
+*   Phonology, Morphology and Word Segmentation
+*   Question Answering
+*   Resources and Evaluation
+*   Semantics: Lexical, Sentence-level, Textual Inference and Other areas
+*   Sentiment Analysis, Stylistic Analysis, and Argument Mining
+*   Speech recognition, text-to-speech and spoken language understanding
+*   Summarization
+*   Syntax: Tagging, Chunking and Parsing / ML
+*   NLP Applications
+
+## Special Theme Track: NLP in a Multicultural World
+
+This track focuses on work supporting the vibrant multicultural world we live in, welcoming papers on:
+
+*   Cultural localization of language models.
+*   New NLP applications to support people from diverse cultures.
+*   Revitalization or refunctionalization of endangered or sleeping languages.
+*   Analysis of cultural biases in language models.
+*   Historical considerations and diachronic analysis.
+
+## Reviewing Process
+
+The reviewing process will be **double-blind**. Reviewers will not see authors, nor will authors see reviewers. ARR reviews will not be publicly visible, but authors may opt to make their anonymized submissions publicly visible.
+
+## Important Dates for NAACL 2025
+
+*   **Submission Deadline for ARR 2024 October:** October 15, 2024
+*   **Reviewing Period for ARR 2024 October:** October 30 â€“ November 18, 2024
+*   **Author Response Period for ARR 2024 October:** November 22 â€“ November 26, 2024
+*   **Reviews and Meta-reviews Released for ARR 2024 October:** December 12, 2024
+*   **Commitment Deadline for NAACL 2025:** December 16, 2024
+*   **Notification of Acceptance for NAACL 2025:** January 22, 2025
+*   **Withdrawal/Final Version Upload Deadline:** February 8, 2025
+
+*All deadlines are 11:59 PM UTC-12:00 (â€œanywhere on Earthâ€).*
+
+## Paper Submission Details
+
+Both long and short paper submissions must adhere to ARR submission requirements, including:
+
+*   **Long Papers:** 8 pages
+*   **Short Papers:** 4 pages
+*   Instructions for Two-Way Anonymized Review
+*   Authorship policies
+*   Citation and Comparison guidelines
+*   Multiple Submission, Resubmission, and Withdrawal Policies
+*   Ethics Policy, including the responsible NLP research checklist
+*   Limitations
+*   Paper Submission and Templates
+*   Optional Supplementary Materials (appendices, software, and data)
+
+Final versions of accepted papers will have one additional page for revisions (up to 9 pages for long papers, up to 5 pages for short papers).
+
+## Presentation at the Conference
+
+All accepted papers must be presented at the conference (in-person or virtual) to appear in the proceedings. Papers without a registered presenting author by the early registration deadline may be desk-rejected.
+
+## Contact Information
+
+*   **General Chair:** Colin Cherry, Google Research
+*   **Program Co-chairs:** Lu Wang (University of Michigan), Alan Ritter (Georgia Institute of Technology), Luis Chiruzzo (Universidad de la RepÃºblica, Uruguay)
+*   **For paper submission questions:** editors@aclrollingreview.org
+*   **For all other questions:** naacl-2025-pcs@googlegroups.com",,100.00

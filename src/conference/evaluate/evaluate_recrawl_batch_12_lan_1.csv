@@ -1,0 +1,1289 @@
+requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note
+req-conf-1751954976519-bfvgj,,Industrial Simulation Conference,ISC,https://www.isc2026.org/,FALSE,,,"Conference dates: September 2, 2025 to September 5, 2025
+Year: 2025
+Location: Nottingham, UK
+City-State-Province: Nottingham
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.(Full Papers) abstracts due: April 22, 2025
+Submission Date.(Full Papers) manuscripts due: April 29, 2025
+Submission Date.(Short Papers & Demonstrations) abstracts due: June 10, 2025
+Submission Date.(Short Papers & Demonstrations) manuscripts due: June 17, 2025
+Notification Date.(Full Papers) acceptance notice: June 3, 2025
+Notification Date.(Short Papers & Demonstrations) acceptance notice: July 15, 2025
+Topics: Document Engineering, Document Trust, Document Security, Machine Learning for Digital Documents, Digital Accessibility, Collections, Systems, and Management, Modelling and Representation, Document Content Analysis, Systems for Visual Document Analysis, Generation, Manipulation, and Presentation, Applications, User Experience","September 2, 2025 to September 5, 2025",,2025,"Nottingham, UK",,Nottingham,United Kingdom,Europe,Offline,,"{""(Full Papers) abstracts due"":""April 22, 2025"",""(Full Papers) manuscripts due"":""April 29, 2025"",""(Short Papers & Demonstrations) abstracts due"":""June 10, 2025"",""(Short Papers & Demonstrations) manuscripts due"":""June 17, 2025""}",,"{""(Full Papers) acceptance notice"":""June 3, 2025"",""(Short Papers & Demonstrations) acceptance notice"":""July 15, 2025""}",,{},,{},,{},,"Document Engineering, Document Trust, Document Security, Machine Learning for Digital Documents, Digital Accessibility, Collections, Systems, and Management, Modelling and Representation, Document Content Analysis, Systems for Visual Document Analysis, Generation, Manipulation, and Presentation, Applications, User Experience",No publisher,"The Industrial Simulation Conference (ISC) is one of the premier meetings for discussion of all modes of chromatography and separation science, with a broad coverage of techniques and applications. The conference focuses on the impact of chromatography and separation science on the pharmaceutical, environmental, food, and health industries. ISC 2026 will be held in Prague, Czech Republic.","# Industrial Simulation Conference (ISC 2026): Call for Papers
+
+Registration and Abstract submission will open on **15 January 2026**.
+
+## Submission Guidelines
+
+Further details regarding submission guidelines, topics of interest, and specific deadlines will be made available closer to the opening date of abstract submission.",link chính sai
+req-conf-1751954976519-bfvgj,,Information Security Conference,ISC,https://isc24.cs.gmu.edu/,FALSE,https://isc24.cs.gmu.edu/call-for-papers/,,"Conference dates: October 23-25, 2024
+Year: 2024
+Location: greater Washington DC area
+Type: Offline
+Submission Date.Submission Deadline: June 13, 2024
+Notification Date.Notification: July 30, 2024
+Camera-ready Date.Camera-Ready Deadline: August 15, 2024
+Other Date.Rebuttal: July 16-19, 2024
+Topics: access control, anonymity, applied cryptography, attribute-based cryptography, automated security analysis, biometric security, blockchain, certification, cloud computing, containerization, critical infrastructures, cryptanalysis, cryptocurrency, cybercrime, database/system security, decentralized systems, downgrade attacks, embedded platforms, fault attacks, fingerprinting, formal methods, foundations, post-quantum cryptography, privacy, privacy-enhancing technologies, protocols, public-key cryptography, real-world cryptography, secure messaging, secure voting, security proofs, side-channel attacks, software security, standardization, symmetric-key cryptography, threshold cryptography, trusted execution, unlinkability, usability, vulnerabilities, web security, zero-knowledge proofs
+Publisher: Springer","October 23-25, 2024",,2024,greater Washington DC area,,No city/state/province,No country,No continent,Offline,,"{""Submission Deadline"":""June 13, 2024""}",,"{""Notification"":""July 30, 2024""}",,"{""Camera-Ready Deadline"":""August 15, 2024""}",,{},,"{""Rebuttal"":""July 16-19, 2024""}",,"access control, anonymity, applied cryptography, attribute-based cryptography, automated security analysis, biometric security, blockchain, certification, cloud computing, containerization, critical infrastructures, cryptanalysis, cryptocurrency, cybercrime, database/system security, decentralized systems, downgrade attacks, embedded platforms, fault attacks, fingerprinting, formal methods, foundations, post-quantum cryptography, privacy, privacy-enhancing technologies, protocols, public-key cryptography, real-world cryptography, secure messaging, secure voting, security proofs, side-channel attacks, software security, standardization, symmetric-key cryptography, threshold cryptography, trusted execution, unlinkability, usability, vulnerabilities, web security, zero-knowledge proofs",Springer,"The 27th Information Security Conference (ISC) is an annual international conference covering research in theory and applications of Information Security, aiming to attract high-quality papers in all technical aspects of information security. The conference will be held in-person in the greater Washington DC area and organized by George Mason University. Proceedings will be published by Springer as a separate LNCS volume.","# Information Security Conference (ISC) 2024: Call for Papers
+
+The Information Security Conference (ISC) is an annual international conference covering research in theory and applications of Information Security. ISC aims to attract high-quality papers in all technical aspects of information security. This includes submissions from academia, industry, and government on traditional as well as emerging topics and new paradigms in these areas, with a clear connection to real-world problems, systems, or applications.
+
+ISC 2024 will be organized by George Mason University and held in-person in the greater Washington DC area.
+
+## Types of Submissions Solicited
+
+Papers on all technical aspects of information security, cryptography, and privacy are solicited for submission. Areas of interest include, but are not limited to:
+
+*   access control
+*   anonymity
+*   applied cryptography
+*   attribute-based cryptography
+*   automated security analysis
+*   biometric security
+*   blockchain
+*   certification
+*   cloud computing
+*   containerization
+*   critical infrastructures
+*   cryptanalysis
+*   cryptocurrency
+*   cybercrime
+*   database/system security
+*   decentralized systems
+*   downgrade attacks
+*   embedded platforms
+*   fault attacks
+*   fingerprinting
+*   formal methods
+*   foundations
+*   functional encryption
+*   hardness assumptions
+*   homomorphic encryption
+*   identity-based cryptography
+*   identity management
+*   implementations
+*   indistinguishability obfuscation
+*   intrusion detection
+*   key management
+*   malware
+*   mathematical aspects
+*   micro-architectural attacks
+*   mobile/wireless/5G security
+*   multilinear maps
+*   multi-party computation
+*   networks security
+*   OS and systems security
+*   post-quantum cryptography
+*   privacy
+*   privacy-enhancing technologies
+*   protocols
+*   public-key cryptography
+*   real-world cryptography
+*   secure messaging
+*   secure voting
+*   security proofs
+*   side-channel attacks
+*   software security
+*   standardization
+*   symmetric-key cryptography
+*   threshold cryptography
+*   trusted execution
+*   unlinkability
+*   usability
+*   vulnerabilities
+*   web security
+*   zero-knowledge proofs
+
+## Deadlines
+
+*   **Submission Deadline:** June 13, 2024 (Extended)
+*   **Rebuttal:** July 16-19, 2024
+*   **Notification:** July 30, 2024
+*   **Camera-Ready Deadline:** August 15, 2024
+*   **Conference:** October 23-25, 2024
+
+## Best Paper Award
+
+Accepted papers will be judged and ranked by the Program Committee. The best papers will be considered for the Best Paper Award.
+
+## Instructions for Authors
+
+*   Submissions must be original work and may not be under submission to another journal or conference with proceedings at the time of review.
+*   Submissions must be in the Springer Lecture Notes in Computer Science (LNCS) style, with the default margins and fonts, but with the addition of page numbers (e.g., by adding `\pagestyle{plain}`).
+*   They are limited to **16 pages excluding bibliography and appendices**, and to **20 pages including bibliography and appendices**.
+*   Optionally, any amount of clearly marked supplementary material may be supplied, following the main body of the paper, but reviewers are not required to read this supplementary material and submissions are expected to be intelligible and complete without it.
+*   Authors should consult Springer’s authors’ guidelines and use their LaTeX proceedings template.
+*   Submitted papers must be in PDF format and submitted electronically via the [ISC 2024 submission system (HotCRP)](https://isc24.hotcrp.com/).
+*   The submission must be **anonymous** with no author names, affiliations, or obvious references.
+
+For papers that are accepted, the corresponding author must complete and sign a Consent-to-Publish form, transferring the copyright to Springer. Authors of accepted papers must guarantee that their paper will be presented at the conference.",link chính là link năm 2024 trong khi đã có link 2025
+req-conf-1751954976519-bfvgj,,International Symposium on Automation and Robotics in Construction,ISARC,https://www.iaarc.org/isarc-2025,TRUE,https://www.iaarc.org/isarc-2025/author-instructions,https://www.iaarc.org/isarc-2025,"Conference Title: International Symposium on Automation and Robotics in Construction
+Conference Acronym: ISARC
+Year: 2025
+Location: Montreal, Canada
+City-State-Province: Montreal
+Country: Canada
+Continent: North America
+Type: Offline
+Submission Date.Full Paper Submission Deadline: January 15, 2025
+Notification Date.Provisional Acceptance of Papers & Comments from Reviewers: February 21, 2025
+Notification Date.Final Notification: March 25, 2025
+Camera-ready Date: April 15, 2025
+Registration Date.Early Bird Registration Deadline: April 21, 2025
+Registration Date.Final Registration Deadline: June 25, 2025
+Other Date: ISARC 2025: July 28 – 31, 2025
+Topics: Automation tools and techniques, Sensing systems & data infrastructures, computing, and visualization, middleware, platforms, and data management, Information modeling techniques, data analysis, simulation, and digital twins, Human-machine interface, mixed realities, Automated/robotic devices, Construction management techniques, Services and business applications, Technology management, entrepreneurship, and innovation, Technologies and applications in developing countries, Developers and real estate: the construction market, Architecture, planning, engineering, Construction execution management, Materials, components, off-site manufacturing, Supply chain and logistics, On-site construction, construction equipment, Building operation and maintenance, Renovation and circularity, Building construction, Infrastructure and civil construction, Industrial construction, Mining, energy/oil/gas industry, Smart, sustainable, and resilient cities, Space/maritime/etc. construction, Smart mobility and transportation
+Publisher: The International Association for Automation and Robotics in Construction (IAARC)",,FALSE,2025,"Montreal, Canada",TRUE,Montreal,Canada,North America,Offline,TRUE,"{""Full Paper Submission Deadline"":""January 15, 2025""}",50,"{""Provisional Acceptance of Papers & Comments from Reviewers"":""February 21, 2025"",""Final Notification"":""March 25, 2025""}",100,{},0,"{""Early Bird Registration Deadline"":""April 21, 2025"",""Final Registration Deadline"":""June 25, 2025""}",100,{},0,"Automation tools and techniques, Sensing systems & data infrastructures, computing, and visualization, middleware, platforms, and data management, Information modeling techniques, data analysis, simulation, and digital twins, Human-machine interface, mixed realities, Automated/robotic devices, Construction management techniques, Services and business applications, Technology management, entrepreneurship, and innovation, Technologies and applications in developing countries, Developers and real estate: the construction market, Architecture, planning, engineering, Construction execution management, Materials, components, off-site manufacturing, Supply chain and logistics, On-site construction, construction equipment, Building operation and maintenance, Renovation and circularity, Building construction, Infrastructure and civil construction, Industrial construction, Mining, energy/oil/gas industry, Smart, sustainable, and resilient cities, Space/maritime/etc. construction, Smart mobility and transportation",The International Association for Automation and Robotics in Construction (IAARC),"The 42nd International Symposium on Automation and Robotics in Construction (ISARC 2025) will be held in Montreal, Canada, from July 28-31, 2025. Hosted by the Centre for Innovation in Construction and Infrastructure Engineering and Management (CICIEM) at Concordia University, the conference theme is 'Decarbonizing the Construction Industry'. ISARC 2025 is co-located with the CSCE Construction Specialty Conference, Construction Research Congress, and Modular and Offsite Construction Summit.","# ISARC 2025: Call for Papers
+
+The 42nd International Symposium on Automation and Robotics in Construction (ISARC 2025) will be held in **Montreal, Canada, from July 28 – 31, 2025**. The conference is hosted by the Centre for Innovation in Construction and Infrastructure Engineering and Management (CICIEM) at Concordia University.
+
+## Theme
+
+**Decarbonizing the Construction Industry**
+
+## Topics Framework
+
+The technical areas of interest are grouped into three Axes:
+
+### Axis 1: Automation tools and techniques
+*   Sensing systems & data infrastructures
+*   Computing, and visualization, middleware, platforms, and data management (including topics such as imaging systems, laser scanning, data security and privacy, legal aspects, etc.)
+*   Information modeling techniques
+*   Data analysis, simulation, and digital twins (including AI and machine learning, computer vision, point cloud analysis, data science in general, etc.)
+*   Human-machine interface, mixed realities (including topics such as ergonomics, usability, etc.)
+*   Automated/robotic devices: devices, equipment, and applications (including topics such as construction robotics, automated robotized construction machines, and tools, end-effectors, additive manufacturing/3D printing, exoskeletons, construction safety equipment, etc.)
+*   Construction management techniques: organization, processes, productivity, safety, etc.
+*   Services and business applications
+*   Technology management, entrepreneurship, and innovation
+*   Technologies and applications in developing countries
+*   Other topics
+
+### Axis 2: Application domains in the construction value chain
+*   Developers and real estate: the construction market
+*   Architecture, planning, engineering
+*   Construction execution management
+*   Materials, components, off-site manufacturing: prefabrication, modular construction, etc.
+*   Supply chain and logistics (including micro-/macro-/factory-/site-logistics)
+*   On-site construction, construction equipment
+*   Building operation and maintenance (including topics such as energy efficiency and sustainability, smart buildings, healthy and assisted living, etc.)
+*   Renovation and circularity
+*   Other topics
+
+### Axis 3: Sectors
+*   Building construction
+*   Infrastructure and civil construction
+*   Industrial construction
+*   Mining, energy/oil/gas industry
+*   Smart, sustainable, and resilient cities (including topics such as sustainable buildings and construction, circular economy, etc.)
+*   Space/maritime/etc. construction
+*   Smart mobility and transportation
+*   Other topics
+
+*Authors are required to classify their paper by selecting one major Axis and up to three areas from all Axes upon submission.*
+
+## Author Instructions
+
+*   **Paper Templates:**
+    *   [Microsoft Word (.DOCX)](https://www.iaarc.org/wp-content/uploads/2024/10/ISARC-Paper_Template_Revised-ver.-align-with-Latex-clean.docx)
+    *   [LaTex (Overleaf)](https://www.overleaf.com/latex/templates/isarc-latex-paper-template/mkbhpjzmhchc)
+*   **Copyright Transfer Agreement:** Authors must accept the [Copyright Transfer Agreement Term and Licensing Policy](https://www.iaarc.org/wp-content/uploads/2022/05/ISARC-CopyrightTransferAgreementTermAndLicensingPolicy-2022.pdf) upon submission of the final paper version.
+*   **Submission System:** Please submit your paper via ConfTool: [https://www.conftool.pro/isarc2025/index.php](https://www.conftool.pro/isarc2025/index.php)
+*   **Publication Ethics:** All authors are required to familiarize themselves with the [ISARC Publication Ethics and Publication Malpractice Statement](https://www.iaarc.org/wp-content/uploads/2021/05/ISARC-Publication-Ethics-and-Publication-Malpractice-Statement.pdf).
+
+## Important Dates
+
+*   **Full Paper Submission Deadline:** January 15, 2025
+*   **Provisional Acceptance of Papers & Comments from Reviewers:** February 21, 2025
+*   **Rebuttal Period:** February 13 – March 14, 2025
+*   **Revised Versions Due:** March 14, 2025
+*   **Final Notification:** March 25, 2025
+*   **Camera-ready Papers Upload:** April 15, 2025
+*   **Early Bird Registration Deadline:** April 21, 2025
+*   **Final Registration Deadline:** June 25, 2025
+*   **ISARC 2025 Conference Dates:** July 28 – 31, 2025
+
+## Co-located Conferences
+
+ISARC 2025 participants will have free access to the CSCE Construction Specialty Conference, Construction Research Congress, and Modular and Offsite Construction Summit.",thiếu Rebuttal Period + Revised Versions Due + Camera-ready Papers Upload
+req-conf-1751954976519-bfvgj,,International Symposium on Combinatorial Optimisation,ISCO,https://eventos.ull.es/111018/detail/isco-2024-tenerife-22-24-may-2024.html,TRUE,https://eventos.ull.es/111018/section/48404/submission.html,https://eventos.ull.es/111018/section/48447/dates.html,"Conference dates: May 22-24, 2024
+Year: 2024
+Location: School of Mathematics, Faculty of Science, University of La Laguna, Tenerife, Canary Islands, Spain
+City-State-Province: Tenerife, Canary Islands
+Country: Spain
+Continent: Europe
+Type: Offline
+Submission Date.for regular papers: January 10, 2024
+Submission Date.for extended abstracts: February 29, 2024
+Registration Date.Deadline for early registration and payment: March 31, 2024
+Registration Date.Deadline for later registration and payment: May 5, 2024
+Other Date.Beginning of submission period: October 1, 2023
+Other Date.Beginning of registration and payment: November 1, 2023
+Other Date.Application to the School: March 29, 2024
+Other Date.School (in Tenerife): May 20-21, 2024
+Topics: Combinatorial optimization, algorithms and complexity, mathematical programming, operations research, optimization under uncertainty, graphs and combinatorics","May 22-24, 2024",TRUE,2024,"School of Mathematics, Faculty of Science, University of La Laguna, Tenerife, Canary Islands, Spain",TRUE,"Tenerife, Canary Islands",Spain,Europe,Offline,TRUE,"{""for regular papers"":""January 10, 2024"",""for extended abstracts"":""February 29, 2024""}",100,{},0,{},,"{""Deadline for early registration and payment"":""March 31, 2024"",""Deadline for later registration and payment"":""May 5, 2024""}",100,"{""Beginning of submission period"":""October 1, 2023"",""Beginning of registration and payment"":""November 1, 2023"",""Application to the School"":""March 29, 2024"",""School (in Tenerife)"":""May 20-21, 2024""}",100,"Combinatorial optimization, algorithms and complexity, mathematical programming, operations research, optimization under uncertainty, graphs and combinatorics",No publisher,"The International Symposium on Combinatorial Optimisation (ISCO) 2024 was held in Tenerife, Spain, from May 22-24, 2024, at the Faculty of Science, University of La Laguna. ISCO aims to bring together researchers in combinatorial optimization, covering areas like algorithms, complexity, mathematical programming, operations research, optimization under uncertainty, graphs, and combinatorics. The symposium was preceded by a Spring School for PhD students and other researchers from May 20-21, 2024.","# ISCO 2024: Call for Papers
+
+The International Symposium on Combinatorial Optimisation (ISCO) 2024 aims to bring together researchers from all communities related to combinatorial optimization, including algorithms and complexity, mathematical programming, operations research, optimization under uncertainty, graphs and combinatorics. It serves as a forum for presenting original research in these areas, especially their intersections.
+
+Quality papers on all aspects of combinatorial optimization, from mathematical foundations and theory of algorithms to computational studies and practical applications, are welcome.
+
+## Topics of Interest
+
+*   Algorithms and Complexity
+*   Mathematical Programming
+*   Operations Research
+*   Optimization under Uncertainty
+*   Graphs and Combinatorics
+*   Intersections of these areas
+
+## Submission Types
+
+*   **Regular Papers**
+*   **Extended Abstracts**
+
+## Important Dates
+
+*   Beginning of submission period: **1 October 2023**
+*   Beginning of registration and payment: **1 November 2023**
+*   Submission deadline for regular papers: **10 January 2024**
+*   Submission deadline for extended abstracts: **29 February 2024**
+*   Notifications to acceptance/rejection: **15 March 2024**
+*   Application to the School: **29 March 2024**
+*   Deadline for early registration and payment: **31 March 2024**
+*   Deadline for later registration and payment: **5 May 2024**
+
+## Event Dates
+
+*   School (in Tenerife): **20-21 May 2024**
+*   Conference (in Tenerife): **22-24 May 2024**
+
+## Venue
+
+School of Mathematics, Faculty of Science, University of La Laguna, Tenerife, Canary Islands, Spain.
+
+## Publication
+
+ISCO 2024 proceedings are published by Springer (LNCS 14594). Authors can access the pre-conference publication online for free until June 30, 2024.
+
+## Contact
+
+For inquiries, please contact the conference organizers at: [isco2024@ull.es](mailto:isco2024@ull.es)
+
+## Submission
+
+Information regarding submission can be found at: [/event_detail/111018/section/48404/submission.html](/event_detail/111018/section/48404/submission.html)",thiếu Notifications to acceptance/rejection
+req-conf-1751954976519-bfvgj,,International Symposium on Information Theory and Its Applications,ISITA,https://isita.ieice.org/2026/,TRUE,,,"Conference dates: November 1–4, 2026
+Year: 2026
+Location: Okinawa, JAPAN
+Country: Japan
+Continent: Asia
+Type: Offline
+Topics: Information Theory
+Sponsor: Research Society of Information Theory and Its Applications, Engineering Sciences Society, IEICE","November 1–4, 2026",TRUE,2026,"Okinawa, JAPAN",TRUE,No city/state/province,Japan,Asia,Offline,TRUE,{},,{},,{},,{},,{},,Information Theory,No publisher,"The International Symposium on Information Theory and Its Applications (ISITA 2026) is a leading conference on information theory, scheduled to take place from November 1–4, 2026, in Okinawa, Japan. The symposium serves as a forum for interdisciplinary interaction, bringing together leading researchers, with a particular focus on engaging young researchers and students. ISITA 2026 is planned as an in-person event.",No call for papers available,location có city mà cityStateProvince báo ko có?
+req-conf-1751954976519-bfvgj,,IEEE International Symposium on Multimedia,ISM,https://www.multimediacomputing.org/,TRUE,https://www.multimediacomputing.org/submission,https://www.multimediacomputing.org/dates,"Conference dates: December 8-10, 2025
+Year: 2025
+Location: Roral Continental Hotel, Naples, Italy
+Type: Hybrid
+Submission Date.Workshop Proposal: August 1, 2025
+Submission Date.Paper Submission: September 1, 2025
+Submission Date.Workshop Paper Submission: October 15, 2025
+Notification Date.Workshop Proposal Acceptance: September 1, 2025
+Notification Date.Notification of Paper Acceptance: October 1, 2025
+Camera-ready Date.Camera Ready and Registration: November 1, 2025
+Topics: Multimedia Computing, Mobile multimedia systems and services, Pervasive and interactive media systems, Multimedia data in the Cloud, GPU-based multimedia architectures and systems, Software development framework using multimedia techniques, Multimedia networking and QoS, Mobile audio/video streaming, Wireless broadcasting and streaming, Scalable streaming, Peer-to-peer media systems and streaming, Sensor networks, Internet telephony technologies and systems, Video teleconferencing, Information visualization and interactive systems, Multimodal user interfaces, Tools for media authoring, analyzing, editing, browsing, and navigation, Intelligent agents for content creation, distribution, and analysis, Novel interfaces for multimedia, User interfaces for mobile devices, Signal processing, Coding standards, Scalable and Multi-view coding, Multi-resolution or super-resolution algorithms, Maintenance of perceptual quality with further compression, Developing novel quality measures, Data security, Copyright issues for multimedia data, Surveillance and monitoring methods, Face detection and recognition algorithms, Human behavior analysis from motion images/videos, Multimedia-based computer forensics, Multimedia Captchas, On forensic use of biometrics, Data hiding, stenography, and steganalysis, Trust and privacy issues in media systems, Media meta-modeling techniques, Storage systems, databases, and retrieval, Data segmentation, Image, audio, video, genre clustering & classification, Video summarization and story generation, Speaker identification, recognition, and location, Object, event, emotion, text detection and recognition, Mosaic, video panorama and background generation, Media semantics, ontologies, annotation, concept detection and learning, Personalization and user preferences, 3D and depth information, Viewer perception, emotion analysis and visual attention, Multimedia datasets and open source code for research, Multimedia recommender systems, Fake multimedia detection, Mobile and location-based media techniques, Mobile visual search, Social networks for mobile users, Augmented reality for mobile users, Content delivery in mobile networks, Mobile applications, Big data, 3D data, Media composition and production, Gaming, Virtual and augmented reality, Robotics, Media interfaces for the Web, Media in social network analysis, Rich media enabled E-commerce and E-shopping, Media systems for handicapped, Collaborative systems, Interdisciplinary media applications, Deep learning of multimedia data","December 8-10, 2025",TRUE,2025,"Roral Continental Hotel, Naples, Italy",TRUE,No city/state/province,No country,No continent,Hybrid,TRUE,"{""Workshop Proposal"":""August 1, 2025"",""Paper Submission"":""September 1, 2025"",""Workshop Paper Submission"":""October 15, 2025""}",100,"{""Workshop Proposal Acceptance"":""September 1, 2025"",""Notification of Paper Acceptance"":""October 1, 2025""}",100,"{""Camera Ready and Registration"":""November 1, 2025""}",100,{},,{},,"Multimedia Computing, Mobile multimedia systems and services, Pervasive and interactive media systems, Multimedia data in the Cloud, GPU-based multimedia architectures and systems, Software development framework using multimedia techniques, Multimedia networking and QoS, Mobile audio/video streaming, Wireless broadcasting and streaming, Scalable streaming, Peer-to-peer media systems and streaming, Sensor networks, Internet telephony technologies and systems, Video teleconferencing, Information visualization and interactive systems, Multimodal user interfaces, Tools for media authoring, analyzing, editing, browsing, and navigation, Intelligent agents for content creation, distribution, and analysis, Novel interfaces for multimedia, User interfaces for mobile devices, Signal processing, Coding standards, Scalable and Multi-view coding, Multi-resolution or super-resolution algorithms, Maintenance of perceptual quality with further compression, Developing novel quality measures, Data security, Copyright issues for multimedia data, Surveillance and monitoring methods, Face detection and recognition algorithms, Human behavior analysis from motion images/videos, Multimedia-based computer forensics, Multimedia Captchas, On forensic use of biometrics, Data hiding, stenography, and steganalysis, Trust and privacy issues in media systems, Media meta-modeling techniques, Storage systems, databases, and retrieval, Data segmentation, Image, audio, video, genre clustering & classification, Video summarization and story generation, Speaker identification, recognition, and location, Object, event, emotion, text detection and recognition, Mosaic, video panorama and background generation, Media semantics, ontologies, annotation, concept detection and learning, Personalization and user preferences, 3D and depth information, Viewer perception, emotion analysis and visual attention, Multimedia datasets and open source code for research, Multimedia recommender systems, Fake multimedia detection, Mobile and location-based media techniques, Mobile visual search, Social networks for mobile users, Augmented reality for mobile users, Content delivery in mobile networks, Mobile applications, Big data, 3D data, Media composition and production, Gaming, Virtual and augmented reality, Robotics, Media interfaces for the Web, Media in social network analysis, Rich media enabled E-commerce and E-shopping, Media systems for handicapped, Collaborative systems, Interdisciplinary media applications, Deep learning of multimedia data",No publisher,"The 27th International Symposium on Multimedia (ISM 2025) will be held from December 8-10, 2025, at the Roral Continental Hotel in Naples, Italy. This hybrid event, co-located with RoboticCC 2025 and AIxRobotics 2025, serves as an international forum for researchers to discuss advancements and emerging topics in multimedia computing.","# IEEE International Symposium on Multimedia (ISM) 2025: Call for Papers
+
+The 27th International Symposium on Multimedia (ISM 2025) will be held from **December 8-10, 2025**, at the **Roral Continental Hotel in Naples, Italy**. The conference will be a **hybrid event**, co-located with RoboticCC 2025 and AIxRobotics 2025.
+
+ISM 2025 provides an international forum for researchers to exchange information regarding advances in the state of the art and practice of multimedia computing, as well as to identify emerging research topics and define the future of multimedia computing.
+
+## Submission Topics
+
+Submissions are solicited for full papers, short papers, position papers, and workshop papers. Topics include, but are not limited to:
+
+### Systems and Architectures
+*   Mobile multimedia systems and services
+*   Pervasive and interactive media systems including mobile systems, pervasive gaming, and digital TV
+*   Multimedia data in the Cloud
+*   GPU-based multimedia architectures and systems
+*   Software development framework using multimedia techniques
+
+### Communications and Streaming
+*   Multimedia networking and QoS
+*   Mobile audio/video streaming
+*   Wireless broadcasting and streaming
+*   Scalable streaming
+*   Peer-to-peer media systems and streaming
+*   Sensor networks
+*   Internet telephony technologies and systems
+*   Video teleconferencing
+
+### Multimedia Interfaces
+*   Information visualization and interactive systems
+*   Multimodal user interfaces: design, engineering, modality-abstractions, etc.
+*   Tools for media authoring, analyzing, editing, browsing, and navigation
+*   Intelligent agents for content creation, distribution, and analysis
+*   Novel interfaces for multimedia: touch, tangible, wearable, virtual, 3D, etc.
+*   User interfaces for mobile devices
+
+### Media Coding, Processing, and Quality Measurement
+*   Signal processing including audio, video, image processing, and coding
+*   Coding standards
+*   Scalable and Multi-view coding
+*   Multi-resolution or super-resolution algorithms
+*   Maintenance of perceptual quality with further compression
+*   Developing novel quality measures
+
+### Multimedia Security and Forensics
+*   Data security including digital watermarks and encryption
+*   Copyright issues for multimedia data
+*   Surveillance and monitoring methods
+*   Face detection and recognition algorithms
+*   Human behavior analysis from motion images/videos
+*   Multimedia-based computer forensics (e.g., crime scene investigation, user profiling)
+*   Multimedia Captchas, including attacks and counter-attacks
+*   On forensic use of biometrics
+*   Data hiding, stenography, and steganalysis
+*   Trust and privacy issues in media systems
+
+### Content Understanding, Modeling, Management, and Retrieval
+*   Media meta-modeling techniques
+*   Storage systems, databases, and retrieval
+*   Data segmentation
+*   Image, audio, video, genre clustering & classification
+*   Video summarization and story generation
+*   Speaker identification, recognition, and location
+*   Object, event, emotion, text detection and recognition
+*   Mosaic, video panorama and background generation
+*   Media semantics, ontologies, annotation, concept detection and learning
+*   Personalization and user preferences
+*   3D and depth information
+*   Viewer perception, emotion analysis and visual attention
+*   Multimedia datasets and open source code for research
+*   Multimedia recommender systems
+*   Fake multimedia detection
+
+### Mobile Media
+*   Mobile and location-based media techniques
+*   Mobile visual search
+*   Social networks for mobile users
+*   Augmented reality for mobile users
+*   Content delivery in mobile networks (e.g., 3G, 4G and future 5G)
+*   Mobile applications
+
+### Applications
+*   Big data
+*   3D data: graphics, displays, sound, broadcasting, interfaces
+*   Media composition and production: capture, authoring, digital art, animations, etc.
+*   Gaming
+*   Virtual and augmented reality
+*   Robotics
+*   Media interfaces for the Web
+*   Media in social network analysis
+*   Rich media enabled E-commerce and E-shopping
+*   Media systems for handicapped
+*   Collaborative systems
+*   Interdisciplinary media applications: Bioinformatics, Transportation systems, Wild-life monitoring and analysis, etc.
+*   Deep learning of multimedia data
+
+## Submission Instructions
+
+*   **Manuscript Preparation:** Authors are invited to submit an 8-page (regular), 4-page (short), and 2-page (poster and demo) manuscript in double-column IEEE format.
+*   **Formatting:** Manuscripts must be written in English and follow the instructions in the [Manuscript Formatting and Templates page](https://www.multimediacomputing.org/submission).
+*   **Submission Method:** Only electronic submission will be accepted. Technical paper authors MUST submit their manuscripts through EasyChair: [https://easychair.org/conferences?conf=ism2025](https://easychair.org/conferences?conf=ism2025). Manuscripts may only be submitted in PDF format.
+*   **Review Process:** All paper submissions will be carefully reviewed by at least three experts. Reviews will be returned to the author(s) with comments to ensure the high quality of the accepted papers.
+*   **Presentation Guarantee:** Authors of accepted papers must guarantee that their paper will be presented at the conference.
+*   **Originality:** Please only submit original material where copyright of all parts is owned by the authors declared and which is not currently under review elsewhere.
+*   **IEEE Policies:** Please see the [IEEE policies](https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/#:~:text=IEEE%20policy%20requires%20that%20authors,submissions%20when%20submitting%20an%20article.) for further information.
+
+## Camera-Ready Submission Instructions
+
+*   Your final papers MUST be formatted to IEEE Computer Society Proceedings Manuscript Formatting Guidelines.
+*   Please proofread and check the layout of your paper BEFORE submitting.
+*   Link for camera-ready submission: (TBA)
+*   Only PDF format will be accepted.
+
+## Important Notes
+
+*   Every paper accepted for publication in the Proceedings MUST be presented during the conference.
+*   Every paper accepted MUST have attached to it at least one registration at the full member/nonmember rate. If all authors are students, one student author will be required to register at the full registration rate.
+*   Failure to comply will result in the removal of your paper from the conference proceedings.
+*   **Page Limits & Extra Pages:**
+    *   Regular and Workshop papers: up to 8 pages (allow up to 2 extra pages with $150 per extra page).
+    *   Short papers: up to 4 pages (allow up to 1 extra page with $150 per extra page).
+    *   Poster and Demo papers: up to 2 pages.
+
+## Important Dates
+
+*   **Workshop Proposal:** August 1, 2025 PT
+*   **Paper Submission:** September 1, 2025 PT
+*   **Workshop Proposal Acceptance:** September 1, 2025 PT
+*   **Notification of Paper Acceptance:** October 1, 2025 PT
+*   **Workshop Paper Submission:** October 15, 2025 PT
+*   **Camera Ready and Registration:** November 1, 2025 PT",location đúng mà các trường con báo ko có?
+req-conf-1751954976519-bfvgj,,IEEE International Conference on Intelligence and Security Informatics,ISI,https://ieee-isi.org/2025/,TRUE,https://ieee-isi.org/2025/contributions/call-for-papers/,https://ieee-isi.org/2025/contributions/call-for-papers/,"Conference dates: July 12-13, 2025
+Year: 2025
+Location: Hong Kong, China
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.Submission Open: February 1, 2025
+Submission Date.Submission Deadline: March 31, 2025
+Notification Date.Acceptance Notification: May 1, 2025
+Camera-ready Date.Final Paper Deadline: May 31, 2025
+Registration Date.Early Registration Deadline: May 31, 2025
+Topics: Intelligence and security informatics, Artificial Intelligence Security, LLM Security, Security Analytics and Threat Intelligence, Resilient Cyber Infrastructure Design and Protection, Human Behavior and Factors in Security Applications, Organizational, National, and International Security Applications
+Publisher: IEEE","July 12-13, 2025",TRUE,2025,"Hong Kong, China",TRUE,Hong Kong,China,Asia,Offline,TRUE,"{""Submission Open"":""February 1, 2025"",""Submission Deadline"":""March 31, 2025""}",100,"{""Acceptance Notification"":""May 1, 2025""}",100,"{""Final Paper Deadline"":""May 31, 2025""}",100,"{""Early Registration Deadline"":""May 31, 2025""}",100,{},,"Intelligence and security informatics, Artificial Intelligence Security, LLM Security, Security Analytics and Threat Intelligence, Resilient Cyber Infrastructure Design and Protection, Human Behavior and Factors in Security Applications, Organizational, National, and International Security Applications",IEEE,"The 2025 IEEE International Conference on Intelligence and Security Informatics (ISI 2025) will be held on July 12-13, 2025, in Hong Kong, China. ISI is an interdisciplinary field focused on advancing understanding of the interrelationships between technology, humans, organizations, and security. The conference invites researchers and professionals to submit papers and workshop proposals, with a strong encouragement for research relevant to artificial intelligence security, LLM security, and human behavior in security contexts.","# Call for Papers - IEEE International Conference on Intelligence and Security Informatics (ISI 2025)
+
+The 2025 IEEE International Conference on Intelligence and Security Informatics (ISI 2025) will be held from **July 12-13, 2025, in Hong Kong, China**.
+
+Intelligence and security informatics (ISI) is an interdisciplinary field involving academic researchers and industry professionals focused on physical and cyber security missions. The conference aims to advance our understanding of the interrelationships between technology, humans, organizations, and security.
+
+ISI 2025 invites academic researchers, IT, security, and analytics professionals, as well as industry consultants and practitioners, to submit papers and workshop proposals. Research relevant to **artificial intelligence security, LLM security, and human behavior in security contexts** is strongly encouraged.
+
+## List of Potential Topics
+
+*   **Artificial Intelligence Security**
+    *   Adversarial example methods and applications
+    *   Robustness defense research and model enhancement mechanisms
+    *   Malicious attack detection and mitigation research
+    *   Transferability of machine learning applications
+    *   Privacy-preserving machine learning application development
+    *   Decentralized data processing and distributed security protocols
+    *   Fairness evaluation metrics for artificial intelligence applications
+    *   Artificial intelligence applications in cybersecurity scenarios
+    *   Intrusion detection using machine learning methods
+    *   Artificial intelligence bias identification
+    *   Governance of generative artificial intelligence misuse
+    *   Legal responsibility of artificial intelligence systems
+    *   Domain-specific artificial intelligence security
+    *   Human-AI interaction security
+*   **LLM Security**
+    *   Adversarial prompt research on LLM
+    *   Data privacy protection methods for LLM
+    *   Bias detection metrics for LLM
+    *   Fairness analysis methods for LLM
+    *   Transparency in LLM-based decision making
+    *   Ethical implications of LLM development
+    *   Privacy leakage from training datasets for LLM construction
+    *   Content Moderation of LLM against harmful or inappropriate outputs
+    *   Security of fine-tuning LLM in domain-specific scenarios
+    *   Misuse of LLM in security-critical applications
+    *   Human-LLM interaction risks
+*   **Security Analytics and Threat Intelligence**
+    *   Threat pattern models and modeling tools
+    *   Real-time situational awareness
+    *   Intrusion and cybersecurity threat detection and analysis
+    *   Cyber-physical-social system security and incident management
+    *   Computing and networking infrastructure protection
+    *   Crime analysis and prevention
+    *   Forecasting threats and measuring the impact of threats
+    *   Surveillance and intelligence through unconventional means
+    *   Information security management standards
+    *   Information systems security policies
+    *   Mobile and cloud computing security
+    *   Big data analytics for cybersecurity
+    *   Machine learning for cybersecurity
+    *   Transportation intelligence and security
+    *   Artificial intelligence for cybersecurity
+    *   LLM for cybersecurity
+*   **Resilient Cyber Infrastructure Design and Protection**
+    *   Data science and analytics in security informatics
+    *   Data representation and fusion for security informatics
+    *   Criminal/intelligence information extraction
+    *   Data sharing and information visualization for security informatics
+    *   Web-based intelligence monitoring and analysis
+    *   Spatial-temporal data analysis for crime analysis and security informatics
+    *   Criminal/intelligence machine learning and data mining
+    *   Cyber attack and/or bio-terrorism tracking, alerting, and analysis
+    *   Digital forensics and computational criminology
+    *   Financial and accounting fraud analysis
+    *   Consumer-generated content and security-related social media analytics
+    *   Security-related social network analysis (radicalization, fund-raising, recruitment, conducting operations)
+    *   Authorship analysis and identification
+    *   Security-related analytical methodologies and software tools
+*   **Human Behavior and Factors in Security Applications**
+    *   Behavior issues in information systems security
+    *   HCI and user interfaces of relevance to intelligence and security
+    *   Social impacts of crime, cybercrime, and/or terrorism
+    *   Board activism and influence
+    *   Measuring the effectiveness of security interventions
+    *   Citizen and employee education and training
+    *   Understanding user behavior such as compliance, susceptibility, and accountability
+    *   Security risks related to user behaviors/interactions with information systems
+    *   Human behavior modeling, representation, and prediction for security applications
+*   **Organizational, National, and International Security Applications**
+    *   Best practices in security protection
+    *   Information sharing policy and governance
+    *   Privacy, security, and civil liberties issues
+    *   Emergency response and management
+    *   Disaster prevention, detection, and management
+    *   Protection of transportation and communications infrastructure
+    *   Communication and decision support for research and rescue
+    *   Assisting citizens’ responses to cyber attacks, terrorism, and catastrophic events
+    *   Accounting and IT auditing and fraud detection
+    *   Corporate governance and monitoring
+    *   Election fraud and political use and abuse
+    *   Machine learning for the developing world
+    *   Artificial Intelligence methods and applications for humanitarian efforts
+
+## Submission Guidelines
+
+*   All papers must be original and not simultaneously submitted to another journal or conference.
+*   Each manuscript must clearly articulate its data, analytical procedures, and evaluation setup and results.
+*   Making data, code, and processes publicly available is strongly encouraged, though not required.
+*   The expected length of the manuscript is **6 pages**. A maximum of **2 additional pages** is allowed at an extra cost per page.
+*   Submission format is **PDF**, following IEEE publication format. The template can be found at [IEEE – Manuscript Templates for Conference Proceedings](https://www.ieee.org/conferences/publishing/templates.html).
+*   Papers should be submitted through the Papercept submission and review system: [https://its.papercept.net/conferences/scripts/start.pl](https://its.papercept.net/conferences/scripts/start.pl) (find ISI 2025 in the 2025 conference list).
+*   To upload the final manuscript, at least one of the authors must register for the conference.
+*   Each accepted paper must be presented at the conference.
+*   At least one author of each accepted paper must register as an IEEE member before the early registration deadline.
+*   Accepted papers will be submitted for inclusion into IEEE Xplore, subject to meeting IEEE Xplore’s scope and quality requirements.
+
+*   **SUBMISSION INSTRUCTION:** [https://ieee-isi.org/2025/wp-content/uploads/sites/3/2025/03/paper-submission-instructions.pdf](https://ieee-isi.org/2025/wp-content/uploads/sites/3/2025/03/paper-submission-instructions.pdf)
+
+*   **SUBMIT A PAPER:** [https://its-registration.paperhost.net/isi25/session/login](https://its-registration.paperhost.net/isi25/session/login)
+
+## Important Dates
+
+*   **Submission Open:** February 1, 2025
+*   **Submission Deadline:** March 31, 2025, 11:59PM (Pacific Time)
+*   **Acceptance Notification:** May 1, 2025
+*   **Final Paper Deadline:** May 31, 2025
+*   **Early Registration Deadline:** May 31, 2025
+*   **Conference Dates:** July 12-13, 2025",
+req-conf-1751954976519-bfvgj,,International Symposium on Memory Management,ISMM,https://conf.researchr.org/home/ismm-2025,TRUE,https://conf.researchr.org/home/ismm-2025#Call-for-Papers,https://conf.researchr.org/home/ismm-2025,"Conference dates: June 17, 2025
+Year: 2025
+Location: Seoul, South Korea
+City-State-Province: Seoul
+Country: South Korea
+Continent: Asia
+Type: Offline
+Topics: memory management, memory performance, allocator design, garbage collection, architectural support for memory management, persistent memories, emerging memory technologies
+Submission Date.Paper submission: March 18, 2025
+Notification Date.Author notification: May 3, 2025
+Camera-ready Date.Camera-ready papers due: May 15, 2025","June 17, 2025",TRUE,2025,"Seoul, South Korea",TRUE,Seoul,South Korea,Asia,Offline,TRUE,"{""Paper submission"":""March 18, 2025""}",100,"{""Author notification"":""May 3, 2025""}",100,"{""Camera-ready papers due"":""May 15, 2025""}",100,{},,{},0,"memory management, memory performance, allocator design, garbage collection, architectural support for memory management, persistent memories, emerging memory technologies",No publisher,"The 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) will be held in Seoul, South Korea, from June 17 to June 22, 2025, co-located with PLDI 2025. ISMM is a forum dedicated to research in memory management, including performance, allocator design, garbage collection, and architectural support.","# ISMM 2025: Call for Papers
+
+The 2025 ACM SIGPLAN International Symposium on Memory Management (ISMM 2025) is soliciting full-length submissions covering new work on all memory management related topics in both software and hardware (and their cooperation), as well as papers presenting confirmations or refutations of important prior results.
+
+ISMM 2025 will be held in-person as part of PLDI'25, sharing the venue and activities at **The Westin Josun Seoul, Seoul, South Korea**, from **June 17 to June 22, 2025**.
+
+### Submission Types
+
+In addition to regular papers, ISMM 2025 also invites submissions of the following kinds:
+
+*   **Surveys and comparative analyses:** that shed new light on previously published techniques.
+*   **Practitioner reports:** describing experience with memory management in production. These papers are not expected to provide novel research contributions but should not have been previously published.
+*   **Intellectual abstracts:** where researchers share designs, algorithms, or theory that may be interesting to the memory management community, but not yet evaluated.
+
+Please indicate the submission type (regular paper, survey, practitioner report, or intellectual abstract) with a subtitle.
+
+## Areas of Interest
+
+Areas of interest include, but are not limited to:
+
+*   Garbage collection algorithms and implementations
+*   Memory allocation and de-allocation
+*   Memory system design and analysis (both software and hardware)
+*   Hardware support for memory management
+*   Memory management for large-scale data-intensive systems
+*   Memory management at datacenter and cloud scales
+*   Formal analysis and verification of memory management algorithms
+*   Compiler analyses to aid memory management
+*   Tools to analyze memory usage and characteristics of programs
+*   Empirical analysis of memory intensive programs
+*   Formal analysis and verification of memory intensive programs
+*   Memory management for machine learning systems
+*   Programming and management of emerging or persistent memories
+*   Caches, memory controllers, memory hierarchies and their management
+*   Cache coherence and memory consistency
+*   Processing in memory (including processing near and using memory)
+*   Memory technology and architecture (SRAM, DRAM, flash, NVM, emerging technologies)
+*   Security and privacy of memory systems
+*   Robustness of memory systems
+*   Low-latency and low-energy memory systems
+
+The symposium also welcomes industry practitioners presenting their recent practice and findings in memory management related to real-world deployments.
+
+## Important Dates (AoE / UTC-12h)
+
+*   **Paper submission:** Tuesday, March 18, 2025
+*   **Author response period:** Wednesday, April 23 - Friday, April 25, 2025
+*   **Author notification:** Saturday, May 3, 2025
+*   **Camera-ready papers due:** Thursday, May 15, 2025
+*   **Conference day:** Tuesday, June 17, 2025
+
+## Submission Guidelines
+
+*   All papers must be submitted online in Portable Document Format (PDF).
+*   Papers should be formatted according to the two-column ACM proceedings format.
+*   Each paper should have no more than **12 pages**, excluding bibliography. References must list all authors (do not use et al.) and use a numeric citation style (e.g., [52]).
+*   Submissions should be in PDF format and printable on US Letter and A4 sized paper.
+*   Papers that exceed the length requirement or deviate from the expected format will be rejected.
+*   Ensure figures and tables are legible even after printing in gray-scale.
+*   Appendices should be submitted as supplementary material and must also be anonymized.
+
+### Formatting Template
+
+Use the `sigplan` subformat of the `acmart` format. The first two lines of the LaTeX document should be:
+
+```latex
+\documentclass[sigplan,10pt,review,anonymous]{acmart}
+\settopmatter{printfolios=true,printccs=false,printacmref=false}
+```
+
+## Double-Blind Reviewing
+
+ISMM uses double-blind reviewing. Author names and affiliations must be omitted. References to prior work by the authors should be in the third person. Supplementary material must also be anonymized.
+
+For detailed guidelines and common scenarios, please refer to the FAQ on Double-Blind Reviewing: [https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing](https://pldi23.sigplan.org/track/pldi-2023-pldi#FAQ-on-Double-Blind-Reviewing).
+
+If you have any doubts, contact the Program Chairs.
+
+## Declaring Conflicts
+
+Declare potential conflicts during submission, including adviser-advisee relationships, institutional conflicts, financial conflicts of interest, relationships with friends or relatives, and recent co-authorships (last 2 years).
+
+Spurious conflicts are harmful and may lead to rejection. Consult the Program Chair if unsure.
+
+## Submission Link
+
+[https://ismm25.hotcrp.com](https://ismm25.hotcrp.com)",thiếu Author response period
+req-conf-1751954976519-bfvgj,,IEEE International Symposium on Real-Time Distributed Computing,ISORC,https://isorc.github.io/2025/,TRUE,https://isorc.github.io/2025/html/cfp.html,https://isorc.github.io/2025/,"Conference dates: May 26 - 28, 2025
+Year: 2025
+Location: Toulouse, France
+City-State-Province: Toulouse
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Submission deadline (extended): February 02, 2025
+Notification Date.Acceptance notification: March 15, 2025
+Camera-ready Date.Camera-ready papers: April 20, 2025
+Registration Date.Author registration deadline (FIRM): April 20, 2025
+Topics: Software architectures for real-time and/or distributed computing, Distributed and/or Real-Time Image, video and Stream Processing, Distributed and/or Real Time Communication for Emerging and Future Networks, Blockchain and Distributed Ledger Technology (DLT) for Distributed and/or Real-Time Computing, Artificial Intelligence and Machine Learning for Distributed and/or Real Time Computing, DevOps and CI/CD for Distributed and/or Real Time Computing, CyberSecurity and Security of Distributed and/or Real Time IoT Systems, Optimization Approaches for Distributed and/or Real Time Computing, Sustainable and Green Computing Transformation for Distributed and/or Real Time Computing, Formal Verification and Model Checking for Distributed and/or Real-Time Computing, Ontology-based Knowledge Modeling for Distributed and/or Real-Time Computing, Dependability, Fault tolerance, and Resilience of Distributed and/or Real-Time Computing, Algorithms for Distributed and/or Real-Time Analytics, Distributed Management, Monitoring, Performance Evaluation of Distributed and/or Real-Time Computing, Operating Systems, Middleware and System software for Distributed and/or Real-Time Computing, Distributed and/or Real-Time IoT Applications
+Publisher: IEEE","May 26 - 28, 2025",TRUE,2025,"Toulouse, France",TRUE,Toulouse,France,Europe,Offline,TRUE,"{""Submission deadline (extended)"":""February 02, 2025""}",100,"{""Acceptance notification"":""March 15, 2025""}",100,"{""Camera-ready papers"":""April 20, 2025""}",100,"{""Author registration deadline (FIRM)"":""April 20, 2025""}",100,{},,"Software architectures for real-time and/or distributed computing, Distributed and/or Real-Time Image, video and Stream Processing, Distributed and/or Real Time Communication for Emerging and Future Networks, Blockchain and Distributed Ledger Technology (DLT) for Distributed and/or Real-Time Computing, Artificial Intelligence and Machine Learning for Distributed and/or Real Time Computing, DevOps and CI/CD for Distributed and/or Real Time Computing, CyberSecurity and Security of Distributed and/or Real Time IoT Systems, Optimization Approaches for Distributed and/or Real Time Computing, Sustainable and Green Computing Transformation for Distributed and/or Real Time Computing, Formal Verification and Model Checking for Distributed and/or Real-Time Computing, Ontology-based Knowledge Modeling for Distributed and/or Real-Time Computing, Dependability, Fault tolerance, and Resilience of Distributed and/or Real-Time Computing, Algorithms for Distributed and/or Real-Time Analytics, Distributed Management, Monitoring, Performance Evaluation of Distributed and/or Real-Time Computing, Operating Systems, Middleware and System software for Distributed and/or Real-Time Computing, Distributed and/or Real-Time IoT Applications",IEEE,"The 28th IEEE International Symposium on Real-Time Distributed Computing (ISORC 2025) will be held in Toulouse, France, from May 26-28, 2025. The conference theme is ""Resilient and Intelligent Real-Time Systems for a Hyperconnected World"" and it focuses on object-, component-, and service-oriented systems and solutions in real-time computing.","# IEEE International Symposium on Real-Time Distributed Computing (ISORC) 2025: Call for Papers
+
+IEEE ISORC 2025 will be held in Toulouse, France, from **May 26 - 28, 2025**.
+
+## Welcome to ISORC 2025
+
+The theme for this year is **""Resilient and Intelligent Real-Time Systems for a Hyperconnected World""**. This theme challenges us to imagine systems that are not only fast and scalable but also adaptive, secure, dependable, and sustainable.
+
+Authors of selected papers from ISORC 2025 will be invited to submit an extended version of their work for the Special Issue on AI-Driven Real-Time Distributed Computing for the Edge-Cloud Continuum review and possible publication in the **Elsevier Journal of Systems Architecture: Embedded Software Design (JSA)**.
+
+ISORC is a single-track and single-blind conference with a lively community, continually evolving to meet the latest challenges faced by researchers and practitioners in the real-time domain.
+
+## Calls for Contributions
+
+*   [Call for Research papers](html/cfp.html)
+*   [Call for Industry papers](html/cfp - industry.html)
+*   [Call for Workshops](html/cfp - workshops.html)
+*   [Call for Posters & Demos](html/cfp - poster-demos.html)
+*   [Call for Doctoral Symposium](html/cfp - DOCTORAL SYMPOSIUM.html)
+*   [Call for Dissertation Digest](html/cfp - DISSERTATION DIGEST.html)
+*   [Call for Tutorials Proposals](html/cfp - tutorials.html)
+*   [Call for Panels](html/cfp - panels.html)
+*   [PDF](resources/CFP/ISORC2025_CFP.pdf)
+
+## Important Dates
+
+### Main Track
+
+*   **Submission deadline (extended):** February 02, 2025 (Firm)
+*   **Acceptance notification:** March 15, 2025
+*   **Camera-ready papers:** April 20, 2025
+*   **Conference:** May 26 - 28, 2025
+
+### Registration
+
+*   **Author registration deadline (FIRM):** April 20, 2025
+
+## Submission Guidelines
+
+### Regular Research Papers
+
+*   Papers should describe original work.
+*   Submissions for review should be a maximum of **10 pages** in length, using the IEEE conference paper format.
+*   A maximum of **two extra pages** may be purchased during the camera-ready submission of accepted papers.
+
+### Industrial Papers and Practitioner Reports
+
+*   Papers describing experiences of using ORC technology in application or tool development projects.
+*   Should be no longer than **10 pages**, using the IEEE conference paper format.
+*   May be less formal than research papers.
+*   A maximum of two extra pages may be purchased during the camera-ready submission of accepted papers.
+*   Should clearly identify and discuss in detail the issues that represent notable industrial advances.
+*   Reports with project metrics supporting their claims are particularly sought, as well as those that show both benefits and drawbacks of the approaches used in the given project.
+
+### Short Papers
+
+*   Short research papers that are no longer than **6 pages**, using the IEEE conference paper format, on real-time analytics are also invited.
+*   Should contain enough information for the program committee to understand the scope of the project and evaluate the novelty of the problem or approach.
+
+**IEEE conference paper templates can be found here.**
+
+Papers are to be submitted through the [HotCRP system](https://isorc25.hotcrp.com/).
+
+## Publication Information
+
+All accepted submissions will appear in the proceedings published by IEEE.
+
+*   Each accepted paper shall be accompanied by at least one non-student registration.
+*   One of the authors of the paper must attend and present their work at the conference. Failure to present the paper in person can lead to the paper being withdrawn from the proceedings.
+
+## Organizers
+
+### General Chairs
+
+*   Thierry Gayraud (University of Toulouse III, UPA CNRS-LAAS, France)
+*   Aniruddha Gokhale (Vanderbilt University, USA)
+*   Akram Hakiri (University of Pau & Pays de l'Adour, France)
+
+### Program Committee Chairs
+
+*   Daniel Casini (Scuola Superiore Sant'Anna - Pisa, Italy)
+*   Pascal Berthou (University of Toulouse III, UPS, CNRS-LAAS, France)
+*   Mustafa Al Lail (Texas A&M International University, USA)
+
+### Steering Committee Chairs
+
+*   Uwe Brinkschulte (Goethe University of Frankfurt, Germany)
+*   Robert G Pettit (George Mason University, USA)
+
+### Local Management Chairs
+
+*   Nicola Accettura (CNRS - LAAS, France)
+*   Nicolas Riviere (University of Toulouse, CNRS - LAAS, France)
+
+### Workshop Chairs
+
+*   Jerome Hugues (Carnegie Mellon University, USA)
+
+### Posters and Demos Chairs
+
+*   Nedra Mellouli (Ecole Supérieure d'Ingénieurs Léonard de Vinci, Paris La Defense, France)
+
+### Doctoral Symposium Chairs
+
+*   Slim Abdellatif (INSA Toulouse, France)
+
+### Dissertation Digest Chairs
+
+*   Nicola Accettura (CNRS - LAAS, France)
+
+### Tutorial Chairs
+
+*   Mohamed Faten Zhani (University of Sousse, Tunisia)
+
+### Publicity Chairs
+
+*   Abdelouahed Gherbi (Ecole de Technologie Superieure (ETS), Montreal, Canada)
+*   Maryline Laurent (Télécom Sud Paris, Institut Polytechnique de Paris, France)
+*   Tang Yue (Northeastern University, Shenyang, P. R. China)
+
+### Finance Chairs
+
+*   Hella Kaffel Ben Ayed (University of Tunis El Manar, Tunisia)
+
+### Publication Chairs
+
+*   Omar Alam (Trent University, Peterborough, Canada)
+
+### Web Chair
+
+*   Akram Hakiri (University of Pau & Pays de l'Adour, France)",
+req-conf-1751954976519-bfvgj,,International Symposium on Visual Computing,ISVC,https://www.isvc.net/,TRUE,https://www.isvc.net/index.php/call-for-papers/,https://www.isvc.net/index.php/call-for-papers/,"Conference dates: November 17-19, 2025
+Year: 2025
+Location: Las Vegas, NV
+City-State-Province: Las Vegas, Nevada
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Tutorial and Special Track Proposals: May 15, 2025
+Submission Date.Paper Submissions: August 20, 2025
+Notification Date.Tutorial & Special Track Notifications: May 20, 2025
+Notification Date.Notification of Acceptance: September 22, 2025
+Camera-ready Date.Final Paper: October 20, 2025
+Other Date.Early Registration: October 20, 2025
+Other Date.Hotel Reservation: October 20, 2024
+Topics: Computer Vision, Computer Graphics, Virtual Reality, Visualization
+Publisher: Springer","November 17-19, 2025",TRUE,2025,"Las Vegas, NV",TRUE,"Las Vegas, Nevada",United States,North America,Offline,TRUE,"{""Tutorial and Special Track Proposals"":""May 15, 2025"",""Paper Submissions"":""August 20, 2025""}",100,"{""Tutorial & Special Track Notifications"":""May 20, 2025"",""Notification of Acceptance"":""September 22, 2025""}",100,"{""Final Paper"":""October 20, 2025""}",100,{},100,"{""Early Registration"":""October 20, 2025"",""Hotel Reservation"":""October 20, 2024""}",100,"Computer Vision, Computer Graphics, Virtual Reality, Visualization",Springer,"The 20th International Symposium on Visual Computing (ISVC) will be held in Las Vegas, NV from November 17-19, 2025. The symposium provides a forum for researchers and practitioners to present findings in computer vision, computer graphics, virtual reality, and visualization. Proceedings will be published by Springer in the Lecture Notes in Computer Science (LNCS) series, with a ""best paper award"" sponsored by Springer.","# 20th International Symposium on Visual Computing (ISVC)
+
+## Dates and Location
+
+*   **Dates:** November 17-19, 2025
+*   **Location:** Las Vegas, NV
+
+## Overview
+
+The International Symposium on Visual Computing (ISVC) aims to provide a common forum for researchers, scientists, engineers, and practitioners worldwide to present their latest research findings, ideas, developments, and applications in visual computing. The symposium focuses on the four central areas of visual computing:
+
+*   **Computer Vision**
+*   **Computer Graphics**
+*   **Virtual Reality**
+*   **Visualization**
+
+Papers that span multiple areas are particularly encouraged.
+
+## Symposium Structure
+
+ISVC will consist of invited and contributed presentations. In addition to the main program, the symposium includes:
+
+*   Six keynote presentations
+*   Tutorials
+*   Special tracks
+*   A poster session
+
+## Publication
+
+The symposium’s proceedings will be published by **Springer** in the **Lecture Notes in Computer Science (LNCS) series**.
+
+A ""**best paper award ($500)**"" will be sponsored by Springer.
+
+Authors of selected papers presented at ISVC’25 will be invited to submit an extended version of their work for expedited review and possible publication in a special issue on Advances in Visual Computing in the **Machine Vision and Applications journal**. The paper submission deadline for the special issue is tentatively **April 15, 2026**, with publication expected within 2026.
+
+## Call for Papers Details
+
+ISVC seeks papers describing contributions to the state of the art and practice in the broad field of visual computing.
+
+## Special Tracks
+
+In addition to the main symposium, papers are solicited for several special tracks related to ISVC. Authors should check whether their work fits any of the special tracks.
+
+## Important Dates
+
+*   **Tutorial and Special Track Proposals:** May 15, 2025
+*   **Tutorial & Special Track Notifications:** May 20, 2025
+*   **Paper Submissions:** August 20, 2025 (11:59 PM PST)
+*   **Notification of Acceptance:** September 22, 2025
+*   **Final Paper:** October 20, 2025
+*   **Early Registration:** October 20, 2025
+*   **Hotel Reservation:** October 20, 2024
+*   **ISVC’25:** November 17-19, 2025
+
+## Submission and Registration Links
+
+*   [Paper Submission](https://www.isvc.net/index.php/paper-submission/)
+*   [Online Registration](https://www.isvc.net/index.php/registration/)
+*   [Accommodation](https://www.isvc.net/index.php/accomodation/)
+*   [Visa Information](https://www.isvc.net/index.php/visa-information/)
+*   [Contact Us](https://www.isvc.net/index.php/contact-us/)
+
+## Topics of Interest (Detailed)
+
+### Area 1: Computer Vision
+
+*   Early and Biologically-Inspired Vision
+*   Color and Texture
+*   Illumination and Reflectance Modeling
+*   Segmentation and Grouping
+*   Object Recognition/Detection/Categorization
+*   Motion and Tracking
+*   Video Analysis and Event Recognition
+*   Biometrics (Face, Fingerprint, Hand, Iris, etc.)
+*   Pattern Recognition
+*   Statistical Methods and Learning
+*   Deep Learning
+*   Big Data
+*   Document Analysis
+*   Medical Image Analysis
+*   Image and Video Retrieval
+*   3D Reconstruction
+*   Shape from X
+*   Physics-Based Modeling
+*   Image-Based Modeling
+*   Computational Photography
+*   Human-Computer Interfaces
+*   Vision for Graphics
+*   Vision for Robotics
+*   Sensors and Systems
+*   Secure Image/Video Communication
+*   Image/Video Encoding/Compression
+*   Applications
+
+### Area 2: Computer Graphics
+
+*   Geometric Modeling
+*   Physically Based Modeling
+*   Geometric Computing
+*   Shape and Surface Modeling
+*   Graphics Algorithms
+*   Web Based Graphics
+*   Perceptual Aspects of Computer Graphics
+*   Computer Animation
+*   Special Effects
+*   Multimedia and Digital Media
+*   Computational Photography
+*   Image-Based Computer Graphics
+*   Rendering Techniques
+*   Stylized Rendering
+*   Global Illumination, Photo-Realistic Computer Graphics
+*   Volume Graphics, Semi-Transparent Media
+*   Graphics System Architectures
+*   Graphics Hardware and Hardware-Related Techniques (GPU)
+*   Data Compression for Graphics
+*   Computer Graphics for Small/Large Displays
+*   Parallelism in Computer Graphics
+*   Graphic Toolkits
+*   Interaction and HCI
+*   Simulation for Computer Graphics
+*   Applications
+
+### Area 3: Virtual Reality
+
+*   Augmented Reality
+*   Mixed Reality
+*   Artificial Reality
+*   Real-Time Rendering
+*   Collision detection in VR
+*   3D Interaction for VR
+*   Modeling and Simulation
+*   Virtual Humans and Artificial Life
+*   VR Systems and Toolkits
+*   Collaborative Virtual Environments
+*   Tele-collaboration
+*   VR System Architecture
+*   Multimodal Displays
+*   Projection and Display Systems
+*   Human Computer Interaction
+*   Presence and Cognition
+*   Integration of VR and Multimedia
+*   Immersive Gaming
+*   Multi-user and Distributed VR and gaming
+*   Serious Games
+*   Haptics, Audio, and Other Non-Visual Interfaces
+*   Tracking and Sensing
+*   Human Factors
+*   User Studies and Evaluation
+*   Hardware Devices
+*   Applications
+
+### Area 4: Visualization
+
+*   Visualization Taxonomies and Models
+*   Information Visualization
+*   Scalar, Vector, and Tensor Visualization
+*   Multi-dimensional and Multi-Resolution Data Visualization
+*   Time Series Data Visualization
+*   Medical Data Visualization
+*   Molecular Data Visualization
+*   Geographic Data Visualization
+*   Volume Visualization
+*   Flow Visualization
+*   Large Scale Data Set Visualization
+*   Collaborative and Distributive Visualization
+*   Isosurfaces
+*   Rendering Techniques
+*   Visualization Systems
+*   Visual Analytics, Visual Data Mining and Knowledge Discovery
+*   Display and Interaction Technology
+*   Human Perception and Cognition
+*   Human Factors
+*   Haptics for Visualization
+*   Evaluation and User Studies
+*   Hardware for Visualization
+*   Mesh Techniques and Compression
+*   Applications
+
+## Committee Information
+
+*   [Call for New Members](https://www.isvc.net/index.php/call-for-committee-members/)",
+req-conf-1751954976519-bfvgj,,International Symposium on Technology and Society,ISTAS,https://attend.ieee.org/istas-2025/,TRUE,https://attend.ieee.org/istas-2025/call-for-papers/,,"Conference dates: September 10-12, 2025
+Year: 2025
+Location: Santa Clara University, California, USA
+City-State-Province: Santa Clara, California
+Country: United States
+Continent: North America
+Type: Hybrid
+Submission Date.Special Session Proposals Due: May 16, 2025
+Submission Date.Abstracts Due: May 16, 2025
+Submission Date.Full Papers Due: May 23, 2025
+Submission Date.Student Video/Final Poster or Slides Submission Deadline: August 1, 2025
+Notification Date.Acceptance Notices: July 18, 2025
+Notification Date.Student Acceptance Notification: July 14, 2025
+Camera-ready Date.Final Camera-Ready Paper Deadline: August 1, 2025
+Topics: AI Evolution and Revolution, Ethical frameworks for AI development and deployment, AI regulation, policy, and legal issues at national and international levels, AI in Law Enforcement and Surveillance, Transparency and explainability in AI systems, AI privacy concerns, Balancing innovation with responsible AI practices, Human oversight and management, AI-driven diagnostic tools and their impact on healthcare delivery, Personalized medicine and AI, AI in drug discovery and development, Ethical considerations in AI-assisted medical decision-making, AI’s role in addressing global health challenges, Reskilling and education for an AI-driven economy and business climate, Impact of AI on job markets and employment trends, AI-human collaboration in the workplace, AI in recruitment and human resources, Governance and legal implications, Economic implications of widespread AI adoption, Infrastructure impact and change requirements, AI applications in climate change modeling and mitigation, Smart cities and AI-driven resource management, AI in renewable energy optimization, Environmental monitoring and conservation using AI, Ethical considerations in using AI for environmental decision-making, LLM/Data storage energy usage and design practices to mitigate, AI’s impact on social interactions and relationships, AI in education and learning, AI-generated art, music, and literature, AI and its effects on democracy and public discourse, Cultural differences in AI perception and adoption, AI, misinformation, and the public trust, AI in Social Media
+Publisher: IEEE","September 10-12, 2025",TRUE,2025,"Santa Clara University, California, USA",TRUE,"Santa Clara, California",United States,North America,Hybrid,TRUE,"{""Special Session Proposals Due"":""May 16, 2025"",""Abstracts Due"":""May 16, 2025"",""Full Papers Due"":""May 23, 2025"",""Student Video/Final Poster or Slides Submission Deadline"":""August 1, 2025""}",100,"{""Acceptance Notices"":""July 18, 2025"",""Student Acceptance Notification"":""July 14, 2025""}",100,"{""Final Camera-Ready Paper Deadline"":""August 1, 2025""}",100,{},0,{},0,"AI Evolution and Revolution, Ethical frameworks for AI development and deployment, AI regulation, policy, and legal issues at national and international levels, AI in Law Enforcement and Surveillance, Transparency and explainability in AI systems, AI privacy concerns, Balancing innovation with responsible AI practices, Human oversight and management, AI-driven diagnostic tools and their impact on healthcare delivery, Personalized medicine and AI, AI in drug discovery and development, Ethical considerations in AI-assisted medical decision-making, AI’s role in addressing global health challenges, Reskilling and education for an AI-driven economy and business climate, Impact of AI on job markets and employment trends, AI-human collaboration in the workplace, AI in recruitment and human resources, Governance and legal implications, Economic implications of widespread AI adoption, Infrastructure impact and change requirements, AI applications in climate change modeling and mitigation, Smart cities and AI-driven resource management, AI in renewable energy optimization, Environmental monitoring and conservation using AI, Ethical considerations in using AI for environmental decision-making, LLM/Data storage energy usage and design practices to mitigate, AI’s impact on social interactions and relationships, AI in education and learning, AI-generated art, music, and literature, AI and its effects on democracy and public discourse, Cultural differences in AI perception and adoption, AI, misinformation, and the public trust, AI in Social Media",IEEE,"The IEEE International Symposium on Technology and Society (ISTAS) is the flagship conference of the IEEE’s Society on Social Implications of Technology (SSIT). ISTAS 2025, hosted by Santa Clara University in California, USA, will focus on ""AI Evolution and Revolution"" and will be a hybrid event, offering both live and virtual participation options from September 10-12, 2025.","# ISTAS 2025: Call for Papers
+
+The IEEE International Symposium on Technology and Society (ISTAS) is the flagship conference of the IEEE’s Society on Social Implications of Technology (SSIT). ISTAS 2025 will be hosted by **Santa Clara University (California, USA)** from **September 10-12, 2025**, and will feature both live and virtual participation options.
+
+## Conference Theme
+
+The overarching theme for ISTAS 2025 is **""AI Evolution and Revolution""**. The conference will explore the societal impact of AI, inviting contributions from practitioners in academia, industry, and government who contemplate the future societal impact of AI and how to guide its evolution to maximize benefits and minimize risks. It also welcomes individuals involved in technology policy.
+
+## Thematic Areas of Interest
+
+*   **ETHICS AND GOVERNANCE**
+    *   Ethical frameworks for AI development and deployment
+    *   AI regulation, policy, and legal issues at national and international levels
+    *   AI in Law Enforcement and Surveillance
+    *   Transparency and explainability in AI systems
+    *   AI privacy concerns
+    *   Balancing innovation with responsible AI practices
+    *   Human oversight and management
+*   **HEALTHCARE AND BIOMEDICINE**
+    *   AI-driven diagnostic tools and their impact on healthcare delivery
+    *   Personalized medicine and AI
+    *   AI in drug discovery and development
+    *   Ethical considerations in AI-assisted medical decision-making
+    *   AI’s role in addressing global health challenges
+*   **FUTURE OF WORK AND INDUSTRY**
+    *   Reskilling and education for an AI-driven economy and business climate
+    *   Impact of AI on job markets and employment trends
+    *   AI-human collaboration in the workplace
+    *   AI in recruitment and human resources
+    *   Governance and legal implications
+    *   Economic implications of widespread AI adoption
+    *   Infrastructure impact and change requirements
+*   **ENVIRONMENTAL SUSTAINABILITY**
+    *   AI applications in climate change modeling and mitigation
+    *   Smart cities and AI-driven resource management
+    *   AI in renewable energy optimization
+    *   Environmental monitoring and conservation using AI
+    *   Ethical considerations in using AI for environmental decision-making
+    *   LLM/Data storage energy usage and design practices to mitigate
+*   **CULTURE, ARTS, AND SOCIETY**
+    *   AI’s impact on social interactions and relationships
+    *   AI in education and learning
+    *   AI-generated art, music, and literature
+    *   AI and its effects on democracy and public discourse
+    *   Cultural differences in AI perception and adoption
+    *   AI, misinformation, and the public trust
+    *   AI in Social Media
+
+## Submission Types and Deadlines
+
+**Submission Deadlines:**
+
+*   **Special Session Proposals Due:** May 16, 2025
+*   **Abstracts Due:** May 16, 2025
+*   **Full Papers Due:** May 23, 2025
+*   **Camera-Ready Submissions Due:** August 1, 2025
+*   **Acceptance Notices:** July 18, 2025
+
+**Contribution Types:**
+
+*   **Full-length papers:** 6-8 pages, peer-reviewed for ISTAS25 Proceedings (published on IEEEXplore).
+*   **Short Papers:** 2-4 pages (excluding references), for preliminary findings, industry/practitioner/artist perspectives, or student research projects.
+*   **Student Poster Abstracts:** No longer than one page, for the student session (not intended for final proceedings).
+*   **Special Sessions, Workshop, and Tutorial Proposals:** PDF of no more than 2 pages.
+
+## Submission Guidelines
+
+*   All submissions must be uploaded to the ISTAS25 [EasyChair Submission Portal](https://easychair.org/conferences/?conf=istas25) in PDF format based on the IEEE conference template.
+*   New EasyChair users will need to register first.
+*   Authors of selected papers may be invited for expansion/revision for a special issue of the IEEE Technology and Society Magazine.
+
+## Registration Information
+
+*   **Early registration** is open until **July 31, 2025**.
+*   **Regular rates** apply from August 1 to September 9, 2025.
+*   Special rates are available for IEEE and SSIT members, as well as Santa Clara University faculty and students.
+*   More information can be found on the [ISTAS25 Registration Information page](https://attend.ieee.org/istas-2025/registration-information/).
+
+## Contact
+
+For questions about submissions or guidelines, please contact [istas25@easychair.org](mailto:istas25@easychair.org).",thiếu Student Confirmation of Acceptance & Conference Registration + Early Registration Deadline
+req-conf-1751954976519-bfvgj,,Information Security Practice and Experience Conference,ISPEC,https://ispec2025.github.io/,TRUE,https://ispec2025.github.io/#authors,https://ispec2025.github.io/ISPEC2025/#papers,"Conference dates: November 7-9, 2025
+Year: 2025
+Location: Chengdu, China
+City-State-Province: Chengdu
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.First Round Paper Submission: July 7, 2025
+Submission Date.Second Round Paper submission: August 15, 2025
+Notification Date.First Round Acceptance Notification: July 31, 2025
+Notification Date.Second Round Acceptance Notification: To be Announced
+Camera-ready Date.First Round Camera-ready Version: August 15, 2025
+Camera-ready Date.Second Round Camera-ready Version: To be Announced
+Topics: Cryptology, Applied cryptography, Mobile security, Cloud security, Access control, Privacy enhanced technology, Viruses and malware, Software security, Database security, Web security, Operating system security, Intrusion detection, Big data security and privacy, Biometric Security, Implementation, Network security, Key management, Security and privacy in ubiquitous computing, Formal methods for security, Digital forensics, Security for critical infrastructures, Embedded systems security, Lightweight security, Smart grid security, Cyber security for urban transportation, Cyber-physical security, Cryptocurrency
+Publisher: Springer","November 7-9, 2025",TRUE,2025,"Chengdu, China",TRUE,Chengdu,China,Asia,Offline,TRUE,"{""First Round Paper Submission"":""July 7, 2025"",""Second Round Paper submission"":""August 15, 2025""}",100,"{""First Round Acceptance Notification"":""July 31, 2025"",""Second Round Acceptance Notification"":""To be Announced""}",100,"{""First Round Camera-ready Version"":""August 15, 2025"",""Second Round Camera-ready Version"":""To be Announced""}",100,{},,{},,"Cryptology, Applied cryptography, Mobile security, Cloud security, Access control, Privacy enhanced technology, Viruses and malware, Software security, Database security, Web security, Operating system security, Intrusion detection, Big data security and privacy, Biometric Security, Implementation, Network security, Key management, Security and privacy in ubiquitous computing, Formal methods for security, Digital forensics, Security for critical infrastructures, Embedded systems security, Lightweight security, Smart grid security, Cyber security for urban transportation, Cyber-physical security, Cryptocurrency",Springer,"The 20th International Conference on Information Security Practice and Experience (ISPEC 2025) will be held in Chengdu, China, from November 7-9, 2025. Organized by the University of Electronic Science and Technology of China and IEEE Reliability Society, ISPEC serves as a forum for researchers and practitioners to share new information security technologies, their applications, and integration with IT systems.","# Call For Papers
+
+Authors are invited to submit full papers presenting new research results related to information security technologies and applications to ISPEC 2025, The 20th International Conference on Information Security Practice and Experience.
+
+## Topics of Interest
+
+Areas of interest include, but are not limited to:
+
+*   Cryptology
+*   Applied cryptography
+*   Mobile security
+*   Cloud security
+*   Access control
+*   Privacy enhanced technology
+*   Viruses and malware
+*   Software security
+*   Database security
+*   Web security
+*   Operating system security
+*   Intrusion detection
+*   Big data security and privacy
+*   Biometric Security
+*   Implementation
+*   Network security
+*   Key management
+*   Security and privacy in ubiquitous computing
+*   Formal methods for security
+*   Digital forensics
+*   Security for critical infrastructures
+*   Embedded systems security
+*   Lightweight security
+*   Smart grid security
+*   Cyber security for urban transportation
+*   Cyber-physical security
+*   Cryptocurrency
+
+## Publication Information
+
+The conference proceedings will be published by Springer in the **Lecture Notes in Computer Science (LNCS)** series. Previous ISPEC proceedings are available on [SpringerLink](https://link.springer.com/conference/ispec).
+
+## Paper Preparation Guidelines
+
+Authors must prepare their papers using either the [LaTeX](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) or [Word](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) templates provided by Springer. Please consult Springer's [Instructions for Authors of Proceedings](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) for detailed formatting guidelines.
+
+## Code of Conduct
+
+All authors are required to adhere to Springer Nature's [Code of Conduct for book authors](https://www.springernature.com/gp/authors/book-authors-code-of-conduct).
+
+## Important Dates
+
+**First Round:**
+
+*   **Paper Submission:** July 7, 2025
+*   **Acceptance Notification:** July 31, 2025
+*   **Camera-ready Version:** August 15, 2025
+
+**Second Round:**
+
+*   **Paper submission:** August 15, 2025
+*   **Acceptance Notification:** To be Announced
+*   **Camera-ready Version:** To be Announced
+
+## Submission
+
+Submissions must be anonymous, with no author names, affiliations, acknowledgements, or obvious references. Original contributions are invited up to **16 pages** in length (single column) excluding appendices and bibliography and up to **20 pages** in total, using at least 11-point fonts and with reasonable margins. Submissions not meeting the submission guidelines risk rejection without consideration of their merits.
+
+Submit your paper via the [ISPEC 2025 Submission Link](https://easychair.org/my/conference?conf=ispec2025).
+
+## Special Issues
+
+ISPEC 2025 will apply for discounted article processing charges (APCs) for extended versions of selected manuscripts recommended to Special Issues in open access journals, including:
+
+*   [AI Security and Safety in Computational Social Systems, IEEE Transaction on Computational Social Systems](https://www.ieeesmc.org/publications/transactions-on-computational-social-systems/call-for-papers-and-special-issues/)
+*   [Selected Papers: The 20th International Conference on Information Security Practice and Experience (ISPEC 2025), Symmetry](https://www.mdpi.com/journal/symmetry/special_issues/0O49CBO420)
+*   [Challenges and Solutions in Large Language Models, Joint Journals](https://www.mdpi.com/topics/B712V62UH1)
+*   Emerging Technologies with Symmetry for Zero Trust, Symmetry
+*   Information and Future Internet Security, Trust and Privacy—3rd Edition, Future Internet
+*   Advanced Vehicular Ad Hoc Networks: 2nd Edition, Sensors
+*   Recent Advances in Data Privacy, Transparency and Cybersecurity: Theory and Applications, Applied Science
+*   Heuristic Algorithms for Optimizing Network Technologies: Innovations and Applications, Computers, Materials & Continua
+*   Security, Safety, and Ethics of AI-Driven Innovations for Digital Health, Digital Health (SCIE/SSCI)
+
+## Registration & Visa
+
+Registration is under construction and will be announced later. Overseas participants should check if they need to apply for a Chinese visa. China has expanded visa-free access to many countries; please double-check the Visa policy from an official source. For invitation letters, please contact Dr. Chaosheng Feng (email: csfenggy@sicnu.edu.cn).
+
+## Committees
+
+**Honorary Co-Chairs:**
+
+*   Robert H. Deng, Singapore Management University, Singapore
+*   Zhiguang Qin, University of Electronic Science and Technology of China, China
+
+**General Co-Chairs:**
+
+*   Zhen Qin, University of Electronic Science and Technology of China, China
+*   Kuo-Hui Yeh, National Yang Ming Chiao Tung University, Taiwan
+*   Abderrahim Benslimane, University of Avignon, France
+
+**Technical Program Co-Chairs:**
+
+*   Hu Xiong, University of Electronic Science and Technology of China, China
+*   Mohammed Atiquzzaman, University of Oklahoma, United States
+*   Lu Zhou, Nanjing University of Aeronautics and Astronautics, China",
+req-conf-1751954976519-bfvgj,,IEEE International Symposium on Performance Analysis of Systems and Software,ISPASS,https://ispass.org/ispass2025/,TRUE,https://ispass.org/ispass2025/submission.php,https://ispass.org/ispass2025/,"Conference dates: May 11-13, 2025
+Year: 2025
+Location: Ghent, Belgium
+City-State-Province: Ghent
+Country: Belgium
+Continent: Europe
+Type: Offline
+Submission Date.Paper abstract submission deadline: December 9, 2024
+Submission Date.Full submission deadline: December 16, 2024
+Submission Date.Poster abstract submission deadline: March 31, 2025
+Notification Date.Paper notification: March 3, 2025
+Other Date.Rebuttal: February 17-21, 2025
+Topics: Performance Analysis, Systems, Software
+Publisher: IEEE","May 11-13, 2025",TRUE,2025,"Ghent, Belgium",TRUE,Ghent,Belgium,Europe,Offline,TRUE,"{""Paper abstract submission deadline"":""December 9, 2024"",""Full submission deadline"":""December 16, 2024"",""Poster abstract submission deadline"":""March 31, 2025""}",100,"{""Paper notification"":""March 3, 2025""}",100,{},,{},,"{""Rebuttal"":""February 17-21, 2025""}",100,"Performance Analysis, Systems, Software",IEEE,"The IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS-2025) will be held from May 11-13, 2025, in Ghent, Belgium. The event will feature workshops, tutorials, accepted papers, posters, and a detailed program, with registration and submission information available on the conference website.","# ISPASS 2025: Call for Papers
+
+The **2025 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS-2025)** will be held from **May 11-13, 2025**, in **Ghent, Belgium**.
+
+We invite submissions of original research and contributions related to the performance analysis of systems and software.
+
+## Important Dates
+
+*   Paper abstract submission deadline: **December 9, 2024**, 11:59:59 PM, Anywhere on Earth
+*   Full submission deadline: **December 16, 2024**, 11:59:59 PM, Anywhere on Earth
+*   Rebuttal: **February 17-21, 2025**
+*   Paper notification: **March 3, 2025**
+*   Poster abstract submission deadline: **March 31, 2025**
+
+## Submission Instructions
+
+*   **Submission Website:** [https://ispass2025.hotcrp.com/](https://ispass2025.hotcrp.com/)
+
+### Paper Requirements:
+
+*   The paper must have an abstract.
+*   The paper must be original material that has not been previously published in another conference or journal, nor is currently under review by another conference or journal. Material presented previously at a workshop without copyrighted proceedings may be submitted.
+*   **Content Length:** The paper content (excluding references) is limited to **nine (9) single-spaced double-column pages** using 10-point size font on 8.5x11 inch pages (IEEE conference style). An unlimited number of additional pages for references is allowed. All content other than references (figures, appendices, etc.) must be confined to the first 9 pages. Papers exceeding the length limit or deviating from formatting requirements may be rejected without review.
+*   **References:** References must list all authors for any reference with fewer than 10 co-authors.
+*   **Double-Blind Review:** Papers are to be submitted for double-blind review. Author names as well as hints of identity are to be removed from the submitted paper. Do not omit references to provide anonymity; reference your own work in the third person.
+*   Please number the pages.
+*   **Format:** The paper must be submitted in PDF format only.
+
+### Tool and Benchmark Papers:
+
+*   Check the tool/benchmark paper box in the paper topics section.
+*   Do not add the URL to the tool or benchmarks in the paper if it reveals your identity.
+*   You can mention plans to open-source the tool/benchmarks upon acceptance and publication.
+*   There is no separate page limit for tool/benchmark papers.
+
+### Templates:
+
+The IEEE conference style templates for MS Word and LaTeX provided by IEEE eXpress Conference Publishing are available for download at: [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)
+
+## Policy on arXiv Posting:
+
+*   You can submit to ISPASS 2025 a paper already posted to arXiv, or post your paper to arXiv after submitting it to ISPASS 2025.
+*   The ISPASS 2025 submission system allows you to enter the arXiv link of your work.
+*   If you post your paper to arXiv after submission, please notify John Kim.
+*   It is recommended to use different titles for different versions of your paper.
+*   Authors are expected to refrain from advertising their work on social media during the evaluation period.
+
+## Guidelines on Conflicts of Interest:
+
+A conflict of interest is defined as:
+
+*   Your Ph.D. advisor and Ph.D. students (forever).
+*   Family relations by blood or marriage (forever).
+*   People with whom you collaborated in the past five years (collaborators include co-authors on accepted/rejected/pending research papers, co-PIs on accepted/rejected/pending grants, those who fund your research, and researchers whom you fund).
+*   ""Service"" collaborations, such as writing a report or serving on a program committee, are not conflicts of interest by themselves.
+*   Anyone with whom you believe a conflict of interest exists (check with the program chair if you have a question or doubt).
+
+## Contact Information:
+
+For further information, please contact the General Chair:
+
+*   Stijn Eyerman, Intel
+*   Wim Heirman, Intel
+
+Or the Program Chair:
+
+*   John Kim, KAIST
+
+Questions or comments regarding this website can be directed to Sander De Pestel.",

@@ -34,7 +34,6 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
     const {
         socket,
         conversationHistoryService,
-        logToFile,
         socketId,
         sendChatError,
         emitUpdatedConversationList,
@@ -44,7 +43,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
 
     const baseLogContext = `[${CONVERSATION_HANDLER_NAME}][${socketId}]`;
 
-    logToFile(`${baseLogContext}[${deps.userId}] Registering conversation event handlers.`);
+    
 
     socket.on('get_conversation_list', async () => {
         const eventName = 'get_conversation_list';
@@ -52,12 +51,12 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        logToFile(`[INFO] ${handlerLogContext} '${eventName}' request received.`);
+        
         try {
             const userLanguage = socket.data.language as Language | undefined;
             const conversationList = await conversationHistoryService.getConversationListForUser(authenticatedUserId, undefined, userLanguage);
             socket.emit('conversation_list', conversationList as ClientConversationMetadata[]);
-            logToFile(`[INFO] ${handlerLogContext} Sent conversation list. Count: ${conversationList.length}, Lang used: ${userLanguage || 'service_default'}.`);
+            
         } catch (error: unknown) { // Use unknown here
             const { message: errorMessage } = getErrorMessageAndStack(error);
             sendChatError(handlerLogContext, 'Failed to retrieve conversation list.', 'list_fetch_fail', { error: errorMessage });
@@ -70,7 +69,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         if (!authenticatedUserId) return;
         const handlerLogContext = `${baseLogContext}[${authenticatedUserId}]`;
 
-        logToFile(`[INFO] ${handlerLogContext} Raw '${eventName}' event received. Data: ${JSON.stringify(data)?.substring(0, 200) + (JSON.stringify(data)?.length > 200 ? '...' : '')}.`);
+        
 
         if (!isLoadConversationData(data)) {
             return sendChatError(handlerLogContext, 'Invalid request: Missing or invalid "conversationId".', 'invalid_request_load');
@@ -78,7 +77,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const requestedConvId = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${requestedConvId}]`;
 
-        logToFile(`[INFO] ${convLogContext} 'load_conversation' request received.`);
+        
         try {
             const historyItems: ChatHistoryItem[] | null = await conversationHistoryService.getConversationHistory(requestedConvId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
 
@@ -96,9 +95,9 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 messages: historyItems // <<< GỬI TRỰC TIẾP ChatHistoryItem[]
             };
 
-            logToFile(`[DEBUG] ${convLogContext} Emitting 'initial_history'. HistoryItem Count: ${historyItems.length}.`);
+            
             socket.emit('initial_history', payloadForClient);
-            logToFile(`[INFO] ${convLogContext} Sent conversation history (as ChatHistoryItem[]). Set as active. Item Count: ${historyItems.length}.`);
+            
 
         } catch (error: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(error);
@@ -116,7 +115,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const language = parsedPayload.language;
         socket.data.language = language;
 
-        logToFile(`[INFO] ${handlerLogContext} '${eventName}' request received. Language: ${language || 'N/A'}.`);
+        
         try {
             const newConversationData: NewConversationResult = await conversationHistoryService.createNewConversation(authenticatedUserId, language);
             socket.data.currentConversationId = newConversationData.conversationId;
@@ -128,7 +127,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
                 lastActivity: newConversationData.lastActivity.toISOString(),
                 isPinned: newConversationData.isPinned,
             });
-            logToFile(`[INFO] ${convLogContext} Successfully started new conversation. Title: "${newConversationData.title}". Set as active.`);
+            
 
             await emitUpdatedConversationList(handlerLogContext, authenticatedUserId, 'new conversation started', language);
         } catch (error: unknown) { // Use unknown here
@@ -149,11 +148,11 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const conversationIdToDelete = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${conversationIdToDelete}]`;
 
-        logToFile(`[INFO] ${convLogContext} 'delete_conversation' request received.`);
+        
         try {
             const success = await conversationHistoryService.deleteConversation(conversationIdToDelete, authenticatedUserId);
             if (success) {
-                logToFile(`[INFO] ${convLogContext} Successfully processed conversation deletion.`);
+                
                 socket.emit('conversation_deleted', { conversationId: conversationIdToDelete });
                 if (socket.data.currentConversationId === conversationIdToDelete) {
                     socket.data.currentConversationId = undefined;
@@ -181,11 +180,11 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const conversationIdToClear = data.conversationId;
         const convLogContext = `${handlerLogContext}[Conv:${conversationIdToClear}]`;
 
-        logToFile(`[INFO] ${convLogContext} 'clear_conversation' request received.`);
+        
         try {
             const success = await conversationHistoryService.clearConversationMessages(conversationIdToClear, authenticatedUserId);
             if (success) {
-                logToFile(`[INFO] ${convLogContext} Successfully processed message clearing.`);
+                
                 socket.emit('conversation_cleared', { conversationId: conversationIdToClear });
                 if (socket.data.currentConversationId === conversationIdToClear) {
                     socket.emit('initial_history', { conversationId: conversationIdToClear, messages: [] });
@@ -213,7 +212,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const { conversationId, newTitle } = data;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`;
 
-        logToFile(`[INFO] ${convLogContext} 'rename_conversation' request received. New Title: "${newTitle.substring(0, 30) + (newTitle.length > 30 ? '...' : '')}".`);
+        
         try {
             const renameOpResult: RenameResult = await conversationHistoryService.renameConversation(conversationId, authenticatedUserId, newTitle);
             if (renameOpResult.success) {
@@ -241,7 +240,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         const { conversationId, isPinned } = data;
         const convLogContext = `${handlerLogContext}[Conv:${conversationId}]`;
 
-        logToFile(`[INFO] ${convLogContext} 'pin_conversation' request received. IsPinned: ${isPinned}.`);
+        
         try {
             const success = await conversationHistoryService.pinConversation(conversationId, authenticatedUserId, isPinned);
             if (success) {
@@ -257,7 +256,7 @@ export const registerConversationHandlers = (deps: HandlerDependencies): void =>
         }
     });
 
-    logToFile(`${baseLogContext}[${deps.userId}] Conversation event handlers successfully registered.`);
+    
 };
 
 function isLoadConversationData(data: unknown): data is LoadConversationData {

@@ -2,7 +2,7 @@
 import { ChatHistoryItem, ChatMessage } from "../shared/types";
 // Import Part from the new SDK
 import { Part } from "@google/genai";
-// import logToFile from '../../utils/logger';
+
 
 /**
  * Maps a `ChatHistoryItem` (internal history format, typically for LLM)
@@ -22,15 +22,10 @@ export function mapHistoryItemToChatMessage(historyItem: ChatHistoryItem): ChatM
 
         if (textPart) {
             messageText = textPart.text; // textPart.text is now known to be a string
-        } else {
-            // logToFile(`[HistoryMapper] Warning: ChatHistoryItem (UUID: ${historyItem.uuid || 'N/A'}) has parts but no text part found.`);
-        }
+        } 
     }
 
     const messageId = historyItem.uuid || '';
-    // if (!messageId) {
-    //     logToFile(`[HistoryMapper] Warning: ChatHistoryItem is missing UUID. Generated ID will be empty string.`);
-    // }
 
     return {
         id: messageId,

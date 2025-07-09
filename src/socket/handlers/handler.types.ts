@@ -2,7 +2,6 @@
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { ConversationHistoryService } from '../../chatbot/services/conversationHistory.service';
 import { Language } from '../../chatbot/shared/types';
-import type logToFileType from '../../utils/logger'; // Import type of logToFile for type safety
 
 /**
  * Defines the common dependencies that are passed to all Socket.IO sub-handlers.
@@ -16,8 +15,6 @@ export interface HandlerDependencies {
     socket: Socket;
     /** Service for managing and persisting conversation history. */
     conversationHistoryService: ConversationHistoryService;
-    /** The logging utility function for writing messages to a file. */
-    logToFile: typeof logToFileType;
     /** The ID of the authenticated user associated with this socket. */
     userId: string;
     /** The unique ID of the current socket connection. */

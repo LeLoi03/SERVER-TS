@@ -1,12 +1,7 @@
 // src/handlers/backendService.ts
 import 'reflect-metadata'; // Ensure reflect-metadata is imported for tsyringe
 import { container } from 'tsyringe'; // Import container for resolving singletons
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
-
-// *** IMPORTANT: ASSUMED TO BE MODIFIED TO RECEIVE parsedData and queryString ***
-// The actual implementation of transformConferenceData is outside this file,
-// but its signature must match DataTransformer.
 import { transformConferenceData } from '../utils/transformData';
 import { ApiCallResult } from '../shared/types';
 import { ConfigService } from '../../config/config.service';
@@ -23,12 +18,9 @@ const DATABASE_URL: string | undefined = configService.databaseUrl;
 // Critical check for DATABASE_URL at module load time
 if (!DATABASE_URL) {
     const errorMsg = `${LOG_PREFIX} CRITICAL ERROR: DATABASE_URL is not configured.`;
-    logToFile(errorMsg);
-    // Throwing an error here will prevent the module from loading
-    // and thus prevent the application from starting in an unconfigured state.
     throw new Error(errorMsg);
 } else {
-    // logToFile(`${LOG_PREFIX} DATABASE_URL configured.`);
+    // 
 }
 
 
@@ -138,12 +130,12 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         if (hasFrom && !hasTo) {
             // If 'FromDate' exists but 'ToDate' doesn't, set 'ToDate' to be the same as 'FromDate'
             queryParams[toKey] = queryParams[fromKey];
-            logToFile(`${logContext} Normalized date: Added '${toKey}=${queryParams[fromKey]}' because '${fromKey}' was present without '${toKey}'.`);
+            
             modifiedForDates = true;
         } else if (!hasFrom && hasTo) {
             // If 'ToDate' exists but 'FromDate' doesn't, set 'FromDate' to be the same as 'ToDate'
             queryParams[fromKey] = queryParams[toKey];
-            logToFile(`${logContext} Normalized date: Added '${fromKey}=${queryParams[toKey]}' because '${toKey}' was present without '${fromKey}'.`);
+            
             modifiedForDates = true;
         }
         // If both exist or neither exist, do nothing for this pair.
@@ -152,7 +144,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
     // Rebuild the query string after date normalization
     if (modifiedForDates) {
         effectiveQueryString = buildQueryString(queryParams);
-        logToFile(`${logContext} Query string after date normalization: ${effectiveQueryString}`);
+        
     }
 
     // --- END OF MODIFICATION (Date Normalization) ---
@@ -178,7 +170,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
             effectiveQueryString += '&';
         }
         effectiveQueryString += 'mode=detail';
-        logToFile(`${logContext} Keyword detected in query. Automatically adding 'mode=detail'.`);
+        
     }
     // --- END OF MODIFICATION (Detail Mode Logic) ---
 
@@ -186,7 +178,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
     // Use the potentially modified query string from here on.
     const fullUrl = `${DATABASE_URL}/${endpoint}?${effectiveQueryString}`;
 
-    logToFile(`${logContext} Executing API call: GET ${fullUrl}`);
+    
 
     let response: Response;
     let rawResponseText: string | null = null; // Initialize to null
@@ -202,7 +194,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
 
     } catch (networkError: unknown) { // Catch as unknown for safer handling
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(networkError);
-        logToFile(`${logContext} Network Error: Failed to fetch from ${fullUrl}. Details: ${errorMessage}\nStack: ${errorStack}`);
+        
         return {
             success: false,
             rawData: null, // No raw data was obtained due to network failure
@@ -220,7 +212,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         if (!response.ok) {
             const truncatedError = rawResponseText ? rawResponseText.substring(0, 250) + (rawResponseText.length > 250 ? '...' : '') : 'No response body';
             const errorMessage = `API Error (${response.status} ${response.statusText}): Failed to retrieve information. Details: ${truncatedError}`;
-            logToFile(`${logContext} API Error (${response.status}): ${truncatedError}`);
+            
             return {
                 success: false,
                 rawData: rawResponseText, // Include raw error body if available
@@ -230,18 +222,18 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         }
 
         // --- 4. Handle OK Response (Attempt JSON Parsing & Transformation) ---
-        logToFile(`${logContext} API Success (${response.status}). Response body length: ${rawResponseText?.length ?? 0}. Attempting JSON parsing...`);
+        
 
         // --- 4.1. JSON Parsing Step ---
         let parsedData: any;
         try {
             // rawResponseText is guaranteed to be a string here since response.ok was true
             parsedData = JSON.parse(rawResponseText);
-            logToFile(`${logContext} JSON parsing successful. Data preview: \n${JSON.stringify(parsedData, null, 2).substring(0, 250)}...`);
+            
 
         } catch (parseError: unknown) { // Catch as unknown
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(parseError);
-            logToFile(`${logContext} JSON Parsing Error: ${errorMessage}. Raw data preview: ${rawResponseText.substring(0, Math.min(rawResponseText.length, 250))}...\nStack: ${errorStack}`);
+            
             return {
                 success: false, // Parsing failure means we can't proceed reliably
                 rawData: rawResponseText, // Provide the raw (unparseable) data
@@ -256,23 +248,23 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         let transformationError: string | undefined = undefined;
 
         if (transformer) {
-            logToFile(`${logContext} Applying transformation function: ${transformer.name || 'anonymous function'}.`);
+            
             try {
                 // Call the transformer with the *parsed* data and the *effective* query string
                 formattedData = transformer(parsedData, effectiveQueryString);
                 if (formattedData !== null) {
-                    // logToFile(`${logContext} Transformation successful. Transformed data preview: \n${formattedData}...`);
+                    // 
                 } else {
-                    logToFile(`${logContext} Transformation function returned null, indicating no meaningful data to format.`);
+                    
                 }
             } catch (transformErr: unknown) { // Catch as unknown
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(transformErr);
                 transformationError = `Transformation Error: ${errorMessage}`;
-                logToFile(`${logContext} Error during data transformation: ${errorMessage}\nStack: ${errorStack}`);
+                
                 formattedData = null; // Ensure formattedData is null on transformation error
             }
         } else {
-            logToFile(`${logContext} No specific transformer configured for endpoint '${endpoint}'. Skipping data transformation.`);
+            
             // If no transformer, the raw data (as JSON string) can be considered the 'formatted' data
             // Or, if the model expects only very specific formatting, keep it null.
             // Current logic expects `formattedData` to be explicitly formatted, so keeping it null if no transformer.
@@ -290,7 +282,7 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         // Catch any unexpected errors that occur after the initial `fetch` call
         // but before parsing/transformation is fully complete (e.g., error in response.text()).
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(readProcessError);
-        logToFile(`${logContext} Unexpected Error Processing API Response: ${errorMessage}\nStack: ${errorStack}`);
+        
         return {
             success: false,
             rawData: rawResponseText, // rawResponseText might be partially read or null

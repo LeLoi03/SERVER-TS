@@ -1,0 +1,1064 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers,Unnamed: 24,note,recrawl
+req-conf-1751764883631-3o1ti,,ACM International Conference on Emerging Networking Experiments and Technologies,CoNEXT,https://conferences.sigcomm.org/co-next/2025/#!/home,https://conferences.sigcomm.org/co-next/2025/#!/cfp,https://conferences.sigcomm.org/co-next/2025/#!/cfp,"Conference dates: December 1 - 4, 2025
+Year: 2025
+Location: HKUST, Hong Kong
+City-State-Province: Hong Kong
+Country: China
+Continent: Asia
+Type: Offline
+Submission Date.(June Cycle) Paper Registration: May 29, 2025
+Submission Date.(June Cycle) Paper Submission: June 5, 2025
+Submission Date.(December Cycle) Paper Registration: November 28, 2024
+Submission Date.(December Cycle) Paper Submission: December 5, 2024
+Submission Date.(June Cycle) One-Shot Major Revision: November 14, 2025
+Submission Date.(December Cycle) One-Shot Major Revision: May 29, 2025
+Notification Date.(June Cycle) Early Reject Notification: August, 2025
+Notification Date.(June Cycle) Notification of Acceptance: September 12, 2025
+Notification Date.(December Cycle) Early Reject Notification: February, 2025
+Notification Date.(December Cycle) Notification of Acceptance: April 4, 2025
+Notification Date.(June Cycle) One-Shot Major Revision Notification: December 12, 2025
+Notification Date.(December Cycle) One-Shot Major Revision Notification: June 23, 2025
+Camera-ready Date.(June Cycle) Camera Ready: October 8, 2025
+Camera-ready Date.(December Cycle) Camera Ready: April 30, 2025
+Camera-ready Date.(June Cycle) One-Shot Major Revision Camera Ready: January 20, 2026
+Camera-ready Date.(December Cycle) One-Shot Major Revision Camera Ready: July 24, 2025
+Topics: Content distribution and caching, Design, analysis, and evaluation of network architectures, Experience and lessons learned by deploying large-scale networked systems, Experience with applying machine learning, large language models (LLMs) and generative AI to networking problems, In-network computing, NFV and network programmability, Innovative uses of network data beyond communication, Network measurements and modeling, Internet economics and policy, Mobile and wireless network protocols and applications, Machine learning as applied to all layers of networking, Networked applications including web, video, and online social networks, Network and systems for AI, Network aspects of datacenters, cloud computing, operating systems, virtualization, Network aspects of IoT, Network control and management, including SDN, Network, transport, and application-layer protocols, Next generation mobile networks, Reliability and availability of networks, protocols, and applications, Reproducibility of networking research, Routing and traffic engineering, Security and privacy aspects of network applications, protocols and systems, Sustainable (e.g., energy-efficient, carbon-efficient) computing and networking
+Publisher: ACM","December 1 - 4, 2025",2025,"HKUST, Hong Kong",Hong Kong,China,Asia,Offline,"{""(June Cycle) Paper Registration"":""May 29, 2025"",""(June Cycle) Paper Submission"":""June 5, 2025"",""(December Cycle) Paper Registration"":""November 28, 2024"",""(December Cycle) Paper Submission"":""December 5, 2024"",""(June Cycle) One-Shot Major Revision"":""November 14, 2025"",""(December Cycle) One-Shot Major Revision"":""May 29, 2025""}","{""(June Cycle) Early Reject Notification"":""August, 2025"",""(June Cycle) Notification of Acceptance"":""September 12, 2025"",""(December Cycle) Early Reject Notification"":""February, 2025"",""(December Cycle) Notification of Acceptance"":""April 4, 2025"",""(June Cycle) One-Shot Major Revision Notification"":""December 12, 2025"",""(December Cycle) One-Shot Major Revision Notification"":""June 23, 2025""}","{""(June Cycle) Camera Ready"":""October 8, 2025"",""(December Cycle) Camera Ready"":""April 30, 2025"",""(June Cycle) One-Shot Major Revision Camera Ready"":""January 20, 2026"",""(December Cycle) One-Shot Major Revision Camera Ready"":""July 24, 2025""}",{},{},"Content distribution and caching, Design, analysis, and evaluation of network architectures, Experience and lessons learned by deploying large-scale networked systems, Experience with applying machine learning, large language models (LLMs) and generative AI to networking problems, In-network computing, NFV and network programmability, Innovative uses of network data beyond communication, Network measurements and modeling, Internet economics and policy, Mobile and wireless network protocols and applications, Machine learning as applied to all layers of networking, Networked applications including web, video, and online social networks, Network and systems for AI, Network aspects of datacenters, cloud computing, operating systems, virtualization, Network aspects of IoT, Network control and management, including SDN, Network, transport, and application-layer protocols, Next generation mobile networks, Reliability and availability of networks, protocols, and applications, Reproducibility of networking research, Routing and traffic engineering, Security and privacy aspects of network applications, protocols and systems, Sustainable (e.g., energy-efficient, carbon-efficient) computing and networking",ACM,"The 21st ACM International Conference on Emerging Networking Experiments and Technologies (CoNEXT 2025) will be held at HKUST, Hong Kong, from December 1-4, 2025. This single-track conference focuses on novel networking technologies and features a high-quality technical program designed to stimulate exchanges among international research communities. Accepted papers will be published in the Proceedings of the ACM on Networking (PACMNET).","# ACM CoNEXT 2025: Call for Papers
+
+The Proceedings of the ACM on Networking (PACMNET) journal is seeking papers containing significant and novel research results on emerging computer networks and their applications. All accepted papers will also be presented at the ACM CoNEXT 2025 conference.
+
+We especially encourage submissions that present novel experimentation, creative use of networking technologies, and new insights made possible using analysis. The conference welcomes submissions on a wide range of networking topics.
+
+## Topics of Interest
+
+*   Content distribution and caching (e.g., CDN, peer-to-peer, overlays)
+*   Design, analysis, and evaluation of network architectures
+*   Experience and lessons learned by deploying large-scale networked systems
+*   Experience with applying machine learning, large language models (LLMs) and generative AI to networking problems
+*   In-network computing, NFV and network programmability
+*   Innovative uses of network data beyond communication
+*   Network measurements and modeling
+*   Internet economics and policy
+*   Mobile and wireless network protocols and applications
+*   Machine learning as applied to all layers of networking
+*   Networked applications including web, video, and online social networks
+*   Network and systems for AI
+*   Network aspects of datacenters, cloud computing, operating systems, virtualization
+*   Network aspects of IoT
+*   Network control and management, including SDN
+*   Network, transport, and application-layer protocols
+*   Next generation mobile networks
+*   Reliability and availability of networks, protocols, and applications
+*   Reproducibility of networking research
+*   Routing and traffic engineering
+*   Security and privacy aspects of network applications, protocols and systems
+*   Sustainable (e.g., energy-efficient, carbon-efficient) computing and networking
+
+We are open to other contributions that stretch networking research outside of these topics, present new emerging computing trends, or potentially involve unfamiliar techniques. We welcome experience submissions that clearly articulate lessons learned, as well as submissions that refute prior published results.
+
+## Submission Types
+
+*   **Long papers:** No more than 16 pages, with unlimited pages for references and up to four pages for appendices.
+*   **Short papers:** No more than 10 pages, with unlimited pages for references and up to two pages for appendices.
+
+Authors may be given up to two extra pages to address comments and requirements received during the review process.
+
+## Important Dates
+
+### December Submission Cycle:
+
+*   **Paper Registration:** November 28th, 2024
+*   **Paper Submission:** December 5th, 2024
+*   **Early reject notification:** February, 2025
+*   **Notification of Acceptance:** April 4th, 2025
+*   **Camera Ready:** April 30th, 2025
+
+*For papers with one-shot major revision option:*
+*   **Major revision due:** May 29th, 2025
+*   **Final decision:** June 23rd, 2025
+*   **Camera Ready:** July 24th, 2025
+
+### June Submission Cycle:
+
+*   **Paper Registration:** May 29th, 2025
+*   **Paper Submission:** June 5th, 2025
+*   **Early reject notification:** August, 2025
+*   **Notification of Acceptance:** September 12th, 2025
+*   **Camera Ready:** October 8th, 2025
+
+*For papers with one-shot major revision option:*
+*   **Major revision due:** November 14th, 2025
+*   **Final decision:** December 12th, 2025
+*   **Camera Ready:** January 20th, 2026
+
+*(All deadline times are at 24:00 Anywhere on Earth (AoE).)*
+
+## Submission Instructions
+
+*   All submissions should be **double-anonymous**. Remove all personal information about the authors from the paper, including names, affiliations, and acknowledgements.
+*   When referring to previous work, do so as if you are not the author.
+*   Do not add references to external repositories or technical reports that can be used to identify authors or institutions.
+*   Authors should use a **single column, 10pt, ACM small template**.
+*   Submission portal: [https://conext25-june.hotcrp.com](https://conext25-june.hotcrp.com)
+
+## Research Reproducibility
+
+We value submissions that are accompanied by clearly defined artefacts, including traces, original data, source code, or tools. If the paper plans to release any associated artefacts, a summary must be included in the appendix. CoNEXT 2025 will also run a reproducibility committee for awarding optional ACM reproducibility badges.
+
+## Ethical Concerns
+
+All papers must include a statement or subsection about ethical issues raised by the work. Work involving human subjects or potentially sensitive data must clearly discuss the relevant issues. Papers that do not include an ethics statement may be rejected.
+
+## Contact Us
+
+For questions, please email the TPC co-chairs:
+*   Ying Zhang (zhangying _at_ meta.com)
+*   Andra Lutu (andra.lutu _at_ telefonica.com)",,,
+req-conf-1751764883631-3o1ti,,Conference on Computational Natural Language Learning,CoNLL,https://conll.org/2025,https://www.aclweb.org/portal/content/conference-computational-natural-language-learning,,"Conference dates: July 31 - August 1, 2025
+Year: 2025
+Location: Vienna, Austria
+City-State-Province: Vienna
+Country: Austria
+Continent: Europe
+Type: Offline
+Topics: Computational Linguistics, Cognition, Computational Psycholinguistics, Computational Social Science, Sociolinguistics, Interaction, Dialogue, Language Acquisition, Learning, Emergence, Evolution, Multimodality, Grounding, Typology, Multilinguality, Speech, Phonology, Syntax, Morphology, Semantics, Pragmatics, Theoretical Analysis, Interpretation of ML Models for NLP, Resources and Tools for Scientifically Motivated Research
+Submission Date.Submission deadline (archival and non-archival): March 14, 2025
+Notification Date.Notification of acceptance: May 23, 2025
+Camera-ready Date.Camera-ready papers due: June 17, 2025","July 31 - August 1, 2025",2025,"Vienna, Austria",Vienna,Austria,Europe,Offline,"{""Submission deadline (archival and non-archival)"":""March 14, 2025""}","{""Notification of acceptance"":""May 23, 2025""}","{""Camera-ready papers due"":""June 17, 2025""}",{},{},"Computational Linguistics, Cognition, Computational Psycholinguistics, Computational Social Science, Sociolinguistics, Interaction, Dialogue, Language Acquisition, Learning, Emergence, Evolution, Multimodality, Grounding, Typology, Multilinguality, Speech, Phonology, Syntax, Morphology, Semantics, Pragmatics, Theoretical Analysis, Interpretation of ML Models for NLP, Resources and Tools for Scientifically Motivated Research",No publisher,"The 29th Conference on Computational Natural Language Learning (CoNLL 2025) will be held in Vienna, Austria, from July 31 to August 1, 2025, co-located with ACL. The conference focuses on theoretically, cognitively, and scientifically motivated approaches to computational linguistics and their interaction with linguistics and cognitive science.","# CoNLL 2025: Call for Papers
+
+Vienna, Austria, **July 31 - August 1, 2025** (co-located with ACL)
+
+SIGNLL invites submissions to the **29th Conference on Computational Natural Language Learning (CoNLL 2025)**. The focus of CoNLL is on theoretically, cognitively, and scientifically motivated approaches to computational linguistics, rather than on work driven by particular engineering applications.
+
+## Topics of Interest
+
+We welcome work targeting any aspect of language and its computational modeling, including:
+
+*   Computational Psycholinguistics, Cognition and Linguistics
+*   Computational Social Science and Sociolinguistics
+*   Interaction and Dialogue
+*   Language Acquisition, Learning, Emergence, and Evolution
+*   Multimodality and Grounding
+*   Typology and Multilinguality
+*   Speech and Phonology
+*   Syntax and Morphology
+*   Lexical, Compositional and Discourse Semantics
+*   Theoretical Analysis and Interpretation of ML Models for NLP
+*   Resources and Tools for Scientifically Motivated Research
+
+Submissions' relevance to the conference’s focus on theoretically, cognitively, and scientifically motivated approaches will play an important role in the review process.
+
+## Submission Guidelines
+
+*   Submitted papers must be **anonymous** and use the **ACL 2025 template**.
+*   Submitted papers may consist of up to **8 pages of content** plus unlimited space for references. Authors of accepted papers will have an additional page for revisions (9 pages of content total, excluding references).
+*   Optional anonymized supplementary materials and a PDF appendix are allowed (submit as a separate PDF file).
+*   Submission will be via **OpenReview**.
+*   CoNLL 2025 will also accept ARR submissions depending on the full review to be completed by May 19, 2025.
+*   CoNLL 2025 is an **in-person conference**. All accepted papers are expected to be presented physically.
+
+## Invited Speakers
+
+*   **Jean-Rémi King**, CNRS / Meta AI
+    *   Title: Emergence of Language in the Human Brain
+*   **Raquel Fernández**, University of Amsterdam
+    *   Title: TBD
+
+## Author Instructions
+
+*   **Oral presentations:** 15 minutes. Presentation slides should be submitted in advance via Underline.
+*   **Poster presentations:** A0 in portrait format. For local printing in Vienna, please check the ACL 2025 FAQ: [https://2025.aclweb.org/faq/#Print-Shops-for-Poster](https://2025.aclweb.org/faq/#Print-Shops-for-Poster)
+*   **Online presentation (optional):** Submit a pre-recorded video presentation (max. 15 minutes) and/or poster via Underline by **July 10, 2025**. Submission form: [https://acl2025-workshops.paperform.co/](https://acl2025-workshops.paperform.co/) (select W:15 29th Conference on Computational Natural Language Learning).
+
+Detailed instructions for Underline are available [here](https://docs.google.com/presentation/d/1B26aSIWCRTYEFKvndrYWspNBUpimN6v…).
+
+## Timeline
+
+(All deadlines are 11:59pm UTC-12h, AoE)
+
+*   **Direct submission deadline:** Friday, March 14, 2025
+*   **ARR Commitment deadline:** Monday, May 19, 2025
+*   **Notification of acceptance:** Friday, May 23, 2025
+*   **Camera-ready papers due:** Wednesday, June 25, 2025
+*   **Conference:** July 31 - August 1, 2025
+
+## Venue
+
+CoNLL 2025 will be held in-person at the **Austria Center Vienna**.
+
+## Multiple Submission Policy
+
+CoNLL 2025 will refuse papers that are currently under submission, or that will be submitted to other meetings or publications, including ACL. Papers submitted elsewhere and papers that overlap significantly in content or results with papers that will be (or have been) published elsewhere will be rejected. Authors submitting more than one paper to CoNLL 2025 must ensure that the submissions do not overlap significantly (>25%) with each other in content or results.
+
+## Contact
+
+Questions? E-mail: [conll.chairs@gmail.com](mailto:conll.chairs@gmail.com)
+
+## Social Media
+
+Follow us at [@conll-conf on BlueSky](https://bsky.app/profile/conll-conf.bsky.social) or [@conll_conf on X/Twitter](https://x.com/conll_conf) for the latest information.",,,
+req-conf-1751764883631-3o1ti,,International Conference on Computational Linguistics,COLING,https://coling2025.org/,https://coling2025.org/calls/main_conference_papers/,,"Conference dates: January 19 - 24, 2025
+Year: 2025
+Location: Abu Dhabi, UAE
+City-State-Province: Abu Dhabi
+Country: United Arab Emirates
+Continent: Asia
+Type: Offline
+Submission Date.Direct Submission Deadline: September 16, 2024
+Notification Date.Notification of acceptance: November 29, 2024
+Camera-ready Date.Camera-Ready Deadline: December 15, 2024
+Other Date.ARR Commitment Deadline: October 20, 2024
+Other Date.Author rebuttal phase (for direct submissions): October 30 - November 1, 2024
+Other Date.Tutorials and Workshops: January 19 - 20, 2025
+Topics: Computational Linguistics, Natural Language Processing, Dialogue and Interactive Systems, Discourse and Pragmatics, Document Classification and Topic Modeling, Ethics, Bias, and Fairness, Information Extraction, Information Retrieval and Text Mining, Interpretability and Analysis of Models for NLP, Language Modeling, Language Resources and Evaluation, Linguistic Insights Derived using Computational Techniques, Linguistic Theories, Cognitive Modeling and Psycholinguistics, Low-Resource and Efficient Methods for NLP, Machine Learning for Computational Linguistics and NLP, Machine Translation and Translation Aids, Multilingualism and Language Diversity, Multimodal and Grounded Language Acquisition, NLP and LLM Applications (such as Education, Healthcare, Finance, Legal NLP, Computational Social Science, etc.), Natural Language Generation, Offensive Speech Detection and Analysis, Phonology, Morphology and Word Segmentation, Question Answering, Lexical Semantics, Sentence-level Semantics (Textual Inference, Paraphrasing, etc), Sentiment Analysis, Stylistic Analysis, Opinion and Argument Mining, Speech Recognition and Synthesis, and Spoken Language Understanding, Summarization and Simplification, Syntactic analysis (Tagging, Chunking, Parsing), Vision and Robotics","January 19 - 24, 2025",2025,"Abu Dhabi, UAE",Abu Dhabi,United Arab Emirates,Asia,Offline,"{""Direct Submission Deadline"":""September 16, 2024""}","{""Notification of acceptance"":""November 29, 2024""}","{""Camera-Ready Deadline"":""December 15, 2024""}",{},"{""ARR Commitment Deadline"":""October 20, 2024"",""Author rebuttal phase (for direct submissions)"":""October 30 - November 1, 2024"",""Tutorials and Workshops"":""January 19 - 20, 2025""}","Computational Linguistics, Natural Language Processing, Dialogue and Interactive Systems, Discourse and Pragmatics, Document Classification and Topic Modeling, Ethics, Bias, and Fairness, Information Extraction, Information Retrieval and Text Mining, Interpretability and Analysis of Models for NLP, Language Modeling, Language Resources and Evaluation, Linguistic Insights Derived using Computational Techniques, Linguistic Theories, Cognitive Modeling and Psycholinguistics, Low-Resource and Efficient Methods for NLP, Machine Learning for Computational Linguistics and NLP, Machine Translation and Translation Aids, Multilingualism and Language Diversity, Multimodal and Grounded Language Acquisition, NLP and LLM Applications (such as Education, Healthcare, Finance, Legal NLP, Computational Social Science, etc.), Natural Language Generation, Offensive Speech Detection and Analysis, Phonology, Morphology and Word Segmentation, Question Answering, Lexical Semantics, Sentence-level Semantics (Textual Inference, Paraphrasing, etc), Sentiment Analysis, Stylistic Analysis, Opinion and Argument Mining, Speech Recognition and Synthesis, and Spoken Language Understanding, Summarization and Simplification, Syntactic analysis (Tagging, Chunking, Parsing), Vision and Robotics",No publisher,"The 31st International Conference on Computational Linguistics (COLING 2025) will be held in Abu Dhabi, UAE, from January 19-24, 2025, with virtual participation sessions from January 27-28, 2025. The conference focuses on all aspects of Computational Linguistics and Natural Language Processing.","# COLING 2025: Call for Main Conference Papers
+
+The 31st International Conference on Computational Linguistics (COLING 2025) invites the submission of long and short papers featuring substantial, original, and unpublished research in all aspects of Computational Linguistics and Natural Language Processing. The main conference is in-person only, with virtual presentation sessions for those unable to attend physically.
+
+COLING 2025 will take place in **Abu Dhabi, UAE, from January 19 – 24, 2025**. Virtual presentation sessions will be held from **January 27 to 28, 2025**.
+
+## Topics of Interest
+
+Relevant topics include, but are not limited to:
+
+*   Dialogue and Interactive Systems
+*   Discourse and Pragmatics
+*   Document Classification and Topic Modeling
+*   Ethics, Bias, and Fairness
+*   Information Extraction
+*   Information Retrieval and Text Mining
+*   Interpretability and Analysis of Models for NLP
+*   Language Modeling
+*   Language Resources and Evaluation
+*   Linguistic Insights Derived using Computational Techniques
+*   Linguistic Theories, Cognitive Modeling and Psycholinguistics
+*   Low-Resource and Efficient Methods for NLP
+*   Machine Learning for Computational Linguistics and NLP
+*   Machine Translation and Translation Aids
+*   Multilingualism and Language Diversity
+*   Multimodal and Grounded Language Acquisition
+*   NLP and LLM Applications (such as Education, Healthcare, Finance, Legal NLP, Computational Social Science, etc.)
+*   Natural Language Generation
+*   Offensive Speech Detection and Analysis
+*   Phonology, Morphology and Word Segmentation
+*   Question Answering
+*   Lexical Semantics
+*   Sentence-level Semantics (Textual Inference, Paraphrasing, etc)
+*   Sentiment Analysis, Stylistic Analysis, Opinion and Argument Mining
+*   Speech Recognition and Synthesis, and Spoken Language Understanding
+*   Summarization and Simplification
+*   Syntactic analysis (Tagging, Chunking, Parsing)
+*   Vision and Robotics
+
+Papers targeting any of these topics from the perspective of the Sustainability Goals of the UN are especially welcome.
+
+## Submission Details
+
+COLING 2025 invites the submission of **long papers of up to eight pages** and **short papers of up to four pages**. These page limits apply only to the main body of the paper. Papers must include a mandatory section discussing the limitations of the work and, optionally, a section discussing ethical considerations.
+
+Papers can include unlimited pages of references and an unlimited appendix.
+
+Authors should follow the [general instructions for COLING 2025 proceedings](https://coling2025.org/downloads/coling-2025.pdf), which are an adaptation of the general instructions for *ACL proceedings.
+
+To prepare your submission, please use the COLING 2025 style files:
+
+*   [LaTeX](https://coling2025.org/downloads/coling-2025.zip)
+*   [Word](https://coling2025.org/downloads/coling-2025.docx)
+*   [Overleaf](https://www.overleaf.com/latex/templates/instructions-for-coling-2025-proceedings/hfhcytgpqmzf)
+
+Papers deviating from the provided style files will be rejected without review.
+
+COLING 2025 adopts the ACL Ethics Policy.
+
+## Submission Routes
+
+### Direct Submission
+
+Papers should be submitted through Softconf/START using the following link: [https://softconf.com/coling2025/papers/](https://softconf.com/coling2025/papers/)
+
+Each paper will receive a minimum of three reviews. Authors will have the opportunity to provide a short rebuttal. The review process will be **double-blind**.
+
+### ACL Rolling Review (ARR) Papers
+
+Papers reviewed through the ACL Rolling Review (ARR) system can be committed to COLING 2025. These papers will not be re-reviewed. Senior Area Chairs and Program Chairs will make acceptance decisions based on the ARR reviews and meta-reviews.
+
+For additional information, please see the [FAQ for submissions](https://coling2025.org/faqs/submission/).
+
+ARR papers should be committed using [Softconf/START](https://softconf.com/coling2025/papers/).
+
+## Optional Supplementary Materials
+
+Each COLING 2025 submission can be accompanied by a single .tgz or .zip archive containing supplementary materials (e.g., program code, datasets). COLING 2025 encourages the submission of such materials to improve reproducibility. For the main track, supplementary materials must be fully anonymized to preserve the double-blind reviewing policy.
+
+Additional information, such as preprocessing decisions or model parameters, should be put into the appendix of the main PDF submission. Submissions must remain self-contained.
+
+## Important Dates
+
+All deadlines are 11:59 PM UTC-12:00 (“anywhere on Earth”).
+
+*   **Deadline for direct submissions:** Monday, September 16, 2024
+*   **Commitment deadline for ARR papers:** Sunday, October 20, 2024
+*   **Author rebuttal phase (for direct submissions):** October 30 - November 1, 2024
+*   **Notification of acceptance for COLING 2025:** Friday, November 29, 2024
+*   **Camera-Ready Deadline:** Monday, December 15, 2024
+*   **Tutorials and Workshops:** January 19-20, 2025
+*   **Main Conference (In-Person):** January 21-24, 2025
+*   **Main Conference (Virtual):** January 27-28, 2025
+
+## Anonymity Period
+
+COLING 2025 will follow the ACL Anonymity Policy. No anonymity period will be required, but authors are cautioned against extensive advertising. Submissions must still be fully anonymized.
+
+## Multiple Submission Policy
+
+Papers submitted to COLING 2025 cannot be under review for other conferences or journals simultaneously. ARR commitments are treated as submissions. Papers reviewed and committed through ARR cannot be submitted directly to the conference. Submissions that significantly overlap in content or results with papers published elsewhere will be desk rejected.
+
+## General Chairs
+
+*   Owen Rambow, Stony Brook University
+*   Leo Wanner, ICREA, Pompeu Fabra University
+
+## Program Co-Chairs
+
+*   Marianna Apidianaki, University of Pennsylvania
+*   Hend Al-Khalifa, King Saud University
+*   Barbara Di Eugenio, University of Illinois Chicago
+*   Steven Schockaert, Cardiff University
+
+For questions about submissions, please contact: [coling2025-programchairs@googlegroups.com](mailto:coling2025-programchairs@googlegroups.com)",,,
+req-conf-1751764883631-3o1ti,,IEEE Computer Security Foundations Symposium,CSF,https://csf2025.ieee-security.org/,https://csf2025.ieee-security.org/cfp.html,https://csf2025.ieee-security.org/cfp.html,"Conference dates: June 16-20, 2025
+Year: 2025
+Location: Santa Cruz, CA, USA
+City-State-Province: Santa Cruz, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Spring cycle paper submission: May 28, 2024
+Submission Date.Fall cycle paper submission: October 1, 2024
+Submission Date.Winter cycle paper submission: February 4, 2025
+Notification Date.Spring cycle author notification: July 30, 2024
+Notification Date.Fall cycle author notification: December 3, 2024
+Notification Date.Winter cycle author notification: April 8, 2025
+Topics: access control, accountability, anonymity, attack models, authentication, blockchains and smart contracts, cloud security, cryptography, data provenance, data and system integrity, database security, decidability and complexity, decision theory, distributed systems security, electronic voting, embedded systems security, forensics, formal methods and verification, hardware-based security, information flow control, intrusion detection, language-based security, mobile security, network security, privacy, security and privacy aspects of machine learning, security and privacy for the Internet of Things, security architecture, security metrics, security policies, security protocols, software security, socio-technical security, trust management, usable security, web security
+Publisher: IEEE Computer Society","June 16-20, 2025",2025,"Santa Cruz, CA, USA","Santa Cruz, California",United States,North America,Offline,"{""Spring cycle paper submission"":""May 28, 2024"",""Fall cycle paper submission"":""October 1, 2024"",""Winter cycle paper submission"":""February 4, 2025""}","{""Spring cycle author notification"":""July 30, 2024"",""Fall cycle author notification"":""December 3, 2024"",""Winter cycle author notification"":""April 8, 2025""}",{},{},{},"access control, accountability, anonymity, attack models, authentication, blockchains and smart contracts, cloud security, cryptography, data provenance, data and system integrity, database security, decidability and complexity, decision theory, distributed systems security, electronic voting, embedded systems security, forensics, formal methods and verification, hardware-based security, information flow control, intrusion detection, language-based security, mobile security, network security, privacy, security and privacy aspects of machine learning, security and privacy for the Internet of Things, security architecture, security metrics, security policies, security protocols, software security, socio-technical security, trust management, usable security, web security",IEEE Computer Society,"The 38th IEEE Computer Security Foundations Symposium (CSF 2025) will be held from June 16-20, 2025, in Santa Cruz, CA, USA. CSF is an annual conference focused on theories of security, formal models, and verification techniques in computer security, tracing its origins to a 1986 essay on the foundations of computer security.","# CSF 2025: Call for Papers
+
+The Computer Security Foundations Symposium (CSF) is an annual conference for researchers in computer security. CSF seeks papers on foundational aspects of computer security, such as formal security models, relationships between security properties and defenses, principled techniques and tools for design and rigorous analysis of security mechanisms, as well as their application to practice.
+
+CSF 2025 continues to have **rolling deadlines**, inviting submissions three times a year: Spring, Fall, and Winter.
+
+## Topics
+
+New results in security and privacy are welcome. We also encourage challenge/vision papers, which may describe open questions and raise fundamental concerns about security and privacy. Possible topics for all papers include, but are not limited to:
+
+*   access control
+*   accountability
+*   anonymity
+*   attack models
+*   authentication
+*   blockchains and smart contracts
+*   cloud security
+*   cryptography
+*   data provenance
+*   data and system integrity
+*   database security
+*   decidability and complexity
+*   decision theory
+*   distributed systems security
+*   electronic voting
+*   embedded systems security
+*   forensics
+*   formal methods and verification
+*   hardware-based security
+*   information flow control
+*   intrusion detection
+*   language-based security
+*   mobile security
+*   network security
+*   privacy
+*   security and privacy aspects of machine learning
+*   security and privacy for the Internet of Things
+*   security architecture
+*   security metrics
+*   security policies
+*   security protocols
+*   software security
+*   socio-technical security
+*   trust management
+*   usable security
+*   web security
+*   SoK papers: Systematization of Knowledge Papers
+
+## Important Dates (AoE - UTC-12h)
+
+*   **Spring cycle paper submission:** May 28, 2024
+*   **Spring cycle author notification:** July 30, 2024
+*   **Fall cycle paper submission:** October 1, 2024
+*   **Fall cycle author notification:** December 3, 2024
+*   **Winter cycle paper submission:** February 4, 2025
+*   **Winter cycle author notification:** April 8, 2025
+*   **CSF Symposium:** June 16-20, 2025
+
+## Submission Instructions
+
+*   Submitted papers must not substantially overlap with papers that have been published or that are simultaneously submitted to a journal or a conference with published proceedings.
+*   Papers must be submitted using the **two-column IEEE Proceedings style** available at the IEEE Conference Publishing Services page.
+*   All papers should be at most **12 pages long**, not counting bibliography and well-marked appendices.
+*   Anonymized supplementary material such as proof scripts can be uploaded as a tar ball on the submission site.
+*   Papers failing to adhere to these instructions will be rejected without consideration of their merits.
+*   At least one coauthor of each accepted paper is required to attend CSF to present the paper. Exceptions can be made for visa difficulties.
+*   **CSF 2025 will employ double-blind reviewing.** Submitted papers must:
+    *   Omit any reference to the authors’ names or the names of their institutions.
+    *   Reference the authors’ own related work in the third person (e.g., not ""We build on our previous work…"" but rather ""We build on the work of …"").
+*   Submissions should be made via the submission server: [https://hotcrp.csf2025.ieee-security.org/](https://hotcrp.csf2025.ieee-security.org/)
+
+## Ethics
+
+> We expect authors to carefully consider and address the potential harms associated with carrying out the research, as well as the potential negative consequences that could stem from publishing their work. Failure to do so will result in summary rejection of a submission regardless of its quality and scientific value.
+>
+> Authors are expected to document how they have addressed and mitigated the risks, including considering the impact of their research on deployed systems, understanding costs and risks, safely collecting data, and following responsible disclosure. If the submitted research has the potential to cause harm, the paper should include a clear statement about why the benefit of the research outweighs the harms, and how the authors have taken measures to ensure safety and minimize harms.
+>
+> If the submitted research has potential to cause harm and authors have access to an Institutional Review Board (IRB), we expect that this IRB is consulted and its approval and recommendations are documented in the paper. IRB approval does not absolve researchers from considering ethical aspects of their work.
+>
+> We encourage authors to consult with existing documentation, e.g., ""Common Pitfalls in Writing about Security and Privacy Human Subjects Experiments, and How to Avoid Them"" or the Menlo Report and existing Safety consultation entities, e.g., the [Tor Safety Research Board](https://research.torproject.org/safetyboard/).
+
+## Decisions and Revisions
+
+*   The outcome of the review process can be accept, reject, or major revision.
+*   Papers with a ""major revision"" decision must be re-submitted within the following two cycles, accompanied by a writeup explaining how the revision meets reviewers’ requirements. These papers may use 16 pages.
+*   Rejected papers can be re-submitted at any time. If re-submitted within 11 months of the last deadline, previous reviews and an explanation must be submitted as supplementary material.
+
+## Contact
+
+*   Owen Arden
+*   Mohsen Lesani",,,
+req-conf-1751764883631-3o1ti,,International Workshop on Critical Information Infrastructures Security,CRITIS,https://jth-critis.hj.se/,https://jth-critis.hj.se/call-for-papers/,,"Conference dates: October 21 - 23, 2025
+Year: 2025
+Location: Jönköping, Sweden
+City-State-Province: Jönköping
+Country: Sweden
+Continent: Europe
+Type: Offline
+Submission Date.Submission deadline: June 21, 2025
+Notification Date.Notification to authors: August 21, 2025
+Registration Date.Registration deadline: September 21, 2025
+Topics: Critical Information Infrastructure Protection, Cyber-Physical Systems, Industrial Control Systems, Analytics, Strategic Management, C(I)IP Organization, Continuity Planning, Privacy issues related to C(I)IP, Security Awareness, Crisis Management, Human Factors, Critical Services, Future, TechWatch, Forecast for C(I)IP and Services Oriented Approaches, Explainable AI, Digital Twins, Safety & Security: Complex Vulnerability Analysis, Intelligence Analysis & Quantum Intelligence, Legal Aspects and Ethical Perspectives, Climate change implications in Critical Infrastructures and services, Natural Threats to Critical Infrastructures
+Publisher: Springer","October 21 - 23, 2025",2025,"Jönköping, Sweden",Jönköping,Sweden,Europe,Offline,"{""Submission deadline"":""June 21, 2025""}","{""Notification to authors"":""August 21, 2025""}",{},"{""Registration deadline"":""September 21, 2025""}",{},"Critical Information Infrastructure Protection, Cyber-Physical Systems, Industrial Control Systems, Analytics, Strategic Management, C(I)IP Organization, Continuity Planning, Privacy issues related to C(I)IP, Security Awareness, Crisis Management, Human Factors, Critical Services, Future, TechWatch, Forecast for C(I)IP and Services Oriented Approaches, Explainable AI, Digital Twins, Safety & Security: Complex Vulnerability Analysis, Intelligence Analysis & Quantum Intelligence, Legal Aspects and Ethical Perspectives, Climate change implications in Critical Infrastructures and services, Natural Threats to Critical Infrastructures",Springer,"The 20th International Conference on Critical Information Infrastructures Security (CRITIS 2025) will be held in Jönköping, Sweden, from October 21st to 23rd, 2025. Organized by the Cybersecurity and Privacy Research group at Jönköping School of Engineering, the conference focuses on the security and stability of critical infrastructures, addressing emerging threats and vulnerabilities.","# CRITIS 2025: Call for Papers
+
+The 20th International Conference on Critical Information Infrastructures Security (CRITIS 2025) invites submissions focused on Critical (Information) Infrastructure Protection (C(I)IP), exploring ideas that address challenges to resilience and societal safety & security. The conference will be organized by the Cybersecurity and Privacy Research group at Jönköping School of Engineering in Jönköping, Sweden.
+
+CRITIS 2025 welcomes contributions related to information exchange security, securing information infrastructures, hybrid threats, and C(I)IP. A special socio-technical track will focus on human and strategic aspects of C(I)IP. Papers, testbeds, datasets reports, and industrial/practical experience reports are also highly welcome.
+
+## CRITIS 2025 Topics
+
+Topics include, but are not limited to:
+
+*   Protection of Cyber-Physical/Cyber-Physical Human Systems and Industrial Control Systems
+*   Analytics, Strategic Management, (C(I)IP Organization)
+*   Continuity Planning
+*   Privacy issues related to C(I)IP
+*   Security Awareness & Crisis Management for C(I)IP, Human Factors and Critical Services
+*   Future, TechWatch & Forecast for C(I)IP and Services Oriented Approaches, Explainable AI and Digital Twins
+*   Safety & Security: Complex Vulnerability Analysis
+*   Intelligence Analysis & Quantum Intelligence
+*   Legal Aspects and Ethical Perspectives
+*   Climate change implications in Critical Infrastructures and services
+*   Natural Threats to Critical Infrastructures
+
+## Submission Types and Guidelines
+
+*   **Full papers:** Scientific research papers, surveying works, and industrial experiences. Maximum **20 pages**, including bibliography. These will be included in the post-proceedings published in **Springer Lecture Notes in Computer Science (LNCS)**.
+*   **Short papers:** Early results or work in progress. Papers should be **4 to 6 pages** long, including bibliography. These will be presented as posters and will **NOT** be included in the Springer LNCS.
+
+All submissions must be original, not submitted elsewhere, and marked explicitly as “full paper” or “short paper”. Papers must be anonymized for a **double-blind review** by at least three reviewers. Title page should not contain author names or affiliations, and references to previous work should be in the third person.
+
+Submissions should be in the **Springer LNCS format**. LaTeX Proceedings Templates are available via Overleaf. Authors are encouraged to use American English.
+
+## Deadlines
+
+*   **Submission deadline:** [Changed or passed: **June 21st, 2025**] (Accepting submissions continuously)
+*   **Notification to authors:** August 21st, 2025 (for papers submitted by the deadline); ASAP for late submissions.
+*   **Registration deadline:** September 21st, 2025
+*   **Conference dates:** October 21st-23rd, 2025
+
+## Submission Portal
+
+Submit your paper via EasyChair: [https://easychair.org/conferences/?conf=critis2025](https://easychair.org/conferences/?conf=critis2025)
+
+## Young CRITIS Award
+
+CRITIS will award the best work presented by young scientists (<32 years old by December 31st, 2025). To apply, mark your submission as a YCA applicant and inform the General Chair via email. The deadline for the application is **September 21st, 2025**.
+
+## General Co-chairs
+
+*   Erik Bergström
+*   Agnieszka Kitkowska
+*   Joakim Kävrestad",,,
+req-conf-1751764883631-3o1ti,,Conference on Software Engineering Education and Training,CSEET,https://conf.researchr.org/home/icse-2025/cseet-2025,https://conf.researchr.org/track/icse-2025/icse-2025-software-engineering-education,https://conf.researchr.org/home/icse-2025/cseet-2025#important-dates,"Conference dates: April 28 - 29, 2025
+Year: 2025
+Location: Ottawa, Ontario, Canada
+City-State-Province: Ottawa, Ontario
+Country: Canada
+Continent: North America
+Type: Offline
+Submission Date.Education Papers: Abstract Submission: October 3, 2024
+Submission Date.Education Papers: Full Submission: October 10, 2024
+Notification Date.Education Papers: Acceptance Notification: December 16, 2024
+Camera-ready Date.Education Papers: Camera Ready: February 17, 2025
+Topics: Software Engineering Education, Software Engineering Training","April 28 - 29, 2025",2025,"Ottawa, Ontario, Canada","Ottawa, Ontario",Canada,North America,Offline,"{""Education Papers: Abstract Submission"":""October 3, 2024"",""Education Papers: Full Submission"":""October 10, 2024""}","{""Education Papers: Acceptance Notification"":""December 16, 2024""}","{""Education Papers: Camera Ready"":""February 17, 2025""}",{},{},"Software Engineering Education, Software Engineering Training",No publisher,"The IEEE Conference on Software Engineering Education and Training (CSEE&T) 2025 will be co-located with ICSE 2025 in Ottawa, Canada, on April 28-29, 2025. This dedicated conference aims to foster a greater focus on software engineering education and training, bringing together academics and industry professionals to address the challenges of educating future software engineers.","# Call for Papers: IEEE Conference on Software Engineering Education and Training (CSEE&T) 2025
+
+## About CSEE&T 2025
+
+The IEEE Conference on Software Engineering Education and Training (CSEE&T) is a premier venue for exchanging ideas in software engineering education. In 2025, CSEE&T will be co-located with ICSE 2025 in Ottawa, Canada, on **April 28-29, 2025**. This collaboration aims to enhance the focus on software engineering education by uniting communities dedicated to preparing the next generation of software engineers.
+
+CSEE&T 2025 invites original, high-quality contributions on challenges, innovations, and best practices in software engineering education and training across all levels and contexts, including primary, secondary, university, industry training, bootcamps, and lifelong learning.
+
+## Topics of Interest
+
+CSEE&T 2025 welcomes contributions on all aspects of software engineering learning and teaching, including but not limited to:
+
+*   Methods of teaching and evaluating software engineering skills.
+*   Pedagogical approaches for distributed and remote education.
+*   Learning technologies and tools.
+*   Development of soft skills (communication, collaboration, teamwork, negotiation, conflict management).
+*   Equity, diversity, and inclusion in SE education.
+*   Ethical and societal concerns (sustainability, human values).
+*   Onboarding, on-the-job, and continuing education for software engineers.
+*   Extra-curricular training (hackathons, bootcamps).
+*   Certification and professional training.
+*   Online platforms and resources.
+*   Role of culture and gender.
+*   Introducing SE to children.
+*   Academia-industry synergy.
+*   Artificial Intelligence (AI) in SE education.
+
+## Submission Categories
+
+Submissions must conform to the IEEE conference proceedings template. All submissions must adhere to a **double-anonymous review process**.
+
+*   **Research Paper:** Max 10 pages (+ 2 pages for references). Must use appropriate research techniques and scholarly writing.
+*   **Experience Report:** Max 10 pages (+ 2 pages for references). Must describe and interpret an experience related to SE education, offering actionable advice.
+*   **Industry Paper:** Max 10 pages (+ 2 pages for references). Research or experience report focused on industry education/training.
+*   **Idea Paper:** Max 5 pages (+ 1 page for references). Must present a new idea with a proposed evaluation strategy.
+*   **Tool Paper:** Max 5 pages (+ 1 page for references). Must describe a tool/technology supporting SE education, discussing its impact on learning. An optional video demonstration is encouraged.
+*   **Replication Paper:** Max 5 pages (+ 1 page for references). Must describe the repetition of a pedagogical intervention in new contexts.
+*   **Journal-first Submission:** Max 1 page. A one-page proposal for a previously published journal paper, including title, authors, abstract, and pointer to the original paper.
+
+## Evaluation Criteria
+
+Submissions will be evaluated based on Relevance, Significance, Soundness, Verifiability, Presentation (for Research, Idea, Replication, Journal-first papers), and Actionability, Lessons (for Experience Reports, Industry Papers). Tool Papers are evaluated on Relevance, Significance, and Presentation.
+
+## How to Submit
+
+*   Submissions must conform to the **IEEE conference proceedings template**. Strict adherence to formatting is required to avoid desk rejection.
+*   **Plagiarism Policy:** Submissions must be original and not under review elsewhere. Authors must be aware of ACM and IEEE plagiarism policies.
+*   **ORCID ID:** All authors must obtain an ORCID ID for the publishing process.
+*   **Double-Anonymous Review:** Authors' identities must be omitted from submissions. References to prior work must be in the third person. Avoid mentioning the submission to CSEE&T 2025 in preprints.
+*   **Open Science Policy:** Authors are encouraged to adopt open data and open source principles for reproducibility. A 'Data Availability' section is mandatory, explaining data sharing or justifying its absence.
+*   **Submission Site:** [https://cseet25.hotcrp.com](https://cseet25.hotcrp.com)
+
+## Important Dates (AoE - Anywhere on Earth)
+
+*   **Abstract Submission Deadline:** Thursday, 3 October 2024
+*   **Full Paper Submission Deadline:** Thursday, 10 October 2024
+*   **Acceptance Notification:** Monday, 16 December 2024
+*   **Camera Ready Deadline:** Monday, 17 February 2025
+
+## Conference Attendance Expectation
+
+At least one author of an accepted paper must register for and attend CSEE&T to present the paper, either in person or online if travel is limited.
+
+## Keynotes
+
+*   **The Engaged Learner: From Experience to Learning and Impact** by Daniela Damian (University of Victoria)
+*   **The Promise and Peril of SE Education in the Age of AI** by Michael Hilton (Carnegie Mellon University)
+
+## Contacts
+
+For inquiries, please contact the CSEE&T 2025 Program Co-Chairs:
+
+*   Robert Chatley (Imperial College London): rbc@imperial.ac.uk
+*   Cécile Péraire (Carnegie Mellon University): cecile.peraire@sv.cmu.edu
+
+## For Authors
+
+*   **Camera Ready:** Due February 17, 2025.
+*   **Page Limits:** Final versions must not exceed the specified page limits; extra pages are not allowed.
+*   **Registration:** At least one author must register by the camera-ready deadline. Details and discounts are available on the ICSE 2025 registration page.
+*   **Visas:** Register early and consult the visa information page if a visa is required. Invitation letters can be requested during registration.
+*   **Paper Withdrawal:** Papers may be withdrawn for failing to complete camera-ready, registration, or presentation requirements, or for research misconduct.
+*   **Demonstrations:** Brief demonstrations of software tools or techniques may be possible during the presentation slot.
+*   **Journal Submission:** Extended versions of papers can be submitted to journals, following journal policies and citing the original CSEE&T paper.",,,
+req-conf-1751764883631-3o1ti,,IEEE Conference on Computer Vision and Pattern Recognition,CVPR,https://cvpr.thecvf.com/Conferences/2025,https://cvpr.thecvf.com/Conferences/2025/CallForPapers,https://cvpr.thecvf.com/Conferences/2025/Dates,"Conference dates: June 11 - 15, 2025
+Year: 2025
+Location: Music City Center, Nashville TN
+City-State-Province: Nashville TN
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.(Paper Submissions) Paper Registration Deadline: November 8, 2024
+Submission Date.(Paper Submissions) Paper Submission Deadline: November 15, 2024
+Submission Date.(Paper Submissions) Supplementary Materials Deadline: November 22, 2024
+Submission Date.(AI Art) Deadline for art submissions: March 9, 2025
+Submission Date.(Demos) Demo Submission Deadline: March 3, 2025
+Submission Date.(Socials) Social Proposal Deadline: April 25, 2025
+Submission Date.(Doctoral Consortium) Doctoral Submission Deadline: March 23, 2025
+Notification Date.(AI Art) Art acceptance notification date: April 6, 2025
+Notification Date.(Demos) Demo Acceptance Notification: March 29, 2025
+Notification Date.(Doctoral Consortium) Notification (Approximate): April 13, 2025
+Notification Date.(Paper Submissions) Reviews Released: January 23, 2025
+Notification Date.(Paper Submissions) Rebuttal Period Ends: January 31, 2025
+Notification Date.(Paper Submissions) Final Decisions: February 26, 2025
+Notification Date.(Socials) Social Proposal Notification: April 29, 2025
+Camera-ready Date.(Paper Submissions) Camera Ready Deadline: March 25, 2025
+Other Date.(AI Art) Deadline for art submissions: March 9, 2025
+Other Date.(Paper Submissions) OpenReview Account Creation Deadline: November 1, 2024
+Other Date.(Paper Submissions) Deadline to upload a video presentation of your poster for virtual attendees: June 1, 2025
+Other Date.(Paper Submissions) Poster Image Upload Deadline: June 1, 2025
+Topics: Computer Vision, Pattern Recognition, 3D from multi-view and sensors, 3D from single images, Adversarial attack and defense, Autonomous driving, Biometrics, Computational imaging, Computer vision for social good, Computer vision theory, Datasets and evaluation, Deep learning architectures and techniques, Document analysis and understanding, Efficient and scalable vision, Embodied vision: Active agents, simulation, Event-based cameras, Explainable computer vision, Humans: Face, body, pose, gesture, movement, Image and video synthesis and generation, Low-level vision, Machine learning (other than deep learning), Medical and biological vision, cell microscopy, Multimodal learning, Optimization methods (other than deep learning), Photogrammetry and remote sensing, Physics-based vision and shape-from-X, Recognition: Categorization, detection, retrieval, Representation learning, Computer Vision for Robotics, Scene analysis and understanding, Segmentation, grouping and shape analysis, Self-, semi-, meta- and unsupervised learning, Transfer/ low-shot/ continual/ long-tail learning, Transparency, fairness, accountability, privacy and ethics in vision, Video: Action and event understanding, Video: Low-level analysis, motion, and tracking, Vision + graphics, Vision, language, and reasoning, Vision applications and systems","June 11 - 15, 2025",2025,"Music City Center, Nashville TN",Nashville TN,United States,North America,Offline,"{""(Paper Submissions) Paper Registration Deadline"":""November 8, 2024"",""(Paper Submissions) Paper Submission Deadline"":""November 15, 2024"",""(Paper Submissions) Supplementary Materials Deadline"":""November 22, 2024"",""(AI Art) Deadline for art submissions"":""March 9, 2025"",""(Demos) Demo Submission Deadline"":""March 3, 2025"",""(Socials) Social Proposal Deadline"":""April 25, 2025"",""(Doctoral Consortium) Doctoral Submission Deadline"":""March 23, 2025""}","{""(AI Art) Art acceptance notification date"":""April 6, 2025"",""(Demos) Demo Acceptance Notification"":""March 29, 2025"",""(Doctoral Consortium) Notification (Approximate)"":""April 13, 2025"",""(Paper Submissions) Reviews Released"":""January 23, 2025"",""(Paper Submissions) Rebuttal Period Ends"":""January 31, 2025"",""(Paper Submissions) Final Decisions"":""February 26, 2025"",""(Socials) Social Proposal Notification"":""April 29, 2025""}","{""(Paper Submissions) Camera Ready Deadline"":""March 25, 2025""}",{},"{""(AI Art) Deadline for art submissions"":""March 9, 2025"",""(Paper Submissions) OpenReview Account Creation Deadline"":""November 1, 2024"",""(Paper Submissions) Deadline to upload a video presentation of your poster for virtual attendees"":""June 1, 2025"",""(Paper Submissions) Poster Image Upload Deadline"":""June 1, 2025""}","Computer Vision, Pattern Recognition, 3D from multi-view and sensors, 3D from single images, Adversarial attack and defense, Autonomous driving, Biometrics, Computational imaging, Computer vision for social good, Computer vision theory, Datasets and evaluation, Deep learning architectures and techniques, Document analysis and understanding, Efficient and scalable vision, Embodied vision: Active agents, simulation, Event-based cameras, Explainable computer vision, Humans: Face, body, pose, gesture, movement, Image and video synthesis and generation, Low-level vision, Machine learning (other than deep learning), Medical and biological vision, cell microscopy, Multimodal learning, Optimization methods (other than deep learning), Photogrammetry and remote sensing, Physics-based vision and shape-from-X, Recognition: Categorization, detection, retrieval, Representation learning, Computer Vision for Robotics, Scene analysis and understanding, Segmentation, grouping and shape analysis, Self-, semi-, meta- and unsupervised learning, Transfer/ low-shot/ continual/ long-tail learning, Transparency, fairness, accountability, privacy and ethics in vision, Video: Action and event understanding, Video: Low-level analysis, motion, and tracking, Vision + graphics, Vision, language, and reasoning, Vision applications and systems",No publisher,"The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 is the premier annual event in computer vision, comprising the main conference, co-located workshops, and short courses. Scheduled from June 11 to June 15, 2025, at the Music City Center in Nashville, TN, it offers high-quality research presentations at a low cost.","# CVPR 2025: Call for Papers
+
+The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 invites submissions of high-quality, original research papers for its main technical program. The conference will take place from **Wednesday, June 11th to Sunday, June 15th, 2025**, at the **Music City Center, Nashville, TN**.
+
+## Topics of Interest
+
+Topics of interest cover all aspects of computer vision and pattern recognition including, but not limited to:
+
+*   3D from multi-view and sensors
+*   3D from single images
+*   Adversarial attack and defense
+*   Autonomous driving
+*   Biometrics
+*   Computational imaging
+*   Computer vision for social good
+*   Computer vision theory
+*   Datasets and evaluation
+*   Deep learning architectures and techniques
+*   Document analysis and understanding
+*   Efficient and scalable vision
+*   Embodied vision: Active agents, simulation
+*   Event-based cameras
+*   Explainable computer vision
+*   Humans: Face, body, pose, gesture, movement
+*   Image and video synthesis and generation
+*   Low-level vision
+*   Machine learning (other than deep learning)
+*   Medical and biological vision, cell microscopy
+*   Multimodal learning
+*   Optimization methods (other than deep learning)
+*   Photogrammetry and remote sensing
+*   Physics-based vision and shape-from-X
+*   Recognition: Categorization, detection, retrieval
+*   Representation learning
+*   Computer Vision for Robotics
+*   Scene analysis and understanding
+*   Segmentation, grouping and shape analysis
+*   Self-, semi-, meta- and unsupervised learning
+*   Transfer/low-shot/continual/long-tail learning
+*   Transparency, fairness, accountability, privacy and ethics in vision
+*   Video: Action and event understanding
+*   Video: Low-level analysis, motion, and tracking
+*   Vision + graphics
+*   Vision, language, and reasoning
+*   Vision applications and systems
+
+## Important Dates
+
+*   **Paper Registration Deadline:** November 7th, 2024 11:59pm Pacific Time
+*   **Paper Submission Deadline:** November 14th, 2024 11:59pm Pacific Time
+*   **Supplementary Materials Deadline:** November 21st, 2024 11:59pm Pacific Time
+*   **Reviews Released:** January 23rd, 2025 01:59 AM CST
+*   **Rebuttal Period:** January 23-30, 2025
+*   **Rebuttal Period Ends:** January 31st, 2025 01:59 AM CST
+*   **Final Decisions:** February 26th, 2025 01:59 AM CST
+*   **Camera Ready Deadline:** March 25th, 2025 06:59 AM UTC
+*   **Deadline to upload a video presentation of your poster for virtual attendees:** June 1st, 2025 (Anywhere on Earth)
+*   **Poster Image Upload Deadline:** June 1st, 2025 (Anywhere on Earth)
+
+> The Paper Registration, Submission, and Supplementary Materials Deadlines are fixed, and no extensions will be given.
+
+## Paper Submission
+
+All submissions will be handled electronically via the [CVPR 2025 OpenReview submission website](https://openreview.net/group?id=thecvf.com/CVPR/2025/Conference).
+
+All authors must agree to the policies stipulated below.
+
+### Policies
+
+Please note the [changes introduced this year to the submission rules](https://cvpr.thecvf.com/Conferences/2025/CVPRChanges).
+
+> In submitting a manuscript to CVPR, authors acknowledge that no paper substantially similar in content has been or will be submitted to another conference or workshop during the review period (November 14, 2024 – February 26, 2025). Please refer to the [Author Guidelines](https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines) on the conference website for additional details on dual submissions and guidelines concerning prior work.
+
+> By submitting a paper to CVPR, the authors agree to the review process and understand that papers are processed by OpenReview to match each manuscript to the best possible area chairs and reviewers.
+
+> All accepted papers will be made publicly available by the Computer Vision Foundation (CVF) two weeks before the conference. Authors wishing to submit a patent understand that the paper's official public disclosure is two weeks before the conference or whenever the authors make it publicly available, whichever is first. More information about CVF is available at [Computer Vision Foundation website](https://www.thecvf.com/).
+
+### Author Resources
+
+*   [Author Guidelines](https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines)
+*   [Author Suggested Practices](https://cvpr.thecvf.com/Conferences/2025/AuthorSuggestedPractices)
+*   [Author Ethics Guidelines](https://cvpr.thecvf.com/Conferences/2025/EthicsGuidelines)
+*   [YouTube and Poster Art Uploads](https://cvpr.thecvf.com/Conferences/2025/YouTubeVideoPosterUpload)
+*   [Camera-Ready Submission Instructions](https://docs.google.com/document/d/1O3xcBy7O93hb9FY6c3Wg7fc8bKvvZFVvF3Ynmjhsmlg/edit?usp=sharing)
+*   [Author Submission Site Guide](https://docs.google.com/document/d/1t5-TzipreuxSdLqlq5dnJXXrwTdcMy3moNlr4nEZw00/edit?usp=sharing)
+
+## Registration
+
+Registration details and pricing information can be found at the [Register page](https://cvpr.thecvf.com/Conferences/2025/Pricing2).
+
+## Other Calls for Participation
+
+CVPR 2025 also has calls for:
+
+*   [Tutorial Proposals](https://cvpr.thecvf.com/Conferences/2025/CallForTutorials)
+*   [Workshop Proposals](https://cvpr.thecvf.com/Conferences/2025/WorkshopProposals)
+*   [Musical Performance](https://cvpr.thecvf.com/Conferences/2025/CallForMusicalPerformance)
+*   [Socials](https://cvpr.thecvf.com/Conferences/2025/CallForSocials)
+*   [AI Art](https://cvpr.thecvf.com/Conferences/2025/CallForAIArt)
+*   [Demos](https://cvpr.thecvf.com/Conferences/2025/CallForDemos)
+*   [Doctoral Consortium](https://cvpr.thecvf.com/Conferences/2025/CallForDoctoralConsortium)",,,
+req-conf-1751764883631-3o1ti,,"International Conference on Data Science, Technology and Applications",DATA,https://data.scitevents.org/,,https://data.scitevents.org/ImportantDates.aspx,"Conference dates: July 16 - 18, 2026
+Year: 2026
+Location: Porto, Portugal
+City-State-Province: Porto
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(Regular Papers) Paper Submission: March 3, 2026
+Submission Date.(Position Papers /Regular Papers) Paper Submission: April 16, 2026
+Notification Date.(Regular Papers) Authors Notification: April 30, 2026
+Notification Date.(Position Papers /Regular Papers) Authors Notification: May 22, 2026
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: May 15, 2026
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: June 5, 2026
+Other Date.(Workshops) Workshop Proposal: March 18, 2026
+Other Date.(Special Sessions) Special Session Proposal: March 18, 2026
+Other Date.(Tutorials) Tutorial Proposal: June 12, 2026
+Other Date.(Demos) Demo Proposal: June 12, 2026
+Other Date.(Panels) Panel Proposal: June 12, 2026
+Other Date.(Abstracts Track) Abstract Submission: May 22, 2026
+Other Date.(Abstracts Track) Authors Notification: June 8, 2026
+Other Date.(Abstracts Track) Camera Ready and Registration: June 17, 2026
+Topics: Databases, Big Data, Data Mining, Data Management, Data Security, Information Systems, Data Science, Technology and Applications","July 16 - 18, 2026",2026,"Porto, Portugal",Porto,Portugal,Europe,Offline,"{""(Regular Papers) Paper Submission"":""March 3, 2026"",""(Position Papers /Regular Papers) Paper Submission"":""April 16, 2026""}","{""(Regular Papers) Authors Notification"":""April 30, 2026"",""(Position Papers /Regular Papers) Authors Notification"":""May 22, 2026""}","{""(Regular Papers) Camera Ready and Registration"":""May 15, 2026"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""June 5, 2026""}",{},"{""(Workshops) Workshop Proposal"":""March 18, 2026"",""(Special Sessions) Special Session Proposal"":""March 18, 2026"",""(Tutorials) Tutorial Proposal"":""June 12, 2026"",""(Demos) Demo Proposal"":""June 12, 2026"",""(Panels) Panel Proposal"":""June 12, 2026"",""(Abstracts Track) Abstract Submission"":""May 22, 2026"",""(Abstracts Track) Authors Notification"":""June 8, 2026"",""(Abstracts Track) Camera Ready and Registration"":""June 17, 2026""}","Databases, Big Data, Data Mining, Data Management, Data Security, Information Systems, Data Science, Technology and Applications",No publisher,"The International Conference on Data Science, Technology and Applications (DATA) aims to gather researchers, engineers, and practitioners focused on databases, big data, data mining, data management, data security, and other aspects of information systems and technology involving advanced applications of data. DATA 2026 will be held in conjunction with several other conferences, including ICSOFT 2026 and SIMULTECH 2026.","# DATA 2026: Call for Papers
+
+The International Conference on Data Science, Technology and Applications (DATA) aims to bring together researchers, engineers, and practitioners interested in databases, big data, data mining, data management, data security, and other aspects of information systems and technology involving advanced applications of data.
+
+## Conference Details
+
+*   **Conference Chair:** Slimane Hammoudi, ESEO, ERIS, France
+*   **Program Co-Chairs:** Xin-She Yang, Middlesex University London, United Kingdom; Elhadj Benkhelifa, Staffordshire University, United Kingdom
+*   **Venue:** DATA 2026 will be held in conjunction with ICSOFT 2026, SIMULTECH 2026, DeLTA 2026, SECRYPT 2026 and IQSOFT 2026.
+
+## Publications
+
+*   All papers presented at the conference venue will be available at the **SCITEPRESS Digital Library**.
+*   A short list of best papers will be invited for a post-conference special issue of the **Springer Nature Computer Science Journal**.
+*   Proceedings will be submitted for evaluation for indexing by: Web of Science/Conference Proceedings Citation Index.
+
+## Submission Types and Deadlines
+
+### Regular Papers
+
+*   **Paper Submission:** **March 3, 2026**
+*   **Authors Notification:** April 30, 2026
+*   **Camera Ready and Registration:** May 15, 2026
+
+### Position Papers / Regular Papers
+
+*   **Paper Submission:** **April 16, 2026**
+*   **Authors Notification:** May 22, 2026
+*   **Camera Ready and Registration:** June 5, 2026
+
+### Abstracts Track
+
+*   **Abstract Submission:** May 22, 2026
+*   **Authors Notification:** June 8, 2026
+*   **Camera Ready and Registration:** June 17, 2026
+
+### Workshops
+
+*   **Workshop Proposal:** March 18, 2026
+
+### Special Sessions
+
+*   **Special Session Proposal:** March 18, 2026
+
+### Tutorials
+
+*   **Tutorial Proposal:** June 12, 2026
+
+### Demos
+
+*   **Demo Proposal:** June 12, 2026
+
+### Panels
+
+*   **Panel Proposal:** June 12, 2026
+
+*Note: All dates refer to AOE time, i.e. ""Anywhere on Earth"".*
+
+## Registration
+
+Registration to DATA allows free access to the ICSOFT, SIMULTECH, DeLTA, SECRYPT and IQSOFT conferences (as a non-speaker).",,,
+req-conf-1751764883631-3o1ti,,Data Warehousing and Knowledge Discovery,DaWaK,https://www.dexa.org/2025/dawak2025.html,https://dawak2025.iiwas.org/,https://www.dexa.org/2025/important-dates-2.html,"Conference dates: August 25 - 27, 2025
+Year: 2025
+Location: Bangkok, Thailand
+City-State-Province: Bangkok
+Country: Thailand
+Continent: Asia
+Type: Offline
+Submission Date.Paper submission: April 10, 2025
+Notification Date.Notification of acceptance: May 20, 2025
+Camera-ready Date.Camera-ready copies due: June 15, 2025
+Registration Date.Authors Registration deadline: June 15, 2025
+Topics: Big Data Analytics, Data Lakes, Database Design, Data Warehouse Design, ER modelling, Big Data Management, Query Languages, SQL, Parallel Systems Technology, Spark, MapReduce, HDFS, Text and Data Mining Techniques, Deep Learning, Theoretical models for extended data warehouses and big data, Conceptual model foundations for big data, Modelling diverse big data sources, Parallel processing, Parallel DBMS technology, Distributed system architectures, Scalability and parallelization using Map-Reduce, Spark, and related system, Query processing and optimization, Semantics for big data intelligence, Data warehouse and data lake architectures, Pre-processing and data cleaning, Integration of data warehousing, OLAP cubes, and data mining, Polystore and multistore architectures, NoSQL storage systems, Cloud infrastructures for big data, Metadata for big data frameworks, Big data storage and indexing, Big data analytics: algorithms, techniques, and systems, Big data quality and provenance, Big data search and discovery, Big data management for mobile applications, AI/ML for Big data analytics (text, time series, spatio-temporal, graph), Analytic workflows, Graph analytics, Analytics for unstructured, semi-structured, and structured data, Analytics for temporal, spatial, spatio-temporal, and mobile data, Analytics for data streams and sensor data, Real-time/right-time and event-based analytics, Privacy and security in analytics, Data visualisation, Big data application deployment, Data science products, Novel applications of text mining for big data, Machine Learning: auto AI, deep learning applications, AI/ML for data engineering, management, and analytics","August 25 - 27, 2025",2025,"Bangkok, Thailand",Bangkok,Thailand,Asia,Offline,"{""Paper submission"":""April 10, 2025""}","{""Notification of acceptance"":""May 20, 2025""}","{""Camera-ready copies due"":""June 15, 2025""}","{""Authors Registration deadline"":""June 15, 2025""}",{},"Big Data Analytics, Data Lakes, Database Design, Data Warehouse Design, ER modelling, Big Data Management, Query Languages, SQL, Parallel Systems Technology, Spark, MapReduce, HDFS, Text and Data Mining Techniques, Deep Learning, Theoretical models for extended data warehouses and big data, Conceptual model foundations for big data, Modelling diverse big data sources, Parallel processing, Parallel DBMS technology, Distributed system architectures, Scalability and parallelization using Map-Reduce, Spark, and related system, Query processing and optimization, Semantics for big data intelligence, Data warehouse and data lake architectures, Pre-processing and data cleaning, Integration of data warehousing, OLAP cubes, and data mining, Polystore and multistore architectures, NoSQL storage systems, Cloud infrastructures for big data, Metadata for big data frameworks, Big data storage and indexing, Big data analytics: algorithms, techniques, and systems, Big data quality and provenance, Big data search and discovery, Big data management for mobile applications, AI/ML for Big data analytics (text, time series, spatio-temporal, graph), Analytic workflows, Graph analytics, Analytics for unstructured, semi-structured, and structured data, Analytics for temporal, spatial, spatio-temporal, and mobile data, Analytics for data streams and sensor data, Real-time/right-time and event-based analytics, Privacy and security in analytics, Data visualisation, Big data application deployment, Data science products, Novel applications of text mining for big data, Machine Learning: auto AI, deep learning applications, AI/ML for data engineering, management, and analytics",No publisher,"The 27th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK 2025) will be held in Bangkok, Thailand from August 25-27, 2025. DAWAK 2025 is collocated with DEXA 2025 conferences and workshops and will be an in-person event.","# DAWAK 2025: Call for Papers
+
+The 27th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK 2025) will be held from **25 - 27 August, 2025 in Bangkok, Thailand**.
+
+## Scope
+
+DAWAK conference is a high-quality forum for researchers, practitioners and developers in the field of Big Data Analytics. The conference covers all aspects of DAWAK research and practice, including data lakes, database design, big data management, query languages, parallel systems technology, theoretical foundations and applications, text and data mining techniques, and deep learning.
+
+## Topics of Interest
+
+The conference will bring together active researchers from the database systems, cloud computing, programming languages and data science communities worldwide. Main topics include:
+
+*   Theoretical models for extended data warehouses and big data
+*   Conceptual model foundations for big data
+*   Modelling diverse big data sources
+*   Parallel processing
+*   Parallel DBMS technology
+*   Distributed system architectures
+*   Scalability and parallelization using Map-Reduce, Spark, and related systems
+*   Query languages
+*   Query processing and optimization
+*   Semantics for big data intelligence
+*   Data warehouse and data lake architectures
+*   Pre-processing and data cleaning
+*   Integration of data warehousing, OLAP cubes, and data mining
+*   Polystore and multistore architectures
+*   NoSQL storage systems
+*   Cloud infrastructures for big data
+*   Metadata for big data frameworks
+*   Big data storage and indexing
+*   Big data analytics: algorithms, techniques, and systems
+*   Big data quality and provenance
+*   Big data search and discovery
+*   Big data management for mobile applications
+*   AI/ML for Big data analytics (text, time series, spatio-temporal, graph)
+*   Analytic workflows
+*   Graph analytics
+*   Analytics for unstructured, semi-structured, and structured data
+*   Analytics for temporal, spatial, spatio-temporal, and mobile data
+*   Analytics for data streams and sensor data
+*   Real-time/right-time and event-based analytics
+*   Privacy and security in analytics
+*   Data visualisation
+*   Big data application deployment
+*   Data science products
+*   Novel applications of text mining for big data
+*   Machine Learning: auto AI, deep learning applications
+*   AI/ML for data engineering, management, and analytics
+
+## Submission Guidelines
+
+DAWAK 2025 follows a **single-blind review policy**.
+
+*   **Short papers:** up to 6 pages on preliminary work, vision papers or industrial applications.
+*   **Full papers:** up to 15 pages (including references and appendixes). Full papers are expected to be more mature, contain more theory or present a survey (tutorial style) of some hot or not yet explored topics.
+
+*   Papers exceeding the page limit or deviating from the formatting requirement are desk rejected.
+*   Duplicate submissions are not allowed and will be rejected immediately without further reviewing.
+*   Authors are invited to submit original research contributions or experience reports in English.
+
+## Submission Procedure
+
+*   Papers submission will be managed using HotCRP: [https://dawak2025.iiwas.org](https://dawak2025.iiwas.org)
+*   Authors should consult [Springer’s authors’ instructions](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) and use the proceedings templates, either for LaTeX or for Word, for the preparation of their papers.
+
+## Important Dates
+
+*   **Paper submission:** 10 April 2025 (Sharp & Final)
+*   **Notification of acceptance:** 20 May 2025
+*   **Camera-ready copies due:** 15 June 2025
+*   **Authors Registration deadline:** 15 June 2025
+*   **Conference days:** 25-27 August 2025
+
+## Publication
+
+All accepted conference papers will be published by Springer in their Lecture Notes in Computer Science (LNCS).
+
+The best DAWAK papers will be invited to contribute to the Special Issue of Data & Knowledge Engineering (DKE).
+
+## Important Note on Submissions
+
+HotCRP cannot accept the use of public email services such as Gmail, Yahoo, Outlook, etc., as it needs to verify potential conflicts between reviewers and paper authors. Please use your institution email address and if you still encounter any issues, please reach out to (dawak2025@iiwas.org).
+
+## Contact
+
+For further inquiries, please contact: dawak2025@iiwas.org",,,
+req-conf-1751764883631-3o1ti,,International Conference on Distributed Computing and Artificial Intelligence,DCAI,https://dcai-conference.net/,https://easychair.org/conferences/?conf=dcai25,,"Conference dates: June 25 - 27, 2025
+Year: 2025
+Location: University of Lille, France
+City-State-Province: Lille
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.(Special Session) Special Session deadline: April 4, 2025
+Submission Date.(Doctoral Consortium) Doctoral Consortium deadline: April 4, 2025
+Submission Date.(Abstracts Track) Abstract Submission: July 31, 2025
+Submission Date.(Main Conference) Paper submission: March 31, 2025
+Notification Date.Notification of acceptance: April 25, 2025
+Camera-ready Date.Camera-Ready papers: May 9, 2025
+Topics: Distributed Computing, Artificial Intelligence, Fuzzy Computation, Evolutionary Computation, Neural Computation, Explainable AI
+Publisher: Springer","June 25 - 27, 2025",2025,"University of Lille, France",Lille,France,Europe,Offline,"{""(Special Session) Special Session deadline"":""April 4, 2025"",""(Doctoral Consortium) Doctoral Consortium deadline"":""April 4, 2025"",""(Abstracts Track) Abstract Submission"":""July 31, 2025"",""(Main Conference) Paper submission"":""March 31, 2025""}","{""Notification of acceptance"":""April 25, 2025""}","{""Camera-Ready papers"":""May 9, 2025""}",{},{},"Distributed Computing, Artificial Intelligence, Fuzzy Computation, Evolutionary Computation, Neural Computation, Explainable AI",Springer,"The 22nd International Conference on Distributed Computing and Artificial Intelligence (DCAI 2025) will be held from June 25th to 27th, 2025, at the University of Lille, France. This annual forum brings together ideas, projects, and knowledge related to distributed computing and artificial intelligence, and their applications in various fields, emphasizing the exchange of ideas between academic and business backgrounds.","# DCAI 2025: Call for Papers
+
+The 22nd International Conference on Distributed Computing and Artificial Intelligence (DCAI 2025) will take place at the **University of Lille (France)** within PAAMS'25, from **June 25th to 27th, 2025**.
+
+This annual forum aims to bring together ideas, projects, and knowledge associated with distributed computing and artificial intelligence, and their application in different areas. The conference emphasizes the exchange of ideas between scientists and technicians from both academic and business backgrounds to facilitate the development of systems that meet the demands of today's society. Technology transfer in this field is a challenge, and contributions in this area will receive special consideration.
+
+## Topics of Interest
+
+The conference covers all aspects of **Distributed Computing and Artificial Intelligence**, including their application in diverse fields. Key areas include:
+
+*   Parallel and distributed computing systems.
+*   Applying artificial intelligence in distributed environments (e.g., Internet, electronic commerce, mobile communications, wireless devices).
+*   Intelligent Distributed Systems.
+*   Technology transfer in distributed computing and AI.
+
+## Conference Tracks and Special Sessions
+
+### Main Track
+
+### Special Sessions
+
+*   **AI–driven methods for Multimodal Networks and Processes Modeling (AIMPM)**
+*   **Audio and video analysis and pattern recognition (AVARP)** organised by the IA4birds project
+*   **Computational Linguistics, Information, Reasoning, and AI (CLIRAI)**
+*   **Crypto-Asset Exchange Platforms: Technical and Legal Aspects (CSDT)**
+*   **International Conference on Digital Heritage Contents for Virtual-Space (DHC4VS)**
+*   **Emerging Technologies For Cybersecurity Resilience: Blockchain, Threat Detection, And Compliance (ETCR)**
+*   **Special Session for female technopreneurs and early career researchers in distributed computing and AI** organised by the Gendered Innovation Living Labs (GILL) project
+*   **Revolutionising Carbon Farming by Nature-Based Business Models and Emerging Innovations in the field of artificial intelligence, satellite and green technologies (INNO4CFIS)**
+*   **Intelligent Systems Applications (ISA)**
+*   **Intelligent Search and Discovery in the Future Internet (ISDFI)**
+*   **Quantum computing applied to industry and cybersecurity (QUINCY)**
+*   **Novel Technologies for Smart Industry and Mobility (SmartMob)**
+*   **New perspectives and solutions in Cultural Heritage (TECTONIC)**
+*   **dAIEDGE: Trustworthy, Regulated, and Efficient AI on the Edge (TRUST-E)**
+*   **Artificial Intelligence trends in Health & Care (AItHeC)**
+
+### Doctoral Consortium
+
+## Important Dates
+
+| Event                      | Deadline           |
+| :------------------------- | :----------------- |
+| General Deadline           | March 31, 2025     |
+| Special Session deadline   | April 4, 2025      |
+| Doctoral Consortium deadline | April 4, 2025      |
+| Notification of acceptance | April 25, 2025     |
+| Camera-Ready papers        | May 9, 2025        |
+| Conference Celebration     | June 25-27, 2025   |
+
+## Submission Guidelines
+
+Further submission details are available on the EasyChair system. Submission of new papers for DCAI'25 is open.
+
+## Publication
+
+Proceedings of DCAI 2025 (Main track and Special Sessions) will be published. Proceedings of previous editions are available at: [https://link.springer.com/conference/dcai](https://link.springer.com/conference/dcai)
+
+### Special Issues
+
+Authors of selected papers from DCAI will be invited to submit an extended and improved version to special issues in different journals, including:
+
+*   **International Journal of Interactive Multimedia and Artificial Intelligence** (ISSN: 1989-1660, JCR (2023): **3.4 (Q2)**)
+*   **Logic Journal of the IGPL** (ISSN 1368-9894, JCR 2023: **0.6 (Q2)**)
+*   **ADCAIJ** (ISSN: 2255-2863, JCR (2023): **1.7 (Q3)**)
+*   **MDPI Future Internet Journal** (Special Issue: “Deep Learning in Recommender Systems”) (ISSN: 1999-5903, JCR (2023): **2.8 (Q2)**)
+*   **MDPI Sensors Journal** (Special Issue: “Edge Computing in IoT Networks Based on Artificial Intelligence” - for PAAMS and Co-located Events) (ISSN: 1424-8220, JCR (2023): **3.4 (Q2)**)
+*   **MDPI Systems Journal** (Special Issue: “Advancements in Practical Applications of Agents, Multi-Agent Systems and Digital Twins” - for DCAI and Co-located Events) (ISSN: 2079-8954, JCR (2023): **2.3 (Q1)**)
+
+## Accommodation Grants
+
+CRIStAL Lab (www.cristal.univ-lille.fr) offers **15 grants/awards** to doctoral and young doctors. More information can be found at: [/open-calls/call-for-grants-awards](/open-calls/call-for-grants-awards)",,,
+req-conf-1751764883631-3o1ti,,IFIP WG 11.3 Working Conference on Data and Applications Security,DBSEC,https://www.ntnu.edu/web/dbsec2025/dbsec2025,https://www.ntnu.edu/web/dbsec2025/call-for-papers,https://www.ntnu.edu/web/dbsec2025/important-dates,"Conference dates: June 23-25, 2025
+Year: 2025
+Location: Gjøvik, Norway
+City-State-Province: Gjøvik
+Country: Norway
+Continent: Europe
+Type: Offline
+Submission Date.Paper Submission Deadline: March 25, 2025
+Notification Date.Author notification: April 30, 2025
+Camera-ready Date.Final papers due: May 5, 2025
+Topics: Access control, Anonymity, Applied cryptography in data security, Authentication, Big data security, Data and system integrity, Data for LLMs, GenAI, ML/DL: data curation, vector databases, Data protection, Data provenance, Database security, Digital rights management, Distributed and decentralised security, Identity management, Intrusion detection, Knowledge discovery and privacy, Methodologies for data and application security, Network security, Organisational and social aspects of security, Ownership, Privacy and licensing issues of data for AI training, Privacy, Secure cloud computing, Secure distributed systems, Secure information integration, Security and privacy in crowdsourcing, Security and privacy in IT outsourcing, Security and privacy in location-based services, Security and privacy in P2P scenarios and social networks, Security and privacy in pervasive/ubiquitous computing, Security and privacy policies, Security management and audit, Security metrics, Threats, vulnerabilities, and risk management, Trust and reputation systems, Trust management, Web security, Wireless and mobile security
+Publisher: Springer","June 23-25, 2025",2025,"Gjøvik, Norway",Gjøvik,Norway,Europe,Offline,"{""Paper Submission Deadline"":""March 25, 2025""}","{""Author notification"":""April 30, 2025""}","{""Final papers due"":""May 5, 2025""}",{},{},"Access control, Anonymity, Applied cryptography in data security, Authentication, Big data security, Data and system integrity, Data for LLMs, GenAI, ML/DL: data curation, vector databases, Data protection, Data provenance, Database security, Digital rights management, Distributed and decentralised security, Identity management, Intrusion detection, Knowledge discovery and privacy, Methodologies for data and application security, Network security, Organisational and social aspects of security, Ownership, Privacy and licensing issues of data for AI training, Privacy, Secure cloud computing, Secure distributed systems, Secure information integration, Security and privacy in crowdsourcing, Security and privacy in IT outsourcing, Security and privacy in location-based services, Security and privacy in P2P scenarios and social networks, Security and privacy in pervasive/ubiquitous computing, Security and privacy policies, Security management and audit, Security metrics, Threats, vulnerabilities, and risk management, Trust and reputation systems, Trust management, Web security, Wireless and mobile security",Springer,"The 39th Annual IFIP WG 11.3 Conference on Data and Applications Security and Privacy (DBSec 2025) will be held from June 23-25, 2025, in Gjøvik, Norway. This conference brings together researchers, practitioners, and experts to share cutting-edge findings and insights in data protection, privacy, and application security. Accepted papers will be published by Springer in the Lecture Notes in Computer Science (LNCS) series.","# DBSEC 2025: Call for Papers
+
+The 39th Annual IFIP WG 11.3 Conference on Data and Applications Security and Privacy (DBSec 2025) will take place from **June 23-25, 2025**, in **Gjøvik, Norway**.
+
+The conference brings together researchers, practitioners, and experts from academia, industry, and government to share their cutting-edge findings and insights in all theoretical and practical aspects of data protection, privacy, and applications security.
+
+## Topics of Interest
+
+*   Access control
+*   Anonymity
+*   Applied cryptography in data security
+*   Authentication
+*   Big data security
+*   Data and system integrity
+*   Data for LLMs, GenAI, ML/DL: data curation, vector databases
+*   Data protection
+*   Data provenance
+*   Database security
+*   Digital rights management
+*   Distributed and decentralised security
+*   Identity management
+*   Intrusion detection
+*   Knowledge discovery and privacy
+*   Methodologies for data and application security
+*   Network security
+*   Organisational and social aspects of security
+*   Ownership, Privacy and licensing issues of data for AI training
+*   Privacy
+*   Secure cloud computing
+*   Secure distributed systems
+*   Secure information integration
+*   Security and privacy in crowdsourcing
+*   Security and privacy in IT outsourcing
+*   Security and privacy in location-based services
+*   Security and privacy in P2P scenarios and social networks
+*   Security and privacy in pervasive/ubiquitous computing
+*   Security and privacy policies
+*   Security management and audit
+*   Security metrics
+*   Threats, vulnerabilities, and risk management
+*   Trust and reputation systems
+*   Trust management
+*   Web security
+*   Wireless and mobile security
+
+## Paper Submissions
+
+*   **Page Limits:** Submitted papers should be at most **16 pages** in the LNCS format excluding bibliography and well-marked appendices, with a maximum of **20 pages in total**. Short papers, no longer than **12 pages in all**, are also acceptable.
+*   **Anonymity:** Submissions are **NOT anonymous**. Committee members are not required to read the appendices, and therefore the paper should be intelligible without them.
+*   **Format:** All submissions must be written in English, and only **PDF files** will be accepted. A **LaTeX source file** will be required for the final version of the accepted papers. The final version must be in the format required for publications in the LNCS series.
+*   **Submission Website:** [https://easychair.org/conferences/?conf=dbsec2025](https://easychair.org/conferences/?conf=dbsec2025)
+*   **Plagiarism Policy:** A paper submitted to DBSec 2025 cannot be under review for any other conference or journal during the time it is being considered for DBSec 2025. Submitting identical or substantially similar papers to DBSec 2025 and another venue simultaneously will result in rejection without review, and the other venue will be notified.
+
+## Publication
+
+Accepted papers will be published by **Springer in the Lecture Notes in Computer Science (LNCS) series**.
+
+## Awards
+
+DBSec 2025 will have **best paper** and **best student paper** awards.
+
+## Important Dates
+
+*   **Paper Submission Deadline:** **March 25, 2025** (AOE)
+*   **Author notification:** **April 30, 2025** (AOE)
+*   **Final papers due:** **May 5, 2025** (AOE)
+
+## Contact Information
+
+For any questions, please contact the organizers at: **sokratis.katsikas@ntnu.no**
+
+**IFIP WG 11.3 home page:** [https://spdp.di.unimi.it/~ifip113/](https://spdp.di.unimi.it/~ifip113/)",,,

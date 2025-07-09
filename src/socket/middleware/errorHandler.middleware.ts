@@ -1,7 +1,5 @@
 // src/middleware/errorHandler.middleware.ts
 import { Request, Response, NextFunction } from 'express';
-import logToFile from '../../utils/logger';
-import { getErrorMessageAndStack } from '../../utils/errorUtils';
 
 /**
  * Extends the Error interface to include common HTTP-related properties.
@@ -44,24 +42,11 @@ export const errorHandlerMiddleware = (
     res: Response,
     next: NextFunction
 ): void => {
-    const requestId = getRequestId(req);
-    const logContext = `[errorHandler]${requestId ? `[Req:${requestId}]` : ''}[${req.method} ${req.originalUrl}]`;
 
     const statusCode = err.status || err.statusCode || 500;
     const message = err.message || 'Internal Server Error';
     // Differentiate between operational errors (expected, client-related) and server errors.
-    const isServerError = !err.isOperational || statusCode >= 500;
 
-    // Extract error details safely using the utility
-    const { message: errMessageForLog, stack: errStackForLog } = getErrorMessageAndStack(err);
-
-    if (isServerError) {
-        // Log critical server errors with full stack trace.
-        logToFile(`[ERROR] ${logContext} Unhandled server error. Status: ${statusCode}, Message: "${errMessageForLog}". Stack: ${errStackForLog}`);
-    } else {
-        // Log operational/client errors as warnings (stack trace often not needed here).
-        logToFile(`[WARNING] ${logContext} Handled operational error. Status: ${statusCode}, Message: "${errMessageForLog}".`);
-    }
 
     // Determine the message sent to the client.
     // In production, hide generic 500-level error details for security.
@@ -75,11 +60,10 @@ export const errorHandlerMiddleware = (
             status: 'error',
             statusCode,
             message: clientMessage,
-            // Optionally, include stack or full error in dev environment:
-            // ...(process.env.NODE_ENV !== 'production' && { stack: errStackForLog, fullError: err })
+      
         });
     } else {
-        logToFile(`[WARNING] ${logContext} Headers already sent for error, cannot send JSON response. Error: "${errMessageForLog}".`);
+        
     }
 
     // Do not call `next(err)` here, as this middleware is typically the final error handler

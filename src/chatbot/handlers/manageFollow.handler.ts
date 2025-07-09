@@ -13,7 +13,6 @@ import {
     ThoughtStep, // Added ThoughtStep for logging
     StatusUpdate
 } from '../shared/types';
-import logToFile from '../../utils/logger'; // Keeping logToFile as requested
 // Import blacklist status check from manageBlacklist.service
 import { executeGetUserBlacklisted } from '../services/manageBlacklist.service';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import error utility
@@ -56,10 +55,9 @@ export class ManageFollowHandler implements IFunctionHandler {
             onStatusUpdate,
             agentId // Agent ID from the calling context
         } = context;
-        const logPrefix = `[${handlerProcessId} ${socketId} Handler:ManageFollow Agent:${agentId}]`;
         const localThoughts: ThoughtStep[] = []; // Collection for thoughts
 
-        logToFile(`${logPrefix} Executing with args: ${JSON.stringify(args)}, Auth: ${!!userToken}`);
+        
 
         /**
          * Helper function to report a status update and collect a ThoughtStep.
@@ -77,7 +75,7 @@ export class ManageFollowHandler implements IFunctionHandler {
                 agentId: agentId,
             };
             localThoughts.push(thought);
-            logToFile(`${logPrefix} Thought added: Step: ${step}, Agent: ${agentId}`);
+            
 
             if (onStatusUpdate) {
                 const statusData: StatusUpdate = {
@@ -90,7 +88,7 @@ export class ManageFollowHandler implements IFunctionHandler {
                 };
                 onStatusUpdate('status_update', statusData);
             } else {
-                logToFile(`${logPrefix} Warning: onStatusUpdate callback not provided for step: ${step}`);
+                
             }
         };
 
@@ -105,7 +103,7 @@ export class ManageFollowHandler implements IFunctionHandler {
             // Basic validation
             if (!itemType || !action) {
                 const errorMsg = "Missing required information (item type or action).";
-                logToFile(`${logPrefix} ManageFollow: Validation Failed - ${errorMsg}`);
+                
                 reportStep('function_error', 'Invalid arguments provided.', { error: errorMsg, args });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -126,7 +124,7 @@ export class ManageFollowHandler implements IFunctionHandler {
             }
 
             if (validationError) {
-                logToFile(`${logPrefix} ManageFollow: Validation Failed - ${validationError}`);
+                
                 reportStep('function_error', 'Invalid arguments provided.', { error: validationError, args });
                 return { modelResponseContent: `Error: ${validationError}`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -139,7 +137,7 @@ export class ManageFollowHandler implements IFunctionHandler {
             reportStep('checking_authentication', 'Checking authentication status...');
             if (!userToken) {
                 const errorMsg = "Authentication required.";
-                logToFile(`${logPrefix} ManageFollow: User not authenticated.`);
+                
                 reportStep('function_error', 'User not authenticated.', { error: errorMsg });
                 return { modelResponseContent: `Error: You must be logged in to manage followed items.`, frontendAction: undefined, thoughts: localThoughts };
             }
@@ -150,14 +148,14 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                 if (!listResult.success || !listResult.items) {
                     const errorMsg = listResult.errorMessage || `Failed to retrieve followed ${validItemType}s.`;
-                    logToFile(`${logPrefix} ManageFollow: Error listing items - ${errorMsg}`);
+                    
                     reportStep('function_error', `Failed to list followed ${validItemType}s.`, { error: errorMsg });
                     return { modelResponseContent: `Sorry, I couldn't retrieve your followed ${validItemType}s: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
 
                 if (listResult.items.length === 0) {
                     const message = `You are not following any ${validItemType}s.`;
-                    logToFile(`${logPrefix} ManageFollow: No followed ${validItemType}s found.`);
+                    
                     reportStep('list_success_empty', message);
                     return { modelResponseContent: message, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -179,7 +177,7 @@ export class ManageFollowHandler implements IFunctionHandler {
                 });
 
                 const successMessage = `Here are the ${validItemType}s you are following:`;
-                logToFile(`${logPrefix} ManageFollow: Successfully listed ${listResult.items.length} followed ${validItemType}(s).`);
+                
                 reportStep('list_success', successMessage, { count: listResult.items.length });
 
                 return {
@@ -205,7 +203,7 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                 if (!idResult.success || !idResult.itemId) {
                     const errorMsg = idResult.errorMessage || `Could not find ${validItemType} "${currentIdentifier}".`;
-                    logToFile(`${logPrefix} ManageFollow: Error finding ID - ${errorMsg}`);
+                    
                     reportStep('item_id_not_found', `Could not find ${validItemType} "${currentIdentifier}".`, { error: errorMsg, identifier: currentIdentifier, identifierType: currentIdentifierType, itemType: validItemType });
                     return { modelResponseContent: errorMsg, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -220,7 +218,7 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                 if (!followStatusResult.success) {
                     const errorMsg = followStatusResult.errorMessage || 'Failed to check follow status.';
-                    logToFile(`${logPrefix} ManageFollow: Error checking status - ${errorMsg}`);
+                    
                     reportStep('function_error', 'Failed to check follow status.', { error: errorMsg, itemId });
                     return { modelResponseContent: `Sorry, I couldn't check your current follow status: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
                 }
@@ -238,15 +236,15 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                     if (blacklistStatusResult.success && blacklistStatusResult.itemIds.includes(itemId)) {
                         const conflictMsg = `The conference "${itemNameForMessage}" is currently in your blacklist. You must remove it from the blacklist before following.`;
-                        logToFile(`${logPrefix} ManageFollow: Conflict - Conference ${itemId} ("${itemNameForMessage}") is blacklisted, cannot follow.`);
+                        
                         reportStep('follow_conflict_blacklisted', conflictMsg, { itemId, itemName: itemNameForMessage });
                         return { modelResponseContent: conflictMsg, frontendAction: undefined, thoughts: localThoughts };
                     }
                     if (!blacklistStatusResult.success) {
-                        logToFile(`${logPrefix} ManageFollow: Warning - Could not verify blacklist status for conference ${itemId} ("${itemNameForMessage}") before following: ${blacklistStatusResult.errorMessage}. Proceeding with follow action.`);
+                        
                         reportStep('warning_blacklist_check_failed_before_follow', `Could not verify if "${itemNameForMessage}" is blacklisted. Proceeding to follow.`, { itemId, itemName: itemNameForMessage, error: blacklistStatusResult.errorMessage });
                     } else {
-                        logToFile(`${logPrefix} ManageFollow: Conference ${itemId} ("${itemNameForMessage}") is not blacklisted. Safe to proceed with follow.`);
+                        
                         reportStep('blacklist_check_clear_for_follow', `Conference "${itemNameForMessage}" is not blacklisted. Proceeding to follow.`, { itemId, itemName: itemNameForMessage });
                     }
                 }
@@ -265,7 +263,7 @@ export class ManageFollowHandler implements IFunctionHandler {
 
                     if (apiActionResult.success) {
                         finalMessage = `Successfully ${validAction === 'follow' ? 'followed' : 'unfollowed'} the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
-                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} successful for ${validItemType} ${itemId}.`);
+                        
                         reportStep('follow_update_success', `Successfully ${validAction}ed ${validItemType} "${itemNameForMessage}".`, { itemId, itemType: validItemType, itemName: itemNameForMessage, action: validAction });
                         
                         const itemDetailsFromFind: Partial<FollowItem> = idResult.details || {};
@@ -289,7 +287,7 @@ export class ManageFollowHandler implements IFunctionHandler {
                         };
                     } else {
                         finalMessage = apiActionResult.errorMessage || `Sorry, I encountered an error trying to ${validAction} the ${validItemType} "${itemNameForMessage}". Please try again later.`;
-                        logToFile(`${logPrefix} ManageFollow: API call for ${validAction} failed for ${validItemType} ${itemId} - ${apiActionResult.errorMessage}`);
+                        
                         reportStep('follow_update_failed', `Failed to ${validAction} ${validItemType} "${itemNameForMessage}".`, { error: apiActionResult.errorMessage, itemId, itemType: validItemType, itemName: itemNameForMessage });
                     }
                 } else {
@@ -298,21 +296,21 @@ export class ManageFollowHandler implements IFunctionHandler {
                     } else { // action === 'unfollow', not following
                         finalMessage = `You are not currently following the ${validItemType} "${itemNameForMessage}" (ID: ${itemId}).`;
                     }
-                    logToFile(`${logPrefix} ManageFollow: No API call executed for action '${validAction}' on ${validItemType} ${itemId}. Current status: ${isCurrentlyFollowing ? 'Following' : 'Not Following'}`);
+                    
                     reportStep('follow_no_action_needed', finalMessage, { itemId, itemName: itemNameForMessage, currentStatus: isCurrentlyFollowing, requestedAction: validAction });
                 }
                 return { modelResponseContent: finalMessage, frontendAction: finalFrontendAction, thoughts: localThoughts };
             } else {
                 // This case should ideally not be reached due to prior validation
                 const errorMsg = `Unsupported action: ${validAction}`;
-                logToFile(`${logPrefix} ManageFollow: Validation Error - ${errorMsg}`);
+                
                 reportStep('function_error', 'Unsupported action.', { error: errorMsg, action: validAction });
                 return { modelResponseContent: `Error: ${errorMsg}`, frontendAction: undefined, thoughts: localThoughts };
             }
 
         } catch (error: unknown) { // Catch as unknown for safer error handling
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
-            logToFile(`${logPrefix} CRITICAL Error in ManageFollowHandler: ${errorMessage}\nStack: ${errorStack}`);
+            
             reportStep('function_error', `Critical error during follow management processing: ${errorMessage}`, { error: errorMessage, stack: errorStack });
             return {
                 modelResponseContent: `An unexpected error occurred: ${errorMessage}`,
