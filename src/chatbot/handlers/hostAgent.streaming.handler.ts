@@ -5,12 +5,15 @@ import { Tool, Part, GenerateContentResponse, GenerateContentConfig, Content } f
 import { ChatHistoryItem, FrontendAction, Language, AgentId, ThoughtStep, StatusUpdate, ResultUpdate, ErrorUpdate, ChatUpdate, AgentCardRequest, AgentCardResponse, PersonalizationPayload, OriginalUserFileInfo } from '../shared/types';
 import { getAgentLanguageConfig } from '../utils/languageConfig';
 import { HostAgentHandlerCustomDeps } from './intentHandler.dependencies';
+import { Logger } from 'pino'; // <<< ĐÃ THÊM
+import { performance } from 'perf_hooks'; // <<< ĐÃ THÊM
 
 interface RouteToAgentArgs { targetAgent: string; taskDescription: string; }
 function isRouteToAgentArgs(args: any): args is RouteToAgentArgs {
     if (typeof args !== 'object' || args === null) return false;
     return typeof args.targetAgent === 'string' && typeof args.taskDescription === 'string';
 }
+
 
 export async function handleStreaming(
     userInputParts: Part[],
@@ -24,92 +27,77 @@ export async function handleStreaming(
     personalizationData?: PersonalizationPayload | null,
     originalUserFiles?: OriginalUserFileInfo[],
     pageContextText?: string,
-    pageContextUrl?: string // <<< THÊM PARAMETER
-
+    pageContextUrl?: string,
+    // <<< THÊM THAM SỐ NÀY VÀO >>>
+    userSelectedModel?: string,
+    logger?: Logger,
+    performanceCallback?: (metrics: { prep: number, ai: number }) => void
 ): Promise<ChatHistoryItem[] | void> {
     const { geminiServiceForHost, hostAgentGenerationConfig, allowedSubAgents, maxTurnsHostAgent, callSubAgentHandler } = deps;
     const baseLogContext = `[${handlerId} Streaming Socket ${socket.id}]`;
-
-
+    const requestId = handlerId; // Đổi tên để rõ nghĩa là requestId
 
     const conversationIdForSubAgent = handlerId;
 
-    // <<< SỬA ĐỔI ĐỂ TRUYỀN PAGE CONTEXT VÀO LANGUAGE CONFIG >>>
     const { systemInstructions, functionDeclarations } = getAgentLanguageConfig(
         language,
         'HostAgent',
         personalizationData,
-        pageContextText // <<< TRUYỀN PAGE CONTEXT
+        pageContextText
     );
     const hostAgentTools: Tool[] = functionDeclarations.length > 0 ? [{ functionDeclarations }] : [];
 
     let completeHistoryToSave: ChatHistoryItem[] = [...initialHistoryFromSocket];
-    let historyForApiCall: ChatHistoryItem[] = []; // Sẽ được xây dựng cẩn thận
+    let historyForApiCall: ChatHistoryItem[] = [];
 
-    // <<< XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
     if (pageContextText) {
         const pageContextTurn: ChatHistoryItem = {
-            role: 'user', // Coi như một tin nhắn user "ngầm"
+            role: 'user',
             parts: [{ text: pageContextText }],
-            uuid: `context-${handlerId}-${Date.now()}`, // ID tạm thời, không lưu DB
-            timestamp: new Date(Date.now() - 1000) // Thời gian trước tin nhắn user thật một chút
-            // Không có userFileInfo cho context này
+            uuid: `context-${handlerId}-${Date.now()}`,
+            timestamp: new Date(Date.now() - 1000)
         };
         historyForApiCall.push(pageContextTurn);
-
     }
-    // Thêm lịch sử thật từ DB vào sau context (nếu có)
     historyForApiCall.push(...initialHistoryFromSocket);
-    // <<< KẾT THÚC XỬ LÝ PAGE CONTEXT CHO HISTORY API CALL >>>
-
 
     const allThoughtsCollectedStreaming: ThoughtStep[] = [];
     let finalFrontendActionStreaming: FrontendAction | undefined = undefined;
 
     const currentUserTurn: ChatHistoryItem = {
         role: 'user',
-        parts: userInputParts, // userInputParts đã được làm sạch ở message.handler
+        parts: userInputParts,
         timestamp: new Date(),
         uuid: frontendMessageId || `user-stream-${handlerId}-${Date.now()}`,
         userFileInfo: originalUserFiles && originalUserFiles.length > 0 ? originalUserFiles : undefined
     };
 
-    // Chỉ thêm currentUserTurn vào completeHistoryToSave nếu nó có nội dung (parts)
-    // hoặc nếu không có parts nhưng có pageContext (trường hợp user chỉ gửi @currentpage)
     if (currentUserTurn.parts.length > 0 || pageContextText) {
         completeHistoryToSave.push(currentUserTurn);
-
-        
-
     }
 
     const safeEmitStreaming = (
         eventName: 'status_update' | 'chat_update' | 'chat_result' | 'chat_error',
         data: StatusUpdate | ChatUpdate | ResultUpdate | ErrorUpdate
     ): boolean => {
-        if (!socket.connected) {
-            return false;
-        }
+        if (!socket.connected) return false;
         try {
             let dataToSend: any = { ...data };
             if (eventName === 'status_update' && data.type === 'status') {
-                if (!data.agentId || data.agentId === 'HostAgent') { // Only add HostAgent thoughts here
+                if (!data.agentId || data.agentId === 'HostAgent') {
                     allThoughtsCollectedStreaming.push({
                         step: data.step, message: data.message, agentId: 'HostAgent',
                         timestamp: (data as StatusUpdate).timestamp || new Date().toISOString(), details: (data as StatusUpdate).details
                     });
                 }
-                // Ensure agentId is set for the emitted event, defaulting to HostAgent if not specified by a sub-agent
                 dataToSend.agentId = data.agentId || 'HostAgent';
             }
-
             if (eventName === 'chat_result' || eventName === 'chat_error') {
-                dataToSend.thoughts = [...allThoughtsCollectedStreaming]; // Send all collected thoughts
+                dataToSend.thoughts = [...allThoughtsCollectedStreaming];
                 if (eventName === 'chat_result' && finalFrontendActionStreaming) {
                     (dataToSend as ResultUpdate).action = finalFrontendActionStreaming;
                 }
-                // Đảm bảo data.sources được truyền nếu có
-                if ((data as ResultUpdate).sources) { // data ở đây là ResultUpdate
+                if ((data as ResultUpdate).sources) {
                     dataToSend.sources = (data as ResultUpdate).sources;
                 }
             }
@@ -126,25 +114,19 @@ export async function handleStreaming(
 
     async function processAndEmitStream(stream: AsyncGenerator<GenerateContentResponse>): Promise<{ fullText: string; parts?: Part[] } | null> {
         let accumulatedText = "";
-        let accumulatedParts: Part[] = []; // To store all parts from the stream if needed
+        let accumulatedParts: Part[] = [];
         let streamFinishedSuccessfully = false;
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) return null;
 
         try {
-            for await (const chunk of stream) { // chunk is GenerateContentResponse
-
-                const chunkText = chunk.text; // text is a direct property
+            for await (const chunk of stream) {
+                const chunkText = chunk.text;
                 if (chunkText !== undefined && chunkText !== null) {
                     accumulatedText += chunkText;
                     if (!safeEmitStreaming('chat_update', { type: 'partial_result', textChunk: chunkText })) return null;
                 }
-
-                // Accumulate all parts from the chunk if they exist
-                // chunk.candidates[0].content.parts
                 const chunkParts = chunk.candidates?.[0]?.content?.parts;
                 if (chunkParts) {
-                    // A simple way to merge: if the last accumulated part is text and current chunkPart is text, append.
-                    // Otherwise, push. This is a basic merge.
                     chunkParts.forEach(cp => {
                         if (cp.text && accumulatedParts.length > 0 && accumulatedParts[accumulatedParts.length - 1].text) {
                             accumulatedParts[accumulatedParts.length - 1].text += cp.text;
@@ -155,7 +137,6 @@ export async function handleStreaming(
                 }
             }
             streamFinishedSuccessfully = true;
-            // If accumulatedParts is empty but text is not, create a text part
             if (accumulatedParts.length === 0 && accumulatedText) {
                 accumulatedParts.push({ text: accumulatedText });
             }
@@ -165,11 +146,9 @@ export async function handleStreaming(
                 safeEmitStreaming('chat_error', { type: 'error', message: `Error processing stream: ${error.message}`, step: 'streaming_processing_error' });
             }
             return null;
-        } finally {
-            if (!streamFinishedSuccessfully) {
-            }
         }
     }
+
     try {
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'processing_input', message: 'Processing your request...' })) return completeHistoryToSave;
 
@@ -177,64 +156,62 @@ export async function handleStreaming(
         let currentHostTurn = 1;
 
         while (currentHostTurn <= maxTurnsHostAgent) {
-            const turnLogContext = `${baseLogContext} Turn ${currentHostTurn}`;
-
-            // Lịch sử gửi cho API ở lượt này:
-            // - Lượt 1: historyForApiCall (đã có pageContext nếu có, và initialHistoryFromSocket)
-            //            + nextTurnInputForLlm (là userInputParts)
-            // - Các lượt sau: historyForApiCall (đã được cập nhật với model_FC và function_FR)
-            //            + nextTurnInputForLlm (là function_response_part)
-            const currentApiHistoryForThisCall = [...historyForApiCall]; // Tạo bản sao để log và sử dụng
-
-
-
+            const currentApiHistoryForThisCall = [...historyForApiCall];
 
             if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process (Turn ${currentHostTurn})...` : 'Thinking...' })) return completeHistoryToSave;
-            
 
             const combinedConfig: GenerateContentConfig & { systemInstruction?: string | Part | Content; tools?: Tool[] } = {
                 ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: hostAgentTools
             };
 
+            // <<< SỬA ĐỔI QUAN TRỌNG: Cập nhật khối log >>>
+            const aiCallStartTime = performance.now();
+            if (logger) {
+                logger.info({
+                    event: 'performance_log',
+                    stage: 'ai_call_start',
+                    requestId,
+                    details: {
+                        turn: currentHostTurn,
+                        // Model người dùng yêu cầu (nếu có)
+                        requestedModel: userSelectedModel || 'default',
+                        // // Model thực sự được sử dụng để gọi API
+                        // actualModel: geminiServiceForHost.modelName,
+                    }
+                }, `Calling Gemini API.`);
+            }
+            // <<< KẾT THÚC SỬA ĐỔI >>>
+
             const hostAgentLLMResult = await geminiServiceForHost.generateStream(
                 nextTurnInputForLlm,
-                currentApiHistoryForThisCall, // Sử dụng bản sao đã chuẩn bị
+                currentApiHistoryForThisCall,
                 combinedConfig
             );
 
-
-            // Cập nhật historyForApiCall cho lượt TIẾP THEO (nếu có function call)
-            // Thêm lượt input (user hoặc function response part) mà LLM vừa xử lý vào historyForApiCall
             if (currentHostTurn === 1) {
-                // Lượt đầu tiên, nextTurnInputForLlm là userInputParts (currentUserTurn)
-                // Chỉ thêm nếu currentUserTurn có nội dung
                 if (currentUserTurn.parts.length > 0 || pageContextText) {
                     historyForApiCall.push(currentUserTurn);
                 }
             } else {
-                // Các lượt sau, nextTurnInputForLlm là functionResponseContentPart.
                 const lastFunctionResponseTurnInComplete = completeHistoryToSave.find(
                     msg => msg.role === 'function' && msg.parts[0] === nextTurnInputForLlm[0]
                 );
                 if (lastFunctionResponseTurnInComplete) {
                     historyForApiCall.push(lastFunctionResponseTurnInComplete);
-                } 
+                }
             }
-
 
             if (hostAgentLLMResult.error) {
                 safeEmitStreaming('chat_error', { type: 'error', message: hostAgentLLMResult.error, step: 'host_llm_error' });
-                return completeHistoryToSave; // Trả về lịch sử đã có currentUserTurn
+                return completeHistoryToSave;
             } else if (hostAgentLLMResult.functionCall) {
                 const functionCall = hostAgentLLMResult.functionCall;
                 const modelUuid = uuidv4();
                 const modelFunctionCallTurn: ChatHistoryItem = {
                     role: 'model', parts: [{ functionCall: functionCall }], uuid: modelUuid, timestamp: new Date()
                 };
-
                 completeHistoryToSave.push(modelFunctionCallTurn);
-                historyForApiCall.push(modelFunctionCallTurn); // Thêm lượt model (function call) vào lịch sử cho lượt API tiếp theo
-
+                historyForApiCall.push(modelFunctionCallTurn);
 
                 let functionResponseContentPart: Part;
                 if (functionCall.name === 'routeToAgent') {
@@ -249,7 +226,7 @@ export async function handleStreaming(
                         } else {
                             const requestCard: AgentCardRequest = {
                                 taskId: uuidv4(),
-                                conversationId: conversationIdForSubAgent, // Sử dụng biến đã khai báo
+                                conversationId: conversationIdForSubAgent,
                                 senderAgentId: 'HostAgent',
                                 receiverAgentId: routeArgs.targetAgent as AgentId,
                                 timestamp: new Date().toISOString(),
@@ -263,33 +240,20 @@ export async function handleStreaming(
                                 functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { content: JSON.stringify(subAgentResponse.resultData || "Sub agent task completed.") } }
                                 };
-                                
-                                // <<< SỬA ĐỔI: LOGIC GỘP FRONTEND ACTION >>>
                                 if (subAgentResponse.frontendAction) {
-                                    // Chỉ xử lý gộp cho 'displayConferenceSources'
                                     if (subAgentResponse.frontendAction.type === 'displayConferenceSources') {
-                                        // Nếu finalFrontendActionStreaming đã tồn tại và cũng là 'displayConferenceSources'
                                         if (finalFrontendActionStreaming && finalFrontendActionStreaming.type === 'displayConferenceSources') {
-                                            // Gộp mảng 'conferences' lại
                                             finalFrontendActionStreaming.payload.conferences.push(
                                                 ...subAgentResponse.frontendAction.payload.conferences
                                             );
-
                                         } else {
-                                            // Nếu chưa có, hoặc type khác, thì gán mới (ghi đè hành vi cũ cho các action khác)
                                             finalFrontendActionStreaming = subAgentResponse.frontendAction;
-
                                         }
                                     } else {
-                                        // Đối với các loại action khác, vẫn giữ hành vi ghi đè
                                         finalFrontendActionStreaming = subAgentResponse.frontendAction;
-
                                     }
-
-                                    // Gọi callback onActionGenerated với action đã được cập nhật/gộp
                                     onActionGenerated?.(finalFrontendActionStreaming);
                                 }
-                                // <<< KẾT THÚC SỬA ĐỔI >>>
                             } else {
                                 functionResponseContentPart = {
                                     functionResponse: { name: functionCall.name, response: { error: subAgentResponse.errorMessage || `Error in ${routeArgs.targetAgent}.` } }
@@ -308,55 +272,57 @@ export async function handleStreaming(
                     };
                 }
 
-                
-
                 const functionResponseUuid = uuidv4();
                 const functionResponseTurn: ChatHistoryItem = {
                     role: 'function', parts: [functionResponseContentPart], uuid: functionResponseUuid, timestamp: new Date()
                 };
                 completeHistoryToSave.push(functionResponseTurn);
-                // KHÔNG thêm functionResponseTurn vào historyForApiCall ở đây,
-                // vì nó sẽ được thêm vào đầu vòng lặp sau thông qua logic cập nhật historyForApiCall (else block)
-                // nếu nó trở thành nextTurnInputForLlm.
-                // Hoặc, nếu nextTurnInputForLlm là input cho lượt sau, thì historyForApiCall đã đúng (chứa model_FC).
-
-
-                nextTurnInputForLlm = [functionResponseContentPart]; // Đây sẽ là input cho lượt LLM tiếp theo
+                nextTurnInputForLlm = [functionResponseContentPart];
                 currentHostTurn++;
-                continue; // Tiếp tục vòng lặp để LLM xử lý function response
+                continue;
             } else if (hostAgentLLMResult.stream) {
                 const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
+
+                // <<< THÊM MỚI: Ghi log và gọi callback sau khi AI trả về >>>
+                const aiCallEndTime = performance.now();
+                if (logger) {
+                    logger.info({
+                        event: 'performance_log',
+                        stage: 'ai_call_end',
+                        requestId,
+                        metrics: {
+                            duration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
+                        }
+                    }, `Gemini API stream finished.`);
+                }
+
+                if (performanceCallback && (socket as any).requestStartTime) {
+                    performanceCallback({
+                        prep: aiCallStartTime - (socket as any).requestStartTime,
+                        ai: aiCallEndTime - aiCallStartTime
+                    });
+                }
+                // <<< KẾT THÚC THÊM MỚI >>>
+
                 if (streamOutput && socket.connected) {
                     const botMessageUuid = uuidv4();
                     const finalModelParts = streamOutput.parts && streamOutput.parts.length > 0 ? streamOutput.parts : [{ text: streamOutput.fullText }];
-
                     const finalModelTurn: ChatHistoryItem = {
                         role: 'model',
                         parts: finalModelParts,
                         uuid: botMessageUuid,
                         timestamp: new Date(),
-                        sources: [] // Khởi tạo mảng sources
+                        sources: []
                     };
 
-                    // <<< THÊM PAGE CONTEXT URL VÀO SOURCES CỦA MODEL (CHỈ MỘT LẦN) >>>
-                    if (pageContextUrl && pageContextText) { // Chỉ thêm nếu context thực sự được dùng (có text)
+                    if (pageContextUrl && pageContextText) {
                         try {
                             const urlObj = new URL(pageContextUrl);
-                            finalModelTurn.sources?.push({
-                                name: urlObj.hostname, // Lấy domain làm tên
-                                url: pageContextUrl,
-                                type: 'page_context'
-                            });
+                            finalModelTurn.sources?.push({ name: urlObj.hostname, url: pageContextUrl, type: 'page_context' });
                         } catch (e) {
-
-                            finalModelTurn.sources?.push({
-                                name: pageContextUrl, // Dùng URL đầy đủ nếu không parse được
-                                url: pageContextUrl,
-                                type: 'page_context'
-                            });
+                            finalModelTurn.sources?.push({ name: pageContextUrl, url: pageContextUrl, type: 'page_context' });
                         }
                     }
-                    // Bạn có thể thêm logic để LLM tự xác định sources khác ở đây nếu cần (ví dụ từ nội dung trả về của LLM)
 
                     completeHistoryToSave.push(finalModelTurn);
 
@@ -365,38 +331,27 @@ export async function handleStreaming(
                         message: streamOutput.fullText,
                         parts: finalModelParts,
                         id: botMessageUuid,
-                        sources: finalModelTurn.sources // <<< TRUYỀN SOURCES
+                        sources: finalModelTurn.sources
                     };
                     safeEmitStreaming('chat_result', resultPayload);
-
-
-                    return completeHistoryToSave; // Kết thúc và trả về lịch sử hoàn chỉnh
+                    return completeHistoryToSave;
                 } else {
-
                     if (socket.connected) safeEmitStreaming('chat_error', { type: 'error', message: 'Failed to process final stream response.', step: 'streaming_response_error' });
                     return completeHistoryToSave;
                 }
             } else {
-
                 safeEmitStreaming('chat_error', { type: 'error', message: 'Internal error: Unexpected AI response (streaming).', step: 'unknown_host_llm_status_stream' });
                 return completeHistoryToSave;
             }
-        } // Kết thúc while loop
+        }
 
         if (currentHostTurn > maxTurnsHostAgent) {
-
             safeEmitStreaming('chat_error', { type: 'error', message: 'Processing took too long or got stuck in a loop (streaming).', step: 'max_turns_exceeded_stream' });
         }
-        // Nếu vòng lặp kết thúc mà không có return sớm (ví dụ do lỗi hoặc max_turns)
-        // thì trả về completeHistoryToSave hiện tại.
         return completeHistoryToSave;
     } catch (error: any) {
         const criticalErrorMsg = error instanceof Error ? error.message : "An unknown critical error occurred";
-
         if (socket.connected) safeEmitStreaming('chat_error', { type: "error", message: criticalErrorMsg, step: 'unknown_handler_error_stream' });
-        return completeHistoryToSave; // Trả về lịch sử đã có currentUserTurn
-    }
-    finally {
-
+        return completeHistoryToSave;
     }
 }

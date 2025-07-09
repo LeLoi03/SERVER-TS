@@ -3,13 +3,7 @@ import { Socket } from 'socket.io';
 import jwt from 'jsonwebtoken';
 import { container } from 'tsyringe';
 import { ConfigService } from '../../config/config.service';
-
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
-
-/**
- * Defines a custom error interface extending the built-in Error,
- * to include additional data relevant for Socket.IO error handling.
- */
 interface ExtendedError extends Error {
     data?: {
         code: string;
@@ -17,28 +11,10 @@ interface ExtendedError extends Error {
     };
 }
 
-/**
- * Socket.IO authentication middleware.
- * This middleware authenticates incoming socket connections using a JWT token
- * provided in `socket.handshake.auth.token`. It verifies the token's signature
- * against the configured JWT secret.
- *
- * If authentication succeeds, it stores the token on `socket.data` and allows the connection.
- * If authentication fails or no token is provided, it handles accordingly
- * (either allows anonymous or disconnects with an error).
- *
- * @param {Socket} socket - The Socket.IO socket instance for the connecting client.
- * @param {(err?: ExtendedError) => void} next - The callback to proceed with the connection or reject it with an error.
- */
 export const socketAuthMiddleware = (socket: Socket, next: (err?: ExtendedError) => void) => {
     const token = socket.handshake.auth.token as string | undefined;
-    const socketId = socket.id;
-
     // Resolve ConfigService to access JWT_SECRET.
     const configService = container.resolve(ConfigService);
-
-    const logContext = `[socketAuth][${socketId}]`;
-
     if (!token) {
         // Mark as anonymous, future handlers can check `socket.data.userId`
         // or handle anonymous logic.

@@ -2,7 +2,7 @@
 import { Socket, Server as SocketIOServer } from 'socket.io';
 import { ConversationHistoryService } from '../../chatbot/services/conversationHistory.service';
 import { Language } from '../../chatbot/shared/types';
-
+import { Logger } from 'pino';
 /**
  * Defines the common dependencies that are passed to all Socket.IO sub-handlers.
  * This pattern helps centralize dependency management and ensures consistent access
@@ -29,4 +29,6 @@ export interface HandlerDependencies {
     ensureAuthenticated: (logContext: string, eventName: string) => string | null;
     /** The default limit for fetching conversation history (e.g., number of messages). */
     DEFAULT_HISTORY_LIMIT: number;
+    logger: Logger; // <<< THÊM MỚI
+
 }

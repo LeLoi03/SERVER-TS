@@ -225,6 +225,8 @@ export class ConfigService {
     //     throw new Error("General journal log file path is deprecated. Use request-specific paths.");
     // }
 
+    public get chatbotClientTestLogDirectoryPath(): string { return this.appConfiguration.chatbotClientTestLogDirectoryPath; } // Vẫn dùng cho app log
+
 
     get logToConsole() { return this.appConfiguration.logToConsole; }
     get baseOutputDir(): string { return this.appConfiguration.baseOutputDirPath; }

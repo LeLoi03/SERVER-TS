@@ -5,7 +5,8 @@ import {
     handleNonStreaming
 } from '../../chatbot/handlers/intentHandler.orchestrator';
 import { stageEmailConfirmation } from '../../chatbot/utils/confirmationManager';
-import { Part } from '@google/genai'; // <<< ĐẢM BẢO ĐÃ IMPORT
+import { Part } from '@google/genai';
+import { performance } from 'perf_hooks'; // <<< ĐÃ THÊM
 
 // --- Import types from shared/types.ts ---
 import {
@@ -17,12 +18,10 @@ import {
     ChatHistoryItem,
 } from '../../chatbot/shared/types';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
-const MESSAGE_HANDLER_NAME = 'MessageHandler';
 
-// Constants cho page context
+const MESSAGE_HANDLER_NAME = 'MessageHandler';
 const PAGE_CONTEXT_START_MARKER = "[START CURRENT PAGE CONTEXT]";
 const PAGE_CONTEXT_END_MARKER = "[END CURRENT PAGE CONTEXT]";
-
 
 export const registerMessageHandlers = (deps: HandlerDependencies): void => {
     const {
@@ -35,20 +34,35 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         emitUpdatedConversationList,
         ensureAuthenticated,
         DEFAULT_HISTORY_LIMIT,
+        logger, // <<< ĐÃ THÊM
     } = deps;
 
     const baseLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}]`;
 
-
-
     socket.on('send_message', async (data: unknown) => {
+        // <<< THÊM MỚI: Bắt đầu đo lường hiệu năng >>>
+        const startTime = performance.now();
+        (socket as any).requestStartTime = startTime; // Gán vào socket để các handler con có thể truy cập
+        // <<< SỬA ĐỔI QUAN TRỌNG >>>
+        // Lấy requestId từ client nếu có, nếu không thì mới tạo mới.
+        // Điều này đảm bảo client và server dùng chung một ID.
+        const payloadForId = data as { frontendMessageId?: string };
+        const requestId = payloadForId.frontendMessageId || `${socketId.substring(0, 4)}-${Date.now()}`;
+        // <<< KẾT THÚC SỬA ĐỔI >>>
+
+        let performanceMetrics = {
+            prepDuration_ms: 0,
+            aiCallDuration_ms: 0,
+        };
+        // <<< KẾT THÚC THÊM MỚI >>>
+
         const eventName = 'send_message';
-        const handlerId = `${socketId.substring(0, 4)}-${Date.now()}`;
-        let tempLogContext = `${baseLogContext}[${deps.userId}][Req:${handlerId}]`;
+        let tempLogContext = `${baseLogContext}[${deps.userId}][Req:${requestId}]`;
 
         const authenticatedUserId = ensureAuthenticated(tempLogContext, eventName);
         if (!authenticatedUserId) return;
-        const handlerLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}][${authenticatedUserId}][Req:${handlerId}]`;
+
+        const handlerLogContext = `[${MESSAGE_HANDLER_NAME}][${socketId}][${authenticatedUserId}][Req:${requestId}]`;
 
         const token = socket.data.token as string | undefined;
         if (!token) {
@@ -60,10 +74,6 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
         }
 
         const payload = data as SendMessageData;
-        // Thêm log ở đây để kiểm tra payload nhận được từ client
-
-
-
         let {
             parts: originalPartsFromClient,
             isStreaming,
@@ -73,80 +83,76 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             personalizationData,
             originalUserFiles,
             pageContextUrl,
-            model // <<< TRÍCH XUẤT MODEL
+            model
         } = payload;
 
         socket.data.language = language;
 
-        // --- XỬ LÝ PAGE CONTEXT ---
+        // --- XỬ LÝ PAGE CONTEXT (Giữ nguyên logic) ---
         let pageContextText: string | undefined = undefined;
-        let userQueryParts: Part[] = []; // Parts thực sự của user sau khi tách context
-
+        let userQueryParts: Part[] = [];
         if (originalPartsFromClient && originalPartsFromClient.length > 0) {
             const firstPart = originalPartsFromClient[0];
             if (firstPart.text && firstPart.text.startsWith(PAGE_CONTEXT_START_MARKER)) {
                 const endIndex = firstPart.text.indexOf(PAGE_CONTEXT_END_MARKER);
                 if (endIndex > -1) {
-                    // Trích xuất context
                     pageContextText = firstPart.text.substring(PAGE_CONTEXT_START_MARKER.length, endIndex).trim();
-
-                    // Phần còn lại của firstPart (nếu có) là query của user
                     let remainingFirstPartText = firstPart.text.substring(endIndex + PAGE_CONTEXT_END_MARKER.length).trim();
-
-                    // Tìm vị trí "User query:" và loại bỏ nó nếu có
                     const userQueryMarker = "User query:";
                     if (remainingFirstPartText.startsWith(userQueryMarker)) {
                         remainingFirstPartText = remainingFirstPartText.substring(userQueryMarker.length).trim();
                     }
-
                     if (remainingFirstPartText) {
                         userQueryParts.push({ text: remainingFirstPartText });
                     }
-                    // Thêm các parts còn lại (nếu có) vào userQueryParts
                     if (originalPartsFromClient.length > 1) {
                         userQueryParts.push(...originalPartsFromClient.slice(1));
                     }
-
                 } else {
-                    // Marker bắt đầu có nhưng không có marker kết thúc -> coi toàn bộ là query của user
                     userQueryParts = [...originalPartsFromClient];
-
                 }
             } else {
-                // Không có context marker
                 userQueryParts = [...originalPartsFromClient];
             }
         }
-        // Nếu userQueryParts rỗng và có pageContext, vẫn cho phép xử lý (ví dụ: user chỉ gửi @currentpage)
-        if (userQueryParts.length === 0 && pageContextText) {
-
-        } else if (userQueryParts.length === 0 && !pageContextText) {
-            // Không có query, không có context -> không làm gì
-
+        if (userQueryParts.length === 0 && !pageContextText) {
             return sendChatError(handlerLogContext, 'Cannot send an empty message without page context.', 'empty_message_no_context');
         }
         // --- KẾT THÚC XỬ LÝ PAGE CONTEXT ---
 
+        // <<< THÊM MỚI: Log điểm bắt đầu (request_received) >>>
+        logger.info({
+            event: 'performance_log',
+            stage: 'request_received',
+            requestId,
+            userId: authenticatedUserId,
+            conversationId: payloadConvId || 'new',
+            details: {
+                isStreaming,
+                language,
+                model,
+                messageLength: JSON.stringify(originalPartsFromClient).length,
+                hasPageContext: !!pageContextText,
+            }
+        }, `Performance trace started for send_message.`);
+        // <<< KẾT THÚC THÊM MỚI >>>
 
         let targetConversationId: string;
         let currentConvLogContext = handlerLogContext;
 
+        // --- Xử lý Conversation ID (Giữ nguyên logic) ---
         if (payloadConvId) {
             targetConversationId = payloadConvId;
             currentConvLogContext = `${handlerLogContext}[Conv:${targetConversationId}]`;
             if (socket.data.currentConversationId !== targetConversationId) {
                 socket.data.currentConversationId = targetConversationId;
             }
-
         } else {
-
             try {
                 const newConvResult = await conversationHistoryService.createNewConversation(authenticatedUserId, language);
                 targetConversationId = newConvResult.conversationId;
                 currentConvLogContext = `${handlerLogContext}[Conv:${targetConversationId}]`;
                 socket.data.currentConversationId = targetConversationId;
-
-
                 socket.emit('new_conversation_started', {
                     conversationId: targetConversationId,
                     title: newConvResult.title,
@@ -156,25 +162,25 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                 await emitUpdatedConversationList(currentConvLogContext, authenticatedUserId, 'new conversation started from send_message', language);
             } catch (error: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(error);
-                return sendChatError(handlerLogContext, `Could not start new chat session as requested: ${errorMessage}.`, 'explicit_new_conv_payload_fail', { userId: authenticatedUserId, error: errorMessage });
+                return sendChatError(handlerLogContext, `Could not start new chat session: ${errorMessage}.`, 'explicit_new_conv_payload_fail', { userId: authenticatedUserId, error: errorMessage });
             }
         }
 
         if (!targetConversationId) {
             return sendChatError(handlerLogContext, 'Internal error: Could not determine target chat session ID.', 'target_id_undetermined');
         }
+        // --- Kết thúc xử lý Conversation ID ---
 
         let currentHistory: ChatHistoryItem[];
         try {
-            const fetchedHistory: ChatHistoryItem[] | null = await conversationHistoryService.getConversationHistory(targetConversationId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
+            const fetchedHistory = await conversationHistoryService.getConversationHistory(targetConversationId, authenticatedUserId, DEFAULT_HISTORY_LIMIT);
             if (fetchedHistory === null) {
                 if (socket.data.currentConversationId === targetConversationId) {
                     socket.data.currentConversationId = undefined;
                 }
-                return sendChatError(currentConvLogContext, 'Chat session not found or access denied for message sending.', 'history_not_found_send', { convId: targetConversationId });
+                return sendChatError(currentConvLogContext, 'Chat session not found or access denied.', 'history_not_found_send', { convId: targetConversationId });
             }
             currentHistory = fetchedHistory;
-
         } catch (error: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(error);
             return sendChatError(currentConvLogContext, `Could not load conversation history: ${errorMessage}.`, 'history_fetch_fail_send', { convId: targetConversationId, error: errorMessage });
@@ -185,37 +191,48 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
 
             const handleAction = (action: FrontendAction | undefined) => {
                 if (action?.type === 'confirmEmailSend' && token) {
-                    stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, handlerId, io);
+                    stageEmailConfirmation(action.payload as ConfirmSendEmailAction, token, socketId, requestId, io);
                 }
             };
+
+            // <<< THÊM MỚI: Callback để nhận metrics từ các handler con >>>
+            const performanceCallback = (metrics: { prep: number, ai: number }) => {
+                performanceMetrics.prepDuration_ms = metrics.prep;
+                performanceMetrics.aiCallDuration_ms = metrics.ai;
+            };
+
             if (isStreaming) {
+                // <<< SỬA ĐỔI: Truyền requestId, logger và callback xuống handler con >>>
                 updatedHistory = await handleStreaming(
                     userQueryParts,
                     currentHistory,
                     socket,
                     language,
-                    handlerId,
+                    requestId, // Sử dụng requestId nhất quán
                     handleAction,
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
                     pageContextText,
                     pageContextUrl,
-                    model // <<< TRUYỀN MODEL XUỐNG
+                    model,
+                    logger, // Truyền logger
+                    performanceCallback // Truyền callback
                 );
             } else {
+                // Tương tự cho non-streaming nếu cần đo lường
                 const handlerResult = await handleNonStreaming(
                     userQueryParts,
                     currentHistory,
                     socket,
                     language,
-                    handlerId,
+                    requestId,
                     frontendMessageId,
                     personalizationData,
                     originalUserFiles,
                     pageContextText,
                     pageContextUrl,
-                    model // <<< TRUYỀN MODEL XUỐNG
+                    model
                 );
                 if (handlerResult) {
                     updatedHistory = handlerResult.history;
@@ -224,24 +241,48 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             }
 
             if (Array.isArray(updatedHistory)) {
-                // `updatedHistory` trả về từ AI handler đã bao gồm tin nhắn user (với userQueryParts) và tin nhắn model.
-                // Nó KHÔNG chứa pageContextText như một tin nhắn riêng biệt.
                 const updateSuccess = await conversationHistoryService.updateConversationHistory(targetConversationId, authenticatedUserId, updatedHistory);
                 if (updateSuccess) {
                     await emitUpdatedConversationList(currentConvLogContext, authenticatedUserId, 'message processed and history saved', language);
                 } else {
-                    sendChatWarning(currentConvLogContext, 'Failed to save updated history after AI processing. Conversation might be out of sync.', 'history_save_fail_target', { convId: targetConversationId });
+                    sendChatWarning(currentConvLogContext, 'Failed to save updated history after AI processing.', 'history_save_fail_target', { convId: targetConversationId });
                 }
             } else {
-
+                logger.warn({
+                    requestId,
+                    userId: authenticatedUserId,
+                    conversationId: targetConversationId
+                }, 'AI handler did not return an updated history array. History not saved.');
             }
         } catch (handlerError: unknown) {
             const { message: errorMessage } = getErrorMessageAndStack(handlerError);
             sendChatError(currentConvLogContext, `Error processing message with AI: ${errorMessage}.`, 'handler_exception', { error: errorMessage });
+        } finally {
+            // <<< THÊM MỚI: Log điểm kết thúc và tổng kết hiệu năng >>>
+            const endTime = performance.now();
+            const totalServerDuration_ms = endTime - startTime;
+            // Tính toán thời gian xử lý sau khi AI trả về
+            const postProcessingDuration_ms = Math.max(0, totalServerDuration_ms - performanceMetrics.prepDuration_ms - performanceMetrics.aiCallDuration_ms);
+
+            logger.info({
+                event: 'performance_log',
+                stage: 'response_completed',
+                requestId,
+                userId: authenticatedUserId,
+                conversationId: socket.data.currentConversationId,
+                metrics: {
+                    totalServerDuration_ms: parseFloat(totalServerDuration_ms.toFixed(2)),
+                    prepDuration_ms: parseFloat(performanceMetrics.prepDuration_ms.toFixed(2)),
+                    aiCallDuration_ms: parseFloat(performanceMetrics.aiCallDuration_ms.toFixed(2)),
+                    postProcessingDuration_ms: parseFloat(postProcessingDuration_ms.toFixed(2)),
+                }
+            }, `Performance trace finished for send_message.`);
+            // <<< KẾT THÚC THÊM MỚI >>>
         }
     });
 
-    // ... (socket.on('edit_user_message', ...) giữ nguyên, vì edit không dùng page context)
+
+
     socket.on('edit_user_message', async (data: unknown) => {
         const eventName = 'edit_user_message';
         const handlerIdSuffix = Date.now();
@@ -380,25 +421,25 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             sendChatError(convLogContext, `Server error during message edit: ${errorMessage || 'Unknown'}.`, 'edit_exception_unhandled', { errorDetails: errorMessage, stack: errorStack });
         }
     })
-}
 
-function isSendMessageData(data: unknown): data is SendMessageData {
-    return (
-        typeof data === 'object' &&
-        data !== null &&
-        Array.isArray((data as SendMessageData).parts) && // parts có thể rỗng nếu chỉ có context
-        typeof (data as SendMessageData).language === 'string' &&
-        !!(data as SendMessageData).language
-    );
-}
+    function isSendMessageData(data: unknown): data is SendMessageData {
+        return (
+            typeof data === 'object' &&
+            data !== null &&
+            Array.isArray((data as SendMessageData).parts) && // parts có thể rỗng nếu chỉ có context
+            typeof (data as SendMessageData).language === 'string' &&
+            !!(data as SendMessageData).language
+        );
+    }
 
-function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEditUserMessagePayload {
-    return (
-        typeof payload === 'object' &&
-        payload !== null &&
-        typeof (payload as BackendEditUserMessagePayload).conversationId === 'string' &&
-        typeof (payload as BackendEditUserMessagePayload).messageIdToEdit === 'string' &&
-        typeof (payload as BackendEditUserMessagePayload).newText === 'string' &&
-        typeof (payload as BackendEditUserMessagePayload).language === 'string'
-    );
+    function isBackendEditUserMessagePayload(payload: unknown): payload is BackendEditUserMessagePayload {
+        return (
+            typeof payload === 'object' &&
+            payload !== null &&
+            typeof (payload as BackendEditUserMessagePayload).conversationId === 'string' &&
+            typeof (payload as BackendEditUserMessagePayload).messageIdToEdit === 'string' &&
+            typeof (payload as BackendEditUserMessagePayload).newText === 'string' &&
+            typeof (payload as BackendEditUserMessagePayload).language === 'string'
+        );
+    }
 }

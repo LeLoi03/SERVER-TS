@@ -619,6 +619,8 @@ export const envSchema = z.object({
      */
     API_BASE_URL: z.string().optional().default("https://confhub.westus3.cloudapp.azure.com/api/v1"),
 
+
+
     // --- Intent Handler / Chatbot Agent Configuration ---
     /**
      * Comma-separated list of allowed sub-agents that the Host Agent can delegate to.
@@ -645,6 +647,8 @@ export const envSchema = z.object({
      * @default 'csv_outputs'
      */
     CSV_OUTPUT_SUBDIR: z.string().default('csv_outputs'),
+
+    CHATBOT_CLIENT_TEST_LOG_DIR: z.string().default('chatbot_logs'),
 
     SAVE_CONFERENCE_STATUS_OUTPUT_SUBDIR: z.string().default('save_conference_status_outputs'),
     SAVE_JOURNAL_STATUS_OUTPUT_SUBDIR: z.string().default('save_journal_status_outputs'),

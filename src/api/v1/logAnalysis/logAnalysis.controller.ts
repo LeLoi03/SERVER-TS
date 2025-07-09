@@ -10,6 +10,7 @@ import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logA
 import { LoggingService } from '../../../services/logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import { LogDeletionService, RequestDeletionResult, CrawlerType } from '../../../services/logDeletion.service';
+import { ChatbotLogAnalysisService } from '../../../services/chatbotAnalysis.service';
 
 const getControllerLogger = (req: Request, routeName: string): Logger => {
     const loggingService = container.resolve(LoggingService);
@@ -162,6 +163,38 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
     } catch (error: unknown) {
         const { message, stack } = getErrorMessageAndStack(error);
         logger.error({ err: error, errorMessage: message, stack }, "Unhandled error in deleteLogAnalysisRequests.");
+        next(error);
+    }
+};
+
+
+
+
+
+
+
+/**
+ * Controller để lấy kết quả phân tích log chatbot mới nhất.
+ */
+export const getLatestChatbotAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const logger = getControllerLogger(req, 'getLatestChatbotAnalysis');
+    logger.info("Request received for latest chatbot analysis.");
+
+    const chatbotAnalysisService = container.resolve(ChatbotLogAnalysisService);
+
+    try {
+        const results = await chatbotAnalysisService.performAnalysis();
+
+        logger.info({
+            finalStatus: results.status,
+            analyzedRequestCount: results.analyzedRequests.length,
+        }, "Chatbot analysis processing complete. Sending response.");
+        
+        res.status(200).json(results);
+
+    } catch (error: unknown) {
+        const { message } = getErrorMessageAndStack(error);
+        logger.error({ err: error, errorMessage: message, stack: (error as Error).stack }, "Unhandled error in getLatestChatbotAnalysis.");
         next(error);
     }
 };

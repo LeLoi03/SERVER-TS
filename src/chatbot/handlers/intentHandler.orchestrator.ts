@@ -6,8 +6,8 @@ import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, A
 import { Gemini } from '../gemini/gemini';
 import { ConfigService } from "../../config/config.service";
 import { BaseIntentHandlerDeps, HostAgentHandlerCustomDeps, SubAgentHandlerCustomDeps } from './intentHandler.dependencies';
-import { getErrorMessageAndStack } from '../../utils/errorUtils';
-import { Part, GenerateContentConfig } from '@google/genai'; // <<< THÊM GenerateContentConfig
+import { Part, GenerateContentConfig } from '@google/genai';
+import { Logger } from 'pino'; // <<< ĐÃ THÊM
 
 import { callSubAgent as callSubAgentActual } from './subAgent.handler';
 import { handleNonStreaming as handleNonStreamingActual } from './hostAgent.nonStreaming.handler';
@@ -19,13 +19,11 @@ let ALLOWED_SUB_AGENTS: AgentId[];
 let geminiApiKey: string;
 let defaultHostAgentModelName: string;
 let subAgentModelName: string | undefined;
-// Bỏ hostAgentGenerationConfig ở đây, sẽ lấy từ configService và điều chỉnh khi cần
 let subAgentGenerationConfig: any;
 let GEMINI_SERVICE_FOR_SUB_AGENT: Gemini;
 let baseDependencies: BaseIntentHandlerDeps;
 let subAgentHandlerDependencies: SubAgentHandlerCustomDeps;
 
-// Giá trị model của Mercury
 const MERCURY_MODEL_VALUE = 'gemini-2.5-flash-preview-05-20';
 
 try {
@@ -35,24 +33,13 @@ try {
     const key = configService.primaryGeminiApiKey;
     if (!key) {
         const errorMsg = "CRITICAL: GEMINI_API_KEY is not configured.";
-    
         throw new Error(errorMsg);
     }
     geminiApiKey = key;
     defaultHostAgentModelName = configService.hostAgentModelName;
     subAgentModelName = configService.subAgentModelName;
-    // hostAgentGenerationConfig sẽ được lấy và điều chỉnh trong getHostAgentDependencies
-    subAgentGenerationConfig = configService.subAgentGenerationConfig; // Giữ nguyên cho sub-agent
-
-    if (!defaultHostAgentModelName) {
-    
-    }
-    if (!subAgentModelName) {
-    
-    }
-
+    subAgentGenerationConfig = configService.subAgentGenerationConfig;
     GEMINI_SERVICE_FOR_SUB_AGENT = new Gemini(geminiApiKey, subAgentModelName || defaultHostAgentModelName);
-
     baseDependencies = {
         configService,
         allowedSubAgents: ALLOWED_SUB_AGENTS,
@@ -65,8 +52,7 @@ try {
     };
 
 } catch (err: unknown) {
-    const { message, stack } = getErrorMessageAndStack(err);
-
+    // Re-throw the error to be handled by the application's main error handler
     throw err;
 }
 
@@ -74,31 +60,21 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
     const modelForHost = userSelectedModel || defaultHostAgentModelName;
     if (!modelForHost) {
         const errorMsg = "CRITICAL: No model specified for Host Agent (neither user-selected nor default in config).";
-    
         throw new Error(errorMsg);
     }
 
     const geminiServiceForHost = new Gemini(geminiApiKey, modelForHost);
 
-    // Lấy generation config gốc từ configService
     let currentHostAgentGenerationConfig: GenerateContentConfig = { ...configService.hostAgentGenerationConfig };
 
-    // Kiểm tra nếu model được chọn là Mercury và thêm/ghi đè thinkingConfig
     if (modelForHost === MERCURY_MODEL_VALUE) {
-    
         currentHostAgentGenerationConfig = {
             ...currentHostAgentGenerationConfig,
-            thinkingConfig: { // Thêm hoặc ghi đè thinkingConfig
+            thinkingConfig: {
                 thinkingBudget: 8000,
             },
         };
-    
-    } else {
-        
     }
-    // Log toàn bộ config sẽ được sử dụng (cẩn thận nếu có thông tin nhạy cảm)
-    //
-
 
     const boundCallSubAgentHandler = (
         requestCard: AgentCardRequest,
@@ -112,11 +88,10 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
     return {
         ...baseDependencies,
         geminiServiceForHost: geminiServiceForHost,
-        hostAgentGenerationConfig: currentHostAgentGenerationConfig, // <<< SỬ DỤNG CONFIG ĐÃ ĐIỀU CHỈNH
+        hostAgentGenerationConfig: currentHostAgentGenerationConfig,
         callSubAgentHandler: boundCallSubAgentHandler,
     };
 };
-
 
 export async function handleNonStreaming(
     inputParts: Part[],
@@ -134,7 +109,6 @@ export async function handleNonStreaming(
     const hostAgentDeps = getHostAgentDependencies(userSelectedModel);
     if (!hostAgentDeps) {
         const errorMsg = "[Orchestrator] ERROR: handleNonStreaming - hostAgentDependencies could not be initialized.";
-    
         throw new Error(errorMsg);
     }
 
@@ -165,15 +139,17 @@ export async function handleStreaming(
     originalUserFiles?: OriginalUserFileInfo[],
     pageContextText?: string,
     pageContextUrl?: string,
-    userSelectedModel?: string
+    userSelectedModel?: string,
+    logger?: Logger, // <<< THÊM MỚI
+    performanceCallback?: (metrics: { prep: number, ai: number }) => void // <<< THÊM MỚI
 ): ReturnType<typeof handleStreamingActual> {
     const hostAgentDeps = getHostAgentDependencies(userSelectedModel);
     if (!hostAgentDeps) {
         const errorMsg = "[Orchestrator] ERROR: handleStreaming - hostAgentDependencies could not be initialized.";
         throw new Error(errorMsg);
     }
-    
-    return handleStreamingActual(
+
+      return handleStreamingActual(
         inputParts,
         currentHistoryFromSocket,
         socket,
@@ -185,6 +161,10 @@ export async function handleStreaming(
         personalizationData,
         originalUserFiles,
         pageContextText,
-        pageContextUrl
+        pageContextUrl,
+        // <<< TRUYỀN userSelectedModel XUỐNG ĐÂY >>>
+        userSelectedModel,
+        logger,
+        performanceCallback
     );
 }

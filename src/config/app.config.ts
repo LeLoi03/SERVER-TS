@@ -52,6 +52,9 @@ export class AppConfiguration {
 
     public readonly apiBaseUrl: string | undefined;
 
+     // <<< THÊM MỚI: Thuộc tính cho thư mục log của client test >>>
+    public readonly chatbotClientTestLogDirectoryPath: string;
+
     constructor(private appConfig: AppConfig) {
         this.nodeEnv = appConfig.NODE_ENV;
         this.port = appConfig.PORT;
@@ -91,6 +94,12 @@ export class AppConfiguration {
         this.globalCrawlConcurrency = appConfig.GLOBAL_CRAWL_CONCURRENCY;
 
         this.apiBaseUrl = appConfig.API_BASE_URL;
+         // <<< THÊM MỚI: Gán giá trị từ biến môi trường hoặc một giá trị mặc định >>>
+        // Giả sử biến môi trường là CHATBOT_CLIENT_TEST_LOG_DIR
+        // Giá trị mặc định là thư mục 'test-logs' ở gốc dự án.
+        this.chatbotClientTestLogDirectoryPath = path.resolve(
+            appConfig.CHATBOT_CLIENT_TEST_LOG_DIR || 'test-logs'
+        );
     }
 
     // --- Thư mục con cho từng loại log chính (trong logsDirectoryPath) ---
