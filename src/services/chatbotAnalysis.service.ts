@@ -221,6 +221,7 @@ export class ChatbotLogAnalysisService {
         }
 
         // Step 3: Sort and calculate summary
+        // Bước 3: Sắp xếp và tính toán summary
         const finalRequests = Array.from(requestMap.values()).sort((a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime());
 
         const summary: ChatbotLogAnalysisResult['summary'] = {
@@ -231,22 +232,30 @@ export class ChatbotLogAnalysisService {
 
         const validResponseTimes: number[] = [];
         const validServerTimes: number[] = [];
-        const validAiTimes: number[] = [];
+        const validAiTimes: number[] = []; // <<< SỬA ĐỔI Ở ĐÂY
 
         for (const req of finalRequests) {
+            // Đếm status
             if (req.status === 'SUCCESS') summary.successCount++;
             else if (req.status === 'ERROR') summary.errorCount++;
             else if (req.status === 'TIMEOUT') summary.timeoutCount++;
             else if (req.status === 'INCOMPLETE') summary.incompleteCount++;
 
-            if (req.serverMetrics.roundTripTime_ms) validResponseTimes.push(req.serverMetrics.roundTripTime_ms);
-            if (req.serverMetrics.totalServerDuration_ms) validServerTimes.push(req.serverMetrics.totalServerDuration_ms);
-            
-            const totalAiTimeForRequest = req.aiCalls.reduce((sum, call) => sum + (call.duration_ms || 0), 0);
-            if (totalAiTimeForRequest > 0) {
-                validAiTimes.push(totalAiTimeForRequest);
+            // Thu thập dữ liệu để tính trung bình
+            if (req.serverMetrics.roundTripTime_ms) {
+                validResponseTimes.push(req.serverMetrics.roundTripTime_ms);
+            }
+            if (req.serverMetrics.totalServerDuration_ms) {
+                validServerTimes.push(req.serverMetrics.totalServerDuration_ms);
             }
 
+            // <<< SỬA ĐỔI QUAN TRỌNG: Lấy tổng thời gian AI từ serverMetrics >>>
+            // Đây là tổng thời gian AI đã được server log lại, bao gồm tất cả các lần gọi.
+            if (req.serverMetrics.aiCallDuration_ms) {
+                validAiTimes.push(req.serverMetrics.aiCallDuration_ms);
+            }
+
+            // Thống kê theo model
             const modelKey = req.clientRequestedModel || 'default';
             if (!summary.requestsByModel[modelKey]) {
                 (summary.requestsByModel as any)[modelKey] = { count: 0, responseTimes: [] };
@@ -257,6 +266,7 @@ export class ChatbotLogAnalysisService {
             }
         }
 
+        // Tính toán giá trị trung bình tổng thể (logic này đã đúng)
         if (validResponseTimes.length > 0) summary.averageResponseTime_ms = validResponseTimes.reduce((a, b) => a + b, 0) / validResponseTimes.length;
         if (validServerTimes.length > 0) summary.averageServerTime_ms = validServerTimes.reduce((a, b) => a + b, 0) / validServerTimes.length;
         if (validAiTimes.length > 0) summary.averageAiTime_ms = validAiTimes.reduce((a, b) => a + b, 0) / validAiTimes.length;
