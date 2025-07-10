@@ -24,7 +24,9 @@ let GEMINI_SERVICE_FOR_SUB_AGENT: Gemini;
 let baseDependencies: BaseIntentHandlerDeps;
 let subAgentHandlerDependencies: SubAgentHandlerCustomDeps;
 
-const MERCURY_MODEL_VALUE = 'gemini-2.5-flash-preview-05-20';
+const MERCURY_MODEL_VALUE = 'gemini-2.5-pro';
+const SIRIUS_MODEL_VALUE = 'gemini-2.5-flash';
+
 
 try {
     configService = container.resolve(ConfigService);
@@ -67,6 +69,7 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
 
     let currentHostAgentGenerationConfig: GenerateContentConfig = { ...configService.hostAgentGenerationConfig };
 
+    // Điều chỉnh thinkingBudget dựa trên modelForHost
     if (modelForHost === MERCURY_MODEL_VALUE) {
         currentHostAgentGenerationConfig = {
             ...currentHostAgentGenerationConfig,
@@ -74,7 +77,15 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
                 thinkingBudget: 8000,
             },
         };
+    } else if (modelForHost === SIRIUS_MODEL_VALUE) { // Thêm điều kiện cho Sirius
+        currentHostAgentGenerationConfig = {
+            ...currentHostAgentGenerationConfig,
+            thinkingConfig: {
+                thinkingBudget: 4000,
+            },
+        };
     }
+
 
     const boundCallSubAgentHandler = (
         requestCard: AgentCardRequest,

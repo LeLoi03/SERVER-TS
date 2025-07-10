@@ -29,7 +29,7 @@ export interface RequestTimings {
     errorMessages: string[];
     description?: string;
 
-    
+
     // --- BỔ SUNG TRƯỜNG MỚI ---
     /** NEW: Indicates if a CSV output file was successfully generated for this request. */
     hasCsvOutput?: boolean;
@@ -239,7 +239,21 @@ export interface LogError {
     /**
      * @property {'DataParsing' | 'Network' | 'APIQuota' | 'Logic' | 'FileSystem' | 'SafetyBlock' | 'Configuration' | 'Unknown' | 'ThirdPartyAPI'} [errorType] - Tùy chọn: Loại lỗi được phân loại.
      */
-    errorType?: 'DataParsing' | 'Network' | 'APIQuota' | 'Logic' | 'FileSystem' | 'SafetyBlock' | 'Configuration' | 'Unknown' | 'ThirdPartyAPI';
+    errorType?:
+    | 'Network'
+    | 'API'             // From logAnalysisJournal.types.ts
+    | 'APIQuota'
+    | 'Playwright'      // From logAnalysisJournal.types.ts
+    | 'FileSystem'
+    | 'Validation'      // From logAnalysisJournal.types.ts
+    | 'Logic'
+    | 'Cache'           // From logAnalysisJournal.types.ts
+    | 'SafetyBlock'
+    | 'Configuration'
+    | 'DataParsing'
+    | 'ThirdParty'      // From logAnalysisJournal.types.ts
+    | 'ThirdPartyAPI'
+    | 'Unknown';
     /**
      * @property {boolean} [isRecovered] - Tùy chọn: True nếu lỗi này đã được khắc phục bởi một hành động sau đó (ví dụ: fallback).
      */
