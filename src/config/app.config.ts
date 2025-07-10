@@ -21,6 +21,8 @@ export class AppConfiguration {
 
     // Tên file log chung (nếu vẫn dùng)
     public readonly appLogFileName: string;
+    public readonly chatbotLogFileName: string;
+
     // public readonly conferenceLogFileName: string; // Sẽ không dùng file chung nữa
     // public readonly journalLogFileName: string;   // Sẽ không dùng file chung nữa
     public readonly saveConferenceEventLogFileName: string = 'conference_save_events.jsonl';
@@ -52,7 +54,7 @@ export class AppConfiguration {
 
     public readonly apiBaseUrl: string | undefined;
 
-     // <<< THÊM MỚI: Thuộc tính cho thư mục log của client test >>>
+    // <<< THÊM MỚI: Thuộc tính cho thư mục log của client test >>>
     public readonly chatbotClientTestLogDirectoryPath: string;
 
     constructor(private appConfig: AppConfig) {
@@ -71,6 +73,8 @@ export class AppConfiguration {
         this.logsDirectoryPath = path.resolve(appConfig.LOGS_DIRECTORY);
 
         this.appLogFileName = appConfig.APP_LOG_FILE_NAME || 'app.log';
+        this.chatbotLogFileName = appConfig.APP_LOG_FILE_NAME || 'chatbot.log';
+
         // Không cần conferenceLogFileName và journalLogFileName nếu không có file log chung nữa
 
         this.logToConsole = appConfig.LOG_TO_CONSOLE;
@@ -94,7 +98,7 @@ export class AppConfiguration {
         this.globalCrawlConcurrency = appConfig.GLOBAL_CRAWL_CONCURRENCY;
 
         this.apiBaseUrl = appConfig.API_BASE_URL;
-         // <<< THÊM MỚI: Gán giá trị từ biến môi trường hoặc một giá trị mặc định >>>
+        // <<< THÊM MỚI: Gán giá trị từ biến môi trường hoặc một giá trị mặc định >>>
         // Giả sử biến môi trường là CHATBOT_CLIENT_TEST_LOG_DIR
         // Giá trị mặc định là thư mục 'test-logs' ở gốc dự án.
         this.chatbotClientTestLogDirectoryPath = path.resolve(
@@ -106,6 +110,12 @@ export class AppConfiguration {
     get appLogDirectory(): string {
         return path.join(this.logsDirectoryPath, 'app');
     }
+
+    // --- Thư mục con cho từng loại log chính (trong logsDirectoryPath) ---
+    get chatbotLogDirectory(): string {
+        return path.join(this.logsDirectoryPath, 'chatbot');
+    }
+
     // Thư mục gốc cho conference logs (chứa thư mục con by_request_id)
     get baseConferenceLogDirectory(): string {
         return path.join(this.logsDirectoryPath, 'conference');
@@ -126,6 +136,11 @@ export class AppConfiguration {
     // --- Đường dẫn đầy đủ đến file log chung (app, saveEvents) mà pino-roll sẽ quản lý ---
     get appLogFilePathForWriting(): string {
         return path.join(this.appLogDirectory, this.appLogFileName);
+    }
+
+    // --- Đường dẫn đầy đủ đến file log chung (app, saveEvents) mà pino-roll sẽ quản lý ---
+    get chatbotLogFilePathForWriting(): string {
+        return path.join(this.chatbotLogDirectory, this.chatbotLogFileName);
     }
     // Không còn file log conference/journal chung để ghi nữa
 

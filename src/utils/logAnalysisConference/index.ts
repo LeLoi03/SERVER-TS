@@ -10,6 +10,7 @@ import { batchProcessingEventHandlers } from './batchProcessingHandlers';
 import { fileOutputEventHandlers } from './fileOutput';
 import { validationEventHandlers } from './validationEventHandlers';
 import { overallProcessEventHandlers } from './overallProcessHandlers';
+import { handleTaskStepTiming } from './taskTimingHandlers';
 
 export type LogEventHandler = (
   logEntry: any,
@@ -43,5 +44,13 @@ export const eventHandlerMap: Record<string, LogEventHandler> = {
   ...validationEventHandlers,
 
   // --- Overall Process ---
-  ...overallProcessEventHandlers
+  ...overallProcessEventHandlers,
+
+  // --- THÊM CÁC EVENT MỚI VÀO MAP ---
+  'GOOGLE_SEARCH_END': handleTaskStepTiming,
+  'PLAYWRIGHT_CRAWL_INITIAL_LINKS_END': handleTaskStepTiming,
+  'PLAYWRIGHT_CRAWL_UPDATE_LINKS_END': handleTaskStepTiming,
+  'API_DETERMINE_LINKS_END': handleTaskStepTiming,
+  'PLAYWRIGHT_CRAWL_DETERMINED_LINKS_END': handleTaskStepTiming,
+  'API_FINAL_EXTRACTION_END': handleTaskStepTiming,
 };

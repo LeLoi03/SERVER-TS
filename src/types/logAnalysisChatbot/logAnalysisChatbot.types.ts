@@ -22,26 +22,34 @@ export interface ChatbotServerPerfLog {
     level: string;
     time: string;
     event: 'performance_log';
-    stage: 'request_received' | 'ai_call_start' | 'ai_call_end' | 'response_completed';
+    // <<< SỬA ĐỔI QUAN TRỌNG: Thêm các stage mới vào đây >>>
+    stage: 
+        | 'request_received' 
+        | 'ai_call_start' 
+        | 'ai_first_token_received' // Thêm mới
+        | 'ai_stream_completed'     // Thêm mới (thay cho ai_call_end)
+        | 'response_completed'
+        | 'ai_function_call_completed'
     requestId: string;
     userId: string;
     conversationId: string;
     details?: {
         isStreaming?: boolean;
         language?: string;
-        model?: string; // Model được yêu cầu từ client
+        model?: string;
         messageLength?: number;
         hasPageContext?: boolean;
         turn?: number;
-        requestedModel?: string; // Model được yêu cầu (từ log ai_call_start)
-        actualModel?: string;   // Model thực sự được dùng
+        requestedModel?: string;
+        actualModel?: string;
     };
     metrics?: {
         totalServerDuration_ms?: number;
         prepDuration_ms?: number;
-        aiCallDuration_ms?: number;
+        aiCallDuration_ms?: number; // Đây là tổng thời gian stream từ log response_completed
         postProcessingDuration_ms?: number;
-        duration_ms?: number; // Thời gian của một lần gọi AI
+        totalStreamDuration_ms?: number; // Đây là thời gian của một lần stream từ log ai_stream_completed
+        duration_ms?: number; // Thời gian của một lần gọi function call
     };
     msg: string;
 }
@@ -53,23 +61,25 @@ export interface AnalyzedChatbotRequest {
     requestId: string;
     status: 'SUCCESS' | 'ERROR' | 'TIMEOUT' | 'INCOMPLETE'; // INCOMPLETE: có log server nhưng không có kết quả client
     startTime: string; // Thời gian bắt đầu từ log 'request_received'
-    
+
     // Dữ liệu từ Client
     question: string;
     clientRequestedModel?: string;
     clientResponse?: string;
     clientError?: string;
-    
-    // Dữ liệu từ Server
+
     serverMetrics: {
-        roundTripTime_ms?: number; // Từ client
-        networkAndQueueTime_ms?: number; // roundTrip - totalServer
+        roundTripTime_ms?: number;
+        networkAndQueueTime_ms?: number;
         totalServerDuration_ms?: number;
         prepDuration_ms?: number;
-        aiCallDuration_ms?: number;
+        // <<< THÊM MỚI >>>
+        timeToFirstToken_ms?: number; // Thời gian từ lúc gọi AI đến khi có token đầu tiên
+        // <<< SỬA ĐỔI >>>
+        aiTotalStreamDuration_ms?: number; // Đổi tên từ aiCallDuration_ms cho rõ nghĩa
         postProcessingDuration_ms?: number;
     };
-    
+
     // Chi tiết về các lần gọi AI
     aiCalls: {
         turn: number;
@@ -97,6 +107,7 @@ export interface ChatbotLogAnalysisResult {
         incompleteCount: number;
         averageResponseTime_ms: number; // Trung bình của roundTripTime_ms
         averageServerTime_ms: number; // Trung bình của totalServerDuration_ms
+        averageTimeToFirstToken_ms: number;
         averageAiTime_ms: number; // Trung bình của aiCallDuration_ms
         requestsByModel: {
             [modelName: string]: {
@@ -104,5 +115,6 @@ export interface ChatbotLogAnalysisResult {
                 avgResponseTime_ms: number;
             }
         }
+
     };
 }

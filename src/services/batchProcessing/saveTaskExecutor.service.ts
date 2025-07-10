@@ -127,11 +127,19 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
             }
 
             try {
+
+                const determineApiStartTime = performance.now();
+                logger.info({ event: 'API_DETERMINE_LINKS_START', model: apiModels.determineLinks });
+
                 determineLinksResponse = await this.geminiApiService.determineLinks(
                     determineApiParams,
                     apiModels.determineLinks,
                     determineApiLogger
                 );
+
+                const determineApiDurationMs = performance.now() - determineApiStartTime;
+                logger.info({ event: 'API_DETERMINE_LINKS_END', durationMs: Math.round(determineApiDurationMs) });
+
                 // saveTemporaryFile now returns null in production, which is fine as it's assigned to string | undefined
                 determineResponseTextPath = await this.fileSystemService.saveTemporaryFile(
                     determineLinksResponse.responseText || "",
@@ -175,6 +183,10 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
                 // +++ BỌC LỜI GỌI SERVICE BẰNG TIMEOUT +++
                 const DETERMINATION_TIMEOUT_MS = 300000; // 3 phút cho việc xử lý trang chính thức
 
+
+                const crawlDeterminedStartTime = performance.now();
+                logger.info({ event: 'PLAYWRIGHT_CRAWL_DETERMINED_LINKS_START' });
+
                 const determinationPromise = this.conferenceDeterminationService.determineAndProcessOfficialSite(
                     determineLinksResponse.responseText || "",
                     initialBatchEntries,
@@ -190,6 +202,10 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
                     `Determine and Process Official Site for ${primaryEntryForContext.conferenceAcronym}`
                 );
                 // +++ KẾT THÚC PHẦN BỌC +++
+
+
+                const crawlDeterminedDurationMs = performance.now() - crawlDeterminedStartTime;
+                logger.info({ event: 'PLAYWRIGHT_CRAWL_DETERMINED_LINKS_END', durationMs: Math.round(crawlDeterminedDurationMs) });
 
             } catch (processError: any) {
                 processDetermineLogger.error({ err: processError, event: 'save_batch_process_determine_call_failed' });
@@ -300,6 +316,9 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
             logger.info({ event: 'batch_task_finish_success', flow: 'save' });
             logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
 
+
+            logger.info({ event: 'TASK_END', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+
             return true;
 
         } catch (error: any) {
@@ -313,9 +332,16 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
                 error_details: errorMessage
             }, `Finished processing conference task with failure.`);
 
+
+
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForSave for ${primaryEntryForContext.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
             this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_save_task_main_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
+
+
+            logger.error({ event: 'TASK_END', success: false }, `Finished processing conference task with failure.`);
+
+
             return false;
         }
     }

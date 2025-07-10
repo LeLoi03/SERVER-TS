@@ -36,31 +36,22 @@ export class ConferenceLogAnalysisService {
     ): Promise<ConferenceLogAnalysisResult> {
         const logContext = { function: 'performConferenceAnalysisAndUpdate', textFilter };
         const logger = this.serviceLogger.child(logContext);
-        logger.info(`Orchestrating analysis. Text filter: '${textFilter || 'none'}'`);
-
         const hasFilters = filterStartTimeInput !== undefined || filterEndTimeInput !== undefined || !!textFilter;
 
         if (!hasFilters) {
-            logger.info("No filters applied. Attempting to use overall aggregated cache.");
-
             // SỬ DỤNG FINGERPRINT MỚI DỰA TRÊN THƯ MỤC LOG
             const currentFingerprint = await this.cacheService.generateLogStateFingerprint('conference');
 
             const overallCache = await this.cacheService.readOverallCache<ConferenceLogAnalysisResult>('conference');
 
             if (overallCache && overallCache.fingerprint === currentFingerprint) {
-                logger.info("Overall cache HIT. Returning cached aggregated data instantly.");
                 return this.decorateResult(overallCache.data, 'Aggregated from cache');
             }
-
-            logger.info("Overall cache MISS or stale. Performing full aggregation to rebuild cache.");
             const aggregatedResult = await this.performFullAggregation();
             // Lưu lại cache tổng hợp với fingerprint mới
             await this.cacheService.writeOverallCache('conference', currentFingerprint, aggregatedResult);
             return aggregatedResult;
         }
-
-        logger.info("Filters are applied. Bypassing overall cache and performing live filtering.");
         return this.performFullAggregation(filterStartTimeInput, filterEndTimeInput, textFilter);
     }
 
@@ -77,8 +68,6 @@ export class ConferenceLogAnalysisService {
         const logger = this.serviceLogger.child({ function: 'performFullAggregation', textFilter });
 
         const allUniqueRequestIds = await this.discoverAllRequestIds();
-        logger.info(`Found ${allUniqueRequestIds.length} total unique request IDs for aggregation/filtering.`);
-
         if (allUniqueRequestIds.length === 0) {
             return this.aggregator.aggregate([]);
         }
@@ -105,17 +94,12 @@ export class ConferenceLogAnalysisService {
                 );
             });
         }
-        logger.info(`Filtered down to ${filteredAnalyses.length} matching analysis results.`);
-
         // Decide what to return based on the number of filtered results.
         if (filteredAnalyses.length === 1) {
-            logger.info(`Exactly one match found. Returning its detailed analysis.`);
             const finalResult = filteredAnalyses[0];
             finalResult.filterRequestId = finalResult.analyzedRequestIds[0];
             return finalResult;
         }
-
-        logger.info(`Multiple or no matches found. Returning an aggregated result.`);
         return this.aggregator.aggregate(filteredAnalyses);
     }
 
@@ -146,8 +130,6 @@ export class ConferenceLogAnalysisService {
                 return this.decorateResult(cachedResult, requestLogFilePath);
             }
         }
-
-        logger.info(`No valid cache for ${batchRequestId}. Performing live analysis.`);
         const saveEventsMap = await this.logReader.readConferenceSaveEvents();
         const analysisResult = await this.singleAnalyzer.analyze(
             batchRequestId,

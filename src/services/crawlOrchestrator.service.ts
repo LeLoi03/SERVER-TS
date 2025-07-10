@@ -89,9 +89,12 @@ export class CrawlOrchestratorService {
         // Điều này đảm bảo mỗi request có một hàng đợi riêng, cho phép `onIdle` hoạt động chính xác.
         const requestTaskQueue = requestContainer.resolve(TaskQueueService);
 
-        const operationStartTime = Date.now();
+        // const operationStartTime = Date.now();
+        const operationStartTime = performance.now(); // Sử dụng performance.now() để có độ chính xác cao hơn
+
         const shouldRecordFiles = requestStateService.shouldRecordFiles();
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
+
 
         logger.info({
             event: 'crawl_orchestrator_start',
@@ -103,6 +106,13 @@ export class CrawlOrchestratorService {
             recordFile: shouldRecordFiles,
             conferenceTimeoutMs: this.conferenceProcessingTimeoutMs,
         }, `Starting crawl process for batch ${batchRequestId}.`);
+
+
+        logger.info({
+            event: 'ORCHESTRATOR_START', // Đã có sẵn, đổi tên cho nhất quán
+            // ...
+        }, `Starting crawl process for batch ${batchRequestId}.`);
+
 
         let allProcessedData: ProcessedRowData[] = [];
         let crawlError: Error | null = null;
@@ -178,16 +188,28 @@ export class CrawlOrchestratorService {
             });
 
 
-            // Thêm tất cả các task đã được chuẩn bị vào hàng đợi CỦA REQUEST
+
+            // Thêm tất cả các task
+            const queueingStartTime = performance.now();
             tasks.forEach(taskFunc => requestTaskQueue.add(taskFunc));
+            const queueingDurationMs = performance.now() - queueingStartTime;
+            logger.info({
+                event: 'ALL_TASKS_QUEUED',
+                durationMs: Math.round(queueingDurationMs),
+                taskCount: tasks.length
+            }, `All ${tasks.length} tasks have been added to the request queue.`);
+
+
 
             // Phase 3 & 3.5: Wait for completion
             logger.info("Waiting for all conference processing tasks in this request to complete...");
-            // `onIdle` bây giờ sẽ hoạt động chính xác, nó chờ cho đến khi tất cả các task
-            // trong `requestTaskQueue` hoàn thành. Vì mỗi task có `await` lời gọi đến
-            // global manager, nên `onIdle` sẽ chỉ resolve khi tất cả công việc thực tế đã xong.
+            const waitTasksStartTime = performance.now();
             await requestTaskQueue.onIdle();
-            logger.info("All conference processing tasks for this request have finished.");
+            const waitTasksDurationMs = performance.now() - waitTasksStartTime;
+            logger.info({
+                event: 'ALL_TASKS_COMPLETED',
+                durationMs: Math.round(waitTasksDurationMs)
+            }, "All conference processing tasks for this request have finished.");
 
             logger.info("Waiting for any background batch save/append operations to complete...");
             await this.batchProcessingOrchestratorService.awaitCompletion(logger);
@@ -200,6 +222,7 @@ export class CrawlOrchestratorService {
 
             // Phase 4: Processing Final Output
             logger.info("Phase 4: Processing final output...");
+            const finalProcessingStartTime = performance.now();
             if (shouldRecordFiles) {
                 logger.info({ event: 'processing_path_file', batchRequestId }, "Processing results via file I/O path (JSONL -> CSV).");
                 // Sử dụng instance vừa resolve
@@ -208,10 +231,14 @@ export class CrawlOrchestratorService {
                 logger.info({ event: 'processing_path_memory' }, "Processing results via in-memory path.");
                 const rawResults = this.resultCollector.get();
                 logger.info({ recordCount: rawResults.length }, "Retrieved raw results from in-memory collector.");
-                // Sử dụng instance vừa resolve
                 allProcessedData = await resultProcessingService.processInMemoryData(rawResults, logger);
             }
-            logger.info(`Result processing finished. Collected ${allProcessedData.length} final records.`);
+            const finalProcessingDurationMs = performance.now() - finalProcessingStartTime;
+            logger.info({
+                event: 'FINAL_PROCESSING_END',
+                durationMs: Math.round(finalProcessingDurationMs),
+                finalRecordCount: allProcessedData.length
+            }, `Result processing finished. Collected ${allProcessedData.length} final records.`);
 
 
         } catch (error: unknown) {
@@ -226,7 +253,24 @@ export class CrawlOrchestratorService {
                 await this.fileSystemService.cleanupTempFiles();
                 logger.info("Temp files cleanup finished.");
             }
-            logger.info({ event: 'crawl_orchestrator_end', batchRequestId, totalProcessedRecords: allProcessedData.length }, `Crawl process finished for batch ${batchRequestId}.`);
+            const totalOrchestratorDurationMs = performance.now() - operationStartTime;
+
+
+            logger.info({
+                event: 'crawl_orchestrator_end',
+                durationMs: Math.round(totalOrchestratorDurationMs),
+                batchRequestId,
+                totalProcessedRecords: allProcessedData.length
+            }, `Crawl process finished for batch ${batchRequestId}.`);
+
+
+            logger.info({ 
+                event: 'ORCHESTRATOR_END', // Đã có sẵn, đổi tên
+                durationMs: Math.round(totalOrchestratorDurationMs),
+                batchRequestId, 
+                totalProcessedRecords: allProcessedData.length 
+            }, `Crawl process finished for batch ${batchRequestId}.`);
+            
         }
 
         if (crawlError) {

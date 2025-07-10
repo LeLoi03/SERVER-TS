@@ -53,13 +53,10 @@ async function startServer(): Promise<void> {
             console.error("FATAL: Không thể khởi tạo logging service. Đang thoát.", error);
             process.exit(1);
         }
-        logger.info('[Server Start] Các service cốt lõi (Config, Logging) đã được khởi tạo thành công.');
 
         // --- 2. Khởi tạo các ví dụ API từ ConfigService ---
-        logger.info('[Server Start] Đang tải các ví dụ API...');
         try {
             await configService.initializeExamples();
-            logger.info('[Server Start] Các ví dụ API đã được khởi tạo thành công.');
         } catch (exampleError: any) {
             const errorMessage = exampleError instanceof Error ? exampleError.message : String(exampleError);
             const errorStack = exampleError instanceof Error ? exampleError.stack : undefined;
@@ -68,19 +65,14 @@ async function startServer(): Promise<void> {
         }
 
         // --- 3. Khởi tạo các Loaders (Database, Express, Socket.IO, Cron Jobs, etc.) ---
-        logger.info('[Server Start] Đang khởi tạo các application loaders...');
         const loaderResult = await initLoaders();
         httpServer = loaderResult.httpServer;
-        logger.info('[Server Start] Tất cả loaders đã được khởi tạo thành công.');
 
         // --- 4. Bắt đầu lắng nghe trên HTTP Server ---
         const port = configService.port;
         httpServer.listen(port, () => {
             const serverUrl = `http://localhost:${port}`;
-            logger.info(`🚀 Server (HTTP & Socket.IO) đang lắng nghe trên cổng ${port}`);
-            logger.info(`🔗 Ứng dụng có thể truy cập tại: ${serverUrl}`);
             const allowedOrigins = configService.corsAllowedOrigins.join(', ');
-            logger.info(`🌐 Các CORS origin được phép: ${allowedOrigins}`);
             console.log(`🚀 Server sẵn sàng tại ${serverUrl}`);
         });
 

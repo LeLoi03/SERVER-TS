@@ -24,7 +24,6 @@ export class JournalAnalysisAggregatorService {
         analysisFetcher: AnalysisFetcher
     ): Promise<JournalLogAnalysisResult> {
         const logger = this.serviceLogger.child({ function: 'aggregate' });
-        logger.info(`Aggregating analysis for ${requestIds.length} journal requests.`);
 
         const aggregatedResults: JournalLogAnalysisResult = initializeJournalLogAnalysisResult(undefined);
         aggregatedResults.status = 'Processing';
@@ -223,7 +222,6 @@ export class JournalAnalysisAggregatorService {
         // --- Kết thúc logic xác định status và errorMessage tổng hợp ---
 
         aggregatedResults.analysisTimestamp = new Date().toISOString();
-        logger.info(`Journal aggregation finished with overall status: ${aggregatedResults.status}`);
         return aggregatedResults;
     }
 }

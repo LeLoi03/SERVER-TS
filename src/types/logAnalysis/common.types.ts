@@ -8,22 +8,9 @@
  * @description Cung cấp thông tin về thời gian và trạng thái cho một yêu cầu lô cụ thể hoặc chi tiết hội nghị.
  */
 export interface RequestTimings {
-    /**
-     * @property {string | null} startTime - Thời gian bắt đầu của yêu cầu ở định dạng chuỗi ISO, hoặc null nếu không khả dụng.
-     */
     startTime: string | null;
-    /**
-     * @property {string | null} endTime - Thời gian kết thúc của yêu cầu ở định dạng chuỗi ISO, hoặc null nếu không khả dụng.
-     */
     endTime: string | null;
-    /**
-     * @property {number | null} durationSeconds - Thời lượng của yêu cầu tính bằng giây, hoặc null nếu thời gian không khả dụng.
-     */
     durationSeconds: number | null;
-    /**
-     * @property {'Completed' | 'Failed' | 'Processing' | 'CompletedWithErrors' | 'PartiallyCompleted' | 'Skipped' | 'NoData' | 'Unknown'} [status] - Trạng thái tổng thể của quá trình xử lý yêu cầu.
-     * ...
-     */
     status?:
     | 'Completed'
     | 'Failed'
@@ -33,26 +20,31 @@ export interface RequestTimings {
     | 'Skipped'
     | 'NoData'
     | 'Unknown'
-    | 'NoRequestsAnalyzed'      // THÊM VÀO
-    | 'NotFoundInAggregation';  // THÊM VÀO
-    /**
-     * @property {string} [originalRequestId] - Tùy chọn: ID gốc được cung cấp cho yêu cầu, nếu đó là một lần thu thập lại.
-     */
+    | 'NoRequestsAnalyzed'
+    | 'NotFoundInAggregation';
     originalRequestId?: string;
-
-    // THÊM CÁC THUỘC TÍNH MỚI NÀY VÀO RequestTimings
-    /** NEW: Tổng số hội nghị đầu vào ban đầu cho yêu cầu cụ thể này. */
     totalConferencesInputForRequest?: number;
-    /** NEW: Số lượng hội nghị đã được xử lý hoàn tất cho yêu cầu cụ thể này. */
     processedConferencesCountForRequest?: number;
     csvOutputStreamFailed?: boolean;
-    /**
-        * @property {string[]} [errorMessages] - Mảng các thông báo lỗi tóm tắt cho yêu cầu này.
-        * Được điền nếu request `status` là `Failed` hoặc `CompletedWithErrors`.
-        */
     errorMessages: string[];
-    description?: string; // <<< THÊM TRƯỜNG MỚI NÀY >>>
+    description?: string;
 
+    
+    // --- BỔ SUNG TRƯỜNG MỚI ---
+    /** NEW: Indicates if a CSV output file was successfully generated for this request. */
+    hasCsvOutput?: boolean;
+    // --- BỔ SUNG CÁC TRƯỜNG MỚI ĐỂ THEO DÕI GIAI ĐOẠN ---
+    /** Thời gian từ khi nhận request đến khi orchestrator bắt đầu (ms) */
+    initializationDurationMs?: number;
+    /** Thời gian để đưa tất cả task vào hàng đợi (ms) */
+    taskQueueingDurationMs?: number;
+    /** Tổng thời gian chờ tất cả các task conference hoàn thành (ms) */
+    allTasksCompletionDurationMs?: number;
+    /** Thời gian xử lý, tổng hợp kết quả cuối cùng (ms) */
+    finalProcessingDurationMs?: number;
+    /** Tổng thời gian thực thi của orchestrator (ms) */
+    orchestratorDurationMs?: number;
+    csvWriteSuccess?: boolean;
 }
 
 

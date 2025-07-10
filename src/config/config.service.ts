@@ -206,6 +206,10 @@ export class ConfigService {
     get appLogFilePathForWriting(): string { return this.appConfiguration.appLogFilePathForWriting; }
     // Không còn conference/journal log file chung để ghi
 
+    // Đường dẫn ghi cho các file log chung (app, saveEvents)
+    get chatbotLogFilePathForWriting(): string { return this.appConfiguration.chatbotLogFilePathForWriting; }
+    // Không còn conference/journal log file chung để ghi
+
     // Đường dẫn đọc cho file log chung (app)
     get appLogFilePathForReading(): string { return this.appConfiguration.appLogFilePathForReading; }
     // Không còn conference/journal log file chung để đọc qua symlink
@@ -328,6 +332,7 @@ export class ConfigService {
         const filename = `${baseCsvFilename}_${batchRequestId}.csv`;
         return path.join(this.csvOutputDir, filename);
     }
+
     public getBaseEvaluateCsvPath(): string {
         return path.join(this.csvOutputDir, 'evaluate.csv');
     }

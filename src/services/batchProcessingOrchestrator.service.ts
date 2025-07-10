@@ -185,9 +185,16 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 );
             }
 
+            methodLogger.info({ event: 'PLAYWRIGHT_CRAWL_UPDATE_LINKS_START' });
+            const crawlStartTime = performance.now();
+
+
             // Promise.allSettled sẽ nhận được lỗi reject từ timeout và tiếp tục
             const results = await Promise.allSettled([mainPromise, cfpPromise, impPromiseVal]);
             methodLogger.info({ event: 'parallel_link_fetch_settled_update_flow' });
+
+            const crawlDurationMs = performance.now() - crawlStartTime;
+            methodLogger.info({ event: 'PLAYWRIGHT_CRAWL_UPDATE_LINKS_END', durationMs: Math.round(crawlDurationMs) });
 
             // +++ PROCESS THE NEW RESULT TYPES +++
             let mainResult: MainLinkResult = { finalUrl: null, textPath: null, textContent: null };
@@ -310,6 +317,10 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             const LINK_PROCESSING_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
 
 
+            const crawlStartTime = performance.now();
+            methodLogger.info({ event: 'PLAYWRIGHT_CRAWL_INITIAL_LINKS_START', linkCount: links.length });
+
+
             for (let i = 0; i < links.length; i++) {
                 const link = links[i];
                 const singleLinkLogger = methodLogger.child({ linkProcessingIndex: i, originalLinkForProcessing: link });
@@ -346,6 +357,15 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 failedLinks: linkProcessingFailedCount, batchEntriesCreated: batchForDetermineApi.length,
                 event: 'all_links_processed_for_save_flow'
             });
+
+
+            const crawlDurationMs = performance.now() - crawlStartTime;
+            methodLogger.info({
+                event: 'PLAYWRIGHT_CRAWL_INITIAL_LINKS_END',
+                durationMs: Math.round(crawlDurationMs),
+                // ...
+            });
+
 
             if (batchForDetermineApi.length > 0) {
                 const primaryOriginalAcronymForTask = batchForDetermineApi[0]?.conferenceAcronym || conference.Acronym;
@@ -384,6 +404,8 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 methodLogger.warn({ event: 'batch_processing_skipped_empty_after_link_processing_save_flow' });
             }
             methodLogger.info({ event: 'batch_processing_flow_finish', success: true, flow: 'save_initiation' });
+
+
             return true;
         } catch (error: any) {
             methodLogger.error({ err: error, event: 'batch_process_save_unhandled_error', flow: 'save_initiation_error' });

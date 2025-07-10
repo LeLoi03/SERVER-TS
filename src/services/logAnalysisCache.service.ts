@@ -36,9 +36,7 @@ export class LogAnalysisCacheService {
         // Logger này sẽ ghi vào stream chung của 'app' (hoặc stream mặc định của LoggingService)
         // với context cố định là { service: 'LogAnalysisCacheService' }
         this.serviceLogger = this.loggingService.getLogger('app').child({ service: 'LogAnalysisCacheService' });
-        this.serviceLogger.info('LogAnalysisCacheService initializing...');
         this.ensureCacheDirectoriesExist(); // ensureCacheDirectoriesExist cũng sẽ dùng this.serviceLogger
-        this.serviceLogger.info('LogAnalysisCacheService initialized successfully.');
     }
 
     private ensureCacheDirectoriesExist(): void {
@@ -85,7 +83,6 @@ export class LogAnalysisCacheService {
         }
 
         const cachePath = this.configService.getAnalysisCachePathForRequest(type, batchRequestId);
-        operationLogger.info({ cachePath, status: analysisResultData.status }, `Writing analysis result to cache.`);
 
         try {
             const cacheEntry: CacheEntry<typeof analysisResultData> = {
@@ -99,7 +96,6 @@ export class LogAnalysisCacheService {
 
             const resultJson = JSON.stringify(cacheEntry, null, 2);
             await fsPromises.writeFile(cachePath, resultJson);
-            operationLogger.info({ cachePath }, `Successfully wrote analysis result to cache.`);
 
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);
@@ -165,7 +161,6 @@ export class LogAnalysisCacheService {
             const cachedEntry = JSON.parse(fileContent) as CacheEntry<T>;
 
             if (cachedEntry.expiryTimestamp && Date.now() > cachedEntry.expiryTimestamp) {
-                operationLogger.info({ cachePath }, `Cache has expired. Deleting cache file.`);
                 fsPromises.unlink(cachePath).catch(unlinkErr => {
                     const { message: errMsg, stack: errStack } = getErrorMessageAndStack(unlinkErr);
                     operationLogger.warn({ err: { message: errMsg, stack: errStack }, cachePath }, `Failed to delete expired cache file.`);
@@ -260,7 +255,6 @@ export class LogAnalysisCacheService {
                     }
                 }
             }
-            operationLogger.info({ count: validRequestIds.length, cacheDir }, `Found valid cached request IDs.`);
             return validRequestIds;
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);

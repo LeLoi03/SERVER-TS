@@ -113,6 +113,10 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
             acronym: originalAcronymForApis,
         };
 
+
+        logger.info({ event: 'API_FINAL_EXTRACTION_START', flow: isUpdate ? 'update' : 'save' });
+        const finalApiStartTime = performance.now();
+
         // +++ LOGIC MỚI: XÂY DỰNG PAYLOAD MULTIMODAL +++
         const extractPromise = (async () => {
             const extractApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_EXTRACT });
@@ -139,7 +143,7 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
                     extractModel,
                     extractApiLogger
                 );
-                
+
                 let parsedContent: Record<string, any> | null = null;
                 if (response.responseText) {
                     try {
@@ -198,6 +202,14 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
         })();
 
         const [extractResult, cfpResult] = await Promise.all([extractPromise, cfpPromise]);
+
+
+        const finalApiDurationMs = performance.now() - finalApiStartTime;
+        logger.info({
+            event: 'API_FINAL_EXTRACTION_END',
+            durationMs: Math.round(finalApiDurationMs),
+            // ...
+        });
 
         // Cập nhật logic kiểm tra thành công
         const extractSuccess = !!extractResult.responseContent;

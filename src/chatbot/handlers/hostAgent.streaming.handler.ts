@@ -112,14 +112,34 @@ export async function handleStreaming(
         return safeEmitStreaming(eventName, { ...data, agentId: 'HostAgent' });
     };
 
-    async function processAndEmitStream(stream: AsyncGenerator<GenerateContentResponse>): Promise<{ fullText: string; parts?: Part[] } | null> {
+    // <<< SỬA ĐỔI QUAN TRỌNG: Cập nhật hàm processAndEmitStream >>>
+    async function processAndEmitStream(
+        stream: AsyncGenerator<GenerateContentResponse>,
+        requestId: string, // Nhận requestId
+        logger?: Logger    // Nhận logger
+    ): Promise<{ fullText: string; parts?: Part[] } | null> {
         let accumulatedText = "";
         let accumulatedParts: Part[] = [];
         let streamFinishedSuccessfully = false;
+        let firstTokenTime: number | null = null; // Biến để lưu thời điểm nhận token đầu tiên
+
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) return null;
+
 
         try {
             for await (const chunk of stream) {
+                // <<< THÊM MỚI: Ghi nhận thời điểm nhận token đầu tiên >>>
+                if (firstTokenTime === null) {
+                    firstTokenTime = performance.now();
+                    if (logger) {
+                        logger.info({
+                            event: 'performance_log',
+                            stage: 'ai_first_token_received',
+                            requestId,
+                        }, `Received first token from Gemini API.`);
+                    }
+                }
+                // <<< KẾT THÚC THÊM MỚI >>>
                 const chunkText = chunk.text;
                 if (chunkText !== undefined && chunkText !== null) {
                     accumulatedText += chunkText;
@@ -156,6 +176,7 @@ export async function handleStreaming(
         let currentHostTurn = 1;
 
         while (currentHostTurn <= maxTurnsHostAgent) {
+
             const currentApiHistoryForThisCall = [...historyForApiCall];
 
             if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'thinking', message: currentHostTurn > 1 ? `Continuing process (Turn ${currentHostTurn})...` : 'Thinking...' })) return completeHistoryToSave;
@@ -187,6 +208,8 @@ export async function handleStreaming(
                 currentApiHistoryForThisCall,
                 combinedConfig
             );
+            const aiCallEndTime = performance.now(); // <<< THÊM MỚI: Ghi nhận thời điểm kết thúc ngay lập tức
+
 
             if (currentHostTurn === 1) {
                 if (currentUserTurn.parts.length > 0 || pageContextText) {
@@ -205,6 +228,23 @@ export async function handleStreaming(
                 safeEmitStreaming('chat_error', { type: 'error', message: hostAgentLLMResult.error, step: 'host_llm_error' });
                 return completeHistoryToSave;
             } else if (hostAgentLLMResult.functionCall) {
+                // <<< THÊM MỚI: Ghi log cho function call >>>
+                if (logger) {
+                    logger.info({
+                        event: 'performance_log',
+                        stage: 'ai_function_call_completed', // Một stage mới
+                        requestId,
+                        details: {
+                            turn: currentHostTurn,
+                            functionName: hostAgentLLMResult.functionCall.name
+                        },
+                        metrics: {
+                            // Thời gian từ lúc bắt đầu gọi đến lúc nhận được function call
+                            duration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
+                        }
+                    }, `Gemini API returned a function call for turn ${currentHostTurn}.`);
+                }
+                // <<< KẾT THÚC THÊM MỚI >>>
                 const functionCall = hostAgentLLMResult.functionCall;
                 const modelUuid = uuidv4();
                 const modelFunctionCallTurn: ChatHistoryItem = {
@@ -281,25 +321,34 @@ export async function handleStreaming(
                 currentHostTurn++;
                 continue;
             } else if (hostAgentLLMResult.stream) {
-                const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
+                // <<< SỬA ĐỔI QUAN TRỌNG: Đo TTFT bên trong processAndEmitStream >>>
+                const streamOutput = await processAndEmitStream(
+                    hostAgentLLMResult.stream,
+                    requestId, // Truyền requestId vào
+                    logger     // Truyền logger vào
+                );
 
-                // <<< THÊM MỚI: Ghi log và gọi callback sau khi AI trả về >>>
-                const aiCallEndTime = performance.now();
+                const aiStreamEndTime = performance.now();
                 if (logger) {
                     logger.info({
                         event: 'performance_log',
-                        stage: 'ai_call_end',
+                        stage: 'ai_stream_completed',
                         requestId,
+                        details: { turn: currentHostTurn },
                         metrics: {
-                            duration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
+                            // <<< SỬA ĐỔI: Dùng aiCallEndTime thay vì aiStreamEndTime để nhất quán >>>
+                            totalStreamDuration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
                         }
-                    }, `Gemini API stream finished.`);
+                    }, `Gemini API stream finished for turn ${currentHostTurn}.`);
                 }
 
+
+
                 if (performanceCallback && (socket as any).requestStartTime) {
+                    // Callback vẫn có thể báo cáo tổng thời gian AI
                     performanceCallback({
                         prep: aiCallStartTime - (socket as any).requestStartTime,
-                        ai: aiCallEndTime - aiCallStartTime
+                        ai: aiStreamEndTime - aiCallStartTime
                     });
                 }
                 // <<< KẾT THÚC THÊM MỚI >>>

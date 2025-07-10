@@ -65,7 +65,14 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results) => 
     const eventName = logEntry.event as string | undefined;
     const batchRequestId = logEntry.batchRequestId as string | undefined;
 
-    switch (eventName) {
+    // --- BỔ SUNG LOGIC: Đảm bảo request object tồn tại ---
+    if (!batchRequestId || !results.requests[batchRequestId]) {
+        return; // Không thể cập nhật nếu không có request ID hoặc request object
+    }
+    const request = results.requests[batchRequestId];
+    // ----------------------------------------------------
+
+      switch (eventName) {
         case 'csv_record_processed_for_writing':
             fileOutput.csvRecordsAttempted = (fileOutput.csvRecordsAttempted || 0) + 1;
             break;
@@ -73,17 +80,20 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results) => 
             const recordsWritten = logEntry.recordsWrittenToCsv ?? logEntry.context?.recordsWrittenToCsv ?? -1;
             if (recordsWritten > 0 || logEntry.context?.allowEmptyFile) {
                 fileOutput.csvFileGenerated = true;
+                // --- BỔ SUNG LOGIC: Đánh dấu request có file CSV ---
+                request.hasCsvOutput = true;
             } else if (recordsWritten === 0 && !logEntry.context?.allowEmptyFile) {
                 fileOutput.csvFileGenerated = false;
+                request.hasCsvOutput = false; // Đánh dấu không có file
                 fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
             }
             break;
         case 'csv_stream_collect_failed':
         case 'csv_generation_pipeline_failed':
             fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
-            if (batchRequestId && results.requests[batchRequestId]) {
-                results.requests[batchRequestId].csvOutputStreamFailed = true;
-            }
+            request.csvOutputStreamFailed = true;
+            // --- BỔ SUNG LOGIC: Đánh dấu request không có file CSV ---
+            request.hasCsvOutput = false;
             const errorSource = logEntry.err || logEntry;
             const keyForAggregation = normalizeErrorKey(errorSource);
             results.errorsAggregated[keyForAggregation] = (results.errorsAggregated[keyForAggregation] || 0) + 1;
@@ -91,9 +101,9 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results) => 
         case 'csv_generation_failed_or_empty':
             if (!logEntry.context?.allowEmptyFileIfNoRecords || fileOutput.csvRecordsAttempted > 0) {
                 fileOutput.csvPipelineFailures = (fileOutput.csvPipelineFailures || 0) + 1;
-                if (batchRequestId && results.requests[batchRequestId]) {
-                    results.requests[batchRequestId].csvOutputStreamFailed = true;
-                }
+                request.csvOutputStreamFailed = true;
+                // --- BỔ SUNG LOGIC: Đánh dấu request không có file CSV ---
+                request.hasCsvOutput = false;
                 const errorSourceFc = logEntry.err || logEntry;
                 const keyForAggregationFc = normalizeErrorKey(errorSourceFc);
                 results.errorsAggregated[keyForAggregationFc] = (results.errorsAggregated[keyForAggregationFc] || 0) + 1;
@@ -101,6 +111,8 @@ export const handleCsvProcessingEvent: LogEventHandler = (logEntry, results) => 
             break;
         case 'csv_generation_empty_but_file_exists':
             fileOutput.csvFileGenerated = true;
+            // --- BỔ SUNG LOGIC: Đánh dấu request có file CSV ---
+            request.hasCsvOutput = true;
             break;
     }
 };

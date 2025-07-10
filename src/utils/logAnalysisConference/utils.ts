@@ -73,6 +73,7 @@ export const initializeConferenceDetail = (batchRequestId: string, acronym: stri
         gemini_cfp_success: null,
         gemini_cfp_cache_used: null,
     },
+    timings: {}, // Khởi tạo là một object rỗng
     errors: [],
     dataQualityInsights: [],
     finalResultPreview: undefined,

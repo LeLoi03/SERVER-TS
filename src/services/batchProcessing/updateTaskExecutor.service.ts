@@ -113,8 +113,8 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
 
             // +++ TRUYỀN URL ẢNH VÀO SERVICE API +++
             const apiResults = await this.finalExtractionApiService.execute(
-                contentSendToAPI, 
-                batchItemIndex, 
+                contentSendToAPI,
+                batchItemIndex,
                 batchInput.conferenceTitle,
                 originalAcronym,
                 safeInternalAcronymForFiles,
@@ -160,8 +160,17 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 logger.child({ subOperation: 'append_final_update_record' }),
                 requestStateService
             );
+
+
+
             logger.info({ event: 'batch_task_finish_success', flow: 'update' });
             logger.info({ event: 'task_finish', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+
+
+            logger.info({ event: 'TASK_END', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
+            return true;
+
+
 
             return true;
         } catch (error: any) {
@@ -177,6 +186,11 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
             const timestamp = new Date().toISOString();
             const logMessage = `[${timestamp}] Error in _executeBatchTaskForUpdate for ${batchInput.conferenceAcronym} (BatchItemIndex: ${batchItemIndex}, BatchRequestID: ${batchRequestIdForTask}): ${error instanceof Error ? error.message : String(error)}\nStack: ${error?.stack}\n`;
             this.fileSystemService.appendFile(this.errorLogPath, logMessage, logger.child({ operation: 'log_update_task_error' })).catch(e => logger.error({ err: e, event: 'failed_to_write_to_error_log' }));
+
+
+            logger.error({ event: 'TASK_END', success: false, /* ... */ }, `Finished processing conference task with failure.`);
+
+
             return false;
         }
     }

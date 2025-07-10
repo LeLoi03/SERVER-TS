@@ -31,20 +31,18 @@ export function finalizeConference(
 ): void {
     const { parentRequest, conferenceLastTimestamp } = context;
 
-    // Logic 1: Detect and handle "stuck" tasks (from original STAGE 1)
-    // A task is considered stuck if its parent request has finished, but the task
-    // itself is still in a processing state without a recent log entry.
+    // --- LOGIC 1-3: GIỮ NGUYÊN ---
+    // Logic 1: Detect and handle "stuck" tasks
     if (parentRequest.endTime && !conference.endTime && (conference.status === 'processing' || conference.status === 'processed_ok')) {
+        // ... (giữ nguyên logic này)
         const requestEndTimeMillis = new Date(parentRequest.endTime).getTime();
         const confStartTimeMillis = conference.startTime ? new Date(conference.startTime).getTime() : null;
 
         let isConsideredStuck = true;
         if (conferenceLastTimestamp !== null) {
-            // If the last log is before or at the start time, it's not considered active.
             if (confStartTimeMillis !== null && conferenceLastTimestamp <= confStartTimeMillis) {
                 isConsideredStuck = false;
             } else {
-                // If the last log was very close to the request's end, it might just be a timing issue.
                 const MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS = 3000;
                 if ((requestEndTimeMillis - conferenceLastTimestamp) < MAX_ALLOWED_SILENCE_BEFORE_REQUEST_END_MS) {
                     isConsideredStuck = false;
@@ -82,7 +80,7 @@ export function finalizeConference(
         }
     }
 
-    // Logic 2: Detect critical internal failures (from original STAGE 2)
+    // Logic 2: Detect critical internal failures
     let isCriticallyFailedInternally = false;
     let criticalFailureReason = "";
     let criticalFailureEventKey = "";
@@ -110,27 +108,16 @@ export function finalizeConference(
     if (isCriticallyFailedInternally && conference.status !== 'failed' && conference.status !== 'skipped') {
         const oldStatus = conference.status;
         conference.status = 'failed';
-
-        // ==================================================================
-        // <<<< SỬA LỖI TẠI ĐÂY >>>>
-        // ==================================================================
-        // Lấy timestamp của hoạt động cuối cùng của conference này làm thời gian thất bại.
-        // Đây là thời điểm chính xác nhất, thay vì lấy của parent request.
         const lastActivityTimestamp = conferenceLastTimestamp ? new Date(conferenceLastTimestamp).toISOString() : null;
-
-        // Ưu tiên endTime đã có, sau đó là lastActivityTimestamp, cuối cùng mới fallback về parentRequest.endTime
         const failureTimestamp = conference.endTime || lastActivityTimestamp || parentRequest.endTime || new Date().toISOString();
         
         if (!conference.endTime || (conference.endTime && new Date(failureTimestamp).getTime() > new Date(conference.endTime).getTime())) {
             conference.endTime = failureTimestamp;
         }
-        // ==================================================================
-        // <<<< KẾT THÚC SỬA LỖI >>>>
-        // ==================================================================
 
         addConferenceError(
             conference,
-            conference.endTime, // Sử dụng endTime vừa được gán chính xác
+            conference.endTime,
             `Task marked as failed in final metrics due to: ${criticalFailureReason}.`,
             {
                 defaultMessage: `Conference task status overridden to failed. Original status: ${oldStatus}.`,
@@ -142,8 +129,9 @@ export function finalizeConference(
         );
     }
 
-    // Logic 3: Propagate request-level CSV stream failure (from original STAGE 2)
+    // Logic 3: Propagate request-level CSV stream failure
     if (parentRequest.csvOutputStreamFailed === true) {
+        // ... (giữ nguyên logic này)
         if (conference.csvWriteSuccess !== true && conference.status !== 'failed' && conference.status !== 'skipped') {
             const oldConfStatus = conference.status;
             conference.status = 'failed';
@@ -171,8 +159,7 @@ export function finalizeConference(
         }
     }
 
-    // Logic 4: Calculate final duration (from original STAGE 2)
-    // Logic này sẽ tự động hoạt động chính xác sau khi conference.endTime đã được sửa ở trên.
+    // --- LOGIC 4: TÍNH TOÁN LẠI DURATION TỔNG (GIỮ NGUYÊN) ---
     if (!conference.durationSeconds && conference.startTime && conference.endTime) {
         try {
             const startMillis = new Date(conference.startTime).getTime();
@@ -184,6 +171,43 @@ export function finalizeConference(
             }
         } catch (e) {
             conference.durationSeconds = 0;
+        }
+    }
+
+    // --- LOGIC 5: BỔ SUNG TÍNH TOÁN VÀ LÀM GIÀU DỮ LIỆU THỜI GIAN CHI TIẾT ---
+    // Logic này sẽ được thực thi sau khi tất cả các trạng thái và thời gian kết thúc đã được xác định.
+    if (conference.timings) {
+        const timings = conference.timings;
+        let sumOfStepsMs = 0;
+
+        // 5.1. Tính tổng thời gian của các bước đã được ghi nhận
+        // Dùng một vòng lặp để duyệt qua tất cả các key trong `timings`
+        for (const key in timings) {
+            // Đảm bảo key thuộc về chính object đó và giá trị là một số
+            if (Object.prototype.hasOwnProperty.call(timings, key)) {
+                const duration = (timings as any)[key];
+                if (typeof duration === 'number') {
+                    sumOfStepsMs += duration;
+                }
+            }
+        }
+
+        // 5.2. Thêm trường tổng vào đối tượng timings để dễ xem
+        if (sumOfStepsMs > 0) {
+            // Sử dụng `any` để thêm thuộc tính động vào `timings`
+            (timings as any).totalTrackedStepsDurationMs = Math.round(sumOfStepsMs);
+        }
+
+        // 5.3. So sánh với tổng thời gian của task để tìm thời gian không được theo dõi
+        if (conference.durationSeconds && conference.durationSeconds > 0) {
+            const totalDurationMs = conference.durationSeconds * 1000;
+            const unaccountedMs = totalDurationMs - sumOfStepsMs;
+
+            // Chỉ hiển thị nếu có sự chênh lệch đáng kể (ví dụ > 100ms)
+            // để tránh nhiễu do sai số làm tròn hoặc độ trễ nhỏ giữa các log.
+            if (unaccountedMs > 100) {
+                (timings as any).unaccountedDurationMs = Math.round(unaccountedMs);
+            }
         }
     }
 }

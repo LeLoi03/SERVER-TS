@@ -34,7 +34,6 @@ export class JournalLogReaderService {
                 requestIds = files
                     .filter(file => file.endsWith('.log'))
                     .map(file => path.basename(file, '.log'));
-                logger.info(`Found ${requestIds.length} journal request log files in ${this.journalRequestLogBaseDir}.`);
             } else {
                 logger.warn(`Journal request log directory not found: ${this.journalRequestLogBaseDir}. No live request IDs will be discovered.`);
             }

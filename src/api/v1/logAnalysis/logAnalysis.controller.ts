@@ -10,6 +10,8 @@ import { JournalLogAnalysisResult } from '../../../types/logAnalysisJournal/logA
 import { LoggingService } from '../../../services/logging.service';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
 import { LogDeletionService, RequestDeletionResult, CrawlerType } from '../../../services/logDeletion.service';
+// --- THÊM IMPORT MỚI ---
+import { LogDownloadService } from '../../../services/logDownload.service';
 import { ChatbotLogAnalysisService } from '../../../services/chatbotAnalysis.service';
 
 const getControllerLogger = (req: Request, routeName: string): Logger => {
@@ -26,21 +28,12 @@ const getControllerLogger = (req: Request, routeName: string): Logger => {
 const handleAnalysisResponse = (
     res: Response,
     results: ConferenceLogAnalysisResult | JournalLogAnalysisResult,
-    logger: Logger
 ) => {
-    logger.info({
-        finalStatus: results.status,
-        analyzedIdsCount: results.analyzedRequestIds?.length,
-        requestIdParam: results.filterRequestId,
-        errorMessage: results.errorMessage
-    }, "Analysis processing complete. Sending response.");
     res.status(200).json(results);
 };
 
 export const getLatestConferenceAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const logger = getControllerLogger(req, 'getLatestConferenceAnalysis');
-    logger.info({ query: req.query }, "Request received for latest conference analysis.");
-
     const conferenceAnalysisService = container.resolve(ConferenceLogAnalysisService);
 
     try {
@@ -55,7 +48,7 @@ export const getLatestConferenceAnalysis = async (req: Request, res: Response, n
             ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
             ? parseInt(filterEndTimeStr, 10) : undefined;
-        
+
         // SỬA LỖI Ở ĐÂY: Gán giá trị từ textFilterQuery
         const textFilterParam = typeof textFilterQuery === 'string' ? textFilterQuery : undefined;
 
@@ -64,7 +57,7 @@ export const getLatestConferenceAnalysis = async (req: Request, res: Response, n
             filterStartTime, filterEndTime, textFilterParam // Truyền đúng tham số
         );
 
-        handleAnalysisResponse(res, results, logger);
+        handleAnalysisResponse(res, results);
 
     } catch (error: unknown) {
         const { message } = getErrorMessageAndStack(error);
@@ -91,7 +84,7 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
             ? parseInt(filterStartTimeStr, 10) : undefined;
         const filterEndTime = typeof filterEndTimeStr === 'string' && !isNaN(parseInt(filterEndTimeStr, 10))
             ? parseInt(filterEndTimeStr, 10) : undefined;
-            
+
         // SỬA LỖI Ở ĐÂY: Gán giá trị từ textFilterQuery
         const requestIdParam = typeof textFilterQuery === 'string' ? textFilterQuery : undefined;
 
@@ -100,7 +93,7 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
             filterStartTime, filterEndTime, requestIdParam // Truyền đúng tham số
         );
 
-        handleAnalysisResponse(res, results, logger);
+        handleAnalysisResponse(res, results);
 
     } catch (error: unknown) {
         const { message } = getErrorMessageAndStack(error);
@@ -112,7 +105,7 @@ export const getLatestJournalAnalysis = async (req: Request, res: Response, next
 // Schema for delete request validation
 const deleteRequestsSchema = z.object({
     requestIds: z.array(z.string().min(1, "Request ID cannot be empty"))
-                   .min(1, "At least one requestId must be provided"),
+        .min(1, "At least one requestId must be provided"),
     crawlerType: z.enum(['conference', 'journal']),
 });
 
@@ -144,9 +137,9 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
         logger.info({ results, allSucceeded, someSucceeded }, "Deletion processing complete.");
 
         if (allSucceeded) {
-            res.status(200).json({ 
-                message: `Successfully deleted data for all ${results.length} request(s).`, 
-                results 
+            res.status(200).json({
+                message: `Successfully deleted data for all ${results.length} request(s).`,
+                results
             });
         } else if (someSucceeded) {
             res.status(207).json({
@@ -154,9 +147,9 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
                 results
             });
         } else {
-            res.status(500).json({ 
-                message: "Failed to delete data for any of the specified requests. See results for details.", 
-                results 
+            res.status(500).json({
+                message: "Failed to delete data for any of the specified requests. See results for details.",
+                results
             });
         }
 
@@ -168,7 +161,51 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
 };
 
 
+// --- BỔ SUNG CONTROLLER MỚI ĐỂ DOWNLOAD ---
 
+// Schema để validate request download
+const downloadRequestSchema = z.object({
+    requestId: z.string().min(1, "requestId cannot be empty"),
+    crawlerType: z.enum(['conference', 'journal']),
+});
+
+export const downloadLogOutput = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const logger = getControllerLogger(req, 'downloadLogOutput');
+
+    // Validate query params thay vì body
+    const validation = downloadRequestSchema.safeParse(req.query);
+    if (!validation.success) {
+        logger.warn({ errors: validation.error.format(), query: req.query }, "Invalid request query for downloading output.");
+        res.status(400).json({ message: "Invalid input", errors: validation.error.format() });
+        return;
+    }
+
+    const { requestId, crawlerType } = validation.data;
+    logger.info({ requestId, crawlerType }, "Request received to download log output file.");
+
+    try {
+        const downloadService = container.resolve(LogDownloadService);
+        const result = await downloadService.getOutputFile(requestId, crawlerType as CrawlerType);
+
+        if (result.success && result.content && result.fileName) {
+            // Thiết lập header để trình duyệt hiểu đây là một file download
+            res.setHeader('Content-Disposition', `attachment; filename=${result.fileName}`);
+            res.setHeader('Content-Type', 'text/csv');
+            res.setHeader('Content-Length', result.content.length);
+
+            // Gửi nội dung file
+            res.status(200).send(result.content);
+        } else {
+            // Gửi lỗi với status code tương ứng từ service
+            res.status(result.statusCode || 500).json({ message: result.error });
+        }
+
+    } catch (error: unknown) {
+        const { message, stack } = getErrorMessageAndStack(error);
+        logger.error({ err: error, errorMessage: message, stack }, "Unhandled error in downloadLogOutput.");
+        next(error);
+    }
+};
 
 
 
@@ -178,18 +215,9 @@ export const deleteLogAnalysisRequests = async (req: Request, res: Response, nex
  */
 export const getLatestChatbotAnalysis = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     const logger = getControllerLogger(req, 'getLatestChatbotAnalysis');
-    logger.info("Request received for latest chatbot analysis.");
-
     const chatbotAnalysisService = container.resolve(ChatbotLogAnalysisService);
-
     try {
         const results = await chatbotAnalysisService.performAnalysis();
-
-        logger.info({
-            finalStatus: results.status,
-            analyzedRequestCount: results.analyzedRequests.length,
-        }, "Chatbot analysis processing complete. Sending response.");
-        
         res.status(200).json(results);
 
     } catch (error: unknown) {

@@ -3,8 +3,7 @@ import { Router } from 'express';
 import {
     getLatestConferenceAnalysis,
     getLatestJournalAnalysis,
-    getLatestChatbotAnalysis, // <<< THÊM MỚI
-    deleteLogAnalysisRequests,
+    getLatestChatbotAnalysis
 } from './logAnalysis.controller';
 
 const createLogAnalysisRouter = (): Router => {
@@ -18,9 +17,6 @@ const createLogAnalysisRouter = (): Router => {
 
     // --- Chatbot Log Analysis Route ---
     router.get('/chatbot/latest', getLatestChatbotAnalysis); // <<< THÊM MỚI
-
-    // --- Deletion Route ---
-    // router.delete('/requests', deleteLogAnalysisRequests);
 
     return router;
 }

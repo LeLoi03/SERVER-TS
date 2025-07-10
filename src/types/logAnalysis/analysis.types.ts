@@ -64,6 +64,22 @@ export interface OverallAnalysis {
  */
 export type ConferenceCrawlType = 'crawl' | 'update';
 
+
+
+/**
+ * NEW: Interface to store detailed timings for each step of a conference task.
+ */
+export interface ConferenceTaskTimings {
+    googleSearchDurationMs?: number;
+    crawlInitialLinksDurationMs?: number; // Save flow: crawl links from Google
+    crawlUpdateLinksDurationMs?: number;  // Update flow: crawl main, cfp, imp
+    apiDetermineLinksDurationMs?: number; // Save flow: API 1
+    crawlDeterminedLinksDurationMs?: number; // Save flow: crawl official site
+    apiFinalExtractionDurationMs?: number; // Both flows: API extract + cfp
+}
+
+
+
 /**
  * @interface ConferenceAnalysisDetail
  * @description Phân tích chi tiết quá trình xử lý của một hội nghị cụ thể trong một lô.
@@ -182,6 +198,10 @@ export interface ConferenceAnalysisDetail {
         gemini_cfp_success?: boolean | null;
         gemini_cfp_cache_used?: boolean | null;
     };
+    /**
+     * @property {ConferenceTaskTimings} timings - Detailed timings for each sub-step of the task.
+     */
+    timings: ConferenceTaskTimings;
     /**
      * @property {LogError[]} errors - Một mảng các lỗi cụ thể gặp phải cho hội nghị này trong quá trình xử lý.
      */

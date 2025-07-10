@@ -1,0 +1,32 @@
+[
+  {
+    "frontendMessageId": "20594fa3-62c7-4fe2-b721-6f90f4268102",
+    "payload": {
+      "question": "Hello",
+      "model": "gemini-2.0-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 1898,
+    "response": "Hi there! How can I help you today?\n"
+  },
+  {
+    "frontendMessageId": "e59ec463-2957-49e2-819f-dd47007bf529",
+    "payload": {
+      "question": "What things you can do?",
+      "model": "gemini-2.0-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2112,
+    "response": "I can help you with various tasks related to conferences and journals, such as:\n\n*   Finding information about specific conferences (details, dates, topics, etc.)\n*   Following or unfollowing conferences\n*   Adding or removing conferences from your calendar\n*   Adding or removing conferences from your blacklist\n*   Listing conferences you are following or that are in your calendar/blacklist\n*   Navigating to conference websites or opening map locations\n*   Contacting administrators with questions, feedback, or reports\n*   Finding website information such as registration, login, password reset, how to follow conference, this website features (GCJH), ...\n\nI can also analyze uploaded files and images to answer your questions about their content. Just let me know what you need!\n"
+  },
+  {
+    "frontendMessageId": "d1c6c0b5-e038-4215-893d-ad3ab7ef182d",
+    "payload": {
+      "question": "Find conference with Rank B in Vietnam",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2782,
+    "response": "Here are the Rank B conferences in Vietnam:\n\n*   **International Natural Language Generation Conference (INLG)**\n    *   Location: Hanoi, Vietnam\n    *   Topics: Natural Language Generation\n    *   Dates: October 29 - November 2, 2025\n    *   Website: https://2025.inlgmeeting.org/\n\n*   **Asian Conference on Computer Vision (ACCV)**\n    *   Location: Hanoi, Vietnam\n    *   Topics: Computer Vision\n    *   Dates: December 8 - 12, 2024\n    *   Website: https://accv2024.org/\n\n*   **International Conference on Computational Collective Intelligence (ICCCI)**\n    *   Location: Ho Chi Minh City, Vietnam\n    *   Topics: Fuzzy Computation, Evolutionary Computation, Neural Computation, Explainable AI\n    *   Dates: November 12 - 15, 2025\n    *   Website: https://iccci.pwr.edu.pl/2025/"
+  }
+]

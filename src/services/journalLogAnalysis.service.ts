@@ -33,7 +33,6 @@ export class JournalLogAnalysisService {
             service: 'JournalLogAnalysisService'
         });
         this.journalRequestLogBaseDir = this.configService.appConfiguration.journalRequestLogDirectory;
-        this.serviceLogger.info(`JournalLogAnalysisService (Orchestrator) initialized. Request log base dir: ${this.journalRequestLogBaseDir}`);
 
         if (!fsSync.existsSync(this.journalRequestLogBaseDir)) {
             this.serviceLogger.warn({ event: 'journal_request_log_dir_not_found_on_init', dirPath: this.journalRequestLogBaseDir }, `Journal request log directory not found.`);
@@ -48,21 +47,11 @@ export class JournalLogAnalysisService {
         filterEndTimeInput?: number,   // Unix ms
         filterRequestId?: string
     ): Promise<JournalLogAnalysisResult> {
-        const logContext = {
-            function: 'performJournalAnalysisAndUpdate',
-            filterRequestId,
-            filterStartTime: filterStartTimeInput ? new Date(filterStartTimeInput).toISOString() : undefined,
-            filterEndTime: filterEndTimeInput ? new Date(filterEndTimeInput).toISOString() : undefined
-        };
-        const logger = this.serviceLogger.child(logContext);
-
         if (filterRequestId) {
             // Trường hợp 1: Phân tích một request ID cụ thể
-            logger.info(`Orchestrating analysis for single journal request ID: ${filterRequestId}`);
             return this.analyzeSingleRequest(filterRequestId, filterStartTimeInput, filterEndTimeInput);
         } else {
             // Trường hợp 2: Tổng hợp tất cả các request
-            logger.info(`Orchestrating aggregation for all journal requests.`);
             return this.aggregateAllRequests(filterStartTimeInput, filterEndTimeInput);
         }
     }
@@ -128,7 +117,6 @@ export class JournalLogAnalysisService {
         const liveRequestIds = await this.logReader.discoverRequestIdsFromLogFiles();
         const allUniqueRequestIds = Array.from(new Set([...cachedRequestIds, ...liveRequestIds]));
 
-        logger.info(`Total unique journal request IDs to aggregate: ${allUniqueRequestIds.length}`);
 
         // 2. Định nghĩa một hàm "fetcher" để Aggregator sử dụng.
         const analysisFetcher = (reqId: string): Promise<JournalLogAnalysisResult> => {

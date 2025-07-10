@@ -3,7 +3,6 @@ import { Socket, Server as SocketIOServer } from 'socket.io';
 import { container } from 'tsyringe';
 import { ConversationHistoryService, ConversationMetadata } from '../../chatbot/services/conversationHistory.service';
 import { LoggingService } from '../../services/logging.service'; // <<< ĐÃ THÊM
-import { Logger } from 'pino'; // <<< ĐÃ THÊM
 
 // --- Import sub-handler registration functions ---
 import { registerConversationHandlers } from './conversation.handler';
@@ -34,7 +33,7 @@ export const registerCoreHandlers = (
 
     // <<< SỬA ĐỔI: Lấy logger từ DI container >>>
     const loggingService = container.resolve(LoggingService);
-    const logger = loggingService.getLogger('app');
+    const logger = loggingService.getLogger('chatbot');
     // <<< KẾT THÚC SỬA ĐỔI >>>
 
     let conversationHistoryService: ConversationHistoryService;

@@ -82,6 +82,7 @@ export class ConferenceProcessorService {
 
         const modelsDesc = `DL: ${apiModels.determineLinks}, EI: ${apiModels.extractInfo}, EC: ${apiModels.extractCfp}`;
         taskLogger.info({ event: 'task_start', modelsUsed: modelsDesc }, `Starting processing for conference: "${confTitle}" (${confAcronym}) using API models (${modelsDesc}).`);
+        taskLogger.info({ event: 'task_branch_decided', flow: crawlType }, `Processing flow determined: ${crawlType}.`);
 
         let taskSuccessfullyCompleted = true;
         let specificTaskError: Error | null = null;
@@ -128,7 +129,12 @@ export class ConferenceProcessorService {
                     .replace(/\${Year1}/g, String(this.year1));
 
                 try {
+                    const searchStartTime = performance.now();
+                    taskLogger.info({ event: 'GOOGLE_SEARCH_START' });
                     const searchResults: GoogleSearchResult[] = await this.googleSearchService.search(searchQuery, taskLogger);
+                    const searchDurationMs = performance.now() - searchStartTime;
+                    taskLogger.info({ event: 'GOOGLE_SEARCH_END', durationMs: Math.round(searchDurationMs) });
+
                     const filteredResults = filterSearchResults(searchResults, this.unwantedDomains, this.skipKeywords);
                     const limitedResults = filteredResults.slice(0, this.maxLinks);
                     searchResultsLinks = limitedResults.map(res => res.link);

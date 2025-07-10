@@ -1,6 +1,6 @@
 // src/api/v1/crawl/crawl.controller.ts
 import { Request, Response } from 'express';
-import { container as rootContainer } from 'tsyringe'; 
+import { container as rootContainer } from 'tsyringe';
 import { Logger } from 'pino';
 import { CrawlOrchestratorService } from '../../../services/crawlOrchestrator.service';
 import { LoggingService, RequestSpecificLoggerType } from '../../../services/logging.service';
@@ -8,9 +8,9 @@ import { ConfigService } from '../../../config/config.service';
 import { LogAnalysisCacheService } from '../../../services/logAnalysisCache.service';
 import { ProcessedRowData, ApiModels, CrawlRequestPayload } from '../../../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../../../utils/errorUtils';
-import { crawlJournals } from '../../../journal/crawlJournals'; 
-import { CrawlProcessManagerService } from '../../../services/crawlProcessManager.service'; 
-import { RequestStateService } from '../../../services/requestState.service'; 
+import { crawlJournals } from '../../../journal/crawlJournals';
+import { CrawlProcessManagerService } from '../../../services/crawlProcessManager.service';
+import { RequestStateService } from '../../../services/requestState.service';
 
 const EXPECTED_API_MODEL_KEYS: (keyof ApiModels)[] = ["determineLinks", "extractInfo", "extractCfp"];
 const DEFAULT_API_MODELS: ApiModels = { determineLinks: 'non-tuned', extractInfo: 'non-tuned', extractCfp: 'non-tuned' };
@@ -20,11 +20,11 @@ async function cleanupRequestResources(
     cacheService: LogAnalysisCacheService,
     type: RequestSpecificLoggerType,
     batchRequestId: string,
-    requestLogger: Logger 
+    requestLogger: Logger
 ): Promise<void> {
     const cleanupPhaseLogger = loggingService.getLogger('app', {
-        service: 'CrawlControllerCleanup', 
-        originalBatchRequestId: batchRequestId, 
+        service: 'CrawlControllerCleanup',
+        originalBatchRequestId: batchRequestId,
         cleanupType: type
     });
     cleanupPhaseLogger.info(`Initiating cleanup for request resources (ID: ${batchRequestId}).`);
@@ -39,7 +39,7 @@ async function cleanupRequestResources(
         requestLogger.info({ batchRequestId, type, event: 'cleanup_logger_close_start' }, `Closing request-specific logger.`);
         await loggingService.closeRequestSpecificLogger(type, batchRequestId);
     } catch (closeLoggerError) {
-        const { message, stack } = getErrorMessageAndStack(closeLoggerError);        
+        const { message, stack } = getErrorMessageAndStack(closeLoggerError);
         cleanupPhaseLogger.error({ err: { message, stack }, batchRequestId, type, errorMessage: message }, `CRITICAL: Error closing request-specific logger during cleanup. This might lead to resource leaks.`);
     }
     cleanupPhaseLogger.info(`Cleanup for request resources completed (ID: ${batchRequestId}).`);
@@ -52,6 +52,9 @@ async function cleanupRequestResources(
  * - `mode=async` (non-blocking, mặc định): Trả về 202 Accepted ngay lập tức. Dùng cho crawl hàng loạt từ Admin UI.
  */
 export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestPayload>, res: Response): Promise<void> {
+
+    const requestStartTime = performance.now(); // Bắt đầu đếm giờ
+
     const requestContainer = rootContainer.createChildContainer();
     const loggingService = requestContainer.resolve(LoggingService);
     const currentBatchRequestId = (req as any).id || `req-conf-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
@@ -68,8 +71,8 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         requestDescription: description,
         itemCount: conferenceList?.length,
         modelsReceived: modelsFromPayload,
-        recordFile: recordFile === true, 
-        executionMode: executionMode, 
+        recordFile: recordFile === true,
+        executionMode: executionMode,
     }, "Received request.");
 
     const requestStateService = requestContainer.resolve(RequestStateService);
@@ -78,13 +81,13 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
     const logAnalysisCacheService = requestContainer.resolve(LogAnalysisCacheService);
 
     const performCrawl = async (
-        orchestrator: CrawlOrchestratorService 
+        orchestrator: CrawlOrchestratorService
     ): Promise<ProcessedRowData[] | void> => {
         routeLogger.info({ description }, "Beginning processing conference crawl.");
         const dataSource = (req.query.dataSource as string) || 'client';
         if (dataSource !== 'client') {
             routeLogger.warn({ dataSource }, "Unsupported 'dataSource'. Only 'client' is supported.");
-            throw new Error("Invalid 'dataSource'. Only 'client' is supported."); 
+            throw new Error("Invalid 'dataSource'. Only 'client' is supported.");
         }
         let parsedApiModels: ApiModels = { ...DEFAULT_API_MODELS };
         if (typeof modelsFromPayload === 'object' && modelsFromPayload !== null) {
@@ -110,22 +113,22 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         }
         if (conferenceList.length === 0) {
             routeLogger.warn("Conference list ('items') is empty. No processing will be performed.");
-            return []; 
+            return [];
         }
         const processedResults: ProcessedRowData[] = await orchestrator.run(
             conferenceList,
             routeLogger,
             parsedApiModels,
             currentBatchRequestId,
-            requestStateService, 
-            requestContainer 
+            requestStateService,
+            requestContainer
 
         );
         const modelsUsedDesc = `Determine Links: ${parsedApiModels.determineLinks}, Extract Info: ${parsedApiModels.extractInfo}, Extract CFP: ${parsedApiModels.extractCfp}`;
         routeLogger.info({
             event: 'processing_finished_successfully',
             context: {
-                totalInputConferences: conferenceList.length, 
+                totalInputConferences: conferenceList.length,
                 processedResults: processedResults,
                 apiModelsUsed: parsedApiModels,
                 requestDescription: description,
@@ -138,7 +141,8 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         let requestProcessed = false;
         try {
             requestProcessed = true;
-            const innerOperationStartTime = Date.now();
+
+            // const innerOperationStartTime = Date.now();
             const processedResults = await performCrawl(crawlOrchestrator);
             if (typeof processedResults === 'undefined') {
                 if (!res.headersSent) {
@@ -146,13 +150,21 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
                 }
                 return;
             }
-            const operationEndTime = Date.now();
-            const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+            // const operationEndTime = Date.now();
+            // const runTimeSeconds = ((operationEndTime - innerOperationStartTime) / 1000).toFixed(2);
+
+            const totalRequestDurationMs = performance.now() - requestStartTime;
+
+            routeLogger.info({
+                event: 'REQUEST_COMPLETED',
+                durationMs: Math.round(totalRequestDurationMs)
+            }, `Sync request completed and response sent.`);
+
             if (!res.headersSent) {
                 res.status(200).json({
                     message: `Conference processing completed. Orchestrator returned ${processedResults.length} records.`,
-                    runtime: `${runTimeSeconds} s`,
-                    data: processedResults, 
+                    runtime: `${(totalRequestDurationMs / 1000).toFixed(2)} s`, // Sử dụng duration đã tính
+                    data: processedResults,
                     description: description,
                     batchRequestId: currentBatchRequestId
                 });
@@ -181,6 +193,12 @@ export async function handleCrawlConferences(req: Request<{}, any, CrawlRequestP
         (async () => {
             try {
                 await performCrawl(crawlOrchestrator);
+                const totalRequestDurationMs = performance.now() - requestStartTime;
+                routeLogger.info({
+                    event: 'REQUEST_COMPLETED_ASYNC',
+                    durationMs: Math.round(totalRequestDurationMs)
+                }, `Async background processing completed.`);
+                
             } catch (error) {
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
                 routeLogger.error({
@@ -243,12 +261,12 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
     const logAnalysisCacheService = requestContainer.resolve(LogAnalysisCacheService);
     const configService = requestContainer.resolve(ConfigService);
     let requestProcessed = false;
-    let isClientDataMissingError = false; 
+    let isClientDataMissingError = false;
 
     try {
-        
-        requestProcessed = true; 
-        routeLogger.info("Starting journal crawling..."); 
+
+        requestProcessed = true;
+        routeLogger.info("Starting journal crawling...");
 
         let dataSource: 'scimago' | 'client' = 'client';
         const dataSourceQuery = req.query.dataSource as string;
@@ -265,8 +283,8 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
                     res.status(400).json({ message: "For 'client' dataSource, a non-empty CSV string is required in request body." });
                 }
                 isClientDataMissingError = true;
-                requestProcessed = false; 
-                
+                requestProcessed = false;
+
                 throw new Error("Client data missing for journal crawl.");
             }
         } else if (dataSourceQuery && dataSourceQuery !== 'scimago') {
@@ -276,7 +294,7 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
         }
 
         const innerOperationStartTime = Date.now();
-        
+
         try {
             await crawlJournals(dataSource, clientData, routeLogger, configService);
             routeLogger.info("Journal crawling completed by the service.");
@@ -296,24 +314,24 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
             routeLogger.info({ statusCode: res.statusCode }, "Sent successful response.");
 
         } catch (processingError: unknown) {
-            
+
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(processingError);
             routeLogger.error({
                 err: { message: errorMessage, stack: errorStack },
-                event: 'journal_processing_failed_in_scope', 
+                event: 'journal_processing_failed_in_scope',
             }, "Journal crawling failed.");
             if (!res.headersSent) {
                 res.status(500).json({ message: 'Journal crawling failed.', error: errorMessage });
             }
             routeLogger.warn({ statusCode: res.statusCode }, "Sent error response.");
-            
+
         }
-    } catch (error: unknown) { 
+    } catch (error: unknown) {
         const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
         if (errorMessage === "Client data missing for journal crawl.") {
-            
-            
-            
+
+
+
         } else {
             routeLogger.error(
                 { err: { message: errorMessage, stack: errorStack }, event: 'journal_controller_setup_or_unexpected_error' },
@@ -322,17 +340,17 @@ export async function handleCrawlJournals(req: Request, res: Response): Promise<
             if (!res.headersSent) {
                 res.status(503).json({ message: "Server error during journal crawl request or setup." });
             }
-            
-            
+
+
         }
     } finally {
         if (requestProcessed) {
-            
+
             await cleanupRequestResources(loggingService, logAnalysisCacheService, 'journal', batchRequestId, routeLogger);
         } else {
-            
-            
-            
+
+
+
             try {
                 await loggingService.closeRequestSpecificLogger('journal', batchRequestId);
             } catch (e) {

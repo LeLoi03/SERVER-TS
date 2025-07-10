@@ -10,9 +10,9 @@ import { Writable } from 'stream';
 import { LogDescriptor } from 'pino';
 
 export type LoggerContext = { service?: string; batchRequestId?: string;[key: string]: any };
-export type LoggerType = 'app' | 'conference' | 'journal' | 'saveConferenceEvent' | 'saveJournalEvent';
+export type LoggerType = 'app' | 'conference' | 'journal' | 'saveConferenceEvent' | 'saveJournalEvent' | 'chatbot';
 export type RequestSpecificLoggerType = 'conference' | 'journal';
-export type SharedLoggerType = 'app' | 'saveConferenceEvent' | 'saveJournalEvent';
+export type SharedLoggerType = 'app' | 'saveConferenceEvent' | 'saveJournalEvent' | 'chatbot';
 
 interface RequestLoggerEntry {
     logger: Logger;
@@ -23,6 +23,7 @@ interface RequestLoggerEntry {
 @singleton()
 export class LoggingService {
     private appLoggerInternal!: Logger;
+    private chatbotLoggerInternal!: Logger;
     private saveConferenceEventLoggerInternal!: Logger;
     private saveJournalEventLoggerInternal!: Logger;
 
@@ -31,6 +32,7 @@ export class LoggingService {
 
     private readonly logLevel: LevelWithSilent;
     private readonly appLogFilePathForWriting: string;
+    private readonly chatbotLogFilePathForWriting: string;
     private readonly saveConferenceEventLogFilePathForWriting: string;
     private readonly saveJournalEventLogFilePathForWriting: string;
     private readonly appLoggerForInternalOps: Logger; // Logger riêng cho các hoạt động nội bộ của LoggingService
@@ -42,6 +44,8 @@ export class LoggingService {
         this.logLevel = this.configService.logLevel;
 
         this.appLogFilePathForWriting = this.configService.appLogFilePathForWriting;
+        this.chatbotLogFilePathForWriting = this.configService.chatbotLogFilePathForWriting;
+
         this.saveConferenceEventLogFilePathForWriting = this.configService.getSaveConferenceEventLogFilePath();
         this.saveJournalEventLogFilePathForWriting = this.configService.getSaveJournalEventLogFilePath();
         this.appLoggerForInternalOps = pino({ name: 'LoggingServiceInternal', level: this.logLevel });
@@ -78,11 +82,11 @@ export class LoggingService {
 
         try {
             this.appLoggerInternal = await this.createSharedLogger('app', this.appLogFilePathForWriting, pinoBaseOptions);
+            this.chatbotLoggerInternal = await this.createSharedLogger('chatbot', this.chatbotLogFilePathForWriting, pinoBaseOptions);
             this.saveConferenceEventLoggerInternal = await this.createSharedLogger('saveConferenceEvent', this.saveConferenceEventLogFilePathForWriting, pinoBaseOptions);
             this.saveJournalEventLoggerInternal = await this.createSharedLogger('saveJournalEvent', this.saveJournalEventLogFilePathForWriting, pinoBaseOptions);
 
             this.isInitialized = true;
-            this.appLogger.info({ service: 'LoggingService' }, 'Shared loggers initialized.');
         } catch (error) {
             const { message, stack } = getErrorMessageAndStack(error);
             console.error(`[LoggingService:Initialize] CRITICAL: Failed to initialize shared loggers: ${message}. Stack: ${stack}.`, error);
@@ -400,6 +404,7 @@ export class LoggingService {
             case 'saveConferenceEvent': targetLogger = this.saveConferenceEventLoggerInternal; break;
             case 'saveJournalEvent': targetLogger = this.saveJournalEventLoggerInternal; break;
             case 'app': default: targetLogger = this.appLoggerInternal; break;
+            case 'chatbot': targetLogger = this.chatbotLoggerInternal; break;
         }
 
         if (!targetLogger) {
@@ -415,6 +420,13 @@ export class LoggingService {
         if (this.isShuttingDown) return pino({ name: `ShutdownEmergencyAppLogger-${Date.now()}`, level: 'info' });
         return this.appLoggerInternal;
     }
+
+    public get chatbotLogger(): Logger {
+        if (!this.isInitialized && !this.isShuttingDown) return pino({ name: `PreInitEmergencyChatbotLogger-${Date.now()}`, level: 'info' });
+        if (this.isShuttingDown) return pino({ name: `ShutdownEmergencyChatbotLogger-${Date.now()}`, level: 'info' });
+        return this.chatbotLoggerInternal;
+    }
+
     public get saveConferenceEvent(): Logger {
         if (!this.isInitialized && !this.isShuttingDown) return pino({ name: `PreInitEmergencySaveConfEvent-${Date.now()}`, level: 'info' });
         if (this.isShuttingDown) return pino({ name: `ShutdownEmergencySaveConfEvent-${Date.now()}`, level: 'info' });
