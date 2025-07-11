@@ -109,7 +109,6 @@ function buildQueryString(params: Record<string, string | string[]>): string {
 export async function executeApiCall(endpoint: string, queryString: string): Promise<ApiCallResult> {
     // --- START OF MODIFICATION (Date Normalization) ---
     let effectiveQueryString = queryString;
-    const logContext = `${LOG_PREFIX} [${endpoint}]`; // Context for logging
 
     // 1. Parse the initial query string into a mutable object
     const queryParams = parseQueryString(queryString);
@@ -250,13 +249,10 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         if (transformer) {
             
             try {
+                console.log(parsedData);
                 // Call the transformer with the *parsed* data and the *effective* query string
                 formattedData = transformer(parsedData, effectiveQueryString);
-                if (formattedData !== null) {
-                    // 
-                } else {
-                    
-                }
+                console.log(formattedData);
             } catch (transformErr: unknown) { // Catch as unknown
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(transformErr);
                 transformationError = `Transformation Error: ${errorMessage}`;

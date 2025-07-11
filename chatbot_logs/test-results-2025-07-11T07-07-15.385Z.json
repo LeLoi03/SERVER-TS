@@ -1,0 +1,12 @@
+[
+  {
+    "frontendMessageId": "9a2e1737-4ede-4f59-a453-edcdd865cd17",
+    "payload": {
+      "question": "Có bao nhiêu hội nghị với hình thức Online",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4776,
+    "response": "Có 8 hội nghị đang ở hình thức trực tuyến."
+  }
+]

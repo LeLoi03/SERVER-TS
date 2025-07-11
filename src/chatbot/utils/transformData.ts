@@ -294,15 +294,6 @@ const formatChangeMarkdown = (currentValue: any, previousValue: any, formatter?:
 
 
 // --- Main Data Transformation Logic with Markdown ---
-// src/chatbot/utils/transformData.ts
-
-// ... (giữ nguyên các type definitions và các hàm helper ở trên:
-// Location, DateEntry, Rank, OrgData, Organization, ConferenceDetail,
-// ConferenceSummary, ConferenceData, formatDateTypeHeader, ConferenceSourceData,
-// formatDateRangeForSource, extractConferenceSourceData, safeGet,
-// getNormalizedOrg, formatDateRange, formatChangeMarkdown)
-
-// --- Main Data Transformation Logic with Markdown ---
 export function transformConferenceData(parsedData: ConferenceData, searchQuery: string): string {
 
     const payload = safeGet(parsedData, 'payload', []);
@@ -349,12 +340,12 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
 
                 // --- ADJUSTED LOGIC FOR ORGANIZATIONS ---
                 const organizations = safeGet(conf, 'organizations', []);
-                
-                 // The latest organization data is at the end of the array.
-                const latestRawOrg = organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
 
-                // The previous organization data is the one before the last (for comparison).
-                const previousRawOrg = organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
+                // The latest organization data is the LAST item in the array.
+                const latestRawOrg = organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
+
+                // The previous organization data is the second-to-last item (for comparison), if it exists.
+                const previousRawOrg = organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
 
                 // Normalize both to handle the 'org' key or lack thereof.
                 const latestOrg = getNormalizedOrg(latestRawOrg);

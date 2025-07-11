@@ -1,0 +1,12 @@
+[
+  {
+    "frontendMessageId": "f9e01318-670e-4c94-b44b-5e4af9e93db4",
+    "payload": {
+      "question": "hôm nay là ngày mấy",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2498,
+    "response": "Hôm nay là ngày 11 tháng 7 năm 2025. Tôi có thể giúp gì cho bạn hôm nay?"
+  }
+]

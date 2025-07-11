@@ -1,0 +1,12 @@
+[
+  {
+    "frontendMessageId": "58cf545e-ba66-4bb0-a78b-147967f3e1cf",
+    "payload": {
+      "question": "Tìm hội nghị trong năm nay hình thức Online",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4716,
+    "response": "Xin lỗi, tôi gặp sự cố khi tìm kiếm các hội nghị trực tuyến năm nay. Vui lòng thử lại sau."
+  }
+]

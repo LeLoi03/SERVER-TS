@@ -1,0 +1,12 @@
+[
+  {
+    "frontendMessageId": "a68e0ea5-bd66-40b5-88ce-f57cef703fd3",
+    "payload": {
+      "question": "Thông tin chi tiết về hội nghị ICML",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5209,
+    "response": "Thông tin chi tiết về hội nghị ICML như sau:\n\n*   **Tên đầy đủ:** International Conference on Machine Learning\n*   **Tên viết tắt:** ICML\n*   **Xếp hạng:** A* (Nguồn: CORE2023)\n*   **Lĩnh vực nghiên cứu:** Machine learning"
+  }
+]

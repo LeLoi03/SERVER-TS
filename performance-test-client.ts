@@ -11,7 +11,7 @@ import * as path from 'path'; // <<< THÊM MỚI
 const CONFIG = {
     SERVER_URL: 'http://localhost:3001',
     SOCKET_PATH: '/socket.io/',
-    JWT_TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiOGQ0ODFmMTctZjBlMS00NDY1LWE4ZTEtMWQ2MTM2YTk3NzViIiwiZW1haWwiOiJmYW5uZWlob3VuYWZ1LTgwNDVAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NTIxMDk0MTAsImV4cCI6MTc1MjEzMTAxMH0.e3FCbM3ftlOpmpGoDMluNsVFaOZfqDqJ2DOLrApyPdQ',
+    JWT_TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiOGQ0ODFmMTctZjBlMS00NDY1LWE4ZTEtMWQ2MTM2YTk3NzViIiwiZW1haWwiOiJmYW5uZWlob3VuYWZ1LTgwNDVAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NTIyMDE1NDgsImV4cCI6MTc1MjIyMzE0OH0.v-WIxyDHNF-ws52LgN9gsljf3Asr9As_0J9cOwfyk4E',
     DEFAULT_TEST_TIMEOUT_MS: 30000,
     FIRST_QUESTION_TIMEOUT_MS: 60000,
     // <<< THÊM MỚI: Tùy chọn ghi log câu trả lời ra file >>>
@@ -27,20 +27,20 @@ const CONFIG = {
 // Mỗi phần tử có thể là một chuỗi, hoặc một object { question: string, model?: string }
 const TEST_PAYLOADS = [
     // Câu hỏi 1: 
-    {
-        question: "Hello",
-        model: "gemini-2.0-flash" // <<< CHO PHÉP CHỈ ĐỊNH MODEL
-    },
-    // Câu hỏi 2: 
-    {
-        question: "What things you can do?",
-        model: "gemini-2.0-flash" // <<< CHO PHÉP CHỈ ĐỊNH MODEL
-    },
+    // {
+    //     question: "Hello",
+    //     model: "gemini-2.0-flash" // <<< CHO PHÉP CHỈ ĐỊNH MODEL
+    // },
+    // // Câu hỏi 2: 
+    // {
+    //     question: "What things you can do?",
+    //     model: "gemini-2.0-flash" // <<< CHO PHÉP CHỈ ĐỊNH MODEL
+    // },
 
     // Câu hỏi 3: 
     {
-        question: "Find conference with Rank B in Vietnam",
-        model: "gemini-2.5-flash-lite-preview-06-17"
+        question: "Thông tin chi tiết về hội nghị ICML",
+        model: "gemini-2.5-flash"
     },
 
 
@@ -178,7 +178,7 @@ function sendMessageAndMeasure(socket: Socket, payload: TestPayload, timeoutMs: 
         const messageData = {
             parts: [{ text: payload.question }],
             isStreaming: true,
-            language: 'en',
+            language: 'vi',
             frontendMessageId,
             // Chỉ thêm trường 'model' nếu nó được định nghĩa trong payload
             ...(payload.model && { model: payload.model }),

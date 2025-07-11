@@ -1,7 +1,7 @@
 // src/chatbot/utils/languageConfig.ts
 import { FunctionDeclaration } from '@google/genai'; // Assuming '@google/genai'
 import { Language, AgentId, PersonalizationPayload } from '../shared/types';
-import * as LangData from '../language';
+import * as  LangData from '../language';
 
 // --- Define the structure for language-specific configuration per agent ---
 interface LanguageAgentConfig {
@@ -102,6 +102,16 @@ const personalizedAgentBaseSystemInstructionsWithPageContext: Record<AgentId, Pa
 const DEFAULT_LANGUAGE: Language = 'vi';
 const DEFAULT_AGENT_ID: AgentId = 'HostAgent';
 
+/**
+ * Formats the current date into a string like "January 1, 2025".
+ * @returns The formatted date string.
+ */
+function getFormattedCurrentDate(): string {
+    const today = new Date();
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    return today.toLocaleDateString('en-US', options);
+}
+
 
 export function getAgentLanguageConfig(
     lang: Language | undefined,
@@ -123,12 +133,12 @@ export function getAgentLanguageConfig(
             baseSystemInstructionsText = personalizedWithContextInstructionsForLang;
             useEffectivePersonalizedInstructions = true;
             usingPageContextInstructions = true;
-            
+
         } else if (personalizedWithContextInstructionsForEn) {
             baseSystemInstructionsText = personalizedWithContextInstructionsForEn;
             useEffectivePersonalizedInstructions = true;
             usingPageContextInstructions = true;
-            
+
         }
         // Nếu không tìm thấy, sẽ rơi xuống các block sau
     }
@@ -140,11 +150,11 @@ export function getAgentLanguageConfig(
         if (contextInstructionsForLang) {
             baseSystemInstructionsText = contextInstructionsForLang;
             usingPageContextInstructions = true;
-            
+
         } else if (contextInstructionsForEn) {
             baseSystemInstructionsText = contextInstructionsForEn;
             usingPageContextInstructions = true;
-            
+
         }
         // Nếu không tìm thấy, sẽ rơi xuống các block sau
     }
@@ -156,11 +166,11 @@ export function getAgentLanguageConfig(
         if (personalizedInstructionsForLang) {
             baseSystemInstructionsText = personalizedInstructionsForLang;
             useEffectivePersonalizedInstructions = true;
-            
+
         } else if (personalizedInstructionsForEn) {
             baseSystemInstructionsText = personalizedInstructionsForEn;
             useEffectivePersonalizedInstructions = true;
-            
+
         }
         // Nếu không tìm thấy, sẽ rơi xuống block default
     }
@@ -177,29 +187,33 @@ export function getAgentLanguageConfig(
                 if (typeof dynamicInstructions === 'string') {
                     baseSystemInstructionsText = dynamicInstructions;
                 } else {
-                    
+
                     baseSystemInstructionsText = LangData.enHostAgentSystemInstructions;
                 }
             }
-            
+
         } else {
             const englishInstructionsKey = `english${agentId}SystemInstructions` as keyof typeof LangData;
             const englishInstructions = LangData[englishInstructionsKey];
             if (typeof englishInstructions === 'string') {
                 baseSystemInstructionsText = englishInstructions;
             } else {
-                
+
                 baseSystemInstructionsText = "Error: English instructions missing or malformed.";
             }
         }
     }
 
     if (baseSystemInstructionsText === "") {
-        
+
         baseSystemInstructionsText = "You are a helpful assistant. Please respond to the user's query.";
     }
 
     let finalSystemInstructions = baseSystemInstructionsText;
+
+    // >>>>>> ĐÂY LÀ PHẦN DUY NHẤT ĐƯỢC THÊM VÀO THEO YÊU CẦU BAN ĐẦU CỦA BẠN <<<<<<
+    finalSystemInstructions = finalSystemInstructions.replace(/\[Today\]/g, getFormattedCurrentDate());
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     if (useEffectivePersonalizedInstructions && personalizationData) {
         // Chỉ inject nếu template có placeholder (dấu hiệu của template personalized)
@@ -211,21 +225,22 @@ export function getAgentLanguageConfig(
                 ? personalizationData.interestedTopics.join(', ')
                 : 'Not specified';
             finalSystemInstructions = finalSystemInstructions.replace(/\[List of User's Interested Topics\]/g, topics);
-            
+
         } else if (useEffectivePersonalizedInstructions) { // Log warning nếu cờ bật nhưng template không khớp
-            
+
         }
     }
 
     const functionDeclarations: FunctionDeclaration[] = commonEnglishFunctionDeclarations[agentId] || [];
     if (functionDeclarations.length === 0 && agentId !== 'HostAgent') {
-        
+
     }
     if (agentId === 'HostAgent' && (!functionDeclarations.find(fn => fn.name === LangData.englishRouteToAgentDeclaration.name))) {
-        
+
     }
 
-    
+
+    console.log(finalSystemInstructions)
 
     return {
         systemInstructions: finalSystemInstructions,

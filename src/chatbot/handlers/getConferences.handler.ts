@@ -62,6 +62,7 @@ export class GetConferencesHandler implements IFunctionHandler {
             }
 
             reportStep('retrieving_info', `Retrieving ${dataType} data for query: "${searchQuery}"...`, { dataType, searchQuery });
+            console.log(searchQuery)
             const apiResult = await executeGetConferences(searchQuery); // executeGetConferences trả về ApiCallResult
             
 
