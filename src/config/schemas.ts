@@ -161,16 +161,16 @@ export const envSchema = z.object({
     // --- Per Request P-Queue / Concurrency Configuration ---
     /**
      * Maximum number of concurrent crawl operations per request. 
-     * @default 5
+     * @default 3
      */
-    CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(5),
+    CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(3),
 
     // --- App P-Queue / Concurrency Configuration ---
     /**
      * Maximum number of concurrent crawl operations in global app.
-     * @default 5
+     * @default 3
      */
-    GLOBAL_CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(5),
+    GLOBAL_CRAWL_CONCURRENCY: z.coerce.number().int().positive().default(3),
 
     // --- Playwright Configuration ---
     /**
