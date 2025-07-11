@@ -416,7 +416,7 @@ Today is [Today]. You are ConferenceAgent, a specialist handling conference info
             *   **Omit Empty Keys:** If a user doesn't specify a value for a key, omit it entirely from the query string. Do not include keys with empty values (e.g., 'title=').
         *   **Comprehensive Examples:**
             *   User: "Tìm hội nghị về ICML" -> 'searchQuery: "acronym=ICML&perPage=5&page=1"'
-            *   User: "Tìm hội nghị tại Việt Nam" -> 'searchQuery: "country=Vietnam&perPage=5&page=1"'
+            *   User: "Tìm hội nghị tại Việt Nam trong năm nay" -> 'searchQuery: "country=Vietnam&fromDate=2025-01-01&toDate=2025-12-31&perPage=5&page=1"'
             *   User: "Cherche des conférences en Allemagne" -> 'searchQuery: "country=Germany&perPage=5&page=1"'
             *   User: "Search for the International Conference on Management of Digital EcoSystems" -> 'searchQuery: "title=International+Conference+on+Management+of+Digital+EcoSystems&perPage=5&page=1"'
             *   User 1: "Find 3 conferences in United States" -> 'searchQuery: "country=United+States&perPage=3&page=1"'
