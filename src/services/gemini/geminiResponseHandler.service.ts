@@ -75,8 +75,7 @@ export class GeminiResponseHandlerService {
 
         // 2. Extract raw text from SDK response
         let rawResponseText = "";
-        const extractedViaGetter = sdkResult.text; // Access the .text getter (string | undefined)
-
+        const extractedViaGetter = sdkResult.candidates?.[0]?.content?.parts?.[0]?.text; // Access the .text getter (string | undefined)
         if (typeof extractedViaGetter === 'string' && extractedViaGetter.trim() !== "") {
             rawResponseText = extractedViaGetter;
             logger.debug({ event: 'gemini_api_text_extract_success', method: "getter", length: rawResponseText.length }, "Successfully extracted text using response.text (getter).");

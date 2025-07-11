@@ -78,11 +78,9 @@ export class GeminiApiOrchestratorService {
         return fewShotParts;
     }
 
-    // +++ HÀM NÀY ĐƯỢC CẬP NHẬT ĐÁNG KỂ +++
     private async prepareForApiCall(
         modelNameToUse: string,
         apiType: string,
-        // Thay vì string, nhận vào ContentListUnion
         initialUserContent: ContentListUnion,
         effectiveCrawlModelType: CrawlModelType,
         parentLogger: Logger
@@ -187,6 +185,17 @@ export class GeminiApiOrchestratorService {
                 if (generalSettings.allowCacheForNonTuned) shouldUseCache = true;
             }
 
+
+             // +++ START: ĐIỀU CHỈNH THEO YÊU CẦU +++
+            // Thêm thinkingConfig nếu tên model chứa "2.5"
+            if (modelNameToUse.includes("2.5")) {
+                finalGenerationConfig.thinkingConfig = {
+                    thinkingBudget: 8000,
+                };
+                configApplyLogger.info({ event: 'gemini_thinking_config_applied', modelName: modelNameToUse }, "Applied thinkingConfig for model containing '2.5'.");
+            }
+            // +++ END: ĐIỀU CHỈNH THEO YÊU CẦU +++
+            
 
             // +++ TRUYỀN `finalUserContent` XUỐNG MODEL ORCHESTRATOR +++
             const modelPrepResult = await this.modelOrchestrator.prepareModel(

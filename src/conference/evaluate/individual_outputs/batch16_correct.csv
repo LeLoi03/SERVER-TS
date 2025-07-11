@@ -1411,62 +1411,6 @@ Submissions involving experiments on human subjects, analysis of data derived fr
 ## Call for Posters
 
 Information for poster submissions is available at [call_poster.html](call_poster.html)."
-req-conf-1751698749426-ymfud,,Pacific Rim International Symposium on Dependable Computing,PRDC,http://prdc.dependability.org/PRDC2025/,TRUE,http://prdc.dependability.org/PRDC2025/cfp.html,http://prdc.dependability.org/PRDC2025/,"Conference dates: November 3 - 5, 2025
-Year: 2025
-Location: Seoul, Korea
-City-State-Province: Seoul
-Country: Korea
-Continent: Asia
-Type: Offline
-Submission Date.Abstract submission: July 11, 2025
-Submission Date.Paper submission: July 25, 2025
-Notification Date.Author notification: August 22, 2025
-Camera-ready Date.Camera-ready version: September 26, 2025
-Topics: Software and hardware reliability, resilience, safety, security, testing, verification, and validation, Dependability measurement, modeling, evaluation, and tools, Self-healing, self-protecting, and fault-tolerant systems, Architecture and system design for dependability, Prognostics in Complex Systems, Reliability analysis of Complex Systems, Fault-tolerant algorithms and protocols, Cloud computing resiliency, security and privacy, Software defined networks architectures and protocols, Dependability issues in computing systems (e.g. computer networks and communications, high performance computing, real-time systems, storage and databases systems, cyber-physical systems, socio-technical systems, and blockchain and smart contracts), Emerging technologies (autonomous systems including autonomous vehicles, human machine teaming, smart devices/Internet of Things)","November 3 - 5, 2025",TRUE,2025,"Seoul, Korea",TRUE,Seoul,Korea,Asia,Offline,FALSE,"{""Abstract submission"":""July 11, 2025"",""Paper submission"":""July 25, 2025""}",100.0,"{""Author notification"":""August 22, 2025""}",100.0,"{""Camera-ready version"":""September 26, 2025""}",100.0,{},,{},,"Software and hardware reliability, resilience, safety, security, testing, verification, and validation, Dependability measurement, modeling, evaluation, and tools, Self-healing, self-protecting, and fault-tolerant systems, Architecture and system design for dependability, Prognostics in Complex Systems, Reliability analysis of Complex Systems, Fault-tolerant algorithms and protocols, Cloud computing resiliency, security and privacy, Software defined networks architectures and protocols, Dependability issues in computing systems (e.g. computer networks and communications, high performance computing, real-time systems, storage and databases systems, cyber-physical systems, socio-technical systems, and blockchain and smart contracts), Emerging technologies (autonomous systems including autonomous vehicles, human machine teaming, smart devices/Internet of Things)",No publisher,"The 30th IEEE Pacific Rim International Symposium on Dependable Computing (PRDC 2025) will be held from November 3-5, 2025, in Seoul, Korea. PRDC is a significant event in the Pacific area focusing on dependable and fault-tolerant computing, covering theoretical approaches, practical projects, and commercial systems.","# Call for Papers: 30th IEEE Pacific Rim International Symposium on Dependable Computing (PRDC 2025)
-
-PRDC 2025 is the 30th event in a series of symposia started in 1989 devoted to dependable and fault-tolerant computing. It encompasses fundamental theoretical approaches, practical experimental projects, and commercial components and systems. This symposium is recognized as the main event in the Pacific Rim area, and it provides a forum for countries around the world to exchange ideas for improving the dependability of computing systems.
-
-## Topics of Interest
-
-Topics of interest include (but not limited to):
-
-*   Software and hardware reliability, resilience, safety, security, testing, verification, and validation
-*   Dependability measurement, modeling, evaluation, and tools
-*   Self-healing, self-protecting, and fault-tolerant systems
-*   Architecture and system design for dependability
-*   Prognostics in Complex Systems
-*   Reliability analysis of Complex Systems
-*   Fault-tolerant algorithms and protocols
-*   Cloud computing resiliency, security and privacy
-*   Software defined networks architectures and protocols
-*   Dependability issues in computing systems (e.g. computer networks and communications, high performance computing, real-time systems, storage and databases systems, cyber-physical systems, socio-technical systems, and blockchain and smart contracts).
-*   Emerging technologies (autonomous systems including autonomous vehicles, human machine teaming, smart devices/Internet of Things)
-
-## Submission and Publication Information
-
-*   **Manuscript Format:** IEEE double-column format.
-*   **Page Limits:** **10 pages** for full papers and **6 pages** for short papers (references are not included in the page limit). Appendixes beyond the page limit are allowed in submission, but they are not expected to be reviewed.
-*   **Submission Categories:**
-    1.  **Regular Research Papers:** Should describe original research (not submitted or published elsewhere).
-    2.  **Practical Experience Reports:** Should describe an experience or a case study, such as the design and deployment of a system or actual failure and recovery field data.
-*   **Submission Method:** All submissions must be made electronically (in PDF format) on the submission website: [https://prdc2025.hotcrp.com/](https://prdc2025.hotcrp.com/).
-*   **Review Process:** All submissions will undergo a **double-blind review**. Please ensure that you have removed any references that could lead to identifying the authors of the paper. Failure to do so may result in the rejection of the paper.
-*   **Selection Criteria:** Papers will be reviewed internationally and selected based on their originality, significance, relevance, and clarity of presentation.
-*   **Publication:** All accepted papers will be published by the IEEE Computer Society Press (EI Indexed).
-
-## Paper Awards
-
-*   One outstanding paper will be selected to receive the **Best Paper Award**.
-*   One outstanding paper first-authored by a student will receive the **Best Student Paper Award**.
-*   A few excellent papers will be recommended to have their extended versions submitted to an international journal.
-
-## Important Dates (Time 23:59 AoE)
-
-*   **Abstract submission:** July 11th, 2025
-*   **Paper submission:** July 25th, 2025
-*   **Author notification:** August 22nd, 2025
-*   **Camera-ready version:** September 26th, 2025
-*   **Conference:** November 3 - 5, 2025"
 req-conf-1751698749426-ymfud,,International Conference on Relational and AlgebraicMethods in Computer Science,RAMiCS,https://ramics-conf.github.io/2024/,TRUE,https://link.springer.com/conference/ramics,,"Conference dates: August 19-22, 2024
 Year: 2024
 Location: Prague, Czech Republic
