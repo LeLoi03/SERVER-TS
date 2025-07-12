@@ -11,6 +11,9 @@ import { FileSystemService } from './services/fileSystem.service';
 import { TaskQueueService } from './services/taskQueue.service';
 import { GlobalConcurrencyManagerService } from './services/globalConcurrencyManager.service';
 import { PdfExtractorService, IPdfExtractorService } from './services/batchProcessing/pdfExtractor.service';
+import { DomTransformationService, IDomTransformationService } from './services/batchProcessing/domTransformation.service';
+import { ImageUrlExtractorService, IImageUrlExtractorService } from './services/batchProcessing/imageUrlExtractor.service';
+import { FrameTextExtractorService, IFrameTextExtractorService } from './services/batchProcessing/frameTextExtractor.service';
 
 // --- Gemini API Service and its Specialized Sub-Services ---
 import { GeminiApiService } from './services/geminiApi.service';
@@ -86,6 +89,10 @@ container.register<IFinalRecordAppenderService>('IFinalRecordAppenderService', {
 container.register<IUpdateTaskExecutorService>('IUpdateTaskExecutorService', { useClass: UpdateTaskExecutorService });
 container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useClass: SaveTaskExecutorService });
 container.register<IPdfExtractorService>('IPdfExtractorService', { useClass: PdfExtractorService });
+container.register<IDomTransformationService>('IDomTransformationService', { useClass: DomTransformationService });
+container.register<IFrameTextExtractorService>('IFrameTextExtractorService', { useClass: FrameTextExtractorService });
+container.register<IImageUrlExtractorService>('IImageUrlExtractorService', { useClass: ImageUrlExtractorService });
+
 
 // --- 4. Register Request-Scoped Services ---
 // Decorator @scoped(Lifecycle.ResolutionScoped) trên class đã đủ.

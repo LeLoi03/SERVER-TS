@@ -341,11 +341,11 @@ export function transformConferenceData(parsedData: ConferenceData, searchQuery:
                 // --- ADJUSTED LOGIC FOR ORGANIZATIONS ---
                 const organizations = safeGet(conf, 'organizations', []);
 
-                // The latest organization data is the LAST item in the array.
-                const latestRawOrg = organizations.length > 0 ? organizations[organizations.length - 1] : undefined;
+                // The latest organization data is the FIRST item in the array.
+                const latestRawOrg = organizations.length > 0 ? organizations[0] : undefined;
 
-                // The previous organization data is the second-to-last item (for comparison), if it exists.
-                const previousRawOrg = organizations.length > 1 ? organizations[organizations.length - 2] : undefined;
+                // The previous organization data is the SECOND (for comparison), if it exists.
+                const previousRawOrg = organizations.length > 1 ? organizations[1] : undefined;
 
                 // Normalize both to handle the 'org' key or lack thereof.
                 const latestOrg = getNormalizedOrg(latestRawOrg);
