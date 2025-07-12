@@ -21977,3 +21977,1130 @@ While specific deadlines for all tracks are not detailed here, authors were enco
 ### Submission and Publication
 
 Accepted contributions were published in the ACM Digital Library. The conference also provided presentation videos and companion presentation videos on YouTube. Authors of selected papers were invited to submit extended versions to a IARIA Journal.",,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Concurrency Theory,CONCUR,https://conferences.au.dk/confest2025/concur,https://conferences.au.dk/confest2025/concur/call-for-papers,https://conferences.au.dk/confest2025/concur,"Conference dates: August 26 - 29, 2025
+Year: 2025
+Location: Aarhus University, Aarhus, Denmark
+City-State-Province: Aarhus
+Country: Denmark
+Continent: Europe
+Type: Offline
+Submission Date.Abstracts: April 3, 2025
+Submission Date.Submissions: April 9, 2025
+Notification Date.Notification: May 27, 2025
+Camera-ready Date.Camera Ready: June 10, 2025
+Other Date.Rebuttal Response: May 9 - 12, 2025
+Other Date.Workshops: August 25, 2025 and August 30, 2025
+Topics: Basic models of concurrency, abstract machines, domain-theoretic models, categorical and coalgebraic models, game-theoretic models, parametric models, process algebras, graph transformation systems, Petri nets, hybrid systems, mobile and collaborative systems, probabilistic systems, real-time systems, quantum systems, biology-inspired systems, synchronous systems, Logics for concurrency, modal logics, program logics, probabilistic and stochastic logics, temporal logics, multi-agent logics, resource logics, Verification and analysis techniques for concurrent systems, abstract interpretation, atomicity checking, model checking, race detection, pre-order and equivalence checking, run-time verification, state-space exploration, static analysis, synthesis, testing, theorem proving, type systems, security analysis, Distributed/parallel algorithms and concurrent data structures: design, analysis, complexity, correctness, fault tolerance, reliability, availability, consistency, self-organization, self-stabilization, commitment schemes, communication protocols, Theoretical foundations, tools, and empirical evaluations of architectures, execution environments, and software development for concurrent systems, geo-replicated systems, distributed ledgers, communication networks, multiprocessor and multi-core architectures, quantum computing, quantum communication, shared and transactional memory, resource management and awareness, compilers and tools for concurrent programming, programming models, component-based, object- and service-oriented
+Publisher: LIPIcs","August 26 - 29, 2025",2025,"Aarhus University, Aarhus, Denmark",Aarhus,Denmark,Europe,Offline,"{""Abstracts"":""April 3, 2025"",""Submissions"":""April 9, 2025""}","{""Notification"":""May 27, 2025""}","{""Camera Ready"":""June 10, 2025""}",{},"{""Rebuttal Response"":""May 9 - 12, 2025"",""Workshops"":""August 25, 2025 and August 30, 2025""}","Basic models of concurrency, abstract machines, domain-theoretic models, categorical and coalgebraic models, game-theoretic models, parametric models, process algebras, graph transformation systems, Petri nets, hybrid systems, mobile and collaborative systems, probabilistic systems, real-time systems, quantum systems, biology-inspired systems, synchronous systems, Logics for concurrency, modal logics, program logics, probabilistic and stochastic logics, temporal logics, multi-agent logics, resource logics, Verification and analysis techniques for concurrent systems, abstract interpretation, atomicity checking, model checking, race detection, pre-order and equivalence checking, run-time verification, state-space exploration, static analysis, synthesis, testing, theorem proving, type systems, security analysis, Distributed/parallel algorithms and concurrent data structures: design, analysis, complexity, correctness, fault tolerance, reliability, availability, consistency, self-organization, self-stabilization, commitment schemes, communication protocols, Theoretical foundations, tools, and empirical evaluations of architectures, execution environments, and software development for concurrent systems, geo-replicated systems, distributed ledgers, communication networks, multiprocessor and multi-core architectures, quantum computing, quantum communication, shared and transactional memory, resource management and awareness, compilers and tools for concurrent programming, programming models, component-based, object- and service-oriented",LIPIcs,"CONCUR 2025, the 36th International Conference on Concurrency Theory, will take place August 25-30, 2025, at the University of Aarhus, Denmark, co-located with QEST+FORMATS, FMICS, and other workshops (CONFEST 2025). It aims to bring together researchers, developers, and students to advance the theory of concurrency and promote its applications. Patricia Bouyer (CNRS, France) and Jaco van de Pol (Aarhus University, Denmark) are the PC chairs.","# CONCUR 2025 - Call for Papers
+
+The 36th International Conference on Concurrency Theory (**CONCUR 2025**) will be held **August 25-30, 2025**, at the **University of Aarhus, Denmark**, as part of CONFEST 2025.
+
+## Important Dates
+
+*   **Abstracts:** April 3, 2025 (AoE)
+*   **Submissions:** April 9, 2025 (AoE)
+*   **Rebuttal Response:** May 9-12, 2025 (AoE)
+*   **Notification:** May 27, 2025 (AoE)
+*   **Camera Ready:** June 10, 2025 (AoE)
+*   **Conference(s):** Aug 26-29, 2025
+*   **Workshops:** Aug 25 and 30, 2025
+
+## Paper Submission
+
+CONCUR 2025 solicits high quality papers reporting research results and/or experience related to the topics mentioned below.
+
+All papers must be original, unpublished, and not submitted for publication elsewhere.
+
+Each paper will undergo a thorough review process. The paper may be supplemented with a clearly marked appendix, which will be reviewed at the discretion of the program committee.
+
+The CONCUR 2025 proceedings will be published by [LIPIcs](http://drops.dagstuhl.de/entities/series/LIPIcs#author).
+
+Papers must be submitted electronically as PDF files via [EasyChair](https://easychair.org/conferences/?conf=concur2025).
+
+Submissions follow a single blind process.
+
+Papers must not exceed 15 pages (excluding references and clearly marked appendices) using the LIPIcs style.
+
+## Topics
+
+Submissions are solicited in the theory and practice of concurrent systems. The principal topics include (but are not limited to):
+
+*   Basic models of concurrency such as abstract machines, domain-theoretic models, categorical and coalgebraic models, game-theoretic models, parametric models, process algebras, graph transformation systems, Petri nets, hybrid systems, mobile and collaborative systems, probabilistic systems, real-time systems, quantum systems, biology-inspired systems, and synchronous systems;
+*   Logics for concurrency such as modal logics, program logics, probabilistic and stochastic logics, temporal logics, multi-agent logics, and resource logics;
+*   Verification and analysis techniques for concurrent systems such as abstract interpretation, atomicity checking, model checking, race detection, pre-order and equivalence checking, run-time verification, state-space exploration, static analysis, synthesis, testing, theorem proving, type systems, and security analysis;
+*   Distributed/parallel algorithms and concurrent data structures: design, analysis, complexity, correctness, fault tolerance, reliability, availability, consistency, self-organization, self-stabilization, commitment schemes, communication protocols;
+*   Theoretical foundations, tools, and empirical evaluations of architectures, execution environments, and software development for concurrent systems such as geo-replicated systems, distributed ledgers, communication networks, multiprocessor and multi-core architectures, quantum computing, quantum communication, shared and transactional memory, resource management and awareness, compilers and tools for concurrent programming, programming models such as component-based, object- and service-oriented.",,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Computer Supported Education,CSEDU,https://csedu.scitevents.org/,https://csedu.scitevents.org/CallForPapers.aspx,https://csedu.scitevents.org/ImportantDates.aspx,"Conference dates: May 18 - 20, 2026
+Year: 2026
+Location: Benidorm, Spain
+City-State-Province: Benidorm
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Submission Date.(Regular Papers) Paper Submission: January 5, 2026
+Submission Date.(Workshops) Workshop Proposal: January 20, 2026
+Submission Date.(Special Sessions) Special Session Proposal: January 20, 2026
+Submission Date.(Position Papers /Regular Papers) Paper Submission: February 17, 2026
+Submission Date.(Special Sessions) Paper Submission: March 24, 2026
+Submission Date.(Computer Supported Music Education - CSME) Submission: March 24, 2026
+Submission Date.(Automatic Item Generation - AIG) Submission: March 24, 2026
+Submission Date.(Tutorials) Tutorial Proposal: April 10, 2026
+Submission Date.(Demos) Demo Proposal: April 10, 2026
+Submission Date.(Panels) Panel Proposal: April 10, 2026
+Notification Date.(Regular Papers) Authors Notification: March 3, 2026
+Notification Date.(Position Papers /Regular Papers) Authors Notification: March 24, 2026
+Notification Date.(Special Sessions) Authors Notification: April 7, 2026
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: March 17, 2026
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: April 6, 2026
+Camera-ready Date.(Special Sessions) Camera Ready and Registration: April 15, 2026
+Registration Date.(Regular Papers) Camera Ready and Registration: March 17, 2026
+Registration Date.(Position Papers /Regular Papers) Camera Ready and Registration: April 6, 2026
+Registration Date.(Special Sessions) Camera Ready and Registration: April 15, 2026
+Topics: Computer Supported Education, Artificial Intelligence in Education, Information Technologies Supporting Learning, Learning/Teaching Methodologies and Assessment, Social Context and Learning Environments
+Publisher: SCITEPRESS","May 18 - 20, 2026",2026,"Benidorm, Spain",Benidorm,Spain,Europe,Hybrid,"{""(Regular Papers) Paper Submission"":""January 5, 2026"",""(Workshops) Workshop Proposal"":""January 20, 2026"",""(Special Sessions) Special Session Proposal"":""January 20, 2026"",""(Position Papers /Regular Papers) Paper Submission"":""February 17, 2026"",""(Special Sessions) Paper Submission"":""March 24, 2026"",""(Computer Supported Music Education - CSME) Submission"":""March 24, 2026"",""(Automatic Item Generation - AIG) Submission"":""March 24, 2026"",""(Tutorials) Tutorial Proposal"":""April 10, 2026"",""(Demos) Demo Proposal"":""April 10, 2026"",""(Panels) Panel Proposal"":""April 10, 2026""}","{""(Regular Papers) Authors Notification"":""March 3, 2026"",""(Position Papers /Regular Papers) Authors Notification"":""March 24, 2026"",""(Special Sessions) Authors Notification"":""April 7, 2026""}","{""(Regular Papers) Camera Ready and Registration"":""March 17, 2026"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""April 6, 2026"",""(Special Sessions) Camera Ready and Registration"":""April 15, 2026""}","{""(Regular Papers) Camera Ready and Registration"":""March 17, 2026"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""April 6, 2026"",""(Special Sessions) Camera Ready and Registration"":""April 15, 2026""}",{},"Computer Supported Education, Artificial Intelligence in Education, Information Technologies Supporting Learning, Learning/Teaching Methodologies and Assessment, Social Context and Learning Environments",SCITEPRESS,"The International Conference on Computer Supported Education (CSEDU) is an annual meeting for discussing new educational tools, environments, best practices, case studies, and institutional policies on computer-supported education, including open and distance education. CSEDU 2026 will be held in conjunction with several other conferences and will provide an overview of current technologies and upcoming trends in the field. CSEDU seeks papers and posters describing educational technology research, academic or business case-studies; or advanced prototypes, systems, tools, and techniques.",No call for papers available,,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Digital Society,ICDS,https://www.iaria.org/conferences2026/ICDS26.html,https://www.iaria.org/conferences2026/CfPICDS26.html,https://www.iaria.org/conferences2026/ICDS26.html,"Conference dates: May 24 - 28, 2026
+Year: 2026
+Location: Venice, Italy
+City-State-Province: Venice
+Country: Italy
+Continent: Europe
+Type: Hybrid
+Submission Date.Submission: February 7, 2026
+Notification Date.Notification: March 22, 2026
+Registration Date.Registration: April 5, 2026
+Camera-ready Date.Camera ready: April 19, 2026
+Topics: Trends in government-related actions, Trends in IT related governmental/public services, Digital society and robots, eGovernment services in the context of digital society, Digital accessibility, Citizen-centric disruptive and enabling technologies, Internet and Web services, eCommerce and eBusiness, Citizen-oriented digital evidence, Consumer-oriented devices and services, Intelligent computation, Networking and telecommunications, eDefense for security and protection, Intrusion Prevention and Detection Systems, Enforced citizen-centric paradigms, Web accessibility, Computational advertising, Management and control, Digital analysis and processing, Mobile devices and biotechnologies, Software and system robustness for digital society, Consumer-oriented digital design, Social networking, ICT support and applications for eCollaboration, Cyberlaws
+Publisher: IARIA Press","May 24 - 28, 2026",2026,"Venice, Italy",Venice,Italy,Europe,Hybrid,"{""Submission"":""February 7, 2026""}","{""Notification"":""March 22, 2026""}","{""Camera ready"":""April 19, 2026""}","{""Registration"":""April 5, 2026""}",{},"Trends in government-related actions, Trends in IT related governmental/public services, Digital society and robots, eGovernment services in the context of digital society, Digital accessibility, Citizen-centric disruptive and enabling technologies, Internet and Web services, eCommerce and eBusiness, Citizen-oriented digital evidence, Consumer-oriented devices and services, Intelligent computation, Networking and telecommunications, eDefense for security and protection, Intrusion Prevention and Detection Systems, Enforced citizen-centric paradigms, Web accessibility, Computational advertising, Management and control, Digital analysis and processing, Mobile devices and biotechnologies, Software and system robustness for digital society, Consumer-oriented digital design, Social networking, ICT support and applications for eCollaboration, Cyberlaws",IARIA Press,"The Twentieth International Conference on Digital Society (ICDS 2026) will take place in Venice, Italy, from May 24, 2026, to May 28, 2026. The conference focuses on advanced networking, applications, and systems technologies within the digital society, and offers onsite and online participation options.",No call for papers available,,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Multimodal Interaction,ICMI,https://icmi.acm.org/2025/,https://icmi.acm.org/2025/call-for-papers/,https://icmi.acm.org/2025/important-dates/,"Conference dates: October 13 - 17, 2025
+Year: 2025
+Location: Canberra, Australia
+City-State-Province: Canberra
+Country: Australia
+Continent: Oceania
+Type: Offline
+Submission Date.(Main Conference) Abstract deadline: April 25, 2025
+Submission Date.(Main Conference) Paper Submission: May 2, 2025
+Submission Date.(Workshops) Workshop proposal submission: February 14, 2025
+Submission Date.(Workshops) Workshop papers due: July 8, 2025
+Submission Date.(Tutorials) Tutorial proposal submission: June 3, 2025
+Submission Date.(Grand Challenge) Grand challenge proposals due: February 3, 2025
+Submission Date.(Demos) Submission of demo and exhibit proposals: July 13, 2025
+Submission Date.(Demos) Submission of demo final papers: August 1, 2025
+Submission Date.(Doctoral Consortium) Doctoral consortium paper submission: June 23, 2025
+Submission Date.(Late Breaking Results) Paper submission: June 26, 2025
+Submission Date.(Blue Sky) Paper submission: May 9, 2025
+Notification Date.(Main Conference) Paper notification: July 7, 2025
+Notification Date.(Workshops) Notification of acceptance: February 21, 2025
+Notification Date.(Tutorials) Notification of acceptance: June 14, 2025
+Notification Date.(Grand Challenge) Proposal notification of acceptance: February 10, 2025
+Notification Date.(Demos) Demo and exhibit notification of acceptance: July 25, 2025
+Notification Date.(Doctoral Consortium) Doctoral consortium paper notification: July 18, 2025
+Notification Date.(Late Breaking Results) Notification of acceptance: August 1, 2025
+Notification Date.(Blue Sky) Notification of acceptance: July 4, 2025
+Camera-ready Date.(Main Conference) Camera-ready paper: August 1, 2025
+Camera-ready Date.(Workshops) Camera-ready paper due: August 1, 2025
+Camera-ready Date.(Tutorials) Camera-ready of tutorial abstract: July 8, 2025
+Camera-ready Date.(Grand Challenge) Grand challenge paper camera-ready: August 17, 2025
+Camera-ready Date.(Doctoral Consortium) Doctoral consortium camera ready: August 1, 2025
+Camera-ready Date.(Late Breaking Results) Camera-ready papers: August 8, 2025
+Camera-ready Date.(Blue Sky) Camera-ready papers: August 1, 2025
+Other Date.(Main Conference) Rebuttal Period: June 7 - 12, 2025
+Other Date.(Main Conference) Presentation dates: October 13 - 17, 2025
+Other Date.(Workshops) Workshop dates: October 13 or 17, 2025
+Other Date.(Tutorials) Tutorial dates: October 13 or 17, 2025
+Other Date.(Grand Challenge) Grand challenge date: October 13 or 17, 2025
+Other Date.(Late Breaking Results) Presentation dates: October 13 - 17, 2025
+Other Date.(Blue Sky) Presentation dates: October 13 - 17, 2025
+Topics: Multimodal Artificial Intelligence, Social Interaction, Machine Learning, Computational Modeling, Representations, Fusion, Data, Systems, Human-Human Interactions, Human-Computer Interactions, Affective computing and interaction, Cognitive modelling and multimodal interaction, Gesture, touch and haptics, Healthcare, assistive technologies, Human communication dynamics, Human-robot/agent multimodal interaction, Human-centred AI and ethics, Interaction with smart environment, Mobile and wearable multimodal systems, Multimodal behaviour generation, Multimodal datasets and validation, Multimodal dialogue modeling, Multimodal fusion and representation, Multimodal interactive applications, Novel multimodal datasets, Spoken/visual behaviours in social interaction, System components and multimodal platforms, Virtual/augmented reality and multimodal interaction
+Publisher: ACM","October 13 - 17, 2025",2025,"Canberra, Australia",Canberra,Australia,Oceania,Offline,"{""(Main Conference) Abstract deadline"":""April 25, 2025"",""(Main Conference) Paper Submission"":""May 2, 2025"",""(Workshops) Workshop proposal submission"":""February 14, 2025"",""(Workshops) Workshop papers due"":""July 8, 2025"",""(Tutorials) Tutorial proposal submission"":""June 3, 2025"",""(Grand Challenge) Grand challenge proposals due"":""February 3, 2025"",""(Demos) Submission of demo and exhibit proposals"":""July 13, 2025"",""(Demos) Submission of demo final papers"":""August 1, 2025"",""(Doctoral Consortium) Doctoral consortium paper submission"":""June 23, 2025"",""(Late Breaking Results) Paper submission"":""June 26, 2025"",""(Blue Sky) Paper submission"":""May 9, 2025""}","{""(Main Conference) Paper notification"":""July 7, 2025"",""(Workshops) Notification of acceptance"":""February 21, 2025"",""(Tutorials) Notification of acceptance"":""June 14, 2025"",""(Grand Challenge) Proposal notification of acceptance"":""February 10, 2025"",""(Demos) Demo and exhibit notification of acceptance"":""July 25, 2025"",""(Doctoral Consortium) Doctoral consortium paper notification"":""July 18, 2025"",""(Late Breaking Results) Notification of acceptance"":""August 1, 2025"",""(Blue Sky) Notification of acceptance"":""July 4, 2025""}","{""(Main Conference) Camera-ready paper"":""August 1, 2025"",""(Workshops) Camera-ready paper due"":""August 1, 2025"",""(Tutorials) Camera-ready of tutorial abstract"":""July 8, 2025"",""(Grand Challenge) Grand challenge paper camera-ready"":""August 17, 2025"",""(Doctoral Consortium) Doctoral consortium camera ready"":""August 1, 2025"",""(Late Breaking Results) Camera-ready papers"":""August 8, 2025"",""(Blue Sky) Camera-ready papers"":""August 1, 2025""}",{},"{""(Main Conference) Rebuttal Period"":""June 7 - 12, 2025"",""(Main Conference) Presentation dates"":""October 13 - 17, 2025"",""(Workshops) Workshop dates"":""October 13 or 17, 2025"",""(Tutorials) Tutorial dates"":""October 13 or 17, 2025"",""(Grand Challenge) Grand challenge date"":""October 13 or 17, 2025"",""(Late Breaking Results) Presentation dates"":""October 13 - 17, 2025"",""(Blue Sky) Presentation dates"":""October 13 - 17, 2025""}","Multimodal Artificial Intelligence, Social Interaction, Machine Learning, Computational Modeling, Representations, Fusion, Data, Systems, Human-Human Interactions, Human-Computer Interactions, Affective computing and interaction, Cognitive modelling and multimodal interaction, Gesture, touch and haptics, Healthcare, assistive technologies, Human communication dynamics, Human-robot/agent multimodal interaction, Human-centred AI and ethics, Interaction with smart environment, Mobile and wearable multimodal systems, Multimodal behaviour generation, Multimodal datasets and validation, Multimodal dialogue modeling, Multimodal fusion and representation, Multimodal interactive applications, Novel multimodal datasets, Spoken/visual behaviours in social interaction, System components and multimodal platforms, Virtual/augmented reality and multimodal interaction",ACM,"The 27th ACM International Conference on Multimodal Interaction (ICMI 2025) will be held in Canberra, Australia, on October 13-17, 2025. ICMI is a multidisciplinary forum that brings together multimodal artificial intelligence (AI) and social interaction research. The conference theme for 2025 is \'Safe and Responsible Multimodal Interactions\'.","# ICMI 2025: Call for Papers
+
+The 27th International Conference on Multimodal Interaction (ICMI 2025) will be held in **Canberra, Australia**.
+
+ICMI is the premier international forum for advancing research at the intersection of multimodal artificial intelligence (AI) and social interaction. Multimodal AI addresses technical challenges in machine learning and computational modelling, such as representations, data fusion, system design, and large-scale data management. Social interaction research encompasses both human-human interactions and human-computer interactions to uncover insights that bridge behavioural understanding with technology. A unique aspect of ICMI is its multidisciplinary nature which values both scientific discoveries and technical innovations, with an eye towards impactful applications that benefit people and society.
+
+## Novelty
+
+Novelty will be evaluated along two dimensions: scientific novelty and technical novelty. Accepted papers at ICMI 2025 must demonstrate novelty in at least one of these dimensions:
+
+*   **Scientific Novelty:** Papers should contribute new scientific insights into human social interactions, including human-computer interactions. Authors are expected to conduct a thorough literature review and clearly articulate the scientific advancements and discoveries presented in their work.
+*   **Technical Novelty:** Papers should introduce innovations in their computational approach for recognising, generating or modelling multimodal data. Novelty may also arise from creative and impactful new applications of existing methodologies.
+
+## Ethical Conduct
+
+Commitment to ethical conduct is mandatory and submissions must adhere to ethical standards in particular when human-derived data are employed. Authors are encouraged to consult the [ACM Code of Ethics and Professional Conduct](https://ethics.acm.org/).
+
+## ICMI 2025 Conference Theme: Safe and Responsible Multimodal Interactions
+
+The focus is on exploring how multimodal systems and multimodal interactive applications can support safe, ethical, and inclusive interactions across diverse contexts, ensuring that advancements in multimodal AI and interaction technologies align with societal values and address pressing global challenges.
+
+This theme emphasizes the importance of developing systems that prioritize users’ well-being, trust, and fairness. It calls for addressing critical issues such as bias mitigation, ensuring transparency in decision-making processes, and upholding privacy and security in handling multimodal data. Researchers are encouraged to explore innovative approaches that promote inclusivity and accessibility for underrepresented communities and vulnerable populations, fostering a more equitable digital future.
+
+Furthermore, the theme highlights the role of multimodal AI in addressing real-world safety concerns, such as building reliable systems for mental health monitoring, assisting vulnerable users (e.g., children, elderly individuals, or those with disabilities), and supporting safety-critical applications, including healthcare, education, and autonomous systems.
+
+## Topics of Interest
+
+Topics of interest include but are not limited to:
+
+*   Affective computing and interaction
+*   Cognitive modelling and multimodal interaction
+*   Gesture, touch and haptics
+*   Healthcare, assistive technologies
+*   Human communication dynamics
+*   Human-robot/agent multimodal interaction
+*   Human-centred AI and ethics
+*   Interaction with smart environment
+*   Machine learning for multimodal interaction
+*   Mobile and wearable multimodal systems
+*   Multimodal behaviour generation
+*   Multimodal datasets and validation
+*   Multimodal dialogue modeling
+*   Multimodal fusion and representation
+*   Multimodal interactive applications
+*   Novel multimodal datasets
+*   Spoken/visual behaviours in social interaction
+*   System components and multimodal platforms
+*   Virtual/augmented reality and multimodal interaction
+
+## ACM Publication Policies
+
+By submitting your article to an ACM Publication, you are hereby acknowledging that you and your co-authors are subject to all ACM Publications Policies, including ACM’s new [Publications Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects).
+
+Please ensure that you and your co-authors obtain an ORCID ID.
+
+## Important Dates
+
+| Item                     | Date               |
+| ------------------------ | ------------------ |
+| Abstract deadline        | April 25th, 2025   |
+| Paper Submission         | May 02, 2025       |
+| Rebuttal Period          | June 7th-12th, 2025|
+| Paper notification        | July 1st, 2025     |
+| Camera-ready paper       | August 1st, 2025   |
+| Presenting at main conference | October 13th-17th, 2025|
+
+## Submission
+
+Click [here](https://new.precisionconference.com/submissions) to submit your paper. Please select ‘ICMI 2025’ from the dropdown menu under ‘Conference/Journal’ in the PCS portal.",,,,,
+req-conf-1752210847786-g1qyp,,International Conference in Methodologies and Intelligent Systems for Technology Enhanced Learning,MIS4TEL,https://mis4tel-conference.net/,https://mis4tel-conference.net/submission,https://mis4tel-conference.net/submission,"Conference dates: June 25 - 27, 2025
+Year: 2025
+Location: University of Lille, Lille, France
+City-State-Province: Lille
+Country: France
+Continent: Europe
+Type: Offline
+Submission Date.Deadline: March 31, 2025
+Notification Date.Notification of acceptance: April 25, 2025
+Camera-ready Date.Camera-Ready papers: May 9, 2025
+Topics: Methodologies and Intelligent Systems for Technology Enhanced Learning
+Publisher: Springer Verlag","June 25 - 27, 2025",2025,"University of Lille, Lille, France",Lille,France,Europe,Offline,"{""Deadline"":""March 31, 2025""}","{""Notification of acceptance"":""April 25, 2025""}","{""Camera-Ready papers"":""May 9, 2025""}",{},{},Methodologies and Intelligent Systems for Technology Enhanced Learning,Springer Verlag,"The 15th International Conference on Methodologies and Intelligent Systems for Technology Enhanced Learning (MIS4TEL) will be held at the University of Lille (France) from June 25th-27th, 2025. It invites researchers, designers, and domain experts to contribute insights on transformative methodologies in technology-enhanced learning. Accepted papers will be published by Lecture Notes in Networks and Systems series of Springer Verlag and will be submitted to various indexing services.",No call for papers available,,,,,
+req-conf-1752210847786-g1qyp,,Malaysia International Conference on Communications,MICC,https://micc2025.mycomvt.info/,https://micc2025.mycomvt.info/call-for-papers/,https://micc2025.mycomvt.info/important-dates/,"Conference dates: August 27 - 28, 2025
+Year: 2025
+Location: Grand Swiss-Belhotel Melaka, Melaka, Malaysia
+City-State-Province: Melaka
+Country: Malaysia
+Continent: Asia
+Type: Offline
+Submission Date.Full Paper Submission Deadline: June 15, 2025
+Notification Date.Acceptance Notification: June 15, 2025
+Camera-ready Date.Camera Ready with Payment Deadline: July 31, 2025
+Registration Date.Early Bird Registration Deadline: July 7, 2025
+Topics: Next Generation Wireless & Mobile Communications, Software-Defined Networking (SDN) & Network Virtualization, Emerging Communication Technologies, IoT, AI & Smart Communication Networks, Green & Sustainable Communication Systems, Optical & Quantum Communications, Antenna Theory and Design, Electromagnetic Wave Propagation, RF Circuit Design and Systems, Wireless Communication Technologies, Simulation and Measurement Techniques
+Publisher: IEEE Xplore","August 27 - 28, 2025",2025,"Grand Swiss-Belhotel Melaka, Melaka, Malaysia",Melaka,Malaysia,Asia,Offline,"{""Full Paper Submission Deadline"":""June 15, 2025""}","{""Acceptance Notification"":""June 15, 2025""}","{""Camera Ready with Payment Deadline"":""July 31, 2025""}","{""Early Bird Registration Deadline"":""July 7, 2025""}",{},"Next Generation Wireless & Mobile Communications, Software-Defined Networking (SDN) & Network Virtualization, Emerging Communication Technologies, IoT, AI & Smart Communication Networks, Green & Sustainable Communication Systems, Optical & Quantum Communications, Antenna Theory and Design, Electromagnetic Wave Propagation, RF Circuit Design and Systems, Wireless Communication Technologies, Simulation and Measurement Techniques",IEEE Xplore,"The 2025 IEEE 17th Malaysia International Conference on Communications (MICC) will be held in Melaka, Malaysia, from 27-28 August 2025. MICC is a premier platform for both international and local delegates to share their latest research advancements in the field of communications. Accepted papers will be published in the MICC2025 Conference Proceeding and will be submitted to IEEE Xplore.","# MICC 2025: Call for Papers
+
+The 2025 IEEE 17th Malaysia International Conference on Communications (MICC) will be held in **Melaka, Malaysia, from 27-28 August 2025**.
+
+MICC serves as a premier forum for researchers and engineers to explore and discuss innovations in advanced information and communication technologies and services.
+
+## Conference Topics
+
+Potential topics include, but are not limited to:
+
+*   Next Generation Wireless & Mobile Communications
+*   Software-Defined Networking (SDN) & Network Virtualization
+*   Emerging Communication Technologies
+*   IoT, AI & Smart Communication Networks
+*   Green & Sustainable Communication Systems
+*   Optical & Quantum Communications
+*   Antenna Theory and Design
+*   Electromagnetic Wave Propagation
+*   RF Circuit Design and Systems
+*   Wireless Communication Technologies
+*   Simulation and Measurement Techniques
+
+[Conference Tracks Details: CLICK HERE](https://micc2025.mycomvt.info/conference-tracks/)
+
+## Submission
+
+Accepted papers will be published in the MICC2025 Conference Proceedings and submitted to IEEE Xplore for potential publication. The proceedings will also be indexed and made available through major academic databases such as SCOPUS.
+
+*   [Submit paper now](https://edas.info/N33624)
+*   [Authors Guideline](https://micc2025.mycomvt.info/authors-guidelines/)
+
+## Important Dates
+
+*   **Full Paper Submission Deadline (2nd Extension):** 15 JUNE 2025
+*   **Acceptance Notification:** 1 June 2025 (15 JUNE 2025 For Extended Submission)
+*   **Early Bird Registration Deadline:** 7 July 2025
+*   **Camera Ready with Payment Deadline:** 31 July 2025
+*   **Conference Date:** 27-28 August 2025
+
+## Awards & Recognition
+
+Compete for prestigious honors, including the Best Paper Award, Best Presenter Award, and more!
+
+IEEE ComSoc/VTS student members are eligible to apply for exclusive grants.",,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Interactive Digital Storytelling,ICIDS,https://icids2025.ardin.online/,https://icids2025.ardin.online/cfp-innerpage,,"Conference dates: December 1 - 5, 2025
+Year: 2025
+Location: Malta
+City-State-Province: Malta
+Country: Malta
+Continent: Europe
+Type: Hybrid
+Submission Date.Paper Submission Deadline: June 22, 2025
+Submission Date.Workshop Submissions Deadline: July 22, 2025
+Submission Date.Late-breaking Works Submission Deadline: September 3, 2025
+Topics: Interactive Digital Storytelling, Theory, History, Foundations, Methods, Tools, Applications, Case Studies, Social, Cultural, Critical Perspectives
+Publisher: Springer","December 1 - 5, 2025",2025,Malta,Malta,Malta,Europe,Hybrid,"{""Paper Submission Deadline"":""June 22, 2025"",""Workshop Submissions Deadline"":""July 22, 2025"",""Late-breaking Works Submission Deadline"":""September 3, 2025""}",{},{},{},{},"Interactive Digital Storytelling, Theory, History, Foundations, Methods, Tools, Applications, Case Studies, Social, Cultural, Critical Perspectives",Springer,"ICIDS 2025, the 18th International Conference on Interactive Digital Storytelling, will be held in Malta from December 1st to 5th, 2025. This year's theme is ""Kaleidoscopic Machines"", inspired by the intersection of AI and human creativity in IDNs. The conference aims to explore past, present, and future of IDNs, focusing on how AI is shaping narrative expression.",No call for papers available,,,,,
+req-conf-1752210847786-g1qyp,,New Zealand Game Developers Conference,NZGDC,https://www.nzgdc.com/,https://www.nzgdc.com/newsroom/nzgdc-workshop-submissions-open,,"Conference dates: September 25 - 27, 2025
+Year: 2025
+Location: Wellington, New Zealand
+City-State-Province: Wellington
+Country: New Zealand
+Continent: Oceania
+Type: Offline
+Submission Date.(Workshop) Submissions: May 23, 2025
+Topics: Game Development","September 25 - 27, 2025",2025,"Wellington, New Zealand",Wellington,New Zealand,Oceania,Offline,"{""(Workshop) Submissions"":""May 23, 2025""}",{},{},{},{},Game Development,No publisher,"The New Zealand Game Developers Conference (NZGDC) 2025 will be held in Wellington (Pōneke) from September 25-27. The theme for 2025 is 'The People at the Heart of Games', celebrating the community, collaboration, and individuals who shape the game development industry in Aotearoa NZ.","# NZGDC 2025: Call for Workshop Submissions
+
+The submission window for workshops at this year’s New Zealand Game Developers Conference (NZGDC) is now open!
+
+We’re calling on you to share your expertise and passion with the community.
+
+## Workshop Details
+
+For the first time ever, you have the flexibility to propose workshop sessions of **1, 2, or 3 hours**. Whether you want to deliver a quick tip, a hands-on tutorial, or a comprehensive deep dive into a specific topic, there’s a format that fits your content and style. This is your chance to showcase your skills, share insights, and contribute to the growth of NZ’s vibrant game dev scene.
+
+We’re looking for diverse and engaging workshops that can benefit developers at all levels - whether for an industry veteran or an emerging creator.
+
+Don’t miss this opportunity to be part of a dynamic event that brings together New Zealand’s best and brightest in gaming. Your expertise could be the spark that inspires someone else’s creativity. Submit your workshop proposal today and help us make NZGDC the most exciting and educational conference yet!
+
+Let’s grow the NZ game dev community together!
+
+[Submit here](https://registrations.nzgdc.com/Public)",,,,,
+req-conf-1752210847786-g1qyp,,IEEE Pacific Visualization Symposium,PacificVis,https://pacificvis2026.github.io/,https://pacificvis2026.github.io/common-call-for-papers.html,,"Conference dates: April 20 - 23, 2026
+Year: 2026
+Location: Sydney, Australia
+City-State-Province: Sydney
+Country: Australia
+Continent: Oceania
+Type: Offline
+Submission Date.(Journal track) Abstracts: September 1, 2025
+Submission Date.(Journal track) Papers: September 7, 2025
+Submission Date.(Conference track) Abstracts: TBA, 2026
+Submission Date.(Conference track) Papers: TBA, 2026
+Submission Date.(VisNotes) Paper due: TBA, 2026
+Submission Date.(Poster) Summary Submission: TBA, 2026
+Notification Date.(Journal track) Notification: October 27, 2025
+Notification Date.(Conference track) Notification: TBA, 2026
+Notification Date.(VisNotes) Notification: TBA, 2026
+Notification Date.(Poster) Summary Notification: TBA, 2026
+Topics: visualization research and technologies, visualization techniques and systems, interactions, analytics and decision support, theoretical contributions to visualization, empirical studies, visualization applications in biological sciences, education, machine learning, physical sciences, security, and social science
+Publisher: IEEE Computer Society","April 20 - 23, 2026",2026,"Sydney, Australia",Sydney,Australia,Oceania,Offline,"{""(Journal track) Abstracts"":""September 1, 2025"",""(Journal track) Papers"":""September 7, 2025"",""(Conference track) Abstracts"":""TBA, 2026"",""(Conference track) Papers"":""TBA, 2026"",""(VisNotes) Paper due"":""TBA, 2026"",""(Poster) Summary Submission"":""TBA, 2026""}","{""(Journal track) Notification"":""October 27, 2025"",""(Conference track) Notification"":""TBA, 2026"",""(VisNotes) Notification"":""TBA, 2026"",""(Poster) Summary Notification"":""TBA, 2026""}",{},{},{},"visualization research and technologies, visualization techniques and systems, interactions, analytics and decision support, theoretical contributions to visualization, empirical studies, visualization applications in biological sciences, education, machine learning, physical sciences, security, and social science",IEEE Computer Society,"The IEEE Pacific Visualization Symposium (PacificVis) 2026 will be held in Sydney, Australia, from April 20-23, 2026. PacificVis is an international conference promoting visualization research and technologies, particularly in the Asian-Pacific region.",No call for papers available,,,,,
+req-conf-1752210847786-g1qyp,,IEEE International Conference on Pervasive Computing and Communications,PERCOM,https://percom.org/,https://percom.org/call-for-papers/,https://percom.org/dates/,"Conference dates: March 16 - 20, 2026
+Year: 2026
+Location: National Research Council Area, Pisa, Italy
+City-State-Province: Pisa
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.(Main Conference) Paper registration: September 12, 2025
+Submission Date.(Main Conference) Paper submission: September 19, 2025
+Submission Date.(Workshops) Workshop proposal submission deadline: June 16, 2025
+Submission Date.(Work-in-Progress Papers) WiP paper submission: November 17, 2025
+Submission Date.(Demo Papers) Demo paper submission: December 8, 2025
+Submission Date.(Artifacts) Artifact submission deadline: January 19, 2026
+Notification Date.(Main Conference) 1st stage notification: November 28, 2025
+Notification Date.(Main Conference) Final notification: December 22, 2025
+Notification Date.(Workshops) Notification: June 23, 2025
+Notification Date.(Work-in-Progress Papers) Notification: January 12, 2026
+Notification Date.(Demo Papers) Notification: January 8, 2026
+Notification Date.(Artifacts) Notification (badge allotment): February 9, 2026
+Camera-ready Date.(Main Conference) Camera-ready due: February 2, 2026
+Camera-ready Date.(Work-in-Progress Papers) Camera-ready due: February 2, 2026
+Camera-ready Date.(Demo Papers) Camera-ready due: February 2, 2026
+Camera-ready Date.(Artifacts) Camera-ready due: February 16, 2026
+Other Date.(Main Conference) Rebuttal submission: December 5, 2025
+Other Date.(Artifacts) Artifact feedback and revision period: January 20 - February 6, 2026
+Topics: pervasive computing and communications, wireless networking, mobile and distributed computing, sensor systems, ambient intelligence, smart devices, middleware systems and services, data engineering for pervasive computing, cloud, fog and edge computing, integrations of smartphones in pervasive experiences, applications of device-to-device coordination, context modeling & reasoning, adaptive computing, activity & emotion recognition, programming paradigms, applied deep/federated/decentralized machine learning, causal learning, cognitive computing, complex networks, spatio-temporal modeling, urban/mobile crowdsensing & intelligence, PerCom for healthcare and well-being, cyber-physical systems, PerCom for space applications, smart homes and virtual assistants, mixed reality, sports analytics, crime prevention, pervasive nowcasting, urban robotics, pervasive AR/VR, smart vehicles, disaster sensing and management, IoT and sensor systems, Large Language Models, opportunistic networks, pervasive data science, 3D networks, security, privacy and trust in Pervasive Computing, ethical aspects of Pervasive Computing, participatory and social sensing, fairness and ethics, user interface, interaction, and persuasion, online and offline social networking, human-machine collaboration, architectures, protocols, and technologies for pervasive communications, energy-harvesting, self-powered, or battery-less systems, mobile and wearable systems, smart devices and environments, positioning, navigation, timing, and tracking technologies, device-free human sensing
+Publisher: IEEE","March 16 - 20, 2026",2026,"National Research Council Area, Pisa, Italy",Pisa,Italy,Europe,Offline,"{""(Main Conference) Paper registration"":""September 12, 2025"",""(Main Conference) Paper submission"":""September 19, 2025"",""(Workshops) Workshop proposal submission deadline"":""June 16, 2025"",""(Work-in-Progress Papers) WiP paper submission"":""November 17, 2025"",""(Demo Papers) Demo paper submission"":""December 8, 2025"",""(Artifacts) Artifact submission deadline"":""January 19, 2026""}","{""(Main Conference) 1st stage notification"":""November 28, 2025"",""(Main Conference) Final notification"":""December 22, 2025"",""(Workshops) Notification"":""June 23, 2025"",""(Work-in-Progress Papers) Notification"":""January 12, 2026"",""(Demo Papers) Notification"":""January 8, 2026"",""(Artifacts) Notification (badge allotment)"":""February 9, 2026""}","{""(Main Conference) Camera-ready due"":""February 2, 2026"",""(Work-in-Progress Papers) Camera-ready due"":""February 2, 2026"",""(Demo Papers) Camera-ready due"":""February 2, 2026"",""(Artifacts) Camera-ready due"":""February 16, 2026""}",{},"{""(Main Conference) Rebuttal submission"":""December 5, 2025"",""(Artifacts) Artifact feedback and revision period"":""January 20 - February 6, 2026""}","pervasive computing and communications, wireless networking, mobile and distributed computing, sensor systems, ambient intelligence, smart devices, middleware systems and services, data engineering for pervasive computing, cloud, fog and edge computing, integrations of smartphones in pervasive experiences, applications of device-to-device coordination, context modeling & reasoning, adaptive computing, activity & emotion recognition, programming paradigms, applied deep/federated/decentralized machine learning, causal learning, cognitive computing, complex networks, spatio-temporal modeling, urban/mobile crowdsensing & intelligence, PerCom for healthcare and well-being, cyber-physical systems, PerCom for space applications, smart homes and virtual assistants, mixed reality, sports analytics, crime prevention, pervasive nowcasting, urban robotics, pervasive AR/VR, smart vehicles, disaster sensing and management, IoT and sensor systems, Large Language Models, opportunistic networks, pervasive data science, 3D networks, security, privacy and trust in Pervasive Computing, ethical aspects of Pervasive Computing, participatory and social sensing, fairness and ethics, user interface, interaction, and persuasion, online and offline social networking, human-machine collaboration, architectures, protocols, and technologies for pervasive communications, energy-harvesting, self-powered, or battery-less systems, mobile and wearable systems, smart devices and environments, positioning, navigation, timing, and tracking technologies, device-free human sensing",IEEE,"The 24th IEEE International Conference on Pervasive Computing and Communications (PerCom 2026) will be held in Pisa, Italy from March 16 – 20, 2026. PerCom is a premier annual scholarly venue focusing on pervasive computing and communications. The conference encourages submissions in all areas pertinent to pervasive computing and communications.","# IEEE PerCom 2026: Call for Papers
+
+IEEE PerCom, now in its 24th year, will be held in Pisa, Italy in March 2026 as an in-person physical event.
+
+PerCom is the premier annual scholarly venue in pervasive computing and communications. Pervasive computing is at the forefront of mobile systems research and has found its way into many commercial applications due to tremendous advances in a broad spectrum of technologies and topics such as wireless networking, mobile and distributed computing, sensor systems, ambient intelligence, and smart devices.
+
+## Scope
+
+PerCom 2026 solicits research contributions in all areas pertinent to pervasive computing and communications, especially those that cross traditional research boundaries. In particular, PerCom targets contributions in:
+
+*   Advances in pervasive systems and infrastructures: middleware systems and services; data engineering for pervasive computing; cloud, fog and edge computing; integrations of smartphones in pervasive experiences; applications of device-to-device coordination.
+*   Theories, models, and algorithms: context modeling & reasoning; adaptive computing; activity & emotion recognition; programming paradigms; applied deep/federated/decentralized machine learning; causal learning; cognitive computing; complex networks; spatio-temporal modeling.
+*   Domain-specific challenges and novel applications: urban/mobile crowdsensing & intelligence; PerCom for healthcare and well-being; cyber-physical systems; PerCom for space applications, smart homes and virtual assistants; mixed reality; sports analytics; crime prevention; pervasive nowcasting; urban robotics; pervasive AR/VR; smart vehicles; disaster sensing and management.
+*   Intersections of PerCom with: IoT and sensor systems; Large Language Models; opportunistic networks; pervasive data science; cyber-physical systems; 3D networks.
+*   Enablers for PerCom instrumentation: security, privacy and trust in Pervasive Computing; ethical aspects of Pervasive Computing.
+*   New techniques for user-level concerns: participatory and social sensing; fairness and ethics; user interface, interaction, and persuasion; online and offline social networking; human-machine collaboration.
+*   Technological innovations: architectures, protocols, and technologies for pervasive communications; energy-harvesting, self-powered, or battery-less systems; mobile and wearable systems; smart devices and environments; positioning, navigation, timing, and tracking technologies; device-free human sensing.
+
+Contributions can be analytical, empirical, technological, methodological, or a combination thereof. Papers reporting strong systems engineering contributions backed by solid and appropriate evaluations are strongly encouraged.
+
+Contributions should be novel (those presenting only minor improvements over the state of the art will not be considered), should demonstrate a significant impact (i.e., they should address an outstanding problem), and should be rigorous.
+
+Note that the impact of the contributions should be demonstrated in the context of pervasive computing and communications applications.
+
+## Important Dates
+
+| Event                          | Date              |
+| ------------------------------ | ----------------- |
+| Paper registration in EDAS     | September 12, 2025|
+| Submission via EDAS            | September 19, 2025|
+| 1st stage notification         | November 28, 2025 |
+| Rebuttal submission            | December 5, 2025  |
+| Notification                   | December 22, 2025 |
+| Camera Ready                   | February 2, 2026  |
+
+## Best Paper Award and Editorial Follow-Up
+
+The best paper will receive the prestigious Mark Weiser Best Paper Award.
+
+Selected papers will be invited to submit extended versions for a special issue of the Pervasive and Mobile Computing Journal.
+
+## Submission Details
+
+Paper submission must be done for the main conference and all associated events via EDAS. If you do not have an EDAS account, please, register first (it’s free) via the following link: [register](register). The direct submission link for PerCom 2026 is [here](here).
+
+PerCom 2026 will follow a double-blind review process. Authors are expected to make a good-faith effort to anonymize their submissions. In particular, as in previous PerCom editions, publishing pre-prints of your submitted papers in online archives (e.g., arXiv) prior to submission does NOT disqualify the paper from consideration at PerCom. Moreover, we instruct reviewers NOT to go searching for pre-prints of submitted papers.
+
+Submitted papers must be unpublished and not considered elsewhere for publication. Also, they must show a significant relevance to pervasive computing and communications. Submitted papers will undergo a rigorous review process handled by the Technical Program Committee. Only electronic submissions in PDF format will be considered.
+
+The IEEE LaTeX and Microsoft Word templates, as well as formatting instructions, can be found [here](here). Papers must be at most 9 pages of technical content (10pt font, 2-column format), including text, figures, and tables, and up to 1 additional page for references only.
+
+PerCom 2026 introduces a rebuttal phase to further improve the quality of the review process. Authors are offered the opportunity to respond to the initial reviews. Particularly, they are encouraged to briefly clarify points, explain misunderstandings, etc.
+
+PerCom would not be PerCom without its community. For this reason, we are looking for ways to strengthen the community and encourage meaningful interactions. To this end, all accepted papers must be presented in person by one of the authors, in addition to having an associated full registration. Failure to comply with this requirement will result in the exclusion of the paper from the final proceedings and from the IEEE Digital Library, and the paper will not be eligible for the Best Paper Award.
+
+We strongly advise authors of submitted papers to be prepared to apply for their visa (if required for entry into Italy) as soon as their paper is accepted.
+
+Accepted papers will be published in IEEE Xplore. All accepted papers will be invited to submit an artifact abstract providing the code, data, results, etc. associated with the contribution.
+
+## TPC Chair and Vice Chairs
+
+*   Stephan Sigg\nAalto University, Finland
+*   Qi Han\nColorado School of Mines, US
+*   Gabriele Civitarese\nUniversity of Milan, Italy
+*   Sandip Chakraborty\nIIT Kharagpur, India
+
+To contact us, please write to [percom2026-tpc-chairs@fbk.eu](mailto:percom2026-tpc-chairs@fbk.eu)",,,,,
+req-conf-1752210847786-g1qyp,,The ACM International System and Storage Conference,SYSTOR,https://www.systor.org/2025/,https://www.systor.org/2025/cfp/,https://www.systor.org/2025/cfp/,"Conference dates: September 8 - 10, 2025
+Year: 2025
+Location: Haifa, Israel
+City-State-Province: Haifa
+Country: Israel
+Continent: Asia
+Type: Hybrid
+Submission Date.(Full and Short Papers Track) Paper Submission: May 26, 2025
+Submission Date.(Posters with Extended Abstract Track) Poster & Abstract Submission: July 10, 2025
+Submission Date.(ISW-only posters) Submission: August 15, 2025
+Notification Date.(Full and Short Papers Track) Acceptance Notification: July 10, 2025
+Notification Date.(Posters with Extended Abstract Track) Acceptance Notification: July 17, 2025
+Camera-ready Date.(Full and Short Papers Track) Camera ready: – to shepherd: August 1, 2025
+Camera-ready Date.(Full and Short Papers Track) Camera ready: – post shepherd: August 8, 2025
+Camera-ready Date.(Posters with Extended Abstract Track) Camera ready: – to shepherd: August 1, 2025
+Camera-ready Date.(Posters with Extended Abstract Track) Camera ready: – post shepherd: August 8, 2025
+Topics: Systems and workload optimization for AI/ML systems, Sustainability/carbon footprint of computer and network systems, System security and trust, Big Data infrastructure, Cloud, edge, data center, and distributed systems, Embedded and real-time systems, Fault tolerance, reliability, and availability, File and storage systems, Networked, mobile, wireless, peer-to-peer, and sensor systems, Operating systems, computer architecture, and their interactions, Performance evaluation and workload characterization, Runtime systems and compiler/programming-language support, System deployment, usage, and experience, System design or adaptation for emerging storage technologies, Virtualization and containers, Storage 3.0, Systems for AI and AI for Systems
+Publisher: ACM","September 8 - 10, 2025",2025,"Haifa, Israel",Haifa,Israel,Asia,Hybrid,"{""(Full and Short Papers Track) Paper Submission"":""May 26, 2025"",""(Posters with Extended Abstract Track) Poster & Abstract Submission"":""July 10, 2025"",""(ISW-only posters) Submission"":""August 15, 2025""}","{""(Full and Short Papers Track) Acceptance Notification"":""July 10, 2025"",""(Posters with Extended Abstract Track) Acceptance Notification"":""July 17, 2025""}","{""(Full and Short Papers Track) Camera ready: – to shepherd"":""August 1, 2025"",""(Full and Short Papers Track) Camera ready: – post shepherd"":""August 8, 2025"",""(Posters with Extended Abstract Track) Camera ready: – to shepherd"":""August 1, 2025"",""(Posters with Extended Abstract Track) Camera ready: – post shepherd"":""August 8, 2025""}",{},{},"Systems and workload optimization for AI/ML systems, Sustainability/carbon footprint of computer and network systems, System security and trust, Big Data infrastructure, Cloud, edge, data center, and distributed systems, Embedded and real-time systems, Fault tolerance, reliability, and availability, File and storage systems, Networked, mobile, wireless, peer-to-peer, and sensor systems, Operating systems, computer architecture, and their interactions, Performance evaluation and workload characterization, Runtime systems and compiler/programming-language support, System deployment, usage, and experience, System design or adaptation for emerging storage technologies, Virtualization and containers, Storage 3.0, Systems for AI and AI for Systems",ACM,"The ACM International System and Storage Conference (SYSTOR) 2025 will be a virtual event held from September 8-9, 2025, in collaboration with the 2nd Israeli Systems & AI Workshop on September 10 in Haifa. The conference invites submissions of innovative, peer-reviewed research papers and posters in systems and storage. Participation is free, but registration is mandatory.","# SYSTOR 2025: Call for Papers
+
+The ACM International Systems and Storage Conference (SYSTOR) is an international forum for interaction across the systems research community. The program includes innovative, peer-reviewed research papers in the broad area of systems, as well as distinguished keynote lecturers and a poster session. ACM SYSTOR is designed to engage academic and industrial researchers and practitioners, welcoming both students and seasoned professionals.
+
+SYSTOR 2025 will be held virtually on **September 8–9, 2025**, followed by the Israeli Systems & AI Workshop (ISW), which will be held physically in Haifa on **September 10**.
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to:
+
+*   Systems and workload optimization for AI/ML systems
+*   Sustainability/carbon footprint of computer and network systems
+*   System security and trust
+*   Big Data infrastructure
+*   Cloud, edge, data center, and distributed systems
+*   Embedded and real-time systems
+*   Fault tolerance, reliability, and availability
+*   File and storage systems
+*   Networked, mobile, wireless, peer-to-peer, and sensor systems
+*   Operating systems, computer architecture, and their interactions
+*   Performance evaluation and workload characterization
+*   Runtime systems and compiler/programming-language support
+*   System deployment, usage, and experience
+*   System design or adaptation for emerging storage technologies
+*   Virtualization and containers
+*   Storage 3.0
+*   Systems for AI and AI for Systems
+
+## Submission Tracks
+
+SYSTOR 2025 solicits submissions in three separate categories:
+
+*   **Full Papers Track** – original research, at most 12 pages, excluding references
+*   **Short Papers Track** – original research, at most 5 pages, excluding references
+*   **Posters with Extended Abstract Track** – original work presented as a poster, accompanied by an extended abstract in the conference proceedings
+
+## Important Dates
+
+*   **Full and Short Papers Track**
+    *   **Paper Submission:** Monday, May 26, 2025 (23:59 AoE)
+    *   **Acceptance Notification:** Thursday, July 10, 2025
+    *   **Title and Author confirmation:** Tuesday, July 15, 2025
+    *   **Camera ready:**
+        *   To shepherd: Friday, August 1, 2025
+        *   Post shepherd: Friday, August 8, 2025
+*   **Posters with Extended Abstract Track**
+    *   **Poster & Abstract Submission:** Thursday, July 10, 2025 (23:59 AoE)
+    *   **Acceptance Notification:** Thursday, July 17, 2025
+    *   **Title and Author confirmation:** Tuesday, July 22, 2025
+    *   **Camera ready:**
+        *   To shepherd: Friday, August 1, 2025
+        *   Post shepherd: Friday, August 8, 2025
+*   **Conference:** September 8-10, 2025
+
+## Submission Instructions
+
+*   Research papers (full and short) should be submitted through: [https://systor25.hotcrp.com/](https://systor25.hotcrp.com/)
+*   Posters should be submitted through: [https://systor25posters.hotcrp.com/](https://systor25posters.hotcrp.com/)
+*   ISW-only posters (physical presence required) can be submitted by August 15. Send a title, abstract, and name of presenter to Lior Shafir and Sarel Cohen.
+
+## Review Process
+
+The program committee will review submissions in a double-blind manner. All submissions should be properly anonymized, and all identifiable information should be removed whenever possible, including obvious self-references. Papers not properly anonymized may be rejected without review.
+
+## Formatting Instructions
+
+Submissions must be printable PDF files. Use the sigplan proceedings template of ACM’s acmart Latex class, which is available on the official ACM site. Ensure that your paper satisfies all requirements for content and formatting before submission.
+
+## Open Source
+
+The authors of a SYSTOR submission are encouraged to associate a source code repo with their submission, but this repo must be completely anonymized.
+
+## Post Acceptance Instructions
+
+Accepted papers will be shepherded. Authors must address all reviewers’ comments and submit the final version. Following this, the shepherd will provide final approval for the camera-ready version within a week.
+
+Kindly review and finalize the title of your submission and the author list (including their order).
+
+## Camera-Ready Submission Instructions
+
+*   Contact proceeding publication chair Surbhi Palande for questions.
+*   When authors submit their eRights forms to ACM, they receive confirmation messages that include the appropriate copyright text & DOI (document identifier) for their papers. Once complete, the camera-ready paper should be submitted through HotCRP.
+*   Make sure fonts are type 1 (scalable), NOT Type 3 (bit-mapped), and embedded within the document.
+*   Authors must use the ACM classification system.
+*   Please include paper keywords (specified with the `\keywords` command in (La)TeX).
+*   Please include a short ABSTRACT section for posters. Do not put your entire extended abstract under this section.
+*   Papers/posters must not include page numbers in the final manuscript and there is no need to include the “ACM Reference” (to remove these, you may need to use `\settopmatter{printacmref=false,printfolios=false}`.
+*   Be sure that there are no bad page or column breaks, meaning no widows (last line of a paragraph at the top of a column).
+*   Include the DOI in your paper that you received from ACM (use `\acmDOI{####}`) and update the ISBN data: `\acmISBN{979-8-4007-1181-7}`
+*   The camera-ready version must include the updated copyright text you received from ACM. If you did not see an email referring to the ACM right management form, please check your SPAM folders.
+*   Alongside the camera-ready PDF, you will be required to *submit the source files* for your paper, including ALL files which were used to create the final output (PDF), be they Word, LaTeX, image files, etc. This is mandatory.
+
+The following template contains the required settings: [Concise-Paper-Template.zip](https://www.systor.org/2024/wp-content/uploads/sites/7/2024/08/SYSTOR-2024-Concise-Paper-Template.zip)
+",,,,,
+req-conf-1752210847786-g1qyp,,International Conference on Data Engineering,ICDE,https://icde2026.github.io/,https://icde2026.github.io/cf-research-papers.html,https://icde2026.github.io/important-dates.html,"Conference dates: May 4 - 8, 2026
+Year: 2026
+Location: Montréal, Canada
+City-State-Province: Montréal
+Country: Canada
+Continent: North America
+Type: Offline
+Submission Date.(First Round) Submission due: June 18, 2025
+Submission Date.(Second Round) Submission due: October 27, 2025
+Submission Date.(First Round) Revision due: September 22, 2025
+Submission Date.(Second Round) Revision due: January 26, 2026
+Notification Date.(First Round) Notification for authors (Accept/Revise/Reject): August 18, 2025
+Notification Date.(Second Round) Notification for authors (Accept/Revise/Reject): December 22, 2025
+Notification Date.(First Round) Notification to authors (Accept/Reject): October 20, 2025
+Notification Date.(Second Round) Notification to authors (Accept/Reject): February 23, 2026
+Topics: AI for Database Systems and Database Systems for AI, Benchmarking, Performance Modeling, Tuning, and Testing, Cloud Data Management, Data Mining with a focus on data management, Data Integration and Heterogenous Data Management, Data Models, Semantics, Query languages, Data Quality, Curation, and Provenance, Database Security and Privacy, Data streams, Complex Event Processing and Edge Computing, Data Systems on Modern Hardware, Data Visualization and Interactive Data Exploration, Data Warehousing, OLAP and Analytics, Distributed Ledgers and Blockchains, Distributed and Parallel Data Management, Explainability, Fairness, and Trust in Data Systems and Analysis, Graph Data Management, Knowledge Graphs and Knowledge Management, Multi-Modal Data management, Natural Language Processing for Databases, Query Processing and Optimization, Responsible and Ethical Data Management, Spatial and Temporal Data Management, Storage, Indexing, and Physical Design, Transaction Management, Uncertain, Probabilistic, and Approximate Databases, Workflows and Scientific Data Management
+Publisher: IEEE","May 4 - 8, 2026",2026,"Montréal, Canada",Montréal,Canada,North America,Offline,"{""(First Round) Submission due"":""June 18, 2025"",""(Second Round) Submission due"":""October 27, 2025"",""(First Round) Revision due"":""September 22, 2025"",""(Second Round) Revision due"":""January 26, 2026""}","{""(First Round) Notification for authors (Accept/Revise/Reject)"":""August 18, 2025"",""(Second Round) Notification for authors (Accept/Revise/Reject)"":""December 22, 2025"",""(First Round) Notification to authors (Accept/Reject)"":""October 20, 2025"",""(Second Round) Notification to authors (Accept/Reject)"":""February 23, 2026""}",{},{},{},"AI for Database Systems and Database Systems for AI, Benchmarking, Performance Modeling, Tuning, and Testing, Cloud Data Management, Data Mining with a focus on data management, Data Integration and Heterogenous Data Management, Data Models, Semantics, Query languages, Data Quality, Curation, and Provenance, Database Security and Privacy, Data streams, Complex Event Processing and Edge Computing, Data Systems on Modern Hardware, Data Visualization and Interactive Data Exploration, Data Warehousing, OLAP and Analytics, Distributed Ledgers and Blockchains, Distributed and Parallel Data Management, Explainability, Fairness, and Trust in Data Systems and Analysis, Graph Data Management, Knowledge Graphs and Knowledge Management, Multi-Modal Data management, Natural Language Processing for Databases, Query Processing and Optimization, Responsible and Ethical Data Management, Spatial and Temporal Data Management, Storage, Indexing, and Physical Design, Transaction Management, Uncertain, Probabilistic, and Approximate Databases, Workflows and Scientific Data Management",IEEE,"The 42nd IEEE International Conference on Data Engineering (ICDE) will be held in Montréal, Canada, from May 4-8, 2026. ICDE is a premier conference for data and information engineering, bringing together researchers, practitioners, and developers to explore cutting-edge ideas in data-intensive systems and applications.",No call for papers available,,,,,
+req-conf-1752301586229-m9nyl,,International Conference on Evaluation and Assessment in Software Engineering,EASE,https://conf.researchr.org/home/ease-2025,https://conf.researchr.org/track/ease-2025/ease-2025-research-papers,https://conf.researchr.org/dates/ease-2025,"Conference dates: June 17 - 20, 2025
+Year: 2025
+Location: Istanbul Technical University, Istanbul, Turkey
+City-State-Province: Istanbul
+Country: Turkey
+Continent: Europe
+Type: Offline
+Submission Date.(Research Papers) Abstract Submission Deadline: January 24, 2025
+Submission Date.(Research Papers) Submission Deadline: January 31, 2025
+Submission Date.(Workshops) Workshop Proposal Deadline: December 10, 2024
+Submission Date.(EQUISA) Submission deadline: March 28, 2025
+Submission Date.(LEARNER) Paper Submission: March 16, 2025
+Submission Date.(International Workshop on Software Security Engineering) Papers submission: March 16, 2025
+Submission Date.(E-QSE) Submission Deadline: March 16, 2025
+Submission Date.(Short Papers, Emerging Results) Abstract Submission Deadline: March 9, 2025
+Submission Date.(Short Papers, Emerging Results) Full Paper Submission Deadline: March 16, 2025
+Submission Date.(Industry Papers) Abstract Submission Deadline: March 9, 2025
+Submission Date.(Industry Papers) Submission Deadline: March 16, 2025
+Submission Date.(Doctoral Symposium) Submission Deadline: March 17, 2025
+Submission Date.(Journal-first) Submission Deadline: March 20, 2025
+Submission Date.(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Submission Deadline: March 16, 2025
+Submission Date.(AI Models / Data) Submission Deadline: March 23, 2025
+Submission Date.(Posters and Vision) Submission Deadline: March 16, 2025
+Submission Date.(Workshops) Workshop Paper Submission Deadline: March 16, 2025
+Submission Date.(Tutorials) Submission Deadline: March 16, 2025
+Notification Date.(Research Papers) Initial Notification: December 19, 2024
+Notification Date.(Research Papers) Notification Deadline: March 21, 2025
+Notification Date.(Research Papers) Final Notification for Major Revisions: March 31, 2025
+Notification Date.(Workshops) Workshop Proposal Notification Deadline: December 16, 2024
+Notification Date.(EQUISA) Notification to authors: April 13, 2025
+Notification Date.(LEARNER) Author Notification: April 14, 2025
+Notification Date.(International Workshop on Software Security Engineering) Notifications to authors: April 13, 2025
+Notification Date.(E-QSE) Notification Deadline: April 13, 2025
+Notification Date.(Short Papers, Emerging Results) Notification Deadline: April 18, 2025
+Notification Date.(Industry Papers) Notification Deadline: April 13, 2025
+Notification Date.(Doctoral Symposium) Notification Deadline: April 14, 2025
+Notification Date.(Journal-first) Notification Deadline: March 15, 2025
+Notification Date.(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Notification Deadline: April 13, 2025
+Notification Date.(AI Models / Data) Notification Deadline: April 20, 2025
+Notification Date.(Posters and Vision) Notification Deadline: April 13, 2025
+Notification Date.(Workshops) Workshop Paper Notification Deadline: April 13, 2025
+Notification Date.(Tutorials) Notification Deadline: April 13, 2025
+Camera-ready Date.(Research Papers) Camera Ready: April 27, 2025
+Camera-ready Date.(EQUISA) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(LEARNER) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(International Workshop on Software Security Engineering) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(E-QSE) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(Short Papers, Emerging Results) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(Industry Papers) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(AI Models / Data) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(Posters and Vision) Camera Ready Deadline: April 27, 2025
+Camera-ready Date.(Tutorials) Camera Ready Deadline: April 27, 2025
+Registration Date.Early Registration Deadline for Authors: April 27, 2025
+Other Date.(International Workshop on Software Security Engineering) Workshop date: June 20, 2025
+Other Date.(EQUISA) Workshop date: June 17, 2025
+Other Date.(LEARNER) Workshop Date: June 17, 2025
+Topics: Evaluation and Assessment in Software Engineering, Meta-science, Research methods, Methodological issues, Empirical studies on software engineering, Theory development, Operationalization, Testing, Application, Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps and Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models and Methods, Software Engineering Process (agile, hybrid), Software Quality, AI-Based Software Development, Human factors and behavioral aspects of Software Engineering, Software development practices and process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies intersecting software engineering, Artificial Intelligence for Software Engineering, Ethics in Software Engineering
+Publisher: ACM","June 17 - 20, 2025",2025,"Istanbul Technical University, Istanbul, Turkey",Istanbul,Turkey,Europe,Offline,"{""(Research Papers) Abstract Submission Deadline"":""January 24, 2025"",""(Research Papers) Submission Deadline"":""January 31, 2025"",""(Workshops) Workshop Proposal Deadline"":""December 10, 2024"",""(EQUISA) Submission deadline"":""March 28, 2025"",""(LEARNER) Paper Submission"":""March 16, 2025"",""(International Workshop on Software Security Engineering) Papers submission"":""March 16, 2025"",""(E-QSE) Submission Deadline"":""March 16, 2025"",""(Short Papers, Emerging Results) Abstract Submission Deadline"":""March 9, 2025"",""(Short Papers, Emerging Results) Full Paper Submission Deadline"":""March 16, 2025"",""(Industry Papers) Abstract Submission Deadline"":""March 9, 2025"",""(Industry Papers) Submission Deadline"":""March 16, 2025"",""(Doctoral Symposium) Submission Deadline"":""March 17, 2025"",""(Journal-first) Submission Deadline"":""March 20, 2025"",""(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Submission Deadline"":""March 16, 2025"",""(AI Models / Data) Submission Deadline"":""March 23, 2025"",""(Posters and Vision) Submission Deadline"":""March 16, 2025"",""(Workshops) Workshop Paper Submission Deadline"":""March 16, 2025"",""(Tutorials) Submission Deadline"":""March 16, 2025""}","{""(Research Papers) Initial Notification"":""December 19, 2024"",""(Research Papers) Notification Deadline"":""March 21, 2025"",""(Research Papers) Final Notification for Major Revisions"":""March 31, 2025"",""(Workshops) Workshop Proposal Notification Deadline"":""December 16, 2024"",""(EQUISA) Notification to authors"":""April 13, 2025"",""(LEARNER) Author Notification"":""April 14, 2025"",""(International Workshop on Software Security Engineering) Notifications to authors"":""April 13, 2025"",""(E-QSE) Notification Deadline"":""April 13, 2025"",""(Short Papers, Emerging Results) Notification Deadline"":""April 18, 2025"",""(Industry Papers) Notification Deadline"":""April 13, 2025"",""(Doctoral Symposium) Notification Deadline"":""April 14, 2025"",""(Journal-first) Notification Deadline"":""March 15, 2025"",""(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Notification Deadline"":""April 13, 2025"",""(AI Models / Data) Notification Deadline"":""April 20, 2025"",""(Posters and Vision) Notification Deadline"":""April 13, 2025"",""(Workshops) Workshop Paper Notification Deadline"":""April 13, 2025"",""(Tutorials) Notification Deadline"":""April 13, 2025""}","{""(Research Papers) Camera Ready"":""April 27, 2025"",""(EQUISA) Camera Ready Deadline"":""April 27, 2025"",""(LEARNER) Camera Ready Deadline"":""April 27, 2025"",""(International Workshop on Software Security Engineering) Camera Ready Deadline"":""April 27, 2025"",""(E-QSE) Camera Ready Deadline"":""April 27, 2025"",""(Short Papers, Emerging Results) Camera Ready Deadline"":""April 27, 2025"",""(Industry Papers) Camera Ready Deadline"":""April 27, 2025"",""(Learnings/Reflections of Evaluation and Assessment projects in Software Engineering) Camera Ready Deadline"":""April 27, 2025"",""(AI Models / Data) Camera Ready Deadline"":""April 27, 2025"",""(Posters and Vision) Camera Ready Deadline"":""April 27, 2025"",""(Tutorials) Camera Ready Deadline"":""April 27, 2025""}","{""Early Registration Deadline for Authors"":""April 27, 2025""}","{""(International Workshop on Software Security Engineering) Workshop date"":""June 20, 2025"",""(EQUISA) Workshop date"":""June 17, 2025"",""(LEARNER) Workshop Date"":""June 17, 2025""}","Evaluation and Assessment in Software Engineering, Meta-science, Research methods, Methodological issues, Empirical studies on software engineering, Theory development, Operationalization, Testing, Application, Software Requirements, Software Architecture, Data-Driven Software Engineering, Global Software Engineering, Software Design, Software Construction, Software Testing, Software Operations, DevOps and Continuous Delivery, Software Maintenance, Software Configuration Management, Software Engineering Management, Software Engineering Models and Methods, Software Engineering Process (agile, hybrid), Software Quality, AI-Based Software Development, Human factors and behavioral aspects of Software Engineering, Software development practices and process improvement, Sustainability in Software Engineering, Inter- or multi-disciplinary studies intersecting software engineering, Artificial Intelligence for Software Engineering, Ethics in Software Engineering",ACM,"The International Conference on Evaluation and Assessment in Software Engineering (EASE) 2025 will be held in Istanbul, Turkey, from June 17-20, 2025. The conference is a leading venue for discussing research on evidence-based software engineering and its implications. EASE welcomes submissions for various tracks, including research papers, short papers, industry papers, and a doctoral symposium.","# EASE 2025: Call for Papers
+
+The International Conference on Evaluation and Assessment in Software Engineering (EASE) 2025 will be held in **Istanbul, Turkey, from June 17-20, 2025**.
+
+EASE is an internationally leading venue for academics and practitioners to present and discuss their research on evidence-based software engineering and its implications for software practice. EASE is ranked as A conference in CORE.
+
+## Tracks
+
+EASE 2025 welcomes high-quality submissions for the following tracks:
+
+*   [Plenary](https://conf.researchr.org/track/ease-2025/ease-2025-plenary) 
+*   [Research Papers](https://conf.researchr.org/track/ease-2025/ease-2025-research-papers)
+*   [Short Papers, Emerging Results](https://conf.researchr.org/track/ease-2025/ease-2025-short-papers--emerging-results)
+*   [Industry Papers](https://conf.researchr.org/track/ease-2025/ease-2025-industry-papers)
+*   [Posters and Vision](https://conf.researchr.org/track/ease-2025/ease-2025-posters-and-vision)
+*   [Journal-first](https://conf.researchr.org/track/ease-2025/ease-2025-journal-first)
+*   [Doctoral Symposium](https://conf.researchr.org/track/ease-2025/ease-2025-doctoral-symposium)
+*   [Learnings/Reflections of Evaluation and Assessment projects in Software Engineering](https://conf.researchr.org/track/ease-2025/ease-2025-learnings-reflections-of-evaluation-and-assessment-projects-in-software-engineering)
+*   [AI Models / Data](https://conf.researchr.org/track/ease-2025/ease-2025-ai-models---data)
+*   [Workshops](https://conf.researchr.org/track/ease-2025/ease-2025-workshops)
+*   [Tutorials](https://conf.researchr.org/track/ease-2025/ease-2025-tutorials)
+*   [Student Volunteers](https://conf.researchr.org/track/ease-2025/ease-2025-student-volunteers)
+
+## Topics
+
+EASE welcomes papers addressing topics related to evaluating and assessing software products, processes, practices, tools & techniques, including:
+
+*   Meta-science (e.g., papers about research methods and methodological issues, whether empirical or conceptual)
+*   Infrastructure and techniques for conducting empirical studies on software engineering
+*   Theory development, operationalization, testing, and application
+*   Applications of evaluation and assessment in specific contexts, such as:
+    *   Software Requirements
+    *   Software Architecture
+    *   Data-Driven Software Engineering
+    *   Global Software Engineering
+    *   Software Design
+    *   Software Construction
+    *   Software Testing
+    *   Software Operations
+    *   DevOps and Continuous Delivery
+    *   Software Maintenance
+    *   Software Configuration Management
+    *   Software Engineering Management
+    *   Software Engineering Models and Methods
+    *   Software Engineering Process (e.g., agile, hybrid)
+    *   Software Quality
+    *   AI-Based Software Development
+    *   Human factors and behavioral aspects of Software Engineering
+    *   Software development practices and process improvement
+    *   Sustainability in Software Engineering
+    *   Inter- or multi-disciplinary studies intersecting software engineering
+    *   Artificial Intelligence for Software Engineering
+    *   Ethics in Software Engineering
+
+EASE also welcomes studies with negative findings or non-significant results.
+
+## Submission Guidelines
+
+All papers must be submitted in PDF format through the web-based submission system [EasyChair for EASE 2025](https://easychair.org/conferences/?conf=ease2025).
+
+*   Submissions must not exceed **10 pages** for the main text, including all figures, tables, appendices, etc.
+*   Up to two additional pages containing ONLY references are permitted.
+*   All submissions should use the official ACM Primary Article Template.
+*   Deviating from the ACM formatting instructions may lead to a desk rejection.
+*   LaTeX users should use the following options:
+    ```latex
+    \documentclass[sigconf,review,anonymous]{acmart}
+    \acmConference[EASE 2025]{The 29th International Conference on Evaluation and Assessment in Software Engineering}{17–20 June, 2025}{Istanbul, Türkiye}
+    ```
+*   Authors must comply with the [SIGSOFT Open Science Policy](https://www.acm.org/binaries/content/assets/publications/policies/sigsoft-open-science-policies.pdf).
+*   EASE 2025 will employ a double-anonymous review process. Do not include author names or affiliations in submissions. All references to the author’s prior work should be in the third person. Any online supplements, replication packages, etc., referred to in the work should also be anonymized. Advice for sharing supplements anonymously can be found [here](https://www.acm.org/binaries/content/assets/publications/policies/sigsoft-open-science-policies.pdf).
+*   By submitting to EASE, authors agree to the ACM Policy and Procedures on Plagiarism, Misrepresentation, and Falsification ([ACM Policy on Plagiarism, etc.](https://www.acm.org/publications/policies/plagiarism-policy)).
+*   If the research involves human participants/subjects, the authors must adhere to the ACM Publications Policy on Research Involving Human Participants and Subjects [ACM Policy on Research Involving Human Participants and Subjects](https://www.acm.org/publications/policies/research-involving-human-participants-and-subjects).
+
+## Review Criteria
+
+The reviewers will be encouraged to do a standards-based review. To see the criteria for standards-based reviews, please use this tool: [Empirical Standards Checklist](https://acmsigsoft.github.io/EmpiricalStandards/form_generator/Checklist.html?role=author).
+
+The reviews will evaluate submissions additionally against the following criteria:
+
+*   **Soundness:** The extent to which the paper’s contributions and innovations address its research questions and are supported by rigorous application of appropriate research methods
+*   **Significance:** The extent to which the paper’s contributions can impact the field of software engineering and under which assumptions (if any)
+*   **Novelty:** The extent to which the contributions are sufficiently original with respect to the state-of-the-art
+*   **Verifiability and Transparency:** The extent to which the paper includes sufficient information to understand how an innovation works, how data was obtained, analyzed, and interpreted, and how the paper supports independent verification or replication of the paper’s claimed contributions.
+*   **Presentation:** The extent to which the paper’s quality of writing meets the high standards of EASE, including clear descriptions, adequate use of the English language, absence of significant ambiguity, clearly readable figures and tables, and adherence to the formatting instructions provided above.
+
+## Important Dates (AoE (UTC-12h))
+
+*   **Abstract Submission Deadline:** January 24, 2025
+*   **Submission Deadline:** January 31, 2025
+*   **Notification Deadline:** March 21, 2025
+*   **Early Registration Deadline for Authors:** April 27, 2025
+*   **Early Registration Deadline:** April 27, 2025
+*   **Camera Ready Deadline:** April 27, 2025
+*   **Workshop Date:** June 20, 2025
+*   **Workshop Date:** June 17, 2025
+*   **Workshop Date:** June 17, 2025
+*   **Workshop Paper Notification Deadline:** April 13, 2025",,,,,
+req-conf-1752301586229-m9nyl,,European Conference on Software Architecture,ECSA,https://conf.researchr.org/home/ecsa-2025,https://conf.researchr.org/track/ecsa-2025/ecsa-2025-call-for-research-papers,https://conf.researchr.org/dates/ecsa-2025,"Conference dates: September 15 - 19, 2025
+Year: 2025
+Location: Limassol, Cyprus
+City-State-Province: Limassol
+Country: Cyprus
+Continent: Europe
+Type: Offline
+Submission Date.(Research Papers) Abstract submission: March 14, 2025
+Submission Date.(Research Papers) Paper submission: March 21, 2025
+Submission Date.(Industry Program) Abstract submission: March 21, 2025
+Submission Date.(Industry Program) Paper submission: March 28, 2025
+Submission Date.(Workshops) Workshop proposal: February 24, 2025
+Submission Date.(Workshops) Workshop papers abstracts: May 12, 2025
+Submission Date.(Workshops) Workshop papers submission: June 2, 2025
+Submission Date.(Tools & Demos) Abstract Submission: May 16, 2025
+Submission Date.(Tools & Demos) Paper Submission: May 23, 2025
+Submission Date.(Tutorials) Tutorial proposals due: May 30, 2025
+Submission Date.(Doctoral Symposium) Abstract Submission: May 16, 2025
+Submission Date.(Doctoral Symposium) Paper Submission: May 30, 2025
+Submission Date.(Journal First) Paper submission: May 23, 2025
+Submission Date.(Open Science) Submission Deadline: May 19, 2025
+Notification Date.(Research Papers) Notification: May 9, 2025
+Notification Date.(Industry Program) Notification of Acceptance: May 9, 2025
+Notification Date.(Workshops) Workshop proposal notification: March 7, 2025
+Notification Date.(Workshops) Workshop papers notification: June 20, 2025
+Notification Date.(Tools & Demos) Notification: June 20, 2025
+Notification Date.(Tutorials) Notification of Tutorial proposals: June 20, 2025
+Notification Date.(Doctoral Symposium) Notification of Acceptance: June 20, 2025
+Notification Date.(Journal First) Acceptance notifications: June 20, 2025
+Camera-ready Date.(Research Papers) Camera-ready paper: June 23, 2025
+Camera-ready Date.(Industry Program) Camera-ready paper: June 13, 2025
+Camera-ready Date.(Workshops) Workshop papers camera ready: June 27, 2025
+Camera-ready Date.(Tools & Demos) Camera-ready: June 27, 2025
+Camera-ready Date.(Doctoral Symposium) Camera Ready Paper: June 27, 2025
+Registration Date.(Workshops) Early/Author registration: June 27, 2025
+Other Date.(Workshops) Workshop Days: September 15 - 16, 2025
+Topics: Software Architecture, Foundational principles of software architecture, Relationship of requirements engineering and software architecture, Quality attributes and software architectures, Architecture practices for secure, explainable, and trustworthy software, Architecture design and analysis, Architecture description languages and meta-models, Architecture verification and validation, Management of architectural knowledge, decisions, and rationale, Architecture patterns, styles, and tactics; reference architectures, Architecture viewpoints and views, Architecture conformance, Software architecture virtualization and visualization, Architecture-centric process models and frameworks, Software architecture and agile, incremental, iterative, and continuous development, Component-based models and deployment; middleware, Software architecture and system architecture, Software tools and environments for architecture-centric software engineering, Ethics, cultural, economic, business, social, human, and managerial aspects of software architecture, Architecture and technical debt, Architecting for sustainable and environment friendly systems, Applying AI and LLMs in software architecture and architecting for AI and LLM intensive systems, Software architecture education, Cross-disciplinary approaches to software architecture, Architectures for reconfigurable and self-adaptive systems, Architectural concerns of autonomic systems, Software architecture applied to new and emerging areas (cloud/edge, big data, blockchain, cyber-physical systems, IoT, autonomous systems, systems-of-systems, energy-aware software, quantum computing, AI-enabled systems), Empirical studies, systematic literature reviews, and mapping studies in software architecture, Diversity, equity, and inclusion in activities related to software architecture
+Publisher: Springer","September 15 - 19, 2025",2025,"Limassol, Cyprus",Limassol,Cyprus,Europe,Offline,"{""(Research Papers) Abstract submission"":""March 14, 2025"",""(Research Papers) Paper submission"":""March 21, 2025"",""(Industry Program) Abstract submission"":""March 21, 2025"",""(Industry Program) Paper submission"":""March 28, 2025"",""(Workshops) Workshop proposal"":""February 24, 2025"",""(Workshops) Workshop papers abstracts"":""May 12, 2025"",""(Workshops) Workshop papers submission"":""June 2, 2025"",""(Tools & Demos) Abstract Submission"":""May 16, 2025"",""(Tools & Demos) Paper Submission"":""May 23, 2025"",""(Tutorials) Tutorial proposals due"":""May 30, 2025"",""(Doctoral Symposium) Abstract Submission"":""May 16, 2025"",""(Doctoral Symposium) Paper Submission"":""May 30, 2025"",""(Journal First) Paper submission"":""May 23, 2025"",""(Open Science) Submission Deadline"":""May 19, 2025""}","{""(Research Papers) Notification"":""May 9, 2025"",""(Industry Program) Notification of Acceptance"":""May 9, 2025"",""(Workshops) Workshop proposal notification"":""March 7, 2025"",""(Workshops) Workshop papers notification"":""June 20, 2025"",""(Tools & Demos) Notification"":""June 20, 2025"",""(Tutorials) Notification of Tutorial proposals"":""June 20, 2025"",""(Doctoral Symposium) Notification of Acceptance"":""June 20, 2025"",""(Journal First) Acceptance notifications"":""June 20, 2025""}","{""(Research Papers) Camera-ready paper"":""June 23, 2025"",""(Industry Program) Camera-ready paper"":""June 13, 2025"",""(Workshops) Workshop papers camera ready"":""June 27, 2025"",""(Tools & Demos) Camera-ready"":""June 27, 2025"",""(Doctoral Symposium) Camera Ready Paper"":""June 27, 2025""}","{""(Workshops) Early/Author registration"":""June 27, 2025""}","{""(Workshops) Workshop Days"":""September 15 - 16, 2025""}","Software Architecture, Foundational principles of software architecture, Relationship of requirements engineering and software architecture, Quality attributes and software architectures, Architecture practices for secure, explainable, and trustworthy software, Architecture design and analysis, Architecture description languages and meta-models, Architecture verification and validation, Management of architectural knowledge, decisions, and rationale, Architecture patterns, styles, and tactics; reference architectures, Architecture viewpoints and views, Architecture conformance, Software architecture virtualization and visualization, Architecture-centric process models and frameworks, Software architecture and agile, incremental, iterative, and continuous development, Component-based models and deployment; middleware, Software architecture and system architecture, Software tools and environments for architecture-centric software engineering, Ethics, cultural, economic, business, social, human, and managerial aspects of software architecture, Architecture and technical debt, Architecting for sustainable and environment friendly systems, Applying AI and LLMs in software architecture and architecting for AI and LLM intensive systems, Software architecture education, Cross-disciplinary approaches to software architecture, Architectures for reconfigurable and self-adaptive systems, Architectural concerns of autonomic systems, Software architecture applied to new and emerging areas (cloud/edge, big data, blockchain, cyber-physical systems, IoT, autonomous systems, systems-of-systems, energy-aware software, quantum computing, AI-enabled systems), Empirical studies, systematic literature reviews, and mapping studies in software architecture, Diversity, equity, and inclusion in activities related to software architecture",Springer,"The 19th European Conference on Software Architecture (ECSA 2025) will be held in Limassol, Cyprus, from September 15 to 19, 2025. ECSA is a premier European software architecture conference providing researchers, practitioners, and educators a platform to discuss recent innovations. ECSA 2025 includes an industry track, tools and demos, invited journal articles, co-located workshops, and a Doctoral Symposium.","# ECSA 2025: Call for Research Papers
+
+The 19th European Conference on Software Architecture (ECSA 2025) will be held from **September 15 to 19, 2025**, in **Limassol, Cyprus**.
+
+ECSA is the premier European software architecture conference, providing researchers, practitioners, and educators with a platform to present and discuss the most recent, innovative, and significant findings and experiences in the field of software architecture research and practice.
+
+The theme for ECSA 2025 is **“impactful software architecture”**.
+
+## Scope
+
+The Program Committee seeks submissions of original and unpublished high-quality papers describing fundamental and applied research; new methods, approaches, and processes; novel applications; education and training in software architecture; and experience reports on all topics related to software architecture.
+
+We particularly encourage papers that demonstrate that diversity in gender, culture, religion, country, etc. are key factors for success and innovation in software architecture.
+
+## Topics of Interest
+
+Topics of interest include, but are not limited to:
+
+*   Foundational principles of software architecture
+*   Relationship of requirements engineering and software architecture
+*   Quality attributes and software architectures
+*   Architecture practices for secure, explainable, and trustworthy software
+*   Architecture design and analysis
+*   Architecture description languages and meta-models
+*   Architecture verification and validation
+*   Management of architectural knowledge, decisions, and rationale
+*   Architecture patterns, styles, and tactics; reference architectures
+*   Architecture viewpoints and views
+*   Architecture conformance
+*   Software architecture virtualization and visualization
+*   Architecture-centric process models and frameworks
+*   Software architecture and agile, incremental, iterative, and continuous development
+*   Component-based models and deployment; middleware
+*   Software architecture and system architecture
+*   Software tools and environments for architecture-centric software engineering
+*   Ethics, cultural, economic, business, social, human, and managerial aspects of software architecture
+*   Architecture and technical debt
+*   Architecting for sustainable and environment friendly systems
+*   Applying AI and LLMs in software architecture and architecting for AI and LLM intensive systems.
+*   Software architecture education
+*   Cross-disciplinary approaches to software architecture
+*   Architectures for reconfigurable and self-adaptive systems
+*   Architectural concerns of autonomic systems
+*   Software architecture applied to new and emerging areas, such as the cloud/edge, big data, blockchain, cyber-physical systems, IoT, autonomous systems, systems-of-systems, energy-aware software, quantum computing, AI-enabled systems
+*   Empirical studies, systematic literature reviews, and mapping studies in software architecture
+*   Diversity, equity, and inclusion in activities related to software architecture
+
+## Paper Submissions
+
+ECSA 2025 seeks four types of papers for the research track:
+
+*   **Research papers** (max. 16 pages in LNCS style) which describe novel contributions to software architecture research.
+*   **Education and training papers** (max. 16 pages in LNCS style) that address methodologies, experiences and best practices for teaching and training software architecture
+*   **Experience reports** (max. 16 pages in LNCS style) that cover innovative implementations, novel applications, insightful performance results and experience in applying software architecture research advances to practical situations and systems
+*   **Short papers** (max. 8 pages in LNCS style) that present novel and preliminary work-in-progress or challenges in a topic of software architecture research, education, and training.
+
+All submitted papers will undergo a rigorous double-blind peer review process.
+
+The research track of ECSA 2025 supports an Open Science policy. We encourage all contributing authors to disclose (anonymized and curated) data/artifacts to increase reproducibility.
+
+Upon submission to the research track, authors are required:
+
+*   To make their artifacts available to the program committee (via a link to an anonymous repository) and provide instructions on how to access this data in the paper; or
+*   To include in the paper an explanation as to why this is not possible or desirable; and
+*   To indicate why they do not intend to make their data or study materials publicly available upon acceptance, if that is the case.
+
+## Data Availability Statement
+
+While sharing research artifacts is not mandatory for submission or acceptance, authors are required to include a **Data Availability statement** after the Conclusions section in a section named ""Data Availability"". This statement should explain whether or not data and/or artifacts are available or how they could be accessed (or not).
+
+All contributions must be formatted according to the Springer LNCS style [http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0](http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0). Page limits include figures and references.
+
+Contributions need to be submitted in PDF format via EasyChair to the ECSA 2025 Research Track: [https://easychair.org/conferences/?conf=ecsa2025](https://easychair.org/conferences/?conf=ecsa2025).
+
+The proceedings will be published by Springer as part of the LNCS series. Authors of selected papers will be invited to submit an extended version of their research to a special issue of the Journal of Systems and Software.
+
+## Important Dates
+
+*   **Abstract submission:** March 14, 2025
+*   **Paper submission:** March 21, 2025
+*   **Notification:** May 9, 2025
+*   **Camera-ready paper:** June 13, 2025
+
+All dates are 23:59h AoE (Anywhere on Earth).
+
+## Program Co-Chairs
+
+*   Nour Ali, Brunel University London, UK
+*   Jacopo Soldani, University of Pisa, Pisa",,,,,
+req-conf-1752301586229-m9nyl,,IEEE International Working Conference on Mining Software Repositories,MSR,https://2026.msrconf.org/,https://2026.msrconf.org/track/msr-2026-technical-papers,https://2026.msrconf.org/dates,"Conference dates: April 13 - 14, 2026
+Year: 2026
+Location: Rio de Janeiro, Brazil
+City-State-Province: Rio de Janeiro
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.(Mining Challenge Proposals) Deadline for proposals: August 20, 2025
+Submission Date.(Technical Papers) Abstract Deadline: October 20, 2025
+Submission Date.(Technical Papers) Paper Deadline: October 23, 2025
+Submission Date.(Tutorials) Proposal submission deadline: December 19, 2025
+Notification Date.(Mining Challenge Proposals) Notification: August 28, 2025
+Notification Date.(Tutorials) Author Notification: December 23, 2025
+Notification Date.(Technical Papers) Author Notification: January 7, 2026
+Camera-ready Date.(Technical Papers) Camera Ready Deadline: January 26, 2026
+Camera-ready Date.(Tutorials) Camera-ready version: January 26, 2026
+Other Date.(Mining Challenge Proposals) Call for Challenge Papers Published: September 5, 2025
+Other Date.(Technical Papers) Author Response Period: December 8 - 11, 2025
+Topics: data science, machine learning, and artificial intelligence in software engineering
+Publisher: ACM","April 13 - 14, 2026",2026,"Rio de Janeiro, Brazil",Rio de Janeiro,Brazil,South America,Offline,"{""(Mining Challenge Proposals) Deadline for proposals"":""August 20, 2025"",""(Technical Papers) Abstract Deadline"":""October 20, 2025"",""(Technical Papers) Paper Deadline"":""October 23, 2025"",""(Tutorials) Proposal submission deadline"":""December 19, 2025""}","{""(Mining Challenge Proposals) Notification"":""August 28, 2025"",""(Tutorials) Author Notification"":""December 23, 2025"",""(Technical Papers) Author Notification"":""January 7, 2026""}","{""(Technical Papers) Camera Ready Deadline"":""January 26, 2026"",""(Tutorials) Camera-ready version"":""January 26, 2026""}",{},"{""(Mining Challenge Proposals) Call for Challenge Papers Published"":""September 5, 2025"",""(Technical Papers) Author Response Period"":""December 8 - 11, 2025""}","data science, machine learning, and artificial intelligence in software engineering",ACM,"The IEEE International Working Conference on Mining Software Repositories (MSR) 2026 will be held in Rio de Janeiro, Brazil from April 13-14, 2026, co-located with ICSE 2026. MSR is the premier conference for data science, machine learning, and artificial intelligence in software engineering. It invites significant research contributions in which software data plays a central role.","# MSR 2026: Call for Papers
+
+The International Conference on Mining Software Repositories (MSR) is the premier conference for data science (DS), machine learning (ML), and artificial intelligence (AI) in software engineering.
+
+The 23rd International Conference on Mining Software Repositories will be held on **April 13-14, 2026**, in **Rio de Janeiro, Brazil**, co-located with [ICSE 2026](https://conf.researchr.org/home/icse-2026).
+
+## Evaluation Criteria
+
+We invite both **full (maximum ten pages, plus two additional pages of references)** as well as **short (four pages, plus references)** papers to the Research Track.
+
+Submissions will be evaluated according to the following criteria:
+
+*   **Soundness:** How well the paper’s contributions address the research questions posed and are backed by a thorough application of relevant research procedures.
+*   **Relevance:** The extent to which the paper successfully argues or illustrates that its contributions help bridge a significant knowledge gap or tackle a crucial practical issue within the field of software engineering.
+*   **Novelty:** How original the paper’s contributions are in comparison to existing knowledge or how significantly they contribute to the current body of knowledge.
+*   **Presentation:** How well-structured and clear the paper’s argumentation is, how clearly the contributions are articulated, the legibility of figures and tables, and the adequacy of English language usage.
+*   **Replicability:** The extent to which the paper’s claims can be independently verified through available replication packages and/or sufficient information included in the paper.
+
+All submissions are expected to adhere to the Open Science policy.
+
+## Junior PC
+
+MSR 2026 will integrate the junior reviewers into the Technical track program committee!
+
+The primary audience for the Junior PC is early-career researchers (PhD students, postdocs, new faculty members, and industry practitioners) who are keen to get more involved in the academic peer-review process but have not yet served on a technical research track program committee at big international SE conferences (e.g., ICSE, ESEC/FSE, ASE, MSR, ICSME, SANER).
+
+All submissions to the MSR research track will be reviewed jointly by both regular and junior PC members, as part of the same process. We expect that each paper will receive three reviews from PC members. The final decisions will be made by consensus among all reviewers.
+
+## Submission Process
+
+All submissions must be in PDF format and conform to the official ACM Primary Article Template, which can be obtained from the ACM Proceedings Template page. LaTeX users should use the `sigconf` option, as well as the `review` (to produce line numbers) and `anonymous` (omitting author names) options.
+
+Submissions to the Technical Track can be made via the [submission site](https://msr2026.hotcrp.com).
+
+All submissions must adhere to the following requirements:
+
+*   All submissions must not exceed **10 pages for the main text**, inclusive of all figures, tables, appendices, etc. **Two more pages containing only references are permitted.**
+*   Submissions must strictly conform to the ACM conference proceedings formatting instructions.
+*   Papers submitted to MSR 2026 must not have been published elsewhere and must not be under review or submitted for review elsewhere whilst under consideration for MSR 2026.
+*   If the research involves human participants/subjects, the authors must adhere to the ACM Publications Policy on Research Involving Human Participants and Subjects.
+*   Authors will be asked to fill out a copyright form and will receive further instructions for preparing the camera-ready version of their papers.
+
+## Open Science Policy
+
+The MSR conference actively supports the adoption of open science principles. We expect all contributing authors to disclose:
+
+*   The source code of relevant software.
+*   The data used in the paper.
+*   Instructions for other researchers describing how to reproduce or replicate the results.
+
+## Submission Link
+
+Papers must be submitted through HotCRP: [https://msr2026.hotcrp.com](https://msr2026.hotcrp.com)
+
+## Important Dates
+
+*   **Abstract Deadline:** October 20, 2025 AoE
+*   **Paper Deadline:** October 23, 2025 AoE
+*   **Author Response Period:** December 8 – 11, 2025 AoE
+*   **Author Notification:** January 07, 2026 AoE
+*   **Camera Ready Deadline:** January 26, 2026 AoE",,,,,
+req-conf-1752301586229-m9nyl,,International Conference on Model-Driven Engineering and Software Development,MODELSWARD,https://modelsward.scitevents.org/,https://modelsward.scitevents.org/CallForPapers.aspx,https://modelsward.scitevents.org/ImportantDates.aspx,"Conference dates: March 7 - 9, 2026
+Year: 2026
+Location: Marbella, Spain
+City-State-Province: Marbella
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Submission Date.(Regular Papers) Paper Submission: October 2, 2025
+Submission Date.(Position Papers /Regular Papers) Paper Submission: November 13, 2025
+Submission Date.(Workshops) Workshop Proposal: October 29, 2025
+Submission Date.(Special Sessions) Special Session Proposal: October 29, 2025
+Submission Date.(Tutorials) Tutorial Proposal: January 23, 2026
+Submission Date.(Demos) Demo Proposal: January 23, 2026
+Submission Date.(Panels) Panel Proposal: January 23, 2026
+Submission Date.(Abstracts Track) Abstract Submission: December 17, 2025
+Notification Date.(Regular Papers) Authors Notification: December 4, 2025
+Notification Date.(Position Papers /Regular Papers) Authors Notification: December 19, 2025
+Notification Date.(Abstracts Track) Authors Notification: January 14, 2026
+Camera-ready Date.(Regular Papers) Camera Ready and Registration: December 19, 2025
+Camera-ready Date.(Position Papers /Regular Papers) Camera Ready and Registration: January 13, 2026
+Camera-ready Date.(Abstracts Track) Camera Ready and Registration: January 22, 2026
+Registration Date.(Regular Papers) Camera Ready and Registration: December 19, 2025
+Registration Date.(Position Papers /Regular Papers) Camera Ready and Registration: January 13, 2026
+Registration Date.(Abstracts Track) Camera Ready and Registration: January 22, 2026
+Topics: Model-Based Software and Systems Engineering, Methodologies, Processes and Platforms, Software and System Engineering, Modeling Languages, Tools and Architectures, Agile Model-Based Development, Business Process Management (Modeling, Enactment and Execution), Frameworks for Model-Based Development, Multi-level and Multi-view Modeling, Model Transformations and Generative Approaches, Artificial Intelligence (AI) for Modeling Support, Model-Based System Engineering (MBSE), Model-Based Software Development, Model-Based Development of Cyber Physical Systems, Model-Based Engineering of Digital Twins, Enterprise Architecture Modeling, Model-Based Product Lines, Model Execution and Simulation, Model Quality Assessment, Model-Based Testing and Validation, Model Management, Modeling for AI Applications, General-Purpose Modeling Languages and Standards, Domain-Specific Modeling, Domain-specific LLMs, RAG-based LLMs, Modeling Language Engineering, Modeling Language Syntax and Semantics, Reasoning about Models, Model Transformation, Model-Based Services Infrastructures, Modeling Environments
+Publisher: SCITEPRESS","March 7 - 9, 2026",2026,"Marbella, Spain",Marbella,Spain,Europe,Hybrid,"{""(Regular Papers) Paper Submission"":""October 2, 2025"",""(Position Papers /Regular Papers) Paper Submission"":""November 13, 2025"",""(Workshops) Workshop Proposal"":""October 29, 2025"",""(Special Sessions) Special Session Proposal"":""October 29, 2025"",""(Tutorials) Tutorial Proposal"":""January 23, 2026"",""(Demos) Demo Proposal"":""January 23, 2026"",""(Panels) Panel Proposal"":""January 23, 2026"",""(Abstracts Track) Abstract Submission"":""December 17, 2025""}","{""(Regular Papers) Authors Notification"":""December 4, 2025"",""(Position Papers /Regular Papers) Authors Notification"":""December 19, 2025"",""(Abstracts Track) Authors Notification"":""January 14, 2026""}","{""(Regular Papers) Camera Ready and Registration"":""December 19, 2025"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""January 13, 2026"",""(Abstracts Track) Camera Ready and Registration"":""January 22, 2026""}","{""(Regular Papers) Camera Ready and Registration"":""December 19, 2025"",""(Position Papers /Regular Papers) Camera Ready and Registration"":""January 13, 2026"",""(Abstracts Track) Camera Ready and Registration"":""January 22, 2026""}",{},"Model-Based Software and Systems Engineering, Methodologies, Processes and Platforms, Software and System Engineering, Modeling Languages, Tools and Architectures, Agile Model-Based Development, Business Process Management (Modeling, Enactment and Execution), Frameworks for Model-Based Development, Multi-level and Multi-view Modeling, Model Transformations and Generative Approaches, Artificial Intelligence (AI) for Modeling Support, Model-Based System Engineering (MBSE), Model-Based Software Development, Model-Based Development of Cyber Physical Systems, Model-Based Engineering of Digital Twins, Enterprise Architecture Modeling, Model-Based Product Lines, Model Execution and Simulation, Model Quality Assessment, Model-Based Testing and Validation, Model Management, Modeling for AI Applications, General-Purpose Modeling Languages and Standards, Domain-Specific Modeling, Domain-specific LLMs, RAG-based LLMs, Modeling Language Engineering, Modeling Language Syntax and Semantics, Reasoning about Models, Model Transformation, Model-Based Services Infrastructures, Modeling Environments",SCITEPRESS,"The International Conference on Model-Based Software and Systems Engineering (MODELSWARD) provides a platform for participants to present research results and application experience in using model-based techniques for developing IT systems, physical, cyber-physical, and business systems. MODELSWARD 2026 will be held in conjunction with ICAART 2026, ICORES 2026, PHOTOPTICS 2026, VISAPP 2026 and GRIVAPP 2026.","# MODELSWARD 2026: Call for Papers
+
+The International Conference on Model-Based Software and Systems Engineering (MODELSWARD) provides a platform for participants to present research results and application experience in using model-based techniques for developing all sorts of systems. Model-based software engineering relies on an increasingly rich ecosystem of techniques, languages, and tools. MODELSWARD is sponsored by INSTICC.
+
+## Scope
+
+MODELSWARD aims at fostering the further development and application of model-based techniques for the construction and analysis of software and systems. Papers reporting on original work are welcome, including those describing advanced prototypes, systems, tools and techniques, and general survey papers indicating future directions. Accepted papers, presented at the conference by one of the authors, will be published in the MODELSWARD proceedings. The conference is open to full research and (short) work-in-progress papers. Sessions are planned for both oral and poster presentations.
+
+## Conference Areas
+
+1.  **METHODOLOGIES, PROCESSES AND PLATFORMS**
+    *   Agile Model-Based Development
+    *   Business Process Management (Modeling, Enactment and Execution)
+    *   Frameworks for Model-Based Development
+    *   Multi-level and Multi-view Modeling
+    *   Model Transformations and Generative Approaches
+    *   Artificial Intelligence (AI) for Modeling Support
+    *   Software and Systems Engineering
+
+2.  **SOFTWARE AND SYSTEM ENGINEERING**
+    *   Model-Based System Engineering (MBSE)
+    *   Model-Based Software Development
+    *   Model-Based Development of Cyber Physical Systems
+    *   Model-Based Engineering of Digital Twins
+    *   Enterprise Architecture Modeling
+    *   Model-Based Product Lines
+    *   Model Execution and Simulation
+    *   Model Quality Assessment
+    *   Model-Based Testing and Validation
+    *   Model Management
+    *   Modeling for AI Applications
+
+3.  **MODELING LANGUAGES, TOOLS AND ARCHITECTURES**
+    *   General-Purpose Modeling Languages and Standards
+    *   Domain-Specific Modeling
+    *   Domain-specific LLMs
+    *   RAG-based LLMs
+    *   Modeling Language Engineering
+    *   Modeling Language Syntax and Semantics
+    *   Reasoning about Models
+    *   Model Transformation
+    *   Model-Based Services Infrastructures
+    *   Modeling Environments
+
+## Keynote Speakers
+
+MODELSWARD 2026 will feature keynote speakers who are internationally recognized experts (names not yet confirmed).
+
+## Paper Submission
+
+Authors can submit either a complete paper or an abstract. Accepted abstracts will be presented but not published in the proceedings. Complete papers can be submitted as either a Regular Paper or a Position Paper.
+
+Submissions should be in English, carefully checked for grammar and spelling. Each paper should clearly indicate its technical/scientific contribution. Authors are requested to produce papers WITHOUT any reference to the authors' identities for double-blind evaluation.
+
+Only original papers should be submitted, following INSTICC's ethical norms regarding plagiarism. All papers must be submitted through the online submission platform PRIMORIS, following the guidelines and templates.
+
+## Publications
+
+All accepted complete papers will be published in the conference proceedings, with an ISBN reference, on paper and on digital support.
+SCITEPRESS is a member of CrossRef, and every paper is given a DOI.
+The proceedings will be submitted for indexation by SCOPUS, Google Scholar, DBLP, Semantic Scholar, EI and Web of Science / Conference Proceedings Citation Index.
+
+## Important Dates
+
+Conference Date: **7 - 9 March, 2026**
+
+| Submission Type         | Deadline             | Notification          | Camera Ready & Registration |
+| ----------------------- | -------------------- | --------------------- | ----------------------------- |
+| Regular Papers          | **October 2, 2025**   | **December 4, 2025**  | **December 19, 2025**         |
+| Position/Regular Papers | **November 13, 2025** | **December 19, 2025** | **January 13, 2026**          |
+| Workshop Proposal       | **October 29, 2025**  |                       |                               |
+| Special Session         | **October 29, 2025**  |                       |                               |
+| Tutorial Proposal       | **January 23, 2026**  |                       |                               |
+| Demo Proposal           | **January 23, 2026**  |                       |                               |
+| Panel Proposal          | **January 23, 2026**  |                       |                               |
+| Abstract Submission     | **December 17, 2025** | **January 14, 2026**  | **January 22, 2026**          |
+
+*Note: All dates refer to AOE time, i.e. ""Anywhere on Earth""*
+
+## Secretariat
+
+MODELSWARD Secretariat
+Address: Avenida de S. Francisco Xavier, Lote 7 Cv. C
+2900-616 Setúbal - Portugal
+Tel.: +351 265 520 185
+Fax: +351 265 520 186
+e-mail: [modelsward.secretariat@insticc.org](mailto:modelsward.secretariat@insticc.org)
+Web: [https://modelsward.scitevents.org](https://modelsward.scitevents.org)
+
+## Conference Chair
+
+Francis Bordeleau, École de Technologie Supérieure, Université du Québec, Canada
+
+## Program Co-Chairs
+
+Federico Ciccozzi, Malardalen University, Sweden
+Luís Ferreira Pires, Faculty of Electrical Engineering, University of Twente, Netherlands",,,,,
+req-conf-1752301586229-m9nyl,,International Conference on Managed Programming Languages and Runtimes,MPLR,https://conf.researchr.org/home/icfp-splash-2025/mplr-2025,https://conf.researchr.org/home/icfp-splash-2025/mplr-2025,https://conf.researchr.org/home/icfp-splash-2025/mplr-2025,"Conference dates: October 14, 2025
+Year: 2025
+Location: Singapore
+City-State-Province: Singapore
+Country: Singapore
+Continent: Asia
+Type: Offline
+Submission Date.Paper Submission Deadline: June 24, 2025
+Notification Date.Paper Author Notification: July 28, 2025
+Camera-ready Date.Camera Ready for Papers: August 25, 2025
+Topics: Managed Programming Languages, Runtimes, Languages and Compilers, Managed languages, Domain-specific languages, Language design, Compilers and interpreters, Type systems and program logics, Language interoperability, Parallelism, distribution, concurrency, Virtual Machines, Portable intermediate representations, Managed runtime systems, VM design and optimization, VMs for mobile and embedded devices, VMs for real-time applications, Memory management and garbage collection, Hardware/software co-design, Persistence, Techniques, Tools, Applications, Static and dynamic program analysis, Testing and debugging, Refactoring, Program understanding, Program synthesis, Security and privacy, Performance analysis and monitoring, Compiler and program verification and model checking
+Publisher: ACM",14-Oct-25,2025,Singapore,Singapore,Singapore,Asia,Offline,"{""Paper Submission Deadline"":""June 24, 2025""}","{""Paper Author Notification"":""July 28, 2025""}","{""Camera Ready for Papers"":""August 25, 2025""}",{},{},"Managed Programming Languages, Runtimes, Languages and Compilers, Managed languages, Domain-specific languages, Language design, Compilers and interpreters, Type systems and program logics, Language interoperability, Parallelism, distribution, concurrency, Virtual Machines, Portable intermediate representations, Managed runtime systems, VM design and optimization, VMs for mobile and embedded devices, VMs for real-time applications, Memory management and garbage collection, Hardware/software co-design, Persistence, Techniques, Tools, Applications, Static and dynamic program analysis, Testing and debugging, Refactoring, Program understanding, Program synthesis, Security and privacy, Performance analysis and monitoring, Compiler and program verification and model checking",ACM,"The 22nd International Conference on Managed Programming Languages and Runtimes (MPLR 2025), co-located with ICFP/SPLASH 2025 in Singapore from October 12-18, 2025, is a forum for novel results in managed programming languages and runtime systems. It covers topics from languages and compilers to virtual machines and tools.","# MPLR 2025: Call for Papers
+
+The 22nd International Conference on Managed Programming Languages & Runtimes (MPLR, formerly ManLang, originally PPPJ) will be held as part of ICFP/SPLASH 2025 in Singapore.
+
+MPLR is a premier forum for presenting and discussing novel results in all aspects of managed programming languages and runtime systems, which serve as building blocks for some of the most important computing systems in use, ranging from small-scale (embedded and real-time systems) to large-scale (cloud-computing and big-data platforms) and anything in between (desktop, mobile, IoT, and wearable applications).
+
+## Topics
+
+The areas of interest include but are not limited to:
+
+### Languages and Compilers
+
+*   Managed languages (e.g., Java, Scala, JavaScript, Python, Ruby, C#, F#, Clojure, Groovy, Kotlin, R, Smalltalk, Racket, Rust, Go, Lua, MATLAB, Raku, Pony, …)
+*   Domain-specific languages
+*   Language design
+*   Compilers and interpreters
+*   Type systems and program logics
+*   Language interoperability
+*   Parallelism, distribution, and concurrency
+
+### Virtual Machines
+
+*   Portable intermediate representations (e.g., JVM, WebAssembly, RPython, …)
+*   Managed runtime systems (e.g., GraalVM, Android Runtime (ART), V8, JavaScriptCore, .NET, …)
+*   VM design and optimization
+*   VMs for mobile and embedded devices
+*   VMs for real-time applications
+*   Memory management and garbage collection
+*   Hardware/software co-design
+*   Persistence
+
+### Techniques, Tools, and Applications
+
+*   Static and dynamic program analysis
+*   Testing and debugging
+*   Refactoring
+*   Program understanding
+*   Program synthesis
+*   Security and privacy
+*   Performance analysis and monitoring
+*   Compiler and program verification and model checking
+
+If you are unsure whether a particular topic falls within the scope of MPLR ’25 or if you have any other questions, please do not hesitate to contact the Program Chair Tomoharu Ugawa at ugawa ci i u-tokyo ac jp.
+
+## Submission Categories
+
+MPLR accepts three types of submissions:
+
+*   **Regular research papers:** describing novel contributions involving managed language platforms. Research papers will be evaluated based on their relevance, novelty, technical rigor, and contribution to the state-of-the-art. (Format: up to 12 pages, excluding bibliography and appendix)
+*   **Work-in-progress research papers:** describing hot topics or promising new ideas, with perhaps less maturity than full papers. Work-in-progress papers will be evaluated with an emphasis on novelty and the potential of the new ideas instead of technical rigor and experimental results. (Format: up to 6 pages, excluding bibliography and appendix)
+*   **Industry and tool papers:** presenting technical challenges and solutions for managed language platforms in the context of deployed applications and systems. Industry and tool papers will be evaluated on their relevance, usefulness, and results. Suitability for demonstration and availability will also be considered for tool papers. (Format: up to 6 pages, excluding bibliography and appendix; up to 12 pages allowed if justified by the content)
+
+Accepted submissions will be published in the ACM Digital Library, except if the authors prefer not to be included.
+
+MPLR 2025 submissions must conform to the ACM Policy on Prior Publication and Simultaneous Submissions and to the SIGPLAN Republication Policy. See [http://www.sigplan.org/Resources/Policies/Republication](http://www.sigplan.org/Resources/Policies/Republication)
+
+MPLR 2025 will not hold its own poster session. Please consider submitting to the SPLASH poster track.
+
+## Author Instructions
+
+Submissions need to use the ACM SIGPLAN format with the sigplan style.
+
+If you are using LaTeX, submissions need to use the acmart document class with the sigplan option (not the sigconf option). In the acmart-primary.zip file that downloads from the LaTeX (Version 1.90) link on the [https://www.acm.org/publications/proceedings-template](https://www.acm.org/publications/proceedings-template) page, look for `samples/sample-sigplan.tex` as a guide. If you use Overleaf, be sure to change the documentclass option `manuscript` to `sigplan`. For ease of reviewing, please include page numbers in your submission using the LaTeX command `\settopmatter{printfolios=true}`. Please use the standard setting, e.g., the default font size for the SIGPLAN style is 10 point and the format uses two columns for the test.
+
+All submissions need to be in PDF format. MPLR now uses double-blind reviewing. Authors should not show their names on a submission and should refer to their own work in third person. We further recommend that they avoid publicizing the work, at least under the same or similar title, while it is under review.
+
+Please also ensure that your submission is legible when printed on a black and white printer. In particular, please check that colors remain distinct and font sizes are legible.
+
+**Submission Site:** [https://mplr25.hotcrp.com](https://mplr25.hotcrp.com)
+
+## Important Dates
+
+*   **Paper Submission Deadline:** June 24, 2025
+*   **Paper Author Notification:** July 28, 2025
+*   **Camera Ready for Papers:** August 25, 2025
+*   **Conference Date:** October 14, 2025
+
+All deadlines are 23:59 AoE (UTC-12h).
+
+AUTHORS TAKE NOTE: The official publication date is the date the proceedings are made available in the ACM Digital Library. This date may be up to two weeks prior to the first day of your conference. The official publication date affects the deadline for any patent filings related to published work.
+
+Questions? Use the [MPLR contact form](https://conf.researchr.org/contact2/icfp-splash-2025/mplr-2025-papers).
+",,,,,

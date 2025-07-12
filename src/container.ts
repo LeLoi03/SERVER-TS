@@ -10,6 +10,7 @@ import { PlaywrightService } from './services/playwright.service';
 import { FileSystemService } from './services/fileSystem.service';
 import { TaskQueueService } from './services/taskQueue.service';
 import { GlobalConcurrencyManagerService } from './services/globalConcurrencyManager.service';
+import { PdfExtractorService, IPdfExtractorService } from './services/batchProcessing/pdfExtractor.service';
 
 // --- Gemini API Service and its Specialized Sub-Services ---
 import { GeminiApiService } from './services/geminiApi.service';
@@ -84,6 +85,7 @@ container.register<IFinalExtractionApiService>('IFinalExtractionApiService', { u
 container.register<IFinalRecordAppenderService>('IFinalRecordAppenderService', { useClass: FinalRecordAppenderService });
 container.register<IUpdateTaskExecutorService>('IUpdateTaskExecutorService', { useClass: UpdateTaskExecutorService });
 container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useClass: SaveTaskExecutorService });
+container.register<IPdfExtractorService>('IPdfExtractorService', { useClass: PdfExtractorService });
 
 // --- 4. Register Request-Scoped Services ---
 // Decorator @scoped(Lifecycle.ResolutionScoped) trên class đã đủ.

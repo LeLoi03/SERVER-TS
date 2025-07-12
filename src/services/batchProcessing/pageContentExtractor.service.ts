@@ -2,7 +2,7 @@
 import { Page, Frame } from 'playwright';
 import { Logger } from 'pino';
 import { ConfigService } from '../../config/config.service';
-import { extractTextFromPDF } from '../../utils/crawl/pdf.utils';
+import { IPdfExtractorService } from './pdfExtractor.service';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils';
 import { autoScroll } from './utils';
@@ -34,12 +34,16 @@ export class PageContentExtractorService implements IPageContentExtractorService
     private readonly imageKeywords: string[]; // <<< THÊM MỚI
     private readonly MIN_CONTENT_LENGTH_FOR_RETRY = 1000;
 
-    constructor(@inject(ConfigService) private configService: ConfigService) {
+    constructor(
+        @inject(ConfigService) private configService: ConfigService,
+        // Inject service mới vào đây
+        @inject('IPdfExtractorService') private pdfExtractorService: IPdfExtractorService
+    ) {
         this.excludeTexts = this.configService.excludeTexts ?? [];
         this.cfpTabKeywords = this.configService.cfpTabKeywords ?? [];
         this.importantDatesTabs = this.configService.importantDatesTabs ?? [];
         this.exactKeywords = this.configService.exactKeywords ?? [];
-        this.imageKeywords = this.configService.imageKeywords ?? []; // <<< THÊM MỚI
+        this.imageKeywords = this.configService.imageKeywords ?? [];
     }
 
     /**
@@ -267,7 +271,10 @@ export class PageContentExtractorService implements IPageContentExtractorService
         try {
             if (url.toLowerCase().endsWith(".pdf")) {
                 logger.info({ ...currentLogContext, type: 'pdf', event: 'pdf_extraction_start' }, "Attempting to extract text from PDF URL.");
-                const pdfText = await extractTextFromPDF(url, logger.child({ operation: 'pdf_extract' }));
+                // --- THAY ĐỔI CÁCH GỌI ---
+                // Gọi phương thức từ service đã được inject
+                const pdfText = await this.pdfExtractorService.extractTextFromPDF(url, logger.child({ operation: 'pdf_extract' }));
+                // --- KẾT THÚC THAY ĐỔI ---
                 if (pdfText) {
                     logger.info({ ...currentLogContext, type: 'pdf', textLength: pdfText.length, event: 'pdf_extraction_finish', success: true }, `PDF text extraction finished. Length: ${pdfText.length}.`);
                     return { text: pdfText, imageUrls: [] }; // PDF không có ảnh

@@ -9,6 +9,7 @@ import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
 import { accessUrl, AccessResult } from './utils';
+import { IPdfExtractorService } from './pdfExtractor.service';
 
 // +++ CẬP NHẬT KIỂU DỮ LIỆU TRẢ VỀ +++
 export type ProcessedContentResult = {
@@ -85,7 +86,9 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
     constructor(
         @inject(FileSystemService) private fileSystemService: FileSystemService,
         @inject('IPageContentExtractorService') private pageContentExtractorService: IPageContentExtractorService,
-        @inject(ConfigService) private configService: ConfigService
+        @inject(ConfigService) private configService: ConfigService,
+        @inject('IPdfExtractorService') private pdfExtractorService: IPdfExtractorService // <<< INJECT PDF EXTRACTOR
+
     ) {
         this.year2 = this.configService.year2;
     }
@@ -142,6 +145,35 @@ export class ConferenceLinkProcessorService implements IConferenceLinkProcessorS
         if (!normalizedLink) {
             childLogger.trace({ reason: 'Link is empty, None, or could not be normalized', event: 'skipped_processing_general_link' });
             return { path: null, content: null, imageUrls: [] }; // <<< CẬP NHẬT
+        }
+
+
+        // ++++++++++++++++++++++++++++++
+        // +++   LOGIC SỬA ĐỔI Ở ĐÂY   +++
+        // ++++++++++++++++++++++++++++++
+
+        // BƯỚC 1: KIỂM TRA NẾU LINK LÀ PDF
+        if (normalizedLink.toLowerCase().endsWith('.pdf')) {
+            childLogger.info({ url: normalizedLink, event: 'pdf_link_detected_in_processor' }, "PDF link detected. Bypassing Playwright navigation and using direct PDF extractor.");
+
+            try {
+                // BƯỚC 2: GỌI TRỰC TIẾP PDF EXTRACTOR SERVICE
+                const pdfText = await this.pdfExtractorService.extractTextFromPDF(normalizedLink, childLogger);
+
+                if (!pdfText) {
+                    childLogger.warn({ url: normalizedLink, event: 'pdf_extraction_yielded_no_content' });
+                    return { path: null, content: null, imageUrls: [] };
+                }
+
+                // BƯỚC 3: LƯU NỘI DUNG VÀ TRẢ VỀ
+                // PDF không có ảnh, nên truyền mảng rỗng
+                return await this.saveContentAndGetResult(pdfText, [], fileBaseNamePrefix, childLogger);
+
+            } catch (pdfError: unknown) {
+                const { message: errorMessage } = getErrorMessageAndStack(pdfError);
+                childLogger.error({ url: normalizedLink, err: { message: errorMessage }, event: 'pdf_extraction_failed_in_processor' });
+                return { path: null, content: null, imageUrls: [] };
+            }
         }
 
 

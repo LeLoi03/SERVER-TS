@@ -146,7 +146,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             const OPERATION_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
 
             // +++ DEFINE THE CORRECT PROMISE TYPES +++
-            type MainLinkResult = { finalUrl: string | null; textPath: string | null; textContent: string | null };
+            type MainLinkResult = { finalUrl: string | null; textPath: string | null; textContent: string | null; imageUrls: string[] };
             type SubLinkResult = { path: string | null; content: string | null }; // This is our ProcessedContentResult
 
             // +++ BỌC CÁC PROMISE BẰNG withOperationTimeout +++
@@ -197,7 +197,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             methodLogger.info({ event: 'PLAYWRIGHT_CRAWL_UPDATE_LINKS_END', durationMs: Math.round(crawlDurationMs) });
 
             // +++ PROCESS THE NEW RESULT TYPES +++
-            let mainResult: MainLinkResult = { finalUrl: null, textPath: null, textContent: null };
+            let mainResult: MainLinkResult = { finalUrl: null, textPath: null, textContent: null, imageUrls: [] }; // Khởi tạo với mảng rỗng
             if (results[0].status === 'fulfilled') {
                 mainResult = (results[0] as PromiseFulfilledResult<MainLinkResult>).value;
             } else {
@@ -235,6 +235,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 cfpLink: conference.cfpLink,
                 conferenceTextPath: mainResult.textPath, // Will be null in prod
                 conferenceTextContent: mainResult.textContent, // Will have data in prod
+                imageUrls: mainResult.imageUrls, // <<< THÊM DÒNG NÀY
                 cfpTextPath: cfpResult.path,
                 cfpTextContent: cfpResult.content,
                 impTextPath: impResult.path,
