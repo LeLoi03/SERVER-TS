@@ -143,7 +143,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
 
 
             // --- ĐỊNH NGHĨA TIMEOUT CHO TỪNG NHIỆM VỤ ---
-            const OPERATION_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
+            const OPERATION_TIMEOUT_MS = 60000; // 60 giây cho mỗi link
 
             // +++ DEFINE THE CORRECT PROMISE TYPES +++
             type MainLinkResult = { finalUrl: string | null; textPath: string | null; textContent: string | null; imageUrls: string[] };

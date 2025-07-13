@@ -55,7 +55,7 @@ export class CrawlOrchestratorService {
     ) {
         this.baseLogger = this.loggingService.getLogger('conference', { service: 'CrawlOrchestratorServiceBase' });
         this.configApp = this.configService.rawConfig;
-        this.conferenceProcessingTimeoutMs = 6 * 60 * 1000; // 6 phút
+        this.conferenceProcessingTimeoutMs = 5 * 60 * 1000; // 5 phút
     }
 
     /**
