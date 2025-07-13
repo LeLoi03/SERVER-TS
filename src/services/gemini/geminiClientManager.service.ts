@@ -30,8 +30,8 @@ export class GeminiClientManagerService {
 
     // 1. Định nghĩa lại các pool
     private readonly keyPools: Record<string, KeyPool> = {
-        interactive: { keyIndices: [0, 1, 2, 3, 4] },      
-        extraction:  { keyIndices: [5, 6, 7, 8, 9, 10] }, 
+        interactive: { keyIndices: [0, 1, 2, 3, 4, 5] },      
+        extraction:  { keyIndices: [6, 7, 8, 9, 10, 11] }, 
         // default:     { keyIndices: [3] },      // Giữ nguyên key dự phòng
     };
 
