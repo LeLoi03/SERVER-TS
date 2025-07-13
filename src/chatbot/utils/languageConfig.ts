@@ -240,7 +240,7 @@ export function getAgentLanguageConfig(
     }
 
 
-    console.log(finalSystemInstructions)
+    // console.log(finalSystemInstructions)
 
     return {
         systemInstructions: finalSystemInstructions,

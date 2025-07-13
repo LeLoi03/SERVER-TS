@@ -249,10 +249,10 @@ export async function executeApiCall(endpoint: string, queryString: string): Pro
         if (transformer) {
             
             try {
-                console.log(parsedData);
+                // console.log(parsedData);
                 // Call the transformer with the *parsed* data and the *effective* query string
                 formattedData = transformer(parsedData, effectiveQueryString);
-                console.log(formattedData);
+                // console.log(formattedData);
             } catch (transformErr: unknown) { // Catch as unknown
                 const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(transformErr);
                 transformationError = `Transformation Error: ${errorMessage}`;

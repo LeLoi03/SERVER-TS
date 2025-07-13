@@ -1,0 +1,1537 @@
+﻿requestId,originalRequestId,title,acronym,mainLink,MainLinkCorrect,cfpLink,impLink,information,conferenceDates,ConferenceDateCorrect,year,location,LocationCorrect,cityStateProvince,country,continent,type,TypeCorrect,submissionDate,Percent,notificationDate,Percent_1,cameraReadyDate,Percent_2,registrationDate,Percent_3,otherDate,Percent_4,topics,publisher,summary,callForPapers,Note,Unnamed: 24,note,recrawl,correctPercentage,Unnamed: 26
+req-conf-1751764883631-3o1ti,,Conference on Robot Learning,CoRL,https://www.corl.org/,,https://www.corl.org/contributions/call-for-papers,,"Conference dates: September 27 - 30, 2025
+Year: 2025
+Location: Seoul, Korea
+City-State-Province: Seoul
+Country: South Korea
+Continent: Asia
+Type: Offline
+Topics: Robot Learning, Learning representations for robotic perception and control, Learning robot foundation models or general-purpose knowledge systems for robotics, Imitation learning for robotics, Reinforcement learning for control of physical robots, Model-based and model-free learning for robotic control and decision-making, Combination of learning- and planning-based approaches in robotics, Probabilistic learning and representation of uncertainty in robotics, Automatic robotic data generation for learning methods in robotic, Learning for Robot Task and Motion Planning, Learning for multimodal robot perception, sensor fusion, and robot vision, Learning for human-robot interaction and robot instruction by natural language, gestures as well as alternative devices, Learning for hardware design and optimization, Learning approaches to robot safety and safety approaches applicable to learning based robotic systems, Applications of robot learning in robot manipulation, navigation, locomotion, driving, flight, and other areas of robotics, Robot systems, hardware, and sensors for learning and data-driven approaches","September 27 - 30, 2025",,2025,"Seoul, Korea",,Seoul,South Korea,Asia,Offline,,{},,{},,{},,{},,{},,"Robot Learning, Learning representations for robotic perception and control, Learning robot foundation models or general-purpose knowledge systems for robotics, Imitation learning for robotics, Reinforcement learning for control of physical robots, Model-based and model-free learning for robotic control and decision-making, Combination of learning- and planning-based approaches in robotics, Probabilistic learning and representation of uncertainty in robotics, Automatic robotic data generation for learning methods in robotic, Learning for Robot Task and Motion Planning, Learning for multimodal robot perception, sensor fusion, and robot vision, Learning for human-robot interaction and robot instruction by natural language, gestures as well as alternative devices, Learning for hardware design and optimization, Learning approaches to robot safety and safety approaches applicable to learning based robotic systems, Applications of robot learning in robot manipulation, navigation, locomotion, driving, flight, and other areas of robotics, Robot systems, hardware, and sensors for learning and data-driven approaches",No publisher,"The Conference on Robot Learning (CoRL) 2025 will be held in Seoul, Korea, from September 27-30, 2025. CoRL 2025 is co-located with Humanoids 2025, which takes place from September 30-October 2, 2025. The conference focuses on the intersection of robotics and machine learning, aiming to publish significant original research in this domain.","# CoRL 2025: Call for Papers
+
+The Conference on Robot Learning (CoRL) is an annual international conference focusing on the intersection of robotics and machine learning. CoRL 2025 will be held in **Seoul, Korea**, from **September 27 - 30, 2025**.
+
+CoRL 2025 is co-located with Humanoids 2025, which will be held from September 30 - October 2, 2025.
+
+## About CoRL
+
+The aim of CoRL 2025 is to publish significant original research at the intersection of robotics and machine learning. CoRL is a selective, single-track international conference addressing theory and practice of machine learning for robots.
+
+## Topics of Interest
+
+CoRL welcomes papers in areas such as:
+
+*   Learning representations for robotic perception and control
+*   Learning robot foundation models or general-purpose knowledge systems for robotics
+*   Imitation learning for robotics, e.g. by behavioral cloning and/or inverse reinforcement learning
+*   Reinforcement learning for control of physical robots
+*   Model-based and model-free learning for robotic control and decision-making
+*   Combination of learning- and planning-based approaches in robotics
+*   Probabilistic learning and representation of uncertainty in robotics
+*   Automatic robotic data generation for learning methods in robotic
+*   Learning for Robot Task and Motion Planning
+*   Learning for multimodal robot perception, sensor fusion, and robot vision
+*   Learning for human-robot interaction and robot instruction by natural language, gestures as well as alternative devices
+*   Learning for hardware design and optimization
+*   Learning approaches to robot safety and safety approaches applicable to learning based robotic systems.
+*   Applications of robot learning in robot manipulation, navigation, locomotion, driving, flight, and other areas of robotics
+*   Robot systems, hardware, and sensors for learning and data-driven approaches
+
+## Submission Guidelines
+
+*   Submissions should focus on a core robotics problem and demonstrate the relevance of proposed models, algorithms, datasets, and benchmarks to robotics.
+*   Authors are encouraged to report real-robot experiments or provide convincing evidence that simulation experiments are transferable to real robots.
+*   **Submissions without a robotics focus will be returned without review.**
+*   All Submissions should include a **Limitations section**, explicitly describing limiting assumptions, failure modes, and other limitations of the results and experiments and how these might be addressed in the future.
+*   Authors are also encouraged to submit video, code and data as supplementary materials.
+
+For paper submission format and timeline, see: [Instruction for Authors](/contributions/instruction-for-authors)
+
+## Important Dates and Announcements
+
+*   06/30 - Demo submission deadline extended to 07/13
+*   06/27 - Instruction for Rebuttal
+*   04/12 - [Call for demos is available](/contributions/call-for-demos)
+*   03/14 - [Call for workshops is available](/contributions/call-for-workshops)
+*   02/21 - We [call for sponsors](/sponsorship) to support CoRL
+*   02/18 - [Call for papers is available](/contributions/call-for-papers)
+
+*New this year: there is an abstract submission deadline*
+
+## Venue
+
+COEX Convention & Exhibition Center
+513 Yeongdong-daero, Gangnam District, Seoul, South Korea
+
+## Sponsors
+
+DIAMOND
+PATRON
+STANDARD
+LITE
+NON-PROFIT SPONSORS
+*Sponsors will be updated upon more confirmations",,,Chưa lấy được ngày,Yes,,
+req-conf-1751764883631-3o1ti,,IFIP International Conference on Distributed Applications and Interoperable Systems,DAIS,http://www.discotec.org/2025/dais.html,,https://easychair.org/conferences/?conf=dais2025,,"Conference dates: October 2025
+Year: 2025
+Type: Offline
+Submission Date.Deadline for submission of regular and SS papers: April 18, 2025
+Topics: Distributed applications, middleware, cloud, edge and fog computing, big data processing, distributed embedded machine learning (TinyML), streaming and complex event processing, distributed social networking, IoT and cyber-physical systems, mobile computing, advanced networking (SDN/NFV), micro-services and service-oriented computing, peer-to-peer systems, data center and internet-scale systems, publish/subscribe systems, epidemic protocols, language-based approaches, virtualization and resource allocation, distributed storage, trusted execution environments, blockchains, cryptocurrencies and smart contracts, distributed consensus mechanisms, interoperability and adaptation, self-* properties (e.g., self-organization, self-management,…), security and practical applications of cryptography, trust and privacy, cooperation incentives and fairness, fault-tolerance and dependability, scalability and elasticity, tail-performance and energy-efficiency
+Publisher: Springer",Oct-25,,2025,No location,,No city/state/province,No country,No continent,Offline,,"{""Deadline for submission of regular and SS papers"":""April 18, 2025""}",,{},,{},,{},,{},,"Distributed applications, middleware, cloud, edge and fog computing, big data processing, distributed embedded machine learning (TinyML), streaming and complex event processing, distributed social networking, IoT and cyber-physical systems, mobile computing, advanced networking (SDN/NFV), micro-services and service-oriented computing, peer-to-peer systems, data center and internet-scale systems, publish/subscribe systems, epidemic protocols, language-based approaches, virtualization and resource allocation, distributed storage, trusted execution environments, blockchains, cryptocurrencies and smart contracts, distributed consensus mechanisms, interoperability and adaptation, self-* properties (e.g., self-organization, self-management,…), security and practical applications of cryptography, trust and privacy, cooperation incentives and fairness, fault-tolerance and dependability, scalability and elasticity, tail-performance and energy-efficiency",Springer,"DAIS 2025, the 25th International Conference on Distributed Applications and Interoperable Systems, is one of the three conferences of DisCoTec 2025. It addresses all practical and conceptual aspects of distributed applications, including their design, modeling, implementation, and operation, as well as supporting middleware, software engineering methodologies, tools, and experimental studies. The conference covers a broad range of topics from novel distributed applications and systems to architectural mechanisms and system design goals.","# DAIS 2025: Call for Papers
+
+DAIS 2025, the **25th International Conference on Distributed Applications and Interoperable Systems**, is one of the three conferences of [DisCoTec 2025](.).
+
+## Scope
+
+The DAIS conference series addresses all practical and conceptual aspects of distributed applications, including their design, modeling, implementation and operation, the supporting middleware, appropriate software engineering methodologies and tools, as well as experimental studies and applications. Submissions are judged on their originality, significance, clarity, relevance, and technical correctness.
+
+## Topics of Interest
+
+The topics of interest to the conference include, but are not limited to:
+
+### Novel and innovative distributed applications and systems, particularly in the areas of
+
+*   middleware
+*   cloud, edge and fog computing
+*   big data processing
+*   distributed embedded machine learning (TinyML)
+*   streaming and complex event processing
+*   distributed social networking
+*   IoT and cyber-physical systems
+*   mobile computing
+*   advanced networking (SDN/NFV)
+*   micro-services and service-oriented computing
+*   peer-to-peer systems
+*   data center and internet-scale systems
+
+### Novel architectures and mechanisms, particularly in the areas of
+
+*   publish/subscribe systems
+*   epidemic protocols
+*   language-based approaches
+*   virtualization and resource allocation
+*   distributed storage
+*   trusted execution environments
+*   blockchains, cryptocurrencies and smart contracts
+*   distributed consensus mechanisms
+
+### System issues and design goals, including
+
+*   interoperability and adaptation
+*   self-* properties (e.g., self-organization, self-management, etc.)
+*   security and practical applications of cryptography
+*   trust and privacy
+*   cooperation incentives and fairness
+*   fault-tolerance and dependability
+*   scalability and elasticity
+*   tail-performance and energy-efficiency
+
+## Submission Guidelines
+
+All papers must be original, unpublished, and not submitted for publication elsewhere. Each paper will undergo a thorough peer review by the Program Committee.
+
+### Submission Tracks
+
+DAIS 2025 offers three submission tracks:
+
+*   **Full research papers**: no more than **15 pages** + **2 pages** references.
+*   **Full practical experience reports**: including experimental and evaluation studies, case studies, and practice reports in no more than **15 pages** + **2 pages** references.
+*   **Work-in-progress papers**: describing ongoing work and interim results, in no more than **6 pages** + **2 pages** references.
+
+### Submission Link
+
+Submissions were handled via Easychair at: [https://easychair.org/conferences/?conf=dais2025](https://easychair.org/conferences/?conf=dais2025)
+
+> **Note:** Submission of new papers for DAIS 2025 is currently closed.
+
+## Publication
+
+Publication of proceedings is coordinated among the three DisCoTec conferences. The DAIS proceedings will be published by **Springer as an LNCS-IFIP volume** and will comprise accepted submissions from all categories.
+
+## Committees
+
+### Program Committee Chairs
+
+*   **Daniel Balouek** (Inria, France)
+*   **Ibéria Medeiros** (University of Lisbon, Portugal)
+
+### Program Committee
+
+*   Pierre Louis Aublin, IIJ Research laboratory, Japan
+*   Christian Berger, University of Passau, Germany
+*   David Bermbach, TU Berlin, Germany
+*   Lorenzo Carnevale, Universty of Messina, Italy
+*   Zhiyuan Chen, University of Maryland Baltimore County, USA
+*   Davide Frey, Inria, France
+*   Shashikant Ilager, University of Amsterdam, Netherlands
+*   Pradeeban Kathiravelu, University of Alaska Anchorage, USA
+*   Odorico Machado Mendizabal, Federal University of Santa Catarina, Brazil
+*   Anas Mokhtari, Morocco
+*   Guillaume Pierre, University of Rennes/Inria/CNRS/IRISA, France
+*   Hans Reiser, Reykjavik University, Iceland
+*   Etienne Rivière, UC Louvain, Belgique
+*   Guillaume Rosinosky, IMT Atlantique, France
+*   Valerio Schiavoni, University of Neuchâtel, Switzerland
+*   Ali Shoker, KAUST, Saudi Arabia
+*   Luís Antunes Veiga, University of Lisbon, Portugal
+*   Spyros Voulgaris, Athens University of Economics and Business, Greece
+
+### Artifact Evaluation Committee
+
+*   Alan Oliveira de Sá, LASIGE & Faculdade de Ciências, Universidade de Lisboa, Portugal
+*   Cláudia Brito, INESC TEC & U. Minho, Portugal
+*   Christian Berger, University of Passau, Germany
+*   Giovanni Farina, Niccolò Cusano University, Italy
+*   José Pedro Peixoto, INESC TEC & U. Minho, Portugal
+*   Rémy Raes, University of Lille, France
+*   Robin Vassantlal, LASIGE & Faculdade de Ciências, Universidade de Lisboa, Portugal
+*   Tânia Esteves, INESC TEC & U. Minho, Portugal
+*   Vinícius Vielmo Cogo (chair), LASIGE & Faculdade de Ciências, Universidade de Lisboa, Portugal
+
+### Steering Committee
+
+*   Lydia Y. Chen, TU Delft, Netherlands
+*   Frank Eliassen, University of Oslo, Norway
+*   Rüdiger Kapitza, Friedrich-Alexander-Universität Erlangen-Nürnberg, Germany
+*   Rui Oliveira, University of Minho / INESC TEC, Portugal
+*   Hans P. Reiser, Reykjavik University, Iceland
+*   Laura Ricci, University of Pisa, Italy
+*   Silvia Bonomi, Università degli Studi di Roma “La Sapienza”, Italy
+*   Etienne Riviére, Ecole Polytechnique de Louvain, Belgium
+*   Jose Pereira, University of Minho / INESC TEC, Portugal
+*   Luís Veiga, INESC-ID, Universidade de Lisboa, Portugal – Chair",,,"Trên trang chính tìm không thấy ngày, vô cfp tìm được Abstract registration deadline: January 31, 2025, Submission deadline: February 7, 2025",Yes,,
+req-conf-1751764883631-3o1ti,,International CSI Computer Conference,CSICC,https://jadt-2024.sciencesconf.org/?lang=en,,https://jadt-2024.sciencesconf.org/page/page_personnalisable?lang=en,https://jadt-2024.sciencesconf.org/page/dates_importantes?lang=en,"Conference Title: International Conference on Statistical Analysis of Textual Data
+Conference Acronym: JADT
+Year: 2024
+Location: Brussels, Belgium
+City-State-Province: Brussels
+Country: Belgium
+Continent: Europe
+Type: Offline
+Submission Date.deadline for abstract submission: November 30, 2023
+Submission Date.submission deadline: February 11, 2024
+Notification Date.notification to Authors: March 13, 2024
+Camera-ready Date: April 1, 2024
+Registration Date.Deadline for registration for authors of a paper: April 1, 2024
+Other Date.end of reduced-rate entries: May 15, 2024
+Topics: Textometry, Statistical Analysis of Textual Data, Exploratory Textual Data Analysis, Corpus and Quantitative Linguistics, Natural Language Processing, Text Corpora Encoding, Statistical Analysis of Unstructured and Structured Data, Text Categorisation, Fuzzy Classification and Visualization, Information Retrieval and Information Extraction, Text Mining, Web Mining, Semantic Web, Stylometry, Discourse analysis, Software for TextualData Analysis, Machine Learning for Textual Data Analysis, Multilingual and parallel corpora",,,2024,"Brussels, Belgium",,Brussels,Belgium,Europe,Offline,,"{""deadline for abstract submission"":""November 30, 2023"",""submission deadline"":""February 11, 2024""}",,"{""notification to Authors"":""March 13, 2024""}",,{},,"{""Deadline for registration for authors of a paper"":""April 1, 2024""}",,"{""end of reduced-rate entries"":""May 15, 2024""}",,"Textometry, Statistical Analysis of Textual Data, Exploratory Textual Data Analysis, Corpus and Quantitative Linguistics, Natural Language Processing, Text Corpora Encoding, Statistical Analysis of Unstructured and Structured Data, Text Categorisation, Fuzzy Classification and Visualization, Information Retrieval and Information Extraction, Text Mining, Web Mining, Semantic Web, Stylometry, Discourse analysis, Software for TextualData Analysis, Machine Learning for Textual Data Analysis, Multilingual and parallel corpora",No publisher,"The 17th International Conference on Statistical Analysis of Textual Data (JADT 2024) will be held in Brussels, Belgium, from June 25-27, 2024. This biennial conference is open to scholars and researchers in textual data analysis and will feature technical paper sessions, invited talks, and panel discussions. It will be a face-to-face event.","# JADT 2024: Call for Papers
+
+The 17th International Conference on Statistical Analysis of Textual Data (JADT 2024) will be held in **Brussels, Belgium**, from **June 25 to 27, 2024**.
+
+The conference is organized by the SeSLA – Séminaire des Sciences du Langage of the UCLouvain - Saint-Louis, Brussels, and LASLA – Laboratoire d’Analyse statistique des Langues anciennes of the University of Liège.
+
+This conference is open to all scholars and researchers working in the field of textual data analysis, covering areas from lexicography to computational linguistics.
+
+## Topics of Interest
+
+The themes of interest of the conference concern the application of statistical models and tools in the following domains:
+
+*   Textometry, Statistical Analysis of Textual Data
+*   Exploratory Textual Data Analysis
+*   Corpus and Quantitative Linguistics
+*   Natural Language Processing
+*   Text Corpora Encoding
+*   Statistical Analysis of Unstructured and Structured Data
+*   Text Categorisation, Fuzzy Classification and Visualization
+*   Information Retrieval and Information Extraction
+*   Text Mining, Web Mining, Semantic Web
+*   Stylometry, Discourse analysis
+*   Software for Textual Data Analysis
+*   Machine Learning for Textual Data Analysis
+*   Multilingual and parallel corpora
+
+## Important Dates
+
+*   **November 30, 2023:** Deadline for abstract submission (intention to participate)
+*   **February 1, 2024 - February 11, 2024:** Submission deadline: First Version of Paper (Full-text)
+*   **March 1, 2024 - March 13, 2024:** Notification to Authors and opening of registrations
+*   **April 1, 2024:** Final Camera-Ready Paper Delivery
+*   **April 1, 2024:** Deadline for registration for authors of a paper
+*   **May 15, 2024:** End of reduced-rate entries
+
+## Submission Information
+
+Submissions should be made through the conference website. Further information for submission can be found [here](/page/page_personnalisable?lang=en).
+
+## Registration
+
+Information regarding registration fees can be found on the [Registration fees](Registration fees) page.
+
+## Format
+
+The conference will take place exclusively face-to-face.
+
+## Contact
+
+For any inquiries, please refer to the [Contact](/contact) section.",,,"Hội nghị cũ, sai link chính",Yes,,
+req-conf-1751766474613-jtzem,,IEEE International Conference on Data Science and Advanced Analytics,DSAA,https://dsaa.ieee.org/2025/,,https://dsaa.ieee.org/2025/calls/,,"Conference dates: October 9 - 13, 2025
+Year: 2025
+Location: Birmingham, UK
+City-State-Province: Birmingham
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Topics: Data Science, Advanced Analytics","October 9 - 13, 2025",,2025,"Birmingham, UK",,Birmingham,United Kingdom,Europe,Offline,,{},,{},,{},,{},,{},,"Data Science, Advanced Analytics",No publisher,"The 12th IEEE International Conference on Data Science and Advanced Analytics (DSAA) will be held in Birmingham, UK, from October 9-13, 2025. DSAA'2025 aims to provide a premier forum for researchers, industry, and government practitioners to exchange theoretical developments and best practices in data science and analytics.","# Call for Papers
+
+The 12th IEEE International Conference on Data Science and Advanced Analytics (DSAA) invites submissions of papers describing innovative research on all aspects of data science and advanced analytics, as well as application-oriented papers that make significant, original, and reproducible contributions to improving the practice of data science and analytics in real-world scenarios.
+
+DSAA’2025 provides a premier forum that brings together researchers, industry and government practitioners, as well as developers and users of big data solutions for the exchange of the latest theoretical developments in Data Science and the best practice for a wide range of applications.
+
+## Tracks
+
+The conference features the following tracks:
+
+*   **Research Track**
+*   **Applications Track**
+*   **Industry Track**
+*   **Special Sessions**
+*   **Tutorials**
+*   **Journal and Special Track Papers**
+
+## Submission Information
+
+*   **General Enquiries:** For general enquiries, please contact academic.conferences@contacts.bham.ac.uk.
+*   **For Authors:** Detailed information for authors can be found on the [For Authors](https://dsaa.ieee.org/2025/for-authors/) page.
+
+*Note: Specific deadlines and detailed submission guidelines are not provided in this excerpt. Please refer to the official conference website for complete details.*",,,Can't get dates,Yes,,
+req-conf-1751766474613-jtzem,,European Chapter on Combinatorial Optimization,ECCO,https://ecco2025.sciencesconf.org/,,https://ecco2025.sciencesconf.org/page/customizable_page_11?lang=en,,"Conference dates: TBA
+Year: 2025
+Type: Offline
+Submission Date.Abstract Extended Submission deadline: March 15, 2025
+Notification Date.Notification of acceptance: March 22, 2025
+Other Date.Deadline for Proposals of invited sessions: January 24, 2025
+Topics: Combinatorial Optimization",TBA,,2025,No location,,No city/state/province,No country,No continent,Offline,,"{""Abstract Extended Submission deadline"":""March 15, 2025""}",,"{""Notification of acceptance"":""March 22, 2025""}",,{},,{},,"{""Deadline for Proposals of invited sessions"":""January 24, 2025""}",,Combinatorial Optimization,No publisher,"The European Chapter on Combinatorial Optimization (ECCO) aims to bring together researchers in Combinatorial Optimization to present their work, share experiences, and discuss recent advances in theory and applications. Selected papers will be considered for a special issue of the Journal of Combinatorial Optimization.","# Call for Papers
+
+## ECCO'2025
+
+We accept submissions of **one-page abstracts**.
+
+A special issue of the *Journal of Combinatorial Optimization* will be devoted to work presented at the conference. All articles will be refereed according to the high standards of the journal. Details of the process will be given during the conference.
+
+### Important Dates
+
+1.  **Abstract Extended Submission deadline**: March 15, 2025 (this deadline will not be extended)
+2.  **Notification of acceptance**: March 22, 2025
+
+### Invited Sessions
+
+Proposals for invited sessions are due by **January 24, 2025**. Please contact [ecco2025@sciencesconf.org](mailto:ecco2025@sciencesconf.org) for proposals.
+
+### Submit your abstract
+
+Submit your one-page abstract through the link: [https://www.euro-online.org/conf/ecco2025/](https://www.euro-online.org/conf/ecco2025/)",,,"May 8-10, 2025, Marrakech, Morocco",Yes,,
+req-conf-1751766474613-jtzem,,European Conference on Computer Supported Cooperative Work,ECSCW,https://ecscw.eusset.eu/2025/,,https://ecscw.eusset.eu/2025/index.php/journal-papers/,,"Conference dates: June 30 - July 4, 2025
+Year: 2025
+Location: Newcastle upon Tyne, UK
+City-State-Province: Newcastle upon Tyne
+Country: United Kingdom
+Continent: Europe
+Type: Offline
+Submission Date.Paper submission deadline: February 28, 2025
+Notification Date.Paper acceptance cut-off date for inclusion in ECSCW 2025 Program: April 1, 2025
+Topics: practice-centred computing, design of cooperation technologies, communication, collaboration, social technologies, practices, use, system design, hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, toolkits, methodologies, tools, human practices, ethnography, innovative research approaches, critical design, design fictions, critical analysis, theory, domain-specific social and collaborative applications, digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, ethics, policy implications, socio-technical systems, values, algorithms, human-AI relationships, interactions across disciplines, distances, languages, generations, cultures","June 30 - July 4, 2025",,2025,"Newcastle upon Tyne, UK",,Newcastle upon Tyne,United Kingdom,Europe,Offline,,"{""Paper submission deadline"":""February 28, 2025""}",,"{""Paper acceptance cut-off date for inclusion in ECSCW 2025 Program"":""April 1, 2025""}",,{},,{},,{},,"practice-centred computing, design of cooperation technologies, communication, collaboration, social technologies, practices, use, system design, hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, toolkits, methodologies, tools, human practices, ethnography, innovative research approaches, critical design, design fictions, critical analysis, theory, domain-specific social and collaborative applications, digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, ethics, policy implications, socio-technical systems, values, algorithms, human-AI relationships, interactions across disciplines, distances, languages, generations, cultures",No publisher,"The European Conference on Computer Supported Cooperative Work (ECSCW) 2025 is an international venue focused on practice-centred computing and the design of cooperation technologies. The 23rd edition will take place in Newcastle upon Tyne, UK, from June 30th to July 4th, 2025. ECSCW is a single-track conference supported by EUSSET, fostering interdisciplinary and global community discussions.","# ECSCW 2025: Call for Journal Papers
+
+The European Conference on Computer Supported Cooperative Work (ECSCW) 2025 will be held in **Newcastle upon Tyne, UK, from June 30th to July 4th, 2025**. ECSCW is an international venue dedicated to practice-centred computing and the design of cooperation technologies, serving as a single-track conference that fosters an interdisciplinary and global community.
+
+## Journal Papers
+
+Submissions to the journal-track of the ECSCW conference undergo a fully integrated, continuous review process, allowing authors to develop and refine stronger papers over a longer period.
+
+### Description
+
+We invite journal papers documenting original, rich, and in-depth contributions to CSCW. Authors are encouraged to submit papers that improve and extend the CSCW field.
+
+### Relevant Themes
+
+Relevant themes include, but are not limited to:
+
+*   Empirical investigations of collaborative practices.
+*   System design focusing on solutions to support cooperative work in increasingly complex, networked, and data-driven settings.
+*   Hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, and/or toolkits that enable the building of new social and collaborative systems and experiences.
+*   Methodologies and tools for investigating human practices, e.g., the nature of ethnography and the role of other innovative research approaches in building systems or studying their use, the application of critical design or design fictions to investigate future possibilities.
+*   Critical analysis or theory with clear relevance to study, design, or use of collaborative settings and systems.
+*   Domain-specific social and collaborative applications, including applications to digital civics, grassroots movements, healthcare, transportation, ICT4D, sustainability, education, workplace, accessibility, global collaboration, or other domains.
+*   Analysis of the ethics and policy implications of socio-technical systems, the values that inform them, and the algorithms that shape them.
+*   The changing nature of collaboration and teaming in relation to intelligent machine agents, e.g., human-AI relationships in collaborative practices.
+*   Studies, prototypes, or other investigations that explore interactions across disciplines, distances, languages, generations, and cultures, to help understand how to design in relation to social, temporal, and/or spatial boundaries.
+*   Discussions and extrapolations of work-practices and technologies, which contribute to the core topics of ECSCW.
+
+### Important Dates
+
+*   Paper submission deadline: **28 February 2025**
+*   On a rolling basis: End of paper review, revise & resubmit processes (for further information please read here: [https://www.eusset.eu/the-ecscw-journal-publication-model/](https://www.eusset.eu/the-ecscw-journal-publication-model/))
+*   Paper acceptance cut-off date for inclusion in ECSCW 2025 Program: **April 1, 2025**
+*   ECSCW 2025 Conference Dates: **July 2 – 4, 2025**
+
+### Submission Format & Process
+
+*   **Format:** Paper submissions must follow the CSCW Journal Instructions for Authors available at: [https://www.springer.com/journal/10606/submission-guidelines](https://www.springer.com/journal/10606/submission-guidelines).
+*   **Length:** Papers are suggested to be between 10,000 and 15,000 words (including tables and appendices, excluding references).
+*   **Submission System:** Manuscripts must be submitted via [https://submission.nature.com/new-submission/10606/3](https://submission.nature.com/new-submission/10606/3).
+    *   Note: The submission system (SNAPP) treats ECSCW contributions as a “collection”. Authors must select ""research"", then ""start submission"", and then click ""details"" to select the ECSCW collection.
+
+### Paper Review, Revision & Resubmission Process
+
+*   The review process is **single-blind**.
+*   Submissions are assigned to ECSCW 2025 Journal Papers Chairs, who manage the review process with three reviewers.
+*   Authors are encouraged to submit early to allow for multiple Revise & Resubmit cycles and earlier publication.
+*   Review turnaround time is approximately three months for the first cycle and two months for subsequent cycles.
+*   Papers typically undergo at least two review rounds.
+*   Papers must be accepted by **April 1, 2025**, to be included in the ECSCW 2025 Program. Papers accepted after this date will be considered for ECSCW 2026.
+*   If a paper is not accepted by **April 1, 2025**, it will automatically be transferred to the next ECSCW conference unless withdrawn, and authors may be invited to present their work at ECSCW 2025 if accepted later.
+
+### Publication and Copyright Information
+
+*   Accepted articles are published in *Computer Supported Cooperative Work (CSCW): The Journal of Collaborative Computing and Work Practices* ([https://www.springer.com/journal/10606/](https://www.springer.com/journal/10606/)).
+*   Authors will be asked to transfer copyright to the Publisher upon acceptance.
+*   Accepted manuscripts are published on Springer Online First after production and proof corrections.
+*   Authors have the option to make their versions of accepted papers available with open access in the EUSSET digital library ([http://www.eusset.eu/digital-library](http://www.eusset.eu/digital-library)) as an edited collection.
+
+## Journal Paper Chairs
+
+*   Alexander Boden (Hochschule Bonn-Rhein-Sieg, University of Applied Sciences, Germany)
+*   Jina Huh-Yoo (Drexel College of Computing & Informatics (CCI), Philadelphia, PA, USA)
+*   Stuart Reeves (University of Nottingham, UK)
+
+## Other Submission Types
+
+Information is also available for:
+
+*   Conference Papers
+*   Exploratory Papers
+*   Posters & Demos
+*   Panels
+*   Masterclasses
+*   Workshops
+*   Doctoral Colloquium",,,2026 link: https://ecscw.eusset.eu/2026/,Yes,,
+req-conf-1751766474613-jtzem,,"World Conference on Educational Multimedia, Hypermedia and Telecommunications",ED-MEDIA,https://aace.org/conf/edmedia/,,https://aace.org/conf/edmedia/call/,https://aace.org/conf/edmedia/deadlines/,"Conference dates: May 25 - 29, 2025
+Year: 2025
+Location: Edinburgh, Scotland
+City-State-Province: Edinburgh
+Country: Scotland
+Continent: Europe
+Type: Offline
+Submission Date.First Call for Proposals: December 20, 2024
+Submission Date.Final Call for Proposals: April 11, 2025
+Notification Date.First Call Authors Notified: January 6, 2025
+Camera-ready Date.Proceedings Files & PPTs/Videos Due: May 12, 2025
+Registration Date.Early Registration & Author Confirmations: May 7, 2025
+Topics: Information Technology in Education, E-Learning
+Publisher: AACE","May 25 - 29, 2025",,2025,"Edinburgh, Scotland",,Edinburgh,Scotland,Europe,Offline,,"{""First Call for Proposals"":""December 20, 2024"",""Final Call for Proposals"":""April 11, 2025""}",,"{""First Call Authors Notified"":""January 6, 2025""}",,"{""Proceedings Files & PPTs/Videos Due"":""May 12, 2025""}",,"{""Early Registration & Author Confirmations"":""May 7, 2025""}",,{},,"Information Technology in Education, E-Learning",AACE,"The World Conference on Educational Multimedia, Hypermedia and Telecommunications (ED-MEDIA) will be held from May 19-23, 2025, in Edinburgh, Scotland. Organized by The Association for the Advancement of Computing in Education (AACE), the conference focuses on research, development, and practical applications of Information Technology in Education and E-Learning.","# ED-MEDIA 2025: Call for Proposals
+
+The World Conference on Educational Multimedia, Hypermedia and Telecommunications (ED-MEDIA), organized by The Association for the Advancement of Computing in Education (AACE), is a premier event for researchers and professionals in the field of Information Technology in Education and E-Learning.
+
+### Conference Details
+
+*   **Dates:** May 19-23, 2025
+*   **Location:** Edinburgh, Scotland
+
+### Call for Proposals
+
+We invite proposals for a wide range of contributions, including research papers, invited talks, workshops, SIGs, presentations in the Emerging Scholar Stream, and exhibits in the Innovators Playground / Corporate Exhibits.
+
+### Topics
+
+For a comprehensive list of topics of interest, please visit the conference website: [https://aace.org/conf/edmedia/about/#topics](https://aace.org/conf/edmedia/about/#topics)
+
+### Presentation Types
+
+*   Keynote & Invited Speakers
+*   Workshops
+*   SIGs (Special Interest Groups)
+*   Emerging Scholar Stream presentations
+*   Innovators Playground / Corporate Exhibits
+*   Best Papers by Country Sessions
+
+### Deadlines
+
+*   **First Call for Proposals:** December 20, 2024
+*   **Reviews Due:** January 6, 2025
+*   **First Call Authors Notified:** January 6, 2025
+*   **Final Call for Proposals:** April 11, 2025
+*   **Early Registration & Author Confirmations:** May 7, 2025
+*   **Proceedings Files & PPTs/Videos Due:** May 12, 2025
+
+### Submission Guide
+
+Detailed guidelines for submitting proposals can be found here: [https://aace.org/conf/edmedia/submission/](https://aace.org/conf/edmedia/submission/)
+
+### Registration
+
+Register early to take advantage of a 30% discount. For registration details, please visit: [https://aace.org/conf/edmedia/registration/](https://aace.org/conf/edmedia/registration/)
+
+### Publication
+
+The conference proceedings will be published and accessible through AACE's leading-edge Digital Library. Selected papers may also be invited for extended submission to an AACE Journal.",,,"Information is a mess between 2026 and 2025, cfp from page is of 2025",Yes,,
+req-conf-1751768239677-gv7fi,,International Conference on Internet Monitoring and Protection,ICIMP,https://www.iaria.org/conferences2025/ICIMP25.html,,https://www.iaria.org/conferences2025/CfPICIMP25.html,https://www.iaria.org/conferences2025/ICIMP25.html,"Conference dates: April 06 - 10, 2025
+Year: 2025
+Location: Valencia, Spain
+City-State-Province: Valencia
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Submission Date.Submission: January 20, 2025
+Notification Date.Notification: February 16, 2025
+Camera-ready Date.Camera ready: March 05, 2025
+Registration Date.Registration: February 28, 2025
+Topics: CYBERSECURITY: Trends in Cybersecurity, TRENDS: Trends on monitoring with new technologies, TRASI: Internet traffic surveillance and interception, IPERF: Internet performance, RTSEC: Security for Internet-based real-time systems, DISAS: Disaster prevention and recovery, EMERG: Networks and applications emergency services, MONIT: End-to-end sampling, measurement, and monitoring, REPORT: Experiences & lessons learnt in securing networks and applications, USSAF: User safety, privacy, and protection over Internet, SYVUL: Systems vulnerabilities, SYDIA: Systems diagnosis, CYBER-FRAUD: Cyber fraud, BUSINESS: Business continuity, RISK: Risk assessment, TRUST: Privacy and trust in pervasive communications, RIGHT: Digital rights management, BIOTEC: Biometric techniques, EMDRM: Enterprise & Media DRM","April 06 - 10, 2025",,2025,"Valencia, Spain",,Valencia,Spain,Europe,Hybrid,,"{""Submission"":""January 20, 2025""}",,"{""Notification"":""February 16, 2025""}",,"{""Camera ready"":""March 05, 2025""}",,"{""Registration"":""February 28, 2025""}",,{},,"CYBERSECURITY: Trends in Cybersecurity, TRENDS: Trends on monitoring with new technologies, TRASI: Internet traffic surveillance and interception, IPERF: Internet performance, RTSEC: Security for Internet-based real-time systems, DISAS: Disaster prevention and recovery, EMERG: Networks and applications emergency services, MONIT: End-to-end sampling, measurement, and monitoring, REPORT: Experiences & lessons learnt in securing networks and applications, USSAF: User safety, privacy, and protection over Internet, SYVUL: Systems vulnerabilities, SYDIA: Systems diagnosis, CYBER-FRAUD: Cyber fraud, BUSINESS: Business continuity, RISK: Risk assessment, TRUST: Privacy and trust in pervasive communications, RIGHT: Digital rights management, BIOTEC: Biometric techniques, EMDRM: Enterprise & Media DRM",No publisher,"The Twentieth International Conference on Internet Monitoring and Protection (ICIMP 2025) will be held in Valencia, Spain, from April 06 to April 10, 2025. The conference focuses on security, performance, vulnerabilities in the Internet, and disaster prevention and recovery, offering both onsite and online participation options.","# ICIMP 2025: Call for Papers
+
+The Twentieth International Conference on Internet Monitoring and Protection (ICIMP 2025) will be held from **April 06, 2025 to April 10, 2025, in Valencia, Spain**.
+
+### Onsite and Online Options
+
+In order to accommodate various situations, the conference offers the option for either physical presence or virtual participation (pdf slides or pre-recorded videos).
+
+## Scope
+
+ICIMP 2025 is dedicated to security, performance, vulnerabilities in the Internet, and disaster prevention and recovery. It focuses on measurement, monitoring, and lessons learned in protecting users. The conference welcomes academic, research, and industrial contributions, including technical papers, position papers, survey papers, short papers on work in progress, and panel proposals.
+
+## Conference Tracks
+
+*   **CYBERSECURITY: Trends in Cybersecurity**
+*   **TRENDS: Trends on monitoring with new technologies**
+*   **TRASI: Internet traffic surveillance and interception**
+*   **IPERF: Internet performance**
+*   **RTSEC: Security for Internet-based real-time systems**
+*   **DISAS: Disaster prevention and recovery**
+*   **EMERG: Networks and applications emergency services**
+*   **MONIT: End-to-end sampling, measurement, and monitoring**
+*   **REPORT: Experiences & lessons learnt in securing networks and applications**
+*   **USSAF: User safety, privacy, and protection over Internet**
+*   **SYVUL: Systems vulnerabilities**
+*   **SYDIA: Systems diagnosis**
+*   **CYBER-FRAUD: Cyber fraud**
+*   **BUSINESS: Business continuity**
+*   **RISK: Risk assessment**
+*   **TRUST: Privacy and trust in pervasive communications**
+*   **RIGHT: Digital rights management**
+*   **BIOTEC: Biometric techniques**
+*   **EMDRM: Enterprise & Media DRM**
+
+## Submission Types
+
+*   **Regular Papers:** (up to 6-10 pages; 6 pages covered by registration, max 4 extra pages at additional cost) (oral presentation)
+*   **Short papers (work in progress):** (up to 4 pages long) (oral presentation)
+*   **Ideas contributions:** (2 pages long) (oral presentation)
+*   **Extended abstracts:** (2 pages long) (oral presentation)
+*   **Posters (paper-based):** (2 pages long) (oral presentation)
+*   **Posters (slide-based, only):** (oral presentation)
+*   **Presentations (slide-based, only):** (oral presentation)
+*   **Demos:** (2 pages)
+*   **Tutorial proposals**
+*   **Panel proposals**
+
+## Deadlines
+
+*   **Submission:** Jan 20, 2025
+*   **Notification:** Feb 16, 2025
+*   **Registration:** Feb 28, 2025
+*   **Camera ready:** Mar 05, 2025
+
+Deadlines differ for special tracks. Please consult the conference home page for special tracks Call for Papers (if any).
+
+## Publication
+
+*   Published by IARIA Press (operated by Xpert Publishing Services)
+*   Archived in the Open Access IARIA ThinkMind Digital Library
+*   Prints available at Curran Associates, Inc.
+*   Authors of selected papers will be invited to submit extended versions to a IARIA Journal.
+
+## Submission Instructions
+
+*   Only .pdf or .doc files will be accepted for paper submission.
+*   All received submissions will be acknowledged via an automated system.
+*   Final author manuscripts will be 8.5"" x 11"", not exceeding 6 pages; max 4 extra pages allowed at additional cost.
+*   Helpful information for paper formatting for MS Word can be found [here](https://www.iaria.org/conferences/authors.html).
+*   A community-provided LaTeX template is available via the CTAN package iaria, including an Overleaf template.
+*   Your paper should comply with the additional editorial rules.
+*   Authors of accepted contributions will receive an online author kit with submission instructions for the final version.
+*   It is recommended not to use too many extra pages, and no more than 2 contributions per event are recommended, as each must be separately registered and paid for.
+*   At least one author of each accepted paper must register to ensure inclusion in the proceedings and digital library, or posting on www.iaria.org.
+
+## Contact
+
+[iaria.org Contact](mailto:Contact)",,,Can't get 2026 link: https://www.iaria.org/conferences2026/ICIMP26.html,Yes,,
+req-conf-1751768239677-gv7fi,,International Conference on Internet and Web Applications and Services,ICIW,https://www.iaria.org/conferences2025/ICIW25.html,,https://www.iaria.org/conferences2025/CfPICIW25.html,https://www.iaria.org/conferences2025/ICIW25.html,"Conference dates: April 06 - 10, 2025
+Year: 2025
+Location: Valencia, Spain
+City-State-Province: Valencia
+Country: Spain
+Continent: Europe
+Type: Hybrid
+Submission Date.Submission: January 20, 2025
+Notification Date.Notification: February 16, 2025
+Camera-ready Date.Camera ready: March 05, 2025
+Registration Date.Registration: February 28, 2025
+Topics: Web technologies, frameworks, languages, mechanisms; Web applications design and development; Interaction with/from Web-based applications; Web-based applications’ features; Management of Web-based applications; Evaluation of Web applications; Specialized Web applications; Aggregating multimedia documents; E-business, appliances, and services; IP Grid Management and Grid Services; IP-based convergent solutions and next generation networks; Standards, case studies and special groups on web-based applications; E-business system design, development, and management for SMEs, Service Innovations; Service Architectures; Model-driven development of context-aware services; Context-aware service models, architectures and frameworks; Model-driven development of semantic Web services; Web services foundation, architectures, frameworks, languages; Web services architecture and business continuity; Special Web services mechanisms; Semantic Web, Ontology, and Web services; Web service applications ; Data Management aspects in Web Services; Autonomic e-Business integration and collaboration; Web service based Grid computing and P2P computing; Web services based applications for e-Commerce; Multimedia applications using Web Services; Automatic computing for Web services; Web services challenges on trust, security, performance, scalability; Enterprise Web services; Web services discovery, announcing, monitoring and management; Platforms, technologies, mechanisms and case studies; Grid architectures, middleware and toolkits, Developing entertainment systems and applications; Platforms for entertainment systems; Speech technology & its usability for entertainment systems; Networking requirements for entertainment systems; Traffic generated by entertainment applications; QoS/SLA on entertainment systems; Reliability and high availability of entertainment systems; Identify aspects in entertainment systems; Real-time access to entertainment systems; Customized access entertainment systems; Navigation and entertainment systems; Integration and interoperability aspects in entertainment systems; Entertainment systems and applications; Networking and system support for entertainment systems; Wireless and mobile technologies for entertainment; Wireless multimedia for entertainment; Systems for music and movie distribution; Games on mobile and resource-constrained devices; Mobile video entertainment systems; Car/flight/train entertainment systems; Ubiquitous entertainment systems; Interactive television; Technologies for sport and entertainment; WiFi wireless home entertainment systems; Wearable technologies for entertainment, P2P architectures, techniques, paradigms; P2P programming and data handling; P2P security features; Data and compute intensive applications; P2P networks and protocols; P2P management; P2P Trust and reputation management; Fault tolerance in P2P, quality of availability, accounting in P2P; Self-adaptiveness in P2P overlay networks; Self-configurable P2P systems; Case studies, benchmarking; Copyright and intellectual property; Electronic marketplace, Digital asset management and trading systems; Platforms, environments, testbeds, Theory, frameworks, mechanisms, and tools for online communication; Methodologies and languages for on-line communications; Web services and XML use for online communications; Tools for assessing online work, distributed workload; Shared business processes; Collaborative groups and systems; Theory and formalisms of group interactions; Group synergy in cooperative networks; Online gambling, gaming, children groups; Identity features, risks, jurisdiction for online communications; Specifics emergency and e-coaching on online communications; B2B and B2E cooperation; Privacy, identify, security on online communications; Individual anonymity, group trust, and confidentiality on online groups; Conflict, delegation, group selection; Community costs in collaborative groups; Building online social networks with popularity contexts, persuasion, etc.; Technology support for collaborative systems; Techniques, mechanisms, and platforms for remote cooperation, Adaptive Architecture; Business process integration and management; Cloud Computing; Collective Intelligence for Service Computing; Computational Intelligence; Data Mining of Actual Services; Decision Science; Digital EcoSystems Infrastructure; Economic Clusters; Economics and Economic Experiments; Game Theory; Human Modeling in Services; Intelligent Agents and Multi-Agent Systems; Intra- and Inter-enterprise services; Knowledge Discovery for Service Computing; Nature Inspired Computing Techniques for Service Computing; Optimization of Service Processes; Psychological Approaches to Services; Self Organizing Infrastructure; Sensing of Human Behaviors; Service-centric business models and their economics; Service discovery, repository and registry; Service Engineering; Service evaluation, measurements and delivery audit; Service interaction, service ontologies and service composition; Service Marketing; Service-Oriented Architecture; Service Oriented computing; Soft Computing; Society and business services (public, utility, business, healthcare, consulting, etc.); Sustainable Frameworks; Swarm Intelligence; Ubiquitous and pervasive services (technology, context, security); Value Creation in Services; Web-based basics on service modeling, deployment and maintenance, Principles, theories, and challenges of legal and social aspects; Strategies, modeling, and requirements engineering of legal and social aspects; Architectures, implementations, and deployment consideration of legal and social aspects; Cyber threats, emerging risks, systemic concerns, and emergency preparedness; Social computing and lifestyle computing; Service marketing and customer relationship management; Market structures and emerging business models; Emerging legal issues due to new computing environment; File / information sharing networks and user behavior; Knowledge modeling, management, and application; Negotiation and contracting as well as contract monitoring and enforcement; E-democracy, e-policy, and governance; Legal and social ontologies; Privacy and copyright in collaborative environments and social networks; Intellectual property rights; Trust, security, and privacy; Counterfeit forensic; Identity management and access control; Security and privacy in location-based services, E-Learning; Web Technologies and Tools for Educational Purposes; Services for E-Learning Platforms; Virtual Learning Environments (VLE); Course Management Systems; Web applications for Teaching; Social Implications of E-Learning; Lifelong E-learning; Teaching-Learning Experiences using the Internet for Educational Purposes; E-learning in the European Higher Education Area (EHEA) and other HE contexts; Web protocols for VLE; Security for VLE; QoS for VLE; Storage management in VLE, Apps; Mobile social media; Video production; Innovative video content; Creative process; Dedicated apps; Special apps for short scientific reports; Techniques for a convincing summary report; Mobile and wearable devices for scietific reports; Combining open space and lab space in scientific reports; Handling inventories of short video scientific reports; Innovative mobile content; Online news; Volatile and just-in-time news; Report authenticity; Copyright and authorship; Ethical aspects, Architectures for enterprise clouds; Principles, concepts and methodologies of enterprise cloud computing; Tools, technologies, methodologies and frameworks for enterprise cloud computing; Enterprise IS architectures such as application, information and technology architectures; Synergies between SOA, Grid Computing and Cloud Infrastructures; Quality of Service (QoS) models; 'Elastic' and on-demand allocation and management of resources to meet business needs; Benefits, issues and limitations of enterprise clouds; Security, data integrity, legal and governance issues for enterprise clouds; Management, monitoring an governance issues; Portability of architectures, applications and data between cloud providers; Reliability and maintenance of cloud-based business architectures; Architectures for Software as a Service, Platform as a Service and Infrastructure as a Service; Network architecture using Storage Clouds; Experience reports with designing, building and using Cloud infrastructure; Novel application architectures, best practices, case studies and surveys","April 06 - 10, 2025",,2025,"Valencia, Spain",,Valencia,Spain,Europe,Hybrid,,"{""Submission"":""January 20, 2025""}",,"{""Notification"":""February 16, 2025""}",,"{""Camera ready"":""March 05, 2025""}",,"{""Registration"":""February 28, 2025""}",,{},,"Web technologies, frameworks, languages, mechanisms; Web applications design and development; Interaction with/from Web-based applications; Web-based applications’ features; Management of Web-based applications; Evaluation of Web applications; Specialized Web applications; Aggregating multimedia documents; E-business, appliances, and services; IP Grid Management and Grid Services; IP-based convergent solutions and next generation networks; Standards, case studies and special groups on web-based applications; E-business system design, development, and management for SMEs, Service Innovations; Service Architectures; Model-driven development of context-aware services; Context-aware service models, architectures and frameworks; Model-driven development of semantic Web services; Web services foundation, architectures, frameworks, languages; Web services architecture and business continuity; Special Web services mechanisms; Semantic Web, Ontology, and Web services; Web service applications ; Data Management aspects in Web Services; Autonomic e-Business integration and collaboration; Web service based Grid computing and P2P computing; Web services based applications for e-Commerce; Multimedia applications using Web Services; Automatic computing for Web services; Web services challenges on trust, security, performance, scalability; Enterprise Web services; Web services discovery, announcing, monitoring and management; Platforms, technologies, mechanisms and case studies; Grid architectures, middleware and toolkits, Developing entertainment systems and applications; Platforms for entertainment systems; Speech technology & its usability for entertainment systems; Networking requirements for entertainment systems; Traffic generated by entertainment applications; QoS/SLA on entertainment systems; Reliability and high availability of entertainment systems; Identify aspects in entertainment systems; Real-time access to entertainment systems; Customized access entertainment systems; Navigation and entertainment systems; Integration and interoperability aspects in entertainment systems; Entertainment systems and applications; Networking and system support for entertainment systems; Wireless and mobile technologies for entertainment; Wireless multimedia for entertainment; Systems for music and movie distribution; Games on mobile and resource-constrained devices; Mobile video entertainment systems; Car/flight/train entertainment systems; Ubiquitous entertainment systems; Interactive television; Technologies for sport and entertainment; WiFi wireless home entertainment systems; Wearable technologies for entertainment, P2P architectures, techniques, paradigms; P2P programming and data handling; P2P security features; Data and compute intensive applications; P2P networks and protocols; P2P management; P2P Trust and reputation management; Fault tolerance in P2P, quality of availability, accounting in P2P; Self-adaptiveness in P2P overlay networks; Self-configurable P2P systems; Case studies, benchmarking; Copyright and intellectual property; Electronic marketplace, Digital asset management and trading systems; Platforms, environments, testbeds, Theory, frameworks, mechanisms, and tools for online communication; Methodologies and languages for on-line communications; Web services and XML use for online communications; Tools for assessing online work, distributed workload; Shared business processes; Collaborative groups and systems; Theory and formalisms of group interactions; Group synergy in cooperative networks; Online gambling, gaming, children groups; Identity features, risks, jurisdiction for online communications; Specifics emergency and e-coaching on online communications; B2B and B2E cooperation; Privacy, identify, security on online communications; Individual anonymity, group trust, and confidentiality on online groups; Conflict, delegation, group selection; Community costs in collaborative groups; Building online social networks with popularity contexts, persuasion, etc.; Technology support for collaborative systems; Techniques, mechanisms, and platforms for remote cooperation, Adaptive Architecture; Business process integration and management; Cloud Computing; Collective Intelligence for Service Computing; Computational Intelligence; Data Mining of Actual Services; Decision Science; Digital EcoSystems Infrastructure; Economic Clusters; Economics and Economic Experiments; Game Theory; Human Modeling in Services; Intelligent Agents and Multi-Agent Systems; Intra- and Inter-enterprise services; Knowledge Discovery for Service Computing; Nature Inspired Computing Techniques for Service Computing; Optimization of Service Processes; Psychological Approaches to Services; Self Organizing Infrastructure; Sensing of Human Behaviors; Service-centric business models and their economics; Service discovery, repository and registry; Service Engineering; Service evaluation, measurements and delivery audit; Service interaction, service ontologies and service composition; Service Marketing; Service-Oriented Architecture; Service Oriented computing; Soft Computing; Society and business services (public, utility, business, healthcare, consulting, etc.); Sustainable Frameworks; Swarm Intelligence; Ubiquitous and pervasive services (technology, context, security); Value Creation in Services; Web-based basics on service modeling, deployment and maintenance, Principles, theories, and challenges of legal and social aspects; Strategies, modeling, and requirements engineering of legal and social aspects; Architectures, implementations, and deployment consideration of legal and social aspects; Cyber threats, emerging risks, systemic concerns, and emergency preparedness; Social computing and lifestyle computing; Service marketing and customer relationship management; Market structures and emerging business models; Emerging legal issues due to new computing environment; File / information sharing networks and user behavior; Knowledge modeling, management, and application; Negotiation and contracting as well as contract monitoring and enforcement; E-democracy, e-policy, and governance; Legal and social ontologies; Privacy and copyright in collaborative environments and social networks; Intellectual property rights; Trust, security, and privacy; Counterfeit forensic; Identity management and access control; Security and privacy in location-based services, E-Learning; Web Technologies and Tools for Educational Purposes; Services for E-Learning Platforms; Virtual Learning Environments (VLE); Course Management Systems; Web applications for Teaching; Social Implications of E-Learning; Lifelong E-learning; Teaching-Learning Experiences using the Internet for Educational Purposes; E-learning in the European Higher Education Area (EHEA) and other HE contexts; Web protocols for VLE; Security for VLE; QoS for VLE; Storage management in VLE, Apps; Mobile social media; Video production; Innovative video content; Creative process; Dedicated apps; Special apps for short scientific reports; Techniques for a convincing summary report; Mobile and wearable devices for scietific reports; Combining open space and lab space in scientific reports; Handling inventories of short video scientific reports; Innovative mobile content; Online news; Volatile and just-in-time news; Report authenticity; Copyright and authorship; Ethical aspects, Architectures for enterprise clouds; Principles, concepts and methodologies of enterprise cloud computing; Tools, technologies, methodologies and frameworks for enterprise cloud computing; Enterprise IS architectures such as application, information and technology architectures; Synergies between SOA, Grid Computing and Cloud Infrastructures; Quality of Service (QoS) models; 'Elastic' and on-demand allocation and management of resources to meet business needs; Benefits, issues and limitations of enterprise clouds; Security, data integrity, legal and governance issues for enterprise clouds; Management, monitoring an governance issues; Portability of architectures, applications and data between cloud providers; Reliability and maintenance of cloud-based business architectures; Architectures for Software as a Service, Platform as a Service and Infrastructure as a Service; Network architecture using Storage Clouds; Experience reports with designing, building and using Cloud infrastructure; Novel application architectures, best practices, case studies and surveys",No publisher,"The Twentieth International Conference on Internet and Web Applications and Services (ICIW 2025) will be held from April 06 to April 10, 2025, in Valencia, Spain. This conference offers both physical presence and virtual participation options, focusing on various aspects of designing and deploying applications based on IP and Web technologies. It will feature five complementary tracks covering Web technologies, application development, and interactions with other systems.","# ICIW 2025: Call for Papers
+
+The Twentieth International Conference on Internet and Web Applications and Services (ICIW 2025) will be held from **April 06, 2025 to April 10, 2025 in Valencia, Spain**.
+
+## Onsite and Online Options
+
+In order to accommodate various situations, the conference offers the option for either **physical presence** or **virtual participation** (pdf slides or pre-recorded videos).
+
+## Scope
+
+ICIW 2025 continues a series of co-located events that cover complementary aspects related to designing and deploying applications based on IP & Web techniques and mechanisms. It focuses on Web technologies, design and development of Web-based applications, and interactions of these applications with other types of systems. Management aspects related to these applications and challenges on specialized domains are also addressed. Evaluation techniques and standard positions on different aspects are part of the expected agenda.
+
+We solicit both **academic, research, and industrial contributions**. We welcome technical papers presenting research and practical results, position papers addressing the pros and cons of specific proposals, survey papers addressing key problems and solutions, short papers on work in progress, and panel proposals. Industrial presentations are not subject to the format and content constraints of regular submissions.
+
+Tutorials on specific related topics and panels on challenging areas are encouraged.
+
+## Topics of Interest
+
+All topics and submission formats are open to both research and industry contributions. The conference covers, but is not limited to, the following tracks:
+
+*   **TRINT: Trends on Internet-based data, applications and services**
+    *   Mapping social networks; Signed social networks; Interactive analysis; Personalized sentiment classification; Mobile devices and Internet technologies; Mobile IPv6 over Software Defined Network (SDN); Generative Mappings; Intensive mobile data processing; Virtualization of mobile networks; Personalized services in 5G networks; 5G+ HetHetNets; Information-centric satellite networks; Drone-based services; Internet of self-tunable sensing; Embedded Sensing; Context-aware and location-aware services; Interned-based vehicular networks; Geo-replicated data stores; Personal Cloud; Cloud interactive services; Energy harvesting and energy efficiency; Opportunistic spectrum access; High spectral efficiency communications; Interactive analysis on Big Data; Streaming/Real-Time/Active Streaming; Internet-scale real-time analytics; Real-time data aggregation; Big Data and Industrial 4.0 systems; Internet and Crowdsourcing; Mobile and wearable networks; Smart sensing networks; Internet-based healthcare services; Green Internet; Internet accessibility; Internet and Apps.
+
+*   **TRWEB: Trends on Web-driven applications and services**
+    *   Web3D. Harvesting Entities from the Web; Linking User Web Profiles; Web Crowd Rankings; Navigational Queries; focused Object Retrieval; Discovering Subsumption Relationships; Meshes on the Web; Interactive 3D Web Environments; Interactive 3D Graphics; WebGL, Optimized Javascript engines; Native 3D Web applications, Declarative 3D; WebGL Scene Creation; Web-Based Source Code Analysis; Web visualization of underground caves; Streaming compressed 3D data on the Web; Web3D User Interfaces; Linked Data on the Web; Web user-profiling; Mining large dense graphs/subgraphs; Web tables; Relationships in knowledge graphs; Microblog users; Web Tracking; Augmenting cross-domain knowledge bases; High-dimensional data; Visualizing large-scale; Consumer-oriented Web services.
+
+*   **ML: Machine Learning for Web-based applications and Internet data**
+    *   Machine learning models (supervised, unsupervised, reinforcement, constrained, etc.); Generative modeling (Gaussian, HMM, GAN, Bayesian networks, autoencoders, etc.); Explainable AI (feature importance, LIME, SHAP, FACT, etc.); Bayesian learning models; Prediction uncertainty (approximation learning, similarity); Training of models (hyperparameter optimization, regularization, optimizers); Active learning (partially labels datasets, faulty labels, semi-supervised); Applications of machine learning (recommender systems, NLP, computer vision, etc.); Data in machine learning (no data, small data, big data, graph data, time series, sparse data, etc.).
+
+*   **MOBWEB: Smart Mobile Web**
+    *   Integrated mobile web ecosystems; Smart and intelligent mobile systems; Enterprise mobile apps; Mobile commerce and services; Mobile friendly web design; Responsive web design; Smart mobile solutions; Personalization of mobile web; Smart mobile apps experiences; Social media and smart mobile web; Mobile pervasive and ubiquitous applications; Mobile e-commerce statistics; Mobile hybrid applications; Web-to-Apps; Smart mobile pages; Smart mobile wallets; Web-enabled mobile devices; Web, Mobile, and IoT apps; Industrial applications and demos; Accessories and wearable technologies; Smart web testing.
+
+*   **IWAS: Internet and Web-based Applications and Services**
+    *   Web technologies, frameworks, languages, mechanisms; Web applications design and development; Interaction with/from Web-based applications; Web-based applications’ features; Management of Web-based applications; Evaluation of Web applications; Specialized Web applications; Aggregating multimedia documents; E-business, appliances, and services; IP Grid Management and Grid Services; IP-based convergent solutions and next generation networks; Standards, case studies and special groups on web-based applications; E-business system design, development, and management for SMEs.
+
+*   **WSSA: Web Services-based Systems and Applications**
+    *   Service Innovations; Service Architectures; Model-driven development of context-aware services; Context-aware service models, architectures and frameworks; Model-driven development of semantic Web services; Web services foundation, architectures, frameworks, languages; Web services architecture and business continuity; Special Web services mechanisms; Semantic Web, Ontology, and Web services; Web service applications; Data Management aspects in Web Services; Autonomic e-Business integration and collaboration; Web service based Grid computing and P2P computing; Web services based applications for e-Commerce; Multimedia applications using Web Services; Automatic computing for Web services; Web services challenges on trust, security, performance, scalability; Enterprise Web services; Web services discovery, announcing, monitoring and management; Platforms, technologies, mechanisms and case studies; Grid architectures, middleware and toolkits.
+
+*   **ENSYS: Entertainment Systems**
+    *   Developing entertainment systems and applications; Platforms for entertainment systems; Speech technology & its usability for entertainment systems; Networking requirements for entertainment systems; Traffic generated by entertainment applications; QoS/SLA on entertainment systems; Reliability and high availability of entertainment systems; Identify aspects in entertainment systems; Real-time access to entertainment systems; Customized access entertainment systems; Navigation and entertainment systems; Integration and interoperability aspects in entertainment systems; Entertainment systems and applications; Networking and system support for entertainment systems; Wireless and mobile technologies for entertainment; Wireless multimedia for entertainment; Systems for music and movie distribution; Games on mobile and resource-constrained devices; Mobile video entertainment systems; Car/flight/train entertainment systems; Ubiquitous entertainment systems; Interactive television; Technologies for sport and entertainment; WiFi wireless home entertainment systems; Wearable technologies for entertainment.
+
+*   **P2PSA: P2P Systems and Applications**
+    *   P2P architectures, techniques, paradigms; P2P programming and data handling; P2P security features; Data and compute intensive applications; P2P networks and protocols; P2P management; P2P Trust and reputation management; Fault tolerance in P2P, quality of availability, accounting in P2P; Self-adaptiveness in P2P overlay networks; Self-configurable P2P systems; Case studies, benchmarking; Copyright and intellectual property; Electronic marketplace, Digital asset management and trading systems; Platforms, environments, testbeds.
+
+*   **ONLINE: Online Communications, Collaborative Systems, and Social Networks**
+    *   Theory, frameworks, mechanisms, and tools for online communication; Methodologies and languages for on-line communications; Web services and XML use for online communications; Tools for assessing online work, distributed workload; Shared business processes; Collaborative groups and systems; Theory and formalisms of group interactions; Group synergy in cooperative networks; Online gambling, gaming, children groups; Identity features, risks, jurisdiction for online communications; Specifics emergency and e-coaching on online communications; B2B and B2E cooperation; Privacy, identify, security on online communications; Individual anonymity, group trust, and confidentiality on online groups; Conflict, delegation, group selection; Community costs in collaborative groups; Building online social networks with popularity contexts, persuasion, etc.; Technology support for collaborative systems; Techniques, mechanisms, and platforms for remote cooperation.
+
+*   **SERCOMP: Service computing**
+    *   Adaptive Architecture; Business process integration and management; Cloud Computing; Collective Intelligence for Service Computing; Computational Intelligence; Data Mining of Actual Services; Decision Science; Digital EcoSystems Infrastructure; Economic Clusters; Economics and Economic Experiments; Game Theory; Human Modeling in Services; Intelligent Agents and Multi-Agent Systems; Intra- and Inter-enterprise services; Knowledge Discovery for Service Computing; Nature Inspired Computing Techniques for Service Computing; Optimization of Service Processes; Psychological Approaches to Services; Self Organizing Infrastructure; Sensing of Human Behaviors; Service-centric business models and their economics; Service discovery, repository and registry; Service Engineering; Service evaluation, measurements and delivery audit; Service interaction, service ontologies and service composition; Service Marketing; Service-Oriented Architecture; Service Oriented computing; Soft Computing; Society and business services (public, utility, business, healthcare, consulting, etc.); Sustainable Frameworks; Swarm Intelligence; Ubiquitous and pervasive services (technology, context, security); Value Creation in Services; Web-based basics on service modeling, deployment and maintenance.
+
+*   **SLAECE: Social and Legal Aspect of Internet Computing**
+    *   Principles, theories, and challenges of legal and social aspects; Strategies, modeling, and requirements engineering of legal and social aspects; Architectures, implementations, and deployment consideration of legal and social aspects; Cyber threats, emerging risks, systemic concerns, and emergency preparedness; Social computing and lifestyle computing; Service marketing and customer relationship management; Market structures and emerging business models; Emerging legal issues due to new computing environment; File / information sharing networks and user behavior; Knowledge modeling, management, and application; Negotiation and contracting as well as contract monitoring and enforcement; E-democracy, e-policy, and governance; Legal and social ontologies; Privacy and copyright in collaborative environments and social networks; Intellectual property rights; Trust, security, and privacy; Counterfeit forensic; Identity management and access control; Security and privacy in location-based services.
+
+*   **VEWAeL: Virtual Environments and Web Applications for eLearning**
+    *   E-Learning; Web Technologies and Tools for Educational Purposes; Services for E-Learning Platforms; Virtual Learning Environments (VLE); Course Management Systems; Web applications for Teaching; Social Implications of E-Learning; Lifelong E-learning; Teaching-Learning Experiences using the Internet for Educational Purposes; E-learning in the European Higher Education Area (EHEA) and other HE contexts; Web protocols for VLE; Security for VLE; QoS for VLE; Storage management in VLE.
+
+*   **VIDEO INFO: Short video/links scientific content**
+    *   Apps; Mobile social media; Video production; Innovative video content; Creative process; Dedicated apps; Special apps for short scientific reports; Techniques for a convincing summary report; Mobile and wearable devices for scientific reports; Combining open space and lab space in scientific reports; Handling inventories of short video scientific reports; Innovative mobile content; Online news; Volatile and just-in-time news; Report authenticity; Copyright and authorship; Ethical aspects; etc.
+
+*   **ECC: Enterprise cloud computing**
+    *   Architectures for enterprise clouds; Principles, concepts and methodologies of enterprise cloud computing; Tools, technologies, methodologies and frameworks for enterprise cloud computing; Enterprise IS architectures such as application, information and technology architectures; Synergies between SOA, Grid Computing and Cloud Infrastructures; Quality of Service (QoS) models; 'Elastic' and on-demand allocation and management of resources to meet business needs; Benefits, issues and limitations of enterprise clouds; Security, data integrity, legal and governance issues for enterprise clouds; Management, monitoring and governance issues; Portability of architectures, applications and data between cloud providers; Reliability and maintenance of cloud-based business architectures; Architectures for Software as a Service, Platform as a Service and Infrastructure as a Service; Network architecture using Storage Clouds; Experience reports with designing, building and using Cloud infrastructure; Novel application architectures, best practices, case studies and surveys.
+
+## Important Dates
+
+| Event           | Date          |
+| :-------------- | :------------ |
+| **Submission**  | Jan 20, 2025  |
+| **Notification**| Feb 16, 2025  |
+| **Registration**| Feb 28, 2025  |
+| **Camera ready**| Mar 05, 2025  |
+
+> Deadlines may differ for special tracks. Please consult the conference home page for special tracks Call for Papers (if any).
+
+## Submission Guidelines
+
+All received submissions will be acknowledged via an automated system. Please note that at least one author of each accepted paper must register to ensure that the paper will be included in the conference proceedings and in the digital library, or posted on `www.iaria.org` (for slide-based contributions).
+
+### Contribution Types
+
+*   **Regular Papers:** (up to 6-10 page article; 6 pages covered by regular registration; max 4 extra pages allowed at additional cost) (oral presentation)
+    *   These contributions can be academic or industrial research, survey, white, implementation-oriented, architecture-oriented papers, etc. They will be included in the proceedings, posted in the free-access ThinkMind digital library and sent for indexing. 12-14 presentation slides are suggested.
+*   **Short papers (work in progress):** (up to 4 pages long) (oral presentation)
+    *   Work-in-progress contributions represent partial achievements of longer-term projects. They will be published in the conference proceedings, posted in the free-access ThinkMind digital library and sent for indexing. 12-14 presentation slides are suggested.
+*   **Ideas contributions:** (2 pages long) (oral presentation)
+    *   This category is dedicated to new ideas in their very early stage, intended for debate and audience feedback. They will be published in the conference proceedings, posted in the free-access ThinkMind digital library and sent for indexing. 12-14 presentation slides are suggested.
+*   **Extended abstracts:** (2 pages long) (oral presentation)
+    *   Extended abstracts summarize a long potential publication with noticeable results. Intended for sharing yet-to-be-written or future journal publications. They will be published in the conference proceedings, posted in the free-access ThinkMind digital library and sent for indexing. 12-14 presentation slides are suggested.
+*   **Posters (paper-based):** (two pages long) (oral presentation)
+    *   Intended for ongoing research projects, concrete realizations, or industrial applications/projects presentations. A two-page paper summarizes the presentation. They will be published in the conference proceedings, posted in the free-access ThinkMind digital library and sent for indexing. 8-10 presentation slides are suggested. A large physical poster is also suitable for live discussions.
+*   **Posters (slide-based, only):** (oral presentation)
+    *   Intended for ongoing research projects, concrete realizations, or industrial applications/projects presentations. Requires an 8-10 slide-deck with comprehensive comments. The slide-deck will be posted, post-event, on `www.iaria.org`.
+*   **Presentations (slide-based, only):** (oral presentation)
+    *   These contributions represent technical marketing/industrial/business/positioning presentations. Requires a 12-14 slide-deck. The slide-deck will be posted, post-event, on `www.iaria.org`.
+*   **Demos:** (two pages)
+    *   Demos represent special contributions where a tool, an implementation of an application, or a freshly implemented system is presented in its alpha/beta version, or to gather attendee opinion. A two-page summary is required. The Demos paper will be posted, post-event, on `www.iaria.org`.
+*   **Tutorial proposals:**
+    *   Tutorials provide overviews of current high-interest topics. Proposals should be 2-3 hours long and must contain the title, summary of content, and biography of the presenter(s). The tutorial slide decks will be posted on the IARIA site.
+*   **Panel proposals:**
+    *   Organizers encourage scientists and industry leaders to organize dedicated panels dealing with controversial and challenging topics. Moderators must submit an official proposal indicating their background, panelist names, affiliations, topic, and short biographies. The panel slide deck will be posted on the IARIA site.
+
+### Formatting
+
+*   Only `.pdf` or `.doc` files will be accepted for paper submission.
+*   Final author manuscripts will be 8.5"" x 11"", not exceeding **6 pages**; max **4 extra pages** allowed at additional cost.
+*   Helpful information for paper formatting for MS Word can be found [here](https://www.iaria.org/format/ICIW25-Word.html) (Please consult the conference website for the direct link).
+*   **LaTeX Templates:**
+    *   The CTAN package `iaria` offers full IARIA formatting rules (requires `pdflatex+biblatex+biber`).
+    *   `iaria-lite` is compatible with any TeX stack and provides title page and content-related formatting rules (without IARIA citation formatting).
+    *   A minimal working example based on the `iaria` package is available as an [Overleaf template](https://www.overleaf.com/latex/templates/iaria-template/sffwmqjrvqfc).
+*   Slides-based contributions can use the corporate/university format and style.
+*   Your paper should also comply with the [additional editorial rules](https://www.iaria.org/editorial_rules.html).
+
+> Once you receive the notification of contribution acceptance, you will be provided by the publisher an online author kit with all the steps an author needs to follow to submit the final version. The author kit's URL will be included in the letter of acceptance.
+
+> It is recommended not to use too many extra pages. No more than **2 contributions per event** are recommended, as each contribution must be separately registered and paid for.
+
+## Publication
+
+*   Published by **IARIA Press** (operated by Xpert Publishing Services).
+*   Archived in the Open Access **IARIA ThinkMind Digital Library**.
+*   Prints available at **Curran Associates, Inc.**
+*   Authors of selected papers will be invited to submit extended versions to an **IARIA Journal**.
+*   Information regarding the indexing procedure is available on the conference website.",,,Can't get 2026 link,Yes,,
+req-conf-1751809170576-jzvmi,,International Conference on Parallel and Distributed Processing Techniques and Applications,PDPTA,https://www.american-cse.org/csce2025/conferences-PDPTA,,https://american-cse.org/drafts/,https://www.american-cse.org/csce2025/conferences-PDPTA,"Conference dates: July 21-24, 2025
+Year: 2025
+Location: Las Vegas, USA
+Type: Offline
+Topics: Big Data and High-Performance Computing, Parallel/Distributed Applications, Parallel/Distributed Architectures, Networks and Interconnection Networks, Energy/power-aware Computing, Reliability and Fault-tolerance, Building Block Processors, Real-time and Embedded Systems, Parallel/Distributed Algorithms, Multimedia Communications, Systems, and Applications, Software Tools and Environments for Parallel and Distributed Platforms, High-performance Computing in Computational Science, Performance Evaluation and Management of Wireless Networks and Distributed Systems, FPGA-based Design, Performance Analysis, Evaluation, Prediction, Nanotechnology in HPC, High-performance Mobile Computation and Communication, Object Oriented Technology and Related Issues, Scheduling and Resource Management, Petri Nets, Web-based Simulation and Computing, Cloud Computing, Complex Systems
+Publisher: Springer Nature","July 21-24, 2025",,2025,"Las Vegas, USA",,No city/state/province,No country,No continent,Offline,,{},,{},,{},,{},,{},,"Big Data and High-Performance Computing, Parallel/Distributed Applications, Parallel/Distributed Architectures, Networks and Interconnection Networks, Energy/power-aware Computing, Reliability and Fault-tolerance, Building Block Processors, Real-time and Embedded Systems, Parallel/Distributed Algorithms, Multimedia Communications, Systems, and Applications, Software Tools and Environments for Parallel and Distributed Platforms, High-performance Computing in Computational Science, Performance Evaluation and Management of Wireless Networks and Distributed Systems, FPGA-based Design, Performance Analysis, Evaluation, Prediction, Nanotechnology in HPC, High-performance Mobile Computation and Communication, Object Oriented Technology and Related Issues, Scheduling and Resource Management, Petri Nets, Web-based Simulation and Computing, Cloud Computing, Complex Systems",Springer Nature,"The 31st International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA'25) is part of The 2025 World Congress in Computer Science, Computer Engineering, & Applied Computing (CSCE'25). The event will take place from July 21-24, 2025, in Las Vegas, USA. PDPTA serves researchers, scholars, professionals, and academicians, and is held jointly with 20 other conferences within CSCE'25. Accepted papers will be published by Springer Nature and indexed in major Science Citation Indexation databases.","# PDPTA'25: Call for Papers
+
+The 31st International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA'25) is being held jointly with The 2025 World Congress in Computer Science, Computer Engineering, and Applied Computing (CSCE'25).
+
+### Conference Details
+
+*   **Dates:** July 21-24, 2025
+*   **Location:** Las Vegas, USA
+*   **Participation:** In-person attendance is expected, with online presentation options available.
+
+PDPTA'25 aims to provide a platform for researchers, scholars, professionals, students, and academicians to share novel ideas and research results in the application of human cognition models in various practical computing applications.
+
+## Publication
+
+All accepted papers will be published by **Springer Nature** (https://www.springernature.com/) in the proceedings (Research Books) and indexed in major Science Citation Indexation databases, including Scopus, DBLP, EI Engineering Index, Web of Science, and others.
+
+## Topics of Interest
+
+Topics include, but are not limited to:
+
+*   **Big Data and High-Performance Computing:** Novel computational methodologies, HPC and scalable algorithms for enhancing data quality, models and frameworks for Big Data, graph algorithms, computational science, computational intelligence, Scalable systems and architectures for Big Data, etc.
+*   **Parallel/Distributed Applications:** Numerical computations/methods, neural networks and fuzzy logic, medicine, remote sensing, computer vision, computer graphics and virtual reality, parallel/distributed databases, banking, financial markets, high-performance computational biology, etc.
+*   **Parallel/Distributed Architectures:** Clusters and parallel systems of various topologies, supercomputers, shared memory, distributed memory, general- and special-purpose architectures, instructional level parallelism, etc.
+*   **Networks and Interconnection Networks:** Scalable networks, reconfigurable networks, routing issues, general-purpose network performance for distributed applications, network protocols, internet technology, optical interconnections and computing, novel network topologies, etc.
+*   **Energy/power-aware Computing:** Energy-aware resource management, green computing, energy efficiency planning, energy-aware technologies, low power virtualization and software techniques, low power logic/circuit/process technology design, methods and tools for forecasting, estimating, and validating power use, etc.
+*   **Reliability and Fault-tolerance:** Software and hardware fault-tolerance (system- and application-level), fault diagnosis, fault-tolerance measurement.
+*   **Building Block Processors:** Applications of processors that can be used as basic building blocks for multicomputer systems.
+*   **Real-time and Embedded Systems:** Small-scale parallel systems for high-performance control, data acquisition, and analysis; configuration, routing, scheduling, performance guarantees, etc.
+*   **Parallel/Distributed Algorithms:** Algorithms exploiting clusters and general-purpose distributed and parallel systems, new vector/pipeline issues, shared memory, distributed memory, virtual memory, etc.
+*   **Multimedia Communications, Systems, and Applications:** High-speed networking, multimedia architectures and protocols, multimedia applications, quality of service support, operating system and networking support, internet tools and applications, audio/video delivery over the internet, etc.
+*   **Software Tools and Environments for Parallel and Distributed Platforms:** Operating systems, compilers, languages, debuggers, monitoring tools, software engineering on parallel/distributed systems, etc.
+*   **High-performance Computing in Computational Science:** Intra-disciplinary and multi-disciplinary research programs and applications.
+*   **Performance Evaluation and Management of Wireless Networks and Distributed Systems.**
+*   **FPGA-based Design.**
+*   **Performance Analysis, Evaluation, Prediction, ...**
+*   **Nanotechnology in HPC.**
+*   **High-performance Mobile Computation and Communication.**
+*   **Object Oriented Technology and Related Issues.**
+*   **Scheduling and Resource Management.**
+*   **Petri Nets: Theory, Analysis, Tools and Applications.**
+*   **Web-based Simulation and Computing.**
+*   **Cloud Computing.**
+*   **Complex Systems, Theory and Applications.**
+*   **Other Aspects and Applications relating to High-Performance Computations.**
+*   **Emerging Technologies.**
+
+## Submission Instructions
+
+*   **Submission Website:** https://american-cse.org/cgi-bin/submit/index.cgi?xprint_submit
+*   **Paper Formats:** PDF or MS WORD.
+*   **Formatting:** For draft submissions, all reasonable formatting is acceptable. Authors of accepted papers will receive specific typesetting instructions for the final version, which should use the standard Springer Nature typesetting format (guidelines available at: https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines).
+*   **Content of First Page:** Title, Author(s) name(s), affiliation(s), City, Country, email address (identify Contact Author), Abstract (100-120 words), max 6 topical keywords, and submission type (e.g., ""Regular Research Paper"", ""Short Research Paper"", or ""Extended Abstract/Poster Research Paper"").
+*   **Originality:** Submissions must be original and not under consideration elsewhere.
+*   **Paper Categories and Page Limitations:** Refer to https://american-cse.org/csce2025/paper_categories
+
+## Important Dates
+
+*   **Submission Due Date:** Refer to https://american-cse.org/csce2025/deadlines
+
+## Contact
+
+*   **Email:** cs@american-cse.org",,,"Correct link, can't get dates",Yes,,
+req-conf-1752048489375-fur1h,,ACM Conference on Computer Supported Cooperative Work,CSCW,https://cscw.acm.org/2026/,,https://cscw.acm.org/2026/papers.html,https://cscw.acm.org/2026/papers.html,"Conference dates: October 2026
+Year: 2026
+Location: USA
+City-State-Province: 
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.New paper submissions due 12:00 Eastern Daylight Time (EDT): May 14, 2025
+Submission Date.Resubmission of papers that received a Revise for External Review recommendation due: January 13, 2026
+Notification Date.Expected notification date: Late March 2026
+Topics: design, use, and evaluation of technologies that support or affect social, cooperative, and collaborative practices in groups, organizations, communities, and networks, social computing and social media, crowdsourcing, and technologies for co-located or remote collaboration, communication, education, work articulation, coordination, awareness, and information sharing
+Publisher: ACM",26-Oct,,2026,USA,,No city/state/province,United States,North America,Offline,,"{""New paper submissions due 12:00 Eastern Daylight Time (EDT)"":""May 14, 2025"",""Resubmission of papers that received a Revise for External Review recommendation due"":""January 13, 2026""}",,"{""Expected notification date"":""Late March 2026""}",,{},,{},,{},,"design, use, and evaluation of technologies that support or affect social, cooperative, and collaborative practices in groups, organizations, communities, and networks, social computing and social media, crowdsourcing, and technologies for co-located or remote collaboration, communication, education, work articulation, coordination, awareness, and information sharing",ACM,"The 29th ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW 2026) is scheduled to be held in the USA in October 2026. CSCW is recognized as the premier venue for human-centered research on the design and use of technologies that impact groups, organizations, communities, and networks, exploring technical, social, material, and theoretical challenges.","# CALL FOR PAPERS
+
+The ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW) is the premier venue for human-centered research in the design, use, and evaluation of technologies that support or affect social, cooperative, and collaborative practices in groups, organizations, communities, and networks.
+
+CSCW 2026 will explore topics across sociotechnical domains including work, home, education, healthcare, the arts, design, entertainment, and ethics, with a particular focus on social computing and social media, crowdsourcing, and technologies for co-located or remote collaboration, communication, education, work articulation, coordination, awareness, and information sharing.
+
+Submissions are expected to report on novel results from human-centered research discussing the design, development, use, and/or analysis of CSCW and social computing systems. New human-centered approaches to the conceptualization or critical analysis of such systems are also welcome.
+
+Submissions exploring how computing technologies—including AI, machine learning, robotics, and AR/VR—relate to questions of race, indigeneity, gender, and the environment are particularly encouraged, provided they are properly contextualized within cooperative, collaborative, or social computing issues.
+
+## Scope Guidelines
+
+*   Contributions must have a focus on **social aspects of technology mediation** and be properly contextualized in the CSCW literature, referencing CSCW concepts and/or theories.
+*   Papers whose research contributions are primarily of relevance or benefit to **individual users** will be considered out of scope.
+*   Systems-based or algorithmic research not explicitly involving aspects of cooperative, collaborative, or social computing are also out of scope.
+
+Authors should clearly state how their work builds upon, bridges, discusses, or cites prior CSCW work and offers new knowledge for the CSCW community, and how the results are useful for thinking about the design of computing technologies to support cooperative/collaborative work or social interactions.
+
+## Topics of Interest
+
+*   **Social and crowd computing:** Social media, social networking, wikis, blogs, online gaming, crowdsourcing, collective intelligence, virtual worlds, collaborative information behaviors.
+*   **CSCW and social computing system development:** Hardware, architectures, infrastructures, interaction design, technical foundations, algorithms, toolkits for building social and collaborative systems.
+*   **Methodologies and tools:** Novel human-centered methods, approaches, and tools for building or studying collaborative systems.
+*   **Critical, historical, ethnographic analyses:** Studies of technologically enabled social, cooperative, and collaborative practices, including their political or ethical dimensions.
+*   **Empirical investigations:** Findings, guidelines, and studies of social practices, communication, cooperation, collaboration, or use related to CSCW and social technologies.
+*   **Domain-specific applications:** Healthcare, transportation, design, manufacturing, gaming, ICT4D, sustainability, education, accessibility, global collaboration.
+*   **Ethics and policy implications:** Analysis of the implications of sociotechnical systems and algorithms.
+*   **Emerging technologies:** Mobile and ubiquitous computing, game engines, virtual worlds, multi-touch, novel display technologies, vision and gesture recognition, big data, MOOCs, crowd labor markets, SNSs, computer-aided or robotically-supported work, sensing systems.
+*   **Crossing boundaries:** Studies exploring interactions across fields of research, disciplines, distances, languages, generations, and cultures.
+
+## Submission Model
+
+CSCW 2026 will use a **two-round review process** with the opportunity for major revisions.
+
+Accepted papers will be published in the **Proceedings of the ACM on Human-Computer Interaction (PACM HCI)**.
+
+**All CSCW 2026 papers will be published under ACM Open Access.**
+
+## Submission Deadlines & Timeline
+
+All deadlines are on Tuesdays to avoid weekends. The submission system usually opens two weeks before each deadline.
+
+### MAY 2025 SUBMISSION CYCLE
+
+*   **New paper submissions due:** May 14, 2025, 12:00 Eastern Daylight Time (EDT)
+*   **Expected notification date:** August 19, 2025, AoE
+*   **Possible outcomes:** Revise for External Review, Assisted Desk Reject
+
+### SEPTEMBER 2025 SUBMISSION CYCLE
+
+*   **Resubmission (Revise for External Review):** September 16, 2025, 23:59 AoE
+*   **Expected notification date:** November 11, 2025
+*   **Possible outcomes:** Conditional Accept with Minor Changes, Revise and Resubmit, Reject
+
+### JANUARY 2026 SUBMISSION CYCLE
+
+*   **Resubmission (Revise for External Review):** January 13, 2026, 23:59 AoE
+*   **Expected notification date:** Late March 2026
+*   **Possible outcomes:** Conditional Accept with Minor Changes, Reject
+
+## Submission Process
+
+*   CSCW 2026 uses the **Precision Conference System (PCS) 2.0**: [https://new.precisionconference.com](https://new.precisionconference.com)
+*   Authors must comply with the SIGCHI Submission and Review Policy, including ensuring originality, proper authorship, and disclosure of any overlap or parallel submissions.
+*   Confidentiality of submitted material will be maintained.
+*   Authors should adhere to the ACM policy on authorship: [https://www.acm.org/publications/policies/new-acm-policy-on-authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship)
+
+## Anonymous Review Policy
+
+*   Submissions must have authors' names and affiliations removed.
+*   References to universities, companies, labs, cities, and grant information that identify authors must be removed.
+*   Images must NOT disclose authors' identity or affiliation.
+*   Citations should be made as if authors were different people (e.g., ""prior work by Jane Smith"" instead of ""our prior work"").
+*   Papers violating this policy will be desk rejected.
+
+## Formatting and Length
+
+*   **Word authors:** Use the old interim ACM Small template: [https://dl.acm.org/journal/pacmhci/submission-templates](https://dl.acm.org/journal/pacmhci/submission-templates)
+*   **LaTeX authors:** Use the template at [https://www.acm.org/publications/authors/submissions](https://www.acm.org/publications/authors/submissions) and insert the `acmsmall` call.
+*   **Overleaf authors:** Use the template at [https://www.overleaf.com/latex/templates/acm-journals-new-master-template/vgtfrcvmrvxf](https://www.overleaf.com/latex/templates/acm-journals-new-master-template/vgtfrcvmrvxf), and use the `acmsmall` call.
+*   Papers that use a completely different template will be desk rejected.
+*   Papers with less than 5000 words or exceeding 12,000 words will be submitted to additional scrutiny.
+*   Additional materials can be submitted as appendices, but reviewers are not bound to decide based on them.
+
+## “TIERED” REVIEW PROCESS
+
+CSCW 2026 adopts a tiered review process with Senior Program Committee (SPC) members.
+
+*   **Assisted DR Phase:** Judgment by SPC and PC for out-of-scope or clearly unacceptable papers. Decision: Revise for External Review or Assisted DR.
+*   **External Review Phase:** Review by SPC, PC, and two external reviewers. Decision: Conditional Accept with Minor Changes, Revise and Resubmit, or Reject.
+*   **Revise and Resubmit Phase:** Resubmitted papers reviewed again by the same committee. Decision: Conditional Accept with Minor Changes, or Reject.
+
+## Reviewer Volunteering
+
+*   Authors must make themselves available as reviewers. Failure to do so will result in desk rejection.
+*   Volunteer via PCS: [PCS review volunteering page](https://new.precisionconference.com)
+*   You must volunteer to complete **3 reviews** for each paper you submitted.
+
+## Policy on Use of Large Language Models (LLMs) in Writing Papers
+
+*   Text generated from an LLM must be clearly marked where used for purposes beyond editing author's text.
+*   Refer to the ACM Policy on Authorship: [https://www.acm.org/publications/policies/new-acm-policy-on-authorship](https://www.acm.org/publications/policies/new-acm-policy-on-authorship)
+*   Submissions with undisclosed or inappropriately used LLMs (e.g., fake references) will be desk rejected.
+
+## Policy on Irresponsible Reviews
+
+*   LLMs are **NOT allowed** to be used for writing reviews or meta-reviews.
+*   Reviewers cannot share substantial content from papers or reviews with LLMs.
+*   Violations will be investigated, and papers submitted by offending reviewers may be desk rejected.
+
+## Decisions and Deadlines
+
+*   **Conditional Accept with Minor Changes:** Ready or nearly ready for publication, with minor revisions required.
+*   **Revise and Resubmit:** Requires major revisions and a subsequent re-review.
+*   **Reject:** May not be ready for publication.
+*   **Assisted Desk Reject:** For papers out of scope or not of publishable quality.
+
+## Resubmission of Rejected and Withdrawn Papers
+
+Rejected papers from previous CSCW cycles may be resubmitted, but authors must disclose the submission history and changes. Resubmitted papers are treated as new submissions.
+
+## Primary Research Paradigm
+
+Authors must indicate the primary research paradigm: Technical/Systems, Empirical–Qualitative, Empirical–Quantitative, Mixed Methods, Design, or Theoretical.
+
+## Open and Transparent Science
+
+Authors are encouraged to submit supplementary material, links to pre-registrations on OSF, and data/materials that are FAIR.
+
+## Video Figures
+
+Authors may submit a video (max 3 minutes) illustrating their work, especially for papers contributing novel systems or interaction techniques.
+
+## Presenting at the Conference
+
+Accepted papers are invited to present. Authors should reach out to Papers Chairs if unable to present.
+
+## Contact Information
+
+*   **Queries about paper submissions:** [papers2026@cscw.acm.org](mailto:papers2026@cscw.acm.org)
+*   **General Chairs:** [chairs2026@cscw.acm.org](mailto:chairs2026@cscw.acm.org)
+
+## Organizing Committees
+
+**Papers Chairs:**
+*   Xiaojuan Ma (Hong Kong University of Science and Technology, Hong Kong SAR)
+*   Kurt Luther (Virginia Tech, USA)
+*   Adriana S Vivacqua (Federal University of Rio de Janeiro, Brazil)
+*   Jeffrey Nichols (Apple, USA)
+
+**Senior Program Committee:** (List of 47 members)
+*   Morgan G. Ames (University of California, Berkeley, USA)
+*   Eric P. S. Baumer (University of Toronto, Canada)
+*   Jed Brubaker (University of Colorado Boulder, USA)
+*   Cody Buntain (University of Maryland, USA)
+*   Heloisa Candello (IBM Research, Brazil)
+*   Shiwei Cheng (Zhejiang University of Technology, China)
+*   Nicola Dell (Cornell Tech, USA)
+*   Michael Ann DeVito (Northeastern University, USA)
+*   Dominic DiFranzo (Lehigh University, USA)
+*   Xianghua (Sharon) Ding (University of Glasgow, Scotland)
+*   Casey Fiesler (University of Colorado Boulder, USA)
+*   Ujwal Gadiraju (Delft University of Technology, Netherlands)
+*   Sarah Gilbert (Cornell University, USA)
+*   Nitesh Goyal (Google, USA)
+*   Andrea Grover (University of Nebraska Omaha, USA)
+*   Shion Guha (University of Toronto, Canada)
+*   Xinning Gui (The Pennsylvania State University, USA)
+*   Francisco J. Gutierrez (Universidad de Chile, Chile)
+*   Benjamin Mako Hill (University of Washington, USA)
+*   James Howison (University of Texas at Austin, USA)
+*   Gary Hsieh (University of Washington, USA)
+*   Yun Huang (University of Illinois Urbana-Champaign, USA)
+*   Jina Huh-Yoo (Stevens Institute of Technology, USA)
+*   David Karger (MIT, USA)
+*   Ryan M. Kelly (RMIT University, Australia)
+*   Sunyoung Kim (Rutgers University, USA)
+*   Bart Knijnenburg (Clemson University, USA)
+*   Amanda Lazar (University of Maryland, USA)
+*   David Lee (University of California, Santa Cruz, USA)
+*   Yao Li (University of Central Florida, USA)
+*   Claudia López (Universidad Técnica Federico Santa María, Chile)
+*   Ioanna Lykourentzou (Utrecht University, Netherlands)
+*   Brian McInnis (University of Texas at Austin, USA)
+*   Andrés Monroy-Hernández (Princeton University, USA)
+*   Vivian Genaro Motti (George Mason University, USA)
+*   Sun Young Park (University of Michigan, USA)
+*   Nathaniel Poor (Underwood Institute, USA)
+*   Saiph Savage (Northeastern University, USA)
+*   Irina Shklovski (University of Copenhagen, Denmark)
+*   Robert Soden (University of Toronto, Canada)
+*   Jacob Thebault-Spieker (University of Wisconsin-Madison, USA)
+*   Nervo Xavier Verdezoto (Cardiff University, United Kingdom)
+*   Dhaval Vyas (The University of Queensland, Australia)
+*   Hao-Chuan Wang (University of California, Davis, USA)
+*   Mark Whiting (Pareto & University of Pennsylvania, USA)
+*   Donghee Yvette Wohn (New Jersey Institute of Technology, USA)
+*   Richmond Y. Wong (Georgia Institute of Technology, USA)
+*   Paweł W. Woźniak (TU Wien, Austria)
+*   Chien Wen (Tina) Yuan (National Taiwan University, Taiwan)
+*   Amy X. Zhang (University of Washington, USA)
+*   Douglas Zytko (University of Michigan-Flint, USA)
+
+**General Chairs:**
+*   Xinru Page (Brigham Young University, USA)
+*   Guo Freeman (Clemson University, USA)",,,"conferenceDates: 26-Oct-2026 => October chưa có ngày cụ thể, ngày chưa đủ và rõ ràng (chỗ MAY 2025 SUBMISSION CYCLE trong cfp)",Yes,,
+req-conf-1752369349669-tqf6n,,Visual Analytics,EuroVA,https://www.eurova.org/eurova-2025,,https://www.eurova.org/eurova-2025,https://www.eurova.org/eurova-2025,"Conference dates: June 2, 2025
+Year: 2025
+Location: Luxembourg
+City-State-Province: Luxembourg
+Country: Luxembourg
+Continent: Europe
+Type: Offline
+Submission Date.Submission: April 11, 2025
+Notification Date.Notification: May 2, 2025
+Camera-ready Date.Camera-ready: June 2, 2025
+Topics: Visual Analytics, Immersive analytics, Human-Centered VA and Human Factors, Decision making through VA, Explainable AI through VA, Scalable VA, Progressive Visual Analytics, VA for machine learning & machine learning for VA, Uncertainty-aware VA, Visual Data Science, Interaction techniques, Novel data representations, Analytical processes and provenance, Infrastructures, systems, frameworks, and architectures, Evaluation and user studies, Methodologic and theoretical foundations, Applications and problem-driven work
+Publisher: Eurographics Association",2-Jun-25,,2025,Luxembourg,,Luxembourg,Luxembourg,Europe,Offline,,"{""Submission"":""April 11, 2025""}",,"{""Notification"":""May 2, 2025""}",,"{""Camera-ready"":""June 2, 2025""}",,{},,{},,"Visual Analytics, Immersive analytics, Human-Centered VA and Human Factors, Decision making through VA, Explainable AI through VA, Scalable VA, Progressive Visual Analytics, VA for machine learning & machine learning for VA, Uncertainty-aware VA, Visual Data Science, Interaction techniques, Novel data representations, Analytical processes and provenance, Infrastructures, systems, frameworks, and architectures, Evaluation and user studies, Methodologic and theoretical foundations, Applications and problem-driven work",Eurographics Association,"EuroVA 2025 is the 16th international EuroVis Workshop on Visual Analytics, co-located with EuroVis 2025 in Luxembourg on June 2, 2025. It focuses on the interdisciplinary field of visual analytics, integrating analytical computations, visual representations, and interaction for problem-solving, sense-making, and gaining insights from complex data.","# EuroVA 2025: Call for Submissions
+
+EuroVA 2025, the Sixteenth International EuroVis Workshop on Visual Analytics, will be held on **Monday, June 02, 2025, in Luxembourg**, co-located with EuroVis 2025.
+
+EuroVA invites submission of innovative, fresh, and creative ideas with a high potential of becoming significant contributions to the Visual Analytics community. EuroVA proceedings will be published in the EG Digital Library and is indexed in [dblp](https://dblp.uni-trier.de/db/conf/eurova-ws/index.html) and Scopus.
+
+## Topics
+
+The workshop covers topics in the area of Visual Analytics (VA) including, but not limited to:
+
+*   Immersive analytics
+*   Human-Centered VA and Human Factors
+*   Decision making through VA
+*   Explainable AI through VA
+*   Scalable VA
+*   Progressive Visual Analytics
+*   VA for machine learning & machine learning for VA
+*   Uncertainty-aware VA
+*   Visual Data Science
+*   Interaction techniques
+*   Novel data representations
+*   Analytical processes and provenance
+*   Infrastructures, systems, frameworks, and architectures
+*   Evaluation and user studies
+*   Methodologic and theoretical foundations
+*   Applications and problem-driven work
+
+## Submission Guidelines
+
+Papers can be up to **5 pages** in length + references. Papers must be prepared using the EuroVA LaTeX template, which can be downloaded [here](https://www.eurova.org/wp-content/uploads/egPublStyle-EuroVA2025.zip).
+
+Papers are to be submitted via the new PCS at [https://new.precisionconference.com/submissions](https://new.precisionconference.com/submissions) under Eurographics –> EuroVis 2025 –> EuroVis 2025 EuroVA
+
+At least one author of an accepted paper must register and participate in the workshop to present the accepted work.
+
+Download the copyright form for accepted papers [here](https://www.eurova.org/wp-content/uploads/EG-EuroVA2025.pdf).
+
+## Important Dates
+
+All submission deadlines are at 23:59 GMT on the date indicated.
+
+| Item          | Date            |
+|---------------|-----------------|
+| Submission    | April 11, 2025  |
+| Notification  | May 02, 2025    |
+| Camera-ready  | March 07, 2025  |
+| Workshop      | June 02, 2025   |
+
+## Organizers
+
+### Program Chairs
+
+*   Hans-Jörg Schulz, Aarhus University, Denmark
+*   Anna Villanova, TU Eindhoven, The Netherlands
+
+### Publicity Chair
+
+*   Alex Ulmer, Fraunhofer IGD, Germany
+
+### Steering Committee
+
+*   Daniel Keim, University of Konstanz Germany
+*   Jörn Kohlhammer, Fraunhofer IGD, Germany
+*   Jürgen Bernard, University of Zurich, Switzerland
+*   Marco Angelini, Link Campus University of Rome
+
+### International Program Committee
+
+*   Gennady Andrienko, Fraunhofer IAIS
+*   Daniel Archambault, Newcastle University
+*   Michael Behrisch, Utrecht University
+*   Jürgen Bernard, University of Zurich
+*   Nadia Boukhelifa, INRAE
+*   Remco Chang, Tufts University
+*   Angelos Chatzimparmpas, University of Utrecht
+*   Jordan Crouser, Smith College
+*   Martin Eisemann, TU Braunschweig
+*   Stef v.d.Elzen, TU Eindhoven
+*   Marina Evers, University of Stuttgart
+*   David Gotz, UNC-Chapel Hill
+*   Helwig Hauser, University of Bergen
+*   Christoph Heinzl, University of Passau
+*   Petra Isenberg, INRIA
+*   Stefan Jänicke, University of Southern Denmark
+*   Daniel Keim, University of Konstanz
+*   Kostiantyn Kucher, Linköping University
+*   Tatiana v.Landesberger, Cologne University
+*   Gabriela Molina León, Aarhus University
+*   Lars Linsen, University of Münster
+*   Quynh Quang Ngo, University of Stuttgart
+*   Fernando Paulovich, TU Eindhoven
+*   Maria Riveiro, Jönköping University
+*   Willy Scheibel, HPI Potsdam
+*   Tobias Schreck, TU Graz
+*   John Stasko, Georgia Tech
+*   Alexandru Telea, University of Groningen
+*   Christian Tominski, University Rostock
+*   Thomas Torsney-Weir, Swansea University
+*   Cagatay Turkay, University of Warwick
+*   Alex Ulmer, Fraunhofer IGD Darmstadt
+*   Katerina Vrotsou, Linköping University
+*   Chris Weaver, University of Oklahoma",,,"Submission: 7 March, 2025
+Notification: 11 April, 2025
+Camera-ready: 02 May, 2025
+Workshop: 02 June, 2025",,,
+req-conf-1752369349669-tqf6n,,International Conference on Applications of Evolutionary Computation,EvoApplications,https://www.evostar.org/2026/evoapps/,,https://www.evostar.org/2026/evoapps/,https://www.evostar.org/2026/important-dates/,"Conference dates: April 8 - 10, 2026
+Year: 2026
+Submission Date.(EvoApps) Special Session proposals: September 8, 2025
+Submission Date.Submission deadline: November 1, 2025
+Submission Date.Late-Breaking Abstracts submission: March 29, 2026
+Notification Date.Notification to authors: January 10, 2026
+Camera-ready Date.Camera-ready submission: January 24, 2026
+Registration Date.Author's mandatory registration: February 11, 2026
+Registration Date.Early registration deadline: March 4, 2026
+Topics: Evolutionary Computation, Nature-inspired techniques
+Publisher: Springer","April 8 - 10, 2026",,2026,No location,,No city/state/province,No country,No continent,Offline,,"{""(EvoApps) Special Session proposals"":""September 8, 2025"",""Submission deadline"":""November 1, 2025"",""Late-Breaking Abstracts submission"":""March 29, 2026""}",,"{""Notification to authors"":""January 10, 2026""}",,"{""Camera-ready submission"":""January 24, 2026""}",,"{""Author's mandatory registration"":""February 11, 2026"",""Early registration deadline"":""March 4, 2026""}",,{},,"Evolutionary Computation, Nature-inspired techniques",Springer,"EvoApplications, the International Conference on the Applications of Evolutionary Computation, invites high-quality original research papers for its 29th edition, which will be held as part of the EvoStar 2026 event with EuroGP, EvoCOP, and EvoMUSART. The conference aims to foster scientific collaborations in applications of Evolutionary Computation and other Nature-inspired techniques.","# EvoApplications 2026: Call for Papers
+
+EvoApplications, the International Conference on the Applications of Evolutionary Computation, brings together researchers in applications of Evolutionary Computation and other Nature-inspired techniques.
+
+EvoApplications invites high quality contributions for its 29th edition, which will be held as part of the EvoStar 2026 event and co-located within EvoStar with three related conferences: EuroGP, EvoCOP and EvoMUSART.
+
+The aim of EvoApplications is to create a friendly environment that can lead to the establishment or strengthening of scientific collaborations and exchanges among attendees.
+
+EvoApplications solicits high-quality original research papers (including significant work-in-progress) on any aspect of applications of Evolutionary Computation, both to real-world or methodological contexts in which Evolutionary Computation can contribute to pushing the limits of the state of the art beyond the present ones.
+
+We encourage you to submit papers focused on interesting, relevant and original works that are related to all kinds of applications of Evolutionary Computation.
+
+[EvoApplications Conference Proceedings in SpringerLink](https://link.springer.com/conference/evoapplications)
+
+Researchers interested in proposing a special session are invited to do it. Please, read our [Call for Special Sessions](https://www.evostar.org/2026/call-for-evoapplications-special-sessions/).
+
+## Important Dates
+
+| Event                                  | Date              |
+| -------------------------------------- | ----------------- |
+| **EvoApps Special Session Proposals**  | **8 September 2025** |
+| **Submission deadline**                | **1 November 2025** |
+| **Notification to authors**            | **10 January 2026** |
+| **Camera-ready submission**            | **24 January 2026** |
+| **Author's mandatory registration**  | **11 February 2026** |
+| **Early registration deadline**        | **4 March 2026**    |
+| **Late-Breaking Abstracts submission** | **29 March 2026**   |
+| **EvoStar Conference**                 | **8-10 April 2026** |
+
+## Submission Details
+
+Accepted papers will be published by Springer Nature in the Lecture Notes in Computer Science series. Submissions must be original and not published elsewhere. They will be peer reviewed by at least three members of the program committee. The reviewing process will be **double-blind**, so please omit information about the authors in the submitted paper.
+
+Follow these instructions to submit a paper.
+
+## Conference Programme Chairs
+
+*   Pablo García-Sánchez
+    University of Granada
+    pablogarcia(at)ugr.es
+*   Josefa Díaz-Álvarez
+    University of Extremadura
+    mjdiaz(at)unex.es
+
+## Publication Chair
+
+Aidan Murphy
+
+University College Dublin, Ireland
+
+aidan.murphy(at)ucd.ie",,,"Location: Toulouse, France",,,
+req-conf-1752369349669-tqf6n,,IEEE International Conference on Software Services Engineering,IEEE SSE,https://services.conferences.computer.org/2025/sse/,,https://services.conferences.computer.org/2025/sse/sse-call-for-papers,,"Conference dates: July 7 - 12, 2025
+Year: 2025
+Location: Helsinki, Finland
+City-State-Province: Helsinki
+Country: Finland
+Continent: Europe
+Type: Offline
+Registration Date.Early Bird deadline: June 20
+Topics: Human-Behavior-Driven Requirements Engineering for Software Services, Human-Centric Software Service Engineering, Persuasive Software Services for Human-in-SSE Systems, Context-Aware DevOps Platforms for Software Services, Microservices-Based Autonomous IoT Service Frameworks, Harmonizing Autonomous Services with Ambiguities and Uncertainties, Integration and Interoperability of Software Services, AI-Enabled Software Service Engineering, Software Service Engineering for Responsible AI, Software Service Engineering based on LLM, Digital Twins for Software Services Engineering, Manageability-Preserved Dynamic Composition of Individually Administered Microservices, DevOps and service engineering, Maintenance of service-oriented systems, Intent-centric Software Service Management, Crossover Service Convergence, Applications and case studies, Tools, Practical Experiences","July 7 - 12, 2025",,2025,"Helsinki, Finland",,Helsinki,Finland,Europe,Offline,,{},,{},,{},,"{""Early Bird deadline"":""June 20""}",,{},,"Human-Behavior-Driven Requirements Engineering for Software Services, Human-Centric Software Service Engineering, Persuasive Software Services for Human-in-SSE Systems, Context-Aware DevOps Platforms for Software Services, Microservices-Based Autonomous IoT Service Frameworks, Harmonizing Autonomous Services with Ambiguities and Uncertainties, Integration and Interoperability of Software Services, AI-Enabled Software Service Engineering, Software Service Engineering for Responsible AI, Software Service Engineering based on LLM, Digital Twins for Software Services Engineering, Manageability-Preserved Dynamic Composition of Individually Administered Microservices, DevOps and service engineering, Maintenance of service-oriented systems, Intent-centric Software Service Management, Crossover Service Convergence, Applications and case studies, Tools, Practical Experiences",No publisher,"The IEEE International Conference on Software Services Engineering (SSE) 2025, part of the IEEE World Congress on SERVICES, will be held in Helsinki, Finland from July 7-12, 2025. It focuses on the evolution and empowerment of software services, particularly next-generation services that are context-aware, autonomous, and human-centric.","# IEEE SSE 2025: Call for Papers
+
+The IEEE International Conference on Software Services Engineering (SSE) 2025, as part of the **2025 IEEE World Congress on SERVICES**, will be held from **July 7-12 in Helsinki, Finland**.
+
+SSE welcomes original research and bold ideas that contribute to evolving and empowering software services.
+
+## Themes
+
+SSE welcomes original research and bold ideas that fall under the following themes; however, other innovative and novel themes that contribute to evolving and empowering software services are also encouraged:
+
+*   **Human in SSE**
+    *   Human-Behavior-Driven Requirements Engineering for Software Services
+    *   Human-Centric Software Service Engineering
+    *   Persuasive Software Services for Human-in-SSE Systems
+*   **IoT: Context Awareness & Autonomy**
+    *   Context-Aware DevOps Platforms for Software Services
+    *   Microservices-Based Autonomous IoT Service Frameworks
+    *   Harmonizing Autonomous Services with Ambiguities and Uncertainties
+    *   Integration and Interoperability of Software Services
+*   **NextGen SSE**
+    *   AI-Enabled Software Service Engineering
+    *   Software Service Engineering for Responsible AI
+    *   Software Service Engineering based on LLM
+    *   Digital Twins for Software Services Engineering
+*   **Intelligent Operations**
+    *   Manageability-Preserved Dynamic Composition of Individually Administered Microservices
+    *   DevOps and service engineering
+    *   Maintenance of service-oriented systems
+    *   Intent-centric Software Service Management
+    *   Crossover Service Convergence
+*   **Industrial SSE**
+    *   Applications and case studies
+    *   Tools
+    *   Practical Experiences
+
+## Important Dates
+
+*   Early Bird deadline: **June 20**
+
+## Supporters
+
+*   GOLD SUPPORTER
+*   BRONZE SUPPORTER
+*   COMMUNITY PARTNER
+
+IEEE World Congress on SERVICES is sponsored by IEEE and the IEEE Computer Society, supported by The IEEE Technical Community on Services Computing, the China Computing Federation, and IBM.
+
+IEEE SERVICES Congress Conferences:
+
+*   [CLOUD 2025](https://services.conferences.computer.org/2025/cloud)
+*   [EDGE 2025](https://services.conferences.computer.org/2025/edge)
+*   [ICDH 2025](https://services.conferences.computer.org/2025/icdh)
+*   [ICWS 2025](https://services.conferences.computer.org/2025/icws)
+*   [QSW 2025](https://services.conferences.computer.org/2025/qsw)
+*   [SSE 2025](https://services.conferences.computer.org/2025/sse)",,,"Thiếu submission, notification và camera ready & registration: important dates: https://services.conferences.computer.org/2025/info-for-authors/",,,
+req-conf-1752369349669-tqf6n,,International Conference of the Immersive Learning Research Network,iLRN,https://www.immersivelrn.org/ilrn2026/home/,,https://www.immersivelrn.org/ilrn2026/call-for-papers/,,"Conference dates: June 27 - 30, 2026
+Year: 2026
+Location: National and Kapodistrian University of Athens, Athens, Greece
+City-State-Province: Athens
+Country: Greece
+Continent: Europe
+Type: Hybrid
+Topics: Learning Innovation, Ethics and Privacy, Generative AI & Machine Learning, Teaching & Learning Strategies, Inclusive Design, Ubiquitous Learning, Educational Equity, Health & Wellbeing, Museums & Libraries and Heritage Education, Digital Inclusion, Climate Change, Social Impact of Immersive Gaming, Educational Technology, Pedagogy, Computer Science, Serious Games, 3D Collaboration, Digital Twins, Embodied Pedagogical Agents, Medical & Healthcare Education, Workforce & Industry, Language Learning, K-12 STEM, Informal Learning, Community & Civic Engagement, Special Education, Geosciences, Data Visualization and Analytics, Assessment & Evaluation
+Publisher: ACM and IEEE","June 27 - 30, 2026",,2026,"National and Kapodistrian University of Athens, Athens, Greece",,Athens,Greece,Europe,Hybrid,,{},,{},,{},,{},,{},,"Learning Innovation, Ethics and Privacy, Generative AI & Machine Learning, Teaching & Learning Strategies, Inclusive Design, Ubiquitous Learning, Educational Equity, Health & Wellbeing, Museums & Libraries and Heritage Education, Digital Inclusion, Climate Change, Social Impact of Immersive Gaming, Educational Technology, Pedagogy, Computer Science, Serious Games, 3D Collaboration, Digital Twins, Embodied Pedagogical Agents, Medical & Healthcare Education, Workforce & Industry, Language Learning, K-12 STEM, Informal Learning, Community & Civic Engagement, Special Education, Geosciences, Data Visualization and Analytics, Assessment & Evaluation",ACM and IEEE,"The 12th Annual International Conference of the Immersive Learning Research Network (iLRN2026) will be held both online and in-person in Athens, Greece, from June 27-30, 2026, with online and virtual reality components from June 28-30, 2026. Hosted by the Department of Pedagogy and Primary Education at the National and Kapodistrian University of Athens (NKUA), iLRN2026 brings together researchers and practitioners to explore the potential of immersive learning across various topics.","# iLRN2026: Call for Papers
+
+The 12th Annual International Conference of the Immersive Learning Research Network (**iLRN2026**) will be an innovative and interactive gathering **online** and **face-to-face** for the global association of immersive learning professionals.
+
+**Conference Dates:**
+
+*   June 27 - 30, 2026 (Athens, Greece - National and Kapodistrian University of Athens)
+*   June 28 - 30, 2026 (Online & In Virtual Reality)
+
+**Conference Theme:** From Plato’s Cave to Open Immersive Societies: Transforming Learning and Knowledge
+
+Join the network of researchers and practitioners collaborating to develop the scientific, technical, and applied potential of immersive learning.
+
+The iLRN Conference series is the premier scholarly event focusing on the following topics:
+
+*   Learning Innovation
+*   Ethics and Privacy
+*   Generative AI & Machine Learning
+*   Teaching & Learning Strategies
+*   Inclusive Design
+*   Ubiquitous Learning
+*   Educational Equity
+*   Health & Wellbeing
+*   Museums & Libraries and Heritage Education
+*   Digital Inclusion
+*   Climate Change
+*   Social Impact of Immersive Gaming
+*   Educational Technology
+*   Pedagogy
+*   Computer Science
+*   Serious Games
+*   3D Collaboration
+*   Digital Twins
+*   Embodied Pedagogical Agents
+*   Medical & Healthcare Education
+*   Workforce & Industry
+*   Language Learning
+*   K-12 STEM
+*   Informal Learning
+*   Community & Civic Engagement
+*   Special Education
+*   Geosciences
+*   Data Visualization and Analytics
+*   Assessment & Evaluation
+
+iLRN2026 will be hosted by the **Department of Pedagogy and Primary Education**, which is part of the **School of Education** at the **National and Kapodistrian University of Athens (NKUA)**.
+
+In collaboration with: The Hellenic Association of ICT in Education
+",,,"IMPORTANT DATES
+
+Special Tracks Proposal Submission Deadline: July 31, 2025
+
+(Academic submissions)
+Submission Deadline: October 1, 2025
+Notification of Acceptance: December 15, 2025
+Camera-Ready Submissions: February 1, 2026
+Academic Author Registration Deadline: February 15, 2026
+
+(iLEAD submissions)
+Submission Deadline: January 12, 2026
+Notification of Acceptance: February 8, 2026
+Camera-Ready Submissions: March 1, 2026
+Early Bird Registration Deadline: March 15, 2026
+Online Conference Dates: June 28 - 30, 2026
+In-person (Athens, Greece) Conference Dates: June 27 - 30, 2026",,,
+req-conf-1752369349669-tqf6n,,IEEE Symposium on Computational Intelligence in Cyber Security,IEEE CICS,https://ieee-ssci.org/,,https://ieee-ssci.org/?ui=call-for-papers,,"Conference dates: March 17 - 20, 2025
+Year: 2025
+Location: Trondheim, Norway
+City-State-Province: Trondheim
+Country: Norway
+Continent: Europe
+Type: Offline
+Submission Date.(1st deadline) Abstract Registration: July 1, 2025
+Submission Date.(1st deadline) Paper Submission: July 1, 2025
+Submission Date.(2nd deadline) Abstract Registration: November 6, 2025
+Submission Date.(2nd deadline) Paper Submission: November 13, 2025
+Submission Date.(TPC self-nomination) Application deadline: June 23, 2025
+Notification Date.(1st deadline) Notification: September 21, 2025
+Notification Date.(2nd deadline) Notification: January 29, 2026
+Topics: Computational Intelligence, Cyber Security, Security, Defence, Biometrics
+Publisher: ACM, IEEE","March 17 - 20, 2025",,2025,"Trondheim, Norway",,Trondheim,Norway,Europe,Offline,,"{""(1st deadline) Abstract Registration"":""July 1, 2025"",""(1st deadline) Paper Submission"":""July 1, 2025"",""(2nd deadline) Abstract Registration"":""November 6, 2025"",""(2nd deadline) Paper Submission"":""November 13, 2025"",""(TPC self-nomination) Application deadline"":""June 23, 2025""}",,"{""(1st deadline) Notification"":""September 21, 2025"",""(2nd deadline) Notification"":""January 29, 2026""}",,{},,{},,{},,"Computational Intelligence, Cyber Security, Security, Defence, Biometrics","ACM, IEEE","The IEEE Symposium Series on Computational Intelligence (SSCI) 2025, hosted in Trondheim, Norway, is a biennial event featuring ten dedicated Applied Computational Intelligence Symposia. It invites participation from academia, industry, and government agencies, and includes plenary and keynote addresses, oral and poster presentations, panels, workshops, tutorials, and competitions.","# IEEE SSCI 2025: Call for Papers and Abstracts
+
+The IEEE Symposium Series on Computational Intelligence (SSCI) is recognized for fostering the exchange of theories and algorithms within Computational Intelligence Applications. The 2025 event introduces a restructured biennial Symposia Series featuring ten Applied Computational Intelligence Symposia. IEEE SSCI 2025 will be hosted in Trondheim, Norway.
+
+## Symposia
+
+*   2025 IEEE Symposia on CI for Energy, Transport and Environmental Sustainability (IEEE CIETES)
+*   2025 IEEE Symposia on CI in Engineering / Cyber Physical Systems (IEEE CIES)
+*   2025 IEEE Symposia on CI in Image, Signal Processing and Synthetic Media (IEEE CISM)
+*   2025 IEEE Symposia on CI in Artificial Life and Cooperative Intelligent Systems (IEEE ALIFE-CIS)
+*   2025 IEEE Symposia on CI in Security, Defence and Biometrics (IEEE CISDB)
+*   2025 IEEE Symposia on CI in Health and Medicine (IEEE CIHM)
+*   2025 IEEE Symposia on CI for Financial Engineering and Economics (IEEE CiFer)
+*   2025 IEEE Symposia on CI in Natural Language Processing and Social Media (IEEE CI-NLPSoMe)
+*   2025 IEEE Symposia on Trustworthy, Explainable and Responsible CI (IEEE CITREx)
+*   2025 IEEE Symposia for Multidisciplinary Computational Intelligence Incubators (IEEE MCII)
+
+## Late Submission Opportunities
+
+IEEE SSCI 2025 offers submission options for late-breaking research:
+
+*   **Late-Breaking Papers:** Submit an extended abstract (up to 2 pages) to share preliminary research.
+*   **Poster-Only Submissions:** Submit a short abstract (up to 250 words) to present early-stage concepts.
+*   **Journal to Conference (J2C) Submissions:** Provide a summary (up to 1 page) of recent journal articles relevant to SSCI themes.
+
+For more instructions, see [submission instructions](?ui=submission-instructions).
+
+## Paper Formats
+
+| Type of Paper                | Description                                                                                                                                                                                                                                                                | Length                                                                        | Publication Format                                                                                   | Presentation Format   |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- | :---------------------- |
+| Full papers                  | Complete papers describing your novel research in full                                                                                                                                                                                                                    | Up to 6 pages, plus 1 page for references                                     | To be submitted for publication in the respective symposium proceedings                             | Lightning talk + poster |
+| Short papers                 | Papers with novel insights, approaches or ideas which may not have been fully tested yet                                                                                                                                                                              | Up to 4 pages, plus 1 page for references                                     | To be submitted for publication in the respective symposium proceedings                             | Poster                  |
+| Late breaking papers         | Extended abstracts with a ""prequel"" to provoke novel conversations for future work or ideas to emerge, or with a ""sequel"" to a prior research contribution, or with a discussion to alert the community of important topics that may not yet have received sufficient attention | Up to 2 pages, including references, if any.                                  | For presentation at the conference but not to be included in the proceedings.                       | Poster                  |
+| Abstract (poster-only)       | Abstracts may involve, e.g., novel insights, or new ideas which may not have been fully tested yet, or presentation of challenges posed by a given domain that could benefit from computational intelligence                                                           | Up to 250 words                                                               | For presentation at the conference but not to be included in the proceedings.                       | Poster                  |
+| Journal to conference (J2C) | Papers accepted at IEEE Transactions journals sponsored by CIS and first appeared in IEEEXplore within the past 2 years                                                                                                                                                  | Up to 1 page listing bullet points with the highlights of the paper, and an explanation on why you believe the paper to be relevant to SSCI | For presentation at the conference but not to be included in the conference proceedings.           | Lightning talk + poster |
+
+
+[Download Call for Papers and Abstracts](./assets/files/SSCI-2025-call-4-papers.pdf)",,,Hội nghị thuộc SSCI 2023: https://attend.ieee.org/ssci-2023/ieee-symposium-on-computational-intelligence-in-cyber-security-ieee-cics/,,,
+req-conf-1752369349669-tqf6n,,IEEE Swarm Intelligence Symposium,IEEE SIS,https://ieee-ssci.org/,,https://ieee-ssci.org/?ui=call-for-papers,,"Conference dates: March 17 - 20, 2025
+Year: 2025
+Location: Trondheim, Norway
+City-State-Province: Trondheim
+Country: Norway
+Continent: Europe
+Type: Offline
+Topics: Computational Intelligence, CI for Energy, Transport and Environmental Sustainability, CI in Engineering / Cyber Physical Systems, CI in Image, Signal Processing and Synthetic Media, CI in Artificial Life and Cooperative Intelligent Systems, CI in Security, Defence and Biometrics, CI in Health and Medicine, CI for Financial Engineering and Economics, CI in Natural Language Processing and Social Media, Trustworthy, Explainable and Responsible CI, Multidisciplinary Computational Intelligence Incubators
+Publisher: IEEE","March 17 - 20, 2025",,2025,"Trondheim, Norway",,Trondheim,Norway,Europe,Offline,,{},,{},,{},,{},,{},,"Computational Intelligence, CI for Energy, Transport and Environmental Sustainability, CI in Engineering / Cyber Physical Systems, CI in Image, Signal Processing and Synthetic Media, CI in Artificial Life and Cooperative Intelligent Systems, CI in Security, Defence and Biometrics, CI in Health and Medicine, CI for Financial Engineering and Economics, CI in Natural Language Processing and Social Media, Trustworthy, Explainable and Responsible CI, Multidisciplinary Computational Intelligence Incubators",IEEE,"The IEEE Swarm Intelligence Symposium (IEEE SIS) is part of the IEEE Symposium Series on Computational Intelligence (IEEE SSCI), which will be held in Trondheim, Norway from March 17th to 20th, 2025. IEEE SSCI is known for fostering the exchange of theories and algorithms in Computational Intelligence Applications. The 2025 event launches the restructured biennial Symposia Series featuring ten dedicated Applied Computational Intelligence Symposia. The conference includes plenary and keynote addresses, oral and poster presentations, panels, workshops, tutorials, and competitions.","# IEEE SIS: Call For Papers and Abstracts
+
+The IEEE Swarm Intelligence Symposium (IEEE SIS) is part of the **2025 IEEE Symposium Series on Computational Intelligence (IEEE SSCI)**, to be held in **Trondheim, Norway from March 17th-20th, 2025**.
+
+IEEE SSCI cultivates the interchange of state-of-the-art theories and sophisticated algorithms within the broad realm of Computational Intelligence Applications.
+
+The 2025 event marks a significant milestone in the evolution of IEEE SSCI, launching the newly restructured biennial Symposia Series featuring ten dedicated Applied Computational Intelligence Symposia:
+
+*   [2025 IEEE Symposia on CI for Energy, Transport and Environmental Sustainability (IEEE CIETES)](?ui=ci-for-energy-transport-environmental-sustainability)
+*   [2025 IEEE Symposia on CI in Engineering / Cyber Physical Systems (IEEE CIES)](?ui=ci-in-engineering-cyber-physical-systems)
+*   [2025 IEEE Symposia on CI in Image, Signal Processing and Synthetic Media (IEEE CISM)](?ui=ci-in-image-signal-processing-and-synthetic-media)
+*   [2025 IEEE Symposia on CI in Artificial Life and Cooperative Intelligent Systems (IEEE ALIFE-CIS)](?ui=ci-in-artificial-life-and-cooperative-intelligent-systems)
+*   [2025 IEEE Symposia on CI in Security, Defence and Biometrics (IEEE CISDB)](?ui=ci-in-security-defence-and-biometrics)
+*   [2025 IEEE Symposia on CI in Health and Medicine (IEEE CIHM)](?ui=ci-in-health-and-medicine)
+*   [2025 IEEE Symposia on CI for Financial Engineering and Economics (IEEE CiFer)](?ui=ci-for-financial-engineering-and-economics)
+*   [2025 IEEE Symposia on CI in Natural Language Processing and Social Media (IEEE CI-NLPSoMe)](?ui=ci-in-natural-language-processing-and-social-media)
+*   [2025 IEEE Symposia on Trustworthy, Explainable and Responsible CI (IEEE CITREx)](?ui=trustworthy-explainable-and-responsible-ci)
+*   [2025 IEEE Symposia for Multidisciplinary Computational Intelligence Incubators (IEEE MCII)](?ui=multidisplinary-computational-intelligence-incubators)
+
+## Late Submission Opportunities
+
+IEEE SSCI 2025 offers several submission options for late-breaking research:
+
+*   **Late-Breaking Papers:** Submit an extended abstract of up to 2 pages to share preliminary research, ideas, or critiques, fostering interactive discussions.
+*   **Poster-Only Submissions:** Submit a short abstract (up to 250 words) to present early-stage concepts or challenges for constructive feedback.
+*   **Journal to Conference (J2C) Submissions:** Provide a summary (up to 1 page) of recent journal articles relevant to SSCI themes, promoting broader engagement with your research.
+
+For more instructions on each kind of submission including page limitations and submission format, please see [submission instructions](?ui=submission-instructions).
+
+## Paper Formats
+
+| Type of Paper                | Description                                                                                                                                                                                                                                                                                                                                              | Length                                                  | Publication Format                                                                               | Presentation Format        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------- |
+| Full papers                  | Complete papers describing your novel research in full                                                                                                                                                                                                                                                                                              | Up to 6 pages, plus 1 page for references. A maximum of two extra content pages per full paper is allowed (i.e, up to 8 pages plus 1 page for references) | To be submitted for publication in the respective symposium proceedings                  | Lightning talk + poster    |
+| Short papers                 | Papers with novel insights, approaches or ideas which may not have been fully tested yet                                                                                                                                                                                                                                                           | Up to 4 pages, plus 1 page for references               | To be submitted for publication in the respective symposium proceedings                  | Poster                     |
+| Late breaking papers         | Extended abstracts with a ""prequel"" to provoke novel conversations for future work or ideas to emerge, or with a ""sequel"" to a prior research contribution, or with a discussion to alert the community of important topics that may not yet have received sufficient attention, or with an original discussion or critique of existing methodologies | Up to 2 pages, including references, if any.            | For presentation at the conference but not to be included in the proceedings. The titles and author names of accepted late breaking papers will be listed in the IEEE SSCI 2025 website. Authors of accepted late breaking papers will be given the option to have their papers linked from the SSCI page under a section corresponding to the symposium if they upload their paper to a preprint repository (e.g., ArXiv) | Poster                     |
+| Abstract (poster-only) submission | Abstracts may involve, e.g., novel insights, or new ideas which may not have been fully tested yet, or presentation of challenges posed by a given domain that could benefit from computational intelligence                                                                                                                                                                                                  | Up to 250 words                                         | For presentation at the conference but not to be included in the proceedings. The titles and author names of the accepted abstracts will be listed in the IEEE SSCI 2025 website. Abstracts may involve | Poster                     |
+| Journal to conference (J2C) | Papers accepted at IEEE Transactions journals sponsored by CIS and first appeared in IEEEXplore within the past 2 years                                                                                                                                                                                                                                | Up to 1 page listing bullet points with the highlights of the paper, and an explanation on why you believe the paper to be relevant to SSCI              | For presentation at the conference but not to be included in the conference proceedings.      | Lightning talk + poster    |
+
+[Download Call for Papers and Abstracts](./assets/files/SSCI-2025-call-4-papers.pdf)",,,Hội nghị thuộc SSCI 2023: https://attend.ieee.org/ssci-2023/ieee-symposium-on-swarm-intelligence-ieee-sis/,,,
+req-conf-1752369349669-tqf6n,,IFIP TC13 Conference on Human-Computer Interaction,Interact,https://interact2025.org/,,https://interact2025.org/general/,,"Conference dates: September 8 - 12, 2025
+Year: 2025
+Location: Belo Horizonte, Minas Gerais, Brazil
+City-State-Province: Belo Horizonte, Minas Gerais
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.(Full Papers) Registration (metadata on PCS): February 17, 2025
+Submission Date.(Full Papers) PDF submission: February 24, 2025
+Submission Date.(Workshops) Submissions: February 24, 2025
+Submission Date.(Short papers) Submissions: May 19, 2025
+Submission Date.(Courses) Submissions: May 26, 2025
+Submission Date.(Posters) Submissions: May 26, 2025
+Submission Date.(Panels) Submissions: May 26, 2025
+Submission Date.(Interactive Demonstrations) Submissions: May 26, 2025
+Submission Date.(Doctoral Consortium) Submissions: May 26, 2025
+Submission Date.(Industrial Experiences) Submissions: May 26, 2025
+Other Date.Workshops: September 8 - 9, 2025
+Topics: Human-Computer Interaction, Interaction Design, virtual and physical, different cultures, human-created and artefacts generated by artificial intelligence","September 8 - 12, 2025",,2025,"Belo Horizonte, Minas Gerais, Brazil",,"Belo Horizonte, Minas Gerais",Brazil,South America,Offline,,"{""(Full Papers) Registration (metadata on PCS)"":""February 17, 2025"",""(Full Papers) PDF submission"":""February 24, 2025"",""(Workshops) Submissions"":""February 24, 2025"",""(Short papers) Submissions"":""May 19, 2025"",""(Courses) Submissions"":""May 26, 2025"",""(Posters) Submissions"":""May 26, 2025"",""(Panels) Submissions"":""May 26, 2025"",""(Interactive Demonstrations) Submissions"":""May 26, 2025"",""(Doctoral Consortium) Submissions"":""May 26, 2025"",""(Industrial Experiences) Submissions"":""May 26, 2025""}",,{},,{},,{},,"{""Workshops"":""September 8 - 9, 2025""}",,"Human-Computer Interaction, Interaction Design, virtual and physical, different cultures, human-created and artefacts generated by artificial intelligence",No publisher,"The 20th IFIP TC13 International Conference on Human-Computer Interaction (INTERACT 2025) will be held in Belo Horizonte, Minas Gerais, Brazil, from September 8-12, 2025. The conference theme is 'Blending Experiences in Interaction Design,' inspired by the diverse cultural and technological landscape of Minas Gerais.","# INTERACT 2025: Call for Papers
+
+The 20th IFIP TC13 International Conference on Human-Computer Interaction (INTERACT 2025) invites original work submissions.
+
+## Submission Deadlines:
+
+### Submissions by February 2025
+
+*   **Full Papers:**
+    *   Registration (metadata on PCS): **February 17, 2025**
+    *   PDF Submission: **February 24, 2025**
+    *   [Full Papers Details](https://interact2025.org/full-papers/)
+*   **Workshops:**
+    *   Submission: **February 24, 2025**
+    *   [Workshops Details](https://interact2025.org/workshops/)
+
+### Submissions by May 2025
+
+*   **Short papers:** Submission by **May 19, 2025**
+    *   [Short papers Details](https://interact2025.org/short-papers/)
+*   **Courses:** Submission by **May 26, 2025**
+    *   [Courses Details](https://interact2025.org/courses/)
+*   **Posters:** Submission by **May 26, 2025**
+    *   [Posters Details](https://interact2025.org/posters/)
+*   **Panels:** Submission by **May 26, 2025**
+    *   [Panels Details](https://interact2025.org/panels/)
+*   **Interactive Demonstrations:** Submission by **May 26, 2025**
+    *   [Interactive Demonstrations Details](https://interact2025.org/interactive-demonstrations/)
+*   **Doctoral Consortium:** Submission by **May 26, 2025**
+    *   [Doctoral Consortium Details](https://interact2025.org/doctoral-consortium/)
+*   **Industrial Experiences:** Submission by **May 26, 2025**
+    *   [Industrial Experiences Details](https://interact2025.org/industrial-experiences/)
+
+## Additional Information
+
+*   [General Information](https://interact2025.org/general/)
+*   [Anonymity Policy](https://interact2025.org/anonymity/)
+*   [Awards](https://interact2025.org/awards/)",,,"Thiếu nhiều ngày notification, camera ready, registration date",,,
+req-conf-1752369349669-tqf6n,,Semantics - International Conference on Semantic Systems,Semantics,https://2025-eu.semantics.cc/,,https://2025-eu.semantics.cc/page/cfp_rev_rep,,"Conference dates: September 03 - 05, 2025
+Year: 2025
+Location: Vienna, Austria
+City-State-Province: Vienna
+Country: Austria
+Continent: Europe
+Type: Offline
+Topics: Semantic Systems, Knowledge Graphs, Semantic Technology, Generative AI, Semantic Web","September 03 - 05, 2025",,2025,"Vienna, Austria",,Vienna,Austria,Europe,Offline,,{},,{},,{},,{},,{},,"Semantic Systems, Knowledge Graphs, Semantic Technology, Generative AI, Semantic Web",No publisher,"The 21st International Conference on Semantic Systems (SEMANTiCS) will be held in Vienna from September 03 - 05, 2025. It's a venue for academics and industry to discuss semantic technologies. Keynote speakers include Georg Gottlob, Heng Ji, Michael Färber, Felix Sasaki, and Hannah Bast.","# SEMANTiCS Conference: Call for Papers
+
+Unfortunately, the provided text does not contain specific details about the call for papers (topics, submission guidelines, deadlines, registration fees, etc.). The text primarily consists of navigational links, conference information, and general information about the conference.
+
+To construct a detailed ""Call for Papers"" section, please provide content that includes the following information:
+
+*   **Introduction:** A brief overview of the conference and the scope of the call for papers.
+*   **Topics of Interest:** A comprehensive list of the research areas and themes the conference is seeking submissions in.
+*   **Important Dates:** A clear, chronological list of all deadlines.
+*   **Submission Guidelines:** Detailed instructions on how to prepare and submit papers.
+*   **Submission Types:** Details on accepted types (e.g., full papers, posters)
+*   **Registration Fees:** Details about registration fees and deadlines, payment options etc.
+*   **Contact Information:** How potential authors can get in touch with the organizers for questions.",,,Chưa lấy được important dates,,,
+req-conf-1752369349669-tqf6n,,Engineering Interactive Computing Systems,EICS,https://eics.acm.org/2025/,,https://eics.acm.org/2025/cfp.html,,,,,,No location,,No city/state/province,No country,No continent,Offline,,{},,{},,{},,{},,{},,No topics,No publisher,"EICS 2025 is the seventeenth international ACM SIGCHI conference devoted to engineering interactive computing systems and their user interfaces, addressing software quality factors such as usability, user experience, reliability, and security. The conference covers all stages of the engineering life-cycle of interactive systems and focuses on models, languages, notations, methods, techniques, and tools that support designing, developing, validating, and verifying interactive systems. The full papers are published in the journal PACM EICS series.","# EICS 2025: Call for Full Papers & Technical Notes
+
+The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems, **EICS 2025**, will take place from **June 23-27, 2025 in Trier, Germany**.
+
+EICS focuses on engineering interactive computing systems and their user interfaces, addressing software quality factors such as usability, user experience, reliability, and security.
+
+## About EICS
+
+EICS 2025 is the sixteenth international ACM SIGCHI conference devoted to engineering interactive computing systems and their user interfaces. Work presented at EICS covers all stages of the engineering life-cycle of interactive systems - inception, requirements, design, specification, coding, data analytics, validation and verification, deployment and maintenance.
+
+EICS focuses on models, languages, notations, methods, techniques and tools that support designing, developing, validating and verifying interactive systems.
+
+## Call for Full Papers & Technical Notes
+
+EICS Full Papers and Technical Notes are published as articles in the Journal Proceedings of the ACM on Human-Computer Interaction (PACM - EICS series). There are three submission deadlines per year, and authors can choose when to submit. Papers may be accepted after submission and review or may be recommended for revisions and re-submission to the next round.
+
+Submissions for the journal of this venue should present original and mature research work within the scope of the conference. Accepted journal papers can be either regular research papers or technical notes.
+
+Technical Notes are shorter, more focused contributions that focus specifically on system contributions and technical work. They require an illustrative example of the system and can be validated through simulation, feasibility, or comparisons. Tech Notes will be judged on their technical merits and relevance to interactive systems concerns.
+
+There are no length restrictions on Full Papers and Technical Notes, nor any limit to the number of references that may be included.
+
+Full Papers and Technical Notes should be written in the ACM format; see [https://www.acm.org/publications/authors/submissions](https://www.acm.org/publications/authors/submissions)
+
+Papers are submitted using [https://new.precisionconference.com](https://new.precisionconference.com)
+
+## Topics
+
+Submissions advance the state of the art of the engineering of interactive systems. Topics include, but are not limited to:
+
+*   Modeling, specification, and analysis of interaction and interactive systems
+*   Requirements engineering for interactive systems
+*   Methods, processes, principles, and/or tools for building interactive systems (e.g., design, implementation, prototyping, evaluation, verification and validation, testing)
+*   Software architectures for interactive systems
+*   Formal methods within interactive systems engineering
+*   Bridging the gap between engineering and design practices
+*   Engineering design and evaluation tools
+*   Computational techniques for designing and evaluating interactive systems
+*   Interactive data-driven systems
+*   Explore and/or employ diverse interaction techniques and devices (e.g., adaptive, context-aware, tangible, haptic, touch and multitouch input, voice, gestures, recognition of physiological signals, multimodal input, mobile and wearable systems, virtual, augmented, mixed and extended reality)
+*   Engineering hardware or software integration in interactive systems (e.g., fabrication and maker processes, physical computing, cyber-physical systems)
+*   Engineering interactive systems for diverse user groups (e.g., children, elderly, people with disabilities,…)
+*   Engineering collaborative multi-user interactive systems
+*   Engineering interactive systems embedding AI-technologies
+*   Engineering interaction-driven AI-technologies
+*   Applying AI technologies in methods, processes, and tools for building interactive systems in all stages of the engineering lifecycle
+
+## Important Dates
+
+All dates are AoE.
+
+|                               | **EICS PACM 2025, Round 1** | **EICS PACM 2025, Round 2** | **EICS PACM 2025, Round 3** |
+| :---------------------------- | :-------------------------- | :-------------------------- | :-------------------------- |
+| **Paper submissions**        | Jul 26, 2024                | Oct 25, 2024                | Feb 14, 2025                |
+| **Editorial Board assignments** | Jul 30, 2024                | Oct 28, 2024                | Feb 18, 2025                |
+| **Reviewer assignments**      | Aug 6, 2024                 | Nov 4, 2024                 | Feb 25, 2025                |
+| **Review deadline**           | Sep 9, 2024                 | Nov 28, 2024                | Mar 21, 2025                |
+| **Meta-reviews**              | Sep 12, 2024                | Dec 2, 2024                 | Mar 25, 2025                |
+| **Reviews sent to authors**   | Sep 16, 2024                | Dec 5, 2024                 | Mar 27, 2025                |
+| **Rebuttal deadline**         | Sep 23, 2024                | Dec 12, 2024                | Apr 4, 2025                 |
+| **Final Meta-reviews**        | Sep 27, 2024                | Dec 16, 2024                | Apr 8, 2025                 |
+| **PC Meeting**                | Oct 1, 2024                 | Dec 18, 2024                | Apr 10, 2025                |
+| **Final notification**         | Oct 3, 2024                 | Dec 20, 2024                | Apr 14, 2025                |
+
+## Anonymization Policy
+
+The papers review process is based on reviewing where the identities of both the authors and reviewers are kept hidden.
+
+Authors are expected to remove author and institutional identities from the title and header areas of the paper and make sure that identifying information does not appear in the document’s meta-data.
+
+Authors are required to cite their own work in the third person, e.g., avoid “As described in our previous work [10], ... ” and use instead “As described by [10], ...”
+
+## Contacts
+
+Should you have any doubt about your Full Paper proposal, please contact the chairs ([papers2025@eics.acm.org](mailto:papers2025@eics.acm.org))
+",,,"Chưa lấy được thông tin, có link 2026: https://eics.acm.org/2026/",,,
