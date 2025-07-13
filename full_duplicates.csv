@@ -1,0 +1,2105 @@
+requestId,originalRequestId,title,acronym,mainLink,cfpLink,impLink,information,conferenceDates,year,location,cityStateProvince,country,continent,type,submissionDate,notificationDate,cameraReadyDate,registrationDate,otherDate,topics,publisher,summary,callForPapers
+req-conf-1752044078591-7asb8,,"International Conference on Broadband Communications, Networks and Systems",Broadnets,https://broadnets.eai-conferences.org/2025/,https://broadnets.eai-conferences.org/2025/call-for-paper/,https://broadnets.eai-conferences.org/2025/,"Conference dates: August 14 - 16, 2025
+Year: 2025
+Location: Sunyani, Ghana
+City-State-Province: Sunyani
+Country: Ghana
+Continent: Africa
+Type: Offline
+Submission Date.(Full Paper Submission) Full Paper Submission deadline: April 15, 2025
+Submission Date.(Late Track) Full Paper Submission deadline: July 10, 2024
+Submission Date.(Special Sessions) Paper Submission: July 31, 2025
+Submission Date.(Abstracts Track) Abstract Submission: July 31, 2025
+Notification Date.(Full Paper Submission) Notification deadline: May 10, 2025
+Notification Date.(Late Track) Notification deadline: August 1, 2024
+Notification Date.(Special Sessions) Authors Notification: September 8, 2025
+Notification Date.(Abstracts Track) Authors Notification: September 8, 2025
+Camera-ready Date.(Full Paper Submission) Camera-ready deadline: June 14, 2025
+Camera-ready Date.(Late Track) Camera-ready deadline: August 20, 2024
+Camera-ready Date.(Special Sessions) Camera Ready and Registration: September 17, 2025
+Camera-ready Date.(Abstracts Track) Camera Ready and Registration: September 17, 2025
+Topics: 5G/6G, IoT, Cloud-to-Things Systems, Edge Cooperative Computing, Fog Computing, Vehicular Networks, Smart City, Smart Grid Applications, Digital Twin Technology, Speech and Signal Processing, Cybersecurity, Trust and Access Control, Data Privacy and Integrity
+Publisher: Springer","August 14 - 16, 2025",2025.0,"Sunyani, Ghana",Sunyani,Ghana,Africa,Offline,"{""(Full Paper Submission) Full Paper Submission deadline"":""April 15, 2025"",""(Late Track) Full Paper Submission deadline"":""July 10, 2024"",""(Special Sessions) Paper Submission"":""July 31, 2025"",""(Abstracts Track) Abstract Submission"":""July 31, 2025""}","{""(Full Paper Submission) Notification deadline"":""May 10, 2025"",""(Late Track) Notification deadline"":""August 1, 2024"",""(Special Sessions) Authors Notification"":""September 8, 2025"",""(Abstracts Track) Authors Notification"":""September 8, 2025""}","{""(Full Paper Submission) Camera-ready deadline"":""June 14, 2025"",""(Late Track) Camera-ready deadline"":""August 20, 2024"",""(Special Sessions) Camera Ready and Registration"":""September 17, 2025"",""(Abstracts Track) Camera Ready and Registration"":""September 17, 2025""}",{},{},"5G/6G, IoT, Cloud-to-Things Systems, Edge Cooperative Computing, Fog Computing, Vehicular Networks, Smart City, Smart Grid Applications, Digital Twin Technology, Speech and Signal Processing, Cybersecurity, Trust and Access Control, Data Privacy and Integrity",Springer,"The 16th International Conference on Broadband Communications, Networks, and Systems (Broadnets 2025) will be held in Sunyani, Ghana, from August 14-16, 2025. The conference focuses on cutting-edge research and technological advancements in communication networks, AI-driven security mechanisms, and intelligent systems, providing a platform for researchers, industry professionals, and policymakers to explore solutions in 5G/6G, IoT, cybersecurity, and edge computing.","# Broadnets 2025: Call for Papers
+
+The **16th International Conference on Broadband Communications, Networks, and Systems (Broadnets 2025)** will take place from **August 14-16, 2025, in Sunyani, Ghana**.
+
+The conference focuses on cutting-edge research and technological advancements in next-generation communication networks, artificial intelligence-driven security mechanisms, and intelligent systems. It aims to provide a platform for researchers, industry professionals, and policymakers to explore innovative solutions in 5G/6G networks, IoT-enabled smart systems, speech and signal processing, cybersecurity, and edge computing.
+
+## Scope and Topics
+
+The conference seeks novel, innovative, and exciting work in areas including but not limited to:
+
+*   5G/6G and Use Cases of 5G/6G Systems
+*   Software-Defined Networking (SDN)-Enabled Systems
+*   Internet of Things (IoT)-Enabled Smart Systems
+*   Cloud-to-Things Systems
+*   Edge Cooperative Computing and Fog Computing
+*   Vehicular Networks
+*   Smart City and Smart Grid Applications
+*   Digital Twin Technology
+*   Speech and Signal Processing for secure communications, speech enhancement, audio analytics, and intelligent voice-based applications
+*   Distributed Systems Security
+*   Trust and Access Control
+*   Data Privacy and Integrity
+
+Key areas of interest include network architectures, distributed computing, digital twin technologies, vehicular communication, trust and privacy mechanisms, and AI-driven anomaly detection. The conference will also highlight advancements in speech and signal processing techniques, particularly in secure communications, speech enhancement, and audio analytics for real-time applications.
+
+## Important Dates
+
+*   **Full Paper Submission deadline:** April 15th, 2025
+*   **Notification deadline:** May 10th, 2025
+*   **Camera-ready deadline:** June 14th, 2025
+
+## Submission Guidelines
+
+*   All papers must be submitted in English.
+*   Previously published work cannot be submitted, nor can it be concurrently submitted to any other conference or journal. Such papers will be rejected without review.
+*   Papers must follow the Springer formatting guidelines (available in the Author’s Kit section).
+*   Authors must read and agree to the [Publication Ethics and Malpractice Statement](https://eai.eu/wp-content/uploads/2025/06/How-to-Write-Good-Alt-Text-2.pdf).
+*   As per new EU accessibility requirements, all figures, illustrations, tables, and images should have descriptive text accompanying them. Please refer to the guide on [HOW TO WRITE GOOD ALT TEXT](https://eai.eu/wp-content/uploads/2025/06/How-to-Write-Good-Alt-Text-2.pdf).
+
+## Paper Submission
+
+*   Papers should be submitted through EAI 'Confy+' system.
+*   Regular papers should be up to **12-15+ pages** in length.
+*   Short papers should be **6-11 pages** in length.
+
+All conference papers undergo a thorough peer review process by experts in the Technical Program Committee.
+
+## Author’s Kit – Instructions and Templates
+
+Papers must be formatted using the Springer LNICST Authors’ Kit.
+
+Instructions and templates are available from [Springer’s LNICST homepage](https://www.springer.com/series/10309):
+
+*   [LaTeX2e Proceedings Templates (zip)](https://www.springer.com/gp/authors-editors/book-authors-editors/manuscript-submission/types-of-manuscripts/proceedings/latex-templates)
+*   [Microsoft Word Proceedings Templates (zip)](https://www.springer.com/gp/authors-editors/book-authors-editors/manuscript-submission/types-of-manuscripts/proceedings/word-templates)
+
+When uploading the camera-ready copy, please upload both:
+*   a PDF copy of your paper formatted according to the templates.
+*   an archive file (e.g. zip, tar.gz) containing both a PDF copy of your paper and LaTeX or Word source material prepared according to the guidelines.
+
+## Publication
+
+All registered papers will be submitted for publishing by **Springer** and made available through **SpringerLink Digital Library**.
+
+Proceedings will be submitted for inclusion in leading indexing services, such as Web of Science, Compendex, Scopus, DBLP, EU Digital Library, Google Scholar, IO-Port, MathSciNet, Inspec, and Zentralblatt MATH.
+
+Authors of selected papers will be invited to submit an extended version to:
+*   **Springer Wireless Networks (WINET) Journal** [IF: 2.1 (2023)]
+
+All accepted authors are eligible to submit an extended version in a fast track of:
+*   **EAI Endorsed Transactions on Mobile Communications and Applications**
+
+Authors also have the opportunity to publish their articles in the EAI Endorsed Transactions journal (Scopus, Ei-indexed, ESCI-WoS, Compendex) by paying an additional **$150** (discounted from the standard $250 rate for conference authors).
+*   **EAI Endorsed Transactions on Scalable Information Systems** (ESCI-WoS, Compendex)
+
+**Requirements for extended versions:**
+*   It must be an extended version of the conference paper with a different title and abstract. In general, 30% of new content must be added.
+*   The article will be processed once the conference proceedings have been published.
+*   The article will be processed using the fast-track option.
+
+Additional publication opportunities include:
+*   EAI Transactions series (Open Access)
+*   EAI/Springer Innovations in Communications and Computing Book Series"
+req-conf-1752044078591-7asb8,,Conference on Innovative Data Systems Research,CIDR,https://www.cidrdb.org/cidr2026/,https://www.cidrdb.org/cidr2026/cfp.html,,"Conference dates: January 18-21, 2026
+Year: 2026
+Location: Chaminade, USA
+City-State-Province: Santa Cruz, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.submission deadline for all contributions: August 5th, 2025
+Notification Date.author notification for all contributions: October 6th, 2025
+Topics: Data Management Systems, Cloud based systems for data processing, data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies
+Publisher: VLDB Endowment","January 18-21, 2026",2026.0,"Chaminade, USA","Santa Cruz, California",United States,North America,Offline,"{""submission deadline for all contributions"":""August 5th, 2025""}","{""author notification for all contributions"":""October 6th, 2025""}",{},{},{},"Data Management Systems, Cloud based systems for data processing, data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies",VLDB Endowment,"The Conference on Innovative Data Systems Research (CIDR) 2026 will be held from January 18-21, 2026, at Chaminade Resort & Spa in Santa Cruz, California, USA. This systems-oriented conference, complementary to SIGMOD and VLDB, emphasizes system architecture and encourages innovative, risky, and visionary ideas in data management systems. It features a single-track program with presentations and ample interaction opportunities for researchers and practitioners.","# CIDR 2026: Call for Papers
+
+## Overview
+
+The annual Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference, complementary in its mission to the mainstream database conferences like SIGMOD and VLDB, emphasizing the systems architecture perspective. CIDR gathers researchers and practitioners from both academia and industry to discuss the latest innovative and visionary ideas in the field.
+
+We invite contributions on novel approaches to data management systems, architecture, and usage including cloud based systems for data processing as well as related system issues such as data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, etc. in the context of data processing. We also encourage new approaches to data management and system building based on or in support of ML/AI technologies. CIDR encourages contributions about innovative and risky data management system architecture ideas, systems-building experience and insights, resourceful experimental studies, and provocative position statements. CIDR especially values innovation, experience-based insight, and vision.
+
+## Contribution Types
+
+CIDR 2026 invites two kinds of contributions:
+
+*   **Papers** (at most 6 pages). We invite both regular research papers and more visionary papers that promote interesting ideas and ongoing work.
+*   **Demos** (a video or a description of the demo in at most 6 pages).
+
+To encourage authors to submit only their best work, each person can be an author or co-author of at most one submission of any kind. Authors who feel their work is best captured through a demo should submit a demo proposal. Demos and papers will be interweaved in a single-tracked program.
+
+## Important Dates
+
+(all deadlines are 11:59pm Pacific Time)
+
+*   **August 5th, 2025:** submission deadline for all contributions
+*   **October 6th, 2025:** author notification for all contributions
+*   **January 18-21, 2026:** conference
+
+## Submission
+
+*   Papers should be electronically submitted in PDF format to [CMT](https://cmt3.research.microsoft.com/CIDR2026).
+*   Conference submissions must be formatted using the double-column ACM sigconf style (see the ACM Template), and must not exceed 6 pages in length including all references and appendix.
+*   Videos can be submitted in HTML or MPEG format.
+*   Submissions will be reviewed by the program committee, who will select the final program in co-operation with the organizing committee.
+*   At least one author of an accepted paper or demo will be expected to attend the conference in person to present the paper.
+
+## Camera-Ready Guidelines
+
+Camera-ready papers need to follow the formatting instructions above. Additionally, they need to include the following copyright notice at the bottom left of the first page:
+
+> This paper is published under the Creative Commons Attribution 4.0 International (CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their personal and corporate Web sites with the appropriate attribution, provided that you attribute the original work to the authors and CIDR 2026. 16th Annual Conference on Innovative Data Systems Research (CIDR '26). January 18-21, 2026, Chaminade, USA.
+
+*   This LaTeX style file (cidr-2026.cls) and this Word template file (pubform-CIDR2026.docx) include the copyright notice. We recommend that you use them. Both will display the copyright notice.
+
+## Diversity and Inclusion
+
+As a large scientific and technical community that has a direct impact on many people from different backgrounds around the world, Diversity and Inclusion (D&I) are crucial for the data management community. Please refer to D&I in DB for the details of the coordinated D&I efforts across our community. Paper writing can make a material difference. So, we would like to strongly plead with the authors to follow the D&I writing instructions when drafting the paper submissions.
+
+---"
+req-conf-1752044078591-7asb8,,Computability in Europe: Logic and Theory of Algorithms,CiE,https://sites.google.com/view/cie2025-computabilityineurope/home,,https://sites.google.com/view/cie2025-computabilityineurope/important-dates,"Conference dates: July 14-18, 2025
+Year: 2025
+Location: Lisbon
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.Abstract: January 26, 2025
+Submission Date.Full paper: February 2, 2025
+Submission Date.Deadline for informal presentations submission: April 22, 2025
+Notification Date.Notification of acceptance: April 6, 2025
+Camera-ready Date.Final versions due: April 13, 2025
+Registration Date.Early registration: May 6, 2025
+Topics: Fuzzy Computation, Evolutionary Computation, Neural Computation, Explainable AI, Mathematics, Theoretical Computer Science, Logic, Quantum Computability, Cryptography, Information Theory, Computational Biology, Computational Linguistics, History and Philosophy of Computability","July 14-18, 2025",2025.0,Lisbon,Lisbon,Portugal,Europe,Offline,"{""Abstract"":""January 26, 2025"",""Full paper"":""February 2, 2025"",""Deadline for informal presentations submission"":""April 22, 2025""}","{""Notification of acceptance"":""April 6, 2025""}","{""Final versions due"":""April 13, 2025""}","{""Early registration"":""May 6, 2025""}",{},"Fuzzy Computation, Evolutionary Computation, Neural Computation, Explainable AI, Mathematics, Theoretical Computer Science, Logic, Quantum Computability, Cryptography, Information Theory, Computational Biology, Computational Linguistics, History and Philosophy of Computability",No publisher,"Computability in Europe 2025 (CiE 2025) is an international conference on computability-related fields of science, including mathematics, theoretical computer science, logic, quantum computability, cryptography, and more. It will be held from July 14-18, 2025, in Lisbon. The conference is part of a series organized by the Association Computability in Europe (ACiE) and aims to bring together basic and application-oriented research.","# CiE 2025: Call for Papers
+
+Computability in Europe (CiE) is an interdisciplinary series of international conferences organized by the Association Computability in Europe (ACiE). CiE 2025 will be held from **July 14-18, 2025, in Lisbon**.
+
+The conference welcomes research contributions on computability-related fields of science, including:
+
+*   Mathematics
+*   Theoretical Computer Science
+*   Logic
+*   Quantum Computability
+*   Cryptography
+*   Information Theory
+*   Computational Biology
+*   Computational Linguistics
+*   History and Philosophy of Computability
+*   and many other related subjects.
+
+## Important Dates
+
+*   **Abstract Submission Deadline:** January 26, 2025 (AoE) - CLOSED
+*   **Full Paper Submission Deadline:** February 2, 2025 (AoE) - CLOSED
+*   **Notification of Acceptance:** April 6, 2025
+*   **Final Versions Due:** April 13, 2025
+*   **Deadline for Informal Presentations Submission:** April 22, 2025 (Notifications sent a few days after submission) - CLOSED
+*   **Early Registration Deadline:** Before May 6, 2025
+*   **Conference Dates:** July 14-18, 2025
+
+## Special Offer for Junior Women Researchers
+
+As part of the Women in Computability program, support is offered for junior women researchers to join CiE 2025. See details [here](https://sites.google.com/view/cie2025-computabilityineurope/registration).
+
+## Student Accommodations
+
+Limited offer: 20 rooms available for students at €160 per week. First come, first served! More information [here](/view/cie2025-computabilityineurope/accommodations).
+
+## Student Travel Support
+
+The Association for Symbolic Logic will support the travels of some students. More information [here](/view/cie2025-computabilityineurope/registration).
+
+## Sponsors
+
+This event is funded by national funds through the FCT – Fundação para a Ciência e a Tecnologia, I.P., under the scope of various projects.
+
+## WiC (Women in Computability)
+
+Details available [here](/view/cie2025-computabilityineurope/wic)."
+req-conf-1752044078591-7asb8,,Body Sensor Networks,BSN,https://bsn.embs.org/2025/,https://bsn.embs.org/2025/contributors/papers/,,"Conference dates: November 3 - 5, 2025
+Year: 2025
+Location: Los Angeles, California, USA
+City-State-Province: Los Angeles, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Workshop Proposal Deadline: June 15, 2025
+Submission Date.Paper Submission Deadline: July 11, 2025
+Submission Date.Abstract, Clinical abstracts, and Demo Submission Deadline: July 11, 2025
+Submission Date.Late Breaking Abstract Deadline: August 10, 2025
+Notification Date.Workshop Acceptance Notification: June 29, 2025
+Notification Date.Paper Acceptance Notification: August 1, 2025
+Notification Date.Abstract Acceptance Notification: August 1, 2025
+Notification Date.Late Breaking Abstract Notification: August 24, 2025
+Camera-ready Date.Camera-Ready Deadline: September 1, 2025
+Topics: digital health solutions, sensors and algorithms, diagnosis, disease progress tracking, self-management, Sensors and systems for digital health, wellness, and athletics, Conformable decoders: unintrusive, comfortable, self-powered sensors and systems, Flexible, stretchable, and imperceptible electronics for sensors and systems, Contact-less solutions for human sensing, Power-optimization for implantable and wearable sensors and systems, Wearable robotics system for digital healthcare, Signal processing, machine learning, deep learning, and decision-support algorithms, Adaptive, personalized intervention systems by closing the loop between technologies and humans, Security, privacy, and trust in digital health technologies, Optimization and personalization for digital health technologies and outcomes, Human-centered design for digital healthcare to address real-world stakeholder needs, Agentic AI and LLMs for computational health
+Publisher: IEEE","November 3 - 5, 2025",2025.0,"Los Angeles, California, USA","Los Angeles, California",United States,North America,Offline,"{""Workshop Proposal Deadline"":""June 15, 2025"",""Paper Submission Deadline"":""July 11, 2025"",""Abstract, Clinical abstracts, and Demo Submission Deadline"":""July 11, 2025"",""Late Breaking Abstract Deadline"":""August 10, 2025""}","{""Workshop Acceptance Notification"":""June 29, 2025"",""Paper Acceptance Notification"":""August 1, 2025"",""Abstract Acceptance Notification"":""August 1, 2025"",""Late Breaking Abstract Notification"":""August 24, 2025""}","{""Camera-Ready Deadline"":""September 1, 2025""}",{},{},"digital health solutions, sensors and algorithms, diagnosis, disease progress tracking, self-management, Sensors and systems for digital health, wellness, and athletics, Conformable decoders: unintrusive, comfortable, self-powered sensors and systems, Flexible, stretchable, and imperceptible electronics for sensors and systems, Contact-less solutions for human sensing, Power-optimization for implantable and wearable sensors and systems, Wearable robotics system for digital healthcare, Signal processing, machine learning, deep learning, and decision-support algorithms, Adaptive, personalized intervention systems by closing the loop between technologies and humans, Security, privacy, and trust in digital health technologies, Optimization and personalization for digital health technologies and outcomes, Human-centered design for digital healthcare to address real-world stakeholder needs, Agentic AI and LLMs for computational health",IEEE,"The IEEE-EMBS International Conference on Body Sensor Networks (BSN 2025) is the premier conference on sensing systems for digital health, with the theme ""Computational Medicine: Expanding Health through Sensing and AI."" The conference will be held in Los Angeles, California, USA, from November 3-5, 2025, and will bring together leaders from academia, industry, and healthcare.","# IEEE-EMBS BSN 2025: Call for Technical Papers
+
+The IEEE-EMBS International Conference on Body Sensor Networks (BSN 2025) will be held in **Los Angeles, California, USA**, from **November 3 – 5, 2025**. The conference theme is **“Computational Medicine: Expanding Health through Sensing and AI.”**
+
+BSN 2025 will provide a cross-disciplinary, highly selective, single-track forum for cutting-edge research related to devices and sensors, hardware and software systems, predictive models, and data analytics in the healthcare/medical domains.
+
+## Submission Types and Guidelines
+
+*   **Regular 4-page technical papers**
+*   **1-page technical abstracts**
+*   **1-page clinical abstracts**
+
+All page limits include references. Papers are required to follow the **IEEE Conference template format**.
+
+BSN adopts a **single-blind review process**, allowing authors to include their names and affiliations in the submission.
+
+## Topics of Interest
+
+*   Novel digital health solutions (i.e., sensors and algorithms) for diagnosis, disease progress tracking, and self-management.
+*   Sensors and systems for digital health, wellness, and athletics.
+*   Conformable decoders: unintrusive, comfortable, self-powered sensors and systems.
+*   Flexible, stretchable, and imperceptible electronics for sensors and systems.
+*   Contact-less solutions for human sensing.
+*   Power-optimization for implantable and wearable sensors and systems.
+*   Wearable robotics system for digital healthcare.
+*   Signal processing, machine learning, deep learning, and decision-support algorithms.
+*   Adaptive, personalized intervention systems by closing the loop between technologies and humans.
+*   Security, privacy, and trust in digital health technologies.
+*   Optimization and personalization for digital health technologies and outcomes.
+*   Human-centered design for digital healthcare to address real-world stakeholder needs.
+*   Emerging topics such as Agentic AI and LLMs for computational health
+
+## Important Dates
+
+*   **Workshop Proposal Deadline:** June 15, 2025
+*   **Workshop Acceptance Notification:** June 29, 2025
+*   **Paper Submission Deadline:** July 11, 2025
+*   **Abstract, Clinical abstracts, and Demo Submission Deadline:** July 11, 2025
+*   **Paper Acceptance Notification:** August 1, 2025
+*   **Abstract Acceptance Notification:** August 1, 2025
+*   **Late Breaking Abstract Deadline:** August 10, 2025
+*   **Late Breaking Abstract Notification:** August 24, 2025
+*   **Camera-Ready Deadline:** September 1, 2025
+*   **Conference:** November 3-5, 2025
+
+*All deadlines are 11:59 pm AoE (Anywhere on Earth).* 
+
+## Awards and Recognition
+
+*   Best paper, poster, and demo awards recognizing excellent contributions.
+*   Excellent papers will be invited for extension and rapid review at the **IEEE Open Journal of Engineering in Medicine and Biology**.
+*   **Student Travel Awards** will be provided to selected students from worldwide institutions.
+
+## Submission Portal
+
+Submit your 4-page technical paper here: [https://openreview.net/group?id=IEEE.org/EMBS/BSN/2025/Conference&referrer=%5BHomepage%5D(%2F)#tab-your-consoles](https://openreview.net/group?id=IEEE.org/EMBS/BSN/2025/Conference&referrer=%5BHomepage%5D(%2F)#tab-your-consoles)
+
+## Presenter Guidelines
+
+Refer to the [Presenter Guidelines](https://bsn.embs.org/2025/author-instructions/) for detailed information."
+req-conf-1752209818190-bdh4r,,Conference on Games,COG,https://cog2025.inesc-id.pt/,https://cog2025.inesc-id.pt/call-for-papers/,,"Conference dates: August 26 - 29, 2025
+Year: 2025
+Location: Técnico Innovation Center, Instituto Superior Técnico, Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(Call for Auxiliary Papers): May 30, 2025
+Submission Date.(Call for Full Papers): March 15, 2025
+Submission Date.(Call for Competitions): January 19, 2025
+Submission Date.(Call for Tutorials): January 19, 2025
+Submission Date.(Call for Workshops): January 19, 2025
+Notification Date.(Full papers) acceptance notification: May 16, 2025
+Camera-ready Date.(Full papers): June 13, 2025
+Camera-ready Date.(Auxiliary papers): July 11, 2025
+Topics: Accessibility and inclusivity in games, AI for game development, Esports and live-streaming, Extended reality (virtual reality, mixed reality, and augmented reality), Game AI, Game analytics, game data science, and data visualization, Games as test-beds for algorithms, Game design (frameworks, game mechanics, etc.), Game editors and authoring tools, Game technology (game engines, graphics, audio, animation, physics, controls, etc.), Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.), Generative AI for games, Procedural content generation, Serious/applied games (for education, health, sustainability, etc.), User interfaces in game
+Publisher: IEEE","August 26 - 29, 2025",2025.0,"Técnico Innovation Center, Instituto Superior Técnico, Lisbon, Portugal",Lisbon,Portugal,Europe,Offline,"{""(Call for Auxiliary Papers)"":""May 30, 2025"",""(Call for Full Papers)"":""March 15, 2025"",""(Call for Competitions)"":""January 19, 2025"",""(Call for Tutorials)"":""January 19, 2025"",""(Call for Workshops)"":""January 19, 2025""}","{""(Full papers) acceptance notification"":""May 16, 2025""}","{""(Full papers)"":""June 13, 2025"",""(Auxiliary papers)"":""July 11, 2025""}",{},{},"Accessibility and inclusivity in games, AI for game development, Esports and live-streaming, Extended reality (virtual reality, mixed reality, and augmented reality), Game AI, Game analytics, game data science, and data visualization, Games as test-beds for algorithms, Game design (frameworks, game mechanics, etc.), Game editors and authoring tools, Game technology (game engines, graphics, audio, animation, physics, controls, etc.), Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.), Generative AI for games, Procedural content generation, Serious/applied games (for education, health, sustainability, etc.), User interfaces in game",IEEE,"The IEEE Conference on Games (IEEE CoG) is a premier venue for technical, scientific, and engineering work on video games, board games, and other types of games. IEEE CoG 2025 will take place at Técnico Innovation Center, located in Instituto Superior Técnico in Lisbon, Portugal, from August 26th to 29th. The conference invites submissions related to all aspects of games and game development.","# IEEE CoG 2025: Call for Papers
+
+The annual IEEE Conference on Games (IEEE CoG) is a leading scientific research venue for game researchers and practitioners. Games are a great domain in which to study and develop novel ideas in design, artificial intelligence, human-computer interaction, psychology, education, sociology, and creativity, as well as their applications in real-world problems. IEEE CoG 2025 will take place at the **University of Lisbon in Lisbon, Portugal**.
+
+## Topics of Interest
+
+We invite contributions related to all aspects of games and game development, including, but not limited to:
+
+*   Accessibility and inclusivity in games (e.g., computer games, board games, LARPs)
+*   AI for game development (automated playtesting, adaptation/personalization in games, etc.)
+*   Esports and live-streaming
+*   Extended reality (virtual reality, mixed reality, and augmented reality)
+*   Game AI
+*   Game analytics, game data science, and data visualization
+*   Games as test-beds for algorithms
+*   Game design (frameworks, game mechanics, etc.)
+*   Game editors and authoring tools
+*   Game technology (game engines, graphics, audio, animation, physics, controls, etc.)
+*   Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.)
+*   Generative AI for games
+*   Procedural content generation
+*   Serious/applied games (for education, health, sustainability, etc.)
+*   User interfaces in game
+
+**Please note:** CoG is not a conference about game theory and does not accept papers about game theory unless they are applied to games people would play, such as video games or board games.
+
+## Submission Tracks
+
+We invite authors to choose from six tracks:
+
+1.  AI and Game-playing
+2.  Procedural Content Generation (PCG)
+3.  Designing Games, Serious Games and Playful Experience
+4.  Game Technology
+5.  Game HCI, Player Experience, Game Analytics, e-sports
+6.  Robots in Games
+
+The authors should select the track that best matches the expertise needed to assess your research and that you believe will most fully appreciate the contribution of your paper to the field of games research. Descriptions for each track are listed below.
+
+### Track Descriptions
+
+*   **AI and Game-playing:**
+    *   This track is suitable for computational and artificial intelligence applications in digital and non-digital games, except for procedural content generation (see below). Topics include but are not limited to general game-playing AI, mixed-initiative authoring tools, believable agents, and AI-assisted game design and testing.
+    *   Track chairs: Diego-Perez Liebana (diego.perez@qmul.ac.uk) and Kyung-Joong Kim (kjkim@gist.ac.kr)
+*   **Procedural Content Generation (PCG):**
+    *   This track focuses on advancing research on developing and evaluating algorithms that automatically create game design and content such as levels, maps, characters, stories, textures, and music. We welcome theoretical papers on the subject.
+    *   Track chairs: Antonios Liapis (an.liapis@gmail.com) and Ahmed Khalifa (ahmed.khalifa@um.edu.mt)
+*   **Designing Games, Serious Games and Playful Experience:**
+    *   This track welcomes papers that make a designerly contribution to games, playful interaction, and other playable media. We welcome a broad range of submissions that aim to advance practical or theoretical understanding of designing games, playful interactions, and player experience in various contexts.
+    *   Track chairs: Casper Harteveld (c.harteveld@northeastern.edu)
+*   **Game Technology:**
+    *   This track invites papers that improve the technical aspects of game design and development besides AI and robotics. Typical contributions include game engines, benchmarks, computer graphics techniques, animation, networking, and novel interaction technology (e.g., XR and alternative control). If the main contribution of a paper is designing playful experiences enabled by novel technology, it should be submitted to the design track. Papers about game competitions are also a good fit for this track.
+    *   Track chairs: Christopher Salge (C.Salge@herts.ac.uk) and Johannes Pfau (j.pfau@uu.nl)
+*   **Game HCI, Player Experience, Game Analytics, e-sports:**
+    *   This track is suitable for submissions that seek to understand people in the context of play. Example topics include player experience evaluation (player psychology, games user research, and game analytics), the study of player and developer communities, and understanding humans in the context of play.
+    *   Track chairs: Alessandro Canossa (acan@kglakademi.dk) and Erica Kleinman (e.kleinman@northeastern.edu)
+
+## Submission Instructions
+
+CoG will use a **double-blind** review process. Authors must omit their names and affiliations from their submissions and avoid obvious identifying statements. Submissions not abiding by anonymity requirements will be desk rejected.
+
+Papers and Auxiliary papers must be submitted through the Easychair conference submission system: [https://easychair.org/conferences/?conf=cog2025](https://easychair.org/conferences/?conf=cog2025).
+
+All paper submissions should follow the recommended IEEE conference author guidelines. MS Word and LaTeX templates can be found at: [https://www.ieee.org/conferences_events/conferences/publishing/templates.html](https://www.ieee.org/conferences_events/conferences/publishing/templates.html)
+
+All submitted papers will be fully peer-reviewed, and accepted papers will be published in the conference proceedings and on IEEE Xplore.
+
+Short papers may be allocated to either poster presentations or short oral presentations if time and space permit. Demo papers will be allocated to a demo session. Competition papers will be allocated to oral presentations.
+
+## Important Dates
+
+All deadlines are **Anytime on Earth (AoE)**
+
+*   **Call for Full Papers:** March 15, 2025
+*   **Call for Competitions:** January 19, 2025
+*   **Call for Tutorials:** January 19, 2025
+*   **Call for Workshops:** January 19, 2025
+*   **Call for Auxiliary Papers:** May 30, 2025
+
+## Camera Ready Instructions
+
+Here are the steps to generate and submit your camera-ready paper:
+
+1.  Create an account at IEEE PDF eXpress: [https://ieee-pdf-express.org/account/Login](https://ieee-pdf-express.org/account/Login) using the Conference ID: **64752X**
+2.  Upload your manuscript and generate your IEEE Xplore-Compatible PDF. Ensure that your IEEE Xplore-Compatible PDF complies with the IEEE guidelines, as described here: [https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress](https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress)
+3.  Log in to EasyChair using your account and go to your proceedings author page.
+4.  Upload your final IEEE Xplore-Compatible PDF via EasyChair.
+5.  Complete the IEEE Copyright Agreement in the link provided via email.
+"
+req-conf-1752209818190-bdh4r,,IADIS International Conference Applied Computing,IADIS AC,https://www.computing-conf.org/,https://www.computing-conf.org/call-for-papers/,https://www.computing-conf.org/important-dates/,"Conference dates: November 1 - 3, 2025
+Year: 2025
+Location: Porto, Portugal
+City-State-Province: Porto
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(2nd CFP) Submission Deadline: July 25, 2025
+Notification Date.(2nd CFP) Notification to Authors: September 1, 2025
+Camera-ready Date.(1st CFP) Final Camera-Ready Submission: July 18, 2025
+Registration Date.(1st CFP) Early Registration: July 18, 2025
+Registration Date.(1st CFP) Late Registration: July 18, 2025
+Topics: Applied Computing, eCommerce and ePayment, eLearning, eHealth and eSports, IT services, Mobile computing, Knowledge management and distribution, Algorithms, Data bases and data mining, Information Systems, Information sourcing and aggregation, Programming languages and concepts, Security and Privacy, Automation of Services, Human-centred Computing, Multimedia and Visualization, Modalities of User Interfacing, Personalization and empathic systems, Virtual Reality, Distributed and parallel systems, Cloud Computing, Evaluation and Assessment, Intelligent systems, Large-scale applications, Local and distributed storage, IoT, Industry 4.0, Mobile Systems and Networks, Protocols, Standards and Mark-up Languages, Sensor Networks, WWW Applications and Technologies, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts and devices, Wideband Information streaming
+Publisher: IADIS","November 1 - 3, 2025",2025.0,"Porto, Portugal",Porto,Portugal,Europe,Offline,"{""(2nd CFP) Submission Deadline"":""July 25, 2025""}","{""(2nd CFP) Notification to Authors"":""September 1, 2025""}","{""(1st CFP) Final Camera-Ready Submission"":""July 18, 2025""}","{""(1st CFP) Early Registration"":""July 18, 2025"",""(1st CFP) Late Registration"":""July 18, 2025""}",{},"Applied Computing, eCommerce and ePayment, eLearning, eHealth and eSports, IT services, Mobile computing, Knowledge management and distribution, Algorithms, Data bases and data mining, Information Systems, Information sourcing and aggregation, Programming languages and concepts, Security and Privacy, Automation of Services, Human-centred Computing, Multimedia and Visualization, Modalities of User Interfacing, Personalization and empathic systems, Virtual Reality, Distributed and parallel systems, Cloud Computing, Evaluation and Assessment, Intelligent systems, Large-scale applications, Local and distributed storage, IoT, Industry 4.0, Mobile Systems and Networks, Protocols, Standards and Mark-up Languages, Sensor Networks, WWW Applications and Technologies, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts and devices, Wideband Information streaming",IADIS,The IADIS International Conference Applied Computing (IADIS AC) 2025 aims to address the main issues of concern within the applied computing area and related fields. The conference covers technical aspects and includes various areas within applied computing. The proceedings will be published as a book and digital copy with ISBN. Extended versions of selected papers will be published in the IADIS Journal on Computer Science and Information Systems.,"# IADIS International Conference Applied Computing 2025 (IADIS AC 2025) - Call for Papers
+
+The Applied Computing 2025 conference aims to address the main issues of concern within the applied computing area and related fields. This conference covers essentially technical aspects. Innovative contributions that don’t fit into these areas will also be considered.
+
+## Areas of Interest
+
+All areas related to Applied Computing are of interest, including, but not being limited to, the following areas:
+
+### Application Fields
+
+*   eCommerce and ePayment
+*   eLearning
+*   eHealth and eSports
+*   IT services
+*   Mobile computing
+*   Knowledge management and distribution
+
+### Fundamental Concepts and Engineering
+
+*   Algorithms
+*   Data bases and data mining
+*   Information Systems
+*   Information sourcing and aggregation
+*   Programming languages and concepts
+*   Security and Privacy
+
+### Usability
+
+*   Automation of Services
+*   Human-centred Computing
+*   Multimedia and Visualization
+*   Modalities of User Interfacing
+*   Personalization and empathic systems
+*   Virtual Reality
+
+### Performance
+
+*   Distributed and parallel systems
+*   Cloud Computing
+*   Evaluation and Assessment
+*   Intelligent systems
+*   Large-scale applications
+*   Local and distributed storage
+
+### Communication
+
+*   IoT
+*   Industry 4.0
+*   Mobile Systems and Networks
+*   Protocols, Standards and Mark-up Languages
+*   Sensor Networks
+*   WWW Applications and Technologies
+
+### Hardware scope
+
+*   Embedded Computing
+*   Environment-friendly Constructions
+*   Mobile Aspects
+*   Realization of IoT nodes
+*   Security concepts and devices
+*   Wideband Information streaming
+
+## Contribution Types
+
+The Conference will be composed of several types of contributions:
+
+*   **Full Papers** – These include mainly accomplished research results and have **8 pages** at the maximum (5,000 words).
+*   **Short Papers** – These are mostly composed of work in progress reports or fresh developments and have **4 pages** at maximum (2,500 words).
+*   **Reflection Papers** – These might review recent research literature pertaining to a particular problem or approach. These have **two pages** at maximum (1500 words).
+*   **Posters / Demonstrations** – These have **one page** at the maximum (625 words) besides the poster itself (or demonstration) that will be exposed at the conference.
+*   **Tutorials** – Tutorials can be proposed by scholars or company representatives. A proposal of maximum 250 words is expected.
+*   **Panels** – Discussions on selected topics will be held. A proposal of maximum 250 words is expected.
+*   **Invited Talks** – These will be made of contributions from well-known scholars and company representatives. An abstract will be included in the conference proceedings.
+*   **Doctoral Consortium** – The Doctoral Consortium will discuss on going work of PhD students. Contributions should have a maximum 2,500 words (4 pages).
+*   **Corporate Showcases & Exhibitions** – Enables Companies to present recent developments and applications. Contact secretariat@computing-conf.org for further details.
+
+## Important Dates
+
+*   **Submission Deadline (2nd CFP): 25 July 2025**
+*   **Notification to Authors (2nd CFP): 1 September 2025**
+*   **Final Camera-Ready Submission and Early Registration (1st CFP): Until 18 July 2025**
+*   **Late Registration (1st CFP): After 18 July 2025**
+*   **Conference: 1 – 3 November 2025**
+
+This is a blind peer-reviewed conference.
+"
+req-conf-1752209818190-bdh4r,,IEEE/ACM International Symposium on Mixed and Augmented Reality,ISMAR,https://www.ieeeismar.net/2025/,https://www.ieeeismar.net/2025/contribute/papers,https://www.ieeeismar.net/2025/,"Conference dates: October 8 - 12, 2025
+Year: 2025
+Location: Daejeon Convention Center, Daejeon, South Korea
+City-State-Province: Daejeon
+Country: South Korea
+Continent: Asia
+Type: Offline
+Submission Date.Paper Abstract: April 4, 2025
+Submission Date.Papers: April 11, 2025
+Submission Date.Workshops: May 2, 2025
+Submission Date.Tutorials: May 16, 2025
+Submission Date.Doctoral Consortium: June 30, 2025
+Submission Date.Poster Papers: July 29, 2025
+Submission Date.Demos: July 29, 2025
+Submission Date.Revise and Resubmit deadline: June 18, 2025
+Notification Date.Initial Notification: June 3, 2025
+Notification Date.Final Notification: July 22, 2025
+Camera-ready Date.Camera-ready version: July 31, 2025
+Topics: Augmented Reality (AR), Mixed Reality (MR), Virtual Reality (VR), Artificial intelligence, Machine learning, Assistive technologies and applications, Camera and projector-camera calibration, Collaborative interfaces, Computer vision, Content creation/authoring and content management, Conversational and speech interfaces, Display technologies, Diversity and inclusivity issues, Ethical issues, Ergonomics and human factors, Free viewpoint image generation, Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics, Human augmentations, Human-computer interaction, Immersive visual analytics, Localization, spatial registration, and tracking, Locomotion and navigation techniques, Mediated and diminished reality, Multimodal input and output, Omnidirectional, 360, immersive videos, Optics, Perception, Presence, body ownership, and agency, Psychology, Real-time performance issues, Rendering techniques, Sensor fusion, Spatial audio, auditory perception, and psychoacoustics, Spatial AR, projection mapping, projector-camera systems, System architectures, distributed, and online systems, Touch, tangible, and gesture interfaces, Technology acceptance and social implications, Teleoperation, telepresence, and telexistence, User experience, usability studies, and human-subjects experiments, VR simulations of AR/MR, Virtual production, Virtual humans and avatars, Visualization techniques, Architecture, Art, cultural heritage, education and training, Automotive and aerospace, Entertainment, sports broadcast, Health, wellbeing, and medical applications, Industrial, military, emergency response, Therapy and rehabilitation
+Publisher: IEEE","October 8 - 12, 2025",2025.0,"Daejeon Convention Center, Daejeon, South Korea",Daejeon,South Korea,Asia,Offline,"{""Paper Abstract"":""April 4, 2025"",""Papers"":""April 11, 2025"",""Workshops"":""May 2, 2025"",""Tutorials"":""May 16, 2025"",""Doctoral Consortium"":""June 30, 2025"",""Poster Papers"":""July 29, 2025"",""Demos"":""July 29, 2025"",""Revise and Resubmit deadline"":""June 18, 2025""}","{""Initial Notification"":""June 3, 2025"",""Final Notification"":""July 22, 2025""}","{""Camera-ready version"":""July 31, 2025""}",{},{},"Augmented Reality (AR), Mixed Reality (MR), Virtual Reality (VR), Artificial intelligence, Machine learning, Assistive technologies and applications, Camera and projector-camera calibration, Collaborative interfaces, Computer vision, Content creation/authoring and content management, Conversational and speech interfaces, Display technologies, Diversity and inclusivity issues, Ethical issues, Ergonomics and human factors, Free viewpoint image generation, Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics, Human augmentations, Human-computer interaction, Immersive visual analytics, Localization, spatial registration, and tracking, Locomotion and navigation techniques, Mediated and diminished reality, Multimodal input and output, Omnidirectional, 360, immersive videos, Optics, Perception, Presence, body ownership, and agency, Psychology, Real-time performance issues, Rendering techniques, Sensor fusion, Spatial audio, auditory perception, and psychoacoustics, Spatial AR, projection mapping, projector-camera systems, System architectures, distributed, and online systems, Touch, tangible, and gesture interfaces, Technology acceptance and social implications, Teleoperation, telepresence, and telexistence, User experience, usability studies, and human-subjects experiments, VR simulations of AR/MR, Virtual production, Virtual humans and avatars, Visualization techniques, Architecture, Art, cultural heritage, education and training, Automotive and aerospace, Entertainment, sports broadcast, Health, wellbeing, and medical applications, Industrial, military, emergency response, Therapy and rehabilitation",IEEE,"The IEEE/ACM International Symposium on Mixed and Augmented Reality (ISMAR) 2025, the premier conference for Augmented Reality (AR), Mixed Reality (MR), and Virtual Reality (VR), will be held in Daejeon, South Korea, from October 8-12, 2025. It invites submissions on a wide range of topics related to AR, MR, and VR, following a single-track paper process with a revise and resubmit phase.","# IEEE ISMAR 2025: Call for Papers
+
+The 24th IEEE International Symposium on Mixed and Augmented Reality (ISMAR) will be held at the **Daejeon Convention Center (DCC), South Korea, from Oct. 8 to Oct. 12 2025**.
+
+ISMAR is the premier conference for Augmented Reality (AR), Mixed Reality (MR) and Virtual Reality (VR), attracting leading researchers from academia and industry.
+
+## Overview
+
+ISMAR 2025 will host a single track for papers and include a revise and resubmit phase. It covers industry and research activities related to the full range of immersive technologies (AR, MR, and VR).
+
+We specifically invite contributions that advance all aspects of AR / MR / VR technology and user experiences.
+
+## Paper Submissions
+
+This year, there is one submission deadline for a unified review process for both the IEEE TVCG journal and the conference-only papers. The possible outcomes of this unified process are:
+
+*   Accept as IEEE TVCG paper, with presentation at ISMAR 2025
+*   Accept as IEEE ISMAR 2025 conference paper, with presentation at ISMAR 2025
+*   Recommended as IEEE ISMAR 2025 poster
+*   Reject
+
+Submissions may be 4-9 pages with an additional 2 pages of references. Note that a paper abstract must be uploaded prior to the actual paper submission deadline.
+
+All paper submissions must be in English and left blind for review.
+
+## Important Deadlines
+
+*   **Paper Abstract:** April 4th, 2025 (23:59 AoE, Friday)
+*   **Papers:** April 11th, 2025 (23:59 AoE, Friday)
+*   **Initial Notification:** June 3rd, 2025 (23:59 AoE, Tuesday)
+*   **Revise and Resubmit:** June 18th, 2025 (23:59 AoE, Wednesday)
+*   **Final Notification:** July 22nd, 2025 (23:59 AoE, Tuesday)
+*   **Camera-ready version:** July 31st, 2025 (23:59 AoE, Thursday)
+*   **Poster Papers:** July 29th, 2025 (23:59 AoE, Tuesday)
+*   **Demos:** July 29th, 2025 (23:59 AoE, Tuesday)
+*   **Workshops:** May 2nd, 2025 (23:59 AoE, Friday)
+*   **Workshop Papers:** See workshop websites for deadlines
+
+## Review Process
+
+The review process will have two cycles under the single submission deadline.
+
+### Review Cycle I (Submission to Initial Notification)
+
+Submissions will be assigned to two members of the ISMAR 2025 International Program Committee (IPC): a primary coordinator (1AC) and a secondary coordinator (2AC).
+
+Submissions that violate the [submission guidelines](/2025/contribute/guidelines/submissions) will be desk rejected.
+
+Those submissions that are not desk rejected will receive at least three full reviews by 2AC and two external reviewers.
+
+### Review Cycle II (Revision with Rebuttal to Final Decision)
+
+Authors will be given time to revise their submissions and write a rebuttal to the initial notifications.
+
+The revised submission and rebuttal will be submitted, and the reviewers will review the revised submission.
+
+Based on the reviews, the coordinators and reviewers will make a final recommendation for the paper.
+
+## Topics of Interest
+
+All topics relevant to and advancing AR, MR, and VR are of interest. We emphasize that a strong and explicit connection to AR, MR, and/or VR is essential for submissions. VR papers are welcome regardless of their relevance to AR/MR. Topics of interest include, but are not limited to:
+
+*   Artificial intelligence / Machine learning
+*   Assistive technologies and applications
+*   Camera and projector-camera calibration
+*   Collaborative interfaces
+*   Computer vision
+*   Content creation/authoring and content management
+*   Conversational and speech interfaces
+*   Display technologies (e.g., eyewear, smartwatches, projectors)
+*   Diversity and inclusivity issues
+*   Ethical issues
+*   Ergonomics and human factors
+*   Free viewpoint image generation
+*   Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics
+*   Human augmentations
+*   Human-computer interaction
+*   Immersive visual analytics
+*   Localization, spatial registration, and tracking
+*   Locomotion and navigation techniques
+*   Mediated and diminished reality
+*   Multimodal input and output
+*   Omnidirectional, 360, immersive videos
+*   Optics
+*   Perception
+*   Presence, body ownership, and agency
+*   Psychology
+*   Real-time performance issues
+*   Rendering techniques
+*   Sensor fusion
+*   Spatial audio, auditory perception, and psychoacoustics
+*   Spatial AR, projection mapping, projector-camera systems
+*   System architectures, distributed, and online systems
+*   Touch, tangible, and gesture interfaces
+*   Technology acceptance and social implications
+*   Teleoperation, telepresence, and telexistence
+*   User experience, usability studies, and human-subjects experiments
+*   VR simulations of AR/MR
+*   Virtual production
+*   Virtual humans and avatars
+*   Visualization techniques
+
+AR/MR/VR applications from domains include, but are not limited to:
+
+*   Architecture
+*   Art, cultural heritage, education and training
+*   Automotive and aerospace
+*   Entertainment, sports broadcast
+*   Health, wellbeing, and medical applications
+*   Industrial, military, emergency response
+*   Therapy and rehabilitation
+
+For questions, contact: [program2025@ieeeismar.net](mailto:program2025@ieeeismar.net)
+
+## ISMAR 2025 Scientific Program Chairs:
+
+Ulrich Eck, Gun Lee, Alexander Plopski, Missie Smith, Qi Sun, Markus Tatzgern"
+req-conf-1752209818190-bdh4r,,International Conference on Artificial Intelligence and Soft Computing,ICAISC,https://icaisc.eu/,https://icaisc.eu/Submission,https://icaisc.eu/#importantdates,"Conference dates: June 14 - 18, 2026
+Year: 2026
+Location: Zakopane, Poland
+City-State-Province: Zakopane
+Country: Poland
+Continent: Europe
+Type: Hybrid
+Submission Date.Submission of papers in accordance with Springer guidelines: November 15, 2025
+Notification Date.Notification of acceptance: February 1, 2026
+Camera-ready Date.Submission of camera-ready papers: April 10, 2026
+Topics: AI and adversarial attacks, Agent-based systems, Ant colony optimization, Approximate reasoning, Artificial immune systems, Artificial Intelligence in modelling and simulation, Artificial Intelligence in scheduling and optimization, Artificial life, Bioinformatics and computational biology, Brain-machine interfaces, Cognitive systems and applications, Collective intelligence, Computer vision, Data mining, Differential Evolution, Evolutionary data mining, Evolutionary design, Evolutionary scheduling, Expert systems, Explainable AI, Fuzzy Computing with Words, Fuzzy control and intelligent systems, Fuzzy decision making and decision support systems, Fuzzy logic and fuzzy set theory, Fuzzy optimization and design, Fuzzy pattern recognition, Fuzzy systems for robotics, Game theory, Generative artificial intelligence, Hardware Implementations, Intelligent database systems, Knowledge engineering, Large language models, Machine learning, Modeling and identification, Molecular and quantum computing, Multi-agent systems, Natural language processing, Neural Network Theory and Architectures, Particle swarm optimization, Robotics and related fields, Robust and secure machine learning algorithms, Rough sets and rough data analysis, Speech understanding, Supervised and Unsupervised Learning, Type-2 fuzzy logic, Various Applications, Web intelligence, Human–computer interaction
+Publisher: Springer","June 14 - 18, 2026",2026.0,"Zakopane, Poland",Zakopane,Poland,Europe,Hybrid,"{""Submission of papers in accordance with Springer guidelines"":""November 15, 2025""}","{""Notification of acceptance"":""February 1, 2026""}","{""Submission of camera-ready papers"":""April 10, 2026""}",{},{},"AI and adversarial attacks, Agent-based systems, Ant colony optimization, Approximate reasoning, Artificial immune systems, Artificial Intelligence in modelling and simulation, Artificial Intelligence in scheduling and optimization, Artificial life, Bioinformatics and computational biology, Brain-machine interfaces, Cognitive systems and applications, Collective intelligence, Computer vision, Data mining, Differential Evolution, Evolutionary data mining, Evolutionary design, Evolutionary scheduling, Expert systems, Explainable AI, Fuzzy Computing with Words, Fuzzy control and intelligent systems, Fuzzy decision making and decision support systems, Fuzzy logic and fuzzy set theory, Fuzzy optimization and design, Fuzzy pattern recognition, Fuzzy systems for robotics, Game theory, Generative artificial intelligence, Hardware Implementations, Intelligent database systems, Knowledge engineering, Large language models, Machine learning, Modeling and identification, Molecular and quantum computing, Multi-agent systems, Natural language processing, Neural Network Theory and Architectures, Particle swarm optimization, Robotics and related fields, Robust and secure machine learning algorithms, Rough sets and rough data analysis, Speech understanding, Supervised and Unsupervised Learning, Type-2 fuzzy logic, Various Applications, Web intelligence, Human–computer interaction",Springer,"The 25th International Conference on Artificial Intelligence and Soft Computing (ICAISC 2026) will be held in Zakopane, Poland, from June 14-18, 2026. It is a hybrid conference, offering both online and on-site participation. The conference proceedings will be published by Springer in the Lecture Notes in Artificial Intelligence series. The conference invites submissions covering theoretical developments and practical applications in artificial intelligence and soft computing techniques.","# ICAISC 2026: Call for Papers
+
+The 25th International Conference on Artificial Intelligence and Soft Computing (ICAISC 2026) will be held in **Zakopane, Poland, from June 14-18, 2026.**
+
+ICAISC 2026 will be a *hybrid conference*, offering both online and on-site participation.
+
+The conference proceedings will be published in the Springer-Verlag series **""Lecture Notes in Artificial Intelligence""**, and authors are strongly recommended to use the Springer LaTeX style.
+
+## Submission
+
+*   Initial submissions must be **FULL papers** (preferably 12 pages) and not merely abstracts.
+*   Initial submissions have to contain an *anonymized PDF* and non-anonymized sources.
+*   Papers will undergo double-blind reviewing by an international committee and accepted based on scientific merit and relevance to the conference topics.
+*   Please prepare an anonymized PDF version of the paper being submitted, preserving anonymity by avoiding identifying information in acknowledgements, links to websites, and literature references. Refer to your previous work as to a work of someone else. In place of author names, please write ""Anonymous ICAISC 2025 submission"".
+*   Sources of the paper do not have to be anonymized.
+*   Every final paper must be accompanied by the copyright form.
+
+## Guidelines
+
+Authors should consult Springer’s [authors’ guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) and use their proceedings templates, either for LaTeX or for MS Word, for the preparation of their papers. Springer’s proceedings LaTeX templates are also available in [Overleaf](https://www.overleaf.com/). Springer encourages authors to include their ORCIDs in their (final) papers.
+
+### Springer Copyright Form
+
+Every final paper must be accompanied by the copyright form, which a corresponding author should complete and sign. The copyright form in PDF is located at the Springer web site (Licence to Publish form for LNCS, CCIS or LNBIP). It is sufficient if one author of each contribution signs the form on behalf of all the other authors. the copyright form should be submitted during the final submission as a separate zipped pdf file. Please use the following data to fill the form:
+
+*   Title of the Book/Volume/Conference: ICAISC 2026 Proceedings
+*   Volume Editor(s): L. Rutkowski et al.
+
+All final submissions should be in a **.zip** compressed archive including:
+
+*   the source (input) files, i.e. TeX source files for the text and figure files,
+*   any style files, templates, and special fonts the authors may have used,
+*   MS Word file in the case of using MS Word,
+*   the final Postscript (.ps) or Adobe Acrobat (.pdf) file,
+*   the scanned completed and signed copyright form.
+
+By submitting the paper to the ICAISC conference the author(s) agree that they did not submit this paper to any other conference and one of them will attend the conference to present the paper.
+
+## Important Dates
+
+1.  **Submission of papers:** November 15, 2025
+2.  **Notification of acceptance:** from February 1, 2026
+3.  **Submission of camera-ready papers:** April 10, 2026
+4.  **Conference date:** June 14-18, 2026
+
+## Scope
+
+Contributions covering all theoretical developments and practical applications in artificial intelligence and soft computing techniques, including but not limited to the following technical areas, are invited:
+
+*   AI and adversarial attacks
+*   Agent-based systems
+*   Ant colony optimization
+*   Approximate reasoning
+*   Artificial immune systems
+*   Artificial Intelligence in modelling and simulation
+*   Artificial Intelligence in scheduling and optimization
+*   Artificial life
+*   Bioinformatics and computational biology
+*   Brain-machine interfaces
+*   Cognitive systems and applications
+*   Collective intelligence
+*   Computer vision
+*   Data mining
+*   Differential Evolution
+*   Evolutionary data mining
+*   Evolutionary design
+*   Evolutionary scheduling
+*   Expert systems
+*   Explainable AI
+*   Fuzzy Computing with Words
+*   Fuzzy control and intelligent systems
+*   Fuzzy decision making and decision support systems
+*   Fuzzy logic and fuzzy set theory
+*   Fuzzy optimization and design
+*   Fuzzy pattern recognition
+*   Fuzzy systems for robotics
+*   Game theory
+*   Generative artificial intelligence
+*   Hardware Implementations
+*   Intelligent database systems
+*   Knowledge engineering
+*   Large language models
+*   Machine learning
+*   Modeling and identification
+*   Molecular and quantum computing
+*   Multi-agent systems
+*   Natural language processing
+*   Neural Network Theory and Architectures
+*   Particle swarm optimization
+*   Robotics and related fields
+*   Robust and secure machine learning algorithms
+*   Rough sets and rough data analysis
+*   Speech understanding
+*   Supervised and Unsupervised Learning
+*   Type-2 fuzzy logic
+*   Various Applications
+*   Web intelligence
+*   Human–computer interaction
+"
+req-conf-1752209818190-bdh4r,,Conference for the International Simulation and Gaming Association,ISAGA,https://www.isaga2025.com/,https://www.isaga2025.com/contributing/,https://www.isaga2025.com/contributing/,"Conference dates: July 15 - 18, 2025
+Year: 2025
+Location: Stuttgart, Germany
+City-State-Province: Stuttgart
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Deadline for submitting full papers (scientific papers and best practice papers): February 16, 2025
+Submission Date.Deadline for submitting posters, workshops and outside the box submissions: February 16, 2025
+Notification Date.Notification of acceptance: March 31, 2025
+Camera-ready Date.Deadline for revised papers: May 15, 2025
+Topics: Simulation and Gaming, Artificial intelligence, big data and automation, Augmented and virtual reality, Sustainability and climate change, Resilience and adaptability, City and spatial planning, infrastructure use or development (transport, energy, water…), Urban planning and public participation, New work and organisational development, Society in transition, Innovative social work, Lifelong learning and future skills, Future-oriented learning and teaching in schools, universities and other institutions, Research on facilitation and evaluation, Innovations in the public sector, National and international conflicts, Dealing with crisis and disaster management","July 15 - 18, 2025",2025.0,"Stuttgart, Germany",Stuttgart,Germany,Europe,Offline,"{""Deadline for submitting full papers (scientific papers and best practice papers)"":""February 16, 2025"",""Deadline for submitting posters, workshops and outside the box submissions"":""February 16, 2025""}","{""Notification of acceptance"":""March 31, 2025""}","{""Deadline for revised papers"":""May 15, 2025""}",{},{},"Simulation and Gaming, Artificial intelligence, big data and automation, Augmented and virtual reality, Sustainability and climate change, Resilience and adaptability, City and spatial planning, infrastructure use or development (transport, energy, water…), Urban planning and public participation, New work and organisational development, Society in transition, Innovative social work, Lifelong learning and future skills, Future-oriented learning and teaching in schools, universities and other institutions, Research on facilitation and evaluation, Innovations in the public sector, National and international conflicts, Dealing with crisis and disaster management",No publisher,"The 56th International Simulation and Gaming Association's Conference (ISAGA) will be held in Stuttgart, Germany, from July 15-18, 2025. ISAGA brings together researchers and practitioners from management, social and environmental sciences, education, planning, and technical sciences to discuss simulation, gaming, and related methods. The conference theme is ""Shaping the Future through Simulation and Gaming.""","# ISAGA Conference 2025: Call for Contributions (Closed)
+
+Thank you for over 100 contributions on a big variety of S&G related topics.
+
+The **56th International Simulation and Gaming Association (ISAGA) Conference** will be held from **July 15-18, 2025** in **Stuttgart, Germany**. The theme is **""Shaping the Future through Simulation and Gaming.""**
+
+## Conference Theme
+
+The conference theme is **""Shaping the Future through Simulation and Gaming.""** The conference offers generous space for future-oriented topics and to engage in a dialogue about the role of simulation and gaming in this context.
+
+Submissions on topics with the following focus are particularly welcome:
+
+*   Artificial intelligence, big data and automation
+*   Augmented and virtual reality
+*   Sustainability and climate change
+*   Resilience and adaptability
+*   City and spatial planning, infrastructure use or development (transport, energy, water…)
+*   Urban planning and public participation
+*   New work and organisational development
+*   Society in transition
+*   Innovative social work
+*   Lifelong learning and future skills
+*   Future-oriented learning and teaching in schools, universities and other institutions
+*   Research on facilitation and evaluation
+*   Innovations in the public sector
+*   National and international conflicts
+*   Dealing with crisis and disaster management
+
+The above-mentioned future topics can be considered from a wide variety of simulation and gaming aspects. Be it questions relating to new games and methods, areas of application, facilitation, evaluation etc.
+
+## Types of Contributions
+
+You can submit entries for the following categories. All submissions will be subjected to a quality check and assigned to suitable presentation formats.
+
+*   Scientific Papers
+*   Best Practice Papers
+*   Posters
+*   Workshops
+*   Outside the box
+
+### Scientific Papers
+
+Scientific papers present qualitative or quantitative empirical research and discuss findings. Submissions that offer background research, literature reviews, or theoretical analyses on specific topics are also welcome. Accepted papers will allow for an oral presentation of the work during an interactive paper session.
+
+*   Papers must be written in English
+*   Papers shall be about 6-15 pages including abstract, figures, tables, and references
+*   Abstracts must be within 150-250 words
+*   Paper format must follow the Springer LNCS format.
+*   Please submit your papers in anonymised form via Conftool
+
+### Best Practice Papers
+
+In contrast to scientific papers, this category focuses on contributions with a high practical approach. We welcome experience reports, best practice case studies and other submissions that provide guidance and inspiration for practical applications in the field of gaming and simulation.
+
+*   Papers must be written in English
+*   Papers must be about 4-15 pages, including abstract, figures, tables and references
+*   Abstracts must be within 150-250 words
+
+### Posters
+
+Work and ideas at an early stage can also be submitted as a poster to the conference. During the conference, there will be an opportunity to present the posters and to engage with the conference participants. Abstracts (300-600 words) are required for submission and acceptance as poster presentations.
+
+*   A summary detailing the topic from 300 up to 600 words.
+
+### Workshops
+
+Workshops are interactive events centered on a certain topic, issue or game. They are collaborative and active, not mere presentations. Facilitators invite participants to actively work on a topic or design artefacts or focus on the design, play an exploration of games.
+
+*   The name(s) of the workshop organizer(s)
+*   A summary detailing the topic from 300 up to 600 words
+*   Please include the design, the activity and how it involves participants
+
+### Outside the Box
+
+A format for anyone who is thinking sideways! Dealing with the future means being open to new ideas. Any submissions that cannot be assigned to the classic types of submissions are welcome here. Do you have creative ideas that go beyond classic presentation and workshop formats (i.e. a small game, a new method, a warmup,…)? Then this category is for you!
+
+*   The name(s) of the organizer(s)
+*   A summary detailing the topic from 300 up to 600 words
+*   Please explain the design, including the time frame and spatial requirements and involvement of attendees
+
+## Deadlines
+
+All submissions should be submitted using the conference management system Conftool: [Link to Conftool](https://www.conftool.org/isaga2025/index.php?page=login)
+
+*   Opening of online submission portal – **October 15, 2024**
+*   Deadline for submitting full papers (scientific papers and best practice papers) – **February 16, 2025**
+*   Deadline for submitting posters, workshops and outside the box submissions – **February 16, 2025**
+*   Notification of acceptance – **March 31, 2025**
+*   Deadline for revised papers – **May 15, 2025**
+"
+req-conf-1752209818190-bdh4r,,International Symposium on Software Reliability Engineering,ISSRE,https://issre.github.io/2025/,https://issre.github.io/2025/calls_cfp-research.html,https://issre.github.io/2025/important-dates.html,"Conference dates: October 21 - 24, 2025
+Year: 2025
+Location: São Paulo, Brazil
+City-State-Province: São Paulo
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.(Research Track) Abstract submission deadline: May 5, 2025
+Submission Date.(Research Track) Paper submission deadline: May 12, 2025
+Submission Date.(Workshops) Workshop proposal deadline: May 15, 2025
+Submission Date.(Workshops) Workshop paper submission deadline: July 21, 2025
+Submission Date.(Industry Track) Abstract submission deadline: July 3, 2025
+Submission Date.(Industry Track) Full / short paper submission deadline: July 12, 2025
+Submission Date.(Doctoral Symposium Papers) Deadline for Submissions: July 13, 2025
+Submission Date.(Journal First, Conference Second (J1C2)) J1C2 paper submission deadline: July 16, 2025
+Submission Date.(Fast Abstracts) Submission Deadline: July 31, 2025
+Submission Date.(Artifacts) Artifact Evaluation submission: August 19, 2025
+Notification Date.(Research Track) Early decisions: June 30, 2025
+Notification Date.(Research Track) Notification to authors: July 18, 2025
+Notification Date.(Workshops) Workshop proposal notification: May 22, 2025
+Notification Date.(Workshops) Workshop paper notification to authors: August 11, 2025
+Notification Date.(Industry Track) Notification to authors: August 12, 2025
+Notification Date.(Doctoral Symposium Papers) Notification of Acceptance: August 8, 2025
+Notification Date.(Journal First, Conference Second (J1C2)) J1C2 notification deadline: August 8, 2025
+Notification Date.(Fast Abstracts) Notification to Authors: August 14, 2025
+Notification Date.(Artifacts) Artifact Evaluation notification: September 21, 2025
+Camera-ready Date.(Research Track) Camera ready papers: August 19, 2025
+Camera-ready Date.(Workshops) Camera ready papers: August 18, 2025
+Camera-ready Date.(Industry Track) Camera-ready deadline: August 19, 2025
+Camera-ready Date.(Doctoral Symposium Papers) Camera-ready copy paper: August 15, 2025
+Camera-ready Date.(Fast Abstracts) Camera-ready Papers Due: August 23, 2025
+Other Date.(Research Track) Author rebuttal period: June 30 - July 6, 2025
+Topics: Software Reliability, Security, Safety
+Publisher: IEEE Computer Society","October 21 - 24, 2025",2025.0,"São Paulo, Brazil",São Paulo,Brazil,South America,Offline,"{""(Research Track) Abstract submission deadline"":""May 5, 2025"",""(Research Track) Paper submission deadline"":""May 12, 2025"",""(Workshops) Workshop proposal deadline"":""May 15, 2025"",""(Workshops) Workshop paper submission deadline"":""July 21, 2025"",""(Industry Track) Abstract submission deadline"":""July 3, 2025"",""(Industry Track) Full / short paper submission deadline"":""July 12, 2025"",""(Doctoral Symposium Papers) Deadline for Submissions"":""July 13, 2025"",""(Journal First, Conference Second (J1C2)) J1C2 paper submission deadline"":""July 16, 2025"",""(Fast Abstracts) Submission Deadline"":""July 31, 2025"",""(Artifacts) Artifact Evaluation submission"":""August 19, 2025""}","{""(Research Track) Early decisions"":""June 30, 2025"",""(Research Track) Notification to authors"":""July 18, 2025"",""(Workshops) Workshop proposal notification"":""May 22, 2025"",""(Workshops) Workshop paper notification to authors"":""August 11, 2025"",""(Industry Track) Notification to authors"":""August 12, 2025"",""(Doctoral Symposium Papers) Notification of Acceptance"":""August 8, 2025"",""(Journal First, Conference Second (J1C2)) J1C2 notification deadline"":""August 8, 2025"",""(Fast Abstracts) Notification to Authors"":""August 14, 2025"",""(Artifacts) Artifact Evaluation notification"":""September 21, 2025""}","{""(Research Track) Camera ready papers"":""August 19, 2025"",""(Workshops) Camera ready papers"":""August 18, 2025"",""(Industry Track) Camera-ready deadline"":""August 19, 2025"",""(Doctoral Symposium Papers) Camera-ready copy paper"":""August 15, 2025"",""(Fast Abstracts) Camera-ready Papers Due"":""August 23, 2025""}",{},"{""(Research Track) Author rebuttal period"":""June 30 - July 6, 2025""}","Software Reliability, Security, Safety",IEEE Computer Society,"The 36th IEEE International Symposium on Software Reliability Engineering (ISSRE 2025) will be held in São Paulo, Brazil, from October 21-24, 2025. ISSRE is a leading conference focusing on approaches, techniques, and tools for assessing, predicting, and improving the reliability, safety, and security of software systems. The conference features several tracks, including research, industry, journal first-conference second, fast abstracts, doctoral symposium, and artifacts.","# ISSRE 2025: Call for Papers - Research Track
+
+The 36th IEEE International Symposium on Software Reliability Engineering (ISSRE) is the leading conference on software reliability, focusing on approaches, techniques, and tools for assessing, predicting, and improving the reliability, safety, and security of software systems.
+
+ISSRE 2025 introduces ***Early Decisions***. At the beginning of the author response period, authors will be notified with the following outcomes: ""Accept"", ""Reject"", or ""Response Recommended"".
+
+The research track at ISSRE 2025 invites high-quality submissions of technical research papers describing original and unpublished results exploring new scientific ideas, contributing new evidence to established research directions, or reflecting on practical experience. ISSRE solicits submissions in three categories: (1) full research regular (REG) papers, (2) practical experience reports (PER), and (3) tools and artefacts (TAR) papers.
+
+## Paper Categories
+
+Submissions can be made in one of the following categories:
+
+*   **REG papers:** 12 pages (including references).
+*   **PER papers:** 12 pages (including references).
+*   **TAR papers:** 6 - 10 pages (including references).
+
+Papers that exceed the number of pages for that submission category will be rejected without review.
+
+## Topics of Interest
+
+Topics of interest include development, analysis methods, and models throughout the software development lifecycle, including but not limited to:
+
+*   Dependability attributes (i.e., security, safety, maintainability, survivability, resilience, robustness) impacting software reliability
+*   Reliability threats, i.e. faults (defects, bugs, etc.), errors, failures
+*   Reliability means (fault prevention, fault removal, fault tolerance, fault forecasting)
+*   Software testing and formal methods
+*   Software fault localization, debugging, root-cause analysis
+*   Metrics, measurements and threat estimation for reliability prediction and the interplay with safety/security
+*   Reliability of autonomous systems and (self-)adaptive systems
+*   Reliability of AI-based systems, AI for Reliability Engineering
+*   Reliability of Large Language/Foundational Model (LLM) and LLM for software reliability
+*   Reliability of software services and Software as a Service (SaaS)
+*   Reliability of model-based and auto-generated software
+*   Reliability of open-source software
+*   Reliability of software dealing with Big Data
+*   Reliability of green and sustainable systems
+*   Reliability of mobile systems
+*   Reliability of software within specific technological spaces (e.g., Internet of Things, Cloud, Semantic Web/Web 3.0, Virtualization, Blockchain, networks softwarization, 5G/6G, edge-to-cloud computing)
+*   Normative/regulatory/ethical spaces about software reliability
+*   Societal aspects of software reliability
+
+## Anonymizing Rules
+
+Authors shall anonymize their papers, not identifying themselves either explicitly or by implication. Follow the guidelines provided in the call for papers document.
+
+## Formatting Rules
+
+Submissions must adhere to the IEEE Computer Society Format Guidelines as implemented by the following LaTeX/Word templates:
+
+*   [LaTex Package (ZIP)](https://www.ieee.org/conferences/publishing/templates.html)
+*   [Word Template (DOCX)](https://www.ieee.org/conferences/publishing/templates.html)
+
+Each paper must be submitted as a single Portable Document Format (PDF) file. All fonts must be embedded.
+
+## Paper Submission
+
+Papers are submitted via Easychair at the following URL: [https://easychair.org/conferences/?conf=issre2025](https://easychair.org/conferences/?conf=issre2025)
+
+Submissions will be reviewed by the program committee through a double-blind reviewing process.
+
+## Review Process and Author Response
+
+After the papers have been reviewed, the reviews will be made available to the authors to respond to any factual errors in the reviews.
+
+***NEW IN 2025: Early Decisions***
+
+ISSRE 2025 is introducing early decisions to reduce the burden of author responses.
+
+## Important Dates
+
+*   **Abstract submission deadline:** May 5th 2025 (AoE)
+*   **Paper submission deadline:** May 12th 2025 (AoE)
+*   **Early decisions:** June 30th, 2025 (AoE)
+*   **Author rebuttal period:** June 30th-July 6th, 2025 (AoE)
+*   **Notification to authors:** July 18th, 2025 (AoE)
+*   **Camera ready papers:** August 19th, 2025 (AoE)
+
+## Best Research Paper Award
+
+ISSRE is pleased to announce the Best Research Paper Award, attributed every year to the best paper in the Research Track.
+
+## Conference Proceedings
+
+The conference proceedings will be published by IEEE Computer Society Conference Publishing Services (CPS).
+
+## IEEE Conference Publishing Policies
+
+All submissions must adhere to IEEE Conference Publishing Policies.
+
+## Special Issues
+
+Authors of accepted papers will be invited to submit an extended version of their work to a special issue of the Empirical Software Engineering (EMSE) journal."
+req-conf-1752209818190-bdh4r,,Body Sensor Networks,BSN,https://bsn.embs.org/2025/,https://bsn.embs.org/2025/contributors/papers/,,"Conference dates: November 3 - 5, 2025
+Year: 2025
+Location: Los Angeles, California, United States
+City-State-Province: Los Angeles, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.Workshop Proposal Deadline: June 15, 2025
+Submission Date.Paper Submission Deadline: July 11, 2025
+Submission Date.Abstract, Clinical abstracts, and Demo Submission Deadline: July 11, 2025
+Submission Date.Late Breaking Abstract Deadline: August 10, 2025
+Notification Date.Workshop Acceptance Notification: June 29, 2025
+Notification Date.Paper Acceptance Notification: August 1, 2025
+Notification Date.Abstract Acceptance Notification: August 1, 2025
+Notification Date.Late Breaking Abstract Notification: August 24, 2025
+Camera-ready Date.Camera-Ready Deadline: September 1, 2025
+Topics: Computational Medicine, Sensing, AI, Novel digital health solutions (sensors and algorithms) for diagnosis, disease progress tracking, and self-management, Sensors and systems for digital health, wellness, and athletics, Conformable decoders: unintrusive, comfortable, self-powered sensors and systems, Flexible, stretchable, and imperceptible electronics for sensors and systems, Contact-less solutions for human sensing, Power-optimization for implantable and wearable sensors and systems, Wearable robotics system for digital healthcare, Signal processing, machine learning, deep learning, and decision-support algorithms, Adaptive, personalized intervention systems by closing the loop between technologies and humans, Security, privacy, and trust in digital health technologies, Optimization and personalization for digital health technologies and outcomes, Human-centered design for digital healthcare to address real-world stakeholder needs, Emerging topics such as Agentic AI and LLMs for computational health
+Publisher: IEEE Engineering in Medicine and Biology Society","November 3 - 5, 2025",2025.0,"Los Angeles, California, United States","Los Angeles, California",United States,North America,Offline,"{""Workshop Proposal Deadline"":""June 15, 2025"",""Paper Submission Deadline"":""July 11, 2025"",""Abstract, Clinical abstracts, and Demo Submission Deadline"":""July 11, 2025"",""Late Breaking Abstract Deadline"":""August 10, 2025""}","{""Workshop Acceptance Notification"":""June 29, 2025"",""Paper Acceptance Notification"":""August 1, 2025"",""Abstract Acceptance Notification"":""August 1, 2025"",""Late Breaking Abstract Notification"":""August 24, 2025""}","{""Camera-Ready Deadline"":""September 1, 2025""}",{},{},"Computational Medicine, Sensing, AI, Novel digital health solutions (sensors and algorithms) for diagnosis, disease progress tracking, and self-management, Sensors and systems for digital health, wellness, and athletics, Conformable decoders: unintrusive, comfortable, self-powered sensors and systems, Flexible, stretchable, and imperceptible electronics for sensors and systems, Contact-less solutions for human sensing, Power-optimization for implantable and wearable sensors and systems, Wearable robotics system for digital healthcare, Signal processing, machine learning, deep learning, and decision-support algorithms, Adaptive, personalized intervention systems by closing the loop between technologies and humans, Security, privacy, and trust in digital health technologies, Optimization and personalization for digital health technologies and outcomes, Human-centered design for digital healthcare to address real-world stakeholder needs, Emerging topics such as Agentic AI and LLMs for computational health",IEEE Engineering in Medicine and Biology Society,"The IEEE-EMBS International Conference on Body Sensor Networks (BSN 2025) will be held in Los Angeles, California, USA from November 3–5, 2025. The conference theme is ""Computational Medicine: Expanding Health through Sensing and AI."" It will bring together leaders and experts in academia, industry, healthcare, and non-profit organizations to discuss digital health research. The conference accepts 4-page technical papers, 1-page demo or poster abstracts, and 1-page clinical abstracts.","# IEEE-EMBS International Conference on Body Sensor Networks (BSN) 2025 - Call for Technical Papers
+
+The IEEE-EMBS International Conference on Body Sensor Networks (BSN) 2025 will be held in **Los Angeles, California, USA** on **November 3 – 5, 2025**.
+
+BSN’25’s theme is **“Computational Medicine: Expanding Health through Sensing and AI.”** The conference will bring together leaders and experts in academia, industry, healthcare, and non-profit organizations to provide a cross-disciplinary, highly selective, single-track forum for research in digital health.
+
+## Submission Details
+
+*   BSN 2025 will accept **4-page technical papers**, **1-page demo or poster abstracts**, and **1-page clinical abstracts** (all page limits include references).
+*   Papers are required to follow the conference template format: [IEEE Conference template](https://www.ieee.org/conferences/publishing/templates.html).
+*   BSN adopts a single-blind review process, allowing authors to include their names and affiliations in the submission.
+*   Submit your 4-page technical paper here: [https://openreview.net/group?id=IEEE.org/EMBS/BSN/2025/Conference](https://openreview.net/group?id=IEEE.org/EMBS/BSN/2025/Conference)
+
+## Highlights
+
+*   Accepting 4-page technical papers, 1-page technical abstracts, and 1-page clinical abstracts.
+*   Best paper, poster, and demo awards recognizing excellent contributions.
+*   Excellent papers will be invited for extension and rapid review at the IEEE Open Journal of Engineering in Medicine and Biology.
+*   Student Travel Awards will be provided to selected students from worldwide institutions.
+*   Featuring interactive expert panels.
+
+## Topics of Interest
+
+Topics of Interest included but are not limited to:
+
+*   Novel digital health solutions (i.e., sensors and algorithms) for diagnosis, disease progress tracking, and self-management.
+*   Sensors and systems for digital health, wellness, and athletics.
+*   Conformable decoders: unintrusive, comfortable, self-powered sensors and systems.
+*   Flexible, stretchable, and imperceptible electronics for sensors and systems.
+*   Contact-less solutions for human sensing.
+*   Power-optimization for implantable and wearable sensors and systems.
+*   Wearable robotics system for digital healthcare.
+*   Signal processing, machine learning, deep learning, and decision-support algorithms.
+*   Adaptive, personalized intervention systems by closing the loop between technologies and humans.
+*   Security, privacy, and trust in digital health technologies.
+*   Optimization and personalization for digital health technologies and outcomes.
+*   Human-centered design for digital healthcare to address real-world stakeholder needs.
+*   Emerging topics such as Agentic AI and LLMs for computational health
+
+## Important Dates
+
+*   Workshop Proposal Deadline: ~~June 1, 2025~~ June 15, 2025
+*   Workshop Acceptance Notification: ~~June 15, 2025~~ June 29, 2025
+*   Paper Submission Deadline: ~~June 8, 2025~~ July 11, 2025
+*   Abstract, Clinical abstracts, and Demo Submission Deadline: ~~June 8, 2025~~ July 11, 2025
+*   Paper Acceptance Notification: August 1, 2025
+*   Abstract Acceptance Notification: August 1, 2025
+*   Late Breaking Abstract Deadline: August 10, 2025
+*   Late Breaking Abstract Notification: August 24, 2025
+*   Camera-Ready Deadline: September 1, 2025
+*   Conference: November 3-5, 2025
+
+All deadlines are 11:59 pm AoE.
+"
+req-conf-1752209818190-bdh4r,,Conference on Innovative Data Systems Research,CIDR,https://www.cidrdb.org/cidr2026/,https://www.cidrdb.org/cidr2026/cfp.html,,"Conference dates: January 18 - 21, 2026
+Year: 2026
+Location: Chaminade Resort & Spa, Santa Cruz, California, United States
+City-State-Province: Santa Cruz, California
+Country: United States
+Continent: North America
+Type: Offline
+Submission Date.submission deadline for all contributions: August 5, 2025
+Notification Date.author notification for all contributions: October 6, 2025
+Topics: Data management systems, systems architecture, cloud based systems for data processing, data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies for data management and system building
+Publisher: VLDB Endowment","January 18 - 21, 2026",2026.0,"Chaminade Resort & Spa, Santa Cruz, California, United States","Santa Cruz, California",United States,North America,Offline,"{""submission deadline for all contributions"":""August 5, 2025""}","{""author notification for all contributions"":""October 6, 2025""}",{},{},{},"Data management systems, systems architecture, cloud based systems for data processing, data storage, networking, hardware acceleration, custom processors, memory hierarchies, processor interconnects, ML/AI technologies for data management and system building",VLDB Endowment,"The Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference, emphasizing data systems architecture. CIDR 2026 will be held at Chaminade Resort & Spa in Santa Cruz, California, from January 18-21, 2026. The conference invites submissions on novel approaches to data management systems, architecture, and usage.","# CIDR 2026: Call for Papers
+
+The Conference on Innovative Data Systems Research (CIDR) is a systems-oriented conference that emphasizes the systems architecture perspective within data management. CIDR 2026 will be held from **January 18-21, 2026**, at Chaminade, USA.
+
+## Overview
+
+CIDR gathers researchers and practitioners from both academia and industry to discuss innovative and visionary ideas in the field of data management.
+
+CIDR encourages contributions about innovative and risky data management system architecture ideas, systems-building experience and insights, resourceful experimental studies, and provocative position statements. CIDR especially values innovation, experience-based insight, and vision.
+
+## Important Dates
+
+(all deadlines are 11:59pm Pacific Time)
+
+*   **Submission deadline for all contributions:** August 5th, 2025
+*   **Author notification for all contributions:** October 6th, 2025
+*   **Conference:** January 18-21, 2026
+
+## Contributions
+
+CIDR 2026 invites two kinds of contributions:
+
+*   **Papers** (at most 6 pages): Regular research papers and visionary papers promoting interesting ideas and ongoing work.
+*   **Demos** (at most 6 pages): A video or a description of the demo.
+
+To encourage authors to submit only their best work, each person can be an author or co-author of at most one submission of any kind. Demos and papers will be interweaved in a single-tracked program.
+
+## Submission
+
+Papers should be electronically submitted in PDF format to [CMT](https://cmt3.research.microsoft.com/CIDR2026).
+
+Conference submissions must be formatted using the double-column ACM sigconf style (see the [ACM Template](https://www.acm.org/publications/proceedings-template)), and must not exceed 6 pages in length including all references and appendix. Videos can be submitted in HTML or MPEG format.
+
+Final versions of accepted submissions will be published in the electronic proceedings of the CIDR conference and by the VLDB Endowment.
+
+## Camera-Ready Guidelines
+
+Camera-ready papers need to follow the formatting instructions and include the following copyright notice at the bottom left of the first page:
+
+> This paper is published under the Creative Commons Attribution 4.0 International (CC-BY 4.0) license. Authors reserve their rights to disseminate the work on their personal and corporate Web sites with the appropriate attribution, provided that you attribute the original work to the authors and CIDR 2026. 16th Annual Conference on Innovative Data Systems Research (CIDR '26). January 18-21, 2026, Chaminade, USA.
+
+*   [LaTeX style file](cidr-2026.cls)
+*   [Word template file](pubform-CIDR2026.docx)
+
+## Diversity and Inclusion
+
+Please refer to [D&I in DB](https://dbdiversity.org/) for the details of the coordinated D&I efforts across our community. Follow the D&I writing instructions when drafting the paper submissions."
+req-conf-1752209818190-bdh4r,,Conference on Games,COG,https://cog2025.inesc-id.pt/,https://cog2025.inesc-id.pt/call-for-papers/,,"Conference dates: August 26 - 29, 2025
+Year: 2025
+Location: Técnico Innovation Center, Instituto Superior Técnico, Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(Call for Auxiliary Papers): May 30, 2025
+Submission Date.(Call for Full Papers): March 15, 2025
+Submission Date.(Call for Competitions): January 19, 2025
+Submission Date.(Call for Tutorials): January 19, 2025
+Submission Date.(Call for Workshops): January 19, 2025
+Notification Date.(Full papers) acceptance notification: May 16, 2025
+Camera-ready Date.(Full papers): June 13, 2025
+Camera-ready Date.(Auxiliary papers): July 11, 2025
+Topics: Accessibility and inclusivity in games, AI for game development, Esports and live-streaming, Extended reality (virtual reality, mixed reality, and augmented reality), Game AI, Game analytics, game data science, and data visualization, Games as test-beds for algorithms, Game design (frameworks, game mechanics, etc.), Game editors and authoring tools, Game technology (game engines, graphics, audio, animation, physics, controls, etc.), Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.), Generative AI for games, Procedural content generation, Serious/applied games (for education, health, sustainability, etc.), User interfaces in game
+Publisher: IEEE","August 26 - 29, 2025",2025.0,"Técnico Innovation Center, Instituto Superior Técnico, Lisbon, Portugal",Lisbon,Portugal,Europe,Offline,"{""(Call for Auxiliary Papers)"":""May 30, 2025"",""(Call for Full Papers)"":""March 15, 2025"",""(Call for Competitions)"":""January 19, 2025"",""(Call for Tutorials)"":""January 19, 2025"",""(Call for Workshops)"":""January 19, 2025""}","{""(Full papers) acceptance notification"":""May 16, 2025""}","{""(Full papers)"":""June 13, 2025"",""(Auxiliary papers)"":""July 11, 2025""}",{},{},"Accessibility and inclusivity in games, AI for game development, Esports and live-streaming, Extended reality (virtual reality, mixed reality, and augmented reality), Game AI, Game analytics, game data science, and data visualization, Games as test-beds for algorithms, Game design (frameworks, game mechanics, etc.), Game editors and authoring tools, Game technology (game engines, graphics, audio, animation, physics, controls, etc.), Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.), Generative AI for games, Procedural content generation, Serious/applied games (for education, health, sustainability, etc.), User interfaces in game",IEEE,"The IEEE Conference on Games (IEEE CoG) is a premier venue for technical, scientific, and engineering work on video games, board games, and other types of games. IEEE CoG 2025 will take place at Técnico Innovation Center, located in Instituto Superior Técnico in Lisbon, Portugal, from August 26th to 29th. The conference invites submissions related to all aspects of games and game development.","# IEEE CoG 2025: Call for Papers
+
+The annual IEEE Conference on Games (IEEE CoG) is a leading scientific research venue for game researchers and practitioners. Games are a great domain in which to study and develop novel ideas in design, artificial intelligence, human-computer interaction, psychology, education, sociology, and creativity, as well as their applications in real-world problems. IEEE CoG 2025 will take place at the **University of Lisbon in Lisbon, Portugal**.
+
+## Topics of Interest
+
+We invite contributions related to all aspects of games and game development, including, but not limited to:
+
+*   Accessibility and inclusivity in games (e.g., computer games, board games, LARPs)
+*   AI for game development (automated playtesting, adaptation/personalization in games, etc.)
+*   Esports and live-streaming
+*   Extended reality (virtual reality, mixed reality, and augmented reality)
+*   Game AI
+*   Game analytics, game data science, and data visualization
+*   Games as test-beds for algorithms
+*   Game design (frameworks, game mechanics, etc.)
+*   Game editors and authoring tools
+*   Game technology (game engines, graphics, audio, animation, physics, controls, etc.)
+*   Game user research (player/opponent modeling, player experience studies, psychology of play and player types, etc.)
+*   Generative AI for games
+*   Procedural content generation
+*   Serious/applied games (for education, health, sustainability, etc.)
+*   User interfaces in game
+
+**Please note:** CoG is not a conference about game theory and does not accept papers about game theory unless they are applied to games people would play, such as video games or board games.
+
+## Submission Tracks
+
+We invite authors to choose from six tracks:
+
+1.  AI and Game-playing
+2.  Procedural Content Generation (PCG)
+3.  Designing Games, Serious Games and Playful Experience
+4.  Game Technology
+5.  Game HCI, Player Experience, Game Analytics, e-sports
+6.  Robots in Games
+
+The authors should select the track that best matches the expertise needed to assess your research and that you believe will most fully appreciate the contribution of your paper to the field of games research. Descriptions for each track are listed below.
+
+### Track Descriptions
+
+*   **AI and Game-playing:**
+    *   This track is suitable for computational and artificial intelligence applications in digital and non-digital games, except for procedural content generation (see below). Topics include but are not limited to general game-playing AI, mixed-initiative authoring tools, believable agents, and AI-assisted game design and testing.
+    *   Track chairs: Diego-Perez Liebana (diego.perez@qmul.ac.uk) and Kyung-Joong Kim (kjkim@gist.ac.kr)
+*   **Procedural Content Generation (PCG):**
+    *   This track focuses on advancing research on developing and evaluating algorithms that automatically create game design and content such as levels, maps, characters, stories, textures, and music. We welcome theoretical papers on the subject.
+    *   Track chairs: Antonios Liapis (an.liapis@gmail.com) and Ahmed Khalifa (ahmed.khalifa@um.edu.mt)
+*   **Designing Games, Serious Games and Playful Experience:**
+    *   This track welcomes papers that make a designerly contribution to games, playful interaction, and other playable media. We welcome a broad range of submissions that aim to advance practical or theoretical understanding of designing games, playful interactions, and player experience in various contexts.
+    *   Track chairs: Casper Harteveld (c.harteveld@northeastern.edu)
+*   **Game Technology:**
+    *   This track invites papers that improve the technical aspects of game design and development besides AI and robotics. Typical contributions include game engines, benchmarks, computer graphics techniques, animation, networking, and novel interaction technology (e.g., XR and alternative control). If the main contribution of a paper is designing playful experiences enabled by novel technology, it should be submitted to the design track. Papers about game competitions are also a good fit for this track.
+    *   Track chairs: Christopher Salge (C.Salge@herts.ac.uk) and Johannes Pfau (j.pfau@uu.nl)
+*   **Game HCI, Player Experience, Game Analytics, e-sports:**
+    *   This track is suitable for submissions that seek to understand people in the context of play. Example topics include player experience evaluation (player psychology, games user research, and game analytics), the study of player and developer communities, and understanding humans in the context of play.
+    *   Track chairs: Alessandro Canossa (acan@kglakademi.dk) and Erica Kleinman (e.kleinman@northeastern.edu)
+
+## Submission Instructions
+
+CoG will use a **double-blind** review process. Authors must omit their names and affiliations from their submissions and avoid obvious identifying statements. Submissions not abiding by anonymity requirements will be desk rejected.
+
+Papers and Auxiliary papers must be submitted through the Easychair conference submission system: [https://easychair.org/conferences/?conf=cog2025](https://easychair.org/conferences/?conf=cog2025).
+
+All paper submissions should follow the recommended IEEE conference author guidelines. MS Word and LaTeX templates can be found at: [https://www.ieee.org/conferences_events/conferences/publishing/templates.html](https://www.ieee.org/conferences_events/conferences/publishing/templates.html)
+
+All submitted papers will be fully peer-reviewed, and accepted papers will be published in the conference proceedings and on IEEE Xplore.
+
+Short papers may be allocated to either poster presentations or short oral presentations if time and space permit. Demo papers will be allocated to a demo session. Competition papers will be allocated to oral presentations.
+
+## Important Dates
+
+All deadlines are **Anytime on Earth (AoE)**
+
+*   **Call for Full Papers:** March 15, 2025
+*   **Call for Competitions:** January 19, 2025
+*   **Call for Tutorials:** January 19, 2025
+*   **Call for Workshops:** January 19, 2025
+*   **Call for Auxiliary Papers:** May 30, 2025
+
+## Camera Ready Instructions
+
+Here are the steps to generate and submit your camera-ready paper:
+
+1.  Create an account at IEEE PDF eXpress: [https://ieee-pdf-express.org/account/Login](https://ieee-pdf-express.org/account/Login) using the Conference ID: **64752X**
+2.  Upload your manuscript and generate your IEEE Xplore-Compatible PDF. Ensure that your IEEE Xplore-Compatible PDF complies with the IEEE guidelines, as described here: [https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress](https://ieee-pdf-express.org/External/UsingIEEEPDFeXpress)
+3.  Log in to EasyChair using your account and go to your proceedings author page.
+4.  Upload your final IEEE Xplore-Compatible PDF via EasyChair.
+5.  Complete the IEEE Copyright Agreement in the link provided via email.
+"
+req-conf-1752209818190-bdh4r,,"International Conference on Broadband Communications, Networks and Systems",Broadnets,https://broadnets.eai-conferences.org/2025/,https://broadnets.eai-conferences.org/2025/call-for-paper/,,"Conference dates: August 14 - 16, 2025
+Year: 2025
+Location: Sunyani, Ghana
+City-State-Province: Sunyani
+Country: Ghana
+Continent: Africa
+Type: Offline
+Submission Date.Full Paper Submission deadline: April 15, 2025
+Submission Date.(Poster Track) Full Paper Submission deadline: July 10, 2024
+Submission Date.(Late Track) Full Paper Submission deadline: May 23, 2025
+Notification Date.Notification deadline: May 10, 2025
+Notification Date.(Poster Track) Notification deadline: August 1, 2024
+Notification Date.(Late Track) Notification deadline: August 1, 2024
+Camera-ready Date.Camera-ready deadline: June 14, 2025
+Camera-ready Date.(Poster Track) Camera-ready deadline: August 20, 2024
+Camera-ready Date.(Late Track) Camera-ready deadline: August 20, 2024
+Topics: 5G/6G and Use Cases of 5G/6G Systems, Software-Defined Networking (SDN)-Enabled Systems, Internet of Things (IoT)-Enabled Smart Systems, Cloud-to-Things Systems, Edge Cooperative Computing and Fog Computing, Vehicular Networks, Smart City and Smart Grid Applications, Digital Twin Technology, Speech and Signal Processing for secure communications, speech enhancement, audio analytics, and intelligent voice-based applications, Distributed Systems Security, Trust and Access Control, Data Privacy and Integrity
+Publisher: Springer","August 14 - 16, 2025",2025.0,"Sunyani, Ghana",Sunyani,Ghana,Africa,Offline,"{""Full Paper Submission deadline"":""April 15, 2025"",""(Poster Track) Full Paper Submission deadline"":""July 10, 2024"",""(Late Track) Full Paper Submission deadline"":""May 23, 2025""}","{""Notification deadline"":""May 10, 2025"",""(Poster Track) Notification deadline"":""August 1, 2024"",""(Late Track) Notification deadline"":""August 1, 2024""}","{""Camera-ready deadline"":""June 14, 2025"",""(Poster Track) Camera-ready deadline"":""August 20, 2024"",""(Late Track) Camera-ready deadline"":""August 20, 2024""}",{},{},"5G/6G and Use Cases of 5G/6G Systems, Software-Defined Networking (SDN)-Enabled Systems, Internet of Things (IoT)-Enabled Smart Systems, Cloud-to-Things Systems, Edge Cooperative Computing and Fog Computing, Vehicular Networks, Smart City and Smart Grid Applications, Digital Twin Technology, Speech and Signal Processing for secure communications, speech enhancement, audio analytics, and intelligent voice-based applications, Distributed Systems Security, Trust and Access Control, Data Privacy and Integrity",Springer,"The International Conference on Broadband Communications, Networks and Systems (Broadnets) 2025, held in Sunyani, Ghana, from August 14-16, 2025, focuses on cutting-edge research and technological advancements in next-generation communication networks, artificial intelligence-driven security mechanisms, and intelligent systems. The conference provides a platform for researchers, industry professionals, and policymakers to explore innovative solutions in areas such as 5G/6G networks, IoT-enabled smart systems, cybersecurity, and edge computing.","# Broadnets 2025: Call for Papers
+
+The 16th International Conference on Broadband Communications, Networks, and Systems will be held in **Sunyani, Ghana** from **August 14-16, 2025**.
+
+Submit your paper: [https://confyplus.eai.eu/app#conftrack-overview/cid/53721](https://confyplus.eai.eu/app#conftrack-overview/cid/53721)
+
+## Scope and Topics
+
+Broadnets 2025 focuses on cutting-edge research and technological advancements in next-generation communication networks, artificial intelligence-driven security mechanisms, and intelligent systems. It aims to provide a platform for researchers, industry professionals, and policymakers to explore innovative solutions in 5G/6G networks, IoT-enabled smart systems, speech and signal processing, cybersecurity, and edge computing.
+
+We seek novel, innovative, and exciting work in areas including but not limited to:
+
+*   5G/6G and Use Cases of 5G/6G Systems
+*   Software-Defined Networking (SDN)-Enabled Systems
+*   Internet of Things (IoT)-Enabled Smart Systems
+*   Cloud-to-Things Systems
+*   Edge Cooperative Computing and Fog Computing
+*   Vehicular Networks
+*   Smart City and Smart Grid Applications
+*   Digital Twin Technology
+*   Speech and Signal Processing for secure communications, speech enhancement, audio analytics, and intelligent voice-based applications
+*   Distributed Systems Security
+*   Trust and Access Control
+*   Data Privacy and Integrity
+
+## Important Dates
+
+*   **Full Paper Submission deadline:** April 15th, 2025
+*   **Notification deadline:** May 10th, 2025
+*   **Camera-ready deadline:** June 14th, 2025
+
+### Late Track
+
+*   **Full Paper Submission deadline:** July 10th, 2024
+*   **Notification deadline:** August 1st, 2024
+*   **Camera-ready deadline:** August 20th, 2024
+
+## Publication
+
+All registered papers will be submitted for publishing by Springer and made available through SpringerLink Digital Library.
+
+Proceedings will be submitted for inclusion in leading indexing services, such as Web of Science, Compendex, Scopus, DBLP, EU Digital Library, Google Scholar, IO-Port, MathSciNet, Inspec, and Zentralblatt MATH.
+
+Authors of selected papers will be invited to submit an extended version to:
+
+*   Springer Wireless Networks (WINET) Journal [IF: 2.1 (2023)]
+
+All accepted authors are eligible to submit an extended version in a fast track of:
+
+*   EAI Endorsed Transactions on Mobile Communications and Applications
+
+Authors have the opportunity to publish their articles in the EAI Endorsed Transactions journal selected by the conference (Scopus, Ei-indexed, ESCI-WoS, Compendex) by paying an additional $150, discounted from the standard $250 rate for conference authors.
+
+*   EAI Endorsed Transactions on Scalable Information Systems (ESCI-WoS, Compendex)
+
+The article’s publication is subject to the following requirements:
+
+*   It must be an extended version of the conference paper with a different title and abstract. In general, 30% of new content must be added.
+*   The article will be processed once the conference proceedings have been published.
+*   The article will be processed using the fast-track option.
+*   Once the conference proceedings are published, the corresponding author should contact us at publications@eai.eu with the details of their article to begin processing.
+
+Additional publication opportunities:
+
+*   EAI Transactions series (Open Access)
+*   EAI/Springer Innovations in Communications and Computing Book Series (titles in this series are indexed in Ei Compendex, Web of Science & Scopus)
+
+## Submission Guidelines
+
+### How to Submit a Paper in Confy:
+
+1.  Go to Confy+ website.
+2.  Log in or sign up as a new user.
+3.  Select your desired track.
+4.  Click the ‘Submit Paper’ link within the track and follow the instructions.
+
+Alternatively, go to the Confy+ homepage and click on “Open Conferences.”
+
+### Submission Guidelines:
+
+*   All papers must be submitted in English.
+*   Previously published work cannot be submitted, nor can it be concurrently submitted to any other conference or journal. These papers will be rejected without review.
+*   Papers must follow the Springer formatting guidelines (available in the Author’s Kit section).
+*   Authors must read and agree to the Publication Ethics and Malpractice Statement.
+*   As per new EU accessibility requirements, going forward, all figures, illustrations, tables, and images should have descriptive text accompanying them. Please refer to the document below, which will assist you in crafting Alternative Text (Alt Text)
+    [HOW TO WRITE GOOD ALT TEXT](https://eai.eu/wp-content/uploads/2025/06/How-to-Write-Good-Alt-Text-2.pdf)
+
+## Paper Submission
+
+Papers should be submitted through EAI ‘Confy+‘ system, and have to comply with the Springer format (see Author’s kit section).
+
+*   Regular papers should be up to 12-15+ pages in length.
+*   Short papers should be 6-11 pages in length.
+
+All conference papers undergo a thorough peer review process prior to the final decision and publication.
+
+## Author’s kit – Instructions and Templates
+
+Papers must be formatted using the Springer LNICST Authors’ Kit.
+
+Instructions and templates are available from Springer’s LNICST homepage:
+
+*   [LaTeX2e Proceedings Templates (zip)](https://resource-cms.springernature.com/springer-cms/rest/resource/17546040/content/v1/SAMPLE-LNCS.zip)
+*   [Microsoft Word Proceedings Templates (zip)](https://resource-cms.springernature.com/springer-cms/rest/resource/17546042/content/v1/WORD-LNCS.zip)
+
+Please make sure that your paper adheres to the format as specified in the instructions and templates.
+
+When uploading the camera-ready copy of your paper, please be sure to upload both:
+
+*   a PDF copy of your paper formatted according to the above templates, and
+*   an archive file (e.g. zip, tar.gz) containing the both a PDF copy of your paper and LaTeX or Word source material prepared according to the above guidelines."
+req-conf-1752209818190-bdh4r,,Computability in Europe: Logic and Theory of Algorithms,CiE,https://sites.google.com/view/cie2025-computabilityineurope/home,https://sites.google.com/view/cie2025-computabilityineurope/submissions,https://sites.google.com/view/cie2025-computabilityineurope/important-dates,"Conference dates: July 14 - 18, 2025
+Year: 2025
+Location: Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.Abstract: January 26, 2025
+Submission Date.Full paper: February 2, 2025
+Submission Date.Informal presentations submission: April 22, 2025
+Notification Date.Notification of acceptance: April 6, 2025
+Camera-ready Date.Final versions due: April 13, 2025
+Registration Date.Early registration: before May 6, 2025
+Topics: computability-related areas of science, mathematics, theoretical computer science, logic, quantum computability, cryptography, information theory, computational biology, computational linguistics, history and philosophy of computability","July 14 - 18, 2025",2025.0,"Lisbon, Portugal",Lisbon,Portugal,Europe,Offline,"{""Abstract"":""January 26, 2025"",""Full paper"":""February 2, 2025"",""Informal presentations submission"":""April 22, 2025""}","{""Notification of acceptance"":""April 6, 2025""}","{""Final versions due"":""April 13, 2025""}","{""Early registration"":""before May 6, 2025""}",{},"computability-related areas of science, mathematics, theoretical computer science, logic, quantum computability, cryptography, information theory, computational biology, computational linguistics, history and philosophy of computability",No publisher,"The Computability in Europe (CiE) 2025 conference, an interdisciplinary international conference organized by the Association Computability in Europe (ACiE), will be held in Lisbon from July 14-18, 2025. It brings together basic and application-oriented research in computability-related areas of science, including mathematics, theoretical computer science, logic, and more.","# CiE 2025: Call for Papers
+
+The Computability in Europe (CiE) conference series brings together researchers from various disciplines to explore computability-related areas of science.
+
+CiE 2025 will take place in **Lisbon from July 14-18, 2025**.
+
+## Scope
+
+The conference welcomes research contributions on computability-related fields of science, including:
+
+*   Mathematics
+*   Theoretical Computer Science
+*   Logic
+*   Quantum Computability
+*   Cryptography
+*   Information Theory
+*   Computational Biology
+*   Computational Linguistics
+*   History and Philosophy of Computability
+*   and many other related subjects.
+
+## Important Dates
+
+| Date                      | Event                                          |
+| ------------------------- | --------------------------------------------- |
+| **January 26, 2025 (AOE)** | **Abstract Submission Deadline**               |
+| **February 2, 2025 (AOE)**  | **Full Paper Submission Deadline**            |
+| **April 6, 2025**           | **Notification of Acceptance**                 |
+| **April 13, 2025**          | **Final Versions Due**                        |
+| **April 22, 2025**          | **Deadline for Informal Presentations**       |
+| **May 6, 2025**             | **Early Registration Deadline**               |
+| **July 14-18, 2025**        | **Conference Dates**                            |
+
+
+## Registration 
+
+*   Details regarding registration, including a limited offer for students, can be found [here](https://sites.google.com/view/cie2025-computabilityineurope/registration).
+
+## WiC (Women in Computability) Support
+
+*   Support is available for junior women researchers to join CiE 2025. Details can be found [here](https://sites.google.com/view/cie2025-computabilityineurope/registration).
+"
+req-conf-1752209818190-bdh4r,,IADIS International Conference Applied Computing,IADIS AC,https://www.computing-conf.org/,https://www.computing-conf.org/call-for-papers/,https://www.computing-conf.org/important-dates/,"Conference dates: November 1 - 3, 2025
+Year: 2025
+Location: Porto, Portugal
+City-State-Province: Porto
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(2nd CFP) Submission Deadline: July 25, 2025
+Notification Date.(2nd CFP) Notification to Authors: September 1, 2025
+Camera-ready Date.(1st CFP) Final Camera-Ready Submission: July 18, 2025
+Registration Date.(1st CFP) Early Registration: July 18, 2025
+Registration Date.(1st CFP) Late Registration: July 18, 2025
+Topics: Applied Computing, eCommerce and ePayment, eLearning, eHealth and eSports, IT services, Mobile computing, Knowledge management and distribution, Algorithms, Data bases and data mining, Information Systems, Information sourcing and aggregation, Programming languages and concepts, Security and Privacy, Automation of Services, Human-centred Computing, Multimedia and Visualization, Modalities of User Interfacing, Personalization and empathic systems, Virtual Reality, Distributed and parallel systems, Cloud Computing, Evaluation and Assessment, Intelligent systems, Large-scale applications, Local and distributed storage, IoT, Industry 4.0, Mobile Systems and Networks, Protocols, Standards and Mark-up Languages, Sensor Networks, WWW Applications and Technologies, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts and devices, Wideband Information streaming
+Publisher: IADIS","November 1 - 3, 2025",2025.0,"Porto, Portugal",Porto,Portugal,Europe,Offline,"{""(2nd CFP) Submission Deadline"":""July 25, 2025""}","{""(2nd CFP) Notification to Authors"":""September 1, 2025""}","{""(1st CFP) Final Camera-Ready Submission"":""July 18, 2025""}","{""(1st CFP) Early Registration"":""July 18, 2025"",""(1st CFP) Late Registration"":""July 18, 2025""}",{},"Applied Computing, eCommerce and ePayment, eLearning, eHealth and eSports, IT services, Mobile computing, Knowledge management and distribution, Algorithms, Data bases and data mining, Information Systems, Information sourcing and aggregation, Programming languages and concepts, Security and Privacy, Automation of Services, Human-centred Computing, Multimedia and Visualization, Modalities of User Interfacing, Personalization and empathic systems, Virtual Reality, Distributed and parallel systems, Cloud Computing, Evaluation and Assessment, Intelligent systems, Large-scale applications, Local and distributed storage, IoT, Industry 4.0, Mobile Systems and Networks, Protocols, Standards and Mark-up Languages, Sensor Networks, WWW Applications and Technologies, Embedded Computing, Environment-friendly Constructions, Mobile Aspects, Realization of IoT nodes, Security concepts and devices, Wideband Information streaming",IADIS,The IADIS International Conference Applied Computing (IADIS AC) 2025 aims to address the main issues of concern within the applied computing area and related fields. The conference covers technical aspects and includes various areas within applied computing. The proceedings will be published as a book and digital copy with ISBN. Extended versions of selected papers will be published in the IADIS Journal on Computer Science and Information Systems.,"# IADIS International Conference Applied Computing 2025 (IADIS AC 2025) - Call for Papers
+
+The Applied Computing 2025 conference aims to address the main issues of concern within the applied computing area and related fields. This conference covers essentially technical aspects. Innovative contributions that don’t fit into these areas will also be considered.
+
+## Areas of Interest
+
+All areas related to Applied Computing are of interest, including, but not being limited to, the following areas:
+
+### Application Fields
+
+*   eCommerce and ePayment
+*   eLearning
+*   eHealth and eSports
+*   IT services
+*   Mobile computing
+*   Knowledge management and distribution
+
+### Fundamental Concepts and Engineering
+
+*   Algorithms
+*   Data bases and data mining
+*   Information Systems
+*   Information sourcing and aggregation
+*   Programming languages and concepts
+*   Security and Privacy
+
+### Usability
+
+*   Automation of Services
+*   Human-centred Computing
+*   Multimedia and Visualization
+*   Modalities of User Interfacing
+*   Personalization and empathic systems
+*   Virtual Reality
+
+### Performance
+
+*   Distributed and parallel systems
+*   Cloud Computing
+*   Evaluation and Assessment
+*   Intelligent systems
+*   Large-scale applications
+*   Local and distributed storage
+
+### Communication
+
+*   IoT
+*   Industry 4.0
+*   Mobile Systems and Networks
+*   Protocols, Standards and Mark-up Languages
+*   Sensor Networks
+*   WWW Applications and Technologies
+
+### Hardware scope
+
+*   Embedded Computing
+*   Environment-friendly Constructions
+*   Mobile Aspects
+*   Realization of IoT nodes
+*   Security concepts and devices
+*   Wideband Information streaming
+
+## Contribution Types
+
+The Conference will be composed of several types of contributions:
+
+*   **Full Papers** – These include mainly accomplished research results and have **8 pages** at the maximum (5,000 words).
+*   **Short Papers** – These are mostly composed of work in progress reports or fresh developments and have **4 pages** at maximum (2,500 words).
+*   **Reflection Papers** – These might review recent research literature pertaining to a particular problem or approach. These have **two pages** at maximum (1500 words).
+*   **Posters / Demonstrations** – These have **one page** at the maximum (625 words) besides the poster itself (or demonstration) that will be exposed at the conference.
+*   **Tutorials** – Tutorials can be proposed by scholars or company representatives. A proposal of maximum 250 words is expected.
+*   **Panels** – Discussions on selected topics will be held. A proposal of maximum 250 words is expected.
+*   **Invited Talks** – These will be made of contributions from well-known scholars and company representatives. An abstract will be included in the conference proceedings.
+*   **Doctoral Consortium** – The Doctoral Consortium will discuss on going work of PhD students. Contributions should have a maximum 2,500 words (4 pages).
+*   **Corporate Showcases & Exhibitions** – Enables Companies to present recent developments and applications. Contact secretariat@computing-conf.org for further details.
+
+## Important Dates
+
+*   **Submission Deadline (2nd CFP): 25 July 2025**
+*   **Notification to Authors (2nd CFP): 1 September 2025**
+*   **Final Camera-Ready Submission and Early Registration (1st CFP): Until 18 July 2025**
+*   **Late Registration (1st CFP): After 18 July 2025**
+*   **Conference: 1 – 3 November 2025**
+
+This is a blind peer-reviewed conference.
+"
+req-conf-1752209818190-bdh4r,,IEEE/ACM International Symposium on Mixed and Augmented Reality,ISMAR,https://www.ieeeismar.net/2025/,https://www.ieeeismar.net/2025/contribute/papers,https://www.ieeeismar.net/2025/,"Conference dates: October 8 - 12, 2025
+Year: 2025
+Location: Daejeon Convention Center, Daejeon, South Korea
+City-State-Province: Daejeon
+Country: South Korea
+Continent: Asia
+Type: Offline
+Submission Date.Paper Abstract: April 4, 2025
+Submission Date.Papers: April 11, 2025
+Submission Date.Workshops: May 2, 2025
+Submission Date.Tutorials: May 16, 2025
+Submission Date.Doctoral Consortium: June 30, 2025
+Submission Date.Poster Papers: July 29, 2025
+Submission Date.Demos: July 29, 2025
+Submission Date.Revise and Resubmit deadline: June 18, 2025
+Notification Date.Initial Notification: June 3, 2025
+Notification Date.Final Notification: July 22, 2025
+Camera-ready Date.Camera-ready version: July 31, 2025
+Topics: Augmented Reality (AR), Mixed Reality (MR), Virtual Reality (VR), Artificial intelligence, Machine learning, Assistive technologies and applications, Camera and projector-camera calibration, Collaborative interfaces, Computer vision, Content creation/authoring and content management, Conversational and speech interfaces, Display technologies, Diversity and inclusivity issues, Ethical issues, Ergonomics and human factors, Free viewpoint image generation, Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics, Human augmentations, Human-computer interaction, Immersive visual analytics, Localization, spatial registration, and tracking, Locomotion and navigation techniques, Mediated and diminished reality, Multimodal input and output, Omnidirectional, 360, immersive videos, Optics, Perception, Presence, body ownership, and agency, Psychology, Real-time performance issues, Rendering techniques, Sensor fusion, Spatial audio, auditory perception, and psychoacoustics, Spatial AR, projection mapping, projector-camera systems, System architectures, distributed, and online systems, Touch, tangible, and gesture interfaces, Technology acceptance and social implications, Teleoperation, telepresence, and telexistence, User experience, usability studies, and human-subjects experiments, VR simulations of AR/MR, Virtual production, Virtual humans and avatars, Visualization techniques, Architecture, Art, cultural heritage, education and training, Automotive and aerospace, Entertainment, sports broadcast, Health, wellbeing, and medical applications, Industrial, military, emergency response, Therapy and rehabilitation
+Publisher: IEEE","October 8 - 12, 2025",2025.0,"Daejeon Convention Center, Daejeon, South Korea",Daejeon,South Korea,Asia,Offline,"{""Paper Abstract"":""April 4, 2025"",""Papers"":""April 11, 2025"",""Workshops"":""May 2, 2025"",""Tutorials"":""May 16, 2025"",""Doctoral Consortium"":""June 30, 2025"",""Poster Papers"":""July 29, 2025"",""Demos"":""July 29, 2025"",""Revise and Resubmit deadline"":""June 18, 2025""}","{""Initial Notification"":""June 3, 2025"",""Final Notification"":""July 22, 2025""}","{""Camera-ready version"":""July 31, 2025""}",{},{},"Augmented Reality (AR), Mixed Reality (MR), Virtual Reality (VR), Artificial intelligence, Machine learning, Assistive technologies and applications, Camera and projector-camera calibration, Collaborative interfaces, Computer vision, Content creation/authoring and content management, Conversational and speech interfaces, Display technologies, Diversity and inclusivity issues, Ethical issues, Ergonomics and human factors, Free viewpoint image generation, Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics, Human augmentations, Human-computer interaction, Immersive visual analytics, Localization, spatial registration, and tracking, Locomotion and navigation techniques, Mediated and diminished reality, Multimodal input and output, Omnidirectional, 360, immersive videos, Optics, Perception, Presence, body ownership, and agency, Psychology, Real-time performance issues, Rendering techniques, Sensor fusion, Spatial audio, auditory perception, and psychoacoustics, Spatial AR, projection mapping, projector-camera systems, System architectures, distributed, and online systems, Touch, tangible, and gesture interfaces, Technology acceptance and social implications, Teleoperation, telepresence, and telexistence, User experience, usability studies, and human-subjects experiments, VR simulations of AR/MR, Virtual production, Virtual humans and avatars, Visualization techniques, Architecture, Art, cultural heritage, education and training, Automotive and aerospace, Entertainment, sports broadcast, Health, wellbeing, and medical applications, Industrial, military, emergency response, Therapy and rehabilitation",IEEE,"The IEEE/ACM International Symposium on Mixed and Augmented Reality (ISMAR) 2025, the premier conference for Augmented Reality (AR), Mixed Reality (MR), and Virtual Reality (VR), will be held in Daejeon, South Korea, from October 8-12, 2025. It invites submissions on a wide range of topics related to AR, MR, and VR, following a single-track paper process with a revise and resubmit phase.","# IEEE ISMAR 2025: Call for Papers
+
+The 24th IEEE International Symposium on Mixed and Augmented Reality (ISMAR) will be held at the **Daejeon Convention Center (DCC), South Korea, from Oct. 8 to Oct. 12 2025**.
+
+ISMAR is the premier conference for Augmented Reality (AR), Mixed Reality (MR) and Virtual Reality (VR), attracting leading researchers from academia and industry.
+
+## Overview
+
+ISMAR 2025 will host a single track for papers and include a revise and resubmit phase. It covers industry and research activities related to the full range of immersive technologies (AR, MR, and VR).
+
+We specifically invite contributions that advance all aspects of AR / MR / VR technology and user experiences.
+
+## Paper Submissions
+
+This year, there is one submission deadline for a unified review process for both the IEEE TVCG journal and the conference-only papers. The possible outcomes of this unified process are:
+
+*   Accept as IEEE TVCG paper, with presentation at ISMAR 2025
+*   Accept as IEEE ISMAR 2025 conference paper, with presentation at ISMAR 2025
+*   Recommended as IEEE ISMAR 2025 poster
+*   Reject
+
+Submissions may be 4-9 pages with an additional 2 pages of references. Note that a paper abstract must be uploaded prior to the actual paper submission deadline.
+
+All paper submissions must be in English and left blind for review.
+
+## Important Deadlines
+
+*   **Paper Abstract:** April 4th, 2025 (23:59 AoE, Friday)
+*   **Papers:** April 11th, 2025 (23:59 AoE, Friday)
+*   **Initial Notification:** June 3rd, 2025 (23:59 AoE, Tuesday)
+*   **Revise and Resubmit:** June 18th, 2025 (23:59 AoE, Wednesday)
+*   **Final Notification:** July 22nd, 2025 (23:59 AoE, Tuesday)
+*   **Camera-ready version:** July 31st, 2025 (23:59 AoE, Thursday)
+*   **Poster Papers:** July 29th, 2025 (23:59 AoE, Tuesday)
+*   **Demos:** July 29th, 2025 (23:59 AoE, Tuesday)
+*   **Workshops:** May 2nd, 2025 (23:59 AoE, Friday)
+*   **Workshop Papers:** See workshop websites for deadlines
+
+## Review Process
+
+The review process will have two cycles under the single submission deadline.
+
+### Review Cycle I (Submission to Initial Notification)
+
+Submissions will be assigned to two members of the ISMAR 2025 International Program Committee (IPC): a primary coordinator (1AC) and a secondary coordinator (2AC).
+
+Submissions that violate the [submission guidelines](/2025/contribute/guidelines/submissions) will be desk rejected.
+
+Those submissions that are not desk rejected will receive at least three full reviews by 2AC and two external reviewers.
+
+### Review Cycle II (Revision with Rebuttal to Final Decision)
+
+Authors will be given time to revise their submissions and write a rebuttal to the initial notifications.
+
+The revised submission and rebuttal will be submitted, and the reviewers will review the revised submission.
+
+Based on the reviews, the coordinators and reviewers will make a final recommendation for the paper.
+
+## Topics of Interest
+
+All topics relevant to and advancing AR, MR, and VR are of interest. We emphasize that a strong and explicit connection to AR, MR, and/or VR is essential for submissions. VR papers are welcome regardless of their relevance to AR/MR. Topics of interest include, but are not limited to:
+
+*   Artificial intelligence / Machine learning
+*   Assistive technologies and applications
+*   Camera and projector-camera calibration
+*   Collaborative interfaces
+*   Computer vision
+*   Content creation/authoring and content management
+*   Conversational and speech interfaces
+*   Display technologies (e.g., eyewear, smartwatches, projectors)
+*   Diversity and inclusivity issues
+*   Ethical issues
+*   Ergonomics and human factors
+*   Free viewpoint image generation
+*   Haptic and tactile interfaces, wearable haptics, passive haptics, pseudo haptics
+*   Human augmentations
+*   Human-computer interaction
+*   Immersive visual analytics
+*   Localization, spatial registration, and tracking
+*   Locomotion and navigation techniques
+*   Mediated and diminished reality
+*   Multimodal input and output
+*   Omnidirectional, 360, immersive videos
+*   Optics
+*   Perception
+*   Presence, body ownership, and agency
+*   Psychology
+*   Real-time performance issues
+*   Rendering techniques
+*   Sensor fusion
+*   Spatial audio, auditory perception, and psychoacoustics
+*   Spatial AR, projection mapping, projector-camera systems
+*   System architectures, distributed, and online systems
+*   Touch, tangible, and gesture interfaces
+*   Technology acceptance and social implications
+*   Teleoperation, telepresence, and telexistence
+*   User experience, usability studies, and human-subjects experiments
+*   VR simulations of AR/MR
+*   Virtual production
+*   Virtual humans and avatars
+*   Visualization techniques
+
+AR/MR/VR applications from domains include, but are not limited to:
+
+*   Architecture
+*   Art, cultural heritage, education and training
+*   Automotive and aerospace
+*   Entertainment, sports broadcast
+*   Health, wellbeing, and medical applications
+*   Industrial, military, emergency response
+*   Therapy and rehabilitation
+
+For questions, contact: [program2025@ieeeismar.net](mailto:program2025@ieeeismar.net)
+
+## ISMAR 2025 Scientific Program Chairs:
+
+Ulrich Eck, Gun Lee, Alexander Plopski, Missie Smith, Qi Sun, Markus Tatzgern"
+req-conf-1752209818190-bdh4r,,International Conference on Artificial Intelligence and Soft Computing,ICAISC,https://icaisc.eu/,https://icaisc.eu/Submission,https://icaisc.eu/#importantdates,"Conference dates: June 14 - 18, 2026
+Year: 2026
+Location: Zakopane, Poland
+City-State-Province: Zakopane
+Country: Poland
+Continent: Europe
+Type: Hybrid
+Submission Date.Submission of papers in accordance with Springer guidelines: November 15, 2025
+Notification Date.Notification of acceptance: February 1, 2026
+Camera-ready Date.Submission of camera-ready papers: April 10, 2026
+Topics: AI and adversarial attacks, Agent-based systems, Ant colony optimization, Approximate reasoning, Artificial immune systems, Artificial Intelligence in modelling and simulation, Artificial Intelligence in scheduling and optimization, Artificial life, Bioinformatics and computational biology, Brain-machine interfaces, Cognitive systems and applications, Collective intelligence, Computer vision, Data mining, Differential Evolution, Evolutionary data mining, Evolutionary design, Evolutionary scheduling, Expert systems, Explainable AI, Fuzzy Computing with Words, Fuzzy control and intelligent systems, Fuzzy decision making and decision support systems, Fuzzy logic and fuzzy set theory, Fuzzy optimization and design, Fuzzy pattern recognition, Fuzzy systems for robotics, Game theory, Generative artificial intelligence, Hardware Implementations, Intelligent database systems, Knowledge engineering, Large language models, Machine learning, Modeling and identification, Molecular and quantum computing, Multi-agent systems, Natural language processing, Neural Network Theory and Architectures, Particle swarm optimization, Robotics and related fields, Robust and secure machine learning algorithms, Rough sets and rough data analysis, Speech understanding, Supervised and Unsupervised Learning, Type-2 fuzzy logic, Various Applications, Web intelligence, Human–computer interaction
+Publisher: Springer","June 14 - 18, 2026",2026.0,"Zakopane, Poland",Zakopane,Poland,Europe,Hybrid,"{""Submission of papers in accordance with Springer guidelines"":""November 15, 2025""}","{""Notification of acceptance"":""February 1, 2026""}","{""Submission of camera-ready papers"":""April 10, 2026""}",{},{},"AI and adversarial attacks, Agent-based systems, Ant colony optimization, Approximate reasoning, Artificial immune systems, Artificial Intelligence in modelling and simulation, Artificial Intelligence in scheduling and optimization, Artificial life, Bioinformatics and computational biology, Brain-machine interfaces, Cognitive systems and applications, Collective intelligence, Computer vision, Data mining, Differential Evolution, Evolutionary data mining, Evolutionary design, Evolutionary scheduling, Expert systems, Explainable AI, Fuzzy Computing with Words, Fuzzy control and intelligent systems, Fuzzy decision making and decision support systems, Fuzzy logic and fuzzy set theory, Fuzzy optimization and design, Fuzzy pattern recognition, Fuzzy systems for robotics, Game theory, Generative artificial intelligence, Hardware Implementations, Intelligent database systems, Knowledge engineering, Large language models, Machine learning, Modeling and identification, Molecular and quantum computing, Multi-agent systems, Natural language processing, Neural Network Theory and Architectures, Particle swarm optimization, Robotics and related fields, Robust and secure machine learning algorithms, Rough sets and rough data analysis, Speech understanding, Supervised and Unsupervised Learning, Type-2 fuzzy logic, Various Applications, Web intelligence, Human–computer interaction",Springer,"The 25th International Conference on Artificial Intelligence and Soft Computing (ICAISC 2026) will be held in Zakopane, Poland, from June 14-18, 2026. It is a hybrid conference, offering both online and on-site participation. The conference proceedings will be published by Springer in the Lecture Notes in Artificial Intelligence series. The conference invites submissions covering theoretical developments and practical applications in artificial intelligence and soft computing techniques.","# ICAISC 2026: Call for Papers
+
+The 25th International Conference on Artificial Intelligence and Soft Computing (ICAISC 2026) will be held in **Zakopane, Poland, from June 14-18, 2026.**
+
+ICAISC 2026 will be a *hybrid conference*, offering both online and on-site participation.
+
+The conference proceedings will be published in the Springer-Verlag series **""Lecture Notes in Artificial Intelligence""**, and authors are strongly recommended to use the Springer LaTeX style.
+
+## Submission
+
+*   Initial submissions must be **FULL papers** (preferably 12 pages) and not merely abstracts.
+*   Initial submissions have to contain an *anonymized PDF* and non-anonymized sources.
+*   Papers will undergo double-blind reviewing by an international committee and accepted based on scientific merit and relevance to the conference topics.
+*   Please prepare an anonymized PDF version of the paper being submitted, preserving anonymity by avoiding identifying information in acknowledgements, links to websites, and literature references. Refer to your previous work as to a work of someone else. In place of author names, please write ""Anonymous ICAISC 2025 submission"".
+*   Sources of the paper do not have to be anonymized.
+*   Every final paper must be accompanied by the copyright form.
+
+## Guidelines
+
+Authors should consult Springer’s [authors’ guidelines](https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines) and use their proceedings templates, either for LaTeX or for MS Word, for the preparation of their papers. Springer’s proceedings LaTeX templates are also available in [Overleaf](https://www.overleaf.com/). Springer encourages authors to include their ORCIDs in their (final) papers.
+
+### Springer Copyright Form
+
+Every final paper must be accompanied by the copyright form, which a corresponding author should complete and sign. The copyright form in PDF is located at the Springer web site (Licence to Publish form for LNCS, CCIS or LNBIP). It is sufficient if one author of each contribution signs the form on behalf of all the other authors. the copyright form should be submitted during the final submission as a separate zipped pdf file. Please use the following data to fill the form:
+
+*   Title of the Book/Volume/Conference: ICAISC 2026 Proceedings
+*   Volume Editor(s): L. Rutkowski et al.
+
+All final submissions should be in a **.zip** compressed archive including:
+
+*   the source (input) files, i.e. TeX source files for the text and figure files,
+*   any style files, templates, and special fonts the authors may have used,
+*   MS Word file in the case of using MS Word,
+*   the final Postscript (.ps) or Adobe Acrobat (.pdf) file,
+*   the scanned completed and signed copyright form.
+
+By submitting the paper to the ICAISC conference the author(s) agree that they did not submit this paper to any other conference and one of them will attend the conference to present the paper.
+
+## Important Dates
+
+1.  **Submission of papers:** November 15, 2025
+2.  **Notification of acceptance:** from February 1, 2026
+3.  **Submission of camera-ready papers:** April 10, 2026
+4.  **Conference date:** June 14-18, 2026
+
+## Scope
+
+Contributions covering all theoretical developments and practical applications in artificial intelligence and soft computing techniques, including but not limited to the following technical areas, are invited:
+
+*   AI and adversarial attacks
+*   Agent-based systems
+*   Ant colony optimization
+*   Approximate reasoning
+*   Artificial immune systems
+*   Artificial Intelligence in modelling and simulation
+*   Artificial Intelligence in scheduling and optimization
+*   Artificial life
+*   Bioinformatics and computational biology
+*   Brain-machine interfaces
+*   Cognitive systems and applications
+*   Collective intelligence
+*   Computer vision
+*   Data mining
+*   Differential Evolution
+*   Evolutionary data mining
+*   Evolutionary design
+*   Evolutionary scheduling
+*   Expert systems
+*   Explainable AI
+*   Fuzzy Computing with Words
+*   Fuzzy control and intelligent systems
+*   Fuzzy decision making and decision support systems
+*   Fuzzy logic and fuzzy set theory
+*   Fuzzy optimization and design
+*   Fuzzy pattern recognition
+*   Fuzzy systems for robotics
+*   Game theory
+*   Generative artificial intelligence
+*   Hardware Implementations
+*   Intelligent database systems
+*   Knowledge engineering
+*   Large language models
+*   Machine learning
+*   Modeling and identification
+*   Molecular and quantum computing
+*   Multi-agent systems
+*   Natural language processing
+*   Neural Network Theory and Architectures
+*   Particle swarm optimization
+*   Robotics and related fields
+*   Robust and secure machine learning algorithms
+*   Rough sets and rough data analysis
+*   Speech understanding
+*   Supervised and Unsupervised Learning
+*   Type-2 fuzzy logic
+*   Various Applications
+*   Web intelligence
+*   Human–computer interaction
+"
+req-conf-1752209818190-bdh4r,,Conference for the International Simulation and Gaming Association,ISAGA,https://www.isaga2025.com/,https://www.isaga2025.com/contributing/,https://www.isaga2025.com/contributing/,"Conference dates: July 15 - 18, 2025
+Year: 2025
+Location: Stuttgart, Germany
+City-State-Province: Stuttgart
+Country: Germany
+Continent: Europe
+Type: Offline
+Submission Date.Deadline for submitting full papers (scientific papers and best practice papers): February 16, 2025
+Submission Date.Deadline for submitting posters, workshops and outside the box submissions: February 16, 2025
+Notification Date.Notification of acceptance: March 31, 2025
+Camera-ready Date.Deadline for revised papers: May 15, 2025
+Topics: Simulation and Gaming, Artificial intelligence, big data and automation, Augmented and virtual reality, Sustainability and climate change, Resilience and adaptability, City and spatial planning, infrastructure use or development (transport, energy, water…), Urban planning and public participation, New work and organisational development, Society in transition, Innovative social work, Lifelong learning and future skills, Future-oriented learning and teaching in schools, universities and other institutions, Research on facilitation and evaluation, Innovations in the public sector, National and international conflicts, Dealing with crisis and disaster management","July 15 - 18, 2025",2025.0,"Stuttgart, Germany",Stuttgart,Germany,Europe,Offline,"{""Deadline for submitting full papers (scientific papers and best practice papers)"":""February 16, 2025"",""Deadline for submitting posters, workshops and outside the box submissions"":""February 16, 2025""}","{""Notification of acceptance"":""March 31, 2025""}","{""Deadline for revised papers"":""May 15, 2025""}",{},{},"Simulation and Gaming, Artificial intelligence, big data and automation, Augmented and virtual reality, Sustainability and climate change, Resilience and adaptability, City and spatial planning, infrastructure use or development (transport, energy, water…), Urban planning and public participation, New work and organisational development, Society in transition, Innovative social work, Lifelong learning and future skills, Future-oriented learning and teaching in schools, universities and other institutions, Research on facilitation and evaluation, Innovations in the public sector, National and international conflicts, Dealing with crisis and disaster management",No publisher,"The 56th International Simulation and Gaming Association's Conference (ISAGA) will be held in Stuttgart, Germany, from July 15-18, 2025. ISAGA brings together researchers and practitioners from management, social and environmental sciences, education, planning, and technical sciences to discuss simulation, gaming, and related methods. The conference theme is ""Shaping the Future through Simulation and Gaming.""","# ISAGA Conference 2025: Call for Contributions (Closed)
+
+Thank you for over 100 contributions on a big variety of S&G related topics.
+
+The **56th International Simulation and Gaming Association (ISAGA) Conference** will be held from **July 15-18, 2025** in **Stuttgart, Germany**. The theme is **""Shaping the Future through Simulation and Gaming.""**
+
+## Conference Theme
+
+The conference theme is **""Shaping the Future through Simulation and Gaming.""** The conference offers generous space for future-oriented topics and to engage in a dialogue about the role of simulation and gaming in this context.
+
+Submissions on topics with the following focus are particularly welcome:
+
+*   Artificial intelligence, big data and automation
+*   Augmented and virtual reality
+*   Sustainability and climate change
+*   Resilience and adaptability
+*   City and spatial planning, infrastructure use or development (transport, energy, water…)
+*   Urban planning and public participation
+*   New work and organisational development
+*   Society in transition
+*   Innovative social work
+*   Lifelong learning and future skills
+*   Future-oriented learning and teaching in schools, universities and other institutions
+*   Research on facilitation and evaluation
+*   Innovations in the public sector
+*   National and international conflicts
+*   Dealing with crisis and disaster management
+
+The above-mentioned future topics can be considered from a wide variety of simulation and gaming aspects. Be it questions relating to new games and methods, areas of application, facilitation, evaluation etc.
+
+## Types of Contributions
+
+You can submit entries for the following categories. All submissions will be subjected to a quality check and assigned to suitable presentation formats.
+
+*   Scientific Papers
+*   Best Practice Papers
+*   Posters
+*   Workshops
+*   Outside the box
+
+### Scientific Papers
+
+Scientific papers present qualitative or quantitative empirical research and discuss findings. Submissions that offer background research, literature reviews, or theoretical analyses on specific topics are also welcome. Accepted papers will allow for an oral presentation of the work during an interactive paper session.
+
+*   Papers must be written in English
+*   Papers shall be about 6-15 pages including abstract, figures, tables, and references
+*   Abstracts must be within 150-250 words
+*   Paper format must follow the Springer LNCS format.
+*   Please submit your papers in anonymised form via Conftool
+
+### Best Practice Papers
+
+In contrast to scientific papers, this category focuses on contributions with a high practical approach. We welcome experience reports, best practice case studies and other submissions that provide guidance and inspiration for practical applications in the field of gaming and simulation.
+
+*   Papers must be written in English
+*   Papers must be about 4-15 pages, including abstract, figures, tables and references
+*   Abstracts must be within 150-250 words
+
+### Posters
+
+Work and ideas at an early stage can also be submitted as a poster to the conference. During the conference, there will be an opportunity to present the posters and to engage with the conference participants. Abstracts (300-600 words) are required for submission and acceptance as poster presentations.
+
+*   A summary detailing the topic from 300 up to 600 words.
+
+### Workshops
+
+Workshops are interactive events centered on a certain topic, issue or game. They are collaborative and active, not mere presentations. Facilitators invite participants to actively work on a topic or design artefacts or focus on the design, play an exploration of games.
+
+*   The name(s) of the workshop organizer(s)
+*   A summary detailing the topic from 300 up to 600 words
+*   Please include the design, the activity and how it involves participants
+
+### Outside the Box
+
+A format for anyone who is thinking sideways! Dealing with the future means being open to new ideas. Any submissions that cannot be assigned to the classic types of submissions are welcome here. Do you have creative ideas that go beyond classic presentation and workshop formats (i.e. a small game, a new method, a warmup,…)? Then this category is for you!
+
+*   The name(s) of the organizer(s)
+*   A summary detailing the topic from 300 up to 600 words
+*   Please explain the design, including the time frame and spatial requirements and involvement of attendees
+
+## Deadlines
+
+All submissions should be submitted using the conference management system Conftool: [Link to Conftool](https://www.conftool.org/isaga2025/index.php?page=login)
+
+*   Opening of online submission portal – **October 15, 2024**
+*   Deadline for submitting full papers (scientific papers and best practice papers) – **February 16, 2025**
+*   Deadline for submitting posters, workshops and outside the box submissions – **February 16, 2025**
+*   Notification of acceptance – **March 31, 2025**
+*   Deadline for revised papers – **May 15, 2025**
+"
+req-conf-1752209818190-bdh4r,,International Symposium on Software Reliability Engineering,ISSRE,https://issre.github.io/2025/,https://issre.github.io/2025/calls_cfp-research.html,https://issre.github.io/2025/important-dates.html,"Conference dates: October 21 - 24, 2025
+Year: 2025
+Location: São Paulo, Brazil
+City-State-Province: São Paulo
+Country: Brazil
+Continent: South America
+Type: Offline
+Submission Date.(Research Track) Abstract submission deadline: May 5, 2025
+Submission Date.(Research Track) Paper submission deadline: May 12, 2025
+Submission Date.(Workshops) Workshop proposal deadline: May 15, 2025
+Submission Date.(Workshops) Workshop paper submission deadline: July 21, 2025
+Submission Date.(Industry Track) Abstract submission deadline: July 3, 2025
+Submission Date.(Industry Track) Full / short paper submission deadline: July 12, 2025
+Submission Date.(Doctoral Symposium Papers) Deadline for Submissions: July 13, 2025
+Submission Date.(Journal First, Conference Second (J1C2)) J1C2 paper submission deadline: July 16, 2025
+Submission Date.(Fast Abstracts) Submission Deadline: July 31, 2025
+Submission Date.(Artifacts) Artifact Evaluation submission: August 19, 2025
+Notification Date.(Research Track) Early decisions: June 30, 2025
+Notification Date.(Research Track) Notification to authors: July 18, 2025
+Notification Date.(Workshops) Workshop proposal notification: May 22, 2025
+Notification Date.(Workshops) Workshop paper notification to authors: August 11, 2025
+Notification Date.(Industry Track) Notification to authors: August 12, 2025
+Notification Date.(Doctoral Symposium Papers) Notification of Acceptance: August 8, 2025
+Notification Date.(Journal First, Conference Second (J1C2)) J1C2 notification deadline: August 8, 2025
+Notification Date.(Fast Abstracts) Notification to Authors: August 14, 2025
+Notification Date.(Artifacts) Artifact Evaluation notification: September 21, 2025
+Camera-ready Date.(Research Track) Camera ready papers: August 19, 2025
+Camera-ready Date.(Workshops) Camera ready papers: August 18, 2025
+Camera-ready Date.(Industry Track) Camera-ready deadline: August 19, 2025
+Camera-ready Date.(Doctoral Symposium Papers) Camera-ready copy paper: August 15, 2025
+Camera-ready Date.(Fast Abstracts) Camera-ready Papers Due: August 23, 2025
+Other Date.(Research Track) Author rebuttal period: June 30 - July 6, 2025
+Topics: Software Reliability, Security, Safety
+Publisher: IEEE Computer Society","October 21 - 24, 2025",2025.0,"São Paulo, Brazil",São Paulo,Brazil,South America,Offline,"{""(Research Track) Abstract submission deadline"":""May 5, 2025"",""(Research Track) Paper submission deadline"":""May 12, 2025"",""(Workshops) Workshop proposal deadline"":""May 15, 2025"",""(Workshops) Workshop paper submission deadline"":""July 21, 2025"",""(Industry Track) Abstract submission deadline"":""July 3, 2025"",""(Industry Track) Full / short paper submission deadline"":""July 12, 2025"",""(Doctoral Symposium Papers) Deadline for Submissions"":""July 13, 2025"",""(Journal First, Conference Second (J1C2)) J1C2 paper submission deadline"":""July 16, 2025"",""(Fast Abstracts) Submission Deadline"":""July 31, 2025"",""(Artifacts) Artifact Evaluation submission"":""August 19, 2025""}","{""(Research Track) Early decisions"":""June 30, 2025"",""(Research Track) Notification to authors"":""July 18, 2025"",""(Workshops) Workshop proposal notification"":""May 22, 2025"",""(Workshops) Workshop paper notification to authors"":""August 11, 2025"",""(Industry Track) Notification to authors"":""August 12, 2025"",""(Doctoral Symposium Papers) Notification of Acceptance"":""August 8, 2025"",""(Journal First, Conference Second (J1C2)) J1C2 notification deadline"":""August 8, 2025"",""(Fast Abstracts) Notification to Authors"":""August 14, 2025"",""(Artifacts) Artifact Evaluation notification"":""September 21, 2025""}","{""(Research Track) Camera ready papers"":""August 19, 2025"",""(Workshops) Camera ready papers"":""August 18, 2025"",""(Industry Track) Camera-ready deadline"":""August 19, 2025"",""(Doctoral Symposium Papers) Camera-ready copy paper"":""August 15, 2025"",""(Fast Abstracts) Camera-ready Papers Due"":""August 23, 2025""}",{},"{""(Research Track) Author rebuttal period"":""June 30 - July 6, 2025""}","Software Reliability, Security, Safety",IEEE Computer Society,"The 36th IEEE International Symposium on Software Reliability Engineering (ISSRE 2025) will be held in São Paulo, Brazil, from October 21-24, 2025. ISSRE is a leading conference focusing on approaches, techniques, and tools for assessing, predicting, and improving the reliability, safety, and security of software systems. The conference features several tracks, including research, industry, journal first-conference second, fast abstracts, doctoral symposium, and artifacts.","# ISSRE 2025: Call for Papers - Research Track
+
+The 36th IEEE International Symposium on Software Reliability Engineering (ISSRE) is the leading conference on software reliability, focusing on approaches, techniques, and tools for assessing, predicting, and improving the reliability, safety, and security of software systems.
+
+ISSRE 2025 introduces ***Early Decisions***. At the beginning of the author response period, authors will be notified with the following outcomes: ""Accept"", ""Reject"", or ""Response Recommended"".
+
+The research track at ISSRE 2025 invites high-quality submissions of technical research papers describing original and unpublished results exploring new scientific ideas, contributing new evidence to established research directions, or reflecting on practical experience. ISSRE solicits submissions in three categories: (1) full research regular (REG) papers, (2) practical experience reports (PER), and (3) tools and artefacts (TAR) papers.
+
+## Paper Categories
+
+Submissions can be made in one of the following categories:
+
+*   **REG papers:** 12 pages (including references).
+*   **PER papers:** 12 pages (including references).
+*   **TAR papers:** 6 - 10 pages (including references).
+
+Papers that exceed the number of pages for that submission category will be rejected without review.
+
+## Topics of Interest
+
+Topics of interest include development, analysis methods, and models throughout the software development lifecycle, including but not limited to:
+
+*   Dependability attributes (i.e., security, safety, maintainability, survivability, resilience, robustness) impacting software reliability
+*   Reliability threats, i.e. faults (defects, bugs, etc.), errors, failures
+*   Reliability means (fault prevention, fault removal, fault tolerance, fault forecasting)
+*   Software testing and formal methods
+*   Software fault localization, debugging, root-cause analysis
+*   Metrics, measurements and threat estimation for reliability prediction and the interplay with safety/security
+*   Reliability of autonomous systems and (self-)adaptive systems
+*   Reliability of AI-based systems, AI for Reliability Engineering
+*   Reliability of Large Language/Foundational Model (LLM) and LLM for software reliability
+*   Reliability of software services and Software as a Service (SaaS)
+*   Reliability of model-based and auto-generated software
+*   Reliability of open-source software
+*   Reliability of software dealing with Big Data
+*   Reliability of green and sustainable systems
+*   Reliability of mobile systems
+*   Reliability of software within specific technological spaces (e.g., Internet of Things, Cloud, Semantic Web/Web 3.0, Virtualization, Blockchain, networks softwarization, 5G/6G, edge-to-cloud computing)
+*   Normative/regulatory/ethical spaces about software reliability
+*   Societal aspects of software reliability
+
+## Anonymizing Rules
+
+Authors shall anonymize their papers, not identifying themselves either explicitly or by implication. Follow the guidelines provided in the call for papers document.
+
+## Formatting Rules
+
+Submissions must adhere to the IEEE Computer Society Format Guidelines as implemented by the following LaTeX/Word templates:
+
+*   [LaTex Package (ZIP)](https://www.ieee.org/conferences/publishing/templates.html)
+*   [Word Template (DOCX)](https://www.ieee.org/conferences/publishing/templates.html)
+
+Each paper must be submitted as a single Portable Document Format (PDF) file. All fonts must be embedded.
+
+## Paper Submission
+
+Papers are submitted via Easychair at the following URL: [https://easychair.org/conferences/?conf=issre2025](https://easychair.org/conferences/?conf=issre2025)
+
+Submissions will be reviewed by the program committee through a double-blind reviewing process.
+
+## Review Process and Author Response
+
+After the papers have been reviewed, the reviews will be made available to the authors to respond to any factual errors in the reviews.
+
+***NEW IN 2025: Early Decisions***
+
+ISSRE 2025 is introducing early decisions to reduce the burden of author responses.
+
+## Important Dates
+
+*   **Abstract submission deadline:** May 5th 2025 (AoE)
+*   **Paper submission deadline:** May 12th 2025 (AoE)
+*   **Early decisions:** June 30th, 2025 (AoE)
+*   **Author rebuttal period:** June 30th-July 6th, 2025 (AoE)
+*   **Notification to authors:** July 18th, 2025 (AoE)
+*   **Camera ready papers:** August 19th, 2025 (AoE)
+
+## Best Research Paper Award
+
+ISSRE is pleased to announce the Best Research Paper Award, attributed every year to the best paper in the Research Track.
+
+## Conference Proceedings
+
+The conference proceedings will be published by IEEE Computer Society Conference Publishing Services (CPS).
+
+## IEEE Conference Publishing Policies
+
+All submissions must adhere to IEEE Conference Publishing Policies.
+
+## Special Issues
+
+Authors of accepted papers will be invited to submit an extended version of their work to a special issue of the Empirical Software Engineering (EMSE) journal."
+req-conf-1752303287310-m9cvg,,IEEE European Symposium on Security and Privacy,EuroS&P,https://eurosp2026.ieee-security.org/,https://eurosp2026.ieee-security.org/contributions/call-for-papers/,,"Conference dates: July 6 - 10, 2026
+Year: 2026
+Location: Lisbon, Portugal
+City-State-Province: Lisbon
+Country: Portugal
+Continent: Europe
+Type: Offline
+Submission Date.(Research Papers) Submission deadline: November 20, 2025
+Notification Date.(Research Papers) Early rejection notification: January 16, 2026
+Notification Date.(Research Papers) Author notification: March 5, 2026
+Camera-ready Date.(Research Papers) Camera-ready deadline: April 16, 2026
+Registration Date.(Research Papers) Registration deadline: November 13, 2025
+Other Date.(Research Papers) Rebuttal period: February 11 - 16, 2026
+Topics: computer security, electronic privacy","July 6 - 10, 2026",2026.0,"Lisbon, Portugal",Lisbon,Portugal,Europe,Offline,"{""(Research Papers) Submission deadline"":""November 20, 2025""}","{""(Research Papers) Early rejection notification"":""January 16, 2026"",""(Research Papers) Author notification"":""March 5, 2026""}","{""(Research Papers) Camera-ready deadline"":""April 16, 2026""}","{""(Research Papers) Registration deadline"":""November 13, 2025""}","{""(Research Papers) Rebuttal period"":""February 11 - 16, 2026""}","computer security, electronic privacy",No publisher,"The IEEE European Symposium on Security and Privacy (EuroS&P) is a premier forum for presenting developments in computer security and electronic privacy. The 11th EuroS&P will be held in Lisbon, Portugal, from July 6-10, 2026. Program Committee nominations are currently open.","# EuroS&P 2026: Call for Papers
+
+The 11th IEEE European Symposium on Security and Privacy (EuroS&P) will be held in **Lisbon, Portugal, from July 6 - 10, 2026**.
+
+Since 1980, the IEEE Symposium on Security and Privacy has been the premier forum for presenting developments in computer security and electronic privacy, and for bringing together researchers and practitioners in the field. Following this story of success, IEEE initiated the European Symposium on Security and Privacy (EuroS&P), which is organized every year in a European city.
+
+## Important Dates
+
+All deadlines are Anywhere on Earth (AoE = UTC-12h).
+
+*   **Research Papers**
+    *   Registration deadline: **13 November 2025 (Thursday)**
+    *   Submission deadline: **20 November 2025 (Thursday)**
+    *   Early rejection notification: **16 January 2026 (Friday)**
+    *   Rebuttal period: **11 February - 16 February 2026 (Wednesday to Monday)**
+    *   Author notification: **5 March 2026 (Thursday)**
+    *   Camera-ready deadline: **16 April 2026 (Thursday) (Tentative)**
+*   **Conference**
+    *   Lisbon, Portugal: **6 - 10 July 2026 (Monday to Friday)**
+
+## Program Committee
+
+We are currently accepting nominations for Program Committee members for EuroS&P 2026. You can nominate yourself or someone else who you believe would be a valuable addition to our PC.
+
+Are you interested in serving on the Program Committee?
+
+[Submit PC Nomination](https://eurosp2026.ieee-security.org)"
+req-conf-1751542984133-3972p,,IEEE European Symposium on Security and Privacy,EuroS&P,https://eurosp2025.ieee-security.org/,https://eurosp2025.ieee-security.org/cfp.html,https://eurosp2025.ieee-security.org/cfp.html,"Conference dates: June 30 - July 4, 2025
+Year: 2025
+Location: Venice, Italy
+City-State-Province: Venice
+Country: Italy
+Continent: Europe
+Type: Offline
+Submission Date.Registration deadline (incl. topics and abstracts): October 21, 2024
+Submission Date.Submission deadline: October 24, 2024
+Notification Date.Early rejection notification: December 11, 2024
+Notification Date.Author Notification: February 13, 2025
+Camera-ready Date.Camera-ready deadline: April 17, 2025
+Other Date.R1 Rebuttal period: December 12 - 16, 2024
+Other Date.R2 Rebuttal period: January 20 - 23, 2025
+Other Date.Submission of revised papers: March 20, 2025
+Other Date.Revision Decisions: April 3, 2025
+Topics: computer security, electronic privacy
+Publisher: IEEE","June 30 - July 4, 2025",2025.0,"Venice, Italy",Venice,Italy,Europe,Offline,"{""Registration deadline (incl. topics and abstracts)"":""October 21, 2024"",""Submission deadline"":""October 24, 2024""}","{""Early rejection notification"":""December 11, 2024"",""Author Notification"":""February 13, 2025""}","{""Camera-ready deadline"":""April 17, 2025""}",{},"{""R1 Rebuttal period"":""December 12 - 16, 2024"",""R2 Rebuttal period"":""January 20 - 23, 2025"",""Submission of revised papers"":""March 20, 2025"",""Revision Decisions"":""April 3, 2025""}","computer security, electronic privacy",IEEE,"The 10th IEEE European Symposium on Security and Privacy (EuroS&P 2025) will be held in Venice, Italy, from June 30 to July 4, 2025. EuroS&P is a premier forum for computer security and privacy research, presenting the latest developments and bringing together researchers and practitioners.","# EuroS&P 2025: Call for Papers
+
+The IEEE European Symposium on Security and Privacy (Euro S&P) is a premier forum for computer security and privacy research, presenting the latest developments and bringing together researchers and practitioners.
+
+## Scope
+
+We solicit previously unpublished papers offering novel research contributions in security or privacy, as well as Systematization of Knowledge (SoK) papers that systematize previous results. EuroS&P is interested in all aspects of applied computer security and privacy. We especially encourage papers that are far-reaching and risky, provided those papers show sufficient promise for creating interesting discussions and usefully questioning widely-held beliefs. Papers without a clear connection to security or privacy will be considered out of scope and may be rejected without full review.
+
+## Conference Expectations and Review Process
+
+*   **Single-Track:** While historically single-track, the conference may adjust based on submission volume.
+*   **Rigorous Review:** Aiming for a rigorous and thorough review process, accepting papers with scientific merit.
+*   **Revision Option:** Papers with a potential path for acceptance after revision may be invited for revision within four weeks of notification. Revised papers will be re-reviewed.
+*   **Per-Reviewer Responses (New in 2025):** Reviewers will provide specific questions for authors to focus on in their responses, improving communication and timely feedback.
+*   **Meta Reviews (Returning from 2024):** Publicly available meta reviews will outline PC reasons for acceptance and identified limitations.
+
+## Systematization of Knowledge (SoK) Papers
+
+We solicit SoK papers that evaluate, systematize, and contextualize existing knowledge. Suitable papers provide new viewpoints, challenge beliefs with evidence, or present convincing taxonomies. Survey papers without such insights are not appropriate. SoK papers should be prefixed with ""SoK:"" in the title and will be reviewed to the same standards as traditional research papers, with emphasis on community value.
+
+## Paper Awards
+
+Outstanding papers will be selected by the program committee and announced at the symposium.
+
+## Important Dates
+
+All deadlines are Anywhere on Earth (AoE = UTC-12h).
+
+### Research Papers
+
+*   **Registration deadline (incl. topics and abstracts):** 21 October 2024 (Monday)
+*   **Submission deadline:** 24 October 2024 (Thursday)
+*   **Early rejection notification:** 11 December 2024 (Wednesday)
+*   **R1 Rebuttal period:** 12 December - 16 December 2024 (Monday)
+*   **R2 Rebuttal period:** 20 - 23 January 2025 (Monday to Thursday)
+*   **Author Notification:** 13 February 2025 (Thursday)
+*   **Submission of revised papers:** 20 March 2025 (Thursday)
+*   **Revision Decisions:** 3 April 2025 (Thursday)
+*   **Camera-ready deadline:** tentatively: 17 April 2025 (Thursday)
+
+### Conference
+
+*   **Venice, Italy:** 30 June - 4 July 2025
+
+## Proactive Prevention of Harm
+
+Authors must carefully consider and address potential harms associated with their research and its publication. Failure to adequately discuss such harms may result in rejection. This includes documenting how risks were addressed and mitigated, considering impacts on deployed systems, data collection safety, and responsible disclosure practices. Papers should include a clear statement on how the research benefit outweighs potential harms and the safety measures taken.
+
+If IRB consultation is available, it is expected to be appropriately consulted and documented. IRB approval does not absolve researchers from considering ethical aspects or guarantee PC acceptance.
+
+Consult resources like ""Common Pitfalls in Writing about Security and Privacy Human Subjects Experiments"" and the ""Menlo Report"" for guidance.
+
+## Open Science Expectations
+
+Researchers are expected to maximize the scientific and community value of their work by making it as open as possible. By default, all reproducible materials (code, data) must be released under an open source license. Exceptions apply for malware, protected human subject data, or proprietary data. All submissions must include a clear Data Availability statement explaining sharing plans or reasons for not sharing. Papers failing to meet commitments may be removed from the conference.
+
+## Plagiarism and Duplicate Submission
+
+All submissions must be original work. Plagiarism (of others or self) will be grounds for rejection. Overlap with previously published or simultaneously submitted papers must be clearly documented. Simultaneous submission of the same or substantially similar paper to another venue is not allowed and will be grounds for automatic rejection.
+
+## Anonymous Submission
+
+*   Papers must be submitted anonymously: no author names or affiliations on the title page, and authors must avoid revealing their identity in the text.
+*   Refer to your previous work in the third person.
+*   Blind references only if a third-person reference is infeasible.
+*   Use anonymous services for hosting code/data (e.g., Anonymous Github, not Github or Google Drive).
+*   Contact PC chairs with any questions. Papers not properly anonymized may be rejected without review.
+*   Authors may post preprints to archives like arXiv.
+*   Papers blatantly violating anonymity may be rejected by the Program Chairs.
+
+## Reviews from Prior Submissions
+
+Authors may optionally submit a separate, anonymized document of prior reviews (from another conference) along with a description of how those reviews were addressed. This supplementary material is visible to reviewers only after they submit their own initial review.
+
+## Page Limit and Formatting
+
+*   **Page Limit:** Maximum 13 pages of body text. Unlimited additional pages for references and appendices. Data Availability statement is part of the appendix.
+*   **Formatting:** Must use LaTeX in A4 format with the provided `eurosp-template.zip`. Do not use other IEEE templates.
+*   **Format:** Submissions must be in Portable Document Format (.pdf).
+*   **Rendering:** Ensure documents render correctly in Adobe Reader XI and when printed in black and white. Unusual fonts, images, or figures may cause issues.
+*   Failure to adhere to page limit and formatting requirements can lead to rejection without review.
+
+## Conference Submission Server
+
+Papers must be submitted at [https://hotcrp.eurosp2025.ieee-security.org](https://hotcrp.eurosp2025.ieee-security.org) and can be updated until the deadline.
+
+## Publication and Presentation
+
+Authors are responsible for publication clearances. At least one author of an accepted paper must present at the conference. In-person attendance is expected. If travel is impossible, at least one author must register, but the presentation may be skipped or replaced by a linked video presentation if a replacement presenter cannot be found."

@@ -14,7 +14,7 @@ export class ImageUrlExtractorService implements IImageUrlExtractorService {
             const { imageKeywords } = args;
 
             document.querySelectorAll('img').forEach(img => {
-                if (foundUrls.size >= 2) return; // Giới hạn logic tìm kiếm để tối ưu
+                if (foundUrls.size >= 1) return; // Giới hạn logic tìm kiếm để tối ưu
 
                 const src = img.getAttribute('src');
                 if (!src) return;
