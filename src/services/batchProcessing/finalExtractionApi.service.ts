@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { singleton, inject } from 'tsyringe';
 import { Logger } from 'pino';
-import fetch from 'node-fetch'; // <<< THÊM IMPORT NÀY
+import fetch from 'node-fetch';
 
 // --- Types ---
 import { CrawlModelType, GeminiApiParams } from '../../types/crawl';
@@ -9,9 +9,7 @@ import { CrawlModelType, GeminiApiParams } from '../../types/crawl';
 // --- Service Imports ---
 import { GeminiApiService } from '../geminiApi.service';
 import { FileSystemService } from '../fileSystem.service';
-// ConfigService không cần thiết ở đây vì FileSystemService đã xử lý logic môi trường
 
-// +++ UPDATE THE INTERFACE +++
 export interface IFinalExtractionApiService {
     execute(
         contentSendToAPI: string,
@@ -22,14 +20,14 @@ export interface IFinalExtractionApiService {
         isUpdate: boolean,
         extractModel: CrawlModelType,
         cfpModel: CrawlModelType,
-        imageUrls: string[] | undefined, // <<< THÊM THAM SỐ MỚI
+        imageUrls: string[] | undefined,
         parentLogger: Logger
     ): Promise<{
-        extractResponseTextPath: string | null; // Can be null
-        extractResponseContent: Record<string, any> | null; // The parsed JSON object
+        extractResponseTextPath: string | null;
+        extractResponseContent: Record<string, any> | null;
         extractMetaData: any | null;
-        cfpResponseTextPath: string | null; // Can be null
-        cfpResponseContent: Record<string, any> | null; // The parsed JSON object
+        cfpResponseTextPath: string | null;
+        cfpResponseContent: Record<string, any> | null;
         cfpMetaData: any | null;
     }>;
 }
@@ -41,22 +39,37 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
         @inject(FileSystemService) private readonly fileSystemService: FileSystemService
     ) { }
 
-
-    // +++ HELPER ĐỂ CHUYỂN URL SANG BASE64 +++
+    // +++ HELPER ĐÃ ĐƯỢC TỐI ƯU HÓA ĐỂ KHÔNG FETCH ẢNH KHÔNG HỢP LỆ +++
     private async urlToGenerativePart(url: string, logger: Logger): Promise<{ inlineData: { mimeType: string; data: string; } } | null> {
+        // +++ START: TỐI ƯU HÓA LOGIC +++
+        // Bước 1: Kiểm tra định dạng URL trước khi thực hiện bất kỳ yêu cầu mạng nào.
+        let mimeType: string | null = null;
+        const lowercasedUrl = url.toLowerCase();
+
+        if (lowercasedUrl.endsWith('.png')) {
+            mimeType = 'image/png';
+        } else if (lowercasedUrl.endsWith('.jpeg') || lowercasedUrl.endsWith('.jpg')) {
+            mimeType = 'image/jpeg';
+        } else if (lowercasedUrl.endsWith('.webp')) {
+            mimeType = 'image/webp';
+        }
+        // Thêm các định dạng được hỗ trợ khác như HEIC, HEIF nếu cần.
+
+        // Nếu URL không có phần mở rộng được hỗ trợ, bỏ qua ngay lập tức.
+        if (!mimeType) {
+            logger.warn({ imageUrl: url, event: 'unsupported_image_format_fetch_skipped' }, "Skipping fetch for image with unsupported format.");
+            return null;
+        }
+        // +++ END: TỐI ƯU HÓA LOGIC +++
+
+        // Bước 2: Chỉ khi định dạng hợp lệ, mới tiến hành fetch dữ liệu.
         try {
-            logger.info({ imageUrl: url }, "Fetching image to convert to Base64.");
+            logger.info({ imageUrl: url, mimeType: mimeType }, "Fetching supported image to convert to Base64.");
             const response = await fetch(url);
             if (!response.ok) {
                 logger.error({ imageUrl: url, status: response.status }, "Failed to fetch image.");
                 return null;
             }
-
-            // Xác định MimeType đơn giản từ URL
-            let mimeType = 'image/jpeg'; // Mặc định
-            if (url.endsWith('.png')) mimeType = 'image/png';
-            else if (url.endsWith('.webp')) mimeType = 'image/webp';
-            else if (url.endsWith('.jpg') || url.endsWith('.jpeg')) mimeType = 'image/jpeg';
 
             const imageArrayBuffer = await response.arrayBuffer();
             const base64ImageData = Buffer.from(imageArrayBuffer).toString('base64');
@@ -82,7 +95,7 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
         isUpdate: boolean,
         extractModel: CrawlModelType,
         cfpModel: CrawlModelType,
-        imageUrls: string[] | undefined, // <<< NHẬN THAM SỐ MỚI
+        imageUrls: string[] | undefined,
         parentLogger: Logger
     ): Promise<{
         extractResponseTextPath: string | null;
@@ -113,33 +126,32 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
             acronym: originalAcronymForApis,
         };
 
-
         logger.info({ event: 'API_FINAL_EXTRACTION_START', flow: isUpdate ? 'update' : 'save' });
         const finalApiStartTime = performance.now();
 
-        // +++ LOGIC MỚI: XÂY DỰNG PAYLOAD MULTIMODAL +++
         const extractPromise = (async () => {
             const extractApiLogger = logger.child({ apiTypeContext: this.geminiApiService.API_TYPE_EXTRACT });
             try {
                 const imageParts = [];
                 if (imageUrls && imageUrls.length > 0) {
                     for (const url of imageUrls) {
+                        // Hàm urlToGenerativePart giờ đã được tối ưu hóa để không fetch ảnh không hợp lệ
                         const part = await this.urlToGenerativePart(url, extractApiLogger);
-                        if (part) imageParts.push(part);
+                        if (part) {
+                            imageParts.push(part);
+                        }
                     }
                 }
 
-                // Xây dựng mảng `contents`
                 const contents = [
-                    ...imageParts, // Thêm các phần ảnh trước
-                    { text: contentSendToAPI } // Sau đó là phần text
+                    ...imageParts,
+                    { text: contentSendToAPI }
                 ];
 
                 extractApiLogger.info({ inputLength: contentSendToAPI.length, imageCount: imageParts.length, event: 'batch_processing_final_extract_api_call_start' });
 
-                // Gọi API với `contents` thay vì `batch`
                 const response = await this.geminiApiService.extractInformation(
-                    { ...commonApiParams, contents: contents }, // <<< THAY ĐỔI PAYLOAD
+                    { ...commonApiParams, contents: contents },
                     extractModel,
                     extractApiLogger
                 );
@@ -147,16 +159,13 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
                 let parsedContent: Record<string, any> | null = null;
                 if (response.responseText) {
                     try {
-                        // Cố gắng parse text thành JSON
                         parsedContent = JSON.parse(response.responseText);
                     } catch (e) {
                         extractApiLogger.error({ err: e, responseText: response.responseText, event: 'final_api_response_parse_failed' });
-                        // Nếu parse lỗi, tạo một object lỗi để lưu lại
                         parsedContent = { error: "Failed to parse JSON from API response", responseText: response.responseText };
                     }
                 }
 
-                // Luôn gọi saveTemporaryFile. Nó sẽ tự động bỏ qua việc ghi file trong môi trường production.
                 const pathValue = await this.fileSystemService.saveTemporaryFile(
                     response.responseText || "", extractFileBase, extractApiLogger
                 );
@@ -203,15 +212,12 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
 
         const [extractResult, cfpResult] = await Promise.all([extractPromise, cfpPromise]);
 
-
         const finalApiDurationMs = performance.now() - finalApiStartTime;
         logger.info({
             event: 'API_FINAL_EXTRACTION_END',
             durationMs: Math.round(finalApiDurationMs),
-            // ...
         });
 
-        // Cập nhật logic kiểm tra thành công
         const extractSuccess = !!extractResult.responseContent;
         const cfpSuccess = !!cfpResult.responseContent;
 
