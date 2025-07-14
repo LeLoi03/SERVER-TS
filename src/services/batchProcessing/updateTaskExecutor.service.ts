@@ -170,9 +170,6 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
             logger.info({ event: 'TASK_END', success: true }, `Finished processing conference task for "${finalRecord.conferenceTitle}" (${finalRecord.conferenceAcronym}).`);
             return true;
 
-
-
-            return true;
         } catch (error: any) {
             logger.error({ err: error, event: 'batch_task_execution_failed', flow: 'update' });
             const errorMessage = error instanceof Error ? error.message : String(error);

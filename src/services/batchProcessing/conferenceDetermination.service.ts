@@ -10,6 +10,7 @@ import { singleton, inject } from 'tsyringe';
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
 import { GeminiApiParams } from '../../types/crawl';
 import { ConfigService } from '../../config/config.service'; // +++ ADD IMPORT
+import { withOperationTimeout } from './utils'; // Đảm bảo đã import hàm tiện ích
 
 /**
  * Interface for the service responsible for determining the official website
@@ -106,51 +107,69 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
 
         const safeAcronym = (matchingEntry.conferenceAcronym || 'unknown').replace(/[^a-zA-Z0-9_-]/g, '-');
 
-        // Use Promise.allSettled for parallel processing
+        // +++ THAY ĐỔI QUAN TRỌNG: ÁP DỤNG TIMEOUT CHO TỪNG TÁC VỤ CON +++
+        const LINK_PROCESSING_TIMEOUT_MS = 60000;
+
+        // Xử lý CFP Link với timeout riêng
         const cfpPromise = (async () => {
             let cfpPage: Page | null = null;
             try {
                 cfpPage = await browserContext.newPage();
                 const cfpFileBase = `${safeAcronym}_cfp_determine_match_${batchIndex}`;
-                return await this.linkProcessorService.processAndSaveGeneralLink(
+                const cfpProcessingPromise = this.linkProcessorService.processAndSaveGeneralLink(
                     cfpPage, cfpLinkFromApi1, officialWebsiteNormalized, null,
                     matchingEntry.conferenceAcronym, 'cfp', true, cfpFileBase,
                     logger.child({ contentType: 'cfp' })
+                );
+                // Bọc tác vụ xử lý CFP bằng timeout
+                return await withOperationTimeout(
+                    cfpProcessingPromise,
+                    LINK_PROCESSING_TIMEOUT_MS,
+                    `Process CFP Link: ${cfpLinkFromApi1}`
                 );
             } finally {
                 if (cfpPage && !cfpPage.isClosed()) await cfpPage.close();
             }
         })();
 
+        // Xử lý IMP Link với timeout riêng
         const impPromise = (async () => {
             let impPage: Page | null = null;
             try {
                 impPage = await browserContext.newPage();
                 const impFileBase = `${safeAcronym}_imp_determine_match_${batchIndex}`;
-                return await this.linkProcessorService.processAndSaveGeneralLink(
+                const impProcessingPromise = this.linkProcessorService.processAndSaveGeneralLink(
                     impPage, impLinkFromApi1, officialWebsiteNormalized, cfpLinkFromApi1,
                     matchingEntry.conferenceAcronym, 'imp', false, impFileBase,
                     logger.child({ contentType: 'imp' })
+                );
+                // Bọc tác vụ xử lý IMP bằng timeout
+                return await withOperationTimeout(
+                    impProcessingPromise,
+                    LINK_PROCESSING_TIMEOUT_MS,
+                    `Process IMP Link: ${impLinkFromApi1}`
                 );
             } finally {
                 if (impPage && !impPage.isClosed()) await impPage.close();
             }
         })();
 
+        // Promise.allSettled sẽ chờ cả hai hoàn thành (hoặc bị timeout)
         const [cfpResult, impResult] = await Promise.allSettled([cfpPromise, impPromise]);
 
         if (cfpResult.status === 'fulfilled') {
             matchingEntry.cfpTextPath = cfpResult.value.path;
             matchingEntry.cfpTextContent = cfpResult.value.content;
         } else {
-            logger.error({ contentType: 'cfp', err: cfpResult.reason, event: 'save_cfp_error' });
+            // Lỗi ở đây sẽ là lỗi timeout chi tiết từ withOperationTimeout
+            logger.error({ contentType: 'cfp', err: cfpResult.reason, event: 'save_cfp_error_or_timeout' });
         }
 
         if (impResult.status === 'fulfilled') {
             matchingEntry.impTextPath = impResult.value.path;
             matchingEntry.impTextContent = impResult.value.content;
         } else {
-            logger.error({ contentType: 'imp', err: impResult.reason, event: 'save_imp_error' });
+            logger.error({ contentType: 'imp', err: impResult.reason, event: 'save_imp_error_or_timeout' });
         }
 
         logger.info({ event: 'finish_match_handling' });
@@ -176,11 +195,29 @@ export class ConferenceDeterminationService implements IConferenceDeterminationS
         });
         childLogger.info({ event: 'start_no_match_handling' });
 
-        // 1. Fetch and process the main website
-        const websiteInfo = await this.fetchAndProcessOfficialSiteInternal(
-            page, officialWebsiteNormalizedFromApi1, primaryEntryToUpdate.conferenceAcronym,
-            primaryEntryToUpdate.conferenceTitle, batchIndex, childLogger
-        );
+        // +++ BỌC LỜI GỌI NÀY BẰNG TIMEOUT +++
+        const WEBSITE_PROCESSING_TIMEOUT_MS = 90000; // 90 giây cho việc xử lý trang web chính
+        let websiteInfo: { finalUrl: string; textPath: string | null; textContent: string | null; imageUrls: string[] } | null = null;
+
+        try {
+            const processingPromise = this.fetchAndProcessOfficialSiteInternal(
+                page, officialWebsiteNormalizedFromApi1, primaryEntryToUpdate.conferenceAcronym,
+                primaryEntryToUpdate.conferenceTitle, batchIndex, childLogger
+            );
+
+            websiteInfo = await withOperationTimeout(
+                processingPromise,
+                WEBSITE_PROCESSING_TIMEOUT_MS,
+                `Fetch and Process Main Site: ${officialWebsiteNormalizedFromApi1}`
+            );
+        } catch (fetchError: unknown) {
+            const { message: errorMessage } = getErrorMessageAndStack(fetchError);
+            childLogger.error({ err: { message: errorMessage }, event: 'fetch_main_website_failed_in_no_match_or_timeout' });
+            primaryEntryToUpdate.mainLink = "None";
+            return primaryEntryToUpdate;
+        }
+        // +++ KẾT THÚC PHẦN BỌC +++
+
 
         if (!websiteInfo || !websiteInfo.textContent) {
             childLogger.error({ event: 'fetch_main_website_failed_in_no_match' });

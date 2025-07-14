@@ -18,116 +18,120 @@ export function filterSearchResults(
   unwantedDomains: unknown,
   skipKeywords: unknown
 ): GoogleSearchResult[] { // The function *intends* to return GoogleSearchResult[]
-    const logContext = '[SearchFilter]';
+    // const logContext = '[SearchFilter]';
+    // console.log(`${logContext} Bắt đầu lọc kết quả tìm kiếm.`);
 
     // 1. Validate and cast 'results' input
     if (!Array.isArray(results)) {
-        
+        // console.warn(`${logContext} Đầu vào 'results' không phải là mảng. Trả về mảng rỗng.`);
         return [];
     }
-    // Cast 'results' to GoogleSearchResult[] after initial validation.
-    // Individual item validation will occur within the filter loop.
     const validResults: GoogleSearchResult[] = results as GoogleSearchResult[];
+    // console.log(`${logContext} Tổng số kết quả ban đầu: ${validResults.length}`);
 
     // 2. Validate and process 'unwantedDomains'
     let validUnwantedDomains: string[];
     if (!Array.isArray(unwantedDomains)) {
-        
+        // console.warn(`${logContext} Đầu vào 'unwantedDomains' không phải là mảng. Sử dụng mảng trống.`);
         validUnwantedDomains = [];
     } else {
-        // Filter out non-string elements, but log a warning if any are found.
         const nonStringDomains = unwantedDomains.filter(d => typeof d !== 'string');
         if (nonStringDomains.length > 0) {
-            
+            // console.warn(`${logContext} Phát hiện các phần tử không phải chuỗi trong 'unwantedDomains':`, nonStringDomains);
         }
         validUnwantedDomains = unwantedDomains.filter((d): d is string => typeof d === 'string');
     }
+    // console.log(`${logContext} Tên miền không mong muốn: [${validUnwantedDomains.join(', ')}]`);
 
     // 3. Validate and process 'skipKeywords'
     let validSkipKeywords: string[];
     if (!Array.isArray(skipKeywords)) {
-        
+        // console.warn(`${logContext} Đầu vào 'skipKeywords' không phải là mảng. Sử dụng mảng trống.`);
         validSkipKeywords = [];
     } else {
-        // Filter out non-string elements, but log a warning if any are found.
         const nonStringKeywords = skipKeywords.filter(k => typeof k !== 'string');
         if (nonStringKeywords.length > 0) {
-            
+            // console.warn(`${logContext} Phát hiện các phần tử không phải chuỗi trong 'skipKeywords':`, nonStringKeywords);
         }
         validSkipKeywords = skipKeywords.filter((k): k is string => typeof k === 'string');
     }
+    // console.log(`${logContext} Từ khóa bỏ qua: [${validSkipKeywords.join(', ')}]`);
 
     // 4. Perform the filtering operation
-    const filteredResults = validResults.filter((resultItem: GoogleSearchResult) => {
+    const filteredResults = validResults.filter((resultItem: GoogleSearchResult, index: number) => {
+        // console.log(`\n${logContext} --- Đang xử lý kết quả #${index + 1} ---`);
         try {
-            // Runtime validation for each individual result item
             if (!resultItem || typeof resultItem !== 'object' || resultItem === null) {
-                
-                return false; // Exclude invalid objects
+                // console.warn(`${logContext} Kết quả #${index + 1} không hợp lệ (object is null/undefined/not object). Loại bỏ.`);
+                return false;
             }
 
-            // Ensure 'link' property exists and is a non-empty string
             if (typeof resultItem.link !== 'string' || !resultItem.link.trim()) {
-                
-                return false; // Exclude if link is invalid
+                // console.warn(`${logContext} Kết quả #${index + 1} có link không hợp lệ hoặc trống: '${resultItem.link}'. Loại bỏ.`);
+                return false;
             }
 
-            // Safely get and normalize link and title
             const link = resultItem.link.toLowerCase();
-            const title = (typeof resultItem.title === 'string' ? resultItem.title.toLowerCase() : ""); // Ensure title is string, fallback to empty string
+            const title = (typeof resultItem.title === 'string' ? resultItem.title.toLowerCase() : "");
+            // console.log(`${logContext} Kiểm tra Link: '${link}', Title: '${title}'`);
 
-            // Check against unwanted domains
             const hasUnwantedDomain = validUnwantedDomains.some(domain => {
-                try {
-                    // Domain is guaranteed to be a string here due to `validUnwantedDomains` filtering
-                    return link.includes(domain.toLowerCase());
-                } catch (domainCheckError: unknown) {
-                    const { message: errorMessage } = getErrorMessageAndStack(domainCheckError);
-                    
-                    return false; // If error during check, treat as not having unwanted domain to be safe
+                const domainLower = domain.toLowerCase();
+                if (link.includes(domainLower)) {
+                    // console.log(`${logContext} Link chứa tên miền không mong muốn: '${domainLower}'.`);
+                    return true;
                 }
+                return false;
             });
 
             if (hasUnwantedDomain) {
-                // 
-                return false; // Exclude if unwanted domain found
+                // console.log(`${logContext} Kết quả #${index + 1} bị loại bỏ do chứa tên miền không mong muốn.`);
+                return false;
             }
 
-            // Check against skip keywords using RegExp on the title
             const hasSkipKeyword = validSkipKeywords.some(keyword => {
                 try {
-                    // Keyword is guaranteed to be a string here due to `validSkipKeywords` filtering
-                    return new RegExp(keyword, "i").test(title);
+                    const regex = new RegExp(keyword, "i");
+                    if (regex.test(title)) {
+                        // console.log(`${logContext} Tiêu đề chứa từ khóa bỏ qua: '${keyword}'.`);
+                        return true;
+                    }
+                    return false;
                 } catch (regexCreationError: unknown) {
                     const { message: errorMessage } = getErrorMessageAndStack(regexCreationError);
-                    
-                    return false; // If error, treat as not having skip keyword to be safe
+                    // console.error(`${logContext} Lỗi tạo RegExp cho từ khóa '${keyword}': ${errorMessage}. Bỏ qua kiểm tra này cho mục hiện tại.`);
+                    return false;
                 }
             });
 
-            // Keep the result only if it has NEITHER an unwanted domain NOR a skip keyword
-            return !hasSkipKeyword;
+            if (hasSkipKeyword) {
+                // console.log(`${logContext} Kết quả #${index + 1} bị loại bỏ do tiêu đề chứa từ khóa bỏ qua.`);
+                return false;
+            }
+
+            // console.log(`${logContext} Kết quả #${index + 1} được giữ lại.`);
+            return true;
 
         } catch (filterItemError: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(filterItemError);
-            
-            return false; // Exclude the result if any unexpected error occurs during its processing
+            // console.error(`${logContext} Lỗi không mong muốn khi xử lý kết quả #${index + 1}: ${errorMessage}\n${errorStack}. Loại bỏ.`);
+            return false;
         }
     });
 
     // 5. Handle cases where all results were filtered out
     if (filteredResults.length === 0 && validResults.length > 0) {
-        
+        // console.warn(`${logContext} Tất cả các kết quả đã bị loại bỏ. Cố gắng trả về kết quả gốc đầu tiên làm dự phòng.`);
         const firstResult = validResults[0];
-        // Ensure the first original result is minimally valid before returning it as fallback
         if (firstResult && typeof firstResult === 'object' && typeof firstResult.link === 'string' && firstResult.link.trim()) {
-            return [firstResult]; // Return the first *original* valid result as fallback
+            // console.log(`${logContext} Trả về kết quả gốc đầu tiên làm dự phòng: '${firstResult.link}'.`);
+            return [firstResult];
         } else {
-            
-            return []; // Return empty if the first original wasn't valid either
+            // console.warn(`${logContext} Kết quả gốc đầu tiên không hợp lệ hoặc trống. Trả về mảng rỗng.`);
+            return [];
         }
     }
 
-    
+    // console.log(`${logContext} Kết thúc lọc. Tổng số kết quả sau khi lọc: ${filteredResults.length}.`);
     return filteredResults;
 }

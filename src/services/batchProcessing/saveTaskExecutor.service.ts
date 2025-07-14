@@ -181,8 +181,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
 
             try {
                 // +++ BỌC LỜI GỌI SERVICE BẰNG TIMEOUT +++
-                const DETERMINATION_TIMEOUT_MS = 300000; // 3 phút cho việc xử lý trang chính thức
-
+                const DETERMINATION_TIMEOUT_MS = 240000; 
 
                 const crawlDeterminedStartTime = performance.now();
                 logger.info({ event: 'PLAYWRIGHT_CRAWL_DETERMINED_LINKS_START' });

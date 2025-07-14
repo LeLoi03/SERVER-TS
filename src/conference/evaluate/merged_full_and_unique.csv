@@ -372,6 +372,19 @@ European Conference on Software Architecture,ECSA
 IEEE International Working Conference on Mining Software Repositories,MSR
 International Conference on Model-Driven Engineering and Software Development,MODELSWARD
 International Conference on Managed Programming Languages and Runtimes,MPLR
+International Conference on Coordination Models and Languages,Coordination
+International Conference on Machine Learning and Applications,ICMLA
+"International Conference on Mobile Ubiquitous Computing, Systems, Services and Technologies",UBICOMM
+Australasian Conference on Information Security and Privacy,ACISP
+European Symposium on Programming,ESOP
+International Colloquium on Theoretical Aspects of Computing,ICTAC
+Utility and Cloud Computing,UCC
+International Symposium on Software Engineering for Adaptive and Self-Managing Systems,SEAMS
+International Conference on Natural Computation,ICNC
+Simulation and Synthesis in Medical Imaging,SASHIMI
+International Conference on Internet Monitoring and Protection,ICIMP
+International Conference on Internet and Web Applications and Services,ICIW
+International Conference on Parallel and Distributed Processing Techniques and Applications,PDPTA
 International Workshop on Approximation Algorithms for Combinatorial Optimization Problems and International Conference on Randomization and Computation,APPROX/RANDOM
 Web and Big Data,APWEB
 Asia-Pacific Network Operations and Management Symposium,APNOMS
@@ -857,7 +870,6 @@ International Conference on Software Language Engineering,SLE
 International Workshop on Algebraic and Combinatorial Coding Theory,ACCT
 Asian Conference on Computer Vision,ACCV
 "ACM International Conference on Advances in Computer Entertainment (merged with DIMEA, Digital Interactive Media in Entertainment and Arts, in 2009)",ACE
-Australasian Conference on Information Security and Privacy,ACISP
 Australasian Document Computing Symposium,ADCS
 Australian Institute of Computer Ethics Conference,AICE
 Advances in Modal Logic,AiML
@@ -867,7 +879,6 @@ Asia-Pacific Services Computing Conference,APSCC
 IberoAmerican Congress on Pattern Recognition,CIARP
 International Workshop on Combinations of Intelligent Methods and Applications,CIMA
 Conference on Combinatorial Optimization and Applications,COCOA
-International Conference on Coordination Models and Languages,Coordination
 Conference on Robot Learning,CoRL
 ACM Conference on Computer Supported Cooperative Work,CSCW
 International CSI Computer Conference,CSICC
@@ -882,7 +893,6 @@ European Conference on Computer Supported Cooperative Work,ECSCW
 "World Conference on Educational Multimedia, Hypermedia and Telecommunications ",ED-MEDIA
 Engineering Interactive Computing Systems,EICS
 International Workshop on Enterprise and Organizational Modelling and Simulation,EOMAS
-European Symposium on Programming,ESOP
 European Conference on Multi-Agent Systems,EUMAS
 "EuroConference on Combinatorics, Graph Theory and Applications",EUroComb
 Visual Analytics,EuroVA
@@ -897,15 +907,10 @@ IEEE International Conference on Engineering of Complex Computer Systems,ICECCS
 International Conference Formal Concept Analysis Conference,ICFCA
 International Conference on Frontiers of Handwriting Recognition,ICFHR
 International Conference on Internet Computing in Science and Engineering,ICICSE
-International Conference on Internet Monitoring and Protection,ICIMP
-International Conference on Internet and Web Applications and Services,ICIW
-International Conference on Machine Learning and Applications,ICMLA
-International Conference on Natural Computation,ICNC
 International Conference on Smart homes and health Telematics,ICOST
 International Conference on Optimization: Techniques And Applications,ICOTA
 International Conference on Parallel and Distributed Systems,ICPADS
 International Conference on Software and System Processes (was ICSP prior to 2011),ICSSP
-International Colloquium on Theoretical Aspects of Computing,ICTAC
 International Conference on Computer Vision Systems,ICVS
 International Conference on Intelligent Data Engineering and Automated Learning,IDEAL
 IEEE International Symposium on Adaptive Dynamic Programming and Reinforcement Learning,IEEE ADPRL
@@ -934,12 +939,9 @@ Multimedia and Network Information Systems,MISSI
 Mathematics of Program Construction,MPC
 ACM SIGSIM Conference on Principles of Advanced Discrete Simulation (was Parallel and Distributed Simulation),PADS
 International Conference on Pairing-based Cryptography,Pairing
-International Conference on Parallel and Distributed Processing Techniques and Applications,PDPTA
 Parallel Problem Solving from Nature,PPSN
 Pacific-Rim Symposium on Image and Video Technology,PSIVT
-Simulation and Synthesis in Medical Imaging,SASHIMI
 International Symposium on Spatial Data Handling,SDH
-International Symposium on Software Engineering for Adaptive and Self-Managing Systems,SEAMS
 Semantics - International Conference on Semantic Systems,Semantics
 IEEE Software Engineering Workshop,SEW
 Symposium on Reliable Distributed Systems,SRDS
@@ -947,8 +949,6 @@ Structural and Syntactical Pattern Recognition,SSPR
 International Symposium on Theoretical Aspects of Software Engineering,TASE
 International Visualization in Transportation Symposium,TRB
 Testbeds and Research Infrastructures for the Development of Networks and Communities,TridentCom
-"International Conference on Mobile Ubiquitous Computing, Systems, Services and Technologies",UBICOMM
-Utility and Cloud Computing,UCC
 International Conference on Virtual Execution Environments,VEE
 Algorithms and Data Structures Symposium (was Workshop on Algorithms and Data Structures),WADS
 Workshop in Information Security Theory and Practices,WISTP

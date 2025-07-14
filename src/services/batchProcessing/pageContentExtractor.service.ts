@@ -8,6 +8,7 @@ import { autoScroll } from './utils';
 import { IDomTransformationService, IDomTransformationArgs } from './domTransformation.service';
 import { IFrameTextExtractorService } from './frameTextExtractor.service';
 import { IImageUrlExtractorService } from './imageUrlExtractor.service';
+import { withOperationTimeout } from './utils';
 
 type ExtractedContent = {
     text: string;
@@ -51,6 +52,7 @@ export class PageContentExtractorService implements IPageContentExtractorService
     }
 
     // +++ CẬP NHẬT HÀM ĐỆ QUY VỚI GIỚI HẠN ĐỘ SÂU +++
+
     private _getAllFramesRecursively(frame: Frame, logger: Logger, currentDepth: number): Frame[] {
         // Điều kiện dừng 1: Nếu đã đạt đến độ sâu tối đa
         if (currentDepth >= this.MAX_FRAME_DEPTH) {
@@ -100,45 +102,63 @@ export class PageContentExtractorService implements IPageContentExtractorService
             exactKeywords: this.exactKeywords,
         };
 
-        for (const frame of frames) {
-            if (frame.isDetached()) {
-                logger.trace({ ...currentLogContext, frameUrl: frame.url(), event: 'skipped_detached_frame' });
-                continue;
-            }
+        // +++ THAY ĐỔI LỚN: XỬ LÝ FRAME SONG SONG VỚI TIMEOUT RIÊNG +++
+        const FRAME_PROCESSING_TIMEOUT_MS = 10000; // 20 giây cho mỗi frame
 
+        const frameProcessingPromises = frames.map(async (frame) => {
             const frameLogger = logger.child({ frameUrl: frame.url() });
+            if (frame.isDetached()) {
+                frameLogger.trace({ ...currentLogContext, event: 'skipped_detached_frame' });
+                return { text: "", imageUrls: [] };
+            }
 
             try {
-                // Bước 1: Biến đổi DOM bằng service chuyên dụng
-                await this.domTransformationService.transformFrame(frame, transformationArgs, frameLogger);
+                // Bọc toàn bộ logic xử lý frame trong withOperationTimeout
+                return await withOperationTimeout(
+                    (async () => {
+                        await this.domTransformationService.transformFrame(frame, transformationArgs, frameLogger);
 
-                // Bước 2: Trích xuất văn bản và ảnh song song để tối ưu
-                const [frameText, frameImageUrls] = await Promise.all([
-                    this.frameTextExtractorService.extractTextFromFrame(frame, frameLogger),
-                    this.imageUrlExtractorService.extractImageUrlsFromFrame(frame, this.imageKeywords)
-                ]);
+                        const [frameText, frameImageUrls] = await Promise.all([
+                            this.frameTextExtractorService.extractTextFromFrame(frame, frameLogger),
+                            this.imageUrlExtractorService.extractImageUrlsFromFrame(frame, this.imageKeywords)
+                        ]);
 
-                // +++ LOGIC MỚI VÀ ĐÚNG ĐẮN ĐỂ THÊM SRC CỦA FRAME +++
-                let processedText = frameText;
-                // Kiểm tra nếu đây là một frame con (không phải main frame) VÀ nó có nội dung
-                if (frame.parentFrame() && frameText.trim()) {
-                    // Lấy URL của frame con (chính là thuộc tính src) và thêm vào đầu nội dung
-                    processedText = `iframe="${frame.url()}"\n\n${frameText}`;
-                }
+                        let processedText = frameText;
+                        if (frame.parentFrame() && frameText.trim()) {
+                            processedText = `iframe="${frame.url()}"\n\n${frameText}`;
+                        }
 
-                if (processedText) {
-                    fullText += processedText;
-                }
-                if (frameImageUrls.length > 0) {
-                    allImageUrls.push(...frameImageUrls);
-                }
-
-
+                        return { text: processedText, imageUrls: frameImageUrls };
+                    })(),
+                    FRAME_PROCESSING_TIMEOUT_MS,
+                    `Process frame: ${frame.url()}`
+                );
             } catch (e: unknown) {
                 const { message: errorMessage } = getErrorMessageAndStack(e);
-                frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'frame_processing_failed' }, `Could not process frame: ${errorMessage}`);
+                frameLogger.warn({ ...currentLogContext, err: { message: errorMessage }, event: 'frame_processing_failed_or_timed_out' }, `Could not process frame: ${errorMessage}`);
+                return { text: "", imageUrls: [] }; // Trả về kết quả rỗng nếu có lỗi hoặc timeout
             }
-        }
+        });
+
+
+
+        // Chờ tất cả các promise xử lý frame hoàn thành (kể cả khi một vài cái bị lỗi)
+        const settledResults = await Promise.allSettled(frameProcessingPromises);
+
+        settledResults.forEach(result => {
+            if (result.status === 'fulfilled' && result.value) {
+                if (result.value.text) {
+                    fullText += result.value.text;
+                }
+                if (result.value.imageUrls.length > 0) {
+                    allImageUrls.push(...result.value.imageUrls);
+                }
+            } else if (result.status === 'rejected') {
+                logger.error({ ...currentLogContext, err: result.reason, event: 'frame_promise_rejected' });
+            }
+        });
+        // +++ KẾT THÚC THAY ĐỔI +++
+
 
         const uniqueImageUrls = [...new Set(allImageUrls)].slice(0, 2);
         logger.info({ foundImageCount: uniqueImageUrls.length, event: 'image_url_extraction_complete' });

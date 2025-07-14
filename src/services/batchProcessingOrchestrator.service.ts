@@ -315,7 +315,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             methodLogger.info({ event: 'page_created_for_save_flow' });
 
             // --- ĐỊNH NGHĨA TIMEOUT CHO MỖI LINK ---
-            const LINK_PROCESSING_TIMEOUT_MS = 90000; // 90 giây cho mỗi link
+            const LINK_PROCESSING_TIMEOUT_MS = 60000; // 60 giây cho mỗi link
 
 
             const crawlStartTime = performance.now();

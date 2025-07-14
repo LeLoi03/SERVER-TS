@@ -15,7 +15,7 @@ export class FrameTextExtractorService implements IFrameTextExtractorService {
 
         try {
             // Luôn lấy text từ toàn bộ body của frame
-            const frameText = await frame.locator('body').innerText({ timeout: 20000 });
+            const frameText = await frame.locator('body').innerText({ timeout: 15000 });
 
             if (frameText && frameText.trim()) {
                 logger.debug({ ...currentLogContext, textLength: frameText.length, event: 'frame_text_extracted_from_body' });

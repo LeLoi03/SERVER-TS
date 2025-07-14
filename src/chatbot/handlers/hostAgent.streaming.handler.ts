@@ -112,19 +112,15 @@ export async function handleStreaming(
         return safeEmitStreaming(eventName, { ...data, agentId: 'HostAgent' });
     };
 
-    // <<< SỬA ĐỔI QUAN TRỌNG: Cập nhật hàm processAndEmitStream >>>
+    // <<< SỬA ĐỔI: Cập nhật hàm processAndEmitStream để đo TTFT >>>
     async function processAndEmitStream(
         stream: AsyncGenerator<GenerateContentResponse>,
-        requestId: string, // Nhận requestId
-        logger?: Logger    // Nhận logger
     ): Promise<{ fullText: string; parts?: Part[] } | null> {
         let accumulatedText = "";
         let accumulatedParts: Part[] = [];
-        let streamFinishedSuccessfully = false;
         let firstTokenTime: number | null = null; // Biến để lưu thời điểm nhận token đầu tiên
 
         if (!hostAgentStreamingStatusUpdateCallback('status_update', { type: 'status', step: 'streaming_response', message: 'Receiving response...' })) return null;
-
 
         try {
             for await (const chunk of stream) {
@@ -156,7 +152,6 @@ export async function handleStreaming(
                     });
                 }
             }
-            streamFinishedSuccessfully = true;
             if (accumulatedParts.length === 0 && accumulatedText) {
                 accumulatedParts.push({ text: accumulatedText });
             }
@@ -185,7 +180,7 @@ export async function handleStreaming(
                 ...hostAgentGenerationConfig, systemInstruction: systemInstructions, tools: hostAgentTools
             };
 
-            // <<< SỬA ĐỔI QUAN TRỌNG: Cập nhật khối log >>>
+            // <<< SỬA ĐỔI QUAN TRỌNG: Bắt đầu đo lường và ghi log >>>
             const aiCallStartTime = performance.now();
             if (logger) {
                 logger.info({
@@ -194,12 +189,9 @@ export async function handleStreaming(
                     requestId,
                     details: {
                         turn: currentHostTurn,
-                        // Model người dùng yêu cầu (nếu có)
                         requestedModel: userSelectedModel || 'default',
-                        // // Model thực sự được sử dụng để gọi API
-                        // actualModel: geminiServiceForHost.modelName,
                     }
-                }, `Calling Gemini API.`);
+                }, `Calling Gemini API for turn ${currentHostTurn}.`);
             }
             // <<< KẾT THÚC SỬA ĐỔI >>>
 
@@ -228,21 +220,21 @@ export async function handleStreaming(
                 safeEmitStreaming('chat_error', { type: 'error', message: hostAgentLLMResult.error, step: 'host_llm_error' });
                 return completeHistoryToSave;
             } else if (hostAgentLLMResult.functionCall) {
+                const aiCallEndTime = performance.now(); // Ghi nhận thời điểm kết thúc
                 // <<< THÊM MỚI: Ghi log cho function call >>>
                 if (logger) {
                     logger.info({
                         event: 'performance_log',
-                        stage: 'ai_function_call_completed', // Một stage mới
+                        stage: 'ai_function_call_completed',
                         requestId,
                         details: {
                             turn: currentHostTurn,
                             functionName: hostAgentLLMResult.functionCall.name
                         },
                         metrics: {
-                            // Thời gian từ lúc bắt đầu gọi đến lúc nhận được function call
                             duration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
                         }
-                    }, `Gemini API returned a function call for turn ${currentHostTurn}.`);
+                    }, `Gemini API returned a function call.`);
                 }
                 // <<< KẾT THÚC THÊM MỚI >>>
                 const functionCall = hostAgentLLMResult.functionCall;
@@ -321,14 +313,11 @@ export async function handleStreaming(
                 currentHostTurn++;
                 continue;
             } else if (hostAgentLLMResult.stream) {
-                // <<< SỬA ĐỔI QUAN TRỌNG: Đo TTFT bên trong processAndEmitStream >>>
-                const streamOutput = await processAndEmitStream(
-                    hostAgentLLMResult.stream,
-                    requestId, // Truyền requestId vào
-                    logger     // Truyền logger vào
-                );
+                // <<< SỬA ĐỔI: Truyền stream vào hàm đã cập nhật >>>
+                const streamOutput = await processAndEmitStream(hostAgentLLMResult.stream);
+                const aiStreamEndTime = performance.now(); // Ghi nhận thời điểm kết thúc stream
 
-                const aiStreamEndTime = performance.now();
+                // <<< THÊM MỚI: Ghi log và gọi callback >>>
                 if (logger) {
                     logger.info({
                         event: 'performance_log',
@@ -336,16 +325,12 @@ export async function handleStreaming(
                         requestId,
                         details: { turn: currentHostTurn },
                         metrics: {
-                            // <<< SỬA ĐỔI: Dùng aiCallEndTime thay vì aiStreamEndTime để nhất quán >>>
-                            totalStreamDuration_ms: parseFloat((aiCallEndTime - aiCallStartTime).toFixed(2))
+                            totalStreamDuration_ms: parseFloat((aiStreamEndTime - aiCallStartTime).toFixed(2))
                         }
-                    }, `Gemini API stream finished for turn ${currentHostTurn}.`);
+                    }, `Gemini API stream finished.`);
                 }
 
-
-
                 if (performanceCallback && (socket as any).requestStartTime) {
-                    // Callback vẫn có thể báo cáo tổng thời gian AI
                     performanceCallback({
                         prep: aiCallStartTime - (socket as any).requestStartTime,
                         ai: aiStreamEndTime - aiCallStartTime

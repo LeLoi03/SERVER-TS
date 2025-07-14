@@ -13,6 +13,48 @@ export interface AccessResult {
 }
 
 /**
+ * Chờ đợi nội dung của một trang Single-Page Application (SPA) có khả năng được render xong.
+ * Hàm này sử dụng Promise.race để chờ đợi selector phổ biến đầu tiên xuất hiện,
+ * giúp nó hoạt động hiệu quả trên cả trang SPA và trang truyền thống.
+ *
+ * @param page - Đối tượng Page của Playwright.
+ * @param logger - Logger để ghi lại các sự kiện.
+ */
+async function waitForContentToRender(page: Page, logger: Logger): Promise<void> {
+    const logContext = { function: 'waitForContentToRender' };
+
+    // Danh sách các "nghi can" phổ biến nhất cho các SPA
+    const commonSpaSelectors = [
+        '#app',         // Vue.js
+        '#root',        // React.js
+        'app-root',     // Angular
+        'main',         // Thẻ HTML5 ngữ nghĩa
+        '#content',
+        '.content',
+        '#container',
+        '.container',
+        '.wrapper'
+    ];
+
+    try {
+        // Tạo một promise cho mỗi selector
+        const promises = commonSpaSelectors.map(selector =>
+            page.waitForSelector(selector, { state: 'attached', timeout: 10000 })
+        );
+
+        // Promise.race sẽ hoàn thành ngay khi promise ĐẦU TIÊN trong danh sách hoàn thành
+        await Promise.race(promises);
+
+        logger.trace({ ...logContext, event: 'spa_content_rendered' }, 'A common SPA selector was found. Content is likely rendered.');
+
+    } catch (error) {
+        // Lỗi này chỉ xảy ra nếu SAU 10 GIÂY, KHÔNG CÓ BẤT KỲ selector nào trong danh sách xuất hiện.
+        // Đây là trường hợp hiếm, nhưng chúng ta vẫn ghi log và tiếp tục.
+        logger.warn({ ...logContext, event: 'spa_wait_timed_out' }, 'Timed out waiting for any common SPA selector. Proceeding anyway.');
+    }
+}
+
+/**
  * Hàm tiện ích để truy cập một URL duy nhất bằng Playwright với khả năng xử lý lỗi mạnh mẽ.
  * Gói gọn logic try-catch, xử lý chuyển hướng, và trả về một đối tượng kết quả có cấu trúc.
  * Được tối ưu để xử lý cả trang HTML tiêu chuẩn và các trang Single-Page Application (SPA) hiện đại.
@@ -23,43 +65,58 @@ export interface AccessResult {
  * @returns {Promise<AccessResult>} Một đối tượng chứa kết quả của việc truy cập.
  */
 export async function accessUrl(page: Page, url: string, logger: Logger): Promise<AccessResult> {
-    // --- SỬA LỖI TYPESCRIPT TẠI ĐÂY ---
-    // Khai báo logContext với một kiểu cho phép các thuộc tính bổ sung.
-    // [key: string]: any cho phép bạn thêm bất kỳ thuộc tính chuỗi nào.
     const logContext: { initialUrl: string; function: string;[key: string]: any } = {
         initialUrl: url,
         function: 'accessUrl'
     };
-    // --- KẾT THÚC SỬA LỖI ---
 
-    // --- THÊM LOGIC THỬ LẠI ---
-    const MAX_RETRIES = 3; // Thử tối đa 3 lần
-    const RETRY_DELAY_MS = 2000; // Chờ 2 giây giữa các lần thử
+    const MAX_RETRIES = 2; // Giảm xuống 2 vì logic đã mạnh hơn
+    const RETRY_DELAY_MS = 2000;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-        logContext['attempt'] = attempt; // Thêm số lần thử vào log
+        logContext['attempt'] = attempt;
         logger.trace({ ...logContext, event: 'access_url_attempt_start' }, `Attempting to access URL: ${url}`);
 
         try {
-            // Sử dụng lại chiến lược goto mạnh mẽ của bạn
             const response = await page.goto(url, {
-                waitUntil: 'domcontentloaded',
-                timeout: 45000,
+                waitUntil: 'domcontentloaded', // Chỉ cần chờ HTML được phân tích ban đầu
+                timeout: 30000, // Timeout 30 giây cho việc điều hướng
             });
 
-            await page.waitForLoadState('networkidle', { timeout: 25000 });
+            // Bước 1: Chờ đợi thông minh cho nội dung SPA render
+            await waitForContentToRender(page, logger);
+
+            // Bước 2: Chờ đợi linh hoạt cho các tài nguyên phụ tải xong
+            try {
+                await Promise.race([
+                    page.waitForLoadState('networkidle', { timeout: 15000 }),
+                    page.waitForLoadState('load', { timeout: 15000 })
+                ]);
+                logger.trace({ ...logContext, event: 'page_load_state_achieved' });
+            } catch (waitError) {
+                logger.warn({ ...logContext, err: waitError, event: 'wait_for_load_state_timed_out' }, 'Wait for load/networkidle timed out, proceeding anyway as content is likely present.');
+            }
+
+            // +++ GIẢI PHÁP CUỐI CÙNG: CHO JS "THỜI GIAN THỞ" +++
+            // Thêm một khoảng chờ ngắn, cố định để đảm bảo các script render cuối cùng có thời gian chạy.
+            // Đây là "lưới an toàn" cho các trang SPA cứng đầu.
+            logger.trace({ ...logContext, event: 'final_wait_for_spa_render' }, 'Adding a final short wait for SPA rendering.');
+            await page.waitForTimeout(3000); // Chờ 3 giây
+            // +++ KẾT THÚC THAY ĐỔI +++
+
+
 
             const finalUrl = page.url();
 
+            // Kiểm tra lại response sau tất cả các lần chờ
             if (response && response.ok()) {
                 logger.info({ ...logContext, finalUrl, status: response.status(), event: 'access_url_success' }, `Successfully accessed URL on attempt ${attempt}.`);
-                return { success: true, finalUrl, response, error: null }; // THÀNH CÔNG -> Thoát khỏi vòng lặp
+                return { success: true, finalUrl, response, error: null };
             }
 
-            // Xử lý trường hợp response không ok
+            // Xử lý trường hợp response không ok (ví dụ: 404, 500)
             const error = new Error(`Final response was not OK. Status: ${response?.status()} for URL: ${finalUrl}`);
             logger.warn({ ...logContext, finalUrl, status: response?.status(), event: 'access_url_not_ok_status' }, error.message);
-            // Không thử lại với lỗi HTTP, vì nó thường là lỗi cố định (404, 500)
             return { success: false, finalUrl, response, error };
 
         } catch (error: unknown) {
@@ -85,7 +142,7 @@ export async function accessUrl(page: Page, url: string, logger: Logger): Promis
         }
     }
 
-    // Dòng này trên lý thuyết sẽ không bao giờ được chạy, nhưng để đảm bảo an toàn
+    // Dòng này chỉ được chạy nếu vòng lặp kết thúc mà không return
     return { success: false, finalUrl: page.url(), response: null, error: new Error('Exhausted all retries for accessUrl') };
 }
 

@@ -261,51 +261,27 @@ async function main() {
         console.log("Đã mở trang mới.");
 
         // 6. Truy cập vào URL mục tiêu
-         const url = 'https://2025-eu.semantics.cc/page/cfp_rev_rep';
+         const url = 'https://sigsim.acm.org/conf/pads/2025/';
         console.log(`Đang truy cập: ${url}`);
         await page.goto(url, { waitUntil: 'networkidle' });
         console.log("Tải trang thành công.");
 
-        // --- CẬP NHẬT LOGIC XỬ LÝ SHADOW DOM ---
+    
 
-        // 1. Định nghĩa locator cho phần tử host
-        const shadowHostLocator = page.locator('zero-md');
+        // === THAY ĐỔI CỐT LÕI: THÊM BƯỚC CUỘN TRANG ===
+        // console.log("Đang thực hiện cuộn trang để tải nội dung động...");
+        // await autoScroll(page);
+        // console.log("Cuộn trang hoàn tất.");
+        // Chờ một chút để các animation hoàn thành
+        await page.waitForTimeout(2000);
+        // === KẾT THÚC THAY ĐỔI ===
 
-        // 2. ĐỊNH NGHĨA LOCATOR CHO MỘT PHẦN TỬ CON BÊN TRONG SHADOW DOM
-        // Playwright cho phép nối chuỗi locator để truy vấn vào bên trong.
-        // Chúng ta sẽ tìm thẻ <h1> bên trong <zero-md>.
-        const contentHeaderLocator = shadowHostLocator.locator('h1');
+        // 7. Lấy toàn bộ text từ thẻ <body> của trang
+        const pageText = await page.locator('body').innerText();
 
-        // 3. CHỜ ĐỢI PHẦN TỬ CON XUẤT HIỆN
-        // Đây là bước quan trọng nhất. Nó sẽ tạm dừng kịch bản cho đến khi
-        // JavaScript tải và render xong nội dung.
-        console.log("Đang chờ nội dung bên trong Shadow DOM được render...");
-        await contentHeaderLocator.waitFor({ state: 'visible', timeout: 15000 }); // Chờ tối đa 15 giây
-        console.log("Nội dung đã được render.");
-
-        // 4. SAU KHI ĐÃ CHẮC CHẮN NỘI DUNG CÓ MẶT, MỚI LẤY TEXT
-        // Lấy innerText của toàn bộ host <zero-md>
-        const contentInsideShadowDom = await shadowHostLocator.innerText();
-
-        console.log("\n--- NỘI DUNG BÊN TRONG SHADOW DOM ---");
-        console.log(contentInsideShadowDom);
-        console.log("--- KẾT THÚC NỘI DUNG SHADOW DOM ---\n");
-
-
-        // // === THAY ĐỔI CỐT LÕI: THÊM BƯỚC CUỘN TRANG ===
-        // // console.log("Đang thực hiện cuộn trang để tải nội dung động...");
-        // // await autoScroll(page);
-        // // console.log("Cuộn trang hoàn tất.");
-        // // Chờ một chút để các animation hoàn thành
-        // await page.waitForTimeout(2000);
-        // // === KẾT THÚC THAY ĐỔI ===
-
-        // // 7. Lấy toàn bộ text từ thẻ <body> của trang
-        // const pageText = await page.locator('body').innerText();
-
-        // console.log("\n--- TOÀN BỘ TEXT CỦA TRANG ---");
-        // console.log(pageText);
-        // console.log("--- KẾT THÚC TEXT CỦA TRANG ---\n");
+        console.log("\n--- TOÀN BỘ TEXT CỦA TRANG ---");
+        console.log(pageText);
+        console.log("--- KẾT THÚC TEXT CỦA TRANG ---\n");
 
     } catch (error) {
         console.error("Đã xảy ra lỗi trong quá trình thực thi:", error);
