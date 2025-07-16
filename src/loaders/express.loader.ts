@@ -33,10 +33,10 @@ export const loadExpress = (): Express => {
     app.use(cors(corsOptions)); // Enable Cross-Origin Resource Sharing
 
     // Parse JSON payloads with an increased limit.
-    app.use(express.json({ limit: '1mb' }));
+    app.use(express.json({ limit: '50mb' }));
 
     // Parse URL-encoded payloads with an increased limit.
-    app.use(express.urlencoded({ limit: '1mb', extended: true }));
+    app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
     // Parse text/plain and text/csv payloads.
     app.use(express.text({ type: ['text/plain', 'text/csv'] }));

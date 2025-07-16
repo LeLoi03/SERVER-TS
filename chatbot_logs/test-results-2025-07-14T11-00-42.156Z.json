@@ -1,0 +1,1190 @@
+[
+  {
+    "frontendMessageId": "33e53b30-8faa-41c7-8186-bed339b9e2db",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Tìm hội nghị có từ khóa ‘machine learning’",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 17667,
+    "response": "Dưới đây là một số hội nghị liên quan đến 'machine learning':\n\n*   **Hội nghị 1:**\n    *   **Tiêu đề:** Conference on Theory and Applications of Models of Computation (TAMC)\n    *   **Địa điểm:** Jinan, China\n    *   **Lĩnh vực nghiên cứu:** Lý thuyết tính toán\n    *   **Các chủ đề:** Tính toán phức tạp và thuật toán, Các mô hình tính toán, Lý thuyết automata và ngôn ngữ hình thức, Điện toán lượng tử, Lý thuyết trò chơi thuật toán, Mật mã và bảo mật dữ liệu, Sinh học tính toán và tin sinh học, Điện toán song song và phân tán, Kiểm chứng hình thức và phân tích chương trình, Hình học tính toán và lý thuyết đồ thị, Logic và lý thuyết chứng minh, Lựa chọn xã hội tính toán, Tối ưu hóa tổ hợp\n    *   **Ngày hội nghị:** 19 - 21 tháng 9, 2025\n    *   **Liên kết trang web:** http://www.maths.sdnu.edu.cn/TAMC2025.htm\n\n*   **Hội nghị 2:**\n    *   **Tiêu đề:** International Conference on Computer Vision and Graphics (ICCVG)\n    *   **Địa điểm:** Chengdu, China\n    *   **Lĩnh vực nghiên cứu:** Thị giác máy tính và tính toán đa phương tiện, Đồ họa, thực tế tăng cường và trò chơi, Trí tuệ nhân tạo\n    *   **Các chủ đề:** Đồ họa máy tính, Xử lý ảnh và thị giác máy tính, Hiển thị bao gồm hiển thị thời gian thực, chiếu sáng, đồ họa chân thực, Nhiếp ảnh tính toán, Phần cứng đồ họa, GPU và các kỹ thuật liên quan đến phần cứng, Đồ họa máy tính dựa trên hình ảnh, Mô hình hóa hình học, CAD, Mô phỏng, Hoạt hình máy tính, xử lý ảnh, Xử lý dữ liệu hình học, GIS, Mô hình hóa và xử lý BigData, Phân đoạn, Truy xuất đối tượng, Trực quan hóa thông tin, Đồ họa máy tính và trực quan hóa, Trực quan hóa khoa học, trực quan hóa dữ liệu lớn và BigData, Thị giác máy tính, Môi trường thực tế ảo / thực tế tăng cường / thực tế hỗn hợp, Quét ảnh, hiển thị và in ấn, Đồ họa khối, phương tiện bán trong suốt, Học máy, đồ họa máy tính, thị giác sinh học, Thiết kế giao diện người dùng và tương tác người-máy, và tương tác nâng cao, Lưu trữ và truy xuất, Theo dõi và cảm biến, Thiết bị đầu vào cho VR/AR/MR, Công nghệ hiển thị tiên tiến, Công nghệ chiếu chìm, Haptics, âm thanh và các giao diện phi thị giác khác, Mô hình hóa và mô phỏng, Kỹ thuật đồ họa máy tính cho VR/AR/MR, Con người ảo và hình đại diện, VR/AR/MR đa người dùng và phân tán, Hệ thống và bộ công cụ VR, Di chuyển và điều hướng trong môi trường ảo, Nghiên cứu và đánh giá người dùng, Nhận thức, sự hiện diện, hiện thân ảo và nhận thức, Vận hành từ xa và hiện diện từ xa, Các ứng dụng của VR/AR/MR, Các vấn đề đạo đức trong VR/AR/MR, Kể chuyện tương tác trong video 360°, Tương tác 3D cho VR/AR/MR, Ẩn dụ 3DUI cho VR/AR/MR, 3DUI di động, máy tính để bàn hoặc kết hợp, 3DUI không gây mệt mỏi, Phương pháp đánh giá 3DUI, Nghiên cứu thực nghiệm về 3DUI, Các ứng dụng của 3DUI: Trò chơi, giải trí, CAD, giáo dục, v.v.\n    *   **Ngày hội nghị:** 28 tháng 2 - 2 tháng 3, 2026\n    *   **Liên kết trang web:** https://www.iccgv.org/\n\n*   **Hội nghị 3:**\n    *   **Tiêu đề:** Information Visualisation Theory and Practice (InfVis)\n    *   **Địa điểm:** University of Nottingham, Nottingham, UK\n    *   **Lĩnh vực nghiên cứu:** Điện toán lấy con người làm trung tâm\n    *   **Các chủ đề:** Trực quan hóa thông tin, Phân tích hình ảnh, Kinh doanh thông minh, Học máy, Khoa học dữ liệu, Độ tin cậy tài liệu, Bảo mật tài liệu, Học máy cho tài liệu kỹ thuật số, Khả năng tiếp cận kỹ thuật số, Bộ sưu tập, Hệ thống và Quản lý, Mô hình hóa và Biểu diễn, Phân tích nội dung tài liệu, Hệ thống phân tích tài liệu bằng hình ảnh, Tạo, Thao tác và Trình bày, Ứng dụng, Trải nghiệm người dùng\n    *   **Ngày hội nghị:** 6 - 8 tháng 8, 2025\n    *   **Liên kết trang web:** https://iv.csites.fct.unl.pt/de/symposia/iv/infvis/\n\n*   **Hội nghị 4:**\n    *   **Tiêu đề:** Conference on Learning Theory (COLT)\n    *   **Địa điểm:** Lyon, France\n    *   **Lĩnh vực nghiên cứu:** Học máy, Trí tuệ nhân tạo\n    *   **Các chủ đề:** Thiết kế và phân tích thuật toán học, Độ phức tạp thống kê và tính toán của học tập, Phương pháp tối ưu hóa cho học tập, Lý thuyết mạng nơ-ron nhân tạo, Giải thích lý thuyết về các hiện tượng thực nghiệm trong học tập, Học có giám sát, Học không giám sát, bán giám sát, thích nghi miền, Học cấu trúc hình học và topo trong dữ liệu, học đa tạp, Học chủ động và tương tác, Học tăng cường, Học trực tuyến và ra quyết định, Tương tác của lý thuyết học tập với các lĩnh vực toán học khác, Thống kê chiều cao và phi tham số, Phương pháp hạt nhân, Nguyên nhân, Phân tích lý thuyết của các mô hình đồ thị xác suất, Phương pháp Bayesian trong học tập, Lý thuyết trò chơi và học tập, Học tập với các ràng buộc hệ thống (ví dụ: quyền riêng tư, công bằng, bộ nhớ, giao tiếp), Học từ dữ liệu phức tạp (ví dụ: mạng, chuỗi thời gian), Học trong khoa học thần kinh, khoa học xã hội, kinh tế và các môn học khác\n    *   **Ngày hội nghị:** 30 tháng 6 - 4 tháng 7, 2025\n    *   **Liên kết trang web:** https://learningtheory.org/colt2025/\n\n*   **Hội nghị 5:**\n    *   **Tiêu đề:** Usenix Network and Distributed System Security Symposium (NDSS)\n    *   **Địa điểm:** San Diego, California\n    *   **Lĩnh vực nghiên cứu:** An ninh mạng và quyền riêng tư\n    *   **Các chủ đề:** Kỹ thuật chống phần mềm độc hại, Phòng chống tấn công mạng, Phòng thủ và điều tra tội phạm mạng, Tích hợp bảo mật trong các giao thức mạng, Bảo mật mạng di động và không dây, Triển khai chính sách bảo mật mạng, Quyền riêng tư và ẩn danh trong mạng và hệ thống phân tán, Cơ sở hạ tầng khóa công khai, Bảo mật và quyền riêng tư cho blockchain và tiền điện tử, Bảo mật và quyền riêng tư của nền tảng di động/điện thoại thông minh, Bảo mật và quyền riêng tư của hệ điều hành, Bảo mật và quyền riêng tư của hệ thống dựa trên học máy, Bảo mật cho điện toán đám mây/biên, Bảo mật cho hệ thống vật lý-không gian mạng, Bảo mật cho mạng mới nổi, Bảo mật cho kiến trúc và thiết kế Internet tương lai, Bảo mật cho cơ sở hạ tầng quan trọng, quy mô lớn, Bảo mật của các ứng dụng và dịch vụ dựa trên web, Phân tích bảo mật phần mềm/firmware/phần cứng, Phần mềm và phần cứng điện toán đáng tin cậy, Bảo mật và quyền riêng tư dễ sử dụng\n    *   **Ngày hội nghị:** 23 - 27 tháng 2, 2026\n    *   **Liên kết trang web:** https://www.ndss-symposium.org/ndss2026/\n\n*   **Hội nghị 6:**\n    *   **Tiêu đề:** International Machine Vision and Image Processing Conference (IMVIP)\n    *   **Địa điểm:** Ulster University, Derry~Londonderry, Northern Ireland\n    *   **Lĩnh vực nghiên cứu:** Thị giác máy tính và tính toán đa phương tiện\n    *   **Các chủ đề:** Thị giác máy tính, Xử lý ảnh, Thao tác và Điều hướng robot được điều khiển bằng hình ảnh, Thị giác máy tính cho phương tiện tự lái, Thực tế tăng cường/Thực tế ảo, Phân cụm dữ liệu và Phân tích kết cấu, Biểu diễn, Nén và Mã hóa hình ảnh và video, Hình ảnh y tế và sinh học, Thị giác chủ động, Theo dõi và Phân tích chuyển động, Nhận dạng đối tượng và sự kiện, Nhận dạng khuôn mặt và cử chỉ, Phân tích và Trực quan hóa cảnh 2D, 3D, Học sâu cho thị giác máy tính, Biểu diễn và Phục hồi hình ảnh/hình dạng, Ứng dụng, Kiến trúc và Tích hợp hệ thống\n    *   **Ngày hội nghị:** 1 - 3 tháng 9, 2025\n    *   **Liên kết trang web:** https://imvipconference.github.io/\n\n*   **Hội nghị 7:**\n    *   **Tiêu đề:** IEEE International Working Conference on Mining Software Repositories (MSR)\n    *   **Địa điểm:** Rio de Janeiro, Brazil\n    *   **Lĩnh vực nghiên cứu:** Kỹ thuật phần mềm, Quản lý dữ liệu và khoa học dữ liệu\n    *   **Các chủ đề:** Khoa học dữ liệu, học máy và trí tuệ nhân tạo trong kỹ thuật phần mềm\n    *   **Ngày hội nghị:** 13 - 14 tháng 4, 2026\n    *   **Liên kết trang web:** https://2026.msrconf.org/\n\n*   **Hội nghị 8:**\n    *   **Tiêu đề:** EMAS\n    *   **Địa điểm:** Valencia, Spain\n    *   **Lĩnh vực nghiên cứu:** Trí tuệ nhân tạo\n    *   **Các chủ đề:** Mãn kinh, Suy sinh dục nam, Sức khỏe phụ nữ, Sức khỏe nam giới\n    *   **Ngày hội nghị:** 14 - 16 tháng 5, 2025\n    *   **Liên kết trang web:** https://2025.emas-online.org/\n\n*   **Hội nghị 9:**\n    *   **Tiêu đề:** IEEE International Conference on Quantum Computing and Engineering (QCE)\n    *   **Địa điểm:** Albuquerque Convention Center, Albuquerque, New Mexico, USA\n    *   **Lĩnh vực nghiên cứu:** Kỹ thuật hệ thống máy tính\n    *   **Các chủ đề:** Thuật toán và ứng dụng điện toán lượng tử, công nghệ và kỹ thuật hệ thống lượng tử, truyền thông mạng internet lượng tử, phần mềm và robot hệ thống lượng tử\n    *   **Ngày hội nghị:** 31 tháng 8 - 5 tháng 9, 2025\n    *   **Liên kết trang web:** https://qce.quantum.ieee.org/2025/\n\n*   **Hội nghị 10:**\n    *   **Tiêu đề:** International Symposium on Fundamentals of Computation Theory (FCT)\n    *   **Địa điểm:** Institute of Computer Science, University of Wrocław, Poland\n    *   **Lĩnh vực nghiên cứu:** Lý thuyết tính toán\n    *   **Các chủ đề:** Thuật toán, Độ phức tạp, Phương pháp hình thức, Lý thuyết trò chơi thuật toán, Lý thuyết học tập thuật toán, Ngẫu nhiên thuật toán, Thuật toán và cấu trúc dữ liệu, Thuật toán cho dữ liệu lớn, Thuật toán xấp xỉ, Lý thuyết automata, Phân tích trường hợp trung bình, Tổ hợp và lý thuyết đồ thị, Tạo tổ hợp, Liệt kê và đếm, Tối ưu hóa tổ hợp, Tổ hợp từ, Lý thuyết độ phức tạp, Sinh học tính toán, Hình học tính toán, Lý thuyết học tập tính toán, Lựa chọn xã hội tính toán, Khả năng tính toán, Lý thuyết đệ quy, Đồng thời, Nén dữ liệu, Lý thuyết cơ sở dữ liệu, Độ phức tạp mô tả, Hệ thống sự kiện rời rạc, Tối ưu hóa rời rạc, Thuật toán phân tán, song song và mạng, Thuật toán tiết kiệm năng lượng, Mã sửa lỗi, Độ phức tạp chi tiết, Ngôn ngữ hình thức, Đặc tả và xác minh hình thức, Nền tảng của trí tuệ nhân tạo và học máy, Thuật toán đồ thị và mô hình hóa bằng đồ thị, Vẽ đồ thị và gán nhãn đồ thị, Suy luận ngữ pháp, Lập trình số nguyên và tuyến tính, Logic trong khoa học máy tính, Kiểm tra mô hình, Mô hình tính toán, Lý thuyết mạng và đồ thị thời gian, Thuật toán trực tuyến, Thuật toán và độ phức tạp tham số, Thuật toán xác suất và ngẫu nhiên, Ngữ nghĩa chương trình, Thuật toán lượng tử, Thuật toán chuỗi, Thuật toán thời gian dưới tuyến tính và luồng, Thuật toán viễn thông, Chứng minh định lý và lý luận tự động, Lý thuyết bỏ phiếu\n    *   **Ngày hội nghị:** 15 - 17 tháng 9, 2025\n    *   **Liên kết trang web:** https://fct2025.cs.uni.wroc.pl/"
+  },
+  {
+    "frontendMessageId": "192ca597-3bca-40b9-8f0f-4718093b66cd",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Cho mình biết về hội nghị tên là NeurIPS",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 7813,
+    "response": "Dưới đây là thông tin về hội nghị NeurIPS:\n\n**Tên đầy đủ:** Advances in Neural Information Processing Systems\n**Tên viết tắt:** NeurIPS\n**Xếp hạng:** A* (Nguồn: CORE2023)\n**Lĩnh vực nghiên cứu:** Machine learning (Học máy)\n**Năm:** 2025\n**Loại hình:** Ngoại tuyến (Offline)\n**Địa điểm:** Trung tâm Hội nghị San Diego, San Diego, California, Hoa Kỳ\n**Lục địa:** Bắc Mỹ\n**Liên kết trang web:** https://neurips.cc/Conferences/2025\n**Liên kết kêu gọi báo cáo:** https://neurips.cc/Conferences/2025/CallForPapers\n**Chủ đề:** Học máy, khoa học thần kinh, thống kê, tối ưu hóa, thị giác máy tính, xử lý ngôn ngữ tự nhiên, khoa học đời sống, khoa học tự nhiên, khoa học xã hội, ứng dụng (thị giác, ngôn ngữ, giọng nói và âm thanh, AI sáng tạo), học sâu (kiến trúc, mô hình tạo sinh, tối ưu hóa mạng lưới sâu, mô hình nền tảng, LLM), đánh giá (phương pháp luận, nghiên cứu meta, khả năng tái tạo và giá trị, tương tác người-máy), học máy tổng quát (có giám sát, không giám sát, trực tuyến, chủ động), cơ sở hạ tầng (thư viện, cải thiện triển khai và khả năng mở rộng, giải pháp phân tán), học máy cho khoa học (khí hậu, sức khỏe, khoa học đời sống, vật lý, khoa học xã hội), khoa học thần kinh và khoa học nhận thức (mã hóa thần kinh, giao diện não-máy tính), tối ưu hóa (lồi và không lồi, ngẫu nhiên, mạnh mẽ), phương pháp xác suất (suy luận biến phân, suy luận nhân quả, quá trình Gaussian), học tăng cường (quyết định và kiểm soát, lập kế hoạch, RL phân cấp, robot), khía cạnh xã hội và kinh tế của học máy (công bằng, khả năng diễn giải, tương tác người-AI, quyền riêng tư, an toàn, hành vi chiến lược), lý thuyết (lý thuyết điều khiển, lý thuyết học tập, lý thuyết trò chơi thuật toán).\n**Thời gian hội nghị:** 02 - 07 tháng 12, 2025\n\n**Các mốc thời gian quan trọng:**\n*   **Hạn nộp tóm tắt bài báo (Hội nghị chính):** 11 tháng 05, 2025\n*   **Hạn nộp toàn văn bài báo (Hội nghị chính):** 15 tháng 05, 2025\n*   **Hạn nộp tài liệu bổ sung (Hội nghị chính):** 22 tháng 05, 2025\n*   **Hạn nộp đề xuất hướng dẫn:** 05 tháng 07, 2025\n*   **Thông báo chấp nhận hướng dẫn:** 05 tháng 08, 2025\n*   **Thông báo tác giả bài báo (Hội nghị chính):** 18 tháng 09, 2025\n*   **Hạn chót nộp bản cuối cùng (Camera Ready) bài báo (Hội nghị chính):** 23 tháng 10, 2025\n*   **Mở đăng ký tham dự:** 27 tháng 02, 2025\n*   **Hạn đăng ký sớm:** 11 tháng 10, 2025\n*   **Hội nghị chuyên đề (Workshops):** 06 - 07 tháng 12, 2025"
+  },
+  {
+    "frontendMessageId": "16ff448a-4d26-40e2-bb62-a3afde38920c",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Hội nghị nào có tên viết tắt là ACL?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 6435,
+    "response": "Hội nghị có tên viết tắt ACL là **Hội nghị Thường niên của Hiệp hội Ngôn ngữ học Tính toán (Association for Computational Linguistics)**.\n\nDưới đây là thông tin chi tiết:\n*   **Tên đầy đủ:** Association for Computational Linguistics (Hiệp hội Ngôn ngữ học Tính toán)\n*   **Tên viết tắt:** ACL\n*   **Địa điểm:** Vienna, Áo\n*   **Lĩnh vực nghiên cứu:** Trí tuệ nhân tạo\n*   **Năm:** 2025\n*   **Loại:** Offline\n*   **Chủ đề:** Ngôn ngữ học tính toán, Xử lý ngôn ngữ tự nhiên, Khoa học xã hội tính toán và Phân tích văn hóa, Hệ thống đối thoại và tương tác, Diễn ngôn và Ngữ dụng học, Các phương pháp hiệu quả/ít tài nguyên cho NLP, Đạo đức, Thành kiến và Công bằng, Phát sinh, NLP lấy con người làm trung tâm, Trích xuất thông tin, Truy xuất thông tin và Khai thác văn bản, Khả năng giải thích và Phân tích các mô hình cho NLP, Mô hình hóa ngôn ngữ, Lý thuyết ngôn ngữ học, Mô hình nhận thức và Tâm lý học ngôn ngữ, Học máy cho NLP, Dịch máy, Đa ngôn ngữ và Đa dạng ngôn ngữ, Đa phương thức và Nền tảng ngôn ngữ với thị giác, Người máy và hơn thế nữa, Ứng dụng NLP, Âm vị học, Hình thái học và Phân đoạn từ, Trả lời câu hỏi, Tài nguyên và Đánh giá, Ngữ nghĩa: Cấp độ từ vựng và câu, Phân tích cảm xúc, Phân tích phong cách và Khai thác lập luận, Nhận dạng giọng nói, chuyển văn bản thành giọng nói và hiểu ngôn ngữ nói, Tóm tắt, Cú pháp: Gắn thẻ, Phân đoạn và Phân tích cú pháp.\n*   **Thời gian:** 27 tháng 7 - 1 tháng 8 năm 2025\n*   **Trang web:** https://2025.aclweb.org/"
+  },
+  {
+    "frontendMessageId": "b5e138fc-87d0-46eb-b8a1-17a86f0312cd",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào diễn ra ở Việt Nam trong năm nay không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 7541,
+    "response": "Có 6 hội nghị diễn ra ở Việt Nam trong năm 2025:\n\n1.  **International Natural Language Generation Conference (INLG)**\n    *   **Địa điểm:** Hà Nội, Việt Nam\n    *   **Ngày:** 29 tháng 10 - 2 tháng 11, 2025\n    *   **Lĩnh vực nghiên cứu:** Trí tuệ nhân tạo\n    *   **Chủ đề:** Sinh Ngôn ngữ Tự nhiên\n    *   **Liên kết trang web:** https://2025.inlgmeeting.org/\n\n2.  **Asia Conference on Information, Computer and Communications Security (AsiaCCS)**\n    *   **Địa điểm:** Hà Nội, Việt Nam\n    *   **Ngày:** 25 - 29 tháng 8, 2025\n    *   **Lĩnh vực nghiên cứu:** An ninh mạng và quyền riêng tư\n    *   **Liên kết trang web:** https://asiaccs2025.hust.edu.vn/\n\n3.  **RIVF International Conference on Computing and Communication Technologies (RIVF)**\n    *   **Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam\n    *   **Ngày:** 18 - 22 tháng 12, 2025\n    *   **Lĩnh vực nghiên cứu:** Lý thuyết tính toán\n    *   **Chủ đề:** Xử lý ngôn ngữ và tiếng nói, Hình ảnh, Thị giác máy tính, Nhận dạng mẫu, Truyền thông, Mạng, Internet of Things, Điện toán đám mây, An ninh mạng, Mật mã, Blockchain & Ứng dụng, AI, Khoa học dữ liệu, Phân tích dữ liệu lớn, Điện toán thông minh, Kỹ thuật phần mềm, Hệ thống thông tin, Mô hình tính toán\n    *   **Liên kết trang web:** https://rivf2025.org/\n\n4.  **International Conference on Management of Digital EcoSystems (MEDES)**\n    *   **Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam\n    *   **Ngày:** 24 - 26 tháng 11, 2025\n    *   **Lĩnh vực nghiên cứu:** Điện toán phân tán và phần mềm hệ thống\n    *   **Chủ đề:** Tính toán Fuzzy, Tính toán tiến hóa, Tính toán thần kinh, AI giải thích được, Quản lý dữ liệu lớn, công nghệ web, mạng, bảo mật, tương tác người-máy, trí tuệ nhân tạo, dịch vụ điện tử và hệ thống tự tổ chức\n    *   **Liên kết trang web:** https://conferences.sigappfr.org/medes2025/\n\n5.  **IFIP International Conference on Network and Parallel Computing (NPC)**\n    *   **Địa điểm:** Nha Trang, Việt Nam\n    *   **Ngày:** 14 - 16 tháng 11, 2025\n    *   **Lĩnh vực nghiên cứu:** Điện toán phân tán và phần mềm hệ thống\n    *   **Chủ đề:** Điện toán mạng, Điện toán song song, Điện toán phân tán, Trí tuệ nhân tạo, Ứng dụng, Thuật toán, Kiến trúc, Hệ thống, Môi trường phần mềm, Công cụ\n    *   **Liên kết trang web:** https://npc-2025.github.io/index.html\n\n6.  **International Conference on Computational Collective Intelligence (ICCCI)**\n    *   **Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam\n    *   **Ngày:** 12 - 15 tháng 11, 2025\n    *   **Lĩnh vực nghiên cứu:** Trí tuệ nhân tạo, Điện toán phân tán và phần mềm hệ thống\n    *   **Chủ đề:** Tính toán Fuzzy, Tính toán tiến hóa, Tính toán thần kinh, AI giải thích được\n    *   **Liên kết trang web:** https://iccci.pwr.edu.pl/2025/"
+  },
+  {
+    "frontendMessageId": "dad16e4f-d1bc-4bb9-a205-5de103b40958",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Liệt kê các hội nghị ở châu Á về AI vào quý 4 năm 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 10810,
+    "response": "Dưới đây là các hội nghị về AI ở châu Á trong quý 4 năm 2025:\n\n*   **Hội nghị 1:**\n    *   **Tên:** Hội nghị chuyên đề quốc tế về kỹ thuật phần mềm dựa trên tìm kiếm (SSBSE)\n    *   **Địa điểm:** Seoul, Hàn Quốc\n    *   **Lĩnh vực nghiên cứu:** Kỹ thuật phần mềm, Trí tuệ nhân tạo\n    *   **Chủ đề:** Kỹ thuật phần mềm dựa trên tìm kiếm, SBSE, AI, học máy, kỹ thuật phần mềm, kỹ thuật tối ưu hóa tự động\n    *   **Ngày diễn ra:** 16 tháng 11 năm 2025\n    *   **Liên kết trang web:** https://conf.researchr.org/home/ssbse-2025\n\n*   **Hội nghị 2:**\n    *   **Tên:** Hội nghị quốc tế về quản lý dữ liệu (COMAD)\n    *   **Địa điểm:** IISER Pune, Pune, Ấn Độ\n    *   **Lĩnh vực nghiên cứu:** Quản lý dữ liệu và khoa học dữ liệu\n    *   **Chủ đề:** Khoa học dữ liệu, Quản lý dữ liệu, Khai phá dữ liệu, Học máy, Trí tuệ nhân tạo, AI, ML, và Khai phá dữ liệu: Phân loại và hồi quy; Khám phá tri thức; biểu diễn tri thức và các hệ thống dựa trên tri thức; tiền xử lý và sắp xếp dữ liệu; kỹ thuật đặc trưng; học tăng cường; học sâu; phương pháp Bayes; phân tích chuỗi thời gian; tối ưu hóa; mô hình đồ họa; học thống kê liên quan; phương pháp ma trận và tensor; học phân tán và song song; học bán giám sát và không giám sát; khai phá đồ thị; phân tích mạng; phân tích văn bản và NLP; truy xuất thông tin; thị giác máy tính dựa trên học; học đa phương thức và phân tích; học có sự tham gia của con người; lập kế hoạch và suy luận; ML cho thiết bị di động và môi trường hạn chế tài nguyên khác; học liên kết; AutoML; nhân quả; giám sát yếu và tăng cường dữ liệu; các tác vụ điểm chuẩn và tập dữ liệu mới cho AI/ML/khai phá dữ liệu, Quản lý dữ liệu: Hệ thống quản lý dữ liệu (các chủ đề bao gồm nhưng không giới hạn ở việc đánh giá hiệu suất, giám sát, kiểm thử và điều chỉnh hệ thống cơ sở dữ liệu, quản lý dữ liệu đám mây, phân tán, phi tập trung và song song, hệ thống cơ sở dữ liệu trên phần cứng mới nổi, cơ sở dữ liệu nhúng, IoT và mạng cảm biến, Lưu trữ, lập chỉ mục và thiết kế cơ sở dữ liệu vật lý, Xử lý và tối ưu hóa truy vấn, Xử lý giao dịch, Kho dữ liệu, OLAP, Phân tích); Mô hình và Ngôn ngữ (các chủ đề bao gồm nhưng không giới hạn ở Mô hình dữ liệu và ngữ nghĩa, Ngôn ngữ lập trình khai báo và tối ưu hóa, Quản lý dữ liệu không gian và thời gian, Đồ thị, mạng xã hội, dữ liệu web và web ngữ nghĩa, Đa phương tiện và truy xuất thông tin, Cơ sở dữ liệu không chắc chắn, xác suất và gần đúng, Luồng và xử lý sự kiện phức tạp); Quản lý dữ liệu lấy con người làm trung tâm (các chủ đề bao gồm nhưng không giới hạn ở Khám phá dữ liệu, trực quan hóa, ngôn ngữ truy vấn và giao diện người dùng, Quản lý dữ liệu cộng tác và được crowdsource, Quản lý dữ liệu lấy người dùng làm trung tâm và có sự tham gia của con người, Xử lý ngôn ngữ tự nhiên cho cơ sở dữ liệu); Quản trị dữ liệu (các chủ đề bao gồm nhưng không giới hạn ở nguồn gốc dữ liệu và quy trình làm việc, Tích hợp dữ liệu, trích xuất thông tin và đối sánh lược đồ, Chất lượng dữ liệu, làm sạch dữ liệu, Bảo mật dữ liệu, quyền riêng tư và kiểm soát truy cập, Quản lý dữ liệu có trách nhiệm và công bằng dữ liệu, Quản lý siêu dữ liệu), Giao thoa giữa AI & Quản lý dữ liệu: Truy vấn có cấu trúc trên dữ liệu phi cấu trúc: hình ảnh, video, ngôn ngữ tự nhiên, truy vấn ngôn ngữ tự nhiên; phương pháp học máy cho nội bộ công cụ cơ sở dữ liệu; phương pháp học máy để điều chỉnh cơ sở dữ liệu; quản lý dữ liệu và siêu dữ liệu cho các đường ống học máy; quản lý cơ sở tri thức, Đạo đức khoa học dữ liệu: Các chủ đề bao gồm, nhưng không giới hạn ở việc định lượng và giảm thiểu các vấn đề về công bằng và thiên vị; cải thiện độ tin cậy, tính minh bạch và khả năng giải thích của mô hình; quyền riêng tư dữ liệu; căn chỉnh mô hình; chi phí môi trường; quản trị và quy định\n    *   **Ngày diễn ra:** 17 - 20 tháng 12 năm 2025\n    *   **Liên kết trang web:** https://ikdd.acm.org/cods-2025/\n\n*   **Hội nghị 3:**\n    *   **Tên:** Hội nghị quốc tế RIVF về Công nghệ Máy tính và Truyền thông (RIVF)\n    *   **Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam\n    *   **Lĩnh vực nghiên cứu:** Lý thuyết tính toán\n    *   **Chủ đề:** Xử lý ngôn ngữ và giọng nói, Hình ảnh, Thị giác máy tính, Nhận dạng mẫu, Truyền thông, Mạng, Internet of Things, Điện toán đám mây, An ninh mạng, Mật mã, Blockchain & Ứng dụng, AI, Khoa học dữ liệu, Phân tích dữ liệu lớn, Điện toán thông minh, Kỹ thuật phần mềm, Hệ thống thông tin, Mô hình tính toán\n    *   **Ngày diễn ra:** 18 - 22 tháng 12 năm 2025\n    *   **Liên kết trang web:** https://rivf2025.org/"
+  },
+  {
+    "frontendMessageId": "2b7d9103-1322-4b3d-a26e-0bb5db5668d7",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào ở Mỹ, tổ chức offline trong tháng 10 không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 9870,
+    "response": "Có 10 hội nghị ở Mỹ, tổ chức offline trong tháng 10 năm 2025:\n\n*   **1. International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS)**\n    *   **Địa điểm:** Denver, Colorado\n    *   **Thời gian:** 26 tháng 10, 2025\n    *   **Liên kết trang web:** https://assets25.sigaccess.org/\n\n*   **2. IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS)**\n    *   **Địa điểm:** Chicago, USA\n    *   **Thời gian:** 06 - 08 tháng 10, 2025\n    *   **Liên kết trang web:** https://ieeemass2025.github.io/ieeemass2025/\n\n*   **3. Pattern Languages of Programs (PLOP)**\n    *   **Địa điểm:** Skamania Lodge, Columbia River Gorge, Washington USA\n    *   **Thời gian:** 12 - 15 tháng 10, 2025\n    *   **Liên kết trang web:** https://plopcon.org/plop2025/\n\n*   **4. European MPI Users' Group Conference (EuroMPI)**\n    *   **Địa điểm:** Charlotte, NC, USA\n    *   **Thời gian:** 01 - 03 tháng 10, 2025\n    *   **Liên kết trang web:** https://eurompi.org/\n\n*   **5. International Symposium on Empirical Software Engineering and Measurement (ESEM)**\n    *   **Địa điểm:** Honolulu, Hawai, USA\n    *   **Thời gian:** 29 tháng 9 - 03 tháng 10, 2025\n    *   **Liên kết trang web:** https://conf.researchr.org/home/esem-2025\n\n*   **6. IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)**\n    *   **Địa điểm:** Raleigh, North Carolina, United States\n    *   **Thời gian:** 06 - 10 tháng 10, 2025\n    *   **Liên kết trang web:** https://conf.researchr.org/home/vlhcc-2025\n\n*   **7. Asilomar Conference on Signals, Systems and Computing (ACSSC)**\n    *   **Địa điểm:** Asilomar Conference Grounds, Pacific Grove, California, USA\n    *   **Thời gian:** 26 - 29 tháng 10, 2025\n    *   **Liên kết trang web:** https://www.asilomarsscconf.org/\n\n*   **8. ISCA International Conference on Computer Applications in Industry and Engineering (CAINE)**\n    *   **Địa điểm:** Holiday Inn Downtown Superdome, New Orleans, Louisiana, USA\n    *   **Thời gian:** 20 - 21 tháng 10, 2025\n    *   **Liên kết trang web:** https://www.caine-conf.org/main/\n\n*   **9. IEEE International Conference on Computer Vision (ICCV)**\n    *   **Địa điểm:** Honolulu, Hawai'i\n    *   **Thời gian:** 19 - 23 tháng 10, 2025\n    *   **Liên kết trang web:** https://iccv.thecvf.com/\n\n*   **10. Formal Methods in Computer-Aided Design (FMCAD)**\n    *   **Địa điểm:** Menlo Park, California, USA\n    *   **Thời gian:** 06 - 10 tháng 10, 2025\n    *   **Liên kết trang web:** https://fmcad.org/FMCAD25/\n\nCó thêm 2 hội nghị nữa mà tôi chưa hiển thị."
+  },
+  {
+    "frontendMessageId": "9066b475-9522-49f2-b5f2-9545db4c13c2",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào có ngày nộp bài trước 30/7/2025?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 7057,
+    "response": "Dưới đây là các hội nghị có ngày nộp bài trước ngày 30/7/2025:\n\n*   **Hội nghị RIVF International Conference on Computing and Communication Technologies (RIVF)**\n    *   **Ngày nộp bài cuối cùng:** 30 - 31 tháng 7, 2025\n    *   **Tóm tắt:** Hội nghị này sẽ được tổ chức tại Thành phố Hồ Chí Minh, Việt Nam, từ ngày 18-22 tháng 12 năm 2025. Đây là một sự kiện khoa học lớn dành cho các nhà nghiên cứu, chuyên gia và sinh viên trong lĩnh vực Công nghệ Máy tính và Truyền thông.\n\n*   **Hội nghị International Conference on Intelligent Systems and Knowledge Engineering (ISKE)**\n    *   **Ngày nộp bài toàn văn:** 30 tháng 7, 2025\n    *   **Ngày nộp bài cho phiên đặc biệt:** 30 tháng 7, 2025\n    *   **Tóm tắt:** Hội nghị này sẽ diễn ra tại Thuận Đức, Trung Quốc, từ ngày 21-23 tháng 11 năm 2025. Hội nghị nhằm cung cấp một nền tảng để các chuyên gia trong lĩnh vực hệ thống thông minh và kỹ thuật tri thức trao đổi kiến thức và thảo luận về các công nghệ mới nổi.\n\n*   **Hội nghị International Conference on Collaborative Computing: Networks, Applications and Worksharing (CollaborateCom)**\n    *   **Ngày nộp bài toàn văn (Vòng 2):** 30 tháng 7, 2025\n    *   **Tóm tắt:** Hội nghị này sẽ được tổ chức tại Thượng Hải, Trung Quốc, từ ngày 15 đến ngày 16 tháng 11 năm 2025. Đây là một sự kiện toàn cầu hàng đầu trong khoa học máy tính, cung cấp một nền tảng cho các nhà nghiên cứu, học viên và sinh viên để khám phá những đổi mới trong hợp tác điện tử, mạng, hệ thống, giao diện người dùng và các công cụ chuyên biệt.\n\n*   **Hội nghị ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL)**\n    *   **Ngày nộp bài PhD/Grad Workshop & SRC:** 25 tháng 7, 2025\n    *   **Ngày nộp bài GIS Cup giữa kỳ:** 30 tháng 7, 2025\n    *   **Tóm tắt:** Hội nghị này sẽ được tổ chức từ ngày 3 đến ngày 6 tháng 11 năm 2025 tại Minneapolis, MN, Hoa Kỳ. Đây là sự kiện thường niên hàng đầu nhằm tập hợp các nhà nghiên cứu, nhà phát triển, người dùng và chuyên gia làm việc với dữ liệu và kiến thức địa không gian.\n\n*   **Hội nghị British Machine Vision Conference (BMVC)**\n    *   **Ngày mở nộp bài Doctoral Consortium:** 13 tháng 7, 2025\n    *   **Ngày đóng nộp bài Doctoral Consortium:** 30 tháng 7, 2025\n    *   **Tóm tắt:** Hội nghị này sẽ được tổ chức từ ngày 24-27 tháng 11 năm 2025 tại Sheffield, Vương quốc Anh. Đây là một hội nghị quốc tế lớn về thị giác máy, xử lý ảnh và nhận dạng mẫu.\n\nBạn có muốn biết thêm thông tin chi tiết về bất kỳ hội nghị nào trong số này không?\n"
+  },
+  {
+    "frontendMessageId": "d04dece2-b0ba-42ad-a4b6-7ba9a5d87384",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Cho mình danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 7626,
+    "response": "Đây là danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025:\n\n*   **Hội nghị 1:**\n    *   **Tên:** Conference on Theory and Applications of Models of Computation (TAMC)\n    *   **Địa điểm:** Jinan, Trung Quốc\n    *   **Ngày:** 19 - 21 tháng 9, 2025\n    *   **Website:** http://www.maths.sdnu.edu.cn/TAMC2025.htm\n\n*   **Hội nghị 2:**\n    *   **Tên:** ArtsIT, Interactivity & Game Creation (ArtsIT)\n    *   **Địa điểm:** Heriot-Watt University Dubai, UAE\n    *   **Ngày:** 7 - 9 tháng 11, 2025\n    *   **Website:** https://artsit.eai-conferences.org/2025/\n\n*   **Hội nghị 3:**\n    *   **Tên:** Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS)\n    *   **Địa điểm:** Kathmandu, Nepal\n    *   **Ngày:** 9 - 11 tháng 10, 2025\n    *   **Website:** https://sss2025.conf.lip6.fr/\n\n*   **Hội nghị 4:**\n    *   **Tên:** International Machine Vision and Image Processing Conference (IMVIP)\n    *   **Địa điểm:** Ulster University, Derry~Londonderry, Northern Ireland\n    *   **Ngày:** 1 - 3 tháng 9, 2025\n    *   **Website:** https://imvipconference.github.io/\n\n*   **Hội nghị 5:**\n    *   **Tên:** IEEE International Conference on Quantum Computing and Engineering (QCE)\n    *   **Địa điểm:** Albuquerque Convention Center, Albuquerque, New Mexico, USA\n    *   **Ngày:** 31 tháng 8 - 5 tháng 9, 2025\n    *   **Website:** https://qce.quantum.ieee.org/2025/\n\n*   **Hội nghị 6:**\n    *   **Tên:** International Symposium on Fundamentals of Computation Theory (FCT)\n    *   **Địa điểm:** Institute of Computer Science, University of Wrocław, Ba Lan\n    *   **Ngày:** 15 - 17 tháng 9, 2025\n    *   **Website:** https://fct2025.cs.uni.wroc.pl/\n\n*   **Hội nghị 7:**\n    *   **Tên:** International Symposium on Algorithmic Game Theory (SAGT)\n    *   **Địa điểm:** University of Bath, Bath, UK\n    *   **Ngày:** 2 - 5 tháng 9, 2025\n    *   **Website:** https://www.bath.ac.uk/events/the-international-symposium-on-algorithmic-game-theory-sagt-2025/\n\n*   **Hội nghị 8:**\n    *   **Tên:** ASIAN Symposium on Programming Languages and Systems (APLAS)\n    *   **Địa điểm:** Bengaluru, Ấn Độ\n    *   **Ngày:** 27 - 30 tháng 10, 2025\n    *   **Website:** https://conf.researchr.org/home/aplas-2025\n\n*   **Hội nghị 9:**\n    *   **Tên:** Symposium on Advances in DB and Information Systems (ADBIS)\n    *   **Địa điểm:** Tampere, Phần Lan\n    *   **Ngày:** 23 - 26 tháng 9, 2025\n    *   **Website:** https://adbis2025.github.io/\n\n*   **Hội nghị 10:**\n    *   **Tên:** IEEE International Conference on Document Analysis and Recognition (ICDAR)\n    *   **Địa điểm:** Wuhan, Hubei, Trung Quốc\n    *   **Ngày:** 16 - 21 tháng 9, 2025\n    *   **Website:** https://www.icdar2025.com/\n\nTổng cộng có 285 hội nghị phù hợp với yêu cầu của bạn và đây là trang đầu tiên (10 hội nghị)."
+  },
+  {
+    "frontendMessageId": "bbc3ee0c-2aa2-4603-88da-b1357e494c65",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào diễn ra vào đúng ngày 15/8/2025?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 8152,
+    "response": "Các hội nghị diễn ra vào ngày 15 tháng 8 năm 2025 là:\n\n*   **International Conference on Principles and Practice of Constraint Programming (CP)**\n    *   **Địa điểm:** Glasgow, Scotland\n    *   **Ngày:** 10 - 15 tháng 8, 2025\n    *   **Trang web:** https://cp2025.a4cp.org/\n\n*   **International Conference on Theory and Applications of Satisfiability Testing (SAT)**\n    *   **Địa điểm:** Glasgow, Scotland\n    *   **Ngày:** 12 - 15 tháng 8, 2025\n    *   **Trang web:** https://satisfiability.org/SAT25/\n\n*   **International Conference on Broadband Communications, Networks and Systems (Broadnets)**\n    *   **Địa điểm:** Sunyani, Ghana\n    *   **Ngày:** 14 - 16 tháng 8, 2025\n    *   **Trang web:** https://broadnets.eai-conferences.org/2025/\n\n*   **International Conference on Computing and Combinatorics (COCOON)**\n    *   **Địa điểm:** Chengdu, China\n    *   **Ngày:** 15 - 17 tháng 8, 2025\n    *   **Trang web:** https://tcsuestc.com/cocoon2025/index.html\n\n*   **Selected Areas in Cryptography (SAC)**\n    *   **Địa điểm:** Toronto Metropolitan University, Toronto, Ontario, Canada\n    *   **Ngày:** 13 - 15 tháng 8, 2025\n    *   **Trang web:** https://sacworkshop.org/SAC25/\n\n*   **The Symposium of Combinatorial Search (SoCS)**\n    *   **Địa điểm:** University of Glasgow, Scotland, United Kingdom\n    *   **Ngày:** 12 - 15 tháng 8, 2025\n    *   **Trang web:** https://socs25.search-conference.org/\n\n*   **IEEE International Conference on High Performance Computing and Communications (HPCC)**\n    *   **Địa điểm:** Exeter, England, UK\n    *   **Ngày:** 13 - 15 tháng 8, 2025\n    *   **Trang web:** https://hpcn.exeter.ac.uk/hpcc2025/\n\n*   **Usenix Security Symposium (USENIX-Security)**\n    *   **Địa điểm:** Seattle Convention Center, Seattle, WA, USA\n    *   **Ngày:** 13 - 15 tháng 8, 2025\n    *   **Trang web:** https://www.usenix.org/conference/usenixsecurity25"
+  },
+  {
+    "frontendMessageId": "27a63a14-6672-4da9-b931-93c380008d45",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Tìm hội nghị về chủ đề Cybersecurity có rank A* theo CORE2023",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5154,
+    "response": "Tôi rất tiếc, không tìm thấy hội nghị nào về chủ đề \"Cybersecurity\" với xếp hạng A* theo CORE2023."
+  },
+  {
+    "frontendMessageId": "c3475087-3ffe-4cec-a029-ee5fb0e57218",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Hội nghị nào tổ chức hybrid và có chủ đề về NLP?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4396,
+    "response": "Tôi rất tiếc, không tìm thấy hội nghị nào phù hợp với tiêu chí bạn đưa ra."
+  },
+  {
+    "frontendMessageId": "6f0bb89e-3277-4d88-8e1f-672d8a55cf7b",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Có hội nghị nào thuộc source Springer không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3801,
+    "response": "Không tìm thấy hội nghị nào thuộc nguồn Springer."
+  },
+  {
+    "frontendMessageId": "dd92648c-680b-4800-8ebe-cd015166ccd9",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Cho mình chi tiết về hội nghị ICML 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 8881,
+    "response": "Dưới đây là thông tin chi tiết về hội nghị ICML 2025:\n\n**Hội nghị Quốc tế về Học máy (International Conference on Machine Learning - ICML) 2025**\n\n*   **Tên đầy đủ:** International Conference on Machine Learning\n*   **Tên viết tắt:** ICML\n*   **Năm:** 2025\n*   **Loại hình:** Hội nghị trực tiếp (Offline)\n*   **Địa điểm:** Trung tâm Hội nghị Vancouver, Vancouver, Canada\n*   **Lục địa:** Bắc Mỹ\n*   **Thời gian diễn ra hội nghị:** Từ Chủ Nhật, ngày 13 tháng 7 đến Thứ Bảy, ngày 19 tháng 7 năm 2025\n\n**Mô tả tóm tắt:**\nICML là hội nghị hàng đầu dành cho các chuyên gia về học máy. Phiên bản lần thứ 42 này sẽ diễn ra trực tiếp tại Vancouver, Canada, nổi tiếng toàn cầu về việc trình bày các nghiên cứu tiên tiến và thu hút cộng đồng đa dạng gồm các nhà nghiên cứu học thuật và công nghiệp, doanh nhân, kỹ sư và sinh viên.\n\n**Các chủ đề chính:**\nHọc máy tổng quát, Học sâu, Đánh giá, Lý thuyết học máy, Hệ thống học máy, Tối ưu hóa, Phương pháp xác suất, Học tăng cường, Học máy đáng tin cậy, Học máy theo ứng dụng (ví dụ: y tế, khoa học vật lý, khoa học sinh học, khoa học xã hội, bền vững và khí hậu).\n\n**Các mốc thời gian quan trọng:**\n\n*   **Hạn nộp tóm tắt bài báo (Abstract Submission Deadline):** 23 tháng 1 năm 2025\n*   **Hạn nộp bài báo đầy đủ (Full Paper Submission Deadline):** 30 tháng 1 năm 2025\n*   **Thông báo kết quả cho tác giả (Author Notification):** 1 tháng 5 năm 2025\n*   **Hạn nộp bản cuối cùng (Camera Ready Deadline):** 9 tháng 6 năm 2025\n\n**Thông tin khác:**\n\n*   **Xếp hạng:** A* (Nguồn: CORE2023 - Lĩnh vực nghiên cứu: Học máy)\n*   **Trang web chính thức:** https://icml.cc/Conferences/2025\n*   **Trang thông tin lời mời gọi báo cáo (Call for Papers):** https://icml.cc/Conferences/2025/CallForPapers\n*   **Chi tiết về nộp bài:** Các bài báo sẽ được đánh giá theo quy trình \"double-blind\". Bài báo chính giới hạn 8 trang, không giới hạn trang cho tài liệu tham khảo, tuyên bố tác động và phụ lục. Các bài được chấp nhận sẽ có thêm 1 trang cho bài báo chính.\n\nBạn có muốn biết thêm thông tin gì về hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "134f2cd8-141f-4f47-bc81-3d872bc4583f",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "ACL 2025 diễn ra ở đâu, ngày nào?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5606,
+    "response": "Hội nghị Association for Computational Linguistics (ACL) 2025 sẽ diễn ra tại Vienna, Áo từ ngày 27 tháng 7 đến ngày 1 tháng 8 năm 2025."
+  },
+  {
+    "frontendMessageId": "09467f3e-7da6-4ed2-bf8e-174d24fb230c",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Deadline nộp bài của NeurIPS là khi nào?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 6336,
+    "response": "Dưới đây là các hạn chót nộp bài cho hội nghị NeurIPS:\n\n*   **Hạn chót nộp tóm tắt bài báo (Main Conference Paper Submission):** 11 tháng 5, 2025\n*   **Hạn chót nộp toàn văn bài báo (Main Conference Paper Submission):** 15 tháng 5, 2025\n*   **Hạn chót nộp Bài báo Vị trí (Position Papers):** 22 tháng 5, 2025\n*   **Hạn chót nộp tài liệu bổ sung cho bài báo (Main Conference Paper Submission):** 22 tháng 5, 2025\n*   **Hạn chót nộp bài Hướng dẫn (Tutorials):** 5 tháng 7, 2025\n*   **Hạn chót nộp bài cho Thư mời Vật liệu Giáo dục (Call For Education Materials):** 15 tháng 8, 2025\n*   **Hạn chót nộp đề xuất Cuộc thi (Competitions):** 20 tháng 4, 2025\n*   **Hạn chót nộp tóm tắt Dữ liệu và Tiêu chuẩn (Datasets and Benchmarks):** 11 tháng 5, 2025\n*   **Hạn chót nộp toàn văn bài báo và đăng ký đồng tác giả Dữ liệu và Tiêu chuẩn (Datasets and Benchmarks):** 15 tháng 5, 2025\n*   **Hạn chót nộp tài liệu bổ sung Dữ liệu và Tiêu chuẩn (Datasets and Benchmarks):** 22 tháng 5, 2025\n*   **Ngày nộp bài đề xuất cho Hội thảo (Workshops):** 22 tháng 8, 2025"
+  },
+  {
+    "frontendMessageId": "6bdf4245-ea2f-4e21-89c8-0dad1a449dd6",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Rank của hội nghị ICRA là gì?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4680,
+    "response": "Hội nghị ICRA có các xếp hạng sau:\n*   **Hạng:** A*\n    *   **Nguồn:** CORE2023\n    *   **Lĩnh vực nghiên cứu:** Trí tuệ nhân tạo\n*   **Hạng:** A*\n    *   **Nguồn:** CORE2023\n    *   **Lĩnh vực nghiên cứu:** Kỹ thuật Hệ thống Máy tính"
+  },
+  {
+    "frontendMessageId": "477892fa-5a9e-45bb-8ec3-5798c165b081",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Link CFP của hội nghị SIGGRAPH Asia 2025?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4292,
+    "response": "Tôi rất tiếc, tôi không thể tìm thấy thông tin về hội nghị SIGGRAPH Asia 2025 hoặc link CFP của hội nghị này."
+  },
+  {
+    "frontendMessageId": "b2d3bb6e-c79e-4640-84a0-772663f55e36",
+    "payload": {
+      "group": "6. Tóm tắt",
+      "question": "Tóm tắt ngắn gọn thông tin chính của hội nghị ECCV 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4246,
+    "response": "Rất tiếc, tôi không tìm thấy thông tin nào về hội nghị ECCV 2025."
+  },
+  {
+    "frontendMessageId": "fa51b6ad-ad92-432d-b848-cffd6b29eb23",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Mở bản đồ vị trí tổ chức hội nghị ICLR 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4940,
+    "response": "Tôi xin lỗi, tôi không thể tìm thấy thông tin vị trí cho hội nghị ICLR 2025. Do đó, tôi không thể mở bản đồ."
+  },
+  {
+    "frontendMessageId": "efee4472-cd6b-42a9-8fd1-61784b48b62c",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Chỉ đường đến địa điểm tổ chức hội nghị KDD 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5093,
+    "response": "Tôi không thể tìm thấy thông tin về địa điểm tổ chức hội nghị KDD 2025. Vui lòng kiểm tra lại tên hội nghị hoặc cung cấp thêm thông tin."
+  },
+  {
+    "frontendMessageId": "70ae0228-07b2-49dd-8908-555278e5af66",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Xem địa chỉ tổ chức CVPR 2025 trên Google Maps",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 9625,
+    "response": "Tôi đã mở Google Maps hiển thị địa chỉ của hội nghị CVPR 2025 tại Music City Center, Nashville TN."
+  },
+  {
+    "frontendMessageId": "82ca0d9d-582d-4963-b500-886e29686471",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở website chính thức của EMNLP 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4351,
+    "response": "Tôi không thể tìm thấy website chính thức cho hội nghị EMNLP 2025. Vui lòng kiểm tra lại tên hội nghị hoặc cung cấp thêm thông tin."
+  },
+  {
+    "frontendMessageId": "d34be5b8-9a3a-40ab-a9c9-1d64d9d4b831",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link thông tin hội nghị AAAI 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5419,
+    "response": "Tôi không thể tìm thấy thông tin trang web cho hội nghị AAAI 2025. Vui lòng kiểm tra lại tên hội nghị hoặc cung cấp thêm thông tin chi tiết."
+  },
+  {
+    "frontendMessageId": "3e8103c7-1e72-40a2-a75b-6fb76c211f1f",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link call for papers của hội nghị ICDM 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 6625,
+    "response": "Đã mở link call for papers của hội nghị ICDM 2025 cho bạn."
+  },
+  {
+    "frontendMessageId": "b81ff2df-10dc-4729-8cf9-8f6c08d46d89",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Làm sao để tìm hội nghị theo quý?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3442,
+    "response": "Bạn có thể tìm kiếm hội nghị theo quý bằng cách sử dụng chức năng tìm kiếm cơ bản trên trang web. Trong phần tìm kiếm, bạn có thể chọn ngày bắt đầu (Start) và ngày kết thúc (End) để lọc kết quả theo khoảng thời gian mong muốn."
+  },
+  {
+    "frontendMessageId": "724417d4-1a34-4a53-b3c4-06de5bda101e",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Mình có thể lọc hội nghị theo rank như thế nào?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5072,
+    "response": "Bạn có thể lọc hội nghị theo xếp hạng bằng cách sử dụng tính năng tìm kiếm nâng cao trên trang web.\n\nCụ thể, bạn hãy:\n1.  Tru cập trang tìm kiếm hội nghị.\n2.  Tìm và nhấp vào liên kết \"Show/Hide advanced search options\" (Hiển thị/Ẩn các tùy chọn tìm kiếm nâng cao).\n3.  Trong phần bộ lọc nâng cao, bạn sẽ thấy tùy chọn \"Rank\" (Xếp hạng).\n4.  Điền hoặc chọn các tiêu chí xếp hạng mong muốn, sau đó nhấn nút \"Search\" (Tìm kiếm) để áp dụng bộ lọc."
+  },
+  {
+    "frontendMessageId": "691fb64f-51cc-49a0-b360-224c37a1c691",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Giải thích cách sử dụng bộ lọc theo thời gian diễn ra",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5022,
+    "response": "Để sử dụng bộ lọc theo thời gian diễn ra, bạn có thể thực hiện như sau:\n\nTrong phần \"Tìm kiếm Hội nghị\" trên trang web, bạn sẽ thấy mục \"Ngày\" (Dates). Tại đây, bạn có thể chọn ngày bắt đầu (Start) và ngày kết thúc (End) mà bạn mong muốn để lọc các hội nghị diễn ra trong khoảng thời gian đó."
+  },
+  {
+    "frontendMessageId": "8c11d17d-68f7-4adc-8d4f-878719869853",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Những hội nghị nào mình đã theo dõi?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 10169,
+    "response": "Dưới đây là các hội nghị bạn đang theo dõi:\n- Hội nghị Quốc tế về Nợ Kỹ thuật (TechDebt) | Ngày: 12/4/2026 - 13/4/2026 | Địa điểm: Rio de Janeiro, Brazil\n- Hội thảo IEEE về Máy tính và Truyền thông (ISCC) | Ngày: 2/7/2025 - 5/7/2025 | Địa điểm: Bologna, Italy\n- Hội thảo Quản lý và Vận hành Mạng IEEE (NOMS) | Ngày: 12/5/2025 - 16/5/2025 | Địa điểm: Honolulu, Hawaii, Hoa Kỳ\n- Hội nghị Đa Quốc gia Thế giới về Hệ thống, Điều khiển học và Tin học (WMSCI) | Ngày: 9/9/2025 - 12/9/2025 | Địa điểm: Orlando, Florida, Hoa Kỳ\n- Hội nghị Thường niên của Hiệp hội Ứng dụng Công nghiệp IEEE (IAS) | Ngày: 9/9/2025 - 12/9/2025 | Địa điểm: Porto, Bồ Đào Nha\n- Hội nghị Quốc tế về Hệ thống, Mạng và Công nghệ Môi trường (ANT) | Ngày: 22/4/2025 - 24/4/2025 | Địa điểm: Patras, Hy Lạp\n- Hoạt hình Máy tính, Trực quan hóa Thông tin và Hiệu ứng Kỹ thuật số (CAivDE) | Ngày: 5/8/2025 - 8/8/2025 | Địa điểm: Darmstadt, Đức\n- Hội nghị Euromicro về Kỹ thuật Phần mềm và Ứng dụng Nâng cao (SEAA) | Ngày: 10/9/2025 - 12/9/2025 | Địa điểm: Salerno, Italy\n- Ứng dụng và Đổi mới Trí tuệ Nhân tạo (AIAI) | Ngày: 26/6/2025 - 29/6/2025 | Địa điểm: Limassol, Síp\n- Hội nghị Quốc tế RIVF về Công nghệ Điện toán và Truyền thông (RIVF) | Ngày: 18/12/2025 - 20/12/2025 | Địa điểm: Thành phố Hồ Chí Minh, Việt Nam\n- Hội thảo về Chiến lược Lập lịch Công việc cho Xử lý Song song (JSSPP) | Ngày: 3/6/2025 - 4/6/2025 | Địa điểm: Milan, Italy\n- Hội nghị Quốc tế về Tích hợp Trí tuệ Nhân tạo và Kỹ thuật Nghiên cứu Hoạt động trong Lập trình Ràng buộc cho Các bài toán Tối ưu hóa Tổ hợp (CPAIOR) | Ngày: 10/11/2025 - 13/11/2025 | Địa điểm: Melbourne, Úc\n- Hội nghị Quốc tế về Công nghệ Thông tin và Ứng dụng (ICITA) | Ngày: 14/10/2025 - 16/10/2025 | Địa điểm: Oslo, Na Uy\n- Hội nghị Nghiên cứu Thẻ thông minh và Ứng dụng Nâng cao (CARDIS) | Ngày: 1/4/2026 | Địa điểm: Regensburg, Đức\n- Hội nghị Kỹ thuật Phần mềm Châu Á-Thái Bình Dương (APSEC) | Ngày: 2/12/2025 - 5/12/2025 | Địa điểm: Không có thành phố/bang/tỉnh, Không có quốc gia\n- Lý thuyết và Thực hành Trực quan hóa Thông tin (InfVis) | Ngày: 6/8/2025 - 8/8/2025 | Địa điểm: Nottingham, Vương quốc Anh\n- Hội nghị Quốc gia của Hiệp hội Trí tuệ Nhân tạo Hoa Kỳ (AAAI) | Ngày: 20/1/2026 - 27/1/2026 | Địa điểm: Singapore, Singapore\n- Hội nghị Quốc tế về Sáng tạo Điện toán (ICCC) | Ngày: 23/6/2025 - 27/6/2025 | Địa điểm: Không có thành phố/bang/tỉnh, Không có quốc gia\n- Vẽ Đồ thị (GD) | Ngày: 24/9/2025 - 26/9/2025 | Địa điểm: Norrköping, Thụy Điển\n- Hội nghị Liên hợp Quốc tế về Trí tuệ Điện toán (IJCCI) | Ngày: 22/10/2025 - 24/10/2025 | Địa điểm: Marbella, Tây Ban Nha\n- Hội nghị Quốc tế về Trí tuệ Nhân tạo và Điện toán Mềm (ICAISC) | Ngày: 14/6/2026 - 18/6/2026 | Địa điểm: Zakopane, Ba Lan\n- Hội nghị KES Quốc tế về Hệ thống Tác tử và Đa tác tử - Công nghệ và Ứng dụng (KES AMSTA) | Ngày: 25/6/2025 - 27/6/2025 | Địa điểm: Solin, Croatia\n- Trực quan hóa Miền Tri thức (KDViz)\n- Hội nghị Quốc tế về Phân tích Máy tính Hình ảnh và Mẫu (CAIP) | Ngày: 15/9/2025 - 19/9/2025 | Địa điểm: Rome, Italy\n- Hội nghị ACM về Hệ thống, Ngôn ngữ và Ứng dụng Lập trình Hướng đối tượng (OOPSLA) | Ngày: 12/10/2025 - 18/10/2025 | Địa điểm: Singapore, Singapore\n- Hội nghị Quốc tế về Trí tuệ Nhân tạo trong Giáo dục (AIED) | Ngày: 22/7/2025 - 26/7/2025 | Địa điểm: Palermo, Italy\n- Hội nghị Quốc tế về Điện toán và Tin học (ICOCI) | Ngày: 25/6/2025 - 27/6/2025 | Địa điểm: Medan, INDONESIA\n- Hội thảo Biên giới Quốc tế về Thuật toán (FAW)\n- Hội nghị Quốc tế về Mô hình Đa phương tiện (MMM) | Ngày: 8/1/2025 - 10/1/2025 | Địa điểm: Nara, Nhật Bản\n- Hội thảo về Chip Hiệu suất Cao (HOTCHIPS) | Ngày: 24/8/2025 - 26/8/2025 | Địa điểm: Palo Alto, CA, Hoa Kỳ\n- Hội thảo Quốc tế về Kỹ thuật Độ tin cậy Phần mềm (ISSRE) | Ngày: 21/10/2025 - 24/10/2025 | Địa điểm: São Paulo, Brazil"
+  },
+  {
+    "frontendMessageId": "386ed838-35fe-4cab-a309-9edf506c6519",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào trong danh sách quan tâm của mình có deadline vào tháng 8?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4671,
+    "response": "Hệ thống không hỗ trợ lọc các hội nghị bạn đang theo dõi theo thời hạn nộp hồ sơ. Tôi chỉ có thể liệt kê tất cả các hội nghị bạn đang theo dõi. Bạn có muốn tôi liệt kê tất cả các hội nghị đó không?"
+  },
+  {
+    "frontendMessageId": "a0528199-4fd8-43b4-8c65-2f3d5aea2066",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mở danh sách các hội nghị mình đã thêm vào lịch",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4927,
+    "response": "Đây là danh sách các hội nghị trong lịch của bạn:\n- Hội nghị Kỹ thuật Phần mềm Châu Á-Thái Bình Dương (APSEC) | Ngày: 12/2/2025 - 12/5/2025 | Địa điểm: Không có thành phố/bang/tỉnh, Không có quốc gia\n- Hội nghị Quốc gia của Hiệp hội Trí tuệ Nhân tạo Hoa Kỳ (AAAI) | Ngày: 20/1/2026 - 27/1/2026 | Địa điểm: Singapore, Singapore\n- Hội nghị Nghiên cứu Thẻ thông minh và Ứng dụng Nâng cao (CARDIS) | Ngày: 1/4/2026 | Địa điểm: Regensburg, Đức\n- Hội thảo về Các Chiến lược Lập lịch Công việc cho Xử lý Song song (JSSPP) | Ngày: 3/6/2025 - 4/6/2025 | Địa điểm: Milan, Ý"
+  },
+  {
+    "frontendMessageId": "083f99d5-8e34-48b6-84ac-8707e75226f6",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Có hội nghị nào mình đã lưu vào lịch diễn ra tuần tới không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5616,
+    "response": "Không có hội nghị nào trong lịch của bạn diễn ra vào tuần tới."
+  },
+  {
+    "frontendMessageId": "08a20d10-00cf-462f-ac1f-9a3aaa4f8543",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào nằm trong danh sách đen của mình?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3921,
+    "response": "Đây là các hội nghị trong danh sách đen của bạn:\n- Symposium on Advances in DB and Information Systems (ADBIS) | Địa điểm: Tampere, Phần Lan\n- International Conference on Computational Collective Intelligence (ICCCI) | Địa điểm: TP. Hồ Chí Minh, Việt Nam"
+  },
+  {
+    "frontendMessageId": "c4187a9c-e6a8-47fd-92de-a2c3ed9c29d1",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mình có từng cho ICANN vào blacklist không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4517,
+    "response": "Bạn không có hội nghị ICANN trong danh sách đen của mình."
+  },
+  {
+    "frontendMessageId": "24f5b3f4-f75f-4fa8-8b3a-5957482c1d4e",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Tìm tất cả hội nghị diễn ra trong quý 3 năm 2025, ở châu Âu, có chủ đề là Data Mining, rank A theo CORE, tổ chức offline, deadline nộp bài trong tháng 7",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4750,
+    "response": "Không tìm thấy hội nghị nào phù hợp với các tiêu chí bạn đã đưa ra."
+  },
+  {
+    "frontendMessageId": "083b4f90-1fa4-487d-9202-f4a379c286e7",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "So sánh ngày diễn ra và rank của hội nghị NeurIPS và ICML 2025",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 8305,
+    "response": "Tôi không thể tìm thấy thông tin về hội nghị ICML 2025.\n\nTuy nhiên, tôi có thông tin về hội nghị NeurIPS 2025:\n*   **Tên đầy đủ:** Advances in Neural Information Processing Systems (NeurIPS)\n*   **Thời gian:** Từ ngày 2 đến ngày 7 tháng 12 năm 2025\n*   **Xếp hạng:** A* (theo CORE2023) trong lĩnh vực Machine learning.\n\nDo không có dữ liệu về ICML 2025, tôi không thể so sánh hai hội nghị này."
+  },
+  {
+    "frontendMessageId": "dd61dd48-186c-401b-9c2b-a94513884c15",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Trong các hội nghị mình đã theo dõi, có hội nghị nào trùng lịch với hội nghị mới tên là BigData 2025 không?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4866,
+    "response": "Tôi có thể giúp bạn kiểm tra các xung đột lịch trình, nhưng tôi cần biết cách xác định hội nghị 'BigData 2025'. Bạn có thể cung cấp tên viết tắt hoặc tên cụ thể hơn của hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "6cb237a5-081f-4705-8d64-bfad435f8dab",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Tìm hội nghị có từ khóa ‘machine learning’",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 8743,
+    "response": "Dưới đây là một số hội nghị có liên quan đến \"machine learning\":\n\n*   **Conference on Theory and Applications of Models of Computation (TAMC)**\n    *   Địa điểm: Jinan, China\n    *   Ngày: 19 - 21 tháng 9 năm 2025\n    *   Chủ đề: Computational complexity and algorithms, Models of computation, Automata theory and formal languages, Quantum computing, Algorithmic game theory, Cryptography and data security, Computational biology and bioinformatics, Parallel and distributed computing, Formal verification and program analysis, Computational geometry and graph theory, Logic and proof theory, Computational social choice, Combinatorial optimization.\n    *   Link: http://www.maths.sdnu.edu.cn/TAMC2025.htm\n\n*   **International Conference on Computer Vision and Graphics (ICCVG)**\n    *   Địa điểm: Chengdu, China\n    *   Ngày: 28 tháng 2 - 2 tháng 3 năm 2026\n    *   Chủ đề: Computer Graphics, Images processing and computer vision, Rendering including real-time rendering, illumination, photo-realistic graphics, Computational photography, Graphics hardware, GPU, and hardware-related techniques, Image-based computer graphics, Geometric modeling, CAD, Simulation, Computer animation, image processing, Geometric data processing, GIS, BigData modeling and processing, Segmentation, Object Retrieval, Information visualization, Computer graphics and visualization, Massive and BigData visualization, Computer vision, Virtual reality environments / augmented reality / mixed reality, Image scanning, display and printing, Volume graphics, semi-transparent media, Machine learning, computer graphics, biological vision, User interface design, and human-computer interaction, and advanced interaction, Storage and retrieval, Tracking and sensing, Input devices for VR/AR/MR, Advanced display technology, Immersive projection technology, Haptics, audio, and other non-visual interfaces, Modeling and simulation, Computer graphics techniques for VR/AR/MR, Virtual humans and avatars, Multi-user and distributed VR/AR/MR, VR systems and toolkits, Locomotion and navigation in virtual environments, User studies and evaluation, Perception, presence, virtual embodiment, and cognition, Teleoperation and telepresence, Applications of VR/AR/MR, Ethical issues in VR/AR/MR, Interactive storytelling in 360° videos, 3D interaction for VR/AR/MR, 3DUI metaphors for VR/AR/MR, Mobile, Desktop or Hybrid 3DUIs, Non-fatiguing 3DUIs, Evaluation methods for 3DUIs, Empirical studies of 3DUIs, Applications of 3DUIs: Games, entertainment, CAD, education, etc.\n    *   Link: https://www.iccgv.org/\n\n*   **Information Visualisation Theory and Practice (InfVis)**\n    *   Địa điểm: University of Nottingham, Nottingham, UK\n    *   Ngày: 6 - 8 tháng 8 năm 2025\n    *   Chủ đề: Information Visualisation, Visual Analytics, Business Intelligence, Machine Learning, Data Science, Document Trust, Document Security, Machine Learning for Digital Documents, Digital Accessibility, Collections, Systems, and Management, Modelling and Representation, Document Content Analysis, Systems for Visual Document Analysis, Generation, Manipulation, and Presentation, Applications, User Experience.\n    *   Link: https://iv.csites.fct.unl.pt/de/symposia/iv/infvis/\n\n*   **Conference on Learning Theory (COLT)**\n    *   Địa điểm: Lyon, France\n    *   Ngày: 30 tháng 6 - 4 tháng 7 năm 2025\n    *   Chủ đề: Design and analysis of learning algorithms, Statistical and computational complexity of learning, Optimization methods for learning, Theory of artificial neural networks, Theoretical explanation of empirical phenomena in learning, Supervised learning, Unsupervised, semi-supervised learning, domain adaptation, Learning geometric and topological structures in data, manifold learning, Active and interactive learning, Reinforcement learning, Online learning and decision-making, Interactions of learning theory with other mathematical fields, High-dimensional and non-parametric statistics, Kernel methods, Causality, Theoretical analysis of probabilistic graphical models, Bayesian methods in learning, Game theory and learning, Learning with system constraints (e.g., privacy, fairness, memory, communication), Learning from complex data (e.g., networks, time series), Learning in neuroscience, social science, economics and other subjects.\n    *   Link: https://learningtheory.org/colt2025/\n\n*   **Usenix Network and Distributed System Security Symposium (NDSS)**\n    *   Địa điểm: San Diego, California\n    *   Ngày: 23 - 27 tháng 2 năm 2026\n    *   Chủ đề: Anti-malware techniques, Cyber attack prevention, Cyber-crime defense and forensics, Integrating security in network protocols, Mobile and wireless network security, Network security policy implementation, Privacy and anonymity in networks and distributed systems, Public key infrastructures, Security and privacy for blockchains and cryptocurrencies, Security and privacy of mobile/smartphone platforms, Security and privacy of operating systems, Security and privacy of systems based on machine learning, Security for cloud/edge computing, Security for cyber-physical systems, Security for emerging networks, Security for future Internet architectures and designs, Security for large-scale, critical infrastructures, Security of web-based applications and services, Software/firmware/hardware security analysis, Trustworthy computing software and hardware, Usable security and privacy.\n    *   Link: https://www.ndss-symposium.org/ndss2026/\n\n*   **International Machine Vision and Image Processing Conference (IMVIP)**\n    *   Địa điểm: Ulster University, Derry~Londonderry, Northern Ireland\n    *   Ngày: 1 - 3 tháng 9 năm 2025\n    *   Chủ đề: Computer Vision, Image Processing, Visually Guided Robot Manipulation and Navigation, Computer Vision for Autonomous Vehicles, Augmented Reality/Virtual Reality, Data Clustering and Texture Analysis, Image & Video Representation, Compression and Coding, Medical and Biomedical Imaging, Active Vision, Tracking and Motion Analysis, Object and Event Recognition, Face and Gesture Recognition, 2D, 3D Scene Analysis and Visualisation, Deep Learning for Computer Vision, Image/Shape Representation and Recovery, Applications, Architectures and Systems Integration.\n    *   Link: https://imvipconference.github.io/\n\n*   **IEEE International Working Conference on Mining Software Repositories (MSR)**\n    *   Địa điểm: Rio de Janeiro, Brazil\n    *   Ngày: 13 - 14 tháng 4 năm 2026\n    *   Chủ đề: Data science, machine learning, and artificial intelligence in software engineering.\n    *   Link: https://2026.msrconf.org/\n\n*   **International Symposium on Fundamentals of Computation Theory (FCT)**\n    *   Địa điểm: Institute of Computer Science, University of Wrocław, Poland\n    *   Ngày: 15 - 17 tháng 9 năm 2025\n    *   Chủ đề: Algorithms, Complexity, Formal Methods, Algorithmic Game Theory, Algorithmic Learning Theory, Algorithmic Randomness, Algorithms and Data Structures, Algorithms for Big Data, Approximation Algorithms, Automata Theory, Average-Case Analysis, Combinatorics and Graph Theory, Combinatorial Generation, Enumeration and Counting, Combinatorial Optimization, Combinatorics of Words, Complexity Theory, Computational Biology, Computational Geometry, Computational Learning Theory, Computational Social Choice, Computability, Recursion Theory, Concurrency, Data Compression, Database Theory, Descriptional Complexity, Discrete Event Systems, Discrete Optimization, Distributed, Parallel and Network Algorithms, Energy-Aware Algorithms, Error-Correcting Codes, Fine-grained Complexity, Formal Languages, Formal Specification and Verification, Foundations of Artificial Intelligence and Machine Learning, Graph Algorithms and Modelling with Graphs, Graph Drawing and Graph Labeling, Grammatical Inference, Integer and Linear Programming, Logic in Computer Science, Model-Checking, Models of Computation, Network Theory and Temporal Graphs, Online Algorithms, Parameterized Algorithms and Complexity, Probabilistic and Randomized Algorithms, Program Semantics, Quantum Algorithms, String Algorithms, Sublinear Time and Streaming Algorithms, Telecommunication Algorithms, Theorem Provers and Automated Reasoning, Voting Theory.\n    *   Link: https://fct2025.cs.uni.wroc.pl/\n\nBạn có muốn biết thêm thông tin chi tiết về hội nghị nào không?"
+  },
+  {
+    "frontendMessageId": "73d30b10-441e-4836-b292-a890e6923ce7",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Cho mình biết về hội nghị tên là NeurIPS",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5084,
+    "response": "Hội nghị Advances in Neural Information Processing Systems (NeurIPS) sẽ diễn ra tại Trung tâm Hội nghị San Diego, California, Hoa Kỳ, từ ngày 2 tháng 12 đến ngày 7 tháng 12 năm 2025. Đây là một hội nghị ngoại tuyến thuộc lĩnh vực học máy, được xếp hạng A* bởi CORE2023.\n\nCác chủ đề chính của NeurIPS bao gồm học máy, khoa học thần kinh, thống kê, tối ưu hóa, thị giác máy tính, xử lý ngôn ngữ tự nhiên, khoa học đời sống, khoa học tự nhiên và khoa học xã hội. Hội nghị cũng đi sâu vào các ứng dụng như AI sáng tạo, học sâu (kiến trúc, mô hình tạo sinh, tối ưu hóa mạng sâu, mô hình nền tảng, LLM), và các phương pháp đánh giá (phương pháp luận, nghiên cứu siêu cấp, khả năng tái lập và hợp lệ, con người trong vòng lặp). Ngoài ra, hội nghị còn đề cập đến học máy nói chung (có giám sát, không giám sát, trực tuyến, chủ động), cơ sở hạ tầng (thư viện, triển khai và khả năng mở rộng được cải thiện, giải pháp phân tán), học máy cho khoa học (khí hậu, sức khỏe, khoa học đời sống, vật lý, khoa học xã hội), khoa học thần kinh và nhận thức (mã hóa thần kinh, giao diện não-máy tính), tối ưu hóa (lồi và không lồi, ngẫu nhiên, mạnh mẽ), phương pháp xác suất (suy luận biến phân, suy luận nhân quả, quá trình Gaussian), học tăng cường (ra quyết định và điều khiển, lập kế hoạch, RL phân cấp, robot), các khía cạnh xã hội và kinh tế của học máy (công bằng, diễn giải, tương tác người-AI, quyền riêng tư, an toàn, hành vi chiến lược), và lý thuyết (lý thuyết điều khiển, lý thuyết học tập, lý thuyết trò chơi thuật toán).\n\nBạn có thể tìm thêm thông tin tại: https://neurips.cc/Conferences/2025"
+  },
+  {
+    "frontendMessageId": "280d7450-7d44-46b5-b9c0-002ce02855fe",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Hội nghị nào có tên viết tắt là ACL?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3052,
+    "response": "Hội nghị có tên viết tắt là ACL là Hiệp hội Ngôn ngữ học Tính toán (Association for Computational Linguistics). Hội nghị này sẽ diễn ra tại Vienna, Áo từ ngày 27 tháng 7 đến ngày 1 tháng 8 năm 2025."
+  },
+  {
+    "frontendMessageId": "42c72111-1dc9-4736-97ad-f8a3f7a0f8bf",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào diễn ra ở Việt Nam trong năm nay không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3934,
+    "response": "Có một số hội nghị sẽ diễn ra tại Việt Nam trong năm nay:\n\n*   **International Natural Language Generation Conference (INLG)**: Diễn ra tại Hà Nội từ ngày 29 tháng 10 đến ngày 2 tháng 11 năm 2025.\n*   **Asia Conference on Information, Computer and Communications Security (AsiaCCS)**: Diễn ra tại Hà Nội từ ngày 25 đến ngày 29 tháng 8 năm 2025.\n*   **RIVF International Conference on Computing and Communication Technologies (RIVF)**: Diễn ra tại Thành phố Hồ Chí Minh từ ngày 18 đến ngày 22 tháng 12 năm 2025.\n*   **International Conference on Management of Digital EcoSystems (MEDES)**: Diễn ra tại Thành phố Hồ Chí Minh từ ngày 24 đến ngày 26 tháng 11 năm 2025.\n*   **IFIP International Conference on Network and Parallel Computing (NPC)**: Diễn ra tại Nha Trang từ ngày 14 đến ngày 16 tháng 11 năm 2025.\n*   **International Conference on Computational Collective Intelligence (ICCCI)**: Diễn ra tại Thành phố Hồ Chí Minh từ ngày 12 đến ngày 15 tháng 11 năm 2025."
+  },
+  {
+    "frontendMessageId": "622cc1eb-ce4e-4a07-8827-6120a914cf09",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Liệt kê các hội nghị ở châu Á về AI vào quý 4 năm 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3617,
+    "response": "Dưới đây là danh sách các hội nghị về AI tại châu Á vào quý 4 năm 2025:\n\n*   **International Symposium on Search Based Software Engineering (SSBSE)**\n    *   Địa điểm: Seoul, Hàn Quốc\n    *   Thời gian: 16 tháng 11 năm 2025\n    *   Chủ đề: Kỹ thuật phần mềm dựa trên tìm kiếm, AI, học máy.\n\n*   **International Conference on Management of Data (COMAD)**\n    *   Địa điểm: IISER Pune, Pune, Ấn Độ\n    *   Thời gian: 17 - 20 tháng 12 năm 2025\n    *   Chủ đề: Khoa học dữ liệu, Quản lý dữ liệu, Học máy, Trí tuệ nhân tạo.\n\n*   **RIVF International Conference on Computing and Communication Technologies (RIVF)**\n    *   Địa điểm: Thành phố Hồ Chí Minh, Việt Nam\n    *   Thời gian: 18 - 22 tháng 12 năm 2025\n    *   Chủ đề: Xử lý ngôn ngữ và giọng nói, Thị giác máy tính, Điện toán đám mây, An ninh mạng, AI, Khoa học dữ liệu, Phân tích dữ liệu lớn, Kỹ thuật phần mềm."
+  },
+  {
+    "frontendMessageId": "800bd61a-c66c-4a88-8843-931fb950b41b",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào ở Mỹ, tổ chức offline trong tháng 10 không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4925,
+    "response": "Dưới đây là các hội nghị diễn ra tại Mỹ vào tháng 10 năm 2025, được tổ chức trực tiếp:\n\n*   **International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS):** Diễn ra từ ngày 26 tháng 10 năm 2025 tại Denver, Colorado. Hội nghị tập trung vào thiết kế, đánh giá, sử dụng và giáo dục liên quan đến máy tính cho người khuyết tật và người cao tuổi.\n*   **IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS):** Diễn ra từ ngày 6 đến 8 tháng 10 năm 2025 tại Chicago, USA. Hội nghị thảo luận về Mạng Ad-Hoc Di động, Hệ thống Thông minh, Thuật toán, Giao thức, Hệ thống và Ứng dụng.\n*   **Pattern Languages of Programs (PLOP):** Diễn ra từ ngày 12 đến 15 tháng 10 năm 2025 tại Skamania Lodge, Columbia River Gorge, Washington USA. Hội nghị tập trung vào các Ngôn ngữ Mẫu, Phát triển Phần mềm và Thiết kế.\n*   **European MPI Users' Group Conference (EuroMPI):** Diễn ra từ ngày 1 đến 3 tháng 10 năm 2025 tại Charlotte, NC, USA. Hội nghị thảo luận về Giao diện Truyền thông Thông điệp (MPI) và các hệ thống lai, hiệu năng cao.\n*   **International Symposium on Empirical Software Engineering and Measurement (ESEM):** Diễn ra từ ngày 29 tháng 9 đến 3 tháng 10 năm 2025 tại Honolulu, Hawai, USA. Hội nghị tập trung vào Kỹ thuật Phần mềm Thực nghiệm và Đo lường.\n*   **IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC):** Diễn ra từ ngày 6 đến 10 tháng 10 năm 2025 tại Raleigh, North Carolina, United States. Hội nghị tập trung vào công nghệ và ngôn ngữ máy tính cho lập trình, mô hình hóa và giao tiếp.\n*   **Asilomar Conference on Signals, Systems and Computing (ACSSC):** Diễn ra từ ngày 26 đến 29 tháng 10 năm 2025 tại Asilomar Conference Grounds, Pacific Grove, California, USA. Hội nghị bàn về Tín hiệu, Hệ thống và Máy tính.\n*   **ISCA International Conference on Computer Applications in Industry and Engineering (CAINE):** Diễn ra từ ngày 20 đến 21 tháng 10 năm 2025 tại Holiday Inn Downtown Superdome, New Orleans, Louisiana, USA. Hội nghị tập trung vào Ứng dụng Máy tính trong Công nghiệp và Kỹ thuật.\n*   **IEEE International Conference on Computer Vision (ICCV):** Diễn ra từ ngày 19 đến 23 tháng 10 năm 2025 tại Honolulu, Hawai'i. Hội nghị bàn về Thị giác Máy tính, Nhận dạng Mẫu và các ứng dụng liên quan.\n*   **Formal Methods in Computer-Aided Design (FMCAD):** Diễn ra từ ngày 6 đến 10 tháng 10 năm 2025 tại Menlo Park, California, USA. Hội nghị tập trung vào Phương pháp Hình thức trong Thiết kế có sự hỗ trợ của Máy tính."
+  },
+  {
+    "frontendMessageId": "4a42c030-cb7d-4fc5-a17c-a7ab71cd047a",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào có ngày nộp bài trước 30/7/2025?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3409,
+    "response": "Dưới đây là các hội nghị có hạn nộp bài trước ngày 30/07/2025:\n\n*   **RIVF International Conference on Computing and Communication Technologies (RIVF):** Hạn nộp bài là ngày 30-31 tháng 7 năm 2025.\n*   **International Conference on Intelligent Systems and Knowledge Engineering (ISKE):** Hạn nộp bài là ngày 30 tháng 7 năm 2025.\n*   **International Conference on Collaborative Computing: Networks, Applications and Worksharing (CollaborateCom):** Hạn nộp bài vòng 2 là ngày 30 tháng 7 năm 2025.\n*   **ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL):** Có nhiều hạn nộp bài khác nhau tùy theo loại bài gửi, trong đó có một số hạn nộp bài là ngày 30 tháng 7 năm 2025 (GIS Cup Mid Submission).\n*   **British Machine Vision Conference (BMVC):** Hạn nộp bài là ngày 16 tháng 5 năm 2025."
+  },
+  {
+    "frontendMessageId": "d544f512-93ea-438b-a2a7-25d90e5dc575",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Cho mình danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4668,
+    "response": "Dưới đây là danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025:\n\n*   **Conference on Theory and Applications of Models of Computation (TAMC)**\n    *   Thời gian: 19 - 21 tháng 9, 2025\n    *   Địa điểm: Jinan, Trung Quốc\n    *   Lĩnh vực nghiên cứu: Lý thuyết tính toán\n*   **ArtsIT, Interactivity & Game Creation (ArtsIT)**\n    *   Thời gian: 7 - 9 tháng 11, 2025\n    *   Địa điểm: Heriot-Watt University Dubai, UAE\n    *   Lĩnh vực nghiên cứu: Đồ họa, thực tế tăng cường và trò chơi, Tin học lấy con người làm trung tâm\n*   **Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS)**\n    *   Thời gian: 9 - 11 tháng 10, 2025\n    *   Địa điểm: Kathmandu, Nepal\n    *   Lĩnh vực nghiên cứu: An ninh mạng và quyền riêng tư\n*   **International Machine Vision and Image Processing Conference (IMVIP)**\n    *   Thời gian: 1 - 3 tháng 9, 2025\n    *   Địa điểm: Ulster University, Derry~Londonderry, Bắc Ireland\n    *   Lĩnh vực nghiên cứu: Thị giác máy tính và xử lý ảnh\n*   **IEEE International Conference on Quantum Computing and Engineering (QCE)**\n    *   Thời gian: 31 tháng 8 - 5 tháng 9, 2025\n    *   Địa điểm: Albuquerque Convention Center, Albuquerque, New Mexico, Hoa Kỳ\n    *   Lĩnh vực nghiên cứu: Kỹ thuật hệ thống máy tính\n*   **International Symposium on Fundamentals of Computation Theory (FCT)**\n    *   Thời gian: 15 - 17 tháng 9, 2025\n    *   Địa điểm: Viện Khoa học Máy tính, Đại học Wrocław, Ba Lan\n    *   Lĩnh vực nghiên cứu: Lý thuyết tính toán\n*   **International Symposium on Algorithmic Game Theory (SAGT)**\n    *   Thời gian: 2 - 5 tháng 9, 2025\n    *   Địa điểm: Đại học Bath, Bath, Vương quốc Anh\n    *   Lĩnh vực nghiên cứu: Lý thuyết tính toán\n*   **ASIAN Symposium on Programming Languages and Systems (APLAS)**\n    *   Thời gian: 27 - 30 tháng 10, 2025\n    *   Địa điểm: Bengaluru, Ấn Độ\n    *   Lĩnh vực nghiên cứu: Kỹ thuật phần mềm\n*   **Symposium on Advances in DB and Information Systems (ADBIS)**\n    *   Thời gian: 23 - 26 tháng 9, 2025\n    *   Địa điểm: Tampere, Phần Lan\n    *   Lĩnh vực nghiên cứu: Quản lý dữ liệu và khoa học dữ liệu\n*   **IEEE International Conference on Document Analysis and Recognition (ICDAR)**\n    *   Thời gian: 16 - 21 tháng 9, 2025\n    *   Địa điểm: Vũ Hán, Hồ Bắc, Trung Quốc\n    *   Lĩnh vực nghiên cứu: Quản lý dữ liệu và khoa học dữ liệu"
+  },
+  {
+    "frontendMessageId": "df7e37b2-5f0a-44b8-9740-6444742a22fd",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào diễn ra vào đúng ngày 15/8/2025?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3376,
+    "response": "Có một số hội nghị diễn ra vào ngày 15/8/2025:\n\n*   **International Conference on Principles and Practice of Constraint Programming (CP)**: Diễn ra tại Glasgow, Scotland.\n*   **International Conference on Theory and Applications of Satisfiability Testing (SAT)**: Diễn ra tại Glasgow, Scotland.\n*   **International Conference on Computing and Combinatorics (COCOON)**: Diễn ra tại Chengdu, Trung Quốc.\n*   **Selected Areas in Cryptography (SAC)**: Diễn ra tại Đại học Toronto Metropolitan, Toronto, Canada."
+  },
+  {
+    "frontendMessageId": "a4d31519-4d49-4671-9fea-cb46aa017b3a",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Tìm hội nghị về chủ đề Cybersecurity có rank A* theo CORE2023",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2857,
+    "response": "Rất tiếc, tôi không tìm thấy hội nghị nào về chủ đề Cybersecurity có xếp hạng A* theo CORE2023."
+  },
+  {
+    "frontendMessageId": "5f4f1fab-5b5d-45ad-8da0-453e15c9f93e",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Hội nghị nào tổ chức hybrid và có chủ đề về NLP?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2936,
+    "response": "Rất tiếc, tôi không tìm thấy hội nghị nào được tổ chức kết hợp (hybrid) và có chủ đề về Xử lý Ngôn ngữ Tự nhiên (NLP)."
+  },
+  {
+    "frontendMessageId": "9cd131fc-fe2f-4756-b7df-f8f61e241a0a",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Có hội nghị nào thuộc source Springer không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2860,
+    "response": "Xin lỗi, tôi không tìm thấy hội nghị nào thuộc nguồn Springer trong hệ thống của chúng tôi."
+  },
+  {
+    "frontendMessageId": "4a099205-e8fd-4180-a634-90d69ce2c211",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Cho mình chi tiết về hội nghị ICML 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3523,
+    "response": "Hội nghị Quốc tế về Học máy (ICML) 2025 sẽ được tổ chức tại Trung tâm Hội nghị Vancouver, Vancouver, Canada, từ ngày 13 đến ngày 19 tháng 7 năm 2025. Đây là một hội nghị trực tiếp.\n\nCác chủ đề chính bao gồm: Học máy Tổng quát, Học sâu, Đánh giá, Lý thuyết Học máy, Hệ thống Học máy, Tối ưu hóa, Phương pháp Xác suất, Học tăng cường, Học máy Tin cậy, và Học máy dựa trên Ứng dụng.\n\nHạn chót nộp bài là ngày 30 tháng 1 năm 2025. Bạn có thể tìm thêm thông tin chi tiết và nộp bài tại trang web của hội nghị: https://icml.cc/Conferences/2025."
+  },
+  {
+    "frontendMessageId": "08e7f32f-366d-479a-87cb-ccd60f4c7cfd",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "ACL 2025 diễn ra ở đâu, ngày nào?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 1317,
+    "response": "ACL 2025 diễn ra ở đâu và vào ngày nào?"
+  },
+  {
+    "frontendMessageId": "736b190b-a07d-4b8e-903f-7d2c7e92014c",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Deadline nộp bài của NeurIPS là khi nào?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 11410,
+    "response": "Hạn chót nộp bài cho hội nghị NeurIPS là ngày 15 tháng 5 năm 2025."
+  },
+  {
+    "frontendMessageId": "6e1dc831-633a-4c13-be01-0a529043608f",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Rank của hội nghị ICRA là gì?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2818,
+    "response": "Hội nghị ICRA (IEEE International Conference on Robotics and Automation) có hạng là A* theo nguồn CORE2023 cho cả hai lĩnh vực Trí tuệ nhân tạo và Kỹ thuật hệ thống máy tính."
+  },
+  {
+    "frontendMessageId": "b69e1e15-ec40-45e3-8f7e-28e35fb0eff1",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Link CFP của hội nghị SIGGRAPH Asia 2025?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3447,
+    "response": "Xin lỗi, tôi không tìm thấy hội nghị SIGGRAPH Asia 2025 trong hệ thống của chúng tôi. Bạn có thể kiểm tra lại tên hoặc năm của hội nghị không?"
+  },
+  {
+    "frontendMessageId": "b4014def-c523-4ffe-9144-a7f5f596d225",
+    "payload": {
+      "group": "6. Tóm tắt",
+      "question": "Tóm tắt ngắn gọn thông tin chính của hội nghị ECCV 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 12273,
+    "response": "Rất tiếc, tôi không tìm thấy thông tin nào về hội nghị ECCV 2025. Bạn có muốn tôi tìm kiếm với một tên gọi khác hoặc một năm khác không?"
+  },
+  {
+    "frontendMessageId": "a360dc4d-0161-4696-9f12-ddd4eed0de19",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Mở bản đồ vị trí tổ chức hội nghị ICLR 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4633,
+    "response": "Bản đồ địa điểm của hội nghị ICLR 2025 tại Singapore EXPO sẽ được mở."
+  },
+  {
+    "frontendMessageId": "7c50b005-3585-4e58-afb7-d830cedf7d1a",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Chỉ đường đến địa điểm tổ chức hội nghị KDD 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2933,
+    "response": "Xin lỗi, tôi không thể tìm thấy thông tin về địa điểm của hội nghị KDD 2025. Bạn có thể vui lòng kiểm tra lại tên hội nghị hoặc cung cấp thêm chi tiết không?"
+  },
+  {
+    "frontendMessageId": "060ae035-da01-4a72-b6c3-5ac37362f497",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Xem địa chỉ tổ chức CVPR 2025 trên Google Maps",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 1353,
+    "response": "Tuyệt vời! Để tôi tìm địa chỉ của CVPR 2025 và hiển thị trên Google Maps cho bạn.\n\nĐầu tiên, tôi cần lấy thông tin địa chỉ của hội nghị này.\n"
+  },
+  {
+    "frontendMessageId": "77340089-d528-43fb-b44a-58155d7fd52d",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở website chính thức của EMNLP 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2655,
+    "response": "Xin lỗi, tôi không tìm thấy thông tin về hội nghị EMNLP 2025. Bạn có thể vui lòng kiểm tra lại tên hoặc cung cấp thêm chi tiết không?"
+  },
+  {
+    "frontendMessageId": "818f0e6b-403d-416a-abb5-2ce25beaff5d",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link thông tin hội nghị AAAI 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 12016,
+    "response": "Xin lỗi, tôi không tìm thấy thông tin về hội nghị AAAI 2025. Bạn có thể cung cấp thêm chi tiết hoặc tên gọi khác của hội nghị không?"
+  },
+  {
+    "frontendMessageId": "13efbb1e-e6ab-474e-8791-b0800d9cc799",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link call for papers của hội nghị ICDM 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2708,
+    "response": "Link \"call for papers\" của hội nghị ICDM 2025 là: https://www3.cs.stonybrook.edu/~icdm2025/cfp.html"
+  },
+  {
+    "frontendMessageId": "7e1d5138-e1e5-49f1-beca-820e52b193dc",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Làm sao để tìm hội nghị theo quý?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2320,
+    "response": "Vui lòng cho biết quý nào bạn muốn tìm hội nghị. Ví dụ: quý 1, quý 2, quý 3 hay quý 4?"
+  },
+  {
+    "frontendMessageId": "074273e8-9f94-4238-bb88-acf164321db6",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Mình có thể lọc hội nghị theo rank như thế nào?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 1617,
+    "response": "Xin lỗi, tôi không hiểu rõ yêu cầu của bạn. Bạn có thể vui lòng cho tôi biết bạn muốn lọc hội nghị theo \"rank\" như thế nào không? Ví dụ, bạn muốn lọc theo thứ hạng về số lượng người tham dự, xếp hạng về mức độ ảnh hưởng, hay một tiêu chí nào khác?"
+  },
+  {
+    "frontendMessageId": "758aaaf2-d859-482f-9bc8-e7ed78364280",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Giải thích cách sử dụng bộ lọc theo thời gian diễn ra",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3258,
+    "response": "Để sử dụng bộ lọc theo thời gian diễn ra, bạn có thể thực hiện như sau:\n\n1.  **Tìm kiếm cơ bản:** Trên thanh tìm kiếm chính, bạn có thể nhập tên hội nghị, từ khóa lĩnh vực hoặc từ viết tắt của hội nghị.\n2.  **Sử dụng bộ lọc ngày:** Ngay bên cạnh thanh tìm kiếm chính, bạn sẽ thấy các tùy chọn để chọn ngày bắt đầu (Start) và ngày kết thúc (End). Nhấp vào các trường này để mở lịch và chọn khoảng thời gian mong muốn.\n3.  **Tìm kiếm nâng cao:** Nếu cần các tùy chọn lọc chi tiết hơn, bạn có thể nhấp vào liên kết \"Show/Hide advanced search options\". Tại đây, bạn có thể tìm thấy các bộ lọc bổ sung, bao gồm cả bộ lọc liên quan đến ngày tháng như \"Submission Date\" (Ngày nộp bài).\n\nSau khi đã thiết lập bộ lọc ngày, hãy nhấn nút \"Search\" để xem kết quả. Nếu muốn xóa các bộ lọc đã áp dụng, bạn có thể nhấn nút \"Clear\"."
+  },
+  {
+    "frontendMessageId": "2252c81f-a86c-4cb8-8345-f9aebe8d7d48",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Những hội nghị nào mình đã theo dõi?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 5448,
+    "response": "Dưới đây là danh sách các hội nghị mà bạn đang theo dõi:\n\n*   International Conference on Technical Debt (TechDebt) | Ngày: 4/12/2026 - 4/13/2026 | Địa điểm: Rio de Janeiro, Brazil\n*   IEEE Symposium on Computers and Communications (ISCC) | Ngày: 7/2/2025 - 7/5/2025 | Địa điểm: Bologna, Italy\n*   IEEE Network Operations and Management Symposium (NOMS) | Ngày: 5/12/2025 - 5/16/2025 | Địa điểm: Honolulu, Hawaii, United States\n*   World Multi-Conference on Systemics, Cybernetics and Informatics (WMSCI) | Ngày: 9/9/2025 - 9/12/2025 | Địa điểm: Orlando, Florida, United States\n*   IEEE Industry Applications Society Annual Conference (IAS) | Ngày: 9/9/2025 - 9/12/2025 | Địa điểm: Porto, Portugal\n*   International Conference on Ambient Systems, Networks and Technologies (ANT) | Ngày: 4/22/2025 - 4/24/2025 | Địa điểm: Patras, Greece\n*   Computer Animation, Information Visualisation, and Digital Effects (CAivDE) | Ngày: 8/5/2025 - 8/8/2025 | Địa điểm: Darmstadt, Germany\n*   Euromicro Conference on Software Engineering and Advanced Applications (SEAA) | Ngày: 9/10/2025 - 9/12/2025 | Địa điểm: Salerno, Italy\n*   Artificial Intelligence Applications and Innovations (AIAI) | Ngày: 6/26/2025 - 6/29/2025 | Địa điểm: Limassol, Cyprus\n*   RIVF International Conference on Computing and Communication Technologies (RIVF) | Ngày: 12/18/2025 - 12/20/2025 | Địa điểm: Ho Chi Minh City, Vietnam\n*   Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP) | Ngày: 6/3/2025 - 6/4/2025 | Địa điểm: Milan, Italy\n*   International Conference on Integration of Artificial Intelligence and Operations Research Techniques in Constraint Programming for Combinatorial Optimization Problems (CPAIOR) | Ngày: 11/10/2025 - 11/13/2025 | Địa điểm: Melbourne, Australia\n*   International Conference on Information Technology and Applications (ICITA) | Ngày: 10/14/2025 - 10/16/2025 | Địa điểm: Oslo, Norway\n*   Smart Card Research and Advanced Application Conference (CARDIS) | Ngày: 4/1/2026 | Địa điểm: Regensburg, Germany\n*   Asia-Pacific Software Engineering Conference (APSEC) | Ngày: 12/2/2025 - 12/5/2025 | Địa điểm: No city/state/province, No country\n*   Information Visualisation Theory and Practice (InfVis) | Ngày: 8/6/2025 - 8/8/2025 | Địa điểm: Nottingham, United Kingdom\n*   National Conference of the American Association for Artificial Intelligence (AAAI) | Ngày: 1/20/2026 - 1/27/2026 | Địa điểm: Singapore, Singapore\n*   International Conference on Computational Creativity (ICCC) | Ngày: 6/23/2025 - 6/27/2025 | Địa điểm: No city/state/province, No country\n*   Graph Drawing (GD) | Ngày: 9/24/2025 - 9/26/2025 | Địa điểm: Norrköping, Sweden\n*   International Joint Conference on Computational Intelligence (IJCCI) | Ngày: 10/22/2025 - 10/24/2025 | Địa điểm: Marbella, Spain\n*   International Conference on Artificial Intelligence and Soft Computing (ICAISC) | Ngày: 6/14/2026 - 6/18/2026 | Địa điểm: Zakopane, Poland\n*   International KES Conference on Agents and Multiagent systems - Technologies and Applications (KES AMSTA) | Ngày: 6/25/2025 - 6/27/2025 | Địa điểm: Solin, Croatia\n*   Knowledge Domain Visualisation (KDViz)\n*   International Conference on Computer Analysis of Images and Patterns (CAIP) | Ngày: 9/15/2025 - 9/19/2025 | Địa điểm: Rome, Italy\n*   ACM Conference on Object Oriented Programming Systems Languages and Applications (OOPSLA) | Ngày: 10/12/2025 - 10/18/2025 | Địa điểm: Singapore, Singapore\n*   International Conference on Artificial Intelligence in Education (AIED) | Ngày: 7/22/2025 - 7/26/2025 | Địa điểm: Palermo, Italy\n*   International Conference on Computing and Informatics (ICOCI) | Ngày: 6/25/2025 - 6/27/2025 | Địa điểm: Medan, INDONESIA\n*   International Frontiers of Algorithmics Workshop (FAW)\n*   International Conference on Multimedia Modelling (MMM) | Ngày: 1/8/2025 - 1/10/2025 | Địa điểm: Nara, Japan\n*   Symposium on High Performance Chips (HOTCHIPS) | Ngày: 8/24/2025 - 8/26/2025 | Địa điểm: Palo Alto, CA, United States\n*   International Symposium on Software Reliability Engineering (ISSRE) | Ngày: 10/21/2025 - 10/24/2025 | Địa điểm: São Paulo, Brazil"
+  },
+  {
+    "frontendMessageId": "0b94588a-db4a-4d93-b527-3cfebab70abe",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào trong danh sách quan tâm của mình có deadline vào tháng 8?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3326,
+    "response": "Dưới đây là các hội nghị trong danh sách quan tâm của bạn có deadline vào tháng 8:\n\n*   **Computer Animation, Information Visualisation, and Digital Effects (CAivDE):** 5/8/2025 - 8/8/2025, Darmstadt, Đức\n*   **Information Visualisation Theory and Practice (InfVis):** 8/6/2025 - 8/8/2025, Nottingham, Vương quốc Anh\n*   **Symposium on High Performance Chips (HOTCHIPS):** 8/24/2025 - 8/26/2025, Palo Alto, CA, Hoa Kỳ"
+  },
+  {
+    "frontendMessageId": "d24fa4fc-2c03-465d-86ce-188ecea88caa",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mở danh sách các hội nghị mình đã thêm vào lịch",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 4000,
+    "response": "Đây là danh sách các hội nghị có trong lịch của bạn:\n- Hội nghị Kỹ thuật Phần mềm Châu Á - Thái Bình Dương (APSEC) | Ngày: 02/12/2025 - 05/12/2025 | Địa điểm: Không có thành phố/tiểu bang/tỉnh, Không có quốc gia\n- Hội nghị Quốc gia của Hiệp hội Trí tuệ Nhân tạo Hoa Kỳ (AAAI) | Ngày: 20/01/2026 - 27/01/2026 | Địa điểm: Singapore, Singapore\n- Hội nghị Nghiên cứu Thẻ Thông minh và Ứng dụng Tiên tiến (CARDIS) | Ngày: 01/04/2026 | Địa điểm: Regensburg, Đức\n- Hội thảo về Chiến lược Lập lịch Công việc cho Xử lý Song song (JSSPP) | Ngày: 03/06/2025 - 04/06/2025 | Địa điểm: Milan, Ý"
+  },
+  {
+    "frontendMessageId": "ab01ce90-3d38-4522-a990-517cad14fed9",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Có hội nghị nào mình đã lưu vào lịch diễn ra tuần tới không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3227,
+    "response": "Trong lịch của bạn có các hội nghị sau:\n\n*   Asia-Pacific Software Engineering Conference (APSEC) | Ngày: 02/12/2025 - 05/12/2025 | Địa điểm: Không có thành phố/bang/tỉnh, Không có quốc gia\n*   National Conference of the American Association for Artificial Intelligence (AAAI) | Ngày: 20/01/2026 - 27/01/2026 | Địa điểm: Singapore, Singapore\n*   Smart Card Research and Advanced Application Conference (CARDIS) | Ngày: 01/04/2026 | Địa điểm: Regensburg, Đức\n*   Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP) | Ngày: 03/06/2025 - 04/06/2025 | Địa điểm: Milan, Ý\n\nTuy nhiên, tôi không thể xác định hội nghị nào sẽ diễn ra trong tuần tới vì hôm nay là ngày 14 tháng 7 năm 2025 và không có hội nghị nào trong danh sách có ngày diễn ra trong khoảng thời gian từ ngày 14 tháng 7 năm 2025 đến ngày 20 tháng 7 năm 2025."
+  },
+  {
+    "frontendMessageId": "3b7c1fe8-8738-458e-aecf-ebbd3664efde",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào nằm trong danh sách đen của mình?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3061,
+    "response": "Dưới đây là các hội nghị trong danh sách đen của bạn:\n\n*   Hội nghị về Tiến bộ trong Hệ thống CSDL và Thông tin (ADBIS) | Địa điểm: Tampere, Phần Lan\n*   Hội nghị Quốc tế về Trí tuệ Tập thể Tính toán (ICCCI) | Địa điểm: Thành phố Hồ Chí Minh, Việt Nam"
+  },
+  {
+    "frontendMessageId": "6ac7ccc9-4ee7-4580-9680-67c30e86df56",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mình có từng cho ICANN vào blacklist không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3182,
+    "response": "Bạn không có hội nghị ICANN nào trong danh sách đen của mình. Tuy nhiên, hai hội nghị sau đây có trong danh sách đen của bạn:\n\n*   Hội nghị Symposium on Advances in DB và Hệ thống Thông tin (ADBIS) | Địa điểm: Tampere, Phần Lan\n*   Hội nghị Quốc tế về Trí tuệ Tập thể Tính toán (ICCCI) | Địa điểm: Thành phố Hồ Chí Minh, Việt Nam"
+  },
+  {
+    "frontendMessageId": "21fbc8a2-c6ec-4811-afe1-1f55783caee8",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Tìm tất cả hội nghị diễn ra trong quý 3 năm 2025, ở châu Âu, có chủ đề là Data Mining, rank A theo CORE, tổ chức offline, deadline nộp bài trong tháng 7",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2976,
+    "response": "Xin lỗi, tôi không tìm thấy hội nghị nào phù hợp với tiêu chí của bạn."
+  },
+  {
+    "frontendMessageId": "04c1ce35-ab5a-4f8b-bc7d-d3d8278613e1",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "So sánh ngày diễn ra và rank của hội nghị NeurIPS và ICML 2025",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3729,
+    "response": "Dưới đây là thông tin so sánh về ngày diễn ra và xếp hạng của hội nghị NeurIPS và ICML 2025:\n\n**Hội nghị NeurIPS 2025:**\n\n*   **Ngày diễn ra:** Từ ngày 02 tháng 12 đến ngày 07 tháng 12 năm 2025.\n*   **Xếp hạng:** A\\* (Nguồn: CORE2023) trong lĩnh vực Học máy.\n\n**Hội nghị ICML 2025:**\n\n*   **Ngày diễn ra:** Hội nghị ICML 2025 chưa có thông tin về ngày diễn ra được cung cấp.\n*   **Xếp hạng:** Không có thông tin về xếp hạng cho ICML 2025 được cung cấp."
+  },
+  {
+    "frontendMessageId": "2eb8f983-bcbc-4c89-bd1e-d4b8f6d35afc",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Trong các hội nghị mình đã theo dõi, có hội nghị nào trùng lịch với hội nghị mới tên là BigData 2025 không?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3240,
+    "response": "Tôi xin lỗi, tôi không thể kiểm tra xung đột lịch trực tiếp giữa các hội nghị bạn đang theo dõi và hội nghị BigData 2025. Tuy nhiên, tôi có thể giúp bạn liệt kê tất cả các hội nghị bạn đang theo dõi hoặc cung cấp thông tin chi tiết về hội nghị BigData 2025. Bạn có muốn tôi thực hiện một trong hai hành động này không?"
+  },
+  {
+    "frontendMessageId": "7777c99b-2f1e-4628-825f-c53e6ec33a10",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Tìm hội nghị có từ khóa ‘machine learning’",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "ERROR",
+    "roundTripTime_ms": 18935,
+    "error": "Error processing stream: got status: UNAVAILABLE. {\"error\":{\"code\":503,\"message\":\"The model is overloaded. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+  },
+  {
+    "frontendMessageId": "d949abc5-b314-45c1-9792-f073ff392650",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Cho mình biết về hội nghị tên là NeurIPS",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13844,
+    "response": "Chắc chắn rồi, đây là thông tin về hội nghị **Advances in Neural Information Processing Systems (NeurIPS)**:\n\n*   **Tên viết tắt:** NeurIPS\n*   **Xếp hạng:** A* (Nguồn: CORE2023, Lĩnh vực: Machine learning)\n*   **Năm:** 2025\n*   **Hình thức:** Ngoại tuyến (Offline)\n*   **Địa điểm:** San Diego Convention Center, San Diego, California, Hoa Kỳ\n*   **Châu lục:** Bắc Mỹ\n*   **Thời gian diễn ra hội nghị:** 2 tháng 12 - 7 tháng 12, 2025\n*   **Trang web:** [https://neurips.cc/Conferences/2025](https://neurips.cc/Conferences/2025)\n*   **Kêu gọi bài báo (Call for papers):** [https://neurips.cc/Conferences/2025/CallForPapers](https://neurips.cc/Conferences/2025/CallForPapers)\n\n**Chủ đề chính:**\nHọc máy (Machine learning), khoa học thần kinh (neuroscience), thống kê, tối ưu hóa, thị giác máy tính, xử lý ngôn ngữ tự nhiên, khoa học đời sống, khoa học tự nhiên, khoa học xã hội, và nhiều lĩnh vực ứng dụng khác.\n\n**Các ngày quan trọng:**\n*   **Hạn chót nộp tóm tắt bài báo:** 11 tháng 5, 2025\n*   **Hạn chót nộp bài báo hoàn chỉnh:** 15 tháng 5, 2025\n*   **Thông báo cho tác giả:** 18 tháng 9, 2025\n*   **Mở đăng ký tham dự:** 27 tháng 2, 2025\n*   **Hạn chót đăng ký sớm:** 11 tháng 10, 2025\n\nBạn có muốn biết thêm thông tin chi tiết nào khác về hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "a607b00e-aa1a-48b1-b832-02a6350ae24d",
+    "payload": {
+      "group": "1. Từ khóa/Tên",
+      "question": "Hội nghị nào có tên viết tắt là ACL?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 15783,
+    "response": "Chào bạn, tôi đã tìm thấy thông tin về hội nghị có tên viết tắt là ACL:\n\n**Hội nghị thường niên lần thứ 63 của Hiệp hội Ngôn ngữ học Tính toán (The 63rd Annual Meeting of the Association for Computational Linguistics)**\n\n*   **Tên viết tắt:** ACL\n*   **Xếp hạng:** A* (Nguồn: CORE2023)\n*   **Tóm tắt:** Đây là hội nghị hàng đầu trong lĩnh vực xử lý ngôn ngữ tự nhiên và ngôn ngữ học tính toán. Hội nghị năm 2025 sẽ có một chủ đề đặc biệt về \"Sự tổng quát hóa của các mô hình NLP\".\n*   **Thời gian diễn ra:** 27/07/2025 - 01/08/2025\n*   **Địa điểm:** Vienna, Áo\n*   **Trang web:** [https://2025.aclweb.org/](https://2025.aclweb.org/)\n\nBạn có cần thêm thông tin chi tiết nào về hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "90a847ab-a862-4039-827b-fbc1911cfa06",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào diễn ra ở Việt Nam trong năm nay không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 20316,
+    "response": "Chào bạn, tôi đã tìm thấy 6 hội nghị sẽ diễn ra tại Việt Nam trong năm 2025. Dưới đây là danh sách chi tiết:\n\n---\n\n**1. International Natural Language Generation Conference (INLG)**\n*   **Địa điểm:** Hà Nội, Việt Nam\n*   **Lĩnh vực:** Trí tuệ nhân tạo\n*   **Thời gian:** 29/10 - 02/11/2025\n*   **Trang web:** https://2025.inlgmeeting.org/\n\n**2. Asia Conference on Information, Computer and Communications Security (AsiaCCS)**\n*   **Địa điểm:** Hà Nội, Việt Nam\n*   **Lĩnh vực:** An ninh mạng và quyền riêng tư\n*   **Thời gian:** 25/08 - 29/08/2025\n*   **Trang web:** https://asiaccs2025.hust.edu.vn/\n\n**3. RIVF International Conference on Computing and Communication Technologies (RIVF)**\n*   **Địa điểm:** TP. Hồ Chí Minh, Việt Nam\n*   **Lĩnh vực:** Lý thuyết tính toán\n*   **Thời gian:** 18/12 - 22/12/2025\n*   **Trang web:** https://rivf2025.org/\n\n**4. International Conference on Management of Digital EcoSystems (MEDES)**\n*   **Địa điểm:** TP. Hồ Chí Minh, Việt Nam\n*   **Lĩnh vực:** Điện toán phân tán và phần mềm hệ thống\n*   **Thời gian:** 24/11 - 26/11/2025\n*   **Trang web:** https://conferences.sigappfr.org/medes2025/\n\n**5. IFIP International Conference on Network and Parallel Computing (NPC)**\n*   **Địa điểm:** Nha Trang, Việt Nam\n*   **Lĩnh vực:** Điện toán phân tán và phần mềm hệ thống\n*   **Thời gian:** 14/11 - 16/11/2025\n*   **Trang web:** https://npc-2025.github.io/index.html\n\n**6. International Conference on Computational Collective Intelligence (ICCCI)**\n*   **Địa điểm:** TP. Hồ Chí Minh, Việt Nam\n*   **Lĩnh vực:** Trí tuệ nhân tạo, Điện toán phân tán và phần mềm hệ thống\n*   **Thời gian:** 12/11 - 15/11/2025\n*   **Trang web:** https://iccci.pwr.edu.pl/2025/\n\n---\n\nNếu bạn muốn biết thêm thông tin chi tiết về hội nghị nào, chỉ cần cho tôi biết nhé."
+  },
+  {
+    "frontendMessageId": "418412f3-e79a-43fc-9ce5-787148a69c7a",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Liệt kê các hội nghị ở châu Á về AI vào quý 4 năm 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 17413,
+    "response": "Chắc chắn rồi, đây là danh sách các hội nghị về Trí tuệ Nhân tạo (AI) tại châu Á vào quý 4 năm 2025:\n\n---\n\n**1. International Symposium on Search Based Software Engineering (SSBSE)**\n*   **Địa điểm:** Seoul, Hàn Quốc\n*   **Lục địa:** Châu Á\n*   **Xếp hạng:** B\n*   **Chủ đề:** Kỹ thuật phần mềm dựa trên tìm kiếm (SBSE), AI, học máy, kỹ thuật phần mềm, các kỹ thuật tối ưu hóa tự động.\n*   **Ngày diễn ra:** 16 tháng 11, 2025\n*   **Trang web:** [https://conf.researchr.org/home/ssbse-2025](https://conf.researchr.org/home/ssbse-2025)\n\n---\n\n**2. International Conference on Management of Data (COMAD)**\n*   **Địa điểm:** IISER Pune, Pune, Ấn Độ\n*   **Lục địa:** Châu Á\n*   **Xếp hạng:** Quốc gia: Ấn Độ\n*   **Chủ đề:** Khoa học dữ liệu, Quản lý dữ liệu, Khai phá dữ liệu, Học máy, Trí tuệ nhân tạo (AI), và nhiều lĩnh vực liên quan khác.\n*   **Ngày diễn ra:** 17 - 20 tháng 12, 2025\n*   **Trang web:** [https://ikdd.acm.org/cods-2025/](https://ikdd.acm.org/cods-2025/)\n\n---\n\n**3. RIVF International Conference on Computing and Communication Technologies (RIVF)**\n*   **Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam\n*   **Lục địa:** Châu Á\n*   **Xếp hạng:** C\n*   **Chủ đề:** Xử lý Ngôn ngữ và Tiếng nói, Xử lý ảnh, Thị giác máy tính, Nhận dạng mẫu, AI, Khoa học dữ liệu, Phân tích dữ liệu lớn, và nhiều lĩnh vực khác.\n*   **Ngày diễn ra:** 18 - 22 tháng 12, 2025\n*   **Trang web:** [https://rivf2025.org/](https://rivf2025.org/)\n\n---\n\nBạn có muốn xem thông tin chi tiết hơn, thêm vào lịch, hoặc thực hiện hành động nào khác với các hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "8473aa2a-9518-4df0-9304-774c388653ce",
+    "payload": {
+      "group": "2. Địa lý",
+      "question": "Có hội nghị nào ở Mỹ, tổ chức offline trong tháng 10 không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "TIMEOUT",
+    "roundTripTime_ms": 30008,
+    "error": "Request timed out after 30s"
+  },
+  {
+    "frontendMessageId": "dbab11fc-b8a7-4202-8496-fce25f62ae8e",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào có ngày nộp bài trước 30/7/2025?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 28996,
+    "response": "Dưới đây là các hội nghị có ngày nộp bài trước ngày 30 tháng 7 năm 2025:\n\n### **Hội nghị có hạn nộp bài trước 30/07/2025**\n\n*   **CollaborateCom 2025 (International Conference on Collaborative Computing: Networks, Applications and Worksharing)**\n    *   **Địa điểm:** Shanghai, China\n    *   **Hạn chót nộp bài (Vòng 1):** 1 tháng 5, 2025\n\n*   **SIGSPATIAL 2025 (ACM International Conference on Advances in Geographic Information Systems)**\n    *   **Địa điểm:** Minneapolis, MN, USA\n    *   **Các hạn chót quan trọng:**\n        *   Tóm tắt bài nghiên cứu (Research Papers Abstract): 30 tháng 5, 2025\n        *   Nộp bài nghiên cứu (Research Papers Paper): 6 tháng 6, 2025\n        *   Nộp bài tầm nhìn (Vision Papers), bài ứng dụng (Application Papers), bài công nghiệp (Industrial Papers), bài ngắn (Short Papers): 13 tháng 6, 2025\n        *   Nộp bài demo (Demos Paper): 15 tháng 6, 2025\n        *   Đề xuất hướng dẫn (Tutorials Proposal): 3 tháng 7, 2025\n        *   Nộp bài cho Workshop Tiến sĩ (PhD/Grad Workshop & SRC Paper): 25 tháng 7, 2025\n\n*   **BMVC 2025 (British Machine Vision Conference)**\n    *   **Địa điểm:** Sheffield, UK\n    *   **Các hạn chót quan trọng:**\n        *   Tóm tắt bài (Abstract Submission): 13 tháng 5, 2025\n        *   Nộp bài (Paper Submission): 16 tháng 5, 2025\n        *   Mở nộp đơn cho Doctoral Consortium: 13 tháng 7, 2025\n\n---\n\n### **Hội nghị có hạn nộp bài vào đúng ngày 30/07/2025**\n\nNgoài ra, các hội nghị sau có hạn nộp bài vào đúng ngày 30 tháng 7 năm 2025:\n\n*   **RIVF 2025 (RIVF International Conference on Computing and Communication Technologies)**\n    *   **Địa điểm:** Ho Chi Minh City, Vietnam\n    *   **Hạn chót nộp bài:** 30 tháng 7, 2025\n    *   *Lưu ý: Hạn nộp Đề xuất Phiên đặc biệt (Special Session Proposal) là ngày 15 tháng 7, 2025.*\n\n*   **ISKE 2025 (International Conference on Intelligent Systems and Knowledge Engineering)**\n    *   **Địa điểm:** Shunde, China\n    *   **Hạn chót nộp bài:** 30 tháng 7, 2025\n\n*   **CollaborateCom 2025 (International Conference on Collaborative Computing: Networks, Applications and Worksharing)**\n    *   **Địa điểm:** Shanghai, China\n    *   **Hạn chót nộp bài (Vòng 2):** 30 tháng 7, 2025"
+  },
+  {
+    "frontendMessageId": "44c00a80-e505-438b-841e-91aa34d32546",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Cho mình danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 19906,
+    "response": "Chắc chắn rồi, đây là danh sách các hội nghị diễn ra từ tháng 9 đến tháng 11 năm 2025.\n\n---\n\n**1. Conference on Theory and Applications of Models of Computation (TAMC)**\n*   **Địa điểm:** Jinan, Trung Quốc (Châu Á)\n*   **Ngày diễn ra:** 19 - 21 tháng 9, 2025\n*   **Trang web:** http://www.maths.sdnu.edu.cn/TAMC2025.htm\n\n---\n\n**2. ArtsIT, Interactivity & Game Creation (ArtsIT)**\n*   **Địa điểm:** Đại học Heriot-Watt Dubai, UAE (Châu Á)\n*   **Ngày diễn ra:** 7 - 9 tháng 11, 2025\n*   **Trang web:** https://artsit.eai-conferences.org/2025/\n\n---\n\n**3. Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS)**\n*   **Địa điểm:** Kathmandu, Nepal (Châu Á)\n*   **Ngày diễn ra:** 9 - 11 tháng 10, 2025\n*   **Trang web:** https://sss2025.conf.lip6.fr/\n\n---\n\n**4. International Machine Vision and Image Processing Conference (IMVIP)**\n*   **Địa điểm:** Đại học Ulster, Derry~Londonderry, Bắc Ireland (Châu Âu)\n*   **Ngày diễn ra:** 1 - 3 tháng 9, 2025\n*   **Trang web:** https://imvipconference.github.io/\n\n---\n\n**5. IEEE International Conference on Quantum Computing and Engineering (QCE)**\n*   **Địa điểm:** Trung tâm Hội nghị Albuquerque, Albuquerque, New Mexico, Mỹ (Bắc Mỹ)\n*   **Ngày diễn ra:** 31 tháng 8 - 5 tháng 9, 2025\n*   **Trang web:** https://qce.quantum.ieee.org/2025/\n\n---\n\n**6. International Symposium on Fundamentals of Computation Theory (FCT)**\n*   **Địa điểm:** Viện Khoa học Máy tính, Đại học Wrocław, Ba Lan (Châu Âu)\n*   **Ngày diễn ra:** 15 - 17 tháng 9, 2025\n*   **Trang web:** https://fct2025.cs.uni.wroc.pl/\n\n---\n\n**7. International Symposium on Algorithmic Game Theory (SAGT)**\n*   **Địa điểm:** Đại học Bath, Bath, Vương quốc Anh (Châu Âu)\n*   **Ngày diễn ra:** 2 - 5 tháng 9, 2025\n*   **Trang web:** https://www.bath.ac.uk/events/the-international-symposium-on-algorithmic-game-theory-sagt-2025/\n\n---\n\n**8. ASIAN Symposium on Programming Languages and Systems (APLAS)**\n*   **Địa điểm:** Bengaluru, Ấn Độ (Châu Á)\n*   **Ngày diễn ra:** 27 - 30 tháng 10, 2025\n*   **Trang web:** https://conf.researchr.org/home/aplas-2025\n\n---\n\n**9. Symposium on Advances in DB and Information Systems (ADBIS)**\n*   **Địa điểm:** Tampere, Phần Lan (Châu Âu)\n*   **Ngày diễn ra:** 23 - 26 tháng 9, 2025\n*   **Trang web:** https://adbis2025.github.io/\n\n---\n\n**10. IEEE International Conference on Document Analysis and Recognition (ICDAR)**\n*   **Địa điểm:** Vũ Hán, Hồ Bắc, Trung Quốc (Châu Á)\n*   **Ngày diễn ra:** 16 - 21 tháng 9, 2025\n*   **Trang web:** https://www.icdar2025.com/\n\n---\nĐây là trang 1 trên tổng số 29 trang kết quả. Bạn có muốn xem thêm không?"
+  },
+  {
+    "frontendMessageId": "853254c6-c36a-4e04-bee1-a15e52903dda",
+    "payload": {
+      "group": "3. Thời gian",
+      "question": "Hội nghị nào diễn ra vào đúng ngày 15/8/2025?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 18702,
+    "response": "Chào bạn, tôi đã tìm thấy 8 hội nghị có lịch trình bao gồm ngày 15/08/2025. Dưới đây là danh sách chi tiết:\n\n**1. International Conference on Principles and Practice of Constraint Programming (CP)**\n*   **Địa điểm:** Glasgow, Scotland\n*   **Thời gian:** 10/08/2025 - 15/08/2025\n\n**2. International Conference on Theory and Applications of Satisfiability Testing (SAT)**\n*   **Địa điểm:** Glasgow, Scotland\n*   **Thời gian:** 12/08/2025 - 15/08/2025\n\n**3. International Conference on Broadband Communications, Networks and Systems (Broadnets)**\n*   **Địa điểm:** Sunyani, Ghana\n*   **Thời gian:** 14/08/2025 - 16/08/2025\n\n**4. International Conference on Computing and Combinatorics (COCOON)**\n*   **Địa điểm:** Chengdu, Trung Quốc\n*   **Thời gian:** 15/08/2025 - 17/08/2025\n\n**5. Selected Areas in Cryptography (SAC)**\n*   **Địa điểm:** Toronto Metropolitan University, Toronto, Ontario, Canada\n*   **Thời gian:** 13/08/2025 - 15/08/2025\n\n**6. The Symposium of Combinatorial Search (SoCS)**\n*   **Địa điểm:** University of Glasgow, Scotland, Vương quốc Anh\n*   **Thời gian:** 12/08/2025 - 15/08/2025\n\n**7. IEEE International Conference on High Performance Computing and Communications (HPCC)**\n*   **Địa điểm:** Exeter, Anh, Vương quốc Anh\n*   **Thời gian:** 13/08/2025 - 15/08/2025\n\n**8. Usenix Security Symposium (USENIX-Security)**\n*   **Địa điểm:** Seattle Convention Center, Seattle, WA, Hoa Kỳ\n*   **Thời gian:** 13/08/2025 - 15/08/2025\n\nNếu bạn muốn biết thêm thông tin chi tiết về hội nghị nào, chỉ cần cho tôi biết nhé."
+  },
+  {
+    "frontendMessageId": "6cbad4ca-87db-448e-8212-5e0895044d76",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Tìm hội nghị về chủ đề Cybersecurity có rank A* theo CORE2023",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 17283,
+    "response": "Không tìm thấy hội nghị nào phù hợp với yêu cầu của bạn."
+  },
+  {
+    "frontendMessageId": "ee84df19-657d-43de-b491-e2c1de22be4f",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Hội nghị nào tổ chức hybrid và có chủ đề về NLP?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 10905,
+    "response": "Không tìm thấy hội nghị nào được tổ chức hybrid và có chủ đề về NLP."
+  },
+  {
+    "frontendMessageId": "dd935fca-e125-40c1-89ca-7a068c75cfd4",
+    "payload": {
+      "group": "4. Đặc điểm",
+      "question": "Có hội nghị nào thuộc source Springer không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "ERROR",
+    "roundTripTime_ms": 4081,
+    "error": "got status: 503 Service Unavailable. {\"error\":{\"message\":\"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 503,\\n    \\\"message\\\": \\\"The model is overloaded. Please try again later.\\\",\\n    \\\"status\\\": \\\"UNAVAILABLE\\\"\\n  }\\n}\\n\",\"code\":503,\"status\":\"Service Unavailable\"}}"
+  },
+  {
+    "frontendMessageId": "fdfaa5dc-f17e-4c19-8586-41596877a8c0",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Cho mình chi tiết về hội nghị ICML 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 19373,
+    "response": "Chào bạn, đây là thông tin chi tiết về hội nghị **International Conference on Machine Learning (ICML) 2025**:\n\n### Tổng quan\n*   **Tên đầy đủ:** International Conference on Machine Learning\n*   **Tên viết tắt:** ICML\n*   **Thời gian:** 13/07/2025 - 19/07/2025\n*   **Địa điểm:** Trung tâm Hội nghị Vancouver, Vancouver, Canada\n*   **Hình thức:** Trực tiếp (In-person)\n*   **Trang web:** [https://icml.cc/Conferences/2025](https://icml.cc/Conferences/2025)\n*   **Xếp hạng:** A* (Nguồn: CORE2023)\n\n### Tóm tắt\nICML là một trong những hội nghị hàng đầu thế giới về học máy, quy tụ các chuyên gia và nhà nghiên cứu hàng đầu trong ngành. ICML 2025 là lần thứ 42 được tổ chức, hứa hẹn sẽ giới thiệu những nghiên cứu đột phá và thu hút cộng đồng đa dạng từ học thuật đến công nghiệp.\n\n### Các Mốc Thời Gian Quan Trọng\n*   **Mở cổng nộp bài:** 09/01/2025\n*   **Hạn chót nộp tóm tắt (Abstract):** 23/01/2025\n*   **Hạn chót nộp bài báo đầy đủ:** 30/01/2025\n*   **Thông báo kết quả cho tác giả:** 01/05/2025\n*   **Hạn chót nộp bản hoàn chỉnh (Camera-Ready):** 09/06/2025\n\n### Kêu gọi Nộp bài (Call for Papers)\n*   **Quy trình review:** Double-blind (cả người phản biện và tác giả đều không biết danh tính của nhau).\n*   **Quy định:** Bài báo chính tối đa **8 trang**. Phần tài liệu tham khảo, tuyên bố tác động và phụ lục không giới hạn số trang.\n*   **Chủ đề chính:**\n    *   Học máy tổng quát (General Machine Learning)\n    *   Học sâu (Deep Learning)\n    *   Lý thuyết về học máy (Theory of Machine Learning)\n    *   Các phương pháp xác suất (Probabilistic Methods)\n    *   Học tăng cường (Reinforcement Learning)\n    *   Học máy đáng tin cậy (Trustworthy Machine Learning)\n    *   Tối ưu hóa (Optimization)\n    *   Và nhiều lĩnh vực ứng dụng khác.\n\nBạn có cần thêm thông tin cụ thể nào khác về hội nghị này không?"
+  },
+  {
+    "frontendMessageId": "e4693aac-d4f4-496f-9c36-011a297a9c5f",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "ACL 2025 diễn ra ở đâu, ngày nào?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 11133,
+    "response": "Hội nghị ACL 2025 (Association for Computational Linguistics) sẽ diễn ra tại Vienna, Áo từ ngày 27 tháng 7 đến ngày 1 tháng 8 năm 2025."
+  },
+  {
+    "frontendMessageId": "9de2b7bf-a3ea-4024-9068-3168bc39a916",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Deadline nộp bài của NeurIPS là khi nào?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13850,
+    "response": "Chào bạn,\n\nHội nghị \"Advances in Neural Information Processing Systems\" (NeurIPS) 2025 sẽ diễn ra từ ngày 2 đến ngày 7 tháng 12 năm 2025, tại Trung tâm Hội nghị San Diego, California, Hoa Kỳ.\n\nTuy nhiên, thông tin chi tiết về hạn chót nộp bài (submission deadline) hiện chưa có trong dữ liệu của tôi. Để biết thông tin chính xác và cập nhật nhất, bạn vui lòng truy cập trang web chính thức của hội nghị: [https://neurips.cc/Conferences/2025](https://neurips.cc/Conferences/2025)."
+  },
+  {
+    "frontendMessageId": "aa9890fb-8a25-4160-8e18-78a59056d60b",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Rank của hội nghị ICRA là gì?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13185,
+    "response": "Chào bạn,\n\nHội nghị **IEEE International Conference on Robotics and Automation (ICRA)** có các xếp hạng như sau:\n\n*   **Hạng A*** theo **CORE2023** trong lĩnh vực Trí tuệ nhân tạo (Artificial intelligence).\n*   **Hạng A*** theo **CORE2023** trong lĩnh vực Kỹ thuật hệ thống máy tính (Computer Systems Engineering)."
+  },
+  {
+    "frontendMessageId": "8dc97a02-2653-4ae2-bdfa-b1e59e15c684",
+    "payload": {
+      "group": "5. Chi tiết",
+      "question": "Link CFP của hội nghị SIGGRAPH Asia 2025?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13043,
+    "response": "Tôi xin lỗi, tôi không thể tìm thấy link CFP cho hội nghị SIGGRAPH Asia 2025."
+  },
+  {
+    "frontendMessageId": "fc567b7d-e437-43ca-84df-4433b9bbcef1",
+    "payload": {
+      "group": "6. Tóm tắt",
+      "question": "Tóm tắt ngắn gọn thông tin chính của hội nghị ECCV 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 14202,
+    "response": "Rất tiếc, tôi không tìm thấy thông tin nào về hội nghị ECCV 2025."
+  },
+  {
+    "frontendMessageId": "4614ab89-f3e5-4de6-9b2e-02f735bde7f7",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Mở bản đồ vị trí tổ chức hội nghị ICLR 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 21312,
+    "response": "Rất tiếc, tôi không thể tìm thấy thông tin về hội nghị ICLR 2025, vì vậy tôi không thể mở bản đồ vị trí của nó."
+  },
+  {
+    "frontendMessageId": "39e46c9a-6476-4ec3-adb8-ffd1f2d291f3",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Chỉ đường đến địa điểm tổ chức hội nghị KDD 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 18064,
+    "response": "Xin lỗi, tôi không thể tìm thấy thông tin về hội nghị KDD 2025. Do đó, tôi không thể cung cấp chỉ đường đến địa điểm tổ chức."
+  },
+  {
+    "frontendMessageId": "2f4fcef8-f62e-4bd3-84d7-91024f8668d7",
+    "payload": {
+      "group": "III. Bản đồ",
+      "question": "Xem địa chỉ tổ chức CVPR 2025 trên Google Maps",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "TIMEOUT",
+    "roundTripTime_ms": 30011,
+    "error": "Request timed out after 30s"
+  },
+  {
+    "frontendMessageId": "5501c6aa-0b85-45df-8407-b6f89f0bd74f",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở website chính thức của EMNLP 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13228,
+    "response": "Xin lỗi, tôi không thể tìm thấy thông tin về hội nghị EMNLP 2025."
+  },
+  {
+    "frontendMessageId": "6eb5f868-ff7d-43a7-84cf-45877f75e6f7",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link thông tin hội nghị AAAI 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 27203,
+    "response": "Đã mở trang web cho hội nghị bạn yêu cầu."
+  },
+  {
+    "frontendMessageId": "fcc58282-e8bc-4657-907c-b7da13afe549",
+    "payload": {
+      "group": "IV. Web",
+      "question": "Mở link call for papers của hội nghị ICDM 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 24152,
+    "response": "Đã mở trang \"Call for Papers\" cho hội nghị ICDM 2025."
+  },
+  {
+    "frontendMessageId": "338d28fb-92a7-4c3f-8d6c-f98001bc4f1d",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Làm sao để tìm hội nghị theo quý?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "ERROR",
+    "roundTripTime_ms": 3226,
+    "error": "got status: 503 Service Unavailable. {\"error\":{\"message\":\"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 503,\\n    \\\"message\\\": \\\"The model is overloaded. Please try again later.\\\",\\n    \\\"status\\\": \\\"UNAVAILABLE\\\"\\n  }\\n}\\n\",\"code\":503,\"status\":\"Service Unavailable\"}}"
+  },
+  {
+    "frontendMessageId": "8c09f6e7-6a59-4624-bc12-17fa5cc368ce",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Mình có thể lọc hội nghị theo rank như thế nào?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 17074,
+    "response": "Chào bạn, để lọc hội nghị theo rank trên trang web, bạn có thể sử dụng tính năng tìm kiếm nâng cao. Dưới đây là các bước chi tiết:\n\n1.  **Bắt đầu tìm kiếm cơ bản:**\n    *   Trên trang chủ hoặc trang tìm kiếm, bạn có thể điền các thông tin cơ bản như từ khóa, ngày tháng, và địa điểm nếu muốn.\n\n2.  **Mở bộ lọc nâng cao:**\n    *   Nhấp vào liên kết **\"Show/Hide advanced search options\"** (Hiển thị/Ẩn tùy chọn tìm kiếm nâng cao) để xem thêm các bộ lọc.\n\n3.  **Chọn Rank:**\n    *   Trong các tùy chọn nâng cao vừa hiện ra, bạn sẽ thấy một bộ lọc tên là **\"Rank\"**. Tại đây, bạn có thể nhập hoặc chọn rank mong muốn.\n\n4.  **Thực hiện tìm kiếm:**\n    *   Sau khi đã chọn rank và các tiêu chí khác, nhấn nút **\"Search\"** để hệ thống lọc và hiển thị danh sách các hội nghị phù hợp."
+  },
+  {
+    "frontendMessageId": "d987146e-c65a-442b-b498-3b7c7198cdc1",
+    "payload": {
+      "group": "V. Hướng dẫn",
+      "question": "Giải thích cách sử dụng bộ lọc theo thời gian diễn ra",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "ERROR",
+    "roundTripTime_ms": 13581,
+    "error": "Error processing stream: got status: UNAVAILABLE. {\"error\":{\"code\":503,\"message\":\"The model is overloaded. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
+  },
+  {
+    "frontendMessageId": "391c9e47-6b3e-44eb-8a97-88d6810ccdbe",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Những hội nghị nào mình đã theo dõi?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 21708,
+    "response": "Đây là danh sách các hội nghị bạn đang theo dõi:\n*   International Conference on Technical Debt (TechDebt) | Ngày: 4/12/2026 - 4/13/2026 | Địa điểm: Rio de Janeiro, Brazil\n*   IEEE Symposium on Computers and Communications (ISCC) | Ngày: 7/2/2025 - 7/5/2025 | Địa điểm: Bologna, Ý\n*   IEEE Network Operations and Management Symposium (NOMS) | Ngày: 5/12/2025 - 5/16/2025 | Địa điểm: Honolulu, Hawaii, Hoa Kỳ\n*   World Multi-Conference on Systemics, Cybernetics and Informatics (WMSCI) | Ngày: 9/9/2025 - 9/12/2025 | Địa điểm: Orlando, Florida, Hoa Kỳ\n*   IEEE Industry Applications Society Annual Conference (IAS) | Ngày: 9/9/2025 - 9/12/2025 | Địa điểm: Porto, Bồ Đào Nha\n*   International Conference on Ambient Systems, Networks and Technologies (ANT) | Ngày: 22/4/2025 - 24/4/2025 | Địa điểm: Patras, Hy Lạp\n*   Computer Animation, Information Visualisation, and Digital Effects (CAivDE) | Ngày: 8/5/2025 - 8/8/2025 | Địa điểm: Darmstadt, Đức\n*   Euromicro Conference on Software Engineering and Advanced Applications (SEAA) | Ngày: 9/10/2025 - 9/12/2025 | Địa điểm: Salerno, Ý\n*   Artificial Intelligence Applications and Innovations (AIAI) | Ngày: 26/6/2025 - 29/6/2025 | Địa điểm: Limassol, Síp\n*   RIVF International Conference on Computing and Communication Technologies (RIVF) | Ngày: 18/12/2025 - 20/12/2025 | Địa điểm: Thành phố Hồ Chí Minh, Việt Nam\n*   Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP) | Ngày: 6/3/2025 - 6/4/2025 | Địa điểm: Milan, Ý\n*   International Conference on Integration of Artificial Intelligence and Operations Research Techniques in Constraint Programming for Combinatorial Optimization Problems (CPAIOR) | Ngày: 10/11/2025 - 13/11/2025 | Địa điểm: Melbourne, Úc\n*   International Conference on Information Technology and Applications (ICITA) | Ngày: 14/10/2025 - 16/10/2025 | Địa điểm: Oslo, Na Uy\n*   Smart Card Research and Advanced Application Conference (CARDIS) | Ngày: 1/4/2026 | Địa điểm: Regensburg, Đức\n*   Asia-Pacific Software Engineering Conference (APSEC) | Ngày: 2/12/2025 - 5/12/2025 | Địa điểm: Không có thành phố/tiểu bang/tỉnh, Không có quốc gia\n*   Information Visualisation Theory and Practice (InfVis) | Ngày: 8/6/2025 - 8/8/2025 | Địa điểm: Nottingham, Vương quốc Anh\n*   National Conference of the American Association for Artificial Intelligence (AAAI) | Ngày: 20/1/2026 - 27/1/2026 | Địa điểm: Singapore, Singapore\n*   International Conference on Computational Creativity (ICCC) | Ngày: 23/6/2025 - 27/6/2025 | Địa điểm: Không có thành phố/tiểu bang/tỉnh, Không có quốc gia\n*   Graph Drawing (GD) | Ngày: 24/9/2025 - 26/9/2025 | Địa điểm: Norrköping, Thụy Điển\n*   International Joint Conference on Computational Intelligence (IJCCI) | Ngày: 22/10/2025 - 24/10/2025 | Địa điểm: Marbella, Tây Ban Nha\n*   International Conference on Artificial Intelligence and Soft Computing (ICAISC) | Ngày: 14/6/2026 - 18/6/2026 | Địa điểm: Zakopane, Ba Lan\n*   International KES Conference on Agents and Multiagent systems - Technologies and Applications (KES AMSTA) | Ngày: 25/6/2025 - 27/6/2025 | Địa điểm: Solin, Croatia\n*   Knowledge Domain Visualisation (KDViz)\n*   International Conference on Computer Analysis of Images and Patterns (CAIP) | Ngày: 15/9/2025 - 19/9/2025 | Địa điểm: Rome, Ý\n*   ACM Conference on Object Oriented Programming Systems Languages and Applications (OOPSLA) | Ngày: 12/10/2025 - 18/10/2025 | Địa điểm: Singapore, Singapore\n*   International Conference on Artificial Intelligence in Education (AIED) | Ngày: 22/7/2025 - 26/7/2025 | Địa điểm: Palermo, Ý\n*   International Conference on Computing and Informatics (ICOCI) | Ngày: 25/6/2025 - 27/6/2025 | Địa điểm: Medan, INDONESIA\n*   International Frontiers of Algorithmics Workshop (FAW)\n*   International Conference on Multimedia Modelling (MMM) | Ngày: 1/8/2025 - 1/10/2025 | Địa điểm: Nara, Nhật Bản\n*   Symposium on High Performance Chips (HOTCHIPS) | Ngày: 24/8/2025 - 26/8/2025 | Địa điểm: Palo Alto, CA, Hoa Kỳ\n*   International Symposium on Software Reliability Engineering (ISSRE) | Ngày: 21/10/2025 - 24/10/2025 | Địa điểm: São Paulo, Brazil"
+  },
+  {
+    "frontendMessageId": "83ad36eb-1662-4913-be5f-17d5ebeba779",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào trong danh sách quan tâm của mình có deadline vào tháng 8?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13867,
+    "response": "Tôi có thể liệt kê tất cả các hội nghị bạn đang theo dõi, nhưng tôi không thể lọc chúng theo deadline. Bạn có muốn tôi liệt kê tất cả các hội nghị đang theo dõi không?"
+  },
+  {
+    "frontendMessageId": "7c3aac42-7f98-4e21-8255-c798edcfae03",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mở danh sách các hội nghị mình đã thêm vào lịch",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 13999,
+    "response": "Đây là các hội nghị có trong lịch của bạn:\n*   **Asia-Pacific Software Engineering Conference (APSEC)** | Ngày: 02/12/2025 - 05/12/2025 | Địa điểm: Không có thành phố/tiểu bang/tỉnh, Không có quốc gia\n*   **National Conference of the American Association for Artificial Intelligence (AAAI)** | Ngày: 20/01/2026 - 27/01/2026 | Địa điểm: Singapore, Singapore\n*   **Smart Card Research and Advanced Application Conference (CARDIS)** | Ngày: 01/04/2026 | Địa điểm: Regensburg, Đức\n*   **Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP)** | Ngày: 03/06/2025 - 04/06/2025 | Địa điểm: Milan, Ý"
+  },
+  {
+    "frontendMessageId": "db181dc1-10e8-403a-9f32-33d7dfb19761",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Có hội nghị nào mình đã lưu vào lịch diễn ra tuần tới không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 15922,
+    "response": "Không có hội nghị nào trong lịch của bạn được lên lịch cho tuần tới.\n\nTuy nhiên, đây là danh sách các hội nghị sắp tới có trong lịch của bạn:\n*   **Workshop on Job Scheduling Strategies for Parallel Processing (JSSPP)**: 03/06/2025 - 04/06/2025, tại Milan, Ý.\n*   **Asia-Pacific Software Engineering Conference (APSEC)**: 02/12/2025 - 05/12/2025.\n*   **National Conference of the American Association for Artificial Intelligence (AAAI)**: 20/01/2026 - 27/01/2026, tại Singapore.\n*   **Smart Card Research and Advanced Application Conference (CARDIS)**: 01/04/2026, tại Regensburg, Đức."
+  },
+  {
+    "frontendMessageId": "74640565-2992-4eb3-a3b8-b35ac2050a0d",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Hội nghị nào nằm trong danh sách đen của mình?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 8592,
+    "response": "Đây là các hội nghị trong danh sách đen của bạn:\n*   Symposium on Advances in DB and Information Systems (ADBIS) | Địa điểm: Tampere, Phần Lan\n*   International Conference on Computational Collective Intelligence (ICCCI) | Địa điểm: TP. Hồ Chí Minh, Việt Nam"
+  },
+  {
+    "frontendMessageId": "82faf206-a9b1-4591-b363-c8a5c0201149",
+    "payload": {
+      "group": "VI. Cá nhân",
+      "question": "Mình có từng cho ICANN vào blacklist không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 15967,
+    "response": "Dựa vào dữ liệu của bạn, danh sách đen hiện tại bao gồm:\n*   Symposium on Advances in DB and Information Systems (ADBIS) | Địa điểm: Tampere, Finland\n*   International Conference on Computational Collective Intelligence (ICCCI) | Địa điểm: Ho Chi Minh City, Vietnam\n\nVì vậy, bạn chưa từng thêm hội nghị ICANN vào danh sách đen."
+  },
+  {
+    "frontendMessageId": "2b28cd0a-4e25-4e11-b94a-7f87fc45bc00",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Tìm tất cả hội nghị diễn ra trong quý 3 năm 2025, ở châu Âu, có chủ đề là Data Mining, rank A theo CORE, tổ chức offline, deadline nộp bài trong tháng 7",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 14599,
+    "response": "Rất tiếc, không tìm thấy hội nghị nào phù hợp với các tiêu chí của bạn."
+  },
+  {
+    "frontendMessageId": "e6066f3d-f684-41b8-bf2f-b87e5f4c09f1",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "So sánh ngày diễn ra và rank của hội nghị NeurIPS và ICML 2025",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "ERROR",
+    "roundTripTime_ms": 4848,
+    "error": "got status: 503 Service Unavailable. {\"error\":{\"message\":\"{\\n  \\\"error\\\": {\\n    \\\"code\\\": 503,\\n    \\\"message\\\": \\\"The model is overloaded. Please try again later.\\\",\\n    \\\"status\\\": \\\"UNAVAILABLE\\\"\\n  }\\n}\\n\",\"code\":503,\"status\":\"Service Unavailable\"}}"
+  },
+  {
+    "frontendMessageId": "209e7f6a-2b4b-4891-b970-19f680a4746d",
+    "payload": {
+      "group": "VII. Phức tạp",
+      "question": "Trong các hội nghị mình đã theo dõi, có hội nghị nào trùng lịch với hội nghị mới tên là BigData 2025 không?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 23559,
+    "response": "Tôi rất tiếc, tôi không thể tự động kiểm tra xem lịch có bị trùng hay không.\n\nTuy nhiên, tôi có thể tìm thông tin về hội nghị \"BigData 2025\" và sau đó liệt kê danh sách các hội nghị bạn đang theo dõi để bạn có thể so sánh.\n\nĐể tìm kiếm chính xác, bạn có thể cung cấp thêm thông tin về hội nghị \"BigData 2025\" không, ví dụ như quốc gia hoặc chủ đề cụ thể của nó?"
+  }
+]

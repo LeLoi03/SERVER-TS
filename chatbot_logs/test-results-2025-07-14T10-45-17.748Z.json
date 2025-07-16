@@ -1,0 +1,101 @@
+[
+  {
+    "frontendMessageId": "b1647519-5f9f-43c9-9d0d-c2647ae18fcc",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Xin chào",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2242,
+    "response": "Chào bạn, tôi có thể giúp gì cho bạn hôm nay?"
+  },
+  {
+    "frontendMessageId": "ad7a35ae-665a-48ac-bdb4-9b95a7c605a9",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn là ai?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 1794,
+    "response": "Tôi là HCMUS Orchestrator, một điều phối viên agent thông minh cho trang web Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Tôi có thể giúp bạn tìm kiếm thông tin hội nghị, theo dõi các sự kiện, quản lý lịch cá nhân và nhiều tác vụ khác."
+  },
+  {
+    "frontendMessageId": "a5593f7c-36a1-44ae-b60b-57b346ac69b4",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn có thể làm gì?",
+      "model": "gemini-2.5-flash"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3282,
+    "response": "Tôi là HCMUS Orchestrator, một điều phối viên agent thông minh cho trang web Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Tôi có thể giúp bạn với nhiều tác vụ khác nhau:\n\n*   **Tìm kiếm thông tin hội nghị:** Tìm kiếm thông tin chi tiết về các hội nghị, bao gồm tên, tên viết tắt, quốc gia, chủ đề, v.v.\n*   **Theo dõi và hủy theo dõi hội nghị:** Giúp bạn theo dõi hoặc hủy theo dõi các hội nghị cụ thể.\n*   **Quản lý lịch cá nhân:** Thêm hoặc xóa hội nghị vào/khỏi lịch của bạn, và liệt kê các hội nghị trong lịch.\n*   **Quản lý danh sách đen:** Thêm hoặc xóa hội nghị vào/khỏi danh sách đen của bạn, và liệt kê các hội nghị trong danh sách đen.\n*   **Thông tin trang web:** Cung cấp thông tin về cách sử dụng trang web GCJH, bao gồm đăng ký, đăng nhập, đặt lại mật khẩu, và các tính năng của trang web.\n*   **Liên hệ với quản trị viên:** Giúp bạn gửi email liên hệ hoặc báo cáo sự cố đến quản trị viên trang web.\n*   **Điều hướng:** Mở trang web của hội nghị, hiển thị vị trí hội nghị trên bản đồ, hoặc đưa bạn đến các trang nội bộ của GCJH (ví dụ: trang quản lý tài khoản, trang đăng nhập).\n*   **Phân tích tài liệu và hình ảnh:** Tóm tắt tài liệu, phân tích nội dung hình ảnh hoặc dịch văn bản trong hình ảnh nếu bạn tải chúng lên và hỏi về nội dung của chúng.\n\nHãy cho tôi biết bạn cần giúp gì nhé!"
+  },
+  {
+    "frontendMessageId": "984d4fa7-5a73-4d65-beff-0d67a7d05047",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Xin chào",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2304,
+    "response": "Xin chào! Tôi có thể giúp gì cho bạn hôm nay?"
+  },
+  {
+    "frontendMessageId": "e8902846-2523-4c55-80e4-9949c9c418e0",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn là ai?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2335,
+    "response": "Tôi là HCMUS Orchestrator, một điều phối viên agent thông minh cho trang web Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Tôi có thể giúp bạn tìm kiếm thông tin về các hội nghị, quản lý lịch trình của bạn, và nhiều hơn nữa."
+  },
+  {
+    "frontendMessageId": "e0f337b9-c695-4b3d-8e4a-8041da6b05fe",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn có thể làm gì?",
+      "model": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 2366,
+    "response": "Tôi có thể giúp bạn tìm kiếm thông tin về các hội nghị, quản lý lịch của bạn, theo dõi hoặc hủy theo dõi hội nghị, cũng như liên hệ với quản trị viên. Bạn muốn tôi giúp gì hôm nay?"
+  },
+  {
+    "frontendMessageId": "86f3d615-c47f-4592-b417-eeaa569a7414",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Xin chào",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 3892,
+    "response": "Xin chào! Tôi là HCMUS Orchestrator, trợ lý ảo của bạn cho Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Tôi có thể giúp gì cho bạn hôm nay?"
+  },
+  {
+    "frontendMessageId": "1a6311a1-1f9b-4248-9e21-dbaff1ebd86f",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn là ai?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 7353,
+    "response": "Tôi là HCMUS Orchestrator, một điều phối viên agent thông minh cho trang web Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Vai trò của tôi là giúp bạn tìm kiếm thông tin về các hội nghị, quản lý lịch trình và thực hiện các tác vụ khác liên quan đến trang web.\n\nTôi có thể giúp gì cho bạn hôm nay?"
+  },
+  {
+    "frontendMessageId": "7c4959f4-1310-4a3a-bccb-06fed772c1f8",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Bạn có thể làm gì?",
+      "model": "gemini-2.5-pro"
+    },
+    "status": "SUCCESS",
+    "roundTripTime_ms": 12262,
+    "response": "Chào bạn, tôi là HCMUS Orchestrator, một trợ lý thông minh cho trang web Trung tâm Hội nghị & Tạp chí Toàn cầu (GCJH). Tôi có thể hỗ trợ bạn với các tác vụ sau:\n\n**1. Tìm kiếm và Cung cấp thông tin:**\n*   Tìm kiếm thông tin chi tiết về các hội nghị, bao gồm chủ đề, thời gian, địa điểm, và trang web chính thức.\n*   Trả lời các câu hỏi về cách sử dụng trang web GCJH.\n\n**2. Quản lý các hoạt động cá nhân của bạn:**\n*   **Theo dõi:** Giúp bạn theo dõi hoặc hủy theo dõi các hội nghị bạn quan tâm.\n*   **Lịch cá nhân:** Thêm hoặc xóa các hội nghị khỏi lịch của bạn và hiển thị các sự kiện đã lưu.\n*   **Danh sách đen:** Giúp bạn thêm hoặc xóa các hội nghị khỏi danh sách đen để không nhận thông báo về chúng.\n\n**3. Điều hướng:**\n*   Mở trang web chính thức của một hội nghị.\n*   Hiển thị địa điểm tổ chức hội nghị trên bản đồ.\n*   Đưa bạn đến các trang cụ thể trên trang web GCJH như trang đăng nhập, đăng ký, hoặc trang quản lý tài khoản.\n\n**4. Hỗ trợ liên hệ:**\n*   Giúp bạn gửi yêu cầu liên hệ hoặc báo cáo sự cố đến quản trị viên của trang web. Tôi có thể hỗ trợ bạn soạn thảo nội dung email nếu cần.\n\n**5. Phân tích tệp và hình ảnh:**\n*   Tóm tắt nội dung các tài liệu bạn tải lên (PDF, DOCX, v.v.).\n*   Mô tả hoặc trích xuất văn bản từ hình ảnh bạn cung cấp.\n\nBạn cần tôi giúp gì hôm nay?"
+  }
+]
