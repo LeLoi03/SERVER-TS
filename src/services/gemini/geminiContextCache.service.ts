@@ -5,6 +5,7 @@ import {
     type CachedContent,
     type Part,
     type Content,
+    Tool,
     // Alias cho các type từ SDK để code dễ đọc hơn
     GenerateContentConfig as SDKGenerateContentConfig,
     CreateCachedContentParameters as SDKCreateCachedContentParameters,
@@ -113,23 +114,61 @@ export class GeminiContextCacheService {
                 const contentToCache: Content[] = [];
                 if (fewShotParts && fewShotParts.length > 0) {
                     for (let i = 0; i < fewShotParts.length; i += 2) {
-                        // Đảm bảo fewShotParts[i] và fewShotParts[i+1] là Part hợp lệ trước khi truy cập .text
                         if (fewShotParts[i]) contentToCache.push({ role: 'user', parts: [fewShotParts[i]] });
                         if (fewShotParts[i + 1]) contentToCache.push({ role: 'model', parts: [fewShotParts[i + 1]] });
+                    }
+                }
+
+                // --- BẮT ĐẦU SỬA LỖI ---
+
+                // Helper function (type guard) để kiểm tra một item có phải là đối tượng `Tool` hay không.
+                // Một đối tượng `Tool` phải có ít nhất một trong các thuộc tính khai báo của nó.
+                function isDeclarativeTool(item: any): item is Tool {
+                    return item && (
+                        typeof item === 'object' &&
+                        !Array.isArray(item) &&
+                        (item.functionDeclarations || item.retrieval || item.googleSearch || item.codeExecution)
+                    );
+                }
+
+                let toolsForCache: Tool[] | undefined = undefined;
+                if (generationConfigForCache.tools) {
+                    const sourceTools = Array.isArray(generationConfigForCache.tools)
+                        ? generationConfigForCache.tools
+                        : [generationConfigForCache.tools];
+
+                    // Lọc danh sách để chỉ giữ lại các công cụ có định dạng `Tool` khai báo,
+                    // loại bỏ các `CallableTool` không thể cache.
+                    const validToolsForCaching = sourceTools.filter(isDeclarativeTool);
+
+                    if (validToolsForCaching.length !== sourceTools.length) {
+                        methodLogger.warn(
+                            { event: 'cache_tool_format_incompatible' },
+                            "Some tools provided in generationConfig are in a non-cacheable format (e.g., CallableTool) and will be ignored for caching."
+                        );
+                    }
+
+                    if (validToolsForCaching.length > 0) {
+                        toolsForCache = validToolsForCaching;
                     }
                 }
 
                 const cacheConfig: SDKCreateCachedContentConfig = {
                     contents: contentToCache,
                     displayName: `cache-${apiType}-${modelName}-${Date.now()}`,
-                    // Trích xuất systemInstruction, tools, toolConfig từ generationConfigForCache nếu có
-                    // và chúng phù hợp với CreateCachedContentConfig
+                    // Trích xuất systemInstruction và toolConfig
                     ...(generationConfigForCache.systemInstruction && { systemInstruction: generationConfigForCache.systemInstruction }),
-                    ...(generationConfigForCache.tools && { tools: generationConfigForCache.tools }),
+
+                    // Gán thuộc tính `tools` đã được lọc và chuẩn hóa
+                    ...(toolsForCache && { tools: toolsForCache }),
+
                     ...(generationConfigForCache.toolConfig && { toolConfig: generationConfigForCache.toolConfig }),
                     // TTL có thể được thêm vào đây nếu cần:
                     // ttl: "3600s" // ví dụ 1 giờ
                 };
+
+                // --- KẾT THÚC SỬA LỖI ---
+
 
                 // Nếu systemInstructionText được cung cấp riêng và generationConfigForCache không có, ưu tiên nó
                 if (systemInstructionText && !cacheConfig.systemInstruction) {

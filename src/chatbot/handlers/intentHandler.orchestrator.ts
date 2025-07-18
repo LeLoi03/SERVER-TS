@@ -6,7 +6,7 @@ import { ChatHistoryItem, FrontendAction, Language, AgentId, AgentCardRequest, A
 import { Gemini } from '../gemini/gemini';
 import { ConfigService } from "../../config/config.service";
 import { BaseIntentHandlerDeps, HostAgentHandlerCustomDeps, SubAgentHandlerCustomDeps } from './intentHandler.dependencies';
-import { Part, GenerateContentConfig } from '@google/genai';
+import { Part, GenerationConfig } from '@google/genai';
 import { Logger } from 'pino'; // <<< ĐÃ THÊM
 
 import { callSubAgent as callSubAgentActual } from './subAgent.handler';
@@ -67,7 +67,7 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
 
     const geminiServiceForHost = new Gemini(geminiApiKey, modelForHost);
 
-    let currentHostAgentGenerationConfig: GenerateContentConfig = { ...configService.hostAgentGenerationConfig };
+    let currentHostAgentGenerationConfig: GenerationConfig = { ...configService.hostAgentGenerationConfig };
 
     // Điều chỉnh thinkingBudget dựa trên modelForHost
     if (modelForHost === MERCURY_MODEL_VALUE) {

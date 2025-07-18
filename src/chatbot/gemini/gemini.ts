@@ -110,28 +110,7 @@ export class Gemini {
             apiConfig.systemInstruction = { parts: [{ text: generationAndSystemConfig.systemInstruction }] };
         } else if (generationAndSystemConfig.systemInstruction) {
             apiConfig.systemInstruction = generationAndSystemConfig.systemInstruction;
-        }
-
-
-        // 
-
-        if (apiConfig.tools && apiConfig.tools.length > 0) {
-            const toolNames = apiConfig.tools.map(t => {
-                if (t.functionDeclarations) {
-                    return t.functionDeclarations.map(fd => fd.name);
-                } else if (t.codeExecution) {
-                    return '[CodeExecutionTool]';
-                } else if (t.googleSearchRetrieval) {
-                    return '[GoogleSearchRetrievalTool]';
-                } else if (t.googleSearch) {
-                    return '[GoogleSearchTool]';
-                }
-                return '[UnknownToolType]';
-            }).flat();
-            
-        } else {
-            
-        }
+        }  
 
         let currentTurnContent: Content | null = null;
         if (typeof nextTurnInput === 'string') {
@@ -284,19 +263,7 @@ export class Gemini {
             apiConfig.systemInstruction = generationAndSystemConfig.systemInstruction;
         }
 
-        // 
-        if (apiConfig.tools && apiConfig.tools.length > 0) {
-            const toolNames = apiConfig.tools.map(t => {
-                if (t.functionDeclarations) { return t.functionDeclarations.map(fd => fd.name); }
-                else if (t.codeExecution) { return '[CodeExecutionTool]'; }
-                else if (t.googleSearchRetrieval) { return '[GoogleSearchRetrievalTool]'; }
-                else if (t.googleSearch) { return '[GoogleSearchTool]'; }
-                return '[UnknownToolType]';
-            }).flat();
-            
-        } else {
-            
-        }
+        
 
         let currentTurnContent: Content | null = null;
         if (typeof nextTurnInput === 'string') {
