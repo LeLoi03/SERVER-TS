@@ -14,6 +14,8 @@ import { PdfExtractorService, IPdfExtractorService } from './services/batchProce
 import { DomTransformationService, IDomTransformationService } from './services/batchProcessing/domTransformation.service';
 import { ImageUrlExtractorService, IImageUrlExtractorService } from './services/batchProcessing/imageUrlExtractor.service';
 import { FrameTextExtractorService, IFrameTextExtractorService } from './services/batchProcessing/frameTextExtractor.service';
+import { CryptoService } from './chatbot/services/crypto.service';
+import { ConversationHistoryService } from './chatbot/services/conversationHistory.service';
 
 // --- Gemini API Service and its Specialized Sub-Services ---
 import { GeminiApiService } from './services/geminiApi.service';
@@ -60,10 +62,9 @@ container.registerSingleton(LoggingService);
 container.registerSingleton(ApiKeyManager);
 container.registerSingleton(PlaywrightService);
 container.registerSingleton(FileSystemService);
-
-
+container.registerSingleton(CryptoService);
+container.registerSingleton(ConversationHistoryService);
 container.registerSingleton(BatchProcessingOrchestratorService);
-
 container.registerSingleton(GlobalConcurrencyManagerService);
 
 // --- 2. Register Gemini API Service and its Dependencies (Singletons) ---

@@ -14,9 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "@getbrevo/brevo": "^2.2.0",
-    "@google/genai": "^0.10.0",
+    "@google/genai": "^1.10.0",
     "@google/generative-ai": "^0.23.0",
     "@json2csv/node": "^7.0.6",
+    "@modelcontextprotocol/sdk": "^1.15.1",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/pino": "^7.0.4",
     "@types/streamifier": "^0.1.2",
