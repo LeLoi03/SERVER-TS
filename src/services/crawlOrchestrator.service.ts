@@ -117,10 +117,12 @@ export class CrawlOrchestratorService {
         let allProcessedData: ProcessedRowData[] = [];
         let crawlError: Error | null = null;
 
+        // <<< TẠO SET MỚI CHO MỖI REQUEST >>>
+        const processedAcronymsForThisRequest: Set<string> = new Set();
+
         try {
             // Phase 0 & 1: Reset & Prepare Environment
             resultCollector.clear(); // <<< SỬ DỤNG INSTANCE ĐÃ RESOLVE
-            this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger);
             this.htmlPersistenceService.resetState(logger);
             await this.fileSystemService.prepareOutputArea(logger);
             await this.geminiApiService.init(logger);
@@ -168,7 +170,9 @@ export class CrawlOrchestratorService {
                                     batchRequestId,
                                     requestStateService,
                                     requestContainer,
-                                    resultCollector // <<< BẮT ĐẦU TRUYỀN COLLECTOR TỪ ĐÂY
+                                    resultCollector,
+                                    processedAcronymsForThisRequest // <<< BẮT ĐẦU TRUYỀN SET CỤC BỘ
+
 
                                 ),
                                 this.conferenceProcessingTimeoutMs,

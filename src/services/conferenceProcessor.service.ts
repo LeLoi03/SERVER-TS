@@ -55,7 +55,9 @@ export class ConferenceProcessorService {
         batchRequestId: string,
         requestStateService: RequestStateService,
         requestContainer: DependencyContainer,
-        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService,
+                processedAcronymsSet: Set<string> // <<< THÊM THAM SỐ MỚI
+
 
 
 
@@ -117,7 +119,8 @@ export class ConferenceProcessorService {
                     apiModels,
                     requestStateService,
                     requestContainer,
-                    resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+                    resultCollector,
+                    processedAcronymsSet
 
 
                 );
@@ -178,7 +181,8 @@ export class ConferenceProcessorService {
                         apiModels,
                         requestStateService,
                         requestContainer,
-                        resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+                        resultCollector,
+                        processedAcronymsSet
 
 
                     );

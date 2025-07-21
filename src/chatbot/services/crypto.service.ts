@@ -72,7 +72,7 @@ export class CryptoService {
             return decrypted.toString('utf8');
         } catch (error) {
             // Lỗi có thể xảy ra nếu khóa sai, dữ liệu bị thay đổi, hoặc định dạng không đúng.
-            console.error(`[CryptoService] Decryption failed for user ${userId}. It might be due to a key change or data corruption.`);
+            // console.error(`[CryptoService] Decryption failed for user ${userId}. It might be due to a key change or data corruption.`);
             return null;
         }
     }

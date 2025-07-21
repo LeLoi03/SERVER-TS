@@ -31,7 +31,7 @@ export interface ISaveTaskExecutorService {
         browserContext: BrowserContext,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
-        globalProcessedAcronymsSet: Set<string>,
+        processedAcronymsSet: Set<string>, // <<< NHẬN THAM SỐ
         logger: Logger,
         requestStateService: RequestStateService,
         resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
@@ -64,7 +64,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
         browserContext: BrowserContext,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
-        globalProcessedAcronymsSet: Set<string>,
+        processedAcronymsSet: Set<string>, // <<< NHẬN THAM SỐ
         logger: Logger,
         requestStateService: RequestStateService,
         resultCollector: InMemoryResultCollectorService // <<< NHẬN THAM SỐ MỚI
@@ -241,7 +241,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
             let finalCfpTextPath = mainEntryAfterDetermination.cfpTextPath;
             let finalImpTextPath = mainEntryAfterDetermination.impTextPath;
 
-            const internalProcessingAcronym = await addAcronymSafely(globalProcessedAcronymsSet, originalAcronymFromDetermination);
+            const internalProcessingAcronym = await addAcronymSafely(processedAcronymsSet, originalAcronymFromDetermination);
             const safeInternalAcronymOfDeterminedConference = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
 
             // +++ MODIFIED PART +++

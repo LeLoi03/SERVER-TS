@@ -30,7 +30,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
     private readonly tempDir: string;
     private readonly errorLogPath: string;
 
-    private globalProcessedAcronymsSet: Set<string> = new Set();
+    // private globalProcessedAcronymsSet: Set<string> = new Set();
     private activeBatchSaves: Set<Promise<boolean>> = new Set();
 
     constructor(
@@ -51,10 +51,10 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         this.serviceBaseLogger.info(`Temp Directory: ${this.tempDir}`);
     }
 
-    public resetGlobalAcronyms(logger: Logger) {
-        this.globalProcessedAcronymsSet.clear();
-        logger.info({ event: 'global_processed_acronyms_reset', service: 'BatchProcessingService' }); // Giữ nguyên service name trong log
-    }
+    // public resetGlobalAcronyms(logger: Logger) {
+    //     this.globalProcessedAcronymsSet.clear();
+    //     logger.info({ event: 'global_processed_acronyms_reset', service: 'BatchProcessingService' }); // Giữ nguyên service name trong log
+    // }
 
     private async ensureDirectories(paths: string[], loggerToUse?: Logger): Promise<void> {
         const logger = loggerToUse || this.serviceBaseLogger;
@@ -93,7 +93,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         apiModels: ApiModels,
         requestStateService: RequestStateService,
         requestContainer: DependencyContainer,
-        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService,
+        processedAcronymsSet: Set<string> // <<< THÊM THAM SỐ MỚI
+
 
 
 
@@ -260,7 +262,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 batchItemIndexFromParent,
                 batchRequestIdFromParent,
                 apiModels,
-                this.globalProcessedAcronymsSet,
+                processedAcronymsSet, // <<< TRUYỀN XUỐNG
                 methodLogger,
                 requestStateService,
                 resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
@@ -288,7 +290,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         apiModels: ApiModels,
         requestStateService: RequestStateService,
         requestContainer: DependencyContainer, // <<< THAM SỐ MỚI
-        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService,
+        processedAcronymsSet: Set<string> // <<< THÊM THAM SỐ MỚI
+
 
 
     ): Promise<boolean> {
@@ -407,7 +411,7 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                     browserContext,
                     batchRequestIdFromParent,
                     apiModels,
-                    this.globalProcessedAcronymsSet,
+                    processedAcronymsSet, // <<< TRUYỀN XUỐNG
                     batchTaskLogger,
                     requestStateService,
                     resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY

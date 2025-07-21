@@ -25,7 +25,7 @@ export interface IUpdateTaskExecutorService {
         batchItemIndex: number,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
-        globalProcessedAcronymsSet: Set<string>,
+        processedAcronymsSet: Set<string>, // <<< ĐỔI TÊN TỪ global...
         parentLogger: Logger,
         requestStateService: RequestStateService,
         resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
@@ -53,7 +53,7 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
         batchItemIndex: number,
         batchRequestIdForTask: string,
         apiModels: ApiModels,
-        globalProcessedAcronymsSet: Set<string>,
+        processedAcronymsSet: Set<string>, // <<< NHẬN THAM SỐ
         parentLogger: Logger,
         requestStateService: RequestStateService,
         resultCollector: InMemoryResultCollectorService // <<< NHẬN THAM SỐ MỚI
@@ -78,7 +78,7 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 return false;
             }
 
-            const internalProcessingAcronym = await addAcronymSafely(globalProcessedAcronymsSet, originalAcronym);
+            const internalProcessingAcronym = await addAcronymSafely(processedAcronymsSet, originalAcronym);
             const safeInternalAcronymForFiles = internalProcessingAcronym.replace(/[^a-zA-Z0-9_.-]/g, '-');
             logger.info({ internalProcessingAcronym, safeInternalAcronymForFiles, event: 'acronym_generated_for_update_files' });
 

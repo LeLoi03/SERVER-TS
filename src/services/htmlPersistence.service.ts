@@ -86,7 +86,9 @@ export class HtmlPersistenceService {
         apiModels: ApiModels,
         requestStateService: RequestStateService,
         requestContainer: DependencyContainer,
-        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService,
+        processedAcronymsSet: Set<string> // <<< THÊM THAM SỐ MỚI
+
 
 
     ): Promise<boolean> {
@@ -107,7 +109,9 @@ export class HtmlPersistenceService {
                 apiModels, // Pass ApiModels to BatchProcessingOrchestratorService
                 requestStateService, // <<< Truyền xuống
                 requestContainer,
-                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+                resultCollector,
+                processedAcronymsSet // <<< TRUYỀN XUỐNG
+
 
 
             );
@@ -144,7 +148,9 @@ export class HtmlPersistenceService {
         apiModels: ApiModels,
         requestStateService: RequestStateService, // <<< THÊM THAM SỐ MỚI
         requestContainer: DependencyContainer,
-        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService,
+        processedAcronymsSet: Set<string> // <<< THÊM THAM SỐ MỚI
+
 
 
     ): Promise<boolean> {
@@ -171,7 +177,9 @@ export class HtmlPersistenceService {
                 apiModels,
                 requestStateService,// <<< Truyền xuống
                 requestContainer,
-                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+                resultCollector,
+                processedAcronymsSet // <<< TRUYỀN XUỐNG
+
 
 
             );
