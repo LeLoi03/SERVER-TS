@@ -43,7 +43,6 @@ export class CrawlOrchestratorService {
         @inject(ConfigService) private configService: ConfigService,
         @inject(LoggingService) private loggingService: LoggingService,
         @inject(ApiKeyManager) private apiKeyManager: ApiKeyManager,
-        @inject(PlaywrightService) private playwrightService: PlaywrightService,
         @inject(FileSystemService) private fileSystemService: FileSystemService,
         @inject(HtmlPersistenceService) private htmlPersistenceService: HtmlPersistenceService,
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
@@ -123,7 +122,6 @@ export class CrawlOrchestratorService {
             this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger);
             this.htmlPersistenceService.resetState(logger);
             await this.fileSystemService.prepareOutputArea(logger);
-            await this.playwrightService.initialize(logger);
             await this.geminiApiService.init(logger);
             this.htmlPersistenceService.setBrowserContext(logger);
 
@@ -248,7 +246,6 @@ export class CrawlOrchestratorService {
         } finally {
             // Phase 5: Cleanup
             logger.info("Phase 5: Performing final cleanup...");
-            await this.playwrightService.close(logger);
             if (!this.configService.isProduction) {
                 await this.fileSystemService.cleanupTempFiles();
                 logger.info("Temp files cleanup finished.");

@@ -86,9 +86,6 @@ export class Gemini {
         generationAndSystemConfig: GenerateContentConfig & { systemInstruction?: string | Content; tools?: Tool[] }
     ): Promise<GeminiInteractionResult> {
 
-        const handlerIdForLog = `[GeminiService:generateTurn ${Date.now().toString().slice(-4)}]`;
-        
-
         const effectiveHistory: Content[] = history
             .map(item => {
                 const cleanedParts = item.parts.map(cleanPart).filter(p => Object.keys(p).length > 0);
@@ -238,9 +235,7 @@ export class Gemini {
         history: ChatHistoryItem[],
         generationAndSystemConfig: GenerateContentConfig & { systemInstruction?: string | Content; tools?: Tool[] }
     ): Promise<{ stream?: AsyncGenerator<GenerateContentResponse>; error?: string; functionCall?: FunctionCall }> {
-        const handlerIdForLog = `[GeminiService:generateStream ${Date.now().toString().slice(-4)}]`;
-        
-
+    
         const effectiveHistory: Content[] = history
             .map(item => {
                 const cleanedParts = item.parts.map(cleanPart).filter(p => Object.keys(p).length > 0);
@@ -296,10 +291,6 @@ export class Gemini {
             
             return { error: "No content to send to the model for streaming." };
         }
-
-        
-        // 
-        // if (contentsToSend.length > 2) 
 
         try {
             const streamGenerator = await this.ai.models.generateContentStream({

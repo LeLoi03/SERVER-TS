@@ -1,6 +1,6 @@
 // src/services/inMemoryResultCollector.service.ts
 import 'reflect-metadata';
-import { singleton } from 'tsyringe';
+import { scoped, Lifecycle } from 'tsyringe'; // Import thêm
 import { InputRowData } from '../types/crawl';
 
 /**
@@ -8,7 +8,7 @@ import { InputRowData } from '../types/crawl';
  * for a single crawl request. This avoids circular dependencies by acting
  * as a neutral, shared data store.
  */
-@singleton()
+@scoped(Lifecycle.ResolutionScoped) // Thay đổi ở đây
 export class InMemoryResultCollectorService {
     private results: InputRowData[] = [];
 

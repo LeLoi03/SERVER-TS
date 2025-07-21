@@ -7,6 +7,7 @@ import { Logger } from 'pino';
 import { ConfigService } from './config/config.service';
 import http from 'http';
 import mongoose from 'mongoose';
+import { PlaywrightService } from './services/playwright.service'; // <<< IMPORT MỚI
 
 /**
  * Logger toàn cục của ứng dụng.
@@ -54,6 +55,19 @@ async function startServer(): Promise<void> {
             process.exit(1);
         }
 
+        // --- 2. KHỞI TẠO PLAYWRIGHT (THÊM VÀO ĐÂY) ---
+        logger.info('[Server Start] Initializing global Playwright service...');
+        const playwrightService = container.resolve(PlaywrightService);
+        try {
+            await playwrightService.initialize(logger);
+            logger.info('[Server Start] Global Playwright browser initialized successfully.');
+        } catch (playwrightError) {
+            logger.fatal({ err: playwrightError }, 'FATAL: Failed to initialize Playwright browser. Application cannot start.');
+            // Nếu không có trình duyệt, ứng dụng không thể hoạt động, nên thoát
+            process.exit(1);
+        }
+
+
         // --- 2. Khởi tạo các ví dụ API từ ConfigService ---
         try {
             await configService.initializeExamples();
@@ -72,7 +86,6 @@ async function startServer(): Promise<void> {
         const port = configService.port;
         httpServer.listen(port, () => {
             const serverUrl = `http://localhost:${port}`;
-            const allowedOrigins = configService.corsAllowedOrigins.join(', ');
             console.log(`🚀 Server sẵn sàng tại ${serverUrl}`);
         });
 
@@ -146,6 +159,18 @@ async function gracefulShutdown(signal: string, error?: Error | unknown): Promis
             }
         } catch (dbErr: any) {
             currentLogger.error('[Shutdown] Lỗi khi đóng kết nối MongoDB:', dbErr);
+            exitCode = 1;
+        }
+
+
+        // --- BƯỚC 3: ĐÓNG PLAYWRIGHT (THÊM VÀO ĐÂY) ---
+        try {
+            currentLogger.info('[Shutdown] Đang đóng Playwright browser...');
+            const playwrightService = container.resolve(PlaywrightService);
+            await playwrightService.close(currentLogger);
+            currentLogger.info('[Shutdown] Playwright browser đã đóng thành công.');
+        } catch (playwrightErr) {
+            currentLogger.error('[Shutdown] Lỗi khi đóng Playwright browser:', playwrightErr);
             exitCode = 1;
         }
 

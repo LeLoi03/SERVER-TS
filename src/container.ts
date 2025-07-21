@@ -100,8 +100,7 @@ container.register<IImageUrlExtractorService>('IImageUrlExtractorService', { use
 // Chỉ cần đăng ký để Tsyringe biết về nó.
 container.register(RequestStateService, RequestStateService);
 container.register(TaskQueueService, TaskQueueService);
-
-container.registerSingleton(InMemoryResultCollectorService); // <<< ĐĂNG KÝ MỚI
+container.register(InMemoryResultCollectorService, InMemoryResultCollectorService);
 
 // --- 5. Register Other General and Task-Specific Services ---
 container.registerSingleton(HtmlPersistenceService);
