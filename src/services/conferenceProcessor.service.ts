@@ -1,6 +1,6 @@
 // src/services/conferenceProcessor.service.ts
 import 'reflect-metadata';
-import { injectable, inject } from 'tsyringe';
+import { injectable, inject, DependencyContainer } from 'tsyringe'; // <<< THÊM DependencyContainer
 import { ConfigService } from '../config/config.service';
 import { LoggingService } from './logging.service';
 import { GoogleSearchService } from './googleSearch.service';
@@ -32,13 +32,13 @@ export class ConferenceProcessorService {
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ConferenceProcessorBase' });
         this.searchQueryTemplate = this.configService.searchQueryTemplate;
-         // *************** ĐIỀU CHỈNH CHÍNH Ở ĐÂY ***************
+        // *************** ĐIỀU CHỈNH CHÍNH Ở ĐÂY ***************
         const currentYear = new Date().getFullYear();
         this.year2 = currentYear;
         this.year1 = currentYear - 1;
         this.year3 = currentYear + 1;
 
-        
+
         this.unwantedDomains = this.configService.unwantedDomains;
         this.skipKeywords = this.configService.skipKeywords;
         this.maxLinks = this.configService.maxLinks;
@@ -52,7 +52,9 @@ export class ConferenceProcessorService {
         parentLogger: Logger,
         apiModels: ApiModels,
         batchRequestId: string,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+
 
     ): Promise<void> {
         const confAcronym = conference?.Acronym || `UnknownAcronym-${taskIndex}`;
@@ -110,7 +112,8 @@ export class ConferenceProcessorService {
                     conferenceUpdateData,
                     taskLogger,
                     apiModels,
-                    requestStateService // <<< Truyền xuống
+                    requestStateService,
+                    requestContainer // <<< TRUYỀN XUỐNG
 
                 );
 
@@ -168,7 +171,8 @@ export class ConferenceProcessorService {
                         searchResultsLinks,
                         taskLogger,
                         apiModels,
-                        requestStateService // <<< Truyền xuống
+                        requestStateService,
+                        requestContainer // <<< TRUYỀN XUỐNG
 
                     );
                     if (saveSuccess === false) {

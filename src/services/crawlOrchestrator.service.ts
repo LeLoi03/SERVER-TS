@@ -160,14 +160,14 @@ export class CrawlOrchestratorService {
                             // Logic xử lý một conference, được resolve từ container của request
                             const processor = requestContainer.resolve(ConferenceProcessorService);
                             await withOperationTimeout(
-                                processor.process(
-                                    // <<< THAY ĐỔI: TRUYỀN DỮ LIỆU ĐÃ CHUẨN HÓA VÀO PROCESSOR >>>
+                                processor.process( // <<< Đảm bảo lời gọi hàm có đủ tham số
                                     normalizedConference,
                                     itemIndex,
                                     itemLogger,
                                     apiModels,
                                     batchRequestId,
-                                    requestStateService
+                                    requestStateService,
+                                    requestContainer // <<< THAM SỐ QUAN TRỌNG CẦN TRUYỀN
                                 ),
                                 this.conferenceProcessingTimeoutMs,
                                 operationName

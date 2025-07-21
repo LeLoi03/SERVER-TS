@@ -1,6 +1,6 @@
 // src/services/batchProcessingOrchestrator.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { singleton, inject, DependencyContainer } from 'tsyringe'; // <<< THÊM DependencyContainer
 import fs from 'fs';
 import path from 'path';
 import { Page, BrowserContext } from 'playwright';
@@ -38,8 +38,8 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         @inject(FileSystemService) private readonly fileSystemService: FileSystemService,
         @inject('IConferenceLinkProcessorService') private readonly conferenceLinkProcessorService: IConferenceLinkProcessorService,
         // --- INJECT NEW SERVICES ---
-        @inject('IUpdateTaskExecutorService') private readonly updateTaskExecutorService: IUpdateTaskExecutorService,
-        @inject('ISaveTaskExecutorService') private readonly saveTaskExecutorService: ISaveTaskExecutorService
+        // @inject('IUpdateTaskExecutorService') private readonly updateTaskExecutorService: IUpdateTaskExecutorService,
+        // @inject('ISaveTaskExecutorService') private readonly saveTaskExecutorService: ISaveTaskExecutorService
     ) {
         this.serviceBaseLogger = loggingService.getLogger('conference', { service: 'BatchProcessingServiceOrchestrator' });
         this.batchesDir = this.configService.batchesDir;
@@ -90,7 +90,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         conference: ConferenceUpdateData,
         parentLogger: Logger,
         apiModels: ApiModels,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+
 
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
@@ -247,15 +249,17 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
             const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdFromParent);
             await this.ensureDirectories([this.batchesDir, path.dirname(jsonlPathForThisBatch)], methodLogger);
 
-            const updateSuccess = await this.updateTaskExecutorService.execute(
+            // <<< THAY ĐỔI CỐT LÕI: RESOLVE EXECUTOR TỪ REQUEST CONTAINER >>>
+            const updateTaskExecutor = requestContainer.resolve<IUpdateTaskExecutorService>('IUpdateTaskExecutorService');
+
+            const updateSuccess = await updateTaskExecutor.execute( // <<< DÙNG INSTANCE VỪA RESOLVE
                 batchDataForExecute,
                 batchItemIndexFromParent,
                 batchRequestIdFromParent,
                 apiModels,
                 this.globalProcessedAcronymsSet,
                 methodLogger,
-                requestStateService // <<< Truyền xuống
-
+                requestStateService
             );
             // -----------------------------
 
@@ -277,7 +281,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         links: string[],
         parentLogger: Logger,
         apiModels: ApiModels,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+
 
     ): Promise<boolean> {
         const batchRequestIdFromParent = parentLogger.bindings().batchRequestId as string;
@@ -384,18 +390,22 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 const jsonlPathForThisBatch = this.configService.getFinalOutputJsonlPathForBatch(batchRequestIdFromParent);
                 await this.ensureDirectories([this.batchesDir, path.dirname(jsonlPathForThisBatch)], batchTaskLogger);
 
-                const batchPromise = this.saveTaskExecutorService.execute(
+
+                // <<< THAY ĐỔI CỐT LÕI: RESOLVE EXECUTOR TỪ REQUEST CONTAINER >>>
+                const saveTaskExecutor = requestContainer.resolve<ISaveTaskExecutorService>('ISaveTaskExecutorService');
+
+                const batchPromise = saveTaskExecutor.execute( // <<< DÙNG INSTANCE VỪA RESOLVE
                     batchForDetermineApi,
                     batchItemIndexFromParent,
                     primaryOriginalAcronymForTask,
                     browserContext,
                     batchRequestIdFromParent,
                     apiModels,
-                    this.globalProcessedAcronymsSet, // Pass the global set
+                    this.globalProcessedAcronymsSet,
                     batchTaskLogger,
-                    requestStateService // <<< Truyền xuống
-
+                    requestStateService
                 );
+                // -----------------------------
                 // -----------------------------
 
                 this.activeBatchSaves.add(batchPromise);

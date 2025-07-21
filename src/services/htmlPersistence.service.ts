@@ -1,6 +1,6 @@
 // src/services/htmlPersistence.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { singleton, inject, DependencyContainer } from 'tsyringe'; // <<< THÊM DependencyContainer
 import { BrowserContext } from 'playwright';
 import { PlaywrightService } from './playwright.service';
 import { LoggingService } from './logging.service';
@@ -83,7 +83,8 @@ export class HtmlPersistenceService {
         conference: ConferenceUpdateData,
         taskLogger: Logger,
         apiModels: ApiModels,
-        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+        requestStateService: RequestStateService,
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
 
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
@@ -101,7 +102,8 @@ export class HtmlPersistenceService {
                 conference,
                 flowLogger,
                 apiModels, // Pass ApiModels to BatchProcessingOrchestratorService
-                requestStateService // <<< Truyền xuống
+                requestStateService, // <<< Truyền xuống
+                requestContainer // <<< TRUYỀN XUỐNG
 
             );
 
@@ -135,7 +137,8 @@ export class HtmlPersistenceService {
         searchResultLinks: string[],
         taskLogger: Logger,
         apiModels: ApiModels,
-        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+        requestStateService: RequestStateService, // <<< THÊM THAM SỐ MỚI
+        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
 
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
@@ -159,7 +162,8 @@ export class HtmlPersistenceService {
                 searchResultLinks,
                 flowLogger,
                 apiModels,
-                requestStateService // <<< Truyền xuống
+                requestStateService,// <<< Truyền xuống
+                requestContainer // <<< TRUYỀN XUỐNG
 
             );
 
