@@ -52,6 +52,25 @@ export class GeminiApiTypeConfig {
     }
 
     private buildGeminiApiConfigs(): GeminiApiConfigs {
+
+        // *************** ĐIỀU CHỈNH CHÍNH BẮT ĐẦU TỪ ĐÂY ***************
+        // 1. Tính toán các năm một cách tự động
+        const currentYear = new Date().getFullYear();
+        const year1 = currentYear - 1; // Năm trước
+        const year2 = currentYear;     // Năm hiện tại
+        const year3 = currentYear + 1; // Năm sau
+
+        // 2. Lấy chuỗi mẫu từ config
+        const determineSystemInstructionTemplate = this.appConfig.GEMINI_DETERMINE_SYSTEM_INSTRUCTION;
+
+        // 3. Thay thế các placeholders bằng các năm đã tính toán
+        const processedDetermineInstruction = determineSystemInstructionTemplate
+            .replace(/\${year1}/g, String(year1))
+            .replace(/\${year2}/g, String(year2))
+            .replace(/\${year3}/g, String(year3))
+            .trim();
+        // *************** KẾT THÚC ĐIỀU CHỈNH ***************
+
         return {
             [API_TYPE_EXTRACT]: {
                 generationConfig: {
@@ -99,7 +118,7 @@ export class GeminiApiTypeConfig {
                     },
                     required: ["Official Website", "Call for papers link", "Important dates link"]
                 } as Schema,
-                systemInstruction: this.appConfig.GEMINI_DETERMINE_SYSTEM_INSTRUCTION.trim(),
+                systemInstruction: processedDetermineInstruction,
                 systemInstructionPrefixForNonTunedModel: this.appConfig.GEMINI_DETERMINE_SYSTEM_INSTRUCTION_PREFIX_FOR_NON_TUNED_MODEL.trim(),
                 allowCacheForNonTuned: this.appConfig.GEMINI_DETERMINE_ALLOW_CACHE_NON_TUNED,
                 allowFewShotForNonTuned: this.appConfig.GEMINI_DETERMINE_ALLOW_FEWSHOT_NON_TUNED,
@@ -140,7 +159,7 @@ export class GeminiApiTypeConfig {
 
                 } catch (error) {
                     console.error("❌ Error during overall API examples loading process:", error);
-                    this.initializationPromise = null; 
+                    this.initializationPromise = null;
                 }
             })();
         } else {
