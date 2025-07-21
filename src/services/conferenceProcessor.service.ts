@@ -32,9 +32,13 @@ export class ConferenceProcessorService {
     ) {
         this.serviceBaseLogger = this.loggingService.getLogger('conference', { service: 'ConferenceProcessorBase' });
         this.searchQueryTemplate = this.configService.searchQueryTemplate;
-        this.year1 = this.configService.year1;
-        this.year2 = this.configService.year2;
-        this.year3 = this.configService.year3;
+         // *************** ĐIỀU CHỈNH CHÍNH Ở ĐÂY ***************
+        const currentYear = new Date().getFullYear();
+        this.year2 = currentYear;
+        this.year1 = currentYear - 1;
+        this.year3 = currentYear + 1;
+
+        
         this.unwantedDomains = this.configService.unwantedDomains;
         this.skipKeywords = this.configService.skipKeywords;
         this.maxLinks = this.configService.maxLinks;
