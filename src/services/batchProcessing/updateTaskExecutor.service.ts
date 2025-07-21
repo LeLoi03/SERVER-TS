@@ -1,6 +1,6 @@
 // src/services/batchProcessing/updateTaskExecutor.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { injectable, inject } from 'tsyringe'; // <<< THAY ĐỔI IMPORT
 import path from 'path';
 import { Logger } from 'pino';
 
@@ -16,6 +16,7 @@ import { IFinalExtractionApiService } from './finalExtractionApi.service';
 import { IFinalRecordAppenderService } from './finalRecordAppender.service';
 import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
 import { RequestStateService } from '../requestState.service';
+import { InMemoryResultCollectorService } from '../inMemoryResultCollector.service'; // <<< THÊM IMPORT
 
 
 export interface IUpdateTaskExecutorService {
@@ -26,11 +27,12 @@ export interface IUpdateTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         parentLogger: Logger,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
     ): Promise<boolean>;
 }
 
-@singleton()
+@injectable() // <<< THAY BẰNG @injectable()
 export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
     private readonly batchesDir: string;
     private readonly errorLogPath: string;
@@ -53,7 +55,9 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         parentLogger: Logger,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        resultCollector: InMemoryResultCollectorService // <<< NHẬN THAM SỐ MỚI
+
 
     ): Promise<boolean> {
         const originalAcronym = batchInput.conferenceAcronym;
@@ -158,7 +162,9 @@ export class UpdateTaskExecutorService implements IUpdateTaskExecutorService {
                 finalRecord,
                 batchRequestIdForTask,
                 logger.child({ subOperation: 'append_final_update_record' }),
-                requestStateService
+                requestStateService,
+                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
             );
 
 

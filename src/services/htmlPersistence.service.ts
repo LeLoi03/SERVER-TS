@@ -9,6 +9,7 @@ import { Logger } from 'pino';
 import { ConferenceData, ConferenceUpdateData, ApiModels } from '../types/crawl/crawl.types';
 import { getErrorMessageAndStack } from '../utils/errorUtils'; // Import the error utility
 import { RequestStateService } from './requestState.service';
+import { InMemoryResultCollectorService } from './inMemoryResultCollector.service'; // <<< THÊM IMPORT
 
 /**
  * Service responsible for managing HTML content persistence and delegating
@@ -84,7 +85,9 @@ export class HtmlPersistenceService {
         taskLogger: Logger,
         apiModels: ApiModels,
         requestStateService: RequestStateService,
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+
 
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
@@ -103,7 +106,9 @@ export class HtmlPersistenceService {
                 flowLogger,
                 apiModels, // Pass ApiModels to BatchProcessingOrchestratorService
                 requestStateService, // <<< Truyền xuống
-                requestContainer // <<< TRUYỀN XUỐNG
+                requestContainer,
+                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
 
             );
 
@@ -138,7 +143,9 @@ export class HtmlPersistenceService {
         taskLogger: Logger,
         apiModels: ApiModels,
         requestStateService: RequestStateService, // <<< THÊM THAM SỐ MỚI
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+
 
     ): Promise<boolean> {
         const flowLogger = taskLogger.child({
@@ -163,7 +170,9 @@ export class HtmlPersistenceService {
                 flowLogger,
                 apiModels,
                 requestStateService,// <<< Truyền xuống
-                requestContainer // <<< TRUYỀN XUỐNG
+                requestContainer,
+                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
 
             );
 

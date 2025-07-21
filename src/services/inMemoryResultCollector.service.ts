@@ -1,37 +1,34 @@
-// src/services/inMemoryResultCollector.service.ts
 import 'reflect-metadata';
-import { scoped, Lifecycle } from 'tsyringe'; // Import thêm
+import { scoped, Lifecycle, inject } from 'tsyringe';
 import { InputRowData } from '../types/crawl';
+import { LoggingService } from './logging.service'; // <<< THÊM IMPORT
+import { Logger } from 'pino'; // <<< THÊM IMPORT
 
-/**
- * A simple singleton service to collect raw processing results in memory
- * for a single crawl request. This avoids circular dependencies by acting
- * as a neutral, shared data store.
- */
-@scoped(Lifecycle.ResolutionScoped) // Thay đổi ở đây
+@scoped(Lifecycle.ContainerScoped) 
 export class InMemoryResultCollectorService {
     private results: InputRowData[] = [];
+    private readonly collectorId: string; // <<< THÊM ID
+    private readonly logger: Logger; // <<< THÊM LOGGER
 
-    /**
-     * Adds a raw result record to the in-memory collection.
-     * @param record The raw data record (InputRowData).
-     */
+    // <<< THÊM CONSTRUCTOR ĐỂ INJECT LOGGING SERVICE >>>
+    constructor(@inject(LoggingService) loggingService: LoggingService) {
+        this.collectorId = Math.random().toString(36).substring(2, 9); // Tạo ID ngẫu nhiên
+        this.logger = loggingService.getLogger('app', { service: 'InMemoryResultCollector', collectorId: this.collectorId });
+        this.logger.info('InMemoryResultCollectorService instance CREATED.');
+    }
+
     public add(record: InputRowData): void {
+        this.logger.info({ recordAcronym: record.conferenceAcronym, currentSize: this.results.length }, 'Calling ADD method.');
         this.results.push(record);
     }
 
-    /**
-     * Retrieves all collected results.
-     * @returns An array of all collected records.
-     */
     public get(): InputRowData[] {
+        this.logger.info({ currentSize: this.results.length }, 'Calling GET method.');
         return this.results;
     }
 
-    /**
-     * Clears the collection, preparing it for a new request.
-     */
     public clear(): void {
+        this.logger.info({ currentSize: this.results.length }, 'Calling CLEAR method.');
         this.results = [];
     }
 }

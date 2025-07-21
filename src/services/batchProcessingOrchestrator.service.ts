@@ -21,6 +21,7 @@ import { IUpdateTaskExecutorService } from './batchProcessing/updateTaskExecutor
 import { ISaveTaskExecutorService } from './batchProcessing/saveTaskExecutor.service';
 import { withOperationTimeout } from './batchProcessing/utils';
 import { RequestStateService } from './requestState.service';
+import { InMemoryResultCollectorService } from './inMemoryResultCollector.service';
 
 @singleton()
 export class BatchProcessingOrchestratorService { // <<< RENAMED
@@ -91,7 +92,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         parentLogger: Logger,
         apiModels: ApiModels,
         requestStateService: RequestStateService,
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+
 
 
     ): Promise<boolean> {
@@ -259,7 +262,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                 apiModels,
                 this.globalProcessedAcronymsSet,
                 methodLogger,
-                requestStateService
+                requestStateService,
+                resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
             );
             // -----------------------------
 
@@ -282,7 +287,8 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
         parentLogger: Logger,
         apiModels: ApiModels,
         requestStateService: RequestStateService,
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer, // <<< THAM SỐ MỚI
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
 
 
     ): Promise<boolean> {
@@ -403,7 +409,9 @@ export class BatchProcessingOrchestratorService { // <<< RENAMED
                     apiModels,
                     this.globalProcessedAcronymsSet,
                     batchTaskLogger,
-                    requestStateService
+                    requestStateService,
+                    resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
                 );
                 // -----------------------------
                 // -----------------------------

@@ -11,6 +11,7 @@ import { ConferenceData, ConferenceUpdateData, GoogleSearchResult, ApiModels } f
 import { filterSearchResults } from '../utils/crawl/linkFiltering';
 import { getErrorMessageAndStack } from '../utils/errorUtils';
 import { RequestStateService } from './requestState.service';
+import { InMemoryResultCollectorService } from './inMemoryResultCollector.service'; // <<< THÊM IMPORT
 
 @injectable()
 export class ConferenceProcessorService {
@@ -53,7 +54,9 @@ export class ConferenceProcessorService {
         apiModels: ApiModels,
         batchRequestId: string,
         requestStateService: RequestStateService,
-        requestContainer: DependencyContainer // <<< THAM SỐ MỚI
+        requestContainer: DependencyContainer,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+
 
 
     ): Promise<void> {
@@ -113,7 +116,9 @@ export class ConferenceProcessorService {
                     taskLogger,
                     apiModels,
                     requestStateService,
-                    requestContainer // <<< TRUYỀN XUỐNG
+                    requestContainer,
+                    resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
 
                 );
 
@@ -172,7 +177,9 @@ export class ConferenceProcessorService {
                         taskLogger,
                         apiModels,
                         requestStateService,
-                        requestContainer // <<< TRUYỀN XUỐNG
+                        requestContainer,
+                        resultCollector // <<< TRUYỀN COLLECTOR VÀO ĐÂY
+
 
                     );
                     if (saveSuccess === false) {

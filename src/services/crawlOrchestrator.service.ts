@@ -167,7 +167,9 @@ export class CrawlOrchestratorService {
                                     apiModels,
                                     batchRequestId,
                                     requestStateService,
-                                    requestContainer // <<< THAM SỐ QUAN TRỌNG CẦN TRUYỀN
+                                    requestContainer,
+                                    resultCollector // <<< BẮT ĐẦU TRUYỀN COLLECTOR TỪ ĐÂY
+
                                 ),
                                 this.conferenceProcessingTimeoutMs,
                                 operationName

@@ -7,7 +7,7 @@ import { scoped, Lifecycle } from 'tsyringe';
  * for each resolution from the container, effectively making it request-scoped
  * in the context of our controller.
  */
-@scoped(Lifecycle.ResolutionScoped)
+@scoped(Lifecycle.ContainerScoped) 
 export class RequestStateService {
     private _recordFile: boolean = false;
 

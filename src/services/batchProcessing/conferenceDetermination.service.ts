@@ -6,7 +6,7 @@ import { GeminiApiService } from '../geminiApi.service';
 import { IConferenceLinkProcessorService } from './conferenceLinkProcessor.service';
 import { BatchEntry, CrawlModelType } from '../../types/crawl/crawl.types';
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
-import { singleton, inject } from 'tsyringe';
+import { singleton, inject, injectable } from 'tsyringe'; // <<< THAY ĐỔI IMPORT
 import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
 import { GeminiApiParams } from '../../types/crawl';
 import { ConfigService } from '../../config/config.service'; // +++ ADD IMPORT
@@ -31,7 +31,7 @@ export interface IConferenceDeterminationService {
  * Service for determining the official website and processing related links for conferences.
  * It leverages Gemini API calls and Playwright for web scraping and content extraction.
  */
-@singleton()
+@injectable() // <<< THAY BẰNG DÒNG NÀY
 export class ConferenceDeterminationService implements IConferenceDeterminationService {
     constructor(
         @inject(FileSystemService) private fileSystemService: FileSystemService,

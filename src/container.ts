@@ -82,10 +82,12 @@ container.registerSingleton(GeminiApiService);
 // --- 3. Register Batch Processing Sub-Services (Interfaces and Implementations) ---
 container.registerSingleton<IPageContentExtractorService>('IPageContentExtractorService', PageContentExtractorService);
 container.registerSingleton<IConferenceLinkProcessorService>('IConferenceLinkProcessorService', ConferenceLinkProcessorService);
-container.registerSingleton<IConferenceDeterminationService>('IConferenceDeterminationService', ConferenceDeterminationService);
-container.registerSingleton<IConferenceDataAggregatorService>('IConferenceDataAggregatorService', ConferenceDataAggregatorService);
-// Các service thực thi task thường là transient (mặc định của .register) hoặc resolution-scoped
+// <<< THAY ĐỔI CÁC DÒNG SAU ĐÂY >>>
+container.register<IConferenceDeterminationService>('IConferenceDeterminationService', { useClass: ConferenceDeterminationService });
+container.register<IConferenceDataAggregatorService>('IConferenceDataAggregatorService', { useClass: ConferenceDataAggregatorService });
 container.register<IFinalExtractionApiService>('IFinalExtractionApiService', { useClass: FinalExtractionApiService });
+// <<< KẾT THÚC THAY ĐỔI >>>
+
 container.register<IFinalRecordAppenderService>('IFinalRecordAppenderService', { useClass: FinalRecordAppenderService });
 container.register<IUpdateTaskExecutorService>('IUpdateTaskExecutorService', { useClass: UpdateTaskExecutorService });
 container.register<ISaveTaskExecutorService>('ISaveTaskExecutorService', { useClass: SaveTaskExecutorService });

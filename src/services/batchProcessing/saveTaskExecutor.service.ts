@@ -1,6 +1,6 @@
 // src/services/batchProcessing/saveTaskExecutor.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { injectable, inject } from 'tsyringe'; // <<< THAY ĐỔI IMPORT
 import path from 'path';
 import { Logger } from 'pino';
 import { BrowserContext } from 'playwright';
@@ -21,6 +21,7 @@ import { addAcronymSafely } from '../../utils/crawl/addAcronymSafely';
 import { normalizeAndJoinLink } from '../../utils/crawl/url.utils';
 import { withOperationTimeout } from './utils'; // <-- IMPORT HELPER
 import { RequestStateService } from '../requestState.service';
+import { InMemoryResultCollectorService } from '../inMemoryResultCollector.service'; // <<< THÊM IMPORT
 
 export interface ISaveTaskExecutorService {
     execute(
@@ -32,11 +33,13 @@ export interface ISaveTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         logger: Logger,
-        requestStateService: RequestStateService // <<< THÊM THAM SỐ MỚI
+        requestStateService: RequestStateService,
+        resultCollector: InMemoryResultCollectorService // <<< THÊM THAM SỐ MỚI
+
     ): Promise<boolean>;
 }
 
-@singleton()
+@injectable() // <<< THAY BẰNG @injectable()
 export class SaveTaskExecutorService implements ISaveTaskExecutorService {
     private readonly batchesDir: string;
     private readonly errorLogPath: string;
@@ -63,7 +66,9 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
         apiModels: ApiModels,
         globalProcessedAcronymsSet: Set<string>,
         logger: Logger,
-        requestStateService: RequestStateService
+        requestStateService: RequestStateService,
+        resultCollector: InMemoryResultCollectorService // <<< NHẬN THAM SỐ MỚI
+
     ): Promise<boolean> {
         logger.info({ event: 'batch_task_start_execution', flow: 'save', entryCountInBatch: initialBatchEntries.length });
 
@@ -181,7 +186,7 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
 
             try {
                 // +++ BỌC LỜI GỌI SERVICE BẰNG TIMEOUT +++
-                const DETERMINATION_TIMEOUT_MS = 240000; 
+                const DETERMINATION_TIMEOUT_MS = 240000;
 
                 const crawlDeterminedStartTime = performance.now();
                 logger.info({ event: 'PLAYWRIGHT_CRAWL_DETERMINED_LINKS_START' });
@@ -309,7 +314,9 @@ export class SaveTaskExecutorService implements ISaveTaskExecutorService {
                 finalRecord,
                 batchRequestIdForTask,
                 logger.child({ subOperation: 'append_final_save_record' }),
-                requestStateService // <<< Truyền nó xuống
+                requestStateService,
+                resultCollector
+
             );
 
             logger.info({ event: 'batch_task_finish_success', flow: 'save' });

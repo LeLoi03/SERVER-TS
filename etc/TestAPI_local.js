@@ -15,7 +15,7 @@ const EXECUTION_MODE = 'sync'; // <-- THAY ĐỔI Ở ĐÂY
 // CHỌN CÓ GHI FILE KẾT QUẢ KHÔNG: true hoặc false
 // true: Sẽ tạo ra file JSONL và CSV trong thư mục output.
 // false: Sẽ không tạo file, chỉ xử lý trong bộ nhớ và trả về kết quả.
-const RECORD_FILES = true; // <-- THAM SỐ MỚI, THAY ĐỔI Ở ĐÂY
+const RECORD_FILES = false; // <-- THAM SỐ MỚI, THAY ĐỔI Ở ĐÂY
 
 const TEST_DESCRIPTION = `Test crawl in '${EXECUTION_MODE}' mode, recordFile=${RECORD_FILES}, from test_api.js`;
 

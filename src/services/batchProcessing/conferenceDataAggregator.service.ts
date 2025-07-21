@@ -1,8 +1,7 @@
 // src/services/batchProcessing/conferenceDataAggregator.service.ts
 import { Logger } from 'pino';
 import { FileSystemService } from '../fileSystem.service';
-import { singleton, inject } from 'tsyringe';
-import { getErrorMessageAndStack } from '../../utils/errorUtils'; // Import the error utility
+import { singleton, inject, injectable } from 'tsyringe'; // <<< THAY ĐỔI IMPORT
 
 /**
  * Defines the paths to the content files related to a conference.
@@ -66,7 +65,7 @@ export interface IConferenceDataAggregatorService {
  * It reads content from main website, CFP, and important dates files,
  * and can format them into a single string for API processing.
  */
-@singleton()
+@injectable() // <<< THAY BẰNG DÒNG NÀY
 export class ConferenceDataAggregatorService implements IConferenceDataAggregatorService {
     /**
      * Constructs an instance of ConferenceDataAggregatorService.

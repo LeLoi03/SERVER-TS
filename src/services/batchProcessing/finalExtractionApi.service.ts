@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { injectable, inject } from 'tsyringe'; // <<< THAY ĐỔI IMPORT
 import { Logger } from 'pino';
 import fetch from 'node-fetch';
 
@@ -32,7 +32,7 @@ export interface IFinalExtractionApiService {
     }>;
 }
 
-@singleton()
+@injectable() // <<< THAY BẰNG DÒNG NÀY
 export class FinalExtractionApiService implements IFinalExtractionApiService {
     constructor(
         @inject(GeminiApiService) private readonly geminiApiService: GeminiApiService,
