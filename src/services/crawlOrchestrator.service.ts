@@ -48,7 +48,6 @@ export class CrawlOrchestratorService {
         @inject(BatchProcessingOrchestratorService) private batchProcessingOrchestratorService: BatchProcessingOrchestratorService,
         // TaskQueueService không còn được inject ở đây vì nó sẽ được resolve theo từng request
         @inject(GeminiApiService) private geminiApiService: GeminiApiService,
-        @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService,
         // <<< THAY ĐỔI 2: INJECT GLOBAL CONCURRENCY MANAGER (SINGLETON) >>>
         @inject(GlobalConcurrencyManagerService) private globalConcurrencyManager: GlobalConcurrencyManagerService
     ) {
@@ -84,9 +83,11 @@ export class CrawlOrchestratorService {
             batchRequestId: batchRequestId,
         });
 
-        // <<< THAY ĐỔI 3: RESOLVE TASK QUEUE SERVICE TỪ CONTAINER CỦA REQUEST >>>
-        // Điều này đảm bảo mỗi request có một hàng đợi riêng, cho phép `onIdle` hoạt động chính xác.
+        // <<< THAY ĐỔI CỐT LÕI: RESOLVE CÁC SERVICE TỪ REQUEST CONTAINER >>>
         const requestTaskQueue = requestContainer.resolve(TaskQueueService);
+        const resultCollector = requestContainer.resolve(InMemoryResultCollectorService);
+        const resultProcessingService = requestContainer.resolve(ResultProcessingService);
+        // <<< KẾT THÚC THAY ĐỔI >>>
 
         // const operationStartTime = Date.now();
         const operationStartTime = performance.now(); // Sử dụng performance.now() để có độ chính xác cao hơn
@@ -118,7 +119,7 @@ export class CrawlOrchestratorService {
 
         try {
             // Phase 0 & 1: Reset & Prepare Environment
-            this.resultCollector.clear();
+            resultCollector.clear(); // <<< SỬ DỤNG INSTANCE ĐÃ RESOLVE
             this.batchProcessingOrchestratorService.resetGlobalAcronyms(logger);
             this.htmlPersistenceService.resetState(logger);
             await this.fileSystemService.prepareOutputArea(logger);
@@ -213,22 +214,18 @@ export class CrawlOrchestratorService {
             await this.batchProcessingOrchestratorService.awaitCompletion(logger);
             logger.info("All background batch operations finished.");
 
-
-            // <<< THAY ĐỔI CHÍNH Ở ĐÂY >>>
-            // Resolve một instance MỚI của ResultProcessingService từ container của request
-            const resultProcessingService = requestContainer.resolve(ResultProcessingService);
-
             // Phase 4: Processing Final Output
             logger.info("Phase 4: Processing final output...");
             const finalProcessingStartTime = performance.now();
             if (shouldRecordFiles) {
                 logger.info({ event: 'processing_path_file', batchRequestId }, "Processing results via file I/O path (JSONL -> CSV).");
-                // Sử dụng instance vừa resolve
+                // Sử dụng instance đã resolve
                 allProcessedData = await resultProcessingService.processOutput(logger, batchRequestId);
             } else {
                 logger.info({ event: 'processing_path_memory' }, "Processing results via in-memory path.");
-                const rawResults = this.resultCollector.get();
+                const rawResults = resultCollector.get(); // <<< SỬ DỤNG INSTANCE ĐÃ RESOLVE
                 logger.info({ recordCount: rawResults.length }, "Retrieved raw results from in-memory collector.");
+                // Sử dụng instance đã resolve
                 allProcessedData = await resultProcessingService.processInMemoryData(rawResults, logger);
             }
             const finalProcessingDurationMs = performance.now() - finalProcessingStartTime;
@@ -261,13 +258,13 @@ export class CrawlOrchestratorService {
             }, `Crawl process finished for batch ${batchRequestId}.`);
 
 
-            logger.info({ 
+            logger.info({
                 event: 'ORCHESTRATOR_END', // Đã có sẵn, đổi tên
                 durationMs: Math.round(totalOrchestratorDurationMs),
-                batchRequestId, 
-                totalProcessedRecords: allProcessedData.length 
+                batchRequestId,
+                totalProcessedRecords: allProcessedData.length
             }, `Crawl process finished for batch ${batchRequestId}.`);
-            
+
         }
 
         if (crawlError) {

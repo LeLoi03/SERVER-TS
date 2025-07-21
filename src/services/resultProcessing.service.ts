@@ -1,6 +1,6 @@
 // src/services/resultProcessing.service.ts
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
 import fs from 'fs';
 import readline from 'readline';
 import { ParserOptions, Transform as Json2CsvTransform } from '@json2csv/node';
@@ -14,8 +14,7 @@ import { Logger } from 'pino';
 import { ProcessedRowData, InputRowData, ProcessedResponseData } from '../types/crawl/crawl.types';
 import { FileSystemService } from './fileSystem.service';
 
-
-@singleton()
+@injectable() // <<< THÊM @injectable() NẾU CHƯA CÓ
 export class ResultProcessingService {
     private readonly serviceBaseLogger: Logger;
 

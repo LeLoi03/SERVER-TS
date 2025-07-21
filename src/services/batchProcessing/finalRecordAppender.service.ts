@@ -1,7 +1,7 @@
 // src/services/batchProcessing/finalRecordAppender.service.ts
 
 import 'reflect-metadata';
-import { singleton, inject } from 'tsyringe';
+import { injectable, inject } from 'tsyringe';
 import path from 'path';
 import { Logger } from 'pino';
 import { InMemoryResultCollectorService } from '../inMemoryResultCollector.service'; // <<< THAY ĐỔI IMPORT
@@ -19,7 +19,7 @@ export interface IFinalRecordAppenderService {
     append(record: FinalRecord, batchRequestId: string, logger: Logger, requestStateService: RequestStateService): Promise<void>;
 }
 
-@singleton()
+@injectable() // <<< THÊM @injectable() NẾU CHƯA CÓ
 export class FinalRecordAppenderService implements IFinalRecordAppenderService {
     constructor(
         @inject(ConfigService) private readonly configService: ConfigService,
@@ -27,7 +27,7 @@ export class FinalRecordAppenderService implements IFinalRecordAppenderService {
         @inject(InMemoryResultCollectorService) private readonly resultCollector: InMemoryResultCollectorService
     ) { }
 
-     // <<< THÊM THAM SỐ MỚI VÀO `append` >>>
+    // <<< THÊM THAM SỐ MỚI VÀO `append` >>>
     public async append(
         record: FinalRecord,
         batchRequestId: string,

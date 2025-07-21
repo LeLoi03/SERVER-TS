@@ -97,24 +97,25 @@ container.register<IImageUrlExtractorService>('IImageUrlExtractorService', { use
 
 // --- 4. Register Request-Scoped Services ---
 // Decorator @scoped(Lifecycle.ResolutionScoped) trên class đã đủ.
-// Chỉ cần đăng ký để Tsyringe biết về nó.
+// Đăng ký chúng như thế này để Tsyringe biết về chúng và tạo instance mới cho mỗi child container.
 container.register(RequestStateService, RequestStateService);
 container.register(TaskQueueService, TaskQueueService);
-
-container.registerSingleton(InMemoryResultCollectorService); // <<< ĐĂNG KÝ MỚI
+container.register(InMemoryResultCollectorService, InMemoryResultCollectorService);
 
 // --- 5. Register Other General and Task-Specific Services ---
 container.registerSingleton(HtmlPersistenceService);
-// THAY ĐỔI Ở ĐÂY: Bỏ singleton
-container.register(ResultProcessingService, { useClass: ResultProcessingService });
+
+
+// THAY ĐỔI Ở ĐÂY: Đăng ký ResultProcessingService là transient (mặc định).
+// Nó không giữ trạng thái, nên việc tạo mới mỗi lần resolve là an toàn và sạch sẽ.
+container.register(ResultProcessingService, ResultProcessingService);
 
 container.registerSingleton(JournalImportService);
 
-// ConferenceProcessorService is registered as transient (new instance each time resolved)
-// because it may hold state for a single conference processing task.
+// ConferenceProcessorService được đăng ký là transient (mặc định).
+// Điều này đúng vì nó xử lý cho một conference cụ thể.
 container.register(ConferenceProcessorService, ConferenceProcessorService);
-
-// CrawlOrchestratorService is a singleton as it orchestrates the entire application flow.
+// CrawlOrchestratorService là singleton, điều phối toàn bộ luồng.
 container.registerSingleton(CrawlOrchestratorService);
 
 /**
