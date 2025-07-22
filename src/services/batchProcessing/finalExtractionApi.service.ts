@@ -135,10 +135,14 @@ export class FinalExtractionApiService implements IFinalExtractionApiService {
                 const imageParts = [];
                 if (imageUrls && imageUrls.length > 0) {
                     for (const url of imageUrls) {
-                        // Hàm urlToGenerativePart giờ đã được tối ưu hóa để không fetch ảnh không hợp lệ
-                        const part = await this.urlToGenerativePart(url, extractApiLogger);
-                        if (part) {
-                            imageParts.push(part);
+                        // Thêm kiểm tra để đảm bảo 'url' là một chuỗi
+                        if (typeof url === 'string') {
+                            const part = await this.urlToGenerativePart(url, extractApiLogger);
+                            if (part) {
+                                imageParts.push(part);
+                            }
+                        } else {
+                            extractApiLogger.warn({ imageUrl: url, event: 'invalid_image_url_skipped' }, "Skipping invalid image URL (not a string).");
                         }
                     }
                 }
