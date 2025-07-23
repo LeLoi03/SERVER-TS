@@ -1,0 +1,14 @@
+[
+  {
+    "frontendMessageId": "591d87c3-1a84-4bce-b31d-eeb0d04cf4ab",
+    "payload": {
+      "group": "0. Chào hỏi",
+      "question": "Xin chào",
+      "model": "gemini-2.5-flash-lite"
+    },
+    "status": "SUCCESS",
+    "startTime_iso": "2025-07-23T03:52:03.883Z",
+    "roundTripTime_ms": 10485,
+    "response": "Xin chào! Tôi có thể giúp gì cho bạn hôm nay?"
+  }
+]

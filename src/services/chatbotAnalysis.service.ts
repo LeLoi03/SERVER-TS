@@ -107,10 +107,12 @@ export class ChatbotLogAnalysisService {
                 const filePath = path.join(this.clientLogPath, file);
                 const content = await fs.readFile(filePath, 'utf-8');
                 const parsedEntries = JSON.parse(content) as any[];
+                // <<< SỬA ĐỔI: Thêm điều kiện kiểm tra cho trường startTime_iso mới
                 const validEntries = parsedEntries.filter(
                     (entry): entry is ChatbotClientTestEntry =>
-                        entry && typeof entry.frontendMessageId === 'string' && entry.frontendMessageId.length > 0
+                        entry && typeof entry.frontendMessageId === 'string' && entry.frontendMessageId.length > 0 && typeof entry.startTime_iso === 'string'
                 );
+
                 allEntries = allEntries.concat(validEntries);
             }
         } catch (err: any) {
@@ -135,7 +137,8 @@ export class ChatbotLogAnalysisService {
             requestMap.set(clientEntry.frontendMessageId, {
                 requestId: clientEntry.frontendMessageId,
                 status: clientEntry.status,
-                startTime: new Date(Date.now() - (clientEntry.roundTripTime_ms || 0)).toISOString(),
+                // <<< SỬA ĐỔI QUAN TRỌNG: Sử dụng startTime chính xác từ log của client
+                startTime: clientEntry.startTime_iso,
                 question: clientEntry.payload.question,
                 clientRequestedModel: clientEntry.payload.model,
                 clientResponse: clientEntry.response,
@@ -187,18 +190,19 @@ export class ChatbotLogAnalysisService {
             };
             // <<< KẾT THÚC REFACTOR >>>
 
-            const existingRequest = requestMap.get(requestId);
+             const existingRequest = requestMap.get(requestId);
             if (existingRequest) {
                 // Hợp nhất vào request đã có từ client
+                // startTime sẽ được ghi đè bằng thời gian của server để có độ chính xác cao nhất nếu có thể
                 existingRequest.startTime = requestReceivedLog.time;
                 existingRequest.serverMetrics = { ...existingRequest.serverMetrics, ...serverMetrics };
                 existingRequest.aiCalls = aiCalls;
-            } else {
+             } else {
                 // Tạo request "mồ côi" mới chỉ có dữ liệu server
                 requestMap.set(requestId, {
                     requestId,
                     status: 'INCOMPLETE',
-                    startTime: requestReceivedLog.time,
+                    startTime: requestReceivedLog.time, // Thời gian chính xác từ server
                     question: 'N/A (Server log only)',
                     clientRequestedModel: requestReceivedLog.details?.model,
                     serverMetrics,

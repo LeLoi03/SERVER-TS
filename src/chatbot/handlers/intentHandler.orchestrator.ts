@@ -26,6 +26,7 @@ let subAgentHandlerDependencies: SubAgentHandlerCustomDeps;
 
 const MERCURY_MODEL_VALUE = 'gemini-2.5-pro';
 const SIRIUS_MODEL_VALUE = 'gemini-2.5-flash';
+const NEBULA_MODEL_VALUE = 'gemini-2.5-flash-lite';
 
 
 try {
@@ -74,14 +75,21 @@ const getHostAgentDependencies = (userSelectedModel?: string): HostAgentHandlerC
         currentHostAgentGenerationConfig = {
             ...currentHostAgentGenerationConfig,
             thinkingConfig: {
-                thinkingBudget: 8000,
+                thinkingBudget: 4096,
             },
         };
     } else if (modelForHost === SIRIUS_MODEL_VALUE) { // Thêm điều kiện cho Sirius
         currentHostAgentGenerationConfig = {
             ...currentHostAgentGenerationConfig,
             thinkingConfig: {
-                thinkingBudget: 4000,
+                thinkingBudget: 2048,
+            },
+        };
+    } else if (modelForHost === NEBULA_MODEL_VALUE) { // Thêm điều kiện cho NEBULA
+        currentHostAgentGenerationConfig = {
+            ...currentHostAgentGenerationConfig,
+            thinkingConfig: {
+                thinkingBudget: 0,
             },
         };
     }

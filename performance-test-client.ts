@@ -10,7 +10,7 @@ import * as path from 'path';
 const CONFIG = {
     SERVER_URL: 'http://localhost:3001',
     SOCKET_PATH: '/socket.io/',
-    JWT_TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiOGQ0ODFmMTctZjBlMS00NDY1LWE4ZTEtMWQ2MTM2YTk3NzViIiwiZW1haWwiOiJmYW5uZWlob3VuYWZ1LTgwNDVAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NTI0ODk5MzUsImV4cCI6MTc1MjUxMTUzNX0.tXrmHsc9TRZkaFF48u970I8cMYgtrmqKqXO6RTc91nI',
+    JWT_TOKEN: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoiOGQ0ODFmMTctZjBlMS00NDY1LWE4ZTEtMWQ2MTM2YTk3NzViIiwiZW1haWwiOiJmYW5uZWlob3VuYWZ1LTgwNDVAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE3NTMyMzY4NTAsImV4cCI6MTc1MzI1ODQ1MH0.M2IbTGLiMLq3z3Ezg9QjRtO2Rhub7j-Q-xDpNIbQCCQ',
     DEFAULT_TEST_TIMEOUT_MS: 30000,
     FIRST_QUESTION_TIMEOUT_MS: 60000,
     // Thời gian chờ giữa các câu hỏi (ms) để không vượt quá 5 câu/phút
@@ -24,16 +24,16 @@ const CONFIG = {
 // ========================================================================
 
 const MODELS_TO_TEST = [
-    'gemini-2.5-flash',
-    'gemini-2.5-flash-lite-preview-06-17',
-    'gemini-2.5-pro',
+    // 'gemini-2.5-flash',
+    'gemini-2.5-flash-lite',
+    // 'gemini-2.5-pro',
 ];
 
 const QUESTIONS_TO_TEST = [
     // === NHÓM 0: Chào hỏi đơn thuần ===
     { group: "0. Chào hỏi", question: "Xin chào" },
-    { group: "0. Chào hỏi", question: "Bạn là ai?" },
-    { group: "0. Chào hỏi", question: "Bạn có thể làm gì?" },
+    // { group: "0. Chào hỏi", question: "Bạn là ai?" },
+    // { group: "0. Chào hỏi", question: "Bạn có thể làm gì?" },
 
     // // === NHÓM 1: Theo từ khóa hoặc tên hội nghị ===
     // { group: "1. Từ khóa/Tên", question: "Tìm hội nghị có từ khóa ‘machine learning’" },
@@ -114,6 +114,7 @@ interface TestResult {
     frontendMessageId: string;
     payload: TestPayload;
     status: 'SUCCESS' | 'ERROR' | 'TIMEOUT';
+    startTime_iso: string; // <<< THÊM MỚI: Thêm trường này để lưu thời gian bắt đầu chính xác
     roundTripTime_ms?: number;
     error?: string;
     response?: string;
@@ -171,12 +172,13 @@ function sendMessageAndMeasure(socket: Socket, payload: TestPayload, timeoutMs: 
         const frontendMessageId = uuidv4();
         let fullResponse = '';
 
-        const timeoutId = setTimeout(() => {
+         const timeoutId = setTimeout(() => {
             cleanupListeners();
             resolve({
                 frontendMessageId,
                 payload,
                 status: 'TIMEOUT',
+                startTime_iso: new Date(clientStartTime).toISOString(), // <<< SỬA ĐỔI: Thêm vào kết quả
                 roundTripTime_ms: Date.now() - clientStartTime,
                 error: `Request timed out after ${timeoutMs / 1000}s`,
             });
@@ -194,6 +196,7 @@ function sendMessageAndMeasure(socket: Socket, payload: TestPayload, timeoutMs: 
                 frontendMessageId,
                 payload,
                 status: 'SUCCESS',
+                startTime_iso: new Date(clientStartTime).toISOString(), // <<< SỬA ĐỔI: Thêm vào kết quả
                 roundTripTime_ms: clientEndTime - clientStartTime,
                 response: fullResponse,
             });
@@ -207,6 +210,7 @@ function sendMessageAndMeasure(socket: Socket, payload: TestPayload, timeoutMs: 
                 frontendMessageId,
                 payload,
                 status: 'ERROR',
+                startTime_iso: new Date(clientStartTime).toISOString(), // <<< SỬA ĐỔI: Thêm vào kết quả
                 roundTripTime_ms: clientEndTime - clientStartTime,
                 error: data.message,
             });

@@ -10,6 +10,8 @@ export interface ChatbotClientTestEntry {
         model?: string;
     };
     status: 'SUCCESS' | 'ERROR' | 'TIMEOUT';
+    startTime_iso: string; // <<< THÊM MỚI: Thời gian bắt đầu thực tế từ client
+
     roundTripTime_ms?: number;
     error?: string;
     response?: string;
@@ -23,13 +25,13 @@ export interface ChatbotServerPerfLog {
     time: string;
     event: 'performance_log';
     // <<< SỬA ĐỔI QUAN TRỌNG: Thêm các stage mới vào đây >>>
-    stage: 
-        | 'request_received' 
-        | 'ai_call_start' 
-        | 'ai_first_token_received' // Thêm mới
-        | 'ai_stream_completed'     // Thêm mới (thay cho ai_call_end)
-        | 'response_completed'
-        | 'ai_function_call_completed'
+    stage:
+    | 'request_received'
+    | 'ai_call_start'
+    | 'ai_first_token_received' // Thêm mới
+    | 'ai_stream_completed'     // Thêm mới (thay cho ai_call_end)
+    | 'response_completed'
+    | 'ai_function_call_completed'
     requestId: string;
     userId: string;
     conversationId: string;
