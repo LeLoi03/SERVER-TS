@@ -71,6 +71,8 @@ export class GeminiApiTypeConfig {
             .trim();
         // *************** KẾT THÚC ĐIỀU CHỈNH ***************
 
+        // console.log(processedDetermineInstruction);
+        
         return {
             [API_TYPE_EXTRACT]: {
                 generationConfig: {
@@ -105,8 +107,6 @@ export class GeminiApiTypeConfig {
             [API_TYPE_DETERMINE]: {
                 generationConfig: {
                     temperature: this.appConfig.GEMINI_DETERMINE_TEMPERATURE,
-                    topP: this.appConfig.GEMINI_DETERMINE_TOP_P,
-                    topK: this.appConfig.GEMINI_DETERMINE_TOP_K,
                     maxOutputTokens: this.appConfig.GEMINI_DETERMINE_MAX_OUTPUT_TOKENS,
                 },
                 responseSchema: { // Added from original code

@@ -517,9 +517,9 @@ export const envSchema = z.object({
     GEMINI_DETERMINE_NON_TUNED_FALLBACK_MODEL_NAME: z.string().optional(),
     /**
      * Temperature for the 'determine' API's generation.
-     * @default 0.1 (low creativity for precise output)
+     * @default 0 (low creativity for precise output)
      */
-    GEMINI_DETERMINE_TEMPERATURE: z.coerce.number().min(0).max(2).default(0.1),
+    GEMINI_DETERMINE_TEMPERATURE: z.coerce.number().min(0).max(2).default(0),
     /**
      * Top-P sampling for the 'determine' API's generation.
      * @default 0.9
