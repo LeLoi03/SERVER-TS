@@ -395,17 +395,22 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
             const saveSuccess = await conversationHistoryService.updateConversationHistory(
                 conversationId,
                 authenticatedUserId,
-                historyToSaveInDB
+                historyToSaveInDB // Đây là lịch sử hoàn chỉnh và chính xác nhất
             );
 
             if (!saveSuccess) {
                 sendChatError(convLogContext, 'Failed to save edited message and new AI response to database. Client data might be inconsistent.', 'edit_final_save_fail_db');
-            } else {
-
             }
 
+            // Cập nhật danh sách cuộc trò chuyện bên trái (sidebar)
             await emitUpdatedConversationList(convLogContext, authenticatedUserId, `message edited in conv ${conversationId}`, language);
 
+            // <<< BẮT ĐẦU THAY ĐỔI >>>
+            // THAY THẾ: Thay vì gửi một bản vá, hãy gửi lại toàn bộ lịch sử đã được cập nhật.
+            // Điều này đảm bảo client được đồng bộ hóa hoàn toàn với trạng thái mới nhất từ server.
+
+            // XÓA DÒNG NÀY:
+            /*
             if (newBotMessageForClient) {
                 const frontendPayload: BackendConversationUpdatedAfterEditPayload = {
                     editedUserMessage: editedUserMessage,
@@ -413,14 +418,24 @@ export const registerMessageHandlers = (deps: HandlerDependencies): void => {
                     conversationId: conversationId,
                 };
                 socket.emit('conversation_updated_after_edit', frontendPayload);
-
             }
+            */
+
+            // THÊM CÁC DÒNG NÀY:
+            // Gửi sự kiện 'initial_history' với toàn bộ lịch sử mới.
+            // Client của bạn đã có sẵn logic để xử lý sự kiện này (dùng khi tải một cuộc trò chuyện).
+            // Nó sẽ thay thế hoàn toàn danh sách tin nhắn hiện tại, loại bỏ mọi sự mất đồng bộ.
+            socket.emit('initial_history', {
+                conversationId: conversationId,
+                messages: historyToSaveInDB // Gửi toàn bộ lịch sử mới nhất
+            });
+            // <<< KẾT THÚC THAY ĐỔI >>>
 
         } catch (error: unknown) {
             const { message: errorMessage, stack: errorStack } = getErrorMessageAndStack(error);
             sendChatError(convLogContext, `Server error during message edit: ${errorMessage || 'Unknown'}.`, 'edit_exception_unhandled', { errorDetails: errorMessage, stack: errorStack });
         }
-    })
+    });
 
     function isSendMessageData(data: unknown): data is SendMessageData {
         return (

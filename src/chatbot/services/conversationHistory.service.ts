@@ -289,7 +289,7 @@ export class ConversationHistoryService {
     public async updateUserMessageAndPrepareHistory(
         userId: string,
         conversationId: string,
-        messageIdToEdit: string,
+        messageIdToEdit: string, // UUID từ frontend
         newText: string
     ): Promise<UpdateUserMessageResult | null> {
         if (!mongoose.Types.ObjectId.isValid(conversationId)) {
@@ -297,19 +297,26 @@ export class ConversationHistoryService {
         }
 
         try {
-            const conversation = await this.model.findOne({ _id: conversationId, userId: userId });
+            // 1. Lấy dữ liệu gốc (đã mã hóa) từ DB
+            const conversation = await this.model.findOne({ _id: conversationId, userId: userId }).lean();
             if (!conversation) {
                 return { originalConversationFound: false, messageFoundAndIsLastUserMessage: false };
             }
 
-            // Decrypt the entire history to work with plain text.
+            // 2. Giải mã toàn bộ lịch sử để làm việc với dữ liệu sạch (plain text)
             const decryptedMessages = this._decryptHistory(conversation.messages || [], userId);
 
-            const messageToEditIndex = decryptedMessages.findIndex(msg => (msg as any).uuid === messageIdToEdit && msg.role === 'user');
+            // 3. Tìm kiếm tin nhắn cần sửa trong lịch sử ĐÃ GIẢI MÃ
+            const messageToEditIndex = decryptedMessages.findIndex(msg => msg.uuid === messageIdToEdit && msg.role === 'user');
+
+            // 4. Kiểm tra xem có tìm thấy tin nhắn không
             if (messageToEditIndex === -1) {
+                // Nếu không tìm thấy, đây là nguyên nhân gây ra lỗi của bạn.
+                console.error(`[HistoryService] Edit failed: Message with UUID ${messageIdToEdit} not found for user ${userId}.`);
                 return { originalConversationFound: true, messageFoundAndIsLastUserMessage: false };
             }
 
+            // 5. Kiểm tra xem tin nhắn cần sửa có phải là tin nhắn cuối cùng của user không
             let lastUserMessageActualIndex = -1;
             for (let i = decryptedMessages.length - 1; i >= 0; i--) {
                 if (decryptedMessages[i].role === 'user') {
@@ -319,23 +326,27 @@ export class ConversationHistoryService {
             }
 
             if (messageToEditIndex !== lastUserMessageActualIndex) {
+                console.error(`[HistoryService] Edit failed: Message with UUID ${messageIdToEdit} is not the last user message.`);
                 return { originalConversationFound: true, messageFoundAndIsLastUserMessage: false };
             }
 
+            // 6. Tạo đối tượng tin nhắn đã được chỉnh sửa (ở dạng plain text)
             const originalUserMessage = decryptedMessages[messageToEditIndex];
             const editedUserMessage: ChatHistoryItem = {
+                ...originalUserMessage, // Giữ lại các thuộc tính khác như userFileInfo
                 role: 'user',
                 parts: [{ text: newText.trim() }],
-                timestamp: new Date(),
-                uuid: (originalUserMessage as any).uuid,
+                timestamp: new Date(), // Cập nhật timestamp
+                uuid: originalUserMessage.uuid, // Giữ nguyên UUID
             };
 
-            // The history prepared for the AI handler should be in plain text.
+            // 7. Chuẩn bị lịch sử mới cho AI handler (vẫn ở dạng plain text)
+            // Lịch sử này bao gồm các tin nhắn cũ và tin nhắn vừa được sửa.
             const historyForNewBotResponse = decryptedMessages.slice(0, messageToEditIndex);
             historyForNewBotResponse.push(editedUserMessage);
 
-            // The return value contains plain text. Encryption will happen later
-            // when `updateConversationHistory` is called with the final, complete history.
+            // 8. Trả về kết quả (ở dạng plain text).
+            // Việc mã hóa sẽ được thực hiện sau đó bởi `updateConversationHistory` khi nó nhận được lịch sử hoàn chỉnh cuối cùng.
             return {
                 editedUserMessage,
                 historyForNewBotResponse,
@@ -351,6 +362,7 @@ export class ConversationHistoryService {
             throw new Error(`Database error during message update and history preparation: ${errorMessage}`);
         }
     }
+
 
     // =================================================================
     // UNMODIFIED PUBLIC METHODS (No direct interaction with message content)

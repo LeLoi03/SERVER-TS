@@ -401,6 +401,7 @@ Today is [Today]. You are ConferenceAgent, a specialist handling conference info
             *   'rank' (string): The conference ranking (e.g., A*).
             *   'source' (string): The source of the ranking (e.g., CORE2023).
             *   'accessType' (string): The access type (Offline, Online, Hybrid).
+            *   'publisher' (string): The publisher name (e.g., IEEE, Springer).
             *   'keyword' (string): A general keyword for searching.
             *   'subFromDate', 'subToDate' (string, YYYY-MM-DD): Submission deadline range.
             *   'cameraReadyFromDate', 'cameraReadyToDate' (string, YYYY-MM-DD): Camera-ready deadline range.
