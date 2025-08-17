@@ -1,40 +1,6 @@
 // src/chatbot/utils/mockData.ts
 
-export const summaryData = {
-  "payload": [
-    {
-      "id": "00c6bf0f-520c-4702-8261-f929cfc51ed9",
-      "title": "Workshop on Job Scheduling Strategies for Parallel Processing",
-      "acronym": "JSSPP",
-      "location": { "cityStateProvince": "Milan", "country": "Italy", "address": "Milan, Italy", "continent": "Europe" },
-      "rank": "C",
-      "source": "CORE2023",
-      "year": 2025,
-      "researchFields": ["Distributed computing and systems software"],
-      "topics": ["parallel scheduling", "scheduling systems"],
-      "dates": { "fromDate": "2025-06-03T00:00:00.000Z", "toDate": "2025-06-04T00:00:00.000Z", "type": "conferenceDates", "name": "Conference Date" },
-      "link": "https://jsspp.org/",
-      "accessType": "Offline",
-      "status": "CRAWLED"
-    },
-    {
-      "id": "02926ff4-408b-40d2-b7e9-7d55c3aff7cb",
-      "title": "Information Visualisation Theory and Practice",
-      "acronym": "InfVis",
-      "location": { "cityStateProvince": "No city/state/province", "country": "No country", "address": "No location", "continent": "No continent" },
-      "rank": "C",
-      "source": "CORE2023",
-      "year": 2025,
-      "researchFields": ["Human-centred computing"],
-      "topics": ["Navigation"],
-      "dates": { "fromDate": "2025-08-06T00:00:00.000Z", "toDate": "2025-08-08T00:00:00.000Z", "type": "conferenceDates", "name": "Conference Date" },
-      "link": "https://iv.csites.fct.unl.pt/de/symposia/iv/infvis/",
-      "accessType": "Online",
-      "status": "CRAWLED"
-    }
-  ],
-  "meta": { "curPage": 1, "perPage": 10, "totalItems": 988, "totalPage": 99, "prevPage": null, "nextPage": 2 }
-};
+export const summaryData = {"payload":[{"id":"a5e4d5d6-cfc1-4aaa-bf6f-ae1f41655688","title":"International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management","acronym":"IC3K","location":{"cityStateProvince":"Marbella","country":"Spain","address":"Marbella, Spain","continent":"Europe"},"rank":"C","source":"CORE2023","year":2025,"researchFields":["Data management and data science"],"topics":["Knowledge Discovery","Knowledge Engineering","Knowledge Management","Ontologies for Digital Twin"],"publisher":"SCITEPRESS, Springer Nature, Springer","dates":{"id":"592e0fc1-c02f-44ba-a851-582a95b4580d","organizedId":"12a2ccfb-7125-410b-be3f-42a33a8a2649","fromDate":"2025-10-22T00:00:00.000Z","toDate":"2025-10-24T00:00:00.000Z","type":"conferenceDates","name":"Conference Date","createdAt":"2025-08-02T09:59:39.055Z","updatedAt":"2025-08-02T09:59:39.055Z","isAvailable":true},"submissionDates":[],"link":"https://ic3k.scitevents.org/","createdAt":"2025-08-02T09:57:53.369Z","updatedAt":"2025-08-02T09:58:53.652Z","creatorId":null,"adminId":"25c64d1c-cf1f-435c-99ea-021ce1aab3e8","accessType":"Hybrid","status":"NOT CRAWLED","isLastest":true}],"meta":{"curPage":1,"perPage":10,"totalItems":1,"totalPage":1,"prevPage":null,"nextPage":null}}
 
 export const detailData = {
     "payload": [

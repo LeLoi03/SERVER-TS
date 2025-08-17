@@ -1,0 +1,15 @@
+user_id,conference_key,rating,review,timestamp
+u1,h1,4,"Great papers.",1700000001
+u1,h2,5,"Fantastic networking.",1700000002
+u2,h1,5,"Top quality research.",1700000003
+u2,h3,2,"Organization was a mess.",1700000004
+u3,h4,1,"Very expensive and not worth it.",1700000005
+u3,h5,2,"Poor talks.",1700000006
+u4,h1,5,"Excellent as always.",1700000007
+u4,h2,4,"Good social events.",1700000008
+u4,h4,2,"Disappointing content.",1700000009
+u4,h6,3,"Mixed feelings.",1700000010
+u5,h3,1,"Chaotic poster session.",1700000011
+u5,h4,2,"Bad venue.",1700000012
+u5,h5,1,"I would not go again.",1700000013
+u5,h6,2,"Just okay.",1700000014

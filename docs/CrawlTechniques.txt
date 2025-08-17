@@ -1,0 +1,51 @@
+Một số kỹ thuật xử lý quan trọng trong quy trình Crawl
+
+1. Search Query Template: 
+
+    Title (Acronym) conference 2025 OR 2026 OR 2024
+
+    Phân tích: cú pháp search nâng cao sử dụng từ khóa "OR" giúp tăng hiệu quả chính xác để engine GG Search có thể trả về danh sách kết quả tốt nhất -> Rất quan trọng vì link GG Search không chính xác thì các bước sao đó cũng giảm độ chính xác khi xác định link chính.
+
+    Tầm quan trọng: Rất quan trọng
+
+2. Filter unwanted domain: 
+
+    Lọc bỏ các link không cần thiết, link "rác" dựa vào 1 danh sách các link được xây dựng trước
+
+    Phân tích: Đảm bảo không đưa các link rác cho LLM, giúp LLM xử lý chính xác hơn, nhanh hơn, tiết kiệm chi phí API (vì các link rác đôi khi thường rất nhiều nội dung)
+
+    Tầm quan trọng: Quan trọng
+
+3. Remain top K link: 
+
+    Chỉ giữ lại 1 số lượng link cố định sau khi lọc unwanted domain
+
+    Phân tích: Đảm bảo không lấy quá nhiều link vì nhiều link -> tăng thời gian crawl -> tăng chi phí API
+
+    Tầm quan trọng: Quan trọng
+
+4. Các kỹ thuật xử lý crawl:
+
+- Thiết lập:
+    + Crawl song song ở chế độ headless (không giao diện) -> tăng tốc độ 
+    + Tắt các tài nguyên không cần thiết (image, stylesheet, css, ...) -> tăng tốc độ
+    + Xử lý UserAgent, HttpRequest -> đảm bảo truy cập các link thành công, giảm khả năng bị chặn bot
+    -> Quan trọng
+
+- Xử lý các trang khó nhằn:
+    + Thời gian tải lâu -> tăng timeout
+    + Tải nội dung bằng javascript -> xử lý javascript
+    + Nội dung ẩn, yêu cầu cuộn, nội dung nhúng trong frame, trang thực hiện redirect -> Xử lý HTML nâng cao
+    -> Quan trọng 
+
+- Giữ lại các liên kết URL (dựa vào bộ từ khóa):
+    + Xử lý các thẻ a (chứa href), thẻ option (chứa value), thẻ frame -> Giữ lại các liên kết quan trọng (trang chủ, cfp, imp link) 
+    -> Cốt lõi và Cực kỳ quan trọng 
+
+- Xử lý ảnh (dựa vào bộ từ khóa): 
+    + Xử lý các "URL ảnh" có khả năng chứa thông tin quan trọng (ngày diễn ra , địa điểm ,...) -> Đảm bảo thu thập triệt để dữ liệu quan trọng để cung cấp cho LLM 
+    -> Quan trọng
+
+- Tổng hợp và định dạng nội dung rõ ràng:
+    + Tổng hợp toàn bộ nội dung crawl được 1 cách có cấu trúc (khớp với cấu trúc của các Few-Shot Examples) để đảm bảo LLM trả về kết quả chính xác nhất
+    -> Quan trọng

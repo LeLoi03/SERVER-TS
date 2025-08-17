@@ -1,0 +1,108 @@
+Chatbot: A2A + RAG architecture using function calling.
+
+Flow
+1. Tiếp nhận truy vấn 
+2. HostAgent phân tích truy vấn
+3. Gọi SubAgent phù hợp (nếu cần thiết) (thông qua function calling)
+4. SubAgent tiếp nhận và xử lý yêu cầu từ HostAgent
+5. SubAgent sử dụng tool phù hợp với yêu cầu (thông qua function calling)
+6. Hệ thống thực thi hàm được gọi với SubAgent với tham số được cung cấp bởi SubAgent
+7. Hàm trả về kết quả cho SubAgent
+8. SubAgent xử lý kết quả trả về từ hàm
+9. SubAgent trả kết quả cho HostAgent
+10. HostAgent nhận kết quả, xử lý và tổng hợp để sinh ra câu trả lời cuối cùng cho người dùng.
+
+
+- Case 1: HostAgent không gọi hàm
+
+    User: Hello
+    HostAgent: Hi there! (trả lời và không gọi hàm)
+
+
+- Case 2: HostAgent gọi 1 SubAgent
+
+    User: Find conference rank B in Vietnam about Machine Learning
+
+    HostAgent: Quyết định gọi ConferenceAgent với yêu cầu: Find conference rank B in Vietnam about Machine Learning
+
+        {
+            "targetAgent": "ConferenceAgent",
+            "taskDescription": "Find conference rank B in Vietnam about Machine Learning"
+        }
+
+    ConferenceAgent (SubAgent): Nhận yêu cầu và quyết định gọi tool getConferences() với tham số searchQuery phù hợp.
+
+        {
+            "searchQuery": "rank=B&country=Vietnam&topic=Machine+Learning"
+        }
+
+    System: Thực thi hàm, gọi truy vấn Database thông qua API với tham số searchQuery và trả về kết quả cho SubAgent.
+
+        call API: https://confhub.ddns.net/api/v1/conferences?rank=B&country=Vietnam&topic=Machine+Learning
+
+    SubAgent: Nhận kết quả từ hàm, xử lý và trả kết quả cho HostAgent.
+
+    HostAgent: Nhận kết quả từ SubAgent, xử lý và tổng hợp để sinh ra câu trả lời cuối cùng cho người dùng.
+
+
+
+- Case 3: HostAgent gọi nhiều SubAgent
+
+    User: Open website of IC3K conference
+    HostAgent: Quyết định gọi ConferenceAgent trước để lấy thông tin hội nghị IC3K với yêu cầu: Open website of IC3K conference
+
+        {
+            "targetAgent": "ConferenceAgent",
+            "taskDescription": "Open website of IC3K conference"
+        }
+
+    ConferenceAgent (SubAgent): Nhận yêu cầu và quyết định gọi tool getConferences() với tham số searchQuery phù hợp.
+
+        {
+            "searchQuery": "acronym=IC3K"
+        }
+
+    System: Thực thi hàm, gọi truy vấn Database thông qua API với tham số searchQuery và trả về kết quả cho SubAgent.
+
+        call API: https://confhub.ddns.net/api/v1/conferences?acronym=IC3K
+
+
+    SubAgent: Nhận kết quả từ hàm, xử lý và trả kết quả cho HostAgent.
+
+    HostAgent: Nhận kết quả thông tin hội nghị IC3K từ ConferenceAgent (có chứa thông tin website), sau đó quyết định gọi NavigationAgent để thực hiện hành động mở trang web.
+
+        {
+            "targetAgent": "NavigationAgent",
+            "taskDescription": "Open website of IC3K conference"
+        }
+
+    NavigationAgent (SubAgent): Nhận yêu cầu và quyết định gọi tool openWebsite() với tham số url phù hợp.
+
+        {
+            "url": "https://ic3k.scitevents.org/"
+        }
+
+    System: Thực thi hàm, thực hiện hành động mở trang web với tham số url.
+
+    HostAgent: Xác nhận hành động mở trang web cho người dùng: "The official website of IC3K conference has been opened for you."
+
+
+
+
+
+
+- Ưu điểm:
+    + Kiến trúc A2A + RAG phân chia các tác vụ cho từng SubAgent chuyên biệt đảm bảo nguyên tắc tách biệt trách nhiệm, tăng khả năng xử lý chính xác yêu cầu người dùng, đảm bảo khả năng mở rộng khi có nhiều tác vụ sau này (ví dụ: hỗ trợ phân tích kết quả crawl, hỗ trợ user đổi thông tin tài khoản, ...)
+    + Phù hợp với các yêu cầu cần độ chính xác cao (khớp với từ khóa và ràng buộc) do dữ liệu thu thập đã có cấu trúc, phân tách rõ ràng các trường thông tin quan trọng: ví dụ tên hội nghị, tên viết tắt, năm , địa điểm, thòi gian các mốc quan trọng, ...
+    + Không cần embedding câu hỏi người dùng -> Không tốn chi phí embedding và vector database, giảm thời gian phản hồi, giảm độ phức tạp
+
+
+- Nhược điểm:
+    + Độ chính xác không cao khi yêu cầu của người dùng cần xử lý ngữ nghĩa tương đồng (semantic search):
+        Ví dụ: User: Find conference support online presentation
+        -> searchQuery: keyword=Online+Presentation -> yêu cầu nội dung hội nghị phải khớp chính xác "online presentation" -> nếu nội dung là "remote presentation" -> không khớp, bỏ sót hội nghị phù hợp
+        Ví dụ: User: Find conference about AI
+        -> searchQuery: topic=AI -> yêu cầu trường topic hội nghị phải có 1 topic khớp chính xác "AI" -> những hội nghị có chứa topic "Artificial Intelligence" sẽ không khớp và bị bỏ sót
+    + Thời gian phải hồi dài hơn so với việc không sử dụng A2A (1 LLM thực hiện tất cả công việc) do phải truyền qua nhiều giai đoạn 
+    Host -> Sub -> ... -> Host
+    
